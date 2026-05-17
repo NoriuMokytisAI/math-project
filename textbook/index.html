@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VBE Vadovėlis — Matematikos Ištekliai</title>
+  <title>12 klasė teorija — Matematikos Ištekliai</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,73 +16,72 @@
     nav ul { list-style: none; display: flex; gap: 32px; }
     nav ul a { color: var(--muted); text-decoration: none; font-size: .9rem; transition: color .2s; }
     nav ul a:hover, nav ul a.active { color: var(--text); }
-    .content { position: relative; z-index: 1; padding: 100px 60px 80px; max-width: 1000px; margin: 0 auto; }
+    .content { position: relative; z-index: 1; padding: 100px 60px 80px; max-width: 900px; margin: 0 auto; }
     .page-header { margin-bottom: 32px; }
     .page-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 6px; }
     .page-desc { color: var(--muted); font-size: 1.05rem; margin-bottom: 6px; }
     .page-meta { color: var(--muted); font-size: .85rem; }
-    .download-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; margin-bottom: 40px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-    .download-box .icon { font-size: 2.5rem; }
+    .download-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px 36px; margin-bottom: 48px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .download-box .icon { font-size: 3rem; }
     .download-box .info { flex: 1; min-width: 200px; }
-    .download-box .info h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+    .download-box .info h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
     .download-box .info p { color: var(--muted); font-size: .9rem; }
-    .download-box .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 12px; font-size: .95rem; font-weight: 600; text-decoration: none; transition: transform .15s, box-shadow .15s; cursor: pointer; background: var(--accent); color: #fff; box-shadow: 0 8px 30px var(--accent-glow); border: none; }
+    .download-box .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; border-radius: 12px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: transform .15s, box-shadow .15s; cursor: pointer; background: var(--accent); color: #fff; box-shadow: 0 8px 30px var(--accent-glow); border: none; }
     .download-box .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--accent-glow); }
     .section-label { text-transform: uppercase; font-size: .75rem; letter-spacing: 2px; color: var(--accent); font-weight: 600; margin-bottom: 16px; }
-    .chapter-list { display: grid; gap: 10px; }
-    .chapter-item { display: flex; align-items: center; gap: 16px; padding: 16px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: var(--text); transition: border-color .2s, transform .2s; }
-    .chapter-item:hover { border-color: var(--accent); transform: translateX(4px); }
-    .chapter-num { font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; font-weight: 700; color: var(--accent); min-width: 44px; text-align: center; }
-    .chapter-info { flex: 1; }
-    .chapter-info h3 { font-size: .95rem; font-weight: 600; margin-bottom: 2px; }
-    .chapter-info p { color: var(--muted); font-size: .8rem; }
-    .chapter-meta { color: var(--muted); font-size: .8rem; text-align: right; white-space: nowrap; }
+    .toc-list { display: grid; gap: 8px; }
+    .toc-item { display: flex; align-items: center; gap: 16px; padding: 14px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+    .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 700; color: var(--accent); min-width: 36px; text-align: center; }
+    .toc-info { flex: 1; }
+    .toc-info h3 { font-size: .9rem; font-weight: 600; margin-bottom: 2px; }
+    .toc-info p { color: var(--muted); font-size: .78rem; }
+    .toc-pages { color: var(--muted); font-size: .8rem; white-space: nowrap; }
     footer { position: relative; z-index: 1; text-align: center; padding: 40px 24px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); margin-top: 60px; }
     footer a { color: var(--accent); text-decoration: none; }
-    @media (max-width: 640px) { nav { padding: 14px 24px; } nav ul { display: none; } .content { padding: 100px 20px 60px; } .download-box { flex-direction: column; text-align: center; } .chapter-meta { display: none; } }
+    @media (max-width: 640px) { nav { padding: 14px 24px; } nav ul { display: none; } .content { padding: 100px 20px 60px; } .download-box { flex-direction: column; text-align: center; } .toc-pages { display: none; } }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo">∫<span>matematika</span></a>
+    <a href="../index.html" class="logo">∫<span>matematika</span></a>
     <ul>
-      <li><a href="index.html#resources">Ištekliai</a></li>
-      <li><a href="exercises/index.html">Užduotys</a></li>
-      <li><a href="textbook/index.html" class="active">Vadovėlis</a></li>
-      <li><a href="index.html#about">Apie</a></li>
+      <li><a href="../index.html#resources">Ištekliai</a></li>
+      <li><a href="../exercises/index.html">Užduotys</a></li>
+      <li><a href="index.html" class="active">Teorija</a></li>
+      <li><a href="../index.html#about">Apie</a></li>
       <li><a href="https://github.com/NoriuMokytisAI/math-project">GitHub</a></li>
     </ul>
   </nav>
   <div class="content">
     <div class="page-header">
-      <h1 class="page-title">📖 VBE Matematikos Vadovėlis</h1>
-      <p class="page-desc">12 klasės matematikos vadovėlis, skirtas Valstybinio Brandos Egzaminui (VBE) pasiruošimui.</p>
+      <h1 class="page-title">📖 12 klasė teorija</h1>
+      <p class="page-desc">Visa 12 klasės matematikos teorija vienoje vietoje — visa, ko reikia VBE egzaminui.</p>
       <p class="page-meta">12 skyrių + formulės + užduotys · 359 psl. · 1.2 MB · v1.1.1 · XeLaTeX</p>
     </div>
     <div class="download-box">
       <div class="icon">📕</div>
       <div class="info">
-        <h2>Visas vadovėlis (PDF)</h2>
-        <p>Visos 12 klasės temos vienoje vietoje. Su turiniu, pavyzdžiais ir uždaviniais.</p>
+        <h2>12 klasė teorija (PDF)</h2>
+        <p>Visa teorija, pavyzdžiai ir uždaviniai — viename faile. Su turiniu ir formulių sąrašu.</p>
       </div>
-      <a href="main.pdf" class="btn" target="_blank">⬇ Atsisiųsti</a>
+      <a href="12_klase_teorija.pdf" class="btn" target="_blank">⬇ Atsisiųsti</a>
     </div>
-    <div class="section-label">Skyriai</div>
-    <div class="chapter-list">
-      <a href="chapters/planimetrija.pdf" target="_blank" class="chapter-item"><span class="chapter-num">01</span><div class="chapter-info"><h3>Planimetrija</h3><p>Trikampiai, keturkampiai, apskritimai. Sinusų ir kosinusų teoremos.</p></div><span class="chapter-meta">34 psl. · 191 KB</span></a>
-      <a href="chapters/logaritmai_ir_eksponentinės_funkcijos.pdf" target="_blank" class="chapter-item"><span class="chapter-num">02</span><div class="chapter-info"><h3>Logaritmai ir eksponentinės funkcijos</h3><p>Logaritmo apibrėžimas, savybės, grafikai ir transformacijos.</p></div><span class="chapter-meta">30 psl. · 190 KB</span></a>
-      <a href="chapters/sekos_ir_progresijos.pdf" target="_blank" class="chapter-item"><span class="chapter-num">03</span><div class="chapter-info"><h3>Sekos ir progresijos</h3><p>Aritmetinės ir geometrinės sekos. Ribos ir konvergavimas.</p></div><span class="chapter-meta">14 psl. · 129 KB</span></a>
-      <a href="chapters/lygtys,_nelygybės_ir_sistemos.pdf" target="_blank" class="chapter-item"><span class="chapter-num">04</span><div class="chapter-info"><h3>Lygtys, nelygybės ir sistemos</h3><p>Eksponentinės ir logaritminės lygtys, nelygybės, sprendimo būdai.</p></div><span class="chapter-meta">54 psl. · 245 KB</span></a>
-      <a href="chapters/lygtys_ir_nelygybės_su_moduliais_a_kursas.pdf" target="_blank" class="chapter-item"><span class="chapter-num">05</span><div class="chapter-info"><h3>Lygtys ir nelygybės su moduliais (A kursas)</h3><p>Modulio lygtys ir nelygybės, sprendimo metodai.</p></div><span class="chapter-meta">24 psl. · 174 KB</span></a>
-      <a href="chapters/trigonometrija.pdf" target="_blank" class="chapter-item"><span class="chapter-num">06</span><div class="chapter-info"><h3>Trigonometrija</h3><p>Trigonometrinės funkcijos, tapatybės, lygtys ir nelygybės.</p></div><span class="chapter-meta">34 psl. · 204 KB</span></a>
-      <a href="chapters/funkcijų_ribos_a_kursas.pdf" target="_blank" class="chapter-item"><span class="chapter-num">07</span><div class="chapter-info"><h3>Funkcijų ribos (A kursas)</h3><p>Funkcijos ribos apibrėžimas, skaičiavimas, vienpusės ribos.</p></div><span class="chapter-meta">24 psl. · 171 KB</span></a>
-      <a href="chapters/funkcijos_išvestinė_ir_jos_taikymas.pdf" target="_blank" class="chapter-item"><span class="chapter-num">08</span><div class="chapter-info"><h3>Funkcijos išvestinė ir jos taikymas</h3><p>Išvestinės apibrėžimas, skaičiavimas, funkcijos tyrimas.</p></div><span class="chapter-meta">20 psl. · 154 KB</span></a>
-      <a href="chapters/pirmykštė_funkcija_ir_integralas_a_kursas.pdf" target="_blank" class="chapter-item"><span class="chapter-num">09</span><div class="chapter-info"><h3>Pirmykštė funkcija ir integralas (A kursas)</h3><p>Nenustatytas ir nustatytas integralas, taikymo pavyzdžiai.</p></div><span class="chapter-meta">20 psl. · 162 KB</span></a>
-      <a href="chapters/vektoriai_erdvėje.pdf" target="_blank" class="chapter-item"><span class="chapter-num">10</span><div class="chapter-info"><h3>Vektoriai erdvėje</h3><p>Vektorių operacijos, skaliarinė ir vektorinė sandauga.</p></div><span class="chapter-meta">18 psl. · 137 KB</span></a>
-      <a href="chapters/stereometrija_erdvinė_geometrija.pdf" target="_blank" class="chapter-item"><span class="chapter-num">11</span><div class="chapter-info"><h3>Stereometrija (Erdvinė geometrija)</h3><p>Figūros erdvėje: tūriai, plotai, įbrėžimai.</p></div><span class="chapter-meta">32 psl. · 192 KB</span></a>
-      <a href="chapters/stochastika_duomenys_ir_tikimybės.pdf" target="_blank" class="chapter-item"><span class="chapter-num">12</span><div class="chapter-info"><h3>Stochastika (Duomenys ir tikimybės)</h3><p>Tikimybės, statistika, kombinatorika.</p></div><span class="chapter-meta">28 psl. · 177 KB</span></a>
-      <a href="chapters/vbe_formulių_sąrašas.pdf" target="_blank" class="chapter-item"><span class="chapter-num">A</span><div class="chapter-info"><h3>VBE formulių sąrašas</h3><p>Visos svarbiausios formulės iš visų skyrių — vienoje vietoje.</p></div><span class="chapter-meta">10 psl. · 107 KB</span></a>
-      <a href="chapters/papildomi_uždaviniai.pdf" target="_blank" class="chapter-item"><span class="chapter-num">B</span><div class="chapter-info"><h3>Papildomi uždaviniai</h3><p>Papildomos užduotys su sprendimais visoms temoms.</p></div><span class="chapter-meta">7 psl. · 90 KB</span></a>
+    <div class="section-label">Turinys</div>
+    <div class="toc-list">
+      <div class="toc-item"><span class="toc-num">01</span><div class="toc-info"><h3>Planimetrija</h3><p>Trikampiai, keturkampiai, apskritimai. Sinusų ir kosinusų teoremos.</p></div><span class="toc-pages">34 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">02</span><div class="toc-info"><h3>Logaritmai ir eksponentinės funkcijos</h3><p>Logaritmo apibrėžimas, savybės, grafikai ir transformacijos.</p></div><span class="toc-pages">30 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">03</span><div class="toc-info"><h3>Sekos ir progresijos</h3><p>Aritmetinės ir geometrinės sekos. Ribos ir konvergavimas.</p></div><span class="toc-pages">14 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">04</span><div class="toc-info"><h3>Lygtys, nelygybės ir sistemos</h3><p>Eksponentinės ir logaritminės lygtys, nelygybės, sprendimo būdai.</p></div><span class="toc-pages">54 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">05</span><div class="toc-info"><h3>Lygtys ir nelygybės su moduliais (A kursas)</h3><p>Modulio lygtys ir nelygybės, sprendimo metodai.</p></div><span class="toc-pages">24 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">06</span><div class="toc-info"><h3>Trigonometrija</h3><p>Trigonometrinės funkcijos, tapatybės, lygtys ir nelygybės.</p></div><span class="toc-pages">34 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">07</span><div class="toc-info"><h3>Funkcijų ribos (A kursas)</h3><p>Funkcijos ribos apibrėžimas, skaičiavimas, vienpusės ribos.</p></div><span class="toc-pages">24 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">08</span><div class="toc-info"><h3>Funkcijos išvestinė ir jos taikymas</h3><p>Išvestinės apibrėžimas, skaičiavimas, funkcijos tyrimas.</p></div><span class="toc-pages">20 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">09</span><div class="toc-info"><h3>Pirmykštė funkcija ir integralas (A kursas)</h3><p>Nenustatytas ir nustatytas integralas, taikymo pavyzdžiai.</p></div><span class="toc-pages">20 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">10</span><div class="toc-info"><h3>Vektoriai erdvėje</h3><p>Vektorių operacijos, skaliarinė ir vektorinė sandauga.</p></div><span class="toc-pages">18 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">11</span><div class="toc-info"><h3>Stereometrija (Erdvinė geometrija)</h3><p>Figūros erdvėje: tūriai, plotai, įbrėžimai.</p></div><span class="toc-pages">32 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">12</span><div class="toc-info"><h3>Stochastika (Duomenys ir tikimybės)</h3><p>Tikimybės, statistika, kombinatorika.</p></div><span class="toc-pages">28 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">A</span><div class="toc-info"><h3>VBE formulių sąrašas</h3><p>Visos svarbiausios formulės iš visų skyrių — vienoje vietoje.</p></div><span class="toc-pages">10 psl.</span></div>
+      <div class="toc-item"><span class="toc-num">B</span><div class="toc-info"><h3>Papildomi uždaviniai</h3><p>Papildomos užduotys su sprendimais visoms temoms.</p></div><span class="toc-pages">7 psl.</span></div>
     </div>
   </div>
   <footer>
