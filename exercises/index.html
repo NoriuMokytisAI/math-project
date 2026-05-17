@@ -12,6 +12,7 @@
     :root {
       --bg: #0b0e17;
       --surface: #131729;
+      --surface-hover: #1a1f35;
       --border: #1e2440;
       --accent: #6c63ff;
       --accent-glow: rgba(108,99,255,.35);
@@ -55,56 +56,153 @@
     /* ---- turinys ---- */
     .content {
       position: relative; z-index: 1;
-      padding: 120px 60px 80px;
-      max-width: 1100px;
+      padding: 100px 60px 80px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
+    /* ---- antraštė ---- */
+    .page-header {
+      margin-bottom: 32px;
+    }
     .page-title {
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
       letter-spacing: -1px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-
     .page-desc {
       color: var(--muted);
       font-size: 1.05rem;
-      margin-bottom: 48px;
     }
-
-    /* ---- kategorijos ---- */
-    .category {
-      margin-bottom: 48px;
-    }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .category-icon {
-      font-size: 1.5rem;
-    }
-
-    .category-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-
-    .category-count {
+    .result-count {
       color: var(--muted);
+      font-size: .9rem;
+      margin-top: 8px;
+    }
+
+    /* ---- filtrai ---- */
+    .filters {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .filters-title {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+    .filter-row:last-child { margin-bottom: 0; }
+    .filter-group {
+      flex: 1;
+      min-width: 200px;
+    }
+    .filter-label {
       font-size: .85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-btn {
+      padding: 6px 16px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: .8rem;
+      cursor: pointer;
+      transition: all .15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .filter-btn.difficulty-paprastas.active { background: #00d4aa; border-color: #00d4aa; }
+    .filter-btn.difficulty-vidutinis.active { background: #6c63ff; border-color: #6c63ff; }
+    .filter-btn.difficulty-pažengęs.active { background: #ff6b9d; border-color: #ff6b9d; }
+
+    .filter-reset {
+      padding: 6px 16px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: .8rem;
+      cursor: pointer;
+      transition: all .15s;
+      font-family: 'Inter', sans-serif;
       margin-left: auto;
     }
+    .filter-reset:hover {
+      border-color: #ff6b9d;
+      color: #ff6b9d;
+    }
 
+    /* ---- kategorijų skirtukai ---- */
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .category-tab {
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .85rem;
+      cursor: pointer;
+      transition: all .15s;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-tab:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .category-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .category-tab .count {
+      background: rgba(255,255,255,.15);
+      padding: 1px 8px;
+      border-radius: 99px;
+      font-size: .75rem;
+    }
+    .category-tab.active .count {
+      background: rgba(255,255,255,.25);
+    }
+
+    /* ---- kortelės ---- */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 16px;
     }
 
@@ -138,10 +236,9 @@
 
     .card-meta {
       display: flex;
-      gap: 12px;
-      margin-top: 10px;
-      font-size: .75rem;
-      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
     }
 
     .card-meta span {
@@ -149,14 +246,44 @@
       color: var(--accent);
       padding: 2px 10px;
       border-radius: 99px;
+      font-size: .75rem;
     }
 
-    /* ---- tuščia kategorija ---- */
-    .empty-hint {
+    .card-meta span.topic {
+      background: rgba(0,212,170,.1);
+      color: #00d4aa;
+    }
+
+    .card-meta span.grade {
+      background: rgba(255,107,157,.1);
+      color: #ff6b9d;
+    }
+
+    .card-meta span.difficulty-paprastas {
+      background: rgba(0,212,170,.15);
+      color: #00d4aa;
+    }
+    .card-meta span.difficulty-vidutinis {
+      background: rgba(108,99,255,.15);
+      color: #6c63ff;
+    }
+    .card-meta span.difficulty-pažengęs {
+      background: rgba(255,107,157,.15);
+      color: #ff6b9d;
+    }
+
+    /* ---- tuščia ---- */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
       color: var(--muted);
-      font-size: .9rem;
-      padding: 16px 0;
-      font-style: italic;
+    }
+    .empty-state .icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .empty-state p {
+      font-size: 1rem;
     }
 
     /* ---- poraštė ---- */
@@ -167,14 +294,17 @@
       color: var(--muted);
       font-size: .85rem;
       border-top: 1px solid var(--border);
+      margin-top: 60px;
     }
     footer a { color: var(--accent); text-decoration: none; }
 
     @media (max-width: 640px) {
       nav { padding: 14px 24px; }
       nav ul { display: none; }
-      .content { padding: 100px 24px 60px; }
+      .content { padding: 100px 20px 60px; }
       .cards { grid-template-columns: 1fr; }
+      .filter-row { flex-direction: column; gap: 12px; }
+      .filter-group { min-width: 100%; }
     }
   </style>
 </head>
@@ -194,77 +324,46 @@
   <!-- turinys -->
   <div class="content">
 
-    <h1 class="page-title">✏️ Užduotys</h1>
-    <p class="page-desc">Matematikos užduotys su sprendimais, suskirstytos pagal temas.</p>
+    <div class="page-header">
+      <h1 class="page-title">✏️ Užduotys</h1>
+      <p class="page-desc">Matematikos užduotys su sprendimais — filtruokite pagal temą, klasę ir sudėtingumą.</p>
+      <p class="result-count" id="resultCount">Įkeliama...</p>
+    </div>
 
-    <!-- ===== ALGEBRA ===== -->
-    <div class="category" id="algebra">
-      <div class="category-header">
-        <span class="category-icon">𝑥</span>
-        <h2 class="category-title">Algebra</h2>
-        <span class="category-count">1 užduotis</span>
+    <!-- filtrai -->
+    <div class="filters">
+      <div class="filters-title">Filtrai</div>
+
+      <div class="filter-row">
+        <div class="filter-group">
+          <span class="filter-label">Tema</span>
+          <div class="filter-options" id="topicFilters"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Klasė</span>
+          <div class="filter-options" id="gradeFilters"></div>
+        </div>
       </div>
-      <div class="cards">
 
-        <a href="algebra/100_uzduociu_sprendimas_x.pdf" target="_blank" class="card-link">
-          <h3>100 užduočių: sprendimas x</h3>
-          <p>Tiesinės, kvadratinės, logaritminės lygtys ir sistemos. Sudėtingumas nuo paprasto iki pažengusio.</p>
-          <div class="card-meta">
-            <span>100 užduočių</span>
-            <span>5 psl.</span>
-            <span>200 KB</span>
-          </div>
-        </a>
-
+      <div class="filter-row">
+        <div class="filter-group">
+          <span class="filter-label">Sudėtingumas</span>
+          <div class="filter-options" id="difficultyFilters"></div>
+        </div>
+        <button class="filter-reset" id="resetFilters" onclick="resetFilters()">✕ Valyti filtrus</button>
       </div>
     </div>
 
-    <!-- ===== GEOMETRIJA ===== -->
-    <div class="category" id="geometrija">
-      <div class="category-header">
-        <span class="category-icon">△</span>
-        <h2 class="category-title">Geometrija</h2>
-        <span class="category-count">0 užduočių</span>
-      </div>
-      <div class="cards">
-        <p class="empty-hint">Užduos netrukus...</p>
-      </div>
-    </div>
+    <!-- kategorijų skirtukai -->
+    <div class="category-tabs" id="categoryTabs"></div>
 
-    <!-- ===== TRIGONOMETRIJA ===== -->
-    <div class="category" id="trigonometrija">
-      <div class="category-header">
-        <span class="category-icon">θ</span>
-        <h2 class="category-title">Trigonometrija</h2>
-        <span class="category-count">0 užduočių</span>
-      </div>
-      <div class="cards">
-        <p class="empty-hint">Užduos netrukus...</p>
-      </div>
-    </div>
+    <!-- užduočių kortelės -->
+    <div class="cards" id="exerciseCards"></div>
 
-    <!-- ===== EGZAMINAS ===== -->
-    <div class="category" id="egzaminas">
-      <div class="category-header">
-        <span class="category-icon">📝</span>
-        <h2 class="category-title">Egzaminas</h2>
-        <span class="category-count">0 užduočių</span>
-      </div>
-      <div class="cards">
-        <p class="empty-hint">Užduos netrukus...</p>
-      </div>
-    </div>
-
-    <!-- ===== KITOS ===== -->
-    <div class="category" id="kitos">
-      <div class="category-header">
-        <span class="category-icon">∞</span>
-        <h2 class="category-title">Kitos temos</h2>
-        <span class="category-count">0 užduočių</span>
-      </div>
-      <div class="cards">
-        <p class="empty-hint">Užduos netrukus...</p>
-      </div>
+    <!-- tuščia būsena -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="icon">🔍</div>
+      <p>Nerasta užduočių atitinkančių pasirinktus filtrus.</p>
     </div>
 
   </div>
@@ -273,6 +372,210 @@
   <footer>
     <p>Sukurta su &hearts; &middot; <a href="https://github.com/NoriuMokytisAI">NoriuMokytisAI</a> &middot; MIT licencija &middot; © 2026</p>
   </footer>
+
+  <script>
+    // ---- Duomenys ----
+    let data = { categories: [], topics: [], grades: [], difficulties: [], exercises: [] };
+    let activeFilters = {
+      category: 'all',
+      topics: [],
+      grades: [],
+      difficulties: []
+    };
+
+    // ---- Įkelti duomenis ----
+    async function loadData() {
+      try {
+        const res = await fetch('data.json');
+        data = await res.json();
+        renderFilters();
+        renderCategoryTabs();
+        renderExercises();
+      } catch (e) {
+        console.error('Nepavyko įkelti duomenų:', e);
+        document.getElementById('resultCount').textContent = 'Klaida įkeliant duomenis.';
+      }
+    }
+
+    // ---- Atvaizduoti filtrus ----
+    function renderFilters() {
+      // Temos
+      const topicContainer = document.getElementById('topicFilters');
+      topicContainer.innerHTML = data.topics.map(t =>
+        `<button class="filter-btn topic-btn" data-topic="${t.id}" onclick="toggleTopic('${t.id}')">${t.label}</button>`
+      ).join('');
+
+      // Klasės
+      const gradeContainer = document.getElementById('gradeFilters');
+      gradeContainer.innerHTML = data.grades.map(g =>
+        `<button class="filter-btn grade-btn" data-grade="${g.id}" onclick="toggleGrade('${g.id}')">${g.label}</button>`
+      ).join('');
+
+      // Sudėtingumas
+      const diffContainer = document.getElementById('difficultyFilters');
+      diffContainer.innerHTML = data.difficulties.map(d =>
+        `<button class="filter-btn difficulty-btn difficulty-${d.id}" data-difficulty="${d.id}" onclick="toggleDifficulty('${d.id}')">${d.label}</button>`
+      ).join('');
+    }
+
+    // ---- Atvaizduoti kategorijų skirtukus ----
+    function renderCategoryTabs() {
+      const container = document.getElementById('categoryTabs');
+      const allCount = data.exercises.length;
+
+      let html = `<button class="category-tab ${activeFilters.category === 'all' ? 'active' : ''}" onclick="setCategory('all')">
+        <span>Visos</span>
+        <span class="count">${allCount}</span>
+      </button>`;
+
+      data.categories.forEach(cat => {
+        const count = data.exercises.filter(e => e.category === cat.id).length;
+        html += `<button class="category-tab ${activeFilters.category === cat.id ? 'active' : ''}" onclick="setCategory('${cat.id}')">
+          <span>${cat.icon} ${cat.title}</span>
+          <span class="count">${count}</span>
+        </button>`;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // ---- Atvaizduoti užduotis ----
+    function renderExercises() {
+      const filtered = getFilteredExercises();
+      const container = document.getElementById('exerciseCards');
+      const emptyState = document.getElementById('emptyState');
+      const resultCount = document.getElementById('resultCount');
+
+      resultCount.textContent = `Rasta: ${filtered.length} užduot${filtered.length === 1 ? 'is' : (filtered.length < 10 && filtered.length > 0 ? 'ys' : 'ių')}`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+
+      container.innerHTML = filtered.map(ex => {
+        const category = data.categories.find(c => c.id === ex.category);
+        const difficulty = data.difficulties.find(d => d.id === ex.difficulty);
+
+        const topicLabels = ex.topics.slice(0, 3).map(tId => {
+          const t = data.topics.find(tp => tp.id === tId);
+          return t ? `<span class="topic">${t.label}</span>` : '';
+        }).join('');
+
+        const gradeLabels = ex.grades.map(gId => {
+          const g = data.grades.find(gr => gr.id === gId);
+          return g ? `<span class="grade">${g.label}</span>` : '';
+        }).join('');
+
+        return `
+          <a href="${ex.file}" target="_blank" class="card-link">
+            <h3>${category ? category.icon : ''} ${ex.title}</h3>
+            <p>${ex.description}</p>
+            <div class="card-meta">
+              <span>${ex.problemCount} užduot${ex.problemCount === 1 ? 'is' : 'ys'}</span>
+              <span>${ex.pages} psl.</span>
+              <span>${ex.size}</span>
+              <span class="difficulty-${ex.difficulty}">${difficulty ? difficulty.label : ex.difficulty}</span>
+              ${topicLabels}
+              ${gradeLabels}
+            </div>
+          </a>
+        `;
+      }).join('');
+    }
+
+    // ---- Filtruoti ----
+    function getFilteredExercises() {
+      return data.exercises.filter(ex => {
+        // Kategorija
+        if (activeFilters.category !== 'all' && ex.category !== activeFilters.category) return false;
+
+        // Temos (jei pasirinkta bent viena — turi atitikti bent vieną)
+        if (activeFilters.topics.length > 0) {
+          const hasTopic = activeFilters.topics.some(t => ex.topics.includes(t));
+          if (!hasTopic) return false;
+        }
+
+        // Klasės
+        if (activeFilters.grades.length > 0) {
+          const hasGrade = activeFilters.grades.some(g => ex.grades.includes(g));
+          if (!hasGrade) return false;
+        }
+
+        // Sudėtingumas
+        if (activeFilters.difficulties.length > 0) {
+          if (!activeFilters.difficulties.includes(ex.difficulty)) return false;
+        }
+
+        return true;
+      });
+    }
+
+    // ---- Filtravimo valdymas ----
+    function setCategory(id) {
+      activeFilters.category = id;
+      renderCategoryTabs();
+      renderExercises();
+    }
+
+    function toggleTopic(id) {
+      const idx = activeFilters.topics.indexOf(id);
+      if (idx >= 0) {
+        activeFilters.topics.splice(idx, 1);
+      } else {
+        activeFilters.topics.push(id);
+      }
+      updateFilterButtons();
+      renderExercises();
+    }
+
+    function toggleGrade(id) {
+      const idx = activeFilters.grades.indexOf(id);
+      if (idx >= 0) {
+        activeFilters.grades.splice(idx, 1);
+      } else {
+        activeFilters.grades.push(id);
+      }
+      updateFilterButtons();
+      renderExercises();
+    }
+
+    function toggleDifficulty(id) {
+      const idx = activeFilters.difficulties.indexOf(id);
+      if (idx >= 0) {
+        activeFilters.difficulties.splice(idx, 1);
+      } else {
+        activeFilters.difficulties.push(id);
+      }
+      updateFilterButtons();
+      renderExercises();
+    }
+
+    function updateFilterButtons() {
+      document.querySelectorAll('.topic-btn').forEach(btn => {
+        btn.classList.toggle('active', activeFilters.topics.includes(btn.dataset.topic));
+      });
+      document.querySelectorAll('.grade-btn').forEach(btn => {
+        btn.classList.toggle('active', activeFilters.grades.includes(btn.dataset.grade));
+      });
+      document.querySelectorAll('.difficulty-btn').forEach(btn => {
+        btn.classList.toggle('active', activeFilters.difficulties.includes(btn.dataset.difficulty));
+      });
+    }
+
+    function resetFilters() {
+      activeFilters = { category: 'all', topics: [], grades: [], difficulties: [] };
+      updateFilterButtons();
+      renderCategoryTabs();
+      renderExercises();
+    }
+
+    // ---- Paleisti ----
+    loadData();
+  </script>
 
 </body>
 </html>
