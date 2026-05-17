@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Užduotys — Matematikos Ištekliai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0b0e17;
+      --surface: #131729;
+      --border: #1e2440;
+      --accent: #6c63ff;
+      --accent-glow: rgba(108,99,255,.35);
+      --text: #e2e6f3;
+      --muted: #7a8199;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---- navigacija ---- */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 60px;
+      background: rgba(11,14,23,.7);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 1.15rem;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    nav .logo span { color: var(--text); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    nav ul a:hover, nav ul a.active { color: var(--text); }
+
+    /* ---- turinys ---- */
+    .content {
+      position: relative; z-index: 1;
+      padding: 120px 60px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .page-desc {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 48px;
+    }
+
+    /* ---- kategorijos ---- */
+    .category {
+      margin-bottom: 48px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .category-icon {
+      font-size: 1.5rem;
+    }
+
+    .category-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .category-count {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-left: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .card-link {
+      display: block;
+      padding: 24px 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+
+    .card-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .card-link h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-link p {
+      color: var(--muted);
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    .card-meta span {
+      background: rgba(108,99,255,.1);
+      color: var(--accent);
+      padding: 2px 10px;
+      border-radius: 99px;
+    }
+
+    /* ---- tuščia kategorija ---- */
+    .empty-hint {
+      color: var(--muted);
+      font-size: .9rem;
+      padding: 16px 0;
+      font-style: italic;
+    }
+
+    /* ---- poraštė ---- */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 24px; }
+      nav ul { display: none; }
+      .content { padding: 100px 24px 60px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navigacija -->
+  <nav>
+    <a href="index.html" class="logo">∫<span>matematika</span></a>
+    <ul>
+      <li><a href="index.html#resources">Ištekliai</a></li>
+      <li><a href="exercises/index.html" class="active">Užduotys</a></li>
+      <li><a href="index.html#about">Apie</a></li>
+      <li><a href="https://github.com/NoriuMokytisAI/math-project">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- turinys -->
+  <div class="content">
+
+    <h1 class="page-title">✏️ Užduotys</h1>
+    <p class="page-desc">Matematikos užduotys su sprendimais, suskirstytos pagal temas.</p>
+
+    <!-- ===== ALGEBRA ===== -->
+    <div class="category" id="algebra">
+      <div class="category-header">
+        <span class="category-icon">𝑥</span>
+        <h2 class="category-title">Algebra</h2>
+        <span class="category-count">1 užduotis</span>
+      </div>
+      <div class="cards">
+
+        <a href="algebra/100_uzduociu_sprendimas_x.pdf" target="_blank" class="card-link">
+          <h3>100 užduočių: sprendimas x</h3>
+          <p>Tiesinės, kvadratinės, logaritminės lygtys ir sistemos. Sudėtingumas nuo paprasto iki pažengusio.</p>
+          <div class="card-meta">
+            <span>100 užduočių</span>
+            <span>5 psl.</span>
+            <span>200 KB</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ===== GEOMETRIJA ===== -->
+    <div class="category" id="geometrija">
+      <div class="category-header">
+        <span class="category-icon">△</span>
+        <h2 class="category-title">Geometrija</h2>
+        <span class="category-count">0 užduočių</span>
+      </div>
+      <div class="cards">
+        <p class="empty-hint">Užduos netrukus...</p>
+      </div>
+    </div>
+
+    <!-- ===== TRIGONOMETRIJA ===== -->
+    <div class="category" id="trigonometrija">
+      <div class="category-header">
+        <span class="category-icon">θ</span>
+        <h2 class="category-title">Trigonometrija</h2>
+        <span class="category-count">0 užduočių</span>
+      </div>
+      <div class="cards">
+        <p class="empty-hint">Užduos netrukus...</p>
+      </div>
+    </div>
+
+    <!-- ===== EGZAMINAS ===== -->
+    <div class="category" id="egzaminas">
+      <div class="category-header">
+        <span class="category-icon">📝</span>
+        <h2 class="category-title">Egzaminas</h2>
+        <span class="category-count">0 užduočių</span>
+      </div>
+      <div class="cards">
+        <p class="empty-hint">Užduos netrukus...</p>
+      </div>
+    </div>
+
+    <!-- ===== KITOS ===== -->
+    <div class="category" id="kitos">
+      <div class="category-header">
+        <span class="category-icon">∞</span>
+        <h2 class="category-title">Kitos temos</h2>
+        <span class="category-count">0 užduočių</span>
+      </div>
+      <div class="cards">
+        <p class="empty-hint">Užduos netrukus...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- poraštė -->
+  <footer>
+    <p>Sukurta su &hearts; &middot; <a href="https://github.com/NoriuMokytisAI">NoriuMokytisAI</a> &middot; MIT licencija &middot; © 2026</p>
+  </footer>
+
+</body>
+</html>
