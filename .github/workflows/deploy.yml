@@ -13,27 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Update chapter navigation
-        run: |
-          for dir in novels/*/; do
-            novel_name=$(basename "$dir")
-            python scripts/chaplink.py "$novel_name"
-          done
-
-      - name: Update posts.js
-        run: python scripts/blog.py
-
-      - name: Generate novels.html
-        run: python scripts/novels.py
-
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
@@ -50,6 +29,4 @@ jobs:
             .ftpignore
             README.md
             *.md
-            node_modules/**
-            *.py
           dangerous-clean-slate: false
