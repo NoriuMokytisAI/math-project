@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Project</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0b0e17;
+      --surface: #131729;
+      --border: #1e2440;
+      --accent: #6c63ff;
+      --accent-glow: rgba(108,99,255,.35);
+      --text: #e2e6f3;
+      --muted: #7a8199;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ---- floating bg blobs ---- */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: .12;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .blob-1 { width: 600px; height: 600px; background: var(--accent); top: -10%; left: -10%; }
+    .blob-2 { width: 400px; height: 400px; background: #00d4aa; bottom: -5%; right: -8%; }
+    .blob-3 { width: 300px; height: 300px; background: #ff6b9d; top: 40%; right: 20%; }
+
+    /* ---- nav ---- */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 60px;
+      background: rgba(11,14,23,.7);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 1.15rem;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+    }
+    nav .logo span { color: var(--text); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    nav ul a:hover { color: var(--text); }
+
+    /* ---- hero ---- */
+    .hero {
+      position: relative; z-index: 1;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 99px;
+      padding: 6px 18px;
+      font-size: .8rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: .5px;
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--accent), #00d4aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+    .hero .cta-row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-size: .95rem; font-weight: 600;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 30px var(--accent-glow);
+    }
+    .btn-primary:hover { box-shadow: 0 12px 40px var(--accent-glow); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--muted); }
+
+    /* ---- formula decoration ---- */
+    .formula-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .formula-grid span {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .75rem;
+      color: var(--border);
+      user-select: none;
+    }
+
+    /* ---- features ---- */
+    .features {
+      position: relative; z-index: 1;
+      padding: 100px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      text-transform: uppercase;
+      font-size: .75rem;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 48px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      transition: border-color .2s, transform .2s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    /* ---- math showcase ---- */
+    .showcase {
+      position: relative; z-index: 1;
+      padding: 100px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .showcase .math-block {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      font-size: 1.15rem;
+      line-height: 2;
+      color: var(--text);
+      text-align: left;
+      overflow-x: auto;
+    }
+    .showcase .math-block .kw { color: var(--accent); }
+    .showcase .math-block .fn { color: #00d4aa; }
+    .showcase .math-block .num { color: #ff6b9d; }
+    .showcase .math-block .cm { color: var(--muted); }
+
+    /* ---- footer ---- */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 24px; }
+      nav ul { display: none; }
+      .features { padding: 60px 24px; }
+      .showcase { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- floating formulas -->
+  <div class="formula-grid" id="formulaGrid"></div>
+
+  <!-- nav -->
+  <nav>
+    <div class="logo">∫<span>math</span></div>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#showcase">Demo</a></li>
+      <li><a href="https://github.com/NoriuMokytisAI/math-project">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="badge">v1.0 &mdash; Open Source</div>
+    <h1>Beautiful Math,<br><span class="gradient">Made Simple.</span></h1>
+    <p>A lightweight, open-source toolkit for rendering, computing, and visualizing mathematical expressions on the web.</p>
+    <div class="cta-row">
+      <a href="https://github.com/NoriuMokytisAI/math-project" class="btn btn-primary">View on GitHub &rarr;</a>
+      <a href="#features" class="btn btn-ghost">Learn More</a>
+    </div>
+  </section>
+
+  <!-- features -->
+  <section class="features" id="features">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">Everything you need.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">&#x222B;</div>
+        <h3>Symbolic Computation</h3>
+        <p>Parse and evaluate algebraic expressions, derivatives, and integrals with a clean API.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#x1D4D7;</div>
+        <h3>LaTeX Rendering</h3>
+        <p>Render beautiful math notation in the browser using KaTeX or MathJax under the hood.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#x1D63C;</div>
+        <h3>Plot &amp; Visualize</h3>
+        <p>Generate interactive 2D and 3D plots from functions with zero configuration.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#x2211;</div>
+        <h3>Matrix Operations</h3>
+        <p>Full linear algebra support &mdash; multiply, invert, decompose, and solve systems.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#x1D452;</div>
+        <h3>Unit Converter</h3>
+        <p>Convert between measurement systems with precision and dimensional analysis.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#x1D70B;</div>
+        <h3>Open Source</h3>
+        <p>MIT licensed. Fork it, extend it, make it yours. Contributions welcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- code showcase -->
+  <section class="showcase" id="showcase">
+    <div class="section-label">Quick Start</div>
+    <h2 class="section-title">Three lines to get going.</h2>
+    <div class="math-block">
+      <span class="cm">// install</span><br>
+      <span class="kw">import</span> { integrate, diff, plot } <span class="kw">from</span> <span class="fn">'math-project'</span>;<br><br>
+      <span class="cm">// compute a derivative</span><br>
+      <span class="kw">const</span> result = diff(<span class="fn">'x^3 + 2*x'</span>, <span class="fn">'x'</span>); <span class="cm">// → "3x² + 2"</span><br><br>
+      <span class="cm">// plot it</span><br>
+      plot(<span class="fn">'x^3 + 2*x'</span>, { x: [<span class="num">-10</span>, <span class="num">10</span>] });
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    Built with &hearts; by <a href="https://github.com/NoriuMokytisAI">NoriuMokytisAI</a> &middot; MIT License
+  </footer>
+
+  <script>
+    // scatter floating formulas
+    const formulas = [
+      '∫ x² dx', '∂f/∂x', '∑ᵢ₌₁ⁿ i', 'lim_{x→∞}',
+      '√(a²+b²)', 'π ≈ 3.14159', 'e^{iπ}+1=0', '∇×F',
+      'det(A) = λ', '∀ε>0 ∃δ', 'H = −∑ p log p', 'P = NP?',
+      'ζ(s) = ∑ 1/nˢ', 'F = ma', 'E = mc²', 'iℏ ∂ψ/∂t',
+      '∮ E·dA = Q/ε₀', 'σ = √(Var)', 'X ~ N(μ,σ²)', '∂²u/∂t² = c²∇²u'
+    ];
+    const grid = document.getElementById('formulaGrid');
+    formulas.forEach(f => {
+      const span = document.createElement('span');
+      span.textContent = f;
+      span.style.left = Math.random() * 90 + 5 + '%';
+      span.style.top  = Math.random() * 90 + 5 + '%';
+      span.style.fontSize = (Math.random() * .4 + .6) + 'rem';
+      span.style.opacity = Math.random() * .15 + .05;
+      grid.appendChild(span);
+    });
+  </script>
+</body>
+</html>
