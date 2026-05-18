@@ -1,0 +1,1472 @@
+\part{III gimnazijos klasė}
+
+\section{Sekos ir matematinė indukcija}\label{sec:sekos-ir-matematine-indukcija}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Seka yra funkcija $a:\mathbb{N}\to \mathbb{R}$, kurios reikšmė $a(n)$ žymima $a_n$. Skaičius $a_n$ vadinamas $n$-uoju sekos nariu.
+\end{apibreztis}
+
+\begin{apibreztis}
+Seka $(a_n)$ vadinama aritmetine progresija, jei egzistuoja pastovusis skirtumas $d$, toks kad $a_{n+1}-a_n=d$ visiems $n\in\mathbb{N}$. Ji vadinama geometrine progresija, jei egzistuoja pastovusis vardiklis $q$, toks kad $a_{n+1}=qa_n$ visiems $n\in\mathbb{N}$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Matematinės indukcijos principas teigia: jei teiginys $P(1)$ teisingas ir iš $P(k)$ teisingumo išplaukia $P(k+1)$ teisingumas kiekvienam $k\in\mathbb{N}$, tai $P(n)$ teisingas visiems $n\in\mathbb{N}$.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Aritmetinės progresijos bendrasis narys ir pirmųjų $n$ narių suma yra
+\[
+a_n=a_1+(n-1)d,\qquad S_n=\frac{n(a_1+a_n)}{2}.
+\]
+\emph{Įrodymas.} Iš apibrėžties $a_2=a_1+d$, $a_3=a_1+2d$ ir indukcija gauname $a_n=a_1+(n-1)d$. Sumai parašome dvi eilutes:
+\[
+S_n=a_1+a_2+\cdots+a_n,\qquad S_n=a_n+a_{n-1}+\cdots+a_1.
+\]
+Sudėję gauname $2S_n=(a_1+a_n)+\cdots+(a_n+a_1)=n(a_1+a_n)$.
+\end{teorema}
+
+\begin{teorema}
+Geometrinės progresijos bendrasis narys ir suma, kai $q\ne 1$, yra
+\[
+a_n=a_1q^{n-1},\qquad S_n=a_1\frac{q^n-1}{q-1}.
+\]
+\emph{Įrodymas.} Bendrojo nario formulė gaunama kartotinai dauginant iš $q$. Sumai taikome
+\[
+qS_n=a_1q+a_1q^2+\cdots+a_1q^n.
+\]
+Atėmę $S_n$ iš $qS_n$, gauname $(q-1)S_n=a_1(q^n-1)$.
+\end{teorema}
+
+\begin{savybe}
+Jei seka didėjanti ir aprėžta iš viršaus, ji turi baigtinę ribą. Jei seka mažėjanti ir aprėžta iš apačios, ji taip pat turi baigtinę ribą.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint taikyti indukciją, pirmiausia patikrinamas pradinis atvejis. Tada aiškiai suformuluojama indukcijos prielaida $P(k)$ ir, naudojant tik ją bei jau žinomas tapatybes, įrodomas $P(k+1)$.
+
+Sekos rekursinei formulei tirti dažnai ieškoma pastoviojo taško $L$, sprendžiant lygtį $L=f(L)$, tada įrodoma monotonija ir aprėžtumas. Tik po to leidžiama pereiti prie ribos.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Įrodykime formulę
+\[
+1+2+\cdots+n=\frac{n(n+1)}{2}.
+\]
+Kai $n=1$, abi pusės lygios $1$. Tarkime, kad formulei teisinga, kai $n=k$, t. y.
+\[
+1+\cdots+k=\frac{k(k+1)}{2}.
+\]
+Tada
+\[
+1+\cdots+k+(k+1)=\frac{k(k+1)}{2}+k+1=\frac{(k+1)(k+2)}{2}.
+\]
+Tai yra formulė, kai $n=k+1$. Pagal indukciją ji teisinga visiems $n$. \textbf{Atsakymas: formulė įrodyta visiems $n\in\mathbb{N}$.}
+
+\textbf{Pavyzdys 2.} Raskime aritmetinės progresijos sumą, jei $a_1=7$, $d=3$, $n=20$. Turime
+\[
+a_{20}=7+19\cdot 3=64,
+\]
+todėl
+\[
+S_{20}=\frac{20(7+64)}{2}=10\cdot 71=710.
+\]
+\textbf{Atsakymas: $710$.}
+
+\textbf{Pavyzdys 3.} Rekursiškai apibrėžta seka $a_1=1$, $a_{n+1}=\sqrt{2+a_n}$. Raskime jos ribą. Pirmiausia įrodome, kad $a_n<2$: jei $a_k<2$, tai $a_{k+1}<\sqrt4=2$, o $a_1<2$. Be to,
+\[
+a_{n+1}\ge a_n \iff \sqrt{2+a_n}\ge a_n \iff 2+a_n\ge a_n^2 \iff (a_n-2)(a_n+1)\le0,
+\]
+kas teisinga, nes $-1<a_n<2$. Seka didėjanti ir aprėžta, todėl turi ribą $L$. Tada
+\[
+L=\sqrt{2+L},\qquad L^2-L-2=0,\qquad L\in\{2,-1\}.
+\]
+Kadangi $a_n>0$, gauname $L=2$. \textbf{Atsakymas: $\lim a_n=2$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Sekos remiasi funkcijų samprata iš \ref{sec:funkcijos-ir-ju-savybes}, o ribos natūraliai pereina į \ref{sec:ribos-ir-tolydumas}. Indukcija yra pagrindinis įrodymo metodas kombinatorikoje iš \ref{sec:tikimybe-ir-kombinatorika} ir algebrinėse formulėse, naudojamose \ref{sec:laipsnines-rodiklines-ir-logaritmines-funkcijos}.
+
+\section{Laipsninės, rodiklinės ir logaritminės funkcijos}\label{sec:laipsnines-rodiklines-ir-logaritmines-funkcijos}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Laipsninė funkcija yra funkcija $f(x)=x^\alpha$, kur $\alpha\in\mathbb{R}$, o apibrėžimo sritis parenkama taip, kad reiškinys turėtų realią prasmę.
+\end{apibreztis}
+
+\begin{apibreztis}
+Rodiklinė funkcija yra $f(x)=a^x$, kur $a>0$, $a\ne1$. Logaritminė funkcija yra $f(x)=\log_a x$, kur $a>0$, $a\ne1$, $x>0$, ir ji apibrėžiama sąlyga
+\[
+\log_a x=y \iff a^y=x.
+\]
+\end{apibreztis}
+
+\begin{pastaba}
+Funkcijos $a^x$ ir $\log_a x$ yra viena kitai atvirkštinės: $a^{\log_a x}=x$ ir $\log_a(a^x)=x$.
+\end{pastaba}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei $a>0$, $a\ne1$, tai $a^x$ yra griežtai didėjanti, kai $a>1$, ir griežtai mažėjanti, kai $0<a<1$.
+\emph{Įrodymas.} Kai $a>1$ ir $x<y$, turime $y-x>0$, todėl $a^{y}=a^x a^{y-x}>a^x$. Kai $0<a<1$, rašome $a=1/b$, kur $b>1$, ir gauname $a^x=b^{-x}$; didėjant $x$, mažėja $-x$, todėl $b^{-x}$ mažėja.
+\end{teorema}
+
+\begin{savybe}
+Logaritmams galioja
+\[
+\log_a(xy)=\log_a x+\log_a y,\quad
+\log_a\frac{x}{y}=\log_a x-\log_a y,\quad
+\log_a(x^r)=r\log_a x.
+\]
+\end{savybe}
+
+\begin{teorema}
+Pagrindo keitimo formulė:
+\[
+\log_a x=\frac{\log_b x}{\log_b a}.
+\]
+\emph{Įrodymas.} Tegul $y=\log_a x$. Tada $a^y=x$. Pritaikę $\log_b$, gauname $y\log_b a=\log_b x$, todėl $y=\dfrac{\log_b x}{\log_b a}$.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Sprendžiant rodiklines lygtis, siekiama suvesti abi puses į tą patį pagrindą arba taikyti logaritmavimą. Sprendžiant logaritmines lygtis, pirmiausia nustatoma apibrėžimo sritis, tada naudojamos logaritmų savybės, o gauti sprendiniai patikrinami pradinėje srityje.
+
+Nelygybėse būtina atsižvelgti į monotoniškumą: jei $a>1$, tai $\log_a x<\log_a y \iff x<y$, o jei $0<a<1$, nelygybės ženklas apsiverčia.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Išspręskime lygtį $3^{2x-1}=27^{x-2}$. Kadangi $27=3^3$, turime
+\[
+3^{2x-1}=3^{3x-6}.
+\]
+Funkcija $3^t$ griežtai didėjanti, todėl
+\[
+2x-1=3x-6,\qquad x=5.
+\]
+\textbf{Atsakymas: $x=5$.}
+
+\textbf{Pavyzdys 2.} Išspręskime $\log_2(x-1)+\log_2(x+3)=3$. Apibrėžimo sritis: $x>1$. Tada
+\[
+\log_2((x-1)(x+3))=3,
+\]
+\[
+(x-1)(x+3)=8,\qquad x^2+2x-3=8,\qquad x^2+2x-11=0.
+\]
+Gauname
+\[
+x=-1\pm 2\sqrt3.
+\]
+Sąlygą $x>1$ tenkina tik $x=-1+2\sqrt3$. \textbf{Atsakymas: $x=-1+2\sqrt3$.}
+
+\textbf{Pavyzdys 3.} Raskime funkcijos $f(x)=\log_3(9-x^2)$ apibrėžimo sritį ir reikšmių sritį. Reikia
+\[
+9-x^2>0 \iff -3<x<3.
+\]
+Kadangi $9-x^2\in(0,9]$, o $\log_3$ didėjanti, tai
+\[
+f(x)\in(-\infty,\log_3 9]=(-\infty,2].
+\]
+\textbf{Atsakymas: $D(f)=(-3,3)$, $R(f)=(-\infty,2]$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Ši tema pratęsia \ref{sec:laipsniai-saknys-ir-logaritmu-pradzia} ir remiasi realiųjų skaičių intervalais iš \ref{sec:realieji-skaiciai-ir-intervalai}. Rodiklinės funkcijos modeliuoja augimą sekose iš \ref{sec:sekos-ir-matematine-indukcija}, o logaritminis diferencijavimas naudojamas \ref{sec:isvestine-ir-diferencijavimas}.
+
+\section{Trigonometrinės funkcijos}\label{sec:trigonometrines-funkcijos}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Vienetiniame apskritime kampui $t$ atitinkantis taškas turi koordinates $(\cos t,\sin t)$. Taip apibrėžiamos funkcijos $\sin t$ ir $\cos t$ visiems realiesiems $t$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcijos $\tan t$ ir $\cot t$ apibrėžiamos
+\[
+\tan t=\frac{\sin t}{\cos t}\quad(\cos t\ne0),\qquad
+\cot t=\frac{\cos t}{\sin t}\quad(\sin t\ne0).
+\]
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcija $f$ vadinama periodine, jei egzistuoja $T>0$, toks kad $f(x+T)=f(x)$ visiems apibrėžimo srities $x$. Mažiausias toks $T$, jei jis egzistuoja, vadinamas pagrindiniu periodu.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{savybe}
+Galioja pagrindinė tapatybė
+\[
+\sin^2 x+\cos^2 x=1.
+\]
+Ji išplaukia iš vienetinio apskritimo lygties $X^2+Y^2=1$.
+\end{savybe}
+
+\begin{savybe}
+Funkcijos $\sin x$ ir $\cos x$ turi periodą $2\pi$, o $\tan x$ ir $\cot x$ turi periodą $\pi$.
+\end{savybe}
+
+\begin{teorema}
+Sudėties formulės:
+\[
+\sin(x+y)=\sin x\cos y+\cos x\sin y,
+\]
+\[
+\cos(x+y)=\cos x\cos y-\sin x\sin y.
+\]
+\emph{Įrodymas.} Sukimas kampu $t$ plokštumoje aprašomas matrica
+\[
+R_t=\begin{pmatrix}\cos t&-\sin t\\ \sin t&\cos t\end{pmatrix}.
+\]
+Kadangi $R_xR_y=R_{x+y}$, sulyginus matricų elementus gaunamos abi formulės.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Grafikams braižyti pirmiausia nustatomas periodas, amplitudė ir poslinkiai. Funkcijai $A\sin(bx+c)+d$ amplitudė yra $|A|$, periodas $\frac{2\pi}{|b|}$, vidurio linija $y=d$.
+
+Skaičiuojant tikslias reikšmes, kampai redukuojami į pirmąjį ketvirtį ir naudojamos reikšmės kampams $0$, $\frac{\pi}{6}$, $\frac{\pi}{4}$, $\frac{\pi}{3}$, $\frac{\pi}{2}$.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Raskime $f(x)=3\sin(2x-\pi)+1$ amplitudę, periodą ir vidurio liniją. Čia $A=3$, $b=2$, $d=1$, todėl amplitudė $3$, periodas
+\[
+T=\frac{2\pi}{2}=\pi,
+\]
+o vidurio linija $y=1$. \textbf{Atsakymas: amplitudė $3$, periodas $\pi$, vidurio linija $y=1$.}
+
+\textbf{Pavyzdys 2.} Apskaičiuokime $\sin\frac{7\pi}{6}$ ir $\cos\frac{7\pi}{6}$. Kampas $\frac{7\pi}{6}=\pi+\frac{\pi}{6}$ yra trečiajame ketvirtyje, todėl abi reikšmės neigiamos:
+\[
+\sin\frac{7\pi}{6}=-\sin\frac{\pi}{6}=-\frac12,\qquad
+\cos\frac{7\pi}{6}=-\cos\frac{\pi}{6}=-\frac{\sqrt3}{2}.
+\]
+\textbf{Atsakymas: $\sin\frac{7\pi}{6}=-\frac12$, $\cos\frac{7\pi}{6}=-\frac{\sqrt3}{2}$.}
+
+\textbf{Pavyzdys 3.} Įrodykime, kad $\sin 2x=2\sin x\cos x$. Iš sudėties formulės
+\[
+\sin(x+x)=\sin x\cos x+\cos x\sin x=2\sin x\cos x.
+\]
+Kadangi $x+x=2x$, gauname norimą tapatybę. \textbf{Atsakymas: $\sin 2x=2\sin x\cos x$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Trigonometrinės funkcijos pratęsia trigonometriją stačiajame trikampyje iš \ref{sec:trigonometrija-staciajame-trikampyje} ir apskritimo geometriją iš \ref{sec:apskritimo-geometrija}. Jų grafikai ir transformacijos remiasi \ref{sec:funkcijos-ir-ju-savybes}, o išvestinės nagrinėjamos \ref{sec:isvestine-ir-diferencijavimas}.
+
+\section{Trigonometrinės lygtys ir tapatybės}\label{sec:trigonometrines-lygtys-ir-tapatybes}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Trigonometrinė lygtis yra lygtis, kurioje nežinomasis yra trigonometrinės funkcijos argumente arba reiškinyje su trigonometrinėmis funkcijomis.
+\end{apibreztis}
+
+\begin{apibreztis}
+Trigonometrinė tapatybė yra lygybė, teisinga visoms argumento reikšmėms, kurioms abi pusės apibrėžtos.
+\end{apibreztis}
+
+\begin{pastaba}
+Bendrieji sprendiniai rašomi su $k\in\mathbb{Z}$, nes trigonometrinės funkcijos yra periodinės.
+\end{pastaba}
+
+\subsection{Teoremos ir savybės}
+
+\begin{savybe}
+Pagrindinių lygčių sprendiniai:
+\[
+\sin x=a \iff x=(-1)^k\arcsin a+k\pi,\quad |a|\le1,
+\]
+\[
+\cos x=a \iff x=\pm\arccos a+2k\pi,\quad |a|\le1,
+\]
+\[
+\tan x=a \iff x=\arctan a+k\pi.
+\]
+\end{savybe}
+
+\begin{savybe}
+Iš pagrindinės tapatybės gaunama
+\[
+1+\tan^2 x=\frac{1}{\cos^2 x},\qquad 1+\cot^2 x=\frac{1}{\sin^2 x}.
+\]
+\end{savybe}
+
+\begin{teorema}
+Sandaugos nulio principas trigonometrinėms lygtims taikomas taip pat kaip algebrinėms: jei $A(x)B(x)=0$, tai $A(x)=0$ arba $B(x)=0$.
+\emph{Įrodymas.} Kiekvienai leistinai $x$ reikšmei $A(x)$ ir $B(x)$ yra realieji skaičiai. Realiųjų skaičių sandauga lygi nuliui tada ir tik tada, kai bent vienas dauginamasis lygus nuliui.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Sprendžiant lygtį pirmiausia nustatoma apibrėžimo sritis. Tada lygtis pertvarkoma iki pagrindinių lygčių arba sandaugos. Jei buvo dalyta iš reiškinio su nežinomuoju, būtina patikrinti, ar neprarasti sprendiniai.
+
+Tapatybei įrodyti dažniausiai pertvarkoma sudėtingesnė pusė, naudojamos $\sin^2x+\cos^2x=1$, sudėties, dvigubo kampo ir redukcijos formulės.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Išspręskime $2\sin x-1=0$. Gauname $\sin x=\frac12$, todėl
+\[
+x=\frac{\pi}{6}+2k\pi \quad \text{arba}\quad x=\frac{5\pi}{6}+2k\pi,\qquad k\in\mathbb{Z}.
+\]
+\textbf{Atsakymas: $x=\frac{\pi}{6}+2k\pi$ arba $x=\frac{5\pi}{6}+2k\pi$, $k\in\mathbb{Z}$.}
+
+\textbf{Pavyzdys 2.} Išspręskime $2\cos^2x-3\cos x+1=0$. Pažymėję $u=\cos x$, gauname
+\[
+2u^2-3u+1=0,\qquad (2u-1)(u-1)=0.
+\]
+Taigi $\cos x=\frac12$ arba $\cos x=1$. Todėl
+\[
+x=\pm\frac{\pi}{3}+2k\pi \quad \text{arba}\quad x=2k\pi.
+\]
+\textbf{Atsakymas: $x=\pm\frac{\pi}{3}+2k\pi$ arba $x=2k\pi$, $k\in\mathbb{Z}$.}
+
+\textbf{Pavyzdys 3.} Įrodykime tapatybę $\dfrac{1-\cos 2x}{\sin 2x}=\tan x$, kai abi pusės apibrėžtos. Naudojame formules
+\[
+1-\cos 2x=1-(\cos^2x-\sin^2x)=2\sin^2x,
+\]
+\[
+\sin 2x=2\sin x\cos x.
+\]
+Todėl
+\[
+\frac{1-\cos 2x}{\sin 2x}=\frac{2\sin^2x}{2\sin x\cos x}=\frac{\sin x}{\cos x}=\tan x.
+\]
+\textbf{Atsakymas: tapatybė įrodyta jos apibrėžimo srityje.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Ši tema remiasi \ref{sec:trigonometrines-funkcijos} ir algebrinių lygčių technika iš \ref{sec:kvadratines-lygtys-ir-nelygybes}. Tapatybės reikalingos diferencijuojant trigonometrines funkcijas \ref{sec:isvestine-ir-diferencijavimas} ir sprendžiant geometrinius uždavinius iš \ref{sec:analitine-geometrija-ir-vektoriai}.
+
+\section{Ribos ir tolydumas}\label{sec:ribos-ir-tolydumas}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Skaičius $L$ vadinamas funkcijos $f$ riba taške $a$, jei kiekvienai $\varepsilon>0$ egzistuoja $\delta>0$, kad iš $0<|x-a|<\delta$ išplaukia $|f(x)-L|<\varepsilon$. Rašoma $\lim_{x\to a}f(x)=L$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcija $f$ vadinama tolydžia taške $a$, jei $f(a)$ apibrėžta ir
+\[
+\lim_{x\to a}f(x)=f(a).
+\]
+\end{apibreztis}
+
+\begin{apibreztis}
+Vienpusės ribos $\lim_{x\to a-}f(x)$ ir $\lim_{x\to a+}f(x)$ apibūdina funkcijos elgesį artėjant prie $a$ atitinkamai iš kairės ir iš dešinės.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei egzistuoja $\lim f(x)=A$ ir $\lim g(x)=B$, tai egzistuoja sumos, skirtumo, sandaugos ir, kai $B\ne0$, dalmens ribos:
+\[
+\lim(f+g)=A+B,\quad \lim(fg)=AB,\quad \lim\frac{f}{g}=\frac{A}{B}.
+\]
+\emph{Įrodymas.} Sumai taikome trikampio nelygybę:
+\[
+|(f+g)-(A+B)|\le |f-A|+|g-B|.
+\]
+Parinkus kiekvienai daliai po $\varepsilon/2$, suma mažesnė už $\varepsilon$. Sandaugai rašome $fg-AB=f(g-B)+B(f-A)$ ir naudojame faktą, kad ribą turinti funkcija šalia taško yra aprėžta. Dalmuo gaunamas iš sandaugos ir $\lim(1/g)=1/B$.
+\end{teorema}
+
+\begin{teorema}
+Jei $f$ ir $g$ tolydžios taške $a$, tai $f+g$, $fg$ ir, kai $g(a)\ne0$, $\frac{f}{g}$ yra tolydžios taške $a$.
+\emph{Įrodymas.} Tai tiesiogiai išplaukia iš ribų algebros ir apibrėžties $\lim f(x)=f(a)$, $\lim g(x)=g(a)$.
+\end{teorema}
+
+\begin{savybe}
+Polinomai tolydūs visoje $\mathbb{R}$, racionaliosios funkcijos tolydžios ten, kur vardiklis nelygus nuliui, o $\sin x$, $\cos x$, $a^x$ ir $\log_a x$ tolydžios savo apibrėžimo srityse.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Ribai skaičiuoti pirmiausia bandoma tiesiogiai įstatyti argumentą. Jei gaunama neapibrėžtis, reiškinys pertvarkomas: išskaidomas dauginamaisiais, racionalizuojamas, suvedamas į žinomas ribas.
+
+Tolydumui tikrinti taške reikia trijų sąlygų: $f(a)$ egzistuoja, $\lim_{x\to a}f(x)$ egzistuoja, ir abi reikšmės sutampa.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Apskaičiuokime
+\[
+\lim_{x\to2}\frac{x^2-4}{x-2}.
+\]
+Kai $x\ne2$,
+\[
+\frac{x^2-4}{x-2}=\frac{(x-2)(x+2)}{x-2}=x+2.
+\]
+Todėl
+\[
+\lim_{x\to2}\frac{x^2-4}{x-2}=\lim_{x\to2}(x+2)=4.
+\]
+\textbf{Atsakymas: $4$.}
+
+\textbf{Pavyzdys 2.} Nustatykime, ar funkcija
+\[
+f(x)=\begin{cases}2x+1,&x<1,\\ x^2+2,&x\ge1\end{cases}
+\]
+tolydi taške $x=1$. Kairioji riba yra $2\cdot1+1=3$, dešinioji riba ir funkcijos reikšmė yra $1^2+2=3$. Vadinasi,
+\[
+\lim_{x\to1}f(x)=3=f(1).
+\]
+\textbf{Atsakymas: funkcija tolydi taške $x=1$.}
+
+\textbf{Pavyzdys 3.} Apskaičiuokime
+\[
+\lim_{x\to0}\frac{\sqrt{1+x}-1}{x}.
+\]
+Racionalizuojame:
+\[
+\frac{\sqrt{1+x}-1}{x}\cdot\frac{\sqrt{1+x}+1}{\sqrt{1+x}+1}
+=\frac{1+x-1}{x(\sqrt{1+x}+1)}=\frac{1}{\sqrt{1+x}+1}.
+\]
+Todėl riba lygi $\frac12$. \textbf{Atsakymas: $\frac12$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Ribos pratęsia sekų analizę iš \ref{sec:sekos-ir-matematine-indukcija} ir yra būtinas pagrindas išvestinei \ref{sec:isvestine-ir-diferencijavimas}. Tolydumas leidžia griežtai kalbėti apie funkcijų grafikus iš \ref{sec:funkcijos-ir-ju-savybes}.
+
+\section{Išvestinė ir diferencijavimas}\label{sec:isvestine-ir-diferencijavimas}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Funkcijos $f$ išvestinė taške $a$ yra riba
+\[
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h},
+\]
+jei ši riba egzistuoja.
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcija vadinama diferencijuojama intervale, jei ji turi išvestinę kiekviename to intervalo taške.
+\end{apibreztis}
+
+\begin{pastaba}
+Išvestinė $f'(a)$ yra liestinės krypties koeficientas funkcijos grafiko taške $(a,f(a))$ ir momentinis kitimo greitis.
+\end{pastaba}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei $f$ diferencijuojama taške $a$, tai $f$ tolydi taške $a$.
+\emph{Įrodymas.} Turime
+\[
+f(x)-f(a)=\frac{f(x)-f(a)}{x-a}(x-a).
+\]
+Kai $x\to a$, pirmasis daugiklis artėja prie $f'(a)$, o antrasis prie $0$, todėl $f(x)-f(a)\to0$.
+\end{teorema}
+
+\begin{savybe}
+Pagrindinės taisyklės:
+\[
+(cf)'=cf',\qquad (f+g)'=f'+g',\qquad (fg)'=f'g+fg',
+\]
+\[
+\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2},\quad g\ne0.
+\]
+\end{savybe}
+
+\begin{teorema}
+Grandinės taisyklė: jei $g$ diferencijuojama taške $x$, o $f$ diferencijuojama taške $g(x)$, tai
+\[
+(f\circ g)'(x)=f'(g(x))g'(x).
+\]
+\emph{Įrodymas.} Pokytį $f(g(x+h))-f(g(x))$ nagrinėjame per tarpinį pokytį $\Delta g=g(x+h)-g(x)$. Diferencijuojamumas reiškia $f(g+\Delta g)-f(g)=f'(g)\Delta g+r(\Delta g)$, kur $r(\Delta g)/\Delta g\to0$. Padalijus iš $h$ ir leidus $h\to0$, gaunama formulė.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Diferencijuojant sudėtinę funkciją, iš pradžių atpažįstama išorinė ir vidinė funkcijos dalis. Diferencijuojama išorinė funkcija, jos argumentą paliekant vidinį, ir dauginama iš vidinės funkcijos išvestinės.
+
+Naudingos formulės:
+\[
+(x^n)'=nx^{n-1},\quad (e^x)'=e^x,\quad (\ln x)'=\frac1x,\quad (\sin x)'=\cos x,\quad (\cos x)'=-\sin x.
+\]
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Iš apibrėžties raskime $f(x)=x^2$ išvestinę taške $a$. Turime
+\[
+f'(a)=\lim_{h\to0}\frac{(a+h)^2-a^2}{h}
+=\lim_{h\to0}\frac{2ah+h^2}{h}
+=\lim_{h\to0}(2a+h)=2a.
+\]
+\textbf{Atsakymas: $f'(a)=2a$.}
+
+\textbf{Pavyzdys 2.} Diferencijuokime $y=(3x^2-1)^5$. Čia išorinė funkcija $u^5$, vidinė $u=3x^2-1$. Todėl
+\[
+y'=5(3x^2-1)^4\cdot6x=30x(3x^2-1)^4.
+\]
+\textbf{Atsakymas: $y'=30x(3x^2-1)^4$.}
+
+\textbf{Pavyzdys 3.} Raskime liestinės lygtį funkcijai $f(x)=\ln x$ taške $x=1$. Turime $f(1)=0$, $f'(x)=1/x$, todėl $f'(1)=1$. Liestinė:
+\[
+y-0=1(x-1).
+\]
+\textbf{Atsakymas: $y=x-1$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Išvestinė remiasi ribomis iš \ref{sec:ribos-ir-tolydumas}. Ji taikoma funkcijų tyrimui \ref{sec:isvestines-taikymai}, logaritminėms ir rodiklinėms funkcijoms iš \ref{sec:laipsnines-rodiklines-ir-logaritmines-funkcijos} bei trigonometrinėms funkcijoms iš \ref{sec:trigonometrines-funkcijos}.
+
+\section{Išvestinės taikymai}\label{sec:isvestines-taikymai}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Taškas $c$ vadinamas kritiniu funkcijos $f$ tašku, jei $f'(c)=0$ arba $f'(c)$ neegzistuoja, bet $f(c)$ apibrėžta.
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcija turi lokalųjį maksimumą taške $c$, jei tam tikroje $c$ aplinkoje $f(x)\le f(c)$. Ji turi lokalųjį minimumą, jei $f(x)\ge f(c)$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Funkcijos grafiko įgaubtumas apibūdinamas antrosios išvestinės ženklu: kai $f''>0$, grafikas išgaubtas aukštyn, kai $f''<0$, išgaubtas žemyn.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei $f$ diferencijuojama intervale ir $f'(x)>0$ visame intervale, tai $f$ tame intervale didėja; jei $f'(x)<0$, tai mažėja.
+\emph{Įrodymas.} Jei $x_1<x_2$, pagal Lagranžo vidutinės reikšmės teoremą egzistuoja $c\in(x_1,x_2)$, kad
+\[
+f(x_2)-f(x_1)=f'(c)(x_2-x_1).
+\]
+Kai $f'(c)>0$, skirtumas teigiamas; kai $f'(c)<0$, neigiamas.
+\end{teorema}
+
+\begin{savybe}
+Jei $f'$ keičia ženklą iš $+$ į $-$ taške $c$, funkcija turi lokalųjį maksimumą. Jei $f'$ keičia ženklą iš $-$ į $+$, funkcija turi lokalųjį minimumą.
+\end{savybe}
+
+\begin{savybe}
+Jei $f''(c)>0$ ir $f'(c)=0$, tai $c$ yra lokaliojo minimumo taškas. Jei $f''(c)<0$ ir $f'(c)=0$, tai $c$ yra lokaliojo maksimumo taškas.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Funkcijai tirti randama apibrėžimo sritis, išvestinė, kritiniai taškai, išvestinės ženklų intervalai, ekstremumai, prireikus antroji išvestinė ir ribinis elgesys. Optimizavimo uždavinyje pirmiausia sudaroma vieno kintamojo funkcija ir nustatomas leistinas intervalas.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Ištirkime $f(x)=x^3-3x^2+2$ didėjimą ir ekstremumus. Išvestinė
+\[
+f'(x)=3x^2-6x=3x(x-2).
+\]
+Ženklai: $f'>0$, kai $x<0$ arba $x>2$; $f'<0$, kai $0<x<2$. Todėl ties $x=0$ yra lokalus maksimumas, ties $x=2$ lokalus minimumas. Reikšmės:
+\[
+f(0)=2,\qquad f(2)=8-12+2=-2.
+\]
+\textbf{Atsakymas: didėja $(-\infty,0)$ ir $(2,\infty)$, mažėja $(0,2)$, maksimumas $2$, minimumas $-2$.}
+
+\textbf{Pavyzdys 2.} Raskime stačiakampio didžiausią plotą, jei jo perimetras $40$. Tegul kraštinės $x$ ir $y$. Tada $2x+2y=40$, todėl $y=20-x$. Plotas
+\[
+A(x)=x(20-x)=20x-x^2,\qquad 0<x<20.
+\]
+\[
+A'(x)=20-2x.
+\]
+Kritinis taškas $x=10$, o $A''(x)=-2<0$, todėl tai maksimumas. Tada $y=10$, $A=100$. \textbf{Atsakymas: didžiausias plotas $100$, kai stačiakampis yra $10\times10$.}
+
+\textbf{Pavyzdys 3.} Raskime funkcijos $f(x)=x+\frac4x$, $x>0$, mažiausią reikšmę. Išvestinė
+\[
+f'(x)=1-\frac4{x^2}.
+\]
+Lygybė $f'(x)=0$ duoda $x=2$. Kai $0<x<2$, $f'<0$, kai $x>2$, $f'>0$, todėl $x=2$ yra minimumas. 
+\[
+f(2)=2+\frac42=4.
+\]
+\textbf{Atsakymas: mažiausia reikšmė $4$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Išvestinės taikymai tęsia \ref{sec:isvestine-ir-diferencijavimas} ir leidžia sistemiškai tirti funkcijas iš \ref{sec:laipsnines-rodiklines-ir-logaritmines-funkcijos} bei \ref{sec:trigonometrines-funkcijos}. Optimizavimas siejasi su modeliavimu iš \ref{sec:optimizavimas-ir-modeliavimas}.
+
+\section{Analitinė geometrija ir vektoriai}\label{sec:analitine-geometrija-ir-vektoriai}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Vektorius plokštumoje yra kryptį ir ilgį turintis dydis. Jei $A(x_1,y_1)$ ir $B(x_2,y_2)$, tai
+\[
+\overrightarrow{AB}=(x_2-x_1,\ y_2-y_1).
+\]
+\end{apibreztis}
+
+\begin{apibreztis}
+Vektorių $\vec a=(a_1,a_2)$ ir $\vec b=(b_1,b_2)$ skaliarinė sandauga yra
+\[
+\vec a\cdot \vec b=a_1b_1+a_2b_2=|\vec a||\vec b|\cos\theta,
+\]
+kur $\theta$ yra kampas tarp vektorių.
+\end{apibreztis}
+
+\begin{apibreztis}
+Tiesės bendroji lygtis plokštumoje yra $Ax+By+C=0$, kur $(A,B)\ne(0,0)$. Vektorius $(A,B)$ yra tiesės normalės vektorius.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{savybe}
+Atstumas tarp taškų $A(x_1,y_1)$ ir $B(x_2,y_2)$ yra
+\[
+AB=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.
+\]
+\end{savybe}
+
+\begin{savybe}
+Vektoriai statmeni tada ir tik tada, kai jų skaliarinė sandauga lygi nuliui.
+\end{savybe}
+
+\begin{teorema}
+Atstumas nuo taško $P(x_0,y_0)$ iki tiesės $Ax+By+C=0$ yra
+\[
+d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.
+\]
+\emph{Įrodymas.} Tiesės normalė yra $\vec n=(A,B)$. Pasirinkime tašką $Q$ tiesėje. Atstumas nuo $P$ iki tiesės yra vektoriaus $\overrightarrow{QP}$ projekcijos į normalės kryptį modulis:
+\[
+d=\left|\frac{\overrightarrow{QP}\cdot \vec n}{|\vec n|}\right|.
+\]
+Kadangi $Q$ tenkina $Ax_Q+By_Q+C=0$, skaitiklis lygus $Ax_0+By_0+C$.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Tiesei per du taškus rasti galima sudaryti krypties vektorių, tada parinkti statmeną normalę. Kampui tarp tiesių rasti naudojamas kampas tarp jų krypties arba normalės vektorių.
+
+Apskritimo lygtis su centru $(a,b)$ ir spinduliu $r$ yra
+\[
+(x-a)^2+(y-b)^2=r^2.
+\]
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Raskime tiesės per $A(1,2)$ ir $B(5,4)$ lygtį. Krypties vektorius
+\[
+\overrightarrow{AB}=(4,2),
+\]
+tad normalė gali būti $(2,-4)$ arba supaprastinta $(1,-2)$. Lygtis:
+\[
+1(x-1)-2(y-2)=0,
+\]
+\[
+x-1-2y+4=0,\qquad x-2y+3=0.
+\]
+\textbf{Atsakymas: $x-2y+3=0$.}
+
+\textbf{Pavyzdys 2.} Apskaičiuokime kampą tarp $\vec a=(1,\sqrt3)$ ir $\vec b=(2,0)$. Turime
+\[
+\vec a\cdot\vec b=2,\quad |\vec a|=2,\quad |\vec b|=2.
+\]
+Todėl
+\[
+\cos\theta=\frac{2}{2\cdot2}=\frac12,
+\]
+vadinasi $\theta=\frac{\pi}{3}$. \textbf{Atsakymas: $\frac{\pi}{3}$.}
+
+\textbf{Pavyzdys 3.} Raskime atstumą nuo taško $P(3,-1)$ iki tiesės $2x-y+4=0$. Taikome formulę:
+\[
+d=\frac{|2\cdot3-(-1)+4|}{\sqrt{2^2+(-1)^2}}
+=\frac{|11|}{\sqrt5}=\frac{11\sqrt5}{5}.
+\]
+\textbf{Atsakymas: $\frac{11\sqrt5}{5}$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Analitinė geometrija pratęsia koordinates ir vektorius iš \ref{sec:vektoriai-ir-koordinates}. Skaliarinė sandauga siejasi su trigonometrija iš \ref{sec:trigonometrines-funkcijos}, o erdvinė vektorių versija naudojama \ref{sec:erdves-geometrija}.
+
+\section{Erdvės geometrija}\label{sec:erdves-geometrija}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Erdvėje taškas aprašomas trimis koordinatėmis $(x,y,z)$, o vektorius $\vec a=(a_1,a_2,a_3)$ turi ilgį
+\[
+|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}.
+\]
+\end{apibreztis}
+
+\begin{apibreztis}
+Plokštumos bendroji lygtis yra
+\[
+Ax+By+Cz+D=0,
+\]
+kur $(A,B,C)\ne(0,0,0)$. Vektorius $(A,B,C)$ yra plokštumos normalė.
+\end{apibreztis}
+
+\begin{apibreztis}
+Tiesė erdvėje gali būti aprašoma parametrinėmis lygtimis
+\[
+x=x_0+at,\quad y=y_0+bt,\quad z=z_0+ct,
+\]
+kur $(a,b,c)$ yra krypties vektorius.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{savybe}
+Erdvės vektorių skaliarinė sandauga:
+\[
+\vec a\cdot\vec b=a_1b_1+a_2b_2+a_3b_3=|\vec a||\vec b|\cos\theta.
+\]
+\end{savybe}
+
+\begin{savybe}
+Dvi plokštumos su normalėmis $\vec n_1$ ir $\vec n_2$ yra lygiagrečios tada ir tik tada, kai $\vec n_1$ ir $\vec n_2$ yra proporcingos. Jos statmenos tada ir tik tada, kai $\vec n_1\cdot\vec n_2=0$.
+\end{savybe}
+
+\begin{teorema}
+Atstumas nuo taško $P(x_0,y_0,z_0)$ iki plokštumos $Ax+By+Cz+D=0$ yra
+\[
+d=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}.
+\]
+\emph{Įrodymas.} Kaip plokštumoje, imame plokštumos tašką $Q$ ir projektuojame $\overrightarrow{QP}$ į normalę $\vec n=(A,B,C)$. Projekcijos modulis yra statmenas atstumas, o plokštumos lygtis panaikina $Q$ koordinates skaitiklyje.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Plokštumai per tašką su duota normale sudaryti naudojama lygtis
+\[
+\vec n\cdot((x,y,z)-(x_0,y_0,z_0))=0.
+\]
+Tiesės ir plokštumos sankirtai rasti tiesės parametrinės lygtys įstatomos į plokštumos lygtį ir sprendžiama dėl parametro.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Raskime plokštumos per tašką $P(1,-2,3)$, kurios normalė $\vec n=(2,1,-1)$, lygtį. Rašome
+\[
+2(x-1)+1(y+2)-1(z-3)=0.
+\]
+Sutvarkę:
+\[
+2x-2+y+2-z+3=0,\qquad 2x+y-z+3=0.
+\]
+\textbf{Atsakymas: $2x+y-z+3=0$.}
+
+\textbf{Pavyzdys 2.} Raskime kampą tarp plokštumų $x+y+z=1$ ir $x-y+2z=3$. Normalės:
+\[
+\vec n_1=(1,1,1),\qquad \vec n_2=(1,-1,2).
+\]
+Kampo tarp plokštumų kosinusas yra kampo tarp normalių kosinuso modulis:
+\[
+\cos\theta=\frac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}
+=\frac{|1-1+2|}{\sqrt3\sqrt6}=\frac{2}{3\sqrt2}=\frac{\sqrt2}{3}.
+\]
+\textbf{Atsakymas: $\theta=\arccos\frac{\sqrt2}{3}$.}
+
+\textbf{Pavyzdys 3.} Raskime tiesės
+\[
+x=1+t,\quad y=2-t,\quad z=3+2t
+\]
+ir plokštumos $x+2y-z=0$ sankirtą. Įstatome:
+\[
+(1+t)+2(2-t)-(3+2t)=0.
+\]
+\[
+1+t+4-2t-3-2t=0,\qquad 2-3t=0,\qquad t=\frac23.
+\]
+Taškas:
+\[
+x=\frac53,\quad y=\frac43,\quad z=\frac{13}{3}.
+\]
+\textbf{Atsakymas: $\left(\frac53,\frac43,\frac{13}{3}\right)$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Erdvės geometrija pratęsia \ref{sec:erdviniai-kunai-ir-ju-pjuviai} ir \ref{sec:analitine-geometrija-ir-vektoriai}. Ji ruošia stereometrijos uždaviniams iš \ref{sec:stereometrijos-uzdaviniai} ir vektoriniams metodams aukštesnėje matematikoje.
+
+\section{Aprašomoji statistika ir normalusis modelis}\label{sec:aprasomoji-statistika-ir-normalusis-modelis}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Imties vidurkis yra
+\[
+\bar x=\frac{x_1+x_2+\cdots+x_n}{n}.
+\]
+Imties dispersija dažnai skaičiuojama
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar x)^2,
+\]
+o standartinis nuokrypis yra $s=\sqrt{s^2}$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Standartizuota reikšmė, arba $z$ reikšmė, yra
+\[
+z=\frac{x-\mu}{\sigma},
+\]
+kur $\mu$ yra vidurkis, $\sigma>0$ standartinis nuokrypis.
+\end{apibreztis}
+
+\begin{apibreztis}
+Normalusis modelis $N(\mu,\sigma^2)$ yra tolydus tikimybinis modelis su varpo formos tankiu, simetrišku apie $\mu$.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{savybe}
+Jei duomenų rinkinys padidinamas pridedant konstantą $c$ prie kiekvienos reikšmės, vidurkis padidėja $c$, o standartinis nuokrypis nepasikeičia. Jei visos reikšmės padauginamos iš $k$, vidurkis padauginamas iš $k$, o standartinis nuokrypis iš $|k|$.
+\end{savybe}
+
+\begin{savybe}
+Normaliajame modelyje apie $68\%$ reikšmių patenka į intervalą $\mu\pm\sigma$, apie $95\%$ į $\mu\pm2\sigma$, apie $99.7\%$ į $\mu\pm3\sigma$.
+\end{savybe}
+
+\begin{teorema}
+Standartizavus $X\sim N(\mu,\sigma^2)$ dydį
+\[
+Z=\frac{X-\mu}{\sigma},
+\]
+gaunamas standartinis normalusis dydis $Z\sim N(0,1)$.
+\emph{Įrodymas.} Poslinkis $X-\mu$ perkelia vidurkį į nulį, o dalyba iš $\sigma$ mastelį pakeičia taip, kad dispersija tampa $\sigma^2/\sigma^2=1$. Tankio transformacija patvirtina, kad forma išlieka normalioji.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Duomenims aprašyti skaičiuojami centro rodikliai, sklaidos rodikliai ir tikrinamos išskirtys. Normaliajam modeliui taikyti reikšmė standartizuojama, tada naudojama standartinio normaliojo skirstinio lentelė arba skaičiuotuvas.
+
+Interpretuojant statistiką būtina skirti imties rodiklius $\bar x$, $s$ nuo populiacijos parametrų $\mu$, $\sigma$.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Duomenys: $4,6,6,8$. Raskime vidurkį ir imties standartinį nuokrypį. Vidurkis
+\[
+\bar x=\frac{4+6+6+8}{4}=6.
+\]
+Kvadratinių nuokrypių suma:
+\[
+(4-6)^2+(6-6)^2+(6-6)^2+(8-6)^2=4+0+0+4=8.
+\]
+Todėl
+\[
+s^2=\frac{8}{3},\qquad s=\sqrt{\frac83}=\frac{2\sqrt6}{3}.
+\]
+\textbf{Atsakymas: $\bar x=6$, $s=\frac{2\sqrt6}{3}$.}
+
+\textbf{Pavyzdys 2.} Testo rezultatai modeliuojami $N(70,10^2)$. Raskime $z$ reikšmę rezultatui $85$. 
+\[
+z=\frac{85-70}{10}=1.5.
+\]
+Tai reiškia, kad rezultatas yra $1.5$ standartinio nuokrypio virš vidurkio. \textbf{Atsakymas: $z=1.5$.}
+
+\textbf{Pavyzdys 3.} Jei $X\sim N(100,15^2)$, įvertinkime tikimybę, kad $70<X<130$, pagal $68$--$95$--$99.7$ taisyklę. Intervalas
+\[
+70=100-2\cdot15,\qquad 130=100+2\cdot15.
+\]
+Tai yra $\mu\pm2\sigma$, todėl tikimybė apie $0.95$. \textbf{Atsakymas: apie $95\%$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Tema tęsia statistinius rodiklius ir koreliaciją iš \ref{sec:statistiniai-rodikliai-ir-koreliacija}. Normalusis modelis susijęs su tikimybiniais skirstiniais iš \ref{sec:tikimybiniai-skirstiniai} ir statistine išvada iš \ref{sec:statistine-isvada-ir-hipotezes}.
+
+\section{Sąlyginė tikimybė ir nepriklausomumas}\label{sec:salygine-tikimybe-ir-nepriklausomumas}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Įvykio $A$ sąlyginė tikimybė, kai įvyko $B$ ir $P(B)>0$, yra
+\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+\]
+\end{apibreztis}
+
+\begin{apibreztis}
+Įvykiai $A$ ir $B$ vadinami nepriklausomais, jei
+\[
+P(A\cap B)=P(A)P(B).
+\]
+Kai $P(B)>0$, tai lygiavertiškai reiškia $P(A\mid B)=P(A)$.
+\end{apibreztis}
+
+\begin{apibreztis}
+Įvykiai $B_1,\ldots,B_n$ sudaro baigtinį skaidinį, jei jie poromis nesikerta, jų sąjunga yra visa baigtis, ir $P(B_i)>0$.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Daugybos formulė:
+\[
+P(A\cap B)=P(A\mid B)P(B)=P(B\mid A)P(A).
+\]
+\emph{Įrodymas.} Pirmoji lygybė yra sąlyginės tikimybės apibrėžties pertvarkymas. Antroji gaunama analogiškai, jei $P(A)>0$.
+\end{teorema}
+
+\begin{teorema}
+Bendrosios tikimybės formulė: jei $B_1,\ldots,B_n$ yra skaidinys, tai
+\[
+P(A)=\sum_{i=1}^n P(A\mid B_i)P(B_i).
+\]
+\emph{Įrodymas.} Kadangi $A=(A\cap B_1)\cup\cdots\cup(A\cap B_n)$ ir šie įvykiai nesikerta, tai
+\[
+P(A)=\sum_{i=1}^nP(A\cap B_i)=\sum_{i=1}^nP(A\mid B_i)P(B_i).
+\]
+\end{teorema}
+
+\begin{teorema}
+Bajeso formulė:
+\[
+P(B_j\mid A)=\frac{P(A\mid B_j)P(B_j)}{\sum_{i=1}^nP(A\mid B_i)P(B_i)}.
+\]
+\emph{Įrodymas.} Skaitiklis gaunamas iš daugybos formulės, o vardiklis yra $P(A)$ pagal bendrosios tikimybės formulę.
+\end{teorema}
+
+\subsection{Taisyklės ir algoritmai}
+
+Sprendžiant sąlyginės tikimybės uždavinius aiškiai įvardijami įvykiai, nustatoma, kas yra sąlyga, ir taikoma formulė $P(A\mid B)=P(A\cap B)/P(B)$. Jei duomenys pateikti lentelėje, pirmiausia randama sąlygos eilutė arba stulpelis, tada skaičiuojama dalis tos sąlygos viduje.
+
+Nepriklausomumui tikrinti palyginama $P(A\cap B)$ su $P(A)P(B)$ arba $P(A\mid B)$ su $P(A)$.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{Pavyzdys 1.} Kortų kaladėje ištraukiama viena korta. Tegul $A$ yra įvykis „kortos rūšis yra širdys“, o $B$ -- „korta raudona“. Raskime $P(A\mid B)$. Raudonų kortų yra $26$, širdžių $13$, todėl
+\[
+P(A\mid B)=\frac{13}{26}=\frac12.
+\]
+\textbf{Atsakymas: $\frac12$.}
+
+\textbf{Pavyzdys 2.} Metami du sąžiningi kauliukai. Tegul $A$ -- „suma lygi $7$“, $B$ -- „pirmas kauliukas rodo $3$“. Kai įvyko $B$, galimi šeši vienodai tikėtini antro kauliuko rezultatai. Suma $7$ gaunama tik kai antras kauliukas rodo $4$, todėl
+\[
+P(A\mid B)=\frac16.
+\]
+Taip pat $P(A)=6/36=1/6$, todėl šiuo atveju $A$ ir $B$ nepriklausomi:
+\[
+P(A\mid B)=P(A).
+\]
+\textbf{Atsakymas: $P(A\mid B)=\frac16$, įvykiai nepriklausomi.}
+
+\textbf{Pavyzdys 3.} Ligos paplitimas yra $2\%$. Testo jautrumas $95\%$, klaidingai teigiamo atsakymo tikimybė $5\%$. Raskime tikimybę, kad žmogus serga, jei testas teigiamas. Tegul $S$ -- serga, $T$ -- testas teigiamas. Tada
+\[
+P(S)=0.02,\quad P(T\mid S)=0.95,\quad P(T\mid S^c)=0.05.
+\]
+Pagal Bajeso formulę
+\[
+P(S\mid T)=\frac{0.95\cdot0.02}{0.95\cdot0.02+0.05\cdot0.98}
+=\frac{0.019}{0.019+0.049}
+=\frac{0.019}{0.068}\approx0.279.
+\]
+\textbf{Atsakymas: apie $27.9\%$.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Sąlyginė tikimybė tęsia kombinatorikos ir tikimybės pagrindus iš \ref{sec:tikimybe-ir-kombinatorika}. Ji būtina tikimybiniams skirstiniams iš \ref{sec:tikimybiniai-skirstiniai}, statistinei išvadai iš \ref{sec:statistine-isvada-ir-hipotezes} ir duomenų interpretacijai \ref{sec:aprasomoji-statistika-ir-normalusis-modelis}.
+
+
+\section{Skaičių aibės ir veiksmai su aibėmis}\label{sec:skaiciu-aibes-ir-veiksmai-su-aibemis}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima realiųjų skaičių aibės struktūrą, sąjungą, sankirtą, skirtumą ir Veno diagramas. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Realiojo skaičiaus modulis}\label{sec:realiojo-skaiciaus-modulis}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima modulio geometrinę prasmę, modulio grafikus, lygtis ir nelygybes su moduliu. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Šaknys, laipsniai ir logaritmai}\label{sec:saknys-laipsniai-ir-logaritmai}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima šaknų, racionaliųjų laipsnių, logaritmų ir jų savybių taikymą reiškiniams pertvarkyti. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Sinusas, kosinusas, tangentas ir atvirkštinės reikšmės}\label{sec:sinusas-kosinusas-tangentas-ir-atvirkstines-reiksmes}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima vienetinį apskritimą, trigonometrines reikšmes, atvirkštines funkcijas ir pagrindines formules. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Bendroji funkcijų teorija}\label{sec:bendroji-funkciju-teorija}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima funkcijos apibrėžimo ir reikšmių sritis, lyginumą, periodiškumą, transformacijas ir sudėtines funkcijas. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Rodiklinės, logaritminės ir racionaliosios lygtys}\label{sec:rodiklines-logaritmines-ir-racionaliosios-lygtys}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima rodiklinių, logaritminių, racionaliųjų ir iracionaliųjų lygčių sprendimo metodus. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Rodiklinės, logaritminės ir racionaliosios nelygybės}\label{sec:rodiklines-logaritmines-ir-racionaliosios-nelygybes}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima intervalų metodą, apibrėžimo sritį ir nelygybių pertvarkius. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Plokštumos vektoriai ir veiksmai su jais}\label{sec:plokstumos-vektoriai-ir-veiksmai-su-jais}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima vektoriaus koordinates, ilgį, sudėtį, daugybą iš skaičiaus ir skaliarinę sandaugą. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Įvadas į statistinę duomenų analizę}\label{sec:ivadas-i-statistine-duomenu-analize}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima populiaciją, imtį, kintamuosius, matavimo skales, duomenų tipus ir skaitmenines vizualizacijas. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Rinkiniai: kėliniai, gretiniai, deriniai}\label{sec:rinkiniai-keliniai-gretiniai-deriniai}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima kombinatorikos sudėties ir daugybos taisykles, kėlinius, gretinius, derinius ir binomo formulę. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
