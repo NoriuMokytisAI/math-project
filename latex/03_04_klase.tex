@@ -1,0 +1,1163 @@
+\part{III–IV klasė}
+
+\section{Naturalieji skaiciai iki milijono}\label{sec:naturalieji-skaiciai-iki-milijono}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Naturalieji skaiciai yra skaiciai, kuriais skaiciuojame daiktus: \(1,2,3,4,\ldots\). Siame skyriuje nagrinejame skaicius iki \(1\,000\,000\).
+\end{apibreztis}
+
+\begin{apibreztis}
+Skaitmens vietine verte rodo, kiek tas skaitmuo reiskia pagal savo vieta skaiciuje. Skaiciuje \(345\,218\) skaitmuo \(3\) reiskia \(300\,000\), skaitmuo \(4\) reiskia \(40\,000\), skaitmuo \(5\) reiskia \(5\,000\).
+\end{apibreztis}
+
+\begin{pastaba}
+Dideli skaiciai skaitomi patogiau, kai juos suskirstome po tris skaitmenis: \(724381\) rasome \(724\,381\).
+\end{pastaba}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Kuo daugiau skaitmenu turi naturalusis skaicius, tuo jis didesnis: \(98\,999<100\,000\).
+\end{teorema}
+
+\begin{savybe}
+Jei du skaiciai turi tiek pat skaitmenu, lyginame juos is kaires i desine. Pirmas nevienodas skaitmuo parodo, kuris skaicius didesnis.
+\end{savybe}
+
+\begin{savybe}
+Kiekviena skaiciu galima isskaidyti pagal vietines vertes, pavyzdziui
+\[
+506\,074=500\,000+6\,000+70+4.
+\]
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint perskaityti skaiciu iki milijono, skaiciu padalijame i tukstanciu ir vienetu grupes. Pavyzdziui, \(382\,145\) skaitome: trys simtai astuoniasdesimt du tukstanciai simtas keturiasdesimt penki.
+
+Norint palyginti du skaicius, pirmiausia lyginame skaitmenu skaiciu. Jei skaitmenu tiek pat, lyginame tukstancius, simtus, desimtis ir vienetus is eiles.
+
+Norint suapvalinti skaiciu iki desimciu, simtu ar tukstanciu, ziurime i skaitmeni desineje nuo apvalinamos vietos. Jei jis \(5\) arba didesnis, apvalinama vieta padideja vienetu.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Isskaidykime skaiciu \(438\,205\) pagal vietines vertes.
+
+Skaitmuo \(4\) yra simtu tukstanciu vietoje, todel reiskia \(400\,000\). Skaitmuo \(3\) reiskia \(30\,000\), skaitmuo \(8\) reiskia \(8\,000\), skaitmuo \(2\) reiskia \(200\), skaitmuo \(0\) desimciu neprideda, skaitmuo \(5\) reiskia \(5\). Taigi
+\[
+438\,205=400\,000+30\,000+8\,000+200+5.
+\]
+\textbf{Atsakymas: \(400\,000+30\,000+8\,000+200+5\).}
+
+\textbf{2 pavyzdys.} Palyginkime skaicius \(572\,419\) ir \(572\,491\).
+
+Abu skaiciai turi po sesis skaitmenis. Lyginame is kaires: \(5=5\), \(7=7\), \(2=2\), \(4=4\). Toliau lyginame desimciu skaitmenis: pirmame skaiciuje yra \(1\), antrame \(9\). Kadangi \(1<9\), tai
+\[
+572\,419<572\,491.
+\]
+\textbf{Atsakymas: \(572\,419<572\,491\).}
+
+\textbf{3 pavyzdys.} Suapvalinkime \(286\,735\) iki tukstanciu.
+
+Tukstanciu skaitmuo yra \(6\). Desineje nuo jo yra simtu skaitmuo \(7\). Kadangi \(7\geq 5\), tukstanciu skaitmeni padidiname vienetu: \(6\) tampa \(7\). Visi desinieji skaitmenys tampa nuliais:
+\[
+286\,735\approx 287\,000.
+\]
+\textbf{Atsakymas: \(287\,000\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Dideli skaiciai reikalingi veiksmams ir ju savybems skyriuje \ref{sec:aritmetiniai-veiksmai-ir-savybes}, stulpelinei daugybai ir dalybai skyriuje \ref{sec:daugyba-ir-dalyba-stulpeliu}, taip pat duomenu skaitymui is lenteliu ir diagramu skyriuje \ref{sec:duomenu-lenteles-ir-diagramos}. Ju pagrindas yra skaiciai iki \(1000\) ir vietine verte is skyriaus \ref{sec:skaiciai-iki-1000-ir-vietine-verte}.
+
+\section{Aritmetiniai veiksmai ir savybes}\label{sec:aritmetiniai-veiksmai-ir-savybes}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Sudetis yra veiksmas, kai kelis kiekius sujungiame i viena. Atimtis yra veiksmas, kai is kiekio atimame dali arba randame skirtuma.
+\end{apibreztis}
+
+\begin{apibreztis}
+Daugyba yra lygiu demenu sudetis. Dalyba yra veiksmas, kai kieki padalijame i lygias dalis arba randame, kiek kartu vienas skaicius telpa kitame.
+\end{apibreztis}
+
+\begin{apibreztis}
+Veiksmu tvarka nurodo, kuriuos veiksmus reiskinyje atliekame pirmiau.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Sudeties perstatomumo savybe: \(a+b=b+a\). Pavyzdziui, \(36+24=24+36\).
+\end{teorema}
+
+\begin{savybe}
+Daugybos perstatomumo savybe: \(a\cdot b=b\cdot a\). Pavyzdziui, \(7\cdot 8=8\cdot 7\).
+\end{savybe}
+
+\begin{savybe}
+Daugybos skirstomumo sudeties atzvilgiu savybe: \(a\cdot(b+c)=a\cdot b+a\cdot c\). Ji padeda skaiciuoti mintinai.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Reiskinyje be skliaustu pirmiausia atliekame daugyba ir dalyba is kaires i desine, paskui sudeti ir atimti is kaires i desine.
+
+Jei reiskinyje yra skliaustai, pirmiausia atliekame veiksmus skliaustuose.
+
+Skaiciavima galima pasitikrinti atvirkstiniu veiksmu: sudeti tikriname atimtimi, atimti tikriname sudetimi, daugyba tikriname dalyba, dalyba tikriname daugyba.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Apskaiciuokime \(48+27+52\) patogiai.
+
+Pastebime, kad \(48+52=100\). Todel demenis galime sugrupuoti:
+\[
+48+27+52=(48+52)+27=100+27=127.
+\]
+\textbf{Atsakymas: \(127\).}
+
+\textbf{2 pavyzdys.} Apskaiciuokime \(6\cdot 23\) naudodami skirstomumo savybe.
+
+Skaiciu \(23\) isskaidome i \(20+3\):
+\[
+6\cdot 23=6\cdot(20+3)=6\cdot20+6\cdot3=120+18=138.
+\]
+\textbf{Atsakymas: \(138\).}
+
+\textbf{3 pavyzdys.} Apskaiciuokime \(80-24:6\).
+
+Pirmiausia atliekame dalyba:
+\[
+24:6=4.
+\]
+Tada atimame:
+\[
+80-4=76.
+\]
+\textbf{Atsakymas: \(76\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Aritmetiniai veiksmai naudojami skaiciams iki milijono skyriuje \ref{sec:naturalieji-skaiciai-iki-milijono}, stulpelinei daugybai ir dalybai skyriuje \ref{sec:daugyba-ir-dalyba-stulpeliu}, reiskiniams skyriuje \ref{sec:reiskiniai-ir-raidiniai-zymejimai} ir matavimams skyriuje \ref{sec:perimetras-plotas-turis-ir-masto-pradzia}.
+
+\section{Daugyba ir dalyba stulpeliu}\label{sec:daugyba-ir-dalyba-stulpeliu}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Daugyba stulpeliu yra rasytinis budas dauginti didesnius skaicius, kai dauginame po viena skaitmeni ir sudedame dalinius rezultatus.
+\end{apibreztis}
+
+\begin{apibreztis}
+Dalyba stulpeliu yra rasytinis budas dalyti didesnius skaicius, kai dalijame nuo didziausios vietines vertes ir tikriname daugyba.
+\end{apibreztis}
+
+\begin{apibreztis}
+Liekana yra skaicius, kuris lieka padalijus, kai jo nebegalima padalyti i sveikas lygias dalis. Liekana visada mazesne uz dalikli.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Dauginant skaiciu is \(10\), \(100\), \(1000\), prie skaiciaus desines prirasome atitinkamai viena, du arba tris nulius.
+\end{teorema}
+
+\begin{savybe}
+Dalybos rezultata galima patikrinti: daliklis \(\cdot\) dalmuo \(+\) liekana \(=\) dalinys.
+\end{savybe}
+
+\begin{savybe}
+Jei dauginame is dvidesimciu, trisdesimciu ar kito desimciu skaiciaus, galima pirma dauginti is \(2\), \(3\) ir tada prirasyti nuli.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Dauginant stulpeliu is vienzenklio skaiciaus, pradedame nuo vienetu. Jei sandauga didesne uz \(9\), vienetus rasome, o desimtis keliame i kita vieta.
+
+Dauginant is dviženklio skaiciaus, gauname du dalinius rezultatus: pirma dauginame is vienetu, paskui is desimciu. Juos sudedame.
+
+Dalijant stulpeliu, imame tiek pirmuju dalinio skaitmenu, kad juos butu galima padalyti is daliklio, rasome dalmens skaitmeni, dauginame, atimame ir nuleidziame kita skaitmeni.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Sudauginkime \(236\cdot 4\).
+
+Dauginame nuo vienetu: \(6\cdot4=24\), rasome \(4\), keliame \(2\). Toliau \(3\cdot4=12\), pridedame pakeltus \(2\), gauname \(14\), rasome \(4\), keliame \(1\). Toliau \(2\cdot4=8\), pridedame \(1\), gauname \(9\). Taigi
+\[
+236\cdot4=944.
+\]
+\textbf{Atsakymas: \(944\).}
+
+\textbf{2 pavyzdys.} Sudauginkime \(128\cdot 23\).
+
+Pirma dauginame is \(3\):
+\[
+128\cdot3=384.
+\]
+Tada dauginame is \(20\):
+\[
+128\cdot20=2\,560.
+\]
+Sudedame dalinius rezultatus:
+\[
+384+2\,560=2\,944.
+\]
+\textbf{Atsakymas: \(2\,944\).}
+
+\textbf{3 pavyzdys.} Padalykime \(845:6\) su liekana.
+
+Imame \(8\): \(8:6=1\), lieka \(2\). Nuleidziame \(4\), gauname \(24\). \(24:6=4\), lieka \(0\). Nuleidziame \(5\). \(5:6=0\), todel dalmens vienetu vietoje rasome \(0\), lieka \(5\). Gauname
+\[
+845:6=140\ \text{lieka}\ 5.
+\]
+Patikriname: \(6\cdot140+5=840+5=845\).
+\textbf{Atsakymas: \(140\), liekana \(5\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Daugyba ir dalyba stulpeliu remiasi vietine verte is skyriaus \ref{sec:naturalieji-skaiciai-iki-milijono} ir veiksmu savybemis is skyriaus \ref{sec:aritmetiniai-veiksmai-ir-savybes}. Veliau jos bus reikalingos dalikliams ir kartotiniams skyriuje \ref{sec:naturalieji-skaiciai-dalikliai-ir-kartotiniai}.
+
+\section{Trupmenos ir desimtaines trupmenos pradzia}\label{sec:trupmenos-ir-desimtaines-trupmenos-pradzia}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Trupmena rodo, i kiek lygiu daliu padalytas visas daiktas ir kiek tokiu daliu paimta. Trupmenoje \(\frac{3}{4}\) skaicius \(4\) rodo visas lygias dalis, o \(3\) rodo paimtas dalis.
+\end{apibreztis}
+
+\begin{apibreztis}
+Desimtaine trupmena yra trupmenos rasymas naudojant kableli. Pavyzdziui, \(0,5\) reiskia penkias desimtasias dalis.
+\end{apibreztis}
+
+\begin{apibreztis}
+Mišrusis skaicius turi sveikaja dali ir trupmenine dali, pavyzdziui \(2\frac{1}{3}\).
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei vienodos trupmenos vardikliai lygus, didesne ta trupmena, kurios skaitiklis didesnis: \(\frac{3}{8}>\frac{2}{8}\).
+\end{teorema}
+
+\begin{savybe}
+Viena antroji yra tiek pat, kiek \(0,5\), nes visas padalytas i dvi lygias dalis arba i desimt daliu ir paimtos penkios.
+\end{savybe}
+
+\begin{savybe}
+Trupmenos \(\frac{1}{10}\), \(\frac{2}{10}\), \(\frac{7}{10}\) gali buti uzrasomos desimtainemis trupmenomis: \(0,1\), \(0,2\), \(0,7\).
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint rasti visumos dali, visuma padalijame is vardiklio ir padauginame is skaitiklio.
+
+Norint sudeti trupmenas su vienodais vardikliais, sudedame skaitiklius, o vardikli paliekame ta pati.
+
+Desimtaines trupmenos su viena vieta po kablelio rodo desimtasias dalis. Skaicius \(3,4\) reiskia \(3\) sveikus ir \(4\) desimtasias.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Raskime \(\frac{3}{5}\) skaiciaus \(20\).
+
+Pirmiausia randame viena penktadali:
+\[
+20:5=4.
+\]
+Tada paimame tris tokias dalis:
+\[
+4\cdot3=12.
+\]
+\textbf{Atsakymas: \(12\).}
+
+\textbf{2 pavyzdys.} Sudekime \(\frac{2}{7}+\frac{3}{7}\).
+
+Vardikliai vienodi, todel sudedame tik skaitiklius:
+\[
+\frac{2}{7}+\frac{3}{7}=\frac{2+3}{7}=\frac{5}{7}.
+\]
+\textbf{Atsakymas: \(\frac{5}{7}\).}
+
+\textbf{3 pavyzdys.} Uzrasykime \(4\frac{6}{10}\) desimtaine trupmena.
+
+Sveikoji dalis yra \(4\). Trupmenine dalis \(\frac{6}{10}\) reiskia \(0,6\). Todel
+\[
+4\frac{6}{10}=4,6.
+\]
+\textbf{Atsakymas: \(4,6\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Trupmenos remiasi dalybos pradzia is skyriaus \ref{sec:daugybos-ir-dalybos-pradzia} ir dalimis is skyriaus \ref{sec:paprastosios-trupmenos-kaip-dalys}. Jos reikalingos matuojant ilgi, plota ir turi skyriuje \ref{sec:perimetras-plotas-turis-ir-masto-pradzia}, o veliau pleciamos skyriuje \ref{sec:paprastosios-ir-desimtaines-trupmenos}.
+
+\section{Reiskiniai ir raidiniai zymejimai}\label{sec:reiskiniai-ir-raidiniai-zymejimai}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Reiskinys yra skaiciu, raidziu ir veiksmu uzrasas. Pavyzdziui, \(8+3\cdot4\) ir \(a+5\) yra reiskiniai.
+\end{apibreztis}
+
+\begin{apibreztis}
+Raide matematikoje gali zymeti nezinoma arba kintanti skaiciu. Pavyzdziui, jei dezuteje yra \(x\) piestuku, tai \(x+3\) reiskia trimis piestukais daugiau.
+\end{apibreztis}
+
+\begin{apibreztis}
+Reiskinio reiksme yra skaicius, gaunamas atlikus veiksmus. Jei \(a=7\), tai reiskinio \(a+5\) reiksme yra \(12\).
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Ta pati situacija gali buti uzrasyta zodziais, paveiksleliu, lentele arba raidiniu reiskiniu.
+\end{teorema}
+
+\begin{savybe}
+Jei i ta pati reiskini vietoje raides irasome skirtingus skaicius, galime gauti skirtingas reiksmes.
+\end{savybe}
+
+\begin{savybe}
+Skliaustai reiskinyje parodo, kad pirmiausia reikia atlikti veiksmus ju viduje.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint rasti reiskinio reiksme, vietoje raides irasome duota skaiciu ir atliekame veiksmus pagal veiksmu tvarka.
+
+Norint uzrasyti situacija reiskiniu, ieskome pasikartojancio arba nezinomo kiekio ir pazymime ji raide.
+
+Jei zodyje sakoma „padidinti \(5\)“, rasome \(+5\). Jei sakoma „sumazinti \(5\)“, rasome \(-5\). Jei sakoma „\(3\) kartus daugiau“, rasome \(\cdot3\).
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Raskime reiskinio \(a+18\) reiksme, kai \(a=27\).
+
+Vietoje \(a\) irasome \(27\):
+\[
+a+18=27+18=45.
+\]
+\textbf{Atsakymas: \(45\).}
+
+\textbf{2 pavyzdys.} Uzrasykime reiskini: mokinys turejo \(x\) lipduku, o draugas jam dave dar \(12\) lipduku.
+
+Pradinis lipduku skaicius yra \(x\). Pridedame \(12\), todel gauname
+\[
+x+12.
+\]
+\textbf{Atsakymas: \(x+12\).}
+
+\textbf{3 pavyzdys.} Raskime reiskinio \(5\cdot(n-3)\) reiksme, kai \(n=11\).
+
+Pirma irasome \(11\):
+\[
+5\cdot(n-3)=5\cdot(11-3).
+\]
+Atliekame veiksma skliaustuose:
+\[
+11-3=8.
+\]
+Tada dauginame:
+\[
+5\cdot8=40.
+\]
+\textbf{Atsakymas: \(40\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Raidiniai reiskiniai remiasi veiksmu tvarka is skyriaus \ref{sec:aritmetiniai-veiksmai-ir-savybes}. Jie padeda uzrasyti lygtis skyriuje \ref{sec:paprastos-lygtys-ir-nelygybes}, lenteliu taisykles skyriuje \ref{sec:sekos-lenteles-ir-koordinates} ir ruosia skaitiniams bei raidiniams reiskiniams skyriuje \ref{sec:skaitiniai-ir-raidiniai-reiskiniai}.
+
+\section{Paprastos lygtys ir nelygybes}\label{sec:paprastos-lygtys-ir-nelygybes}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Lygtis yra lygybe su nezinomuoju. Pavyzdziui, \(x+7=15\).
+\end{apibreztis}
+
+\begin{apibreztis}
+Lygties sprendinys yra skaicius, kuri irasius vietoje nezinomojo lygybe tampa teisinga.
+\end{apibreztis}
+
+\begin{apibreztis}
+Nelygybe yra uzrasas su zenklais \(<\), \(>\), \(\leq\), \(\geq\). Pavyzdziui, \(x<9\) reiskia, kad \(x\) yra mazesnis uz \(9\).
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei prie abieju lygties pusiu pridedame ta pati skaiciu arba is abieju pusiu atimame ta pati skaiciu, lygties pusiausvyra issaugoma.
+\end{teorema}
+
+\begin{savybe}
+Sudeties lygtis tikrinama atimtimi: jei \(x+6=20\), tai \(x=20-6\).
+\end{savybe}
+
+\begin{savybe}
+Nelygybe gali tureti daugiau negu viena sprendini. Pavyzdziui, nelygybei \(x<4\) tinka \(1\), \(2\), \(3\), jei ieskome naturaliuju skaiciu.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Sprendziant lygtis su sudetimi, nezinoma demeni randame is sumos atimdami zinoma demeni.
+
+Sprendziant lygtis su atimtimi, patikriname, kuri dalis nezinoma: jei \(x-5=12\), tai \(x=12+5\); jei \(20-x=8\), tai \(x=20-8\).
+
+Sprendziant paprasta nelygybe, galima bandyti skaicius ir atrinkti tuos, kurie uzrasa padaro teisinga.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Isspreskime lygti \(x+18=43\).
+
+Nezinomas demuo yra \(x\). Ji randame is sumos atimdami zinoma demeni:
+\[
+x=43-18=25.
+\]
+Patikriname:
+\[
+25+18=43.
+\]
+\textbf{Atsakymas: \(x=25\).}
+
+\textbf{2 pavyzdys.} Isspreskime lygti \(y-9=16\).
+
+Nezinomas skaicius sumazintas \(9\) ir gauta \(16\). Vadinasi, prie \(16\) reikia prideti \(9\):
+\[
+y=16+9=25.
+\]
+Patikriname:
+\[
+25-9=16.
+\]
+\textbf{Atsakymas: \(y=25\).}
+
+\textbf{3 pavyzdys.} Raskime naturaliuosius skaicius, mazesnius uz \(6\), kurie tinka nelygybei \(2\cdot x<9\).
+
+Bandome \(x=1\): \(2\cdot1=2<9\), tinka. \(x=2\): \(4<9\), tinka. \(x=3\): \(6<9\), tinka. \(x=4\): \(8<9\), tinka. \(x=5\): \(10<9\), netinka.
+\textbf{Atsakymas: \(x=1,2,3,4\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Lygtys ir nelygybes tesia nezinomojo ideja is skyriaus \ref{sec:lygybes-nelygybes-ir-nezinomasis}. Jos naudoja reiskinius is skyriaus \ref{sec:reiskiniai-ir-raidiniai-zymejimai} ir veliau pleciamos skyriuje \ref{sec:lygtys-ir-nelygybes-su-vienu-nezinomuoju}.
+
+\section{Sekos, lenteles ir koordinates}\label{sec:sekos-lenteles-ir-koordinates}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Seka yra skaiciu arba objektu eile, sudaryta pagal tam tikra taisykle.
+\end{apibreztis}
+
+\begin{apibreztis}
+Lentele padeda tvarkingai uzrasyti duomenis eilutemis ir stulpeliais.
+\end{apibreztis}
+
+\begin{apibreztis}
+Koordinates nusako tasko vieta tinklelyje. Paprastai pirma rasome ejima i sona, paskui ejima aukstyn.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Sekoje gali buti pastovus zingsnis, pavyzdziui \(5,10,15,20\), kur zingsnis yra \(5\).
+\end{teorema}
+
+\begin{savybe}
+Lenteleje ta pati taisykle taikoma kiekvienai eilutei. Jei taisykle yra „padaugink is \(3\)“, tai kiekvienas iejimo skaicius dauginamas is \(3\).
+\end{savybe}
+
+\begin{savybe}
+Taskas su koordinatemis \((3;2)\) yra kitoje vietoje negu taskas \((2;3)\), nes koordinaciu tvarka svarbi.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint pratesti seka, reikia rasti jos taisykle: ar skaiciai dideja, mazeja, kartojasi, dauginami, ar keiciasi kitaip.
+
+Norint uzpildyti lentele, kiekvienam iejimo skaiciui pritaikome ta pacia taisykle ir uzrasome rezultata.
+
+Norint pazymeti taska tinklelyje, nuo pradzios einame pirmos koordinates kryptimi, tada antros koordinates kryptimi.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Prateskime seka \(12, 17, 22, 27, \ldots\).
+
+Randame zingsni:
+\[
+17-12=5,\quad 22-17=5,\quad 27-22=5.
+\]
+Kitas narys yra
+\[
+27+5=32.
+\]
+\textbf{Atsakymas: kitas narys yra \(32\).}
+
+\textbf{2 pavyzdys.} Uzpildykime lentele, jei taisykle yra \(y=2\cdot x+1\), o \(x=1,2,3\).
+
+Kai \(x=1\), gauname \(y=2\cdot1+1=3\). Kai \(x=2\), gauname \(y=2\cdot2+1=5\). Kai \(x=3\), gauname \(y=2\cdot3+1=7\).
+\[
+\begin{array}{c|c}
+x & y\\ \hline
+1 & 3\\
+2 & 5\\
+3 & 7
+\end{array}
+\]
+\textbf{Atsakymas: \(3,5,7\).}
+
+\textbf{3 pavyzdys.} Kuri taska pazymesime, jei nuo pradzios eisime \(4\) langelius i desine ir \(3\) langelius aukstyn?
+
+Pirmoji koordinate rodo ejima i desine, todel ji yra \(4\). Antroji koordinate rodo ejima aukstyn, todel ji yra \(3\). Taskas yra
+\[
+(4;3).
+\]
+\textbf{Atsakymas: \((4;3)\).}
+
+\subsection{Ryšys su kitomis temomis}
+
+Sekos tesia desningumu mokymasi is skyriaus \ref{sec:desningumai-ir-sekos}. Lenteles siejasi su reiskiniais skyriuje \ref{sec:reiskiniai-ir-raidiniai-zymejimai} ir duomenu vaizdavimu skyriuje \ref{sec:duomenu-lenteles-ir-diagramos}. Koordinates veliau pleciamos skyriuje \ref{sec:dydziu-priklausomybes-ir-koordinaciu-plokstuma}.
+
+\section{Kampai, tieses ir daugiakampiai}\label{sec:kampai-tieses-ir-daugiakampiai}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Tiese yra be galo i abi puses besitesianti tiesi linija. Atkarpa yra tiesios linijos dalis, turinti du galus.
+\end{apibreztis}
+
+\begin{apibreztis}
+Kampas susidaro, kai du spinduliai prasideda tame paciame taske. Tas taskas vadinamas kampo virsune.
+\end{apibreztis}
+
+\begin{apibreztis}
+Daugiakampis yra uzdara figura, sudaryta is atkarpu. Trikampis turi \(3\) krastines, keturkampis turi \(4\) krastines.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Statusis kampas yra toks kampas, koks susidaro kvadrato ar staciakampio kampe.
+\end{teorema}
+
+\begin{savybe}
+Smailusis kampas yra mazesnis uz statuji, o bukasis kampas yra didesnis uz statuji.
+\end{savybe}
+
+\begin{savybe}
+Daugiakampis turi tiek virsuniu, kiek turi krastiniu.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint atpazinti kampa, ziurime i du spindulius ir ju bendra pradzios taska.
+
+Norint patikrinti, ar kampas statusis, galima palyginti ji su popieriaus lapo ar liniuotes kampu.
+
+Norint pavadinti daugiakampi, suskaiciuojame jo krastines: \(3\) krastines -- trikampis, \(4\) -- keturkampis, \(5\) -- penkiakampis, \(6\) -- sesiakampis.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Kiek krastiniu ir virsuniu turi penkiakampis?
+
+Penkiakampio pavadinimas sako, kad jis turi \(5\) kampus, arba virsunes. Uzdaras daugiakampis turi tiek pat krastiniu, kiek virsuniu, todel jis turi \(5\) krastines.
+\textbf{Atsakymas: \(5\) krastines ir \(5\) virsunes.}
+
+\textbf{2 pavyzdys.} Koks yra kampas, jei jis mazesnis uz staciojo kampo modeli?
+
+Statusis kampas yra lapo kampo dydzio. Jei duotas kampas yra mazesnis uz ji, toks kampas vadinamas smailiuoju.
+\textbf{Atsakymas: smailusis kampas.}
+
+\textbf{3 pavyzdys.} Kiek kampu is viso turi du trikampiai ir vienas keturkampis?
+
+Vienas trikampis turi \(3\) kampus, todel du trikampiai turi
+\[
+2\cdot3=6
+\]
+kampus. Vienas keturkampis turi \(4\) kampus. Is viso:
+\[
+6+4=10.
+\]
+\textbf{Atsakymas: \(10\) kampu.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Si tema remiasi plokstumos figuromis is skyriaus \ref{sec:plokstumos-figuros-ir-kunai}. Daugiakampiu krastines reikalingos perimetrui skyriuje \ref{sec:perimetras-plotas-turis-ir-masto-pradzia}, o kampu matavimas pleciamas skyriuje \ref{sec:kampai-trikampiai-ir-keturkampiai}.
+
+\section{Perimetras, plotas, turis ir masto pradzia}\label{sec:perimetras-plotas-turis-ir-masto-pradzia}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Perimetras yra visu figuros krastiniu ilgiu suma.
+\end{apibreztis}
+
+\begin{apibreztis}
+Plotas parodo, kiek vietos uzima figura plokstumoje. Jis gali buti matuojamas kvadratiniais centimetrais \(\text{cm}^2\).
+\end{apibreztis}
+
+\begin{apibreztis}
+Turis parodo, kiek vietos uzima kunas erdveje arba kiek telpa inde. Jis gali buti matuojamas litrais arba kubiniais vienetais.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Staciakampio perimetras randamas sudedant visas krastines arba skaiciuojant \(P=2\cdot(a+b)\).
+\end{teorema}
+
+\begin{savybe}
+Staciakampio plotas randamas dauginant ilgi is plocio: \(S=a\cdot b\).
+\end{savybe}
+
+\begin{savybe}
+Mastas parodo, kiek kartu tikras daiktas sumazintas arba padidintas brezinyje. Jei \(1\) cm plane reiskia \(1\) m tikroveje, planas yra sumazintas.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint rasti perimetra, apeiname figura aplink ir sudedame visu krastiniu ilgius.
+
+Norint rasti staciakampio plota, suskaiciuojame, kiek kvadrateliu telpa vienoje eileje ir kiek yra eiliu, tada dauginame.
+
+Norint naudoti paprasta masta, ziurime, ka reiskia vienas brezinio vienetas, ir dauginame is brezinio ilgio.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Raskime staciakampio perimetra, jei jo ilgis \(8\) cm, plotis \(5\) cm.
+
+Staciakampis turi dvi krastines po \(8\) cm ir dvi po \(5\) cm:
+\[
+P=8+5+8+5=26\ \text{cm}.
+\]
+\textbf{Atsakymas: \(26\) cm.}
+
+\textbf{2 pavyzdys.} Raskime staciakampio plota, jei jo ilgis \(7\) cm, plotis \(4\) cm.
+
+Plotas randamas dauginant ilgi is plocio:
+\[
+S=7\cdot4=28\ \text{cm}^2.
+\]
+\textbf{Atsakymas: \(28\ \text{cm}^2\).}
+
+\textbf{3 pavyzdys.} Plane \(1\) cm reiskia \(2\) m tikroveje. Koks tikras takelio ilgis, jei plane jis yra \(6\) cm?
+
+Kiekvienas plano centimetras reiskia \(2\) metrus. Todel:
+\[
+6\cdot2=12\ \text{m}.
+\]
+\textbf{Atsakymas: \(12\) m.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Perimetras ir plotas remiasi matavimais is skyriaus \ref{sec:matavimai-ilgis-mase-turis-laikas-pinigai} ir daugiakampiais is skyriaus \ref{sec:kampai-tieses-ir-daugiakampiai}. Mastelis veliau nagrinejamas skyriuje \ref{sec:procentai-proporcijos-ir-mastelis}, o plotai ir turiai pleciami skyriuje \ref{sec:plotas-pavirsius-ir-turis}.
+
+\section{Simetrija ir transformacijos pradzia}\label{sec:simetrija-ir-transformacijos-pradzia}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Simetrija yra figuros savybe, kai viena jos dalis atitinka kita dali kaip veidrodyje.
+\end{apibreztis}
+
+\begin{apibreztis}
+Simetrijos asis yra linija, per kuria figura galima sulenkti taip, kad abi dalys sutaptu.
+\end{apibreztis}
+
+\begin{apibreztis}
+Transformacija yra figuros pakeitimas: pastumimas, pasukimas arba atspindys.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Atspindys veidrodyje nekeicia figuros dydzio, bet pakeicia jos puse.
+\end{teorema}
+
+\begin{savybe}
+Pastumta figura lieka tokio pat dydzio ir formos, tik atsiranda kitoje vietoje.
+\end{savybe}
+
+\begin{savybe}
+Kvadratas turi kelias simetrijos asis: per vidurius vertikaliai, horizontaliai ir per istrizaines.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint patikrinti, ar linija yra simetrijos asis, isivaizduojame, kad figura per ja sulenkiama. Jei dalys sutampa, linija yra simetrijos asis.
+
+Norint pastumti figura tinklelyje, kiekviena jos taska pastumiame tiek pat langeliu ta pacia kryptimi.
+
+Norint nupiesti atspindi, kiekviena taska dedame kitoje asies puseje tokiu paciu atstumu nuo asies.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Kiek simetrijos asiu turi staciakampis, kuris nera kvadratas?
+
+Toks staciakampis gali buti sulenktas per viduri vertikaliai ir horizontaliai. Per istrizaines dalys nesutampa, nes krastines nevienodos. Taigi yra \(2\) simetrijos asys.
+\textbf{Atsakymas: \(2\) simetrijos asys.}
+
+\textbf{2 pavyzdys.} Taskas \(A\) yra per \(3\) langelius nuo vertikalios simetrijos asies. Kur bus jo atspindys?
+
+Atspindys turi buti kitoje asies puseje tokiu paciu atstumu. Vadinasi, taskas \(A'\) bus per \(3\) langelius nuo asies kitoje puseje.
+\textbf{Atsakymas: per \(3\) langelius kitoje asies puseje.}
+
+\textbf{3 pavyzdys.} Trikampis pastumtas \(4\) langeliais i desine ir \(2\) langeliais aukstyn. Kaip pasikeite jo forma?
+
+Pastumimas nekeicia nei formos, nei dydzio. Pasikeicia tik vieta tinklelyje. Todel trikampis liko toks pats, tik persikele i kita vieta.
+\textbf{Atsakymas: forma ir dydis nepasikeite.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Simetrija siejasi su plokstumos figuromis is skyriaus \ref{sec:plokstumos-figuros-ir-kunai} ir koordinatemis is skyriaus \ref{sec:sekos-lenteles-ir-koordinates}. Veliau transformacijos placiau nagrinejamos skyriuje \ref{sec:transformacijos-ir-simetrijos}.
+
+\section{Duomenu lenteles ir diagramos}\label{sec:duomenu-lenteles-ir-diagramos}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Duomenys yra surinkta informacija, pavyzdziui, kiek mokiniu pasirinko kiekviena megstama vaisiu.
+\end{apibreztis}
+
+\begin{apibreztis}
+Lentele yra duomenu uzrasymo budas eilutemis ir stulpeliais.
+\end{apibreztis}
+
+\begin{apibreztis}
+Diagrama yra duomenu vaizdavimas piesiniu, stulpeliais, taskais arba kitais zenklais.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Stulpelineje diagramoje aukstesnis stulpelis rodo didesni kieki.
+\end{teorema}
+
+\begin{savybe}
+Duomenis lengviau palyginti, kai visi stulpeliai naudoja ta pati masteli.
+\end{savybe}
+
+\begin{savybe}
+Bendras kiekis gaunamas sudedant visu grupiu kiekius.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint sudaryti lentele, pirmame stulpelyje rasome grupes, kitame -- ju kiekius.
+
+Norint skaityti stulpeline diagrama, ziurime i stulpelio pavadinima ir jo auksti pagal skale.
+
+Norint atsakyti i klausima pagal duomenis, pirmiausia randame reikalingus skaicius lenteleje arba diagramoje, tada atliekame veiksmus.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Lenteleje parodyta, kiek mokiniu pasirinko vaisius:
+\[
+\begin{array}{c|c}
+\text{Vaisius} & \text{Mokiniu skaicius}\\ \hline
+\text{Obuolys} & 9\\
+\text{Bananas} & 6\\
+\text{Kriauše} & 5
+\end{array}
+\]
+Kiek mokiniu atsake is viso?
+
+Sudedame visus kiekius:
+\[
+9+6+5=20.
+\]
+\textbf{Atsakymas: \(20\) mokiniu.}
+
+\textbf{2 pavyzdys.} Kiek daugiau mokiniu pasirinko obuoli nei banana, jei obuoli pasirinko \(9\), o banana \(6\)?
+
+Randame skirtuma:
+\[
+9-6=3.
+\]
+\textbf{Atsakymas: \(3\) mokiniais daugiau.}
+
+\textbf{3 pavyzdys.} Diagramos skale: vienas langelis reiskia \(2\) mokinius. Stulpelis yra \(7\) langeliu aukscio. Kiek mokiniu jis rodo?
+
+Kiekvienas langelis reiskia \(2\) mokinius, todel:
+\[
+7\cdot2=14.
+\]
+\textbf{Atsakymas: \(14\) mokiniu.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Duomenu lenteles tesia duomenu rinkima is skyriaus \ref{sec:duomenu-rinkimas-ir-diagramos}. Jos siejasi su lenteliu skaitymu skyriuje \ref{sec:sekos-lenteles-ir-koordinates}, veiksmais skyriuje \ref{sec:aritmetiniai-veiksmai-ir-savybes} ir veliau pleciamos skyriuje \ref{sec:statistiniai-duomenys-ir-vidurkiai}.
+
+\section{Paprastos tikimybes}\label{sec:paprastos-tikimybes}
+
+\subsection{Apibrėžtys}
+
+\begin{apibreztis}
+Ivykis yra tai, kas gali atsitikti bandymo metu. Pavyzdziui, metant kauliuka ivykis gali buti „iskrito \(6\)“.
+\end{apibreztis}
+
+\begin{apibreztis}
+Butinas ivykis visada atsitinka, negalimas ivykis niekada neatsitinka, o galimas ivykis gali atsitikti arba neatsitikti.
+\end{apibreztis}
+
+\begin{apibreztis}
+Paprasta tikimybe nusako, kiek palankiu rezultatu yra tarp visu vienodai galimu rezultatu.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+
+\begin{teorema}
+Jei maiselyje daugiau raudonu korteliu negu melynu, istraukti raudona kortele yra labiau tiketina.
+\end{teorema}
+
+\begin{savybe}
+Jei visi rezultatai vienodai galimi, tikimybe galima uzrasyti trupmena:
+\[
+\frac{\text{palankiu rezultatu skaicius}}{\text{visu rezultatu skaicius}}.
+\]
+\end{savybe}
+
+\begin{savybe}
+Tikimybe negali buti mazesne uz \(0\) ir negali buti didesne uz \(1\). Pradzioje galime ja suprasti kaip dali nuo visos galimybiu grupes.
+\end{savybe}
+
+\subsection{Taisyklės ir algoritmai}
+
+Norint ivertinti ivyki zodziais, klausiame: ar jis tikrai atsitiks, ar negali atsitikti, ar tik gali atsitikti.
+
+Norint rasti paprasta tikimybe, suskaiciuojame visus rezultatus ir palankius rezultatus, tada sudarome trupmena.
+
+Norint palyginti tikimybes, lyginame palankiu rezultatu skaiciu, kai visu rezultatu skaicius vienodas.
+
+\subsection{Iliustruojantys pavyzdžiai}
+
+\textbf{1 pavyzdys.} Maiselyje yra \(3\) raudoni ir \(2\) melyni rutuliukai. Kiek is viso rutuliuku?
+
+Sudedame rutuliuku skaicius:
+\[
+3+2=5.
+\]
+\textbf{Atsakymas: \(5\) rutuliukai.}
+
+\textbf{2 pavyzdys.} Kokia tikimybe istraukti raudona rutuliuka, jei maiselyje yra \(3\) raudoni ir \(2\) melyni rutuliukai?
+
+Visu rutuliuku yra \(5\). Palankus rezultatai yra \(3\) raudoni rutuliukai. Todel tikimybe:
+\[
+\frac{3}{5}.
+\]
+\textbf{Atsakymas: \(\frac{3}{5}\).}
+
+\textbf{3 pavyzdys.} Metamas iprastas zaidimo kauliukas. Ar ivykis „iskris skaicius \(8\)“ yra galimas?
+
+Ant iprasto kauliuko yra skaiciai \(1,2,3,4,5,6\). Skaiciaus \(8\) nera, todel toks ivykis negali atsitikti.
+\textbf{Atsakymas: negalimas ivykis.}
+
+\subsection{Ryšys su kitomis temomis}
+
+Tikimybes zodziai remiasi ankstesne tema \ref{sec:tikimybes-zodziai-ir-ivykiai}. Tikimybes naudoja trupmenas is skyriaus \ref{sec:trupmenos-ir-desimtaines-trupmenos-pradzia} ir duomenu skaityma is skyriaus \ref{sec:duomenu-lenteles-ir-diagramos}. Veliau jos pleciamos skyriuje \ref{sec:atsitiktiniai-bandymas-ir-tikimybe}.
+
+
+\section{Skaičiai nuo 0 iki 10 000}\label{sec:skaiciai-nuo-0-iki-10000}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima skaičių iki 10 000 skaitymą, rašymą, skyrių sumą, palyginimą ir apvalinimą. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Finansiniai skaičiavimai: kainos, pokyčiai ir sprendimai}\label{sec:finansiniai-skaiciavimai-kainos-pokyciai-sprendimai}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima pinigų smulkinimą, stambinimą, kainų pokyčius, nuolaidas, išlaidas ir taupymą. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Algoritmai: pasirinkimas ir kartojimas}\label{sec:algoritmai-pasirinkimas-ir-kartojimas}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima algoritmo, programos, pasirinkimo komandos ir kartojimo komandos taikymą. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Algebra: lygtys ir raidiniai reiškiniai}\label{sec:algebra-lygtys-ir-raidiniai-reiskiniai}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima lygties, nežinomojo, sprendinio, raidinio reiškinio ir jo reikšmės sąvokas. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Matavimo vienetai: laikas, greitis, plotas ir tūris}\label{sec:matavimo-vienetai-laikas-greitis-plotas-turis}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima laiko, ilgio, greičio, ploto ir tūrio vienetus bei jų keitimą. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+
+
+\section{Koordinačių planai, postūmiai ir posūkiai}\label{sec:koordinaciu-planai-postumiai-ir-posukiai}
+
+\subsection{Apibrėžtys}
+\begin{apibreztis}
+Tema apima padėties nusakymą poromis, judėjimą plane, postūmį, posūkį ir simetriją. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+\end{apibreztis}
+\begin{apibreztis}
+Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+\end{apibreztis}
+
+\subsection{Teoremos ir savybės}
+\begin{savybe}
+Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\end{savybe}
+\begin{pastaba}
+Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Taikant taisyklę svarbu remtis konkrečiais modeliais, brėžiniais arba lentele.
+\end{pastaba}
+
+\subsection{Taisyklės ir algoritmai}
+\begin{enumerate}[label=\arabic*.]
+\item Išskirkite duotus dydžius, sąvokas arba objektus.
+\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
+\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
+\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\end{enumerate}
+
+\subsection{Iliustruojantys pavyzdžiai}
+\begin{enumerate}[label=\arabic*.]
+\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
+\begin{align}
+12+3&=15.
+\end{align}
+\textbf{Atsakymas: \(15\).}
+\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
+\begin{align}
+24-18&=6,\\
+24&>18.
+\end{align}
+\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
+\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
+\begin{align}
+x+5&=20,\\
+x&=15.
+\end{align}
+\textbf{Atsakymas: \(x=15\).}
+\end{enumerate}
+
+\subsection{Ryšys su kitomis temomis}
+Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
