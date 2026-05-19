@@ -57,7 +57,7 @@
     .content {
       position: relative; z-index: 1;
       padding: 100px 60px 80px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -69,62 +69,6 @@
       margin-bottom: 6px;
     }
     .page-desc { color: var(--muted); font-size: 1.05rem; }
-
-    /* ---- sekcijos ---- */
-    .resource-section {
-      margin-bottom: 32px;
-    }
-    .resource-section h2 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* ---- kortelės ---- */
-    .resource-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .resource-link {
-      display: block;
-      padding: 20px 24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      text-decoration: none;
-      color: var(--text);
-      transition: border-color .2s, transform .2s;
-    }
-    .resource-link:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-    .resource-link h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .resource-link p {
-      color: var(--muted);
-      font-size: .85rem;
-    }
-    .resource-meta {
-      display: flex;
-      gap: 12px;
-      margin-top: 8px;
-    }
-    .resource-meta span {
-      background: rgba(108,99,255,.1);
-      color: var(--accent);
-      padding: 2px 10px;
-      border-radius: 99px;
-      font-size: .75rem;
-    }
 
     /* ---- atgal ---- */
     .back-link {
@@ -138,6 +82,94 @@
       transition: color .2s;
     }
     .back-link:hover { color: var(--accent); }
+
+    /* ---- sekcijos ---- */
+    .resource-section {
+      margin-bottom: 40px;
+    }
+    .resource-section h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+    }
+    .resource-section .section-count {
+      color: var(--muted);
+      font-weight: 400;
+      font-size: .9rem;
+    }
+
+    /* ---- kortelės ---- */
+    .resource-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resource-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+    .resource-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .resource-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(108,99,255,.08);
+      border-radius: 10px;
+    }
+    .resource-info { flex: 1; min-width: 0; }
+    .resource-link h3 {
+      font-size: .95rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .resource-link h3 .badge-new {
+      background: #00d4aa;
+      color: #000;
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .resource-link p {
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.4;
+    }
+    .resource-meta {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+    .resource-meta span {
+      background: rgba(108,99,255,.1);
+      color: var(--accent);
+      padding: 1px 8px;
+      border-radius: 99px;
+      font-size: .72rem;
+    }
 
     /* ---- poraštė ---- */
     footer {
@@ -154,7 +186,9 @@
     @media (max-width: 640px) {
       nav { padding: 14px 24px; }
       nav ul { display: none; }
-      .content { padding: 100px 20px 60px; }
+      .content { padding: 100px 16px 60px; }
+      .resource-link { padding: 14px 16px; }
+      .resource-icon { font-size: 1.4rem; width: 40px; height: 40px; }
     }
   </style>
 </head>
@@ -179,38 +213,253 @@
 
     <div class="page-header">
       <h1 class="page-title">📖 Visi ištekliai</h1>
-      <p class="page-desc">Visų matematikos išteklių sąrašas ir aprašymas</p>
+      <p class="page-desc">Visi matematikos mokymosi ir egzaminų rengimosi šaltiniai</p>
     </div>
 
-    <!-- Egzaminai -->
+    <!-- 📚 Teorija -->
     <div class="resource-section">
-      <h2>📝 Egzaminai</h2>
+      <h2>📚 Teorija <span class="section-count">(9 failai)</span></h2>
       <div class="resource-list">
-        <a href="exams/matematikos_pupp_instrukcija_2026.pdf" class="resource-link" target="_blank">
-          <h3>Matematikos PUPP el. vykdymo instrukcija 2026</h3>
-          <p>Nacionalinės švietimo agentūros parengta instrukcija matematikos egzamino elektroniniam vykdymui</p>
-          <div class="resource-meta">
-            <span>2026 m.</span>
-            <span>PDF</span>
-            <span>158 KB</span>
+
+        <a href="../textbook/matematika_k12.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">📕</div>
+          <div class="resource-info">
+            <h3>Matematika I–XII klasė <span class="badge-new">NAUJAS</span></h3>
+            <p>Visa mokyklinė teorija viename faile: 176 psl., visos temos nuo I iki XII klasės</p>
+            <div class="resource-meta"><span>PDF</span><span>794 KB</span><span>176 psl.</span></div>
           </div>
         </a>
+
+        <a href="../textbook/12_klase_teorija.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">📖</div>
+          <div class="resource-info">
+            <h3>12 klasė teorija</h3>
+            <p>Visa 12 klasės matematikos teorija: 12 skyrių + formulės + užduotys. VBE egzaminui.</p>
+            <div class="resource-meta"><span>PDF</span><span>1.2 MB</span><span>359 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/01_02_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">1️⃣</div>
+          <div class="resource-info">
+            <h3>1–2 klasė</h3>
+            <p>Pradinės klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/03_04_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">2️⃣</div>
+          <div class="resource-info">
+            <h3>3–4 klasė</h3>
+            <p>3–4 klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/05_06_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">3️⃣</div>
+          <div class="resource-info">
+            <h3>5–6 klasė</h3>
+            <p>5–6 klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/07_08_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">4️⃣</div>
+          <div class="resource-info">
+            <h3>7–8 klasė</h3>
+            <p>7–8 klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/09_10_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">5️⃣</div>
+          <div class="resource-info">
+            <h3>9–10 klasė</h3>
+            <p>9–10 klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/11_gim_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">6️⃣</div>
+          <div class="resource-info">
+            <h3>11 gimnazijos klasė</h3>
+            <p>11 gimnazijos klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
+        <a href="../textbook/chapters/12_gim_klase.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">7️⃣</div>
+          <div class="resource-info">
+            <h3>12 gimnazijos klasė</h3>
+            <p>12 gimnazijos klasės matematikos teorija</p>
+            <div class="resource-meta"><span>PDF</span></div>
+          </div>
+        </a>
+
       </div>
     </div>
 
-    <!-- Formulės -->
+    <!-- ✏️ Užduotys -->
     <div class="resource-section">
-      <h2>📐 Formulės</h2>
+      <h2>✏️ Užduotys <span class="section-count">(3 failai)</span></h2>
       <div class="resource-list">
-        <a href="formulas/matematikos_formuliu_lapas.pdf" class="resource-link" target="_blank">
-          <h3>Matematikos išplėstinio kurso formulės</h3>
-          <p>Brandos egzamino formulės: greitosios daugybos, trigonometrijos, geometrijos, tikimybių teorijos ir statistikos formulės</p>
-          <div class="resource-meta">
-            <span>2024 m.</span>
-            <span>PDF</span>
-            <span>570 KB</span>
+
+        <a href="../exercises/algebra/100_uzduociu_sprendimas_x.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">𝑥</div>
+          <div class="resource-info">
+            <h3>100 užduočių: sprendimas x</h3>
+            <p>Tiesinės, kvadratinės, logaritminės, eksponentinės lygtys ir sistemos. Su sprendimais.</p>
+            <div class="resource-meta"><span>PDF</span><span>200 KB</span><span>100 užduočių</span><span>5 psl.</span></div>
           </div>
         </a>
+
+        <a href="../exercises/tekstines-lygtys/tekstines_lygtys.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">📄</div>
+          <div class="resource-info">
+            <h3>Tekstinės lygtys</h3>
+            <p>15 tekstinių uždavinų su sprendimais. Paverskite žodžius lygtimis ir išspręskite.</p>
+            <div class="resource-meta"><span>PDF</span><span>33 KB</span><span>15 užduočių</span><span>4 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/index.html" class="resource-link">
+          <div class="resource-icon">✏️</div>
+          <div class="resource-info">
+            <h3>Visos užduotys (interaktyvus sąrašas)</h3>
+            <p>Visi uždaviniai su galimybe filtruoti pagal temą, klasę ir sudėtingumą</p>
+            <div class="resource-meta"><span>Tinklapis</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 📐 Formulynai -->
+    <div class="resource-section">
+      <h2>📐 Formulynai <span class="section-count">(9 failai)</span></h2>
+      <div class="resource-list">
+
+        <a href="../exercises/formulynai/formulynai_4kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">4️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 4 klasė</h3>
+            <p>Skaičių savybės, plotas ir perimetras, matmenys</p>
+            <div class="resource-meta"><span>PDF</span><span>19 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_5kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">5️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 5 klasė</h3>
+            <p>Trupmenos, dešimtainės trupmenos, procentai, geometrija</p>
+            <div class="resource-meta"><span>PDF</span><span>18 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_6kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">6️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 6 klasė</h3>
+            <p>Santykiai, proporcijos, laipsniai, šaknys, geometrija</p>
+            <div class="resource-meta"><span>PDF</span><span>24 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_7kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">7️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 7 klasė</h3>
+            <p>Tiesinės lygtys, nelygybės, lygčių sistemos, funkcija, geometrija</p>
+            <div class="resource-meta"><span>PDF</span><span>21 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_8kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">8️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 8 klasė</h3>
+            <p>Kvadratinė lygtis, Vieta formulė, kvadratinė funkcija, geometrija</p>
+            <div class="resource-meta"><span>PDF</span><span>23 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_9kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">9️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 9 klasė</h3>
+            <p>Aritmetinė ir geometrinė progresijos, logaritmai, eksponentinė funkcija</p>
+            <div class="resource-meta"><span>PDF</span><span>21 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_10kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">🔟</div>
+          <div class="resource-info">
+            <h3>Formulynai — 10 klasė</h3>
+            <p>Trigonometrinės tapatybės, suma, skirtumas, dvigubas kampis, mažinimo formulės</p>
+            <div class="resource-meta"><span>PDF</span><span>17 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_11kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">1️⃣1️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 11 klasė</h3>
+            <p>Ribos, išvestinės lentelė, erdvinė geometrija</p>
+            <div class="resource-meta"><span>PDF</span><span>24 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+        <a href="../exercises/formulynai/formulynai_12kl.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">1️⃣2️⃣</div>
+          <div class="resource-info">
+            <h3>Formulynai — 12 klasė</h3>
+            <p>Integralai, tikimybė, kombinatorika, statistika</p>
+            <div class="resource-meta"><span>PDF</span><span>26 KB</span><span>1 psl.</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 📝 Egzaminai -->
+    <div class="resource-section">
+      <h2>📝 Egzaminai <span class="section-count">(1 failas)</span></h2>
+      <div class="resource-list">
+
+        <a href="exams/matematikos_pupp_instrukcija_2026.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <h3>Matematikos PUPP el. vykdymo instrukcija 2026</h3>
+            <p>Nacionalinės švietimo agentūros parengta instrukcija matematikos egzamino elektroniniam vykdymui</p>
+            <div class="resource-meta"><span>PDF</span><span>158 KB</span><span>2026 m.</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- 📐 Formulės -->
+    <div class="resource-section">
+      <h2>📐 Formulės <span class="section-count">(1 failas)</span></h2>
+      <div class="resource-list">
+
+        <a href="formulas/matematikos_formuliu_lapas.pdf" class="resource-link" target="_blank">
+          <div class="resource-icon">📐</div>
+          <div class="resource-info">
+            <h3>Matematikos išplėstinio kurso formulės</h3>
+            <p>Brandos egzamino formulės: greitosios daugybos, trigonometrijos, geometrijos, tikimybių teorijos ir statistikos formulės</p>
+            <div class="resource-meta"><span>PDF</span><span>570 KB</span><span>2024 m.</span></div>
+          </div>
+        </a>
+
       </div>
     </div>
 
