@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visi ištekliai — Matematikos Ištekliai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0b0e17;
+      --surface: #131729;
+      --surface-hover: #1a1f35;
+      --border: #1e2440;
+      --accent: #6c63ff;
+      --accent-glow: rgba(108,99,255,.35);
+      --text: #e2e6f3;
+      --muted: #7a8199;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---- navigacija ---- */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 60px;
+      background: rgba(11,14,23,.7);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 1.15rem;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    nav .logo span { color: var(--text); }
+    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul a {
+      color: var(--muted); text-decoration: none; font-size: .9rem;
+      transition: color .2s;
+    }
+    nav ul a:hover, nav ul a.active { color: var(--text); }
+
+    /* ---- turinys ---- */
+    .content {
+      position: relative; z-index: 1;
+      padding: 100px 60px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-header { margin-bottom: 40px; }
+    .page-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 6px;
+    }
+    .page-desc { color: var(--muted); font-size: 1.05rem; }
+
+    /* ---- sekcijos ---- */
+    .resource-section {
+      margin-bottom: 32px;
+    }
+    .resource-section h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ---- kortelės ---- */
+    .resource-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .resource-link {
+      display: block;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+    .resource-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .resource-link h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .resource-link p {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .resource-meta {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .resource-meta span {
+      background: rgba(108,99,255,.1);
+      color: var(--accent);
+      padding: 2px 10px;
+      border-radius: 99px;
+      font-size: .75rem;
+    }
+
+    /* ---- atgal ---- */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .9rem;
+      margin-bottom: 24px;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* ---- poraštė ---- */
+    footer {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 24px; }
+      nav ul { display: none; }
+      .content { padding: 100px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navigacija -->
+  <nav>
+    <a href="../index.html" class="logo">∫<span>matematika</span></a>
+    <ul>
+      <li><a href="../index.html#resources">Ištekliai</a></li>
+      <li><a href="../exercises/index.html">Užduotys</a></li>
+      <li><a href="../textbook/index.html">Teorija</a></li>
+      <li><a href="../index.html#about">Apie</a></li>
+      <li><a href="https://github.com/NoriuMokytisAI/math-project">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- turinys -->
+  <div class="content">
+
+    <a href="../index.html#resources" class="back-link">← Grįžti į pagrindinį</a>
+
+    <div class="page-header">
+      <h1 class="page-title">📖 Visi ištekliai</h1>
+      <p class="page-desc">Visų matematikos išteklių sąrašas ir aprašymas</p>
+    </div>
+
+    <!-- Egzaminai -->
+    <div class="resource-section">
+      <h2>📝 Egzaminai</h2>
+      <div class="resource-list">
+        <a href="exams/matematikos_pupp_instrukcija_2026.pdf" class="resource-link" target="_blank">
+          <h3>Matematikos PUPP el. vykdymo instrukcija 2026</h3>
+          <p>Nacionalinės švietimo agentūros parengta instrukcija matematikos egzamino elektroniniam vykdymui</p>
+          <div class="resource-meta">
+            <span>2026 m.</span>
+            <span>PDF</span>
+            <span>158 KB</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulės -->
+    <div class="resource-section">
+      <h2>📐 Formulės</h2>
+      <div class="resource-list">
+        <a href="formulas/matematikos_formuliu_lapas.pdf" class="resource-link" target="_blank">
+          <h3>Matematikos išplėstinio kurso formulės</h3>
+          <p>Brandos egzamino formulės: greitosios daugybos, trigonometrijos, geometrijos, tikimybių teorijos ir statistikos formulės</p>
+          <div class="resource-meta">
+            <span>2024 m.</span>
+            <span>PDF</span>
+            <span>570 KB</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>Sukurta su &hearts; &middot; <a href="https://github.com/NoriuMokytisAI">NoriuMokytisAI</a> &middot; MIT licencija &middot; © 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
