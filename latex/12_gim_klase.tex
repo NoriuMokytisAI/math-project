@@ -3,234 +3,381 @@
 \section{Integralas ir pirmykštė funkcija}\label{sec:integralas-ir-pirmykste-funkcija}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{išvestinė ir diferencijavimas}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{išvestinė ir diferencijavimas}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:isvestine-ir-diferencijavimas}.
 \end{tcolorbox}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Funkcija \(F\) vadinama funkcijos \(f\) pirmykšte funkcija intervale \(I\), jeigu kiekvienam \(x \in I\) galioja \(F'(x)=f(x)\).
+Funkcija \(F\) vadinama funkcijos \(f\) pirmykšte funkcija intervale \(I\), jeigu kiekvienam \(x\in I\) galioja \(F'(x)=f(x)\).
 \end{apibreztis}
 \begin{apibreztis}
-Neapibrėžtinis integralas yra visų pirmykščių funkcijų aibė: \(\int f(x)\,dx=F(x)+C\), kur \(C\) yra konstanta.
+Neapibrėžtinis integralas yra visų funkcijos \(f\) pirmykščių funkcijų šeima:
+\[
+\int f(x)\,dx=F(x)+C,\qquad C\in\mathbb{R}.
+\]
+Ženklas \(dx\) primena, pagal kurį kintamąjį integruojama.
+\end{apibreztis}
+\begin{apibreztis}
+Pagrindinė integravimo užduotis yra atvirkštinė diferencijavimui: žinome kitimo greitį \(f(x)\), o ieškome sukaupto dydžio \(F(x)\).
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{teorema}
-Jeigu \(F\) yra viena funkcijos \(f\) pirmykštė intervale, tai visos pirmykštės yra \(F+C\).
+Jeigu \(F\) yra viena funkcijos \(f\) pirmykštė intervale \(I\), tai visos \(f\) pirmykštės tame intervale yra \(F+C\), kur \(C\) yra konstanta.
 \end{teorema}
 \begin{proof}
-Jei \(G'=f\) ir \(F'=f\), tai \((G-F)'=0\). Funkcija, kurios išvestinė intervale lygi nuliui, yra konstanta, todėl \(G=F+C\).
+Jei \(G'=f\) ir \(F'=f\), tai \((G-F)'=G'-F'=0\). Funkcija, kurios išvestinė intervale lygi nuliui, tame intervale yra pastovi, todėl \(G-F=C\), t. y. \(G=F+C\).
 \end{proof}
 \begin{savybe}
-\(\int (af(x)+bg(x))\,dx=a\int f(x)\,dx+b\int g(x)\,dx\).
+Integralas yra tiesinis:
+\[
+\int (a f(x)+b g(x))\,dx=a\int f(x)\,dx+b\int g(x)\,dx.
+\]
 \end{savybe}
-\begin{proof}
-Abi puses diferencijavus gaunama ta pati funkcija \(af(x)+bg(x)\), todėl jos skiriasi tik konstanta.
-\end{proof}
+\begin{savybe}
+Dažniausios pirmykščių formulės:
+\[
+\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\quad(n\ne -1),\qquad
+\int \frac{1}{x}\,dx=\ln|x|+C,
+\]
+\[
+\int e^x\,dx=e^x+C,\quad
+\int \sin x\,dx=-\cos x+C,\quad
+\int \cos x\,dx=\sin x+C.
+\]
+\end{savybe}
+\begin{pastaba}
+Išplėstiniame kurse dažnai reikia integruoti ir paprastas sudėtines funkcijas. Jeigu vidinės funkcijos išvestinė yra šalia, tinka keitimo mintis: \(\int f'(x)\varphi(f(x))\,dx=\Phi(f(x))+C\), kai \(\Phi'=\varphi\).
+\end{pastaba}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Atpažinkite funkciją \(f(x)\), kurią reikia integruoti.
-\item Pasirinkite pagrindinę integralų formulę, pavyzdžiui \(\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\), kai \(n\ne -1\).
-\item Pritaikykite integralų tiesiškumą.
-\item Patikrinkite atsakymą diferencijuodami.
+\item Pertvarkykite reiškinį taip, kad matytųsi pagrindinės formulės: išskleiskite skliaustus, atskirkite trupmenas, laipsnius rašykite \(x^n\) pavidalu.
+\item Integruokite kiekvieną dėmenį atskirai ir nepamirškite konstantų daugiklių.
+\item Pridėkite \(+C\). Be šios konstantos atsakymas neaprašo visų pirmykščių.
+\item Patikrinkite diferencijuodami gautą rezultatą. Jeigu išvestinė grįžta į pradinę funkciją, integralas rastas teisingai.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Raskime \(\int (3x^2-4x+1)\,dx\).
+\item Raskime \(\int (6x^2-4x+5)\,dx\).
 \begin{align}
-\int (3x^2-4x+1)\,dx &= x^3-2x^2+x+C.
+\int (6x^2-4x+5)\,dx
+&=6\cdot\frac{x^3}{3}-4\cdot\frac{x^2}{2}+5x+C\\
+&=2x^3-2x^2+5x+C.
 \end{align}
-\textbf{Atsakymas: \(x^3-2x^2+x+C\).}
-\item Raskime pirmykštę, kai \(f(x)=\cos x+e^x\).
+\textbf{Atsakymas:} \(2x^3-2x^2+5x+C\).
+
+\item Raskime pirmykštę \(F\), jei \(F'(x)=3\sqrt{x}-\frac{2}{x}\), \(x>0\), ir \(F(1)=4\).
 \begin{align}
-\int(\cos x+e^x)\,dx &= \sin x+e^x+C.
+F(x)&=\int \left(3x^{1/2}-2x^{-1}\right)\,dx\\
+&=3\cdot\frac{x^{3/2}}{3/2}-2\ln x+C\\
+&=2x^{3/2}-2\ln x+C.
 \end{align}
-\textbf{Atsakymas: \(\sin x+e^x+C\).}
-\item Raskime \(F\), jei \(F'(x)=2x\) ir \(F(1)=5\).
+Iš sąlygos \(F(1)=4\):
+\[
+2\cdot1^{3/2}-2\ln1+C=4,\qquad C=2.
+\]
+\textbf{Atsakymas:} \(F(x)=2x^{3/2}-2\ln x+2\), kai \(x>0\).
+
+\item Apskaičiuokime \(\int 2x\cos(x^2+1)\,dx\).
 \begin{align}
-F(x)&=x^2+C,\\
-5&=1+C,\\
-C&=4.
+u&=x^2+1,\qquad du=2x\,dx,\\
+\int 2x\cos(x^2+1)\,dx&=\int \cos u\,du=\sin u+C.
 \end{align}
-\textbf{Atsakymas: \(F(x)=x^2+4\).}
+\textbf{Atsakymas:} \(\sin(x^2+1)+C\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Pamirštama konstanta \(C\). Pavyzdžiui, \(\int 2x\,dx=x^2+C\), ne vien \(x^2\).
+\item Taikoma laipsnio formulė atvejui \(n=-1\). \(\int x^{-1}\,dx\) yra \(\ln|x|+C\), o ne \(\frac{x^0}{0}\).
+\item Sumai integruoti pradedama taikyti sandaugos taisyklės analogija. Integralas tiesinis sumai, bet \(\int f(x)g(x)\,dx\) paprastai nelygu \(\int f(x)\,dx\int g(x)\,dx\).
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Raskite \(\int (4x^3-6x+2)\,dx\).
+\item Raskite \(F\), jei \(F'(x)=\frac{1}{x}+e^x\), \(x>0\), ir \(F(1)=e\).
+\item Patikrinkite diferencijuodami: ar \(-3\cos x+2e^x+C\) yra funkcijos \(3\sin x+2e^x\) pirmykštė?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Integralas remiasi išvestinės samprata ir paruošia plotų, tūrių, judėjimo bei tikimybinių tankių skaičiavimą, todėl jungia analizę, geometriją ir modeliavimą.
+Pirmykštė funkcija yra tiltas nuo išvestinės prie apibrėžtinio integralo. Jei išvestinė aprašo momentinį kitimą, integralas aprašo sukauptą pokytį, plotą, tūrį ar bendrą darbą.
 
 \section{Integralo taikymai}\label{sec:integralo-taikymai}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Apibrėžtinis integralas \(\int_a^b f(x)\,dx\) nusako orientuotą plotą tarp funkcijos grafiko ir \(x\) ašies intervale \([a;b]\).
+Apibrėžtinis integralas \(\int_a^b f(x)\,dx\) yra integralinių sumų riba. Geometriškai, kai \(f(x)\ge0\), jis lygus kreivinės trapecijos plotui po grafiku intervale \([a;b]\).
 \end{apibreztis}
 \begin{apibreztis}
-Funkcijos vidutinė reikšmė intervale \([a;b]\) yra \(\frac{1}{b-a}\int_a^b f(x)\,dx\).
+Orientuotas plotas reiškia, kad grafiko dalys virš \(x\) ašies duoda teigiamą indėlį, o dalys žemiau \(x\) ašies -- neigiamą.
+\end{apibreztis}
+\begin{apibreztis}
+Funkcijos vidutinė reikšmė intervale \([a;b]\) yra
+\[
+\overline f=\frac{1}{b-a}\int_a^b f(x)\,dx.
+\]
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
-\begin{teorema}
-Jeigu \(F'=f\), tai \(\int_a^b f(x)\,dx=F(b)-F(a)\).
+\begin{teorema}[Niutono ir Leibnico formulė]
+Jeigu \(F'=f\) intervale \([a;b]\), tai
+\[
+\int_a^b f(x)\,dx=F(b)-F(a).
+\]
 \end{teorema}
 \begin{proof}
-Tai pagrindinė analizės teorema: sukaupto dydžio pokytis lygus jo kitimo greičio integralui.
+Pirmykštė funkcija \(F\) aprašo sukauptą dydį. Integralas sudeda mažus pokyčius \(f(x)\Delta x\), todėl visa suma artėja prie bendro pokyčio \(F(b)-F(a)\).
 \end{proof}
 \begin{savybe}
-Jeigu \(f(x)\ge g(x)\) intervale \([a;b]\), plotas tarp grafikų lygus \(\int_a^b (f(x)-g(x))\,dx\).
+Jeigu \(a<c<b\), tai \(\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx\).
+\end{savybe}
+\begin{savybe}
+Jeigu \(f(x)\ge g(x)\) intervale \([a;b]\), tai plotas tarp grafikų yra
+\[
+S=\int_a^b (f(x)-g(x))\,dx.
+\]
+\end{savybe}
+\begin{savybe}
+Išplėstiniame kurse sukinio, gauto sukant \(y=f(x)\ge0\) apie \(x\) ašį, tūris:
+\[
+V=\pi\int_a^b (f(x))^2\,dx.
+\]
 \end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Nubraižykite arba mintyse nustatykite integruojamą sritį.
-\item Užrašykite ribas \(a\) ir \(b\).
-\item Sudarykite integralą iš viršutinės funkcijos atėmę apatinę.
-\item Apskaičiuokite integralą pagal Niutono ir Leibnico formulę.
+\item Nustatykite, ką skaičiuojate: orientuotą integralą, tikrą plotą, vidutinę reikšmę ar tūrį.
+\item Jei reikia ploto, raskite susikirtimo taškus ir nuspręskite, kuri funkcija viršuje.
+\item Užrašykite integralą su teisingomis ribomis.
+\item Raskite pirmykštę ir pritaikykite Niutono ir Leibnico formulę.
+\item Patikrinkite ženklą ir vienetus. Plotas negali būti neigiamas, tūrio vienetai yra kubiniai.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Raskime \(\int_0^2 3x^2\,dx\).
+\item Apskaičiuokime \(\int_0^3 (2x+1)\,dx\).
 \begin{align}
-\int_0^2 3x^2\,dx &= \left[x^3\right]_0^2=8.
+\int_0^3 (2x+1)\,dx
+&=\left[x^2+x\right]_0^3\\
+&=(9+3)-0=12.
 \end{align}
-\textbf{Atsakymas: \(8\).}
-\item Raskime plotą tarp \(y=x\) ir \(y=x^2\), kai \(0\le x\le1\).
+\textbf{Atsakymas:} \(12\).
+
+\item Raskime plotą tarp \(y=x\) ir \(y=x^2\).
+Susikirtimo taškai:
+\[
+x=x^2,\qquad x(x-1)=0,\qquad x=0,\;x=1.
+\]
+Kai \(0<x<1\), viršuje yra \(y=x\), todėl
 \begin{align}
 S&=\int_0^1 (x-x^2)\,dx\\
-&=\left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1=\frac{1}{6}.
+&=\left[\frac{x^2}{2}-\frac{x^3}{3}\right]_0^1
+=\frac12-\frac13=\frac16.
 \end{align}
-\textbf{Atsakymas: \(\frac{1}{6}\).}
-\item Raskime \(f(x)=2x+1\) vidutinę reikšmę intervale \([0;3]\).
+\textbf{Atsakymas:} \(\frac16\).
+
+\item Kreivė \(y=\sqrt{x}\) sukama apie \(x\) ašį, \(0\le x\le4\). Raskime sukinio tūrį.
 \begin{align}
-\bar f&=\frac{1}{3}\int_0^3(2x+1)\,dx\\
-&=\frac{1}{3}\left[x^2+x\right]_0^3=4.
+V&=\pi\int_0^4 (\sqrt{x})^2\,dx
+=\pi\int_0^4 x\,dx\\
+&=\pi\left[\frac{x^2}{2}\right]_0^4=8\pi.
 \end{align}
-\textbf{Atsakymas: \(4\).}
+\textbf{Atsakymas:} \(8\pi\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Plotas tarp grafikų skaičiuojamas kaip \(\int (g-f)\,dx\), nors \(g\) yra apatinė funkcija. Tada gaunamas neigiamas skaičius.
+\item Pamirštama perskirti intervalą, kai grafikas kerta \(x\) ašį. Tikras plotas yra atskirų teigiamų plotų suma.
+\item Tūrio formulėje pamirštama kvadratu kelti funkciją: \(V=\pi\int (f(x))^2\,dx\), ne \(\pi\int f(x)\,dx\).
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Apskaičiuokite \(\int_1^2 (3x^2-1)\,dx\).
+\item Raskite plotą tarp \(y=4-x^2\) ir \(x\) ašies.
+\item Raskite funkcijos \(f(x)=x^2\) vidutinę reikšmę intervale \([0;3]\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Integralo taikymai pratęsia analizę į geometriją, fizikinius modelius ir statistiką, o vėliau padeda suprasti skirstinių tankius bei optimizavimo uždavinius.
+Integralo taikymai jungia funkcijų analizę, geometriją, fizikinius modelius ir tikimybinius tankius. Egzamino uždaviniuose dažnai reikia kartu rasti susikirtimo taškus, nubraižyti eskizą ir tik tada integruoti.
 
 \section{Diferencialinės lygtys ir modeliai}\label{sec:diferencialines-lygtys-ir-modeliai}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{išvestinės taikymai}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{išvestinės taikymai}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:isvestines-taikymai}.
 \end{tcolorbox}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Diferencialinė lygtis yra lygtis, kurioje nežinoma funkcija siejama su jos išvestinėmis.
+Diferencialinė lygtis yra lygtis, kurioje nežinoma funkcija siejama su jos išvestinėmis, pavyzdžiui, \(y'=2x\) arba \(N'=0{,}03N\).
 \end{apibreztis}
 \begin{apibreztis}
-Pradinė sąlyga nurodo funkcijos reikšmę viename taške ir leidžia iš bendrojo sprendinio gauti konkretų sprendinį.
+Bendrasis sprendinys aprašo visą sprendinių šeimą, o konkretusis sprendinys gaunamas pritaikius pradinę sąlygą, pavyzdžiui, \(y(0)=5\).
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{teorema}
-Lygties \(y'=ky\) sprendiniai yra \(y=Ce^{kx}\).
+Lygties \(y'=ky\) sprendiniai yra \(y=Ce^{kx}\), kur \(C\) yra konstanta.
 \end{teorema}
 \begin{proof}
-Diferencijuojant \(Ce^{kx}\) gauname \(kCe^{kx}=ky\). Atvirkščiai, atskyrus kintamuosius \(\frac{dy}{y}=k\,dx\), integravimas duoda \(\ln|y|=kx+C_1\), todėl \(y=Ce^{kx}\).
+Jei \(y=Ce^{kx}\), tai \(y'=kCe^{kx}=ky\). Atvirkščiai, kai \(y\ne0\), galima atskirti kintamuosius:
+\[
+\frac{dy}{y}=k\,dx,\qquad \ln|y|=kx+C_1,\qquad y=Ce^{kx}.
+\]
+Sprendinys \(y=0\) taip pat įeina, kai \(C=0\).
 \end{proof}
 \begin{savybe}
-Jeigu kitimo greitis proporcingas kiekiui, modelis yra eksponentinis.
+Jeigu kitimo greitis proporcingas pačiam kiekiui, modelis yra eksponentinis: augimas, kai \(k>0\), ir nykimas, kai \(k<0\).
+\end{savybe}
+\begin{savybe}
+Lygtis \(y'=f(x)\) sprendžiama integruojant: \(y=\int f(x)\,dx\).
 \end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Nustatykite, kas yra nežinoma funkcija.
-\item Užrašykite kitimo dėsnį kaip lygtį su išvestine.
-\item Jei galima, atskirkite kintamuosius.
-\item Integruokite ir pritaikykite pradinę sąlygą.
+\item Įvardykite nežinomą funkciją ir kintamąjį: \(N(t)\), \(s(t)\), \(T(t)\) ar pan.
+\item Sąlygos žodžius perkelkite į lygtį: ``greitis proporcingas kiekiui'' reiškia \(N'=kN\).
+\item Išspręskite lygtį integruodami arba atskirdami kintamuosius.
+\item Pritaikykite pradinę sąlygą ir patikrinkite, ar atsakymas turi prasmę pagal kontekstą.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Išspręskime \(y'=3y\).
+\item Išspręskime \(y'=4x-3\), \(y(1)=2\).
 \begin{align}
-y&=Ce^{3x}.
+y&=\int(4x-3)\,dx=2x^2-3x+C,\\
+2&=2\cdot1^2-3\cdot1+C=-1+C,\\
+C&=3.
 \end{align}
-\textbf{Atsakymas: \(y=Ce^{3x}\).}
-\item Išspręskime \(y'=2x\), \(y(0)=4\).
+\textbf{Atsakymas:} \(y=2x^2-3x+3\).
+
+\item Populiacija auga pagal \(N'=0{,}08N\), \(N(0)=500\). Raskime \(N(t)\).
+\[
+N(t)=Ce^{0{,}08t},\qquad N(0)=C=500.
+\]
+\textbf{Atsakymas:} \(N(t)=500e^{0{,}08t}\).
+
+\item Vaisto kiekis kraujyje mažėja pagal \(A'=-0{,}2A\), \(A(0)=40\). Kada liks \(10\) mg?
 \begin{align}
-y&=x^2+C,\\
-4&=C.
+A(t)&=40e^{-0{,}2t},\\
+10&=40e^{-0{,}2t},\\
+\frac14&=e^{-0{,}2t},\\
+t&=\frac{\ln4}{0{,}2}\approx6{,}93.
 \end{align}
-\textbf{Atsakymas: \(y=x^2+4\).}
-\item Kiekis auga pagal \(N'=0{,}1N\), \(N(0)=50\). Raskime \(N(t)\).
-\begin{align}
-N(t)&=Ce^{0{,}1t},\\
-50&=C.
-\end{align}
-\textbf{Atsakymas: \(N(t)=50e^{0{,}1t}\).}
+\textbf{Atsakymas:} maždaug po \(6{,}93\) laiko vieneto.
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Painiojama \(y'=k\) ir \(y'=ky\). Pirmuoju atveju gaunama tiesinė funkcija \(y=kx+C\), antruoju -- eksponentinė.
+\item Pradinė sąlyga pritaikoma dar prieš randant bendrąjį sprendinį, todėl prarandama konstanta.
+\item Eksponentinio nykimo modelyje pamirštamas neigiamas ženklas.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Išspręskite \(y'=6x^2\), \(y(0)=1\).
+\item Išspręskite \(P'=0{,}05P\), \(P(0)=1200\).
+\item Ką reiškia koeficientas \(k=-0{,}1\) modelyje \(Q'=kQ\)?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Diferencialinės lygtys susieja funkcijų kitimą, eksponentines funkcijas, integralus ir taikomuosius modelius biologijoje, ekonomikoje bei fizikoje.
+Diferencialinės lygtys parodo, kaip išvestinė tampa modeliu. Jos remiasi integralais, eksponentinėmis ir logaritminėmis funkcijomis, o taikomuosiuose uždaviniuose dažnai susijungia su procentiniu kitimu.
 
 \section{Kompleksiniai skaičiai}\label{sec:kompleksiniai-skaiciai}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Kompleksinis skaičius yra \(z=a+bi\), kur \(a,b\in\mathbb{R}\), o \(i^2=-1\).
+Kompleksinis skaičius yra \(z=a+bi\), kur \(a,b\in\mathbb{R}\), o \(i^2=-1\). Skaičius \(a\) vadinamas realiąja dalimi, \(b\) -- menamąja dalimi.
 \end{apibreztis}
 \begin{apibreztis}
 Skaičiaus \(z=a+bi\) modulis yra \(|z|=\sqrt{a^2+b^2}\), o jungtinis skaičius yra \(\overline z=a-bi\).
 \end{apibreztis}
+\begin{apibreztis}
+Kompleksinėje plokštumoje skaičius \(a+bi\) vaizduojamas tašku \((a;b)\). Modulis yra atstumas nuo pradžios taško iki šio taško.
+\end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-\(z\overline z=|z|^2\).
+\[
+z\overline z=|z|^2.
+\]
 \end{savybe}
 \begin{proof}
-\((a+bi)(a-bi)=a^2-b^2i^2=a^2+b^2=|z|^2\).
+\[
+(a+bi)(a-bi)=a^2-b^2i^2=a^2+b^2=|z|^2.
+\]
 \end{proof}
 \begin{teorema}
-Kvadratinė lygtis su realiais koeficientais ir neigiamu diskriminantu turi dvi jungtines kompleksines šaknis.
+Kvadratinė lygtis \(ax^2+bx+c=0\), \(a\ne0\), su realiais koeficientais ir neigiamu diskriminantu turi dvi jungtines kompleksines šaknis:
+\[
+x=\frac{-b\pm i\sqrt{-D}}{2a},\qquad D=b^2-4ac<0.
+\]
 \end{teorema}
-\begin{proof}
-Jei \(D<0\), tai \(\sqrt D=i\sqrt{-D}\), todėl šaknys \(\frac{-b\pm i\sqrt{-D}}{2a}\) yra jungtinės.
-\end{proof}
+\begin{savybe}
+Kompleksiniai skaičiai sudedami ir atimami dalimis, o dauginant naudojama taisyklė \(i^2=-1\).
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Sudėdami kompleksinius skaičius sudėkite realiąsias ir menamąsias dalis.
-\item Daugindami naudokite \(i^2=-1\).
-\item Dalydami trupmeną dauginkite iš vardiklio jungtinio skaičiaus.
-\item Kvadratinių lygčių atveju neigiamą diskriminantą rašykite per \(i\).
+\item Sudėdami ar atimdami grupuokite realiąsias ir menamąsias dalis.
+\item Daugindami išskleiskite skliaustus ir kiekvieną \(i^2\) pakeiskite \(-1\).
+\item Dalydami iš \(a+bi\), dauginkite skaitiklį ir vardiklį iš jungtinio \(a-bi\).
+\item Spręsdami kvadratinę lygtį su \(D<0\), rašykite \(\sqrt{D}=i\sqrt{-D}\).
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Apskaičiuokime \((2+3i)+(5-i)\).
+\item Apskaičiuokime \((2-3i)+(5+7i)\).
+\[
+(2-3i)+(5+7i)=7+4i.
+\]
+\textbf{Atsakymas:} \(7+4i\).
+
+\item Padalykime \(\frac{3+i}{2-i}\).
 \begin{align}
-(2+3i)+(5-i)&=7+2i.
+\frac{3+i}{2-i}
+&=\frac{(3+i)(2+i)}{(2-i)(2+i)}\\
+&=\frac{6+3i+2i+i^2}{4-i^2}
+=\frac{5+5i}{5}=1+i.
 \end{align}
-\textbf{Atsakymas: \(7+2i\).}
-\item Apskaičiuokime \((1+2i)(3-i)\).
+\textbf{Atsakymas:} \(1+i\).
+
+\item Išspręskime \(x^2-2x+5=0\).
 \begin{align}
-(1+2i)(3-i)&=3-i+6i-2i^2=5+5i.
+D&=(-2)^2-4\cdot1\cdot5=-16,\\
+x&=\frac{2\pm i\sqrt{16}}{2}=1\pm2i.
 \end{align}
-\textbf{Atsakymas: \(5+5i\).}
-\item Išspręskime \(x^2+4=0\).
-\begin{align}
-x^2&=-4,\\
-x&=\pm 2i.
-\end{align}
-\textbf{Atsakymas: \(x=\pm2i\).}
+\textbf{Atsakymas:} \(x=1-2i\) ir \(x=1+2i\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Rašoma \(\sqrt{-9}=-3\). Teisingai: \(\sqrt{-9}=3i\) kompleksinių skaičių sistemoje.
+\item Dalijant nepanaikinama menamoji dalis vardiklyje.
+\item Pamirštama, kad \((bi)^2=b^2i^2=-b^2\).
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Apskaičiuokite \((4+i)(1-3i)\).
+\item Raskite \(|-6+8i|\).
+\item Išspręskite \(x^2+6x+13=0\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Kompleksiniai skaičiai užbaigia realiųjų skaičių plėtrą ir leidžia spręsti lygtis, kurios realiųjų sprendinių neturi, taip sustiprindami algebros ir funkcijų teoriją.
+Kompleksiniai skaičiai išplečia realiųjų skaičių aibę taip, kad kvadratinės lygtys visada turėtų šaknis. Jie ypač naudingi algebroje, trigonometrijoje ir vėlesnėse technologijų bei fizikos temose.
 
 \section{Matricos ir tiesinės sistemos}\label{sec:matricos-ir-tiesines-sistemos}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{lygčių ir nelygybių sistemos}, nagrinėta 9-10.
+Šiai temai reikia mokėti: \textbf{lygčių ir nelygybių sistemos}, nagrinėta 9--10 klasėse.
 Jei reikia, pasikartok: \ref{sec:lygciu-ir-nelygybiu-sistemos}.
 \end{tcolorbox}
 
@@ -241,67 +388,111 @@ Matrica yra stačiakampė skaičių lentelė. Matricos elementas \(a_{ij}\) yra 
 \begin{apibreztis}
 Tiesinė sistema yra lygčių sistema, kurioje visi nežinomieji įeina pirmuoju laipsniu.
 \end{apibreztis}
+\begin{apibreztis}
+Determinantas \(2\times2\) matricai skaičiuojamas taip:
+\[
+\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc.
+\]
+\end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Matricas galima sudėti tik tada, kai jų matmenys vienodi.
+Matricas galima sudėti tik tada, kai jų matmenys vienodi. Sudedami atitinkami elementai.
 \end{savybe}
 \begin{savybe}
 Matricų sandauga \(AB\) apibrėžta tada, kai \(A\) stulpelių skaičius lygus \(B\) eilučių skaičiui.
 \end{savybe}
 \begin{teorema}
-Jeigu kvadratinės matricos determinantas nelygus nuliui, atitinkama tiesinė sistema turi vienintelį sprendinį.
+Jeigu sistemos
+\[
+\begin{cases}
+ax+by=e,\\
+cx+dy=f
+\end{cases}
+\]
+koeficientų determinantas \(D=ad-bc\ne0\), sistema turi vienintelį sprendinį.
 \end{teorema}
 \begin{proof}
-Nelygus nuliui determinantas reiškia, kad matricos eilutės nepriklausomos, todėl nė viena lygtis nekartoja kitos informacijos ir sistema turi vieną sankirtos tašką.
+Geometriškai kiekviena lygtis aprašo tiesę. Kai \(D\ne0\), tiesės nėra lygiagrečios ir nesutampa, todėl jos kertasi viename taške.
 \end{proof}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Užrašykite sistemos koeficientus matrica.
-\item Jei sprendžiate eliminavimu, keiskite eilutes elementariais veiksmais.
-\item Siekite trikampės arba laiptuotos formos.
-\item Atlikite atgalinį įstatymą ir patikrinkite sistemoje.
+\item Sistemos koeficientus surašykite tvarkingai, laikydamiesi nežinomųjų eiliškumo.
+\item Spręsdami Gauso metodu, naudokite elementariuosius eilučių veiksmus: sukeiskite eilutes, dauginkite eilutę iš nelygaus nuliui skaičiaus, prie eilutės pridėkite kitos eilutės kartotinį.
+\item Siekite laiptuotos formos, tada atlikite atgalinį įstatymą.
+\item Patikrinkite sprendinį pradinėje sistemoje.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Sudėkime matricas \(\begin{pmatrix}1&2\\3&4\end{pmatrix}\) ir \(\begin{pmatrix}5&6\\7&8\end{pmatrix}\).
-\begin{align}
-\begin{pmatrix}1&2\\3&4\end{pmatrix}+\begin{pmatrix}5&6\\7&8\end{pmatrix}
-=\begin{pmatrix}6&8\\10&12\end{pmatrix}.
-\end{align}
-\textbf{Atsakymas: \(\begin{pmatrix}6&8\\10&12\end{pmatrix}\).}
-\item Apskaičiuokime determinantą \(\begin{vmatrix}2&1\\5&3\end{vmatrix}\).
-\begin{align}
-D&=2\cdot3-1\cdot5=1.
-\end{align}
-\textbf{Atsakymas: \(1\).}
-\item Išspręskime sistemą \(x+y=5\), \(x-y=1\).
-\begin{align}
-2x&=6,\\
-x&=3,\\
-y&=2.
-\end{align}
-\textbf{Atsakymas: \(x=3,\ y=2\).}
+\item Apskaičiuokime sandaugą:
+\[
+\begin{pmatrix}1&2\\3&4\end{pmatrix}
+\begin{pmatrix}5\\6\end{pmatrix}
+=
+\begin{pmatrix}1\cdot5+2\cdot6\\3\cdot5+4\cdot6\end{pmatrix}
+=
+\begin{pmatrix}17\\39\end{pmatrix}.
+\]
+\textbf{Atsakymas:} \(\begin{pmatrix}17\\39\end{pmatrix}\).
+
+\item Išspręskime sistemą
+\[
+\begin{cases}
+2x+y=7,\\
+x-y=2.
+\end{cases}
+\]
+Sudėję lygtis gauname \(3x=9\), todėl \(x=3\). Tada \(3-y=2\), todėl \(y=1\).
+\textbf{Atsakymas:} \(x=3,\ y=1\).
+
+\item Ištirkime sistemą pagal determinantą:
+\[
+\begin{cases}
+3x+2y=1,\\
+6x+4y=5.
+\end{cases}
+\]
+\[
+D=\begin{vmatrix}3&2\\6&4\end{vmatrix}=12-12=0.
+\]
+Kairės pusės proporcingos, bet dešinės pusės ne: antroji lygtis nėra pirmosios kartotinis. Sistema sprendinių neturi.
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Keičiant eilučių veiksmus pakeičiama tik viena lygties pusė.
+\item Matricų sandaugoje dauginami atitinkami elementai kaip sudėtyje. Teisingai: eilutė dauginama iš stulpelio.
+\item Determinantas \(ad-bc\) painiojamas su \(ab-cd\).
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Apskaičiuokite \(\begin{vmatrix}4&-1\\2&3\end{vmatrix}\).
+\item Išspręskite sistemą \(x+2y=8,\ 3x-y=1\).
+\item Ar galima sudauginti \(2\times3\) ir \(3\times1\) matricas? Koks bus sandaugos matmuo?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Matricos apibendrina lygčių sistemas, vektorius ir transformacijas, todėl yra natūrali priemonė geometrijai, optimizavimui ir duomenų modeliavimo uždaviniams.
+Matricos kompaktiškai užrašo sistemas, transformacijas ir duomenų lenteles. Jos padeda suprasti regresijos skaičiavimus, geometrijos transformacijas ir optimizavimo modelius.
 
 \section{Optimizavimas ir modeliavimas}\label{sec:optimizavimas-ir-modeliavimas}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{išvestinės taikymai}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{išvestinės taikymai}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:isvestines-taikymai}.
 \end{tcolorbox}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Optimizavimo uždavinys yra uždavinys, kuriame reikia rasti didžiausią arba mažiausią dydžio reikšmę.
+Optimizavimo uždavinys yra uždavinys, kuriame reikia rasti didžiausią arba mažiausią dydžio reikšmę, laikantis duotų apribojimų.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis yra realios situacijos aprašymas kintamaisiais, lygtimis, nelygybėmis arba funkcijomis.
+Matematinis modelis yra realios situacijos aprašymas kintamaisiais, lygtimis, nelygybėmis, funkcijomis arba duomenimis.
+\end{apibreztis}
+\begin{apibreztis}
+Kritinis taškas yra apibrėžimo srities taškas, kuriame \(f'(x)=0\) arba išvestinė neegzistuoja.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
@@ -309,63 +500,92 @@ Matematinis modelis yra realios situacijos aprašymas kintamaisiais, lygtimis, n
 Jeigu diferencijuojama funkcija turi ekstremumą vidiniame intervalo taške, tame taške jos išvestinė lygi nuliui.
 \end{teorema}
 \begin{proof}
-Ekstremumo taške mažas poslinkis į kairę ir dešinę nekeičia funkcijos pirmos eilės nariu, todėl liestinės nuolydis yra nulis.
+Ekstremumo taške funkcijos reikšmės į abi puses pirmuoju artiniu nebedidėja ta pačia kryptimi. Todėl liestinės krypties koeficientas turi būti \(0\), t. y. \(f'(x)=0\).
 \end{proof}
 \begin{savybe}
 Optimizuojant uždarame intervale būtina tikrinti ir kritinius taškus, ir intervalo galus.
 \end{savybe}
+\begin{savybe}
+Jeigu \(f'\) keičia ženklą iš \(+\) į \(-\), turime maksimumą; jei iš \(-\) į \(+\), turime minimumą.
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Apibrėžkite kintamuosius ir apribojimus.
-\item Sudarykite optimizuojamą funkciją.
-\item Raskite jos išvestinę ir kritinius taškus.
-\item Palyginkite leistinas reikšmes ir suformuluokite atsakymą kontekste.
+\item Apibrėžkite kintamuosius ir nurodykite jų leistinąsias reikšmes.
+\item Sudarykite optimizuojamą funkciją vienu kintamuoju.
+\item Raskite išvestinę ir kritinius taškus.
+\item Palyginkite funkcijos reikšmes kritiniuose taškuose ir intervalo galuose.
+\item Atsakymą parašykite kontekste: su vienetais ir patikrintu realumu.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Raskime \(f(x)=x^2-4x+7\) mažiausią reikšmę.
+\item Raskime \(f(x)=x^3-6x^2+9x+1\) ekstremumus.
 \begin{align}
-f'(x)&=2x-4,\\
-2x-4&=0,\\
-x&=2,\\
-f(2)&=3.
+f'(x)&=3x^2-12x+9=3(x-1)(x-3).
 \end{align}
-\textbf{Atsakymas: mažiausia reikšmė yra \(3\).}
-\item Stačiakampio perimetras \(20\). Raskime didžiausią plotą.
-\begin{align}
-2x+2y&=20,\quad y=10-x,\\
-S(x)&=x(10-x),\\
-S'(x)&=10-2x=0,\\
-x&=5,\quad y=5.
-\end{align}
-\textbf{Atsakymas: didžiausias plotas \(25\).}
-\item Raskime \(f(x)=x^3-3x\) kritinius taškus.
-\begin{align}
-f'(x)&=3x^2-3,\\
-3x^2-3&=0,\\
-x&=\pm1.
-\end{align}
-\textbf{Atsakymas: kritiniai taškai \(x=-1\) ir \(x=1\).}
+Ženklų analizė: \(f'>0\), kai \(x<1\); \(f'<0\), kai \(1<x<3\); \(f'>0\), kai \(x>3\). Todėl ties \(x=1\) yra maksimumas, ties \(x=3\) -- minimumas.
+\[
+f(1)=5,\qquad f(3)=1.
+\]
+\textbf{Atsakymas:} maksimumas \(5\), minimumas \(1\).
+
+\item Stačiakampio perimetras \(40\). Kokie matmenys duoda didžiausią plotą?
+\[
+2x+2y=40,\qquad y=20-x.
+\]
+\[
+S(x)=x(20-x)=20x-x^2,\qquad 0<x<20.
+\]
+\[
+S'(x)=20-2x=0,\qquad x=10,\qquad y=10.
+\]
+\textbf{Atsakymas:} didžiausią plotą duoda kvadratas \(10\times10\), plotas \(100\).
+
+\item Iš \(24\) cm ilgio vielos lankstomas stačiakampis, kuris sukamas apie vieną kraštinę \(x\). Raskime didžiausią cilindro tūrį.
+\[
+2x+2r=24,\qquad r=12-x,\qquad V(x)=\pi r^2x=\pi(12-x)^2x.
+\]
+\[
+V'(x)=\pi\left((12-x)^2-2x(12-x)\right)=\pi(12-x)(12-3x).
+\]
+Leistiname intervale \(0<x<12\) gauname \(x=4\), \(r=8\).
+\textbf{Atsakymas:} didžiausias tūris \(V=256\pi\), kai aukštis \(4\) cm, spindulys \(8\) cm.
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Sudaroma funkcija dviem kintamaisiais ir iš karto diferencijuojama, nepanaudojus apribojimo.
+\item Rastas kritinis taškas laikomas atsakymu, bet nepatikrinami intervalo galai.
+\item Atsakymas pateikiamas be vienetų arba neatitinka konteksto, pavyzdžiui, neigiamas ilgis.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Raskite \(f(x)=x^2-8x+10\) mažiausią reikšmę.
+\item Skaičių \(30\) išskaidykite į du teigiamus dėmenis taip, kad jų sandauga būtų didžiausia.
+\item Raskite funkcijos \(f(x)=x^3-3x\) didžiausią ir mažiausią reikšmes intervale \([-2;2]\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Optimizavimas sujungia funkcijų teoriją, išvestines, geometriją ir realių procesų modeliavimą, todėl padeda spręsti praktinius projektavimo, ekonomikos ir duomenų analizės klausimus.
+Optimizavimas sujungia funkcijų tyrimą, geometriją, integralų taikymus ir modeliavimą. Egzamine svarbiausia ne tik rasti išvestinę, bet ir teisingai sukurti funkciją iš teksto.
 
 \section{Stereometrijos uždaviniai}\label{sec:stereometrijos-uzdaviniai}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{erdvės geometrija}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{erdvės geometrija}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:erdves-geometrija}.
 \end{tcolorbox}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Stereometrija tiria erdvines figūras, jų tarpusavio padėtį, kampus, atstumus, plotus ir tūrius.
+Stereometrija tiria erdvines figūras, jų tarpusavio padėtį, kampus, atstumus, pjūvius, plotus ir tūrius.
 \end{apibreztis}
 \begin{apibreztis}
 Kampo tarp tiesės ir plokštumos dydis yra kampas tarp tiesės ir jos ortogonalios projekcijos į plokštumą.
+\end{apibreztis}
+\begin{apibreztis}
+Dvisienis kampas yra kampas tarp dviejų pusplokštumių, turinčių bendrą kraštinę. Jis matuojamas kampu pjūvyje, statmename bendrai kraštinei.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
@@ -373,46 +593,71 @@ Kampo tarp tiesės ir plokštumos dydis yra kampas tarp tiesės ir jos ortogonal
 Jeigu tiesė statmena dviem susikertančioms plokštumos tiesėms, ji statmena tai plokštumai.
 \end{teorema}
 \begin{proof}
-Dvi susikertančios tiesės nusako plokštumos kryptis. Tiesė, statmena abiem nepriklausomoms kryptims, statmena kiekvienai plokštumos krypčiai.
+Dvi susikertančios tiesės nusako dvi nepriklausomas plokštumos kryptis. Tiesė, statmena abiem šioms kryptims, statmena kiekvienai per susikirtimo tašką einančiai plokštumos tiesei, todėl statmena plokštumai.
 \end{proof}
 \begin{savybe}
-Kūgio, cilindro ir rutulio tūriai priklauso nuo pagrindo matmenų ir aukščio arba spindulio, todėl matavimo vienetai visada kubiniai.
+Atstumas nuo taško iki plokštumos matuojamas statmens ilgiu, o ne bet kurios pasvirosios ilgiu.
+\end{savybe}
+\begin{savybe}
+Prasilenkiančių tiesių kampas lygus kampui tarp lygiagrečiai perkeltų susikertančių tiesių.
 \end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Nusibraižykite pjūvį, kuriame matomas ieškomas kampas arba atstumas.
-\item Pažymėkite statmenis ir projekcijas.
-\item Taikykite Pitagoro teoremą, trigonometrines funkcijas arba tūrio formules.
-\item Patikrinkite, ar atsakymo vienetai atitinka dydį.
+\item Nusibraižykite aiškų brėžinį ir pažymėkite duotus ilgius bei kampus.
+\item Ieškokite plokščiojo pjūvio, kuriame matomas ieškomas dydis.
+\item Pažymėkite statmenis, projekcijas ir trikampius.
+\item Taikykite Pitagoro teoremą, trigonometrines funkcijas, panašumą arba erdvinių kūnų formules.
+\item Atsakymą patikrinkite pagal ribas: kampai turi būti realūs, ilgiai teigiami.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Raskime kubo, kurio briauna \(a=3\), tūrį.
-\begin{align}
-V&=a^3=3^3=27.
-\end{align}
-\textbf{Atsakymas: \(27\).}
-\item Raskime stačiakampio gretasienio įstrižainę, kai kraštinės \(2,3,6\).
-\begin{align}
-d&=\sqrt{2^2+3^2+6^2}=\sqrt{49}=7.
-\end{align}
-\textbf{Atsakymas: \(7\).}
-\item Cilindro spindulys \(2\), aukštis \(5\). Raskime tūrį.
-\begin{align}
-V&=\pi r^2h=\pi\cdot4\cdot5=20\pi.
-\end{align}
-\textbf{Atsakymas: \(20\pi\).}
+\item Stačiakampio gretasienio briaunos yra \(2\), \(3\) ir \(6\). Raskime įstrižainę.
+\[
+d=\sqrt{2^2+3^2+6^2}=\sqrt{49}=7.
+\]
+\textbf{Atsakymas:} \(7\).
+
+\item Taisyklingos keturkampės piramidės pagrindo kraštinė \(6\), aukštinė \(4\). Raskime šoninės briaunos ilgį.
+Nuo pagrindo centro iki viršūnės atstumas:
+\[
+R=\frac{6\sqrt2}{2}=3\sqrt2.
+\]
+Šoninė briauna:
+\[
+l=\sqrt{4^2+(3\sqrt2)^2}=\sqrt{16+18}=\sqrt{34}.
+\]
+\textbf{Atsakymas:} \(\sqrt{34}\).
+
+\item Tiesė sudaro su plokštuma \(30^\circ\) kampą. Pasviroji nuo taško iki plokštumos yra \(10\). Raskime atstumą nuo taško iki plokštumos.
+\[
+h=10\sin30^\circ=10\cdot\frac12=5.
+\]
+\textbf{Atsakymas:} \(5\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Kampas tarp tiesės ir plokštumos painiojamas su kampu tarp tiesės ir bet kurios plokštumos tiesės.
+\item Vietoj statmens iki plokštumos naudojama pasviroji.
+\item Erdvinis uždavinys sprendžiamas be pjūvio, todėl į vieną trikampį sudedami taškai, kurie nėra vienoje plokštumoje.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Kubo briauna \(5\). Raskite jo erdvinę įstrižainę.
+\item Taisyklingos trikampės piramidės aukštinė \(6\), o atstumas nuo pagrindo centro iki viršūnės \(2\sqrt3\). Raskite šoninę briauną.
+\item Paaiškinkite, kodėl atstumas nuo taško iki plokštumos visada ne didesnis už bet kurios pasvirosios ilgį.
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Stereometrija remiasi plokštumos geometrija, trigonometrija ir vektoriais, o jos uždaviniai dažnai pereina į integralo taikymus ir optimizavimą.
+Stereometrija remiasi planimetrija, vektoriais ir trigonometrija. Pjūviai dažnai paverčia erdvinį uždavinį į plokštumos geometrijos uždavinį.
 
 \section{Tikimybiniai skirstiniai}\label{sec:tikimybiniai-skirstiniai}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{sąlyginė tikimybė ir nepriklausomumas}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{sąlyginė tikimybė ir nepriklausomumas}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:salygine-tikimybe-ir-nepriklausomumas}.
 \end{tcolorbox}
 
@@ -421,7 +666,16 @@ Jei reikia, pasikartok: \ref{sec:salygine-tikimybe-ir-nepriklausomumas}.
 Atsitiktinio dydžio skirstinys nusako, kokias reikšmes dydis gali įgyti ir su kokiomis tikimybėmis.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinė viltis yra ilgalaikis atsitiktinio dydžio vidurkis: \(E(X)=\sum x_i p_i\).
+Matematinė viltis yra ilgalaikis atsitiktinio dydžio vidurkis:
+\[
+E(X)=\sum x_i p_i.
+\]
+\end{apibreztis}
+\begin{apibreztis}
+Dispersija matuoja sklaidos dydį:
+\[
+D(X)=\sum (x_i-E(X))^2p_i,\qquad \sigma(X)=\sqrt{D(X)}.
+\]
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
@@ -429,97 +683,147 @@ Matematinė viltis yra ilgalaikis atsitiktinio dydžio vidurkis: \(E(X)=\sum x_i
 Diskrečiojo skirstinio tikimybių suma lygi \(1\).
 \end{savybe}
 \begin{teorema}
-Binominio skirstinio \(X\sim B(n,p)\) matematinė viltis yra \(E(X)=np\).
+Binominio skirstinio \(X\sim B(n,p)\) matematinė viltis yra \(E(X)=np\), o dispersija \(D(X)=np(1-p)\).
 \end{teorema}
 \begin{proof}
-Binominis dydis yra \(n\) nepriklausomų Bernulio bandymų suma. Kiekvieno bandymo viltis lygi \(p\), todėl sumos viltis lygi \(np\).
+Binominis dydis yra \(n\) nepriklausomų Bernulio bandymų suma. Kiekvieno bandymo viltis lygi \(p\), dispersija \(p(1-p)\), todėl sumos viltis ir dispersija yra atitinkamų dydžių sumos.
 \end{proof}
+\begin{savybe}
+Jeigu \(X\sim B(n,p)\), tai
+\[
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+\]
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Nustatykite galimas atsitiktinio dydžio reikšmes.
-\item Priskirkite tikimybes ir patikrinkite, ar jų suma lygi \(1\).
-\item Skaičiuokite viltį, dispersiją arba konkrečių įvykių tikimybes.
-\item Parinkite modelį: Bernulio, binominį, geometrinį arba normalųjį.
+\item Nustatykite, ką reiškia atsitiktinis dydis \(X\).
+\item Išvardykite galimas reikšmes ir priskirkite tikimybes.
+\item Patikrinkite, ar tikimybių suma lygi \(1\).
+\item Skaičiuokite viltį, dispersiją, standartinį nuokrypį arba konkrečias tikimybes.
+\item Jei yra \(n\) vienodų nepriklausomų bandymų su dviem baigtimis, patikrinkite, ar tinka binominis modelis.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Dydis \(X\) įgyja \(0,1,2\) su tikimybėmis \(0{,}2,0{,}5,0{,}3\). Raskime \(E(X)\).
+\item Dydis \(X\) įgyja reikšmes \(0,1,2\) su tikimybėmis \(0{,}2,0{,}5,0{,}3\). Raskime \(E(X)\).
+\[
+E(X)=0\cdot0{,}2+1\cdot0{,}5+2\cdot0{,}3=1{,}1.
+\]
+\textbf{Atsakymas:} \(1{,}1\).
+
+\item Raskime to paties dydžio dispersiją.
 \begin{align}
-E(X)&=0\cdot0{,}2+1\cdot0{,}5+2\cdot0{,}3=1{,}1.
+D(X)&=(0-1{,}1)^2\cdot0{,}2+(1-1{,}1)^2\cdot0{,}5+(2-1{,}1)^2\cdot0{,}3\\
+&=1{,}21\cdot0{,}2+0{,}01\cdot0{,}5+0{,}81\cdot0{,}3\\
+&=0{,}49.
 \end{align}
-\textbf{Atsakymas: \(1{,}1\).}
-\item Jei \(X\sim B(10,0{,}4)\), raskime viltį.
-\begin{align}
-E(X)&=np=10\cdot0{,}4=4.
-\end{align}
-\textbf{Atsakymas: \(4\).}
-\item Metama sąžininga moneta 3 kartus. Tikimybė gauti 2 herbus:
-\begin{align}
-P(X=2)&=\binom32\left(\frac12\right)^2\left(\frac12\right)=\frac{3}{8}.
-\end{align}
-\textbf{Atsakymas: \(\frac{3}{8}\).}
+\textbf{Atsakymas:} \(D(X)=0{,}49\), \(\sigma=0{,}7\).
+
+\item Metama moneta \(5\) kartus. Raskime tikimybę gauti lygiai \(3\) herbus.
+\[
+P(X=3)=\binom53\left(\frac12\right)^3\left(\frac12\right)^2=\frac{10}{32}=\frac{5}{16}.
+\]
+\textbf{Atsakymas:} \(\frac{5}{16}\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Viltis painiojama su labiausiai tikėtina reikšme. Ji gali net nebūti galima reikšmė.
+\item Skirstinio lentelėje tikimybių suma nėra \(1\).
+\item Binominis modelis taikomas priklausomiems bandymams be pagrindo.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item \(X\) įgyja \(1,2,3\) su tikimybėmis \(0{,}4,0{,}4,0{,}2\). Raskite \(E(X)\).
+\item Jei \(X\sim B(12,0{,}25)\), raskite \(E(X)\) ir \(D(X)\).
+\item Raskite \(P(X=2)\), kai \(X\sim B(4,0{,}5)\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Tikimybiniai skirstiniai remiasi kombinatorika, sąlygine tikimybe ir funkcijų modeliais, o integralai leidžia nagrinėti tolydžiuosius skirstinius.
+Skirstiniai remiasi kombinatorika ir tikimybių savybėmis. Normalusis skirstinys yra tolydus atsitiktinių dydžių modelis, todėl siejasi su funkcijų grafikais ir plotais po kreive.
 
 \section{Statistinė išvada ir hipotezės}\label{sec:statistine-isvada-ir-hipotezes}
 
 \begin{tcolorbox}[title=Primename iš ankstesnių klasių, colback=yellow!10]
-Šiai temai reikia mokėti: \textbf{aprašomoji statistika ir normalusis modelis}, nagrinėta 11.
+Šiai temai reikia mokėti: \textbf{aprašomoji statistika ir normalusis modelis}, nagrinėta 11 klasėje.
 Jei reikia, pasikartok: \ref{sec:aprasomoji-statistika-ir-normalusis-modelis}.
 \end{tcolorbox}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Imtis yra populiacijos dalis, pagal kurią daroma išvada apie visą populiaciją.
+Populiacija yra visa tiriama objektų ar žmonių aibė, o imtis -- jos dalis, pagal kurią daroma išvada apie populiaciją.
 \end{apibreztis}
 \begin{apibreztis}
-Nulinė hipotezė \(H_0\) yra tikrinamas pradinis teiginys, o alternatyvioji hipotezė \(H_1\) nurodo, kuo abejojama.
+Nulinė hipotezė \(H_0\) yra tikrinamas pradinis teiginys, o alternatyvioji hipotezė \(H_1\) nurodo, kokio pokyčio ar skirtumo ieškoma.
+\end{apibreztis}
+\begin{apibreztis}
+\(p\)-reikšmė yra tikimybė gauti bent tokį kraštutinį rezultatą, jeigu \(H_0\) yra teisinga.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Didesnė atsitiktinė imtis paprastai mažina įverčio paklaidą.
+Didesnė atsitiktinė imtis paprastai mažina įverčio paklaidą, nes atsitiktiniai svyravimai labiau išsilygina.
 \end{savybe}
 \begin{teorema}
-Jeigu imtis didelė, imties vidurkio skirstinys dažnai artimas normaliajam.
+Jeigu imtis didelė ir stebėjimai nepriklausomi, imties vidurkio skirstinys dažnai artimas normaliajam.
 \end{teorema}
 \begin{proof}
-Tai centrinės ribinės teoremos idėja: daug nepriklausomų mažų įtakų suma turi stabilų, varpo formos skirstinį.
+Tai centrinės ribinės teoremos idėja: daug nepriklausomų mažų įtakų suma arba vidurkis turi stabilų, varpo formos skirstinį.
 \end{proof}
+\begin{savybe}
+Statistinė išvada visada priklauso nuo duomenų rinkimo būdo. Neatsitiktinė arba šališka imtis gali duoti klaidingą išvadą net tada, kai skaičiavimai atlikti teisingai.
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
+\item Aiškiai apibrėžkite populiaciją, imtį ir matuojamą kintamąjį.
 \item Suformuluokite \(H_0\) ir \(H_1\).
-\item Pasirinkite reikšmingumo lygmenį.
+\item Pasirinkite reikšmingumo lygmenį \(\alpha\), dažnai \(\alpha=0{,}05\).
 \item Apskaičiuokite testinę statistiką arba \(p\)-reikšmę.
-\item Priimkite sprendimą ir išsakykite jį kontekste.
+\item Jeigu \(p\le\alpha\), atmeskite \(H_0\); jeigu \(p>\alpha\), nepakanka pagrindo atmesti \(H_0\).
+\item Sprendimą išsakykite kontekste, vengdami per stiprių teiginių.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
 \item Imties vidurkis \(52\), hipotezinis vidurkis \(50\), standartinė paklaida \(1\). Raskime \(z\).
-\begin{align}
-z&=\frac{52-50}{1}=2.
-\end{align}
-\textbf{Atsakymas: \(z=2\).}
-\item Apklausus \(100\) mokinių, \(60\) pasirinko A. Raskime proporcijos įvertį.
-\begin{align}
-\hat p&=\frac{60}{100}=0{,}6.
-\end{align}
-\textbf{Atsakymas: \(\hat p=0{,}6\).}
+\[
+z=\frac{52-50}{1}=2.
+\]
+\textbf{Atsakymas:} \(z=2\).
+
+\item Apklausus \(100\) mokinių, \(60\) pasirinko A. Raskime proporcijos įvertį ir apytikslę standartinę paklaidą.
+\[
+\hat p=\frac{60}{100}=0{,}6,\qquad
+SE\approx\sqrt{\frac{0{,}6\cdot0{,}4}{100}}=\sqrt{0{,}0024}\approx0{,}049.
+\]
+\textbf{Atsakymas:} \(\hat p=0{,}6\), standartinė paklaida apie \(0{,}049\).
+
 \item Jei pasikliautinojo intervalo centras \(10\), paklaida \(0{,}8\), užrašykime intervalą.
-\begin{align}
-I&=[10-0{,}8;\,10+0{,}8]=[9{,}2;\,10{,}8].
-\end{align}
-\textbf{Atsakymas: \([9{,}2;\,10{,}8]\).}
+\[
+I=[10-0{,}8;\,10+0{,}8]=[9{,}2;\,10{,}8].
+\]
+\textbf{Atsakymas:} \([9{,}2;\,10{,}8]\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Teigiama, kad \(H_0\) ``įrodyta'', kai jos neatmetame. Teisingiau: duomenys nesuteikė pakankamai pagrindo ją atmesti.
+\item Painiojama koreliacija ir priežastingumas.
+\item Iš šališkos apklausos daroma išvada apie visą populiaciją.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Suformuluokite \(H_0\) ir \(H_1\), jei tiriama, ar vidutinis kelionės į mokyklą laikas viršija \(25\) min.
+\item Paaiškinkite, ką reiškia \(p=0{,}03\), kai \(\alpha=0{,}05\).
+\item Kodėl savanoriška internetinė apklausa dažnai nėra gera imtis visai mokyklai?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Statistinė išvada remiasi duomenų aprašymu, tikimybiniais skirstiniais ir modeliavimu, todėl leidžia pagrįstai spręsti iš nepilnos informacijos.
+Statistinė išvada remiasi duomenų aprašymu, tikimybiniais skirstiniais ir modeliavimu. Ji padeda pereiti nuo skaičiavimo prie pagrįsto sprendimo, bet reikalauja kritiškai vertinti duomenų kilmę.
 
 \section{Egzamino sintezė ir problemų sprendimas}\label{sec:egzamino-sinteze-ir-problemu-sprendimas}
 
@@ -530,350 +834,588 @@ Sintezės uždavinys yra uždavinys, kuriame reikia sujungti kelias matematikos 
 \begin{apibreztis}
 Sprendimo strategija yra sąmoningas veiksmų planas: suprasti sąlygą, pasirinkti modelį, atlikti skaičiavimus ir patikrinti rezultatą.
 \end{apibreztis}
+\begin{apibreztis}
+Pilnas sprendimas yra ne tik atsakymas, bet ir argumentuotas kelias iki jo: apibrėžti kintamieji, formulės, pertvarkymai, skaičiavimai ir išvada.
+\end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Sudėtingame uždavinyje tarpiniai rezultatai turi būti tikrinami pagal prasmę, vienetus ir leistinąsias reikšmes.
+Sudėtingame uždavinyje tarpiniai rezultatai turi būti tikrinami pagal prasmę, vienetus, ženklą ir leistinąsias reikšmes.
 \end{savybe}
 \begin{savybe}
-Tas pats uždavinys gali turėti kelis sprendimo kelius: algebrinį, grafinį, geometrinį arba skaitinį.
+Tas pats uždavinys gali turėti kelis sprendimo kelius: algebrinį, grafinį, geometrinį, tikimybinį arba skaitinį.
+\end{savybe}
+\begin{savybe}
+Brandos egzamino užduotyse ypač vertinamas ne vien galutinis skaičius, bet ir argumentavimas: kodėl pasirinktas metodas tinka ir kodėl gautas rezultatas atsako į klausimą.
 \end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, ieškomą dydį ir apribojimus.
-\item Atpažinkite temų jungtis: funkcijos, geometrija, tikimybė, statistika arba skaičiavimai.
+\item Perskaitykite sąlygą du kartus: pirmą kartą dėl situacijos, antrą kartą dėl duomenų.
+\item Išskirkite duotus dydžius, ieškomą dydį, apribojimus ir vienetus.
+\item Atpažinkite temas: funkcijos, trigonometrija, geometrija, tikimybės, statistika, integralai.
 \item Sudarykite modelį ir spręskite nuosekliai.
 \item Patikrinkite atsakymą kitu būdu arba bent įvertinkite jo realumą.
+\item Galutinį atsakymą parašykite aiškiu sakiniu.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Raskime, kur \(f(x)=x^2-6x+8\) kerta \(x\) ašį.
-\begin{align}
-x^2-6x+8&=0,\\
-(x-2)(x-4)&=0,\\
-x&=2 \ \text{arba}\ x=4.
-\end{align}
-\textbf{Atsakymas: \(x=2\) ir \(x=4\).}
-\item Stačiojo trikampio statiniai \(6\) ir \(8\). Raskime įžambinę ir plotą.
-\begin{align}
-c&=\sqrt{6^2+8^2}=10,\\
-S&=\frac{6\cdot8}{2}=24.
-\end{align}
-\textbf{Atsakymas: įžambinė \(10\), plotas \(24\).}
-\item Dėžėje yra 3 raudoni ir 2 mėlyni rutuliai. Traukiami 2 be grąžinimo. Raskime tikimybę ištraukti du raudonus.
-\begin{align}
-P&=\frac{3}{5}\cdot\frac{2}{4}=\frac{3}{10}.
-\end{align}
-\textbf{Atsakymas: \(\frac{3}{10}\).}
+\item Funkcija \(f(x)=x^2-6x+8\). Raskime jos nulius ir mažiausią reikšmę.
+\[
+x^2-6x+8=(x-2)(x-4),
+\]
+todėl nuliai \(x=2\) ir \(x=4\). Mažiausia reikšmė yra viršūnėje:
+\[
+x=\frac{2+4}{2}=3,\qquad f(3)=9-18+8=-1.
+\]
+\textbf{Atsakymas:} nuliai \(2\) ir \(4\), mažiausia reikšmė \(-1\).
+
+\item Dėžėje yra \(3\) raudoni ir \(2\) mėlyni rutuliai. Traukiami \(2\) be grąžinimo. Raskime tikimybę ištraukti bent vieną mėlyną.
+Patogiau skaičiuoti priešingą įvykį: abu raudoni.
+\[
+P(\text{abu raudoni})=\frac35\cdot\frac24=\frac3{10}.
+\]
+\[
+P(\text{bent vienas mėlynas})=1-\frac3{10}=\frac7{10}.
+\]
+\textbf{Atsakymas:} \(\frac7{10}\).
+
+\item Stačiojo trikampio statiniai \(6\) ir \(8\). Jo plotas sukamas apie statinį \(6\). Raskime susidariusio kūgio tūrį.
+Sukant apie statinį \(6\), kūgio aukštis \(h=6\), spindulys \(r=8\).
+\[
+V=\frac13\pi r^2h=\frac13\pi\cdot64\cdot6=128\pi.
+\]
+\textbf{Atsakymas:} \(128\pi\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Atsakoma į ne tą klausimą: pavyzdžiui, randamas spindulys, nors prašoma tūrio.
+\item Per anksti apvalinama, todėl vėlesni skaičiavimai praranda tikslumą.
+\item Sprendime nėra paaiškinta, kodėl pasirinkta formulė tinka.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Sudarykite trijų žingsnių planą uždaviniui: rasti plotą tarp dviejų funkcijų grafikų.
+\item Kodėl tikimybių uždavinyje naudinga ieškoti priešingo įvykio?
+\item Funkcija \(g(x)=x^3-3x\). Kokias temas reikėtų prisiminti, norint nubraižyti jos grafiko eskizą?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Egzamino sintezė apibendrina visą kursą: skaičius, algebrą, funkcijas, geometriją, statistiką ir tikimybę, todėl moko matyti matematiką kaip vieną tarpusavyje susietą sistemą.
-
+Egzamino sintezė apibendrina visą kursą: skaičius, algebrą, funkcijas, geometriją, statistiką ir tikimybę. Gera strategija dažnai svarbesnė už ilgą skaičiavimą.
 
 \section{Trigonometrinės lygtys ir nelygybės}\label{sec:trigonometrines-lygtys-ir-nelygybes}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima trigonometrinių lygčių bendruosius sprendinius, sprendinius intervale ir trigonometrines nelygybes. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Trigonometrinė lygtis yra lygtis, kurioje nežinomasis yra trigonometrinės funkcijos argumente, pavyzdžiui, \(\sin x=\frac12\), \(\cos 2x=0\), \(\tan x>1\).
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Bendrasis trigonometrinės lygties sprendinys aprašo visas reikšmes, besikartojančias dėl trigonometrinių funkcijų periodiškumo.
+\end{apibreztis}
+\begin{apibreztis}
+Trigonometrinė nelygybė sprendžiama nustatant, kuriuose vienetinio apskritimo arba grafiko intervaluose funkcijos reikšmės tenkina nelygybę.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+Pagrindiniai periodai:
+\[
+\sin(x+2\pi)=\sin x,\qquad \cos(x+2\pi)=\cos x,\qquad \tan(x+\pi)=\tan x.
+\]
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Pagrindinės lygčių formulės:
+\[
+\sin x=a\Rightarrow x=(-1)^n\arcsin a+n\pi,\quad |a|\le1,
+\]
+\[
+\cos x=a\Rightarrow x=\pm\arccos a+2\pi n,\quad |a|\le1,
+\]
+\[
+\tan x=a\Rightarrow x=\arctan a+\pi n,\quad n\in\mathbb{Z}.
+\]
+\end{savybe}
+\begin{savybe}
+Dažnai naudojamos tapatybės:
+\[
+\sin^2x+\cos^2x=1,\qquad
+\sin2x=2\sin x\cos x,\qquad
+\cos2x=\cos^2x-\sin^2x.
+\]
+Išplėstiniame kurse taip pat taikomos sumos ir skirtumo formulės.
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Pertvarkykite lygtį iki vienos pagrindinės funkcijos, jei įmanoma.
+\item Jei yra sandauga, naudokite nulio sandaugos taisyklę.
+\item Užrašykite bendruosius sprendinius su \(n\in\mathbb{Z}\).
+\item Jei prašoma sprendinių intervale, iš bendrųjų formulių atrinkite tik į intervalą patenkančius sprendinius.
+\item Nelygybei naudokite vienetinį apskritimą arba grafiką ir tik tada pridėkite periodus.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Išspręskime \(\sin x=\frac12\).
+Viename periode sprendiniai yra \(\frac{\pi}{6}\) ir \(\frac{5\pi}{6}\). Todėl
+\[
+x=\frac{\pi}{6}+2\pi n\quad\text{arba}\quad x=\frac{5\pi}{6}+2\pi n,\qquad n\in\mathbb{Z}.
+\]
+\textbf{Atsakymas:} \(x=\frac{\pi}{6}+2\pi n\) arba \(x=\frac{5\pi}{6}+2\pi n\).
+
+\item Raskime \(\cos 2x=0\) sprendinius intervale \([0;2\pi]\).
+\[
+2x=\frac{\pi}{2}+\pi n,\qquad x=\frac{\pi}{4}+\frac{\pi n}{2}.
+\]
+Atrenkame:
+\[
+x=\frac{\pi}{4},\ \frac{3\pi}{4},\ \frac{5\pi}{4},\ \frac{7\pi}{4}.
+\]
+\textbf{Atsakymas:} \(\frac{\pi}{4},\frac{3\pi}{4},\frac{5\pi}{4},\frac{7\pi}{4}\).
+
+\item Išspręskime \(\sin x\ge\frac{\sqrt3}{2}\).
+Viename periode \([0;2\pi]\) sinusas toks didelis nuo \(\frac{\pi}{3}\) iki \(\frac{2\pi}{3}\). Todėl
+\[
+x\in\left[\frac{\pi}{3}+2\pi n;\frac{2\pi}{3}+2\pi n\right],\qquad n\in\mathbb{Z}.
+\]
+\textbf{Atsakymas:} nurodyti intervalai.
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Pamirštamas periodas ir pateikiamas tik vienas sprendinys.
+\item Sprendžiant \(\cos x=a\), prarandamas antras sprendinys \(-\arccos a+2\pi n\).
+\item Nelygybė sprendžiama kaip lygtis, nepateikiant intervalų.
+\item Dalijama iš \(\sin x\) arba \(\cos x\), nepatikrinus atvejų, kai šis daugiklis lygus nuliui.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Išspręskite \(\cos x=-\frac12\).
+\item Raskite \(\tan x=1\) sprendinius intervale \([0;2\pi]\).
+\item Išspręskite \(\cos x<0\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
-
+Trigonometrinės lygtys remiasi vienetiniu apskritimu, funkcijų grafikais ir tapatybėmis. Jos vėliau naudojamos išvestinių, integralų, periodinių procesų ir geometrijos uždaviniuose.
 
 \section{Išvestinė, tolydumas ir liestinė}\label{sec:isvestine-tolydumas-ir-liestine}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima funkcijos tolydumą, išvestinės apibrėžimą, liestinės lygtį ir diferencijavimo taisykles. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Funkcija yra tolydi taške \(x=a\), jeigu jos reikšmės artėjant prie \(a\) artėja prie \(f(a)\). Intuityviai grafikas ties tuo tašku neturi šuolio ar skylės.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Funkcijos išvestinė taške \(a\) yra riba
+\[
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h},
+\]
+jeigu ši riba egzistuoja.
+\end{apibreztis}
+\begin{apibreztis}
+Liestinė funkcijos grafikui taške \(x=a\) yra tiesė, kurios krypties koeficientas lygus \(f'(a)\). Jos lygtis:
+\[
+y=f(a)+f'(a)(x-a).
+\]
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+Jeigu funkcija diferencijuojama taške, tai ji tame taške yra tolydi. Atvirkščias teiginys nebūtinai teisingas.
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Išvestinių taisyklės:
+\[
+(cf)'=cf',\quad (f+g)'=f'+g',\quad (fg)'=f'g+fg',
+\]
+\[
+\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2},\quad g\ne0,\qquad
+(f(g(x)))'=f'(g(x))g'(x).
+\]
+\end{savybe}
+\begin{savybe}
+Elementariųjų funkcijų išvestinės:
+\[
+(x^n)'=nx^{n-1},\quad (e^x)'=e^x,\quad (\ln x)'=\frac1x,
+\]
+\[
+(\sin x)'=\cos x,\quad (\cos x)'=-\sin x,\quad (\tan x)'=\frac{1}{\cos^2x}.
+\]
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Nustatykite funkcijos apibrėžimo sritį ir galimus netolydumo taškus.
+\item Išvestinei rinkitės tinkamą taisyklę: suma, sandauga, dalmuo, sudėtinė funkcija.
+\item Liestinei raskite \(f(a)\) ir \(f'(a)\).
+\item Funkcijos tyrimui išspręskite \(f'(x)=0\) ir sudarykite išvestinės ženklų lentelę.
+\item Grafiko eskizui pažymėkite nulius, ekstremumus, didėjimo ir mažėjimo intervalus.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Raskime \(f(x)=x^3-4x\) išvestinę ir kritinius taškus.
+\[
+f'(x)=3x^2-4.
+\]
+\[
+3x^2-4=0,\qquad x=\pm\frac{2}{\sqrt3}=\pm\frac{2\sqrt3}{3}.
+\]
+\textbf{Atsakymas:} kritiniai taškai \(x=\pm\frac{2\sqrt3}{3}\).
+
+\item Raskime funkcijos \(f(x)=x^2+1\) liestinės lygtį taške \(x=2\).
+\[
+f(2)=5,\qquad f'(x)=2x,\qquad f'(2)=4.
+\]
+\[
+y=5+4(x-2)=4x-3.
+\]
+\textbf{Atsakymas:} \(y=4x-3\).
+
+\item Raskime \(g(x)=\sin(3x^2)\) išvestinę.
+\[
+g'(x)=\cos(3x^2)\cdot6x=6x\cos(3x^2).
+\]
+\textbf{Atsakymas:} \(6x\cos(3x^2)\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Sudėtinės funkcijos išvestinėje pamirštamas vidinės funkcijos daugiklis.
+\item Liestinės lygtyje vietoj taško \((a;f(a))\) naudojamas \((a;f'(a))\).
+\item Kritinis taškas sutapatinamas su ekstremumu, nors būtina patikrinti išvestinės ženklo kitimą.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Raskite \(f(x)=\frac{x^2+1}{x}\) išvestinę.
+\item Parašykite \(y=\ln x\) liestinės lygtį taške \(x=1\).
+\item Ištirkite, kur \(f(x)=x^3-12x\) didėja ir mažėja.
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
-
+Išvestinė yra pagrindinis funkcijų tyrimo ir optimizavimo įrankis. Ji taip pat paruošia integralą, nes pirmykštė funkcija apibrėžiama per išvestinę.
 
 \section{Briaunainiai, sukiniai ir pjūviai}\label{sec:briaunainiai-sukiniai-ir-pjuviai}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima prizmes, piramides, ritinius, kūgius, nupjautinius kūgius, rutulius ir jų pjūvius. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Briaunainis yra erdvinis kūnas, apribotas daugiakampiais. Prizmės ir piramidės yra svarbiausi mokykliniai briaunainiai.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Sukinys yra kūnas, gaunamas sukant plokštumos figūrą apie tiesę. Ritinys, kūgis, nupjautinis kūgis, sfera ir rutulys yra sukiniai.
+\end{apibreztis}
+\begin{apibreztis}
+Pjūvis yra figūra, gaunama erdvinį kūną kertant plokštuma. Ašinis pjūvis eina per sukinio ašį.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+Stačiosios prizmės tūris \(V=S_p h\), kur \(S_p\) -- pagrindo plotas, \(h\) -- aukštis.
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Piramidės tūris \(V=\frac13 S_p h\), kūgio tūris \(V=\frac13\pi r^2h\), ritinio tūris \(V=\pi r^2h\).
+\end{savybe}
+\begin{savybe}
+Rutulio tūris \(V=\frac43\pi r^3\), paviršiaus plotas \(S=4\pi r^2\).
+\end{savybe}
+\begin{savybe}
+Pjūvis, lygiagretus pagrindui, dažnai yra panašus į pagrindą. Ilgiai keičiasi pagal panašumo koeficientą, plotai -- pagal jo kvadratą.
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Atpažinkite kūną ir jo elementus: pagrindą, aukštinę, apotemą, sudaromąją, spindulį.
+\item Jei reikia pjūvio, nusibraižykite būtent tą plokštumos figūrą.
+\item Pasirinkite formulę tūriui, šoniniam paviršiui arba visam paviršiui.
+\item Trūkstamus ilgius raskite iš stačiųjų trikampių, panašumo arba trigonometrinių funkcijų.
+\item Atskirai nurodykite, ar skaičiuojamas šoninis, ar visas paviršius.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Ritinio spindulys \(3\), aukštis \(7\). Raskime tūrį ir šoninį paviršių.
+\[
+V=\pi r^2h=\pi\cdot9\cdot7=63\pi.
+\]
+\[
+S_{\text{šon}}=2\pi rh=2\pi\cdot3\cdot7=42\pi.
+\]
+\textbf{Atsakymas:} \(V=63\pi\), \(S_{\text{šon}}=42\pi\).
+
+\item Kūgio spindulys \(5\), aukštis \(12\). Raskime sudaromąją ir šoninį paviršių.
+\[
+l=\sqrt{5^2+12^2}=13,\qquad S_{\text{šon}}=\pi rl=65\pi.
+\]
+\textbf{Atsakymas:} \(l=13\), \(S_{\text{šon}}=65\pi\).
+
+\item Taisyklingos keturkampės piramidės pagrindo kraštinė \(8\), aukštis \(3\). Raskime tūrį.
+\[
+S_p=8^2=64,\qquad V=\frac13\cdot64\cdot3=64.
+\]
+\textbf{Atsakymas:} \(64\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Painiojama kūgio aukštinė ir sudaromoji.
+\item Paviršiaus plote pamirštamas vienas arba abu pagrindai.
+\item Pjūvio plotas keičiamas pagal ilgių koeficientą, nors plotams reikia koeficiento kvadrato.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Raskite rutulio, kurio spindulys \(2\), tūrį ir paviršiaus plotą.
+\item Raskite kūgio tūrį, kai \(r=4\), \(h=9\).
+\item Kuo skiriasi ritinio ašinis pjūvis nuo pjūvio, lygiagretaus pagrindui?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
-
+Briaunainių ir sukinių uždaviniai remiasi stereometrija, trigonometrija ir funkcijomis. Sukinių tūriai išplėstiniame kurse natūraliai susiję su integralais.
 
 \section{Regresija ir koreliacija}\label{sec:regresija-ir-koreliacija}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima koreliacijos koeficientą, tiesinę regresiją, priklausomą ir aiškinamąjį kintamąjį. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Koreliacija apibūdina dviejų kiekybinių kintamųjų tiesinio ryšio kryptį ir stiprumą.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Koreliacijos koeficientas \(r\) tenkina \(-1\le r\le1\). Kai \(r>0\), ryšys teigiamas; kai \(r<0\), ryšys neigiamas; kai \(r\approx0\), tiesinis ryšys silpnas.
+\end{apibreztis}
+\begin{apibreztis}
+Tiesinė regresija aprašo priklausomąjį kintamąjį \(y\) aiškinamuoju kintamuoju \(x\) tiesės modeliu \(y=ax+b\).
+\end{apibreztis}
+\begin{apibreztis}
+Determinacijos koeficientas \(R^2\) parodo, kokią priklausomojo kintamojo sklaidos dalį paaiškina modelis.
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+Koreliacija neįrodo priežastingumo. Du kintamieji gali judėti kartu dėl trečio veiksnio arba atsitiktinumo.
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Regresijos tiesė tinka prognozuoti tik tame \(x\) reikšmių intervale, kuriame buvo rinkti duomenys. Prognozė toli už intervalo vadinama ekstrapoliacija ir yra rizikinga.
+\end{savybe}
+\begin{savybe}
+Jeigu modelyje yra vienas aiškinamasis kintamasis, dažnai \(R^2=r^2\).
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Nubraižykite taškų diagramą ir įvertinkite, ar ryšys panašus į tiesinį.
+\item Nuspręskite, kuris kintamasis yra aiškinamasis \(x\), o kuris priklausomasis \(y\).
+\item Skaitmeninėmis priemonėmis raskite regresijos tiesę \(y=ax+b\), koreliacijos koeficientą \(r\) ir \(R^2\).
+\item Interpretuokite \(a\): kiek vidutiniškai keičiasi \(y\), kai \(x\) padidėja vienetu.
+\item Patikrinkite, ar išvada neperžengia duomenų ribų ir nevadina koreliacijos priežastimi.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Duomenims gauta regresijos tiesė \(\hat y=1{,}8x+12\). Ką reiškia koeficientas \(1{,}8\)?
+\textbf{Sprendimas.} Kai \(x\) padidėja vienu vienetu, modelis prognozuoja, kad \(y\) vidutiniškai padidėja \(1{,}8\) vieneto.
+
+\item Jei \(r=-0{,}86\), apibūdinkime ryšį.
+\textbf{Sprendimas.} Ryšys stiprus neigiamas: didėjant vienam kintamajam, kitas paprastai mažėja, bet tai savaime neįrodo priežasties.
+
+\item Modelio \(R^2=0{,}72\). Interpretuokime.
+\textbf{Sprendimas.} Apie \(72\%\) priklausomojo kintamojo sklaidos paaiškinama tiesiniu modeliu su pasirinktu aiškinamuoju kintamuoju.
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Iš koreliacijos daroma priežastinė išvada be papildomo tyrimo.
+\item Regresijos modelis taikomas už duomenų intervalo ribų.
+\item Ignoruojami išskirtys, kurios gali smarkiai pakeisti tiesę ir koreliaciją.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Paaiškinkite, ką reiškia \(r=0{,}15\).
+\item Regresijos tiesė \(\hat y=-2x+50\). Kokia prognozė, kai \(x=12\)?
+\item Kodėl prieš skaičiuojant regresiją verta nubraižyti taškų diagramą?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
-
+Regresija jungia funkcijas ir statistiką: tiesė tampa duomenų modeliu. Ji taip pat remiasi kritiniu mąstymu apie imtį, kintamuosius ir paklaidas.
 
 \section{Klasikiniai ir neklasikiniai tikimybiniai modeliai}\label{sec:klasikiniai-ir-neklasikiniai-tikimybiniai-modeliai}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima vienodai ir nevienodai tikėtinų baigčių modelius, įvykių veiksmus ir Bernulio bandymus. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Klasikinis tikimybinis modelis taikomas tada, kai visos elementariosios baigtys vienodai tikėtinos. Tada
+\[
+P(A)=\frac{\text{palankių baigčių skaičius}}{\text{visų baigčių skaičius}}.
+\]
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Neklasikiniame modelyje baigtys nebūtinai vienodai tikėtinos, todėl tikimybės nustatomos iš sąlygos, duomenų, medžio arba modelio.
+\end{apibreztis}
+\begin{apibreztis}
+Įvykiai yra nesutaikomi, jei negali įvykti kartu. Įvykiai yra nepriklausomi, jei vieno įvykimas nekeičia kito tikimybės.
+\end{apibreztis}
+\begin{apibreztis}
+Bernulio bandymas turi dvi baigtis: sėkmę su tikimybe \(p\) ir nesėkmę su tikimybe \(1-p\).
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+\[
+P(\Omega)=1,\qquad P(\varnothing)=0,\qquad P(\overline A)=1-P(A).
+\]
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Jeigu \(A\) ir \(B\) nesutaikomi, tai
+\[
+P(A\cup B)=P(A)+P(B).
+\]
+Bendruoju atveju
+\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]
+\end{savybe}
+\begin{savybe}
+Jeigu \(A\) ir \(B\) nepriklausomi, tai
+\[
+P(A\cap B)=P(A)P(B).
+\]
+\end{savybe}
+\begin{savybe}
+Bernulio bandymuose tikimybė gauti tiksliai \(k\) sėkmių per \(n\) bandymų:
+\[
+P(X=k)=\binom nk p^k(1-p)^{n-k}.
+\]
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Nuspręskite, ar baigtys vienodai tikėtinos. Jei taip, galima taikyti klasikinę formulę.
+\item Sudėtiniam bandymui braižykite galimybių arba tikimybių medį.
+\item Žodis ``ir'' dažnai reiškia sankirtą, žodis ``arba'' -- sąjungą.
+\item Be grąžinimo tikimybės keičiasi, su grąžinimu -- paprastai išlieka tokios pačios.
+\item Patikrinkite, ar įvykiai nesutaikomi arba nepriklausomi, prieš taikydami specialias formules.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Metamas sąžiningas kauliukas. Raskime tikimybę gauti lyginį skaičių.
+Palankios baigtys: \(2,4,6\). Iš viso \(6\) baigtys.
+\[
+P=\frac36=\frac12.
+\]
+\textbf{Atsakymas:} \(\frac12\).
+
+\item Dėžėje yra \(4\) balti ir \(3\) juodi rutuliai. Traukiami du be grąžinimo. Raskime tikimybę, kad abu balti.
+\[
+P=\frac47\cdot\frac36=\frac{12}{42}=\frac27.
+\]
+\textbf{Atsakymas:} \(\frac27\).
+
+\item Tikimybės \(P(A)=0{,}6\), \(P(B)=0{,}5\), \(P(A\cap B)=0{,}2\). Raskime \(P(A\cup B)\).
+\[
+P(A\cup B)=0{,}6+0{,}5-0{,}2=0{,}9.
+\]
+\textbf{Atsakymas:} \(0{,}9\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item Klasikinė formulė taikoma nevienodai tikėtinoms baigtims.
+\item Žodis ``arba'' suprantamas kaip visada nesutaikomi įvykiai, nors kartais įvykiai gali įvykti kartu.
+\item Be grąžinimo antrame žingsnyje nepakeičiamas bendras baigčių skaičius.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Iš kortelių \(1,2,3,4,5\) atsitiktinai traukiama viena kortelė. Raskite tikimybę gauti pirminį skaičių.
+\item Dėžėje \(2\) raudoni ir \(5\) mėlyni rutuliai. Traukiami du su grąžinimu. Raskite tikimybę, kad abu raudoni.
+\item Jei \(A\) ir \(B\) nepriklausomi, \(P(A)=0{,}4\), \(P(B)=0{,}3\), raskite \(P(A\cap B)\).
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
-
+Tikimybiniai modeliai remiasi kombinatorika, aibėmis ir loginiais jungtukais. Jie paruošia atsitiktinius dydžius, binominį skirstinį ir statistinę išvadą.
 
 \section{Atsitiktiniai dydžiai ir normalusis skirstinys}\label{sec:atsitiktiniai-dydziai-ir-normalusis-skirstinys}
 
 \subsection{Apibrėžtys}
 \begin{apibreztis}
-Tema apima atsitiktinio dydžio skirstinį, viltį, dispersiją, standartinį nuokrypį ir normalųjį skirstinį. Ji nagrinėjama kaip atskira mokymo(si) turinio dalis pagal \emph{matematikaPrograma.pdf}.
+Atsitiktinis dydis yra skaitinė bandymo rezultato funkcija, pavyzdžiui, herbų skaičius metant monetą arba laukimo laikas stotelėje.
 \end{apibreztis}
 \begin{apibreztis}
-Matematinis modelis šioje temoje yra skaičių, simbolių, brėžinių, lentelių arba diagramų sistema, kuria aprašoma reali arba teorinė situacija.
+Normalusis skirstinys yra tolydus varpo formos skirstinys, žymimas \(X\sim N(\mu;\sigma^2)\), kur \(\mu\) yra vidurkis, o \(\sigma\) -- standartinis nuokrypis.
+\end{apibreztis}
+\begin{apibreztis}
+Standartizavimas paverčia \(X\sim N(\mu;\sigma^2)\) standartiniu normaliuoju dydžiu:
+\[
+Z=\frac{X-\mu}{\sigma}.
+\]
 \end{apibreztis}
 
 \subsection{Teoremos ir savybės}
 \begin{savybe}
-Jeigu uždavinio sąlyga tiksliai perkeliama į matematinį modelį, tai modelio rezultatas gali būti interpretuojamas pradinėje situacijoje.
+Normaliojo skirstinio kreivė simetriška apie \(\mu\). Didžiausias tankis yra ties vidurkiu.
 \end{savybe}
-\begin{pastaba}
-Pagrindimas remiasi nagrinėjamų objektų apibrėžtimis ir tuo, kad kiekvienas veiksmas išlaiko pradinės situacijos prasmę. Formalus taikymas reikalauja nurodyti sąlygas ir patikrinti gautą rezultatą.
-\end{pastaba}
+\begin{savybe}
+Apytikslė \(68\)-\(95\)-\(99{,}7\) taisyklė:
+apie \(68\%\) reikšmių patenka į \([\mu-\sigma;\mu+\sigma]\), apie \(95\%\) -- į \([\mu-2\sigma;\mu+2\sigma]\), apie \(99{,}7\%\) -- į \([\mu-3\sigma;\mu+3\sigma]\).
+\end{savybe}
+\begin{savybe}
+Tikimybės tolydžiajame skirstinyje atitinka plotus po tankio kreive, todėl \(P(X=a)=0\), o skaičiuojamos intervalų tikimybės.
+\end{savybe}
 
 \subsection{Taisyklės ir algoritmai}
 \begin{enumerate}[label=\arabic*.]
-\item Išskirkite duotus dydžius, sąvokas arba objektus.
-\item Pasirinkite tinkamą užrašą: skaitinį reiškinį, formulę, lentelę, brėžinį, diagramą arba lygtį.
-\item Atlikite veiksmus nuosekliai, kiekviename žingsnyje išlaikydami vienetus ir sąlygas.
-\item Patikrinkite, ar gautas rezultatas atitinka uždavinio prasmę.
+\item Nustatykite \(\mu\) ir \(\sigma\).
+\item Jei reikia, standartizuokite ribas: \(z=\frac{x-\mu}{\sigma}\).
+\item Naudokite normalaus skirstinio lentelę, skaičiuoklę arba \(68\)-\(95\)-\(99{,}7\) taisyklę.
+\item Atsakymą interpretuokite kaip tikimybę arba procentą.
+\item Patikrinkite, ar gautas procentas logiškas pagal atstumą nuo vidurkio.
 \end{enumerate}
 
 \subsection{Iliustruojantys pavyzdžiai}
 \begin{enumerate}[label=\arabic*.]
-\item Pritaikykime temą paprastam skaičiavimui: pradinė reikšmė yra \(12\), pokytis yra \(3\).
-\begin{align}
-12+3&=15.
-\end{align}
-\textbf{Atsakymas: \(15\).}
-\item Palyginkime du galimus rezultatus \(18\) ir \(24\).
-\begin{align}
-24-18&=6,\\
-24&>18.
-\end{align}
-\textbf{Atsakymas: antras rezultatas didesnis \(6\) vienetais.}
-\item Sudarykime ir išspręskime paprastą modelį, kai nežinomas dydis \(x\) su \(5\) sudaro \(20\).
-\begin{align}
-x+5&=20,\\
-x&=15.
-\end{align}
-\textbf{Atsakymas: \(x=15\).}
+\item Testo rezultatai pasiskirstę normaliai, \(\mu=70\), \(\sigma=10\). Kokia apytikslė dalis rezultatų tarp \(60\) ir \(80\)?
+Intervalas yra \(\mu\pm\sigma\), todėl pagal taisyklę apie \(68\%\).
+\textbf{Atsakymas:} apie \(68\%\).
+
+\item Tame pačiame modelyje standartizuokime rezultatą \(85\).
+\[
+z=\frac{85-70}{10}=1{,}5.
+\]
+\textbf{Atsakymas:} rezultatas yra \(1{,}5\) standartinio nuokrypio virš vidurkio.
+
+\item Dydžio \(X\) skirstinio lentelė:
+\[
+\begin{array}{c|ccc}
+x&0&1&2\\ \hline
+P(X=x)&0{,}25&0{,}50&0{,}25
+\end{array}
+\]
+Raskime viltį ir dispersiją.
+\[
+E(X)=0\cdot0{,}25+1\cdot0{,}50+2\cdot0{,}25=1.
+\]
+\[
+D(X)=(0-1)^2\cdot0{,}25+(1-1)^2\cdot0{,}50+(2-1)^2\cdot0{,}25=0{,}5.
+\]
+\textbf{Atsakymas:} \(E(X)=1\), \(D(X)=0{,}5\).
+\end{enumerate}
+
+\subsection{Dažnos klaidos}
+\begin{itemize}
+\item \(\sigma\) painiojamas su \(\sigma^2\). Žymėjime \(N(\mu;\sigma^2)\) antras parametras yra dispersija.
+\item Skaičiuojama taško tikimybė \(P(X=a)\) tolydžiajame skirstinyje kaip teigiamas plotas.
+\item Standartizuojant sukeičiamas ženklas: turi būti \(x-\mu\), ne \(\mu-x\), jei naudojama įprasta \(Z\) formulė.
+\end{itemize}
+
+\subsection{Mini praktika}
+\begin{enumerate}[label=\alph*)]
+\item Jei \(X\sim N(100;15^2)\), standartizuokite \(x=130\).
+\item Pagal \(68\)-\(95\)-\(99{,}7\) taisyklę į kokį intervalą patenka apie \(95\%\) reikšmių, kai \(\mu=50\), \(\sigma=4\)?
+\item Kodėl normaliuoju skirstiniu aprašomam dydžiui \(P(X=50)=0\), bet \(P(49<X<51)>0\)?
 \end{enumerate}
 
 \subsection{Ryšys su kitomis temomis}
-Ši tema papildo to paties koncentro skaičių, modelių, geometrijos arba duomenų temas ir padeda nuosekliai pereiti prie aukštesnių klasių uždavinių, kuriuose reikia derinti kelias matematikos sritis.
+Atsitiktiniai dydžiai ir normalusis skirstinys sujungia tikimybę, funkcijų grafikus ir statistinę išvadą. Normalusis modelis padeda interpretuoti matavimo paklaidas, testų rezultatus ir imčių vidurkius.
