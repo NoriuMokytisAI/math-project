@@ -476,7 +476,7 @@
             <h3>${category ? category.icon : ''} ${ex.title}</h3>
             <p>${ex.description}</p>
             <div class="card-meta">
-              <span>${ex.problemCount} užduot${ex.problemCount === 1 ? 'is' : 'ys'}</span>
+              <span>${ex.problemCount != null ? ex.problemCount + ' užduot' + (ex.problemCount === 1 ? 'is' : 'ys') : 'Formulių sąrašas'}</span>
               <span>${ex.pages} psl.</span>
               <span>${ex.size}</span>
               <span class="difficulty-${ex.difficulty}">${difficulty ? difficulty.label : ex.difficulty}</span>
