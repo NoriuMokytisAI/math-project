@@ -1,0 +1,1516 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "7 klasės programa atskirai aprašo atvirkštinio proporcingumo lenteles, taškus ir grafikus."
+  },
+  "topic": {
+    "id": "atvirkstinis-proporcingumas",
+    "title": "Atvirkštinis proporcingumas ir jo grafikas",
+    "grade": 7,
+    "strand": "Modeliai ir sąryšiai",
+    "level": "curriculum",
+    "order": 5,
+    "estimatedStudyMinutes": 120,
+    "prerequisiteTopicIds": [
+      "tiesioginis-proporcingumas"
+    ],
+    "nextTopicIds": [
+      "tiesinis-sarysis"
+    ],
+    "conceptIds": [
+      "funkcija",
+      "argumentas",
+      "apibrezimo-sritis",
+      "reiksmiu-sritis",
+      "grafikas",
+      "funkcijos-nulis",
+      "didejimas",
+      "mazejimas",
+      "kvadratine-funkcija",
+      "parabole",
+      "virsune",
+      "simetrijos-asis",
+      "diskriminantas",
+      "saknys"
+    ],
+    "formulaIds": [
+      "funkcijos-zymejimas",
+      "virsunes-formule",
+      "diskriminanto-formule"
+    ],
+    "mistakeIds": [
+      "x-y-sumaiso",
+      "apibrezimo-srities-neziuri"
+    ],
+    "exerciseIds": [
+      "atvirkstinis-proporcingumas-ex-001",
+      "atvirkstinis-proporcingumas-ex-002",
+      "atvirkstinis-proporcingumas-ex-003",
+      "atvirkstinis-proporcingumas-ex-004",
+      "atvirkstinis-proporcingumas-ex-005",
+      "atvirkstinis-proporcingumas-ex-006",
+      "atvirkstinis-proporcingumas-ex-007",
+      "atvirkstinis-proporcingumas-ex-008",
+      "atvirkstinis-proporcingumas-ex-009",
+      "atvirkstinis-proporcingumas-ex-010",
+      "atvirkstinis-proporcingumas-ex-011",
+      "atvirkstinis-proporcingumas-ex-012",
+      "atvirkstinis-proporcingumas-ex-013",
+      "atvirkstinis-proporcingumas-ex-014",
+      "atvirkstinis-proporcingumas-ex-015",
+      "atvirkstinis-proporcingumas-ex-016",
+      "atvirkstinis-proporcingumas-ex-017",
+      "atvirkstinis-proporcingumas-ex-018",
+      "atvirkstinis-proporcingumas-ex-019",
+      "atvirkstinis-proporcingumas-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "atvirkstinis-proporcingumas-ivadas",
+      "title": "Įvadas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atvirkštinis proporcingumas ir jo grafikas yra tema, kurioje mokomasi atpažinti pagrindinius atvirkštinis proporcingumas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[funkcija|Funkcija]], [[argumentas|Argumentas]], [[apibrezimo-sritis|Apibrėžimo sritis]] ir uždavinių sprendimo."
+        }
+      ]
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-svarbiausios-savokos",
+      "title": "Svarbiausios sąvokos",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "funkcija",
+          "text": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę."
+        },
+        {
+          "type": "definition",
+          "conceptId": "argumentas",
+          "text": "Nepriklausomas kintamasis."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apibrezimo-sritis",
+          "text": "Visų leistinų argumentų aibė."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[funkcija|Funkcija]] ir [[reiksmiu-sritis|Reikšmių sritis]]."
+        }
+      ]
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-taisyklės",
+      "title": "Svarbiausios taisyklės",
+      "blocks": [
+        {
+          "type": "theorem",
+          "text": "Atvirkštinis proporcingumas ir jo grafikas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+        },
+        {
+          "type": "property",
+          "text": "Jei užduotyje pasirodo [[apibrezimo-sritis|Apibrėžimo sritis]] ar [[reiksmiu-sritis|Reikšmių sritis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+        },
+        {
+          "type": "formula",
+          "formulaId": "funkcijos-zymejimas",
+          "latex": "y=f(x)"
+        }
+      ]
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-strategija",
+      "title": "Sprendimo strategija",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+        }
+      ]
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-rysys",
+      "title": "Ryšys su kitomis temomis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "funkcija",
+      "title": "Funkcija",
+      "type": "concept",
+      "shortDefinition": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
+      "intuition": "Tai pagrindinis atvirkštinis proporcingumas modelis.",
+      "formal": "Funkcija yra atvaizdis, kiekvienam x priskiriantis vienintelį f(x).",
+      "notation": [],
+      "relatedConceptIds": [
+        "argumentas",
+        "grafikas",
+        "apibrezimo-sritis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "argumentas",
+      "title": "Argumentas",
+      "type": "concept",
+      "shortDefinition": "Nepriklausomas kintamasis.",
+      "intuition": "Tai įvestis, kurią duodame funkcijai.",
+      "formal": "Argumentas yra funkcijos įvesties kintamasis.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "reiksmiu-sritis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "apibrezimo-sritis",
+      "title": "Apibrėžimo sritis",
+      "type": "concept",
+      "shortDefinition": "Visų leistinų argumentų aibė.",
+      "intuition": "Tai visi x, kuriuos funkcija priima.",
+      "formal": "Apibrėžimo sritis D(f) yra visų leistinų x aibė.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [
+        "d-f"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "reiksmiu-sritis",
+      "title": "Reikšmių sritis",
+      "type": "concept",
+      "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
+      "intuition": "Tai visi galimi y atsakymai.",
+      "formal": "Reikšmių sritis yra funkcijos galimų reikšmių aibė.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [
+        "e-f"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "grafikas",
+      "title": "Grafikas",
+      "type": "concept",
+      "shortDefinition": "Taškų rinkinys koordinačių plokštumoje.",
+      "intuition": "Grafikas leidžia funkciją pamatyti akimis.",
+      "formal": "Funkcijos grafikas yra visų taškų (x, f(x)) aibė.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "funkcijos-nulis",
+        "didejimas",
+        "mazejimas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "funkcijos-nulis",
+      "title": "Funkcijos nulis",
+      "type": "concept",
+      "shortDefinition": "Argumentas, kuriam funkcijos reikšmė lygi nuliui.",
+      "intuition": "Tai vieta, kur grafikas susiduria su x ašimi.",
+      "formal": "x0 yra nulis, jei f(x0)=0.",
+      "notation": [],
+      "relatedConceptIds": [
+        "grafikas",
+        "saknys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "didejimas",
+      "title": "Didėjimas",
+      "type": "concept",
+      "shortDefinition": "Kai didesniam argumentui atitinka didesnė reikšmė.",
+      "intuition": "Judant į dešinę grafikas kyla.",
+      "formal": "Funkcija didėja intervale, jei x1 < x2 implikuoja f(x1) < f(x2).",
+      "notation": [],
+      "relatedConceptIds": [
+        "mazejimas",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "mazejimas",
+      "title": "Mažėjimas",
+      "type": "concept",
+      "shortDefinition": "Kai didesniam argumentui atitinka mažesnė reikšmė.",
+      "intuition": "Judant į dešinę grafikas leidžiasi.",
+      "formal": "Funkcija mažėja intervale, jei x1 < x2 implikuoja f(x1) > f(x2).",
+      "notation": [],
+      "relatedConceptIds": [
+        "didejimas",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "kvadratine-funkcija",
+      "title": "Kvadratinė funkcija",
+      "type": "concept",
+      "shortDefinition": "Funkcija su x² nariu.",
+      "intuition": "Tai parabolės istorija.",
+      "formal": "Kvadratinė funkcija yra f(x)=ax²+bx+c, kur a!=0.",
+      "notation": [],
+      "relatedConceptIds": [
+        "parabole",
+        "virsune",
+        "diskriminantas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "parabole",
+      "title": "Parabolė",
+      "type": "concept",
+      "shortDefinition": "Kvadratinės funkcijos grafikas.",
+      "intuition": "U formos arba apversta U forma.",
+      "formal": "Parabolė yra kvadratinės funkcijos grafikas.",
+      "notation": [],
+      "relatedConceptIds": [
+        "kvadratine-funkcija",
+        "virsune"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "virsune",
+      "title": "Viršūnė",
+      "type": "concept",
+      "shortDefinition": "Aukščiausias arba žemiausias parabolės taškas.",
+      "intuition": "Tai parabolės lūžio vieta.",
+      "formal": "Viršūnė yra taškas, kuriame kvadratinė funkcija pasiekia ekstremumą.",
+      "notation": [],
+      "relatedConceptIds": [
+        "parabole",
+        "simetrijos-asis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "simetrijos-asis",
+      "title": "Simetrijos ašis",
+      "type": "concept",
+      "shortDefinition": "Tiesė, dalijanti parabolę į dvi vienodas dalis.",
+      "intuition": "Tai parabolės veidrodis.",
+      "formal": "Parabolės simetrijos ašis yra x=-b/(2a).",
+      "notation": [],
+      "relatedConceptIds": [
+        "virsune",
+        "parabole"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "diskriminantas",
+      "title": "Diskriminantas",
+      "type": "concept",
+      "shortDefinition": "Dydis, nusakantis kvadratinės lygties nulių skaičių.",
+      "intuition": "Jis sako, ar parabolė kirs ašį.",
+      "formal": "D=b²-4ac.",
+      "notation": [],
+      "relatedConceptIds": [
+        "saknys",
+        "kvadratine-funkcija"
+      ],
+      "prerequisiteConceptIds": [
+        "d"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "saknys",
+      "title": "Šaknys",
+      "type": "concept",
+      "shortDefinition": "Lygties sprendiniai.",
+      "intuition": "Šaknys yra ten, kur funkcija lygi nuliui.",
+      "formal": "Kvadratinės lygties šaknys yra sprendiniai, gaunami pagal diskriminantą.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcijos-nulis",
+        "diskriminantas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "funkcijos-zymejimas",
+      "title": "Funkcijos žymėjimas",
+      "type": "formula",
+      "latex": "y=f(x)",
+      "conditions": [
+        "Kai pateikiama priklausomybė"
+      ],
+      "variables": {
+        "x": "argumentas",
+        "y": "reikšmė"
+      },
+      "explanation": "Žymi, kad y priklauso nuo x.",
+      "relatedConceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "virsunes-formule",
+      "title": "Viršūnės x koordinatė",
+      "type": "formula",
+      "latex": "x_v=-\\frac{b}{2a}",
+      "conditions": [
+        "Kvadratinė funkcija"
+      ],
+      "variables": {
+        "a": "x² koeficientas",
+        "b": "x koeficientas"
+      },
+      "explanation": "Padeda rasti parabolės simetrijos ašį.",
+      "relatedConceptIds": [
+        "virsune",
+        "kvadratine-funkcija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "diskriminanto-formule",
+      "title": "Diskriminantas",
+      "type": "formula",
+      "latex": "D=b^2-4ac",
+      "conditions": [
+        "Kvadratinė lygtis"
+      ],
+      "variables": {
+        "a": "x² koeficientas",
+        "b": "x koeficientas",
+        "c": "laisvasis narys"
+      },
+      "explanation": "Nusako realių šaknų skaičių.",
+      "relatedConceptIds": [
+        "diskriminantas",
+        "saknys"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "x-y-sumaiso",
+      "title": "Supainioja x ir y",
+      "type": "mistake",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "wrongPattern": "f(2)=5 supranta kaip x=5.",
+      "whyItHappens": "f(2)=5 reiškia, kad kai x=2, funkcijos reikšmė yra 5.",
+      "correction": "x yra įvestis, y yra rezultatas.",
+      "wrongExample": "x=5",
+      "correctExample": "x=2, y=5",
+      "defaultSrs": true
+    },
+    {
+      "id": "apibrezimo-srities-neziuri",
+      "title": "Neišsiaiškina apibrėžimo srities",
+      "type": "mistake",
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "wrongPattern": "Skaičiuoja 1/(x-2) ties x=2.",
+      "whyItHappens": "Vardiklis negali būti nulis.",
+      "correction": "Patikrink, kur reiškinys neapibrėžtas.",
+      "wrongExample": "x=2 tinka",
+      "correctExample": "x=2 netinka",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "atvirkstinis-proporcingumas-exmp-1",
+      "title": "Reikšmės radimas",
+      "level": "easy",
+      "problem": "Jei f(x)=2x+1, rask f(4).",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Įrašome 4.",
+          "latex": "f(4)=2\\cdot4+1"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "9"
+        }
+      ],
+      "answer": "9"
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-exmp-2",
+      "title": "Nulis",
+      "level": "easy",
+      "problem": "Rask funkcijos f(x)=x-7 nulį.",
+      "conceptIds": [
+        "funkcijos-nulis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sprendžiame f(x)=0.",
+          "latex": "x-7=0"
+        },
+        {
+          "text": "Gauname.",
+          "latex": "x=7"
+        }
+      ],
+      "answer": "7"
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-exmp-3",
+      "title": "Apibrėžimo sritis",
+      "level": "medium",
+      "problem": "Kokia yra f(x)=1/(x-2) apibrėžimo sritis?",
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Vardiklis negali būti 0.",
+          "latex": "x-2\\neq 0"
+        },
+        {
+          "text": "Todėl x negali būti 2.",
+          "latex": "D(f)=\\mathbb{R}\\setminus\\{2\\}"
+        }
+      ],
+      "answer": "R\\{2}"
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-exmp-4",
+      "title": "Didėjimas",
+      "level": "medium",
+      "problem": "Jei f(x)=3x-5, ar funkcija didėja?",
+      "conceptIds": [
+        "didejimas",
+        "mazejimas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Nuolydis teigiamas.",
+          "latex": "3>0"
+        },
+        {
+          "text": "Funkcija didėja.",
+          "latex": "taip"
+        }
+      ],
+      "answer": "taip"
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-exmp-5",
+      "title": "Grafikas",
+      "level": "hard",
+      "problem": "Tiesė kerta y ašį taške (0; -2) ir turi nuolydį 4. Užrašyk lygtį.",
+      "conceptIds": [
+        "kvadratine-funkcija",
+        "grafikas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Tiesės lygtis y=ax+b.",
+          "latex": "y=4x-2"
+        }
+      ],
+      "answer": "y=4x-2"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "atvirkstinis-proporcingumas-ex-001",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei f(x)=2x+1, rask f(2).",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija",
+            "argumentas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičiuojame.",
+          "latex": "f(2)=5"
+        }
+      ],
+      "answerText": "5",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-002",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei f(x)=2x+1, rask f(3).",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija",
+            "argumentas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičiuojame.",
+          "latex": "f(3)=7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-003",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei f(x)=2x+1, rask f(4).",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija",
+            "argumentas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičiuojame.",
+          "latex": "f(4)=9"
+        }
+      ],
+      "answerText": "9",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-004",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei f(x)=2x+1, rask f(5).",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija",
+            "argumentas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičiuojame.",
+          "latex": "f(5)=11"
+        }
+      ],
+      "answerText": "11",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-005",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei f(x)=2x+1, rask f(6).",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija",
+            "argumentas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičiuojame.",
+          "latex": "f(6)=13"
+        }
+      ],
+      "answerText": "13",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-006",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Rask funkcijos f(x)=x-8 nulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Lygybė lygi nuliui.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcijos-nulis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "x-8=0.",
+          "latex": "x=8"
+        }
+      ],
+      "answerText": "8",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcijos-nulis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-007",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kuri iš šių funkcijų didėja?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "y=-2x+1"
+          },
+          {
+            "id": "b",
+            "text": "y=3x-4"
+          },
+          {
+            "id": "c",
+            "text": "y=-x-7"
+          },
+          {
+            "id": "d",
+            "text": "y=5-x"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Žiūrėk į teigiamą koeficientą prie x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "didejimas",
+            "mazejimas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Teigiamas nuolydis reiškia didėjimą.",
+          "latex": "y=3x-4"
+        }
+      ],
+      "answerText": "y=3x-4",
+      "alternateMethods": [],
+      "conceptIds": [
+        "didejimas",
+        "mazejimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-008",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kokia yra f(x)=1/(x-2) apibrėžimo srities draudžiama reikšmė?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vardiklis negali būti nulis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "apibrezimo-sritis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "x negali būti 2.",
+          "latex": "x\\neq2"
+        }
+      ],
+      "answerText": "2",
+      "alternateMethods": [],
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-009",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "expressionInput",
+      "statement": "Tiesės grafikas eina per tašką (0; -3) ir turi nuolydį 2. Užrašyk lygtį.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "y=2x-3",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudok y=ax+b.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kvadratine-funkcija"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "b yra -3.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome nuolydį ir kirtimą.",
+          "latex": "y=2x-3"
+        }
+      ],
+      "answerText": "y=2x-3",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kvadratine-funkcija",
+        "grafikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 80
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-010",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 10.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-011",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 11.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "11"
+        }
+      ],
+      "answerText": "11",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-012",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 12.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "12"
+        }
+      ],
+      "answerText": "12",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-013",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 13.",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "13"
+        }
+      ],
+      "answerText": "13",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-014",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 14.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "14"
+        }
+      ],
+      "answerText": "14",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-015",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 15.",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "15"
+        }
+      ],
+      "answerText": "15",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-016",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 16.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-017",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 17.",
+      "answer": {
+        "kind": "numeric",
+        "value": 17,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "17"
+        }
+      ],
+      "answerText": "17",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-018",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 18.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "18"
+        }
+      ],
+      "answerText": "18",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-019",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 19.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "19"
+        }
+      ],
+      "answerText": "19",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-ex-020",
+      "topicId": "atvirkstinis-proporcingumas",
+      "grade": 7,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atvirkštinis proporcingumas ir jo grafikas: papildomas uždavinys Nr. 20.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "20"
+        }
+      ],
+      "answerText": "20",
+      "alternateMethods": [],
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    }
+  ],
+  "tests": [
+    {
+      "id": "atvirkstinis-proporcingumas-test-topic",
+      "title": "Atvirkštinis proporcingumas ir jo grafikas testas",
+      "scope": "topic",
+      "topicIds": [
+        "atvirkstinis-proporcingumas"
+      ],
+      "exerciseIds": [
+        "atvirkstinis-proporcingumas-ex-001",
+        "atvirkstinis-proporcingumas-ex-002",
+        "atvirkstinis-proporcingumas-ex-003",
+        "atvirkstinis-proporcingumas-ex-004",
+        "atvirkstinis-proporcingumas-ex-005",
+        "atvirkstinis-proporcingumas-ex-006",
+        "atvirkstinis-proporcingumas-ex-007",
+        "atvirkstinis-proporcingumas-ex-008"
+      ],
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75,
+      "timeLimitSeconds": 1800
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-test-challenge",
+      "title": "Atvirkštinis proporcingumas ir jo grafikas iššūkis",
+      "scope": "topic",
+      "topicIds": [
+        "atvirkstinis-proporcingumas"
+      ],
+      "exerciseIds": [
+        "atvirkstinis-proporcingumas-ex-009",
+        "atvirkstinis-proporcingumas-ex-010",
+        "atvirkstinis-proporcingumas-ex-011",
+        "atvirkstinis-proporcingumas-ex-012",
+        "atvirkstinis-proporcingumas-ex-013",
+        "atvirkstinis-proporcingumas-ex-014",
+        "atvirkstinis-proporcingumas-ex-015",
+        "atvirkstinis-proporcingumas-ex-016"
+      ],
+      "masteryWeight": 1.6,
+      "passingThreshold": 0.65,
+      "timeLimitSeconds": 2400
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "atvirkstinis-proporcingumas-srs-funkcija",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra funkcija?",
+      "back": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
+      "conceptIds": [
+        "funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-argumentas",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra argumentas?",
+      "back": "Nepriklausomas kintamasis.",
+      "conceptIds": [
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-apibrezimo-sritis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra apibrėžimo sritis?",
+      "back": "Visų leistinų argumentų aibė.",
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-reiksmiu-sritis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra reikšmių sritis?",
+      "back": "Visų galimų funkcijos reikšmių aibė.",
+      "conceptIds": [
+        "reiksmiu-sritis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-funkcijos-zymejimas",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra funkcijos žymėjimas?",
+      "back": "Žymi, kad y priklauso nuo x.",
+      "conceptIds": [
+        "funkcijos-zymejimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-virsunes-formule",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra viršūnės x koordinatė?",
+      "back": "Padeda rasti parabolės simetrijos ašį.",
+      "conceptIds": [
+        "virsunes-formule"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-x-y-sumaiso",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra supainioja x ir y?",
+      "back": "x yra įvestis, y yra rezultatas.",
+      "conceptIds": [
+        "x-y-sumaiso"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "atvirkstinis-proporcingumas-srs-apibrezimo-srities-neziuri",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra neišsiaiškina apibrėžimo srities?",
+      "back": "Patikrink, kur reiškinys neapibrėžtas.",
+      "conceptIds": [
+        "apibrezimo-srities-neziuri"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    }
+  ]
+}

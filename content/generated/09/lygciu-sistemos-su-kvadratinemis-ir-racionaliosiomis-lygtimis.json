@@ -1,0 +1,1406 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "9 klasėje programa aprašo sistemas, kurių viena lygtis pirmojo, kita ne aukštesnio kaip antrojo laipsnio."
+  },
+  "topic": {
+    "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+    "title": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis",
+    "grade": 9,
+    "strand": "Modeliai ir sąryšiai",
+    "level": "curriculum",
+    "order": 5,
+    "estimatedStudyMinutes": 170,
+    "prerequisiteTopicIds": [
+      "tiesiniu-lygciu-sistemos-8",
+      "kvadratine-funkcija-ir-lygtys"
+    ],
+    "nextTopicIds": [
+      "lygciu-ir-nelygybiu-sistemos"
+    ],
+    "conceptIds": [
+      "lygtis",
+      "nelygybe",
+      "sprendinys",
+      "sistema",
+      "tiesine-funkcija",
+      "veiksmai-su-lygtimis",
+      "tiesine-lygybe",
+      "rodikliu-nelygybe",
+      "modeliavimas",
+      "grafine-sistema"
+    ],
+    "formulaIds": [
+      "tiesines-sistemos-bendrumas",
+      "eliminacijos-principas"
+    ],
+    "mistakeIds": [
+      "sistema-vienu-kintamuoju",
+      "eliminacija-be-patikros"
+    ],
+    "exerciseIds": [
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-001",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-002",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-003",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-004",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-005",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-006",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-007",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-008",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-009",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-010",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-011",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-012",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-013",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-014",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-015",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-016",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-017",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-018",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-019",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ivadas",
+      "title": "Įvadas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis yra tema, kurioje mokomasi atpažinti pagrindinius mišrios lygčių sistemos modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[lygtis|Lygtis]], [[nelygybe|Nelygybė]], [[sprendinys|Sprendinys]] ir uždavinių sprendimo."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-svarbiausios-savokos",
+      "title": "Svarbiausios sąvokos",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "lygtis",
+          "text": "Lygybė su nežinomuoju."
+        },
+        {
+          "type": "definition",
+          "conceptId": "nelygybe",
+          "text": "Ryšys su <, >, <= arba >=."
+        },
+        {
+          "type": "definition",
+          "conceptId": "sprendinys",
+          "text": "Reikšmė, tenkinanti lygtį."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[lygtis|Lygtis]] ir [[sistema|Sistema]]."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-taisyklės",
+      "title": "Svarbiausios taisyklės",
+      "blocks": [
+        {
+          "type": "theorem",
+          "text": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+        },
+        {
+          "type": "property",
+          "text": "Jei užduotyje pasirodo [[sprendinys|Sprendinys]] ar [[sistema|Sistema]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tiesines-sistemos-bendrumas",
+          "latex": "\\begin{cases} ax+by=c \\\\ dx+ey=f \\end{cases}"
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-strategija",
+      "title": "Sprendimo strategija",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-rysys",
+      "title": "Ryšys su kitomis temomis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "lygtis",
+      "title": "Lygtis",
+      "type": "concept",
+      "shortDefinition": "Lygybė su nežinomuoju.",
+      "intuition": "Lygtis turi būti tikrinama abiejose pusėse.",
+      "formal": "Lygtis yra lygybė su bent vienu nežinomuoju.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sprendinys",
+        "sistema"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "nelygybe",
+      "title": "Nelygybė",
+      "type": "concept",
+      "shortDefinition": "Ryšys su <, >, <= arba >=.",
+      "intuition": "Nelygybė aprašo sritį, o ne vieną skaičių.",
+      "formal": "Nelygybė lygina du reiškinius nelygybės ženklais.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sprendinys",
+        "sistema"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sprendinys",
+      "title": "Sprendinys",
+      "type": "concept",
+      "shortDefinition": "Reikšmė, tenkinanti lygtį.",
+      "intuition": "Patikrinimas yra svarbiausias žingsnis.",
+      "formal": "Sprendinys padaro lygtį ar nelygybę teisingą.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "nelygybe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sistema",
+      "title": "Sistema",
+      "type": "concept",
+      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
+      "intuition": "Sistema reiškia, kad visi reikalavimai galioja kartu.",
+      "formal": "Sprendinys turi tenkinti visas sistemos lygtis.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "tiesine-funkcija"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tiesine-funkcija",
+      "title": "Tiesinė funkcija",
+      "type": "concept",
+      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
+      "intuition": "Sistema dažnai reiškia tiesių susikirtimą.",
+      "formal": "Tiesinė funkcija rašoma y=ax+b.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "veiksmai-su-lygtimis",
+      "title": "Veiksmai su lygtimis",
+      "type": "concept",
+      "shortDefinition": "Lygties pertvarkymas išlaikant lygybę.",
+      "intuition": "Galima pridėti, atimti, dauginti ar dalyti abi puses tuo pačiu skaičiumi.",
+      "formal": "Lygtį galima pertvarkyti ekvivalentiškais veiksmais.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tiesine-lygybe",
+      "title": "Tiesinė lygtis",
+      "type": "concept",
+      "shortDefinition": "Lygtis su pirmojo laipsnio nežinomuoju.",
+      "intuition": "Tai pagrindinė vieno nežinomojo lygtis.",
+      "formal": "Tiesinė lygtis turi formą ax+b=0.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "rodikliu-nelygybe",
+      "title": "Rodyklinė nelygybė",
+      "type": "concept",
+      "shortDefinition": "Nelygybė, kai reikia saugoti ženklų kryptį.",
+      "intuition": "Svarbu, kad dauginant iš neigiamo skaičiaus ženklas apsiverčia.",
+      "formal": "Dauginant ar dalijant iš neigiamo skaičiaus nelygybės ženklas pasikeičia.",
+      "notation": [],
+      "relatedConceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "modeliavimas",
+      "title": "Modeliavimas",
+      "type": "concept",
+      "shortDefinition": "Realaus teksto vertimas į lygtį ar sistemą.",
+      "intuition": "Tai žingsnis nuo istorijos prie matematikos.",
+      "formal": "Modeliavimas reiškia situacijos užrašymą matematiniais ryšiais.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "sistema"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "grafine-sistema",
+      "title": "Grafinė sistema",
+      "type": "concept",
+      "shortDefinition": "Lygčių sistema, sprendžiama grafiškai.",
+      "intuition": "Tai tiesių arba kreivių susikirtimas.",
+      "formal": "Sistema sprendžiama radus bendrus grafiko taškus.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sistema",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "tiesines-sistemos-bendrumas",
+      "title": "Tiesinių lygčių sistemos idėja",
+      "type": "formula",
+      "latex": "\\begin{cases} ax+by=c \\\\ dx+ey=f \\end{cases}",
+      "conditions": [
+        "Kai yra du apribojimai"
+      ],
+      "variables": {
+        "x": "pirmas nežinomasis",
+        "y": "antras nežinomasis"
+      },
+      "explanation": "Sistema aprašo bendrą sprendinį.",
+      "relatedConceptIds": [
+        "sistema",
+        "tiesine-funkcija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "eliminacijos-principas",
+      "title": "Eliminacijos principas",
+      "type": "formula",
+      "latex": "(1)+(2)",
+      "conditions": [
+        "Kai sudėjus gaunamas vienas kintamasis"
+      ],
+      "variables": {
+        "x": "nežinomasis"
+      },
+      "explanation": "Sudėdami arba atimdami lygtis galime pašalinti vieną kintamąjį.",
+      "relatedConceptIds": [
+        "sistema",
+        "veiksmai-su-lygtimis"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "sistema-vienu-kintamuoju",
+      "title": "Sistemoje ieško tik vieno skaičiaus",
+      "type": "mistake",
+      "conceptIds": [
+        "sistema"
+      ],
+      "wrongPattern": "Bando tik vieną lygtį spręsti atskirai.",
+      "whyItHappens": "Sistema reiškia bendrą kelių lygčių sprendinį.",
+      "correction": "Spręsk abi lygtis kartu.",
+      "wrongExample": "x=5",
+      "correctExample": "x=5, y=3",
+      "defaultSrs": true
+    },
+    {
+      "id": "eliminacija-be-patikros",
+      "title": "Eliminavęs kintamąjį pamiršta patikrinti",
+      "type": "mistake",
+      "conceptIds": [
+        "veiksmai-su-lygtimis"
+      ],
+      "wrongPattern": "Iš karto pasitiki tarpiniu skaičiumi.",
+      "whyItHappens": "Visada verta įstatyti atsakymą atgal.",
+      "correction": "Patikrink sprendinį abiejose lygtėse.",
+      "wrongExample": "Be patikros",
+      "correctExample": "Su patikra",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-exmp-1",
+      "title": "Sistema",
+      "level": "easy",
+      "problem": "Išspręsk sistemą x+y=10, x-y=2.",
+      "conceptIds": [
+        "sistema"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudedame lygtis.",
+          "latex": "2x=12"
+        },
+        {
+          "text": "Gauname.",
+          "latex": "x=6"
+        }
+      ],
+      "answer": "x=6"
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-exmp-2",
+      "title": "Įstatymas",
+      "level": "easy",
+      "problem": "Jei x=4 ir 3x+2y=16, rask y.",
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Įstatome x.",
+          "latex": "12+2y=16"
+        },
+        {
+          "text": "Gauname.",
+          "latex": "y=2"
+        }
+      ],
+      "answer": "2"
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-exmp-3",
+      "title": "Grafinis sprendimas",
+      "level": "medium",
+      "problem": "Ką reiškia tiesių susikirtimo taškas?",
+      "conceptIds": [
+        "tiesine-funkcija",
+        "grafine-sistema"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Tai bendras abiejų lygčių sprendinys.",
+          "latex": "susikirtimas"
+        }
+      ],
+      "answer": "bendras sprendinys"
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-exmp-4",
+      "title": "Eliminacija",
+      "level": "medium",
+      "problem": "Sistemoje x+y=8 ir x-y=2 rask y.",
+      "conceptIds": [
+        "veiksmai-su-lygtimis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Atimame antrą lygtį iš pirmos.",
+          "latex": "2y=6"
+        },
+        {
+          "text": "Gauname.",
+          "latex": "y=3"
+        }
+      ],
+      "answer": "3"
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-exmp-5",
+      "title": "Modeliavimas",
+      "level": "hard",
+      "problem": "Du bilietai ir vienas saldainis kainuoja 11 eurų, o trys bilietai ir vienas saldainis – 17 eurų. Kiek kainuoja bilietas?",
+      "conceptIds": [
+        "modeliavimas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudarykime sistemą.",
+          "latex": "\\begin{cases} 2b+s=11 \\\\ 3b+s=17 \\end{cases}"
+        },
+        {
+          "text": "Atimame.",
+          "latex": "b=6"
+        }
+      ],
+      "answer": "6"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-001",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk sistemą ir rask x: x+y=10, x-y=2.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pritaikyk atimties arba įstatymo būdą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "sistema",
+            "tiesine-funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame x.",
+          "latex": "x=6"
+        }
+      ],
+      "answerText": "6",
+      "alternateMethods": [],
+      "conceptIds": [
+        "sistema",
+        "tiesine-funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-002",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk sistemą ir rask x: 2x+y=11, x+y=8.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pritaikyk atimties arba įstatymo būdą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "sistema",
+            "tiesine-funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame x.",
+          "latex": "x=3"
+        }
+      ],
+      "answerText": "3",
+      "alternateMethods": [],
+      "conceptIds": [
+        "sistema",
+        "tiesine-funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-003",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk sistemą ir rask x: x+2y=13, x-y=1.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pritaikyk atimties arba įstatymo būdą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "sistema",
+            "tiesine-funkcija"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame x.",
+          "latex": "x=3"
+        }
+      ],
+      "answerText": "3",
+      "alternateMethods": [],
+      "conceptIds": [
+        "sistema",
+        "tiesine-funkcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-004",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei 3x + 2y = 16 ir x = 4, kiek lygu y?",
+      "answer": {
+        "kind": "numeric",
+        "value": -2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Įstatyk x.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis",
+            "sprendinys"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3·4+2y=16.",
+          "latex": "y=-2"
+        }
+      ],
+      "answerText": "-2",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-005",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kuris metodas dažniausiai tinka lygčių sistemai su x+y=8 ir x-y=2?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Daugyba iš nulio"
+          },
+          {
+            "id": "b",
+            "text": "Sudėtis arba atimtis"
+          },
+          {
+            "id": "c",
+            "text": "Šaknijimas"
+          },
+          {
+            "id": "d",
+            "text": "Logaritmavimas"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vienas kintamasis išnyks sudėjus.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "tiesine-funkcija",
+            "modeliavimas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudedant lygtis eliminuojamas y.",
+          "latex": "sudėtis"
+        }
+      ],
+      "answerText": "Sudėtis arba atimtis",
+      "alternateMethods": [],
+      "conceptIds": [
+        "tiesine-funkcija",
+        "modeliavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-006",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 6.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "6"
+        }
+      ],
+      "answerText": "6",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-007",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 7.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-008",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 8.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "8"
+        }
+      ],
+      "answerText": "8",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-009",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 9.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "9"
+        }
+      ],
+      "answerText": "9",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-010",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 10.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-011",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 11.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "11"
+        }
+      ],
+      "answerText": "11",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-012",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 12.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "12"
+        }
+      ],
+      "answerText": "12",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-013",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 13.",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "13"
+        }
+      ],
+      "answerText": "13",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-014",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 14.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "14"
+        }
+      ],
+      "answerText": "14",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-015",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 15.",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "15"
+        }
+      ],
+      "answerText": "15",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-016",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 16.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-017",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 17.",
+      "answer": {
+        "kind": "numeric",
+        "value": 17,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "17"
+        }
+      ],
+      "answerText": "17",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-018",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 18.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "18"
+        }
+      ],
+      "answerText": "18",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-019",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 19.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "19"
+        }
+      ],
+      "answerText": "19",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-020",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis: papildomas uždavinys Nr. 20.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "20"
+        }
+      ],
+      "answerText": "20",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    }
+  ],
+  "tests": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-test-topic",
+      "title": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis testas",
+      "scope": "topic",
+      "topicIds": [
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis"
+      ],
+      "exerciseIds": [
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-001",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-002",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-003",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-004",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-005",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-006",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-007",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-008"
+      ],
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75,
+      "timeLimitSeconds": 1800
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-test-challenge",
+      "title": "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis iššūkis",
+      "scope": "olympiad",
+      "topicIds": [
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis"
+      ],
+      "exerciseIds": [
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-009",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-010",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-011",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-012",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-013",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-014",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-015",
+        "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-ex-016"
+      ],
+      "masteryWeight": 1.6,
+      "passingThreshold": 0.65,
+      "timeLimitSeconds": 2400
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-lygtis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra lygtis?",
+      "back": "Lygybė su nežinomuoju.",
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-nelygybe",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra nelygybė?",
+      "back": "Ryšys su <, >, <= arba >=.",
+      "conceptIds": [
+        "nelygybe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-sprendinys",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra sprendinys?",
+      "back": "Reikšmė, tenkinanti lygtį.",
+      "conceptIds": [
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-sistema",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra sistema?",
+      "back": "Kelios lygtys su tais pačiais nežinomaisiais.",
+      "conceptIds": [
+        "sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-tiesines-sistemos-bendrumas",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra tiesinių lygčių sistemos idėja?",
+      "back": "Sistema aprašo bendrą sprendinį.",
+      "conceptIds": [
+        "tiesines-sistemos-bendrumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-eliminacijos-principas",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra eliminacijos principas?",
+      "back": "Sudėdami arba atimdami lygtis galime pašalinti vieną kintamąjį.",
+      "conceptIds": [
+        "eliminacijos-principas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-sistema-vienu-kintamuoju",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra sistemoje ieško tik vieno skaičiaus?",
+      "back": "Spręsk abi lygtis kartu.",
+      "conceptIds": [
+        "sistema-vienu-kintamuoju"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-srs-eliminacija-be-patikros",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra eliminavęs kintamąjį pamiršta patikrinti?",
+      "back": "Patikrink sprendinį abiejose lygtėse.",
+      "conceptIds": [
+        "eliminacija-be-patikros"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    }
+  ]
+}
