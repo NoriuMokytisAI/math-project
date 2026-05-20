@@ -1,5 +1,6 @@
 import { concepts, exercises, tests, topics } from "./content";
 import { createInitialDiagnosticState, normalizeDiagnosticState } from "./diagnostic";
+import { inferStartMode } from "./startModes";
 import { State, SrsCard, SrsSettings, Attempt, TestAttempt, TopicMastery } from "./types";
 
 export const CONTENT_VERSION = "0.1.0";
@@ -36,6 +37,10 @@ export function createInitialState(): State {
     profile: {
       onboarded: false,
       goal: "",
+      startMode: "full-course",
+      preparationType: undefined,
+      targetedStartChoice: "diagnostic",
+      targetTopicId: "",
       grade: 9,
       gradeBand: "9-10",
       confidence: "",
@@ -118,13 +123,23 @@ export function normalizeState(value: any): State {
     srs: srsSettings
   };
   const migratedCards = migrateSrsCards(incoming.srsCards || [], incoming.version, srsSettings);
+  const profileInput = { ...initial.profile, ...(incoming.profile || {}) };
+  if (!incoming.profile?.startMode) {
+    delete (profileInput as any).startMode;
+  }
+  if (!incoming.profile?.targetedStartChoice) {
+    delete (profileInput as any).targetedStartChoice;
+  }
+  if (!incoming.profile?.preparationType) {
+    delete (profileInput as any).preparationType;
+  }
 
   const finalState: State = {
     ...initial,
     ...incoming,
     version: STATE_VERSION,
     contentVersion: incoming.contentVersion || CONTENT_VERSION,
-    profile: { ...initial.profile, ...(incoming.profile || {}) },
+    profile: normalizeProfile(profileInput),
     preferences,
     srsCards: applySrsPreferences(migratedCards, srsSettings),
     attempts: Array.isArray(incoming.attempts) ? incoming.attempts : [],
@@ -136,6 +151,24 @@ export function normalizeState(value: any): State {
 
   finalState.mastery = calculateMastery(finalState);
   return finalState;
+}
+
+function normalizeProfile(profile: any) {
+  const startMode = inferStartMode(profile);
+  const preparationType = ["control", "pupp", "vbe"].includes(profile.preparationType)
+    ? profile.preparationType
+    : undefined;
+  const targetedStartChoice = ["diagnostic", "topic"].includes(profile.targetedStartChoice)
+    ? profile.targetedStartChoice
+    : (startMode === "targeted" && preparationType === "control" ? "topic" : "diagnostic");
+
+  return {
+    ...profile,
+    startMode,
+    preparationType,
+    targetedStartChoice,
+    targetTopicId: topics[profile.targetTopicId] ? profile.targetTopicId : ""
+  };
 }
 
 function migrateSrsCards(cards: any[], stateVersion: number, settings: SrsSettings): SrsCard[] {
@@ -527,7 +560,14 @@ function updateAchievements(state: Omit<State, 'achievements'> & { achievements?
 }
 
 export function recommendation(state: State): { type: string, text: string } {
-  if (state.diagnosticState?.status !== "complete") {
+  const mode = inferStartMode(state.profile);
+  const wantsDiagnostic = mode === "full-course" ||
+    (mode === "targeted" && state.profile.targetedStartChoice === "diagnostic");
+  const targetTopicId = state.profile.targetTopicId && topics[state.profile.targetTopicId]
+    ? state.profile.targetTopicId
+    : state.activeTopicId;
+
+  if (wantsDiagnostic && state.diagnosticState?.status !== "complete") {
     if (state.diagnosticState?.status === "in_progress") {
       return { type: "diagnostic", text: "Tęsk diagnostiką: ji renka įrodymus apie spragas ir sudarys tikslų mokymosi kelią." };
     }
@@ -538,6 +578,20 @@ export function recommendation(state: State): { type: string, text: string } {
   }
   const due = getDueSrsCards(state.srsCards, state.preferences?.srs);
   if (due.length) return { type: "srs", text: `Turi ${due.length} korteles pakartojimui. Pradėk nuo atminties, kol ji šilta.` };
+
+  if (mode === "olympiad") {
+    const topic = topics[targetTopicId] || topics[state.activeTopicId] || topics[DEFAULT_TOPIC_ID];
+    return { type: "practice", text: `Olimpiadiniam stiprinimui pradėk nuo sunkesnių ${topic.title} uždavinių ir alternatyvių sprendimo būdų.` };
+  }
+
+  if (mode === "targeted") {
+    const topic = topics[targetTopicId] || topics[state.activeTopicId] || topics[DEFAULT_TOPIC_ID];
+    if (state.profile.preparationType === "control") {
+      return { type: "topic", text: `Kontroliniui pirmiausia sutvarkyk temą: ${topic.title}. Perskaityk teoriją, tada laikyk temos testą.` };
+    }
+    return { type: "tests", text: `${state.profile.preparationType === "vbe" ? "VBE" : "PUPP"} pasiruošimui dirbk per diagnostikos spragas arba pasirinktą temą: ${topic.title}.` };
+  }
+
   const active = topics[state.activeTopicId] ? state.activeTopicId : DEFAULT_TOPIC_ID;
   const m = state.mastery[active]?.value || 0;
   if (m < 40) return { type: "theory", text: `Skaityk teoriją: ${topics[active].title}. Tada spręsk lengvus uždavinius.` };

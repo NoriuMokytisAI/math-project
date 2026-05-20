@@ -2,6 +2,7 @@ import React from 'react';
 import { State } from '../types';
 import { getDueSrsCards } from '../systems';
 import { topics } from '../content';
+import { firstTopicForProfile } from '../startModes';
 
 interface TopbarProps {
   state: State;
@@ -12,7 +13,10 @@ interface TopbarProps {
 
 export const Topbar: React.FC<TopbarProps> = ({ state, currentPage, currentId, navigate }) => {
   const due = getDueSrsCards(state.srsCards, state.preferences?.srs).length;
-  const activeTopic = topics[state.activeTopicId] || Object.values(topics)[0];
+  const targetTopicId = state.profile.targetTopicId && topics[state.profile.targetTopicId]
+    ? state.profile.targetTopicId
+    : firstTopicForProfile(state.profile);
+  const activeTopic = topics[targetTopicId] || topics[state.activeTopicId] || Object.values(topics)[0];
 
   const getPageTitle = () => {
     if (currentPage === 'topic') {

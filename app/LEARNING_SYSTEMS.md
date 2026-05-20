@@ -11,15 +11,76 @@ The learning engine has four connected systems:
 
 All systems run locally and offline.
 
+## Goal-Based Start Modes
+
+The learning engine must support three goal-based starting modes. The same topic, SRS, practice, test, mastery, and storage systems are used in every mode, but the home page and recommendation order differ. Modes are not permanent categories: switching mode later in Settings changes recommendations and the home page while preserving all progress.
+
+### Olympiad Strengthening Mode
+
+Selected by: `Noriu sustiprinti matematiką`
+
+Primary recommendation order:
+
+1. urgent due SRS,
+2. olympiad prerequisite gaps,
+3. hard official-curriculum exercises needed for olympiad readiness,
+4. olympiad theory or method notes,
+5. non-routine problem sets,
+6. alternative solution-method exploration,
+7. proof-style or competition-style tests.
+
+The diagnostic is optional in this mode. It can be offered as a prerequisite-gap check if the student struggles, but it should not block entry into olympiad content.
+
+The student should choose a starting grade band in onboarding. This grade band only sets the initial difficulty and recommendation order; it must not restrict access to higher-grade olympiad or curriculum content.
+
+### Topic or Exam Preparation Mode
+
+Selected by: `Ruošiuosi kontroliniui arba egzaminui`
+
+This mode has a second choice:
+
+- `Kontrolinis`: the student chooses a specific curriculum topic and starts there.
+- `PUPP`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
+- `VBE`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
+
+Primary recommendation order:
+
+1. selected topic due SRS,
+2. blocking prerequisite check for the selected topic,
+3. concise selected-topic theory,
+4. worked examples,
+5. selected-topic practice,
+6. common mistakes,
+7. topic or exam-style test.
+
+The student must choose the target topic or exam area during onboarding. The diagnostic is optional unless the student switches to full-course mode.
+
+### Full Course With Diagnostic Mode
+
+Selected by: `Nežinau nuo ko pradėti`
+
+Primary recommendation order:
+
+1. start or resume the diagnostic,
+2. urgent due SRS,
+3. blocking prerequisite from the generated path,
+4. current recommended theory,
+5. current recommended exercises,
+6. checkpoint test,
+7. next curriculum topic,
+8. olympiad extension if readiness is high.
+
+This is the recommended path for new users who do not know where to begin.
+
 ## Diagnostics
 
 The diagnostic should estimate what the student knows and where to start.
 
-The long-term diagnostic system is not a short onboarding quiz. It should be the root of the app: an extensive cognitive diagnosis model assessment that replaces grade selection and manual topic selection as the main placement mechanism.
+The long-term diagnostic system is not a short onboarding quiz. It is the root of the full-course mode: an extensive cognitive diagnosis model assessment that replaces grade selection and manual topic selection when the student chooses `Nežinau nuo ko pradėti`.
 
 Canonical implementation details are defined in [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md).
 
-The app may still ask the student's goal, but the learning path should be generated from diagnostic evidence:
+In full-course mode, the learning path should be generated from diagnostic evidence:
 
 - concept and skill mastery,
 - prerequisite gaps,
@@ -207,7 +268,7 @@ The app should recommend:
 - prerequisite topic from lower grade,
 - olympiad extension if mastery is high.
 
-Recommendation order:
+Default recommendation order for full-course mode:
 
 1. urgent due SRS,
 2. blocking prerequisite,

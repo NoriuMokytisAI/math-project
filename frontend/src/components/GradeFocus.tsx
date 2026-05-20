@@ -1,7 +1,7 @@
 import React from 'react';
 import { State } from '../types';
 import { curriculum } from '../content';
-import { bandForGrade, gradesForBand, formatGradeBand, topicsForBand } from './Onboarding';
+import { bandForGrade, formatGradeBand, gradesForBand, inferStartMode, topicsForBand, topicsForExam } from '../startModes';
 
 interface GradeFocusProps {
   state: State;
@@ -12,8 +12,11 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
   const band = state.profile.gradeBand || bandForGrade(state.profile.grade || 9);
   const grades = gradesForBand(band);
   const grade = state.profile.grade || grades[0] || 9;
+  const startMode = inferStartMode(state.profile);
 
-  const currentTopics = topicsForBand(band);
+  const currentTopics = startMode === "targeted" && state.profile.preparationType
+    ? topicsForExam(state.profile.preparationType)
+    : topicsForBand(band);
 
   const prevGrade = Math.max(5, grade - 1);
   const nextGrade = Math.min(12, grade + 1);
@@ -54,9 +57,14 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
         <div className="section-head">
           <div>
             <span className="eyebrow">Tavo programos pakopa</span>
-            <h2>{formatGradeBand(band)}</h2>
+            <h2>{startMode === "targeted" && state.profile.preparationType ? "Tikslinis pasiruošimas" : formatGradeBand(band)}</h2>
             <p className="lead">
-              Rodome tik tavo pasirinktos pakopos aktualų kelią. Kitų klasių temas pateikiame tik kaip pagalbą, kai jų reikia spragoms užpildyti ar žingsniui į priekį.
+              {startMode === "olympiad"
+                ? "Olimpiadiniame kelyje pradinė pakopa nustato sunkumo startą, bet aukštesnių klasių temos lieka laisvai pasiekiamos."
+                : startMode === "targeted"
+                  ? "Rodome pasiruošimui aktualias temas. Kontrolinio kelias gali būti siauras, o PUPP/VBE kelias gali remtis diagnostika ir aukštesnių pakopų spragomis."
+                  : "Rodome tavo pasirinktai pakopai aktualų kelią. Kitų klasių temos pateikiamos kaip pagalba, kai jų reikia spragoms užpildyti ar žingsniui į priekį."
+              }
             </p>
           </div>
           <div className="grade-nav">
@@ -67,7 +75,7 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
       </section>
 
       <section className="panel wide">
-        <span className="eyebrow">Tavo klasės temos pagal Bendrąją programą</span>
+        <span className="eyebrow">{startMode === "targeted" ? "Pasiruošimo temos pagal Bendrąją programą" : "Tavo pakopos temos pagal Bendrąją programą"}</span>
 
         {groupedTopics.length === 0 ? (
           <p className="muted">Šiai klasei dar nėra temų.</p>
@@ -87,7 +95,7 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
                         <div>
                           <strong>{topic.title}</strong>
                           <small>
-                            {mastery}% • {topic.grade} klasė • {(topic as any).level === "olympiad" ? "Olimpiadinis papildymas" : "Bendroji programa"}
+                            {mastery}% • {(topic as any).level === "olympiad" ? "Olimpiadinis papildymas" : "Bendroji programa"}
                           </small>
                         </div>
                         <div className="grade-topic-actions">

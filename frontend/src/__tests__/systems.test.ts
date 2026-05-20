@@ -3,6 +3,7 @@ import * as systems from '../systems';
 import * as generated from '../content';
 import * as diagnostic from '../diagnostic';
 import { diagnosticItems } from '../diagnosticContent';
+import { inferStartMode } from '../startModes';
 
 describe('Systems Logic', () => {
   it('creates initial state with no pre-created SRS cards', () => {
@@ -74,6 +75,43 @@ describe('Systems Logic', () => {
 
     const migrated = systems.normalizeState(oldAutoDeck);
     expect(migrated.srsCards.length).toBe(0);
+  });
+
+  it('normalizes goal-based start mode profile metadata', () => {
+    const olympiad = systems.normalizeState({
+      ...systems.createInitialState(),
+      profile: {
+        onboarded: true,
+        goal: 'Noriu sustiprinti matematiką',
+        grade: 9,
+        gradeBand: '9-10',
+        confidence: '',
+        dailyMinutes: 20,
+        olympiad: false,
+        diagnostic: false
+      }
+    });
+
+    expect(inferStartMode(olympiad.profile)).toBe('olympiad');
+    expect(olympiad.profile.startMode).toBe('olympiad');
+
+    const targeted = systems.normalizeState({
+      ...systems.createInitialState(),
+      profile: {
+        onboarded: true,
+        goal: 'Ruošiuosi kontroliniui arba egzaminui',
+        startMode: 'targeted',
+        preparationType: 'control',
+        grade: 9,
+        gradeBand: '9-10',
+        confidence: '',
+        dailyMinutes: 20,
+        olympiad: false,
+        diagnostic: false
+      }
+    });
+
+    expect(targeted.profile.targetedStartChoice).toBe('topic');
   });
 });
 

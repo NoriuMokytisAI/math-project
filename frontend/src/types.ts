@@ -1,6 +1,14 @@
+export type StartMode = 'olympiad' | 'targeted' | 'full-course';
+export type PreparationType = 'control' | 'pupp' | 'vbe';
+export type TargetedStartChoice = 'diagnostic' | 'topic';
+
 export interface Profile {
   onboarded: boolean;
   goal: string;
+  startMode?: StartMode;
+  preparationType?: PreparationType;
+  targetedStartChoice?: TargetedStartChoice;
+  targetTopicId?: string;
   grade: number;
   gradeBand: string;
   confidence: string;

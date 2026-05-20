@@ -1,4 +1,5 @@
 import { concepts, exercises, tests, topics } from "./content.js";
+import { inferStartMode } from "./startModes.ts";
 
 export const CONTENT_VERSION = "0.1.0";
 export const STATE_VERSION = 3;
@@ -36,6 +37,10 @@ export function createInitialState() {
     profile: {
       onboarded: false,
       goal: "",
+      startMode: "full-course",
+      preparationType: undefined,
+      targetedStartChoice: "diagnostic",
+      targetTopicId: "",
       grade: 9,
       gradeBand: "9-10",
       confidence: "",
@@ -118,18 +123,40 @@ export function normalizeState(value) {
     srs: srsSettings
   };
   const migratedCards = migrateSrsCards(incoming.srsCards || [], incoming.version, srsSettings);
+  const profileInput = { ...initial.profile, ...(incoming.profile || {}) };
+  if (!incoming.profile?.startMode) delete profileInput.startMode;
+  if (!incoming.profile?.targetedStartChoice) delete profileInput.targetedStartChoice;
+  if (!incoming.profile?.preparationType) delete profileInput.preparationType;
   return {
     ...initial,
     ...incoming,
     version: STATE_VERSION,
     contentVersion: incoming.contentVersion || CONTENT_VERSION,
-    profile: { ...initial.profile, ...(incoming.profile || {}) },
+    profile: normalizeProfile(profileInput),
     preferences,
     srsCards: applySrsPreferences(migratedCards, srsSettings),
     attempts: Array.isArray(incoming.attempts) ? incoming.attempts : [],
     testAttempts: Array.isArray(incoming.testAttempts) ? incoming.testAttempts : [],
     achievements: Array.isArray(incoming.achievements) ? incoming.achievements : [],
     activeTopicId: topics[incoming.activeTopicId] ? incoming.activeTopicId : DEFAULT_TOPIC_ID
+  };
+}
+
+function normalizeProfile(profile) {
+  const startMode = inferStartMode(profile);
+  const preparationType = ["control", "pupp", "vbe"].includes(profile.preparationType)
+    ? profile.preparationType
+    : undefined;
+  const targetedStartChoice = ["diagnostic", "topic"].includes(profile.targetedStartChoice)
+    ? profile.targetedStartChoice
+    : (startMode === "targeted" && preparationType === "control" ? "topic" : "diagnostic");
+
+  return {
+    ...profile,
+    startMode,
+    preparationType,
+    targetedStartChoice,
+    targetTopicId: topics[profile.targetTopicId] ? profile.targetTopicId : ""
   };
 }
 

@@ -26,7 +26,11 @@ The app must:
 - use GitHub as the content and code integration workflow,
 - separate official curriculum content from olympiad extension content,
 - support Lithuanian math notation and KaTeX-rendered formulas,
-- support topic theory, glossary concepts, SRS, exercises, tests, mastery, achievements, and recommendations.
+- support topic theory, glossary concepts, SRS, exercises, tests, mastery, achievements, and recommendations,
+- support three goal-based app modes with different home pages:
+  - olympiad strengthening,
+  - topic or exam preparation,
+  - full course with diagnostic.
 
 The app must not:
 
@@ -139,7 +143,8 @@ The implementation target is the completed product, not a temporary grade-limite
 
 The production app must include:
 
-- diagnostic-first start flow,
+- goal-based start flow,
+- three mode-specific home pages,
 - cognitive diagnosis model placement,
 - automatically generated learning paths,
 - complete grades 5-12 curriculum coverage,
@@ -158,6 +163,51 @@ The production app must include:
 - offline behavior on web/PWA, Android, and desktop.
 
 Android and desktop are first-class production targets. They must use the same shared app, content, learning logic, and progress format as the web/PWA target.
+
+## Goal Mode Requirements
+
+The app has three starting modes selected during onboarding. These states change the home page and recommendation strategy, but not the shared learning systems. The app must explain the effect of each choice during onboarding. The student must be able to change mode later in Settings without losing progress.
+
+### Olympiad Strengthening Mode
+
+Selected by: `Noriu sustiprinti matematiką`
+
+Requirements:
+
+- put the user into olympiad-level mathematics by default,
+- ask for a starting grade band,
+- use the grade band only for initial difficulty and recommendation ordering,
+- allow free access to higher and lower grade content,
+- prioritize olympiad extension tracks and hard problem sets,
+- surface official curriculum prerequisites only when they block progress,
+- make alternative solution methods and proof-style reasoning prominent,
+- keep the diagnostic optional as a prerequisite-gap check.
+
+### Topic or Exam Preparation Mode
+
+Selected by: `Ruošiuosi kontroliniui arba egzaminui`
+
+Requirements:
+
+- ask the user whether they are preparing for `Kontrolinis`, `PUPP`, or `VBE`,
+- for `Kontrolinis`, ask the user to choose the specific topic they want to learn,
+- for `PUPP` or `VBE`, make diagnostic the primary recommended action and topic selection the secondary action,
+- make the selected topic the main dashboard focus,
+- prioritize concise theory, worked examples, practice, mistakes, and topic tests,
+- offer prerequisite checks when the selected topic depends on earlier material,
+- keep the diagnostic optional unless the user asks for full placement.
+
+### Full Course With Diagnostic Mode
+
+Selected by: `Nežinau nuo ko pradėti`
+
+Requirements:
+
+- make the full diagnostic test the recommended first action,
+- explain that the diagnostic is long, resumable, and used to build the course plan,
+- generate the learning path from diagnostic evidence,
+- show full-course progress and prerequisite repair on the home page,
+- unlock olympiad extensions only after standard prerequisites are strong enough.
 
 ## Full Completion Requirements
 

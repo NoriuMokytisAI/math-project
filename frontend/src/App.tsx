@@ -67,7 +67,7 @@ export const App: React.FC = () => {
     }, 3000);
   };
 
-  const handleOnboardingComplete = (profile: Partial<Profile>, startingTopicId: string) => {
+  const handleOnboardingComplete = (profile: Partial<Profile>, startingTopicId: string, destination = 'dashboard') => {
     updateState((prev) => ({
       ...prev,
       profile: {
@@ -77,7 +77,7 @@ export const App: React.FC = () => {
       },
       activeTopicId: startingTopicId
     }));
-    navigate('diagnostic');
+    navigate(destination);
   };
 
   const handleReset = async () => {

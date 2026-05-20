@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { State, SrsSettings } from '../types';
+import { PreparationType, Profile, StartMode, State, SrsSettings, TargetedStartChoice } from '../types';
 import { topics, concepts, exercises, tests } from '../content';
 import {
   normalizeSrsSettings,
@@ -8,6 +8,16 @@ import {
   importProgress,
   applySrsPreferences
 } from '../systems';
+import {
+  defaultGradeBandForPreparation,
+  firstTopicForProfile,
+  formatGradeBand,
+  GRADE_BANDS,
+  PREPARATION_LABELS,
+  START_MODE_LABELS,
+  topicsForBand,
+  topicsForExam
+} from '../startModes';
 
 interface SettingsProps {
   state: State;
@@ -28,6 +38,10 @@ export const Settings: React.FC<SettingsProps> = ({
   const [transferCode, setTransferCode] = useState("");
 
   const srs = normalizeSrsSettings(state.preferences?.srs);
+  const startMode = state.profile.startMode || 'full-course';
+  const targetTopicId = state.profile.targetTopicId && topics[state.profile.targetTopicId]
+    ? state.profile.targetTopicId
+    : firstTopicForProfile(state.profile);
 
   const handleExport = () => {
     try {
@@ -121,6 +135,81 @@ export const Settings: React.FC<SettingsProps> = ({
     showToast("Atkurti numatytieji SRS nustatymai.");
   };
 
+  const updateGoalMode = (patch: Partial<{
+    startMode: StartMode;
+    preparationType: PreparationType;
+    targetedStartChoice: TargetedStartChoice;
+    gradeBand: string;
+    targetTopicId: string;
+  }>) => {
+    updateState((prev) => {
+      const nextProfile: Profile = {
+        ...prev.profile,
+        ...patch
+      };
+
+      if (patch.startMode) {
+        nextProfile.olympiad = patch.startMode === 'olympiad';
+        nextProfile.diagnostic = patch.startMode === 'full-course';
+        if (patch.startMode === 'full-course') {
+          nextProfile.goal = 'Nežinau nuo ko pradėti';
+          nextProfile.preparationType = undefined;
+          nextProfile.targetedStartChoice = 'diagnostic';
+          nextProfile.targetTopicId = '';
+        }
+        if (patch.startMode === 'olympiad') {
+          nextProfile.goal = 'Noriu sustiprinti matematiką';
+          nextProfile.preparationType = undefined;
+          nextProfile.targetedStartChoice = 'topic';
+          nextProfile.targetTopicId = '';
+          nextProfile.targetTopicId = firstTopicForProfile(nextProfile);
+        }
+        if (patch.startMode === 'targeted') {
+          nextProfile.goal = 'Ruošiuosi kontroliniui arba egzaminui';
+          nextProfile.preparationType = nextProfile.preparationType || 'control';
+          nextProfile.targetedStartChoice = nextProfile.preparationType === 'control' ? 'topic' : 'diagnostic';
+          nextProfile.diagnostic = nextProfile.targetedStartChoice === 'diagnostic';
+          nextProfile.targetTopicId = '';
+          nextProfile.targetTopicId = nextProfile.targetedStartChoice === 'topic'
+            ? firstTopicForProfile(nextProfile)
+            : '';
+        }
+      }
+
+      if (patch.preparationType) {
+        nextProfile.gradeBand = defaultGradeBandForPreparation(patch.preparationType);
+        nextProfile.targetedStartChoice = patch.preparationType === 'control' ? 'topic' : 'diagnostic';
+        nextProfile.diagnostic = nextProfile.targetedStartChoice === 'diagnostic';
+        nextProfile.targetTopicId = '';
+      }
+
+      if (patch.targetedStartChoice) {
+        nextProfile.diagnostic = patch.targetedStartChoice === 'diagnostic';
+        if (patch.targetedStartChoice === 'topic' && !nextProfile.targetTopicId) {
+          nextProfile.targetTopicId = firstTopicForProfile(nextProfile);
+        }
+      }
+
+      if (patch.gradeBand && !patch.targetTopicId) {
+        nextProfile.targetTopicId = topicsForBand(patch.gradeBand)[0]?.id || prev.activeTopicId;
+      }
+
+      const activeTopicId = nextProfile.targetTopicId && topics[nextProfile.targetTopicId]
+        ? nextProfile.targetTopicId
+        : (firstTopicForProfile(nextProfile) || prev.activeTopicId);
+
+      return {
+        ...prev,
+        profile: {
+          ...nextProfile,
+          grade: topics[activeTopicId]?.grade || prev.profile.grade
+        },
+        activeTopicId
+      };
+    });
+    showToast("Pradžios režimas atnaujintas. Progresas nepakeistas.");
+  };
+
   const enabledCards = state.srsCards.filter(
     (card) => card.enabled && srs.enabledCardTypes[card.cardType] !== false && card.queue !== "suspended"
   ).length;
@@ -154,6 +243,85 @@ export const Settings: React.FC<SettingsProps> = ({
 
       {activeTab === 'general' ? (
         <div className="grid">
+          <section className="panel wide">
+            <span className="eyebrow">Pradžios režimas</span>
+            <h2>Keisk startą neprarasdamas progreso</h2>
+            <p className="lead">
+              Šis pasirinkimas keičia pagrindinio ekrano rekomendacijas ir pirmą siūlomą veiksmą. Jis neištrina diagnostikos, SRS kortelių, testų ar išspręstų uždavinių.
+            </p>
+            <div className="settings-choice-grid">
+              {(['olympiad', 'targeted', 'full-course'] as StartMode[]).map((mode) => (
+                <button
+                  key={mode}
+                  type="button"
+                  className={startMode === mode ? 'selected' : ''}
+                  onClick={() => updateGoalMode({ startMode: mode })}
+                >
+                  <strong>{START_MODE_LABELS[mode]}</strong>
+                  <small>
+                    {mode === 'olympiad' && 'Sunkesni uždaviniai, laisvos aukštesnės pakopos.'}
+                    {mode === 'targeted' && 'Kontrolinis, PUPP arba VBE su tema ar diagnostika.'}
+                    {mode === 'full-course' && 'Pilnas kursas, diagnostika ir automatinis planas.'}
+                  </small>
+                </button>
+              ))}
+            </div>
+
+            {startMode === 'olympiad' && (
+              <div className="settings-inline-controls">
+                <label>Pradinis olimpiadinio kelio lygis
+                  <select
+                    value={state.profile.gradeBand}
+                    onChange={(e) => updateGoalMode({ gradeBand: e.target.value })}
+                  >
+                    {GRADE_BANDS.map((band) => (
+                      <option key={band.value} value={band.value}>{band.label}</option>
+                    ))}
+                  </select>
+                </label>
+                <p className="muted">Dabar: {formatGradeBand(state.profile.gradeBand)}. Aukštesnės temos lieka pasiekiamos.</p>
+              </div>
+            )}
+
+            {startMode === 'targeted' && (
+              <div className="settings-inline-controls">
+                <label>Pasiruošimo tipas
+                  <select
+                    value={state.profile.preparationType || 'control'}
+                    onChange={(e) => updateGoalMode({ preparationType: e.target.value as PreparationType })}
+                  >
+                    {(['control', 'pupp', 'vbe'] as PreparationType[]).map((type) => (
+                      <option key={type} value={type}>{PREPARATION_LABELS[type]}</option>
+                    ))}
+                  </select>
+                </label>
+                {(state.profile.preparationType === 'pupp' || state.profile.preparationType === 'vbe') && (
+                  <label>Pradėti nuo
+                    <select
+                      value={state.profile.targetedStartChoice || 'diagnostic'}
+                      onChange={(e) => updateGoalMode({ targetedStartChoice: e.target.value as TargetedStartChoice })}
+                    >
+                      <option value="diagnostic">Rekomenduojama diagnostika</option>
+                      <option value="topic">Konkreti tema</option>
+                    </select>
+                  </label>
+                )}
+                {(state.profile.preparationType === 'control' || state.profile.targetedStartChoice === 'topic') && (
+                  <label>Pasirinkta tema
+                    <select
+                      value={targetTopicId}
+                      onChange={(e) => updateGoalMode({ targetTopicId: e.target.value })}
+                    >
+                      {topicsForExam(state.profile.preparationType).map((topic) => (
+                        <option key={topic.id} value={topic.id}>{topic.title}</option>
+                      ))}
+                    </select>
+                  </label>
+                )}
+              </div>
+            )}
+          </section>
+
           <section className="panel wide">
             <span className="eyebrow">Perkėlimas be paskyros</span>
             <h2>Eksportuok arba importuok progresą</h2>

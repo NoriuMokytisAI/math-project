@@ -1,6 +1,7 @@
 import React from 'react';
 import { State } from '../types';
 import { getDueSrsCards, recommendation } from '../systems';
+import { inferStartMode, START_MODE_LABELS } from '../startModes';
 
 interface SidebarProps {
   state: State;
@@ -18,6 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
     : 0;
 
   const rec = recommendation(state);
+  const mode = inferStartMode(state.profile);
 
   const navItems = [
     { page: 'dashboard', label: 'Apžvalga', icon: '⧉' },
@@ -62,8 +64,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
       </nav>
 
       <div className="side-card">
-        <span className="eyebrow">Tikslas</span>
-        <strong>{state.profile.goal || "Pasirink tikslą"}</strong>
+        <span className="eyebrow">Pradžios režimas</span>
+        <strong>{START_MODE_LABELS[mode]}</strong>
+        <small>{state.profile.goal || "Pasirink tikslą"}</small>
         <p className="rec-text">{rec.text}</p>
         <div className="side-meter-wrapper">
           <div className="side-meter" style={{ '--p': averageMastery } as React.CSSProperties}>

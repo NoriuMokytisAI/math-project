@@ -13,7 +13,13 @@ These decisions are fixed for the completed app:
 - Use Dexie/IndexedDB through a storage abstraction on web, Android, and desktop unless a platform proves it needs a native adapter.
 - Build one shared app, not separate web/native implementations.
 - Treat grades 5-12, olympiad extensions, diagnostics, SRS, practice, tests, mastery, recommendations, and progress transfer as production scope.
-- Do not use grade selection or topic selection as the root placement mechanism. Use the cognitive diagnosis model.
+- Do not use grade selection as the root placement mechanism.
+- Use goal-based modes:
+  - olympiad strengthening,
+  - topic or exam preparation,
+  - full course with diagnostic.
+- Treat modes as changeable starting positions, not permanent locked tracks.
+- Use the cognitive diagnosis model as the recommended root of full-course mode.
 
 Open design choices that may be decided during implementation:
 
@@ -40,6 +46,14 @@ Routes:
 - `/diagnostic`
 - `/diagnostic/:moduleId`
 - `/dashboard`
+- `/dashboard/olympiad`
+- `/dashboard/topic`
+- `/dashboard/course`
+- `/onboarding`
+- `/onboarding/goal`
+- `/onboarding/grade-band`
+- `/onboarding/topic`
+- `/onboarding/exam`
 - `/learn/:pathNodeId`
 - `/topic/:topicId`
 - `/glossary`
@@ -94,13 +108,25 @@ Deliverables:
 - no teaching hints or solution reveal during diagnostic,
 - learning-path generation from diagnostic evidence.
 
-The diagnostic is the root of the app. It must replace grade/topic onboarding as the primary way to decide what the student should learn.
+The diagnostic is the root of full-course mode. It must replace grade/topic guessing when the student chooses `Nežinau nuo ko pradėti`.
 
-## Phase 4: Plan-Driven Learning Flow
+For other modes:
+
+- olympiad strengthening mode may use a short prerequisite-gap check but should not block olympiad content,
+- topic or exam preparation mode should branch into `Kontrolinis`, `PUPP`, or `VBE`,
+- `Kontrolinis` should ask the student to choose a target topic and may offer prerequisite checks,
+- `PUPP` and `VBE` should recommend diagnostic as the primary path and manual topic choice as the secondary path.
+
+## Phase 4: Goal-Mode Learning Flow
 
 Deliverables:
 
-- dashboard driven by the generated learning path,
+- shared dashboard shell with mode-specific main content,
+- olympiad strengthening home page,
+- topic or exam preparation home page,
+- full-course diagnostic home page,
+- settings control for changing mode without deleting progress,
+- dashboard driven by the generated learning path in full-course mode,
 - recommended next action,
 - prerequisite repair path,
 - current topic path,
@@ -108,7 +134,13 @@ Deliverables:
 - SRS queue entry points,
 - explanation of why each recommendation appears.
 
-The dashboard may show curriculum browsing as a secondary option, but the primary action must come from diagnostic and learning evidence.
+The home page must differ by mode:
+
+- olympiad strengthening: challenge tracks, hard problem sets, olympiad readiness, prerequisite alerts,
+- topic or exam preparation: selected topic for kontrolinis, or PUPP/VBE diagnostic recommendation with topic fallback,
+- full course with diagnostic: diagnostic status, generated course path, prerequisite repair, full-course progress.
+
+The dashboard may show curriculum browsing as a secondary option, but the primary action must come from the selected mode.
 
 ## Phase 5: Theory, Glossary, and Concept Graph
 
@@ -247,7 +279,7 @@ Deliverables:
 
 ### Milestone 1
 
-Production app shell with diagnostic start.
+Production app shell with goal-mode start.
 
 ### Milestone 2
 
@@ -255,11 +287,11 @@ Validated curriculum, concept, diagnostic attribute, and exercise schemas.
 
 ### Milestone 3
 
-Fixed multi-module diagnostic with saved progress and learning-path output.
+Goal-mode dashboards plus fixed multi-module diagnostic with saved progress and learning-path output.
 
 ### Milestone 4
 
-Plan-driven dashboard and theory/glossary flow.
+Mode-driven dashboard and theory/glossary flow.
 
 ### Milestone 5
 

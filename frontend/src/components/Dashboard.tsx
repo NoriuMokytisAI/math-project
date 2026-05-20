@@ -2,7 +2,17 @@ import React from 'react';
 import { State } from '../types';
 import { getDueSrsCards, recommendation, calculateGradeMastery } from '../systems';
 import { topics, achievements } from '../content';
-import { bandForGrade, gradesForBand, formatGradeBand, topicsForBand } from './Onboarding';
+import {
+  bandForGrade,
+  firstTopicForProfile,
+  formatGradeBand,
+  gradesForBand,
+  inferStartMode,
+  PREPARATION_LABELS,
+  START_MODE_LABELS,
+  topicsForBand,
+  topicsForExam
+} from '../startModes';
 
 interface DashboardProps {
   state: State;
@@ -14,15 +24,22 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
   const due = getDueSrsCards(state.srsCards, state.preferences?.srs).length;
   const solvedCount = new Set(state.attempts.filter((a) => a.correct).map((a) => a.exerciseId)).size;
   const gradeMastery = calculateGradeMastery(state);
+  const startMode = inferStartMode(state.profile);
 
   const activeBand = state.profile.gradeBand || bandForGrade(state.profile.grade || 9);
   const activeGrades = gradesForBand(activeBand);
-  const gradeTopics = topicsForBand(activeBand);
+  const gradeTopics = startMode === "targeted" && state.profile.preparationType
+    ? topicsForExam(state.profile.preparationType)
+    : topicsForBand(activeBand);
 
   const plan = dailyPlan(state.profile.dailyMinutes || 20);
   const goalAdvice = goalGuidance(state.profile.goal || "");
 
-  const activeTopic = topics[state.activeTopicId] || Object.values(topics)[0];
+  const targetTopicId = state.profile.targetTopicId && topics[state.profile.targetTopicId]
+    ? state.profile.targetTopicId
+    : firstTopicForProfile(state.profile);
+  const activeTopic = topics[targetTopicId] || topics[state.activeTopicId] || Object.values(topics)[0];
+  const hero = modeHero();
 
   function dailyPlan(minutes: number): string[] {
     if (minutes <= 10) return ["1 SRS kortelė", "1 teorijos pastraipa", "1 lengvas uždavinys"];
@@ -33,11 +50,55 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
   }
 
   function goalGuidance(goal: string): string {
+    if (startMode === "olympiad") return "Tavo kelias labiau akcentuos sunkesnius uždavinius, alternatyvius sprendimus ir papildomus iššūkius po bazinės teorijos. Aukštesnės pakopos lieka pasiekiamos laisvai.";
+    if (startMode === "targeted" && state.profile.preparationType === "control") return "Tavo pradžia sutelkta į pasirinktą temą: greita teorija, praktika, testas ir klaidų taisymas.";
+    if (startMode === "targeted" && (state.profile.preparationType === "pupp" || state.profile.preparationType === "vbe")) return "Egzamino keliui diagnostika yra rekomenduojamas startas, bet gali dirbti ir per pasirinktą temą.";
+    if (startMode === "full-course") return "Pilno kurso kelias remiasi diagnostika: programa ieško spragų ir automatiškai siūlo, ką mokytis toliau.";
     if (goal.includes("olimpiadinio")) return "Tavo kelias labiau akcentuos sunkesnius uždavinius, alternatyvius sprendimus ir papildomus iššūkius po bazinės teorijos.";
     if (goal.includes("PUPP") || goal.includes("VBE") || goal.includes("egzaminui")) return "Tavo kelias labiau akcentuos programos temas, testus ir klaidų taisymą, kad pasiruošimas egzaminui būtų tiesus.";
     if (goal.includes("kontroliniui")) return "Tavo kelias labiau akcentuos greitą temos sutvarkymą: trumpa teorija, pavyzdžiai ir keli tikrinantys uždaviniai.";
     if (goal.includes("Nežinau")) return "Tavo kelias prasidės nuo rekomenduojamos temos ir pagal sprendimus siūlys, ką mokytis toliau.";
     return "Tavo kelias labiau akcentuos stabilų pagrindų stiprinimą: teoriją, sąvokas, SRS ir praktiką.";
+  }
+
+  function modeHero() {
+    if (startMode === "olympiad") {
+      return {
+        eyebrow: START_MODE_LABELS.olympiad,
+        title: "Stiprinkis aukščiau bazės",
+        text: `Pradinis lygis: ${formatGradeBand(activeBand)}. Rinkis sunkesnes temas, spręsk daugiau uždavinių ir grįžk prie teorijos tik tada, kai ji tikrai trukdo.`,
+        primary: "Spręsti iššūkį",
+        secondary: "Rodyti temas",
+        primaryAction: () => navigate("practice", activeTopic.id),
+        secondaryAction: () => navigate("grade")
+      };
+    }
+    if (startMode === "targeted") {
+      const prep = state.profile.preparationType ? PREPARATION_LABELS[state.profile.preparationType] : "Pasiruošimas";
+      const diagnosticFirst = state.profile.targetedStartChoice === "diagnostic" && state.diagnosticState.status !== "complete";
+      return {
+        eyebrow: `${START_MODE_LABELS.targeted} · ${prep}`,
+        title: diagnosticFirst ? "Pirmiausia raskime spragas" : `Pirmiausia: ${activeTopic.title}`,
+        text: diagnosticFirst
+          ? "Diagnostika padės pasiruošimą paremti tikrais atsakymais. Jei skubi, gali eiti tiesiai į pasirinktą temą ar testą."
+          : "Pagrindinis ekranas sutelktas į tavo pasirinktą temą: teorija, praktika, testas ir klaidos vienoje vietoje.",
+        primary: diagnosticFirst ? "Pradėti diagnostiką" : "Atidaryti temą",
+        secondary: diagnosticFirst ? "Rinktis temą" : "Laikyti testą",
+        primaryAction: () => diagnosticFirst ? navigate("diagnostic") : navigate("topic", activeTopic.id),
+        secondaryAction: () => diagnosticFirst ? navigate("grade") : navigate("tests", activeTopic.id)
+      };
+    }
+    return {
+      eyebrow: START_MODE_LABELS["full-course"],
+      title: state.diagnosticState.status === "complete" ? "Tavo planas jau sudarytas" : "Pradėk nuo diagnostikos",
+      text: state.diagnosticState.status === "complete"
+        ? "Toliau dirbk pagal diagnostikos pasiūlytą kelią, SRS korteles ir temų meistriškumą."
+        : "Ilgesnis testas pakeičia spėjimą: programa surenka įrodymus, kas jau laikosi, o ką verta mokytis nuo žemesnės pakopos.",
+      primary: state.diagnosticState.status === "complete" ? "Tęsti planą" : "Pradėti diagnostiką",
+      secondary: "Peržiūrėti temas",
+      primaryAction: () => state.diagnosticState.status === "complete" ? navigate("topic", state.activeTopicId) : navigate("diagnostic"),
+      secondaryAction: () => navigate("grade")
+    };
   }
 
   // Grouping by strands
@@ -68,22 +129,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
   return (
     <div className="grid dashboard-grid">
       <section className="panel wide recommendation-panel">
-        <span className="eyebrow">Rekomendacija</span>
-        <h2>{rec.text}</h2>
+        <span className="eyebrow">{hero.eyebrow}</span>
+        <h2>{hero.title}</h2>
+        <p className="lead">{hero.text}</p>
         <p className="lead">{goalAdvice}</p>
         <div className="actions">
-          <button
-            className="primary"
-            onClick={() => {
-              if (rec.type === "srs") navigate("srs");
-              else if (rec.type === "diagnostic") navigate("diagnostic");
-              else if (rec.type === "practice") navigate("practice", state.activeTopicId);
-              else navigate("topic", state.activeTopicId);
-            }}
-          >
-            Tęsti
-          </button>
-          <button onClick={() => navigate("tests", activeTopic.id)}>Laikyti testą</button>
+          <button className="primary" onClick={hero.primaryAction}>{hero.primary}</button>
+          <button onClick={hero.secondaryAction}>{hero.secondary}</button>
+          {rec.type === "srs" && <button onClick={() => navigate("srs")}>Kartoti SRS</button>}
         </div>
       </section>
 
@@ -110,14 +163,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
       <section className="panel wide">
         <div className="section-head">
           <div>
-            <span className="eyebrow">{formatGradeBand(activeBand)}</span>
-            <h2>Rodome tik tavo programos pakopą</h2>
+            <span className="eyebrow">{startMode === "olympiad" ? "Atvira programa" : formatGradeBand(activeBand)}</span>
+            <h2>{startMode === "olympiad" ? "Gali judėti aukščiau savo pakopos" : "Rodome aktualiausią programos pakopą"}</h2>
           </div>
           <button onClick={() => navigate("grade")}>Plačiau</button>
         </div>
         <div className="grade-mastery compact">
           {Object.entries(gradeMastery)
-            .filter(([grade]) => activeGrades.includes(Number(grade)))
+            .filter(([grade]) => startMode === "olympiad" ? Number(grade) >= Math.min(...activeGrades) : activeGrades.includes(Number(grade)))
             .map(([grade, value]) => (
               <button key={grade} onClick={() => navigate("grade")}>
                 <strong>{grade} klasė</strong>
@@ -132,8 +185,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
       <section className="panel wide strands-section">
         <div className="section-head">
           <div>
-            <span className="eyebrow">{formatGradeBand(activeBand)} kelias</span>
-            <h2>Temos pagal ugdymo sritis</h2>
+            <span className="eyebrow">{startMode === "targeted" ? "Tikslinis kelias" : `${formatGradeBand(activeBand)} kelias`}</span>
+            <h2>{startMode === "targeted" ? "Aktualios temos pasiruošimui" : "Temos pagal ugdymo sritis"}</h2>
           </div>
           <button
             className="primary"

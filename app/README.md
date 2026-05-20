@@ -14,7 +14,7 @@ The implementation target is now the completed product, not a narrow prototype:
 
 - full grades 5-12 curriculum coverage,
 - olympiad extension content,
-- diagnostic-first placement and learning-path generation,
+- goal-based starting modes with optional/full diagnostic placement,
 - production web/PWA, Android, and desktop delivery.
 
 ## Documents
@@ -26,6 +26,7 @@ The implementation target is now the completed product, not a narrow prototype:
 - [Technical architecture](./TECHNICAL_ARCHITECTURE.md)
 - [Content model and schemas](./CONTENT_MODEL.md)
 - [Content authoring guide](./CONTENT_AUTHORING_GUIDE.md)
+- [Olympiad exercise authoring guide](./OLYMPIAD_EXERCISE_AUTHORING_GUIDE.md)
 - [Learning systems: SRS, mastery, diagnostics](./LEARNING_SYSTEMS.md)
 - [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md)
 - [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md)
@@ -45,6 +46,16 @@ These decisions remove ambiguity for implementation:
 - Use local-first storage only.
 - Use Dexie/IndexedDB as the first storage implementation on all platforms.
 - Add native storage adapters only if a platform proves IndexedDB insufficient.
+
+## Canonical Goal-Based Start Modes
+
+The first onboarding decision creates one of three starting modes. The main app remains shared, but the first home page and recommendation strategy differ.
+
+- `Noriu sustiprinti matematiką` -> olympiad strengthening mode. The user enters olympiad-level mathematics by default, chooses a starting grade band, and can freely access higher-grade content.
+- `Ruošiuosi kontroliniui arba egzaminui` -> topic or exam preparation mode. The user chooses `kontrolinis`, `PUPP`, or `VBE`; kontrolinis goes directly to topic selection, while PUPP/VBE recommends diagnostic first and keeps topic selection available.
+- `Nežinau nuo ko pradėti` -> full-course mode. The app recommends the long diagnostic test and generates a complete learning path.
+
+These modes are starting positions, not permanent user categories. The student can change mode later in Settings without losing progress. The diagnostic is the main root only for full-course mode; it is optional in olympiad and topic/exam modes.
 
 ## Fully Completed App
 

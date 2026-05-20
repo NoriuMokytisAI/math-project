@@ -2,18 +2,24 @@
 
 ## Purpose
 
-The app must not rely on the student choosing a grade and a topic as the main starting point. The long-term root of the app should be a deep diagnostic assessment that estimates what the student knows, what they are missing, and what they should learn next.
+The app must not rely on the student choosing a grade as the main starting point. For students who choose the full-course path, the long-term root of the app should be a deep diagnostic assessment that estimates what the student knows, what they are missing, and what they should learn next.
 
 This guide defines the implementation target for that diagnostic engine.
 
-The diagnostic should be extensive. A full initial diagnostic may take multiple hours and may be completed across several sessions. It replaces:
+The diagnostic should be extensive. A full initial diagnostic may take multiple hours and may be completed across several sessions. In full-course mode, it replaces:
 
 - grade selection as the main placement mechanism,
 - "what topic do you want to learn" as the main planning mechanism,
 - shallow onboarding quizzes,
 - manual starting-topic choice.
 
-The student may still choose a goal, such as exam preparation or general strengthening, but the app should decide the learning plan from evidence.
+The student chooses one of three starting goals before the diagnostic decision:
+
+- `Noriu sustiprinti matematiką`: olympiad strengthening mode. The diagnostic is optional and used only as a prerequisite-gap check. The student chooses a starting grade band, but access to higher-grade content remains open.
+- `Ruošiuosi kontroliniui arba egzaminui`: topic or exam preparation mode. For `Kontrolinis`, the student chooses a target topic. For `PUPP` or `VBE`, diagnostic is the primary recommended route and topic choice remains available as a secondary route.
+- `Nežinau nuo ko pradėti`: full-course mode. The diagnostic is the recommended first action and generates the learning plan.
+
+The onboarding UI must explain the consequence of the selected goal and must say that the goal mode can be changed later in Settings without deleting progress. In full-course mode, the app should decide the learning plan from evidence.
 
 ## Model Choice
 
@@ -429,22 +435,24 @@ type DiagnosticModule = {
 };
 ```
 
-## Replacing Onboarding
+## Replacing Onboarding In Full-Course Mode
 
-The canonical start flow should be:
+The canonical full-course start flow should be:
 
 1. welcome,
 2. goal selection,
 3. diagnostic explanation,
 4. diagnostic start.
 
-Remove as primary placement tools:
+In full-course mode, remove as primary placement tools:
 
 - grade-band selection,
 - topic selection,
 - self-reported starting level.
 
 The app may still ask optional context questions, but those answers must not override diagnostic evidence.
+
+In olympiad strengthening mode and topic or exam preparation mode, the app may skip the full diagnostic and use the selected mode-specific entry point instead. The exception is PUPP/VBE inside topic or exam preparation mode: diagnostic should be the primary recommendation, with manual topic choice as a secondary path.
 
 ### Student-Facing Explanation
 
@@ -537,7 +545,11 @@ Dashboard after diagnostic:
 
 ### Phase 4: Plan-Driven App
 
-- Replace grade/topic onboarding with diagnostic start.
+- Replace grade/topic guessing with goal-based start modes.
+- Use diagnostic start for full-course mode.
+- Use olympiad entry for olympiad strengthening mode.
+- Use topic selection for kontrolinis preparation.
+- Use diagnostic-primary plus topic-secondary entry for PUPP/VBE preparation.
 - Dashboard uses learning path as the source of truth.
 - Practice and SRS update attribute diagnosis over time.
 
