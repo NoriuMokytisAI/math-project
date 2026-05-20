@@ -25,6 +25,7 @@ The first implementation target is a web-first MVP for Grade 9:
 - [Content model and schemas](./CONTENT_MODEL.md)
 - [Content authoring guide](./CONTENT_AUTHORING_GUIDE.md)
 - [Learning systems: SRS, mastery, diagnostics](./LEARNING_SYSTEMS.md)
+- [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md)
 - [Implementation plan](./IMPLEMENTATION_PLAN.md)
 - [MVP Grade 9 scope](./MVP_GRADE_9.md)
 

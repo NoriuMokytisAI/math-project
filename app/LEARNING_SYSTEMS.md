@@ -78,29 +78,18 @@ Practice deck contains:
 
 Memory reviews have only two buttons:
 
-- `Vel` / Again
-- `Gerai` / Good
+- `Pakartoti`
+- `Moku gerai`
 
 Behavior:
 
-- Again returns the card almost immediately.
-- Good schedules it later.
+- The front of the card is shown first.
+- The student thinks before seeing the answer.
+- The answer and rating buttons appear only after the card is flipped.
+- `Pakartoti` returns the card soon.
+- `Moku gerai` advances the card through learning or review intervals.
 
-MVP scheduling:
-
-```ts
-if (rating === "again") {
-  intervalMinutes = 3;
-  ease = Math.max(1.3, ease - 0.2);
-}
-
-if (rating === "good") {
-  if (reviewCount === 0) intervalDays = 1;
-  else if (reviewCount === 1) intervalDays = 3;
-  else intervalDays = Math.round(previousIntervalDays * ease);
-  ease = Math.min(2.8, ease + 0.05);
-}
-```
+The production MVP must use the SM-2 style Anki scheduler described in [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md). FSRS is intentionally deferred, but the scheduler interface must allow it to be adopted later without rewriting the review UI or card storage.
 
 Practice SRS should not ask for Again/Good. It should update automatically from performance.
 

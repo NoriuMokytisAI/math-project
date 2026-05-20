@@ -5,9 +5,14 @@ import {
   calculateConceptMastery,
   calculateGradeMastery,
   calculateMastery,
+  DEFAULT_SRS_SETTINGS,
+  ensureConceptSrsCard,
+  ensureTopicSrsCards,
   exportProgress as encodeProgress,
+  getDueSrsCards,
   getTestsForTopic,
   importProgress as decodeProgress,
+  normalizeSrsSettings,
   recommendation,
   recordAttempt,
   recordTestAttempt,
@@ -15,6 +20,19 @@ import {
 } from "./systems.js";
 
 const DEFAULT_TOPIC_ID = topics["funkcijos-ir-ju-savybes"] ? "funkcijos-ir-ju-savybes" : Object.keys(topics)[0];
+const OFFICIAL_STRANDS = [
+  "Skaičiai ir skaičiavimai",
+  "Modeliai ir sąryšiai",
+  "Geometrija ir matavimai",
+  "Duomenys ir tikimybės"
+];
+const GRADE_BANDS = [
+  { label: "5-6 klasės", value: "5-6", grades: [5, 6] },
+  { label: "7-8 klasės", value: "7-8", grades: [7, 8] },
+  { label: "9-10 klasės", value: "9-10", grades: [9, 10] },
+  { label: "11 klasė", value: "11", grades: [11] },
+  { label: "12 klasė", value: "12", grades: [12] }
+];
 
 let state = await loadState();
 if (!topics[state.activeTopicId]) {
@@ -25,10 +43,15 @@ state.mastery = calculateMastery(state);
 let route = parseRoute();
 let practiceSession = null;
 let testSession = null;
+let srsRevealed = false;
+let srsActiveCardId = "";
+let settingsTab = "general";
 let onboardingDraft = {
   step: 0,
   goal: state.profile.goal || goals[0],
   grade: state.profile.grade || null,
+  gradeBand: state.profile.gradeBand || bandForGrade(state.profile.grade || 9),
+  activeTopicId: state.activeTopicId || DEFAULT_TOPIC_ID,
   confidence: state.profile.confidence || "Vidutini\u0161kai",
   dailyMinutes: state.profile.dailyMinutes || 20,
   olympiad: Boolean(state.profile.olympiad),
@@ -82,7 +105,7 @@ function html(strings, ...values) {
 }
 
 function render() {
-  const due = state.srsCards.filter((card) => card.enabled && card.due <= Date.now()).length;
+  const due = getDueSrsCards(state.srsCards, state.preferences?.srs).length;
   const solved = new Set(state.attempts.filter((a) => a.correct).map((a) => a.exerciseId)).size;
   const averageMastery = Math.round(Object.values(state.mastery).reduce((sum, item) => sum + item.value, 0) / Math.max(1, Object.values(state.mastery).length));
   if (route.page === "onboarding") {
@@ -134,7 +157,7 @@ function navButton(page, label) {
 }
 
 function renderTopbar() {
-  const due = state.srsCards.filter((card) => card.enabled && card.due <= Date.now()).length;
+  const due = getDueSrsCards(state.srsCards, state.preferences?.srs).length;
   const activeTopic = topics[state.activeTopicId] || topics[DEFAULT_TOPIC_ID];
   return html`
     <header class="topbar">
@@ -169,11 +192,11 @@ function renderRoute() {
   if (route.page === "onboarding") return renderOnboarding();
   if (route.page === "grade") return renderGrade();
   if (route.page === "topic") return renderTopic(route.id || state.activeTopicId);
-  if (route.page === "srs") return renderSrs();
+  if (route.page === "srs") return renderSrsReview();
   if (route.page === "practice") return renderPractice(route.id || state.activeTopicId);
   if (route.page === "tests") return renderTests(route.id || state.activeTopicId);
   if (route.page === "glossary") return renderGlossary(route.id);
-  if (route.page === "settings") return renderSettings();
+  if (route.page === "settings") return renderSettingsPanel();
   return renderDashboard();
 }
 
@@ -194,7 +217,7 @@ function renderOnboarding() {
           <div class="onboarding-actions">
             <button data-action="onboarding-back" ${onboardingDraft.step === 0 ? "disabled" : ""}>Atgal</button>
             <button class="primary" data-action="${isLast ? "onboarding-finish" : "onboarding-next"}">
-              ${isLast ? "Prad\u0117ti nuo funkcij\u0173" : step.type === "explain" ? "Supratau" : "Toliau"}
+              ${isLast ? "Pradėti nuo pasirinktos temos" : step.type === "explain" ? "Supratau" : "Toliau"}
             </button>
           </div>
         </div>
@@ -202,7 +225,8 @@ function renderOnboarding() {
       <aside class="onboarding-preview">
         <div class="brand onboarding-brand"><span class="brand-mark">&sum;</span><span><strong>NoriuMokyti.lt</strong><small>Offline matematikos kelias</small></span></div>
         <div class="preview-card"><strong>${onboardingDraft.goal}</strong><small>Tikslas</small></div>
-        <div class="preview-card"><strong>${onboardingDraft.grade ? `${onboardingDraft.grade} klas\u0117` : "Klas\u0117 dar nepasirinkta"}</strong><small>Pradinis lygis</small></div>
+        <div class="preview-card"><strong>${formatGradeBand(onboardingDraft.gradeBand)}</strong><small>Programa</small></div>
+        <div class="preview-card"><strong>${topics[onboardingDraft.activeTopicId]?.title || "Tema dar nepasirinkta"}</strong><small>Pirma tema</small></div>
         <div class="preview-card"><strong>${onboardingDraft.dailyMinutes} min.</strong><small>Kasdienis tempas</small></div>
       </aside>
     </main>
@@ -214,7 +238,7 @@ function onboardingSteps() {
     {
       kicker: "Sveikas",
       title: "Pirmiausia susid\u0117liokime mokymosi keli\u0105.",
-      body: "Atsakyk \u012f tris klausimus. Tada parodysime, kaip naudotis programa: k\u0105 spausti, kaip mokytis teorij\u0105, kaip veikia SRS ir kod\u0117l praktika kei\u010dia meistri\u0161kum\u0105.",
+      body: "Atsakyk \u012f kelis klausimus. Tada parodysime, kaip naudotis programa: k\u0105 spausti, kaip mokytis teorij\u0105, kaip veikia SRS ir kod\u0117l praktika kei\u010dia meistri\u0161kum\u0105.",
       type: "welcome"
     },
     {
@@ -231,11 +255,18 @@ function onboardingSteps() {
     },
     {
       kicker: "Klas\u0117",
-      title: "Kurioje klas\u0117je dabar mokaisi?",
-      body: "Klas\u0117 parenka programos kontekst\u0105 ir padeda rodyti tinkamus prerekvizitus. Jei sprendimai rodys spragas, programa gal\u0117s pasi\u016blyti gr\u012f\u017eti \u012f ankstesnes temas.",
+      title: "Kurioje programos pakopoje dabar mokaisi?",
+      body: "Pakopos sugrupuotos taip, kaip Bendrojoje programoje: 5-6, 7-8, 9-10, o 11 ir 12 klas\u0117s rodomos atskirai.",
       type: "choices",
-      field: "grade",
-      choices: [7, 8, 9, 10, 11, 12]
+      field: "gradeBand",
+      choices: GRADE_BANDS.map(({ label, value }) => ({ label, value }))
+    },
+    {
+      kicker: "Tema",
+      title: "Nuo kurios temos nori prad\u0117ti?",
+      body: "Pasirinkimas nustatys pirm\u0105 aktyvi\u0105 tem\u0105 ir rekomendacijas. V\u0117liau gal\u0117si pereiti prie kit\u0173 tos pa\u010dios pakopos tem\u0173.",
+      type: "topics",
+      field: "activeTopicId"
     },
     {
       kicker: "Tempas",
@@ -279,12 +310,12 @@ function onboardingSteps() {
     {
       kicker: "Kartojimas ir praktika",
       title: "SRS saugo atmint\u012f, o praktika kelia meistri\u0161kum\u0105.",
-      body: "SRS kortel\u0117se yra tik du pasirinkimai: V\u0117l ir Gerai. U\u017edaviniuose gali pra\u0161yti u\u017euomin\u0173 po vien\u0105, bet u\u017euominos ma\u017eina meistri\u0161kumo augim\u0105, nes programa mato, kad reik\u0117jo pagalbos.",
+      body: "SRS kortel\u0117se pirma pamatai klausim\u0105, pagalvoji, tada apverti kortel\u0119. Tik po atsakymo pasirodo du pasirinkimai: Pakartoti ir Moku gerai. U\u017edaviniuose gali pra\u0161yti u\u017euomin\u0173 po vien\u0105, bet u\u017euominos ma\u017eina meistri\u0161kumo augim\u0105, nes programa mato, kad reik\u0117jo pagalbos.",
       type: "explain",
       cards: [
         ["SRS", "Kartok s\u0105vokas, formules ir klaidas."],
-        ["V\u0117l", "Kortel\u0117 gr\u012f\u0161 beveik i\u0161kart."],
-        ["Gerai", "Kortel\u0117 bus nukelta v\u0117lesnei dienai."],
+        ["Pakartoti", "Kortel\u0117 gr\u012f\u0161 beveik i\u0161kart."],
+        ["Moku gerai", "Kortel\u0117 bus nukelta v\u0117lesnei dienai."],
         ["Meistri\u0161kumas", "Auga nuo teisingumo, grei\u010dio ir sprendimo be u\u017euomin\u0173."]
       ]
     },
@@ -297,7 +328,7 @@ function onboardingSteps() {
         ["Be prisijungimo", "Nereikia paskyros, el. pa\u0161to ar internetinio profilio."],
         ["Eksportas", "Sukuria kod\u0105, kur\u012f gali perkelti kitur."],
         ["Importas", "\u012ekrauna anks\u010diau eksportuot\u0105 progres\u0105."],
-        ["Startas", "Dabar prad\u0117sime nuo funkcij\u0173 temos."]
+        ["Startas", "Dabar pradėsime nuo tavo pasirinktos temos."]
       ]
     }
   ];
@@ -315,7 +346,7 @@ function renderOnboardingStep(step) {
     const cards = step.cards || [
       ["Teorija", "Pirma supranti id\u0117j\u0105, tada sprendi."],
       ["\u017dodynas", "Paspaud\u017eiamos s\u0105vokos atidaro paai\u0161kinimus ir ry\u0161ius."],
-      ["SRS", "V\u0117l arba Gerai. Ai\u0161kus kartojimas be perteklini\u0173 pasirinkim\u0173."],
+      ["SRS", "Apversk kortel\u0119, tada rinkis Pakartoti arba Moku gerai."],
       ["Praktika", "Greitis, teisingumas ir u\u017euominos kei\u010dia meistri\u0161kum\u0105."]
     ];
     return `<div class="explain-grid">
@@ -330,6 +361,15 @@ function renderOnboardingStep(step) {
       }).join("")}
     </div>`;
   }
+  if (step.type === "topics") {
+    const available = topicsForBand(onboardingDraft.gradeBand);
+    return `<div class="onboarding-choices topic-choices">
+      ${available.map((topic) => {
+        const active = onboardingDraft.activeTopicId === topic.id;
+        return `<button class="${active ? "selected" : ""}" data-onboarding-field="activeTopicId" data-onboarding-value="${topic.id}"><strong>${topic.title}</strong><small>${topic.strand}</small></button>`;
+      }).join("") || "<p class='muted'>Šiai pakopai temos dar neparuoštos.</p>"}
+    </div>`;
+  }
   return `<div class="onboarding-choices">
     ${step.choices.map((choice) => {
       const label = typeof choice === "object" ? choice.label : choice;
@@ -340,16 +380,41 @@ function renderOnboardingStep(step) {
   </div>`;
 }
 
+function bandForGrade(grade) {
+  const number = Number(grade);
+  return GRADE_BANDS.find((band) => band.grades.includes(number))?.value || "9-10";
+}
+
+function gradesForBand(value) {
+  return GRADE_BANDS.find((band) => band.value === value)?.grades || [9, 10];
+}
+
+function formatGradeBand(value) {
+  return GRADE_BANDS.find((band) => band.value === value)?.label || "9-10 klasės";
+}
+
+function topicsForBand(value) {
+  const gradeSet = new Set(gradesForBand(value));
+  return Object.values(topics)
+    .filter((topic) => gradeSet.has(topic.grade))
+    .sort((a, b) => a.grade - b.grade || a.order - b.order);
+}
+
+function firstTopicForBand(value) {
+  return topicsForBand(value)[0]?.id || DEFAULT_TOPIC_ID;
+}
+
 function renderDashboard() {
   const rec = recommendation(state);
-  const due = state.srsCards.filter((card) => card.enabled && card.due <= Date.now());
+  const due = getDueSrsCards(state.srsCards, state.preferences?.srs);
   const gradeMastery = calculateGradeMastery(state);
   const activeTopic = topics[state.activeTopicId] || topics[DEFAULT_TOPIC_ID];
-  const activeGrade = state.profile.grade || 9;
+  const activeBand = state.profile.gradeBand || bandForGrade(state.profile.grade || 9);
+  const activeGrades = gradesForBand(activeBand);
   const gradeTopics = Object.values(topics)
-    .filter((topic) => topic.grade === activeGrade)
-    .sort((a, b) => a.order - b.order);
-  const topicCards = gradeTopics.map((topic) => renderTopicCard(topic)).join("");
+    .filter((topic) => activeGrades.includes(topic.grade))
+    .sort((a, b) => a.grade - b.grade || a.order - b.order);
+  const topicCards = renderStrandTopicGroups(gradeTopics, { compact: true });
   const plan = dailyPlan(state.profile.dailyMinutes || 20);
   const goalAdvice = goalGuidance(state.profile.goal || "");
   return html`
@@ -383,19 +448,19 @@ function renderDashboard() {
       <section class="panel wide">
         <div class="section-head">
           <div>
-            <span class="eyebrow">${activeGrade} klasė</span>
-            <h2>Rodome tik tavo klasės kelią</h2>
+            <span class="eyebrow">${formatGradeBand(activeBand)}</span>
+            <h2>Rodome tik tavo programos pakopą</h2>
           </div>
           <button data-nav="grade">Plačiau</button>
         </div>
-        <div class="grade-mastery compact">${Object.entries(gradeMastery).filter(([grade]) => Number(grade) === activeGrade).map(([grade, value]) => `<button data-nav="grade"><strong>${grade}</strong><span>${value}%</span><i style="--p:${value}"></i></button>`).join("")}</div>
+        <div class="grade-mastery compact">${Object.entries(gradeMastery).filter(([grade]) => activeGrades.includes(Number(grade))).map(([grade, value]) => `<button data-nav="grade"><strong>${grade}</strong><span>${value}%</span><i style="--p:${value}"></i></button>`).join("")}</div>
       </section>
       <section class="panel wide">
         <div class="section-head">
-          <div><span class="eyebrow">${activeGrade} klasės kelias</span><h2>Pradėk nuo ${activeTopic.title}</h2></div>
+          <div><span class="eyebrow">${formatGradeBand(activeBand)} kelias</span><h2>Pradėk nuo ${activeTopic.title}</h2></div>
           <button data-nav="practice" data-id="${state.activeTopicId}">Spręsti</button>
         </div>
-        <div class="topic-grid">${topicCards}</div>
+        ${topicCards}
       </section>
       <section class="panel">
         <span class="eyebrow">Pasiekimai</span>
@@ -421,6 +486,34 @@ function dailyPlan(minutes) {
   return ["10 min. SRS", "15 min. teorijos", "bent 6 uždaviniai arba testas"];
 }
 
+function renderStrandTopicGroups(topicList, options = {}) {
+  const groups = OFFICIAL_STRANDS.map((strand) => ({
+    strand,
+    topics: topicList.filter((topic) => normalizeStrand(topic.strand) === strand)
+  })).filter((group) => group.topics.length);
+  const extra = topicList.filter((topic) => !OFFICIAL_STRANDS.includes(normalizeStrand(topic.strand)));
+  if (extra.length) groups.push({ strand: "Kitos temos", topics: extra });
+  if (!groups.length) return "<p class='muted'>Šiai klasei dar nėra temų.</p>";
+  return `<div class="curriculum-strands ${options.compact ? "compact-strands" : ""}">
+    ${groups.map((group) => `
+      <section class="strand-group">
+        <div class="strand-heading">
+          <span class="eyebrow">Mokymo(si) turinio sritis</span>
+          <h3>${group.strand}</h3>
+        </div>
+        <div class="${options.compact ? "topic-grid" : "grade-topic-list"}">
+          ${group.topics.map((topic) => options.compact ? renderTopicCard(topic) : renderGradeTopic(topic)).join("")}
+        </div>
+      </section>
+    `).join("")}
+  </div>`;
+}
+
+function normalizeStrand(strand) {
+  if (strand === "Duomenys ir tikimybė") return "Duomenys ir tikimybės";
+  return strand;
+}
+
 function renderTopicCard(topic) {
   const m = state.mastery[topic.id] || { value: 0, label: "Pradžia", solved: 0, total: 0 };
   return html`
@@ -439,41 +532,45 @@ function renderTopicCard(topic) {
   `;
 }
 
+function renderGradeTopic(topic) {
+  const mastery = state.mastery[topic.id]?.value || 0;
+  return `
+    <article class="grade-topic">
+      <div>
+        <strong>${topic.title}</strong>
+        <small>${mastery}% • ${topic.level === "olympiad" ? "Olimpiadinis papildymas" : "Bendroji programa"}</small>
+      </div>
+      <div class="grade-topic-actions">
+        <button data-nav="topic" data-id="${topic.id}">Teorija</button>
+        <button data-nav="practice" data-id="${topic.id}">Praktika</button>
+      </div>
+    </article>
+  `;
+}
+
 function renderGrade() {
-  const grade = state.profile.grade || 9;
-  const current = Object.values(topics).filter((topic) => topic.grade === grade).sort((a, b) => a.order - b.order);
+  const band = state.profile.gradeBand || bandForGrade(state.profile.grade || 9);
+  const grades = gradesForBand(band);
+  const grade = state.profile.grade || grades[0];
+  const current = Object.values(topics).filter((topic) => grades.includes(topic.grade)).sort((a, b) => a.grade - b.grade || a.order - b.order);
+  const currentTopicGroups = renderStrandTopicGroups(current);
   const prevGrade = Math.max(5, grade - 1);
   const nextGrade = Math.min(12, grade + 1);
   const otherGrades = Object.entries(curriculum)
-    .filter(([g]) => Number(g) !== grade)
+    .filter(([g]) => !grades.includes(Number(g)))
     .map(([g, items]) => ({
       grade: Number(g),
       items: items.slice(0, 3)
     }))
     .sort((a, b) => a.grade - b.grade);
-  const currentTopics = current.map((topic) => {
-    const mastery = state.mastery[topic.id]?.value || 0;
-    return `
-      <article class="grade-topic">
-        <div>
-          <strong>${topic.title}</strong>
-          <small>${topic.strand} • ${mastery}%</small>
-        </div>
-        <div class="grade-topic-actions">
-          <button data-nav="topic" data-id="${topic.id}">Teorija</button>
-          <button data-nav="practice" data-id="${topic.id}">Praktika</button>
-        </div>
-      </article>
-    `;
-  }).join("");
   return `
     <div class="grade-focus">
       <section class="panel wide">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Tavo klasė</span>
-            <h2>${grade} klasė</h2>
-            <p class="lead">Rodome tik tavo klasesi aktualų kelią. Kitų klasių temas pateikiame tik kaip pagalbą, kai jų reikia priekį arba atgal spragoms užpildyti.</p>
+            <span class="eyebrow">Tavo programos pakopa</span>
+            <h2>${formatGradeBand(band)}</h2>
+            <p class="lead">Rodome tik tavo pasirinktos pakopos aktualų kelią. Kitų klasių temas pateikiame tik kaip pagalbą, kai jų reikia priekį arba atgal spragoms užpildyti.</p>
           </div>
           <div class="grade-nav">
             <button data-nav="topic" data-id="${topics[state.activeTopicId]?.id || DEFAULT_TOPIC_ID}">Grįžti į temą</button>
@@ -482,8 +579,8 @@ function renderGrade() {
         </div>
       </section>
       <section class="panel wide">
-        <span class="eyebrow">Tavo klasės temos</span>
-        <div class="grade-topic-list">${currentTopics || "<p class='muted'>Šiai klasei dar nėra temų.</p>"}</div>
+        <span class="eyebrow">Tavo klasės temos pagal Bendrąją programą</span>
+        ${currentTopicGroups}
       </section>
       <section class="panel">
         <span class="eyebrow">Artimiausia pakopa</span>
@@ -571,7 +668,7 @@ function renderGlossary(selectedId = "") {
   const selectedIdResolved = Object.entries(concepts).find(([, concept]) => concept === selected)?.[0] || Object.keys(concepts)[0];
   const card = state.srsCards.find((item) => item.id === `theory-${selectedIdResolved}`);
   const mastery = calculateConceptMastery(state, selectedIdResolved);
-  const list = Object.entries(concepts).map(([id, concept]) => `<button class="${selected === concept ? "active" : ""}" data-nav="glossary" data-id="${id}">${concept.title}</button>`).join("");
+  const list = Object.entries(concepts).map(([id, concept]) => `<button class="${selected === concept ? "active" : ""}" data-concept="${id}">${concept.title}</button>`).join("");
   return html`
     <div class="split">
       <section class="panel glossary-list">${list}</section>
@@ -581,32 +678,42 @@ function renderGlossary(selectedId = "") {
         <p class="lead">${selected.definition}</p>
         <div class="concept-toolbar">
           <div class="mastery-bar labeled" style="--p:${mastery}"><span></span><b>${mastery}%</b></div>
-          <button data-action="toggle-srs-card" data-card="theory-${selectedIdResolved}">${card?.enabled ? "Išimti iš SRS" : "Įtraukti į SRS"}</button>
+          <button data-action="toggle-srs-card" data-card="theory-${selectedIdResolved}" data-concept-id="${selectedIdResolved}">${card?.enabled ? "Išimti iš SRS" : "Įtraukti į SRS"}</button>
         </div>
         <h3>Intuityviai</h3><p>${selected.intuition}</p>
         <h3>Formaliai</h3><p>${selected.formal}</p>
         <h3>Ryšiai</h3>
-        <div class="chips">${selected.related.map((id) => concepts[id] ? `<button class="concept-chip" data-nav="glossary" data-id="${id}">${concepts[id].title}</button>` : "").join("")}</div>
+        <div class="chips">${selected.related.map((id) => concepts[id] ? `<button class="concept-chip" data-concept="${id}">${concepts[id].title}</button>` : "").join("")}</div>
       </section>
     </div>
   `;
 }
 
-function renderSrs() {
-  const due = state.srsCards.filter((card) => card.enabled && card.due <= Date.now());
+function renderSrsReview() {
+  const due = getDueSrsCards(state.srsCards, state.preferences?.srs);
   const card = due[0];
   if (!card) {
-    return `<section class="panel centered"><h2>Šiandien SRS švaru.</h2><p>Atmintis ilsisi. Galima spręsti uždavinius.</p><button data-nav="practice" data-id="${state.activeTopicId}">Eiti į praktiką</button></section>`;
+    srsActiveCardId = "";
+    srsRevealed = false;
+    return `<section class="panel centered"><h2>Šiandien nėra SRS kortelių.</h2><p>Kortelės atsiras tada, kai skaitydamas teoriją paspausi sąvoką, pažymėsi temą kaip skaitytą arba bandysi susijusius uždavinius.</p><button data-nav="topic" data-id="${state.activeTopicId}">Eiti į teoriją</button></section>`;
+  }
+  if (srsActiveCardId !== card.id) {
+    srsActiveCardId = card.id;
+    srsRevealed = false;
   }
   return html`
-    <section class="panel review-card">
-      <span class="eyebrow">${card.deck === "theory" ? "Teorijos kortelė" : "Praktikos kortelė"} • liko ${due.length}</span>
-      <h2>${card.front}</h2>
-      <details><summary>Rodyti atsakymą</summary><p>${card.back}</p></details>
-      <div class="actions">
-        <button data-srs="again" data-card="${card.id}">Vėl</button>
-        <button class="primary" data-srs="good" data-card="${card.id}">Gerai</button>
+    <section class="panel review-card ${srsRevealed ? "revealed" : ""}" tabindex="0">
+      <span class="eyebrow">${card.deck === "theory" ? "Teorijos kortelė" : "Praktikos kortelė"} • ${card.queue} • liko ${due.length}</span>
+      <div class="anki-card" data-action="reveal-srs">
+        <div class="card-face">
+          <h2>${card.front}</h2>
+          ${srsRevealed ? `<div class="card-answer"><span class="card-side">Atsakymas</span><p>${card.back}</p></div>` : ""}
+        </div>
       </div>
+      ${srsRevealed ? `<div class="actions review-actions">
+        <button data-srs="again" data-card="${card.id}">Pakartoti</button>
+        <button class="primary" data-srs="good" data-card="${card.id}">Moku gerai</button>
+      </div>` : `<div class="actions review-actions"><button class="primary" data-action="reveal-srs">Rodyti atsakymą</button></div>`}
     </section>
   `;
 }
@@ -813,12 +920,124 @@ function renderSettings() {
   `;
 }
 
+function renderSettingsPanel() {
+  const srs = normalizeSrsSettings(state.preferences?.srs);
+  return html`
+    <div class="settings-shell">
+      <div class="settings-tabs" role="tablist" aria-label="Nustatymų skyriai">
+        <button class="${settingsTab === "general" ? "active" : ""}" data-action="set-settings-tab" data-tab="general">Bendra</button>
+        <button class="${settingsTab === "srs" ? "active" : ""}" data-action="set-settings-tab" data-tab="srs">SRS</button>
+      </div>
+      ${settingsTab === "srs" ? renderSrsSettings(srs) : renderGeneralSettings()}
+    </div>
+  `;
+}
+
+function renderGeneralSettings() {
+  return html`
+    <div class="grid">
+      <section class="panel wide">
+        <span class="eyebrow">Perkėlimas be paskyros</span>
+        <h2>Eksportuok arba importuok progresą</h2>
+        <textarea id="transfer-code" placeholder="Čia atsiras eksportavimo kodas arba įklijuok importo kodą"></textarea>
+        <div class="actions">
+          <button class="primary" data-action="export">Eksportuoti</button>
+          <button data-action="import">Importuoti</button>
+        </div>
+      </section>
+      <section class="panel">
+        <span class="eyebrow">Turinys</span>
+        <h3>${Object.keys(topics).length} temos</h3>
+        <p>${Object.keys(concepts).length} sąvokos, ${exercises.length} užduočių, ${tests.length} testų. Turinys veikia lokaliai ir yra saugomas naršyklėje.</p>
+      </section>
+      <section class="panel danger-zone">
+        <span class="eyebrow">Sesija</span>
+        <h3>Pradėti iš naujo</h3>
+        <p>Ištrina progresą šiame įrenginyje ir vėl parodo onboardingą. Perkėlimo kodai kituose įrenginiuose neliečiami.</p>
+        <button data-action="reset-progress">Ištrinti vietinį progresą</button>
+      </section>
+    </div>
+  `;
+}
+
+function renderSrsSettings(srs) {
+  const enabledCards = state.srsCards.filter((card) => card.enabled && srs.enabledCardTypes[card.cardType] !== false && card.queue !== "suspended").length;
+  const typeLabels = {
+    concept: "Sąvokos",
+    formula: "Formulės",
+    mistake: "Tipinės klaidos",
+    method: "Metodai",
+    practice: "Praktikos kortelės"
+  };
+  return html`
+    <div class="grid">
+      <section class="panel wide">
+        <span class="eyebrow">SRS algoritmas</span>
+        <h2>SM-2 dabar, FSRS vėliau</h2>
+        <p class="lead">MVP naudoja lengvą Anki stiliaus SM-2 planuoklį. Visa logika eina per planuoklio sąsają, todėl vėliau galima pridėti FSRS neperrašant kortelių rodymo, saugyklos ar įsitraukimo taisyklių.</p>
+        <p class="muted">${enabledCards} aktyvios kortelės. Naujos kortelės atsiranda tik po sąvokos paspaudimo, teorijos pažymėjimo arba susijusio uždavinio bandymo.</p>
+      </section>
+      <section class="panel wide srs-settings-grid">
+        <label>Naujos kortelės per dieną
+          <input type="number" min="0" step="1" value="${srs.newCardsPerDay}" data-srs-setting="newCardsPerDay" />
+        </label>
+        <label>Kartojimai per dieną
+          <input type="number" min="0" step="1" value="${srs.reviewsPerDay}" data-srs-setting="reviewsPerDay" />
+        </label>
+        <label>Mokymosi žingsniai minutėmis
+          <input value="${srs.learningStepsMinutes.join(", ")}" data-srs-setting="learningStepsMinutes" />
+        </label>
+        <label>Pakartotinio mokymosi žingsniai
+          <input value="${srs.relearningStepsMinutes.join(", ")}" data-srs-setting="relearningStepsMinutes" />
+        </label>
+        <label>Baigimo intervalas dienomis
+          <input type="number" min="1" step="1" value="${srs.graduatingIntervalDays}" data-srs-setting="graduatingIntervalDays" />
+        </label>
+        <label>Maksimalus intervalas dienomis
+          <input type="number" min="1" step="1" value="${srs.maximumIntervalDays}" data-srs-setting="maximumIntervalDays" />
+        </label>
+      </section>
+      <section class="panel">
+        <span class="eyebrow">Kortelių tipai</span>
+        ${Object.entries(typeLabels).map(([key, label]) => `<label class="check"><input type="checkbox" ${srs.enabledCardTypes[key] ? "checked" : ""} data-srs-type="${key}" /> ${label}</label>`).join("")}
+      </section>
+      <section class="panel">
+        <span class="eyebrow">Išplėstiniai SM-2</span>
+        <details open>
+          <summary>Rodyti parametrus</summary>
+          <label>Pradinis lengvumas
+            <input type="number" min="1.3" step="0.1" value="${srs.startingEaseFactor}" data-srs-setting="startingEaseFactor" />
+          </label>
+          <label>Mažiausias lengvumas
+            <input type="number" min="1" step="0.1" value="${srs.minimumEaseFactor}" data-srs-setting="minimumEaseFactor" />
+          </label>
+          <label>Bauda už „Pakartoti“
+            <input type="number" min="0" step="0.05" value="${srs.easePenaltyOnAgain}" data-srs-setting="easePenaltyOnAgain" />
+          </label>
+          <label>Intervalo daugiklis
+            <input type="number" min="0.1" step="0.1" value="${srs.intervalModifier}" data-srs-setting="intervalModifier" />
+          </label>
+        </details>
+        <div class="actions">
+          <button data-action="reset-srs-settings">Atkurti Anki stiliaus numatytuosius</button>
+        </div>
+      </section>
+    </div>
+  `;
+}
+
 function bindEvents() {
   app.querySelectorAll("[data-nav]").forEach((el) => {
     el.addEventListener("click", () => navigate(el.dataset.nav, el.dataset.id || ""));
   });
   app.querySelectorAll("[data-concept]").forEach((el) => {
-    el.addEventListener("click", () => navigate("glossary", el.dataset.concept));
+    el.addEventListener("click", () => {
+      const conceptId = el.dataset.concept;
+      const next = ensureConceptSrsCard(state, conceptId, state.activeTopicId);
+      state = next;
+      saveState(state);
+      navigate("glossary", conceptId);
+    });
   });
   app.querySelectorAll("[data-onboarding-field]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -827,7 +1046,23 @@ function bindEvents() {
       if (value === "true") value = true;
       if (value === "false") value = false;
       if (["grade", "dailyMinutes"].includes(field)) value = Number(value);
-      onboardingDraft = { ...onboardingDraft, [field]: value };
+      if (field === "gradeBand") {
+        const activeTopicId = firstTopicForBand(value);
+        onboardingDraft = {
+          ...onboardingDraft,
+          gradeBand: value,
+          grade: gradesForBand(value)[0],
+          activeTopicId
+        };
+      } else if (field === "activeTopicId") {
+        onboardingDraft = {
+          ...onboardingDraft,
+          activeTopicId: value,
+          grade: topics[value]?.grade || onboardingDraft.grade
+        };
+      } else {
+        onboardingDraft = { ...onboardingDraft, [field]: value };
+      }
       render();
     });
   });
@@ -839,9 +1074,24 @@ function bindEvents() {
       button?.click();
     });
   });
+  app.querySelectorAll(".review-card").forEach((card) => {
+    card.addEventListener("keydown", (event) => {
+      if (!["Enter", " ", "1", "2"].includes(event.key)) return;
+      event.preventDefault();
+      if (!srsRevealed && ["Enter", " "].includes(event.key)) {
+        srsRevealed = true;
+        render();
+        return;
+      }
+      if (srsRevealed && event.key === "1") card.querySelector('[data-srs="again"]')?.click();
+      if (srsRevealed && ["2", "Enter"].includes(event.key)) card.querySelector('[data-srs="good"]')?.click();
+    });
+  });
   app.querySelectorAll("[data-srs]").forEach((button) => {
     button.addEventListener("click", () => {
-      const srsCards = state.srsCards.map((card) => card.id === button.dataset.card ? scheduleCard(card, button.dataset.srs) : card);
+      const srsCards = state.srsCards.map((card) => card.id === button.dataset.card ? scheduleCard(card, button.dataset.srs, state.preferences?.srs) : card);
+      srsRevealed = false;
+      srsActiveCardId = "";
       setState({ ...state, srsCards, achievements: [...new Set([...state.achievements, "firstSrs"])] });
     });
   });
@@ -856,6 +1106,35 @@ function bindEvents() {
       };
       const next = { ...state, preferences, srsCards: applySrsPreferences(state.srsCards, preferences.srs) };
       setState(next);
+      toast("SRS nustatymai atnaujinti.");
+    });
+  });
+  app.querySelectorAll("[data-srs-setting]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const raw = input.value;
+      const key = input.dataset.srsSetting;
+      const value = ["learningStepsMinutes", "relearningStepsMinutes"].includes(key)
+        ? raw.split(",").map((item) => Number(item.trim())).filter((item) => Number.isFinite(item) && item > 0)
+        : Number(raw);
+      const preferences = {
+        ...state.preferences,
+        srs: normalizeSrsSettings({ ...state.preferences.srs, [key]: value })
+      };
+      setState({ ...state, preferences, srsCards: applySrsPreferences(state.srsCards, preferences.srs) });
+      toast("SRS nustatymai atnaujinti.");
+    });
+  });
+  app.querySelectorAll("[data-srs-type]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const current = normalizeSrsSettings(state.preferences?.srs);
+      const preferences = {
+        ...state.preferences,
+        srs: normalizeSrsSettings({
+          ...current,
+          enabledCardTypes: { ...current.enabledCardTypes, [input.dataset.srsType]: input.checked }
+        })
+      };
+      setState({ ...state, preferences, srsCards: applySrsPreferences(state.srsCards, preferences.srs) });
       toast("SRS nustatymai atnaujinti.");
     });
   });
@@ -877,21 +1156,33 @@ function handleAction(button) {
       profile: {
         onboarded: true,
         goal: onboardingDraft.goal,
-        grade: onboardingDraft.grade,
+        grade: topics[onboardingDraft.activeTopicId]?.grade || onboardingDraft.grade || gradesForBand(onboardingDraft.gradeBand)[0],
+        gradeBand: onboardingDraft.gradeBand,
         confidence: onboardingDraft.confidence,
         dailyMinutes: onboardingDraft.dailyMinutes,
         olympiad: onboardingDraft.olympiad,
         diagnostic: onboardingDraft.diagnostic
       },
       achievements: [...new Set([...state.achievements, "onboarded"])],
-      activeTopicId: DEFAULT_TOPIC_ID
+      activeTopicId: topics[onboardingDraft.activeTopicId] ? onboardingDraft.activeTopicId : firstTopicForBand(onboardingDraft.gradeBand)
     };
     setState(next);
-    navigate("topic", DEFAULT_TOPIC_ID);
+    navigate("topic", next.activeTopicId);
   }
   if (action === "mark-theory") {
-    setState({ ...state, achievements: [...new Set([...state.achievements, "firstTheory"])], activeTopicId: button.dataset.topic });
-    toast("Teorija pažymėta. SRS kortelės jau laukia.");
+    const next = ensureTopicSrsCards({
+      ...state,
+      achievements: [...new Set([...state.achievements, "firstTheory"])],
+      activeTopicId: button.dataset.topic
+    }, button.dataset.topic);
+    setState(next);
+    toast("Teorija pažymėta. Susijusios SRS kortelės pridėtos.");
+  }
+  if (action === "reveal-srs") {
+    if (!srsRevealed) {
+      srsRevealed = true;
+      render();
+    }
   }
   if (action === "hint" && practiceSession) {
     const nextHint = practiceSession.exercise.hints[practiceSession.visibleHints.length];
@@ -904,9 +1195,20 @@ function handleAction(button) {
   }
   if (action === "toggle-srs-card") {
     const cardId = button.dataset.card;
-    const srsCards = state.srsCards.map((card) => card.id === cardId ? { ...card, enabled: !card.enabled } : card);
-    setState({ ...state, srsCards });
+    const conceptId = button.dataset.conceptId;
+    const prepared = state.srsCards.some((card) => card.id === cardId) || !conceptId ? state : ensureConceptSrsCard(state, conceptId, state.activeTopicId);
+    const srsCards = prepared.srsCards.map((card) => card.id === cardId ? { ...card, enabled: !card.enabled, queue: card.enabled ? "suspended" : "new" } : card);
+    setState({ ...prepared, srsCards });
     toast("Kortelės būsena pakeista.");
+  }
+  if (action === "set-settings-tab") {
+    settingsTab = button.dataset.tab || "general";
+    render();
+  }
+  if (action === "reset-srs-settings") {
+    const preferences = { ...state.preferences, srs: normalizeSrsSettings(DEFAULT_SRS_SETTINGS) };
+    setState({ ...state, preferences, srsCards: applySrsPreferences(state.srsCards, preferences.srs) });
+    toast("SRS nustatymai atkurti.");
   }
   if (action === "start-test") {
     startTest(button.dataset.test, button.dataset.topic || state.activeTopicId);
@@ -938,6 +1240,8 @@ function handleAction(button) {
         step: 0,
         goal: goals[0],
         grade: 9,
+        gradeBand: "9-10",
+        activeTopicId: DEFAULT_TOPIC_ID,
         confidence: "Vidutiniškai",
         dailyMinutes: 20,
         olympiad: false,
