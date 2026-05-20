@@ -2,7 +2,7 @@
 
 This file defines what it means for the app to be fully completed across web, Android, and PC desktop.
 
-The app is complete only when all required product systems, content systems, learning systems, and platform packages are implemented and accepted. A working web MVP is not a completed app.
+The app is complete only when all required product systems, content systems, learning systems, and platform packages are implemented and accepted. A partial web-only build is not a completed app.
 
 ## Completion Summary
 
@@ -169,7 +169,7 @@ Web full-release test:
 1. clear browser data,
 2. open the production URL,
 3. complete onboarding,
-4. download/cache Grade 9 content,
+4. download/cache selected curriculum and diagnostic content,
 5. open a topic,
 6. review SRS,
 7. solve exercises,
@@ -186,7 +186,7 @@ The Android app is complete when:
 2. it uses the same web app build,
 3. it has Android app id, icon, splash screen, and app name,
 4. it launches offline from cold start,
-5. starter content is bundled,
+5. curriculum and diagnostic content is bundled,
 6. local progress persists after force close and device restart,
 7. Android back button follows route history,
 8. export/import codes work,
@@ -216,7 +216,7 @@ The PC app is complete when:
 1. it is packaged with Tauri,
 2. it uses the same web app build,
 3. it launches offline from cold start,
-4. starter content is bundled,
+4. curriculum and diagnostic content is bundled,
 5. local progress persists after app close and OS restart,
 6. export/import codes work,
 7. keyboard navigation covers core flows,

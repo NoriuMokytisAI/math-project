@@ -59,7 +59,7 @@ Electron is not an initial target. It should only be reconsidered if Tauri block
 
 ## Scope
 
-Initial complete target:
+Complete target:
 
 - Grades 5-12 official curriculum.
 - Olympiad extension topics.
@@ -68,20 +68,9 @@ Initial complete target:
 - Local progress.
 - Transfer codes.
 - Theory, glossary, SRS, practice, tests, mastery.
-
-MVP target:
-
-- Grade 9.
-- `Funkcijos ir ju savybes`.
-- `Kvadratine funkcija`.
-- onboarding with goal selection.
-- theory reader with clickable concepts.
-- glossary entries.
-- theory SRS deck.
-- practice deck.
-- exercises with hints and solutions.
-- mastery dashboard.
-- progress export/import code.
+- Cognitive diagnosis model placement.
+- Automated learning path generation.
+- Web/PWA, Android, and desktop packages.
 
 ## User Experience
 
@@ -110,26 +99,28 @@ Avoid:
 - overly playful UI,
 - AI chat as a product feature.
 
-## Onboarding
+## Diagnostic-First Start
 
-Onboarding should ask the student to choose a goal. This goal should guide initial recommendations.
+The app should not ask the student to choose their grade or starting topic as the primary placement mechanism. The root flow is:
+
+1. short welcome,
+2. goal selection,
+3. explanation of the diagnostic,
+4. resumable cognitive diagnosis assessment,
+5. automatically generated learning plan.
+
+The goal should guide recommendation tone and priorities, but diagnostic evidence decides the actual learning path.
 
 Example goals:
 
-- `Noriu sustiprinti 9 klases matematika`
+- `Noriu sustiprinti savo matematikos pagrindus`
 - `Ruosiuosi kontroliniui`
 - `Ruosiuosi PUPP`
 - `Ruosiuosi VBE`
 - `Noriu mokytis olimpiadiniu uzdaviniu`
 - `Nezinau nuo ko pradeti`
 
-Then ask:
-
-- grade,
-- current confidence,
-- preferred daily time,
-- whether olympiad content should be shown,
-- whether to run a diagnostic.
+Optional context questions are allowed only if they have a clear product effect. They must not override diagnostic evidence.
 
 No account creation.
 

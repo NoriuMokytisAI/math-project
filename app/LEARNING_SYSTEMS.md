@@ -15,21 +15,18 @@ All systems run locally and offline.
 
 The diagnostic should estimate what the student knows and where to start.
 
-MVP diagnostic:
+The long-term diagnostic system is not a short onboarding quiz. It should be the root of the app: an extensive cognitive diagnosis model assessment that replaces grade selection and manual topic selection as the main placement mechanism.
 
-- goal selection,
-- grade selection,
-- self-confidence,
-- short prerequisite quiz,
-- topic-specific quiz for Grade 9 functions.
+Canonical implementation details are defined in [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md).
 
-Later diagnostic:
+The app may still ask the student's goal, but the learning path should be generated from diagnostic evidence:
 
-- cognitive diagnosis model,
-- prerequisite graph,
-- concept-level mastery,
-- mistake pattern detection,
-- adaptive topic recommendations.
+- concept and skill mastery,
+- prerequisite gaps,
+- misconception patterns,
+- confidence of classification,
+- official curriculum strands,
+- olympiad extension readiness.
 
 ## Prerequisite Graph
 
@@ -49,7 +46,7 @@ Kvadratine funkcija
   -> Daugianariu pertvarkiai
 ```
 
-Recommendations should use this graph. If Grade 9 work fails because a Grade 7 prerequisite is weak, the app should recommend that earlier topic.
+Recommendations should use this graph. If work in a later curriculum stage fails because an earlier prerequisite is weak, the app should recommend that earlier topic.
 
 ## SRS Decks
 
@@ -89,7 +86,7 @@ Behavior:
 - `Pakartoti` returns the card soon.
 - `Moku gerai` advances the card through learning or review intervals.
 
-The production MVP must use the SM-2 style Anki scheduler described in [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md). FSRS is intentionally deferred, but the scheduler interface must allow it to be adopted later without rewriting the review UI or card storage.
+The production implementation must use the SM-2 style Anki scheduler described in [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md). FSRS is intentionally deferred, but the scheduler interface must allow it to be adopted later without rewriting the review UI or card storage.
 
 Practice SRS should not ask for Again/Good. It should update automatically from performance.
 
@@ -151,7 +148,7 @@ Topic mastery components:
 - hint dependence,
 - mistake frequency.
 
-Suggested MVP formula:
+Suggested production formula:
 
 ```txt
 topicMastery =

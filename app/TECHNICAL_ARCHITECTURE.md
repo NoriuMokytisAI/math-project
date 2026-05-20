@@ -40,7 +40,7 @@ app/
   CONTENT_MODEL.md
   LEARNING_SYSTEMS.md
   IMPLEMENTATION_PLAN.md
-  MVP_GRADE_9.md
+  CDM_IMPLEMENTATION_GUIDE.md
 
 frontend/
   package.json
@@ -69,7 +69,7 @@ content/
   tests/
 ```
 
-This is a fixed decision for the first implementation: the production app code goes in a future root-level `frontend/` directory. This `app/` directory remains the planning/specification area.
+This is a fixed decision: the production app code goes in the root-level `frontend/` directory. This `app/` directory remains the planning/specification area.
 
 ## Runtime Architecture
 
@@ -91,7 +91,7 @@ The app should have four main layers:
 
 3. **Storage layer**
    - IndexedDB in browser/PWA
-   - same Dexie/IndexedDB implementation inside Android and desktop WebViews for MVP
+   - same Dexie/IndexedDB implementation inside Android and desktop WebViews by default
    - optional native adapters only if IndexedDB proves insufficient
    - import/export serialization
 
@@ -124,16 +124,16 @@ PWA service worker should cache:
 - JS/CSS bundles,
 - icons,
 - content manifest,
-- current grade content,
+- selected curriculum and diagnostic content,
 - common glossary entries.
 
 Large full-grade content can be lazy-loaded and cached after first use on web.
 
-For Android/desktop, bundle starter content directly with the app so the app can launch and teach offline from a cold start.
+For Android/desktop, bundle curriculum and diagnostic content directly with the app so the app can launch and teach offline from a cold start.
 
 ## Storage Model
 
-Use IndexedDB through Dexie and a storage abstraction. The abstraction exists so Android or desktop can later swap in a native adapter, but the MVP uses IndexedDB everywhere.
+Use IndexedDB through Dexie and a storage abstraction. The abstraction exists so Android or desktop can later swap in a native adapter, but IndexedDB is the default storage layer everywhere.
 
 Main stores:
 
@@ -178,13 +178,13 @@ The content compiler should normalize math before rendering.
 
 ## Graphs and Diagrams
 
-MVP:
+Production baseline:
 
 - SVG-based function graphs,
 - simple reusable coordinate grid component,
 - static diagram definitions in content JSON.
 
-Later:
+Advanced interactions:
 
 - interactive graph exploration,
 - draggable points,
@@ -220,7 +220,7 @@ If anonymous analytics are ever considered, they must be optional and disabled b
 
 - wrap web app with Capacitor
 - local content bundled in app assets
-- Dexie/IndexedDB storage in the Capacitor WebView for MVP
+- Dexie/IndexedDB storage in the Capacitor WebView by default
 - Capacitor storage adapter only if needed later
 - Android back button support
 - offline launch
@@ -229,7 +229,7 @@ If anonymous analytics are ever considered, they must be optional and disabled b
 
 - wrap web app with Tauri
 - local content bundled
-- Dexie/IndexedDB storage in the Tauri WebView for MVP
+- Dexie/IndexedDB storage in the Tauri WebView by default
 - export/import progress files and codes
 - offline launch
 

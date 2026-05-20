@@ -114,13 +114,13 @@ Web/PWA:
 Android:
 
 - app must launch offline from cold start,
-- bundled starter content must be available offline immediately,
+- bundled curriculum and diagnostic content must be available offline immediately,
 - progress must persist locally.
 
 Desktop:
 
 - app must launch offline from cold start,
-- bundled starter content must be available offline immediately,
+- bundled curriculum and diagnostic content must be available offline immediately,
 - progress must persist locally.
 
 ## Privacy Requirements
@@ -133,27 +133,31 @@ Desktop:
 - No tracking.
 - Export codes are user-controlled and local.
 
-## MVP Requirements
+## Production Scope Requirements
 
-The first MVP must include:
+The implementation target is the completed product, not a temporary grade-limited slice.
 
-- onboarding,
-- Grade 9 start,
-- `Funkcijos ir ju savybes`,
-- `Kvadratine funkcija`,
+The production app must include:
+
+- diagnostic-first start flow,
+- cognitive diagnosis model placement,
+- automatically generated learning paths,
+- complete grades 5-12 curriculum coverage,
+- olympiad extensions as clearly marked additional content,
 - theory reader,
 - clickable glossary terms,
 - theory SRS deck,
-- practice deck foundations,
+- practice deck,
 - exercise renderer,
-- hints one by one,
+- hints one by one for practice,
+- no teaching hints during diagnostic items,
 - mastery scoring,
 - recommendations,
 - local progress,
 - export/import code,
-- offline web behavior.
+- offline behavior on web/PWA, Android, and desktop.
 
-Android and desktop do not need full public release in the first MVP, but the architecture must be compatible from day one.
+Android and desktop are first-class production targets. They must use the same shared app, content, learning logic, and progress format as the web/PWA target.
 
 ## Full Completion Requirements
 
@@ -165,4 +169,4 @@ The completed app must be released and accepted on:
 
 Completion requires more than platform proof builds. Each platform must pass the full-release criteria in `FULL_COMPLETION_CRITERIA.md`.
 
-The final app must include the complete grade 5-12 curriculum, olympiad extensions, full local progress, SRS, practice, tests, mastery, recommendations, achievements, and transfer codes on every platform.
+The final app must include the complete grade 5-12 curriculum, olympiad extensions, full local progress, SRS, practice, tests, mastery, recommendations, achievements, diagnostic learning-path generation, and transfer codes on every platform.

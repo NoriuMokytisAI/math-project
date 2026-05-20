@@ -4,7 +4,7 @@
 
 The app should use spaced repetition to help students remember concepts, formulas, methods, and recurring mistakes from the Lithuanian mathematics curriculum. SRS must feel like a focused memory tool, not another exercise screen.
 
-The production MVP will implement an Anki-style SM-2 scheduler first. The code must be structured so FSRS can be adopted later without replacing the review UI, card storage, or engagement rules.
+The production implementation will use an Anki-style SM-2 scheduler first. The code must be structured so FSRS can be adopted later without replacing the review UI, card storage, or engagement rules.
 
 ## Fixed Product Decisions
 
@@ -23,7 +23,7 @@ The production MVP will implement an Anki-style SM-2 scheduler first. The code m
 
 ## Scheduler Strategy
 
-### MVP Scheduler: SM-2 Style
+### Production Scheduler: SM-2 Style
 
 The first implementation should use an SM-2 style scheduler because it is lightweight, transparent, offline-friendly, and fits the two-button review model.
 
@@ -64,7 +64,7 @@ The exact TypeScript shape may be adjusted to fit the final state model, but the
 
 ### Future Scheduler: FSRS
 
-FSRS should not be implemented in the MVP. The MVP must still prepare for it by routing all scheduling through a scheduler interface.
+FSRS should not be implemented first. The production SM-2 implementation must still prepare for it by routing all scheduling through a scheduler interface.
 
 The scheduler boundary should look like this conceptually:
 
@@ -106,7 +106,7 @@ type SrsSettings = {
 };
 ```
 
-MVP defaults:
+Production defaults:
 
 - `newCardsPerDay`: `20`
 - `reviewsPerDay`: `200`
@@ -155,7 +155,7 @@ nextIntervalDays = clamp(
 );
 ```
 
-The MVP does not need Anki's `Hard` or `Easy` buttons. Their settings should not be shown to the student unless a future version adds those buttons.
+The initial production interface does not need Anki's `Hard` or `Easy` buttons. Their settings should not be shown to the student unless a future version adds those buttons.
 
 ### Relearning Cards
 
@@ -286,7 +286,7 @@ Cards with review history should not be deleted, even if they came from the old 
 - `Pakartoti` schedules a near-term repeat.
 - `Moku gerai` advances learning or review intervals.
 - SRS settings persist after refresh.
-- Resetting SRS settings restores the MVP defaults.
+- Resetting SRS settings restores the production defaults.
 - Existing reviewed cards survive migration.
 - Existing unreviewed auto-created theory cards are removed during migration.
 - The app remains fully offline.
@@ -303,4 +303,3 @@ Cards with review history should not be deleted, even if they came from the old 
 7. Add the `SRS` settings tab.
 8. Update smoke tests and add scheduler tests.
 9. Verify fresh session, migrated session, SRS review, and export/import behavior.
-
