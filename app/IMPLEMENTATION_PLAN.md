@@ -1,121 +1,219 @@
 # Implementation Plan
 
-## Phase 0: Fixed Decisions
+## Phase 0: Fixed Production Decisions
 
-These decisions are fixed for the first implementation and should not be re-litigated during development:
+These decisions are fixed for the completed app:
 
-- Put implementation in a root-level `frontend/` directory.
+- Put implementation in the root-level `frontend/` directory.
 - Keep planning docs in `app/`.
 - Use React + TypeScript + Vite.
-- Use CSS modules or plain CSS tokens first.
 - Use Capacitor for Android.
 - Use Tauri for desktop.
-- Put content in root `content/`.
-- Use Dexie/IndexedDB for MVP storage on web, Android, and desktop.
+- Put long-form authored content in root `content/` when the content pipeline is separated from app code.
+- Use Dexie/IndexedDB through a storage abstraction on web, Android, and desktop unless a platform proves it needs a native adapter.
 - Build one shared app, not separate web/native implementations.
+- Treat grades 5-12, olympiad extensions, diagnostics, SRS, practice, tests, mastery, recommendations, and progress transfer as production scope.
+- Do not use grade selection as the root placement mechanism.
+- Use goal-based modes:
+  - olympiad strengthening,
+  - topic or exam preparation,
+  - full course with diagnostic.
+- Treat modes as changeable starting positions, not permanent locked tracks.
+- Use the cognitive diagnosis model as the recommended root of full-course mode.
 
 Open design choices that may be decided during implementation:
 
 - exact visual theme tokens,
-- exact first exercise validator implementation for algebraic equivalence,
-- whether to use plain CSS modules or Tailwind after the first prototype.
+- exact algebraic equivalence validator,
+- whether to use plain CSS modules or Tailwind after the first stable production shell.
 
-## Phase 1: App Shell
+## Phase 1: Production App Shell
 
 Deliverables:
 
 - Vite React app.
 - Routes.
-- Responsive layout.
+- Responsive layout for desktop, tablet, and phone.
 - Lithuanian UI.
 - PWA manifest.
 - Service worker.
 - Offline fallback.
+- Shared navigation model for web, Android, and desktop.
 
 Routes:
 
 - `/`
-- `/onboarding`
+- `/diagnostic`
+- `/diagnostic/:moduleId`
 - `/dashboard`
-- `/grade/:grade`
+- `/dashboard/olympiad`
+- `/dashboard/topic`
+- `/dashboard/course`
+- `/onboarding`
+- `/onboarding/goal`
+- `/onboarding/grade-band`
+- `/onboarding/topic`
+- `/onboarding/exam`
+- `/learn/:pathNodeId`
 - `/topic/:topicId`
 - `/glossary`
 - `/glossary/:conceptId`
 - `/srs`
-- `/practice/:topicId`
+- `/practice/:practiceSetId`
 - `/test/:testId`
 - `/settings`
 
-## Phase 2: Content Pipeline
+## Phase 2: Content and Curriculum Pipeline
 
 Deliverables:
 
 - content schemas,
-- content manifest,
-- build-time validator,
-- Grade 9 topic content files,
-- glossary concept files,
-- exercise set files.
+- official curriculum topic map for grades 5-12,
+- strand grouping matching the Lithuanian curriculum,
+- olympiad extension schema,
+- glossary concept schema,
+- exercise schema,
+- diagnostic attribute schema,
+- diagnostic item schema,
+- Q-matrix schema,
+- build-time validator.
 
 Validation must catch broken links between:
 
 - topics,
+- curriculum references,
+- strands,
 - concepts,
+- diagnostic attributes,
+- diagnostic items,
 - formulas,
 - exercises,
+- tests,
 - SRS cards,
 - prerequisites.
 
-## Phase 3: MVP Learning Flow
+## Phase 3: Cognitive Diagnosis Engine
 
 Deliverables:
 
-- onboarding with goal selection,
-- Grade 9 dashboard,
-- topic page,
-- theory reader,
-- clickable concept links,
-- glossary drawer/page,
-- concept add/remove SRS toggle.
+- diagnostic state storage,
+- diagnostic response storage,
+- diagnostic modules,
+- diagnostic item renderer,
+- DINA-style mastery probability updates,
+- prerequisite graph propagation,
+- diagnostic confidence bands,
+- pause/resume support,
+- "I don't know" answer path,
+- no teaching hints or solution reveal during diagnostic,
+- learning-path generation from diagnostic evidence.
 
-## Phase 4: SRS
+The diagnostic is the root of full-course mode. It must replace grade/topic guessing when the student chooses `Nežinau nuo ko pradėti`.
+
+For other modes:
+
+- olympiad strengthening mode may use a short prerequisite-gap check but should not block olympiad content,
+- topic or exam preparation mode should branch into `Kontrolinis`, `PUPP`, or `VBE`,
+- `Kontrolinis` should ask the student to choose a target topic and may offer prerequisite checks,
+- `PUPP` and `VBE` should recommend diagnostic as the primary path and manual topic choice as the secondary path.
+
+## Phase 4: Goal-Mode Learning Flow
+
+Deliverables:
+
+- shared dashboard shell with mode-specific main content,
+- olympiad strengthening home page,
+- topic or exam preparation home page,
+- full-course diagnostic home page,
+- settings control for changing mode without deleting progress,
+- dashboard driven by the generated learning path in full-course mode,
+- recommended next action,
+- prerequisite repair path,
+- current topic path,
+- test checkpoints,
+- SRS queue entry points,
+- explanation of why each recommendation appears.
+
+The home page must differ by mode:
+
+- olympiad strengthening: challenge tracks, hard problem sets, olympiad readiness, prerequisite alerts,
+- topic or exam preparation: selected topic for kontrolinis, or PUPP/VBE diagnostic recommendation with topic fallback,
+- full course with diagnostic: diagnostic status, generated course path, prerequisite repair, full-course progress.
+
+The dashboard may show curriculum browsing as a secondary option, but the primary action must come from the selected mode.
+
+## Phase 5: Theory, Glossary, and Concept Graph
+
+Deliverables:
+
+- theory reader for all curriculum topics,
+- clickable concept links,
+- glossary page/drawer,
+- concept pages with definitions, examples, related theory, exercises, mistakes, formulas, and SRS controls,
+- prerequisite and related-concept navigation,
+- KaTeX rendering.
+
+## Phase 6: SRS
 
 Deliverables:
 
 - theory deck,
 - practice deck,
 - Again/Good review UI,
+- front/back card layout,
 - due cards,
 - local review history,
-- scheduling algorithm,
-- settings for enabled card types.
+- SM-2 scheduler behind a scheduler interface,
+- settings for SRS behavior and enabled card types,
+- FSRS-ready scheduler boundary for later adoption.
 
-## Phase 5: Practice Engine
+## Phase 7: Practice Engine
 
 Deliverables:
 
 - exercise renderer,
 - multiple choice,
 - numeric input,
-- expression input placeholder,
+- algebraic expression input,
+- interval input,
+- graph/table interpretation,
+- ordered steps,
+- matching,
 - hints one by one,
 - solution reveal,
 - alternate solution methods,
 - attempt scoring,
-- mastery updates.
+- mastery and diagnosis updates.
 
-## Phase 6: Mastery and Recommendations
+## Phase 8: Tests and Exams
 
 Deliverables:
 
-- topic mastery score,
-- concept mastery score,
-- practice grid,
+- topic tests,
+- strand tests,
+- full-grade tests,
+- prerequisite diagnostics,
+- exam-style practice,
+- olympiad extension tests,
+- resumable long tests,
+- stronger mastery impact than normal practice.
+
+## Phase 9: Mastery and Recommendations
+
+Deliverables:
+
+- attribute mastery,
+- concept mastery,
+- topic mastery,
+- strand mastery,
+- curriculum-stage mastery,
+- olympiad readiness,
 - weak concept list,
+- prerequisite gap list,
 - recommended next action,
 - achievement popup.
 
-## Phase 7: Transfer Codes
+## Phase 10: Transfer Codes
 
 Deliverables:
 
@@ -123,14 +221,17 @@ Deliverables:
 - import progress code,
 - validation,
 - overwrite warning,
-- version compatibility check.
+- version compatibility check,
+- cross-platform roundtrip.
 
 Encoding approach:
 
-1. JSON serialize progress.
-2. Compress with a small library or browser CompressionStream.
-3. Base64url encode.
-4. Prefix with app marker and version.
+```txt
+JSON serialize progress
+compress
+base64url encode
+prefix with app marker and version
+```
 
 Example:
 
@@ -138,73 +239,31 @@ Example:
 NM-1-eyJ2ZXJzaW9uIjoiMS4wLjAi...
 ```
 
-## Phase 8: Android and Desktop Proofs
-
-Android:
-
-- add Capacitor,
-- configure app id,
-- bundle assets,
-- verify IndexedDB persistence in WebView,
-- implement Android back button route handling,
-- test offline launch.
-
-Desktop:
-
-- add Tauri,
-- configure window,
-- bundle assets,
-- verify IndexedDB persistence in WebView,
-- add keyboard navigation smoke test,
-- test local storage and export/import.
-
-## Phase 9: Content Scale-Up
-
-After Grade 9 MVP:
-
-1. complete Grade 9 curriculum,
-2. add Grade 10,
-3. add Grade 8 prerequisites,
-4. add Grade 11-12 exam track,
-5. add Grade 5-7 foundations,
-6. add olympiad extensions by topic.
-
-## Phase 10: Full Web Release
-
-Deliverables:
-
-- production deployment at `NoriuMokyti.lt`,
-- complete PWA install support,
-- offline cache strategy for selected content,
-- full import/export roundtrip,
-- browser compatibility pass,
-- web full-release test from `FULL_COMPLETION_CRITERIA.md`.
-
-## Phase 11: Full Android Release
+## Phase 11: Android Package
 
 Deliverables:
 
 - Capacitor Android project,
 - production Android app id,
 - icon and splash screen,
-- bundled starter content,
+- bundled content,
 - offline cold launch,
 - persistent local progress,
 - Android back button route handling,
-- Android full-release test from `FULL_COMPLETION_CRITERIA.md`.
+- Android release test from `FULL_COMPLETION_CRITERIA.md`.
 
-## Phase 12: Full PC Desktop Release
+## Phase 12: Desktop Package
 
 Deliverables:
 
 - Tauri desktop project,
 - Windows-first build,
-- bundled starter content,
+- bundled content,
 - offline cold launch,
 - persistent local progress,
 - keyboard navigation smoke pass,
 - resize/layout smoke pass,
-- desktop full-release test from `FULL_COMPLETION_CRITERIA.md`.
+- desktop release test from `FULL_COMPLETION_CRITERIA.md`.
 
 ## Phase 13: Cross-Platform Completion
 
@@ -213,50 +272,50 @@ Deliverables:
 - same content version shipped on all platforms,
 - same progress code format on all platforms,
 - web-to-Android-to-desktop transfer test,
-- final release gates passed,
+- all release gates passed,
 - documentation updated with release commands and troubleshooting.
 
-## Suggested Milestones
+## Milestones
 
 ### Milestone 1
 
-Static app shell with onboarding and dashboard.
+Production app shell with goal-mode start.
 
 ### Milestone 2
 
-Theory reader and glossary for Grade 9 functions.
+Validated curriculum, concept, diagnostic attribute, and exercise schemas.
 
 ### Milestone 3
 
-SRS theory deck.
+Goal-mode dashboards plus fixed multi-module diagnostic with saved progress and learning-path output.
 
 ### Milestone 4
 
-Practice engine and mastery scoring.
+Mode-driven dashboard and theory/glossary flow.
 
 ### Milestone 5
 
-Offline PWA and transfer codes.
+SRS theory and practice decks.
 
 ### Milestone 6
 
-Android wrapper proof.
+Practice engine, tests, mastery, and recommendations.
 
 ### Milestone 7
 
-Desktop wrapper proof.
+Full grades 5-12 content pass with olympiad extensions.
 
 ### Milestone 8
 
-Full web release.
+Offline PWA and transfer codes.
 
 ### Milestone 9
 
-Full Android release.
+Android production package.
 
 ### Milestone 10
 
-Full PC desktop release.
+PC desktop production package.
 
 ### Milestone 11
 

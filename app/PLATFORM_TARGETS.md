@@ -24,7 +24,7 @@ The platform wrappers are delivery shells, not separate products.
 
 ### Purpose
 
-The web app is the first public product and the canonical development target.
+The web app is one production delivery target and the canonical development surface for the shared app.
 
 ### Hosting
 
@@ -39,7 +39,7 @@ The web app is the first public product and the canonical development target.
 - installable browser app,
 - service worker,
 - offline app shell,
-- cached starter content,
+- cached selected or bundled content,
 - IndexedDB progress storage,
 - export/import progress codes,
 - no login.
@@ -50,12 +50,12 @@ The web/PWA target passes offline acceptance when:
 
 1. user opens the app online once,
 2. user completes onboarding,
-3. user opens a Grade 9 topic,
+3. user starts or resumes the diagnostic,
 4. user reviews at least one SRS card,
 5. user solves at least one exercise,
 6. browser is switched offline,
 7. app reloads successfully,
-8. same topic, progress, SRS queue, and exercise history are still available.
+8. diagnostic state, learning plan, progress, SRS queue, and exercise history are still available.
 
 ## Android Target
 
@@ -72,7 +72,7 @@ Android is the first native packaging priority.
 ### Required Features
 
 - offline cold launch,
-- bundled starter content,
+- bundled curriculum and diagnostic content,
 - local progress persistence,
 - Android back button behavior,
 - export/import code support,
@@ -81,7 +81,7 @@ Android is the first native packaging priority.
 
 ### Storage
 
-MVP storage:
+Default storage:
 
 - use the same IndexedDB/Dexie storage layer inside the Capacitor WebView.
 
@@ -95,7 +95,7 @@ The Android target passes acceptance when:
 
 1. app installs on an Android device or emulator,
 2. app launches with no network,
-3. Grade 9 starter content opens,
+3. bundled curriculum and diagnostic content opens,
 4. progress persists after app close/reopen,
 5. Android back button returns to the previous route instead of closing unexpectedly,
 6. export/import code works.
@@ -115,7 +115,7 @@ Desktop is for students who want a PC app with the same offline experience.
 ### Required Features
 
 - offline cold launch,
-- bundled starter content,
+- bundled curriculum and diagnostic content,
 - local progress persistence,
 - export/import progress codes,
 - optional export/import progress file later,
@@ -124,7 +124,7 @@ Desktop is for students who want a PC app with the same offline experience.
 
 ### Storage
 
-MVP storage:
+Default storage:
 
 - use the same IndexedDB/Dexie storage layer inside the Tauri WebView.
 
@@ -138,24 +138,24 @@ The desktop target passes acceptance when:
 
 1. app installs or runs as a desktop build,
 2. app launches with no network,
-3. Grade 9 starter content opens,
+3. bundled curriculum and diagnostic content opens,
 4. progress persists after close/reopen,
 5. export/import code works,
 6. keyboard navigation covers main learning flows.
 
 ## Cross-Platform Release Order
 
-1. Web MVP.
-2. Web beta with real Grade 9 content.
-3. Android proof build.
-4. Desktop proof build.
-5. Android beta.
-6. Desktop beta.
+1. Shared web production shell.
+2. Diagnostic-first learning engine.
+3. Full content and validation pipeline.
+4. Web/PWA release candidate.
+5. Android release candidate.
+6. Desktop release candidate.
 7. Web full release.
 8. Android full release.
 9. PC desktop full release.
 
-Do not delay the web MVP for native packaging, but do not make architectural choices that prevent native packaging.
+Web can remain the fastest iteration surface, but Android and desktop are production requirements, not optional later experiments.
 
 ## Full Platform Completion
 

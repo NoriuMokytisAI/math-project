@@ -291,7 +291,7 @@ Schema:
 
 ## Exercises
 
-Each topic should include at least 20 exercises for MVP-quality content:
+Each topic should include enough exercises for production-quality learning:
 
 - 6 easy,
 - 8 medium,
@@ -359,7 +359,7 @@ nextStep
 structuredReasoning
 ```
 
-For the current web MVP, prefer:
+For the current production app, prefer:
 
 ```txt
 multipleChoice
@@ -548,9 +548,9 @@ For olympiad extension topics, generate at minimum:
 - 15 exercises,
 - 1 challenge test.
 
-## Current MVP Compatibility
+## Current App Compatibility
 
-The current web MVP uses a simplified shape in `frontend/src/content.js`. When generating new content, still use the richer schema in this guide. A conversion script can flatten it into the MVP shape:
+The current web app may use a simplified runtime shape while the content pipeline matures. When generating new content, still use the richer schema in this guide. A conversion script can flatten it into the runtime shape:
 
 - `topic.title` -> `topics[id].title`
 - `topic.strand` -> `topics[id].strand`

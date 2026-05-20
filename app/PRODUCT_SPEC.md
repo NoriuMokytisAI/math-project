@@ -59,7 +59,7 @@ Electron is not an initial target. It should only be reconsidered if Tauri block
 
 ## Scope
 
-Initial complete target:
+Complete target:
 
 - Grades 5-12 official curriculum.
 - Olympiad extension topics.
@@ -68,20 +68,9 @@ Initial complete target:
 - Local progress.
 - Transfer codes.
 - Theory, glossary, SRS, practice, tests, mastery.
-
-MVP target:
-
-- Grade 9.
-- `Funkcijos ir ju savybes`.
-- `Kvadratine funkcija`.
-- onboarding with goal selection.
-- theory reader with clickable concepts.
-- glossary entries.
-- theory SRS deck.
-- practice deck.
-- exercises with hints and solutions.
-- mastery dashboard.
-- progress export/import code.
+- Cognitive diagnosis model placement.
+- Automated learning path generation.
+- Web/PWA, Android, and desktop packages.
 
 ## User Experience
 
@@ -110,28 +99,89 @@ Avoid:
 - overly playful UI,
 - AI chat as a product feature.
 
-## Onboarding
+## Goal-Based Start
 
-Onboarding should ask the student to choose a goal. This goal should guide initial recommendations.
+The app starts by asking the student's learning goal. This is not only a tone preference. The chosen goal selects one of three starting modes. The core app stays the same, but the first home page, first recommended action, and learning-path logic differ by mode.
 
-Example goals:
+The onboarding UI must clearly explain what each choice changes before the student continues. It must also say that the choice can be changed later in Settings and that switching modes does not delete progress.
 
-- `Noriu sustiprinti 9 klases matematika`
-- `Ruosiuosi kontroliniui`
-- `Ruosiuosi PUPP`
-- `Ruosiuosi VBE`
-- `Noriu mokytis olimpiadiniu uzdaviniu`
-- `Nezinau nuo ko pradeti`
+The three canonical goals are:
 
-Then ask:
-
-- grade,
-- current confidence,
-- preferred daily time,
-- whether olympiad content should be shown,
-- whether to run a diagnostic.
+- `Noriu sustiprinti matematiką`
+- `Ruošiuosi kontroliniui arba egzaminui`
+- `Nežinau nuo ko pradėti`
 
 No account creation.
+
+### Mode 1: Olympiad Strengthening
+
+Goal: `Noriu sustiprinti matematiką`
+
+This mode should place the student into olympiad-level mathematics.
+
+Behavior:
+
+- after explaining the mode, ask the student to choose a starting grade band,
+- use the grade band only to choose the initial difficulty and recommendations,
+- never lock higher-grade or lower-grade content because of the chosen grade band,
+- prioritize olympiad extension content,
+- keep official curriculum prerequisites visible when needed,
+- recommend harder problems, alternative solution methods, proof-style reasoning, and non-routine tasks,
+- use the diagnostic only as an optional prerequisite-gap check, not as the required first step,
+- show a home page focused on challenge tracks, hard problem sets, weak prerequisite alerts, and olympiad progress.
+
+This mode is for students who want deeper mathematics, not only standard curriculum repair.
+
+### Mode 2: Topic or Exam Preparation
+
+Goal: `Ruošiuosi kontroliniui arba egzaminui`
+
+This mode should let the student choose the topic they want to learn.
+
+Behavior:
+
+- after goal selection, ask whether the student is preparing for `Kontrolinis`, `PUPP`, or `VBE`,
+- if the student chooses `Kontrolinis`, ask them to choose a specific curriculum topic and start from that topic,
+- if the student chooses `PUPP` or `VBE`, make diagnostic the primary recommended action and keep specific topic selection as a secondary option,
+- show the chosen topic as the main working area,
+- prioritize concise theory, worked examples, practice, topic tests, mistakes, and exam-style checkpoints,
+- offer prerequisite checks only when the topic requires them,
+- show a home page focused on the selected topic, remaining tasks, due SRS, test readiness, and common mistakes.
+
+This mode is for students with a known immediate target.
+
+### Mode 3: Full Course With Diagnostic
+
+Goal: `Nežinau nuo ko pradėti`
+
+This mode should give the full course with the diagnostic test. This is the recommended path for most new users.
+
+Behavior:
+
+- explain that the diagnostic can take several hours and can be resumed,
+- use the cognitive diagnosis model to find missing skills and prerequisites,
+- generate an automatic full-course learning plan,
+- recommend official curriculum topics in prerequisite-safe order,
+- unlock olympiad extensions when standard mastery is strong enough,
+- show a home page focused on the diagnostic status, the next recommended step, prerequisite repair, and full-course progress.
+
+This mode is for students who do not know where to begin or want the app to decide the path.
+
+### Shared Core Across Modes
+
+All modes use the same:
+
+- theory reader,
+- glossary,
+- SRS engine,
+- practice engine,
+- tests,
+- mastery model,
+- local progress,
+- export/import codes,
+- offline storage.
+
+The mode changes the default home page and recommendation strategy. It must not fork the app into separate products. Modes are starting positions, not permanent user categories; the student can change mode later in Settings without losing progress.
 
 ## Core Learning Flow
 

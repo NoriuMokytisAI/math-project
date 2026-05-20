@@ -11,25 +11,83 @@ The learning engine has four connected systems:
 
 All systems run locally and offline.
 
+## Goal-Based Start Modes
+
+The learning engine must support three goal-based starting modes. The same topic, SRS, practice, test, mastery, and storage systems are used in every mode, but the home page and recommendation order differ. Modes are not permanent categories: switching mode later in Settings changes recommendations and the home page while preserving all progress.
+
+### Olympiad Strengthening Mode
+
+Selected by: `Noriu sustiprinti matematiką`
+
+Primary recommendation order:
+
+1. urgent due SRS,
+2. olympiad prerequisite gaps,
+3. hard official-curriculum exercises needed for olympiad readiness,
+4. olympiad theory or method notes,
+5. non-routine problem sets,
+6. alternative solution-method exploration,
+7. proof-style or competition-style tests.
+
+The diagnostic is optional in this mode. It can be offered as a prerequisite-gap check if the student struggles, but it should not block entry into olympiad content.
+
+The student should choose a starting grade band in onboarding. This grade band only sets the initial difficulty and recommendation order; it must not restrict access to higher-grade olympiad or curriculum content.
+
+### Topic or Exam Preparation Mode
+
+Selected by: `Ruošiuosi kontroliniui arba egzaminui`
+
+This mode has a second choice:
+
+- `Kontrolinis`: the student chooses a specific curriculum topic and starts there.
+- `PUPP`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
+- `VBE`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
+
+Primary recommendation order:
+
+1. selected topic due SRS,
+2. blocking prerequisite check for the selected topic,
+3. concise selected-topic theory,
+4. worked examples,
+5. selected-topic practice,
+6. common mistakes,
+7. topic or exam-style test.
+
+The student must choose the target topic or exam area during onboarding. The diagnostic is optional unless the student switches to full-course mode.
+
+### Full Course With Diagnostic Mode
+
+Selected by: `Nežinau nuo ko pradėti`
+
+Primary recommendation order:
+
+1. start or resume the diagnostic,
+2. urgent due SRS,
+3. blocking prerequisite from the generated path,
+4. current recommended theory,
+5. current recommended exercises,
+6. checkpoint test,
+7. next curriculum topic,
+8. olympiad extension if readiness is high.
+
+This is the recommended path for new users who do not know where to begin.
+
 ## Diagnostics
 
 The diagnostic should estimate what the student knows and where to start.
 
-MVP diagnostic:
+The long-term diagnostic system is not a short onboarding quiz. It is the root of the full-course mode: an extensive cognitive diagnosis model assessment that replaces grade selection and manual topic selection when the student chooses `Nežinau nuo ko pradėti`.
 
-- goal selection,
-- grade selection,
-- self-confidence,
-- short prerequisite quiz,
-- topic-specific quiz for Grade 9 functions.
+Canonical implementation details are defined in [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md).
 
-Later diagnostic:
+In full-course mode, the learning path should be generated from diagnostic evidence:
 
-- cognitive diagnosis model,
-- prerequisite graph,
-- concept-level mastery,
-- mistake pattern detection,
-- adaptive topic recommendations.
+- concept and skill mastery,
+- prerequisite gaps,
+- misconception patterns,
+- confidence of classification,
+- official curriculum strands,
+- olympiad extension readiness.
 
 ## Prerequisite Graph
 
@@ -49,7 +107,7 @@ Kvadratine funkcija
   -> Daugianariu pertvarkiai
 ```
 
-Recommendations should use this graph. If Grade 9 work fails because a Grade 7 prerequisite is weak, the app should recommend that earlier topic.
+Recommendations should use this graph. If work in a later curriculum stage fails because an earlier prerequisite is weak, the app should recommend that earlier topic.
 
 ## SRS Decks
 
@@ -78,29 +136,18 @@ Practice deck contains:
 
 Memory reviews have only two buttons:
 
-- `Vel` / Again
-- `Gerai` / Good
+- `Pakartoti`
+- `Moku gerai`
 
 Behavior:
 
-- Again returns the card almost immediately.
-- Good schedules it later.
+- The front of the card is shown first.
+- The student thinks before seeing the answer.
+- The answer and rating buttons appear only after the card is flipped.
+- `Pakartoti` returns the card soon.
+- `Moku gerai` advances the card through learning or review intervals.
 
-MVP scheduling:
-
-```ts
-if (rating === "again") {
-  intervalMinutes = 3;
-  ease = Math.max(1.3, ease - 0.2);
-}
-
-if (rating === "good") {
-  if (reviewCount === 0) intervalDays = 1;
-  else if (reviewCount === 1) intervalDays = 3;
-  else intervalDays = Math.round(previousIntervalDays * ease);
-  ease = Math.min(2.8, ease + 0.05);
-}
-```
+The production implementation must use the SM-2 style Anki scheduler described in [SRS implementation plan](./SRS_IMPLEMENTATION_PLAN.md). FSRS is intentionally deferred, but the scheduler interface must allow it to be adopted later without rewriting the review UI or card storage.
 
 Practice SRS should not ask for Again/Good. It should update automatically from performance.
 
@@ -162,7 +209,7 @@ Topic mastery components:
 - hint dependence,
 - mistake frequency.
 
-Suggested MVP formula:
+Suggested production formula:
 
 ```txt
 topicMastery =
@@ -221,7 +268,7 @@ The app should recommend:
 - prerequisite topic from lower grade,
 - olympiad extension if mastery is high.
 
-Recommendation order:
+Default recommendation order for full-course mode:
 
 1. urgent due SRS,
 2. blocking prerequisite,
