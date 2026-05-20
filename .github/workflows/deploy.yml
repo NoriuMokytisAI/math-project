@@ -54,7 +54,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_TARGET_FOLDER }}/frontend
+          server-dir: ${{ secrets.FTP_TARGET_FOLDER }}/frontend/
           security: loose
           local-dir: frontend/dist/
           dangerous-clean-slate: false
