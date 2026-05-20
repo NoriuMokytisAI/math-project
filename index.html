@@ -86,6 +86,19 @@
       margin-bottom: 28px;
       letter-spacing: .5px;
     }
+    .badge-new {
+      display: inline-block;
+      background: rgba(0,212,170,.15);
+      color: #00d4aa;
+      border: 1px solid rgba(0,212,170,.4);
+      border-radius: 99px;
+      padding: 2px 10px;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
     .hero h1 {
       font-size: clamp(2.8rem, 6vw, 5rem);
       font-weight: 800;
@@ -257,6 +270,7 @@
   <nav>
     <div class="logo">∫<span>matematika</span></div>
     <ul>
+      <li><a href="frontend/index.html">Mokymasis</a></li>
       <li><a href="#resources">Ištekliai</a></li>
       <li><a href="exercises/index.html">Užduotys</a></li>
       <li><a href="textbook/index.html">Teorija</a></li>
@@ -271,7 +285,8 @@
     <h1>Matematika<br><span class="gradient">Lietuvos mokyklai.</span></h1>
     <p>Visa reikalinga Lietuvos mokyklos matematikos mokymuisi — vadovėliai, egzaminų instrukcijos, formulės ir daugiau.</p>
     <div class="cta-row">
-      <a href="#resources" class="btn btn-primary">Peržiūrėti išteklius &rarr;</a>
+      <a href="frontend/index.html" class="btn btn-primary">Pradėti mokytis &rarr;</a>
+      <a href="#resources" class="btn btn-ghost">Ištekliai</a>
       <a href="https://github.com/NoriuMokytisAI/math-project" class="btn btn-ghost">GitHub</a>
     </div>
   </section>
@@ -281,6 +296,12 @@
     <div class="section-label">Ištekliai</div>
     <h2 class="section-title">Mokymosi medžiaga</h2>
     <div class="cards">
+
+      <a href="frontend/index.html" class="card-link">
+        <div class="card-icon">🎓</div>
+        <h3>Interaktyvi mokymosi platforma <span class="badge-new">NAUJA</span></h3>
+        <p>Mokykis matematikos interaktyviai — pagal klases ir temas. Užduotys, teorija ir sprendimai vienoje vietoje.</p>
+      </a>
 
       <a href="resources/exams/matematikos_pupp_instrukcija_2026.pdf" target="_blank" class="card-link">
         <div class="card-icon">📝</div>
