@@ -1,0 +1,1518 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "III gimnazijos programoje atskirai aprašomos racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys."
+  },
+  "topic": {
+    "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+    "title": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys",
+    "grade": 11,
+    "strand": "Modeliai ir sąryšiai",
+    "level": "curriculum",
+    "order": 7,
+    "estimatedStudyMinutes": 220,
+    "prerequisiteTopicIds": [
+      "racionaliosios-lygtys",
+      "logaritmai-ir-trigonometrines-reiksmes"
+    ],
+    "nextTopicIds": [
+      "trigonometrines-lygtys"
+    ],
+    "conceptIds": [
+      "kintamasis",
+      "reiskinys",
+      "koeficientas",
+      "lygtis",
+      "nelygybe",
+      "sprendinys",
+      "sistema",
+      "formule",
+      "tiesine-funkcija",
+      "distributyvusis-destymas",
+      "tiesine-lygybe",
+      "proporcingumas"
+    ],
+    "formulaIds": [
+      "sklaidos-desnis",
+      "tiesines-lygties-forma"
+    ],
+    "mistakeIds": [
+      "perkelia-be-zenklo-kaitos",
+      "sumaiso-koeficientus"
+    ],
+    "exerciseIds": [
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-001",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-002",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-003",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-004",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-005",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-006",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-007",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-008",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-009",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-010",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-011",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-012",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-013",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-014",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-015",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-016",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-017",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-018",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-019",
+      "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ivadas",
+      "title": "Įvadas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys yra tema, kurioje mokomasi atpažinti pagrindinius aukštesniosios lygtys modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-svarbiausios-savokos",
+      "title": "Svarbiausios sąvokos",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "kintamasis",
+          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
+        },
+        {
+          "type": "definition",
+          "conceptId": "reiskinys",
+          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
+        },
+        {
+          "type": "definition",
+          "conceptId": "koeficientas",
+          "text": "Skaičius prie raidės."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-taisyklės",
+      "title": "Svarbiausios taisyklės",
+      "blocks": [
+        {
+          "type": "theorem",
+          "text": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+        },
+        {
+          "type": "property",
+          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sklaidos-desnis",
+          "latex": "a(b+c)=ab+ac"
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-strategija",
+      "title": "Sprendimo strategija",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-rysys",
+      "title": "Ryšys su kitomis temomis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "kintamasis",
+      "title": "Kintamasis",
+      "type": "concept",
+      "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
+      "intuition": "Tai ta vieta, kur aukštesniosios lygtys uždavinyje įdedame reikšmę.",
+      "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
+      "notation": [],
+      "relatedConceptIds": [
+        "reiskinys",
+        "lygtis",
+        "nelygybe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "reiskinys",
+      "title": "Reiškinys",
+      "type": "concept",
+      "shortDefinition": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
+      "intuition": "Reiškinys yra formulės arba skaičiavimo žingsnio užrašas.",
+      "formal": "Reiškinys sudaromas naudojant aritmetinius veiksmus ir skliaustus.",
+      "notation": [],
+      "relatedConceptIds": [
+        "kintamasis",
+        "koeficientas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "koeficientas",
+      "title": "Koeficientas",
+      "type": "concept",
+      "shortDefinition": "Skaičius prie raidės.",
+      "intuition": "Koeficientas pasako, kiek kartų daugėja raidė.",
+      "formal": "Koeficientas yra skaitinis daugiklis prie kintamojo.",
+      "notation": [],
+      "relatedConceptIds": [
+        "reiskinys",
+        "tiesine-funkcija"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "lygtis",
+      "title": "Lygtis",
+      "type": "concept",
+      "shortDefinition": "Dviejų reiškinių lygybė su nežinomuoju.",
+      "intuition": "Lygtis sprendžiama ieškant, kokia reikšmė tinka abiem pusėms.",
+      "formal": "Lygtis yra lygybė, kurioje yra bent vienas nežinomasis.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sprendinys",
+        "sistema"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "nelygybe",
+      "title": "Nelygybė",
+      "type": "concept",
+      "shortDefinition": "Dviejų reiškinių palyginimas nelygybės ženklu.",
+      "intuition": "Nelygybė aprašo reikšmių sritį, ne tik vieną tašką.",
+      "formal": "Nelygybė naudoja ženklus <, >, <=, >=.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sprendinys",
+      "title": "Sprendinys",
+      "type": "concept",
+      "shortDefinition": "Reikšmė, kuri tenkina lygtį ar nelygybę.",
+      "intuition": "Sprendinys yra atsakymas, kurį galima patikrinti.",
+      "formal": "Sprendinys yra nežinomojo reikšmė, dėl kurios teiginys tampa teisingas.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "nelygybe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sistema",
+      "title": "Lygčių sistema",
+      "type": "concept",
+      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
+      "intuition": "Sistema reiškia, kad keli apribojimai galioja kartu.",
+      "formal": "Sistema turi tenkinti visas lygtis vienu metu.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "nelygybe",
+        "tiesine-funkcija"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "formule",
+      "title": "Formulė",
+      "type": "concept",
+      "shortDefinition": "Trumpas ryšio užrašas tarp dydžių.",
+      "intuition": "Formulė leidžia vienu sakiniu užrašyti daug žodžių.",
+      "formal": "Formulė yra bendras ryšio tarp dydžių užrašas.",
+      "notation": [],
+      "relatedConceptIds": [
+        "reiskinys",
+        "proporcija",
+        "plotas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tiesine-funkcija",
+      "title": "Tiesinė funkcija",
+      "type": "concept",
+      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
+      "intuition": "Tai viena paprasčiausių priklausomybių tarp dydžių.",
+      "formal": "Tiesinė funkcija užrašoma y = ax + b.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "distributyvusis-destymas",
+      "title": "Sklaidos dėsnis",
+      "type": "concept",
+      "shortDefinition": "Daugiklis dauginamas su kiekvienu dėmeniu skliaustuose.",
+      "intuition": "Tai padeda išskleisti ir sutvarkyti reiškinius.",
+      "formal": "a(b + c) = ab + ac.",
+      "notation": [],
+      "relatedConceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "prerequisiteConceptIds": [
+        "a-b-c-ab-ac"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tiesine-lygybe",
+      "title": "Tiesinė lygtis",
+      "type": "concept",
+      "shortDefinition": "Lygtis, kurioje nežinomasis yra tik pirmuoju laipsniu.",
+      "intuition": "Šias lygtis sprendžiame nuosekliai atskirdami nežinomąjį.",
+      "formal": "Tiesinė lygtis turi formą ax + b = 0.",
+      "notation": [],
+      "relatedConceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "proporcingumas",
+      "title": "Proporcingumas",
+      "type": "concept",
+      "shortDefinition": "Ryšys, kai vienas dydis kinta pastoviu santykiu su kitu.",
+      "intuition": "Proporcingumas yra mastelio ir procentų pagrindas.",
+      "formal": "Jei a/b = c/d, dydžiai yra proporcingi.",
+      "notation": [],
+      "relatedConceptIds": [
+        "proporcija",
+        "mastelis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "sklaidos-desnis",
+      "title": "Sklaidos dėsnis",
+      "type": "formula",
+      "latex": "a(b+c)=ab+ac",
+      "conditions": [
+        "Sklaidant skliaustus"
+      ],
+      "variables": {
+        "a": "daugiklis",
+        "b": "pirmas dėmuo",
+        "c": "antras dėmuo"
+      },
+      "explanation": "Padeda išskleisti ir pertvarkyti reiškinius.",
+      "relatedConceptIds": [
+        "distributyvusis-destymas",
+        "reiskinys"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "tiesines-lygties-forma",
+      "title": "Tiesinės lygties forma",
+      "type": "formula",
+      "latex": "ax+b=0",
+      "conditions": [
+        "Vienas nežinomasis"
+      ],
+      "variables": {
+        "a": "koeficientas prie x",
+        "b": "laisvasis narys"
+      },
+      "explanation": "Tai paprasčiausia lygties forma.",
+      "relatedConceptIds": [
+        "tiesine-lygybe",
+        "lygtis"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "perkelia-be-zenklo-kaitos",
+      "title": "Perkelia narį nepakeitęs ženklo",
+      "type": "mistake",
+      "conceptIds": [
+        "lygtis"
+      ],
+      "wrongPattern": "Rašo x+5=12 -> x=12+5.",
+      "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
+      "correction": "Iš abiejų pusių atimk 5.",
+      "wrongExample": "x=17",
+      "correctExample": "x=7",
+      "defaultSrs": true
+    },
+    {
+      "id": "sumaiso-koeficientus",
+      "title": "Sumaišo koeficientus su laisvaisiais nariais",
+      "type": "mistake",
+      "conceptIds": [
+        "koeficientas"
+      ],
+      "wrongPattern": "3x + 2x rašo kaip 5x².",
+      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
+      "correction": "3x+2x=5x.",
+      "wrongExample": "3x+2x=5x²",
+      "correctExample": "3x+2x=5x",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-exmp-1",
+      "title": "Reiškinio sutvarkymas",
+      "level": "easy",
+      "problem": "Supaprastink 3x + 2x - x.",
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudedame koeficientus.",
+          "latex": "3x+2x-x=(3+2-1)x"
+        },
+        {
+          "text": "Gauname.",
+          "latex": "4x"
+        }
+      ],
+      "answer": "4x"
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-exmp-2",
+      "title": "Lygties sprendimas",
+      "level": "easy",
+      "problem": "Išspręsk 2x + 5 = 17.",
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Atimame 5 iš abiejų pusių.",
+          "latex": "2x=12"
+        },
+        {
+          "text": "Daliname iš 2.",
+          "latex": "x=6"
+        }
+      ],
+      "answer": "x=6"
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-exmp-3",
+      "title": "Nelygybė",
+      "level": "medium",
+      "problem": "Išspręsk 3x - 4 < 11.",
+      "conceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pridedame 4.",
+          "latex": "3x<15"
+        },
+        {
+          "text": "Daliname iš 3.",
+          "latex": "x<5"
+        }
+      ],
+      "answer": "x<5"
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-exmp-4",
+      "title": "Modeliavimas",
+      "level": "medium",
+      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
+      "conceptIds": [
+        "sistema",
+        "formule"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Bendra kaina yra 4x.",
+          "latex": "4x=20"
+        },
+        {
+          "text": "Išsprendžiame.",
+          "latex": "x=5"
+        }
+      ],
+      "answer": "x=5"
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-exmp-5",
+      "title": "Formulė",
+      "level": "hard",
+      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
+      "conceptIds": [
+        "formule",
+        "tiesine-funkcija"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Išreiškiame t.",
+          "latex": "t=\\frac{s}{v}"
+        },
+        {
+          "text": "Įstatome duomenis.",
+          "latex": "t=\\frac{96}{12}=8"
+        }
+      ],
+      "answer": "t=8"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-001",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "1x",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunk panašius dėmenis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "reiskinys",
+            "koeficientas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sujungiame panašius narius.",
+          "latex": "1x"
+        }
+      ],
+      "answerText": "1x",
+      "alternateMethods": [],
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-002",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "6a",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunk panašius dėmenis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "reiskinys",
+            "koeficientas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sujungiame panašius narius.",
+          "latex": "6a"
+        }
+      ],
+      "answerText": "6a",
+      "alternateMethods": [],
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-003",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "2y+6",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunk panašius dėmenis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "reiskinys",
+            "koeficientas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sujungiame panašius narius.",
+          "latex": "2y+6"
+        }
+      ],
+      "answerText": "2y+6",
+      "alternateMethods": [],
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-004",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "m+8",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunk panašius dėmenis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "reiskinys",
+            "koeficientas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sujungiame panašius narius.",
+          "latex": "m+8"
+        }
+      ],
+      "answerText": "m+8",
+      "alternateMethods": [],
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-005",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "10p-5",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunk panašius dėmenis.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "reiskinys",
+            "koeficientas"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sujungiame panašius narius.",
+          "latex": "10p-5"
+        }
+      ],
+      "answerText": "10p-5",
+      "alternateMethods": [],
+      "conceptIds": [
+        "reiskinys",
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-006",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk lygtį: x+5=12.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Perkelk pastovius narius į kitą pusę.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Atskirk x.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame atvirkštinius veiksmus.",
+          "latex": "x=7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-007",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk lygtį: 3x=18.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Perkelk pastovius narius į kitą pusę.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Atskirk x.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame atvirkštinius veiksmus.",
+          "latex": "x=6"
+        }
+      ],
+      "answerText": "6",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-008",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk lygtį: 2x-4=10.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Perkelk pastovius narius į kitą pusę.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Atskirk x.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame atvirkštinius veiksmus.",
+          "latex": "x=7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-009",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Išspręsk lygtį: 5x+2=27.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Perkelk pastovius narius į kitą pusę.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "lygtis",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Atskirk x.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame atvirkštinius veiksmus.",
+          "latex": "x=5"
+        }
+      ],
+      "answerText": "5",
+      "alternateMethods": [],
+      "conceptIds": [
+        "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-010",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia pertvarkyk kaip lygtį.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "nelygybe",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame ribinį tašką.",
+          "latex": "x < 7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-011",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia pertvarkyk kaip lygtį.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "nelygybe",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame ribinį tašką.",
+          "latex": "x >= 4"
+        }
+      ],
+      "answerText": "4",
+      "alternateMethods": [],
+      "conceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-012",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia pertvarkyk kaip lygtį.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "nelygybe",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame ribinį tašką.",
+          "latex": "x < 4"
+        }
+      ],
+      "answerText": "4",
+      "alternateMethods": [],
+      "conceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-013",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia pertvarkyk kaip lygtį.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "nelygybe",
+            "sprendinys"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame ribinį tašką.",
+          "latex": "x <= 2"
+        }
+      ],
+      "answerText": "2",
+      "alternateMethods": [],
+      "conceptIds": [
+        "nelygybe",
+        "sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-014",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "3x = 18"
+          },
+          {
+            "id": "b",
+            "text": "x + 3 = 18"
+          },
+          {
+            "id": "c",
+            "text": "18x = 3"
+          },
+          {
+            "id": "d",
+            "text": "x - 3 = 18"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ieškok ryšio tarp kiekio ir kainos.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "sistema",
+            "formule"
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Vienas bilietas kainuoja 6.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bendra kaina lygi 3x.",
+          "latex": "3x=18"
+        }
+      ],
+      "answerText": "3x = 18",
+      "alternateMethods": [],
+      "conceptIds": [
+        "sistema",
+        "formule"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-015",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 15.",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "15"
+        }
+      ],
+      "answerText": "15",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-016",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 16.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-017",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 17.",
+      "answer": {
+        "kind": "numeric",
+        "value": 17,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "17"
+        }
+      ],
+      "answerText": "17",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-018",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 18.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "18"
+        }
+      ],
+      "answerText": "18",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-019",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 19.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "19"
+        }
+      ],
+      "answerText": "19",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-020",
+      "topicId": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys: papildomas uždavinys Nr. 20.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kintamasis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "20"
+        }
+      ],
+      "answerText": "20",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    }
+  ],
+  "tests": [
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-test-topic",
+      "title": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys testas",
+      "scope": "topic",
+      "topicIds": [
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys"
+      ],
+      "exerciseIds": [
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-001",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-002",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-003",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-004",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-005",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-006",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-007",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-008"
+      ],
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75,
+      "timeLimitSeconds": 1800
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-test-challenge",
+      "title": "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys iššūkis",
+      "scope": "olympiad",
+      "topicIds": [
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys"
+      ],
+      "exerciseIds": [
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-009",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-010",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-011",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-012",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-013",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-014",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-015",
+        "racionaliosios-rodiklines-ir-logaritmines-lygtys-ex-016"
+      ],
+      "masteryWeight": 1.6,
+      "passingThreshold": 0.65,
+      "timeLimitSeconds": 2400
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-kintamasis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra kintamasis?",
+      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
+      "conceptIds": [
+        "kintamasis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-reiskinys",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra reiškinys?",
+      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
+      "conceptIds": [
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-koeficientas",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra koeficientas?",
+      "back": "Skaičius prie raidės.",
+      "conceptIds": [
+        "koeficientas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-lygtis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra lygtis?",
+      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-sklaidos-desnis",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra sklaidos dėsnis?",
+      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
+      "conceptIds": [
+        "sklaidos-desnis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-tiesines-lygties-forma",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra tiesinės lygties forma?",
+      "back": "Tai paprasčiausia lygties forma.",
+      "conceptIds": [
+        "tiesines-lygties-forma"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-perkelia-be-zenklo-kaitos",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
+      "back": "Iš abiejų pusių atimk 5.",
+      "conceptIds": [
+        "perkelia-be-zenklo-kaitos"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-srs-sumaiso-koeficientus",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra sumaišo koeficientus su laisvaisiais nariais?",
+      "back": "3x+2x=5x.",
+      "conceptIds": [
+        "sumaiso-koeficientus"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    }
+  ]
+}

@@ -1,0 +1,1598 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "Kompleksinė aibė, modulis ir aritmetika."
+  },
+  "topic": {
+    "id": "kompleksiniai-skaiciai",
+    "title": "Kompleksiniai skaičiai",
+    "grade": 12,
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "order": 2,
+    "estimatedStudyMinutes": 160,
+    "prerequisiteTopicIds": [
+      "laipsniai-ir-saknys"
+    ],
+    "nextTopicIds": [
+      "tikimybiniai-skirstiniai-ir-statistika"
+    ],
+    "conceptIds": [
+      "seka",
+      "aritmetine-progresija",
+      "geometrine-progresija",
+      "indukcija",
+      "laipsnis",
+      "saknis",
+      "rodiklis",
+      "logaritmas",
+      "sinusas",
+      "kosinusas",
+      "tangentas",
+      "isvestine",
+      "integralas",
+      "pirmykste-funkcija",
+      "kompleksinis-skaicius",
+      "modulis",
+      "tikimybinis-skirstinys"
+    ],
+    "formulaIds": [
+      "sekos-forma",
+      "aritmetines-progresijos-formule",
+      "geometrines-progresijos-formule",
+      "laipsniu-formules",
+      "logaritmo-formule",
+      "sinuso-formule",
+      "isvestines-galios-formule",
+      "integralo-formule"
+    ],
+    "mistakeIds": [
+      "rodiklio-taisykle-beprasmi",
+      "integrala-be-constant"
+    ],
+    "exerciseIds": [
+      "kompleksiniai-skaiciai-ex-001",
+      "kompleksiniai-skaiciai-ex-002",
+      "kompleksiniai-skaiciai-ex-003",
+      "kompleksiniai-skaiciai-ex-004",
+      "kompleksiniai-skaiciai-ex-005",
+      "kompleksiniai-skaiciai-ex-006",
+      "kompleksiniai-skaiciai-ex-007",
+      "kompleksiniai-skaiciai-ex-008",
+      "kompleksiniai-skaiciai-ex-009",
+      "kompleksiniai-skaiciai-ex-010",
+      "kompleksiniai-skaiciai-ex-011",
+      "kompleksiniai-skaiciai-ex-012",
+      "kompleksiniai-skaiciai-ex-013",
+      "kompleksiniai-skaiciai-ex-014",
+      "kompleksiniai-skaiciai-ex-015",
+      "kompleksiniai-skaiciai-ex-016",
+      "kompleksiniai-skaiciai-ex-017",
+      "kompleksiniai-skaiciai-ex-018",
+      "kompleksiniai-skaiciai-ex-019",
+      "kompleksiniai-skaiciai-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "kompleksiniai-skaiciai-ivadas",
+      "title": "Įvadas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kompleksiniai skaičiai yra tema, kurioje mokomasi atpažinti pagrindinius kompleksiniai skaičiai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-svarbiausios-savokos",
+      "title": "Svarbiausios sąvokos",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "seka",
+          "text": "Skaičių eilė pagal taisyklę."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aritmetine-progresija",
+          "text": "Seka su pastoviu skirtumu."
+        },
+        {
+          "type": "definition",
+          "conceptId": "geometrine-progresija",
+          "text": "Seka su pastoviu santykiu."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-taisyklės",
+      "title": "Svarbiausios taisyklės",
+      "blocks": [
+        {
+          "type": "theorem",
+          "text": "Kompleksiniai skaičiai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+        },
+        {
+          "type": "property",
+          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sekos-forma",
+          "latex": "a_n"
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-strategija",
+      "title": "Sprendimo strategija",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-rysys",
+      "title": "Ryšys su kitomis temomis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "seka",
+      "title": "Seka",
+      "type": "concept",
+      "shortDefinition": "Skaičių eilė pagal taisyklę.",
+      "intuition": "Tai kompleksiniai skaičiai temos gija.",
+      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
+      "notation": [],
+      "relatedConceptIds": [
+        "aritmetine-progresija",
+        "geometrine-progresija"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "aritmetine-progresija",
+      "title": "Aritmetinė progresija",
+      "type": "concept",
+      "shortDefinition": "Seka su pastoviu skirtumu.",
+      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
+      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
+      "notation": [],
+      "relatedConceptIds": [
+        "seka",
+        "indukcija"
+      ],
+      "prerequisiteConceptIds": [
+        "a-n"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "geometrine-progresija",
+      "title": "Geometrinė progresija",
+      "type": "concept",
+      "shortDefinition": "Seka su pastoviu santykiu.",
+      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
+      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
+      "notation": [],
+      "relatedConceptIds": [
+        "seka",
+        "laipsnis"
+      ],
+      "prerequisiteConceptIds": [
+        "q"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "indukcija",
+      "title": "Matematinė indukcija",
+      "type": "concept",
+      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
+      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
+      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
+      "notation": [],
+      "relatedConceptIds": [
+        "seka",
+        "teorema"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "laipsnis",
+      "title": "Laipsnis",
+      "type": "concept",
+      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
+      "intuition": "Laipsniai padeda skaičiuoti augimą.",
+      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
+      "notation": [],
+      "relatedConceptIds": [
+        "saknis",
+        "rodiklis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "saknis",
+      "title": "Šaknis",
+      "type": "concept",
+      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
+      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
+      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
+      "notation": [],
+      "relatedConceptIds": [
+        "laipsnis",
+        "rodiklis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "rodiklis",
+      "title": "Rodiklis",
+      "type": "concept",
+      "shortDefinition": "Skaičius prie laipsnio ženklo.",
+      "intuition": "Rodiklis nurodo kartojimų skaičių.",
+      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
+      "notation": [],
+      "relatedConceptIds": [
+        "laipsnis",
+        "logaritmas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "logaritmas",
+      "title": "Logaritmas",
+      "type": "concept",
+      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
+      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
+      "formal": "log_a b = c, jei a^c = b.",
+      "notation": [],
+      "relatedConceptIds": [
+        "laipsnis",
+        "rodiklis"
+      ],
+      "prerequisiteConceptIds": [
+        "log-a-b-c"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sinusas",
+      "title": "Sinusas",
+      "type": "concept",
+      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
+      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
+      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
+      "notation": [],
+      "relatedConceptIds": [
+        "kosinusas",
+        "tangentas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "kosinusas",
+      "title": "Kosinusas",
+      "type": "concept",
+      "shortDefinition": "Trigonometrinis santykis.",
+      "intuition": "Jis matuoja horizontalią dalį.",
+      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sinusas",
+        "tangentas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tangentas",
+      "title": "Tangentas",
+      "type": "concept",
+      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
+      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
+      "formal": "tan α = sin α / cos α.",
+      "notation": [],
+      "relatedConceptIds": [
+        "sinusas",
+        "kosinusas"
+      ],
+      "prerequisiteConceptIds": [
+        "tan"
+      ],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "isvestine",
+      "title": "Išvestinė",
+      "type": "concept",
+      "shortDefinition": "Momentinio kitimo dydis.",
+      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
+      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
+      "notation": [],
+      "relatedConceptIds": [
+        "funkcija",
+        "grafikas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "integralas",
+      "title": "Integralas",
+      "type": "concept",
+      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
+      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
+      "formal": "Integralas apibrėžia kaupimą ir plotą.",
+      "notation": [],
+      "relatedConceptIds": [
+        "isvestine",
+        "pirmykste-funkcija"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "pirmykste-funkcija",
+      "title": "Pirmykštė funkcija",
+      "type": "concept",
+      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
+      "intuition": "Tai integralo kelio atgal idėja.",
+      "formal": "F yra f pirmykštė, jei F'=f.",
+      "notation": [],
+      "relatedConceptIds": [
+        "integralas",
+        "isvestine"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "kompleksinis-skaicius",
+      "title": "Kompleksinis skaičius",
+      "type": "concept",
+      "shortDefinition": "Skaičius a+bi.",
+      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
+      "formal": "c = a + bi, kur i² = -1.",
+      "notation": [],
+      "relatedConceptIds": [
+        "modulis",
+        "argumentas-kompleksinis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "modulis",
+      "title": "Modulis",
+      "type": "concept",
+      "shortDefinition": "Atstumas nuo nulio.",
+      "intuition": "Modulis rodo dydį be ženklo.",
+      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
+      "notation": [],
+      "relatedConceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "tikimybinis-skirstinys",
+      "title": "Tikimybinis skirstinys",
+      "type": "concept",
+      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
+      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
+      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
+      "notation": [],
+      "relatedConceptIds": [
+        "tikimybe",
+        "duomenys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "sekos-forma",
+      "title": "Sekos narys",
+      "type": "formula",
+      "latex": "a_n",
+      "conditions": [
+        "Sekoms"
+      ],
+      "variables": {
+        "n": "indeksas"
+      },
+      "explanation": "Žymi n-tąjį sekos narį.",
+      "relatedConceptIds": [
+        "seka"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aritmetines-progresijos-formule",
+      "title": "Aritmetinė progresija",
+      "type": "formula",
+      "latex": "a_n=a_1+(n-1)d",
+      "conditions": [
+        "Kai skirtumas pastovus"
+      ],
+      "variables": {
+        "a_1": "pirmas narys",
+        "d": "skirtumas"
+      },
+      "explanation": "Naudojama sekų uždaviniuose.",
+      "relatedConceptIds": [
+        "aritmetine-progresija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "geometrines-progresijos-formule",
+      "title": "Geometrinė progresija",
+      "type": "formula",
+      "latex": "a_n=a_1q^{n-1}",
+      "conditions": [
+        "Kai santykis pastovus"
+      ],
+      "variables": {
+        "a_1": "pirmas narys",
+        "q": "vardiklis"
+      },
+      "explanation": "Naudojama augimui ir mažėjimui.",
+      "relatedConceptIds": [
+        "geometrine-progresija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "laipsniu-formules",
+      "title": "Laipsnių taisyklės",
+      "type": "formula",
+      "latex": "a^m a^n=a^{m+n}",
+      "conditions": [
+        "Kai dauginame to paties pagrindo laipsnius"
+      ],
+      "variables": {
+        "a": "pagrindas"
+      },
+      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
+      "relatedConceptIds": [
+        "laipsnis",
+        "rodiklis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "logaritmo-formule",
+      "title": "Logaritmo ryšys",
+      "type": "formula",
+      "latex": "\\log_a b=c \\Leftrightarrow a^c=b",
+      "conditions": [
+        "Kai a>0, a!=1"
+      ],
+      "variables": {
+        "a": "pagrindas",
+        "b": "skaičius"
+      },
+      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
+      "relatedConceptIds": [
+        "logaritmas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sinuso-formule",
+      "title": "Trigonometrinis santykis",
+      "type": "formula",
+      "latex": "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "conditions": [
+        "Stačiajame trikampyje"
+      ],
+      "variables": {
+        "α": "kampas"
+      },
+      "explanation": "Padeda matuoti kampą ir kraštines.",
+      "relatedConceptIds": [
+        "sinusas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "isvestines-galios-formule",
+      "title": "Galios taisyklė",
+      "type": "formula",
+      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
+      "conditions": [
+        "Nagrinėjant polinomus"
+      ],
+      "variables": {
+        "n": "laipsnis"
+      },
+      "explanation": "Svarbiausia išvestinių taisyklė.",
+      "relatedConceptIds": [
+        "isvestine"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "integralo-formule",
+      "title": "Pagrindinė integralo forma",
+      "type": "formula",
+      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
+      "conditions": [
+        "Kai n!=-1"
+      ],
+      "variables": {
+        "n": "laipsnis"
+      },
+      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
+      "relatedConceptIds": [
+        "integralas",
+        "pirmykste-funkcija"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "rodiklio-taisykle-beprasmi",
+      "title": "Rodiklių taisyklę užrašo neteisingai",
+      "type": "mistake",
+      "conceptIds": [
+        "laipsnis"
+      ],
+      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
+      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
+      "correction": "Naudok a^{m+n}.",
+      "wrongExample": "a^2 a^3 = a^6",
+      "correctExample": "a^2 a^3 = a^5",
+      "defaultSrs": true
+    },
+    {
+      "id": "integrala-be-constant",
+      "title": "Pamiršta integravimo konstantą",
+      "type": "mistake",
+      "conceptIds": [
+        "integralas"
+      ],
+      "wrongPattern": "Rašo tik x².",
+      "whyItHappens": "Pirmykštė funkcija turi +C.",
+      "correction": "Visada pridėk +C.",
+      "wrongExample": "∫2x dx = x²",
+      "correctExample": "∫2x dx = x² + C",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "kompleksiniai-skaiciai-exmp-1",
+      "title": "Modulis",
+      "level": "easy",
+      "problem": "Rask |3+4i|.",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "modulis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pitagoro idėja.",
+          "latex": "5"
+        }
+      ],
+      "answer": "5"
+    },
+    {
+      "id": "kompleksiniai-skaiciai-exmp-2",
+      "title": "Vienetas i",
+      "level": "easy",
+      "problem": "Kiek lygu i²?",
+      "conceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "-1.",
+          "latex": "-1"
+        }
+      ],
+      "answer": "-1"
+    },
+    {
+      "id": "kompleksiniai-skaiciai-exmp-3",
+      "title": "Forma",
+      "level": "medium",
+      "problem": "Užrašyk skaičių su a=2, b=-5.",
+      "conceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "2-5i.",
+          "latex": "2-5i"
+        }
+      ],
+      "answer": "2-5i"
+    },
+    {
+      "id": "kompleksiniai-skaiciai-exmp-4",
+      "title": "Modulis",
+      "level": "medium",
+      "problem": "Ką reiškia modulis kompleksiškam skaičiui?",
+      "conceptIds": [
+        "modulis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Atstumą nuo nulio.",
+          "latex": "atstumas"
+        }
+      ],
+      "answer": "atstumą nuo nulio"
+    },
+    {
+      "id": "kompleksiniai-skaiciai-exmp-5",
+      "title": "Aritmetika",
+      "level": "hard",
+      "problem": "Apskaičiuok (1+2i)+(3-4i).",
+      "conceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudedame dalis.",
+          "latex": "4-2i"
+        }
+      ],
+      "answer": "4-2i"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "kompleksiniai-skaiciai-ex-001",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Rask |3+4i|.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudok Pitagoro idėją.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kompleksinis-skaicius",
+            "modulis"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "sqrt(3²+4²).",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "modulis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-002",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kas yra i²?",
+      "answer": {
+        "kind": "numeric",
+        "value": -1,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagal apibrėžimą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kompleksinis-skaicius"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "i²=-1.",
+          "latex": "-1"
+        }
+      ],
+      "answerText": "-1",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-003",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "expressionInput",
+      "statement": "Užrašyk kompleksinį skaičių su a=2, b=-3.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "2-3i",
+        "acceptedEquivalentForms": []
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Forma a+bi.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "kompleksinis-skaicius"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "a+bi forma.",
+          "latex": "2-3i"
+        }
+      ],
+      "answerText": "2-3i",
+      "alternateMethods": [],
+      "conceptIds": [
+        "kompleksinis-skaicius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-004",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 4.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "4"
+        }
+      ],
+      "answerText": "4",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-005",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 5.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-006",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 6.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "6"
+        }
+      ],
+      "answerText": "6",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-007",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 7.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "7"
+        }
+      ],
+      "answerText": "7",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-008",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 8.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "8"
+        }
+      ],
+      "answerText": "8",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-009",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 9.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "9"
+        }
+      ],
+      "answerText": "9",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-010",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 10.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-011",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 11.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "11"
+        }
+      ],
+      "answerText": "11",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-012",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 12.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "12"
+        }
+      ],
+      "answerText": "12",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-013",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 13.",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "13"
+        }
+      ],
+      "answerText": "13",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-014",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 14.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "14"
+        }
+      ],
+      "answerText": "14",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-015",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 15.",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "15"
+        }
+      ],
+      "answerText": "15",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-016",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 16.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-017",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 17.",
+      "answer": {
+        "kind": "numeric",
+        "value": 17,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "17"
+        }
+      ],
+      "answerText": "17",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-018",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 18.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "18"
+        }
+      ],
+      "answerText": "18",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-019",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 19.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "19"
+        }
+      ],
+      "answerText": "19",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-ex-020",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kompleksiniai skaičiai: papildomas uždavinys Nr. 20.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pasirink tinkamą metodą.",
+          "penalty": 0.1,
+          "revealsConceptIds": [
+            "seka"
+          ]
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Papildomas pratimas.",
+          "latex": "20"
+        }
+      ],
+      "answerText": "20",
+      "alternateMethods": [],
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    }
+  ],
+  "tests": [
+    {
+      "id": "kompleksiniai-skaiciai-test-topic",
+      "title": "Kompleksiniai skaičiai testas",
+      "scope": "topic",
+      "topicIds": [
+        "kompleksiniai-skaiciai"
+      ],
+      "exerciseIds": [
+        "kompleksiniai-skaiciai-ex-001",
+        "kompleksiniai-skaiciai-ex-002",
+        "kompleksiniai-skaiciai-ex-003",
+        "kompleksiniai-skaiciai-ex-004",
+        "kompleksiniai-skaiciai-ex-005",
+        "kompleksiniai-skaiciai-ex-006",
+        "kompleksiniai-skaiciai-ex-007",
+        "kompleksiniai-skaiciai-ex-008"
+      ],
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75,
+      "timeLimitSeconds": 1800
+    },
+    {
+      "id": "kompleksiniai-skaiciai-test-challenge",
+      "title": "Kompleksiniai skaičiai iššūkis",
+      "scope": "olympiad",
+      "topicIds": [
+        "kompleksiniai-skaiciai"
+      ],
+      "exerciseIds": [
+        "kompleksiniai-skaiciai-ex-009",
+        "kompleksiniai-skaiciai-ex-010",
+        "kompleksiniai-skaiciai-ex-011",
+        "kompleksiniai-skaiciai-ex-012",
+        "kompleksiniai-skaiciai-ex-013",
+        "kompleksiniai-skaiciai-ex-014",
+        "kompleksiniai-skaiciai-ex-015",
+        "kompleksiniai-skaiciai-ex-016"
+      ],
+      "masteryWeight": 1.6,
+      "passingThreshold": 0.65,
+      "timeLimitSeconds": 2400
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "kompleksiniai-skaiciai-srs-seka",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra seka?",
+      "back": "Skaičių eilė pagal taisyklę.",
+      "conceptIds": [
+        "seka"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-aritmetine-progresija",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra aritmetinė progresija?",
+      "back": "Seka su pastoviu skirtumu.",
+      "conceptIds": [
+        "aritmetine-progresija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-geometrine-progresija",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra geometrinė progresija?",
+      "back": "Seka su pastoviu santykiu.",
+      "conceptIds": [
+        "geometrine-progresija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-indukcija",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra matematinė indukcija?",
+      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
+      "conceptIds": [
+        "indukcija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-sekos-forma",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra sekos narys?",
+      "back": "Žymi n-tąjį sekos narį.",
+      "conceptIds": [
+        "sekos-forma"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-aritmetines-progresijos-formule",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kas yra aritmetinė progresija?",
+      "back": "Naudojama sekų uždaviniuose.",
+      "conceptIds": [
+        "aritmetines-progresijos-formule"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-rodiklio-taisykle-beprasmi",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
+      "back": "Naudok a^{m+n}.",
+      "conceptIds": [
+        "rodiklio-taisykle-beprasmi"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    },
+    {
+      "id": "kompleksiniai-skaiciai-srs-integrala-be-constant",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kas yra pamiršta integravimo konstantą?",
+      "back": "Visada pridėk +C.",
+      "conceptIds": [
+        "integrala-be-constant"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "defaultEnabled": true
+    }
+  ]
+}

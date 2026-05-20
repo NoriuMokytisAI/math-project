@@ -1,0 +1,12 @@
+{
+  "name": "aimath",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npm --prefix frontend start",
+    "dev": "npm --prefix frontend run dev",
+    "test": "npm --prefix frontend test",
+    "validate:content": "python scripts/validate_content.py"
+  }
+}
