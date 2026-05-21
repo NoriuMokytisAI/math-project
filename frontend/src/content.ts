@@ -1,12 +1,24 @@
 import {
-  curriculum as rawCurriculum,
-  concepts as rawConcepts,
-  exercises as rawExercises,
-  tests as rawTests,
-  goals as rawGoals,
-  achievements as rawAchievements,
+  curriculum as rawCurriculum
+} from "./generated/curriculum.generated.js";
+import {
+  concepts as rawConcepts
+} from "./generated/concepts.generated.js";
+import {
+  exercises as rawExercises
+} from "./generated/exercises.generated.js";
+import {
+  tests as rawTests
+} from "./generated/tests.generated.js";
+import {
+  goals as rawGoals
+} from "./generated/goals.generated.js";
+import {
+  achievements as rawAchievements
+} from "./generated/achievements.generated.js";
+import {
   topics as rawTopics
-} from "./content.generated.js";
+} from "./generated/topics.generated.js";
 import { Topic, Concept, Exercise, Test } from "./types";
 
 export const curriculum: Record<string, string[]> = rawCurriculum;

@@ -163,6 +163,11 @@ def render_content() -> str:
                 accepted_answers = [answer_value]
                 answer_tolerance = answer.get("tolerance", 0)
                 choices = []
+            elif answer["kind"] == "structuredReasoning":
+                answer_value = answer.get("expectedConclusion", "")
+                accepted_answers = [answer_value]
+                answer_tolerance = 0
+                choices = []
             else:
                 answer_value = answer["canonical"]
                 accepted_answers = [answer["canonical"], *answer.get("acceptedEquivalentForms", [])]

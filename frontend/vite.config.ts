@@ -9,7 +9,14 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
+        entryFileNames: 'assets/[name]-[hash].jstxt',
+        chunkFileNames: 'assets/[name]-[hash].jstxt',
+        assetFileNames: 'assets/[name]-[hash][extname]',
         manualChunks(id) {
+          if (id.includes('/src/generated/') || id.includes('\\src\\generated\\') || id.includes('.generated.js')) {
+            const file = id.split(/[\\/]/).pop()?.replace('.generated.js', '') || 'generated';
+            return `generated-${file}`;
+          }
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor-react';
           }

@@ -89,7 +89,8 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
                 </div>
                 <div className="grade-topic-list">
                   {group.topicsList.map((topic) => {
-                    const mastery = state.mastery[topic.id]?.value || 0;
+                    const topicMastery = state.mastery[topic.id];
+                    const mastery = (topic as any).level === "olympiad" ? (topicMastery?.olympiadValue ?? 0) : (topicMastery?.value || 0);
                     return (
                       <article key={topic.id} className="grade-topic">
                         <div>

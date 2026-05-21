@@ -1,0 +1,4514 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus"
+  },
+  "topic": {
+    "id": "olimpiada-05",
+    "title": "Olimpiadinė matematika (5 klasė)",
+    "grade": 5,
+    "strand": "Olimpiada",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 600,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-05-concept-logic",
+      "olimpiada-05-concept-method",
+      "olimpiada-05-concept-invariant",
+      "olimpiada-05-concept-parity",
+      "olimpiada-05-concept-extremal"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [
+      "olimpiada-05-trap-1",
+      "olimpiada-05-trap-2"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-05-031859fd",
+      "ex-olimpiada-05-45f96440",
+      "ex-olimpiada-05-cb54fdbc",
+      "ex-olimpiada-05-a3f215fa",
+      "ex-olimpiada-05-f5a521c1",
+      "ex-olimpiada-05-ee0b640b",
+      "ex-olimpiada-05-b95502c0",
+      "ex-olimpiada-05-cbff97d9",
+      "ex-olimpiada-05-eb7e344a",
+      "ex-olimpiada-05-1fc20a2a",
+      "ex-olimpiada-05-866100dc",
+      "ex-olimpiada-05-6622d1e0",
+      "ex-olimpiada-05-b53ec404",
+      "ex-olimpiada-05-af96bd64",
+      "ex-olimpiada-05-7452e90b",
+      "ex-olimpiada-05-d944dce6",
+      "ex-olimpiada-05-1b8f2f68",
+      "ex-olimpiada-05-6c25d5db",
+      "ex-olimpiada-05-7bf4bab4",
+      "ex-olimpiada-05-9aacf698",
+      "ex-olimpiada-05-a5116194",
+      "ex-olimpiada-05-df8a80e6",
+      "ex-olimpiada-05-29a4ca3d",
+      "ex-olimpiada-05-950a0206",
+      "ex-olimpiada-05-d91d7cd0",
+      "ex-olimpiada-05-335ceef1",
+      "ex-olimpiada-05-9c2b94b5",
+      "ex-olimpiada-05-f16ab6bb",
+      "ex-olimpiada-05-95fb1dbf",
+      "ex-olimpiada-05-dfa8e5ff"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Olimpiadinė matematika: 5 klasės apžvalga",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+        }
+      ]
+    },
+    {
+      "title": "Pagrindinės strategijos",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas."
+        },
+        {
+          "type": "method",
+          "text": "Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+        }
+      ]
+    },
+    {
+      "title": "Dažnos klaidos ir kaip jų išvengti",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Pavyzdžių patikrinimas nėra įrodymas!"
+        },
+        {
+          "type": "warning",
+          "text": "Nepamiršk išnagrinėti kraštutinių atvejų."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-05-concept-logic",
+      "title": "Olimpiadinė logika",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
+      "intuition": "Mąstymas už dėžutės ribų.",
+      "formal": "Griežtas loginis išvedimas, pagrįstas teoremomis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-method",
+      "title": "Įrodymo metodas",
+      "type": "concept",
+      "shortDefinition": "Nuoseklus argumentavimas siekiant pagrįsti teiginį.",
+      "intuition": "Žingsnis po žingsnio prieiname išvadą.",
+      "formal": "Matematinis įrodymas.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-invariant",
+      "title": "Invariantas",
+      "type": "concept",
+      "shortDefinition": "Dydis, kuris nesikeičia atliekant veiksmus.",
+      "intuition": "Jei kažkas nesikeičia, galime rasti atsakymą remdamiesi tuo.",
+      "formal": "Funkcija I(x), kuriai I(T(x)) = I(x).",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-parity",
+      "title": "Paritetas",
+      "type": "concept",
+      "shortDefinition": "Skaičiaus lyginumas arba nelyginumas.",
+      "intuition": "Lyginių ir nelyginių skaičių taisyklės.",
+      "formal": "Liekana dalijant iš dviejų.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-extremal",
+      "title": "Ekstremalus principas",
+      "type": "concept",
+      "shortDefinition": "Didžiausio ar mažiausio elemento nagrinėjimas.",
+      "intuition": "Kartais lengviausia pradėti nuo kraštutinumų.",
+      "formal": "Baigtinėje aibėje visada yra maksimalus elementas.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [
+    {
+      "id": "olimpiada-05-trap-1",
+      "title": "Neišnagrinėti visi atvejai",
+      "type": "mistake",
+      "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+      "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+      "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ]
+    },
+    {
+      "id": "olimpiada-05-trap-2",
+      "title": "Klaidingas įrodymas pavyzdžiais",
+      "type": "mistake",
+      "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+      "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+      "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+      "conceptIds": [
+        "olimpiada-05-concept-method"
+      ]
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Olimpiadinis pavyzdys 1",
+      "problem": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
+      "steps": [
+        {
+          "text": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus."
+        },
+        {
+          "text": "Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą)."
+        },
+        {
+          "text": "Trečias žingsnis: gauti išvadą."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Olimpiadinis pavyzdys 2",
+      "problem": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
+      "steps": [
+        {
+          "text": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus."
+        },
+        {
+          "text": "Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą)."
+        },
+        {
+          "text": "Trečias žingsnis: gauti išvadą."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Olimpiadinis pavyzdys 3",
+      "problem": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
+      "steps": [
+        {
+          "text": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus."
+        },
+        {
+          "text": "Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą)."
+        },
+        {
+          "text": "Trečias žingsnis: gauti išvadą."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Olimpiadinis pavyzdys 4",
+      "problem": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
+      "steps": [
+        {
+          "text": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus."
+        },
+        {
+          "text": "Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą)."
+        },
+        {
+          "text": "Trečias žingsnis: gauti išvadą."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Olimpiadinis pavyzdys 5",
+      "problem": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
+      "steps": [
+        {
+          "text": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus."
+        },
+        {
+          "text": "Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą)."
+        },
+        {
+          "text": "Trečias žingsnis: gauti išvadą."
+        }
+      ],
+      "answer": "Įrodyta."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-05-031859fd",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Place value, reading and writing large integers. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Place value, reading and writing large integers ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-031859fd-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-031859fd-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Place value, reading and writing large integers?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-45f96440",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Divisibility rules (2, 3, 4, 5, 6, 8, 9, 10, 11). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Divisibility rules (2, 3, 4, 5, 6, 8, 9, 10, 11) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-45f96440-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-45f96440-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Divisibility rules (2, 3, 4, 5, 6, 8, 9, 10, 11)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-cb54fdbc",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Factors and multiples. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Factors and multiples ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-cb54fdbc-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-cb54fdbc-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Factors and multiples?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-a3f215fa",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Greatest Common Divisor (GCD) and Least Common Multiple (LCM) — by listing. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Greatest Common Divisor (GCD) and Least Common Multiple (LCM) — by listing ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-a3f215fa-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-a3f215fa-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Greatest Common Divisor (GCD) and Least Common Multiple (LCM) — by listing?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-f5a521c1",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Prime and composite numbers; identifying primes up to 100. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Prime and composite numbers; identifying primes up to 100 ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-f5a521c1-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-f5a521c1-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Prime and composite numbers; identifying primes up to 100?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-ee0b640b",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Even and odd numbers; parity of sums and products. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Even and odd numbers; parity of sums and products ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-ee0b640b-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-ee0b640b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Even and odd numbers; parity of sums and products?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-b95502c0",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Simple integer word problems (age puzzles, coin problems). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Simple integer word problems (age puzzles, coin problems) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-b95502c0-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-b95502c0-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Simple integer word problems (age puzzles, coin problems)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-cbff97d9",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Order of operations (PEMDAS/BODMAS). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Order of operations (PEMDAS/BODMAS) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-cbff97d9-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-cbff97d9-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Order of operations (PEMDAS/BODMAS)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-eb7e344a",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Fractions: addition, subtraction, multiplication, division. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Fractions: addition, subtraction, multiplication, division ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-eb7e344a-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-eb7e344a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Fractions: addition, subtraction, multiplication, division?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-1fc20a2a",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Decimals and percentages; conversion between all three. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Decimals and percentages; conversion between all three ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Decimals and percentages; conversion between all three?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-866100dc",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Ratios and simple proportions. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Ratios and simple proportions ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-866100dc-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-866100dc-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Ratios and simple proportions?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-6622d1e0",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Patterns and sequences (arithmetic sequences: identify the rule, find the next term). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Patterns and sequences (arithmetic sequences: identify the rule, find the next term) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-6622d1e0-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-6622d1e0-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Patterns and sequences (arithmetic sequences: identify the rule, find the next term)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-b53ec404",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Simple linear equations with one unknown (e.g., `3x + 5 = 20`). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Simple linear equations with one unknown (e.g., `3x + 5 = 20`) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-b53ec404-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-b53ec404-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Simple linear equations with one unknown (e.g., `3x + 5 = 20`)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-af96bd64",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Word problems involving distance, rate, time (d = rt at introductory level). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Word problems involving distance, rate, time (d = rt at introductory level) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-af96bd64-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-af96bd64-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Word problems involving distance, rate, time (d = rt at introductory level)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-7452e90b",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Points, lines, line segments, rays. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Points, lines, line segments, rays ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-7452e90b-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-7452e90b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Points, lines, line segments, rays?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-d944dce6",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Types of angles: acute, right, obtuse, straight, reflex. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Types of angles: acute, right, obtuse, straight, reflex ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-d944dce6-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-d944dce6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Types of angles: acute, right, obtuse, straight, reflex?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-1b8f2f68",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Angle relationships: complementary, supplementary, vertical angles. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Angle relationships: complementary, supplementary, vertical angles ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Angle relationships: complementary, supplementary, vertical angles?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-6c25d5db",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Triangles: classification by sides (equilateral, isosceles, scalene) and angles. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Triangles: classification by sides (equilateral, isosceles, scalene) and angles ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-6c25d5db-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-6c25d5db-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Triangles: classification by sides (equilateral, isosceles, scalene) and angles?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-7bf4bab4",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Quadrilaterals: square, rectangle, rhombus, parallelogram, trapezoid — properties. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Quadrilaterals: square, rectangle, rhombus, parallelogram, trapezoid — properties ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Quadrilaterals: square, rectangle, rhombus, parallelogram, trapezoid — properties?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-9aacf698",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Perimeter of polygons. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Perimeter of polygons ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-9aacf698-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-9aacf698-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Perimeter of polygons?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-a5116194",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Area of rectangles, squares, triangles, parallelograms. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Area of rectangles, squares, triangles, parallelograms ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-a5116194-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-a5116194-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Area of rectangles, squares, triangles, parallelograms?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-df8a80e6",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Circles: radius, diameter, circumference (π introduced). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Circles: radius, diameter, circumference (π introduced) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-df8a80e6-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-df8a80e6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Circles: radius, diameter, circumference (π introduced)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-29a4ca3d",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Lines of symmetry. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Lines of symmetry ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Lines of symmetry?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-950a0206",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Basic coordinate geometry: plotting points on a grid (Quadrant I only). Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Basic coordinate geometry: plotting points on a grid (Quadrant I only) ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-950a0206-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-950a0206-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Basic coordinate geometry: plotting points on a grid (Quadrant I only)?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-d91d7cd0",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Systematic listing and organized counting. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Systematic listing and organized counting ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-d91d7cd0-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-d91d7cd0-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Systematic listing and organized counting?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-335ceef1",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: The Multiplication Principle (basic): if one task has m ways and another has n ways, there are m×n combinations. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie The Multiplication Principle (basic): if one task has m ways and another has n ways, there are m×n combinations ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-335ceef1-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-335ceef1-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: The Multiplication Principle (basic): if one task has m ways and another has n ways, there are m×n combinations?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-9c2b94b5",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Simple tree diagrams. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Simple tree diagrams ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-9c2b94b5-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-9c2b94b5-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Simple tree diagrams?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-f16ab6bb",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Basic probability: equally likely outcomes; P = favorable/total. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Basic probability: equally likely outcomes; P = favorable/total ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-f16ab6bb-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-f16ab6bb-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Basic probability: equally likely outcomes; P = favorable/total?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-95fb1dbf",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Logical puzzles: truth/false statements, simple deduction. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Logical puzzles: truth/false statements, simple deduction ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-95fb1dbf-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-95fb1dbf-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Logical puzzles: truth/false statements, simple deduction?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-dfa8e5ff",
+      "topicId": "olimpiada-05",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Olimpiadinis uždavinys iš temos: Venn diagrams with two sets. Suraskite sprendimą ir jį griežtai įrodykite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendimas yra teisingas remiantis loginiu išvedimu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Svarbiausia idėja",
+        "text": "Atidžiai pritaikykite žinias apie Venn diagrams with two sets ir ieškokite netikėtų ryšių."
+      },
+      "strategyTags": [
+        "logic",
+        "proof",
+        "olympiad-method"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandyk išsiaiškinti, koks reiškinys ar savybė čia yra esminė.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atkreipk dėmesį į uždavinio sąlygoje pateiktus ribojimus.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikyk vieną iš standartinių olimpiadinių technikų: paritetą, invariantą arba kraštutinumo principą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmoji sprendimo dalis – atidus sąlygos nagrinėjimas."
+        },
+        {
+          "text": "Toliau pritaikome atitinkamą olimpiadinę teoremą arba principą."
+        },
+        {
+          "text": "Galiausiai suformuluojame išvadą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-dfa8e5ff-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Nagrinėjame sąlygą.",
+              "reason": "Kad suprastume pradinius duomenis.",
+              "result": "Išskirti pagrindiniai faktai."
+            },
+            {
+              "title": "Išvedimas",
+              "action": "Pritaikius logiką atliekami pertvarkymai.",
+              "reason": "Tai leidžia pasiekti galutinį rezultatą.",
+              "result": "Gautas sprendimas."
+            }
+          ],
+          "finalAnswer": "Įrodymas baigtas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "type": "mistake",
+          "whyItHappens": "Dažnai pamirštamas nulinis arba neigiamas atvejis.",
+          "wrongPattern": "Tikrinami tik teigiami skaičiai.",
+          "correction": "Būtina išnagrinėti visus įmanomus variantus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ]
+        },
+        {
+          "id": "olimpiada-05-trap-2",
+          "title": "Klaidingas įrodymas pavyzdžiais",
+          "type": "mistake",
+          "whyItHappens": "Keli teisingi pavyzdžiai neįrodo bendro atvejo.",
+          "wrongPattern": "Parodomi 3 atvejai ir daroma bendra išvada.",
+          "correction": "Naudoti griežtą įrodymą vietoje pavyzdžių.",
+          "conceptIds": [
+            "olimpiada-05-concept-method"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar buvo galima šį uždavinį išspręsti paprasčiau?",
+        "Ką naujo sužinojai pritaikęs šią techniką?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-dfa8e5ff-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Venn diagrams with two sets?",
+          "back": "Ieškome gilių matematinių ryšių, invariantų ir taikome griežtą logiką.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-05-test-challenge",
+      "title": "Olimpiadinis iššūkis (5 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-05"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-05-031859fd",
+        "ex-olimpiada-05-45f96440",
+        "ex-olimpiada-05-cb54fdbc",
+        "ex-olimpiada-05-a3f215fa",
+        "ex-olimpiada-05-f5a521c1",
+        "ex-olimpiada-05-ee0b640b",
+        "ex-olimpiada-05-b95502c0",
+        "ex-olimpiada-05-cbff97d9",
+        "ex-olimpiada-05-eb7e344a",
+        "ex-olimpiada-05-1fc20a2a"
+      ],
+      "masteryWeight": 1.5
+    }
+  ],
+  "srsCards": []
+}

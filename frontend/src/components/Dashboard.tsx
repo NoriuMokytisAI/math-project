@@ -204,14 +204,21 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
                 </div>
                 <div className="topic-grid">
                   {group.topicsList.map((topic) => {
-                    const m = state.mastery[topic.id] || { value: 0, label: "Pradžia", solved: 0, total: 0 };
+                    const topicMastery = state.mastery[topic.id];
+                    const isOlympiadTopic = (topic as any).level === "olympiad";
+                    const val = isOlympiadTopic ? (topicMastery?.olympiadValue ?? 0) : (topicMastery?.value || 0);
+                    const label = isOlympiadTopic 
+                      ? (val < 25 ? "Pradžia" : val < 50 ? "Įsibėgėja" : val < 75 ? "Stipru" : "Meistras") 
+                      : (topicMastery?.label || "Pradžia");
+                    const solved = isOlympiadTopic ? (topicMastery?.olympiadSolved || 0) : (topicMastery?.solved || 0);
+                    const total = isOlympiadTopic ? (topicMastery?.olympiadTotal || 0) : (topicMastery?.total || 0);
                     return (
                       <article key={topic.id} className="topic-card">
-                        <div className="progress-ring" style={{ '--p': m.value } as React.CSSProperties}>{m.value}%</div>
+                        <div className="progress-ring" style={{ '--p': val } as React.CSSProperties}>{val}%</div>
                         <div className="topic-card-body">
                           <h3>{topic.title}</h3>
-                          <p>{m.label} • {m.solved}/{m.total} užd.</p>
-                          <div className="mastery-bar" style={{ '--p': m.value } as React.CSSProperties}>
+                          <p>{label} • {solved}/{total} užd.</p>
+                          <div className="mastery-bar" style={{ '--p': val } as React.CSSProperties}>
                             <span></span>
                           </div>
                           <div className="actions compact">

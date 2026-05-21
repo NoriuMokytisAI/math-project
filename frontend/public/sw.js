@@ -1,8 +1,8 @@
-const CACHE = "noriu-mokyti-web-v3";
+const CACHE = "noriu-mokyti-web-v4";
 const ASSETS = [
   "./",
   "./index.html",
-  "./manifest.webmanifest",
+  "./manifest.json",
   "./assets/icon.svg"
 ];
 

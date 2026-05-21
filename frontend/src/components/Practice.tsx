@@ -51,12 +51,12 @@ export const Practice: React.FC<PracticeProps> = ({
 
   // Auto select mode tab based on startMode on mount/topic change
   useEffect(() => {
-    if (startMode === 'olympiad' && hasOlympiad) {
+    if ((startMode === 'olympiad' || curriculumPool.length === 0) && hasOlympiad) {
       setPracticeMode('olympiad');
     } else {
       setPracticeMode('curriculum');
     }
-  }, [activeTopicId, startMode, hasOlympiad]);
+  }, [activeTopicId, startMode, hasOlympiad, curriculumPool.length]);
 
   // Determine active pool
   const currentPool = practiceMode === 'olympiad' ? olympiadPool : curriculumPool;
