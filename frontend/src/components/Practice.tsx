@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { State, Exercise } from '../types';
-import { exercises as allExercises, topics } from '../content';
-import { recordAttempt } from '../systems';
+import { exercises as allExercises, topics, concepts } from '../content';
+import { recordAttempt, ensureSrsCard } from '../systems';
+import { inferStartMode } from '../startModes';
 import { MathText } from './MathText';
 
 interface PracticeProps {
@@ -23,6 +24,12 @@ export const Practice: React.FC<PracticeProps> = ({
   const topic = topics[activeTopicId];
 
   const pool = allExercises.filter((ex) => ex.topicId === activeTopicId);
+  const curriculumPool = pool.filter((ex) => ex.level !== 'olympiad');
+  const olympiadPool = pool.filter((ex) => ex.level === 'olympiad');
+  const hasOlympiad = olympiadPool.length > 0;
+
+  // Tabs / Modes
+  const [practiceMode, setPracticeMode] = useState<'curriculum' | 'olympiad'>('curriculum');
 
   // Practice session state
   const [currentExercise, setCurrentExercise] = useState<Exercise | null>(null);
@@ -33,13 +40,35 @@ export const Practice: React.FC<PracticeProps> = ({
   const [selectedChoice, setSelectedChoice] = useState("");
   const [startedAt, setStartedAt] = useState(Date.now());
 
+  // Olympiad Specific States
+  const [showFirstObservation, setShowFirstObservation] = useState(false);
+  const [scratchpadText, setScratchpadText] = useState("");
+  const [addedSrsCardIds, setAddedSrsCardIds] = useState<Set<string>>(new Set());
+  const [openSolutionMethods, setOpenSolutionMethods] = useState<Set<string>>(new Set());
+  const [selfCheckDraft, setSelfCheckDraft] = useState("");
+
+  const startMode = inferStartMode(state.profile);
+
+  // Auto select mode tab based on startMode on mount/topic change
+  useEffect(() => {
+    if (startMode === 'olympiad' && hasOlympiad) {
+      setPracticeMode('olympiad');
+    } else {
+      setPracticeMode('curriculum');
+    }
+  }, [activeTopicId, startMode, hasOlympiad]);
+
+  // Determine active pool
+  const currentPool = practiceMode === 'olympiad' ? olympiadPool : curriculumPool;
+
   // Pick next exercise
-  const loadNextExercise = (newPool = pool) => {
+  const loadNextExercise = (newPool = currentPool) => {
     if (!newPool.length) {
       setCurrentExercise(null);
       return;
     }
     const solved = new Set(state.attempts.filter((a) => a.correct).map((a) => a.exerciseId));
+    // Prefer unsolved, or pick random
     const next = newPool.find((ex) => !solved.has(ex.id)) || newPool[Math.floor(Math.random() * newPool.length)];
 
     setCurrentExercise(next);
@@ -49,198 +78,739 @@ export const Practice: React.FC<PracticeProps> = ({
     setTextAnswer("");
     setSelectedChoice("");
     setStartedAt(Date.now());
+
+    // Reset Olympiad states
+    setShowFirstObservation(false);
+    setScratchpadText("");
+    setAddedSrsCardIds(new Set());
+    setOpenSolutionMethods(new Set(["method-1", "0", "1"])); // Default expand first method
+    setSelfCheckDraft("");
   };
 
-  // Run on mount or when topic changes
+  // Run when practiceMode or activeTopicId changes
   useEffect(() => {
-    loadNextExercise();
-  }, [activeTopicId]);
+    loadNextExercise(currentPool);
+  }, [practiceMode, activeTopicId]);
 
   if (!topic) {
     return (
-      <div className="panel centered">
-        <h2>Tema nerasta</h2>
-        <button onClick={() => navigate("dashboard")}>Grįžti į apžvalgą</button>
-      </div>
+      <section className="panel">
+        <p>Pasirinkta tema nerasta.</p>
+      </section>
     );
   }
 
+  // Handle hint reveal
+  const handleHint = () => {
+    if (!currentExercise) return;
+    const hints = currentExercise.hints || [];
+    if (visibleHints.length < hints.length) {
+      const nextHint = hints[visibleHints.length];
+      setVisibleHints([...visibleHints, nextHint]);
+    }
+  };
+
+  // Check if multiple choice has choices
+  const hasChoices = (ex: Exercise) => {
+    return ex.choices && ex.choices.length > 0;
+  };
+
+  // Handle Answer submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!currentExercise || result?.correct) return;
+
+    let correct = false;
+    if (currentExercise.type === 'structuredReasoning') {
+      // Structured Reasoning (Self check style)
+      correct = true; // Engage / attempt completes it
+    } else if (hasChoices(currentExercise)) {
+      correct = selectedChoice === currentExercise.answer;
+    } else {
+      const cleanInput = textAnswer.trim().replace(/\s+/g, '').toLowerCase();
+      // Handle array of accepted answers if present (e.g. from generated olympiad numeric output)
+      const accepted = (currentExercise as any).acceptedAnswers || [currentExercise.answer];
+      correct = accepted.some((ans: string) => {
+        const cleanAns = ans.trim().replace(/\s+/g, '').toLowerCase();
+        return cleanInput === cleanAns;
+      });
+    }
+
+    setAttemptsCount((prev) => prev + 1);
+    setResult({ correct });
+
+    // Record attempt in state
+    updateState((prev) =>
+      recordAttempt(prev, currentExercise, {
+        correct,
+        seconds: Math.round((Date.now() - startedAt) / 1000),
+        hintsUsed: visibleHints.length,
+        attempts: attemptsCount + 1
+      })
+    );
+
+    if (correct) {
+      showToast(currentExercise.type === 'structuredReasoning' ? "Uždavinys pažymėtas kaip atliktas!" : "Teisingai! Puikus darbas.");
+    } else {
+      showToast("Atsakymas neteisingas, pabandyk dar kartą arba peržiūrėk užuominas.");
+    }
+  };
+
+  // Reveal solution manually
+  const handleRevealSolution = () => {
+    if (!currentExercise) return;
+    setResult({ correct: false });
+    // Record incomplete attempt just to unlock solution
+    updateState((prev) =>
+      recordAttempt(prev, currentExercise, {
+        correct: false,
+        seconds: Math.round((Date.now() - startedAt) / 1000),
+        hintsUsed: visibleHints.length,
+        attempts: attemptsCount + 1
+      })
+    );
+    showToast("Sprendimas atskleistas.");
+  };
+
+  // Add SRS Card Helper
+  const addSrsCard = (seed: any) => {
+    updateState((prev) => {
+      return ensureSrsCard(prev, {
+        id: seed.id,
+        deck: seed.deck || "theory",
+        sourceId: currentExercise?.id || "",
+        topicId: activeTopicId,
+        cardType: seed.cardType || "concept",
+        front: seed.front,
+        back: seed.back,
+        enabled: true
+      });
+    });
+    setAddedSrsCardIds((prev) => {
+      const next = new Set(prev);
+      next.add(seed.id);
+      return next;
+    });
+    showToast("Kortelė sėkmingai pridėta į tavo SRS kartojimo eilę!");
+  };
+
+  // Prerequisite check helper
+  const getLowPrerequisites = () => {
+    if (!currentExercise || currentExercise.level !== 'olympiad') return [];
+    const minMastery = currentExercise.requiredPrerequisiteMastery || 50;
+    const prereqIds = currentExercise.prerequisiteTopicIds || [];
+    return prereqIds.filter((pId) => {
+      const masteryVal = state.mastery[pId]?.value || 0;
+      return masteryVal < minMastery;
+    });
+  };
+
+  const lowPrereqs = getLowPrerequisites();
+
+  // Return empty container if no exercises in selected tab
   if (!currentExercise) {
     return (
-      <section className="panel centered empty-practice">
-        <span className="eyebrow">{topic.title}</span>
-        <h2>Šiai temai pratimai dar neparuošti.</h2>
-        <p>Gali skaityti teoriją, peržiūrėti sąvokas arba rinktis kitą temą programoje.</p>
-        <div className="actions">
-          <button onClick={() => navigate("topic", topic.id)}>Teorija</button>
-          <button className="primary" onClick={() => navigate("grade")}>Programa</button>
+      <section className="view">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow">Praktika</span>
+            <h1>{topic.title}</h1>
+          </div>
+          <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
+        </div>
+
+        {hasOlympiad && (
+          <div className="practice-tabs">
+            <button
+              onClick={() => setPracticeMode('curriculum')}
+              className={`practice-tab-btn ${practiceMode === 'curriculum' ? 'active' : ''}`}
+            >
+              Bendroji programa
+            </button>
+            <button
+              onClick={() => setPracticeMode('olympiad')}
+              className={`practice-tab-btn ${practiceMode === 'olympiad' ? 'active olympiad-tab-active' : ''}`}
+            >
+              Olimpiadinis stiprinimas
+            </button>
+          </div>
+        )}
+
+        <div className="panel" style={{ textAlign: 'center', padding: '40px 20px' }}>
+          <h3 style={{ marginBottom: '12px' }}>Nėra uždavinių</h3>
+          <p style={{ maxWidth: '400px', margin: '0 auto 20px' }}>
+            Šiame režime šiuo metu nėra jokių uždavinių šiai temai.
+          </p>
+          {practiceMode === 'olympiad' && (
+            <button onClick={() => setPracticeMode('curriculum')} className="primary">
+              Spręsti bendrąją programą
+            </button>
+          )}
         </div>
       </section>
     );
   }
 
-  const handleHint = () => {
-    const nextHintIdx = visibleHints.length;
-    if (nextHintIdx < currentExercise.hints.length) {
-      setVisibleHints((prev) => [...prev, currentExercise.hints[nextHintIdx]]);
-    } else {
-      showToast("Daugiau užuominų nėra!");
-    }
-  };
-
-  const normalize = (value: string) => {
-    return String(value).toLowerCase().replace(/\s+/g, "").replace(",", ".");
-  };
-
-  const isCorrectAnswer = (exercise: Exercise, value: string): boolean => {
-    const exerciseTolerance = (exercise as any).answerTolerance;
-    if (Number.isFinite(Number(value)) && Number.isFinite(Number(exercise.answer)) && Number(exerciseTolerance || 0) > 0) {
-      return Math.abs(Number(value) - Number(exercise.answer)) <= Number(exerciseTolerance);
-    }
-    const accepted = (exercise as any).acceptedAnswers?.length
-      ? (exercise as any).acceptedAnswers
-      : [exercise.answer];
-    return accepted.some((answer: string) => normalize(value) === normalize(answer));
-  };
-
-  const hasChoices = (exercise: Exercise): exercise is Exercise & { choices: string[] } => {
-    return Array.isArray(exercise.choices) && exercise.choices.length > 0;
-  };
-
-  const handleSubmit = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-
-    const answer = hasChoices(currentExercise) ? selectedChoice : textAnswer;
-    const trimmed = answer.trim();
-
-    if (!trimmed) {
-      showToast("Įrašyk arba pasirink atsakymą.");
-      return;
-    }
-
-    const correct = isCorrectAnswer(currentExercise, trimmed);
-    const nextAttempts = attemptsCount + 1;
-    setAttemptsCount(nextAttempts);
-    setResult({ correct });
-
-    updateState((prev) => {
-      return recordAttempt(prev, currentExercise, {
-        correct,
-        seconds: Math.round((Date.now() - startedAt) / 1000),
-        hintsUsed: visibleHints.length,
-        attempts: nextAttempts
-      });
-    });
-
-    if (correct) {
-      showToast("Teisingai! Šaunu.");
-    } else {
-      showToast("Atsakymas neteisingas, bandyk dar kartą arba peržiūrėk užuominą.");
+  // Map tier name to lithuanian label
+  const getTierLabel = (tier?: string) => {
+    switch (tier) {
+      case 'introductory': return 'Įvadinis';
+      case 'standard': return 'Standartinis';
+      case 'advanced': return 'Pažengęs';
+      case 'selection': return 'Atrankinis';
+      default: return tier || 'Bendra';
     }
   };
 
   return (
-    <section className="panel practice-card">
-      <span className="eyebrow">
-        {topic.title} • {(currentExercise as any).level || "Bendras lygis"}
-      </span>
-      <h2>
-        <MathText text={currentExercise.statement} onConceptClick={(id) => navigate("glossary", id)} />
-      </h2>
+    <section className="view">
+      <div className="section-head">
+        <div>
+          <span className="eyebrow">Praktinis mokymasis</span>
+          <h1>{topic.title}</h1>
+        </div>
+        <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
+      </div>
 
-      <form onSubmit={handleSubmit} className="practice-form">
-        {hasChoices(currentExercise) ? (
-          <div className="choice-list">
-            {currentExercise.choices.map((choice) => {
-              const active = selectedChoice === choice;
-              return (
-                <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+      {hasOlympiad && (
+        <div className="practice-tabs">
+          <button
+            onClick={() => setPracticeMode('curriculum')}
+            className={`practice-tab-btn ${practiceMode === 'curriculum' ? 'active' : ''}`}
+          >
+            Bendroji programa
+          </button>
+          <button
+            onClick={() => setPracticeMode('olympiad')}
+            className={`practice-tab-btn ${practiceMode === 'olympiad' ? 'active olympiad-tab-active' : ''}`}
+          >
+            Olimpiadinis stiprinimas
+          </button>
+        </div>
+      )}
+
+      {/* ──── OLYMPIAD LAYOUT ──── */}
+      {practiceMode === 'olympiad' ? (
+        <div className="olympiad-workspace" style={{ display: 'grid', gap: '24px' }}>
+          {/* Prerequisite warning warning button */}
+          {lowPrereqs.length > 0 && (
+            <div className="prerequisite-warning">
+              <p>
+                ⚠️ Rekomenduojama pirma pakartoti temos prielaidas. Pradinis pasiruošimas temose{" "}
+                <strong>
+                  {lowPrereqs.map(pId => topics[pId]?.title || pId).join(", ")}
+                </strong>{" "}
+                yra mažesnis nei rekomenduojama ({currentExercise.requiredPrerequisiteMastery || 50}%).
+              </p>
+              <button onClick={() => navigate("topic", lowPrereqs[0])}>
+                Kartoti prielaidas
+              </button>
+            </div>
+          )}
+
+          {/* Top Info Area */}
+          <div className="panel" style={{ padding: '20px 24px' }}>
+            <div className="olympiad-badge-row">
+              <span className="badge-olympiad-track">
+                {currentExercise.olympiadTrack || "Matematika"}
+              </span>
+              <span className="badge-olympiad-tier">
+                Pakopa: {getTierLabel(currentExercise.olympiadTier)}
+              </span>
+              {currentExercise.estimatedSeconds && (
+                <span className="badge-olympiad-time">
+                  ⏱️ Sprendimo laikas: ~{Math.round(currentExercise.estimatedSeconds / 60)} min.
+                </span>
+              )}
+            </div>
+
+            <h2 style={{ fontSize: '22px', marginTop: '10px', lineHeight: '1.45', fontFamily: 'var(--font-body)', fontWeight: 700 }}>
+              <MathText text={currentExercise.statement} onConceptClick={(id) => navigate("glossary", id)} />
+            </h2>
+          </div>
+
+          {/* Before solving: checklist and core observation */}
+          <div className="grid">
+            {/* Prerequisite Checklist */}
+            <div className="panel" style={{ gridColumn: 'span 6', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <h3 style={{ color: 'var(--primary)', marginBottom: '4px' }}>Ką verta prisiminti</h3>
+              <div className="prerequisite-checklist" style={{ display: 'grid', gap: '8px' }}>
+                {(currentExercise.prerequisiteConceptIds || []).map((cid) => {
+                  const conceptObj = concepts[cid];
+                  return (
+                    <label key={cid} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '14px', cursor: 'pointer' }}>
+                      <input type="checkbox" style={{ cursor: 'pointer' }} />
+                      <span>
+                        Sąvoka:{" "}
+                        <span
+                          style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'underline' }}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate("glossary", cid);
+                          }}
+                        >
+                          {conceptObj?.title || cid}
+                        </span>
+                      </span>
+                    </label>
+                  );
+                })}
+                {(currentExercise.prerequisiteTopicIds || []).map((tId) => {
+                  const topicObj = topics[tId];
+                  return (
+                    <label key={tId} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '14px', cursor: 'pointer' }}>
+                      <input type="checkbox" style={{ cursor: 'pointer' }} />
+                      <span>
+                        Tema:{" "}
+                        <span
+                          style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'underline' }}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate("topic", tId);
+                          }}
+                        >
+                          {topicObj?.title || tId}
+                        </span>
+                      </span>
+                    </label>
+                  );
+                })}
+                {(!currentExercise.prerequisiteConceptIds?.length && !currentExercise.prerequisiteTopicIds?.length) && (
+                  <p style={{ fontSize: '13.5px', margin: 0 }}>Šiam uždaviniui papildomų prielaidų nėra.</p>
+                )}
+              </div>
+            </div>
+
+            {/* Core Observation */}
+            {currentExercise.coreIdea && (
+              <div className="panel core-idea-box" style={{ gridColumn: 'span 6', margin: 0 }}>
+                <div className="core-idea-header" onClick={() => setShowFirstObservation(!showFirstObservation)}>
+                  <h3>💡 Pirmas pastebėjimas</h3>
+                  <button type="button" style={{ padding: '4px 10px', fontSize: '12px' }}>
+                    {showFirstObservation ? "Paslėpti" : "Rodyti"}
+                  </button>
+                </div>
+                {showFirstObservation && (
+                  <div className="core-idea-body">
+                    <strong>{currentExercise.coreIdea.title}</strong>
+                    <p style={{ marginTop: '6px', fontSize: '14px', color: 'var(--text)' }}>
+                      <MathText text={currentExercise.coreIdea.text} onConceptClick={(id) => navigate("glossary", id)} />
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Working Workspace: Scratchpad & Inputs */}
+          <div className="panel">
+            <div className="scratchpad-container">
+              <label htmlFor="scratchpad">Juodraštis / Sprendimo eiga</label>
+              <textarea
+                id="scratchpad"
+                className="scratchpad-textarea"
+                placeholder="Rašyk formules, pastebėjimus ar skaičiavimus čia..."
+                value={scratchpadText}
+                onChange={(e) => setScratchpadText(e.target.value)}
+              />
+            </div>
+
+            <form onSubmit={handleSubmit} className="practice-form" style={{ marginTop: '20px' }}>
+              {currentExercise.type === 'structuredReasoning' ? (
+                <div className="self-check-container">
+                  <h4>Savikontrolės režimas</h4>
+                  <p style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '10px' }}>
+                    Šis uždavinys reikalauja įrodymo arba struktūrizuoto sprendimo. Užrašyk savo atsakymo santrauką ir palygink su oficialiu sprendimu:
+                  </p>
+                  <textarea
+                    placeholder="Įvesk savo atsakymą ar sprendimo išvadą..."
+                    value={selfCheckDraft}
+                    onChange={(e) => setSelfCheckDraft(e.target.value)}
+                    disabled={result !== null}
+                  />
+                </div>
+              ) : hasChoices(currentExercise) ? (
+                <div className="choice-list">
+                  {currentExercise.choices?.map((choice) => {
+                    const active = selectedChoice === choice;
+                    return (
+                      <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+                        <input
+                          type="radio"
+                          name="answer"
+                          value={choice}
+                          checked={active}
+                          onChange={(e) => setSelectedChoice(e.target.value)}
+                          disabled={result?.correct}
+                        />
+                        <span>
+                          <MathText text={choice} onConceptClick={(id) => navigate("glossary", id)} />
+                        </span>
+                      </label>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-answer-wrapper">
                   <input
-                    type="radio"
+                    className="answer-input"
                     name="answer"
-                    value={choice}
-                    checked={active}
-                    onChange={(e) => setSelectedChoice(e.target.value)}
+                    value={textAnswer}
+                    onChange={(e) => setTextAnswer(e.target.value)}
+                    placeholder="Įrašyk galutinį skaitinį atsakymą"
+                    autoComplete="off"
                     disabled={result?.correct}
                   />
-                  <span>
-                    <MathText text={choice} onConceptClick={(id) => navigate("glossary", id)} />
-                  </span>
-                </label>
-              );
-            })}
+                </div>
+              )}
+
+              {/* Hints list */}
+              {visibleHints.length > 0 && (
+                <div className="hint-box" style={{ marginTop: '16px' }}>
+                  {visibleHints.map((hint, idx) => {
+                    // Try to extract kind from hintsRaw if available
+                    const rawHint = currentExercise.hintsRaw?.[idx];
+                    const kindLabel = rawHint?.kind === 'orientation' ? 'Orientacija' :
+                                      rawHint?.kind === 'observation' ? 'Pastebėjimas' :
+                                      rawHint?.kind === 'method' ? 'Metodas' :
+                                      rawHint?.kind === 'scaffold' ? 'Gairė' : 'Patarimas';
+                    return (
+                      <p key={idx} className="hint-text" style={{ fontSize: '14px', borderBottom: '1px solid #eef', paddingBottom: '6px' }}>
+                        💡 <strong>Užuomina {idx + 1} ({kindLabel}):</strong> <MathText text={hint} onConceptClick={(id) => navigate("glossary", id)} />
+                      </p>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Actions row */}
+              <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+                <button
+                  type="button"
+                  onClick={handleHint}
+                  disabled={result?.correct || visibleHints.length >= (currentExercise.hints || []).length}
+                >
+                  Užuomina ({Math.max(0, (currentExercise.hints || []).length - visibleHints.length)})
+                </button>
+
+                {result === null ? (
+                  <>
+                    <button
+                      type="submit"
+                      className="primary"
+                    >
+                      {currentExercise.type === 'structuredReasoning' ? "Pateikti atsakymą savikontrolei" : "Tikrinti"}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={handleRevealSolution}
+                      className="secondary-outline"
+                    >
+                      Parodyti sprendimą
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => loadNextExercise()}
+                    className="primary"
+                  >
+                    Kitas uždavinys
+                  </button>
+                )}
+              </div>
+            </form>
           </div>
-        ) : (
-          <div className="text-answer-wrapper">
-            <input
-              className="answer-input"
-              name="answer"
-              value={textAnswer}
-              onChange={(e) => setTextAnswer(e.target.value)}
-              placeholder="Įrašyk atsakymą"
-              autoComplete="off"
-              disabled={result?.correct}
-            />
-          </div>
-        )}
 
-        {visibleHints.length > 0 && (
-          <div className="hint-box">
-            {visibleHints.map((hint, idx) => (
-              <p key={idx} className="hint-text">
-                💡 Užuomina {idx + 1}: <MathText text={hint} onConceptClick={(id) => navigate("glossary", id)} />
-              </p>
-            ))}
-          </div>
-        )}
+          {/* After Attempt or Reveal Area */}
+          {result !== null && (
+            <div className="olympiad-aftermath-panel">
+              {/* Correctness Header */}
+              {currentExercise.type !== 'structuredReasoning' && (
+                <div className={`result ${result.correct ? "ok" : "bad"}`} style={{ padding: '20px', marginBottom: '20px' }}>
+                  <h3>{result.correct ? "Teisingai!" : "Atsakymas neteisingas, bet nesustok mokytis."}</h3>
+                </div>
+              )}
 
-        <div className="actions practice-actions">
-          <button
-            type="button"
-            onClick={handleHint}
-            disabled={result?.correct}
-          >
-            Užuomina ({currentExercise.hints.length - visibleHints.length})
-          </button>
+              {/* Full Solution and Steps */}
+              <div className="panel" style={{ padding: '24px' }}>
+                <h3 style={{ fontSize: '18px', color: 'var(--primary)', marginBottom: '14px' }}>Pilnas sprendimas</h3>
 
-          <button
-            type="submit"
-            className="primary"
-            disabled={result?.correct}
-          >
-            Tikrinti
-          </button>
+                {currentExercise.solutionMethods && currentExercise.solutionMethods.length > 0 ? (
+                  <div className="olympiad-solution-methods">
+                    {currentExercise.solutionMethods.map((method, mIdx) => {
+                      const methodId = method.id || String(mIdx);
+                      const isExpanded = openSolutionMethods.has(methodId);
+                      return (
+                        <div key={methodId} className="method-accordion">
+                          <div
+                            className="method-accordion-header"
+                            style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
+                            onClick={() => {
+                              const nextMethods = new Set(openSolutionMethods);
+                              if (nextMethods.has(methodId)) nextMethods.delete(methodId);
+                              else nextMethods.add(methodId);
+                              setOpenSolutionMethods(nextMethods);
+                            }}
+                          >
+                            <span>💡 Būdas {mIdx + 1}: {method.title}</span>
+                            <span>{isExpanded ? "▲" : "▼"}</span>
+                          </div>
+                          {isExpanded && (
+                            <div className="method-accordion-body">
+                              {method.strategyTags && (
+                                <div style={{ display: 'flex', gap: '6px', marginBottom: '14px', flexWrap: 'wrap' }}>
+                                  {method.strategyTags.map((tag: string) => (
+                                    <span key={tag} className="concept-chip" style={{ fontSize: '11px', padding: '3px 8px' }}>
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
 
-          {result && (
-            <button
-              type="button"
-              onClick={() => loadNextExercise()}
-              className="secondary-outline"
-            >
-              Kitas uždavinys
-            </button>
+                              <div className="step-list">
+                                {method.steps.map((step: any, sIdx: number) => (
+                                  <div key={sIdx} className="step-card">
+                                    <div className="step-header">Žingsnis {sIdx + 1}: {step.title}</div>
+                                    <div className="step-details-grid">
+                                      <div className="step-detail-item">
+                                        <strong>Veiksmas / Idėja</strong>
+                                        <span>
+                                          <MathText text={step.action} onConceptClick={(id) => navigate("glossary", id)} />
+                                        </span>
+                                      </div>
+                                      <div className="step-detail-item">
+                                        <strong>Paaiškinimas (Kodėl?)</strong>
+                                        <span>
+                                          <MathText text={step.reason} onConceptClick={(id) => navigate("glossary", id)} />
+                                        </span>
+                                      </div>
+                                      <div className="step-detail-item">
+                                        <strong>Rezultatas</strong>
+                                        <span>
+                                          <MathText text={step.result} onConceptClick={(id) => navigate("glossary", id)} />
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+
+                              <div className="method-final-answer">
+                                Galutinis atsakymas: {method.finalAnswer}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="result-explanation">
+                    <p>
+                      <MathText text={currentExercise.solution} onConceptClick={(id) => navigate("glossary", id)} />
+                    </p>
+                  </div>
+                )}
+
+                {/* Alternate Solution Text */}
+                {(currentExercise as any).alternate && !currentExercise.solutionMethods && (
+                  <div className="alternate-methods" style={{ marginTop: '20px', padding: '16px', background: 'var(--surface-2)', borderRadius: 'var(--radius)' }}>
+                    <strong>Kiti sprendimo būdai:</strong>
+                    <p style={{ marginTop: '8px' }}>
+                      <MathText text={(currentExercise as any).alternate} onConceptClick={(id) => navigate("glossary", id)} />
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Common Traps warnings */}
+              {currentExercise.commonTraps && currentExercise.commonTraps.length > 0 && (
+                <div className="traps-container">
+                  <h3>⚠️ Dažnos klaidos ir spąstai</h3>
+                  <div style={{ display: 'grid', gap: '12px' }}>
+                    {currentExercise.commonTraps.map((trap, idx) => (
+                      <div key={trap.id || idx} className="trap-card">
+                        <strong>Klaida: {trap.title}</strong>
+                        <div className="trap-details" style={{ marginTop: '8px' }}>
+                          <div>🔴 <strong>Klaidingas veiksmas:</strong> <MathText text={trap.wrongMove} onConceptClick={(id) => navigate("glossary", id)} /></div>
+                          <div>🤔 <strong>Kodėl tai vilioja:</strong> <MathText text={trap.whyTempting} onConceptClick={(id) => navigate("glossary", id)} /></div>
+                          <div>🟢 <strong>Teisingas pataisymas:</strong> <MathText text={trap.correction} onConceptClick={(id) => navigate("glossary", id)} /></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Reflection Card */}
+              {currentExercise.reflectionPrompts && currentExercise.reflectionPrompts.length > 0 && (
+                <div className="reflection-container">
+                  <h3>🧠 Klausimai refleksijai</h3>
+                  <p style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '10px' }}>
+                    Olimpiadinio mąstymo lavinimui atsakyk sau į šiuos klausimus apie išspręstą uždavinį:
+                  </p>
+                  <ul className="reflection-list">
+                    {currentExercise.reflectionPrompts.map((prompt, idx) => (
+                      <li key={idx}>
+                        <MathText text={prompt} onConceptClick={(id) => navigate("glossary", id)} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* SRS seeds addition panel */}
+              {currentExercise.srsSeeds && currentExercise.srsSeeds.length > 0 && (
+                <div className="srs-seeds-panel">
+                  <h3>🧠 Įtraukti į atminties korteles (SRS)</h3>
+                  <p style={{ fontSize: '13.5px', color: 'var(--muted)' }}>
+                    Šie olimpiadiniai dėsningumai, sąvokos ar idėjos gali būti išsaugotos SRS kartojimui, kad nepamirštum jų ateityje:
+                  </p>
+                  <div className="srs-seeds-list">
+                    {currentExercise.srsSeeds.map((seed) => {
+                      const added = addedSrsCardIds.has(seed.id) || state.srsCards.some(c => c.id === seed.id);
+                      return (
+                        <div key={seed.id} className="srs-seed-card">
+                          <div className="srs-seed-info">
+                            <strong>{seed.front}</strong>
+                            <span>{seed.back}</span>
+                          </div>
+                          {added ? (
+                            <span className="srs-seed-added-badge">Pridėta!</span>
+                          ) : (
+                            <button
+                              type="button"
+                              onClick={() => addSrsCard(seed)}
+                              className="secondary-outline"
+                            >
+                              Pridėti į SRS
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           )}
         </div>
-      </form>
+      ) : (
+        /* ──── STANDARD CURRICULUM LAYOUT ──── */
+        <section className="panel practice-card">
+          <span className="eyebrow">
+            {topic.title} • {(currentExercise as any).level || "Bendras lygis"}
+          </span>
+          <h2 style={{ fontSize: '20px', fontWeight: 'normal', lineHeight: '1.5' }}>
+            <MathText text={currentExercise.statement} onConceptClick={(id) => navigate("glossary", id)} />
+          </h2>
 
-      {result && (
-        <div className={`result ${result.correct ? "ok" : "bad"}`}>
-          <h3>{result.correct ? "Teisingai!" : "Dar ne visai..."}</h3>
-          <div className="result-explanation">
-            <strong>Sprendimas:</strong>
-            <p>
-              <MathText text={currentExercise.solution} onConceptClick={(id) => navigate("glossary", id)} />
-            </p>
-          </div>
-          {(currentExercise as any).alternate && (
-            <details className="result-alternate">
-              <summary>Peržiūrėti kitus sprendimo būdus</summary>
-              <p>
-                <MathText text={(currentExercise as any).alternate} onConceptClick={(id) => navigate("glossary", id)} />
-              </p>
-            </details>
+          <form onSubmit={handleSubmit} className="practice-form" style={{ marginTop: '20px' }}>
+            {hasChoices(currentExercise) ? (
+              <div className="choice-list">
+                {currentExercise.choices?.map((choice) => {
+                  const active = selectedChoice === choice;
+                  return (
+                    <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+                      <input
+                        type="radio"
+                        name="answer"
+                        value={choice}
+                        checked={active}
+                        onChange={(e) => setSelectedChoice(e.target.value)}
+                        disabled={result?.correct}
+                      />
+                      <span>
+                        <MathText text={choice} onConceptClick={(id) => navigate("glossary", id)} />
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="text-answer-wrapper">
+                <input
+                  className="answer-input"
+                  name="answer"
+                  value={textAnswer}
+                  onChange={(e) => setTextAnswer(e.target.value)}
+                  placeholder="Įrašyk atsakymą"
+                  autoComplete="off"
+                  disabled={result?.correct}
+                />
+              </div>
+            )}
+
+            {visibleHints.length > 0 && (
+              <div className="hint-box" style={{ marginTop: '16px' }}>
+                {visibleHints.map((hint, idx) => (
+                  <p key={idx} className="hint-text" style={{ fontSize: '14px' }}>
+                    💡 Užuomina {idx + 1}: <MathText text={hint} onConceptClick={(id) => navigate("glossary", id)} />
+                  </p>
+                ))}
+              </div>
+            )}
+
+            <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+              <button
+                type="button"
+                onClick={handleHint}
+                disabled={result?.correct || visibleHints.length >= (currentExercise.hints || []).length}
+              >
+                Užuomina ({Math.max(0, (currentExercise.hints || []).length - visibleHints.length)})
+              </button>
+
+              {result === null ? (
+                <>
+                  <button
+                    type="submit"
+                    className="primary"
+                  >
+                    Tikrinti
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleRevealSolution}
+                    className="secondary-outline"
+                  >
+                    Parodyti sprendimą
+                  </button>
+                </>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => loadNextExercise()}
+                  className="primary"
+                >
+                  Kitas uždavinys
+                </button>
+              )}
+            </div>
+          </form>
+
+          {result !== null && (
+            <div className={`result ${result.correct ? "ok" : "bad"}`} style={{ padding: '20px', marginTop: '24px' }}>
+              <h3>{result.correct ? "Teisingai!" : "Dar ne visai..."}</h3>
+              <div className="result-explanation" style={{ marginTop: '10px' }}>
+                <strong>Sprendimas:</strong>
+                <p style={{ marginTop: '4px' }}>
+                  <MathText text={currentExercise.solution} onConceptClick={(id) => navigate("glossary", id)} />
+                </p>
+              </div>
+              {(currentExercise as any).alternate && (
+                <details className="result-alternate" style={{ marginTop: '10px' }}>
+                  <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>Peržiūrėti kitus sprendimo būdus</summary>
+                  <p style={{ marginTop: '4px' }}>
+                    <MathText text={(currentExercise as any).alternate} onConceptClick={(id) => navigate("glossary", id)} />
+                  </p>
+                </details>
+              )}
+            </div>
           )}
-        </div>
+        </section>
       )}
     </section>
   );

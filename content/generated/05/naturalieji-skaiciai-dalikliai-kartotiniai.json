@@ -62,7 +62,8 @@
       "naturalieji-skaiciai-dalikliai-kartotiniai-ex-017",
       "naturalieji-skaiciai-dalikliai-kartotiniai-ex-018",
       "naturalieji-skaiciai-dalikliai-kartotiniai-ex-019",
-      "naturalieji-skaiciai-dalikliai-kartotiniai-ex-020"
+      "naturalieji-skaiciai-dalikliai-kartotiniai-ex-020",
+      "olympiad-grade5-number-theory"
     ]
   },
   "theory": [
@@ -1566,6 +1567,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 55
+    },
+    {
+      "id": "olympiad-grade5-number-theory",
+      "topicId": "naturalieji-skaiciai-dalikliai-kartotiniai",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Dėžutėje yra 15 raudonų ir 16 mėlynų rutuliukų. Vienu ėjimu leidžiama išimti du rutuliukus. Jei jie vienodos spalvos, į dėžutę įdedamas 1 raudonas rutuliukas. Jei skirtingų spalvų - įdedamas 1 mėlynas. Kiek mėlynų rutuliukų bus dėžutėje, kai joje liks tik vienas rutuliukas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvok apie tai, kaip keičiasi mėlynų rutuliukų skaičius po kiekvieno veiksmo.",
+          "revealsConceptIds": ["kartotiniai", "dalikliai"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Yra trys variantai: paimame (R, R) -> įdedame R; paimame (M, M) -> įdedame R; paimame (R, M) -> įdedame M.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Pastebėk, kad mėlynų rutuliukų skaičius arba nesikeičia, arba sumažėja 2. Todėl mėlynų rutuliukų skaičiaus lyginumas visada išlieka toks pats (invarintas).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Pradinis mėlynų rutuliukų skaičius yra 16 (lyginis). Kadangi jis visada išlieka lyginis, pabaigoje negali likti 1 mėlynas rutuliukas. Todėl likęs rutuliukas privalo būti raudonas, o mėlynų bus 0.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išanalizuokime visus tris galimus ėjimo atvejus ir jų poveikį rutuliukų skaičiui. Tarkime, paimame 2 vienodos spalvos (raudonus) rutuliukus: jie pašalinami ir įdedamas 1 raudonas. Raudonų skaičius sumažėja 1, o mėlynų nesikeičia."
+        },
+        {
+          "text": "Tarkime, paimame 2 vienodos spalvos (mėlynus) rutuliukus: jie pašalinami ir įdedamas 1 raudonas. Mėlynų skaičius sumažėja 2, o raudonų padidėja 1."
+        },
+        {
+          "text": "Tarkime, paimame 2 skirtingų spalvų (R ir M) rutuliukus: jie pašalinami ir įdedamas 1 mėlynas. Raudonų skaičius sumažėja 1, o mėlynų skaičius nesikeičia (nes 1 paimtas, bet 1 įdėtas)."
+        },
+        {
+          "text": "Bet kuriuo atveju mėlynų rutuliukų skaičius sumažėja 2 arba nesikeičia. Tai reiškia, kad mėlynų rutuliukų skaičiaus lyginumas yra nekintantis dydis (invariantas). Kadangi pradinis mėlynų rutuliukų skaičius buvo 16 (lyginis), tai ir paskutiniame žingsnyje jis turi būti lyginis. Kadangi lieka tik 1 rutuliukas, mėlynų rutuliukų gali likti tik 0 (nes 1 būtų nelyginis skaičius). Todėl likęs rutuliukas yra raudonas, o mėlynų skaičius lygus 0."
+        }
+      ],
+      "answerText": "0",
+      "alternateMethods": [],
+      "conceptIds": ["kartotiniai", "dalikliai"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 180
     }
   ],
   "tests": [

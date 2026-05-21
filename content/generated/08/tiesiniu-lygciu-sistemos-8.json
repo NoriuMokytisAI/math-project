@@ -59,7 +59,8 @@
       "tiesiniu-lygciu-sistemos-8-ex-017",
       "tiesiniu-lygciu-sistemos-8-ex-018",
       "tiesiniu-lygciu-sistemos-8-ex-019",
-      "tiesiniu-lygciu-sistemos-8-ex-020"
+      "tiesiniu-lygciu-sistemos-8-ex-020",
+      "olympiad-grade8-systems"
     ]
   },
   "theory": [
@@ -1250,6 +1251,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade8-systems",
+      "topicId": "tiesiniu-lygciu-sistemos-8",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kavinėje bandelė kainuoja x eurų, o sulčių stiklinė kainuoja y eurų (abu yra teigiami sveikieji skaičiai). Tomas už 3 bandeles ir 2 sultis sumokėjo 19 eurų. Raskite didžiausią įmanomą vienos stiklinės sulčių kainą eurais.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Užrašykite ryšį tarp kainų lygtimi: 3x + 2y = 19, kur x ir y yra teigiami sveikieji skaičiai.",
+          "revealsConceptIds": ["sistema", "modeliavimas"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Išreikškite 2y iš lygties: 2y = 19 - 3x. Kadangi y turi būti sveikasis skaičius, dešinioji pusė turi būti lyginė.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Kad 19 - 3x būtų lyginis skaičius, 3x turi būti nelyginis skaičius, o tai reiškia, kad pats nežinomasis x turi būti nelyginis.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Norėdami maksimizuoti y, turime minimizuoti x. Mažiausia galima teigiamo sveikojo skaičiaus x reikšmė yra 1. Patikrinkite y reikšmę prie x = 1.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal sąlygą sudarome lygtį su dviem nežinomaisiais: 3x + 2y = 19, kur x, y yra teigiami sveikieji skaičiai (x >= 1, y >= 1)."
+        },
+        {
+          "text": "Norime rasti didžiausią įmanomą y reikšmę. Išreikškime y: 2y = 19 - 3x. Kadangi y yra teigiamas sveikasis skaičius, tai 19 - 3x turi būti lyginis teigiamas skaičius."
+        },
+        {
+          "text": "Skirtumas 19 - 3x bus lyginis tik tada, kai atimėjas 3x bus nelyginis. Tai reiškia, kad x privalo būti nelyginis teigiamas skaičius."
+        },
+        {
+          "text": "Kad y būtų kuo didesnis, x turi būti kuo mažesnis. Mažiausias teigiamas nelyginis sveikasis skaičius yra x = 1. Įstatę x = 1, gauname: 2y = 19 - 3(1) => 2y = 16 => y = 8. Kadangi 8 yra sveikasis skaičius, didžiausia įmanoma sulčių stiklinės kaina yra 8 eurai."
+        }
+      ],
+      "answerText": "8",
+      "alternateMethods": [],
+      "conceptIds": ["sistema", "modeliavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 180
     }
   ],
   "tests": [

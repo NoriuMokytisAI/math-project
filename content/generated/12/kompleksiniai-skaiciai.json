@@ -72,7 +72,8 @@
       "kompleksiniai-skaiciai-ex-017",
       "kompleksiniai-skaiciai-ex-018",
       "kompleksiniai-skaiciai-ex-019",
-      "kompleksiniai-skaiciai-ex-020"
+      "kompleksiniai-skaiciai-ex-020",
+      "olympiad-grade12-complex"
     ]
   },
   "theory": [
@@ -1443,6 +1444,68 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade12-complex",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Tegul z yra toks kompleksinis skaičius, kad z + 1/z = 1. Raskite z^{72} + 1/z^{72} reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Padauginkite lygtį z + 1/z = 1 iš z, kad gautumėte kvadratinę lygtį z^2 - z + 1 = 0.",
+          "revealsConceptIds": ["kompleksinis-skaicius"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Padauginkite lygtį z^2 - z + 1 = 0 iš (z + 1). Gausite z^3 + 1 = 0.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Vadinasi, z^3 = -1. Išreikškite z^{72} per z^3 laipsnį.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "z^{72} = (z^3)^{24} = (-1)^{24} = 1. Analogiškai apskaičiuokite 1/z^{72} ir sudėkite.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Duota lygtis: z + 1/z = 1. Padauginame abi puses iš z (kadangi z != 0), gauname: z^2 + 1 = z, arba z^2 - z + 1 = 0."
+        },
+        {
+          "text": "Pastebime, kad sandauga (z + 1)(z^2 - z + 1) = z^3 + 1. Kadangi z^2 - z + 1 = 0, tai z^3 + 1 = 0, iš kur seka z^3 = -1."
+        },
+        {
+          "text": "Mums reikia rasti z^{72} + 1/z^{72}. Kadangi 72 dalijasi iš 3 (72 = 3 * 24), galime užrašyti z^{72} = (z^3)^{24}."
+        },
+        {
+          "text": "Kadangi z^3 = -1, turime: z^{72} = (-1)^{24} = 1. Panašiai 1/z^{72} = 1/1 = 1."
+        },
+        {
+          "text": "Sudėję gauname: z^{72} + 1/z^{72} = 1 + 1 = 2."
+        }
+      ],
+      "answerText": "2",
+      "alternateMethods": [],
+      "conceptIds": ["kompleksinis-skaicius"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 150
     }
   ],
   "tests": [

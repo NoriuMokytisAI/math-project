@@ -33,7 +33,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
     : topicsForBand(activeBand);
 
   const plan = dailyPlan(state.profile.dailyMinutes || 20);
-  const goalAdvice = goalGuidance(state.profile.goal || "");
 
   const targetTopicId = state.profile.targetTopicId && topics[state.profile.targetTopicId]
     ? state.profile.targetTopicId
@@ -128,31 +127,38 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
 
   return (
     <div className="grid dashboard-grid">
-      <section className="panel wide recommendation-panel">
+      {/* ── Row 1: Hero Panel (full width) ── */}
+      <section className="panel" style={{ gridColumn: '1 / -1' }}>
         <span className="eyebrow">{hero.eyebrow}</span>
         <h2>{hero.title}</h2>
         <p className="lead">{hero.text}</p>
-        <p className="lead">{goalAdvice}</p>
-        <div className="actions">
+        <div className="actions" style={{ marginTop: '14px' }}>
           <button className="primary" onClick={hero.primaryAction}>{hero.primary}</button>
           <button onClick={hero.secondaryAction}>{hero.secondary}</button>
           {rec.type === "srs" && <button onClick={() => navigate("srs")}>Kartoti SRS</button>}
         </div>
       </section>
 
-      <section className="panel metric">
+      {/* ── Row 2: Quick Stats ── */}
+      <section className="panel metric" style={{ gridColumn: 'span 3' }}>
         <span className="eyebrow">SRS šiandien</span>
         <strong>{due}</strong>
         <small>kortelės laukia</small>
       </section>
 
-      <section className="panel metric">
+      <section className="panel metric" style={{ gridColumn: 'span 3' }}>
         <span className="eyebrow">Išspręsta</span>
         <strong>{solvedCount}</strong>
         <small>uždaviniai</small>
       </section>
 
-      <section className="panel daily-plan">
+      <section className="panel metric" style={{ gridColumn: 'span 3' }}>
+        <span className="eyebrow">Bendras lygis</span>
+        <strong>{Math.round(Object.values(state.mastery).reduce((s, m) => s + m.value, 0) / Math.max(1, Object.keys(state.mastery).length))}%</strong>
+        <small>vidutinis meistriškumas</small>
+      </section>
+
+      <section className="panel daily-plan" style={{ gridColumn: 'span 3' }}>
         <span className="eyebrow">{state.profile.dailyMinutes || 20} min. planas</span>
         <h3>Šiandien</h3>
         <ol>
@@ -160,15 +166,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
         </ol>
       </section>
 
-      <section className="panel wide">
+      {/* ── Row 3: Grade Mastery (full width) ── */}
+      <section className="panel" style={{ gridColumn: '1 / -1' }}>
         <div className="section-head">
           <div>
             <span className="eyebrow">{startMode === "olympiad" ? "Atvira programa" : formatGradeBand(activeBand)}</span>
-            <h2>{startMode === "olympiad" ? "Gali judėti aukščiau savo pakopos" : "Rodome aktualiausią programos pakopą"}</h2>
+            <h2>{startMode === "olympiad" ? "Gali judėti aukščiau savo pakopos" : "Programos pakopų pažanga"}</h2>
           </div>
           <button onClick={() => navigate("grade")}>Plačiau</button>
         </div>
-        <div className="grade-mastery compact">
+        <div className="grade-mastery" style={{ marginTop: '14px' }}>
           {Object.entries(gradeMastery)
             .filter(([grade]) => startMode === "olympiad" ? Number(grade) >= Math.min(...activeGrades) : activeGrades.includes(Number(grade)))
             .map(([grade, value]) => (
@@ -182,7 +189,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
         </div>
       </section>
 
-      <section className="panel wide strands-section">
+      {/* ── Row 4: Topics by Strand (full width) ── */}
+      <section className="panel" style={{ gridColumn: '1 / -1' }}>
         <div className="section-head">
           <div>
             <span className="eyebrow">{startMode === "targeted" ? "Tikslinis kelias" : `${formatGradeBand(activeBand)} kelias`}</span>
@@ -199,7 +207,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
         {groupedTopics.length === 0 ? (
           <p className="muted">Šiai klasei dar nėra temų.</p>
         ) : (
-          <div className="curriculum-strands compact-strands">
+          <div className="curriculum-strands compact-strands" style={{ marginTop: '14px' }}>
             {groupedTopics.map((group) => (
               <section key={group.strand} className="strand-group">
                 <div className="strand-heading">
@@ -214,7 +222,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
                         <div className="progress-ring" style={{ '--p': m.value } as React.CSSProperties}>{m.value}%</div>
                         <div className="topic-card-body">
                           <h3>{topic.title}</h3>
-                          <p>{topic.strand} • {m.label} • {m.solved}/{m.total} užd.</p>
+                          <p>{m.label} • {m.solved}/{m.total} užd.</p>
                           <div className="mastery-bar" style={{ '--p': m.value } as React.CSSProperties}>
                             <span></span>
                           </div>
@@ -233,6 +241,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
         )}
       </section>
 
+      {/* ── Row 5: Achievements (full width) ── */}
       <section className="panel achievements-panel">
         <span className="eyebrow">Pasiekimai</span>
         <div className="badges">

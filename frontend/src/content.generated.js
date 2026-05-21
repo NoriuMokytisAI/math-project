@@ -12802,6 +12802,71 @@ export const exercises = [
     "estimatedSeconds": 55
   },
   {
+    "id": "olympiad-grade5-number-theory",
+    "topicId": "naturalieji-skaiciai-dalikliai-kartotiniai",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Dėžutėje yra 15 raudonų ir 16 mėlynų rutuliukų. Vienu ėjimu leidžiama išimti du rutuliukus. Jei jie vienodos spalvos, į dėžutę įdedamas 1 raudonas rutuliukas. Jei skirtingų spalvų - įdedamas 1 mėlynas. Kiek mėlynų rutuliukų bus dėžutėje, kai joje liks tik vienas rutuliukas?",
+    "answer": "0",
+    "acceptedAnswers": [
+      "0"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kartotiniai",
+      "dalikliai"
+    ],
+    "hints": [
+      "Pagalvok apie tai, kaip keičiasi mėlynų rutuliukų skaičius po kiekvieno veiksmo.",
+      "Yra trys variantai: paimame (R, R) -> įdedame R; paimame (M, M) -> įdedame R; paimame (R, M) -> įdedame M.",
+      "Pastebėk, kad mėlynų rutuliukų skaičius arba nesikeičia, arba sumažėja 2. Todėl mėlynų rutuliukų skaičiaus lyginumas visada išlieka toks pats (invarintas).",
+      "Pradinis mėlynų rutuliukų skaičius yra 16 (lyginis). Kadangi jis visada išlieka lyginis, pabaigoje negali likti 1 mėlynas rutuliukas. Todėl likęs rutuliukas privalo būti raudonas, o mėlynų bus 0."
+    ],
+    "solution": "Išanalizuokime visus tris galimus ėjimo atvejus ir jų poveikį rutuliukų skaičiui. Tarkime, paimame 2 vienodos spalvos (raudonus) rutuliukus: jie pašalinami ir įdedamas 1 raudonas. Raudonų skaičius sumažėja 1, o mėlynų nesikeičia. Tarkime, paimame 2 vienodos spalvos (mėlynus) rutuliukus: jie pašalinami ir įdedamas 1 raudonas. Mėlynų skaičius sumažėja 2, o raudonų padidėja 1. Tarkime, paimame 2 skirtingų spalvų (R ir M) rutuliukus: jie pašalinami ir įdedamas 1 mėlynas. Raudonų skaičius sumažėja 1, o mėlynų skaičius nesikeičia (nes 1 paimtas, bet 1 įdėtas). Bet kuriuo atveju mėlynų rutuliukų skaičius sumažėja 2 arba nesikeičia. Tai reiškia, kad mėlynų rutuliukų skaičiaus lyginumas yra nekintantis dydis (invariantas). Kadangi pradinis mėlynų rutuliukų skaičius buvo 16 (lyginis), tai ir paskutiniame žingsnyje jis turi būti lyginis. Kadangi lieka tik 1 rutuliukas, mėlynų rutuliukų gali likti tik 0 (nes 1 būtų nelyginis skaičius). Todėl likęs rutuliukas yra raudonas, o mėlynų skaičius lygus 0.",
+    "alternate": "",
+    "estimatedSeconds": 180,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Pagalvok apie tai, kaip keičiasi mėlynų rutuliukų skaičius po kiekvieno veiksmo.",
+        "revealsConceptIds": [
+          "kartotiniai",
+          "dalikliai"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Yra trys variantai: paimame (R, R) -> įdedame R; paimame (M, M) -> įdedame R; paimame (R, M) -> įdedame M.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Pastebėk, kad mėlynų rutuliukų skaičius arba nesikeičia, arba sumažėja 2. Todėl mėlynų rutuliukų skaičiaus lyginumas visada išlieka toks pats (invarintas).",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Pradinis mėlynų rutuliukų skaičius yra 16 (lyginis). Kadangi jis visada išlieka lyginis, pabaigoje negali likti 1 mėlynas rutuliukas. Todėl likęs rutuliukas privalo būti raudonas, o mėlynų bus 0.",
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
     "id": "transformacijos-5-ex-001",
     "topicId": "transformacijos-5",
     "type": "numericInput",
@@ -15631,6 +15696,71 @@ export const exercises = [
     "solution": "Papildomas pratimas.",
     "alternate": "",
     "estimatedSeconds": 45
+  },
+  {
+    "id": "olympiad-grade6-equations",
+    "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Keli vaikai nuėjo grybauti ir kartu rado 65 grybus. Žinoma, kad jokie du vaikai nerado po lygiai grybų ir nei vienas nerado tuščio krepšelio (kiekvienas rado bent 1 grybą). Koks yra didžiausias įmanomas vaikų skaičius?",
+    "answer": "10",
+    "acceptedAnswers": [
+      "10"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kintamasis",
+      "lygtis"
+    ],
+    "hints": [
+      "Tarkime, kad vaikų yra N. Kadangi visi rado skirtingą grybų skaičių ir bent po vieną, pabandykime minimizuoti bendrą grybų sumą.",
+      "Mažiausia įmanoma N vaikų surinktų grybų suma bus tada, kai jie rado 1, 2, 3, ..., N grybų.",
+      "Skaičių nuo 1 iki N suma lygi N*(N+1)/2. Ši suma negali viršyti bendro rasto grybų skaičiaus (65).",
+      "Patikrink didžiausią sveikąjį skaičių N, kuriam N*(N+1)/2 <= 65. Pavyzdžiui, jei N=10, suma lygi 55. Jei N=11, suma lygi 66."
+    ],
+    "solution": "Tarkime, kad susirinko N vaikų. Kadangi kiekvienas rado skirtingą grybų skaičių ir niekas nerado 0 grybų, minimalus rasto grybų skaičius atskiriems vaikams yra 1, 2, 3, ..., N. Bendra rasta grybų suma negali būti mažesnė už šių mažiausių skirtingų kiekių sumą. Užrašykime sumą: S = 1 + 2 + 3 + ... + N. Naudodami aritmetinės progresijos sumos formulę arba tiesioginį sudėjimą gauname, kad S = N*(N+1)/2. Kadangi bendras grybų skaičius yra 65, turime sąlygą S <= 65. Įstatome N reikšmes: Jei N = 10, tai S = 10 * 11 / 2 = 55 <= 65 (įmanoma, likusius 10 grybų galima atiduoti bet kuriam vaikui, kad grybų skaičiai vis tiek liktų skirtingi). Jei N = 11, tai S = 11 * 12 / 2 = 66 > 65 (neįmanoma, nes net mažiausia įmanoma skirtingų grybų suma viršija 65). Taigi, didžiausias įmanomas vaikų skaičius yra 10.",
+    "alternate": "",
+    "estimatedSeconds": 180,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Tarkime, kad vaikų yra N. Kadangi visi rado skirtingą grybų skaičių ir bent po vieną, pabandykime minimizuoti bendrą grybų sumą.",
+        "revealsConceptIds": [
+          "kintamasis",
+          "lygtis"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Mažiausia įmanoma N vaikų surinktų grybų suma bus tada, kai jie rado 1, 2, 3, ..., N grybų.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Skaičių nuo 1 iki N suma lygi N*(N+1)/2. Ši suma negali viršyti bendro rasto grybų skaičiaus (65).",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Patikrink didžiausią sveikąjį skaičių N, kuriam N*(N+1)/2 <= 65. Pavyzdžiui, jei N=10, suma lygi 55. Jei N=11, suma lygi 66.",
+        "penalty": 0.1
+      }
+    ]
   },
   {
     "id": "sveikieji-racionalieji-skaiciai-ex-001",
@@ -19825,6 +19955,69 @@ export const exercises = [
     "estimatedSeconds": 45
   },
   {
+    "id": "olympiad-grade7-geometry",
+    "topicId": "trikampiai-ir-pitagoro-teorema",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Duotos trys atkarpos, kurių ilgių sandauga lygi 15, o jų ilgiai yra sveikieji skaičiai. Žinoma, kad dviejų trumpesnių atkarpų ilgių santykis yra sveikasis skaičius. Koks yra didžiausias įmanomas trečiosios atkarpos ilgis, kad iš šių trijų atkarpų būtų galima sudaryti trikampį?",
+    "answer": "15",
+    "acceptedAnswers": [
+      "15"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "trikampis"
+    ],
+    "hints": [
+      "Tegul atkarpų ilgiai yra a, b ir c, kur a <= b. Kadangi a * b = 15 ir jie yra sveikieji skaičiai, raskite visas įmanomas poras (a, b).",
+      "Sąlyga sako, kad santykis b / a turi būti sveikasis skaičius. Patikrinkite poras (1, 15) ir (3, 5).",
+      "Kadangi 15 / 1 = 15 (sveikasis), o 5 / 3 nėra sveikasis, gauname a = 1 ir b = 15. Dabar pritaikykite trikampio nelygybę trečiajai atkarpai c.",
+      "Trikampio nelygybė reikalauja, kad c < a + b, t. y. c < 1 + 15 = 16. Koks yra didžiausias sveikasis skaičius c, tenkinantis šią sąlygą?"
+    ],
+    "solution": "Tegul dviejų trumpesnių atkarpų ilgiai yra a ir b (a <= b). Pagal sąlygą, šių atkarpų ilgių sandauga lygi 15. Sveikųjų skaičių poros, kurių sandauga lygi 15, yra (1, 15) ir (3, 5). Taip pat žinoma, kad dviejų trumpesnių atkarpų ilgių santykis b/a yra sveikasis skaičius. Pora (1, 15) tenkina šią sąlygą, nes 15/1 = 15. Pora (3, 5) netinka, nes 5/3 nėra sveikasis skaičius. Todėl trumpesniųjų atkarpų ilgiai yra a = 1 ir b = 15. Tegul trečiosios atkarpos ilgis yra c. Kad iš šių atkarpų būtų galima sudaryti trikampį, turi galioti trikampio nelygybė: c < a + b. Mūsų atveju c < 1 + 15 = 16. Kadangi c yra sveikasis skaičius ir c < 16, didžiausia įmanoma c reikšmė yra 15 (trikampis su kraštinėmis 1, 15, 15 egzistuoja, nes 1 + 15 > 15).",
+    "alternate": "",
+    "estimatedSeconds": 180,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Tegul atkarpų ilgiai yra a, b ir c, kur a <= b. Kadangi a * b = 15 ir jie yra sveikieji skaičiai, raskite visas įmanomas poras (a, b).",
+        "revealsConceptIds": [
+          "trikampis"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Sąlyga sako, kad santykis b / a turi būti sveikasis skaičius. Patikrinkite poras (1, 15) ir (3, 5).",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Kadangi 15 / 1 = 15 (sveikasis), o 5 / 3 nėra sveikasis, gauname a = 1 ir b = 15. Dabar pritaikykite trikampio nelygybę trečiajai atkarpai c.",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Trikampio nelygybė reikalauja, kad c < a + b, t. y. c < 1 + 15 = 16. Koks yra didžiausias sveikasis skaičius c, tenkinantis šią sąlygą?",
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
     "id": "daugianariai-ir-greitosios-daugybos-formules-ex-001",
     "topicId": "daugianariai-ir-greitosios-daugybos-formules",
     "type": "expressionInput",
@@ -23499,6 +23692,71 @@ export const exercises = [
     "estimatedSeconds": 45
   },
   {
+    "id": "olympiad-grade8-systems",
+    "topicId": "tiesiniu-lygciu-sistemos-8",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Kavinėje bandelė kainuoja x eurų, o sulčių stiklinė kainuoja y eurų (abu yra teigiami sveikieji skaičiai). Tomas už 3 bandeles ir 2 sultis sumokėjo 19 eurų. Raskite didžiausią įmanomą vienos stiklinės sulčių kainą eurais.",
+    "answer": "8",
+    "acceptedAnswers": [
+      "8"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "sistema",
+      "modeliavimas"
+    ],
+    "hints": [
+      "Užrašykite ryšį tarp kainų lygtimi: 3x + 2y = 19, kur x ir y yra teigiami sveikieji skaičiai.",
+      "Išreikškite 2y iš lygties: 2y = 19 - 3x. Kadangi y turi būti sveikasis skaičius, dešinioji pusė turi būti lyginė.",
+      "Kad 19 - 3x būtų lyginis skaičius, 3x turi būti nelyginis skaičius, o tai reiškia, kad pats nežinomasis x turi būti nelyginis.",
+      "Norėdami maksimizuoti y, turime minimizuoti x. Mažiausia galima teigiamo sveikojo skaičiaus x reikšmė yra 1. Patikrinkite y reikšmę prie x = 1."
+    ],
+    "solution": "Pagal sąlygą sudarome lygtį su dviem nežinomaisiais: 3x + 2y = 19, kur x, y yra teigiami sveikieji skaičiai (x >= 1, y >= 1). Norime rasti didžiausią įmanomą y reikšmę. Išreikškime y: 2y = 19 - 3x. Kadangi y yra teigiamas sveikasis skaičius, tai 19 - 3x turi būti lyginis teigiamas skaičius. Skirtumas 19 - 3x bus lyginis tik tada, kai atimėjas 3x bus nelyginis. Tai reiškia, kad x privalo būti nelyginis teigiamas skaičius. Kad y būtų kuo didesnis, x turi būti kuo mažesnis. Mažiausias teigiamas nelyginis sveikasis skaičius yra x = 1. Įstatę x = 1, gauname: 2y = 19 - 3(1) => 2y = 16 => y = 8. Kadangi 8 yra sveikasis skaičius, didžiausia įmanoma sulčių stiklinės kaina yra 8 eurai.",
+    "alternate": "",
+    "estimatedSeconds": 180,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Užrašykite ryšį tarp kainų lygtimi: 3x + 2y = 19, kur x ir y yra teigiami sveikieji skaičiai.",
+        "revealsConceptIds": [
+          "sistema",
+          "modeliavimas"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Išreikškite 2y iš lygties: 2y = 19 - 3x. Kadangi y turi būti sveikasis skaičius, dešinioji pusė turi būti lyginė.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Kad 19 - 3x būtų lyginis skaičius, 3x turi būti nelyginis skaičius, o tai reiškia, kad pats nežinomasis x turi būti nelyginis.",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Norėdami maksimizuoti y, turime minimizuoti x. Mažiausia galima teigiamo sveikojo skaičiaus x reikšmė yra 1. Patikrinkite y reikšmę prie x = 1.",
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
     "id": "transformacijos-ir-koordinates-ex-001",
     "topicId": "transformacijos-ir-koordinates",
     "type": "numericInput",
@@ -25324,6 +25582,71 @@ export const exercises = [
     "solution": "Papildomas pratimas.",
     "alternate": "",
     "estimatedSeconds": 45
+  },
+  {
+    "id": "olympiad-grade9-functions",
+    "topicId": "funkcijos-ir-ju-savybes",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Funkcija f(x), apibrėžta visiems sveikiesiems skaičiams x, tenkina sąlygą f(x + 1) = f(x) + 2. Žinoma, kad f(1) = 3. Raskite f(100) reikšmę.",
+    "answer": "201",
+    "acceptedAnswers": [
+      "201"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "funkcija",
+      "argumentas"
+    ],
+    "hints": [
+      "Pastebėkite, kad f(x) yra aritmetinė progresija. Pabandykite apskaičiuoti pirmąsias reikšmes: f(2), f(3) ir t.t.",
+      "f(2) = f(1) + 2 = 3 + 2 = 5. f(3) = f(2) + 2 = 5 + 2 = 7. Koks yra bendras dėsningumas?",
+      "Kiekvieną kartą padidinus argumentą 1 vienetu, funkcijos reikšmė padidėja 2. Todėl f(n) = f(1) + 2 * (n - 1).",
+      "Įstatykite n = 100 į formulę f(100) = f(1) + 2 * 99 ir apskaičiuokite atsakymą."
+    ],
+    "solution": "Pagal duotą sąjungą f(x + 1) = f(x) + 2, kiekviename žingsnyje funkcijos reikšmė padidėja pastoviu dydžiu d = 2. Tai yra aritmetinės progresijos apibrėžimas. Apskaičiuokime kelias pirmąsias reikšmes: f(1) = 3, f(2) = f(1) + 2 = 5, f(3) = f(2) + 2 = 7, f(4) = f(3) + 2 = 9. Matome dėsningumą: f(x) = f(1) + 2 * (x - 1) visiems sveikiesiems skaičiams x >= 1. Įstatome x = 100: f(100) = 3 + 2 * (100 - 1) = 3 + 2 * 99 = 3 + 198 = 201.",
+    "alternate": "",
+    "estimatedSeconds": 150,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Pastebėkite, kad f(x) yra aritmetinė progresija. Pabandykite apskaičiuoti pirmąsias reikšmes: f(2), f(3) ir t.t.",
+        "revealsConceptIds": [
+          "funkcija",
+          "argumentas"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "f(2) = f(1) + 2 = 3 + 2 = 5. f(3) = f(2) + 2 = 5 + 2 = 7. Koks yra bendras dėsningumas?",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Kiekvieną kartą padidinus argumentą 1 vienetu, funkcijos reikšmė padidėja 2. Todėl f(n) = f(1) + 2 * (n - 1).",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Įstatykite n = 100 į formulę f(100) = f(1) + 2 * 99 ir apskaičiuokite atsakymą.",
+        "penalty": 0.1
+      }
+    ]
   },
   {
     "id": "kvadratine-funkcija-ir-lygtys-ex-001",
@@ -28480,6 +28803,69 @@ export const exercises = [
     "solution": "Papildomas pratimas.",
     "alternate": "",
     "estimatedSeconds": 45
+  },
+  {
+    "id": "olympiad-grade10-combinatorics",
+    "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Kiek yra keturženklių natūraliųjų skaičių, kurių visi skaitmenys yra skirtingi, o skaitmenų suma lygi 10?",
+    "answer": "96",
+    "acceptedAnswers": [
+      "96"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kombinatorika"
+    ],
+    "hints": [
+      "Raskite visas keturių skirtingų skaitmenų aibes {a, b, c, d} (nuo 0 iki 9), kurių suma lygi 10.",
+      "Yra tik dvi tokios skaitmenų aibės: {0, 1, 2, 7} ir {0, 1, 3, 6} ir {0, 2, 3, 5} ir {1, 2, 3, 4}. Palaukite, paskaičiuokite atidžiai.",
+      "Patikrinkime skirtingų skaitmenų aibes, kurių suma lygi 10: 1) {0, 1, 2, 7} (suma 10), 2) {0, 1, 3, 6} (suma 10), 3) {0, 1, 4, 5} (suma 10), 4) {0, 2, 3, 5} (suma 10), 5) {1, 2, 3, 4} (suma 10). Iš viso 5 aibės.",
+      "Kiekvienai aibei paskaičiuokite, kiek keturženklių skaičių galima sudaryti (keturženklis skaičius negali prasidėti 0). Pavyzdžiui, aibei {1, 2, 3, 4} yra 4! = 24 skaičiai. Aibei su nuliu, pvz., {0, 1, 2, 7}, pirmoje vietoje gali būti 3 skaitmenys, kitose likę 3! = 6 skaitmenys, iš viso 3 * 3! = 18 skaičių."
+    ],
+    "solution": "Pirmiausia raskime visas keturių skirtingų skaitmenų {a, b, c, d} (nuo 0 iki 9) aibes, kurių suma lygi 10. Sąrašas aibių: \n1. {1, 2, 3, 4} (suma 1 + 2 + 3 + 4 = 10)\n2. {0, 1, 2, 7} (suma 0 + 1 + 2 + 7 = 10)\n3. {0, 1, 3, 6} (suma 0 + 1 + 3 + 6 = 10)\n4. {0, 1, 4, 5} (suma 0 + 1 + 4 + 5 = 10)\n5. {0, 2, 3, 5} (suma 0 + 2 + 3 + 5 = 10)\nKitų skirtingų teigiamų skaitmenų aibių su suma 10 nėra (pvz., jei nėra 0, mažiausia suma keturių skirtingų skaitmenų yra 1+2+3+4=10; jei yra 0, ieškome trijų skirtingų nelygių nuliui skaitmenų su suma 10, kas duoda viršuje nurodytus keturis variantus). Apskaičiuokime galimus sudaryti keturženklius skaičius kiekvienam atvejui:\n- Aibei {1, 2, 3, 4} (nėra nulio): galime sudaryti 4! = 24 skirtingus keturženklius skaičius.\n- Kiekvienai iš keturių aibių, kuriose yra nulis (pvz., {0, 1, 2, 7}): pirmasis skaitmuo negali būti 0 (yra 3 galimybės). Likusiems trims skaitmenims išdėstyti yra 3! = 6 galimybės. Iš viso 3 * 6 = 18 skaičių vienai tokiai aibei. Sudėkime visus variantus: 24 + 18 + 18 + 18 + 18 = 24 + 4 * 18 = 24 + 72 = 96. Palaukite, klausimas prašo atsakymo nurodant tik vieną reikšmę ar kitokį skaičių? Taip, iš viso 96 skaičiai.",
+    "alternate": "",
+    "estimatedSeconds": 180,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Raskite visas keturių skirtingų skaitmenų aibes {a, b, c, d} (nuo 0 iki 9), kurių suma lygi 10.",
+        "revealsConceptIds": [
+          "kombinatorika"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Yra tik dvi tokios skaitmenų aibės: {0, 1, 2, 7} ir {0, 1, 3, 6} ir {0, 2, 3, 5} ir {1, 2, 3, 4}. Palaukite, paskaičiuokite atidžiai.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Patikrinkime skirtingų skaitmenų aibes, kurių suma lygi 10: 1) {0, 1, 2, 7} (suma 10), 2) {0, 1, 3, 6} (suma 10), 3) {0, 1, 4, 5} (suma 10), 4) {0, 2, 3, 5} (suma 10), 5) {1, 2, 3, 4} (suma 10). Iš viso 5 aibės.",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Kiekvienai aibei paskaičiuokite, kiek keturženklių skaičių galima sudaryti (keturženklis skaičius negali prasidėti 0). Pavyzdžiui, aibei {1, 2, 3, 4} yra 4! = 24 skaičiai. Aibei su nuliu, pvz., {0, 1, 2, 7}, pirmoje vietoje gali būti 3 skaitmenys, kitose likę 3! = 6 skaitmenys, iš viso 3 * 3! = 18 skaičių.",
+        "penalty": 0.1
+      }
+    ]
   },
   {
     "id": "kvadratines-nelygybes-ex-001",
@@ -35291,6 +35677,69 @@ export const exercises = [
     "estimatedSeconds": 45
   },
   {
+    "id": "olympiad-grade11-sequences",
+    "topicId": "sekos-ir-indukcija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Seka a_n apibrėžta rekurentiniu sąryšiu: a_1 = 2 ir a_{n+1} = a_n + 2n + 1 visiems n >= 1. Raskite a_{20} reikšmę.",
+    "answer": "401",
+    "acceptedAnswers": [
+      "401"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "seka"
+    ],
+    "hints": [
+      "Apskaičiuokite kelis pirmuosius sekos narius ir pabandykite rasti formulę a_n.",
+      "a_1 = 2. a_2 = a_1 + 2(1) + 1 = 2 + 3 = 5. a_3 = a_2 + 2(2) + 1 = 5 + 5 = 10. a_4 = a_3 + 2(3) + 1 = 10 + 7 = 17.",
+      "Pastebėkite, kad pirmieji nariai yra 2, 5, 10, 17. Koks yra šių skaičių dėsningumas?",
+      "Matome, kad a_n = n^2 + 1. Patikrinkite šią hipotezę: a_1 = 1^2 + 1 = 2, a_2 = 2^2 + 1 = 5, a_3 = 3^2 + 1 = 10. Taip, tai tinka! Dabar apskaičiuokite a_{20}."
+    ],
+    "solution": "Apskaičiuokime kelis pirmuosius sekos narius: \n- a_1 = 2\n- a_2 = a_1 + 2(1) + 1 = 5\n- a_3 = a_2 + 2(2) + 1 = 10\n- a_4 = a_3 + 2(3) + 1 = 17 Pastebime dėsningumą: \n- a_1 = 1^2 + 1\n- a_2 = 2^2 + 1\n- a_3 = 3^2 + 1\n- a_4 = 4^2 + 1\nKelkime hipotezę, kad a_n = n^2 + 1. Įrodykime hipotezę indukcijos būdu:\n- Bazė (n=1) teisinga: a_1 = 1^2 + 1 = 2.\n- Prielaida: tarkime, kad a_k = k^2 + 1.\n- Žingsnis: įrodykime, kad a_{k+1} = (k+1)^2 + 1.\nPagal sekos apibrėžimą: a_{k+1} = a_k + 2k + 1 = (k^2 + 1) + 2k + 1 = k^2 + 2k + 1 + 1 = (k+1)^2 + 1. Indukcijos žingsnis įrodytas. Vadinasi, formulė a_n = n^2 + 1 teisinga visiems n >= 1. Naudodami šią formulę, randame a_{20}: a_{20} = 20^2 + 1 = 400 + 1 = 401.",
+    "alternate": "",
+    "estimatedSeconds": 150,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Apskaičiuokite kelis pirmuosius sekos narius ir pabandykite rasti formulę a_n.",
+        "revealsConceptIds": [
+          "seka"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "a_1 = 2. a_2 = a_1 + 2(1) + 1 = 2 + 3 = 5. a_3 = a_2 + 2(2) + 1 = 5 + 5 = 10. a_4 = a_3 + 2(3) + 1 = 10 + 7 = 17.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Pastebėkite, kad pirmieji nariai yra 2, 5, 10, 17. Koks yra šių skaičių dėsningumas?",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "Matome, kad a_n = n^2 + 1. Patikrinkite šią hipotezę: a_1 = 1^2 + 1 = 2, a_2 = 2^2 + 1 = 5, a_3 = 3^2 + 1 = 10. Taip, tai tinka! Dabar apskaičiuokite a_{20}.",
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
     "id": "briaunainiai-sukiniai-ir-pjuviai-ex-001",
     "topicId": "briaunainiai-sukiniai-ir-pjuviai",
     "type": "numericInput",
@@ -36628,6 +37077,69 @@ export const exercises = [
     "solution": "Papildomas pratimas.",
     "alternate": "",
     "estimatedSeconds": 45
+  },
+  {
+    "id": "olympiad-grade12-complex",
+    "topicId": "kompleksiniai-skaiciai",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Tegul z yra toks kompleksinis skaičius, kad z + 1/z = 1. Raskite z^{72} + 1/z^{72} reikšmę.",
+    "answer": "2",
+    "acceptedAnswers": [
+      "2"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kompleksinis-skaicius"
+    ],
+    "hints": [
+      "Padauginkite lygtį z + 1/z = 1 iš z, kad gautumėte kvadratinę lygtį z^2 - z + 1 = 0.",
+      "Padauginkite lygtį z^2 - z + 1 = 0 iš (z + 1). Gausite z^3 + 1 = 0.",
+      "Vadinasi, z^3 = -1. Išreikškite z^{72} per z^3 laipsnį.",
+      "z^{72} = (z^3)^{24} = (-1)^{24} = 1. Analogiškai apskaičiuokite 1/z^{72} ir sudėkite."
+    ],
+    "solution": "Duota lygtis: z + 1/z = 1. Padauginame abi puses iš z (kadangi z != 0), gauname: z^2 + 1 = z, arba z^2 - z + 1 = 0. Pastebime, kad sandauga (z + 1)(z^2 - z + 1) = z^3 + 1. Kadangi z^2 - z + 1 = 0, tai z^3 + 1 = 0, iš kur seka z^3 = -1. Mums reikia rasti z^{72} + 1/z^{72}. Kadangi 72 dalijasi iš 3 (72 = 3 * 24), galime užrašyti z^{72} = (z^3)^{24}. Kadangi z^3 = -1, turime: z^{72} = (-1)^{24} = 1. Panašiai 1/z^{72} = 1/1 = 1. Sudėję gauname: z^{72} + 1/z^{72} = 1 + 1 = 2.",
+    "alternate": "",
+    "estimatedSeconds": 150,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": null,
+    "strategyTags": [],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Padauginkite lygtį z + 1/z = 1 iš z, kad gautumėte kvadratinę lygtį z^2 - z + 1 = 0.",
+        "revealsConceptIds": [
+          "kompleksinis-skaicius"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "text": "Padauginkite lygtį z^2 - z + 1 = 0 iš (z + 1). Gausite z^3 + 1 = 0.",
+        "penalty": 0.05
+      },
+      {
+        "order": 3,
+        "text": "Vadinasi, z^3 = -1. Išreikškite z^{72} per z^3 laipsnį.",
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "text": "z^{72} = (z^3)^{24} = (-1)^{24} = 1. Analogiškai apskaičiuokite 1/z^{72} ir sudėkite.",
+        "penalty": 0.1
+      }
+    ]
   },
   {
     "id": "pirmykste-funkcija-ir-integralas-ex-001",

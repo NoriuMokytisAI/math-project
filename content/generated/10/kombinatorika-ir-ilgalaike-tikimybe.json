@@ -60,7 +60,8 @@
       "kombinatorika-ir-ilgalaike-tikimybe-ex-017",
       "kombinatorika-ir-ilgalaike-tikimybe-ex-018",
       "kombinatorika-ir-ilgalaike-tikimybe-ex-019",
-      "kombinatorika-ir-ilgalaike-tikimybe-ex-020"
+      "kombinatorika-ir-ilgalaike-tikimybe-ex-020",
+      "olympiad-grade10-combinatorics"
     ]
   },
   "theory": [
@@ -1261,6 +1262,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade10-combinatorics",
+      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kiek yra keturženklių natūraliųjų skaičių, kurių visi skaitmenys yra skirtingi, o skaitmenų suma lygi 10?",
+      "answer": {
+        "kind": "numeric",
+        "value": 96,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Raskite visas keturių skirtingų skaitmenų aibes {a, b, c, d} (nuo 0 iki 9), kurių suma lygi 10.",
+          "revealsConceptIds": ["kombinatorika"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Yra tik dvi tokios skaitmenų aibės: {0, 1, 2, 7} ir {0, 1, 3, 6} ir {0, 2, 3, 5} ir {1, 2, 3, 4}. Palaukite, paskaičiuokite atidžiai.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkime skirtingų skaitmenų aibes, kurių suma lygi 10: 1) {0, 1, 2, 7} (suma 10), 2) {0, 1, 3, 6} (suma 10), 3) {0, 1, 4, 5} (suma 10), 4) {0, 2, 3, 5} (suma 10), 5) {1, 2, 3, 4} (suma 10). Iš viso 5 aibės.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Kiekvienai aibei paskaičiuokite, kiek keturženklių skaičių galima sudaryti (keturženklis skaičius negali prasidėti 0). Pavyzdžiui, aibei {1, 2, 3, 4} yra 4! = 24 skaičiai. Aibei su nuliu, pvz., {0, 1, 2, 7}, pirmoje vietoje gali būti 3 skaitmenys, kitose likę 3! = 6 skaitmenys, iš viso 3 * 3! = 18 skaičių.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia raskime visas keturių skirtingų skaitmenų {a, b, c, d} (nuo 0 iki 9) aibes, kurių suma lygi 10."
+        },
+        {
+          "text": "Sąrašas aibių: \n1. {1, 2, 3, 4} (suma 1 + 2 + 3 + 4 = 10)\n2. {0, 1, 2, 7} (suma 0 + 1 + 2 + 7 = 10)\n3. {0, 1, 3, 6} (suma 0 + 1 + 3 + 6 = 10)\n4. {0, 1, 4, 5} (suma 0 + 1 + 4 + 5 = 10)\n5. {0, 2, 3, 5} (suma 0 + 2 + 3 + 5 = 10)\nKitų skirtingų teigiamų skaitmenų aibių su suma 10 nėra (pvz., jei nėra 0, mažiausia suma keturių skirtingų skaitmenų yra 1+2+3+4=10; jei yra 0, ieškome trijų skirtingų nelygių nuliui skaitmenų su suma 10, kas duoda viršuje nurodytus keturis variantus)."
+        },
+        {
+          "text": "Apskaičiuokime galimus sudaryti keturženklius skaičius kiekvienam atvejui:\n- Aibei {1, 2, 3, 4} (nėra nulio): galime sudaryti 4! = 24 skirtingus keturženklius skaičius.\n- Kiekvienai iš keturių aibių, kuriose yra nulis (pvz., {0, 1, 2, 7}): pirmasis skaitmuo negali būti 0 (yra 3 galimybės). Likusiems trims skaitmenims išdėstyti yra 3! = 6 galimybės. Iš viso 3 * 6 = 18 skaičių vienai tokiai aibei."
+        },
+        {
+          "text": "Sudėkime visus variantus: 24 + 18 + 18 + 18 + 18 = 24 + 4 * 18 = 24 + 72 = 96. Palaukite, klausimas prašo atsakymo nurodant tik vieną reikšmę ar kitokį skaičių? Taip, iš viso 96 skaičiai."
+        }
+      ],
+      "answerText": "96",
+      "alternateMethods": [],
+      "conceptIds": ["kombinatorika"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 180
     }
   ],
   "tests": [

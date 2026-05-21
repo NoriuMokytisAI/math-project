@@ -64,7 +64,8 @@
       "funkcijos-ir-ju-savybes-ex-017",
       "funkcijos-ir-ju-savybes-ex-018",
       "funkcijos-ir-ju-savybes-ex-019",
-      "funkcijos-ir-ju-savybes-ex-020"
+      "funkcijos-ir-ju-savybes-ex-020",
+      "olympiad-grade9-functions"
     ]
   },
   "theory": [
@@ -1361,6 +1362,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade9-functions",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Funkcija f(x), apibrėžta visiems sveikiesiems skaičiams x, tenkina sąlygą f(x + 1) = f(x) + 2. Žinoma, kad f(1) = 3. Raskite f(100) reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 201,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pastebėkite, kad f(x) yra aritmetinė progresija. Pabandykite apskaičiuoti pirmąsias reikšmes: f(2), f(3) ir t.t.",
+          "revealsConceptIds": ["funkcija", "argumentas"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "f(2) = f(1) + 2 = 3 + 2 = 5. f(3) = f(2) + 2 = 5 + 2 = 7. Koks yra bendras dėsningumas?",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Kiekvieną kartą padidinus argumentą 1 vienetu, funkcijos reikšmė padidėja 2. Todėl f(n) = f(1) + 2 * (n - 1).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Įstatykite n = 100 į formulę f(100) = f(1) + 2 * 99 ir apskaičiuokite atsakymą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal duotą sąjungą f(x + 1) = f(x) + 2, kiekviename žingsnyje funkcijos reikšmė padidėja pastoviu dydžiu d = 2. Tai yra aritmetinės progresijos apibrėžimas."
+        },
+        {
+          "text": "Apskaičiuokime kelias pirmąsias reikšmes: f(1) = 3, f(2) = f(1) + 2 = 5, f(3) = f(2) + 2 = 7, f(4) = f(3) + 2 = 9."
+        },
+        {
+          "text": "Matome dėsningumą: f(x) = f(1) + 2 * (x - 1) visiems sveikiesiems skaičiams x >= 1."
+        },
+        {
+          "text": "Įstatome x = 100: f(100) = 3 + 2 * (100 - 1) = 3 + 2 * 99 = 3 + 198 = 201."
+        }
+      ],
+      "answerText": "201",
+      "alternateMethods": [],
+      "conceptIds": ["funkcija", "argumentas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 150
     }
   ],
   "tests": [

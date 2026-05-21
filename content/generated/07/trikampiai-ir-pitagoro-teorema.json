@@ -65,7 +65,8 @@
       "trikampiai-ir-pitagoro-teorema-ex-017",
       "trikampiai-ir-pitagoro-teorema-ex-018",
       "trikampiai-ir-pitagoro-teorema-ex-019",
-      "trikampiai-ir-pitagoro-teorema-ex-020"
+      "trikampiai-ir-pitagoro-teorema-ex-020",
+      "olympiad-grade7-geometry"
     ]
   },
   "theory": [
@@ -1417,6 +1418,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade7-geometry",
+      "topicId": "trikampiai-ir-pitagoro-teorema",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Duotos trys atkarpos, kurių ilgių sandauga lygi 15, o jų ilgiai yra sveikieji skaičiai. Žinoma, kad dviejų trumpesnių atkarpų ilgių santykis yra sveikasis skaičius. Koks yra didžiausias įmanomas trečiosios atkarpos ilgis, kad iš šių trijų atkarpų būtų galima sudaryti trikampį?",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tegul atkarpų ilgiai yra a, b ir c, kur a <= b. Kadangi a * b = 15 ir jie yra sveikieji skaičiai, raskite visas įmanomas poras (a, b).",
+          "revealsConceptIds": ["trikampis"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Sąlyga sako, kad santykis b / a turi būti sveikasis skaičius. Patikrinkite poras (1, 15) ir (3, 5).",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Kadangi 15 / 1 = 15 (sveikasis), o 5 / 3 nėra sveikasis, gauname a = 1 ir b = 15. Dabar pritaikykite trikampio nelygybę trečiajai atkarpai c.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Trikampio nelygybė reikalauja, kad c < a + b, t. y. c < 1 + 15 = 16. Koks yra didžiausias sveikasis skaičius c, tenkinantis šią sąlygą?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul dviejų trumpesnių atkarpų ilgiai yra a ir b (a <= b). Pagal sąlygą, šių atkarpų ilgių sandauga lygi 15. Sveikųjų skaičių poros, kurių sandauga lygi 15, yra (1, 15) ir (3, 5)."
+        },
+        {
+          "text": "Taip pat žinoma, kad dviejų trumpesnių atkarpų ilgių santykis b/a yra sveikasis skaičius. Pora (1, 15) tenkina šią sąlygą, nes 15/1 = 15. Pora (3, 5) netinka, nes 5/3 nėra sveikasis skaičius. Todėl trumpesniųjų atkarpų ilgiai yra a = 1 ir b = 15."
+        },
+        {
+          "text": "Tegul trečiosios atkarpos ilgis yra c. Kad iš šių atkarpų būtų galima sudaryti trikampį, turi galioti trikampio nelygybė: c < a + b. Mūsų atveju c < 1 + 15 = 16."
+        },
+        {
+          "text": "Kadangi c yra sveikasis skaičius ir c < 16, didžiausia įmanoma c reikšmė yra 15 (trikampis su kraštinėmis 1, 15, 15 egzistuoja, nes 1 + 15 > 15)."
+        }
+      ],
+      "answerText": "15",
+      "alternateMethods": [],
+      "conceptIds": ["trikampis"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 180
     }
   ],
   "tests": [

@@ -143,6 +143,9 @@ export interface TopicMastery {
   attempts: number;
   tests: number;
   label: string;
+  olympiadValue?: number;
+  olympiadSolved?: number;
+  olympiadTotal?: number;
 }
 
 export interface State {
@@ -204,6 +207,7 @@ export interface Exercise {
   topicId: string;
   strand: string;
   grade: number;
+  type?: string;
   statement: string;
   estimatedSeconds?: number;
   hints: string[];
@@ -211,7 +215,64 @@ export interface Exercise {
   choices?: string[]; // Multiple choice options
   answer: string; // Correct answer value
   concepts?: string[];
+  level?: string;
+  olympiadTrack?: string;
+  olympiadTier?: 'introductory' | 'standard' | 'advanced' | 'selection';
+  requiredPrerequisiteMastery?: number;
+  coreIdea?: { title: string; text: string };
+  strategyTags?: string[];
+  prerequisiteTopicIds?: string[];
+  prerequisiteConceptIds?: string[];
+  expectedMethodIds?: string[];
+  solutionMethods?: Array<{
+    id: string;
+    title: string;
+    methodType: string;
+    strategyTags?: string[];
+    steps: Array<{
+      title: string;
+      action: string;
+      reason: string;
+      latex?: string;
+      result: string;
+    }>;
+    finalAnswer: string;
+  }>;
+  commonTraps?: Array<{
+    id: string;
+    title: string;
+    wrongMove: string;
+    whyTempting: string;
+    correction: string;
+    reviewConceptIds: string[];
+    srsRecommended: boolean;
+  }>;
+  reflectionPrompts?: string[];
+  extensionQuestions?: Array<{
+    prompt: string;
+    expectedIdea: string;
+    difficulty: string;
+  }>;
+  srsSeeds?: Array<{
+    id: string;
+    deck: string;
+    cardType: string;
+    front: string;
+    back: string;
+    conceptIds: string[];
+    methodIds?: string[];
+    mistakeIds?: string[];
+    defaultEnabled: boolean;
+  }>;
+  hintsRaw?: Array<{
+    order: number;
+    kind?: string;
+    text: string;
+    revealsConceptIds?: string[];
+    penalty?: number;
+  }>;
 }
+
 
 export interface Test {
   id: string;

@@ -61,7 +61,8 @@
       "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-017",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-018",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-019",
-      "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-020"
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-020",
+      "olympiad-grade6-equations"
     ]
   },
   "theory": [
@@ -1362,6 +1363,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade6-equations",
+      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Keli vaikai nuėjo grybauti ir kartu rado 65 grybus. Žinoma, kad jokie du vaikai nerado po lygiai grybų ir nei vienas nerado tuščio krepšelio (kiekvienas rado bent 1 grybą). Koks yra didžiausias įmanomas vaikų skaičius?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tarkime, kad vaikų yra N. Kadangi visi rado skirtingą grybų skaičių ir bent po vieną, pabandykime minimizuoti bendrą grybų sumą.",
+          "revealsConceptIds": ["kintamasis", "lygtis"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Mažiausia įmanoma N vaikų surinktų grybų suma bus tada, kai jie rado 1, 2, 3, ..., N grybų.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Skaičių nuo 1 iki N suma lygi N*(N+1)/2. Ši suma negali viršyti bendro rasto grybų skaičiaus (65).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Patikrink didžiausią sveikąjį skaičių N, kuriam N*(N+1)/2 <= 65. Pavyzdžiui, jei N=10, suma lygi 55. Jei N=11, suma lygi 66.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime, kad susirinko N vaikų. Kadangi kiekvienas rado skirtingą grybų skaičių ir niekas nerado 0 grybų, minimalus rasto grybų skaičius atskiriems vaikams yra 1, 2, 3, ..., N."
+        },
+        {
+          "text": "Bendra rasta grybų suma negali būti mažesnė už šių mažiausių skirtingų kiekių sumą. Užrašykime sumą: S = 1 + 2 + 3 + ... + N."
+        },
+        {
+          "text": "Naudodami aritmetinės progresijos sumos formulę arba tiesioginį sudėjimą gauname, kad S = N*(N+1)/2. Kadangi bendras grybų skaičius yra 65, turime sąlygą S <= 65."
+        },
+        {
+          "text": "Įstatome N reikšmes: Jei N = 10, tai S = 10 * 11 / 2 = 55 <= 65 (įmanoma, likusius 10 grybų galima atiduoti bet kuriam vaikui, kad grybų skaičiai vis tiek liktų skirtingi). Jei N = 11, tai S = 11 * 12 / 2 = 66 > 65 (neįmanoma, nes net mažiausia įmanoma skirtingų grybų suma viršija 65). Taigi, didžiausias įmanomas vaikų skaičius yra 10."
+        }
+      ],
+      "answerText": "10",
+      "alternateMethods": [],
+      "conceptIds": ["kintamasis", "lygtis"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 180
     }
   ],
   "tests": [

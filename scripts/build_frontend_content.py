@@ -170,11 +170,11 @@ def render_content() -> str:
                 choices = []
             if answer["kind"] == "choice":
                 answer_tolerance = 0
-            exercises.append({
+            ex_obj = {
                 "id": ex["id"],
                 "topicId": ex["topicId"],
                 "type": ex["type"],
-                "level": ex["level"],
+                "level": ex.get("level", "curriculum"),
                 "statement": ex["statement"],
                 "answer": answer_value,
                 "acceptedAnswers": accepted_answers,
@@ -185,7 +185,26 @@ def render_content() -> str:
                 "solution": " ".join(step.get("text", "") for step in ex.get("solutionSteps", [])),
                 "alternate": " ".join(method.get("text", "") for method in ex.get("alternateMethods", [])) or "",
                 "estimatedSeconds": ex.get("estimatedSeconds", 60),
-            })
+            }
+            if ex.get("level") == "olympiad":
+                ex_obj.update({
+                    "olympiadTrack": ex.get("olympiadTrack"),
+                    "olympiadTier": ex.get("olympiadTier"),
+                    "requiredPrerequisiteMastery": ex.get("requiredPrerequisiteMastery"),
+                    "coreIdea": ex.get("coreIdea"),
+                    "strategyTags": ex.get("strategyTags", []),
+                    "prerequisiteTopicIds": ex.get("prerequisiteTopicIds", []),
+                    "prerequisiteConceptIds": ex.get("prerequisiteConceptIds", []),
+                    "expectedMethodIds": ex.get("expectedMethodIds", []),
+                    "solutionMethods": ex.get("solutionMethods", []),
+                    "commonTraps": ex.get("commonTraps", []),
+                    "reflectionPrompts": ex.get("reflectionPrompts", []),
+                    "extensionQuestions": ex.get("extensionQuestions", []),
+                    "srsSeeds": ex.get("srsSeeds", []),
+                    "hintsRaw": ex.get("hints", []),
+                })
+            exercises.append(ex_obj)
+
 
         for test in data.get("tests", []):
             tests.append({

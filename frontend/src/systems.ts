@@ -494,24 +494,46 @@ function updatePracticeCards(state: State, exercise: any, attempt: Attempt, now:
 export function calculateMastery(state: Omit<State, 'mastery'> & { testAttempts?: TestAttempt[] }): Record<string, TopicMastery> {
   const mastery: Record<string, TopicMastery> = {};
   for (const topicId of Object.keys(topics)) {
-    const topicExercises = exercises.filter((exercise) => exercise.topicId === topicId);
+    const topicExercises = exercises.filter((exercise) => exercise.topicId === topicId && exercise.level !== 'olympiad');
+    const topicOlympiadExercises = exercises.filter((exercise) => exercise.topicId === topicId && exercise.level === 'olympiad');
+    
     const topicAttempts = state.attempts.filter((attempt) => attempt.topicId === topicId);
+    
+    const curriculumAttempts = topicAttempts.filter((attempt) => {
+      const ex = exercises.find((e) => e.id === attempt.exerciseId);
+      return ex && ex.level !== 'olympiad';
+    });
+    
+    const olympiadAttempts = topicAttempts.filter((attempt) => {
+      const ex = exercises.find((e) => e.id === attempt.exerciseId);
+      return ex && ex.level === 'olympiad';
+    });
+
     const topicTests = (state.testAttempts || []).filter((attempt) => attempt.topicIds?.includes(topicId));
-    const solved = new Set(topicAttempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)).size;
-    const coverage = topicExercises.length ? solved / topicExercises.length : 0;
-    const avgScore = topicAttempts.length ? topicAttempts.reduce((sum, attempt) => sum + attempt.score, 0) / topicAttempts.length : 0;
+    
+    const solvedCurriculum = new Set(curriculumAttempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)).size;
+    const coverage = topicExercises.length ? solvedCurriculum / topicExercises.length : 0;
+    const avgScore = curriculumAttempts.length ? curriculumAttempts.reduce((sum, attempt) => sum + attempt.score, 0) / curriculumAttempts.length : 0;
     const testScore = topicTests.length ? topicTests.reduce((sum, attempt) => sum + attempt.score, 0) / topicTests.length : 0;
-    const hintPenalty = topicAttempts.reduce((sum, attempt) => sum + attempt.hintsUsed, 0) * 0.02;
-    const completedAllExercises = topicExercises.length > 0 && solved >= topicExercises.length;
+    const hintPenalty = curriculumAttempts.reduce((sum, attempt) => sum + attempt.hintsUsed, 0) * 0.02;
+    const completedAllExercises = topicExercises.length > 0 && solvedCurriculum >= topicExercises.length;
     const rawValue = coverage * 0.34 + avgScore * 0.32 + testScore * 0.24;
     const value = completedAllExercises ? 100 : Math.round(Math.max(0, Math.min(100, rawValue * 100 - hintPenalty * 100)));
+
+    const solvedOlympiad = new Set(olympiadAttempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)).size;
+    const olympiadTotal = topicOlympiadExercises.length;
+    const olympiadValue = olympiadTotal > 0 ? Math.round((solvedOlympiad / olympiadTotal) * 100) : undefined;
+
     mastery[topicId] = {
       value,
-      solved,
+      solved: solvedCurriculum,
       total: topicExercises.length,
-      attempts: topicAttempts.length,
+      attempts: curriculumAttempts.length,
       tests: topicTests.length,
-      label: masteryLabel(value)
+      label: masteryLabel(value),
+      olympiadValue,
+      olympiadSolved: solvedOlympiad,
+      olympiadTotal
     };
   }
   return mastery;

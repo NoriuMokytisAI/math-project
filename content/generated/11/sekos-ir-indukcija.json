@@ -72,7 +72,8 @@
       "sekos-ir-indukcija-ex-017",
       "sekos-ir-indukcija-ex-018",
       "sekos-ir-indukcija-ex-019",
-      "sekos-ir-indukcija-ex-020"
+      "sekos-ir-indukcija-ex-020",
+      "olympiad-grade11-sequences"
     ]
   },
   "theory": [
@@ -1459,6 +1460,65 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
+    },
+    {
+      "id": "olympiad-grade11-sequences",
+      "topicId": "sekos-ir-indukcija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Seka a_n apibrėžta rekurentiniu sąryšiu: a_1 = 2 ir a_{n+1} = a_n + 2n + 1 visiems n >= 1. Raskite a_{20} reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 401,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskaičiuokite kelis pirmuosius sekos narius ir pabandykite rasti formulę a_n.",
+          "revealsConceptIds": ["seka"],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "a_1 = 2. a_2 = a_1 + 2(1) + 1 = 2 + 3 = 5. a_3 = a_2 + 2(2) + 1 = 5 + 5 = 10. a_4 = a_3 + 2(3) + 1 = 10 + 7 = 17.",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Pastebėkite, kad pirmieji nariai yra 2, 5, 10, 17. Koks yra šių skaičių dėsningumas?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "text": "Matome, kad a_n = n^2 + 1. Patikrinkite šią hipotezę: a_1 = 1^2 + 1 = 2, a_2 = 2^2 + 1 = 5, a_3 = 3^2 + 1 = 10. Taip, tai tinka! Dabar apskaičiuokite a_{20}.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuokime kelis pirmuosius sekos narius: \n- a_1 = 2\n- a_2 = a_1 + 2(1) + 1 = 5\n- a_3 = a_2 + 2(2) + 1 = 10\n- a_4 = a_3 + 2(3) + 1 = 17"
+        },
+        {
+          "text": "Pastebime dėsningumą: \n- a_1 = 1^2 + 1\n- a_2 = 2^2 + 1\n- a_3 = 3^2 + 1\n- a_4 = 4^2 + 1\nKelkime hipotezę, kad a_n = n^2 + 1."
+        },
+        {
+          "text": "Įrodykime hipotezę indukcijos būdu:\n- Bazė (n=1) teisinga: a_1 = 1^2 + 1 = 2.\n- Prielaida: tarkime, kad a_k = k^2 + 1.\n- Žingsnis: įrodykime, kad a_{k+1} = (k+1)^2 + 1.\nPagal sekos apibrėžimą: a_{k+1} = a_k + 2k + 1 = (k^2 + 1) + 2k + 1 = k^2 + 2k + 1 + 1 = (k+1)^2 + 1. Indukcijos žingsnis įrodytas. Vadinasi, formulė a_n = n^2 + 1 teisinga visiems n >= 1."
+        },
+        {
+          "text": "Naudodami šią formulę, randame a_{20}: a_{20} = 20^2 + 1 = 400 + 1 = 401."
+        }
+      ],
+      "answerText": "401",
+      "alternateMethods": [],
+      "conceptIds": ["seka"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 150
     }
   ],
   "tests": [
