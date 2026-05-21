@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[lithuanian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+\title{Matematikos formulynai \\ 9 klasė}
+\date{}
+
+\begin{document}
+\maketitle
+
+%% -------------------------------------------------------
+\section*{Daugiakampio kampų didumų suma}
+
+\[
+180^\circ \cdot (n - 2)
+\]
+čia $n$ -- daugiakampio kampų skaičius.
+
+%% -------------------------------------------------------
+\section*{Greitoji daugyba}
+
+\[
+(a+b)^2 = a^2 + 2ab + b^2, \quad
+(a-b)^2 = a^2 - 2ab + b^2, \quad
+(a-b)(a+b) = a^2 - b^2
+\]
+
+%% -------------------------------------------------------
+\section*{Laipsniai ir šaknys}
+
+\[
+a^{-n} = \frac{1}{a^n} \quad (a \neq 0)
+\]
+\[
+a^n \cdot a^m = a^{n+m}, \quad
+a^n : a^m = a^{n-m}, \quad
+(a^n)^m = a^{nm}, \quad
+a^n \cdot b^n = (a \cdot b)^n, \quad
+a^n : b^n = (a : b)^n
+\]
+\[
+\sqrt{a} \cdot \sqrt{b} = \sqrt{ab}, \quad
+\sqrt{a} : \sqrt{b} = \sqrt{\frac{a}{b}}, \quad
+\sqrt[3]{a} \cdot \sqrt[3]{b} = \sqrt[3]{ab}, \quad
+\sqrt[3]{a} : \sqrt[3]{b} = \sqrt[3]{\frac{a}{b}}
+\]
+
+%% -------------------------------------------------------
+\section*{Sudėtiniai procentai}
+
+\[
+S_n = S_0 \left(1 \pm \frac{p}{100}\right)^n
+\]
+čia $S_0$ -- dydžio $S$ pradinė reikšmė, $p$ -- procentų skaičius, $n$ -- kartų skaičius.
+
+%% -------------------------------------------------------
+\section*{Kvadratinės lygties $ax^2 + bx + c = 0$ ($a \neq 0$) sprendiniai}
+
+\[
+x_1 = \frac{-b - \sqrt{D}}{2a}, \quad x_2 = \frac{-b + \sqrt{D}}{2a}
+\]
+čia $D = b^2 - 4ac$.
+
+%% -------------------------------------------------------
+\section*{Kvadratinio trinario $ax^2 + bx + c$ ($a \neq 0$) skaidymas dauginamaisiais}
+
+\[
+ax^2 + bx + c = a(x - x_1)(x - x_2)
+\]
+čia $x_1,\, x_2$ -- kvadratinės lygties $ax^2 + bx + c = 0$ sprendiniai.
+
+%% -------------------------------------------------------
+\section*{Tiesės, einančios per taškus $(x_1;\, y_1)$ ir $(x_2;\, y_2)$ ($x_1 \neq x_2$), lygtis}
+
+\[
+y = kx + b; \quad k = \frac{y_2 - y_1}{x_2 - x_1}
+\]
+
+%% -------------------------------------------------------
+\section*{Parabolės $y = ax^2 + bx + c$ ($a \neq 0$) viršūnės abscisė}
+
+\[
+x_{\text{virš.}} = -\frac{b}{2a}
+\]
+
+%% -------------------------------------------------------
+\section*{Trigonometrija}
+
+\[
+\sin^2\alpha + \cos^2\alpha = 1, \qquad \tg\,\alpha = \frac{\sin\alpha}{\cos\alpha}
+\]
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\alpha$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ \\
+\hline
+$\sin\alpha$ & $\dfrac{1}{2}$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{\sqrt{3}}{2}$ & $1$ \\[8pt]
+\hline
+$\cos\alpha$ & $\dfrac{\sqrt{3}}{2}$ & $\dfrac{\sqrt{2}}{2}$ & $\dfrac{1}{2}$ & $0$ \\[8pt]
+\hline
+$\tg\,\alpha$ & $\dfrac{\sqrt{3}}{3}$ & $1$ & $\sqrt{3}$ & $-$ \\[8pt]
+\hline
+\end{tabular}
+\end{center}
+
+%% -------------------------------------------------------
+\section*{Trikampio plotas}
+
+\[
+S = \frac{1}{2} a h_a = \frac{1}{2} ab \cdot \sin\angle C
+\]
+čia $a$, $b$, $c$ -- trikampio kraštinių ilgiai, $\angle C$ -- trikampio kampo, esančio tarp kraštinių, kurių ilgiai $a$ ir $b$, didumas, $h_a$ -- trikampio aukštinės, einančios į kraštinę $a$, ilgis.
+
+\end{document}
