@@ -183,6 +183,19 @@ All modes use the same:
 
 The mode changes the default home page and recommendation strategy. It must not fork the app into separate products. Modes are starting positions, not permanent user categories; the student can change mode later in Settings without losing progress.
 
+## Navigation and Track Selection
+
+The primary learning sections are **Teorija** (Theory) and **Praktika** (Practice), accessible via dedicated tabs on the main left sidebar. Both sections feature a dual-track layout designed to cleanly separate standard and advanced learning:
+- **Mokyklinis turinys**: Official curriculum content (preparation for lessons, tests, exams).
+- **Olimpiadinis turinys**: Advanced olympiad extension content (non-standard thinking).
+
+When a student navigates to "Teorija" or "Praktika", the UI routes them based on their current goal (Start Mode):
+- If the goal is **Olympiad Strengthening**, the app defaults them immediately to the "Olimpiadinis turinys" section.
+- If the goal is **Topic or Exam Preparation**, the app defaults them immediately to the "Mokyklinis turinys" section.
+- If the goal is **Full Course**, the app presents a selection screen with two large cards ("Mokyklinis turinys" and "Olimpiadinis turinys"), requiring them to choose their path for the current session.
+
+Regardless of the default routing or the choice made, a prominent toggle button is always available at the top of the "Teorija" and "Praktika" pages, allowing students to instantly switch between the curriculum and olympiad tracks with a single button press.
+
 ## Core Learning Flow
 
 For each topic:
