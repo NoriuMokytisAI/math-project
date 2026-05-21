@@ -48,18 +48,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate }) => {
     return ["10 min. SRS", "15 min. teorijos", "bent 6 uždaviniai arba testas"];
   }
 
-  function goalGuidance(goal: string): string {
-    if (startMode === "olympiad") return "Tavo kelias labiau akcentuos sunkesnius uždavinius, alternatyvius sprendimus ir papildomus iššūkius po bazinės teorijos. Aukštesnės pakopos lieka pasiekiamos laisvai.";
-    if (startMode === "targeted" && state.profile.preparationType === "control") return "Tavo pradžia sutelkta į pasirinktą temą: greita teorija, praktika, testas ir klaidų taisymas.";
-    if (startMode === "targeted" && (state.profile.preparationType === "pupp" || state.profile.preparationType === "vbe")) return "Egzamino keliui diagnostika yra rekomenduojamas startas, bet gali dirbti ir per pasirinktą temą.";
-    if (startMode === "full-course") return "Pilno kurso kelias remiasi diagnostika: programa ieško spragų ir automatiškai siūlo, ką mokytis toliau.";
-    if (goal.includes("olimpiadinio")) return "Tavo kelias labiau akcentuos sunkesnius uždavinius, alternatyvius sprendimus ir papildomus iššūkius po bazinės teorijos.";
-    if (goal.includes("PUPP") || goal.includes("VBE") || goal.includes("egzaminui")) return "Tavo kelias labiau akcentuos programos temas, testus ir klaidų taisymą, kad pasiruošimas egzaminui būtų tiesus.";
-    if (goal.includes("kontroliniui")) return "Tavo kelias labiau akcentuos greitą temos sutvarkymą: trumpa teorija, pavyzdžiai ir keli tikrinantys uždaviniai.";
-    if (goal.includes("Nežinau")) return "Tavo kelias prasidės nuo rekomenduojamos temos ir pagal sprendimus siūlys, ką mokytis toliau.";
-    return "Tavo kelias labiau akcentuos stabilų pagrindų stiprinimą: teoriją, sąvokas, SRS ir praktiką.";
-  }
-
   function modeHero() {
     if (startMode === "olympiad") {
       return {

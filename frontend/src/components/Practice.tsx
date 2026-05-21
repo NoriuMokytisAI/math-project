@@ -236,9 +236,9 @@ export const Practice: React.FC<PracticeProps> = ({
           </div>
         )}
 
-        <div className="panel" style={{ textAlign: 'center', padding: '40px 20px' }}>
-          <h3 style={{ marginBottom: '12px' }}>Nėra uždavinių</h3>
-          <p style={{ maxWidth: '400px', margin: '0 auto 20px' }}>
+        <div className="panel practice-empty-state">
+          <h3>Nėra uždavinių</h3>
+          <p>
             Šiame režime šiuo metu nėra jokių uždavinių šiai temai.
           </p>
           {practiceMode === 'olympiad' && (
@@ -291,7 +291,7 @@ export const Practice: React.FC<PracticeProps> = ({
 
       {/* ──── OLYMPIAD LAYOUT ──── */}
       {practiceMode === 'olympiad' ? (
-        <div className="olympiad-workspace" style={{ display: 'grid', gap: '24px' }}>
+        <div className="olympiad-workspace">
           {/* Prerequisite warning warning button */}
           {lowPrereqs.length > 0 && (
             <div className="prerequisite-warning">
@@ -309,7 +309,7 @@ export const Practice: React.FC<PracticeProps> = ({
           )}
 
           {/* Top Info Area */}
-          <div className="panel" style={{ padding: '20px 24px' }}>
+          <div className="panel olympiad-info-panel">
             <div className="olympiad-badge-row">
               <span className="badge-olympiad-track">
                 {currentExercise.olympiadTrack || "Matematika"}
@@ -324,7 +324,7 @@ export const Practice: React.FC<PracticeProps> = ({
               )}
             </div>
 
-            <h2 style={{ fontSize: '22px', marginTop: '10px', lineHeight: '1.45', fontFamily: 'var(--font-body)', fontWeight: 700 }}>
+            <h2 className="olympiad-statement">
               <MathText text={currentExercise.statement} onConceptClick={(id) => navigate("glossary", id)} />
             </h2>
           </div>
@@ -332,18 +332,18 @@ export const Practice: React.FC<PracticeProps> = ({
           {/* Before solving: checklist and core observation */}
           <div className="grid">
             {/* Prerequisite Checklist */}
-            <div className="panel" style={{ gridColumn: 'span 6', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="panel half-grid-left prerequisite-checklist-panel">
               <h3 style={{ color: 'var(--primary)', marginBottom: '4px' }}>Ką verta prisiminti</h3>
-              <div className="prerequisite-checklist" style={{ display: 'grid', gap: '8px' }}>
+              <div className="prerequisite-checklist">
                 {(currentExercise.prerequisiteConceptIds || []).map((cid) => {
                   const conceptObj = concepts[cid];
                   return (
-                    <label key={cid} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '14px', cursor: 'pointer' }}>
+                    <label key={cid} className="prerequisite-checklist-item">
                       <input type="checkbox" style={{ cursor: 'pointer' }} />
                       <span>
                         Sąvoka:{" "}
                         <span
-                          style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'underline' }}
+                          className="prerequisite-link"
                           onClick={(e) => {
                             e.preventDefault();
                             navigate("glossary", cid);
@@ -358,12 +358,12 @@ export const Practice: React.FC<PracticeProps> = ({
                 {(currentExercise.prerequisiteTopicIds || []).map((tId) => {
                   const topicObj = topics[tId];
                   return (
-                    <label key={tId} style={{ display: 'flex', gap: '8px', alignItems: 'center', fontSize: '14px', cursor: 'pointer' }}>
+                    <label key={tId} className="prerequisite-checklist-item">
                       <input type="checkbox" style={{ cursor: 'pointer' }} />
                       <span>
                         Tema:{" "}
                         <span
-                          style={{ color: 'var(--primary)', fontWeight: 'bold', textDecoration: 'underline' }}
+                          className="prerequisite-link"
                           onClick={(e) => {
                             e.preventDefault();
                             navigate("topic", tId);
@@ -383,7 +383,7 @@ export const Practice: React.FC<PracticeProps> = ({
 
             {/* Core Observation */}
             {currentExercise.coreIdea && (
-              <div className="panel core-idea-box" style={{ gridColumn: 'span 6', margin: 0 }}>
+              <div className="panel core-idea-box half-grid-right" style={{ margin: 0 }}>
                 <div className="core-idea-header" onClick={() => setShowFirstObservation(!showFirstObservation)}>
                   <h3>💡 Pirmas pastebėjimas</h3>
                   <button type="button" style={{ padding: '4px 10px', fontSize: '12px' }}>
@@ -475,7 +475,7 @@ export const Practice: React.FC<PracticeProps> = ({
                                       rawHint?.kind === 'method' ? 'Metodas' :
                                       rawHint?.kind === 'scaffold' ? 'Gairė' : 'Patarimas';
                     return (
-                      <p key={idx} className="hint-text" style={{ fontSize: '14px', borderBottom: '1px solid #eef', paddingBottom: '6px' }}>
+                      <p key={idx} className="hint-text" style={{ borderBottom: '1px solid var(--line)', paddingBottom: '6px' }}>
                         💡 <strong>Užuomina {idx + 1} ({kindLabel}):</strong> <MathText text={hint} onConceptClick={(id) => navigate("glossary", id)} />
                       </p>
                     );
@@ -534,8 +534,8 @@ export const Practice: React.FC<PracticeProps> = ({
               )}
 
               {/* Full Solution and Steps */}
-              <div className="panel" style={{ padding: '24px' }}>
-                <h3 style={{ fontSize: '18px', color: 'var(--primary)', marginBottom: '14px' }}>Pilnas sprendimas</h3>
+              <div className="panel olympiad-solution-panel">
+                <h3 className="olympiad-solution-heading">Pilnas sprendimas</h3>
 
                 {currentExercise.solutionMethods && currentExercise.solutionMethods.length > 0 ? (
                   <div className="olympiad-solution-methods">
@@ -546,7 +546,7 @@ export const Practice: React.FC<PracticeProps> = ({
                         <div key={methodId} className="method-accordion">
                           <div
                             className="method-accordion-header"
-                            style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
+
                             onClick={() => {
                               const nextMethods = new Set(openSolutionMethods);
                               if (nextMethods.has(methodId)) nextMethods.delete(methodId);
@@ -560,7 +560,7 @@ export const Practice: React.FC<PracticeProps> = ({
                           {isExpanded && (
                             <div className="method-accordion-body">
                               {method.strategyTags && (
-                                <div style={{ display: 'flex', gap: '6px', marginBottom: '14px', flexWrap: 'wrap' }}>
+                                <div className="strategy-tags-row">
                                   {method.strategyTags.map((tag: string) => (
                                     <span key={tag} className="concept-chip" style={{ fontSize: '11px', padding: '3px 8px' }}>
                                       {tag}
@@ -616,7 +616,7 @@ export const Practice: React.FC<PracticeProps> = ({
 
                 {/* Alternate Solution Text */}
                 {(currentExercise as any).alternate && !currentExercise.solutionMethods && (
-                  <div className="alternate-methods" style={{ marginTop: '20px', padding: '16px', background: 'var(--surface-2)', borderRadius: 'var(--radius)' }}>
+                  <div className="alternate-methods alternate-methods-box">
                     <strong>Kiti sprendimo būdai:</strong>
                     <p style={{ marginTop: '8px' }}>
                       <MathText text={(currentExercise as any).alternate} onConceptClick={(id) => navigate("glossary", id)} />
@@ -629,7 +629,7 @@ export const Practice: React.FC<PracticeProps> = ({
               {currentExercise.commonTraps && currentExercise.commonTraps.length > 0 && (
                 <div className="traps-container">
                   <h3>⚠️ Dažnos klaidos ir spąstai</h3>
-                  <div style={{ display: 'grid', gap: '12px' }}>
+                  <div className="traps-grid">
                     {currentExercise.commonTraps.map((trap, idx) => (
                       <div key={trap.id || idx} className="trap-card">
                         <strong>Klaida: {trap.title}</strong>
@@ -703,7 +703,7 @@ export const Practice: React.FC<PracticeProps> = ({
           <span className="eyebrow">
             {topic.title} • {(currentExercise as any).level || "Bendras lygis"}
           </span>
-          <h2 style={{ fontSize: '20px', fontWeight: 'normal', lineHeight: '1.5' }}>
+          <h2 className="curriculum-statement">
             <MathText text={currentExercise.statement} onConceptClick={(id) => navigate("glossary", id)} />
           </h2>
 

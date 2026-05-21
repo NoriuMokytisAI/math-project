@@ -700,6 +700,15 @@ p {
   justify-content: space-between;
   align-items: start;
   gap: 14px;
+  flex-wrap: wrap;
+}
+
+.section-head h2 {
+  margin-bottom: 0;
+}
+
+.section-head p {
+  margin-bottom: 0;
 }
 
 /* ─────── Concept Toolbar & Chips ─────── */
@@ -755,8 +764,10 @@ p {
   gap: 16px;
 }
 
-.topic-layout .panel { grid-column: span 6; }
-.topic-layout .wide { grid-column: span 12; }
+.topic-layout .panel { grid-column: 1 / -1; }
+.topic-layout .wide { grid-column: 1 / -1; }
+.topic-layout .formulas-panel,
+.topic-layout .mistakes-panel { grid-column: span 6; }
 
 .topic-layout > .panel:first-child {
   background:
@@ -1070,10 +1081,10 @@ p {
 
 /* ─────── Tests ─────── */
 .test-card {
-  grid-column: span 4;
+  grid-column: span 6;
   display: grid;
   align-content: space-between;
-  min-height: 200px;
+  min-height: 180px;
 }
 
 .test-runner { position: relative; }
@@ -1813,9 +1824,11 @@ summary {
     padding: 14px 20px;
   }
 
-  .wide, .metric, .test-card,
+  .wide, .metric, .test-card, .daily-plan,
   .dashboard-grid .panel:not(.wide):not(.metric),
   .topic-layout .panel,
+  .topic-layout .formulas-panel,
+  .topic-layout .mistakes-panel,
   .achievements-panel {
     grid-column: 1 / -1;
   }
@@ -2079,6 +2092,10 @@ summary {
 }
 
 .method-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
   background: var(--surface-2);
   padding: 14px 20px;
   font-weight: 700;
@@ -2284,5 +2301,103 @@ summary {
   font-family: var(--font-body);
   font-size: 14px;
   margin-bottom: 12px;
+}
+
+/* ─── Extracted inline style classes (Practice.tsx cleanup) ─── */
+
+.olympiad-workspace {
+  display: grid;
+  gap: 24px;
+}
+
+.olympiad-info-panel {
+  padding: 20px 24px;
+}
+
+.olympiad-statement {
+  font-size: 22px;
+  margin-top: 10px;
+  line-height: 1.45;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.half-grid-left,
+.half-grid-right {
+  grid-column: span 6;
+}
+
+.practice-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.practice-empty-state h3 {
+  margin-bottom: 12px;
+}
+
+.practice-empty-state p {
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.prerequisite-checklist-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prerequisite-checklist {
+  display: grid;
+  gap: 8px;
+}
+
+.prerequisite-checklist-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.prerequisite-link {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.strategy-tags-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.traps-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.olympiad-solution-panel {
+  padding: 24px;
+}
+
+.olympiad-solution-heading {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.alternate-methods-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+
+.curriculum-statement {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
