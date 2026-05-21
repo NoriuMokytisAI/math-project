@@ -1,4 +1,4 @@
-# NoriuMokyti.lt Math Learning App
+# NoriuMokytis.lt Math Learning App
 
 This directory contains the product and implementation specification for an offline-first Lithuanian mathematics learning app.
 
@@ -79,3 +79,6 @@ The full completion rules are defined in [Full completion criteria](./FULL_COMPL
 - Content integrated through GitHub.
 - Strict alignment to the official Lithuanian mathematics curriculum.
 - Olympiad content is additional, clearly marked, and never mixed with mandatory curriculum mastery.
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

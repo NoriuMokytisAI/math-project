@@ -47,7 +47,7 @@ function listen(port, attemptsLeft = 20) {
   });
 
   server.listen(port, () => {
-    console.log(`NoriuMokyti.lt web app: http://localhost:${port}`);
+    console.log(`NoriuMokytis.lt web app: http://localhost:${port}`);
   });
 }
 

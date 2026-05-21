@@ -28,7 +28,7 @@ The web app is one production delivery target and the canonical development surf
 
 ### Hosting
 
-- Host as a static build at `NoriuMokyti.lt`.
+- Host as a static build at `NoriuMokytis.lt`.
 - No required backend for learning.
 - GitHub-based deployment is preferred.
 
@@ -170,3 +170,6 @@ For final completion, each target must satisfy the detailed release criteria in 
 - shared content/version consistency.
 
 No platform is complete if it has a different learning engine, different content model, different SRS logic, or different mastery logic from the shared core app.
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

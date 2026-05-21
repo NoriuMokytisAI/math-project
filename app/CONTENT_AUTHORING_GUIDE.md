@@ -23,17 +23,32 @@ Generate one JSON file per topic.
 Recommended path:
 
 ```txt
-content/generated/grades/{grade}/{topic_id}.json
+content/generated/{grade}/{topic_id}.json
 ```
 
 Example:
 
 ```txt
-content/generated/grades/09/funkcijos.json
-content/generated/grades/09/kvadratine-funkcija.json
+content/generated/09/funkcijos.json
+content/generated/09/kvadratine-funkcija.json
 ```
 
 The file must contain valid UTF-8 JSON only. Do not include Markdown fences, comments, or explanatory text outside JSON.
+
+Olympiad grade packs must use these canonical files:
+
+```txt
+content/generated/05/olimpiada-05.json
+content/generated/06/olimpiada-06.json
+content/generated/07/olimpiada-07.json
+content/generated/08/olimpiada-08.json
+content/generated/09/olimpiada-09.json
+content/generated/10/olimpiada-10.json
+content/generated/11/olimpiada-11.json
+content/generated/12/olimpiada-12.json
+```
+
+When a task asks for app content, write finished JSON content files directly. Do not create generator scripts, parser scripts, extraction scripts, or temporary automation as a substitute for the content.
 
 ## ID Rules
 
@@ -563,3 +578,6 @@ The current web app may use a simplified runtime shape while the content pipelin
 - `tests[]` -> `tests`
 
 Do not write directly into `frontend/src/content.js` unless specifically asked. Generate structured JSON first.
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

@@ -303,3 +303,6 @@ Cards with review history should not be deleted, even if they came from the old 
 7. Add the `SRS` settings tab.
 8. Update smoke tests and add scheduler tests.
 9. Verify fresh session, migrated session, SRS review, and export/import behavior.
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

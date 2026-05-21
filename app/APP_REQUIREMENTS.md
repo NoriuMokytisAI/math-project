@@ -4,8 +4,8 @@ This file is the highest-level requirements source. If another document is uncle
 
 ## Product Identity
 
-- Product name: `NoriuMokyti.lt`
-- Language: Lithuanian only for the initial product.
+- Product name: `NoriuMokytis.lt`
+- Language: Strictly Lithuanian. All the content on the app must be in Lithuanian. No other language should be visible in the production app.
 - Audience: independent students in grades 5-12.
 - Subject: mathematics aligned to the official Lithuanian curriculum.
 - Extension track: olympiad-level mathematics, clearly marked as additional content.

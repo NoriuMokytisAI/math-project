@@ -16,6 +16,27 @@ Olympiad content is not just harder practice. The exercise itself is usually the
 
 This guide extends `CONTENT_AUTHORING_GUIDE.md`. The general topic, concept, exercise, SRS, and test schemas still apply.
 
+## Required Deliverable For Content Agents
+
+When assigned olympiad content generation, create or edit the actual Lithuanian content JSON files. Do not create Python scripts, JavaScript scripts, parser scripts, extraction scripts, temporary generators, or any other automation artifact as the main deliverable.
+
+Use `OLYMPIAD_MATH_SYLLABUS.md` to decide what olympiad mathematics belongs in each grade. Use this guide to decide how each olympiad exercise must be structured. Use `CONTENT_AUTHORING_GUIDE.md` for the base topic JSON schema.
+
+Canonical olympiad output files:
+
+```txt
+content/generated/05/olimpiada-05.json
+content/generated/06/olimpiada-06.json
+content/generated/07/olimpiada-07.json
+content/generated/08/olimpiada-08.json
+content/generated/09/olimpiada-09.json
+content/generated/10/olimpiada-10.json
+content/generated/11/olimpiada-11.json
+content/generated/12/olimpiada-12.json
+```
+
+Each file must be a complete UTF-8 JSON topic file containing the topic metadata, theory, concepts, formulas, mistakes, worked examples, exercises, tests, and SRS seeds needed by the app. If a content agent cannot finish all grades in one run, it should still write completed JSON content for the grades it can finish and stop after a valid complete file. It must not leave behind a script that is meant to generate the content later.
+
 ## Product Role
 
 Olympiad exercises are extension content.
@@ -562,3 +583,6 @@ For each olympiad exercise, generate at minimum:
 
 Harder problems should exceed this minimum.
 
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

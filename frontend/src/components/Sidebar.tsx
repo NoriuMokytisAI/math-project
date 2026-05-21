@@ -25,6 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
     { page: 'dashboard', label: 'Apžvalga', icon: '⧉' },
     { page: 'diagnostic', label: 'Diagnostika', icon: '⌁' },
     { page: 'srs', label: 'SRS', icon: '⏰' },
+    { page: 'theory', label: 'Teorija', icon: '📚' },
     { page: 'practice', label: 'Praktika', icon: '✍' },
     { page: 'tests', label: 'Testai', icon: '📝' },
     { page: 'glossary', label: 'Žodynas', icon: '📖' },
@@ -42,7 +43,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
       >
         <span className="brand-mark">∑</span>
         <span>
-          <strong>NoriuMokyti.lt</strong>
+          <strong>NoriuMokytis.lt</strong>
           <small>Matematika 5-12</small>
         </span>
       </div>

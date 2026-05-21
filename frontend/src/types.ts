@@ -184,6 +184,7 @@ export interface Topic {
   title: string;
   grade: number;
   strand: string;
+  level?: string;
   order: number;
   prerequisites: string[];
   nextTopicIds?: string[];
@@ -206,6 +207,7 @@ export interface Exercise {
   id: string;
   topicId: string;
   strand: string;
+  level?: string;
   grade: number;
   type?: string;
   statement: string;
@@ -215,7 +217,6 @@ export interface Exercise {
   choices?: string[]; // Multiple choice options
   answer: string; // Correct answer value
   concepts?: string[];
-  level?: string;
   olympiadTrack?: string;
   olympiadTier?: 'introductory' | 'standard' | 'advanced' | 'selection';
   requiredPrerequisiteMastery?: number;
@@ -292,6 +293,7 @@ export interface DiagnosticAttribute {
   title: string;
   description: string;
   strand: string;
+  level?: string;
   stage: '5-6' | '7-8' | '9-10' | '11' | '12' | 'olympiad';
   prerequisiteAttributeIds: string[];
   relatedConceptIds: string[];

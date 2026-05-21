@@ -1,4 +1,4 @@
-const CACHE = "noriu-mokyti-web-v3";
+const CACHE = "noriu-mokytis-web-v3";
 const ASSETS = [
   "./",
   "./index.html",

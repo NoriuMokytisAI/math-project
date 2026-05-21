@@ -638,3 +638,6 @@ Primary references:
 - CDMs and Q-matrix use in large-scale assessment: https://largescaleassessmentsineducation.springeropen.com/articles/10.1186/s40536-022-00138-4
 - Q-matrix misspecification risk: https://www.frontiersin.org/articles/10.3389/fpsyg.2020.02120/full
 - CD-CAT item selection overview: https://pmc.ncbi.nlm.nih.gov/articles/PMC7433381/
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

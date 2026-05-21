@@ -152,7 +152,7 @@ Mastery completion means:
 
 The web app is complete when:
 
-1. it is deployed at `NoriuMokyti.lt`,
+1. it is deployed at `NoriuMokytis.lt`,
 2. it loads on current Chrome, Edge, Firefox, and Safari,
 3. it works on desktop and mobile browser widths,
 4. it has a valid PWA manifest,
@@ -279,3 +279,6 @@ The app cannot be called fully completed until all gates pass:
 
 The app is fully done when a Lithuanian student can use the same free offline math learning product on web, Android, and PC desktop, learn any curriculum topic from grades 5-12, practice and test mastery, review concepts through SRS, transfer progress by code, and continue without accounts or network access.
 
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

@@ -294,3 +294,6 @@ Examples:
 
 Achievement popups should be small and dismissible.
 
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

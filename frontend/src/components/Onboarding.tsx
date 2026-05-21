@@ -207,7 +207,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         <div className="brand onboarding-brand">
           <span className="brand-mark">∑</span>
           <span>
-            <strong>NoriuMokyti.lt</strong>
+            <strong>NoriuMokytis.lt</strong>
             <small>Offline matematikos kelias</small>
           </span>
         </div>
@@ -511,4 +511,3 @@ function modeSummary(draft: Draft): string {
 function isExplanationStep(step: StepType): boolean {
   return step === 'modeExplanation' || step === 'appExplanation' || step === 'finalExplanation';
 }
-

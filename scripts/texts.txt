@@ -1,0 +1,314 @@
+
+--- Dashboard.tsx ---
+Bendras lygis
+Dar nėra. Pirmas žingsnis jau čia pat.
+Išspręsta
+Kartoti SRS
+Mokymo(si) turinio sritis
+Pasiekimai
+Plačiau
+Praktika
+SRS šiandien
+Spręsti dabartinę
+Teorija
+kortelės laukia
+startMode === "olympiad" ? Number(grade) >= Math.min(...activeGrades) : activeGrades.includes(Number(grade)))
+            .map(([grade, value]) => (
+uždaviniai
+vidutinis meistriškumas
+Šiai klasei dar nėra temų.
+Šiandien
+
+--- Diagnostic.tsx ---
+2-6 val.
+; gaps: Array
+Aiškių spragų dar nėra.
+Atidaryti
+Automatinis kelias
+Bendra eiga
+Dabartinis modulis
+Dar reikia daugiau atsakymų.
+Diagnostika
+Diagnostika baigta
+Diagnostika pradėta. Gali sustoti ir tęsti vėliau.
+Diagnostika sustabdyta
+Diagnostika sustabdyta. Progresas išsaugotas.
+Galima atlikti per kelis prisėdimus.
+Galimų diagnostinių užduočių fondas.
+Kaip jautiesi dėl atsakymo?
+Kaip tai veikia
+Kelias bus sudarytas pradėjus diagnostiką.
+Klaida vienoje temoje paleidžia prielaidų patikrinimą, o ne aklą temos kartojimą.
+Moduliai pagal programos pakopas ir sritis.
+Mokymosi planas
+Nežinau
+Patvirtinti atsakymą
+Pirmiausia rasime, ko iš tikrųjų trūksta.
+Platus patikrinimas
+Po diagnostikos gauni eilę: ką kartoti, ką mokytis, ką spręsti ir kada laikyti testą.
+Pradedama nuo skirtingų sričių užduočių, kad sistema rastų apytikrį lygį.
+Pradėti diagnostiką
+Pradėti pagal planą
+Praleista. Jei reikės, sistema grįš prie panašaus gebėjimo.
+Praleisti
+Progresas išsaugotas.
+Rekomenduojami žingsniai
+Sistema sudėjo svarbiausias spragas, susiejo jas su programos temomis ir parinko, nuo ko verta pradėti.
+Spragos
+Spragų paieška
+Stiprybės
+Sustabdyti
+Tai nėra pažymys ir ne trumpas klausimynas. Diagnostika eina per visą 5-12 klasių programą,
+            tikrina prielaidas, sąvokas ir tipines klaidas, o tada sudaro asmeninį mokymosi kelią.
+Tavo mokymosi kelias paruoštas.
+Tęsiame nuo tos pačios vietos.
+Tęsti diagnostiką
+diagnosis.evidenceCount >= 1 && diagnosis.pMastery
+Į apžvalgą
+Įrašyk, pasirink atsakymą arba spausk „Nežinau“.
+Įrodymai
+
+--- Glossary.tsx ---
+Formaliai
+Grįžti į apžvalgą
+Intuityviai
+Susijusios sąvokos
+Sąvokų sąrašas
+Žodynas tuščias
+
+--- GradeFocus.tsx ---
+Artimiausia pakopa
+Grįžti į temą
+Keisti tikslą
+Kitos klasės
+Kitos programos klasės
+Mokymo(si) turinio sritis
+Praktika
+Rodyti tik tada, kai reikia
+Tavo programos pakopa
+Teorija
+Šiai klasei dar nėra temų.
+
+--- Onboarding.tsx ---
+Atgal
+Dabartinis startas
+Dienos planas
+Greitesnis startas, kai jau žinai, ką nori kartoti pirmiausia.
+Ilgesnis kelias, bet PUPP/VBE pasiruošimas remsis realiomis spragomis.
+Kas pasikeis
+Matysi, ką tas pasirinkimas keičia pagrindiniame ekrane.
+NoriuMokytis.lt
+Offline matematikos kelias
+Pasirinksi mokymosi situaciją.
+Pasirinkti konkrečią temą
+Pradinis sunkumo lygis. Aukštesnės pakopos liks pasiekiamos.
+Pradžios režimas
+Rekomenduojama diagnostika
+Režimą vėliau galėsi pakeisti nustatymuose neprarasdamas progreso.
+
+--- Practice.tsx ---
+([]);
+  const [attemptsCount, setAttemptsCount] = useState(0);
+  const [result, setResult] = useState
+(null);
+  const [textAnswer, setTextAnswer] = useState("");
+  const [selectedChoice, setSelectedChoice] = useState("");
+  const [startedAt, setStartedAt] = useState(Date.now());
+
+  // Olympiad Specific States
+  const [showFirstObservation, setShowFirstObservation] = useState(false);
+  const [scratchpadText, setScratchpadText] = useState("");
+  const [addedSrsCardIds, setAddedSrsCardIds] = useState
+(null);
+  const [visibleHints, setVisibleHints] = useState
+) : (
+        /* ──── STANDARD CURRICULUM LAYOUT ──── */
+) : hasChoices(currentExercise) ? (
+>(new Set());
+  const [openSolutionMethods, setOpenSolutionMethods] = useState
+Atsakymas neteisingas, pabandyk dar kartą arba peržiūrėk užuominas.
+Grįžti į skydelį
+Juodraštis / Sprendimo eiga
+Kartoti prielaidas
+Kitas uždavinys
+Kiti sprendimo būdai:
+Klaidingas veiksmas:
+Kodėl tai vilioja:
+Kortelė sėkmingai pridėta į tavo SRS kartojimo eilę!
+Ką nori mokytis šiandien?
+Ką verta prisiminti
+Mokyklinis turinys
+Nėra uždavinių
+Olimpiadinio mąstymo lavinimui atsakyk sau į šiuos klausimus apie išspręstą uždavinį:
+Olimpiadinis turinys
+Paaiškinimas (Kodėl?)
+Parodyti sprendimą
+Pasirinkta tema nerasta.
+Pasiruošimas pamokoms, kontroliniams ir egzaminams. Oficiali mokyklos programa.
+Peržiūrėti kitus sprendimo būdus
+Pilnas sprendimas
+Praktika
+Praktinis mokymasis
+Pridėta!
+Pridėti į SRS
+Rezultatas
+Savikontrolės režimas
+Sprendimas atskleistas.
+Sprendimas:
+Spręsti bendrąją programą
+Sunkesni uždaviniai, nestandartinis mąstymas ir olimpiados lygio iššūkiai.
+Teisingas pataisymas:
+Tikrinti
+Veiksmas / Idėja
+c.id === seed.id);
+                      return (
+ex.topicId === activeTopicId);
+
+  // Practice session state
+  const [currentExercise, setCurrentExercise] = useState
+Šiam uždaviniui papildomų prielaidų nėra.
+Šiame režime šiuo metu nėra jokių uždavinių šiai temai.
+Šie olimpiadiniai dėsningumai, sąvokos ar idėjos gali būti išsaugotos SRS kartojimui, kad nepamirštum jų ateityje:
+Šis uždavinys reikalauja įrodymo arba struktūrizuoto sprendimo. Užrašyk savo atsakymo santrauką ir palygink su oficialiu sprendimu:
+⚠️ Dažnos klaidos ir spąstai
+💡 Pirmas pastebėjimas
+🧠 Klausimai refleksijai
+🧠 Įtraukti į atminties korteles (SRS)
+
+--- Settings.tsx ---
+Atkurti numatytieji SRS nustatymai.
+Atkurti numatytuosius
+Baigimo intervalas dienomis
+Bauda už „Pakartoti“
+Bendra
+Eksportuok arba importuok progresą
+Eksportuoti
+Eksportuoti nepavyko.
+Importuoti
+Intervalo daugiklis
+Išplėstiniai SM-2
+Ištrina progresą šiame įrenginyje ir vėl parodo onboardingą. Perkėlimo kodai kituose įrenginiuose neliečiami.
+Ištrinti vietinį progresą
+Kartojimai per dieną
+Keisk startą neprarasdamas progreso
+Konkreti tema
+Kortelių tipai
+MVP naudoja lengvą Anki stiliaus SM-2 planuoklį. Visa logika eina per planuoklio sąsają, todėl vėliau galima pridėti FSRS neperrašant kortelių rodymo, saugyklos ar įsitraukimo taisyklių.
+Maksimalus intervalas dienomis
+Mažiausias lengvumas
+Mokymosi žingsniai minutėmis
+Naujos kortelės per dieną
+Pasirinkta tema
+Pasiruošimo tipas
+Perkėlimas be paskyros
+Pradinis lengvumas
+Pradinis olimpiadinio kelio lygis
+Pradėti iš naujo
+Pradėti nuo
+Pradžios režimas
+Pradžios režimas atnaujintas. Progresas nepakeistas.
+Progresas eksportuotas! Nukopijuokite kodą iš teksto laukelio.
+Progresas sėkmingai importuotas!
+Rekomenduojama diagnostika
+Rodyti parametrus
+SM-2 dabar, FSRS vėliau
+SRS algoritmas
+SRS planuoklis
+Sesija
+Turinys
+Vietinis progresas ištrintas.
+card.enabled && srs.enabledCardTypes[card.cardType] !== false && card.queue !== "suspended"
+  ).length;
+
+  const typeLabels: Record
+Įklijuokite eksportuotą kodą.
+Šis pasirinkimas keičia pagrindinio ekrano rekomendacijas ir pirmą siūlomą veiksmą. Jis neištrina diagnostikos, SRS kortelių, testų ar išspręstų uždavinių.
+
+--- Sidebar.tsx ---
+Matematika 5-12
+NoriuMokytis.lt
+Pradžios režimas
+
+--- SrsReview.tsx ---
+Atsakymas
+Eiti į teoriją
+Kortelės atsiras tada, kai skaitydamas teoriją paspausi sąvoką, pažymėsi temą kaip skaitytą arba bandysi susijusius uždavinius.
+Moku gerai
+Pakartoti
+Rodyti atsakymą
+[2 / Enter]
+[Space / Enter]
+Šiandien nėra SRS kortelių.
+
+--- Tests.tsx ---
+Atgal
+Baigti testą
+Eiti į praktiką
+Gali tęsti praktiką ir grįžti vėliau.
+Grįžti į apžvalgą
+Kitas
+Nutraukti
+Pradėti testą
+Tema nerasta
+Testai
+Testai meistriškumą keičia stipriau negu įprasta praktika. Pradėk tada, kai bent kartą perskaitei teoriją ir pabandei kelis uždavinius.
+attempt.testId === test.id);
+
+        return (
+Šiai temai testai dar nesukurti.
+Šis testas neturi atidaromų užduočių.
+
+--- Topbar.tsx ---
+Mokymosi kelias
+
+--- TopicView.tsx ---
+Atsakymas:
+Dažnos klaidos
+Formulės
+Grįžti į apžvalgą
+Ką nori mokytis šiandien?
+Mokyklinis turinys
+Olimpiadinis turinys
+Pasiruošimas pamokoms, kontroliniams ir egzaminams. Oficiali mokyklos programa.
+Pažymėti teoriją kaip skaitytą
+Sprendimas.
+Spręsti uždavinius
+Sunkesni uždaviniai, nestandartinis mąstymas ir olimpiados lygio iššūkiai.
+Sąvokos šioje temoje
+Tema nerasta
+Temos teorija pažymėta kaip skaityta! Sąvokos ir formulės pridėtos į SRS kartojimą.
+Teorinė dalis
+Uždavinių pavyzdžiai su sprendimais
+
+--- App.tsx ---
+(null);
+  const [route, setRoute] = useState
+);
+      case 'glossary':
+        return (
+);
+      case 'grade':
+        return
+);
+      case 'practice':
+        return (
+);
+      case 'settings':
+        return (
+);
+      case 'srs':
+        return (
+);
+      case 'tests':
+        return (
+);
+      default:
+        return
+;
+      case 'diagnostic':
+        return (
+;
+      case 'theory':
+      case 'topic':
+        return (
+Kraunamas matematikos kelias...

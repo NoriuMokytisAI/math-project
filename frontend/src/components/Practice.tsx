@@ -7,7 +7,7 @@ import { MathText } from './MathText';
 
 interface PracticeProps {
   state: State;
-  topicId: string;
+  topicId?: string;
   navigate: (page: string, id?: string) => void;
   updateState: (updater: (prev: State) => State) => void;
   showToast: (message: string) => void;
@@ -20,16 +20,30 @@ export const Practice: React.FC<PracticeProps> = ({
   updateState,
   showToast
 }) => {
-  const activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
+  const [selectedTrack, setSelectedTrack] = useState<'curriculum' | 'olympiad' | null>(() => {
+    if (topicId) {
+      return topics[topicId]?.level === 'olympiad' ? 'olympiad' : 'curriculum';
+    }
+    const mode = inferStartMode(state.profile);
+    if (mode === 'olympiad') return 'olympiad';
+    if (mode === 'targeted') return 'curriculum';
+    return null;
+  });
+
+  let activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
+  if (!topicId && selectedTrack === 'olympiad') {
+     const grade = state.profile.grade || 9;
+     const oId = `olimpiada-${String(grade).padStart(2, '0')}`;
+     if (topics[oId]) activeTopicId = oId;
+  } else if (!topicId && selectedTrack === 'curriculum') {
+     if (topics[activeTopicId]?.level === 'olympiad') {
+        const fallback = Object.keys(topics).find(k => topics[k].level !== 'olympiad' && topics[k].grade === (state.profile.grade || 9));
+        if (fallback) activeTopicId = fallback;
+     }
+  }
+
   const topic = topics[activeTopicId];
-
-  const pool = allExercises.filter((ex) => ex.topicId === activeTopicId);
-  const curriculumPool = pool.filter((ex) => ex.level !== 'olympiad');
-  const olympiadPool = pool.filter((ex) => ex.level === 'olympiad');
-  const hasOlympiad = olympiadPool.length > 0;
-
-  // Tabs / Modes
-  const [practiceMode, setPracticeMode] = useState<'curriculum' | 'olympiad'>('curriculum');
+  const currentPool = allExercises.filter((ex) => ex.topicId === activeTopicId);
 
   // Practice session state
   const [currentExercise, setCurrentExercise] = useState<Exercise | null>(null);
@@ -46,20 +60,6 @@ export const Practice: React.FC<PracticeProps> = ({
   const [addedSrsCardIds, setAddedSrsCardIds] = useState<Set<string>>(new Set());
   const [openSolutionMethods, setOpenSolutionMethods] = useState<Set<string>>(new Set());
   const [selfCheckDraft, setSelfCheckDraft] = useState("");
-
-  const startMode = inferStartMode(state.profile);
-
-  // Auto select mode tab based on startMode on mount/topic change
-  useEffect(() => {
-    if ((startMode === 'olympiad' || curriculumPool.length === 0) && hasOlympiad) {
-      setPracticeMode('olympiad');
-    } else {
-      setPracticeMode('curriculum');
-    }
-  }, [activeTopicId, startMode, hasOlympiad, curriculumPool.length]);
-
-  // Determine active pool
-  const currentPool = practiceMode === 'olympiad' ? olympiadPool : curriculumPool;
 
   // Pick next exercise
   const loadNextExercise = (newPool = currentPool) => {
@@ -87,10 +87,28 @@ export const Practice: React.FC<PracticeProps> = ({
     setSelfCheckDraft("");
   };
 
-  // Run when practiceMode or activeTopicId changes
+  // Run when track or activeTopicId changes
   useEffect(() => {
     loadNextExercise(currentPool);
-  }, [practiceMode, activeTopicId]);
+  }, [selectedTrack, activeTopicId]);
+
+  if (selectedTrack === null) {
+    return (
+      <div className="track-selection">
+        <h2>Ką nori mokytis šiandien?</h2>
+        <div className="track-cards">
+          <div className="track-card" onClick={() => setSelectedTrack('curriculum')}>
+            <h3>Mokyklinis turinys</h3>
+            <p>Pasiruošimas pamokoms, kontroliniams ir egzaminams. Oficiali mokyklos programa.</p>
+          </div>
+          <div className="track-card" onClick={() => setSelectedTrack('olympiad')}>
+            <h3>Olimpiadinis turinys</h3>
+            <p>Sunkesni uždaviniai, nestandartinis mąstymas ir olimpiados lygio iššūkiai.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!topic) {
     return (
@@ -219,30 +237,18 @@ export const Practice: React.FC<PracticeProps> = ({
           <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
         </div>
 
-        {hasOlympiad && (
-          <div className="practice-tabs">
-            <button
-              onClick={() => setPracticeMode('curriculum')}
-              className={`practice-tab-btn ${practiceMode === 'curriculum' ? 'active' : ''}`}
-            >
-              Bendroji programa
-            </button>
-            <button
-              onClick={() => setPracticeMode('olympiad')}
-              className={`practice-tab-btn ${practiceMode === 'olympiad' ? 'active olympiad-tab-active' : ''}`}
-            >
-              Olimpiadinis stiprinimas
-            </button>
-          </div>
-        )}
+        <div className="track-toggle-bar">
+        <button className={selectedTrack === 'curriculum' ? 'active' : ''} onClick={() => setSelectedTrack('curriculum')}>Mokyklinis turinys</button>
+        <button className={selectedTrack === 'olympiad' ? 'active' : ''} onClick={() => setSelectedTrack('olympiad')}>Olimpiadinis turinys</button>
+      </div>
 
         <div className="panel practice-empty-state">
           <h3>Nėra uždavinių</h3>
           <p>
             Šiame režime šiuo metu nėra jokių uždavinių šiai temai.
           </p>
-          {practiceMode === 'olympiad' && (
-            <button onClick={() => setPracticeMode('curriculum')} className="primary">
+          {selectedTrack === 'olympiad' && (
+            <button onClick={() => setSelectedTrack('curriculum')} className="primary">
               Spręsti bendrąją programą
             </button>
           )}
@@ -272,25 +278,13 @@ export const Practice: React.FC<PracticeProps> = ({
         <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
       </div>
 
-      {hasOlympiad && (
-        <div className="practice-tabs">
-          <button
-            onClick={() => setPracticeMode('curriculum')}
-            className={`practice-tab-btn ${practiceMode === 'curriculum' ? 'active' : ''}`}
-          >
-            Bendroji programa
-          </button>
-          <button
-            onClick={() => setPracticeMode('olympiad')}
-            className={`practice-tab-btn ${practiceMode === 'olympiad' ? 'active olympiad-tab-active' : ''}`}
-          >
-            Olimpiadinis stiprinimas
-          </button>
-        </div>
-      )}
+      <div className="track-toggle-bar">
+        <button className={selectedTrack === 'curriculum' ? 'active' : ''} onClick={() => setSelectedTrack('curriculum')}>Mokyklinis turinys</button>
+        <button className={selectedTrack === 'olympiad' ? 'active' : ''} onClick={() => setSelectedTrack('olympiad')}>Olimpiadinis turinys</button>
+      </div>
 
       {/* ──── OLYMPIAD LAYOUT ──── */}
-      {practiceMode === 'olympiad' ? (
+      {selectedTrack === 'olympiad' ? (
         <div className="olympiad-workspace">
           {/* Prerequisite warning warning button */}
           {lowPrereqs.length > 0 && (

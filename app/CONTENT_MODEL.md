@@ -258,3 +258,6 @@ type ContentManifest = {
 
 Progress export must include content version. Import should warn if versions differ.
 
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

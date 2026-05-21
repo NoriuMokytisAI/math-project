@@ -2,7 +2,7 @@
 
 ## Product Name
 
-Working name: **NoriuMokyti.lt**
+Working name: **NoriuMokytis.lt**
 
 The name should feel direct, Lithuanian, and motivating. The product should present itself as a serious school tool with light gamified encouragement, not as a toy.
 
@@ -38,6 +38,7 @@ Secondary user:
 6. **Practice is diagnostic.** Exercises should update mastery, SRS timing, and recommendations.
 7. **Gamification supports learning.** Achievements and streaks should encourage, not distract.
 8. **Free forever.** No paid content, no subscription, no monetization gates.
+9. **Strictly Lithuanian UI and Content.** All the content on the app must be in Lithuanian. No other language should be visible in the production app.
 
 ## Platforms
 
@@ -51,7 +52,7 @@ The app should be implemented once and packaged across platforms:
 Recommended platform route:
 
 - Core app: React + TypeScript + Vite.
-- Web: static PWA hosted at `NoriuMokyti.lt`.
+- Web: static PWA hosted at `NoriuMokytis.lt`.
 - Android: Capacitor wrapper.
 - Desktop: Tauri wrapper.
 

@@ -3,7 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matematikos Ištekliai — Lietuvos Mokyklos Matematika</title>
+  <title>NoriuMokytis.lt — Nemokamas Matematikos mokymasis savarankiškai (5–12 klasės)</title>
+  <meta name="description" content="Nemokamas matematikos mokymasis savarankiškai 5–12 klasių moksleiviams. Teorija, interaktyvios užduotys su sprendimais, VBE ir PUPP egzaminų rengimasis bei olimpiadinis turinys. Mokykitės matematikos patogiai ir be interneto!" />
+  <link rel="canonical" href="https://noriumokytis.lt/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://noriumokytis.lt/" />
+  <meta property="og:title" content="NoriuMokytis.lt — Nemokamas Matematikos mokymasis savarankiškai (5–12 klasės)" />
+  <meta property="og:description" content="Nemokamas matematikos mokymasis savarankiškai 5–12 klasių moksleiviams. Teorija, interaktyvios užduotys su sprendimais, VBE ir PUPP egzaminų rengimasis bei olimpiadinis turinys. Veikia ir neprisijungus!" />
+  <meta property="og:image" content="https://noriumokytis.lt/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://noriumokytis.lt/" />
+  <meta property="twitter:title" content="NoriuMokytis.lt — Nemokamas Matematikos mokymasis savarankiškai (5–12 klasės)" />
+  <meta property="twitter:description" content="Nemokamas matematikos mokymasis savarankiškai 5–12 klasių moksleiviams. Teorija, interaktyvios užduotys su sprendimais, VBE ir PUPP egzaminų rengimasis bei olimpiadinis turinys. Veikia ir neprisijungus!" />
+  <meta property="twitter:image" content="https://noriumokytis.lt/assets/og-image.png" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NoriuMokytis.lt",
+    "url": "https://noriumokytis.lt/",
+    "description": "Nemokamas matematikos mokymasis savarankiškai 5–12 klasių moksleiviams. Teorija, interaktyvios užduotys su sprendimais, VBE/PUPP egzaminų medžiaga ir olimpiadinis turinys.",
+    "inLanguage": "lt"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NoriuMokytis.lt",
+    "url": "https://noriumokytis.lt/",
+    "logo": "https://noriumokytis.lt/assets/og-image.png",
+    "description": "Nemokama matematikos mokymosi platforma 5–12 klasių Lietuvos moksleiviams."
+  }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
@@ -270,12 +308,12 @@
   <nav>
     <div class="logo">∫<span>matematika</span></div>
     <ul>
-      <li><a href="frontend/index.html">Mokymasis</a></li>
-      <li><a href="#resources">Ištekliai</a></li>
-      <li><a href="exercises/index.html">Užduotys</a></li>
-      <li><a href="textbook/index.html">Teorija</a></li>
-      <li><a href="#about">Apie</a></li>
-      <li><a href="https://github.com/NoriuMokytisAI/math-project">GitHub</a></li>
+      <li><a href="frontend/index.html" id="nav-learning">Mokymasis</a></li>
+      <li><a href="#resources" id="nav-resources">Ištekliai</a></li>
+      <li><a href="exercises/index.html" id="nav-exercises">Užduotys</a></li>
+      <li><a href="textbook/index.html" id="nav-theory">Teorija</a></li>
+      <li><a href="#about" id="nav-about">Apie</a></li>
+      <li><a href="https://github.com/NoriuMokytisAI/math-project" id="nav-github">GitHub</a></li>
     </ul>
   </nav>
 
@@ -285,9 +323,9 @@
     <h1>Matematika<br><span class="gradient">Lietuvos mokyklai.</span></h1>
     <p>Visa reikalinga Lietuvos mokyklos matematikos mokymuisi — vadovėliai, egzaminų instrukcijos, formulės ir daugiau.</p>
     <div class="cta-row">
-      <a href="frontend/index.html" class="btn btn-primary">Pradėti mokytis &rarr;</a>
-      <a href="#resources" class="btn btn-ghost">Ištekliai</a>
-      <a href="https://github.com/NoriuMokytisAI/math-project" class="btn btn-ghost">GitHub</a>
+      <a href="frontend/index.html" id="cta-start-learning" class="btn btn-primary">Pradėti mokytis &rarr;</a>
+      <a href="#resources" id="cta-resources" class="btn btn-ghost">Ištekliai</a>
+      <a href="https://github.com/NoriuMokytisAI/math-project" id="cta-github" class="btn btn-ghost">GitHub</a>
     </div>
   </section>
 
@@ -297,55 +335,55 @@
     <h2 class="section-title">Mokymosi medžiaga</h2>
     <div class="cards">
 
-      <a href="frontend/index.html" class="card-link">
+      <a href="frontend/index.html" id="card-interactive-platform" class="card-link">
         <div class="card-icon">🎓</div>
         <h3>Interaktyvi mokymosi platforma <span class="badge-new">NAUJA</span></h3>
         <p>Mokykis matematikos interaktyviai — pagal klases ir temas. Užduotys, teorija ir sprendimai vienoje vietoje.</p>
       </a>
 
-      <a href="resources/exams/matematikos_pupp_instrukcija_2026.pdf" target="_blank" class="card-link">
+      <a href="resources/exams/matematikos_pupp_instrukcija_2026.pdf" id="card-pupp-instruction" target="_blank" class="card-link">
         <div class="card-icon">📝</div>
         <h3>Matematikos PUPP instrukcija 2026</h3>
         <p>Nacionalinės švietimo agentūros parengta instrukcija matematikos egzamino elektroniniam vykdymui</p>
       </a>
 
-      <a href="resources/formulas/matematikos_formuliu_lapas.pdf" target="_blank" class="card-link">
+      <a href="resources/formulas/matematikos_formuliu_lapas.pdf" id="card-formulas" target="_blank" class="card-link">
         <div class="card-icon">📐</div>
         <h3>Matematikos formulės</h3>
         <p>Brandos egzamino formulės: greitosios daugybos, trigonometrijos, geometrijos, tikimybių teorijos ir statistika</p>
       </a>
 
-      <a href="textbook/index.html" target="_blank" class="card-link">
+      <a href="textbook/index.html" id="card-textbook-k12" target="_blank" class="card-link">
         <div class="card-icon">📚</div>
         <h3>Matematika I–XII klasė <span class="badge-new">NAUJAS</span></h3>
         <p>Visas mokyklinis vadovėlis — nuo I iki XII klasės. 176 psl. Atsisiųsti visą arba pagal skyrius.</p>
       </a>
 
-      <a href="textbook/index.html#12-klase" target="_blank" class="card-link">
+      <a href="textbook/index.html#12-klase" id="card-textbook-12" target="_blank" class="card-link">
         <div class="card-icon">📖</div>
         <h3>12 klasė teorija</h3>
         <p>Visa 12 klasės matematikos teorija viename faile — 12 skyrių + formulės + uždaviniai. 359 psl. VBE egzaminui.</p>
       </a>
 
-      <a href="exercises/index.html" target="_blank" class="card-link">
+      <a href="exercises/index.html" id="card-exercises" target="_blank" class="card-link">
         <div class="card-icon">✏️</div>
         <h3>Užduotys</h3>
         <p>Matematikos pratimai su sprendimais — algebra, geometrija, trigonometrija ir egzaminų užduotys</p>
       </a>
 
-      <a href="exercises/index.html#formulynai" target="_blank" class="card-link">
+      <a href="exercises/index.html#formulynai" id="card-formulynai" target="_blank" class="card-link">
         <div class="card-icon">📐</div>
         <h3>Formulynai (4–12 klasė)</h3>
         <p>Formulės pagal klases — kiekvienai klasei atskiras lapas. Aritmetika, algebra, geometrija, trigonometrija, integralai</p>
       </a>
 
-      <a href="exercises/index.html#tekstines-lygtys" target="_blank" class="card-link">
+      <a href="exercises/index.html#tekstines-lygtys" id="card-tekstines-lygtys" target="_blank" class="card-link">
         <div class="card-icon">📄</div>
         <h3>Tekstinės lygtys</h3>
         <p>Tekstiniai uždaviniai — paverskite žodžius lygtimis ir išspręskite</p>
       </a>
 
-      <a href="resources/index.html" target="_blank" class="card-link">
+      <a href="resources/index.html" id="card-resources-all" target="_blank" class="card-link">
         <div class="card-icon">📖</div>
         <h3>Visi ištekliai</h3>
         <p>Visų matematikos išteklių sąrašas ir aprašymas</p>

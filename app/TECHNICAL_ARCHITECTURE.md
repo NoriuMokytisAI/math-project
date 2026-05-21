@@ -212,7 +212,7 @@ If anonymous analytics are ever considered, they must be optional and disabled b
 
 ### Web/PWA
 
-- host static build at `NoriuMokyti.lt`
+- host static build at `NoriuMokytis.lt`
 - installable from browser
 - works offline after first load
 
@@ -256,3 +256,6 @@ Visual checks:
 - desktop viewport
 - mobile viewport
 - offline reload
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.

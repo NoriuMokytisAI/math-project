@@ -8,6 +8,27 @@
 > - 🔶 **Advanced** — needed for hardest problems; learn after mastering required topics
 > - ❌ **Out of scope** — not expected at standard IMO level
 
+## Project Usage
+
+This document is the syllabus guide for olympiad content. It is not the output format.
+
+When an agent is asked to add olympiad-level content to the app, it must translate this syllabus into Lithuanian app content JSON for each grade. The canonical output files are:
+
+```txt
+content/generated/05/olimpiada-05.json
+content/generated/06/olimpiada-06.json
+content/generated/07/olimpiada-07.json
+content/generated/08/olimpiada-08.json
+content/generated/09/olimpiada-09.json
+content/generated/10/olimpiada-10.json
+content/generated/11/olimpiada-11.json
+content/generated/12/olimpiada-12.json
+```
+
+Use this file to decide what topics and methods belong in each grade. Use `OLYMPIAD_EXERCISE_AUTHORING_GUIDE.md` to decide how each problem, solution, hint sequence, prerequisite list, mistake analysis, and SRS seed must be authored. Use `CONTENT_AUTHORING_GUIDE.md` for the shared JSON schema.
+
+Do not create generator scripts, parser scripts, extraction scripts, or temporary automation as the deliverable. The deliverable is finished Lithuanian JSON content in the files above.
+
 ---
 
 ## Grade 5
@@ -534,3 +555,6 @@ These are meta-skills and proof techniques that are required at every level, gro
 ---
 
 *Last updated: May 2026. Based on the IMO official problem corpus, AMC/AIME/USAMO competition syllabi, Evan Chen's unofficial olympiad syllabus, Art of Problem Solving curriculum, and established national olympiad preparation frameworks.*
+
+
+> **Language Constraint:** All the content on the app must be strictly in Lithuanian. No other language should be visible in the production app.
