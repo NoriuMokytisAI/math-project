@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { State, Profile } from './types';
 import { loadState, saveState, resetState } from './storage';
 import { Sidebar } from './components/Sidebar';
+import { MobileNav } from './components/MobileNav';
 import { Topbar } from './components/Topbar';
 import { Onboarding } from './components/Onboarding';
 import { Dashboard } from './components/Dashboard';
@@ -298,6 +299,11 @@ export const App: React.FC = () => {
     <div className="app-container">
       <Sidebar
         state={state}
+        currentPage={route.page}
+        currentId={route.id}
+        navigate={navigate}
+      />
+      <MobileNav
         currentPage={route.page}
         currentId={route.id}
         navigate={navigate}

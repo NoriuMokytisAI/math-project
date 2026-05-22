@@ -22,6 +22,7 @@ The app must:
 - store progress locally,
 - allow progress transfer through export/import codes,
 - be usable on web, Android, and desktop,
+- be usable on phone web widths down to `360px`,
 - use the same core app and content model on every platform,
 - use GitHub as the content and code integration workflow,
 - separate official curriculum content from olympiad extension content,
@@ -146,6 +147,7 @@ The production app must include:
 
 - goal-based start flow,
 - three mode-specific home pages,
+- phone-safe web layout that satisfies `WEB_PHONE_ACCESSIBILITY.md`,
 - cognitive diagnosis model placement,
 - automatically generated learning paths,
 - dashboard `Aktualios temos` as the focused current-topic list,
@@ -166,6 +168,23 @@ The production app must include:
 - offline behavior on web/PWA, Android, and desktop.
 
 Android and desktop are first-class production targets. They must use the same shared app, content, learning logic, and progress format as the web/PWA target.
+
+## Web Phone Requirements
+
+The web/PWA app must satisfy `WEB_PHONE_ACCESSIBILITY.md`.
+
+Minimum requirements:
+
+- no whole-page horizontal scroll at `360px`,
+- no clipped text in cards, buttons, page titles, settings panels, problem statements, SRS cards, or recommendations,
+- no dashboard metric cards squeezed into unreadable vertical columns,
+- no settings cards squeezed into thin vertical strips,
+- usable `Teorija` and `Praktika` search/filter/card layouts on phones,
+- readable and actionable standard and olympiad practice pages on phones,
+- touch targets at least `44px`,
+- mobile navigation must not cover learning content.
+
+The web/PWA target is not complete until the phone viewport checklist in `WEB_PHONE_ACCESSIBILITY.md` passes.
 
 ## Goal Mode Requirements
 

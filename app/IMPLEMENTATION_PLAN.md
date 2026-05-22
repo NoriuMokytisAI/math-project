@@ -34,6 +34,7 @@ Deliverables:
 - Vite React app.
 - Routes.
 - Responsive layout for desktop, tablet, and phone.
+- phone web accessibility pass following `WEB_PHONE_ACCESSIBILITY.md`.
 - Lithuanian UI.
 - PWA manifest.
 - Service worker.
@@ -126,6 +127,7 @@ Deliverables:
 
 - shared dashboard shell with mode-specific main content,
 - `Aktualios temos` dashboard section replacing broad dashboard curriculum browsing,
+- phone-safe dashboard metrics and `Aktualios temos` cards with no clipped text or thin vertical cards,
 - olympiad strengthening home page,
 - topic or exam preparation home page,
 - full-course diagnostic home page,
@@ -151,6 +153,7 @@ The dashboard should not be the full curriculum browser. The broad topic library
 Deliverables:
 
 - card-library `Teorija` index page with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters,
+- phone-safe `Teorija` and `Praktika` library controls with collapsed filters and one-column topic cards,
 - recommended topic cards above all other matching topic cards,
 - theory reader for all curriculum topics,
 - `Pridėti prie aktualių temų` action on individual theory topic pages,
@@ -185,6 +188,7 @@ Additional entry behavior:
 Deliverables:
 
 - exercise renderer,
+- phone-safe standard and olympiad practice layouts,
 - multiple choice,
 - numeric input,
 - algebraic expression input,
@@ -285,6 +289,7 @@ Deliverables:
 - same content version shipped on all platforms,
 - same progress code format on all platforms,
 - web-to-Android-to-desktop transfer test,
+- phone web accessibility verification at the viewport matrix in `WEB_PHONE_ACCESSIBILITY.md`,
 - all release gates passed,
 - documentation updated with release commands and troubleshooting.
 

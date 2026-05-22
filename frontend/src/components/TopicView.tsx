@@ -77,7 +77,7 @@ export const TopicView: React.FC<TopicViewProps> = ({
             Prerekvizitai: {topic.prerequisites.join(", ")}.
           </p>
         )}
-        <div className="actions">
+        <div className="actions actions-stack-mobile">
           <button
             className="primary"
             onClick={() => navigate("practice", topic.id)}

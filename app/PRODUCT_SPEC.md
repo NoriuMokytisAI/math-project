@@ -84,6 +84,8 @@ The app should feel:
 - calm,
 - lightly gamified.
 
+The web experience must also feel intentionally designed on phones. A phone user must be able to complete core learning flows without zooming, clipped content, thin vertical cards, hidden buttons, or horizontal page scrolling. The detailed phone standard is `WEB_PHONE_ACCESSIBILITY.md`.
+
 Inspirations:
 
 - Anki for memory review,
@@ -232,6 +234,24 @@ The content box must show card-based topic presentations:
 Recommended topics should be based on diagnostic recommendations first, then `Aktualios temos`, then the current target/active topic, then low-mastery topics in the selected grade band. Recommendations must respect the current toggle and filters.
 
 Clicking a Teorija card opens the individual theory topic page. Clicking a Praktika card starts practice for that topic.
+
+## Phone Web Experience
+
+Phone web usability is a first-class product requirement.
+
+Minimum standards:
+
+- support phone widths down to `360px`,
+- no whole-page horizontal scrolling,
+- no clipped text in cards, buttons, titles, topic pills, stats, settings cards, practice statements, SRS cards, or recommendations,
+- no dashboard metric cards squeezed into unreadable vertical strips,
+- no settings cards squeezed into unreadable vertical strips,
+- no practice or olympiad content disappearing off-screen,
+- all core actions visible and touch-friendly,
+- math formulas scroll horizontally only inside their own formula container,
+- touch targets at least `44px`.
+
+The dashboard, `Teorija`, `Praktika`, topic theory, standard practice, olympiad practice, SRS, diagnostics, `Žodynas`, tests, settings, and onboarding must pass `WEB_PHONE_ACCESSIBILITY.md`.
 
 ## Core Learning Flow
 

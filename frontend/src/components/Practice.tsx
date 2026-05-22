@@ -534,7 +534,7 @@ export const Practice: React.FC<PracticeProps> = ({
               )}
 
               {/* Actions row */}
-              <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+              <div className="actions practice-actions actions-stack-mobile" style={{ marginTop: '20px' }}>
                 <button
                   type="button"
                   onClick={handleHint}
@@ -759,7 +759,7 @@ export const Practice: React.FC<PracticeProps> = ({
                             Spręsti →
                           </span>
                         </div>
-                        <p style={{ margin: 0, fontSize: '13.5px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+                        <p style={{ margin: 0, fontSize: '13.5px', overflowWrap: 'anywhere' }}>
                           {ex.statement}
                         </p>
                       </div>
@@ -817,8 +817,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="primary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                        className="primary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                         onClick={() => {
                           const nextEx = similarExercises[0];
                           setCurrentExercise(nextEx);
@@ -849,8 +849,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="secondary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content', background: 'var(--gold)', color: 'white', border: 'none' }}
+                        className="secondary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', background: 'var(--gold)', color: 'white', border: 'none' }}
                         onClick={() => navigate("topic", lowPrereqs[0])}
                       >
                         Kartoti prielaidas
@@ -866,8 +866,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="primary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                        className="primary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                         onClick={() => {
                           setCurrentExercise(harderEx);
                           setVisibleHints([]);
@@ -896,8 +896,8 @@ export const Practice: React.FC<PracticeProps> = ({
                     </div>
                     <button
                       type="button"
-                      className="secondary-outline"
-                      style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                      className="secondary-outline recommendation-btn"
+                      style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                       onClick={() => navigate("topic", activeTopicId)}
                     >
                       Skaityti teoriją
@@ -967,7 +967,7 @@ export const Practice: React.FC<PracticeProps> = ({
               </div>
             )}
 
-            <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+            <div className="actions practice-actions actions-stack-mobile" style={{ marginTop: '20px' }}>
               <button
                 type="button"
                 onClick={handleHint}

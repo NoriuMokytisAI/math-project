@@ -235,7 +235,7 @@ export const Tests: React.FC<TestsProps> = ({
           </div>
         )}
 
-        <div className="actions test-actions">
+        <div className="actions test-actions actions-stack-mobile">
           <button
             onClick={handlePrev}
             disabled={session.index === 0}

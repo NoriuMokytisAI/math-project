@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { State, Topic } from '../types';
 import { topics, exercises } from '../content';
 import {
@@ -33,6 +33,47 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
   const [gradeFilter, setGradeFilter] = useState<string>(state.profile.gradeBand || '9-10');
   const [disciplineFilter, setDisciplineFilter] = useState<string>('all');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isFilterSheetOpen, setIsFilterSheetOpen] = useState(false);
+
+  const [tempGradeFilter, setTempGradeFilter] = useState(state.profile.gradeBand || '9-10');
+  const [tempDisciplineFilter, setTempDisciplineFilter] = useState('all');
+  const [tempDifficultyFilter, setTempDifficultyFilter] = useState('all');
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const openFilters = () => {
+    setTempGradeFilter(gradeFilter);
+    setTempDisciplineFilter(disciplineFilter);
+    setTempDifficultyFilter(difficultyFilter);
+    setIsFilterSheetOpen(true);
+  };
+
+  const applyFilters = () => {
+    setGradeFilter(tempGradeFilter);
+    setDisciplineFilter(tempDisciplineFilter);
+    setDifficultyFilter(tempDifficultyFilter);
+    setIsFilterSheetOpen(false);
+  };
+
+  const clearFilters = () => {
+    setGradeFilter('all');
+    setDisciplineFilter('all');
+    setDifficultyFilter('all');
+    setTempGradeFilter('all');
+    setTempDisciplineFilter('all');
+    setTempDifficultyFilter('all');
+    setIsFilterSheetOpen(false);
+  };
+
+  const hasActiveFilters = gradeFilter !== 'all' || disciplineFilter !== 'all' || difficultyFilter !== 'all';
 
   const allTopics = useMemo(() => Object.values(topics), []);
 
@@ -115,44 +156,107 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
             </button>
           </div>
 
-          <div className="search-box">
-            <input 
-              id="topic-search"
-              name="topic-search"
-              type="text" 
-              placeholder="Ieškoti temos..." 
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
+          <div className="search-and-filter-row" style={{ display: 'flex', gap: '10px', width: '100%', flexWrap: 'wrap' }}>
+            <div className="search-box" style={{ flex: 1, minWidth: '200px' }}>
+              <input 
+                id="topic-search"
+                name="topic-search"
+                type="text" 
+                placeholder="Ieškoti temos..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
 
-          <div className="filters">
-            <select value={gradeFilter} onChange={(e) => setGradeFilter(e.target.value)}>
-              <option value="all">Visos klasės</option>
-              {GRADE_BANDS.map(band => (
-                <option key={band.value} value={band.value}>{band.label}</option>
-              ))}
-            </select>
+            {isMobile ? (
+              <button 
+                type="button" 
+                className={`filter-trigger-btn ${hasActiveFilters ? 'has-active' : ''}`}
+                onClick={openFilters}
+              >
+                Filtrai {hasActiveFilters ? '•' : ''}
+              </button>
+            ) : (
+              <div className="filters">
+                <select value={gradeFilter} onChange={(e) => setGradeFilter(e.target.value)}>
+                  <option value="all">Visos klasės</option>
+                  {GRADE_BANDS.map(band => (
+                    <option key={band.value} value={band.value}>{band.label}</option>
+                  ))}
+                </select>
 
-            <select value={disciplineFilter} onChange={(e) => setDisciplineFilter(e.target.value)}>
-              <option value="all">Visos sritys</option>
-              {DISCIPLINES.map(d => (
-                <option key={d} value={d}>{d}</option>
-              ))}
-            </select>
+                <select value={disciplineFilter} onChange={(e) => setDisciplineFilter(e.target.value)}>
+                  <option value="all">Visos sritys</option>
+                  {DISCIPLINES.map(d => (
+                    <option key={d} value={d}>{d}</option>
+                  ))}
+                </select>
 
-            {contentToggle === 'olympiad' && (
-              <select value={difficultyFilter} onChange={(e) => setDifficultyFilter(e.target.value)}>
-                <option value="all">Visi lygiai</option>
-                <option value="introductory">Įvadinis</option>
-                <option value="standard">Standartinis</option>
-                <option value="advanced">Sudėtingas</option>
-                <option value="selection">Atrankinis</option>
-              </select>
+                {contentToggle === 'olympiad' && (
+                  <select value={difficultyFilter} onChange={(e) => setDifficultyFilter(e.target.value)}>
+                    <option value="all">Visi lygiai</option>
+                    <option value="introductory">Įvadinis</option>
+                    <option value="standard">Standartinis</option>
+                    <option value="advanced">Sudėtingas</option>
+                    <option value="selection">Atrankinis</option>
+                  </select>
+                )}
+              </div>
             )}
           </div>
         </div>
       </header>
+
+      {isMobile && isFilterSheetOpen && (
+        <div className="mobile-filter-backdrop" onClick={() => setIsFilterSheetOpen(false)} />
+      )}
+
+      {isMobile && (
+        <div className={`mobile-filter-sheet ${isFilterSheetOpen ? 'open' : ''}`}>
+          <div className="mobile-filter-sheet-header">
+            <h3>Filtruoti temas</h3>
+            <button className="close-btn" onClick={() => setIsFilterSheetOpen(false)}>×</button>
+          </div>
+          <div className="mobile-filter-sheet-body">
+            <label>
+              Klasė / Pakopa
+              <select value={tempGradeFilter} onChange={(e) => setTempGradeFilter(e.target.value)}>
+                <option value="all">Visos klasės</option>
+                {GRADE_BANDS.map(band => (
+                  <option key={band.value} value={band.value}>{band.label}</option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              Sritis
+              <select value={tempDisciplineFilter} onChange={(e) => setTempDisciplineFilter(e.target.value)}>
+                <option value="all">Visos sritys</option>
+                {DISCIPLINES.map(d => (
+                  <option key={d} value={d}>{d}</option>
+                ))}
+              </select>
+            </label>
+
+            {contentToggle === 'olympiad' && (
+              <label>
+                Sunkumo lygis
+                <select value={tempDifficultyFilter} onChange={(e) => setTempDifficultyFilter(e.target.value)}>
+                  <option value="all">Visi lygiai</option>
+                  <option value="introductory">Įvadinis</option>
+                  <option value="standard">Standartinis</option>
+                  <option value="advanced">Sudėtingas</option>
+                  <option value="selection">Atrankinis</option>
+                </select>
+              </label>
+            )}
+          </div>
+          <div className="mobile-filter-sheet-footer">
+            <button className="clear-btn" onClick={clearFilters}>Išvalyti</button>
+            <button className="apply-btn primary" onClick={applyFilters}>Taikyti</button>
+          </div>
+        </div>
+      )}
 
       <main className="library-content">
         {recommendations.length > 0 && (

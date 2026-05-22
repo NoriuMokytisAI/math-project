@@ -35,6 +35,7 @@ The web app is one production delivery target and the canonical development surf
 ### Required Features
 
 - responsive desktop/mobile layout,
+- phone web accessibility according to `WEB_PHONE_ACCESSIBILITY.md`,
 - PWA manifest,
 - installable browser app,
 - service worker,
@@ -56,6 +57,18 @@ The web/PWA target passes offline acceptance when:
 6. browser is switched offline,
 7. app reloads successfully,
 8. diagnostic state, learning plan, progress, SRS queue, and exercise history are still available.
+
+### Phone Layout Acceptance Criteria
+
+The web/PWA target passes phone layout acceptance when:
+
+1. the viewport matrix in `WEB_PHONE_ACCESSIBILITY.md` has been checked,
+2. there is no whole-page horizontal scroll at `360px`,
+3. dashboard metric cards and settings cards do not become thin unreadable columns,
+4. `Teorija` and `Praktika` search/filter/card layouts are usable,
+5. standard and olympiad practice pages do not cut off statements, recommendations, SRS cards, or buttons,
+6. mobile navigation does not cover learning content,
+7. every verification flow in `WEB_PHONE_ACCESSIBILITY.md` passes.
 
 ## Android Target
 

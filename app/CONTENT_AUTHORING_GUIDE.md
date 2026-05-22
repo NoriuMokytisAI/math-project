@@ -4,6 +4,8 @@
 
 This file tells a content-generation agent how to write Lithuanian math learning content so it can be injected into the app with minimal cleanup.
 
+Use this file for the exact topic JSON structure and authoring rules. Use `CONTENT_EXPANSION_STRATEGY.md` to decide what content to add next, how to expand beyond the minimum, how to prioritize topics, and how to track coverage so no official topic is forgotten.
+
 The agent should generate structured content, not prose-only notes. The output must be easy to convert into app data for:
 
 - curriculum topic pages,

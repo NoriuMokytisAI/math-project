@@ -22,10 +22,12 @@ The implementation target is now the completed product, not a narrow prototype:
 - [Product specification](./PRODUCT_SPEC.md)
 - [Canonical requirements](./APP_REQUIREMENTS.md)
 - [Platform targets](./PLATFORM_TARGETS.md)
+- [Web phone accessibility and responsive implementation guide](./WEB_PHONE_ACCESSIBILITY.md)
 - [Full completion criteria](./FULL_COMPLETION_CRITERIA.md)
 - [Technical architecture](./TECHNICAL_ARCHITECTURE.md)
 - [Content model and schemas](./CONTENT_MODEL.md)
 - [Content authoring guide](./CONTENT_AUTHORING_GUIDE.md)
+- [Content expansion strategy](./CONTENT_EXPANSION_STRATEGY.md)
 - [Olympiad exercise authoring guide](./OLYMPIAD_EXERCISE_AUTHORING_GUIDE.md)
 - [Learning systems: SRS, mastery, diagnostics](./LEARNING_SYSTEMS.md)
 - [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md)
@@ -40,6 +42,7 @@ These decisions remove ambiguity for implementation:
 - Put the implementation in the root-level `frontend/` directory.
 - Keep this `app/` directory for product and engineering specifications.
 - Ship web as an offline-capable PWA.
+- Treat phone web usability as a release gate, following `WEB_PHONE_ACCESSIBILITY.md`.
 - Wrap the same web app for Android with Capacitor.
 - Wrap the same web app for desktop with Tauri.
 - Do not build separate native Android or desktop UIs.
@@ -62,6 +65,12 @@ These modes are starting positions, not permanent user categories. The student c
 The dashboard topic area is **Aktualios temos**. It is a focused local list of topic ids, not the full curriculum browser. Topic/exam onboarding adds the selected topic to this list, and individual theory topic pages must provide `Pridėti prie aktualių temų`.
 
 The full curriculum and olympiad browser lives in **Teorija** and **Praktika**. Both pages use a card-based library layout with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters. Recommended cards appear first; all other matching topics appear below.
+
+## Canonical Phone Web Standard
+
+The website must be usable on phone widths down to `360px` without zooming, clipped text, thin vertical cards, hidden primary actions, or whole-page horizontal scrolling.
+
+The binding phone implementation rules are defined in [Web phone accessibility and responsive implementation guide](./WEB_PHONE_ACCESSIBILITY.md). They apply to onboarding, dashboard metrics, `Aktualios temos`, `Teorija`, `Praktika`, topic theory, standard practice, olympiad practice, SRS, diagnostics, `Žodynas`, tests, and settings.
 
 ## Fully Completed App
 
