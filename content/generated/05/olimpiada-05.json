@@ -87,7 +87,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\\\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\\\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\\\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$"
+          "text": "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$"
         },
         {
           "type": "method",
@@ -147,7 +147,7 @@
       "type": "concept",
       "shortDefinition": "Sveikųjų skaičių savybė dalytis iš dviejų be liekanos arba turėti liekaną vienas.",
       "intuition": "Skaičių skirstymas į lyginius ir nelyginius. Sandauga lyginė, jei bent vienas daugiklis lyginis; suma lyginė, jei abu dėmenys vienodo lyginumo.",
-      "formal": "Skaičiaus $n \\\\in \\\\mathbb{Z}$ klasifikacija pagal $n \\\\equiv 0 \\\\pmod 2$ (lyginis) arba $n \\\\equiv 1 \\\\pmod 2$ (nelyginis).",
+      "formal": "Skaičiaus $n \\in \\mathbb{Z}$ klasifikacija pagal $n \\equiv 0 \\pmod 2$ (lyginis) arba $n \\equiv 1 \\pmod 2$ (nelyginis).",
       "relatedConceptIds": []
     },
     {
@@ -156,7 +156,7 @@
       "type": "concept",
       "shortDefinition": "Strategija pradėti uždavinio nagrinėjimą nuo objekto, turinčio didžiausią arba mažiausią tam tikros charakteristikos reikšmę.",
       "intuition": "Žiūrėkite į patį mažiausią skaičių, ilgiausią atkarpą ar kraštutinį tašką – tai dažnai apriboja kitų objektų elgseną.",
-      "formal": "Bet kuri netuščia baigtinė aibė $\\\\mathcal{S} \\\\subset \\\\mathbb{R}$ turi maksimalų elementą $\\\\max \\\\mathcal{S}$ ir minimalų elementą $\\\\min \\\\mathcal{S}$.",
+      "formal": "Bet kuri netuščia baigtinė aibė $\\mathcal{S} \\subset \\mathbb{R}$ turi maksimalų elementą $\\max \\mathcal{S}$ ir minimalų elementą $\\min \\mathcal{S}$.",
       "relatedConceptIds": []
     }
   ],
@@ -191,22 +191,22 @@
       "problem": "Triženklio skaičiaus pirmasis skaitmuo yra $3$. Jei šį skaitmenį perkeltume į skaičiaus galą, gautasis skaičius būtų $9$ vienetais didesnis už pradinį. Raskite pradinį skaičių.",
       "steps": [
         {
-          "text": "Pažymėkime pradinį skaičių kaip $\\\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$."
+          "text": "Pažymėkime pradinį skaičių kaip $\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$."
         },
         {
-          "text": "Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$."
+          "text": "Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$."
         },
         {
-          "text": "Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\\\overline{ab3} - \\\\overline{3ab} = 9$."
+          "text": "Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\overline{ab3} - \\overline{3ab} = 9$."
         },
         {
           "text": "Užrašome lygtį: $(100a + 10b + 3) - (300 + 10a + b) = 9$."
         },
         {
-          "text": "Supaprastiname: $90a + 9b - 297 = 9 \\\\implies 90a + 9b = 306$."
+          "text": "Supaprastiname: $90a + 9b - 297 = 9 \\implies 90a + 9b = 306$."
         },
         {
-          "text": "Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$)."
+          "text": "Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$)."
         },
         {
           "text": "Pradinis skaičius buvo $334$. Patikriname: $343 - 334 = 9$. Viskas tinka!"
@@ -222,7 +222,7 @@
           "text": "Kiekviena moneta gali būti būsenos 'Skaičius' (S) arba 'Herbas' (H). Mums reikia, kad pradžioje buvo $11$ S monetų (ir $0$ H monetų), o pabaigoje būtų $11$ H monetų."
         },
         {
-          "text": "Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia."
+          "text": "Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia."
         },
         {
           "text": "Pastebime, kad visais atvejais H monetų skaičius pakinta lyginiu skaičiumi ($+2$, $-2$ arba $0$)."
@@ -260,10 +260,10 @@
       "problem": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
       "steps": [
         {
-          "text": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą."
+          "text": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą."
         },
         {
-          "text": "Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\\\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\\\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\\\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\\\implies 3 \\times 8$ arba $4 \\times 6$."
+          "text": "Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\implies 3 \\times 8$ arba $4 \\times 6$."
         },
         {
           "text": "Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka!"
@@ -312,7 +312,7 @@
       "answerText": "105263157894736842",
       "coreIdea": {
         "title": "Naudokite skaičiaus skleistinį",
-        "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\\\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
+        "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
       },
       "strategyTags": [
         "skaitmenų-perkėlimas",
@@ -355,7 +355,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Užrašykite lygtį $19A = 2 \\\\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
+          "text": "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
           "penalty": 0.12
         }
       ],
@@ -364,10 +364,10 @@
           "text": "Pažymime pradinį skaičių kaip $10A + 2$, kur $A$ yra skaičiaus dalis be paskutinio dvejeto."
         },
         {
-          "text": "Pagal uždavinio sąlygą sudarome lygtį: $2 \\\\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis."
+          "text": "Pagal uždavinio sąlygą sudarome lygtį: $2 \\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis."
         },
         {
-          "text": "Supaprastinę lygtį gauname $19A = 2 \\\\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$."
+          "text": "Supaprastinę lygtį gauname $19A = 2 \\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$."
         }
       ],
       "solutionMethods": [
@@ -383,12 +383,12 @@
               "title": "Matematinio modelio sudarymas",
               "action": "Pažymime ieškomą skaičių kintamaisiais ir užrašome jo skaitmeninę išraišką $10A + 2$.",
               "reason": "Kad galėtume pritaikyti algebrines operacijas skaitmenų perkėlimui aprašyti.",
-              "result": "Gauta lygtis $2 \\\\cdot 10^k + A = 2(10A + 2)$."
+              "result": "Gauta lygtis $2 \\cdot 10^k + A = 2(10A + 2)$."
             },
             {
               "title": "Lygties sprendimas ir analizė",
               "action": "Išreiškiame $A$ per $k$ ir ieškome mažiausio tinkamo $k$ taikydami dalumo iš $19$ požymius.",
-              "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\\\cdot 10^k - 4$ privalo dalytis iš $19$.",
+              "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\cdot 10^k - 4$ privalo dalytis iš $19$.",
               "result": "Rastas mažiausias skaičius $105263157894736842$."
             }
           ],
@@ -431,7 +431,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į pa...",
-          "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\\\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
+          "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -652,7 +652,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\\\equiv 3 \\\\pmod 4$ ir $N \\\\equiv 4 \\\\pmod 5$, tai paste...",
+          "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste...",
           "penalty": 0.12
         }
       ],
@@ -679,7 +679,7 @@
             {
               "title": "Bendrojo kartotinio radimas su poslinkiu",
               "action": "Randame mažiausią bendrąjį $4$ ir $5$ kartotinį ir atimame $1$ dėl liekanų savybės.",
-              "reason": "Sąlyga $N \\\\equiv -1 \\\\pmod 4$ ir $N \\\\equiv -1 \\\\pmod 5$ leidžia naudoti MBK metodą.",
+              "reason": "Sąlyga $N \\equiv -1 \\pmod 4$ ir $N \\equiv -1 \\pmod 5$ leidžia naudoti MBK metodą.",
               "result": "Kandidatai: $19, 39, 59, ...$"
             },
             {
@@ -799,16 +799,16 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...",
+          "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\\\cdot 3 \\\\cdot 5$, $84 = 2^2 \\\\cdot 3 \\\\cdot 7$."
+          "text": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$."
         },
         {
-          "text": "Randame DBD($60, 84$) = $2^2 \\\\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm."
+          "text": "Randame DBD($60, 84$) = $2^2 \\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm."
         },
         {
           "text": "Apskaičiuojame kvadratų kiekį: $(60/12) \\times (84/12) = 5 \\times 7 = 35$."
@@ -921,7 +921,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
+          "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -946,13 +946,13 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\\\sqrt{...",
+          "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame apytikslę šaknį: $\\\\sqrt{2021} \\\\approx 44.9$."
+          "text": "Apskaičiuojame apytikslę šaknį: $\\sqrt{2021} \\approx 44.9$."
         },
         {
           "text": "Tikriname pirminius skaičius mažėjančia tvarka: $43$. Atliekame dalybą: $2021 / 43 = 47$."
@@ -1004,7 +1004,7 @@
           "title": "Netinkamas šaknies įvertinimas",
           "wrongMove": "Manoma, kad daugikliai turi būti labai maži (pvz., tikrinama tik iki 10).",
           "whyTempting": "Tikimasi, kad uždavinys bus labai paprastas.",
-          "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\\\sqrt{N}$.",
+          "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\sqrt{N}$.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1093,7 +1093,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\\\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
+          "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
           "penalty": 0.12
         }
       ],
@@ -1102,7 +1102,7 @@
           "text": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius."
         },
         {
-          "text": "Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\\\min(a,b)$)."
+          "text": "Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\min(a,b)$)."
         },
         {
           "text": "Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali."
@@ -1252,7 +1252,7 @@
           "text": "Sudarome lygtį: $36+x = 3(8+x)$."
         },
         {
-          "text": "Sprendžiame: $36+x = 24+3x \\\\implies 12 = 2x \\\\implies x = 6$."
+          "text": "Sprendžiame: $36+x = 24+3x \\implies 12 = 2x \\implies x = 6$."
         }
       ],
       "solutionMethods": [
@@ -1387,7 +1387,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...",
+          "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...$",
           "penalty": 0.12
         }
       ],
@@ -1483,7 +1483,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\\\dots + \\frac{1}{9 \\times 10}$.",
+      "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{9 \\times 10}$.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Suma lygi $\\frac{9}{10}$."
@@ -1534,13 +1534,13 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...",
+          "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...$",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Išskleidžiame sumą: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + (\\frac{1}{3} - \\frac{1}{4}) + \\\\dots + (\\frac{1}{9} - \\frac{1}{10})$."
+          "text": "Išskleidžiame sumą: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + (\\frac{1}{3} - \\frac{1}{4}) + \\dots + (\\frac{1}{9} - \\frac{1}{10})$."
         },
         {
           "text": "Pastebime, kad visi viduriniai nariai susinaikina: $-\\frac{1}{2} + \\frac{1}{2} = 0$, $-\\frac{1}{3} + \\frac{1}{3} = 0$ ir t.t."
@@ -1609,7 +1609,7 @@
           "id": "ex-olimpiada-05-eb7e344a-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...$",
           "back": "Taikome šį metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
@@ -1630,7 +1630,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Krepšininkas pataikė $60\\\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
+      "statement": "Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Iš viso atlikta $40$ metimų."
@@ -1665,7 +1665,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\\\%$?",
+          "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\%$?",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -1681,7 +1681,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...",
+          "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...$",
           "penalty": 0.12
         }
       ],
@@ -1740,7 +1740,7 @@
         {
           "id": "ex-olimpiada-05-1fc20a2a-trap-2",
           "title": "Netvarkingas procentų skaičiavimas",
-          "wrongMove": "Manoma, kad $60\\\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
+          "wrongMove": "Manoma, kad $60\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
           "whyTempting": "Klaidingas supratimas apie procentų prigimtį.",
           "correction": "Procentai visada skaičiuojami nuo kintančios visumos, todėl juos visada paverskite skaičiais arba trupmenomis.",
           "reviewConceptIds": [
@@ -1759,7 +1759,7 @@
           "id": "ex-olimpiada-05-1fc20a2a-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\\\%$ visų mestų baudų metimų. Atlikęs...",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs...",
           "back": "Taikome šį metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
@@ -1780,7 +1780,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Žemėlapyje, kurio mastelis $1 : 50\\\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\\\ 000$?",
+      "statement": "Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\ 000$?",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Atstumas kitame žemėlapyje bus $2$ cm."
@@ -1788,7 +1788,7 @@
       "answerText": "2 cm",
       "coreIdea": {
         "title": "Naudokite atvirkštinį santykį",
-        "text": "Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$."
+        "text": "Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$."
       },
       "strategyTags": [
         "proporcijos",
@@ -1806,7 +1806,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Mastelis $1 : 200\\\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
+          "text": "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1822,7 +1822,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$.",
+          "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -1831,13 +1831,13 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\\\ 000$, o naujasis mastelis – $1 : 200\\\\ 000$. Naujasis mastelis yra $20...",
+          "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\ 000$, o naujasis mastelis – $1 : 200\\ 000$. Naujasis mastelis yra $20...$",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame mastelių santykį: $200\\\\ 000 / 50\\\\ 000 = 4$."
+          "text": "Apskaičiuojame mastelių santykį: $200\\ 000 / 50\\ 000 = 4$."
         },
         {
           "text": "Kadangi naujas mastelis sumažina vaizdą dar $4$ kartus labiau, tai atstumas žemėlapyje bus $4$ kartus trumpesnis."
@@ -1906,8 +1906,8 @@
           "id": "ex-olimpiada-05-866100dc-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\\\ 000$, atstumas tarp dvie...",
-          "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$.",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dvie...",
+          "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1927,7 +1927,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\\\dots$ Raskite kitą šios sekos narį.",
+      "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\dots$ Raskite kitą šios sekos narį.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Kitas sekos narys yra $95$."
@@ -2053,7 +2053,7 @@
           "id": "ex-olimpiada-05-6622d1e0-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...$",
           "back": "Taikome šį metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
@@ -2125,7 +2125,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...",
+          "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...$",
           "penalty": 0.12
         }
       ],
@@ -2518,12 +2518,12 @@
       "statement": "Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite kampą, kurį sudaro laikrodžio valandinė ir minutinė rodyklės (mažesnįjį iš dviejų kampų).",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Kampas tarp rodyklių yra $130^\\\\circ$."
+        "expectedConclusion": "Kampas tarp rodyklių yra $130^\\circ$."
       },
       "answerText": "130°",
       "coreIdea": {
         "title": "Raskite rodyklių poslinkį laipsniais",
-        "text": "Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus."
+        "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus."
       },
       "strategyTags": [
         "kampai",
@@ -2541,7 +2541,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\\\circ$) ir kiek valandinė ($0.5^\\\\circ$).",
+          "text": "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\circ$) ir kiek valandinė ($0.5^\\circ$).",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -2557,7 +2557,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+          "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -2566,22 +2566,22 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Viena valandos padala atitinka $360^\\\\circ / 12 = 30^\\\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\\\circ$.",
+          "text": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\circ$.",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Viena valandos padala atitinka $360^\\\\circ / 12 = 30^\\\\circ$."
+          "text": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$."
         },
         {
-          "text": "Ties $40$ minučių minutinė rodyklė rodo tiksliai į $8$-tą padalą, kas atitinka $8 \\times 30^\\\\circ = 240^\\\\circ$ nuo $12$ valandos žymės."
+          "text": "Ties $40$ minučių minutinė rodyklė rodo tiksliai į $8$-tą padalą, kas atitinka $8 \\times 30^\\circ = 240^\\circ$ nuo $12$ valandos žymės."
         },
         {
-          "text": "Valandinė rodyklė $3$ valandą buvo ties $3$-čia padala ($90^\\\\circ$). Per $40$ minučių ji pastūmėjo į priekį: $\\frac{40}{60} \\times 30^\\\\circ = 20^\\\\circ$. Taigi valandinė rodyklė yra ties $90^\\\\circ + 20^\\\\circ = 110^\\\\circ$."
+          "text": "Valandinė rodyklė $3$ valandą buvo ties $3$-čia padala ($90^\\circ$). Per $40$ minučių ji pastūmėjo į priekį: $\\frac{40}{60} \\times 30^\\circ = 20^\\circ$. Taigi valandinė rodyklė yra ties $90^\\circ + 20^\\circ = 110^\\circ$."
         },
         {
-          "text": "Kampas tarp jų yra $240^\\\\circ - 110^\\\\circ = 130^\\\\circ$."
+          "text": "Kampas tarp jų yra $240^\\circ - 110^\\circ = 130^\\circ$."
         }
       ],
       "solutionMethods": [
@@ -2597,22 +2597,22 @@
               "title": "Valandinės rodyklės padėties nustatymas",
               "action": "Apskaičiuojame bazinį valandų kampą ir pridedame papildomą poslinkį dėl minučių.",
               "reason": "Valandinė rodyklė juda nuolatos, o ne šuoliais kas valandą.",
-              "result": "Gauta padėtis $110^\\\\circ$."
+              "result": "Gauta padėtis $110^\\circ$."
             },
             {
               "title": "Minutinės rodyklės padėties nustatymas",
-              "action": "Dauginame minučių skaičių iš minutės poslinkio kampo ($6^\\\\circ$).",
+              "action": "Dauginame minučių skaičių iš minutės poslinkio kampo ($6^\\circ$).",
               "reason": "Minutinė rodyklė juda $12$ kartų greičiau už valandinę.",
-              "result": "Gauta padėtis $240^\\\\circ$."
+              "result": "Gauta padėtis $240^\\circ$."
             },
             {
               "title": "Kampo skirtumo radimas",
-              "action": "Atimame mažesnį kampą iš didesnio ir patikriname, ar rezultatas yra mažesnis už $180^\\\\circ$.",
+              "action": "Atimame mažesnį kampą iš didesnio ir patikriname, ar rezultatas yra mažesnis už $180^\\circ$.",
               "reason": "Uždavinyje prašoma rasti mažesnįjį iš dviejų galimų kampų.",
-              "result": "Kampas lygus $130^\\\\circ$."
+              "result": "Kampas lygus $130^\\circ$."
             }
           ],
-          "finalAnswer": "Kampas tarp rodyklių yra $130^\\\\circ$."
+          "finalAnswer": "Kampas tarp rodyklių yra $130^\\circ$."
         }
       ],
       "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes kampų metodas yra pats tiesiausias.",
@@ -2622,7 +2622,7 @@
           "title": "Valandinės rodyklės poslinkio nepaisymas",
           "wrongMove": "Manoma, kad valandinė rodyklė stovi lygiai ties 3-ia valanda.",
           "whyTempting": "Vizualiai valandinė rodyklė juda lėtai, todėl jos poslinkis dažnai pamirštamas.",
-          "correction": "Visada pridėkite prie valandų kampo papildomą dalį: $\\text{minutės} \\times 0.5^\\\\circ$.",
+          "correction": "Visada pridėkite prie valandų kampo papildomą dalį: $\\text{minutės} \\times 0.5^\\circ$.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -2651,7 +2651,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite ...",
-          "back": "Taikome šį metodą: Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+          "back": "Taikome šį metodą: Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -2674,12 +2674,12 @@
       "statement": "Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dydis yra $4$ kartus didesnis už gretimo kampo dydį. Raskite visų keturių susidariusių kampų dydžius.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Kampų dydžiai yra $36^\\\\circ$, $144^\\\\circ$, $36^\\\\circ$ ir $144^\\\\circ$."
+        "expectedConclusion": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
       },
       "answerText": "36°, 144°, 36°, 144°",
       "coreIdea": {
         "title": "Naudokite gretimų kampų sumos savybę",
-        "text": "Gretimų kampų suma visada lygi $180^\\\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$."
+        "text": "Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$."
       },
       "strategyTags": [
         "gretimi-kampai",
@@ -2697,7 +2697,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Prisiminkite, kad tiesė sudaro $180^\\\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
+          "text": "Prisiminkite, kad tiesė sudaro $180^\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -2706,14 +2706,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\\\circ$.",
+          "text": "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\circ$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Gretimų kampų suma visada lygi $180^\\\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
+          "text": "Gretimų kampų suma visada lygi $180^\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -2722,25 +2722,25 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Sudarome lygtį: $x + 4x = 180^\\\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta.",
+          "text": "Sudarome lygtį: $x + 4x = 180^\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta.",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tarkime, mažesniojo kampo dydis yra $x^\\\\circ$. Tada gretimas kampas yra $4x^\\\\circ$."
+          "text": "Tarkime, mažesniojo kampo dydis yra $x^\\circ$. Tada gretimas kampas yra $4x^\\circ$."
         },
         {
-          "text": "Kadangi gretimų kampų suma yra $180^\\\\circ$, gauname lygtį: $x + 4x = 180^\\\\circ \\\\implies 5x = 180^\\\\circ$."
+          "text": "Kadangi gretimų kampų suma yra $180^\\circ$, gauname lygtį: $x + 4x = 180^\\circ \\implies 5x = 180^\\circ$."
         },
         {
-          "text": "Išsprendžiame: $x = 180 / 5 = 36^\\\\circ$. Tai pirmasis kampas."
+          "text": "Išsprendžiame: $x = 180 / 5 = 36^\\circ$. Tai pirmasis kampas."
         },
         {
-          "text": "Gretimas kampas yra $180^\\\\circ - 36^\\\\circ = 144^\\\\circ$."
+          "text": "Gretimas kampas yra $180^\\circ - 36^\\circ = 144^\\circ$."
         },
         {
-          "text": "Susikertant dviem tiesėms, susidaro dvi poros lygų kryžminių kampų. Todėl visi keturi kampai yra $36^\\\\circ, 144^\\\\circ, 36^\\\\circ, 144^\\\\circ$."
+          "text": "Susikertant dviem tiesėms, susidaro dvi poros lygų kryžminių kampų. Todėl visi keturi kampai yra $36^\\circ, 144^\\circ, 36^\\circ, 144^\\circ$."
         }
       ],
       "solutionMethods": [
@@ -2756,16 +2756,16 @@
               "title": "Algebrinės lygties sudarymas",
               "action": "Pažymime vieną kampą $x$ ir užrašome gretimų kampų sumos lygybę.",
               "reason": "Tai leidžia rasti konkretų kampo dydį per bendrą geometrinę savybę.",
-              "result": "Lygtis $5x = 180^\\\\circ$."
+              "result": "Lygtis $5x = 180^\\circ$."
             },
             {
               "title": "Visų kampų identifikavimas",
               "action": "Apskaičiuojame gretimą kampą ir pritaikome kryžminių kampų lygybės taisyklę.",
               "reason": "Susikertančios tiesės sukuria simetrišką kampų struktūrą.",
-              "result": "Gauti keturi kampai: dvi poros po $36^\\\\circ$ ir $144^\\\\circ$."
+              "result": "Gauti keturi kampai: dvi poros po $36^\\circ$ ir $144^\\circ$."
             }
           ],
-          "finalAnswer": "Kampų dydžiai yra $36^\\\\circ$, $144^\\\\circ$, $36^\\\\circ$ ir $144^\\\\circ$."
+          "finalAnswer": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
         }
       ],
       "alternateMethodNote": "Alternatyvus metodas nenaudojant lygčių: 180 laipsnių padalinti į 1+4=5 dalis.",
@@ -2784,9 +2784,9 @@
         {
           "id": "ex-olimpiada-05-1b8f2f68-trap-2",
           "title": "Klaidingas sumos nustatymas",
-          "wrongMove": "Sudaroma lygtis, kurios suma lygi $360^\\\\circ$ arba $90^\\\\circ$.",
+          "wrongMove": "Sudaroma lygtis, kurios suma lygi $360^\\circ$ arba $90^\\circ$.",
           "whyTempting": "Sumišimas tarp visų kampų sumos aplink tašką ir gretimų kampų sumos.",
-          "correction": "Visada prisiminkite: gretimi kampai kartu sudaro tiesę ($180^\\\\circ$).",
+          "correction": "Visada prisiminkite: gretimi kampai kartu sudaro tiesę ($180^\\circ$).",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -2804,7 +2804,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dyd...",
-          "back": "Taikome šį metodą: Gretimų kampų suma visada lygi $180^\\\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$.",
+          "back": "Taikome šį metodą: Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -3040,7 +3040,7 @@
           "text": "Perskaitome ir išanalizuojame uždavinio sąlygą."
         },
         {
-          "text": "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Jo perimetras $2a + 2b = 30 \\\\implies a + b = 15$. Perkirpus stačiakampį pusiau išilgai kraštinės $a$, gauname du stačiakampius su kraštinėmis $a/2$ ir $b$. Mažesnio stačiakampio perimetras yra $2(a/2) + 2b = a + 2b = 18$. Iš pirmos lygties turime $a = 15 - b$. Įstatome į antrąją: $(15 - b) + 2b = 18 \\\\implies 15 + b = 18 \\\\implies b = 3$ cm. Tada $a = 15 - 3 = 12$ cm."
+          "text": "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Jo perimetras $2a + 2b = 30 \\implies a + b = 15$. Perkirpus stačiakampį pusiau išilgai kraštinės $a$, gauname du stačiakampius su kraštinėmis $a/2$ ir $b$. Mažesnio stačiakampio perimetras yra $2(a/2) + 2b = a + 2b = 18$. Iš pirmos lygties turime $a = 15 - b$. Įstatome į antrąją: $(15 - b) + 2b = 18 \\implies 15 + b = 18 \\implies b = 3$ cm. Tada $a = 15 - 3 = 12$ cm."
         },
         {
           "text": "Taigi, gauname išvadą: Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm."
@@ -3280,10 +3280,10 @@
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\\\%$, o kita sutrumpinta $20\\\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
+      "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, o kita sutrumpinta $20\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Plotas sumažėjo $4\\\\%$."
+        "expectedConclusion": "Plotas sumažėjo $4\\%$."
       },
       "answerText": "Sumažėjo 4%",
       "coreIdea": {
@@ -3315,7 +3315,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Pailginimas $20\\\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\\\%$ atitinka daugybą iš $0.8$.",
+          "text": "Pailginimas $20\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\%$ atitinka daugybą iš $0.8$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -3340,13 +3340,13 @@
           "text": "Tarkime, pradinio sklypo kraštinės yra $a$ ir $b$. Pradinis plotas yra $S_1 = ab$."
         },
         {
-          "text": "Pailginus vieną kraštinę $20\\\\%$, ji tampa $a + 0.2a = 1.2a$. Sutrumpinus kitą kraštinę $20\\\\%$, ji tampa $b - 0.2b = 0.8b$."
+          "text": "Pailginus vieną kraštinę $20\\%$, ji tampa $a + 0.2a = 1.2a$. Sutrumpinus kitą kraštinę $20\\%$, ji tampa $b - 0.2b = 0.8b$."
         },
         {
           "text": "Naujasis sklypo plotas yra $S_2 = 1.2a \\times 0.8b = 0.96ab$."
         },
         {
-          "text": "Palyginame: $0.96ab = 96\\\\% \\\\cdot ab$. Plotas sumažėjo nuo $100\\\\%$ iki $96\\\\%$, t. y. sumažėjo $4\\\\%$."
+          "text": "Palyginame: $0.96ab = 96\\% \\cdot ab$. Plotas sumažėjo nuo $100\\%$ iki $96\\%$, t. y. sumažėjo $4\\%$."
         }
       ],
       "solutionMethods": [
@@ -3374,10 +3374,10 @@
               "title": "Pokyčio įvertinimas procentais",
               "action": "Atimame gautą dalį iš $1$ (visumos) ir paverčiame procentais.",
               "reason": "Rezultatas nurodo galutinį skirtumą nuo pradinės būsenos.",
-              "result": "Sumažėjimas $4\\\\%$."
+              "result": "Sumažėjimas $4\\%$."
             }
           ],
-          "finalAnswer": "Plotas sumažėjo $4\\\\%$."
+          "finalAnswer": "Plotas sumažėjo $4\\%$."
         }
       ],
       "alternateMethodNote": "Galima įsivaizduoti kvadratą $10 \\times 10 = 100$. Pakeitus kraštines gausime $12 \\times 8 = 96$. Skirtumas $100 - 96 = 4$.",
@@ -3385,7 +3385,7 @@
         {
           "id": "ex-olimpiada-05-a5116194-trap-1",
           "title": "Klaidinga prielaida apie nepakitusį plotą",
-          "wrongMove": "Manoma, kad $+20\\\\%$ ir $-20\\\\%$ vienas kitą panaikina, todėl plotas lieka toks pat.",
+          "wrongMove": "Manoma, kad $+20\\%$ ir $-20\\%$ vienas kitą panaikina, todėl plotas lieka toks pat.",
           "whyTempting": "Skaičiai $20$ ir $20$ atrodo simetriški.",
           "correction": "Sumažėjimas skaičiuojamas jau nuo padidintos (kitokios) reikšmės, todėl pokyčiai nėra lygūs absoliučiais dydžiais.",
           "reviewConceptIds": [
@@ -3396,7 +3396,7 @@
         {
           "id": "ex-olimpiada-05-a5116194-trap-2",
           "title": "Procentų sumavimas vietoje dauginimo",
-          "wrongMove": "Bandoma atimti procentus tiesiogiai: $20\\\\% - 20\\\\% = 0\\\\%$.",
+          "wrongMove": "Bandoma atimti procentus tiesiogiai: $20\\% - 20\\% = 0\\%$.",
           "whyTempting": "Neteisingas supratimas, kaip procentai veikia sudėtines figūras.",
           "correction": "Kraštinės yra dauginamos, todėl ir jų pokyčiai turi būti dauginami kaip koeficientai.",
           "reviewConceptIds": [
@@ -3415,7 +3415,7 @@
           "id": "ex-olimpiada-05-a5116194-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos sklypo viena kraštinė pailginta $20\\\\%$, ...",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, ...",
           "back": "Taikome šį metodą: Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite su $ab$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
@@ -3439,12 +3439,12 @@
       "statement": "Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pailgės šio apskritimo ilgis?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Apskritimo ilgis pailgės $6\\\\pi$ cm."
+        "expectedConclusion": "Apskritimo ilgis pailgės $6\\pi$ cm."
       },
       "answerText": "6π cm",
       "coreIdea": {
         "title": "Naudokite apskritimo ilgio formulę",
-        "text": "Apskritimo ilgio formulė yra $C = 2\\\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio."
+        "text": "Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio."
       },
       "strategyTags": [
         "apskritimas",
@@ -3462,7 +3462,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Užrašykite apskritimo ilgio formulę: $C = 2\\\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
+          "text": "Užrašykite apskritimo ilgio formulę: $C = 2\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -3478,7 +3478,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Palyginkite du ilgius: pradinį $C_1 = 2\\\\pi r$ ir naująjį $C_2 = 2\\\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
+          "text": "Palyginkite du ilgius: pradinį $C_1 = 2\\pi r$ ir naująjį $C_2 = 2\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -3487,22 +3487,22 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Apskaičiuokite: $2\\\\pi(r+3) - 2\\\\pi r = 2\\\\pi r + 6\\\\pi - 2\\\\pi r$. Kas lieka?",
+          "text": "Apskaičiuokite: $2\\pi(r+3) - 2\\pi r = 2\\pi r + 6\\pi - 2\\pi r$. Kas lieka?",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pažymime pradinį apskritimo spindulį $r$. Tuomet jo ilgis yra $C_1 = 2\\\\pi r$."
+          "text": "Pažymime pradinį apskritimo spindulį $r$. Tuomet jo ilgis yra $C_1 = 2\\pi r$."
         },
         {
-          "text": "Padidinus spindulį $3$ cm, naujas spindulys tampa $r+3$. Naujas apskritimo ilgis yra $C_2 = 2\\\\pi(r+3)$."
+          "text": "Padidinus spindulį $3$ cm, naujas spindulys tampa $r+3$. Naujas apskritimo ilgis yra $C_2 = 2\\pi(r+3)$."
         },
         {
-          "text": "Apskaičiuojame skirtumą: $C_2 - C_1 = 2\\\\pi(r+3) - 2\\\\pi r$."
+          "text": "Apskaičiuojame skirtumą: $C_2 - C_1 = 2\\pi(r+3) - 2\\pi r$."
         },
         {
-          "text": "Atskliaudžiame: $2\\\\pi r + 6\\\\pi - 2\\\\pi r = 6\\\\pi$. Apskritimo ilgis pailgės $6\\\\pi$ cm."
+          "text": "Atskliaudžiame: $2\\pi r + 6\\pi - 2\\pi r = 6\\pi$. Apskritimo ilgis pailgės $6\\pi$ cm."
         }
       ],
       "solutionMethods": [
@@ -3516,27 +3516,27 @@
           "steps": [
             {
               "title": "Kintamojo poslinkio aprašymas",
-              "action": "Užrašome funkciją $C(r) = 2\\\\pi r$ ir įvertiname jos reikšmę taške $r+3$.",
+              "action": "Užrašome funkciją $C(r) = 2\\pi r$ ir įvertiname jos reikšmę taške $r+3$.",
               "reason": "Tai leidžia matematiškai tiksliai pavaizduoti fizinį spindulio pasikeitimą.",
-              "result": "Išraiška $2\\\\pi(r+3)$."
+              "result": "Išraiška $2\\pi(r+3)$."
             },
             {
               "title": "Skliaustų atskleidimas ir suprastinimas",
               "action": "Taikome paskirstymo dėsnį ir sutraukiame panašiuosius narius.",
               "reason": "Supaprastinus išraišką pamatome, koks narys lemia patį pokytį.",
-              "result": "Skirtumas $6\\\\pi$."
+              "result": "Skirtumas $6\\pi$."
             }
           ],
-          "finalAnswer": "Apskritimo ilgis pailgės $6\\\\pi$ cm."
+          "finalAnswer": "Apskritimo ilgis pailgės $6\\pi$ cm."
         }
       ],
-      "alternateMethodNote": "Pastebėkite, kad $\\\\Delta C = 2\\\\pi \\\\Delta r$. Jei $\\\\Delta r = 3$, tai $\\\\Delta C = 2\\\\pi \\\\cdot 3 = 6\\\\pi$.",
+      "alternateMethodNote": "Pastebėkite, kad $\\Delta C = 2\\pi \\Delta r$. Jei $\\Delta r = 3$, tai $\\Delta C = 2\\pi \\cdot 3 = 6\\pi$.",
       "commonTraps": [
         {
           "id": "ex-olimpiada-05-df8a80e6-trap-1",
           "title": "Daugybos iš 2π pamiršimas pridedamam dydžiui",
-          "wrongMove": "Atsakoma, kad ilgis pailgės tik $3$ cm arba tik $3\\\\pi$ cm.",
-          "whyTempting": "Mokinys klaidingai atskleidžia skliaustus: $2\\\\pi(r+3) = 2\\\\pi r + 3$.",
+          "wrongMove": "Atsakoma, kad ilgis pailgės tik $3$ cm arba tik $3\\pi$ cm.",
+          "whyTempting": "Mokinys klaidingai atskleidžia skliaustus: $2\\pi(r+3) = 2\\pi r + 3$.",
           "correction": "Dauginant skliaustus, kiekvienas dėmuo viduje turi būti padaugintas iš koeficiento prieš skliaustus.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
@@ -3566,7 +3566,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pai...",
-          "back": "Taikome šį metodą: Apskritimo ilgio formulė yra $C = 2\\\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio.",
+          "back": "Taikome šį metodą: Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -3940,7 +3940,7 @@
       ],
       "solutionSteps": [
         {
-          "text": "Nelyginių skaitmenų aibė yra $\\\\{1, 3, 5, 7, 9\\\\}$, kurioje yra $5$ elementai."
+          "text": "Nelyginių skaitmenų aibė yra $\\{1, 3, 5, 7, 9\\}$, kurioje yra $5$ elementai."
         },
         {
           "text": "Šimtams parinkti turime $5$ galimybes."
@@ -3980,7 +3980,7 @@
           "finalAnswer": "Yra $60$ tokie skaičiai."
         }
       ],
-      "alternateMethodNote": "Galima mąstyti kaip apie kėlinius iš 5 elementų po 3: $P(5, 3) = 5 \\\\cdot 4 \\\\cdot 3 = 60$.",
+      "alternateMethodNote": "Galima mąstyti kaip apie kėlinius iš 5 elementų po 3: $P(5, 3) = 5 \\cdot 4 \\cdot 3 = 60$.",
       "commonTraps": [
         {
           "id": "ex-olimpiada-05-d91d7cd0-trap-1",
@@ -4078,7 +4078,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a \times b \times c$ būdais.",
+          "text": "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a times b times c$ būdais.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -4090,10 +4090,10 @@
           "text": "Nustatome pasirinkimų skaičių kiekvienai drabužių grupei: 4 kelnės, 5 marškiniai, 3 švarkai."
         },
         {
-          "text": "Kadangi pasirinkimai yra nepriklausomi, taikome daugybos taisyklę: $4 \times 5 \times 3$."
+          "text": "Kadangi pasirinkimai yra nepriklausomi, taikome daugybos taisyklę: $4 times 5 times 3$."
         },
         {
-          "text": "Atliekame skaičiavimą: $4 \times 5 = 20$; $20 \times 3 = 60$. Iš viso yra 60 būdų."
+          "text": "Atliekame skaičiavimą: $4 times 5 = 20$; $20 times 3 = 60$. Iš viso yra 60 būdų."
         }
       ],
       "solutionMethods": [
@@ -4113,7 +4113,7 @@
             },
             {
               "title": "Daugybos taisyklės taikymas",
-              "action": "Dauginame pasirinkimų skaičius tarpusavyje: $4 \times 5 \times 3$.",
+              "action": "Dauginame pasirinkimų skaičius tarpusavyje: $4 times 5 times 3$.",
               "reason": "Kadangi kiekvienas pasirinkimas iš vienos grupės gali būti derinamas su bet kuriuo pasirinkimu iš kitų grupių.",
               "result": "Gautas rezultatas $60$."
             }
@@ -4137,7 +4137,7 @@
         {
           "id": "ex-olimpiada-05-335ceef1-trap-2",
           "title": "Nepilnas derinys",
-          "wrongMove": "Suskaičiuojami tik kelnių ir marškinių deriniai ($4 \times 5 = 20$), pamirštant švarkus.",
+          "wrongMove": "Suskaičiuojami tik kelnių ir marškinių deriniai ($4 times 5 = 20$), pamirštant švarkus.",
           "whyTempting": "Uždavinio sąlyga perskaitoma ne iki galo arba pamirštamas paskutinis žingsnis.",
           "correction": "Visada patikrinkite, ar į galutinį skaičiavimą įtraukėte visas uždavinyje minimas kategorijas.",
           "reviewConceptIds": [
@@ -4157,7 +4157,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Marius turi 4 kelnes, 5 marškinius ir 3 švarkus. Keliais būdais jis gali pasirinkti pilną derinį?",
-          "back": "Taikome daugybos taisyklę: $4 \times 5 \times 3 = 60$.",
+          "back": "Taikome daugybos taisyklę: $4 times 5 times 3 = 60$.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -4212,7 +4212,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Iš viso yra 8 galimi deriniai ($2 \times 2 \times 2$). Pabandykite juos visus išrašyti sistemiškai.",
+          "text": "Iš viso yra 8 galimi deriniai ($2 times 2 times 2$). Pabandykite juos visus išrašyti sistemiškai.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -4258,7 +4258,7 @@
             {
               "title": "Palankių baigčių atranka",
               "action": "Iš sąrašo išrenkame tas baigtis, kuriose H raidė pasikartoja 2 arba 3 kartus.",
-              "reason": "Sąlyga „bent du“ matematiškai reiškia, kad tinka visos reikšmės $x \\\\ge 2$.",
+              "reason": "Sąlyga „bent du“ matematiškai reiškia, kad tinka visos reikšmės $x \\ge 2$.",
               "result": "Atrinktos baigtys: HHH, HHS, HSH, SHH."
             }
           ],
@@ -4401,7 +4401,7 @@
             },
             {
               "title": "Palankių įvykių identifikavimas",
-              "action": "Surašome visas skaitines poras $(a, b)$, kur $1 \\\\le a, b \\\\le 6$ ir $a + b = 7$.",
+              "action": "Surašome visas skaitines poras $(a, b)$, kur $1 \\le a, b \\le 6$ ir $a + b = 7$.",
               "reason": "Tai nustato skaitiklį $m$ tikimybės formulei.",
               "result": "$m = 6$ poros: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$."
             },
@@ -4432,7 +4432,7 @@
           "id": "ex-olimpiada-05-f16ab6bb-trap-2",
           "title": "Bendra baigčių erdvė",
           "wrongMove": "Tikimybė skaičiuojama dalijant iš $11$ arba $12$ galimų sumų.",
-          "whyTempting": "Mokinys galvoja apie galimas sumas $\\\\{2, 3, \\\\dots, 12\\\\}$, kurių yra 11, o ne apie elementariąsias baigtis.",
+          "whyTempting": "Mokinys galvoja apie galimas sumas $\\{2, 3, \\dots, 12\\}$, kurių yra 11, o ne apie elementariąsias baigtis.",
           "correction": "Tikimybės skaičiuojamos naudojant vienodai galimas elementariąsias baigtis (pora skaičių), o ne galimas sumas, nes sumos nėra vienodai tikėtinos.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
@@ -4695,7 +4695,7 @@
             },
             {
               "title": "Sankirtos radimas",
-              "action": "Taikome formulę $|A \\\\cap B| = |A| + |B| - |A \\\\cup B|$.",
+              "action": "Taikome formulę $|A \\cap B| = |A| + |B| - |A \\cup B|$.",
               "reason": "Sankirta parodo elementus, kurie priklauso abiem aibėms vienu metu.",
               "result": "$15 + 12 - 20 = 7$."
             }

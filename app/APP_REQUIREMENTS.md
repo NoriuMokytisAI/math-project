@@ -27,6 +27,7 @@ The app must:
 - separate official curriculum content from olympiad extension content,
 - support Lithuanian math notation and KaTeX-rendered formulas,
 - support topic theory, glossary concepts, SRS, exercises, tests, mastery, achievements, and recommendations,
+- support an `Aktualios temos` dashboard list backed by local topic ids,
 - support three goal-based app modes with different home pages:
   - olympiad strengthening,
   - topic or exam preparation,
@@ -147,6 +148,8 @@ The production app must include:
 - three mode-specific home pages,
 - cognitive diagnosis model placement,
 - automatically generated learning paths,
+- dashboard `Aktualios temos` as the focused current-topic list,
+- searchable card-library pages for `Teorija` and `Praktika`,
 - complete grades 5-12 curriculum coverage,
 - olympiad extensions as clearly marked additional content,
 - theory reader,
@@ -191,11 +194,41 @@ Requirements:
 
 - ask the user whether they are preparing for `Kontrolinis`, `PUPP`, or `VBE`,
 - for `Kontrolinis`, ask the user to choose the specific topic they want to learn,
+- add the selected topic to `Aktualios temos`,
 - for `PUPP` or `VBE`, make diagnostic the primary recommended action and topic selection the secondary action,
 - make the selected topic the main dashboard focus,
 - prioritize concise theory, worked examples, practice, mistakes, and topic tests,
 - offer prerequisite checks when the selected topic depends on earlier material,
 - keep the diagnostic optional unless the user asks for full placement.
+
+## Aktualios Temos and Topic Browsing Requirements
+
+The dashboard must show **Aktualios temos** where broad `Temos pagal ugdymo sritis` browsing would otherwise appear. This section is a focused list, not the full curriculum browser.
+
+Requirements:
+
+- store relevant topic ids in local progress,
+- add the onboarding-selected topic when topic/exam preparation creates a concrete topic target,
+- allow adding a topic from the individual theory topic page with `Pridėti prie aktualių temų`,
+- prevent duplicate topic entries,
+- show an already-added state such as `Jau aktualiose temose`,
+- do not automatically add diagnostic recommendations to this list,
+- show a useful empty state if no topics have been added.
+
+The full curriculum and olympiad browsing experience belongs in `Teorija` and `Praktika`.
+
+Both `Teorija` and `Praktika` must have card-library index pages when opened without a topic id:
+
+- top search/filter box,
+- `Mokyklinis` / `Olimpiadinis` toggle,
+- search input,
+- grade or grade-band filter defaulting to onboarding,
+- discipline/strand filter,
+- olympiad difficulty filter,
+- recommended cards first,
+- all other matching cards below.
+
+The default content toggle must come from onboarding mode: olympiad mode defaults to `Olimpiadinis`; other modes default to `Mokyklinis`.
 
 ### Full Course With Diagnostic Mode
 

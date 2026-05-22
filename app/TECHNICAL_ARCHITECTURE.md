@@ -145,6 +145,7 @@ Main stores:
 - `srsReviews`
 - `mastery`
 - `achievements`
+- `relevantTopicIds`
 - `contentVersions`
 
 All storage writes should be local and deterministic.

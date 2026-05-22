@@ -91,7 +91,7 @@
         },
         {
           "type": "method",
-          "text": "Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\\\ge \\\\min(p, |A|+|B|-1)$."
+          "text": "Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
         }
       ]
     }
@@ -112,7 +112,7 @@
       "type": "concept",
       "shortDefinition": "Nelygybių įrodymo metodas, kai kiekvienam nariui pritaikoma tiesinė funkcija, liestinė tam tikrame taške.",
       "intuition": "Jei funkcija yra išgaubta aplink vidurkį, jos grafikas yra virš liestinės, todėl galime kiekvieną nelygybės narį įvertinti tiesine išraiška, kurias sudėjus gauname bendrą nelygybę.",
-      "formal": "Jei norime įrodyti $\\\\sum_{i=1}^n f(x_i) \\\\ge C$ su sąlyga $\\\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\\\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\\\sum f(x_i) \\\\ge m \\\\sum x_i + n \\\\cdot n$.",
+      "formal": "Jei norime įrodyti $\\sum_{i=1}^n f(x_i) \\ge C$ su sąlyga $\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\sum f(x_i) \\ge m \\sum x_i + n \\cdot n$.",
       "relatedConceptIds": []
     },
     {
@@ -120,8 +120,8 @@
       "title": "Vieneto šaknų filtras",
       "type": "concept",
       "shortDefinition": "Metodas skaičiuoti koeficientų sumas su tam tikru žingsniu naudojant kompleksines vieneto šaknis.",
-      "intuition": "Naudojant faktą, kad $\\\\sum_{j=0}^{m-1} \\\\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
-      "formal": "Sveikajam $k$ ir $\\\\omega = e^{2\\\\pi i / m}$ galioja $\\frac{1}{m} \\\\sum_{j=0}^{m-1} \\\\omega^{j k} = 1$, kai $m \\\\mid k$, ir $0$, kai $m \\nmid k$.",
+      "intuition": "Naudojant faktą, kad $\\sum_{j=0}^{m-1} \\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
+      "formal": "Sveikajam $k$ ir $\\omega = e^{2\\pi i / m}$ galioja $\\frac{1}{m} \\sum_{j=0}^{m-1} \\omega^{j k} = 1$, kai $m \\mid k$, ir $0$, kai $m \\nmid k$.",
       "relatedConceptIds": []
     },
     {
@@ -130,7 +130,7 @@
       "type": "concept",
       "shortDefinition": "Koordinačių sistema geometrijoje, kurioje taško padėtis apibrėžiama trikampio viršūnių masėmis.",
       "intuition": "Bet kurį plokštumos tašką galime išreikšti trikampio viršūnių tiesine kombinacija su svoriais, kurių suma lygi 1. Tai leidžia algebriškai spręsti geometrijos uždavinius.",
-      "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\\\vec{A} + y \\\\vec{B} + z \\\\vec{C} = (x+y+z) \\\\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
+      "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\vec{A} + y \\vec{B} + z \\vec{C} = (x+y+z) \\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
       "relatedConceptIds": []
     },
     {
@@ -148,7 +148,7 @@
       "type": "concept",
       "shortDefinition": "Tikimybinis metodas įrodyti, kad atsitiktinis dydis yra teigiamas su didele tikimybe, naudojant dispersiją.",
       "intuition": "Jei dydžio dispersija yra maža, palyginti su jo vidurkiu, tai dydis labai retai nukrypsta nuo vidurkio ir beveik niekada nebūna lygus nuliui.",
-      "formal": "Atsitiktiniam dydžiui $X \\\\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
+      "formal": "Atsitiktiniam dydžiui $X \\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
       "relatedConceptIds": []
     }
   ],
@@ -170,8 +170,8 @@
       "title": "Netinkamas išgaubtumo taikymas liestinės triuke",
       "type": "mistake",
       "whyItHappens": "Taikomas liestinės triukas funkcijai, kuri nėra išgaubta visame nagrinėjamame intervale.",
-      "wrongPattern": "Manoma, kad $f(x) \\\\ge mx + n$ galioja visiems $x$, nors tam tikrame intervale funkcija guli po liestine.",
-      "correction": "Griežtai įrodykite nelygybę $f(x) \\\\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus.",
+      "wrongPattern": "Manoma, kad $f(x) \\ge mx + n$ galioja visiems $x$, nors tam tikrame intervale funkcija guli po liestine.",
+      "correction": "Griežtai įrodykite nelygybę $f(x) \\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus.",
       "conceptIds": [
         "olimpiada-12-concept-tangent-trick"
       ]
@@ -180,13 +180,13 @@
   "workedExamples": [
     {
       "title": "Vijetos šuolis",
-      "problem": "Tegu $a, b \\\\in \\\\mathbb{N}$ tokie, kad $ab+1$ dalija $a^2+b^2$. Įrodykite, kad $k = \\frac{a^2+b^2}{ab+1}$ yra pilnas kvadratas.",
+      "problem": "Tegu $a, b \\in \\mathbb{N}$ tokie, kad $ab+1$ dalija $a^2+b^2$. Įrodykite, kad $k = \\frac{a^2+b^2}{ab+1}$ yra pilnas kvadratas.",
       "steps": [
         {
-          "text": "Tarkime, kad $k$ nėra kvadratas. Fiksuojame $k$ ir pasirenkame sprendinį $(a,b)$, kuris minimizuoja $a+b$, su $a \\\\ge b$."
+          "text": "Tarkime, kad $k$ nėra kvadratas. Fiksuojame $k$ ir pasirenkame sprendinį $(a,b)$, kuris minimizuoja $a+b$, su $a \\ge b$."
         },
         {
-          "text": "Užrašome kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$. Kita šaknis $x_2$ tenkina $x_2 + a = kb$ ir $x_2 \\\\cdot a = b^2 - k$."
+          "text": "Užrašome kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$. Kita šaknis $x_2$ tenkina $x_2 + a = kb$ ir $x_2 \\cdot a = b^2 - k$."
         },
         {
           "text": "Iš čia $x_2 = kb - a = \\frac{b^2-k}{a}$. Įrodoma, kad $x_2$ yra teigiamas sveikas skaičius ir $x_2 < a$, kas prieštarauja minimalumui."
@@ -196,35 +196,35 @@
     },
     {
       "title": "Liestinės triukas",
-      "problem": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$.",
+      "problem": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$.",
       "steps": [
         {
           "text": "Randame funkcijos $f(x) = \\frac{1}{x}$ liestinę taške $x=1$."
         },
         {
-          "text": "Liestinės lygtis yra $y = 2 - x$. Įrodome nelygybę $\\frac{1}{x} \\\\ge 2 - x \\\\implies \\frac{(x-1)^2}{x} \\\\ge 0$, kuri yra teisinga visiems $x > 0$."
+          "text": "Liestinės lygtis yra $y = 2 - x$. Įrodome nelygybę $\\frac{1}{x} \\ge 2 - x \\implies \\frac{(x-1)^2}{x} \\ge 0$, kuri yra teisinga visiems $x > 0$."
         },
         {
-          "text": "Sudedame šias nelygybes trims kintamiesiems: $\\\\sum \\frac{1}{a} \\\\ge 6 - (a+b+c) = 3$."
+          "text": "Sudedame šias nelygybes trims kintamiesiems: $\\sum \\frac{1}{a} \\ge 6 - (a+b+c) = 3$."
         }
       ],
       "answer": "Įrodyta"
     },
     {
       "title": "Vieneto šaknų filtras",
-      "problem": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\\\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
+      "problem": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
       "steps": [
         {
-          "text": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\\\omega)^n + (1+\\\\omega^2)^n)$."
+          "text": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$."
         },
         {
-          "text": "Kadangi $1+\\\\omega = e^{i\\\\pi/3}$ ir $1+\\\\omega^2 = e^{-i\\\\pi/3}$."
+          "text": "Kadangi $1+\\omega = e^{i\\pi/3}$ ir $1+\\omega^2 = e^{-i\\pi/3}$."
         },
         {
-          "text": "Sudedame reikšmes: $S = \\frac{2^n + e^{in\\\\pi/3} + e^{-in\\\\pi/3}}{3} = \\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}$."
+          "text": "Sudedame reikšmes: $S = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3} = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$."
         }
       ],
-      "answer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+      "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
     },
     {
       "title": "Baricentrinės koordinatės",
@@ -244,13 +244,13 @@
     },
     {
       "title": "Antrojo momento metodas",
-      "problem": "Atsitiktinis dydis $X \\\\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
+      "problem": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
       "steps": [
         {
-          "text": "Taikome formulę $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2}$."
+          "text": "Taikome formulę $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$."
         },
         {
-          "text": "Įstatome reikšmes: $P(X=0) \\\\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$."
+          "text": "Įstatome reikšmes: $P(X=0) \\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$."
         }
       ],
       "answer": "0.05"
@@ -266,15 +266,15 @@
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Tegu $K = \\\\mathbb{Q}(\\\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\\\mathcal{O}_K$.",
+      "statement": "Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "\\\\mathbb{Z}[\\\\sqrt{2}]"
+        "expectedConclusion": "\\mathbb{Z}[\\sqrt{2}]"
       },
-      "answerText": "\\\\mathbb{Z}[\\\\sqrt{2}]",
+      "answerText": "\\mathbb{Z}[\\sqrt{2}]",
       "coreIdea": {
         "title": "Kvadratinių laukų struktūra",
-        "text": "Kvadratiniam laukui $\\\\mathbb{Q}(\\\\sqrt{d})$ sveikųjų skaičių žiedas priklauso nuo $d$ liekanos moduliu 4. Jei $d \\\\equiv 2, 3 \\\\pmod 4$, tai $\\\\mathcal{O}_K = \\\\mathbb{Z}[\\\\sqrt{d}]$."
+        "text": "Kvadratiniam laukui $\\mathbb{Q}(\\sqrt{d})$ sveikųjų skaičių žiedas priklauso nuo $d$ liekanos moduliu 4. Jei $d \\equiv 2, 3 \\pmod 4$, tai $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{d}]$."
       },
       "strategyTags": [
         "proof",
@@ -290,7 +290,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\\\mathbb{Q}(\\\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
+          "text": "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\mathbb{Q}(\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
@@ -304,7 +304,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Kadangi $2 \\\\equiv 2 \\\\pmod 4$, sveikasis skaičius $\\\\alpha = a + b\\\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\\\in \\\\mathbb{Z}$.",
+          "text": "Kadangi $2 \\equiv 2 \\pmod 4$, sveikasis skaičius $\\alpha = a + b\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\in \\mathbb{Z}$.",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
@@ -314,13 +314,13 @@
           "text": "Nustatome, kad laukas $K$ yra suformuotas iš $d=2$."
         },
         {
-          "text": "Tikriname sąlygą: $2 \\\\equiv 2 \\\\pmod 4$."
+          "text": "Tikriname sąlygą: $2 \\equiv 2 \\pmod 4$."
         },
         {
-          "text": "Pagal bendrąją algebrinės skaičių teorijos teoremą, šiuo atveju bazė yra $\\\\{1, \\\\sqrt{2}\\\\}$."
+          "text": "Pagal bendrąją algebrinės skaičių teorijos teoremą, šiuo atveju bazė yra $\\{1, \\sqrt{2}\\}$."
         },
         {
-          "text": "Išvada: $\\\\mathcal{O}_K = \\\\mathbb{Z}[\\\\sqrt{2}]$."
+          "text": "Išvada: $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{2}]$."
         }
       ],
       "solutionMethods": [
@@ -334,20 +334,20 @@
           "steps": [
             {
               "title": "Minimaliojo polinomo analizė",
-              "action": "Tiriame skaičių $\\\\alpha = \frac{a+b\\\\sqrt{2}}{c}$ tenkinantį lygtį su sveikaisiais koeficientais.",
+              "action": "Tiriame skaičių $\\alpha = frac{a+b\\sqrt{2}}{c}$ tenkinantį lygtį su sveikaisiais koeficientais.",
               "reason": "Sveikasis algebrinis skaičius apibrėžiamas per jo minimalųjį polinomą.",
               "result": "Nustatyta, kad vardiklis gali būti tik 1.",
-              "latex": "x^2 - \\text{Tr}(\\\\alpha)x + \\text{N}(\\\\alpha) = 0"
+              "latex": "x^2 - \\text{Tr}(\\alpha)x + \\text{N}(\\alpha) = 0"
             }
           ],
-          "finalAnswer": "\\\\mathbb{Z}[\\\\sqrt{2}]"
+          "finalAnswer": "\\mathbb{Z}[\\sqrt{2}]"
         }
       ],
       "commonTraps": [
         {
           "id": "ex-olimpiada-12-01-trap-1",
           "title": "Maišymas su d=1 mod 4",
-          "wrongMove": "Manoma, kad visada reikia pridėti narius su vardikliu 2, kaip pavyzdžiui $\\\\mathbb{Q}(\\\\sqrt{5})$ atveju.",
+          "wrongMove": "Manoma, kad visada reikia pridėti narius su vardikliu 2, kaip pavyzdžiui $\\mathbb{Q}(\\sqrt{5})$ atveju.",
           "whyTempting": "Auksinis pjūvis ir panašios struktūros dažnai pasitaiko olimpiadose.",
           "correction": "Visada tikrinkite liekaną moduliu 4; tik esant liekanai 1 atsiranda papildomi elementai.",
           "conceptIds": []
@@ -363,7 +363,7 @@
       ],
       "reflectionPrompts": [
         "Kodėl liekana moduliu 4 yra tokia svarbi kvadratiniams laukams?",
-        "Kaip pasikeistų atsakymas, jei nagrinėtume $\\\\mathbb{Q}(\\\\sqrt{5})$?"
+        "Kaip pasikeistų atsakymas, jei nagrinėtume $\\mathbb{Q}(\\sqrt{5})$?"
       ],
       "extensionQuestions": [],
       "srsSeeds": [
@@ -371,8 +371,8 @@
           "id": "ex-olimpiada-12-01-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Koks yra $\\\\mathcal{O}_K$ laukui $K = \\\\mathbb{Q}(\\\\sqrt{2})$?",
-          "back": "$\\\\mathbb{Z}[\\\\sqrt{2}]$, nes $2 \\\\equiv 2 \\\\pmod 4$.",
+          "front": "Koks yra $\\mathcal{O}_K$ laukui $K = \\mathbb{Q}(\\sqrt{2})$?",
+          "back": "$\\mathbb{Z}[\\sqrt{2}]$, nes $2 \\equiv 2 \\pmod 4$.",
           "conceptIds": [],
           "methodIds": [],
           "defaultEnabled": true
@@ -388,7 +388,7 @@
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\\\mathbb{F}_3$ (įskaitant begalybės tašką).",
+      "statement": "Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\mathbb{F}_3$ (įskaitant begalybės tašką).",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "4"
@@ -410,37 +410,37 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Surašykite visas $x$ reikšmes lauke $\\\\mathbb{F}_3$: 0, 1 ir 2.",
+          "text": "Surašykite visas $x$ reikšmes lauke $\\mathbb{F}_3$: 0, 1 ir 2.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
         {
           "order": 2,
           "kind": "observation",
-          "text": "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\\\pmod 3$.",
+          "text": "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\pmod 3$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Nustatykite, kurie rezultatai yra kvadratai lauke $\\\\mathbb{F}_3$ (kvadratai yra 0 ir 1).",
+          "text": "Nustatykite, kurie rezultatai yra kvadratai lauke $\\mathbb{F}_3$ (kvadratai yra 0 ir 1).",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Kai $x=0$, $y^2 = 1 \\\\implies y=1, 2$ (2 taškai)."
+          "text": "Kai $x=0$, $y^2 = 1 \\implies y=1, 2$ (2 taškai)."
         },
         {
-          "text": "Kai $x=1$, $y^2 = 1^3 + 1 + 1 = 3 \\\\equiv 0 \\\\implies y=0$ (1 taškas)."
+          "text": "Kai $x=1$, $y^2 = 1^3 + 1 + 1 = 3 \\equiv 0 \\implies y=0$ (1 taškas)."
         },
         {
-          "text": "Kai $x=2$, $y^2 = 2^3 + 2 + 1 = 11 \\\\equiv 2 \\\\pmod 3$. Skaičius 2 nėra kvadratas $\\\\mathbb{F}_3$ (0 taškų)."
+          "text": "Kai $x=2$, $y^2 = 2^3 + 2 + 1 = 11 \\equiv 2 \\pmod 3$. Skaičius 2 nėra kvadratas $\\mathbb{F}_3$ (0 taškų)."
         },
         {
-          "text": "Pridedame begalybės tašką $\\\\mathcal{O}$."
+          "text": "Pridedame begalybės tašką $\\mathcal{O}$."
         },
         {
           "text": "Suma: $2 + 1 + 0 + 1 = 4$."
@@ -470,7 +470,7 @@
         {
           "id": "ex-olimpiada-12-02-trap-1",
           "title": "Pamirštas begalybės taškas",
-          "wrongMove": "Suskaičiuojami tik taškai plokštumoje (3) ir pamirštama pridėti $\\\\mathcal{O}$.",
+          "wrongMove": "Suskaičiuojami tik taškai plokštumoje (3) ir pamirštama pridėti $\\mathcal{O}$.",
           "whyTempting": "Begalybės taškas yra abstrakti sąvoka, nepastebima lygtyje.",
           "correction": "Eliptinė kreivė visada apibrėžiama projektinėje plokštumoje.",
           "conceptIds": []
@@ -478,9 +478,9 @@
         {
           "id": "ex-olimpiada-12-02-trap-2",
           "title": "Klaidingas kvadratų nustatymas",
-          "wrongMove": "Manoma, kad 2 yra kvadratas $\\\\mathbb{F}_3$.",
+          "wrongMove": "Manoma, kad 2 yra kvadratas $\\mathbb{F}_3$.",
           "whyTempting": "Sumišimas su kitais baigtiniais laukais.",
-          "correction": "Tikrinkite: $0^2=0, 1^2=1, 2^2=4 \\\\equiv 1$. Kvadratai yra tik {0, 1}.",
+          "correction": "Tikrinkite: $0^2=0, 1^2=1, 2^2=4 \\equiv 1$. Kvadratai yra tik {0, 1}.",
           "conceptIds": []
         }
       ],
@@ -494,7 +494,7 @@
           "id": "ex-olimpiada-12-02-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kiek taškų turi $y^2 = x^3 + x + 1$ virš $\\\\mathbb{F}_3$?",
+          "front": "Kiek taškų turi $y^2 = x^3 + x + 1$ virš $\\mathbb{F}_3$?",
           "back": "4 (įskaitant begalybės tašką).",
           "conceptIds": [],
           "methodIds": [],
@@ -540,7 +540,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "$2026 = 2000 + 24 + 2 \\\\equiv 2 \\\\pmod 4$.",
+          "text": "$2026 = 2000 + 24 + 2 \\equiv 2 \\pmod 4$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -554,16 +554,16 @@
       ],
       "solutionSteps": [
         {
-          "text": "Pastebime, kad bet kurio skaičiaus kvadratas $n^2 \\\\equiv 0 \\\\pmod 4$ (jei $n$ lyginis) arba $n^2 \\\\equiv 1 \\\\pmod 4$ (jei $n$ nelyginis)."
+          "text": "Pastebime, kad bet kurio skaičiaus kvadratas $n^2 \\equiv 0 \\pmod 4$ (jei $n$ lyginis) arba $n^2 \\equiv 1 \\pmod 4$ (jei $n$ nelyginis)."
         },
         {
-          "text": "Galimos skirtumo $x^2 - y^2 \\\\pmod 4$ reikšmės: $0-0=0$, $1-1=0$, $1-0=1$, $0-1=-1 \\\\equiv 3$."
+          "text": "Galimos skirtumo $x^2 - y^2 \\pmod 4$ reikšmės: $0-0=0$, $1-1=0$, $1-0=1$, $0-1=-1 \\equiv 3$."
         },
         {
           "text": "Reikšmė 2 moduliu 4 niekada nepasiekiama."
         },
         {
-          "text": "Kadangi $2026 \\\\equiv 2 \\\\pmod 4$, lygtis sprendinių neturi."
+          "text": "Kadangi $2026 \\equiv 2 \\pmod 4$, lygtis sprendinių neturi."
         }
       ],
       "solutionMethods": [
@@ -615,7 +615,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kodėl $x^2 - y^2 = 2026$ neturi sprendinių?",
-          "back": "Nes $x^2-y^2 \\not\\\\equiv 2 \\\\pmod 4$, o $2026 \\\\equiv 2 \\\\pmod 4$.",
+          "back": "Nes $x^2-y^2 \\not\\equiv 2 \\pmod 4$, o $2026 \\equiv 2 \\pmod 4$.",
           "conceptIds": [],
           "methodIds": [],
           "defaultEnabled": true
@@ -631,7 +631,7 @@
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Jei $a, b \\\\in \\\\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
+      "statement": "Jei $a, b \\in \\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Pilnas kvadratas"
@@ -664,7 +664,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\\\ge b$.",
+          "text": "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\ge b$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -887,7 +887,7 @@
       "answerText": "4",
       "coreIdea": {
         "title": "LTE (Lifting The Exponent) lema",
-        "text": "Nelyginiam pirminiam skaičiui $p$, jei $p \\\\mid a+b$ (n nelyginis), tai $v_p(a^n + b^n) = v_p(a+b) + v_p(n)$."
+        "text": "Nelyginiam pirminiam skaičiui $p$, jei $p \\mid a+b$ (n nelyginis), tai $v_p(a^n + b^n) = v_p(a+b) + v_p(n)$."
       },
       "strategyTags": [
         "proof",
@@ -1002,7 +1002,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Raskite visas tolydžias funkcijas $f: \\\\mathbb{R} \\to \\\\mathbb{R}$, tenkinančias Koši lygtį $f(x+y) = f(x) + f(y)$. Užrašykite bendrąją formą per kintamąjį c.",
+      "statement": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias Koši lygtį $f(x+y) = f(x) + f(y)$. Užrašykite bendrąją formą per kintamąjį c.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "f(x) = cx"
@@ -1047,19 +1047,19 @@
       ],
       "solutionSteps": [
         {
-          "text": "$f(0+0) = f(0)+f(0) \\\\implies f(0) = 0$."
+          "text": "$f(0+0) = f(0)+f(0) \\implies f(0) = 0$."
         },
         {
-          "text": "Indukcija: $f(nx) = nf(x)$ visiems $n \\\\in \\\\mathbb{N}$."
+          "text": "Indukcija: $f(nx) = nf(x)$ visiems $n \\in \\mathbb{N}$."
         },
         {
-          "text": "Tegu $n/m = q \\\\in \\\\mathbb{Q}$. Tada $mf(qx) = f(mqx) = f(nx) = nf(x) \\\\implies f(qx) = qf(x)$."
+          "text": "Tegu $n/m = q \\in \\mathbb{Q}$. Tada $mf(qx) = f(mqx) = f(nx) = nf(x) \\implies f(qx) = qf(x)$."
         },
         {
-          "text": "Tegu $x = 1$. Tada $f(q) = f(1) \\\\cdot q = cq$, kur $c = f(1)$."
+          "text": "Tegu $x = 1$. Tada $f(q) = f(1) \\cdot q = cq$, kur $c = f(1)$."
         },
         {
-          "text": "Kadangi $f$ tolydi, o racionalieji skaičiai yra tiršti $\\\\mathbb{R}$, tai $f(x) = cx$ visiems $x \\\\in \\\\mathbb{R}$."
+          "text": "Kadangi $f$ tolydi, o racionalieji skaičiai yra tiršti $\\mathbb{R}$, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$."
         }
       ],
       "solutionMethods": [
@@ -1073,7 +1073,7 @@
           "steps": [
             {
               "title": "Racionalusis pagrindimas",
-              "action": "Įrodome tiesiškumą virš $\\\\mathbb{Q}$.",
+              "action": "Įrodome tiesiškumą virš $\\mathbb{Q}$.",
               "reason": "Tai visų Koši lygčių sprendimo pagrindas.",
               "result": "Gauta $f(q) = cq$.",
               "latex": ""
@@ -1096,7 +1096,7 @@
           "title": "Laisvojo nario pridėjimas",
           "wrongMove": "Rašoma $f(x) = cx + d$.",
           "whyTempting": "Įprasta tiesinės funkcijos forma.",
-          "correction": "Įstačius į lygtį $c(x+y)+d = cx+d+cy+d \\\\implies d=0$. Funkcija privalo eiti per koordinačių pradžią.",
+          "correction": "Įstačius į lygtį $c(x+y)+d = cx+d+cy+d \\implies d=0$. Funkcija privalo eiti per koordinačių pradžią.",
           "conceptIds": []
         }
       ],
@@ -1127,7 +1127,7 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$. Kokia minimali reikšmė pasiekiama, kai kintamieji lygūs?",
+      "statement": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$. Kokia minimali reikšmė pasiekiama, kai kintamieji lygūs?",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "3"
@@ -1172,13 +1172,13 @@
       ],
       "solutionSteps": [
         {
-          "text": "Naudojame AM-HM nelygybę: $\\frac{a+b+c}{3} \\\\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$."
+          "text": "Naudojame AM-HM nelygybę: $\\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$."
         },
         {
           "text": "Kadangi $a+b+c=3$, tai $\\frac{3}{3} = 1$."
         },
         {
-          "text": "$1 \\\\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\\\implies \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$."
+          "text": "$1 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\implies \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$."
         },
         {
           "text": "Lygybė pasiekiama tik tada, kai $a=b=c=1$."
@@ -1208,7 +1208,7 @@
         {
           "id": "ex-olimpiada-12-08-trap-1",
           "title": "Nelygybės ženklo supainiojimas",
-          "wrongMove": "Rašoma $1/a + 1/b + 1/c \\\\le 3$.",
+          "wrongMove": "Rašoma $1/a + 1/b + 1/c \\le 3$.",
           "whyTempting": "Klaidingas AM-HM interpretavimas.",
           "correction": "Harmoninis vidurkis yra mažiausias, todėl jo vardiklyje esanti suma turi būti didelė, kad bendra vertė būtų maža.",
           "conceptIds": []
@@ -1232,7 +1232,7 @@
           "id": "ex-olimpiada-12-08-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokia yra $\\\\sum 1/a$ minimumo reikšmė, jei $\\\\sum a = 3$ ($a,b,c>0$)?",
+          "front": "Kokia yra $\\sum 1/a$ minimumo reikšmė, jei $\\sum a = 3$ ($a,b,c>0$)?",
           "back": "3 (pasiekiama, kai $a=b=c=1$).",
           "conceptIds": [],
           "methodIds": [],
@@ -1249,12 +1249,12 @@
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\\\dots$ išreikštą per n naudojant kompleksines vieneto šaknis.",
+      "statement": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ išreikštą per n naudojant kompleksines vieneto šaknis.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+        "expectedConclusion": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
       },
-      "answerText": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}",
+      "answerText": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}",
       "coreIdea": {
         "title": "Vieneto šaknų filtras",
         "text": "Norint susumuoti kas $k$-tą binominį koeficientą, naudojama $k$-tojo laipsnio vieneto šaknų savybė: jų laipsnių suma lygi $k$, jei laipsnis dalijasi iš $k$, ir 0 kitais atvejais."
@@ -1275,43 +1275,43 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Naudokite trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
+          "text": "Naudokite trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
         {
           "order": 2,
           "kind": "observation",
-          "text": "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\\\omega)^n$ ir $(1+\\\\omega^2)^n$ skleidinius.",
+          "text": "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\omega)^n$ ir $(1+\\omega^2)^n$ skleidinius.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\\\omega^k + \\\\omega^{2k}$.",
+          "text": "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\omega^k + \\omega^{2k}$.",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pagal filtrą: $S = \\frac{1}{3} ((1+1)^n + (1+\\\\omega)^n + (1+\\\\omega^2)^n)$."
+          "text": "Pagal filtrą: $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$."
         },
         {
-          "text": "Pastebime: $1+\\\\omega = 1 + \\\\cos(2\\\\pi/3) + i\\\\sin(2\\\\pi/3) = 1/2 + i\\\\sqrt{3}/2 = e^{i\\\\pi/3}$."
+          "text": "Pastebime: $1+\\omega = 1 + \\cos(2\\pi/3) + i\\sin(2\\pi/3) = 1/2 + i\\sqrt{3}/2 = e^{i\\pi/3}$."
         },
         {
-          "text": "$1+\\\\omega^2 = e^{-i\\\\pi/3}$."
+          "text": "$1+\\omega^2 = e^{-i\\pi/3}$."
         },
         {
-          "text": "$S = \\frac{2^n + (e^{i\\\\pi/3})^n + (e^{-i\\\\pi/3})^n}{3} = \\frac{2^n + e^{in\\\\pi/3} + e^{-in\\\\pi/3}}{3}$."
+          "text": "$S = \\frac{2^n + (e^{i\\pi/3})^n + (e^{-i\\pi/3})^n}{3} = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3}$."
         },
         {
-          "text": "Naudojant Eulerio formulę: $e^{i\\theta} + e^{-i\\theta} = 2\\\\cos(\\theta)$."
+          "text": "Naudojant Eulerio formulę: $e^{i\\theta} + e^{-i\\theta} = 2\\cos(\\theta)$."
         },
         {
-          "text": "$S = \\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}$."
+          "text": "$S = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$."
         }
       ],
       "solutionMethods": [
@@ -1331,16 +1331,16 @@
               "latex": ""
             }
           ],
-          "finalAnswer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+          "finalAnswer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
         }
       ],
       "commonTraps": [
         {
           "id": "ex-olimpiada-12-09-trap-1",
           "title": "Klaidingas nario 1+omega skaičiavimas",
-          "wrongMove": "Manoma, kad $|1+\\\\omega| = 1$.",
-          "whyTempting": "Nes $|\\\\omega| = 1$.",
-          "correction": "Brėžkite vektorius: $1$ ir $\\\\omega$ sudaro $120$ laipsnių kampą, jų suma yra rombo įstrižainė lygi 1 (bet kryptis pasikeičia).",
+          "wrongMove": "Manoma, kad $|1+\\omega| = 1$.",
+          "whyTempting": "Nes $|\\omega| = 1$.",
+          "correction": "Brėžkite vektorius: $1$ ir $\\omega$ sudaro $120$ laipsnių kampą, jų suma yra rombo įstrižainė lygi 1 (bet kryptis pasikeičia).",
           "conceptIds": []
         },
         {
@@ -1348,12 +1348,12 @@
           "title": "Dalybos iš 3 pamiršimas",
           "wrongMove": "Sudedamos trys reikšmės ir paliekamas bendras rezultatas.",
           "whyTempting": "Dėmesys sutelkiamas į kompleksinius skaičiavimus.",
-          "correction": "Kadangi filtras $1+\\\\omega^k + \\\\omega^{2k}$ duoda reikšmę 3 (o ne 1), būtina padalyti iš m=3.",
+          "correction": "Kadangi filtras $1+\\omega^k + \\omega^{2k}$ duoda reikšmę 3 (o ne 1), būtina padalyti iš m=3.",
           "conceptIds": []
         }
       ],
       "reflectionPrompts": [
-        "Kaip pasikeistų suma, jei reikėtų $\\binom{n}{1} + \\binom{n}{4} + \\\\dots$?",
+        "Kaip pasikeistų suma, jei reikėtų $\\binom{n}{1} + \\binom{n}{4} + \\dots$?",
         "Ar šis metodas tinka bet kokiam žingsniui $k$?"
       ],
       "extensionQuestions": [],
@@ -1363,7 +1363,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokia yra binominių koeficientų suma kas 3 žingsnius?",
-          "back": "$(2^n + 2\\\\cos(n\\\\pi/3))/3$ (naudojant vieneto šaknų filtrą).",
+          "back": "$(2^n + 2\\cos(n\\pi/3))/3$ (naudojant vieneto šaknų filtrą).",
           "conceptIds": [
             "olimpiada-12-concept-unity-filter"
           ],
@@ -1403,7 +1403,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Daugianarį užrašykite kaip $P(z) = a \\\\prod (z-z_k)$.",
+          "text": "Daugianarį užrašykite kaip $P(z) = a \\prod (z-z_k)$.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
@@ -1417,20 +1417,20 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Išnagrinėkite lygtį $\\\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis.",
+          "text": "Išnagrinėkite lygtį $\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis.",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tegu $z_1, \\\\dots, z_n$ yra $P(z)$ šaknys."
+          "text": "Tegu $z_1, \\dots, z_n$ yra $P(z)$ šaknys."
         },
         {
-          "text": "Išvestinės šaknis $w$ tenkina $\\\\sum \\frac{1}{w-z_k} = 0$."
+          "text": "Išvestinės šaknis $w$ tenkina $\\sum \\frac{1}{w-z_k} = 0$."
         },
         {
-          "text": "Jungtinių skaičių suma $\\\\sum \\frac{\\bar{w}-\\bar{z}_k}{|w-z_k|^2} = 0$."
+          "text": "Jungtinių skaičių suma $\\sum \\frac{\\bar{w}-\\bar{z}_k}{|w-z_k|^2} = 0$."
         },
         {
           "text": "Tai parodo, kad $w$ yra $z_k$ svertinis vidurkis su teigiamais svoriais."
@@ -1525,7 +1525,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$.",
+          "text": "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
@@ -1546,7 +1546,7 @@
       ],
       "solutionSteps": [
         {
-          "text": "Matrica yra $\\begin{pmatrix} 1/2 & 1/2 \\\\\\ 1/2 & 1/2 \\\\end{pmatrix}$."
+          "text": "Matrica yra $\\begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \\end{pmatrix}$."
         },
         {
           "text": "Pagal formulę $\\text{perm}(A) = (1/2)(1/2) + (1/2)(1/2)$."
@@ -1740,15 +1740,15 @@
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Jei $a, b, c$ yra taisyklingojo trikampio viršūnės kompleksinėje plokštumoje, tenkinančios sąlygą $a + b\\\\omega + c\\\\omega^2 = 0$, koks yra $\\\\omega$ apibrėžimas, užtikrinantis šį ryšį?",
+      "statement": "Jei $a, b, c$ yra taisyklingojo trikampio viršūnės kompleksinėje plokštumoje, tenkinančios sąlygą $a + b\\omega + c\\omega^2 = 0$, koks yra $\\omega$ apibrėžimas, užtikrinantis šį ryšį?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "e^{2\\\\pi i / 3}"
+        "expectedConclusion": "e^{2\\pi i / 3}"
       },
-      "answerText": "e^{2\\\\pi i / 3}",
+      "answerText": "e^{2\\pi i / 3}",
       "coreIdea": {
         "title": "Kompleksiniai skaičiai ir sukiniai",
-        "text": "Taisyklingasis trikampis pasižymi simetrija sukiniui per 120 laipsnių. Kompleksinis skaičius $\\\\omega = e^{2\\\\pi i / 3}$ atlieka būtent šį sukinį."
+        "text": "Taisyklingasis trikampis pasižymi simetrija sukiniui per 120 laipsnių. Kompleksinis skaičius $\\omega = e^{2\\pi i / 3}$ atlieka būtent šį sukinį."
       },
       "strategyTags": [
         "algebraic-transformation",
@@ -1769,7 +1769,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Vektorius $b$ gaunamas pasukus $a$ per $120^\\\\circ$ kampą.",
+          "text": "Vektorius $b$ gaunamas pasukus $a$ per $120^\\circ$ kampą.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -1783,16 +1783,16 @@
       ],
       "solutionSteps": [
         {
-          "text": "Taisyklingajame trikampyje viršūnės yra išsidėsčiusios kas $120^\\\\circ$ aplink centrą."
+          "text": "Taisyklingajame trikampyje viršūnės yra išsidėsčiusios kas $120^\\circ$ aplink centrą."
         },
         {
-          "text": "Pasukimas per $120^\\\\circ$ atitinka daugybą iš $e^{2\\\\pi i / 3}$."
+          "text": "Pasukimas per $120^\\circ$ atitinka daugybą iš $e^{2\\pi i / 3}$."
         },
         {
-          "text": "Lygties struktūra $a + b\\\\omega + c\\\\omega^2 = 0$ yra ekvivalenti teiginiui, kad taškai sudaro taisyklingąjį trikampį."
+          "text": "Lygties struktūra $a + b\\omega + c\\omega^2 = 0$ yra ekvivalenti teiginiui, kad taškai sudaro taisyklingąjį trikampį."
         },
         {
-          "text": "Išvada: $\\\\omega$ yra trečiojo laipsnio vieneto šaknis."
+          "text": "Išvada: $\\omega$ yra trečiojo laipsnio vieneto šaknis."
         }
       ],
       "solutionMethods": [
@@ -1808,34 +1808,34 @@
               "title": "Vektorių sulyginimas",
               "action": "Išreiškiame viršūnes per centro sukinį.",
               "reason": "Tai patogiausias būdas dirbti su taisyklingomis figūromis.",
-              "result": "Identifikuotas kampas $120^\\\\circ$.",
+              "result": "Identifikuotas kampas $120^\\circ$.",
               "latex": ""
             }
           ],
-          "finalAnswer": "e^{2\\\\pi i / 3}"
+          "finalAnswer": "e^{2\\pi i / 3}"
         }
       ],
       "commonTraps": [
         {
           "id": "ex-olimpiada-12-13-trap-1",
           "title": "Kampo sumaišymas",
-          "wrongMove": "Manoma, kad $\\\\omega$ atitinka $60^\\\\circ$ kampą.",
-          "whyTempting": "Taisyklingo trikampio vidaus kampai yra $60^\\\\circ$.",
+          "wrongMove": "Manoma, kad $\\omega$ atitinka $60^\\circ$ kampą.",
+          "whyTempting": "Taisyklingo trikampio vidaus kampai yra $60^\\circ$.",
           "correction": "Centrinis kampas (nuo centro iki viršūnių) yra $360/3 = 120$ laipsnių.",
           "conceptIds": []
         },
         {
           "id": "ex-olimpiada-12-13-trap-2",
           "title": "Ženklo klaida eksponentėje",
-          "wrongMove": "Rašoma $e^{\\\\pi i / 3}$.",
+          "wrongMove": "Rašoma $e^{\\pi i / 3}$.",
           "whyTempting": "Panašių formulių gausa trigonometrijoje.",
-          "correction": "Visada pasitikrinkite: visas ratas yra $2\\\\pi$, todėl trečdalis rato yra $2\\\\pi/3$.",
+          "correction": "Visada pasitikrinkite: visas ratas yra $2\\pi$, todėl trečdalis rato yra $2\\pi/3$.",
           "conceptIds": []
         }
       ],
       "reflectionPrompts": [
         "Kaip atrodytų lygtis kvadratui kompleksinėje plokštumoje?",
-        "Kokia yra $1 + \\\\omega + \\\\omega^2$ reikšmė?"
+        "Kokia yra $1 + \\omega + \\omega^2$ reikšmė?"
       ],
       "extensionQuestions": [],
       "srsSeeds": [
@@ -1844,7 +1844,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokia kompleksinė konstanta susieja taisyklingo trikampio viršūnes?",
-          "back": "$\\\\omega = e^{2\\\\pi i / 3}$.",
+          "back": "$\\omega = e^{2\\pi i / 3}$.",
           "conceptIds": [],
           "methodIds": [],
           "defaultEnabled": true
@@ -2276,7 +2276,7 @@
       ],
       "solutionSteps": [
         {
-          "text": "Trikampio $ABC$ plotas $S = \\frac{1}{2} s \\\\cdot h$, kur $s$ yra kraštinė."
+          "text": "Trikampio $ABC$ plotas $S = \\frac{1}{2} s \\cdot h$, kur $s$ yra kraštinė."
         },
         {
           "text": "Mažųjų trikampių plotų suma: $\\frac{1}{2} s h_1 + \\frac{1}{2} s h_2 + \\frac{1}{2} s h_3$."
@@ -2353,7 +2353,7 @@
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Atsitiktinis dydis $X \\\\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X=0)$ iš viršaus naudodami antrojo momento metodo principą (Čebyševo nelygybės formą).",
+      "statement": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X=0)$ iš viršaus naudodami antrojo momento metodo principą (Čebyševo nelygybės formą).",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "0.05"
@@ -2379,7 +2379,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Naudokite nelygybę $P(X=0) \\\\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
+          "text": "Naudokite nelygybę $P(X=0) \\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
           "revealsConceptIds": [],
           "penalty": 0.05
         },
@@ -2400,13 +2400,13 @@
       ],
       "solutionSteps": [
         {
-          "text": "Formulė: $P(X=0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2}$."
+          "text": "Formulė: $P(X=0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$."
         },
         {
           "text": "Įstatome duomenis: $E[X] = 10$, $\\text{Var}(X) = 5$."
         },
         {
-          "text": "$P(X=0) \\\\le \\frac{5}{100} = 0.05$."
+          "text": "$P(X=0) \\le \\frac{5}{100} = 0.05$."
         }
       ],
       "solutionMethods": [
@@ -2435,7 +2435,7 @@
           "title": "Vardiklio klaida",
           "wrongMove": "Dalijama iš $E[X]$ vietoj $E[X]^2$.",
           "whyTempting": "Painiojimas su Markovo nelygybe.",
-          "correction": "Markovo nelygybė įvertina $P(X \\\\ge a)$, o antrojo momento metodui būtinas kvadratas dispersijai atliepti.",
+          "correction": "Markovo nelygybė įvertina $P(X \\ge a)$, o antrojo momento metodui būtinas kvadratas dispersijai atliepti.",
           "conceptIds": []
         },
         {
@@ -2458,7 +2458,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokia formulė įvertina $P(X=0)$ naudojant dispersiją?",
-          "back": "$P(X=0) \\\\le \\text{Var}(X)/E[X]^2$.",
+          "back": "$P(X=0) \\le \\text{Var}(X)/E[X]^2$.",
           "conceptIds": [
             "olimpiada-12-concept-probabilistic-second-moment"
           ],
@@ -2484,7 +2484,7 @@
       "answerText": "2",
       "coreIdea": {
         "title": "Spektrinė grafų teorija",
-        "text": "Reguliariam grafui, kurio kiekviena viršūnė turi laipsnį $d$, didžiausia tikrinė reikšmė visada lygi $d$. Taip pat atitinkamas tikrinis vektorius yra $(1, 1, \\\\dots, 1)$."
+        "text": "Reguliariam grafui, kurio kiekviena viršūnė turi laipsnį $d$, didžiausia tikrinė reikšmė visada lygi $d$. Taip pat atitinkamas tikrinis vektorius yra $(1, 1, \\dots, 1)$."
       },
       "strategyTags": [
         "algebraic-transformation",
@@ -2525,7 +2525,7 @@
           "text": "Viršūnės laipsnis $d = 3-1 = 2$."
         },
         {
-          "text": "Matrica yra $\\begin{pmatrix} 0 & 1 & 1 \\\\\\ 1 & 0 & 1 \\\\\\ 1 & 1 & 0 \\\\end{pmatrix}$."
+          "text": "Matrica yra $\\begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\end{pmatrix}$."
         },
         {
           "text": "Eilučių sumos yra pastovios ir lygios 2."
@@ -2599,7 +2599,7 @@
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Raskite incidencyvumo matricos (virš lauko $\\\\mathbb{F}_2$) rangą jungiamame grafe su 5 viršūnėmis.",
+      "statement": "Raskite incidencyvumo matricos (virš lauko $\\mathbb{F}_2$) rangą jungiamame grafe su 5 viršūnėmis.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "4"
@@ -2607,7 +2607,7 @@
       "answerText": "4",
       "coreIdea": {
         "title": "Algebrinė grafų teorija: Rangas",
-        "text": "Jungiamam grafui su $n$ viršūnių incidencyvumo matricos rangas virš $\\\\mathbb{F}_2$ yra lygus $n-1$. Tai tiesiogiai susiję su faktu, kad bet kurio medžio briaunos yra tiesiškai nepriklausomos, o ciklas sukuria priklausomybę."
+        "text": "Jungiamam grafui su $n$ viršūnių incidencyvumo matricos rangas virš $\\mathbb{F}_2$ yra lygus $n-1$. Tai tiesiogiai susiję su faktu, kad bet kurio medžio briaunos yra tiesiškai nepriklausomos, o ciklas sukuria priklausomybę."
       },
       "strategyTags": [
         "logic",
@@ -2635,7 +2635,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Pastebėkite, kad visų eilučių suma $\\\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu.",
+          "text": "Pastebėkite, kad visų eilučių suma $\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu.",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
@@ -2648,7 +2648,7 @@
           "text": "Kiekvienas stulpelis (briauna) turi lygiai du vienetus, todėl visų eilučių suma moduliu 2 yra 0."
         },
         {
-          "text": "Tai reiškia, kad eilutės yra tiesiškai priklausomos, tad $Rangas \\\\le n-1$."
+          "text": "Tai reiškia, kad eilutės yra tiesiškai priklausomos, tad $Rangas \\le n-1$."
         },
         {
           "text": "Jungiamam grafui bet kurios $n-1$ eilutės yra nepriklausomos."
@@ -2856,7 +2856,7 @@
       "answerText": "6",
       "coreIdea": {
         "title": "Turano teorema (ir Mantelio teorema)",
-        "text": "Mantelio teorema teigia, kad grafas be trikampių gali turėti ne daugiau kaip $n^2/4$ briaunų. Didžiausias toks grafas yra pilnasis dvidalis grafas $K_{\\\\lfloor n/2 \\rfloor, \\\\lceil n/2 \\rceil}$."
+        "text": "Mantelio teorema teigia, kad grafas be trikampių gali turėti ne daugiau kaip $n^2/4$ briaunų. Didžiausias toks grafas yra pilnasis dvidalis grafas $K_{\\lfloor n/2 \\rfloor, \\lceil n/2 \\rceil}$."
       },
       "strategyTags": [
         "logic",
@@ -2884,7 +2884,7 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite Mantelio formulę $\\\\lfloor n^2/4 \\rfloor$.",
+          "text": "Taikykite Mantelio formulę $\\lfloor n^2/4 \\rfloor$.",
           "revealsConceptIds": [],
           "penalty": 0.1
         }
@@ -2900,10 +2900,10 @@
           "text": "Suskirstome viršūnes į aibes po 2 ir 3."
         },
         {
-          "text": "Briaunų skaičius $2 \\\\cdot 3 = 6$."
+          "text": "Briaunų skaičius $2 \\cdot 3 = 6$."
         },
         {
-          "text": "Patikriname formulę: $\\\\lfloor 5^2 / 4 \\rfloor = \\\\lfloor 25 / 4 \\rfloor = 6$."
+          "text": "Patikriname formulę: $\\lfloor 5^2 / 4 \\rfloor = \\lfloor 25 / 4 \\rfloor = 6$."
         }
       ],
       "solutionMethods": [
@@ -2979,7 +2979,7 @@
       "answerText": "3",
       "coreIdea": {
         "title": "Rotho ir Szemerédi teoremos",
-        "text": "Rotho teorema yra Szemerédi teoremos atvejis $k=3$. Ji teigia, kad jei aibė $A \\\\subset \\\\mathbb{N}$ turi teigiamą tankį, joje yra be galo daug 3 narių aritmetinių progresijų."
+        "text": "Rotho teorema yra Szemerédi teoremos atvejis $k=3$. Ji teigia, kad jei aibė $A \\subset \\mathbb{N}$ turi teigiamą tankį, joje yra be galo daug 3 narių aritmetinių progresijų."
       },
       "strategyTags": [
         "logic"
@@ -3013,7 +3013,7 @@
       ],
       "solutionSteps": [
         {
-          "text": "Aibės tankis $\\\\delta > 0$ reiškia, kad aibė yra 'didelė'."
+          "text": "Aibės tankis $\\delta > 0$ reiškia, kad aibė yra 'didelė'."
         },
         {
           "text": "Rotho teorema (1953) įrodė, kad tokia aibė turi 3 narių progresiją."
@@ -3090,7 +3090,7 @@
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "Tegu $|A|=3$ ir $|B|=4$ yra poaibiai lauke $\\\\mathbb{Z}_{11}$. Raskite mažiausią galimą sumos aibės $A+B = \\\\{a+b : a\\\\in A, b\\\\in B\\\\}$ dydį pagal Koši-Davenporto teoremą.",
+      "statement": "Tegu $|A|=3$ ir $|B|=4$ yra poaibiai lauke $\\mathbb{Z}_{11}$. Raskite mažiausią galimą sumos aibės $A+B = \\{a+b : a\\in A, b\\in B\\}$ dydį pagal Koši-Davenporto teoremą.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "6"
@@ -3098,7 +3098,7 @@
       "answerText": "6",
       "coreIdea": {
         "title": "Koši-Davenporto teorema",
-        "text": "Adityviojoje kombinatorikoje ši teorema teigia, kad sumos aibės dydis moduliu pirminis skaičius $p$ tenkina nelygybę $|A+B| \\\\ge \\\\min(p, |A|+|B|-1)$."
+        "text": "Adityviojoje kombinatorikoje ši teorema teigia, kad sumos aibės dydis moduliu pirminis skaičius $p$ tenkina nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
       },
       "strategyTags": [
         "algebraic-transformation",
@@ -3136,7 +3136,7 @@
           "text": "$|A| + |B| - 1 = 3 + 4 - 1 = 6$."
         },
         {
-          "text": "Tikriname rėžį: $\\\\min(11, 6) = 6$."
+          "text": "Tikriname rėžį: $\\min(11, 6) = 6$."
         },
         {
           "text": "Mažiausias galimas dydis yra 6."

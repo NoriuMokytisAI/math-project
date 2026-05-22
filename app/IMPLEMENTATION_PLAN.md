@@ -49,6 +49,8 @@ Routes:
 - `/dashboard/olympiad`
 - `/dashboard/topic`
 - `/dashboard/course`
+- `/theory`
+- `/theory/:topicId`
 - `/onboarding`
 - `/onboarding/goal`
 - `/onboarding/grade-band`
@@ -59,6 +61,7 @@ Routes:
 - `/glossary`
 - `/glossary/:conceptId`
 - `/srs`
+- `/practice`
 - `/practice/:practiceSetId`
 - `/test/:testId`
 - `/settings`
@@ -122,6 +125,7 @@ For other modes:
 Deliverables:
 
 - shared dashboard shell with mode-specific main content,
+- `Aktualios temos` dashboard section replacing broad dashboard curriculum browsing,
 - olympiad strengthening home page,
 - topic or exam preparation home page,
 - full-course diagnostic home page,
@@ -140,13 +144,16 @@ The home page must differ by mode:
 - topic or exam preparation: selected topic for kontrolinis, or PUPP/VBE diagnostic recommendation with topic fallback,
 - full course with diagnostic: diagnostic status, generated course path, prerequisite repair, full-course progress.
 
-The dashboard may show curriculum browsing as a secondary option, but the primary action must come from the selected mode.
+The dashboard should not be the full curriculum browser. The broad topic library belongs in `Teorija` and `Praktika`. The dashboard topic area should show `Aktualios temos`, using local topic ids added from onboarding topic selection or from individual theory pages.
 
 ## Phase 5: Theory, Glossary, and Concept Graph
 
 Deliverables:
 
+- card-library `Teorija` index page with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters,
+- recommended topic cards above all other matching topic cards,
 - theory reader for all curriculum topics,
+- `Pridėti prie aktualių temų` action on individual theory topic pages,
 - clickable concept links,
 - glossary page/drawer,
 - concept pages with definitions, examples, related theory, exercises, mistakes, formulas, and SRS controls,
@@ -168,6 +175,12 @@ Deliverables:
 - FSRS-ready scheduler boundary for later adoption.
 
 ## Phase 7: Practice Engine
+
+Additional entry behavior:
+
+- `/practice` should open a card-library practice index, not a random/default exercise.
+- The practice index uses the same `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, difficulty filters, and recommended-first card ordering as `Teorija`.
+- Practice topic cards open `/practice/:practiceSetId` or the equivalent topic practice route.
 
 Deliverables:
 

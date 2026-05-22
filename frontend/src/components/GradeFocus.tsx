@@ -6,9 +6,10 @@ import { bandForGrade, formatGradeBand, gradesForBand, inferStartMode, topicsFor
 interface GradeFocusProps {
   state: State;
   navigate: (page: string, id?: string) => void;
+  updateState: (updater: (prev: State) => State) => void;
 }
 
-export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
+export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate, updateState }) => {
   const band = state.profile.gradeBand || bandForGrade(state.profile.grade || 9);
   const grades = gradesForBand(band);
   const grade = state.profile.grade || grades[0] || 9;
@@ -100,8 +101,14 @@ export const GradeFocus: React.FC<GradeFocusProps> = ({ state, navigate }) => {
                           </small>
                         </div>
                         <div className="grade-topic-actions">
-                          <button onClick={() => navigate("topic", topic.id)}>Teorija</button>
-                          <button onClick={() => navigate("practice", topic.id)}>Praktika</button>
+                          <button onClick={() => {
+                            updateState(prev => ({ ...prev, profile: { ...prev.profile, libraryToggle: (topic as any).level === 'olympiad' ? 'olympiad' : 'school' } }));
+                            navigate("topic", topic.id);
+                          }}>Teorija</button>
+                          <button onClick={() => {
+                            updateState(prev => ({ ...prev, profile: { ...prev.profile, libraryToggle: (topic as any).level === 'olympiad' ? 'olympiad' : 'school' } }));
+                            navigate("practice", topic.id);
+                          }}>Praktika</button>
                         </div>
                       </article>
                     );

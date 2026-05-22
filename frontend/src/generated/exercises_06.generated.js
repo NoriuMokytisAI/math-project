@@ -1988,15 +1988,15 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Daugiklių medžio sudarymas",
-            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\\\cdot 6$, o $10$ į $2 \\\\cdot 5$.",
+            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\cdot 6$, o $10$ į $2 \\cdot 5$.",
             "reason": "Norint pasiekti 'matematinius atomus' – pirminius skaičius.",
             "result": "Gauti daugikliai $6, 6, 2, 5$."
           },
           {
             "title": "Galutinis išgryninimas",
-            "action": "Pakeiskite kiekvieną $6$ į $2 \\\\cdot 3$ ir surašykite viską laipsnių pavidalu.",
+            "action": "Pakeiskite kiekvieną $6$ į $2 \\cdot 3$ ir surašykite viską laipsnių pavidalu.",
             "reason": "Užtikrinama, kad visi sandaugos nariai yra pirminiai skaičiai.",
-            "result": "$360 = 2^3 \\\\cdot 3^2 \\\\cdot 5$."
+            "result": "$360 = 2^3 \\cdot 3^2 \\cdot 5$."
           }
         ],
         "finalAnswer": "Didžiausias pirminis daugiklis yra $5$."
@@ -2037,7 +2037,7 @@ export const exercises_06 = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra didžiausias skaičiaus $360$ pirminis daugiklis?",
-        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\\\cdot 3^2 \\\\cdot 5$.",
+        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\cdot 3^2 \\cdot 5$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -2125,7 +2125,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Pirminis išskaidymas",
-            "action": "Užrašykite $120 = 2^3 \\\\cdot 3^1 \\\\cdot 5^1$ ir $180 = 2^2 \\\\cdot 3^2 \\\\cdot 5^1$.",
+            "action": "Užrašykite $120 = 2^3 \\cdot 3^1 \\cdot 5^1$ ir $180 = 2^2 \\cdot 3^2 \\cdot 5^1$.",
             "reason": "Tai leidžia tiksliai matyti, kokie daugikliai sudaro kiekvieną skaičių.",
             "result": "Daugikliai paruošti analizei."
           },
@@ -2262,7 +2262,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Struktūros analizė",
-            "action": "Išskaidykite $1000$ į $2^3 \\\\cdot 5^3$.",
+            "action": "Išskaidykite $1000$ į $2^3 \\cdot 5^3$.",
             "reason": "Norint pamatyti, kaip galima suformuoti du skaičius.",
             "result": "Gauti pagrindiniai komponentai: trys '2' ir trys '5'."
           },
@@ -2399,7 +2399,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Pradinis išskaidymas",
-            "action": "Užrašykite $72 = 2^3 \\\\cdot 3^2$.",
+            "action": "Užrašykite $72 = 2^3 \\cdot 3^2$.",
             "reason": "Kad matytume esamų daugiklių kiekius.",
             "result": "Gauti laipsniai: $2$-eto yra $3$, $3$-eto yra $2$."
           },
@@ -2491,7 +2491,7 @@ export const exercises_06 = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite reiškinio reikšmę: $\\\\sqrt{12^2 + 5^2}$.",
+    "statement": "Apskaičiuokite reiškinio reikšmę: $\\sqrt{12^2 + 5^2}$.",
     "answer": "Reikšmė lygi $13$.",
     "acceptedAnswers": [
       "Reikšmė lygi $13$."
@@ -2506,7 +2506,7 @@ export const exercises_06 = [
       "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
       "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$)."
     ],
-    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\\\sqrt{169} = 13$ (nes $13^2 = 169$).",
+    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\sqrt{169} = 13$ (nes $13^2 = 169$).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -2542,7 +2542,7 @@ export const exercises_06 = [
           },
           {
             "title": "Šaknies traukimas",
-            "action": "Sudėkite $144+25=169$ ir raskite $\\\\sqrt{169}$.",
+            "action": "Sudėkite $144+25=169$ ir raskite $\\sqrt{169}$.",
             "reason": "Tai galutinis veiksmas reiškinio reikšmei nustatyti.",
             "result": "Reikšmė lygi $13$."
           }
@@ -2554,7 +2554,7 @@ export const exercises_06 = [
       {
         "id": "ex-olimpiada-06-95300ab8-trap-1",
         "title": "Šaknies skirstymas dėmenims",
-        "wrongMove": "Rašymas $\\\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
+        "wrongMove": "Rašymas $\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
         "whyTempting": "Atrodo paprasta 'panaikinti' kvadratų ir šaknies ženklus.",
         "correction": "Šaknis iš sumos nėra lygi šaknų sumai. Visada pirma sudėkite, o tik tada traukite šaknį.",
         "reviewConceptIds": [
@@ -2584,8 +2584,8 @@ export const exercises_06 = [
         "id": "ex-olimpiada-06-95300ab8-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Ar tiesa, kad $\\\\sqrt{a^2 + b^2} = a + b$?",
-        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
+        "front": "Ar tiesa, kad $\\sqrt{a^2 + b^2} = a + b$?",
+        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -2673,7 +2673,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Sąlygų skaidymas",
-            "action": "Iškelkite reikalavimą: $b \\\\in \\\\{0, 2, 4, 6, 8\\\\}$ ir $(9+a+b)$ dalus iš $9$.",
+            "action": "Iškelkite reikalavimą: $b \\in \\{0, 2, 4, 6, 8\\}$ ir $(9+a+b)$ dalus iš $9$.",
             "reason": "Skaičius $18$ yra $2$ ir $9$ sandauga.",
             "result": "Gautos dvi lygiagrečios sąlygos skaitmenims."
           },
@@ -2778,7 +2778,7 @@ export const exercises_06 = [
     "hints": [
       "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
       "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
-      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\\\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
+      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
     ],
     "solution": "Išskaidome skaičių $120$ pirminiais daugikliais: $120 = 2^3 \\times 3^1 \\times 5^1$. Išrašome kiekvieno pirminio daugiklio laipsnio rodiklius: dvejeto rodiklis yra $3$, trejeto – $1$, penketo – $1$. Prie kiekvieno rodiklio pridedame po $1$ (tai atspindi galimybę daugiklį paimti $0$ kartų): gausime $4, 2$ ir $2$. Sudauginame šiuos skaičius: $4 \\times 2 \\times 2 = 16$. Vadinasi, skaičius $120$ turi $16$ skirtingų daliklių.",
     "alternate": "",
@@ -2810,7 +2810,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Struktūrinė analizė",
-            "action": "Išskaidykite $120$ į $2^3 \\\\cdot 3^1 \\\\cdot 5^1$.",
+            "action": "Išskaidykite $120$ į $2^3 \\cdot 3^1 \\cdot 5^1$.",
             "reason": "Kad matytume, iš kokių 'blokų' galima sudėlioti daliklius.",
             "result": "Gauti rodikliai $3, 1, 1$."
           },
@@ -2858,8 +2858,8 @@ export const exercises_06 = [
         "id": "ex-olimpiada-06-f2a0c71a-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\\\dots$ visų daliklių skaičių?",
-        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\\\dots$.",
+        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\dots$ visų daliklių skaičių?",
+        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\dots$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -2889,7 +2889,7 @@ export const exercises_06 = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\\\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
+        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -2949,7 +2949,7 @@ export const exercises_06 = [
             "title": "Daliklių aibės sudarymas",
             "action": "Suraskite visus skaičius, iš kurių $28$ dalijasi be liekanos.",
             "reason": "Uždavinys reikalauja visų daliklių sumos.",
-            "result": "Aibė $\\\\{1, 2, 4, 7, 14, 28\\\\}$."
+            "result": "Aibė $\\{1, 2, 4, 7, 14, 28\\}$."
           },
           {
             "title": "Sumavimas",
@@ -3450,7 +3450,7 @@ export const exercises_06 = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Šviesos greitis yra maždaug $300\\\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
+    "statement": "Šviesos greitis yra maždaug $300\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
     "answer": "Šviesos greitis yra $3 \\times 10^8$ m/s.",
     "acceptedAnswers": [
       "Šviesos greitis yra $3 \\times 10^8$ m/s."
@@ -3462,10 +3462,10 @@ export const exercises_06 = [
     ],
     "hints": [
       "Pirmiausia kilometrus paverskite metrais. Prisiminkite, kad $1$ km = $1000$ m, todėl greitį reikia padauginti iš $1000$.",
-      "Šviesos greitis metrais per sekundę bus $300\\\\ 000 \\times 1000 = 300\\\\ 000\\\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
-      "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\\\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį."
+      "Šviesos greitis metrais per sekundę bus $300\\ 000 \\times 1000 = 300\\ 000\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
+      "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį."
     ],
-    "solution": "Kilometrus paverčiame metrais: $300\\\\ 000 \\text{ km/s} = 300\\\\ 000 \\times 1000 \\text{ m/s} = 300\\\\ 000\\\\ 000$ m/s. Skaičių $300\\\\ 000\\\\ 000$ turime užrašyti pavidalu $a \\times 10^n$. Čia $a = 3$. Suskaičiuojame skaitmenų kiekį po trejeto: yra lygiai $8$ nuliai. Vadinasi, greitis standartine išraiška yra $3 \\times 10^8$ m/s.",
+    "solution": "Kilometrus paverčiame metrais: $300\\ 000 \\text{ km/s} = 300\\ 000 \\times 1000 \\text{ m/s} = 300\\ 000\\ 000$ m/s. Skaičių $300\\ 000\\ 000$ turime užrašyti pavidalu $a \\times 10^n$. Čia $a = 3$. Suskaičiuojame skaitmenų kiekį po trejeto: yra lygiai $8$ nuliai. Vadinasi, greitis standartine išraiška yra $3 \\times 10^8$ m/s.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -3473,7 +3473,7 @@ export const exercises_06 = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Konvertuokite vienetus ir skaičiuokite nulius",
-      "text": "Pirmiausia kilometrus paverskite metrais (padauginkite iš $1000$). Tada gautą skaičių užrašykite forma $a \\times 10^n$, kur $1 \\\\le a < 10$."
+      "text": "Pirmiausia kilometrus paverskite metrais (padauginkite iš $1000$). Tada gautą skaičių užrašykite forma $a \\times 10^n$, kur $1 \\le a < 10$."
     },
     "strategyTags": [
       "standartinė-išraiška",
@@ -3495,9 +3495,9 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Matavimo vienetų derinimas",
-            "action": "Padauginkite $300\\\\ 000$ iš $10^3$.",
+            "action": "Padauginkite $300\\ 000$ iš $10^3$.",
             "reason": "Užduotis reikalauja greičio metrais per sekundę.",
-            "result": "Gautas skaičius $300\\\\ 000\\\\ 000$."
+            "result": "Gautas skaičius $300\\ 000\\ 000$."
           },
           {
             "title": "Standartizavimas",
@@ -3543,8 +3543,8 @@ export const exercises_06 = [
         "id": "ex-olimpiada-06-13d0b51d-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra šviesos greičio ($300\\\\ 000$ km/s) standartinė išraiška m/s?",
-        "back": "$3 \\times 10^8$ m/s (konvertavus: $300\\\\ 000\\\\ 000$ m/s).",
+        "front": "Kokia yra šviesos greičio ($300\\ 000$ km/s) standartinė išraiška m/s?",
+        "back": "$3 \\times 10^8$ m/s (konvertavus: $300\\ 000\\ 000$ m/s).",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -3567,14 +3567,14 @@ export const exercises_06 = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Šviesos greitis metrais per sekundę bus $300\\\\ 000 \\times 1000 = 300\\\\ 000\\\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
+        "text": "Šviesos greitis metrais per sekundę bus $300\\ 000 \\times 1000 = 300\\ 000\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\\\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį.",
+        "text": "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -3781,7 +3781,7 @@ export const exercises_06 = [
           },
           {
             "title": "Sveikojo sprendinio parinkimas",
-            "action": "Iš intervalo $(-\\\\infty; -4)$ išrinkite didžiausią sveikąjį skaičių.",
+            "action": "Iš intervalo $(-\\infty; -4)$ išrinkite didžiausią sveikąjį skaičių.",
             "reason": "Reikia rasti konkretų sveikąjį sprendinį pagal sąlygą.",
             "result": "$-5$."
           }
@@ -3815,7 +3815,7 @@ export const exercises_06 = [
     ],
     "reflectionPrompts": [
       "Kada nelygybės ženklas keičiasi į priešingą?",
-      "Kuo skirtųsi atsakymas, jei nelygybė būtų negriežta ($5 - 3x \\\\ge 17$)?"
+      "Kuo skirtųsi atsakymas, jei nelygybė būtų negriežta ($5 - 3x \\ge 17$)?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -3912,7 +3912,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Darbo apimties nustatymas",
-            "action": "Sudauginkite $3 \\\\cdot 6 = 18$.",
+            "action": "Sudauginkite $3 \\cdot 6 = 18$.",
             "reason": "Žmogaus-valandos parodo pastovų darbo kiekį.",
             "result": "$18$ žmogaus-valandų."
           },
@@ -4004,10 +4004,10 @@ export const exercises_06 = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Prekės kaina buvo padidinta $25\\\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
-    "answer": "Kainą reikia sumažinti $20\\\\%$.",
+    "statement": "Prekės kaina buvo padidinta $25\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
+    "answer": "Kainą reikia sumažinti $20\\%$.",
     "acceptedAnswers": [
-      "Kainą reikia sumažinti $20\\\\%$."
+      "Kainą reikia sumažinti $20\\%$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -4017,9 +4017,9 @@ export const exercises_06 = [
     "hints": [
       "Pasirinkite patogų skaičių pradinei kainai, pavyzdžiui, $100$ Eur. Kokia kaina taps po padidinimo?",
       "Po padidinimo kaina yra $125$ Eur. Norime grįžti prie $100$ Eur, todėl turime kainą sumažinti $25$ Eurais.",
-      "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\\\_kaina) \\times 100\\\\%$."
+      "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\_kaina) \\times 100\\%$."
     ],
-    "solution": "Tarkime, kad pradinė prekės kaina buvo $100$ vienetų. Padidinus kainą $25\\\\%$, naujoji kaina lygi $100 + 25 = 125$ vienetų. Norėdami grįžti prie pradinės kainos ($100$), turime naująją kainą sumažinti $125 - 100 = 25$ vienetais. Apskaičiuojame, kokią dalį sudaro šis sumažinimas nuo naujosios kainos: $25 / 125 = 1/5$. Paverčiame dalį procentais: $1/5 \\times 100\\\\% = 20\\\\%$.",
+    "solution": "Tarkime, kad pradinė prekės kaina buvo $100$ vienetų. Padidinus kainą $25\\%$, naujoji kaina lygi $100 + 25 = 125$ vienetų. Norėdami grįžti prie pradinės kainos ($100$), turime naująją kainą sumažinti $125 - 100 = 25$ vienetais. Apskaičiuojame, kokią dalį sudaro šis sumažinimas nuo naujosios kainos: $25 / 125 = 1/5$. Paverčiame dalį procentais: $1/5 \\times 100\\% = 20\\%$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -4027,7 +4027,7 @@ export const exercises_06 = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Sudarykite procentinį santykį",
-      "text": "Tarkime, kad pradinė kaina buvo $100$. Padidinus $25\\\\%$, kaina tapo $125$. Dabar reikia rasti, kokią dalį skaičiaus $125$ sudaro skirtumas $25$."
+      "text": "Tarkime, kad pradinė kaina buvo $100$. Padidinus $25\\%$, kaina tapo $125$. Dabar reikia rasti, kokią dalį skaičiaus $125$ sudaro skirtumas $25$."
     },
     "strategyTags": [
       "procentai",
@@ -4057,17 +4057,17 @@ export const exercises_06 = [
             "title": "Atvirkštinio sumažinimo radimas",
             "action": "Apskaičiuokite $25 / 125$.",
             "reason": "Sumažinimas skaičiuojamas nuo naujosios (didesnės) bazės.",
-            "result": "$0.2$ arba $20\\\\%$."
+            "result": "$0.2$ arba $20\\%$."
           }
         ],
-        "finalAnswer": "Kainą reikia sumažinti $20\\\\%$."
+        "finalAnswer": "Kainą reikia sumažinti $20\\%$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-06-5a19da69-trap-1",
         "title": "Simetriškumo klaida",
-        "wrongMove": "Manymas, kad reikia sumažinti tiek pat procentų ($25\\\\%$).",
+        "wrongMove": "Manymas, kad reikia sumažinti tiek pat procentų ($25\\%$).",
         "whyTempting": "Atrodo logiška: jei padidinome $25$, tai ir sumažinti turime $25$.",
         "correction": "Padidinimas skaičiuojamas nuo mažesnės bazės, o sumažinimas – nuo didesnės. Todėl procentinė vertė sumažėja.",
         "reviewConceptIds": [
@@ -4080,7 +4080,7 @@ export const exercises_06 = [
         "title": "Neteisingos bazės pasirinkimas",
         "wrongMove": "Skaičiavimas $25$ nuo $100$ Eurų sumažinimo etape.",
         "whyTempting": "Mokiniai nesąmoningai viską lygina su pradiniu skaičiumi.",
-        "correction": "Sumažinimas vyksta NUO naujosios kainos, todėl ji tampa pagrindu ($100\\\\%$).",
+        "correction": "Sumažinimas vyksta NUO naujosios kainos, todėl ji tampa pagrindu ($100\\%$).",
         "reviewConceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -4089,7 +4089,7 @@ export const exercises_06 = [
     ],
     "reflectionPrompts": [
       "Kodėl sumažinimo procentas yra mažesnis už padidinimo procentą?",
-      "Kas būtų, jei kainą pirma sumažintume $20\\\\%$, o tada padidintume $25\\\\%$?"
+      "Kas būtų, jei kainą pirma sumažintume $20\\%$, o tada padidintume $25\\%$?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -4097,8 +4097,8 @@ export const exercises_06 = [
         "id": "ex-olimpiada-06-5a19da69-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Jei kaina padidėjo $25\\\\%$, kiek procentų ją reikia sumažinti iki pradinės?",
-        "back": "Reikia sumažinti $20\\\\%$ (skaičiuojant $25 / 125$).",
+        "front": "Jei kaina padidėjo $25\\%$, kiek procentų ją reikia sumažinti iki pradinės?",
+        "back": "Reikia sumažinti $20\\%$ (skaičiuojant $25 / 125$).",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -4128,7 +4128,7 @@ export const exercises_06 = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\\\_kaina) \\times 100\\\\%$.",
+        "text": "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\_kaina) \\times 100\\%$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -4186,13 +4186,13 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Vieno traktoriaus galios radimas",
-            "action": "Apskaičiuokite $60 / (5 \\\\cdot 4)$.",
+            "action": "Apskaičiuokite $60 / (5 \\cdot 4)$.",
             "reason": "Svarbu žinoti bazinį vieneto darbo kiekį.",
             "result": "$3$ ha per traktorių per dieną."
           },
           {
             "title": "Rezultato mastelio keitimas",
-            "action": "Padauginkite $3$ iš naujų kintamųjų: $3 \\\\cdot 8 \\\\cdot 3$.",
+            "action": "Padauginkite $3$ iš naujų kintamųjų: $3 \\cdot 8 \\cdot 3$.",
             "reason": "Darbo kiekis tiesiogiai proporcingas traktorių ir dienų skaičiui.",
             "result": "$72$ ha."
           }
@@ -4323,7 +4323,7 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Bendrųjų verčių skaičiavimas",
-            "action": "Sudauginkite kiekius su atitinkamais vidurkiais: $5 \\\\cdot 12$ ir $6 \\\\cdot 14$.",
+            "action": "Sudauginkite kiekius su atitinkamais vidurkiais: $5 \\cdot 12$ ir $6 \\cdot 14$.",
             "reason": "Vidurkio formulė $V = Suma / Kiekis$ leidžia rasti sumą.",
             "result": "Sumos $60$ ir $84$."
           },
@@ -4415,10 +4415,10 @@ export const exercises_06 = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\\\pi$).",
-    "answer": "Plotas lygus $100 - 25\\\\pi$ cm$^2$.",
+    "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).",
+    "answer": "Plotas lygus $100 - 25\\pi$ cm$^2$.",
     "acceptedAnswers": [
-      "Plotas lygus $100 - 25\\\\pi$ cm$^2$."
+      "Plotas lygus $100 - 25\\pi$ cm$^2$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -4428,9 +4428,9 @@ export const exercises_06 = [
     "hints": [
       "Nupieškite kvadratą ir į jį įbrėžtą apskritimą. Pastebėkite, kad apskritimo skersmuo yra lygus kvadrato kraštinei ($10$ cm).",
       "Apskaičiuokite kvadrato plotą ($10^2$) ir apskritimo plotą. Prisiminkite, kad apskritimo spindulys yra pusė skersmens, t. y. $5$ cm.",
-      "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\\\pi$, neatlikdami apytikslių skaičiavimų."
+      "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\pi$, neatlikdami apytikslių skaičiavimų."
     ],
-    "solution": "Apskaičiuojame kvadrato plotą: $S_{kv} = 10^2 = 100\\text{ cm}^2$. Nustatome apskritimo spindulį: $r = 10 / 2 = 5$ cm. Apskaičiuojame apskritimo plotą: $S_{ap} = \\\\pi \\times r^2 = 25\\\\pi\\text{ cm}^2$. Randame ieškomą plotą atimdami apskritimo plotą iš kvadrato ploto: $S = 100 - 25\\\\pi\\text{ cm}^2$.",
+    "solution": "Apskaičiuojame kvadrato plotą: $S_{kv} = 10^2 = 100\\text{ cm}^2$. Nustatome apskritimo spindulį: $r = 10 / 2 = 5$ cm. Apskaičiuojame apskritimo plotą: $S_{ap} = \\pi \\times r^2 = 25\\pi\\text{ cm}^2$. Randame ieškomą plotą atimdami apskritimo plotą iš kvadrato ploto: $S = 100 - 25\\pi\\text{ cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -4466,19 +4466,19 @@ export const exercises_06 = [
           },
           {
             "title": "Plotų radimas ir atimtis",
-            "action": "Apskaičiuokite $10^2 - \\\\pi \\\\cdot 5^2$.",
+            "action": "Apskaičiuokite $10^2 - \\pi \\cdot 5^2$.",
             "reason": "Likusios dalies plotas gaunamas iš visumos atimant vidinę figūrą.",
-            "result": "$100 - 25\\\\pi$."
+            "result": "$100 - 25\\pi$."
           }
         ],
-        "finalAnswer": "Plotas lygus $100 - 25\\\\pi$ cm$^2$."
+        "finalAnswer": "Plotas lygus $100 - 25\\pi$ cm$^2$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-06-bfec6fed-trap-1",
         "title": "Skersmens ir spindulio painiojimas",
-        "wrongMove": "Apskritimo ploto skaičiavimas su spinduliu $10$ cm ($S = 100\\\\pi$).",
+        "wrongMove": "Apskritimo ploto skaičiavimas su spinduliu $10$ cm ($S = 100\\pi$).",
         "whyTempting": "Skaičius $10$ yra duotas sąlygoje, todėl mokiniai jį naudoja formulėse nepagalvoję.",
         "correction": "Visada patikrinkite, ar sąlygoje duota kraštinė atitinka spindulį, ar skersmenį. Čia spindulys yra $5$ cm.",
         "reviewConceptIds": [
@@ -4489,7 +4489,7 @@ export const exercises_06 = [
       {
         "id": "ex-olimpiada-06-bfec6fed-trap-2",
         "title": "Formulės užrašymo klaida",
-        "wrongMove": "Manymas, kad apskritimo plotas yra $2\\\\pi r$ (perimetras) vietoj $\\\\pi r^2$.",
+        "wrongMove": "Manymas, kad apskritimo plotas yra $2\\pi r$ (perimetras) vietoj $\\pi r^2$.",
         "whyTempting": "Dvi panašios apskritimo formulės dažnai painiojamos tarpusavyje.",
         "correction": "Plotas matuojamas kvadratiniais vienetais, todėl formulėje spindulys privalo būti keliamas kvadratu.",
         "reviewConceptIds": [
@@ -4539,7 +4539,7 @@ export const exercises_06 = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\\\pi$, neatlikdami apytikslių skaičiavimų.",
+        "text": "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\pi$, neatlikdami apytikslių skaičiavimų.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -4552,10 +4552,10 @@ export const exercises_06 = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\\\pi$).",
-    "answer": "Perimetras lygus $14\\\\pi$ cm.",
+    "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\pi$).",
+    "answer": "Perimetras lygus $14\\pi$ cm.",
     "acceptedAnswers": [
-      "Perimetras lygus $14\\\\pi$ cm."
+      "Perimetras lygus $14\\pi$ cm."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -4565,9 +4565,9 @@ export const exercises_06 = [
     "hints": [
       "Įsivaizduokite figūrą: stačiakampis išnyksta, o jo vietą užima keturi lankai. Jums reikia apskaičiuoti tik šių išorinių lankų ilgių sumą.",
       "Turite dvi poras pusapskritimių. Viena pora pusapskritimių su skersmeniu $8$ cm sudaro vieną pilną apskritimą. Kita pora su skersmeniu $6$ cm – taip pat.",
-      "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\\\pi d$. Sudėkite $8\\\\pi$ ir $6\\\\pi$."
+      "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\pi d$. Sudėkite $8\\pi$ ir $6\\pi$."
     ],
-    "solution": "Nustatome, kad figūros perimetrą sudaro du pusapskritimiai, kurių skersmuo $d_1 = 8$ cm, ir du pusapskritimiai, kurių skersmuo $d_2 = 6$ cm. Pusapskritimo lanko ilgio formulė yra $L = \\\\pi d / 2$. Apskaičiuojame pirmosios poros lankų sumą: $2 \\times (8\\\\pi / 2) = 8\\\\pi$ cm. Apskaičiuojame antrosios poros lankų sumą: $2 \\times (6\\\\pi / 2) = 6\\\\pi$ cm. Sudedame visus ilgius: $8\\\\pi + 6\\\\pi = 14\\\\pi$ cm.",
+    "solution": "Nustatome, kad figūros perimetrą sudaro du pusapskritimiai, kurių skersmuo $d_1 = 8$ cm, ir du pusapskritimiai, kurių skersmuo $d_2 = 6$ cm. Pusapskritimo lanko ilgio formulė yra $L = \\pi d / 2$. Apskaičiuojame pirmosios poros lankų sumą: $2 \\times (8\\pi / 2) = 8\\pi$ cm. Apskaičiuojame antrosios poros lankų sumą: $2 \\times (6\\pi / 2) = 6\\pi$ cm. Sudedame visus ilgius: $8\\pi + 6\\pi = 14\\pi$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -4575,7 +4575,7 @@ export const exercises_06 = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Suskaičiuokite lankų ilgius",
-      "text": "Figūros perimetrą sudaro $4$ pusapskritimių lankai. Pusapskritimo lanko ilgis yra $\\frac{\\\\pi d}{2}$. Sudėkite visus keturis ilgius."
+      "text": "Figūros perimetrą sudaro $4$ pusapskritimių lankai. Pusapskritimo lanko ilgis yra $\\frac{\\pi d}{2}$. Sudėkite visus keturis ilgius."
     },
     "strategyTags": [
       "figūrų-perimetrai",
@@ -4603,12 +4603,12 @@ export const exercises_06 = [
           },
           {
             "title": "Ilgio apskaičiavimas",
-            "action": "Sudėkite $\\\\pi \\\\cdot 8 + \\\\pi \\\\cdot 6$.",
+            "action": "Sudėkite $\\pi \\cdot 8 + \\pi \\cdot 6$.",
             "reason": "Du pusapskritimiai sudaro pilną apskritimą.",
-            "result": "$14\\\\pi$."
+            "result": "$14\\pi$."
           }
         ],
-        "finalAnswer": "Perimetras lygus $14\\\\pi$ cm."
+        "finalAnswer": "Perimetras lygus $14\\pi$ cm."
       }
     ],
     "commonTraps": [
@@ -4626,7 +4626,7 @@ export const exercises_06 = [
       {
         "id": "ex-olimpiada-06-507d1998-trap-2",
         "title": "Pusapskritimo ilgio formulės klaida",
-        "wrongMove": "Dauginimas $\\\\pi r^2 / 2$ (ploto formulė) vietoj lanko ilgio skaičiavimo.",
+        "wrongMove": "Dauginimas $\\pi r^2 / 2$ (ploto formulė) vietoj lanko ilgio skaičiavimo.",
         "whyTempting": "Painiojamos perimetro ir ploto sąvokos bei jų formulės.",
         "correction": "Ilgis (perimetras) matuojamas tiesiniais vienetais, todėl naudojama formulė su skersmeniu arba spinduliu pirmuoju laipsniu.",
         "reviewConceptIds": [
@@ -4646,7 +4646,7 @@ export const exercises_06 = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra pusapskritimo lanko ilgis, jei jo skersmuo yra $d$?",
-        "back": "$L = \\\\pi d / 2$ arba $L = \\\\pi r$.",
+        "back": "$L = \\pi d / 2$ arba $L = \\pi r$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -4676,7 +4676,7 @@ export const exercises_06 = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\\\pi d$. Sudėkite $8\\\\pi$ ir $6\\\\pi$.",
+        "text": "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\pi d$. Sudėkite $8\\pi$ ir $6\\pi$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -4847,9 +4847,9 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: raskite vienos sienos plotą. Ar galite tai pritaikyti?",
       "Metodas: Kubas turi $6$ lygias kvadratines sienas. Padalykite bendrą plotą iš $6$, kad sužinotumėte sienos plotą, tada raskite briaunos ilgį ir apskaičiuokite tūrį.",
-      "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\\\implies a^2 = 25$. Kubo briau..."
+      "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\implies a^2 = 25$. Kubo briau..."
     ],
-    "solution": "Kubas turi $6$ lygias kvadratines sienas. Pirmiausia randame vienos sienos plotą: $S_{siena} = 150 / 6 = 25\\text{ cm}^2$. Kadangi siena yra kvadratas, jo briaunos ilgį $a$ randame ištraukę kvadratinę šaknį iš ploto: $a = \\\\sqrt{25} = 5$ cm. Galiausiai apskaičiuojame kubo tūrį pagal formulę $V = a^3$: $V = 5^3 = 125\\text{ cm}^3$.",
+    "solution": "Kubas turi $6$ lygias kvadratines sienas. Pirmiausia randame vienos sienos plotą: $S_{siena} = 150 / 6 = 25\\text{ cm}^2$. Kadangi siena yra kvadratas, jo briaunos ilgį $a$ randame ištraukę kvadratinę šaknį iš ploto: $a = \\sqrt{25} = 5$ cm. Galiausiai apskaičiuojame kubo tūrį pagal formulę $V = a^3$: $V = 5^3 = 125\\text{ cm}^3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -4973,7 +4973,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\\\implies a^2 = 25$. Kubo briau...",
+        "text": "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\implies a^2 = 25$. Kubo briau...",
         "penalty": 0.12
       }
     ]
@@ -5297,9 +5297,9 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: taikykite pitagoro teoremą. Ar galite tai pritaikyti?",
       "Metodas: Statusis trikampis tenkina sąryšį $a^2 + b^2 = c^2$. Žinodami įžambinę $c=10$ ir statinį $a=6$, raskite $b$. Trikampio plotas lygus $\\frac{1}{2} a b$.",
-      "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\\\implies 36 + b^2 = 100 \\\\implies b^2 = 64 \\\\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$."
+      "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\implies 36 + b^2 = 100 \\implies b^2 = 64 \\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$."
     ],
-    "solution": "Taikome Pitagoro teoremą $a^2 + b^2 = c^2$, kur $c$ yra įžambinė ($10$ cm), o $a$ – žinomas statinis ($6$ cm). Apskaičiuojame nežinomo statinio kvadratą: $b^2 = 10^2 - 6^2 = 100 - 36 = 64$. Ištraukiame kvadratinę šaknį ir randame statinio ilgį: $b = \\\\sqrt{64} = 8$ cm. Apskaičiuojame stačiojo trikampio plotą sudaugindami statinius ir padalindami iš dviejų: $S = (6 \\times 8) / 2 = 24\\text{ cm}^2$.",
+    "solution": "Taikome Pitagoro teoremą $a^2 + b^2 = c^2$, kur $c$ yra įžambinė ($10$ cm), o $a$ – žinomas statinis ($6$ cm). Apskaičiuojame nežinomo statinio kvadratą: $b^2 = 10^2 - 6^2 = 100 - 36 = 64$. Ištraukiame kvadratinę šaknį ir randame statinio ilgį: $b = \\sqrt{64} = 8$ cm. Apskaičiuojame stačiojo trikampio plotą sudaugindami statinius ir padalindami iš dviejų: $S = (6 \\times 8) / 2 = 24\\text{ cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -5329,13 +5329,13 @@ export const exercises_06 = [
         "steps": [
           {
             "title": "Nežinomos kraštinės radimas",
-            "action": "Atlikite skaičiavimą $\\\\sqrt{c^2 - a^2}$.",
+            "action": "Atlikite skaičiavimą $\\sqrt{c^2 - a^2}$.",
             "reason": "Stačiajame trikampyje statinių kvadratų suma lygi įžambinės kvadratui.",
             "result": "Statinis lygus $8$ cm."
           },
           {
             "title": "Ploto skaičiavimas",
-            "action": "Pritaikykite formulę $S = (a \\\\cdot b) / 2$.",
+            "action": "Pritaikykite formulę $S = (a \\cdot b) / 2$.",
             "reason": "Stačiojo trikampio plotas yra lygus pusei stačiakampio, sudaryto iš jo statinių, ploto.",
             "result": "Plotas $24\\text{ cm}^2$."
           }
@@ -5417,7 +5417,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\\\implies 36 + b^2 = 100 \\\\implies b^2 = 64 \\\\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.",
+        "text": "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\implies 36 + b^2 = 100 \\implies b^2 = 64 \\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.",
         "penalty": 0.12
       }
     ]
@@ -5441,9 +5441,9 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: naudokite lygių trikampių savybes. Ar galite tai pritaikyti?",
       "Metodas: Kadangi trikampiai yra lygūs, jų perimetrai ir atitinkamos kraštinės yra lygios. Raskite trečiąją trikampio $ABC$ kraštinę.",
-      "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm."
+      "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm."
     ],
-    "solution": "Lygūs trikampiai turi vienodus perimetrus, todėl trikampio $ABC$ perimetras taip pat lygus $18$ cm. Trikampio $ABC$ perimetras lygus jo kraštinių sumai: $P = AB + BC + AC = 18$. Įstatome žinomas reikšmes ($AB = 5$, $BC = 7$): $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi trikampiai $ABC$ ir $DEF$ lygūs, jų atitinkamos kraštinės yra lygios. Kraštinė $AC$ atitinka kraštinę $DF$, todėl $DF = 6$ cm.",
+    "solution": "Lygūs trikampiai turi vienodus perimetrus, todėl trikampio $ABC$ perimetras taip pat lygus $18$ cm. Trikampio $ABC$ perimetras lygus jo kraštinių sumai: $P = AB + BC + AC = 18$. Įstatome žinomas reikšmes ($AB = 5$, $BC = 7$): $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi trikampiai $ABC$ ir $DEF$ lygūs, jų atitinkamos kraštinės yra lygios. Kraštinė $AC$ atitinka kraštinę $DF$, todėl $DF = 6$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -5567,7 +5567,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm.",
+        "text": "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm.",
         "penalty": 0.12
       }
     ]
@@ -5591,9 +5591,9 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: fiksuokite paskutinį skaitmenį. Ar galite tai pritaikyti?",
       "Metodas: Kad skaičius būtų lyginis, jis turi baigtis $2$ arba $4$. Apskaičiuokite variantus kiekvienam iš šių atvejų panaudodami faktorialo taisyklę.",
-      "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra ..."
+      "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\{1, 2, 3, 4, 5\\}$ yra ..."
     ],
-    "solution": "Penkiaženklis skaičius yra lyginis tada, kai jo paskutinis skaitmuo yra lyginis. Duotoje aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra tik du lyginiai skaitmenys: $2$ ir $4$. Paskutinę skaičiaus vietą galime užpildyti $2$ būdais ($2$ arba $4$). Likusios keturios pozicijos užpildomos likusiais keturiais skaitmenimis bet kokia tvarka. Tai yra kėliniai iš $4$ elementų: $P_4 = 4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių kiekis randamas sudauginus paskutinio skaitmens pasirinkimo būdus iš likusių pozicijų derinių skaičiaus: $2 \\times 24 = 48$.",
+    "solution": "Penkiaženklis skaičius yra lyginis tada, kai jo paskutinis skaitmuo yra lyginis. Duotoje aibėje $\\{1, 2, 3, 4, 5\\}$ yra tik du lyginiai skaitmenys: $2$ ir $4$. Paskutinę skaičiaus vietą galime užpildyti $2$ būdais ($2$ arba $4$). Likusios keturios pozicijos užpildomos likusiais keturiais skaitmenimis bet kokia tvarka. Tai yra kėliniai iš $4$ elementų: $P_4 = 4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių kiekis randamas sudauginus paskutinio skaitmens pasirinkimo būdus iš likusių pozicijų derinių skaičiaus: $2 \\times 24 = 48$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -5635,7 +5635,7 @@ export const exercises_06 = [
           },
           {
             "title": "Bendros sumos radimas",
-            "action": "Sudauginkite $2 \\\\cdot 24$.",
+            "action": "Sudauginkite $2 \\cdot 24$.",
             "reason": "Taikoma kombinatorinė sandaugos taisyklė nepriklausomiems pasirinkimams.",
             "result": "Iš viso $48$ skaičiai."
           }
@@ -5717,7 +5717,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra ...",
+        "text": "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\{1, 2, 3, 4, 5\\}$ yra ...",
         "penalty": 0.12
       }
     ]
@@ -5891,7 +5891,7 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: dauginkite nepriklausomų įvykių tikimybes. Ar galite tai pritaikyti?",
       "Metodas: Šie du įvykiai yra nepriklausomi. Tikimybė gauti lyginį taškų skaičių kauliuku lygi $\\frac{3}{6} = \\frac{1}{2}$. Tikimybė gauti herbą moneta lygi $\\frac{1}{2}$.",
-      "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P..."
+      "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...$"
     ],
     "solution": "Nagrinėjame du nepriklausomus eksperimentus. Pirmiausia randame tikimybę, kad lošimo kauliukas parodys lyginį skaičių ($2, 4$ arba $6$). Palankių baigčių yra $3$, o visų galimų – $6$. Tikimybė $P_1 = 3/6 = 1/2$. Tada randame tikimybę, kad moneta atvirs herbu. Yra tik dvi galimos baigtys (herbas arba skaičius), todėl tikimybė $P_2 = 1/2$. Kadangi šie įvykiai yra nepriklausomi, bendra tikimybė, kad abu jie įvyks kartu, lygi jų tikimybių sandaugai: $P = P_1 \\times P_2 = 1/2 \\times 1/2 = 1/4$.",
     "alternate": "",
@@ -6011,7 +6011,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...",
+        "text": "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...$",
         "penalty": 0.12
       }
     ]
@@ -6185,9 +6185,9 @@ export const exercises_06 = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: naudokite papildomąjį įvykį. Ar galite tai pritaikyti?",
       "Metodas: Vietoje to, kad skaičiuotumėte visus sudėtingus variantus tiesiogiai, apskaičiuokite tikimybę, kad nė ant vieno iš trijų kauliukų neiškris $6$ akutės, ir atimkite ją iš $1$.",
-      "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg..."
+      "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...$"
     ],
-    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\\\%$) Gauta išvada: Tikimybė lygi $\\frac{91}{216}$.",
+    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$) Gauta išvada: Tikimybė lygi $\\frac{91}{216}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -6223,7 +6223,7 @@ export const exercises_06 = [
           },
           {
             "title": "Sprendimo žingsnis",
-            "action": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\\\%$)",
+            "action": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$)",
             "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
             "result": "Tikimybė lygi $\\frac{91}{216}$."
           }
@@ -6305,7 +6305,7 @@ export const exercises_06 = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...",
+        "text": "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...$",
         "penalty": 0.12
       }
     ]
@@ -6328,10 +6328,10 @@ export const exercises_06 = [
     "hints": [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: pritaikykite trijų aibių įtraukties formulę. Ar galite tai pritaikyti?",
-      "Metodas: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+      "Metodas: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
       "Detalus atlikimas: Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir i..."
     ],
-    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\\\cup V \\\\cup P| = |A| + |V| + |P| - (|A \\\\cap V| + |V \\\\cap P| + |A \\\\cap P|) + |A \\\\cap V \\\\cap P|$\n$|A \\\\cup V \\\\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai. Gauta išvada: Nekalba nei viena iš kalbų $8$ turistai.",
+    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai. Gauta išvada: Nekalba nei viena iš kalbų $8$ turistai.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -6339,7 +6339,7 @@ export const exercises_06 = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Pritaikykite trijų aibių įtraukties formulę",
-      "text": "Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba."
+      "text": "Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba."
     },
     "strategyTags": [
       "įtrauktis-išskirtis",
@@ -6367,7 +6367,7 @@ export const exercises_06 = [
           },
           {
             "title": "Sprendimo žingsnis",
-            "action": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\\\cup V \\\\cup P| = |A| + |V| + |P| - (|A \\\\cap V| + |V \\\\cap P| + |A \\\\cap P|) + |A \\\\cap V \\\\cap P|$\n$|A \\\\cup V \\\\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai.",
+            "action": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai.",
             "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
             "result": "Nekalba nei viena iš kalbų $8$ turistai."
           }
@@ -6410,7 +6410,7 @@ export const exercises_06 = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Iš $100$ turistų, $50$ kalba angliškai, $40$ kalba vokiškai,...",
-        "back": "Taikome šį metodą: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+        "back": "Taikome šį metodą: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -6440,7 +6440,7 @@ export const exercises_06 = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Metodas: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+        "text": "Metodas: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],

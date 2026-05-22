@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { State } from '../types';
 import { topics, concepts } from '../content';
 import { getTestsForTopic, ensureTopicSrsCards } from '../systems';
 import { MathText } from './MathText';
-import { inferStartMode } from '../startModes';
 
 interface TopicViewProps {
   state: State;
@@ -20,58 +19,37 @@ export const TopicView: React.FC<TopicViewProps> = ({
   updateState,
   showToast
 }) => {
-  const [selectedTrack, setSelectedTrack] = useState<'curriculum' | 'olympiad' | null>(() => {
-    if (topicId) {
-      return topics[topicId]?.level === 'olympiad' ? 'olympiad' : 'curriculum';
-    }
-    const mode = inferStartMode(state.profile);
-    if (mode === 'olympiad') return 'olympiad';
-    if (mode === 'targeted') return 'curriculum';
-    return null;
-  });
-
-  let activeId = topicId || state.activeTopicId || Object.keys(topics)[0];
-  if (!topicId && selectedTrack === 'olympiad') {
-     const grade = state.profile.grade || 9;
-     const oId = `olimpiada-${String(grade).padStart(2, '0')}`;
-     if (topics[oId]) activeId = oId;
-  } else if (!topicId && selectedTrack === 'curriculum') {
-     if (topics[activeId]?.level === 'olympiad') {
-        const fallback = Object.keys(topics).find(k => topics[k].level !== 'olympiad' && topics[k].grade === (state.profile.grade || 9));
-        if (fallback) activeId = fallback;
-     }
-  }
-
+  const activeId = topicId || state.activeTopicId || Object.keys(topics)[0];
   const topic = topics[activeId];
-
-  if (selectedTrack === null) {
-    return (
-      <div className="track-selection">
-        <h2>Ką nori mokytis šiandien?</h2>
-        <div className="track-cards">
-          <div className="track-card" onClick={() => setSelectedTrack('curriculum')}>
-            <h3>Mokyklinis turinys</h3>
-            <p>Pasiruošimas pamokoms, kontroliniams ir egzaminams. Oficiali mokyklos programa.</p>
-          </div>
-          <div className="track-card" onClick={() => setSelectedTrack('olympiad')}>
-            <h3>Olimpiadinis turinys</h3>
-            <p>Sunkesni uždaviniai, nestandartinis mąstymas ir olimpiados lygio iššūkiai.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   if (!topic) {
     return (
       <div className="panel centered">
         <h2>Tema nerasta</h2>
-        <button onClick={() => navigate("dashboard")}>Grįžti į apžvalgą</button>
+        <button onClick={() => navigate("theory")}>Grįžti į sąrašą</button>
       </div>
     );
   }
 
   const topicTests = getTestsForTopic(topic.id);
+  const isRelevant = (state.profile.relevantTopicIds || []).includes(topic.id);
+
+  const handleToggleRelevant = () => {
+    updateState((prev) => {
+      const current = prev.profile.relevantTopicIds || [];
+      const next = current.includes(topic.id)
+        ? current.filter(id => id !== topic.id)
+        : [...current, topic.id];
+      return {
+        ...prev,
+        profile: {
+          ...prev.profile,
+          relevantTopicIds: next
+        }
+      };
+    });
+    showToast(isRelevant ? "Tema pašalinta iš aktualių temų." : "Tema pridėta prie aktualių temų!");
+  };
 
   const handleMarkAsRead = () => {
     updateState((prev) => {
@@ -86,14 +64,14 @@ export const TopicView: React.FC<TopicViewProps> = ({
 
   return (
     <div className="topic-layout">
-      <div className="track-toggle-bar">
-        <button className={selectedTrack === 'curriculum' ? 'active' : ''} onClick={() => setSelectedTrack('curriculum')}>Mokyklinis turinys</button>
-        <button className={selectedTrack === 'olympiad' ? 'active' : ''} onClick={() => setSelectedTrack('olympiad')}>Olimpiadinis turinys</button>
-      </div>
-      
       <section className="panel wide topic-header">
-        <span className="eyebrow">Tema • {topic.strand}</span>
-        <h2>{topic.title}</h2>
+        <div className="section-head" style={{ marginBottom: '16px' }}>
+          <div>
+            <span className="eyebrow">Tema • {topic.strand}</span>
+            <h2>{topic.title}</h2>
+          </div>
+          <button onClick={() => navigate("theory")}>Grįžti į sąrašą</button>
+        </div>
         {topic.prerequisites && topic.prerequisites.length > 0 && (
           <p className="lead prerequisites">
             Prerekvizitai: {topic.prerequisites.join(", ")}.
@@ -110,6 +88,12 @@ export const TopicView: React.FC<TopicViewProps> = ({
             onClick={() => navigate("tests", topic.id)}
           >
             Testai ({topicTests.length})
+          </button>
+          <button
+            className={isRelevant ? "secondary" : "secondary-outline"}
+            onClick={handleToggleRelevant}
+          >
+            {isRelevant ? "Jau aktualiose temose" : "Pridėti prie aktualių temų"}
           </button>
           <button
             className="secondary-outline"

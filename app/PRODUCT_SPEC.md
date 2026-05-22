@@ -143,6 +143,7 @@ Behavior:
 
 - after goal selection, ask whether the student is preparing for `Kontrolinis`, `PUPP`, or `VBE`,
 - if the student chooses `Kontrolinis`, ask them to choose a specific curriculum topic and start from that topic,
+- add the chosen topic to `Aktualios temos`,
 - if the student chooses `PUPP` or `VBE`, make diagnostic the primary recommended action and keep specific topic selection as a secondary option,
 - show the chosen topic as the main working area,
 - prioritize concise theory, worked examples, practice, topic tests, mistakes, and exam-style checkpoints,
@@ -186,16 +187,51 @@ The mode changes the default home page and recommendation strategy. It must not 
 
 ## Navigation and Track Selection
 
-The primary learning sections are **Teorija** (Theory) and **Praktika** (Practice), accessible via dedicated tabs on the main left sidebar. Both sections feature a dual-track layout designed to cleanly separate standard and advanced learning:
-- **Mokyklinis turinys**: Official curriculum content (preparation for lessons, tests, exams).
-- **Olimpiadinis turinys**: Advanced olympiad extension content (non-standard thinking).
+The dashboard must contain an **Aktualios temos** section in the place where broad curriculum topic groups would otherwise appear. This section is not the full curriculum browser. It is the student's focused list of currently relevant topics.
 
-When a student navigates to "Teorija" or "Praktika", the UI routes them based on their current goal (Start Mode):
-- If the goal is **Olympiad Strengthening**, the app defaults them immediately to the "Olimpiadinis turinys" section.
-- If the goal is **Topic or Exam Preparation**, the app defaults them immediately to the "Mokyklinis turinys" section.
-- If the goal is **Full Course**, the app presents a selection screen with two large cards ("Mokyklinis turinys" and "Olimpiadinis turinys"), requiring them to choose their path for the current session.
+`Aktualios temos` behavior:
 
-Regardless of the default routing or the choice made, a prominent toggle button is always available at the top of the "Teorija" and "Praktika" pages, allowing students to instantly switch between the curriculum and olympiad tracks with a single button press.
+- store the list as local progress, using stable topic ids,
+- when onboarding creates a topic target in `Ruošiuosi kontroliniui arba egzaminui`, add that topic to the list,
+- after a student opens an individual topic theory page, show `Pridėti prie aktualių temų` beside the existing topic actions,
+- if the topic is already in the list, show a non-duplicating state such as `Jau aktualiose temose`,
+- do not add diagnostic recommendations automatically; diagnostics should recommend topics, while `Aktualios temos` remains the student's explicit working list,
+- if the list is empty, show a clear Lithuanian empty state explaining that topics can be added from a theory topic page.
+
+The full topic browser belongs in **Teorija** and **Praktika**, not on the dashboard.
+
+The primary learning sections are **Teorija** (Theory) and **Praktika** (Practice), accessible via dedicated tabs on the main left sidebar. When opened without a specific topic id, both pages should use a YouTube-inspired card library layout:
+
+1. A top control box for finding content.
+2. A card-based content box for topic cards.
+
+The top control box must include:
+
+- `Mokyklinis` / `Olimpiadinis` content toggle,
+- search bar,
+- grade or grade-band filter,
+- discipline/strand filter,
+- difficulty filter for olympiad-level content.
+
+Default filter state:
+
+- the content toggle defaults to `Olimpiadinis` for olympiad strengthening mode,
+- otherwise it defaults to `Mokyklinis`,
+- grade or grade-band defaults to the onboarding choice,
+- search starts empty,
+- discipline starts as all disciplines.
+
+The content box must show card-based topic presentations:
+
+- recommended topics first,
+- all other matching topics below,
+- large topic name,
+- short description,
+- visible grade/band, strand, mastery, and olympiad difficulty metadata where relevant.
+
+Recommended topics should be based on diagnostic recommendations first, then `Aktualios temos`, then the current target/active topic, then low-mastery topics in the selected grade band. Recommendations must respect the current toggle and filters.
+
+Clicking a Teorija card opens the individual theory topic page. Clicking a Praktika card starts practice for that topic.
 
 ## Core Learning Flow
 

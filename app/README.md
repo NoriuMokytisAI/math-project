@@ -57,6 +57,12 @@ The first onboarding decision creates one of three starting modes. The main app 
 
 These modes are starting positions, not permanent user categories. The student can change mode later in Settings without losing progress. The diagnostic is the main root only for full-course mode; it is optional in olympiad and topic/exam modes.
 
+## Canonical Topic Navigation
+
+The dashboard topic area is **Aktualios temos**. It is a focused local list of topic ids, not the full curriculum browser. Topic/exam onboarding adds the selected topic to this list, and individual theory topic pages must provide `Pridėti prie aktualių temų`.
+
+The full curriculum and olympiad browser lives in **Teorija** and **Praktika**. Both pages use a card-based library layout with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters. Recommended cards appear first; all other matching topics appear below.
+
 ## Fully Completed App
 
 The app is considered complete only when the same learning product is released and accepted on:

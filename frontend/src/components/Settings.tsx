@@ -366,8 +366,10 @@ export const Settings: React.FC<SettingsProps> = ({
           </section>
 
           <section className="panel wide srs-settings-grid">
-            <label>Naujos kortelės per dieną
+            <label htmlFor="srs-daily-new">Naujos kortelės per dieną
               <input
+                id="srs-daily-new"
+                name="srs-daily-new"
                 type="number"
                 min="0"
                 step="1"
@@ -375,8 +377,10 @@ export const Settings: React.FC<SettingsProps> = ({
                 onChange={(e) => updateSrsSetting('dailyNewLimit', Number(e.target.value))}
               />
             </label>
-            <label>Kartojimai per dieną
+            <label htmlFor="srs-daily-review">Kartojimai per dieną
               <input
+                id="srs-daily-review"
+                name="srs-daily-review"
                 type="number"
                 min="0"
                 step="1"
@@ -384,8 +388,10 @@ export const Settings: React.FC<SettingsProps> = ({
                 onChange={(e) => updateSrsSetting('dailyReviewLimit', Number(e.target.value))}
               />
             </label>
-            <label>Mokymosi žingsniai minutėmis
+            <label htmlFor="srs-learning-steps">Mokymosi žingsniai minutėmis
               <input
+                id="srs-learning-steps"
+                name="srs-learning-steps"
                 value={srs.learningStepsMinutes.join(", ")}
                 onChange={(e) => {
                   const arr = e.target.value.split(',').map((x) => Number(x.trim())).filter((x) => !isNaN(x) && x > 0);
@@ -393,8 +399,10 @@ export const Settings: React.FC<SettingsProps> = ({
                 }}
               />
             </label>
-            <label>Baigimo intervalas dienomis
+            <label htmlFor="srs-graduating-interval">Baigimo intervalas dienomis
               <input
+                id="srs-graduating-interval"
+                name="srs-graduating-interval"
                 type="number"
                 min="1"
                 step="1"
@@ -402,8 +410,10 @@ export const Settings: React.FC<SettingsProps> = ({
                 onChange={(e) => updateSrsSetting('graduatingIntervalDays', Number(e.target.value))}
               />
             </label>
-            <label>Maksimalus intervalas dienomis
+            <label htmlFor="srs-maximum-interval">Maksimalus intervalas dienomis
               <input
+                id="srs-maximum-interval"
+                name="srs-maximum-interval"
                 type="number"
                 min="1"
                 step="1"
@@ -417,8 +427,10 @@ export const Settings: React.FC<SettingsProps> = ({
             <span className="eyebrow">Kortelių tipai</span>
             <div className="checkbox-group">
               {Object.entries(typeLabels).map(([key, label]) => (
-                <label key={key} className="check">
+                <label key={key} className="check" htmlFor={`srs-type-${key}`}>
                   <input
+                    id={`srs-type-${key}`}
+                    name={`srs-type-${key}`}
                     type="checkbox"
                     checked={srs.enabledCardTypes[key] !== false}
                     onChange={(e) => updateCardTypeToggle(key, e.target.checked)}
@@ -434,8 +446,10 @@ export const Settings: React.FC<SettingsProps> = ({
             <details>
               <summary>Rodyti parametrus</summary>
               <div className="advanced-srs-fields">
-                <label>Pradinis lengvumas
+                <label htmlFor="srs-ease-factor">Pradinis lengvumas
                   <input
+                    id="srs-ease-factor"
+                    name="srs-ease-factor"
                     type="number"
                     min="1.3"
                     step="0.1"
@@ -443,8 +457,10 @@ export const Settings: React.FC<SettingsProps> = ({
                     onChange={(e) => updateSrsSetting('startingEaseFactor', Number(e.target.value))}
                   />
                 </label>
-                <label>Mažiausias lengvumas
+                <label htmlFor="srs-min-ease">Mažiausias lengvumas
                   <input
+                    id="srs-min-ease"
+                    name="srs-min-ease"
                     type="number"
                     min="1.0"
                     step="0.1"
@@ -452,8 +468,10 @@ export const Settings: React.FC<SettingsProps> = ({
                     onChange={(e) => updateSrsSetting('minimumEaseFactor', Number(e.target.value))}
                   />
                 </label>
-                <label>Bauda už „Pakartoti“
+                <label htmlFor="srs-ease-penalty">Bauda už „Pakartoti“
                   <input
+                    id="srs-ease-penalty"
+                    name="srs-ease-penalty"
                     type="number"
                     min="0"
                     step="0.05"
@@ -461,8 +479,10 @@ export const Settings: React.FC<SettingsProps> = ({
                     onChange={(e) => updateSrsSetting('easePenaltyOnAgain', Number(e.target.value))}
                   />
                 </label>
-                <label>Intervalo daugiklis
+                <label htmlFor="srs-interval-mod">Intervalo daugiklis
                   <input
+                    id="srs-interval-mod"
+                    name="srs-interval-mod"
                     type="number"
                     min="0.1"
                     step="0.1"

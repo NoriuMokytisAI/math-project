@@ -1611,7 +1611,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Sveikųjų skaičių savybė dalytis iš dviejų be liekanos arba turėti liekaną vienas.",
     "intuition": "Skaičių skirstymas į lyginius ir nelyginius. Sandauga lyginė, jei bent vienas daugiklis lyginis; suma lyginė, jei abu dėmenys vienodo lyginumo.",
-    "formal": "Skaičiaus $n \\\\in \\\\mathbb{Z}$ klasifikacija pagal $n \\\\equiv 0 \\\\pmod 2$ (lyginis) arba $n \\\\equiv 1 \\\\pmod 2$ (nelyginis).",
+    "formal": "Skaičiaus $n \\in \\mathbb{Z}$ klasifikacija pagal $n \\equiv 0 \\pmod 2$ (lyginis) arba $n \\equiv 1 \\pmod 2$ (nelyginis).",
     "related": [],
     "topics": [
       "olimpiada-05"
@@ -1622,7 +1622,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Strategija pradėti uždavinio nagrinėjimą nuo objekto, turinčio didžiausią arba mažiausią tam tikros charakteristikos reikšmę.",
     "intuition": "Žiūrėkite į patį mažiausią skaičių, ilgiausią atkarpą ar kraštutinį tašką – tai dažnai apriboja kitų objektų elgseną.",
-    "formal": "Bet kuri netuščia baigtinė aibė $\\\\mathcal{S} \\\\subset \\\\mathbb{R}$ turi maksimalų elementą $\\\\max \\\\mathcal{S}$ ir minimalų elementą $\\\\min \\\\mathcal{S}$.",
+    "formal": "Bet kuri netuščia baigtinė aibė $\\mathcal{S} \\subset \\mathbb{R}$ turi maksimalų elementą $\\max \\mathcal{S}$ ir minimalų elementą $\\min \\mathcal{S}$.",
     "related": [],
     "topics": [
       "olimpiada-05"
@@ -1659,7 +1659,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
     "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
-    "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\\\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+    "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
     "related": [],
     "topics": [
       "olimpiada-06"
@@ -1670,7 +1670,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
     "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
-    "formal": "$n = p_1^{a_1} p_2^{a_2} \\\\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+    "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
     "related": [],
     "topics": [
       "olimpiada-06"
@@ -1725,9 +1725,9 @@ export const concepts = {
   "olimpiada-06-trap-2": {
     "title": "Priklausomų įvykių tikimybių dauginimas",
     "type": "mistake",
-    "definition": "Taikydami tikimybių daugybos taisyklę $P(A \\\\cap B) = P(A) \\times P(B)$, mokiniai pamiršta patikrinti, ar įvykiai yra nepriklausomi.",
+    "definition": "Taikydami tikimybių daugybos taisyklę $P(A \\cap B) = P(A) \\times P(B)$, mokiniai pamiršta patikrinti, ar įvykiai yra nepriklausomi.",
     "intuition": "Traukiami du rutuliai be grąžinimo iš dėžės, kurioje yra 5 raudoni ir 5 mėlyni rutuliai. Tikimybė ištraukti abu raudonus užrašoma kaip $0.5 \\times 0.5 = 0.25$.",
-    "formal": "Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\\\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$.",
+    "formal": "Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$.",
     "related": [
       "olimpiada-06-concept-logic"
     ],
@@ -2702,7 +2702,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Skaičiaus lyginumas arba nelyginumas, padedantis nustatyti būsenų pasiekiamumą.",
     "intuition": "Lyginių ir nelyginių skaičių elgesys atliekant sudėtį ir daugybą.",
-    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\\\pmod 2 \\\\in \\\\{0, 1\\\\}$).",
+    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\pmod 2 \\in \\{0, 1\\}$).",
     "related": [],
     "topics": [
       "olimpiada-07"
@@ -2723,8 +2723,8 @@ export const concepts = {
     "title": "Liekanos prilyginimas neigiamam skaičiui",
     "type": "mistake",
     "definition": "Dalijant neigiamą skaičių, liekana parašoma neigiama.",
-    "intuition": "Teigiama, kad $-5 \\\\pmod 3 = -2$.",
-    "formal": "Liekana visada turi būti neneigiama: $0 \\\\le r < m$. Kadangi $-5 = -2 \\\\cdot 3 + 1$, tai liekana yra 1.",
+    "intuition": "Teigiama, kad $-5 \\pmod 3 = -2$.",
+    "formal": "Liekana visada turi būti neneigiama: $0 \\le r < m$. Kadangi $-5 = -2 \\cdot 3 + 1$, tai liekana yra 1.",
     "related": [
       "olimpiada-07-concept-logic"
     ],
@@ -2783,7 +2783,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Skaičiaus lyginumas arba nelyginumas, padedantis nustatyti būsenų pasiekiamumą.",
     "intuition": "Lyginių ir nelyginių skaičių elgesys atliekant sudėtį ir daugybą.",
-    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\\\pmod 2 \\\\in \\\\{0, 1\\\\}$).",
+    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\pmod 2 \\in \\{0, 1\\}$).",
     "related": [],
     "topics": [
       "olimpiada-08"
@@ -2817,8 +2817,8 @@ export const concepts = {
     "title": "Laipsnio rodiklio pakeitimas liekana moduliu m",
     "type": "mistake",
     "definition": "Rodiklis klaidingai redukuojamas tuo pačiu moduliu.",
-    "intuition": "Teigiama, kad $2^{50} \\\\equiv 2^1 \\\\pmod 7$, nes $50 \\\\equiv 1 \\\\pmod 7$.",
-    "formal": "Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\\\equiv 2 \\\\pmod 6$, tai $2^{50} \\\\equiv 2^2 \\\\equiv 4 \\\\pmod 7$.",
+    "intuition": "Teigiama, kad $2^{50} \\equiv 2^1 \\pmod 7$, nes $50 \\equiv 1 \\pmod 7$.",
+    "formal": "Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\equiv 2 \\pmod 6$, tai $2^{50} \\equiv 2^2 \\equiv 4 \\pmod 7$.",
     "related": [
       "olimpiada-08-concept-method"
     ],
@@ -2985,11 +2985,11 @@ export const concepts = {
     ]
   },
   "olimpiada-09-concept-euler-totient": {
-    "title": "Oilerio totiento funkcija $\\\\varphi(n)$",
+    "title": "Oilerio totiento funkcija $\\varphi(n)$",
     "type": "concept",
     "definition": "Natūraliųjų skaičių, neviršijančių $n$ ir pirminių su $n$, skaičius.",
     "intuition": "Parodo, kiek skaičių nuo $1$ iki $n$ neturi bendrų daliklių su $n$ (išskyrus 1).",
-    "formal": "$\\\\varphi(n) = n \\\\prod_{p|n} \\\\left(1 - \\frac{1}{p}\\right)$, kur $p$ yra skirtingi pirminiai skaičiaus $n$ dalikliai.",
+    "formal": "$\\varphi(n) = n \\prod_{p|n} \\left(1 - \\frac{1}{p}\\right)$, kur $p$ yra skirtingi pirminiai skaičiaus $n$ dalikliai.",
     "related": [],
     "topics": [
       "olimpiada-09"
@@ -2998,9 +2998,9 @@ export const concepts = {
   "olimpiada-09-concept-euler-theorem": {
     "title": "Oilerio teorema",
     "type": "concept",
-    "definition": "Teiginys, kad $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$, kai $\\\\gcd(a, n) = 1$.",
+    "definition": "Teiginys, kad $a^{\\varphi(n)} \\equiv 1 \\pmod n$, kai $\\gcd(a, n) = 1$.",
     "intuition": "Apibendrina Mažąją Fermo teoremą bet kuriam moduliui $n$.",
-    "formal": "Jei $a$ ir $n$ yra tarpusavyje pirminiai natūralieji skaičiai, tai $a^{\\\\varphi(n)} - 1$ dalijasi iš $n$ be liekanos.",
+    "formal": "Jei $a$ ir $n$ yra tarpusavyje pirminiai natūralieji skaičiai, tai $a^{\\varphi(n)} - 1$ dalijasi iš $n$ be liekanos.",
     "related": [
       "olimpiada-09-concept-euler-totient"
     ],
@@ -3013,7 +3013,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Neneigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį.",
     "intuition": "Aritmetinis vidurkis visada yra didesnis arba lygus geometriniam vidurkiui, o lygybė galioja tik kai visi skaičiai lygūs.",
-    "formal": "Neneigiamiems realiesiems skaičiams $a_1, a_2, \\\\dots, a_n$ galioja: $\\frac{a_1 + a_2 + \\\\dots + a_n}{n} \\\\ge \\\\sqrt[n]{a_1 a_2 \\\\dots a_n}$.",
+    "formal": "Neneigiamiems realiesiems skaičiams $a_1, a_2, \\dots, a_n$ galioja: $\\frac{a_1 + a_2 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}$.",
     "related": [],
     "topics": [
       "olimpiada-09"
@@ -3024,7 +3024,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Trikampio kraštinių atkarpų santykių sandauga, kai trys tiesės kertasi viename taške.",
     "intuition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, kertasi viename taške.",
-    "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+    "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
     "related": [],
     "topics": [
       "olimpiada-09"
@@ -3035,7 +3035,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Skaičių seka $C_n = \\frac{1}{n+1}\\binom{2n}{n}$, naudojama kombinatorikoje.",
     "intuition": "Šie skaičiai parodo teisingų skliaustų sekų, medžių ir kitų struktūrų skaičių.",
-    "formal": "Seka apibrėžiama formule $C_n = \\frac{(2n)!}{(n+1)!n!}$ su $n \\\\ge 0$.",
+    "formal": "Seka apibrėžiama formule $C_n = \\frac{(2n)!}{(n+1)!n!}$ su $n \\ge 0$.",
     "related": [],
     "topics": [
       "olimpiada-09"
@@ -3055,8 +3055,8 @@ export const concepts = {
   "olimpiada-09-trap-boundary-cases": {
     "title": "Kraštutinių atvejų ignoravimas",
     "type": "mistake",
-    "definition": "Teoremos ar nelygybės taikomos neatsižvelgiant į ribines sąlygas (pvz., $\\\\gcd(a, n) = 1$).",
-    "intuition": "Oilerio teoremos taikymas $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$, kai $a$ ir $n$ turi bendrų daliklių.",
+    "definition": "Teoremos ar nelygybės taikomos neatsižvelgiant į ribines sąlygas (pvz., $\\gcd(a, n) = 1$).",
+    "intuition": "Oilerio teoremos taikymas $a^{\\varphi(n)} \\equiv 1 \\pmod n$, kai $a$ ir $n$ turi bendrų daliklių.",
     "formal": "Visada patikrinkite, ar tenkinamos teoremos sąlygos, prieš ją taikydami.",
     "related": [
       "olimpiada-09-concept-euler-theorem"
@@ -3070,7 +3070,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Ryšys tarp dviejų skirtingų nelyginių pirminių skaičių kvadratinių liekanų savybių.",
     "intuition": "Parodo, ar skaičius yra kvadratinė liekana moduliu $p$ per ryšį su kitu pirminiu skaičiumi $q$.",
-    "formal": "Jei $p$ ir $q$ yra skirtingi nelyginiai pirminiai skaičiai, tai $\\\\left(\\frac{p}{q}\\right)\\\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+    "formal": "Jei $p$ ir $q$ yra skirtingi nelyginiai pirminiai skaičiai, tai $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
     "related": [],
     "topics": [
       "olimpiada-10"
@@ -3080,8 +3080,8 @@ export const concepts = {
     "title": "Gauso sveikieji skaičiai",
     "type": "concept",
     "definition": "Kompleksiniai skaičiai, kurių realioji ir tariamoji dalys yra sveikieji skaičiai.",
-    "intuition": "Kompleksinių skaičių aibė $\\\\mathbb{Z}[i]$, kurioje galima atlikti dalybą su liekana ir skaidyti pirminiais daugtuviais.",
-    "formal": "Aibė $\\\\mathbb{Z}[i] = \\\\{a + bi \\\\mid a, b \\\\in \\\\mathbb{Z}\\\\}$, kur $i^2 = -1$.",
+    "intuition": "Kompleksinių skaičių aibė $\\mathbb{Z}[i]$, kurioje galima atlikti dalybą su liekana ir skaidyti pirminiais daugtuviais.",
+    "formal": "Aibė $\\mathbb{Z}[i] = \\{a + bi \\mid a, b \\in \\mathbb{Z}\\}$, kur $i^2 = -1$.",
     "related": [],
     "topics": [
       "olimpiada-10"
@@ -3092,7 +3092,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Cauchy-Schwarz nelygybės trupmeninė forma.",
     "intuition": "Patogi nelygybių su trupmenomis įrodymo forma, leidžianti sudėti vardiklius.",
-    "formal": "Realiems skaičiams $a_1, a_2, \\\\dots, a_n$ ir teigiamiems skaičiams $b_1, b_2, \\\\dots, b_n$ galioja: $\\\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\\\ge \\frac{(\\\\sum_{i=1}^n a_i)^2}{\\\\sum_{i=1}^n b_i}$.",
+    "formal": "Realiems skaičiams $a_1, a_2, \\dots, a_n$ ir teigiamiems skaičiams $b_1, b_2, \\dots, b_n$ galioja: $\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum_{i=1}^n a_i)^2}{\\sum_{i=1}^n b_i}$.",
     "related": [],
     "topics": [
       "olimpiada-10"
@@ -3101,9 +3101,9 @@ export const concepts = {
   "olimpiada-10-concept-inversion": {
     "title": "Inversija apskritimo atžvilgiu",
     "type": "concept",
-    "definition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\\\cdot OP' = R^2$.",
+    "definition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\cdot OP' = R^2$.",
     "intuition": "Erdvės transformacija, kuri tieses ir apskritimus paverčia kitais apskritimais ar tiesėmis.",
-    "formal": "Atvaizdis $\\\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\\\in OP$ ir $OP \\\\cdot OP' = R^2$.",
+    "formal": "Atvaizdis $\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\in OP$ ir $OP \\cdot OP' = R^2$.",
     "related": [],
     "topics": [
       "olimpiada-10"
@@ -3151,7 +3151,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Jei moduliai yra poromis tarpusavyje pirminiai, tai liekanų sistema turi vienintelį sprendinį jungtiniu moduliu.",
     "intuition": "Tai tarsi koordinačių sistema skaičiams: žinodami skaičiaus „projekcijas“ (liekanas) įvairiomis kryptimis (moduliais), galime tiksliai nustatyti jo padėtį.",
-    "formal": "Tegu $m_1, m_2, \\\\dots, m_k$ yra natūralieji skaičiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygčių sistema $x \\\\equiv a_i \\\\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\\\dots m_k$.",
+    "formal": "Tegu $m_1, m_2, \\dots, m_k$ yra natūralieji skaičiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygčių sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3160,9 +3160,9 @@ export const concepts = {
   "olimpiada-11-concept-order": {
     "title": "Eilė ir pradinės šaknys",
     "type": "concept",
-    "definition": "Mažiausias teigiamas laipsnis $d$, kuriam $a^d \\\\equiv 1 \\\\pmod m$.",
+    "definition": "Mažiausias teigiamas laipsnis $d$, kuriam $a^d \\equiv 1 \\pmod m$.",
     "intuition": "Skaičiaus laipsniai moduliu $m$ sukasi ratu; eilė nurodo šio rato ilgį.",
-    "formal": "Sveikojo skaičiaus $a$ eilė moduliu $m$ (žymima $\\text{ord}_m a$) yra mažiausias $d > 0$, tenkinantis $a^d \\\\equiv 1 \\\\pmod m$. Jei $\\text{ord}_m g = \\\\varphi(m)$, tai $g$ vadinama pradine šaknimi.",
+    "formal": "Sveikojo skaičiaus $a$ eilė moduliu $m$ (žymima $\\text{ord}_m a$) yra mažiausias $d > 0$, tenkinantis $a^d \\equiv 1 \\pmod m$. Jei $\\text{ord}_m g = \\varphi(m)$, tai $g$ vadinama pradine šaknimi.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3173,7 +3173,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Dėsnis, siejantis Legendro simbolius $(\\frac{p}{q})$ ir $(\\frac{q}{p})$.",
     "intuition": "Leidžia apversti „trupmeną“ Legendro simbolyje, palengvinant kvadratinių liekanų skaičiavimą.",
-    "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\\\left(\\frac{p}{q}\\right)\\\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+    "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3184,7 +3184,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Legendro simbolio apibendrinimas sudėtiniams moduliams.",
     "intuition": "Leidžia naudoti savitarpiškumo savybes net kai modulis nėra pirminis, nors simbolio reikšmė tiesiogiai negarantuoja lygties sprendžiamumo.",
-    "formal": "Jei $n = p_1 p_2 \\\\dots p_k$ (nelyginis), tai $\\\\left(\\frac{a}{n}\\right) = \\\\prod_{i=1}^k \\\\left(\\frac{a}{p_i}\\right)$.",
+    "formal": "Jei $n = p_1 p_2 \\dots p_k$ (nelyginis), tai $\\left(\\frac{a}{n}\\right) = \\prod_{i=1}^k \\left(\\frac{a}{p_i}\\right)$.",
     "related": [
       "olimpiada-11-concept-reciprocity"
     ],
@@ -3197,7 +3197,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Daugianariai, kurių šaknys yra pirmykštės $n$-tojo laipsnio vieneto šaknys.",
     "intuition": "Tai elementariausios „plytelės“, iš kurių susideda daugianaris $x^n - 1$ virš racionalųjų skaičių lauko.",
-    "formal": "$\\\\Phi_n(x) = \\\\prod_{\\text{gcd}(k,n)=1, 1 \\\\le k \\\\le n} (x - e^{2\\\\pi i k / n})$. Galioja savybė: $x^n - 1 = \\\\prod_{d|n} \\\\Phi_d(x)$.",
+    "formal": "$\\Phi_n(x) = \\prod_{\\text{gcd}(k,n)=1, 1 \\le k \\le n} (x - e^{2\\pi i k / n})$. Galioja savybė: $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3206,7 +3206,7 @@ export const concepts = {
   "olimpiada-11-concept-chebyshev": {
     "title": "Čebyševo daugianariai",
     "type": "concept",
-    "definition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\\\cos \\theta) = \\\\cos(n\\theta)$.",
+    "definition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\cos \\theta) = \\cos(n\\theta)$.",
     "intuition": "Jie susieja trigonometriją su algebriniais daugianariais ir pasižymi unikaliomis ekstremaliomis savybėmis.",
     "formal": "$T_0(x)=1, T_1(x)=x, T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
     "related": [],
@@ -3217,7 +3217,7 @@ export const concepts = {
   "olimpiada-11-concept-inversion": {
     "title": "Inversija",
     "type": "concept",
-    "definition": "Transformacija, kuri tašką $P$ atvaizduoja į $P'$ taip, kad $OP \\\\cdot OP' = R^2$.",
+    "definition": "Transformacija, kuri tašką $P$ atvaizduoja į $P'$ taip, kad $OP \\cdot OP' = R^2$.",
     "intuition": "Tai tarsi atspindys apskritime: tai, kas buvo viduje, atsiduria išorėje, ir atvirkščiai.",
     "formal": "Inversija centro $O$ ir spindulio $R$ atžvilgiu: $f(P) = P'$, kur $P'$ yra spindulyje $OP$ ir $|OP'| = R^2/|OP|$.",
     "related": [],
@@ -3241,7 +3241,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Teorema apie daugianario nelygumą nuliui gardelės taškuose.",
     "intuition": "Jei daugianaris turi pakankamai aukštą laipsnį, jis negali „išvengti“ visų taškų tam tikroje aibių sandaugoje.",
-    "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\\\sum t_i$ ir nario $x_1^{t_1} \\\\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\\\dots, s_n) \\\\in S_1 \\times \\\\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
+    "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\sum t_i$ ir nario $x_1^{t_1} \\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\dots, s_n) \\in S_1 \\times \\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3252,7 +3252,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Tikimybinio metodo įrankis, garantuojantis įvykių išvengimą.",
     "intuition": "Jei „blogi“ įvykiai yra reti ir mažai susiję tarpusavyje, tai su teigiama tikimybe nė vienas jų neįvyks.",
-    "formal": "Jei $P(A_i) \\\\le p$ ir kiekvienas įvykis priklauso nuo daugiausiai $d$ kitų įvykių, tai jei $ep(d+1) \\\\le 1$, $P(\\\\cap A_i^c) > 0$.",
+    "formal": "Jei $P(A_i) \\le p$ ir kiekvienas įvykis priklauso nuo daugiausiai $d$ kitų įvykių, tai jei $ep(d+1) \\le 1$, $P(\\cap A_i^c) > 0$.",
     "related": [],
     "topics": [
       "olimpiada-11"
@@ -3273,8 +3273,8 @@ export const concepts = {
     "title": "Bendrų daliklių ignoravimas KLT",
     "type": "mistake",
     "definition": "Mokiniai pamiršta patikrinti, ar moduliai yra tarpusavyje pirminiai.",
-    "intuition": "Sprendžiama sistema $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 6$ tiesiogiai dauginant modulius.",
-    "formal": "Skaidykite modulius į pirminių laipsnius: $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 2$, $x \\\\equiv 2 \\\\pmod 3$. Patikrinkite suderinamumą ($1 \\\\equiv 2 \\\\pmod 2$ – neteisinga, sprendinių nėra).",
+    "intuition": "Sprendžiama sistema $x \\equiv 1 \\pmod 4$ ir $x \\equiv 2 \\pmod 6$ tiesiogiai dauginant modulius.",
+    "formal": "Skaidykite modulius į pirminių laipsnius: $x \\equiv 1 \\pmod 4$ ir $x \\equiv 2 \\pmod 2$, $x \\equiv 2 \\pmod 3$. Patikrinkite suderinamumą ($1 \\equiv 2 \\pmod 2$ – neteisinga, sprendinių nėra).",
     "related": [
       "olimpiada-11-concept-crt"
     ],
@@ -3324,7 +3324,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Nelygybių įrodymo metodas, kai kiekvienam nariui pritaikoma tiesinė funkcija, liestinė tam tikrame taške.",
     "intuition": "Jei funkcija yra išgaubta aplink vidurkį, jos grafikas yra virš liestinės, todėl galime kiekvieną nelygybės narį įvertinti tiesine išraiška, kurias sudėjus gauname bendrą nelygybę.",
-    "formal": "Jei norime įrodyti $\\\\sum_{i=1}^n f(x_i) \\\\ge C$ su sąlyga $\\\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\\\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\\\sum f(x_i) \\\\ge m \\\\sum x_i + n \\\\cdot n$.",
+    "formal": "Jei norime įrodyti $\\sum_{i=1}^n f(x_i) \\ge C$ su sąlyga $\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\sum f(x_i) \\ge m \\sum x_i + n \\cdot n$.",
     "related": [],
     "topics": [
       "olimpiada-12"
@@ -3334,8 +3334,8 @@ export const concepts = {
     "title": "Vieneto šaknų filtras",
     "type": "concept",
     "definition": "Metodas skaičiuoti koeficientų sumas su tam tikru žingsniu naudojant kompleksines vieneto šaknis.",
-    "intuition": "Naudojant faktą, kad $\\\\sum_{j=0}^{m-1} \\\\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
-    "formal": "Sveikajam $k$ ir $\\\\omega = e^{2\\\\pi i / m}$ galioja $\\frac{1}{m} \\\\sum_{j=0}^{m-1} \\\\omega^{j k} = 1$, kai $m \\\\mid k$, ir $0$, kai $m \\nmid k$.",
+    "intuition": "Naudojant faktą, kad $\\sum_{j=0}^{m-1} \\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
+    "formal": "Sveikajam $k$ ir $\\omega = e^{2\\pi i / m}$ galioja $\\frac{1}{m} \\sum_{j=0}^{m-1} \\omega^{j k} = 1$, kai $m \\mid k$, ir $0$, kai $m \\nmid k$.",
     "related": [],
     "topics": [
       "olimpiada-12"
@@ -3346,7 +3346,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Koordinačių sistema geometrijoje, kurioje taško padėtis apibrėžiama trikampio viršūnių masėmis.",
     "intuition": "Bet kurį plokštumos tašką galime išreikšti trikampio viršūnių tiesine kombinacija su svoriais, kurių suma lygi 1. Tai leidžia algebriškai spręsti geometrijos uždavinius.",
-    "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\\\vec{A} + y \\\\vec{B} + z \\\\vec{C} = (x+y+z) \\\\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
+    "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\vec{A} + y \\vec{B} + z \\vec{C} = (x+y+z) \\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
     "related": [],
     "topics": [
       "olimpiada-12"
@@ -3368,7 +3368,7 @@ export const concepts = {
     "type": "concept",
     "definition": "Tikimybinis metodas įrodyti, kad atsitiktinis dydis yra teigiamas su didele tikimybe, naudojant dispersiją.",
     "intuition": "Jei dydžio dispersija yra maža, palyginti su jo vidurkiu, tai dydis labai retai nukrypsta nuo vidurkio ir beveik niekada nebūna lygus nuliui.",
-    "formal": "Atsitiktiniam dydžiui $X \\\\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
+    "formal": "Atsitiktiniam dydžiui $X \\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
     "related": [],
     "topics": [
       "olimpiada-12"
@@ -3391,8 +3391,8 @@ export const concepts = {
     "title": "Netinkamas išgaubtumo taikymas liestinės triuke",
     "type": "mistake",
     "definition": "Taikomas liestinės triukas funkcijai, kuri nėra išgaubta visame nagrinėjamame intervale.",
-    "intuition": "Manoma, kad $f(x) \\\\ge mx + n$ galioja visiems $x$, nors tam tikrame intervale funkcija guli po liestine.",
-    "formal": "Griežtai įrodykite nelygybę $f(x) \\\\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus.",
+    "intuition": "Manoma, kad $f(x) \\ge mx + n$ galioja visiems $x$, nors tam tikrame intervale funkcija guli po liestine.",
+    "formal": "Griežtai įrodykite nelygybę $f(x) \\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus.",
     "related": [
       "olimpiada-12-concept-tangent-trick"
     ],
@@ -4090,7 +4090,7 @@ export const topics = {
         "title": "Paritetas: lyginių ir nelyginių skaičių magija",
         "body": [
           "Vienas galingiausių ir paprasčiausių įrankių pradinėse olimpiadose yra skaičių lyginumas (paritetas).",
-          "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\\\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\\\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\\\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$",
+          "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$",
           "Metodas. Jei uždavinyje kalbama apie objektų mainus, lentelės spalvinimą ar operacijas su skaičiais, stebėkite, kaip keičiasi lyginių arba nelyginių skaičių kiekis. Šis savybės nekintamumas vadinamas **invariantu**."
         ]
       },
@@ -4112,13 +4112,13 @@ export const topics = {
       {
         "title": "1 Pavyzdys: Skaitmenų eilė",
         "text": "Triženklio skaičiaus pirmasis skaitmuo yra $3$. Jei šį skaitmenį perkeltume į skaičiaus galą, gautasis skaičius būtų $9$ vienetais didesnis už pradinį. Raskite pradinį skaičių.",
-        "solution": "Pažymėkime pradinį skaičių kaip $\\\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$. Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$. Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\\\overline{ab3} - \\\\overline{3ab} = 9$. Užrašome lygtį: $(100a + 10b + 3) - (300 + 10a + b) = 9$. Supaprastiname: $90a + 9b - 297 = 9 \\\\implies 90a + 9b = 306$. Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$). Pradinis skaičius buvo $334$. Patikriname: $343 - 334 = 9$. Viskas tinka!",
+        "solution": "Pažymėkime pradinį skaičių kaip $\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$. Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$. Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\overline{ab3} - \\overline{3ab} = 9$. Užrašome lygtį: $(100a + 10b + 3) - (300 + 10a + b) = 9$. Supaprastiname: $90a + 9b - 297 = 9 \\implies 90a + 9b = 306$. Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$). Pradinis skaičius buvo $334$. Patikriname: $343 - 334 = 9$. Viskas tinka!",
         "answer": "$334$"
       },
       {
         "title": "2 Pavyzdys: Monetų paritetas",
         "text": "Ant stalo padėta $11$ monetų, visos atvirstos skaičiumi aukštyn. Vienu ėjimu leidžiama apversti bet kurias dvi monetas. Ar įmanoma po kelių ėjimų pasiekti, kad visos monetos būtų atvirstos herbu aukštyn?",
-        "solution": "Kiekviena moneta gali būti būsenos 'Skaičius' (S) arba 'Herbas' (H). Mums reikia, kad pradžioje buvo $11$ S monetų (ir $0$ H monetų), o pabaigoje būtų $11$ H monetų. Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia. Pastebime, kad visais atvejais H monetų skaičius pakinta lyginiu skaičiumi ($+2$, $-2$ arba $0$). Kadangi pradžioje H monetų skaičius buvo $0$ (lyginis skaičius), tai po bet kokio ėjimų skaičiaus H monetų skaičius visada išliks lyginis. Mums reikia gauti $11$ H monetų. Kadangi $11$ yra nelyginis skaičius, o H monetų skaičius visada turi būti lyginis, pasiekti šį tikslą neįmanoma.",
+        "solution": "Kiekviena moneta gali būti būsenos 'Skaičius' (S) arba 'Herbas' (H). Mums reikia, kad pradžioje buvo $11$ S monetų (ir $0$ H monetų), o pabaigoje būtų $11$ H monetų. Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia. Pastebime, kad visais atvejais H monetų skaičius pakinta lyginiu skaičiumi ($+2$, $-2$ arba $0$). Kadangi pradžioje H monetų skaičius buvo $0$ (lyginis skaičius), tai po bet kokio ėjimų skaičiaus H monetų skaičius visada išliks lyginis. Mums reikia gauti $11$ H monetų. Kadangi $11$ yra nelyginis skaičius, o H monetų skaičius visada turi būti lyginis, pasiekti šį tikslą neįmanoma.",
         "answer": "Ne, neįmanoma."
       },
       {
@@ -4130,7 +4130,7 @@ export const topics = {
       {
         "title": "4 Pavyzdys: Kvadrato dalijimas",
         "text": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
-        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą. Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\\\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\\\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\\\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\\\implies 3 \\times 8$ arba $4 \\times 6$. Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka! Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$.",
+        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą. Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\implies 3 \\times 8$ arba $4 \\times 6$. Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka! Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$.",
         "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
       },
       {
@@ -4829,14 +4829,14 @@ export const topics = {
         "title": "Pirminiai skaičiai – aritmetikos statybiniai blokai",
         "body": [
           "Skaičių teorijoje visi teigiami sveikieji skaičiai gali būti išreikšti kaip pirminių skaičių sandaugos. Tai leidžia lengvai analizuoti dalumą, didžiausius bendrus daliklius (DBD) ir mažiausius bendrus kartotinius (MBK).",
-          "Norėdami rasti skaičiaus daliklių skaičių, išskaidykite jį pirminiais daugikliais: $n = p_1^{a_1} p_2^{a_2} \\\\dots p_k^{a_k}$. Skirtingų daliklių skaičius lygus: $(a_1 + 1)(a_2 + 1) \\\\dots (a_k + 1)$.",
+          "Norėdami rasti skaičiaus daliklių skaičių, išskaidykite jį pirminiais daugikliais: $n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$. Skirtingų daliklių skaičius lygus: $(a_1 + 1)(a_2 + 1) \\dots (a_k + 1)$.",
           "Metodas. Pavyzdžiui, skaičius $72 = 2^3 \\times 3^2$ turi $(3+1)(2+1) = 4 \\times 3 = 12$ daliklių. Šis metodas padeda išvengti ilgų sąrašų rašymo ranka."
         ]
       },
       {
         "title": "Kombinatorikos formulės: kėliniai ir deriniai",
         "body": [
-          "6 klasėje susipažinsime su svarbiomis kombinatorikos sąvokomis:\n- **Kėliniai (Faktorialas)**: būdų išrikiuoti $n$ skirtingų objektų skaičius yra $n! = n \\times (n-1) \\\\dots \\times 1$.\n- **Deriniai**: būdų pasirinkti $k$ objektų iš $n$ objektų aibės, neatsižvelgiant į tvarką, skaičius užrašomas formule: $C_n^k = \\frac{n!}{k!(n-k)!}$.",
+          "6 klasėje susipažinsime su svarbiomis kombinatorikos sąvokomis:\n- **Kėliniai (Faktorialas)**: būdų išrikiuoti $n$ skirtingų objektų skaičius yra $n! = n \\times (n-1) \\dots \\times 1$.\n- **Deriniai**: būdų pasirinkti $k$ objektų iš $n$ objektų aibės, neatsižvelgiant į tvarką, skaičius užrašomas formule: $C_n^k = \\frac{n!}{k!(n-k)!}$.",
           "Įspėjimas. Visada atskirkite, ar tvarka yra svarbi! Jei renkame komandos prezidentą ir pavaduotoją – tvarka svarbi (kėliniai). Jei tiesiog du komandos narius – tvarka nesvarbi (deriniai)."
         ]
       },
@@ -4844,14 +4844,14 @@ export const topics = {
         "title": "Pitagoro teorema ir geometrinės figūros",
         "body": [
           "Geometrijos olimpiadose statusis trikampis yra viena dažniausių figūrų. Pitagoro teorema leidžia rasti kraštinių ilgius.",
-          "Metodas. Pitagoro teorema teigia: $\\\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
+          "Metodas. Pitagoro teorema teigia: $\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
       "Daugiklių dubliavimas MBK skaičiavime — Būtina naudoti pirminį išskaidymą arba formulę $MBK(a, b) = \\frac{a \\times b}{DBD(a, b)}$. Tikrasis $MBK(12, 18) = 36$.",
-      "Priklausomų įvykių tikimybių dauginimas — Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\\\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$."
+      "Priklausomų įvykių tikimybių dauginimas — Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$."
     ],
     "examples": [
       {
@@ -4868,14 +4868,14 @@ export const topics = {
       },
       {
         "title": "3 Pavyzdys: Įbrėžtinis plotas",
-        "text": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\\\pi$).",
-        "solution": "Kadangi kvadrato plotas yra $36\\text{ cm}^2$, jo kraštinės ilgis yra $a = \\\\sqrt{36} = 6$ cm. Įbrėžto apskritimo skersmuo yra lygus kvadrato kraštinei, todėl $d = 6$ cm, o spindulys $r = d / 2 = 3$ cm. Apskaičiuojame apskritimo plotą: $S_{apskr} = \\\\pi r^2 = \\\\pi \\times 3^2 = 9\\\\pi\\text{ cm}^2$. Dalis už apskritimo ribų gaunama iš kvadrato ploto atėmus apskritimo plotą: $S = 36 - 9\\\\pi\\text{ cm}^2$.",
-        "answer": "$36 - 9\\\\pi\\text{ cm}^2$"
+        "text": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\pi$).",
+        "solution": "Kadangi kvadrato plotas yra $36\\text{ cm}^2$, jo kraštinės ilgis yra $a = \\sqrt{36} = 6$ cm. Įbrėžto apskritimo skersmuo yra lygus kvadrato kraštinei, todėl $d = 6$ cm, o spindulys $r = d / 2 = 3$ cm. Apskaičiuojame apskritimo plotą: $S_{apskr} = \\pi r^2 = \\pi \\times 3^2 = 9\\pi\\text{ cm}^2$. Dalis už apskritimo ribų gaunama iš kvadrato ploto atėmus apskritimo plotą: $S = 36 - 9\\pi\\text{ cm}^2$.",
+        "answer": "$36 - 9\\pi\\text{ cm}^2$"
       },
       {
         "title": "4 Pavyzdys: Skaitmenų rikiavimas",
         "text": "Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skaitmenų $1, 2, 3, 4, 5$, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą, o skaičius turi būti lyginis?",
-        "solution": "Penkiaženklis skaičius turi būti lyginis, todėl jo paskutinis skaitmuo turi būti lyginis. Mūsų turimoje aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ lyginiams skaičiams tinka tik $2$ arba $4$. Vadinasi, paskutinę poziciją galime užpildyti $2$ būdais. Likusios keturios pozicijos gali būti užpildytos bet kokia tvarka keturiais likusiais skaitmenimis. Būdų skaičius išdėstyti likusius $4$ skaitmenis yra $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių yra $2 \\times 24 = 48$.",
+        "solution": "Penkiaženklis skaičius turi būti lyginis, todėl jo paskutinis skaitmuo turi būti lyginis. Mūsų turimoje aibėje $\\{1, 2, 3, 4, 5\\}$ lyginiams skaičiams tinka tik $2$ arba $4$. Vadinasi, paskutinę poziciją galime užpildyti $2$ būdais. Likusios keturios pozicijos gali būti užpildytos bet kokia tvarka keturiais likusiais skaitmenimis. Būdų skaičius išdėstyti likusius $4$ skaitmenis yra $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių yra $2 \\times 24 = 48$.",
         "answer": "$48$"
       },
       {
@@ -5801,14 +5801,14 @@ export const topics = {
       {
         "title": "Kongruencijos ir liekanos (Modulinė aritmetika)",
         "body": [
-          "Spęsdami uždavinius apie skaičių dalumą, dažnai susiduriame su labai dideliais laipsniais arba sudėtingomis sandaugomis. Čia mums padeda kongruencijos (lyginiai pagal modulį). Sakome, kad skaičius $a$ yra kongruentus skaičiui $b$ moduliu $m$ (rašome $a \\\\equiv b \\\\pmod m$), jeigu skirtumas $a - b$ dalijasi iš $m$. Tai reiškia, kad abu skaičiai dalijami iš $m$ duoda tą pačią liekaną.",
-          "Metodas. Kongruencijos leidžia lengvai atlikti sudėtį, atimtį ir daugybą: jei $a \\\\equiv b \\\\pmod m$ ir $c \\\\equiv d \\\\pmod m$, tai $a + c \\\\equiv b + d \\\\pmod m$ bei $a \\\\cdot c \\\\equiv b \\\\cdot d \\\\pmod m$. Tai padeda rasti labai didelių skaičių dalybos liekanas (pavyzdžiui, paskutinį skaitmenį)."
+          "Spęsdami uždavinius apie skaičių dalumą, dažnai susiduriame su labai dideliais laipsniais arba sudėtingomis sandaugomis. Čia mums padeda kongruencijos (lyginiai pagal modulį). Sakome, kad skaičius $a$ yra kongruentus skaičiui $b$ moduliu $m$ (rašome $a \\equiv b \\pmod m$), jeigu skirtumas $a - b$ dalijasi iš $m$. Tai reiškia, kad abu skaičiai dalijami iš $m$ duoda tą pačią liekaną.",
+          "Metodas. Kongruencijos leidžia lengvai atlikti sudėtį, atimtį ir daugybą: jei $a \\equiv b \\pmod m$ ir $c \\equiv d \\pmod m$, tai $a + c \\equiv b + d \\pmod m$ bei $a \\cdot c \\equiv b \\cdot d \\pmod m$. Tai padeda rasti labai didelių skaičių dalybos liekanas (pavyzdžiui, paskutinį skaitmenį)."
         ]
       },
       {
         "title": "Euklido algoritmas ir tarpusavyje pirminiai skaičiai",
         "body": [
-          "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\\\pmod b$).",
+          "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\pmod b$).",
           "Metodas. Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais (arba pirminiais vienas kitam). Tai svarbu dirbant su trupmenomis ir lygtimis."
         ]
       },
@@ -5822,26 +5822,26 @@ export const topics = {
     ],
     "formulas": [],
     "mistakes": [
-      "Liekanos prilyginimas neigiamam skaičiui — Liekana visada turi būti neneigiama: $0 \\\\le r < m$. Kadangi $-5 = -2 \\\\cdot 3 + 1$, tai liekana yra 1.",
+      "Liekanos prilyginimas neigiamam skaičiui — Liekana visada turi būti neneigiama: $0 \\le r < m$. Kadangi $-5 = -2 \\cdot 3 + 1$, tai liekana yra 1.",
       "Klaidingas įrodymas pavyzdžiais — Būtina įrodyti bendruoju atveju naudojant kintamuosius (pvz., $(2a+1) + (2b+1) = 2(a+b+1)$)."
     ],
     "examples": [
       {
         "title": "Laipsnio paskutinis skaitmuo",
         "text": "Raskite skaičiaus $3^{100}$ paskutinį skaitmenį.",
-        "solution": "Paskutinis skaitmuo sutampa su dalybos iš 10 liekana: $3^{100} \\\\pmod{10}$. Nagrinėjame 3 laipsnių liekanas moduliu 10: $3^1 \\\\equiv 3$, $3^2 \\\\equiv 9$, $3^3 \\\\equiv 7$, $3^4 \\\\equiv 1 \\\\pmod{10}$. Kadangi $3^4 \\\\equiv 1 \\\\pmod{10}$, liekanos kartojasi periodiškai kas 4 žingsnius. Kadangi rodiklis 100 dalijasi iš 4 be liekanos ($100 = 4 \\\\times 25$), tai $3^{100} = (3^4)^{25} \\\\equiv 1^{25} \\\\equiv 1 \\\\pmod{10}$.",
+        "solution": "Paskutinis skaitmuo sutampa su dalybos iš 10 liekana: $3^{100} \\pmod{10}$. Nagrinėjame 3 laipsnių liekanas moduliu 10: $3^1 \\equiv 3$, $3^2 \\equiv 9$, $3^3 \\equiv 7$, $3^4 \\equiv 1 \\pmod{10}$. Kadangi $3^4 \\equiv 1 \\pmod{10}$, liekanos kartojasi periodiškai kas 4 žingsnius. Kadangi rodiklis 100 dalijasi iš 4 be liekanos ($100 = 4 \\times 25$), tai $3^{100} = (3^4)^{25} \\equiv 1^{25} \\equiv 1 \\pmod{10}$.",
         "answer": "Paskutinis skaitmuo yra 1."
       },
       {
         "title": "Lyginumo savybių įrodymas",
         "text": "Įrodykite, kad dviejų nelyginių skaičių suma yra lyginis skaičius.",
-        "solution": "Užrašome du nelyginius skaičius bendru pavidalu: $x = 2a + 1$ ir $y = 2b + 1$, kur $a, b \\\\in \\\\mathbb{Z}$. Sudedame juos: $x + y = (2a + 1) + (2b + 1) = 2a + 2b + 2$. Iškeliame 2 prieš skliaustus: $x + y = 2(a + b + 1)$. Kadangi gautas reiškinys turi bendrą daugiklį 2, suma dalijasi iš 2, todėl ji yra lyginis skaičius.",
+        "solution": "Užrašome du nelyginius skaičius bendru pavidalu: $x = 2a + 1$ ir $y = 2b + 1$, kur $a, b \\in \\mathbb{Z}$. Sudedame juos: $x + y = (2a + 1) + (2b + 1) = 2a + 2b + 2$. Iškeliame 2 prieš skliaustus: $x + y = 2(a + b + 1)$. Kadangi gautas reiškinys turi bendrą daugiklį 2, suma dalijasi iš 2, todėl ji yra lyginis skaičius.",
         "answer": "Teiginys įrodytas."
       },
       {
         "title": "Euklido algoritmo taikymas",
         "text": "Raskite skaičių 123 ir 36 didžiausią bendrąjį daliklį $\\text{dbd}(123, 36)$ naudodami Euklido algoritmą.",
-        "solution": "Dalijame didesnį skaičių iš mažesnio su liekana: $123 = 3 \\\\times 36 + 15$. Toliau dalijame daliklį iš gautos liekanos: $36 = 2 \\\\times 15 + 6$. Toliau dalijame prieš tai buvusią liekaną iš naujos liekanos: $15 = 2 \\\\times 6 + 3$. Galiausiai dalijame: $6 = 2 \\\\times 3 + 0$. Paskutinė nulinė liekana rodo, kad bendrasis daliklis yra 3.",
+        "solution": "Dalijame didesnį skaičių iš mažesnio su liekana: $123 = 3 \\times 36 + 15$. Toliau dalijame daliklį iš gautos liekanos: $36 = 2 \\times 15 + 6$. Toliau dalijame prieš tai buvusią liekaną iš naujos liekanos: $15 = 2 \\times 6 + 3$. Galiausiai dalijame: $6 = 2 \\times 3 + 0$. Paskutinė nulinė liekana rodo, kad bendrasis daliklis yra 3.",
         "answer": "Didžiausias bendrasis daliklis yra 3."
       },
       {
@@ -5853,7 +5853,7 @@ export const topics = {
       {
         "title": "Dviejų tiesinių lygčių sistema",
         "text": "Išspręskite lygčių sistemą: $2x + y = 10$ ir $x - y = 2$.",
-        "solution": "Sudedame abi lygtis nariu nariais: $(2x + y) + (x - y) = 10 + 2$. Supaprastiname: $3x = 12 \\\\implies x = 4$. Įstatome $x=4$ į antrąją lygtį: $4 - y = 2 \\\\implies y = 2$.",
+        "solution": "Sudedame abi lygtis nariu nariais: $(2x + y) + (x - y) = 10 + 2$. Supaprastiname: $3x = 12 \\implies x = 4$. Įstatome $x=4$ į antrąją lygtį: $4 - y = 2 \\implies y = 2$.",
         "answer": "Sprendinys yra $x = 4$, $y = 2$."
       }
     ]
@@ -6321,58 +6321,58 @@ export const topics = {
         "title": "Diofantinės lygtys ir dalumas",
         "body": [
           "Sveikųjų skaičių lygtys, vadinamos Diofantinėmis lygtimis, turi ilgą istoriją. Tiesinė Diofantinė lygtis su dviem kintamaisiais turi pavidalą $ax + by = c$, kur $a, b, c$ yra sveikieji skaičiai. Ji turi sveikųjų skaičių sprendinių tada ir tik tada, kai skaičių $a$ ir $b$ didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ dalija laisvąjį narį $c$.",
-          "Metodas. Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\\\in \\\\mathbb{Z}$."
+          "Metodas. Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\in \\mathbb{Z}$."
         ]
       },
       {
         "title": "Ferma mažoji teorema ir taikymai",
         "body": [
-          "Ferma mažoji teorema teigia, kad jei $p$ yra pirminis skaičius, tai bet kuriam sveikajam skaičiui $a$ galioja kongruencija $a^p \\\\equiv a \\\\pmod p$. Jeigu $a$ nesidalija iš $p$, galime užrašyti patogesne forma: $a^{p-1} \\\\equiv 1 \\\\pmod p$.",
-          "Metodas. Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\\\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\\\equiv 1 \\\\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\\\cdot 2^2 \\\\equiv 1^8 \\\\cdot 4 \\\\equiv 4 \\\\pmod 7$."
+          "Ferma mažoji teorema teigia, kad jei $p$ yra pirminis skaičius, tai bet kuriam sveikajam skaičiui $a$ galioja kongruencija $a^p \\equiv a \\pmod p$. Jeigu $a$ nesidalija iš $p$, galime užrašyti patogesne forma: $a^{p-1} \\equiv 1 \\pmod p$.",
+          "Metodas. Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\equiv 1 \\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\cdot 2^2 \\equiv 1^8 \\cdot 4 \\equiv 4 \\pmod 7$."
         ]
       },
       {
         "title": "Apskritimo geometrija ir taško galia",
         "body": [
           "Geometrijoje ryšiai tarp kampų ir atkarpų apskritime leidžia įrodyti daugelį teoremų. Kampas tarp stygų arba liestinių yra susijęs su atitinkamų lankų dydžiais, o stygų susikirtimo taškas turi pastovią sandaugą.",
-          "Metodas. Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\\\cdot PB = PC \\\\cdot PD$. Jei taškas $P$ yra apskritimo išorėje, ir iš jo nubrėžta liestinė $PT$ bei kirstinė $PAB$, tai galioja $PT^2 = PA \\\\cdot PB$. Tai leidžia rasti atkarpų ilgius ir įrodyti panašumus."
+          "Metodas. Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$. Jei taškas $P$ yra apskritimo išorėje, ir iš jo nubrėžta liestinė $PT$ bei kirstinė $PAB$, tai galioja $PT^2 = PA \\cdot PB$. Tai leidžia rasti atkarpų ilgius ir įrodyti panašumus."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
       "Diofantinės lygties sprendimas nesuprastinus koeficientų — Visada patikrinkite, ar laisvasis narys dalijasi iš DBD: kadangi $\\text{dbd}(6, 9) = 3$, o 4 nesidalija iš 3, lygtis sprendinių neturi.",
-      "Laipsnio rodiklio pakeitimas liekana moduliu m — Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\\\equiv 2 \\\\pmod 6$, tai $2^{50} \\\\equiv 2^2 \\\\equiv 4 \\\\pmod 7$."
+      "Laipsnio rodiklio pakeitimas liekana moduliu m — Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\equiv 2 \\pmod 6$, tai $2^{50} \\equiv 2^2 \\equiv 4 \\pmod 7$."
     ],
     "examples": [
       {
         "title": "Tiesinės diofantinės lygties sprendimas",
         "text": "Išspręskite sveikaisiais skaičiais lygtį $3x - 5y = 1$.",
-        "solution": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\\\implies y = 1$. Sprendinys yra $(2, 1)$. Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\\\in \\\\mathbb{Z}$.",
-        "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\\\in \\\\mathbb{Z}$."
+        "solution": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\implies y = 1$. Sprendinys yra $(2, 1)$. Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$.",
+        "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
       },
       {
         "title": "Ferma mažosios teoremos taikymas",
         "text": "Raskite skaičiaus $2^{50}$ dalybos iš 7 liekaną.",
-        "solution": "Skaičius 7 yra pirminis. Pagal Ferma mažąją teoremą, kadangi 2 nesidalija iš 7, turime $2^6 \\\\equiv 1 \\\\pmod 7$. Daliname rodiklį 50 iš 6 su liekana: $50 = 6 \\times 8 + 2$. Pertvarkome: $2^{50} = (2^6)^8 \\times 2^2 \\\\equiv 1^8 \\times 4 \\\\equiv 4 \\\\pmod 7$.",
+        "solution": "Skaičius 7 yra pirminis. Pagal Ferma mažąją teoremą, kadangi 2 nesidalija iš 7, turime $2^6 \\equiv 1 \\pmod 7$. Daliname rodiklį 50 iš 6 su liekana: $50 = 6 \\times 8 + 2$. Pertvarkome: $2^{50} = (2^6)^8 \\times 2^2 \\equiv 1^8 \\times 4 \\equiv 4 \\pmod 7$.",
         "answer": "Liekana lygi 4."
       },
       {
         "title": "Herono formulės taikymas trikampio plotui",
         "text": "Raskite trikampio su kraštinėmis 13, 14, 15 plotą.",
-        "solution": "Pirmiausia apskaičiuojame pusperimetrį $p = \\frac{13 + 14 + 15}{2} = 21$. Taikome Herono formulę: $S = \\\\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome vertes: $S = \\\\sqrt{21(21-13)(21-14)(21-15)} = \\\\sqrt{21 \\times 8 \\times 7 \\times 6}$. Apskaičiuojame daugindami pirminiais: $S = \\\\sqrt{3 \\times 7 \\times 2^3 \\times 7 \\times 2 \\times 3} = \\\\sqrt{3^2 \\times 7^2 \\times 2^4} = 3 \\times 7 \\times 4 = 84$.",
+        "solution": "Pirmiausia apskaičiuojame pusperimetrį $p = \\frac{13 + 14 + 15}{2} = 21$. Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome vertes: $S = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6}$. Apskaičiuojame daugindami pirminiais: $S = \\sqrt{3 \\times 7 \\times 2^3 \\times 7 \\times 2 \\times 3} = \\sqrt{3^2 \\times 7^2 \\times 2^4} = 3 \\times 7 \\times 4 = 84$.",
         "answer": "Trikampio plotas lygus 84."
       },
       {
         "title": "Taško galios teorema apskritime",
         "text": "Apskritime susikerta dvi stygos $AB$ ir $CD$ taške $P$. Žinoma, kad $AP = 4$ cm, $PB = 6$ cm, o $CP = 3$ cm. Raskite atkarpos $PD$ ilgį.",
-        "solution": "Pagal stygų susikirtimo savybę (Taško galios teoremą), gautų atkarpų sandaugos yra lygios: $AP \\times PB = CP \\times PD$. Įstatome žinomas vertes: $4 \\times 6 = 3 \\times PD \\\\implies 24 = 3 \\times PD$. Išreiškiame atkarpos ilgį: $PD = 24 / 3 = 8$ cm.",
+        "solution": "Pagal stygų susikirtimo savybę (Taško galios teoremą), gautų atkarpų sandaugos yra lygios: $AP \\times PB = CP \\times PD$. Įstatome žinomas vertes: $4 \\times 6 = 3 \\times PD \\implies 24 = 3 \\times PD$. Išreiškiame atkarpos ilgį: $PD = 24 / 3 = 8$ cm.",
         "answer": "Atkarpos $PD$ ilgis lygus 8 cm."
       },
       {
         "title": "Rankų paspaudimo lema grafe",
         "text": "Grafas turi 5 viršūnes, kurių laipsniai yra $2, 3, 3, 4, 4$. Kiek briaunų turi šis grafas?",
-        "solution": "Pagal Rankų paspaudimo lemą, visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui: $\\\\sum \\text{deg}(v) = 2E$. Apskaičiuojame laipsnių sumą: $S = 2 + 3 + 3 + 4 + 4 = 16$. Sudarome lygtį: $2E = 16 \\\\implies E = 8$.",
+        "solution": "Pagal Rankų paspaudimo lemą, visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui: $\\sum \\text{deg}(v) = 2E$. Apskaičiuojame laipsnių sumą: $S = 2 + 3 + 3 + 4 + 4 = 16$. Sudarome lygtį: $2E = 16 \\implies E = 8$.",
         "answer": "Grafas turi 8 briaunas."
       }
     ]
@@ -7743,8 +7743,8 @@ export const topics = {
       {
         "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
         "body": [
-          "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis.",
-          "Metodas. Naudokite Oilerio teoremą $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\\\gcd(a, n) = 1$."
+          "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis.",
+          "Metodas. Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
         ]
       },
       {
@@ -7769,27 +7769,27 @@ export const topics = {
     ],
     "examples": [
       {
-        "title": "Skaičiaus $\\\\varphi(24)$ apskaičiavimas",
+        "title": "Skaičiaus $\\varphi(24)$ apskaičiavimas",
         "text": "Raskite, kiek yra natūraliųjų skaičių, mažesnių už 24 ir tarpusavyje pirminių su 24.",
-        "solution": "Skaidome skaičių 24 pirminiais daugtuviais: $24 = 2^3 \\\\cdot 3$. Taikome Oilerio totiento funkcijos formulę: $\\\\varphi(24) = 24 \\\\cdot (1 - 1/2) \\\\cdot (1 - 1/3)$. Atliekame veiksmus: $\\\\varphi(24) = 24 \\\\cdot \\frac{1}{2} \\\\cdot \\frac{2}{3} = 8$.",
+        "solution": "Skaidome skaičių 24 pirminiais daugtuviais: $24 = 2^3 \\cdot 3$. Taikome Oilerio totiento funkcijos formulę: $\\varphi(24) = 24 \\cdot (1 - 1/2) \\cdot (1 - 1/3)$. Atliekame veiksmus: $\\varphi(24) = 24 \\cdot \\frac{1}{2} \\cdot \\frac{2}{3} = 8$.",
         "answer": "$8$"
       },
       {
         "title": "Paskutinis skaičiaus skaitmuo",
         "text": "Raskite skaičiaus $3^{400}$ paskutinį skaitmenį.",
-        "solution": "Paskutinis skaitmuo atitinka liekaną moduliu 10. Kadangi $\\\\gcd(3, 10) = 1$, taikome Oilerio teoremą. Apskaičiuojame $\\\\varphi(10) = 10 \\\\cdot (1 - 1/2) \\\\cdot (1 - 1/5) = 4$. Remiantis Oilerio teorema, $3^4 \\\\equiv 1 \\\\pmod{10}$. Kadangi $400$ dalijasi iš 4, tai $3^{400} = (3^4)^{100} \\\\equiv 1^{100} \\\\equiv 1 \\\\pmod{10}$.",
+        "solution": "Paskutinis skaitmuo atitinka liekaną moduliu 10. Kadangi $\\gcd(3, 10) = 1$, taikome Oilerio teoremą. Apskaičiuojame $\\varphi(10) = 10 \\cdot (1 - 1/2) \\cdot (1 - 1/5) = 4$. Remiantis Oilerio teorema, $3^4 \\equiv 1 \\pmod{10}$. Kadangi $400$ dalijasi iš 4, tai $3^{400} = (3^4)^{100} \\equiv 1^{100} \\equiv 1 \\pmod{10}$.",
         "answer": "$1$"
       },
       {
         "title": "Nelygybės įrodymas naudojant AM-GM",
-        "text": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\\\ge 2$.",
-        "solution": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$. Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\\\ge \\\\sqrt{\\frac{a}{b} \\\\cdot \\frac{b}{a}}$. Kadangi $\\frac{a}{b} \\\\cdot \\frac{b}{a} = 1$, tai $\\\\sqrt{1} = 1$. Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\\\ge 2$.",
+        "text": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
+        "solution": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$. Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}}$. Kadangi $\\frac{a}{b} \\cdot \\frac{b}{a} = 1$, tai $\\sqrt{1} = 1$. Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
         "answer": "Įrodyta."
       },
       {
         "title": "Čevos teoremos taikymas",
         "text": "Trikampio $ABC$ kraštinėse parinkti taškai $D$, $E$, $F$ taip, kad $AD$, $BE$, $CF$ kertasi taške $P$. Žinoma, kad $BD = DC$ ir $AE = 2EC$. Raskite santykį $AF/FB$.",
-        "solution": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$. Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$. Įrašome šias vertes į lygtį: $1 \\\\cdot \\frac{1}{2} \\\\cdot \\frac{AF}{FB} = 1$. Iš čia gauname $\\frac{AF}{FB} = 2$.",
+        "solution": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$. Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$. Įrašome šias vertes į lygtį: $1 \\cdot \\frac{1}{2} \\cdot \\frac{AF}{FB} = 1$. Iš čia gauname $\\frac{AF}{FB} = 2$.",
         "answer": "$2$"
       },
       {
@@ -8485,7 +8485,7 @@ export const topics = {
       {
         "title": "Aukštesnioji skaičių teorija ir Gauso sveikieji skaičiai",
         "body": [
-          "10 klasėje skaičių teorija plečiasi už paprastų sveikųjų skaičių ribų. Susipažįstame su Gauso sveikaisiais skaičiais $\\\\mathbb{Z}[i]$ ir jų dalumo savybėmis.",
+          "10 klasėje skaičių teorija plečiasi už paprastų sveikųjų skaičių ribų. Susipažįstame su Gauso sveikaisiais skaičiais $\\mathbb{Z}[i]$ ir jų dalumo savybėmis.",
           "Metodas. Naudokite Gauso skaičių normą $N(a+bi) = a^2+b^2$ norėdami įvertinti pirminių skaičių skaidymą."
         ]
       },
@@ -8512,32 +8512,32 @@ export const topics = {
     "examples": [
       {
         "title": "Kvadratinio abipusiškumo dėsnio taikymas",
-        "text": "Nustatykite Legendre simbolio vertę $\\\\left(\\frac{3}{11}\\right)$.",
-        "solution": "Kadangi abu skaičiai 3 ir 11 yra pirminiai ir nelyginiai, taikome kvadratinio abipusiškumo dėsnį. Dėsnis teigia: $\\\\left(\\frac{3}{11}\\right)\\\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = (-1)^{1 \\\\cdot 5} = -1$. Vadinasi, $\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$. Apskaičiuojame $\\\\left(\\frac{11}{3}\\right)$: kadangi $11 \\\\equiv 2 \\\\pmod{3}$, tai $\\\\left(\\frac{11}{3}\\right) = \\\\left(\\frac{2}{3}\\right)$. Kadangi $2$ nėra kvadratinė liekana moduliu 3 (vienintelė nulinė liekana yra 1), tai $\\\\left(\\frac{2}{3}\\right) = -1$. Įrašome atgal: $\\\\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
+        "text": "Nustatykite Legendre simbolio vertę $\\left(\\frac{3}{11}\\right)$.",
+        "solution": "Kadangi abu skaičiai 3 ir 11 yra pirminiai ir nelyginiai, taikome kvadratinio abipusiškumo dėsnį. Dėsnis teigia: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = (-1)^{1 \\cdot 5} = -1$. Vadinasi, $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Apskaičiuojame $\\left(\\frac{11}{3}\\right)$: kadangi $11 \\equiv 2 \\pmod{3}$, tai $\\left(\\frac{11}{3}\\right) = \\left(\\frac{2}{3}\\right)$. Kadangi $2$ nėra kvadratinė liekana moduliu 3 (vienintelė nulinė liekana yra 1), tai $\\left(\\frac{2}{3}\\right) = -1$. Įrašome atgal: $\\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
         "answer": "$1$"
       },
       {
         "title": "Gauso sveikojo skaičiaus skaidymas",
-        "text": "Susklaidykite skaičių 5 pirminiais daugtuviais Gauso sveikųjų skaičių aibėje $\\\\mathbb{Z}[i]$.",
+        "text": "Susklaidykite skaičių 5 pirminiais daugtuviais Gauso sveikųjų skaičių aibėje $\\mathbb{Z}[i]$.",
         "solution": "Ieškome skaidinio pavidalu $5 = (a + bi)(a - bi) = a^2 + b^2$. Žinome, kad $5 = 2^2 + 1^2$, todėl galime pasirinkti $a = 2, b = 1$. Gausime skaidinį: $5 = (2 + i)(2 - i)$. Patikriname normą $N(2+i) = 2^2 + 1^2 = 5$, kuri yra pirminis skaičius, todėl $2+i$ ir $2-i$ yra pirminiai Gauso skaičiai.",
         "answer": "$(2+i)(2-i)$"
       },
       {
         "title": "Titu lemos taikymas nelygybės įrodyme",
-        "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\\\ge \\frac{9}{x+y+z}$.",
-        "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\\\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
+        "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
+        "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
         "answer": "Įrodyta."
       },
       {
         "title": "Inversijos taikymas geometrijoje",
         "text": "Nustatykite, į ką inversija su centru $O$ ir spinduliu $R$ atvaizduoja tiesę, einančią per centrą $O$.",
-        "solution": "Tegul tiesė $l$ eina per inversijos centrą $O$. Kiekvienas taškas $P \\\\in l$ ($P \\neq O$) yra atvaizduojamas į tašką $P'$ tiesėje $OP$. Kadangi tiesė eina per $O$, tiesė $OP$ sutampa su pačia tiese $l$. Todėl visi taškai $P'$ taip pat priklauso tai pačiai tiesei $l$. Vadinasi, tiesė, einanti per centrą, yra atvaizduojama į save pačią (atmetus patį centrą $O$).",
+        "solution": "Tegul tiesė $l$ eina per inversijos centrą $O$. Kiekvienas taškas $P \\in l$ ($P \\neq O$) yra atvaizduojamas į tašką $P'$ tiesėje $OP$. Kadangi tiesė eina per $O$, tiesė $OP$ sutampa su pačia tiese $l$. Todėl visi taškai $P'$ taip pat priklauso tai pačiai tiesei $l$. Vadinasi, tiesė, einanti per centrą, yra atvaizduojama į save pačią (atmetus patį centrą $O$).",
         "answer": "Į save pačią (be taško $O$)"
       },
       {
         "title": "Oilerio formulės taikymas grafui",
         "text": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
-        "solution": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$. Gauname lygtį: $8 - E + 5 = 2 \\\\implies 13 - E = 2$. Išsprendžiame briaunų skaičių: $E = 11$.",
+        "solution": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$. Gauname lygtį: $8 - E + 5 = 2 \\implies 13 - E = 2$. Išsprendžiame briaunų skaičių: $E = 11$.",
         "answer": "$11$"
       }
     ]
@@ -9493,14 +9493,14 @@ export const topics = {
         "title": "Kiniškoji liekanų teorema ir jos taikymai",
         "body": [
           "Kiniškoji liekanų teorema (KLT) yra galingas įrankis sprendžiant sveikųjų skaičių lygčių sistemas moduliu keli skaičiai. Pagrindinė idėja – jei moduliai yra tarpusavyje pirminiai, tai liekanos kiekvienu moduliu nepriklausomai nustato skaičių moduliu tų modulių sandauga.",
-          "Metodas. Norėdami rasti skaičių $x$, kuris tenkina $x \\\\equiv a_i \\\\pmod{m_i}$, galite naudoti konstruktyvų metodą: raskite bazinius skaičius $e_i$, kurie yra lygūs $1$ moduliu $m_i$ ir $0$ visais kitais moduliais $m_j$. Tada $x = \\\\sum a_i e_i$ bus sprendinys."
+          "Metodas. Norėdami rasti skaičių $x$, kuris tenkina $x \\equiv a_i \\pmod{m_i}$, galite naudoti konstruktyvų metodą: raskite bazinius skaičius $e_i$, kurie yra lygūs $1$ moduliu $m_i$ ir $0$ visais kitais moduliais $m_j$. Tada $x = \\sum a_i e_i$ bus sprendinys."
         ]
       },
       {
         "title": "Kvadratinis savitarpiškumas ir Legendro simbolis",
         "body": [
           "Kvadratinis savitarpiškumas leidžia atsakyti į klausimą: „Ar skaičius yra kvadratinė liekana moduliu $p$?“. Tai viena svarbiausių Gauso teoremų, siejanti dviejų skirtingų pirminių skaičių savybes.",
-          "Metodas. Naudokite Legendro simbolį $\\\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\\\left(\\frac{ab}{p}\\right) = \\\\left(\\frac{a}{p}\\right)\\\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
+          "Metodas. Naudokite Legendro simbolį $\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
         ]
       },
       {
@@ -9513,39 +9513,39 @@ export const topics = {
     ],
     "formulas": [],
     "mistakes": [
-      "Bendrų daliklių ignoravimas KLT — Skaidykite modulius į pirminių laipsnius: $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 2$, $x \\\\equiv 2 \\\\pmod 3$. Patikrinkite suderinamumą ($1 \\\\equiv 2 \\\\pmod 2$ – neteisinga, sprendinių nėra).",
+      "Bendrų daliklių ignoravimas KLT — Skaidykite modulius į pirminių laipsnius: $x \\equiv 1 \\pmod 4$ ir $x \\equiv 2 \\pmod 2$, $x \\equiv 2 \\pmod 3$. Patikrinkite suderinamumą ($1 \\equiv 2 \\pmod 2$ – neteisinga, sprendinių nėra).",
       "Inversija ne per centrą — Tik apskritimai, einantys per $O$, tampa tiesėmis. Kiti apskritimai virsta apskritimais.",
       "Netinkamas n-tojo laipsnio vieneto šaknų parinkimas — Pirmykštės šaknys yra tos, kurių eilė yra lygiai $n$. Jas nurodo rodikliai $k$, tarpusavyje pirminiai su $n$."
     ],
     "examples": [
       {
         "title": "Sistemos sprendimas naudojant KLT",
-        "text": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, tenkinantį sistemą: $x \\\\equiv 1 \\\\pmod 3, x \\\\equiv 2 \\\\pmod 4, x \\\\equiv 3 \\\\pmod 5$.",
-        "solution": "Moduliai $3, 4, 5$ yra tarpusavyje pirminiai. Sprendinio ieškome pavidalu $x = 1 \\\\cdot e_1 + 2 \\\\cdot e_2 + 3 \\\\cdot e_3$. $e_1$ turi dalintis iš $4 \\\\cdot 5 = 20$ ir $e_1 \\\\equiv 1 \\\\pmod 3$. Skaičius $40$ tinka ($40 = 3 \\\\cdot 13 + 1$). $e_2$ dalijasi iš $3 \\\\cdot 5 = 15$ ir $e_2 \\\\equiv 1 \\\\pmod 4$. $45$ tinka ($45 = 4 \\\\cdot 11 + 1$). $e_3$ dalijasi iš $3 \\\\cdot 4 = 12$ ir $e_3 \\\\equiv 1 \\\\pmod 5$. Skaičius $36$ tinka. $x = 1 \\\\cdot 40 + 2 \\\\cdot 45 + 3 \\\\cdot 36 = 40 + 90 + 108 = 238$. Mažiausias teigiamas sprendinys: $238 \\\\pmod{60} = 58$.",
+        "text": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, tenkinantį sistemą: $x \\equiv 1 \\pmod 3, x \\equiv 2 \\pmod 4, x \\equiv 3 \\pmod 5$.",
+        "solution": "Moduliai $3, 4, 5$ yra tarpusavyje pirminiai. Sprendinio ieškome pavidalu $x = 1 \\cdot e_1 + 2 \\cdot e_2 + 3 \\cdot e_3$. $e_1$ turi dalintis iš $4 \\cdot 5 = 20$ ir $e_1 \\equiv 1 \\pmod 3$. Skaičius $40$ tinka ($40 = 3 \\cdot 13 + 1$). $e_2$ dalijasi iš $3 \\cdot 5 = 15$ ir $e_2 \\equiv 1 \\pmod 4$. $45$ tinka ($45 = 4 \\cdot 11 + 1$). $e_3$ dalijasi iš $3 \\cdot 4 = 12$ ir $e_3 \\equiv 1 \\pmod 5$. Skaičius $36$ tinka. $x = 1 \\cdot 40 + 2 \\cdot 45 + 3 \\cdot 36 = 40 + 90 + 108 = 238$. Mažiausias teigiamas sprendinys: $238 \\pmod{60} = 58$.",
         "answer": "58"
       },
       {
         "title": "Ciklotoniniai daugianariai ir dalumas",
-        "text": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
-        "solution": "Ciklotoninis daugianaris $\\\\Phi_n(x)$ apibrėžiamas kaip $\\\\prod (x - \\\\zeta)$, kur $\\\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys. Kiekviena šaknis $\\\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\\\bar{\\\\zeta}$ (jei ji nėra reali). Sandauga $(x - \\\\zeta)(x - \\\\bar{\\\\zeta}) = x^2 - (2 \\\\text{Re} \\\\zeta)x + 1$. Kadangi $|\\\\zeta| = 1$, tai $2 \\\\text{Re} \\\\zeta \\\\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\\\text{Re} \\\\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\\\text{Re} \\\\zeta)^2 - 4 \\\\le 0$. Jei $n=2$, $\\\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$. Kadangi visi sandaugos nariai yra teigiami, tai ir $\\\\Phi_n(x) > 0$.",
+        "text": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
+        "solution": "Ciklotoninis daugianaris $\\Phi_n(x)$ apibrėžiamas kaip $\\prod (x - \\zeta)$, kur $\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys. Kiekviena šaknis $\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\bar{\\zeta}$ (jei ji nėra reali). Sandauga $(x - \\zeta)(x - \\bar{\\zeta}) = x^2 - (2 \\text{Re} \\zeta)x + 1$. Kadangi $|\\zeta| = 1$, tai $2 \\text{Re} \\zeta \\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\text{Re} \\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\text{Re} \\zeta)^2 - 4 \\le 0$. Jei $n=2$, $\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$. Kadangi visi sandaugos nariai yra teigiami, tai ir $\\Phi_n(x) > 0$.",
         "answer": "Įrodyta"
       },
       {
         "title": "Inversijos taikymas besiliečiantiems apskritimams",
-        "text": "Du apskritimai $\\\\omega_1$ ir $\\\\omega_2$ liečiasi taške $P$. Tiesi per $P$ kerta $\\\\omega_1$ taške $A$ ir $\\\\omega_2$ taške $B$. Įrodykite, kad liestinės taškuose $A$ ir $B$ yra lygiagrečios.",
-        "solution": "Taikome inversiją su centru taške $P$. Po inversijos abu apskritimai $\\\\omega_1$ ir $\\\\omega_2$, einantys per centrą $P$, virsta lygiagrečiomis tiesėmis $L_1$ ir $L_2$. Tiesė $PAB$, einanti per inversijos centrą, virsta ta pačia tiese $PAB$. Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$. Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Tačiau savybė, kad liestinė statmena spinduliui, po inversijos virsta kampų išsaugojimo savybe. Inversija išsaugo lygiagretumą tarp liestinių besiliečiančiuose taškuose, nes jos tampa simetriškos lygiagrečių tiesių atžvilgiu.",
+        "text": "Du apskritimai $\\omega_1$ ir $\\omega_2$ liečiasi taške $P$. Tiesi per $P$ kerta $\\omega_1$ taške $A$ ir $\\omega_2$ taške $B$. Įrodykite, kad liestinės taškuose $A$ ir $B$ yra lygiagrečios.",
+        "solution": "Taikome inversiją su centru taške $P$. Po inversijos abu apskritimai $\\omega_1$ ir $\\omega_2$, einantys per centrą $P$, virsta lygiagrečiomis tiesėmis $L_1$ ir $L_2$. Tiesė $PAB$, einanti per inversijos centrą, virsta ta pačia tiese $PAB$. Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$. Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Tačiau savybė, kad liestinė statmena spinduliui, po inversijos virsta kampų išsaugojimo savybe. Inversija išsaugo lygiagretumą tarp liestinių besiliečiančiuose taškuose, nes jos tampa simetriškos lygiagrečių tiesių atžvilgiu.",
         "answer": "Įrodyta"
       },
       {
         "title": "Kombinatorinis Nulstellensatz",
         "text": "Įrodykite, kad bet kokiame reguliariame grafe, kurio viršūnių laipsnis lygus $d$, egzistuoja pakgrafis, kurio visų viršūnių laipsniai yra lygūs.",
-        "solution": "Suformuluojame uždavinį kaip daugianarį virš baigtinio lauko. Tarkime, grafas turi $n$ viršūnių ir $m$ briaunų. Kiekvienai briaunai priskiriame kintamąjį $x_e \\\\in \\\\{0, 1\\\\}$. Sudarytas daugianaris turi nurodyti viršūnių laipsnių sumas. Taikydami Alono Nulstellensatz teoremą, parodome, kad egzistuoja nulinis rinkinys, kuris nėra trivialus, jei laipsnių apribojimai yra tenkinami.",
+        "solution": "Suformuluojame uždavinį kaip daugianarį virš baigtinio lauko. Tarkime, grafas turi $n$ viršūnių ir $m$ briaunų. Kiekvienai briaunai priskiriame kintamąjį $x_e \\in \\{0, 1\\}$. Sudarytas daugianaris turi nurodyti viršūnių laipsnių sumas. Taikydami Alono Nulstellensatz teoremą, parodome, kad egzistuoja nulinis rinkinys, kuris nėra trivialus, jei laipsnių apribojimai yra tenkinami.",
         "answer": "Remiantis Nulstellensatz"
       },
       {
         "title": "Koši funkcinė lygtis",
-        "text": "Raskite visas tolydžias funkcijas $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$, tenkinančias $f(x+y) = f(x) + f(y)$ visiems $x, y \\\\in \\\\mathbb{R}$.",
-        "solution": "Pirmiausia nustatome $f(0)$: $f(0+0) = f(0) + f(0) \\\\implies f(0) = 0$. Indukcija parodome, kad $f(nx) = nf(x)$ visiems natūraliesiems $n$. Tegu $f(1) = c$. Tada $f(n) = cn$ visiems natūraliesiems $n$. Išplėčiame racionaliesiems skaičiams: $f(p/q \\\\cdot q) = f(p) \\\\implies qf(p/q) = cp \\\\implies f(p/q) = c(p/q)$. Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, tai $f(x) = cx$ visiems $x \\\\in \\\\mathbb{R}$.",
+        "text": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias $f(x+y) = f(x) + f(y)$ visiems $x, y \\in \\mathbb{R}$.",
+        "solution": "Pirmiausia nustatome $f(0)$: $f(0+0) = f(0) + f(0) \\implies f(0) = 0$. Indukcija parodome, kad $f(nx) = nf(x)$ visiems natūraliesiems $n$. Tegu $f(1) = c$. Tada $f(n) = cn$ visiems natūraliesiems $n$. Išplėčiame racionaliesiems skaičiams: $f(p/q \\cdot q) = f(p) \\implies qf(p/q) = cp \\implies f(p/q) = c(p/q)$. Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$.",
         "answer": "f(x) = cx"
       }
     ]
@@ -10519,33 +10519,33 @@ export const topics = {
         "title": "Ekstremalioji ir adityvioji kombinatorika",
         "body": [
           "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai.",
-          "Metodas. Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\\\ge \\\\min(p, |A|+|B|-1)$."
+          "Metodas. Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
       "Simetrijos praradimas taikant Vijetos šuolį — Visada atskirai išnagrinėkite atvejį $a = b$ prieš darydami prielaidą $a > b$.",
-      "Netinkamas išgaubtumo taikymas liestinės triuke — Griežtai įrodykite nelygybę $f(x) \\\\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus."
+      "Netinkamas išgaubtumo taikymas liestinės triuke — Griežtai įrodykite nelygybę $f(x) \\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus."
     ],
     "examples": [
       {
         "title": "Vijetos šuolis",
-        "text": "Tegu $a, b \\\\in \\\\mathbb{N}$ tokie, kad $ab+1$ dalija $a^2+b^2$. Įrodykite, kad $k = \\frac{a^2+b^2}{ab+1}$ yra pilnas kvadratas.",
-        "solution": "Tarkime, kad $k$ nėra kvadratas. Fiksuojame $k$ ir pasirenkame sprendinį $(a,b)$, kuris minimizuoja $a+b$, su $a \\\\ge b$. Užrašome kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$. Kita šaknis $x_2$ tenkina $x_2 + a = kb$ ir $x_2 \\\\cdot a = b^2 - k$. Iš čia $x_2 = kb - a = \\frac{b^2-k}{a}$. Įrodoma, kad $x_2$ yra teigiamas sveikas skaičius ir $x_2 < a$, kas prieštarauja minimalumui.",
+        "text": "Tegu $a, b \\in \\mathbb{N}$ tokie, kad $ab+1$ dalija $a^2+b^2$. Įrodykite, kad $k = \\frac{a^2+b^2}{ab+1}$ yra pilnas kvadratas.",
+        "solution": "Tarkime, kad $k$ nėra kvadratas. Fiksuojame $k$ ir pasirenkame sprendinį $(a,b)$, kuris minimizuoja $a+b$, su $a \\ge b$. Užrašome kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$. Kita šaknis $x_2$ tenkina $x_2 + a = kb$ ir $x_2 \\cdot a = b^2 - k$. Iš čia $x_2 = kb - a = \\frac{b^2-k}{a}$. Įrodoma, kad $x_2$ yra teigiamas sveikas skaičius ir $x_2 < a$, kas prieštarauja minimalumui.",
         "answer": "Įrodyta"
       },
       {
         "title": "Liestinės triukas",
-        "text": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$.",
-        "solution": "Randame funkcijos $f(x) = \\frac{1}{x}$ liestinę taške $x=1$. Liestinės lygtis yra $y = 2 - x$. Įrodome nelygybę $\\frac{1}{x} \\\\ge 2 - x \\\\implies \\frac{(x-1)^2}{x} \\\\ge 0$, kuri yra teisinga visiems $x > 0$. Sudedame šias nelygybes trims kintamiesiems: $\\\\sum \\frac{1}{a} \\\\ge 6 - (a+b+c) = 3$.",
+        "text": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$.",
+        "solution": "Randame funkcijos $f(x) = \\frac{1}{x}$ liestinę taške $x=1$. Liestinės lygtis yra $y = 2 - x$. Įrodome nelygybę $\\frac{1}{x} \\ge 2 - x \\implies \\frac{(x-1)^2}{x} \\ge 0$, kuri yra teisinga visiems $x > 0$. Sudedame šias nelygybes trims kintamiesiems: $\\sum \\frac{1}{a} \\ge 6 - (a+b+c) = 3$.",
         "answer": "Įrodyta"
       },
       {
         "title": "Vieneto šaknų filtras",
-        "text": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\\\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
-        "solution": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\\\omega)^n + (1+\\\\omega^2)^n)$. Kadangi $1+\\\\omega = e^{i\\\\pi/3}$ ir $1+\\\\omega^2 = e^{-i\\\\pi/3}$. Sudedame reikšmes: $S = \\frac{2^n + e^{in\\\\pi/3} + e^{-in\\\\pi/3}}{3} = \\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}$.",
-        "answer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+        "text": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
+        "solution": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$. Kadangi $1+\\omega = e^{i\\pi/3}$ ir $1+\\omega^2 = e^{-i\\pi/3}$. Sudedame reikšmes: $S = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3} = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$.",
+        "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
       },
       {
         "title": "Baricentrinės koordinatės",
@@ -10555,8 +10555,8 @@ export const topics = {
       },
       {
         "title": "Antrojo momento metodas",
-        "text": "Atsitiktinis dydis $X \\\\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
-        "solution": "Taikome formulę $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2}$. Įstatome reikšmes: $P(X=0) \\\\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$.",
+        "text": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
+        "solution": "Taikome formulę $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$. Įstatome reikšmes: $P(X=0) \\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$.",
         "answer": "0.05"
       }
     ]
@@ -14269,9 +14269,9 @@ export const exercises = [
       "Pabandykite įsivaizduoti, kas nutinka su skaičiumi, kai jo paskutinis skaitmuo $2$ tampa pirmuoju. Jei pradinis skaičius yra $x$, naujas bus $2$ kartus didesnis.",
       "Pastebėkite: jei padvigubinto skaičiaus paskutinis skaitmuo yra $4$ (nes $2 \\times 2 = 4$), tai ir pradinio skaičiaus priešpaskutinis skaitmuo turėjo būti $4$.",
       "Tęskite šį procesą: padauginę $4$ iš $2$, gausite kitą skaitmenį ($8$). Taip nuosekliai atkurkite visą skaičių iš dešinės į kairę.",
-      "Užrašykite lygtį $19A = 2 \\\\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$."
+      "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$."
     ],
-    "solution": "Pažymime pradinį skaičių kaip $10A + 2$, kur $A$ yra skaičiaus dalis be paskutinio dvejeto. Pagal uždavinio sąlygą sudarome lygtį: $2 \\\\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis. Supaprastinę lygtį gauname $19A = 2 \\\\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$.",
+    "solution": "Pažymime pradinį skaičių kaip $10A + 2$, kur $A$ yra skaičiaus dalis be paskutinio dvejeto. Pagal uždavinio sąlygą sudarome lygtį: $2 \\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis. Supaprastinę lygtį gauname $19A = 2 \\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -14279,7 +14279,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Naudokite skaičiaus skleistinį",
-      "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\\\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
+      "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
     },
     "strategyTags": [
       "skaitmenų-perkėlimas",
@@ -14303,12 +14303,12 @@ export const exercises = [
             "title": "Matematinio modelio sudarymas",
             "action": "Pažymime ieškomą skaičių kintamaisiais ir užrašome jo skaitmeninę išraišką $10A + 2$.",
             "reason": "Kad galėtume pritaikyti algebrines operacijas skaitmenų perkėlimui aprašyti.",
-            "result": "Gauta lygtis $2 \\\\cdot 10^k + A = 2(10A + 2)$."
+            "result": "Gauta lygtis $2 \\cdot 10^k + A = 2(10A + 2)$."
           },
           {
             "title": "Lygties sprendimas ir analizė",
             "action": "Išreiškiame $A$ per $k$ ir ieškome mažiausio tinkamo $k$ taikydami dalumo iš $19$ požymius.",
-            "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\\\cdot 10^k - 4$ privalo dalytis iš $19$.",
+            "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\cdot 10^k - 4$ privalo dalytis iš $19$.",
             "result": "Rastas mažiausias skaičius $105263157894736842$."
           }
         ],
@@ -14350,7 +14350,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į pa...",
-        "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\\\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
+        "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -14389,7 +14389,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Užrašykite lygtį $19A = 2 \\\\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
+        "text": "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
         "penalty": 0.12
       }
     ]
@@ -14557,7 +14557,7 @@ export const exercises = [
       "Pastebėkite, kad abiem dalijimo atvejais (iš 4 ir iš 5) liekana yra vienetu mažesnė už daliklį. Tai reiškia, kad jei pridėtume $1$ saldainį, jų skaičius dalintųsi iš $4$ ir iš $5$ be liekanos.",
       "Ieškokite skaičių, mažesnių už $50$, kurie dalijasi iš $20$ (bendras $4$ ir $5$ kartotinis), ir tada atimkite $1$.",
       "Taikykite metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
-      "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\\\equiv 3 \\\\pmod 4$ ir $N \\\\equiv 4 \\\\pmod 5$, tai paste..."
+      "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste..."
     ],
     "solution": "Nustatome, kad skaičius $N+1$ turi dalytis iš $4$ ir $5$, todėl jis turi dalytis iš $20$. Galimos $N+1$ reikšmės iki $50$ yra $20$ ir $40$. Tai atitinka saldainių skaičių $19$ arba $39$. Tikriname papildomą sąlygą – dalumą iš $3$. Skaičius $19$ nesidalija iš $3$, o $39$ dalijasi ($3 \\times 13 = 39$).",
     "alternate": "",
@@ -14590,7 +14590,7 @@ export const exercises = [
           {
             "title": "Bendrojo kartotinio radimas su poslinkiu",
             "action": "Randame mažiausią bendrąjį $4$ ir $5$ kartotinį ir atimame $1$ dėl liekanų savybės.",
-            "reason": "Sąlyga $N \\\\equiv -1 \\\\pmod 4$ ir $N \\\\equiv -1 \\\\pmod 5$ leidžia naudoti MBK metodą.",
+            "reason": "Sąlyga $N \\equiv -1 \\pmod 4$ ir $N \\equiv -1 \\pmod 5$ leidžia naudoti MBK metodą.",
             "result": "Kandidatai: $19, 39, 59, ...$"
           },
           {
@@ -14677,7 +14677,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\\\equiv 3 \\\\pmod 4$ ir $N \\\\equiv 4 \\\\pmod 5$, tai paste...",
+        "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste...",
         "penalty": 0.12
       }
     ]
@@ -14701,9 +14701,9 @@ export const exercises = [
       "Kadangi kvadratų kraštinės turi tiksliai užpildyti abi stačiakampio kraštines, kvadrato kraštinės ilgis turi būti bendras $60$ ir $84$ daliklis.",
       "Ieškome didžiausio bendrojo daliklio (DBD), kad kvadratai būtų kuo didesni.",
       "Taikykite metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
-      "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,..."
+      "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$"
     ],
-    "solution": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\\\cdot 3 \\\\cdot 5$, $84 = 2^2 \\\\cdot 3 \\\\cdot 7$. Randame DBD($60, 84$) = $2^2 \\\\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm. Apskaičiuojame kvadratų kiekį: $(60/12) \\times (84/12) = 5 \\times 7 = 35$.",
+    "solution": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$. Randame DBD($60, 84$) = $2^2 \\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm. Apskaičiuojame kvadratų kiekį: $(60/12) \\times (84/12) = 5 \\times 7 = 35$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -14821,7 +14821,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...",
+        "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$",
         "penalty": 0.12
       }
     ]
@@ -14842,12 +14842,12 @@ export const exercises = [
       "olimpiada-05-concept-logic"
     ],
     "hints": [
-      "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
+      "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
       "Išbandykite dalinti iš pirminių skaičių $43, 41, 37$ arba $47, 53$.",
       "Taikykite metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
-      "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\\\sqrt{..."
+      "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$"
     ],
-    "solution": "Apskaičiuojame apytikslę šaknį: $\\\\sqrt{2021} \\\\approx 44.9$. Tikriname pirminius skaičius mažėjančia tvarka: $43$. Atliekame dalybą: $2021 / 43 = 47$. Kadangi $47$ taip pat yra pirminis skaičius, radome ieškomus daugiklius. Jų suma: $43 + 47 = 90$.",
+    "solution": "Apskaičiuojame apytikslę šaknį: $\\sqrt{2021} \\approx 44.9$. Tikriname pirminius skaičius mažėjančia tvarka: $43$. Atliekame dalybą: $2021 / 43 = 47$. Kadangi $47$ taip pat yra pirminis skaičius, radome ieškomus daugiklius. Jų suma: $43 + 47 = 90$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -14908,7 +14908,7 @@ export const exercises = [
         "title": "Netinkamas šaknies įvertinimas",
         "wrongMove": "Manoma, kad daugikliai turi būti labai maži (pvz., tikrinama tik iki 10).",
         "whyTempting": "Tikimasi, kad uždavinys bus labai paprastas.",
-        "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\\\sqrt{N}$.",
+        "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\sqrt{N}$.",
         "reviewConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -14940,7 +14940,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
+        "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
         "revealsConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -14965,7 +14965,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\\\sqrt{...",
+        "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$",
         "penalty": 0.12
       }
     ]
@@ -14989,9 +14989,9 @@ export const exercises = [
       "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
       "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
       "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
-      "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\\\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis..."
+      "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis..."
     ],
-    "solution": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius. Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\\\min(a,b)$). Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali.",
+    "solution": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius. Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\min(a,b)$). Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Strategijos ir įrodymai",
@@ -15109,7 +15109,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\\\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
+        "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
         "penalty": 0.12
       }
     ]
@@ -15135,7 +15135,7 @@ export const exercises = [
       "Taikykite metodą: Tarkime, kad praėjo $x$ metų. Tuomet tėvui bus $36 + x$ metų, o sūnui $8 + x$ metų. Sudarykite santykio lygtį.",
       "Atlikite konkretų žingsnį: Pažymėkime praėjusių metų skaičių kaip $x$. Tėvo amžius po $x$ metų bus $36+x$, o sūnaus – $8+x$. Pa..."
     ],
-    "solution": "Po $x$ metų tėvui bus $36+x$, o sūnui $8+x$. Sudarome lygtį: $36+x = 3(8+x)$. Sprendžiame: $36+x = 24+3x \\\\implies 12 = 2x \\\\implies x = 6$.",
+    "solution": "Po $x$ metų tėvui bus $36+x$, o sūnui $8+x$. Sudarome lygtį: $36+x = 3(8+x)$. Sprendžiame: $36+x = 24+3x \\implies 12 = 2x \\implies x = 6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -15277,7 +15277,7 @@ export const exercises = [
       "Daugyba iš didesnio skaičiaus duoda didesnį rezultatą. Pabandykite gauti kuo didesnį daugiklį prieš skaičių $8$.",
       "Išbandykite variantus: $(5+7) \\times 8$, $7 \\times (8-6)$ ir t.t. Nepamirškite veiksmų tvarkos skliaustų viduje.",
       "Taikykite metodą: Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti $5+7$ skliaustuose prieš dauginant iš $8$.",
-      "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7..."
+      "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...$"
     ],
     "solution": "Tikriname pagrindinį variantą: $(5 + 7) \\times 8 - 6 / 2 = 12 \\times 8 - 3 = 96 - 3 = 93$. Tikriname kitą variantą: $5 + 7 \\times (8 - 6 / 2) = 5 + 7 \\times 5 = 40$. Palyginę visus skliaustų dėjimo būdus, matome, kad didžiausia reikšmė yra $93$.",
     "alternate": "",
@@ -15397,7 +15397,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...",
+        "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...$",
         "penalty": 0.12
       }
     ]
@@ -15407,7 +15407,7 @@ export const exercises = [
     "topicId": "olimpiada-05",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\\\dots + \\frac{1}{9 \\times 10}$.",
+    "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{9 \\times 10}$.",
     "answer": "Suma lygi $\\frac{9}{10}$.",
     "acceptedAnswers": [
       "Suma lygi $\\frac{9}{10}$."
@@ -15421,9 +15421,9 @@ export const exercises = [
       "Nereikia skaičiuoti bendrojo vardiklio visoms trupmenoms – tai užimtų per daug laiko. Pastebėkite dėsningumą: $\\frac{1}{2} = 1 - \\frac{1}{2}$, $\\frac{1}{6} = \\frac{1}{2} - \\frac{1}{3}$.",
       "Pabandykite kiekvieną dėmenį $\\frac{1}{n(n+1)}$ užrašyti kaip skirtumą $\\frac{1}{n} - \\frac{1}{n+1}$.",
       "Taikykite metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
-      "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac..."
+      "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...$"
     ],
-    "solution": "Išskleidžiame sumą: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + (\\frac{1}{3} - \\frac{1}{4}) + \\\\dots + (\\frac{1}{9} - \\frac{1}{10})$. Pastebime, kad visi viduriniai nariai susinaikina: $-\\frac{1}{2} + \\frac{1}{2} = 0$, $-\\frac{1}{3} + \\frac{1}{3} = 0$ ir t.t. Lieka tik pirmas ir paskutinis nariai: $1 - \\frac{1}{10} = \\frac{9}{10}$.",
+    "solution": "Išskleidžiame sumą: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + (\\frac{1}{3} - \\frac{1}{4}) + \\dots + (\\frac{1}{9} - \\frac{1}{10})$. Pastebime, kad visi viduriniai nariai susinaikina: $-\\frac{1}{2} + \\frac{1}{2} = 0$, $-\\frac{1}{3} + \\frac{1}{3} = 0$ ir t.t. Lieka tik pirmas ir paskutinis nariai: $1 - \\frac{1}{10} = \\frac{9}{10}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -15501,7 +15501,7 @@ export const exercises = [
         "id": "ex-olimpiada-05-eb7e344a-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...$",
         "back": "Taikome šį metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
@@ -15541,7 +15541,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...",
+        "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...$",
         "penalty": 0.12
       }
     ]
@@ -15551,7 +15551,7 @@ export const exercises = [
     "topicId": "olimpiada-05",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Krepšininkas pataikė $60\\\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
+    "statement": "Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
     "answer": "Iš viso atlikta $40$ metimų.",
     "acceptedAnswers": [
       "Iš viso atlikta $40$ metimų."
@@ -15563,9 +15563,9 @@ export const exercises = [
     ],
     "hints": [
       "Taiklumo procentas yra santykis tarp pataikytų metimų ir visų bandymų. Naudokite lygtį šiam santykiui aprašyti.",
-      "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\\\%$?",
+      "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\%$?",
       "Taikykite metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
-      "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1..."
+      "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...$"
     ],
     "solution": "Taiklių metimų pradžioje buvo $0.6x$. Po papildomų metimų taiklių yra $0.6x + 8$, o visų metimų $x + 10$. Sudarome lygtį: $\\frac{0.6x + 8}{x + 10} = 0.65$. Ją išsprendę gauname $x = 30$. Galutinis metimų skaičius: $30 + 10 = 40$.",
     "alternate": "",
@@ -15626,7 +15626,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-05-1fc20a2a-trap-2",
         "title": "Netvarkingas procentų skaičiavimas",
-        "wrongMove": "Manoma, kad $60\\\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
+        "wrongMove": "Manoma, kad $60\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
         "whyTempting": "Klaidingas supratimas apie procentų prigimtį.",
         "correction": "Procentai visada skaičiuojami nuo kintančios visumos, todėl juos visada paverskite skaičiais arba trupmenomis.",
         "reviewConceptIds": [
@@ -15645,7 +15645,7 @@ export const exercises = [
         "id": "ex-olimpiada-05-1fc20a2a-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\\\%$ visų mestų baudų metimų. Atlikęs...",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs...",
         "back": "Taikome šį metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
@@ -15669,7 +15669,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\\\%$?",
+        "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\%$?",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -15685,7 +15685,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...",
+        "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...$",
         "penalty": 0.12
       }
     ]
@@ -15695,7 +15695,7 @@ export const exercises = [
     "topicId": "olimpiada-05",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Žemėlapyje, kurio mastelis $1 : 50\\\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\\\ 000$?",
+    "statement": "Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\ 000$?",
     "answer": "Atstumas kitame žemėlapyje bus $2$ cm.",
     "acceptedAnswers": [
       "Atstumas kitame žemėlapyje bus $2$ cm."
@@ -15706,12 +15706,12 @@ export const exercises = [
       "olimpiada-05-concept-logic"
     ],
     "hints": [
-      "Mastelis $1 : 200\\\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
+      "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
       "Pagalvokite: jei mastelio vardiklis didėja, tai atstumas brėžinyje turi mažėti. Kiek kartų padidėjo vardiklis?",
-      "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$.",
-      "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\\\ 000$, o naujasis mastelis – $1 : 200\\\\ 000$. Naujasis mastelis yra $20..."
+      "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
+      "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\ 000$, o naujasis mastelis – $1 : 200\\ 000$. Naujasis mastelis yra $20...$"
     ],
-    "solution": "Apskaičiuojame mastelių santykį: $200\\\\ 000 / 50\\\\ 000 = 4$. Kadangi naujas mastelis sumažina vaizdą dar $4$ kartus labiau, tai atstumas žemėlapyje bus $4$ kartus trumpesnis. Atstumas = $8 / 4 = 2$ cm.",
+    "solution": "Apskaičiuojame mastelių santykį: $200\\ 000 / 50\\ 000 = 4$. Kadangi naujas mastelis sumažina vaizdą dar $4$ kartus labiau, tai atstumas žemėlapyje bus $4$ kartus trumpesnis. Atstumas = $8 / 4 = 2$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -15719,7 +15719,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Naudokite atvirkštinį santykį",
-      "text": "Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$."
+      "text": "Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$."
     },
     "strategyTags": [
       "proporcijos",
@@ -15789,8 +15789,8 @@ export const exercises = [
         "id": "ex-olimpiada-05-866100dc-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\\\ 000$, atstumas tarp dvie...",
-        "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$.",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dvie...",
+        "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -15804,7 +15804,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Mastelis $1 : 200\\\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
+        "text": "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
         "revealsConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -15820,7 +15820,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\\\ 000$ ir $200\\\\ 000$.",
+        "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
         "revealsConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -15829,7 +15829,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\\\ 000$, o naujasis mastelis – $1 : 200\\\\ 000$. Naujasis mastelis yra $20...",
+        "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\ 000$, o naujasis mastelis – $1 : 200\\ 000$. Naujasis mastelis yra $20...$",
         "penalty": 0.12
       }
     ]
@@ -15839,7 +15839,7 @@ export const exercises = [
     "topicId": "olimpiada-05",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\\\dots$ Raskite kitą šios sekos narį.",
+    "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\dots$ Raskite kitą šios sekos narį.",
     "answer": "Kitas sekos narys yra $95$.",
     "acceptedAnswers": [
       "Kitas sekos narys yra $95$."
@@ -15933,7 +15933,7 @@ export const exercises = [
         "id": "ex-olimpiada-05-6622d1e0-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...$",
         "back": "Taikome šį metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
@@ -15997,7 +15997,7 @@ export const exercises = [
       "Įsivaizduokite, kad einate atgal nuo galutinio rezultato $9$. Jei paskutinis veiksmas buvo dalyba iš $5$, koks skaičius buvo prieš tai?",
       "Kiekvieną atliktą veiksmą pakeiskite priešingu veiksmu: dalybą – daugyba, atimtį – sudėtimi.",
       "Taikykite metodą: Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą.",
-      "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ..."
+      "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...$"
     ],
     "solution": "Prieš dalinant iš $5$, buvo $9 \\times 5 = 45$. Prieš atimant $7$, buvo $45 + 7 = 52$. Prieš dauginant iš $4$, buvo $52 / 4 = 13$. Sugalvotas skaičius yra $13$.",
     "alternate": "",
@@ -16117,7 +16117,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...",
+        "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...$",
         "penalty": 0.12
       }
     ]
@@ -16416,9 +16416,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite kampą, kurį sudaro laikrodžio valandinė ir minutinė rodyklės (mažesnįjį iš dviejų kampų).",
-    "answer": "Kampas tarp rodyklių yra $130^\\\\circ$.",
+    "answer": "Kampas tarp rodyklių yra $130^\\circ$.",
     "acceptedAnswers": [
-      "Kampas tarp rodyklių yra $130^\\\\circ$."
+      "Kampas tarp rodyklių yra $130^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -16426,12 +16426,12 @@ export const exercises = [
       "olimpiada-05-concept-logic"
     ],
     "hints": [
-      "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\\\circ$) ir kiek valandinė ($0.5^\\\\circ$).",
+      "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\circ$) ir kiek valandinė ($0.5^\\circ$).",
       "Nustatykite abiejų rodyklių padėtis laipsniais nuo 12 valandos žymos. Valandinė rodyklė per 40 minučių pasislenka už 3 valandos žymos.",
-      "Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
-      "Viena valandos padala atitinka $360^\\\\circ / 12 = 30^\\\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\\\circ$."
+      "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+      "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\circ$."
     ],
-    "solution": "Viena valandos padala atitinka $360^\\\\circ / 12 = 30^\\\\circ$. Ties $40$ minučių minutinė rodyklė rodo tiksliai į $8$-tą padalą, kas atitinka $8 \\times 30^\\\\circ = 240^\\\\circ$ nuo $12$ valandos žymės. Valandinė rodyklė $3$ valandą buvo ties $3$-čia padala ($90^\\\\circ$). Per $40$ minučių ji pastūmėjo į priekį: $\\frac{40}{60} \\times 30^\\\\circ = 20^\\\\circ$. Taigi valandinė rodyklė yra ties $90^\\\\circ + 20^\\\\circ = 110^\\\\circ$. Kampas tarp jų yra $240^\\\\circ - 110^\\\\circ = 130^\\\\circ$.",
+    "solution": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$. Ties $40$ minučių minutinė rodyklė rodo tiksliai į $8$-tą padalą, kas atitinka $8 \\times 30^\\circ = 240^\\circ$ nuo $12$ valandos žymės. Valandinė rodyklė $3$ valandą buvo ties $3$-čia padala ($90^\\circ$). Per $40$ minučių ji pastūmėjo į priekį: $\\frac{40}{60} \\times 30^\\circ = 20^\\circ$. Taigi valandinė rodyklė yra ties $90^\\circ + 20^\\circ = 110^\\circ$. Kampas tarp jų yra $240^\\circ - 110^\\circ = 130^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -16439,7 +16439,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Raskite rodyklių poslinkį laipsniais",
-      "text": "Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus."
+      "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus."
     },
     "strategyTags": [
       "kampai",
@@ -16463,22 +16463,22 @@ export const exercises = [
             "title": "Valandinės rodyklės padėties nustatymas",
             "action": "Apskaičiuojame bazinį valandų kampą ir pridedame papildomą poslinkį dėl minučių.",
             "reason": "Valandinė rodyklė juda nuolatos, o ne šuoliais kas valandą.",
-            "result": "Gauta padėtis $110^\\\\circ$."
+            "result": "Gauta padėtis $110^\\circ$."
           },
           {
             "title": "Minutinės rodyklės padėties nustatymas",
-            "action": "Dauginame minučių skaičių iš minutės poslinkio kampo ($6^\\\\circ$).",
+            "action": "Dauginame minučių skaičių iš minutės poslinkio kampo ($6^\\circ$).",
             "reason": "Minutinė rodyklė juda $12$ kartų greičiau už valandinę.",
-            "result": "Gauta padėtis $240^\\\\circ$."
+            "result": "Gauta padėtis $240^\\circ$."
           },
           {
             "title": "Kampo skirtumo radimas",
-            "action": "Atimame mažesnį kampą iš didesnio ir patikriname, ar rezultatas yra mažesnis už $180^\\\\circ$.",
+            "action": "Atimame mažesnį kampą iš didesnio ir patikriname, ar rezultatas yra mažesnis už $180^\\circ$.",
             "reason": "Uždavinyje prašoma rasti mažesnįjį iš dviejų galimų kampų.",
-            "result": "Kampas lygus $130^\\\\circ$."
+            "result": "Kampas lygus $130^\\circ$."
           }
         ],
-        "finalAnswer": "Kampas tarp rodyklių yra $130^\\\\circ$."
+        "finalAnswer": "Kampas tarp rodyklių yra $130^\\circ$."
       }
     ],
     "commonTraps": [
@@ -16487,7 +16487,7 @@ export const exercises = [
         "title": "Valandinės rodyklės poslinkio nepaisymas",
         "wrongMove": "Manoma, kad valandinė rodyklė stovi lygiai ties 3-ia valanda.",
         "whyTempting": "Vizualiai valandinė rodyklė juda lėtai, todėl jos poslinkis dažnai pamirštamas.",
-        "correction": "Visada pridėkite prie valandų kampo papildomą dalį: $\\text{minutės} \\times 0.5^\\\\circ$.",
+        "correction": "Visada pridėkite prie valandų kampo papildomą dalį: $\\text{minutės} \\times 0.5^\\circ$.",
         "reviewConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -16516,7 +16516,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite ...",
-        "back": "Taikome šį metodą: Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+        "back": "Taikome šį metodą: Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -16530,7 +16530,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\\\circ$) ir kiek valandinė ($0.5^\\\\circ$).",
+        "text": "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\circ$) ir kiek valandinė ($0.5^\\circ$).",
         "revealsConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -16546,7 +16546,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Ciferblatas turi $360^\\\\circ$, padalintų į $12$ valandų ($30^\\\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+        "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
         "revealsConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -16555,7 +16555,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Viena valandos padala atitinka $360^\\\\circ / 12 = 30^\\\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\\\circ$.",
+        "text": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\circ$.",
         "penalty": 0.12
       }
     ]
@@ -16566,9 +16566,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dydis yra $4$ kartus didesnis už gretimo kampo dydį. Raskite visų keturių susidariusių kampų dydžius.",
-    "answer": "Kampų dydžiai yra $36^\\\\circ$, $144^\\\\circ$, $36^\\\\circ$ ir $144^\\\\circ$.",
+    "answer": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$.",
     "acceptedAnswers": [
-      "Kampų dydžiai yra $36^\\\\circ$, $144^\\\\circ$, $36^\\\\circ$ ir $144^\\\\circ$."
+      "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -16576,12 +16576,12 @@ export const exercises = [
       "olimpiada-05-concept-logic"
     ],
     "hints": [
-      "Prisiminkite, kad tiesė sudaro $180^\\\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
-      "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\\\circ$.",
-      "Gretimų kampų suma visada lygi $180^\\\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
-      "Sudarome lygtį: $x + 4x = 180^\\\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta."
+      "Prisiminkite, kad tiesė sudaro $180^\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
+      "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\circ$.",
+      "Gretimų kampų suma visada lygi $180^\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
+      "Sudarome lygtį: $x + 4x = 180^\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta."
     ],
-    "solution": "Tarkime, mažesniojo kampo dydis yra $x^\\\\circ$. Tada gretimas kampas yra $4x^\\\\circ$. Kadangi gretimų kampų suma yra $180^\\\\circ$, gauname lygtį: $x + 4x = 180^\\\\circ \\\\implies 5x = 180^\\\\circ$. Išsprendžiame: $x = 180 / 5 = 36^\\\\circ$. Tai pirmasis kampas. Gretimas kampas yra $180^\\\\circ - 36^\\\\circ = 144^\\\\circ$. Susikertant dviem tiesėms, susidaro dvi poros lygų kryžminių kampų. Todėl visi keturi kampai yra $36^\\\\circ, 144^\\\\circ, 36^\\\\circ, 144^\\\\circ$.",
+    "solution": "Tarkime, mažesniojo kampo dydis yra $x^\\circ$. Tada gretimas kampas yra $4x^\\circ$. Kadangi gretimų kampų suma yra $180^\\circ$, gauname lygtį: $x + 4x = 180^\\circ \\implies 5x = 180^\\circ$. Išsprendžiame: $x = 180 / 5 = 36^\\circ$. Tai pirmasis kampas. Gretimas kampas yra $180^\\circ - 36^\\circ = 144^\\circ$. Susikertant dviem tiesėms, susidaro dvi poros lygų kryžminių kampų. Todėl visi keturi kampai yra $36^\\circ, 144^\\circ, 36^\\circ, 144^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -16589,7 +16589,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Naudokite gretimų kampų sumos savybę",
-      "text": "Gretimų kampų suma visada lygi $180^\\\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$."
+      "text": "Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$."
     },
     "strategyTags": [
       "gretimi-kampai",
@@ -16613,16 +16613,16 @@ export const exercises = [
             "title": "Algebrinės lygties sudarymas",
             "action": "Pažymime vieną kampą $x$ ir užrašome gretimų kampų sumos lygybę.",
             "reason": "Tai leidžia rasti konkretų kampo dydį per bendrą geometrinę savybę.",
-            "result": "Lygtis $5x = 180^\\\\circ$."
+            "result": "Lygtis $5x = 180^\\circ$."
           },
           {
             "title": "Visų kampų identifikavimas",
             "action": "Apskaičiuojame gretimą kampą ir pritaikome kryžminių kampų lygybės taisyklę.",
             "reason": "Susikertančios tiesės sukuria simetrišką kampų struktūrą.",
-            "result": "Gauti keturi kampai: dvi poros po $36^\\\\circ$ ir $144^\\\\circ$."
+            "result": "Gauti keturi kampai: dvi poros po $36^\\circ$ ir $144^\\circ$."
           }
         ],
-        "finalAnswer": "Kampų dydžiai yra $36^\\\\circ$, $144^\\\\circ$, $36^\\\\circ$ ir $144^\\\\circ$."
+        "finalAnswer": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
       }
     ],
     "commonTraps": [
@@ -16640,9 +16640,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-05-1b8f2f68-trap-2",
         "title": "Klaidingas sumos nustatymas",
-        "wrongMove": "Sudaroma lygtis, kurios suma lygi $360^\\\\circ$ arba $90^\\\\circ$.",
+        "wrongMove": "Sudaroma lygtis, kurios suma lygi $360^\\circ$ arba $90^\\circ$.",
         "whyTempting": "Sumišimas tarp visų kampų sumos aplink tašką ir gretimų kampų sumos.",
-        "correction": "Visada prisiminkite: gretimi kampai kartu sudaro tiesę ($180^\\\\circ$).",
+        "correction": "Visada prisiminkite: gretimi kampai kartu sudaro tiesę ($180^\\circ$).",
         "reviewConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -16660,7 +16660,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dyd...",
-        "back": "Taikome šį metodą: Gretimų kampų suma visada lygi $180^\\\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$.",
+        "back": "Taikome šį metodą: Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -16674,7 +16674,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Prisiminkite, kad tiesė sudaro $180^\\\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
+        "text": "Prisiminkite, kad tiesė sudaro $180^\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
         "revealsConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -16683,14 +16683,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\\\circ$.",
+        "text": "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Gretimų kampų suma visada lygi $180^\\\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
+        "text": "Gretimų kampų suma visada lygi $180^\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
         "revealsConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -16699,7 +16699,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sudarome lygtį: $x + 4x = 180^\\\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta.",
+        "text": "Sudarome lygtį: $x + 4x = 180^\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta.",
         "penalty": 0.12
       }
     ]
@@ -16875,7 +16875,7 @@ export const exercises = [
       "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Perkirpimas padalina kraštinę $a$ pusiau. Tada naujųjų stačiakampių perimetras bus $2(a/2 + b) = a + 2b = 18$.",
       "Sujunkite dvi lygtis: $a + b = 15$ (pusė pradinio perimetro) ir $a + 2b = 18$. Atimkite pirmąją iš antrosios, kad rastumėte $b$."
     ],
-    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Jo perimetras $2a + 2b = 30 \\\\implies a + b = 15$. Perkirpus stačiakampį pusiau išilgai kraštinės $a$, gauname du stačiakampius su kraštinėmis $a/2$ ir $b$. Mažesnio stačiakampio perimetras yra $2(a/2) + 2b = a + 2b = 18$. Iš pirmos lygties turime $a = 15 - b$. Įstatome į antrąją: $(15 - b) + 2b = 18 \\\\implies 15 + b = 18 \\\\implies b = 3$ cm. Tada $a = 15 - 3 = 12$ cm. Taigi, gauname išvadą: Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm.",
+    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Jo perimetras $2a + 2b = 30 \\implies a + b = 15$. Perkirpus stačiakampį pusiau išilgai kraštinės $a$, gauname du stačiakampius su kraštinėmis $a/2$ ir $b$. Mažesnio stačiakampio perimetras yra $2(a/2) + 2b = a + 2b = 18$. Iš pirmos lygties turime $a = 15 - b$. Įstatome į antrąją: $(15 - b) + 2b = 18 \\implies 15 + b = 18 \\implies b = 3$ cm. Tada $a = 15 - 3 = 12$ cm. Taigi, gauname išvadą: Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -17153,10 +17153,10 @@ export const exercises = [
     "topicId": "olimpiada-05",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\\\%$, o kita sutrumpinta $20\\\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
-    "answer": "Plotas sumažėjo $4\\\\%$.",
+    "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, o kita sutrumpinta $20\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
+    "answer": "Plotas sumažėjo $4\\%$.",
     "acceptedAnswers": [
-      "Plotas sumažėjo $4\\\\%$."
+      "Plotas sumažėjo $4\\%$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -17165,11 +17165,11 @@ export const exercises = [
     ],
     "hints": [
       "Tarkime, kad pradinio stačiakampio plotas yra $100$ vienetų (pvz., kraštinės $10 \\times 10$). Kaip pasikeis kraštinės po procentinių pokyčių?",
-      "Pailginimas $20\\\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\\\%$ atitinka daugybą iš $0.8$.",
+      "Pailginimas $20\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\%$ atitinka daugybą iš $0.8$.",
       "Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite gautą reiškinį su pradiniu plotu $ab$.",
       "Apskaičiuokite sandaugą: $1.2 \\times 0.8$. Gautas skaičius parodys, kokią dalį pradinio ploto sudaro naujasis plotas."
     ],
-    "solution": "Tarkime, pradinio sklypo kraštinės yra $a$ ir $b$. Pradinis plotas yra $S_1 = ab$. Pailginus vieną kraštinę $20\\\\%$, ji tampa $a + 0.2a = 1.2a$. Sutrumpinus kitą kraštinę $20\\\\%$, ji tampa $b - 0.2b = 0.8b$. Naujasis sklypo plotas yra $S_2 = 1.2a \\times 0.8b = 0.96ab$. Palyginame: $0.96ab = 96\\\\% \\\\cdot ab$. Plotas sumažėjo nuo $100\\\\%$ iki $96\\\\%$, t. y. sumažėjo $4\\\\%$.",
+    "solution": "Tarkime, pradinio sklypo kraštinės yra $a$ ir $b$. Pradinis plotas yra $S_1 = ab$. Pailginus vieną kraštinę $20\\%$, ji tampa $a + 0.2a = 1.2a$. Sutrumpinus kitą kraštinę $20\\%$, ji tampa $b - 0.2b = 0.8b$. Naujasis sklypo plotas yra $S_2 = 1.2a \\times 0.8b = 0.96ab$. Palyginame: $0.96ab = 96\\% \\cdot ab$. Plotas sumažėjo nuo $100\\%$ iki $96\\%$, t. y. sumažėjo $4\\%$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -17213,17 +17213,17 @@ export const exercises = [
             "title": "Pokyčio įvertinimas procentais",
             "action": "Atimame gautą dalį iš $1$ (visumos) ir paverčiame procentais.",
             "reason": "Rezultatas nurodo galutinį skirtumą nuo pradinės būsenos.",
-            "result": "Sumažėjimas $4\\\\%$."
+            "result": "Sumažėjimas $4\\%$."
           }
         ],
-        "finalAnswer": "Plotas sumažėjo $4\\\\%$."
+        "finalAnswer": "Plotas sumažėjo $4\\%$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-05-a5116194-trap-1",
         "title": "Klaidinga prielaida apie nepakitusį plotą",
-        "wrongMove": "Manoma, kad $+20\\\\%$ ir $-20\\\\%$ vienas kitą panaikina, todėl plotas lieka toks pat.",
+        "wrongMove": "Manoma, kad $+20\\%$ ir $-20\\%$ vienas kitą panaikina, todėl plotas lieka toks pat.",
         "whyTempting": "Skaičiai $20$ ir $20$ atrodo simetriški.",
         "correction": "Sumažėjimas skaičiuojamas jau nuo padidintos (kitokios) reikšmės, todėl pokyčiai nėra lygūs absoliučiais dydžiais.",
         "reviewConceptIds": [
@@ -17234,7 +17234,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-05-a5116194-trap-2",
         "title": "Procentų sumavimas vietoje dauginimo",
-        "wrongMove": "Bandoma atimti procentus tiesiogiai: $20\\\\% - 20\\\\% = 0\\\\%$.",
+        "wrongMove": "Bandoma atimti procentus tiesiogiai: $20\\% - 20\\% = 0\\%$.",
         "whyTempting": "Neteisingas supratimas, kaip procentai veikia sudėtines figūras.",
         "correction": "Kraštinės yra dauginamos, todėl ir jų pokyčiai turi būti dauginami kaip koeficientai.",
         "reviewConceptIds": [
@@ -17253,7 +17253,7 @@ export const exercises = [
         "id": "ex-olimpiada-05-a5116194-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos sklypo viena kraštinė pailginta $20\\\\%$, ...",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, ...",
         "back": "Taikome šį metodą: Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite su $ab$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
@@ -17277,7 +17277,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pailginimas $20\\\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\\\%$ atitinka daugybą iš $0.8$.",
+        "text": "Pailginimas $20\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\%$ atitinka daugybą iš $0.8$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -17304,9 +17304,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pailgės šio apskritimo ilgis?",
-    "answer": "Apskritimo ilgis pailgės $6\\\\pi$ cm.",
+    "answer": "Apskritimo ilgis pailgės $6\\pi$ cm.",
     "acceptedAnswers": [
-      "Apskritimo ilgis pailgės $6\\\\pi$ cm."
+      "Apskritimo ilgis pailgės $6\\pi$ cm."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -17314,12 +17314,12 @@ export const exercises = [
       "olimpiada-05-concept-logic"
     ],
     "hints": [
-      "Užrašykite apskritimo ilgio formulę: $C = 2\\\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
+      "Užrašykite apskritimo ilgio formulę: $C = 2\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
       "Apskritimo ilgis tiesiogiai priklauso nuo spindulio. Padidinus spindulį, ilgis padidėja tam tikru pastoviu dydžiu, nepriklausomai nuo to, koks buvo pradinis spindulys.",
-      "Palyginkite du ilgius: pradinį $C_1 = 2\\\\pi r$ ir naująjį $C_2 = 2\\\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
-      "Apskaičiuokite: $2\\\\pi(r+3) - 2\\\\pi r = 2\\\\pi r + 6\\\\pi - 2\\\\pi r$. Kas lieka?"
+      "Palyginkite du ilgius: pradinį $C_1 = 2\\pi r$ ir naująjį $C_2 = 2\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
+      "Apskaičiuokite: $2\\pi(r+3) - 2\\pi r = 2\\pi r + 6\\pi - 2\\pi r$. Kas lieka?"
     ],
-    "solution": "Pažymime pradinį apskritimo spindulį $r$. Tuomet jo ilgis yra $C_1 = 2\\\\pi r$. Padidinus spindulį $3$ cm, naujas spindulys tampa $r+3$. Naujas apskritimo ilgis yra $C_2 = 2\\\\pi(r+3)$. Apskaičiuojame skirtumą: $C_2 - C_1 = 2\\\\pi(r+3) - 2\\\\pi r$. Atskliaudžiame: $2\\\\pi r + 6\\\\pi - 2\\\\pi r = 6\\\\pi$. Apskritimo ilgis pailgės $6\\\\pi$ cm.",
+    "solution": "Pažymime pradinį apskritimo spindulį $r$. Tuomet jo ilgis yra $C_1 = 2\\pi r$. Padidinus spindulį $3$ cm, naujas spindulys tampa $r+3$. Naujas apskritimo ilgis yra $C_2 = 2\\pi(r+3)$. Apskaičiuojame skirtumą: $C_2 - C_1 = 2\\pi(r+3) - 2\\pi r$. Atskliaudžiame: $2\\pi r + 6\\pi - 2\\pi r = 6\\pi$. Apskritimo ilgis pailgės $6\\pi$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -17327,7 +17327,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Naudokite apskritimo ilgio formulę",
-      "text": "Apskritimo ilgio formulė yra $C = 2\\\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio."
+      "text": "Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio."
     },
     "strategyTags": [
       "apskritimas",
@@ -17349,26 +17349,26 @@ export const exercises = [
         "steps": [
           {
             "title": "Kintamojo poslinkio aprašymas",
-            "action": "Užrašome funkciją $C(r) = 2\\\\pi r$ ir įvertiname jos reikšmę taške $r+3$.",
+            "action": "Užrašome funkciją $C(r) = 2\\pi r$ ir įvertiname jos reikšmę taške $r+3$.",
             "reason": "Tai leidžia matematiškai tiksliai pavaizduoti fizinį spindulio pasikeitimą.",
-            "result": "Išraiška $2\\\\pi(r+3)$."
+            "result": "Išraiška $2\\pi(r+3)$."
           },
           {
             "title": "Skliaustų atskleidimas ir suprastinimas",
             "action": "Taikome paskirstymo dėsnį ir sutraukiame panašiuosius narius.",
             "reason": "Supaprastinus išraišką pamatome, koks narys lemia patį pokytį.",
-            "result": "Skirtumas $6\\\\pi$."
+            "result": "Skirtumas $6\\pi$."
           }
         ],
-        "finalAnswer": "Apskritimo ilgis pailgės $6\\\\pi$ cm."
+        "finalAnswer": "Apskritimo ilgis pailgės $6\\pi$ cm."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-05-df8a80e6-trap-1",
         "title": "Daugybos iš 2π pamiršimas pridedamam dydžiui",
-        "wrongMove": "Atsakoma, kad ilgis pailgės tik $3$ cm arba tik $3\\\\pi$ cm.",
-        "whyTempting": "Mokinys klaidingai atskleidžia skliaustus: $2\\\\pi(r+3) = 2\\\\pi r + 3$.",
+        "wrongMove": "Atsakoma, kad ilgis pailgės tik $3$ cm arba tik $3\\pi$ cm.",
+        "whyTempting": "Mokinys klaidingai atskleidžia skliaustus: $2\\pi(r+3) = 2\\pi r + 3$.",
         "correction": "Dauginant skliaustus, kiekvienas dėmuo viduje turi būti padaugintas iš koeficiento prieš skliaustus.",
         "reviewConceptIds": [
           "olimpiada-05-concept-method"
@@ -17398,7 +17398,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pai...",
-        "back": "Taikome šį metodą: Apskritimo ilgio formulė yra $C = 2\\\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio.",
+        "back": "Taikome šį metodą: Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -17412,7 +17412,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Užrašykite apskritimo ilgio formulę: $C = 2\\\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
+        "text": "Užrašykite apskritimo ilgio formulę: $C = 2\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
         "revealsConceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -17428,7 +17428,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Palyginkite du ilgius: pradinį $C_1 = 2\\\\pi r$ ir naująjį $C_2 = 2\\\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
+        "text": "Palyginkite du ilgius: pradinį $C_1 = 2\\pi r$ ir naująjį $C_2 = 2\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
         "revealsConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -17437,7 +17437,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $2\\\\pi(r+3) - 2\\\\pi r = 2\\\\pi r + 6\\\\pi - 2\\\\pi r$. Kas lieka?",
+        "text": "Apskaičiuokite: $2\\pi(r+3) - 2\\pi r = 2\\pi r + 6\\pi - 2\\pi r$. Kas lieka?",
         "penalty": 0.12
       }
     ]
@@ -17751,7 +17751,7 @@ export const exercises = [
       "Taikykite daugybos taisyklę: pirmąjį skaitmenį renkamės iš $5$, antrąjį – iš likusių $4$, o trečiąjį – iš likusių $3$.",
       "Sudauginkite pasirinkimų skaičius: $5 \\times 4 \\times 3$. Ar gavote sveikąjį skaičių?"
     ],
-    "solution": "Nelyginių skaitmenų aibė yra $\\\\{1, 3, 5, 7, 9\\\\}$, kurioje yra $5$ elementai. Šimtams parinkti turime $5$ galimybes. Dešimtims parinkti lieka $4$ galimybės (nes vienas skaitmuo jau panaudotas šimtams). Vienetams parinkti lieka $3$ galimybės. Pagal kombinatorikos daugybos taisyklę, iš viso yra $5 \\times 4 \\times 3 = 60$ tokie skaičiai.",
+    "solution": "Nelyginių skaitmenų aibė yra $\\{1, 3, 5, 7, 9\\}$, kurioje yra $5$ elementai. Šimtams parinkti turime $5$ galimybes. Dešimtims parinkti lieka $4$ galimybės (nes vienas skaitmuo jau panaudotas šimtams). Vienetams parinkti lieka $3$ galimybės. Pagal kombinatorikos daugybos taisyklę, iš viso yra $5 \\times 4 \\times 3 = 60$ tokie skaičiai.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -17892,9 +17892,9 @@ export const exercises = [
     "hints": [
       "Marius turi atlikti tris nepriklausomus pasirinkimus: išsirinkti kelnes, marškinius ir švarką.",
       "Vienas kelnių pasirinkimas suteikia 5 galimybes pasirinkti marškinius. Kiek iš viso yra kelnių ir marškinių derinių?",
-      "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a \times b \times c$ būdais."
+      "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a times b times c$ būdais."
     ],
-    "solution": "Nustatome pasirinkimų skaičių kiekvienai drabužių grupei: 4 kelnės, 5 marškiniai, 3 švarkai. Kadangi pasirinkimai yra nepriklausomi, taikome daugybos taisyklę: $4 \times 5 \times 3$. Atliekame skaičiavimą: $4 \times 5 = 20$; $20 \times 3 = 60$. Iš viso yra 60 būdų.",
+    "solution": "Nustatome pasirinkimų skaičių kiekvienai drabužių grupei: 4 kelnės, 5 marškiniai, 3 švarkai. Kadangi pasirinkimai yra nepriklausomi, taikome daugybos taisyklę: $4 times 5 times 3$. Atliekame skaičiavimą: $4 times 5 = 20$; $20 times 3 = 60$. Iš viso yra 60 būdų.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -17930,7 +17930,7 @@ export const exercises = [
           },
           {
             "title": "Daugybos taisyklės taikymas",
-            "action": "Dauginame pasirinkimų skaičius tarpusavyje: $4 \times 5 \times 3$.",
+            "action": "Dauginame pasirinkimų skaičius tarpusavyje: $4 times 5 times 3$.",
             "reason": "Kadangi kiekvienas pasirinkimas iš vienos grupės gali būti derinamas su bet kuriuo pasirinkimu iš kitų grupių.",
             "result": "Gautas rezultatas $60$."
           }
@@ -17953,7 +17953,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-05-335ceef1-trap-2",
         "title": "Nepilnas derinys",
-        "wrongMove": "Suskaičiuojami tik kelnių ir marškinių deriniai ($4 \times 5 = 20$), pamirštant švarkus.",
+        "wrongMove": "Suskaičiuojami tik kelnių ir marškinių deriniai ($4 times 5 = 20$), pamirštant švarkus.",
         "whyTempting": "Uždavinio sąlyga perskaitoma ne iki galo arba pamirštamas paskutinis žingsnis.",
         "correction": "Visada patikrinkite, ar į galutinį skaičiavimą įtraukėte visas uždavinyje minimas kategorijas.",
         "reviewConceptIds": [
@@ -17973,7 +17973,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Marius turi 4 kelnes, 5 marškinius ir 3 švarkus. Keliais būdais jis gali pasirinkti pilną derinį?",
-        "back": "Taikome daugybos taisyklę: $4 \times 5 \times 3 = 60$.",
+        "back": "Taikome daugybos taisyklę: $4 times 5 times 3 = 60$.",
         "conceptIds": [
           "olimpiada-05-concept-logic"
         ],
@@ -18003,7 +18003,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a \times b \times c$ būdais.",
+        "text": "Taikykite kombinatorinės sandaugos taisyklę: jei pirmą objektą galime pasirinkti $a$ būdais, antrą – $b$, o trečią – $c$, tai visą derinį galime pasirinkti $a times b times c$ būdais.",
         "revealsConceptIds": [
           "olimpiada-05-concept-method"
         ],
@@ -18028,7 +18028,7 @@ export const exercises = [
     ],
     "hints": [
       "Kiekvienas metimas turi du galimus variantus: herbą (H) arba skaičių (S).",
-      "Iš viso yra 8 galimi deriniai ($2 \times 2 \times 2$). Pabandykite juos visus išrašyti sistemiškai.",
+      "Iš viso yra 8 galimi deriniai ($2 times 2 times 2$). Pabandykite juos visus išrašyti sistemiškai.",
       "Ieškokite derinių, kuriuose raidė H pasikartoja du arba tris kartus."
     ],
     "solution": "Surašome visas 8 galimas baigtis: HHH, HHS, HSH, HSS, SHH, SHS, SSH, SSS. Atrankos būdu surandame derinius su 2 herbais: HHS, HSH, SHH (3 variantai). Surandame derinį su 3 herbais: HHH (1 variantas). Sudedame rezultatus: $3 + 1 = 4$ atvejai.",
@@ -18068,7 +18068,7 @@ export const exercises = [
           {
             "title": "Palankių baigčių atranka",
             "action": "Iš sąrašo išrenkame tas baigtis, kuriose H raidė pasikartoja 2 arba 3 kartus.",
-            "reason": "Sąlyga „bent du“ matematiškai reiškia, kad tinka visos reikšmės $x \\\\ge 2$.",
+            "reason": "Sąlyga „bent du“ matematiškai reiškia, kad tinka visos reikšmės $x \\ge 2$.",
             "result": "Atrinktos baigtys: HHH, HHS, HSH, SHH."
           }
         ],
@@ -18133,7 +18133,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Iš viso yra 8 galimi deriniai ($2 \times 2 \times 2$). Pabandykite juos visus išrašyti sistemiškai.",
+        "text": "Iš viso yra 8 galimi deriniai ($2 times 2 times 2$). Pabandykite juos visus išrašyti sistemiškai.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -18204,7 +18204,7 @@ export const exercises = [
           },
           {
             "title": "Palankių įvykių identifikavimas",
-            "action": "Surašome visas skaitines poras $(a, b)$, kur $1 \\\\le a, b \\\\le 6$ ir $a + b = 7$.",
+            "action": "Surašome visas skaitines poras $(a, b)$, kur $1 \\le a, b \\le 6$ ir $a + b = 7$.",
             "reason": "Tai nustato skaitiklį $m$ tikimybės formulei.",
             "result": "$m = 6$ poros: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$."
           },
@@ -18234,7 +18234,7 @@ export const exercises = [
         "id": "ex-olimpiada-05-f16ab6bb-trap-2",
         "title": "Bendra baigčių erdvė",
         "wrongMove": "Tikimybė skaičiuojama dalijant iš $11$ arba $12$ galimų sumų.",
-        "whyTempting": "Mokinys galvoja apie galimas sumas $\\\\{2, 3, \\\\dots, 12\\\\}$, kurių yra 11, o ne apie elementariąsias baigtis.",
+        "whyTempting": "Mokinys galvoja apie galimas sumas $\\{2, 3, \\dots, 12\\}$, kurių yra 11, o ne apie elementariąsias baigtis.",
         "correction": "Tikimybės skaičiuojamos naudojant vienodai galimas elementariąsias baigtis (pora skaičių), o ne galimas sumas, nes sumos nėra vienodai tikėtinos.",
         "reviewConceptIds": [
           "olimpiada-05-concept-logic"
@@ -18484,7 +18484,7 @@ export const exercises = [
           },
           {
             "title": "Sankirtos radimas",
-            "action": "Taikome formulę $|A \\\\cap B| = |A| + |B| - |A \\\\cup B|$.",
+            "action": "Taikome formulę $|A \\cap B| = |A| + |B| - |A \\cup B|$.",
             "reason": "Sankirta parodo elementus, kurie priklauso abiem aibėms vienu metu.",
             "result": "$15 + 12 - 20 = 7$."
           }
@@ -21511,15 +21511,15 @@ export const exercises = [
         "steps": [
           {
             "title": "Daugiklių medžio sudarymas",
-            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\\\cdot 6$, o $10$ į $2 \\\\cdot 5$.",
+            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\cdot 6$, o $10$ į $2 \\cdot 5$.",
             "reason": "Norint pasiekti 'matematinius atomus' – pirminius skaičius.",
             "result": "Gauti daugikliai $6, 6, 2, 5$."
           },
           {
             "title": "Galutinis išgryninimas",
-            "action": "Pakeiskite kiekvieną $6$ į $2 \\\\cdot 3$ ir surašykite viską laipsnių pavidalu.",
+            "action": "Pakeiskite kiekvieną $6$ į $2 \\cdot 3$ ir surašykite viską laipsnių pavidalu.",
             "reason": "Užtikrinama, kad visi sandaugos nariai yra pirminiai skaičiai.",
-            "result": "$360 = 2^3 \\\\cdot 3^2 \\\\cdot 5$."
+            "result": "$360 = 2^3 \\cdot 3^2 \\cdot 5$."
           }
         ],
         "finalAnswer": "Didžiausias pirminis daugiklis yra $5$."
@@ -21560,7 +21560,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra didžiausias skaičiaus $360$ pirminis daugiklis?",
-        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\\\cdot 3^2 \\\\cdot 5$.",
+        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\cdot 3^2 \\cdot 5$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -21648,7 +21648,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Pirminis išskaidymas",
-            "action": "Užrašykite $120 = 2^3 \\\\cdot 3^1 \\\\cdot 5^1$ ir $180 = 2^2 \\\\cdot 3^2 \\\\cdot 5^1$.",
+            "action": "Užrašykite $120 = 2^3 \\cdot 3^1 \\cdot 5^1$ ir $180 = 2^2 \\cdot 3^2 \\cdot 5^1$.",
             "reason": "Tai leidžia tiksliai matyti, kokie daugikliai sudaro kiekvieną skaičių.",
             "result": "Daugikliai paruošti analizei."
           },
@@ -21785,7 +21785,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Struktūros analizė",
-            "action": "Išskaidykite $1000$ į $2^3 \\\\cdot 5^3$.",
+            "action": "Išskaidykite $1000$ į $2^3 \\cdot 5^3$.",
             "reason": "Norint pamatyti, kaip galima suformuoti du skaičius.",
             "result": "Gauti pagrindiniai komponentai: trys '2' ir trys '5'."
           },
@@ -21922,7 +21922,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Pradinis išskaidymas",
-            "action": "Užrašykite $72 = 2^3 \\\\cdot 3^2$.",
+            "action": "Užrašykite $72 = 2^3 \\cdot 3^2$.",
             "reason": "Kad matytume esamų daugiklių kiekius.",
             "result": "Gauti laipsniai: $2$-eto yra $3$, $3$-eto yra $2$."
           },
@@ -22014,7 +22014,7 @@ export const exercises = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite reiškinio reikšmę: $\\\\sqrt{12^2 + 5^2}$.",
+    "statement": "Apskaičiuokite reiškinio reikšmę: $\\sqrt{12^2 + 5^2}$.",
     "answer": "Reikšmė lygi $13$.",
     "acceptedAnswers": [
       "Reikšmė lygi $13$."
@@ -22029,7 +22029,7 @@ export const exercises = [
       "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
       "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$)."
     ],
-    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\\\sqrt{169} = 13$ (nes $13^2 = 169$).",
+    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\sqrt{169} = 13$ (nes $13^2 = 169$).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -22065,7 +22065,7 @@ export const exercises = [
           },
           {
             "title": "Šaknies traukimas",
-            "action": "Sudėkite $144+25=169$ ir raskite $\\\\sqrt{169}$.",
+            "action": "Sudėkite $144+25=169$ ir raskite $\\sqrt{169}$.",
             "reason": "Tai galutinis veiksmas reiškinio reikšmei nustatyti.",
             "result": "Reikšmė lygi $13$."
           }
@@ -22077,7 +22077,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-06-95300ab8-trap-1",
         "title": "Šaknies skirstymas dėmenims",
-        "wrongMove": "Rašymas $\\\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
+        "wrongMove": "Rašymas $\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
         "whyTempting": "Atrodo paprasta 'panaikinti' kvadratų ir šaknies ženklus.",
         "correction": "Šaknis iš sumos nėra lygi šaknų sumai. Visada pirma sudėkite, o tik tada traukite šaknį.",
         "reviewConceptIds": [
@@ -22107,8 +22107,8 @@ export const exercises = [
         "id": "ex-olimpiada-06-95300ab8-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Ar tiesa, kad $\\\\sqrt{a^2 + b^2} = a + b$?",
-        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
+        "front": "Ar tiesa, kad $\\sqrt{a^2 + b^2} = a + b$?",
+        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -22196,7 +22196,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Sąlygų skaidymas",
-            "action": "Iškelkite reikalavimą: $b \\\\in \\\\{0, 2, 4, 6, 8\\\\}$ ir $(9+a+b)$ dalus iš $9$.",
+            "action": "Iškelkite reikalavimą: $b \\in \\{0, 2, 4, 6, 8\\}$ ir $(9+a+b)$ dalus iš $9$.",
             "reason": "Skaičius $18$ yra $2$ ir $9$ sandauga.",
             "result": "Gautos dvi lygiagrečios sąlygos skaitmenims."
           },
@@ -22301,7 +22301,7 @@ export const exercises = [
     "hints": [
       "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
       "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
-      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\\\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
+      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
     ],
     "solution": "Išskaidome skaičių $120$ pirminiais daugikliais: $120 = 2^3 \\times 3^1 \\times 5^1$. Išrašome kiekvieno pirminio daugiklio laipsnio rodiklius: dvejeto rodiklis yra $3$, trejeto – $1$, penketo – $1$. Prie kiekvieno rodiklio pridedame po $1$ (tai atspindi galimybę daugiklį paimti $0$ kartų): gausime $4, 2$ ir $2$. Sudauginame šiuos skaičius: $4 \\times 2 \\times 2 = 16$. Vadinasi, skaičius $120$ turi $16$ skirtingų daliklių.",
     "alternate": "",
@@ -22333,7 +22333,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Struktūrinė analizė",
-            "action": "Išskaidykite $120$ į $2^3 \\\\cdot 3^1 \\\\cdot 5^1$.",
+            "action": "Išskaidykite $120$ į $2^3 \\cdot 3^1 \\cdot 5^1$.",
             "reason": "Kad matytume, iš kokių 'blokų' galima sudėlioti daliklius.",
             "result": "Gauti rodikliai $3, 1, 1$."
           },
@@ -22381,8 +22381,8 @@ export const exercises = [
         "id": "ex-olimpiada-06-f2a0c71a-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\\\dots$ visų daliklių skaičių?",
-        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\\\dots$.",
+        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\dots$ visų daliklių skaičių?",
+        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\dots$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -22412,7 +22412,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\\\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
+        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -22472,7 +22472,7 @@ export const exercises = [
             "title": "Daliklių aibės sudarymas",
             "action": "Suraskite visus skaičius, iš kurių $28$ dalijasi be liekanos.",
             "reason": "Uždavinys reikalauja visų daliklių sumos.",
-            "result": "Aibė $\\\\{1, 2, 4, 7, 14, 28\\\\}$."
+            "result": "Aibė $\\{1, 2, 4, 7, 14, 28\\}$."
           },
           {
             "title": "Sumavimas",
@@ -22973,7 +22973,7 @@ export const exercises = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Šviesos greitis yra maždaug $300\\\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
+    "statement": "Šviesos greitis yra maždaug $300\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
     "answer": "Šviesos greitis yra $3 \\times 10^8$ m/s.",
     "acceptedAnswers": [
       "Šviesos greitis yra $3 \\times 10^8$ m/s."
@@ -22985,10 +22985,10 @@ export const exercises = [
     ],
     "hints": [
       "Pirmiausia kilometrus paverskite metrais. Prisiminkite, kad $1$ km = $1000$ m, todėl greitį reikia padauginti iš $1000$.",
-      "Šviesos greitis metrais per sekundę bus $300\\\\ 000 \\times 1000 = 300\\\\ 000\\\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
-      "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\\\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį."
+      "Šviesos greitis metrais per sekundę bus $300\\ 000 \\times 1000 = 300\\ 000\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
+      "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį."
     ],
-    "solution": "Kilometrus paverčiame metrais: $300\\\\ 000 \\text{ km/s} = 300\\\\ 000 \\times 1000 \\text{ m/s} = 300\\\\ 000\\\\ 000$ m/s. Skaičių $300\\\\ 000\\\\ 000$ turime užrašyti pavidalu $a \\times 10^n$. Čia $a = 3$. Suskaičiuojame skaitmenų kiekį po trejeto: yra lygiai $8$ nuliai. Vadinasi, greitis standartine išraiška yra $3 \\times 10^8$ m/s.",
+    "solution": "Kilometrus paverčiame metrais: $300\\ 000 \\text{ km/s} = 300\\ 000 \\times 1000 \\text{ m/s} = 300\\ 000\\ 000$ m/s. Skaičių $300\\ 000\\ 000$ turime užrašyti pavidalu $a \\times 10^n$. Čia $a = 3$. Suskaičiuojame skaitmenų kiekį po trejeto: yra lygiai $8$ nuliai. Vadinasi, greitis standartine išraiška yra $3 \\times 10^8$ m/s.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -22996,7 +22996,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Konvertuokite vienetus ir skaičiuokite nulius",
-      "text": "Pirmiausia kilometrus paverskite metrais (padauginkite iš $1000$). Tada gautą skaičių užrašykite forma $a \\times 10^n$, kur $1 \\\\le a < 10$."
+      "text": "Pirmiausia kilometrus paverskite metrais (padauginkite iš $1000$). Tada gautą skaičių užrašykite forma $a \\times 10^n$, kur $1 \\le a < 10$."
     },
     "strategyTags": [
       "standartinė-išraiška",
@@ -23018,9 +23018,9 @@ export const exercises = [
         "steps": [
           {
             "title": "Matavimo vienetų derinimas",
-            "action": "Padauginkite $300\\\\ 000$ iš $10^3$.",
+            "action": "Padauginkite $300\\ 000$ iš $10^3$.",
             "reason": "Užduotis reikalauja greičio metrais per sekundę.",
-            "result": "Gautas skaičius $300\\\\ 000\\\\ 000$."
+            "result": "Gautas skaičius $300\\ 000\\ 000$."
           },
           {
             "title": "Standartizavimas",
@@ -23066,8 +23066,8 @@ export const exercises = [
         "id": "ex-olimpiada-06-13d0b51d-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra šviesos greičio ($300\\\\ 000$ km/s) standartinė išraiška m/s?",
-        "back": "$3 \\times 10^8$ m/s (konvertavus: $300\\\\ 000\\\\ 000$ m/s).",
+        "front": "Kokia yra šviesos greičio ($300\\ 000$ km/s) standartinė išraiška m/s?",
+        "back": "$3 \\times 10^8$ m/s (konvertavus: $300\\ 000\\ 000$ m/s).",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -23090,14 +23090,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Šviesos greitis metrais per sekundę bus $300\\\\ 000 \\times 1000 = 300\\\\ 000\\\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
+        "text": "Šviesos greitis metrais per sekundę bus $300\\ 000 \\times 1000 = 300\\ 000\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\\\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį.",
+        "text": "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -23304,7 +23304,7 @@ export const exercises = [
           },
           {
             "title": "Sveikojo sprendinio parinkimas",
-            "action": "Iš intervalo $(-\\\\infty; -4)$ išrinkite didžiausią sveikąjį skaičių.",
+            "action": "Iš intervalo $(-\\infty; -4)$ išrinkite didžiausią sveikąjį skaičių.",
             "reason": "Reikia rasti konkretų sveikąjį sprendinį pagal sąlygą.",
             "result": "$-5$."
           }
@@ -23338,7 +23338,7 @@ export const exercises = [
     ],
     "reflectionPrompts": [
       "Kada nelygybės ženklas keičiasi į priešingą?",
-      "Kuo skirtųsi atsakymas, jei nelygybė būtų negriežta ($5 - 3x \\\\ge 17$)?"
+      "Kuo skirtųsi atsakymas, jei nelygybė būtų negriežta ($5 - 3x \\ge 17$)?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -23435,7 +23435,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Darbo apimties nustatymas",
-            "action": "Sudauginkite $3 \\\\cdot 6 = 18$.",
+            "action": "Sudauginkite $3 \\cdot 6 = 18$.",
             "reason": "Žmogaus-valandos parodo pastovų darbo kiekį.",
             "result": "$18$ žmogaus-valandų."
           },
@@ -23527,10 +23527,10 @@ export const exercises = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Prekės kaina buvo padidinta $25\\\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
-    "answer": "Kainą reikia sumažinti $20\\\\%$.",
+    "statement": "Prekės kaina buvo padidinta $25\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
+    "answer": "Kainą reikia sumažinti $20\\%$.",
     "acceptedAnswers": [
-      "Kainą reikia sumažinti $20\\\\%$."
+      "Kainą reikia sumažinti $20\\%$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -23540,9 +23540,9 @@ export const exercises = [
     "hints": [
       "Pasirinkite patogų skaičių pradinei kainai, pavyzdžiui, $100$ Eur. Kokia kaina taps po padidinimo?",
       "Po padidinimo kaina yra $125$ Eur. Norime grįžti prie $100$ Eur, todėl turime kainą sumažinti $25$ Eurais.",
-      "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\\\_kaina) \\times 100\\\\%$."
+      "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\_kaina) \\times 100\\%$."
     ],
-    "solution": "Tarkime, kad pradinė prekės kaina buvo $100$ vienetų. Padidinus kainą $25\\\\%$, naujoji kaina lygi $100 + 25 = 125$ vienetų. Norėdami grįžti prie pradinės kainos ($100$), turime naująją kainą sumažinti $125 - 100 = 25$ vienetais. Apskaičiuojame, kokią dalį sudaro šis sumažinimas nuo naujosios kainos: $25 / 125 = 1/5$. Paverčiame dalį procentais: $1/5 \\times 100\\\\% = 20\\\\%$.",
+    "solution": "Tarkime, kad pradinė prekės kaina buvo $100$ vienetų. Padidinus kainą $25\\%$, naujoji kaina lygi $100 + 25 = 125$ vienetų. Norėdami grįžti prie pradinės kainos ($100$), turime naująją kainą sumažinti $125 - 100 = 25$ vienetais. Apskaičiuojame, kokią dalį sudaro šis sumažinimas nuo naujosios kainos: $25 / 125 = 1/5$. Paverčiame dalį procentais: $1/5 \\times 100\\% = 20\\%$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -23550,7 +23550,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Sudarykite procentinį santykį",
-      "text": "Tarkime, kad pradinė kaina buvo $100$. Padidinus $25\\\\%$, kaina tapo $125$. Dabar reikia rasti, kokią dalį skaičiaus $125$ sudaro skirtumas $25$."
+      "text": "Tarkime, kad pradinė kaina buvo $100$. Padidinus $25\\%$, kaina tapo $125$. Dabar reikia rasti, kokią dalį skaičiaus $125$ sudaro skirtumas $25$."
     },
     "strategyTags": [
       "procentai",
@@ -23580,17 +23580,17 @@ export const exercises = [
             "title": "Atvirkštinio sumažinimo radimas",
             "action": "Apskaičiuokite $25 / 125$.",
             "reason": "Sumažinimas skaičiuojamas nuo naujosios (didesnės) bazės.",
-            "result": "$0.2$ arba $20\\\\%$."
+            "result": "$0.2$ arba $20\\%$."
           }
         ],
-        "finalAnswer": "Kainą reikia sumažinti $20\\\\%$."
+        "finalAnswer": "Kainą reikia sumažinti $20\\%$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-06-5a19da69-trap-1",
         "title": "Simetriškumo klaida",
-        "wrongMove": "Manymas, kad reikia sumažinti tiek pat procentų ($25\\\\%$).",
+        "wrongMove": "Manymas, kad reikia sumažinti tiek pat procentų ($25\\%$).",
         "whyTempting": "Atrodo logiška: jei padidinome $25$, tai ir sumažinti turime $25$.",
         "correction": "Padidinimas skaičiuojamas nuo mažesnės bazės, o sumažinimas – nuo didesnės. Todėl procentinė vertė sumažėja.",
         "reviewConceptIds": [
@@ -23603,7 +23603,7 @@ export const exercises = [
         "title": "Neteisingos bazės pasirinkimas",
         "wrongMove": "Skaičiavimas $25$ nuo $100$ Eurų sumažinimo etape.",
         "whyTempting": "Mokiniai nesąmoningai viską lygina su pradiniu skaičiumi.",
-        "correction": "Sumažinimas vyksta NUO naujosios kainos, todėl ji tampa pagrindu ($100\\\\%$).",
+        "correction": "Sumažinimas vyksta NUO naujosios kainos, todėl ji tampa pagrindu ($100\\%$).",
         "reviewConceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -23612,7 +23612,7 @@ export const exercises = [
     ],
     "reflectionPrompts": [
       "Kodėl sumažinimo procentas yra mažesnis už padidinimo procentą?",
-      "Kas būtų, jei kainą pirma sumažintume $20\\\\%$, o tada padidintume $25\\\\%$?"
+      "Kas būtų, jei kainą pirma sumažintume $20\\%$, o tada padidintume $25\\%$?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -23620,8 +23620,8 @@ export const exercises = [
         "id": "ex-olimpiada-06-5a19da69-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Jei kaina padidėjo $25\\\\%$, kiek procentų ją reikia sumažinti iki pradinės?",
-        "back": "Reikia sumažinti $20\\\\%$ (skaičiuojant $25 / 125$).",
+        "front": "Jei kaina padidėjo $25\\%$, kiek procentų ją reikia sumažinti iki pradinės?",
+        "back": "Reikia sumažinti $20\\%$ (skaičiuojant $25 / 125$).",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -23651,7 +23651,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\\\_kaina) \\times 100\\\\%$.",
+        "text": "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\_kaina) \\times 100\\%$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -23709,13 +23709,13 @@ export const exercises = [
         "steps": [
           {
             "title": "Vieno traktoriaus galios radimas",
-            "action": "Apskaičiuokite $60 / (5 \\\\cdot 4)$.",
+            "action": "Apskaičiuokite $60 / (5 \\cdot 4)$.",
             "reason": "Svarbu žinoti bazinį vieneto darbo kiekį.",
             "result": "$3$ ha per traktorių per dieną."
           },
           {
             "title": "Rezultato mastelio keitimas",
-            "action": "Padauginkite $3$ iš naujų kintamųjų: $3 \\\\cdot 8 \\\\cdot 3$.",
+            "action": "Padauginkite $3$ iš naujų kintamųjų: $3 \\cdot 8 \\cdot 3$.",
             "reason": "Darbo kiekis tiesiogiai proporcingas traktorių ir dienų skaičiui.",
             "result": "$72$ ha."
           }
@@ -23846,7 +23846,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Bendrųjų verčių skaičiavimas",
-            "action": "Sudauginkite kiekius su atitinkamais vidurkiais: $5 \\\\cdot 12$ ir $6 \\\\cdot 14$.",
+            "action": "Sudauginkite kiekius su atitinkamais vidurkiais: $5 \\cdot 12$ ir $6 \\cdot 14$.",
             "reason": "Vidurkio formulė $V = Suma / Kiekis$ leidžia rasti sumą.",
             "result": "Sumos $60$ ir $84$."
           },
@@ -23938,10 +23938,10 @@ export const exercises = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\\\pi$).",
-    "answer": "Plotas lygus $100 - 25\\\\pi$ cm$^2$.",
+    "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).",
+    "answer": "Plotas lygus $100 - 25\\pi$ cm$^2$.",
     "acceptedAnswers": [
-      "Plotas lygus $100 - 25\\\\pi$ cm$^2$."
+      "Plotas lygus $100 - 25\\pi$ cm$^2$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -23951,9 +23951,9 @@ export const exercises = [
     "hints": [
       "Nupieškite kvadratą ir į jį įbrėžtą apskritimą. Pastebėkite, kad apskritimo skersmuo yra lygus kvadrato kraštinei ($10$ cm).",
       "Apskaičiuokite kvadrato plotą ($10^2$) ir apskritimo plotą. Prisiminkite, kad apskritimo spindulys yra pusė skersmens, t. y. $5$ cm.",
-      "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\\\pi$, neatlikdami apytikslių skaičiavimų."
+      "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\pi$, neatlikdami apytikslių skaičiavimų."
     ],
-    "solution": "Apskaičiuojame kvadrato plotą: $S_{kv} = 10^2 = 100\\text{ cm}^2$. Nustatome apskritimo spindulį: $r = 10 / 2 = 5$ cm. Apskaičiuojame apskritimo plotą: $S_{ap} = \\\\pi \\times r^2 = 25\\\\pi\\text{ cm}^2$. Randame ieškomą plotą atimdami apskritimo plotą iš kvadrato ploto: $S = 100 - 25\\\\pi\\text{ cm}^2$.",
+    "solution": "Apskaičiuojame kvadrato plotą: $S_{kv} = 10^2 = 100\\text{ cm}^2$. Nustatome apskritimo spindulį: $r = 10 / 2 = 5$ cm. Apskaičiuojame apskritimo plotą: $S_{ap} = \\pi \\times r^2 = 25\\pi\\text{ cm}^2$. Randame ieškomą plotą atimdami apskritimo plotą iš kvadrato ploto: $S = 100 - 25\\pi\\text{ cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -23989,19 +23989,19 @@ export const exercises = [
           },
           {
             "title": "Plotų radimas ir atimtis",
-            "action": "Apskaičiuokite $10^2 - \\\\pi \\\\cdot 5^2$.",
+            "action": "Apskaičiuokite $10^2 - \\pi \\cdot 5^2$.",
             "reason": "Likusios dalies plotas gaunamas iš visumos atimant vidinę figūrą.",
-            "result": "$100 - 25\\\\pi$."
+            "result": "$100 - 25\\pi$."
           }
         ],
-        "finalAnswer": "Plotas lygus $100 - 25\\\\pi$ cm$^2$."
+        "finalAnswer": "Plotas lygus $100 - 25\\pi$ cm$^2$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-06-bfec6fed-trap-1",
         "title": "Skersmens ir spindulio painiojimas",
-        "wrongMove": "Apskritimo ploto skaičiavimas su spinduliu $10$ cm ($S = 100\\\\pi$).",
+        "wrongMove": "Apskritimo ploto skaičiavimas su spinduliu $10$ cm ($S = 100\\pi$).",
         "whyTempting": "Skaičius $10$ yra duotas sąlygoje, todėl mokiniai jį naudoja formulėse nepagalvoję.",
         "correction": "Visada patikrinkite, ar sąlygoje duota kraštinė atitinka spindulį, ar skersmenį. Čia spindulys yra $5$ cm.",
         "reviewConceptIds": [
@@ -24012,7 +24012,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-06-bfec6fed-trap-2",
         "title": "Formulės užrašymo klaida",
-        "wrongMove": "Manymas, kad apskritimo plotas yra $2\\\\pi r$ (perimetras) vietoj $\\\\pi r^2$.",
+        "wrongMove": "Manymas, kad apskritimo plotas yra $2\\pi r$ (perimetras) vietoj $\\pi r^2$.",
         "whyTempting": "Dvi panašios apskritimo formulės dažnai painiojamos tarpusavyje.",
         "correction": "Plotas matuojamas kvadratiniais vienetais, todėl formulėje spindulys privalo būti keliamas kvadratu.",
         "reviewConceptIds": [
@@ -24062,7 +24062,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\\\pi$, neatlikdami apytikslių skaičiavimų.",
+        "text": "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\pi$, neatlikdami apytikslių skaičiavimų.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -24075,10 +24075,10 @@ export const exercises = [
     "topicId": "olimpiada-06",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\\\pi$).",
-    "answer": "Perimetras lygus $14\\\\pi$ cm.",
+    "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\pi$).",
+    "answer": "Perimetras lygus $14\\pi$ cm.",
     "acceptedAnswers": [
-      "Perimetras lygus $14\\\\pi$ cm."
+      "Perimetras lygus $14\\pi$ cm."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -24088,9 +24088,9 @@ export const exercises = [
     "hints": [
       "Įsivaizduokite figūrą: stačiakampis išnyksta, o jo vietą užima keturi lankai. Jums reikia apskaičiuoti tik šių išorinių lankų ilgių sumą.",
       "Turite dvi poras pusapskritimių. Viena pora pusapskritimių su skersmeniu $8$ cm sudaro vieną pilną apskritimą. Kita pora su skersmeniu $6$ cm – taip pat.",
-      "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\\\pi d$. Sudėkite $8\\\\pi$ ir $6\\\\pi$."
+      "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\pi d$. Sudėkite $8\\pi$ ir $6\\pi$."
     ],
-    "solution": "Nustatome, kad figūros perimetrą sudaro du pusapskritimiai, kurių skersmuo $d_1 = 8$ cm, ir du pusapskritimiai, kurių skersmuo $d_2 = 6$ cm. Pusapskritimo lanko ilgio formulė yra $L = \\\\pi d / 2$. Apskaičiuojame pirmosios poros lankų sumą: $2 \\times (8\\\\pi / 2) = 8\\\\pi$ cm. Apskaičiuojame antrosios poros lankų sumą: $2 \\times (6\\\\pi / 2) = 6\\\\pi$ cm. Sudedame visus ilgius: $8\\\\pi + 6\\\\pi = 14\\\\pi$ cm.",
+    "solution": "Nustatome, kad figūros perimetrą sudaro du pusapskritimiai, kurių skersmuo $d_1 = 8$ cm, ir du pusapskritimiai, kurių skersmuo $d_2 = 6$ cm. Pusapskritimo lanko ilgio formulė yra $L = \\pi d / 2$. Apskaičiuojame pirmosios poros lankų sumą: $2 \\times (8\\pi / 2) = 8\\pi$ cm. Apskaičiuojame antrosios poros lankų sumą: $2 \\times (6\\pi / 2) = 6\\pi$ cm. Sudedame visus ilgius: $8\\pi + 6\\pi = 14\\pi$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -24098,7 +24098,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Suskaičiuokite lankų ilgius",
-      "text": "Figūros perimetrą sudaro $4$ pusapskritimių lankai. Pusapskritimo lanko ilgis yra $\\frac{\\\\pi d}{2}$. Sudėkite visus keturis ilgius."
+      "text": "Figūros perimetrą sudaro $4$ pusapskritimių lankai. Pusapskritimo lanko ilgis yra $\\frac{\\pi d}{2}$. Sudėkite visus keturis ilgius."
     },
     "strategyTags": [
       "figūrų-perimetrai",
@@ -24126,12 +24126,12 @@ export const exercises = [
           },
           {
             "title": "Ilgio apskaičiavimas",
-            "action": "Sudėkite $\\\\pi \\\\cdot 8 + \\\\pi \\\\cdot 6$.",
+            "action": "Sudėkite $\\pi \\cdot 8 + \\pi \\cdot 6$.",
             "reason": "Du pusapskritimiai sudaro pilną apskritimą.",
-            "result": "$14\\\\pi$."
+            "result": "$14\\pi$."
           }
         ],
-        "finalAnswer": "Perimetras lygus $14\\\\pi$ cm."
+        "finalAnswer": "Perimetras lygus $14\\pi$ cm."
       }
     ],
     "commonTraps": [
@@ -24149,7 +24149,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-06-507d1998-trap-2",
         "title": "Pusapskritimo ilgio formulės klaida",
-        "wrongMove": "Dauginimas $\\\\pi r^2 / 2$ (ploto formulė) vietoj lanko ilgio skaičiavimo.",
+        "wrongMove": "Dauginimas $\\pi r^2 / 2$ (ploto formulė) vietoj lanko ilgio skaičiavimo.",
         "whyTempting": "Painiojamos perimetro ir ploto sąvokos bei jų formulės.",
         "correction": "Ilgis (perimetras) matuojamas tiesiniais vienetais, todėl naudojama formulė su skersmeniu arba spinduliu pirmuoju laipsniu.",
         "reviewConceptIds": [
@@ -24169,7 +24169,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra pusapskritimo lanko ilgis, jei jo skersmuo yra $d$?",
-        "back": "$L = \\\\pi d / 2$ arba $L = \\\\pi r$.",
+        "back": "$L = \\pi d / 2$ arba $L = \\pi r$.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -24199,7 +24199,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\\\pi d$. Sudėkite $8\\\\pi$ ir $6\\\\pi$.",
+        "text": "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\pi d$. Sudėkite $8\\pi$ ir $6\\pi$.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -24370,9 +24370,9 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: raskite vienos sienos plotą. Ar galite tai pritaikyti?",
       "Metodas: Kubas turi $6$ lygias kvadratines sienas. Padalykite bendrą plotą iš $6$, kad sužinotumėte sienos plotą, tada raskite briaunos ilgį ir apskaičiuokite tūrį.",
-      "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\\\implies a^2 = 25$. Kubo briau..."
+      "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\implies a^2 = 25$. Kubo briau..."
     ],
-    "solution": "Kubas turi $6$ lygias kvadratines sienas. Pirmiausia randame vienos sienos plotą: $S_{siena} = 150 / 6 = 25\\text{ cm}^2$. Kadangi siena yra kvadratas, jo briaunos ilgį $a$ randame ištraukę kvadratinę šaknį iš ploto: $a = \\\\sqrt{25} = 5$ cm. Galiausiai apskaičiuojame kubo tūrį pagal formulę $V = a^3$: $V = 5^3 = 125\\text{ cm}^3$.",
+    "solution": "Kubas turi $6$ lygias kvadratines sienas. Pirmiausia randame vienos sienos plotą: $S_{siena} = 150 / 6 = 25\\text{ cm}^2$. Kadangi siena yra kvadratas, jo briaunos ilgį $a$ randame ištraukę kvadratinę šaknį iš ploto: $a = \\sqrt{25} = 5$ cm. Galiausiai apskaičiuojame kubo tūrį pagal formulę $V = a^3$: $V = 5^3 = 125\\text{ cm}^3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -24496,7 +24496,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\\\implies a^2 = 25$. Kubo briau...",
+        "text": "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\implies a^2 = 25$. Kubo briau...",
         "penalty": 0.12
       }
     ]
@@ -24820,9 +24820,9 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: taikykite pitagoro teoremą. Ar galite tai pritaikyti?",
       "Metodas: Statusis trikampis tenkina sąryšį $a^2 + b^2 = c^2$. Žinodami įžambinę $c=10$ ir statinį $a=6$, raskite $b$. Trikampio plotas lygus $\\frac{1}{2} a b$.",
-      "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\\\implies 36 + b^2 = 100 \\\\implies b^2 = 64 \\\\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$."
+      "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\implies 36 + b^2 = 100 \\implies b^2 = 64 \\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$."
     ],
-    "solution": "Taikome Pitagoro teoremą $a^2 + b^2 = c^2$, kur $c$ yra įžambinė ($10$ cm), o $a$ – žinomas statinis ($6$ cm). Apskaičiuojame nežinomo statinio kvadratą: $b^2 = 10^2 - 6^2 = 100 - 36 = 64$. Ištraukiame kvadratinę šaknį ir randame statinio ilgį: $b = \\\\sqrt{64} = 8$ cm. Apskaičiuojame stačiojo trikampio plotą sudaugindami statinius ir padalindami iš dviejų: $S = (6 \\times 8) / 2 = 24\\text{ cm}^2$.",
+    "solution": "Taikome Pitagoro teoremą $a^2 + b^2 = c^2$, kur $c$ yra įžambinė ($10$ cm), o $a$ – žinomas statinis ($6$ cm). Apskaičiuojame nežinomo statinio kvadratą: $b^2 = 10^2 - 6^2 = 100 - 36 = 64$. Ištraukiame kvadratinę šaknį ir randame statinio ilgį: $b = \\sqrt{64} = 8$ cm. Apskaičiuojame stačiojo trikampio plotą sudaugindami statinius ir padalindami iš dviejų: $S = (6 \\times 8) / 2 = 24\\text{ cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -24852,13 +24852,13 @@ export const exercises = [
         "steps": [
           {
             "title": "Nežinomos kraštinės radimas",
-            "action": "Atlikite skaičiavimą $\\\\sqrt{c^2 - a^2}$.",
+            "action": "Atlikite skaičiavimą $\\sqrt{c^2 - a^2}$.",
             "reason": "Stačiajame trikampyje statinių kvadratų suma lygi įžambinės kvadratui.",
             "result": "Statinis lygus $8$ cm."
           },
           {
             "title": "Ploto skaičiavimas",
-            "action": "Pritaikykite formulę $S = (a \\\\cdot b) / 2$.",
+            "action": "Pritaikykite formulę $S = (a \\cdot b) / 2$.",
             "reason": "Stačiojo trikampio plotas yra lygus pusei stačiakampio, sudaryto iš jo statinių, ploto.",
             "result": "Plotas $24\\text{ cm}^2$."
           }
@@ -24940,7 +24940,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\\\implies 36 + b^2 = 100 \\\\implies b^2 = 64 \\\\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.",
+        "text": "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\implies 36 + b^2 = 100 \\implies b^2 = 64 \\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.",
         "penalty": 0.12
       }
     ]
@@ -24964,9 +24964,9 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: naudokite lygių trikampių savybes. Ar galite tai pritaikyti?",
       "Metodas: Kadangi trikampiai yra lygūs, jų perimetrai ir atitinkamos kraštinės yra lygios. Raskite trečiąją trikampio $ABC$ kraštinę.",
-      "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm."
+      "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm."
     ],
-    "solution": "Lygūs trikampiai turi vienodus perimetrus, todėl trikampio $ABC$ perimetras taip pat lygus $18$ cm. Trikampio $ABC$ perimetras lygus jo kraštinių sumai: $P = AB + BC + AC = 18$. Įstatome žinomas reikšmes ($AB = 5$, $BC = 7$): $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi trikampiai $ABC$ ir $DEF$ lygūs, jų atitinkamos kraštinės yra lygios. Kraštinė $AC$ atitinka kraštinę $DF$, todėl $DF = 6$ cm.",
+    "solution": "Lygūs trikampiai turi vienodus perimetrus, todėl trikampio $ABC$ perimetras taip pat lygus $18$ cm. Trikampio $ABC$ perimetras lygus jo kraštinių sumai: $P = AB + BC + AC = 18$. Įstatome žinomas reikšmes ($AB = 5$, $BC = 7$): $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi trikampiai $ABC$ ir $DEF$ lygūs, jų atitinkamos kraštinės yra lygios. Kraštinė $AC$ atitinka kraštinę $DF$, todėl $DF = 6$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -25090,7 +25090,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\\\implies 12 + AC = 18 \\\\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm.",
+        "text": "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm.",
         "penalty": 0.12
       }
     ]
@@ -25114,9 +25114,9 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: fiksuokite paskutinį skaitmenį. Ar galite tai pritaikyti?",
       "Metodas: Kad skaičius būtų lyginis, jis turi baigtis $2$ arba $4$. Apskaičiuokite variantus kiekvienam iš šių atvejų panaudodami faktorialo taisyklę.",
-      "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra ..."
+      "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\{1, 2, 3, 4, 5\\}$ yra ..."
     ],
-    "solution": "Penkiaženklis skaičius yra lyginis tada, kai jo paskutinis skaitmuo yra lyginis. Duotoje aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra tik du lyginiai skaitmenys: $2$ ir $4$. Paskutinę skaičiaus vietą galime užpildyti $2$ būdais ($2$ arba $4$). Likusios keturios pozicijos užpildomos likusiais keturiais skaitmenimis bet kokia tvarka. Tai yra kėliniai iš $4$ elementų: $P_4 = 4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių kiekis randamas sudauginus paskutinio skaitmens pasirinkimo būdus iš likusių pozicijų derinių skaičiaus: $2 \\times 24 = 48$.",
+    "solution": "Penkiaženklis skaičius yra lyginis tada, kai jo paskutinis skaitmuo yra lyginis. Duotoje aibėje $\\{1, 2, 3, 4, 5\\}$ yra tik du lyginiai skaitmenys: $2$ ir $4$. Paskutinę skaičiaus vietą galime užpildyti $2$ būdais ($2$ arba $4$). Likusios keturios pozicijos užpildomos likusiais keturiais skaitmenimis bet kokia tvarka. Tai yra kėliniai iš $4$ elementų: $P_4 = 4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių kiekis randamas sudauginus paskutinio skaitmens pasirinkimo būdus iš likusių pozicijų derinių skaičiaus: $2 \\times 24 = 48$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -25158,7 +25158,7 @@ export const exercises = [
           },
           {
             "title": "Bendros sumos radimas",
-            "action": "Sudauginkite $2 \\\\cdot 24$.",
+            "action": "Sudauginkite $2 \\cdot 24$.",
             "reason": "Taikoma kombinatorinė sandaugos taisyklė nepriklausomiems pasirinkimams.",
             "result": "Iš viso $48$ skaičiai."
           }
@@ -25240,7 +25240,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ yra ...",
+        "text": "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\{1, 2, 3, 4, 5\\}$ yra ...",
         "penalty": 0.12
       }
     ]
@@ -25414,7 +25414,7 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: dauginkite nepriklausomų įvykių tikimybes. Ar galite tai pritaikyti?",
       "Metodas: Šie du įvykiai yra nepriklausomi. Tikimybė gauti lyginį taškų skaičių kauliuku lygi $\\frac{3}{6} = \\frac{1}{2}$. Tikimybė gauti herbą moneta lygi $\\frac{1}{2}$.",
-      "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P..."
+      "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...$"
     ],
     "solution": "Nagrinėjame du nepriklausomus eksperimentus. Pirmiausia randame tikimybę, kad lošimo kauliukas parodys lyginį skaičių ($2, 4$ arba $6$). Palankių baigčių yra $3$, o visų galimų – $6$. Tikimybė $P_1 = 3/6 = 1/2$. Tada randame tikimybę, kad moneta atvirs herbu. Yra tik dvi galimos baigtys (herbas arba skaičius), todėl tikimybė $P_2 = 1/2$. Kadangi šie įvykiai yra nepriklausomi, bendra tikimybė, kad abu jie įvyks kartu, lygi jų tikimybių sandaugai: $P = P_1 \\times P_2 = 1/2 \\times 1/2 = 1/4$.",
     "alternate": "",
@@ -25534,7 +25534,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...",
+        "text": "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...$",
         "penalty": 0.12
       }
     ]
@@ -25708,9 +25708,9 @@ export const exercises = [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: naudokite papildomąjį įvykį. Ar galite tai pritaikyti?",
       "Metodas: Vietoje to, kad skaičiuotumėte visus sudėtingus variantus tiesiogiai, apskaičiuokite tikimybę, kad nė ant vieno iš trijų kauliukų neiškris $6$ akutės, ir atimkite ją iš $1$.",
-      "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg..."
+      "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...$"
     ],
-    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\\\%$) Gauta išvada: Tikimybė lygi $\\frac{91}{216}$.",
+    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$) Gauta išvada: Tikimybė lygi $\\frac{91}{216}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -25746,7 +25746,7 @@ export const exercises = [
           },
           {
             "title": "Sprendimo žingsnis",
-            "action": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\\\%$)",
+            "action": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$)",
             "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
             "result": "Tikimybė lygi $\\frac{91}{216}$."
           }
@@ -25828,7 +25828,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...",
+        "text": "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...$",
         "penalty": 0.12
       }
     ]
@@ -25851,10 +25851,10 @@ export const exercises = [
     "hints": [
       "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
       "Svarbus pastebėjimas: pritaikykite trijų aibių įtraukties formulę. Ar galite tai pritaikyti?",
-      "Metodas: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+      "Metodas: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
       "Detalus atlikimas: Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir i..."
     ],
-    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\\\cup V \\\\cup P| = |A| + |V| + |P| - (|A \\\\cap V| + |V \\\\cap P| + |A \\\\cap P|) + |A \\\\cap V \\\\cap P|$\n$|A \\\\cup V \\\\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai. Gauta išvada: Nekalba nei viena iš kalbų $8$ turistai.",
+    "solution": "Perskaitome ir išanalizuojame uždavinio sąlygą. Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai. Gauta išvada: Nekalba nei viena iš kalbų $8$ turistai.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -25862,7 +25862,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Pritaikykite trijų aibių įtraukties formulę",
-      "text": "Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba."
+      "text": "Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba."
     },
     "strategyTags": [
       "įtrauktis-išskirtis",
@@ -25890,7 +25890,7 @@ export const exercises = [
           },
           {
             "title": "Sprendimo žingsnis",
-            "action": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\\\cup V \\\\cup P| = |A| + |V| + |P| - (|A \\\\cap V| + |V \\\\cap P| + |A \\\\cap P|) + |A \\\\cap V \\\\cap P|$\n$|A \\\\cup V \\\\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai.",
+            "action": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai.",
             "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
             "result": "Nekalba nei viena iš kalbų $8$ turistai."
           }
@@ -25933,7 +25933,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Iš $100$ turistų, $50$ kalba angliškai, $40$ kalba vokiškai,...",
-        "back": "Taikome šį metodą: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+        "back": "Taikome šį metodą: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
         "conceptIds": [
           "olimpiada-06-concept-logic"
         ],
@@ -25963,7 +25963,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Metodas: Naudokite formulę: $|A \\\\cup B \\\\cup C| = |A| + |B| + |C| - |A \\\\cap B| - |B \\\\cap C| - |A \\\\cap C| + |A \\\\cap B \\\\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+        "text": "Metodas: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
         "revealsConceptIds": [
           "olimpiada-06-concept-method"
         ],
@@ -29728,11 +29728,11 @@ export const exercises = [
     ],
     "hints": [
       "Apskaičiuokite pirmųjų dviejų laipsnių liekanas dalijant iš 7.",
-      "Pastebėkite, kad $2^3 = 8 \\\\equiv 1 \\\\pmod 7$.",
-      "Užrašykite rodiklį $2026$ kaip $3 \\\\cdot 675 + 1$.",
-      "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\\\cdot 2^1 \\\\equiv 1^{675} \\\\cdot 2 \\\\pmod 7$."
+      "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
+      "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
+      "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$."
     ],
-    "solution": "Pastebime, kad $2^3 \\\\equiv 1 \\\\pmod 7$. Padalijame rodiklį: $2026 = 3 \\\\times 675 + 1$. Pertvarkome laipsnį: $2^{2026} = (2^3)^{675} \\\\cdot 2^1 \\\\equiv 1^{675} \\\\cdot 2 \\\\equiv 2 \\\\pmod 7$.",
+    "solution": "Pastebime, kad $2^3 \\equiv 1 \\pmod 7$. Padalijame rodiklį: $2026 = 3 \\times 675 + 1$. Pertvarkome laipsnį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -29765,22 +29765,22 @@ export const exercises = [
             "title": "Periodo radimas",
             "action": "Apskaičiuojame pirmąsias 2 laipsnių liekanas moduliu 7.",
             "reason": "Ieškome tokio laipsnio, kuris duotų liekaną 1, kad galėtume supaprastinti didelį laipsnį.",
-            "result": "$2^1 \\\\equiv 2$, $2^2 \\\\equiv 4$, $2^3 = 8 \\\\equiv 1 \\\\pmod 7$.",
-            "latex": "2^3 \\\\equiv 1 \\\\pmod 7"
+            "result": "$2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 = 8 \\equiv 1 \\pmod 7$.",
+            "latex": "2^3 \\equiv 1 \\pmod 7"
           },
           {
             "title": "Rodiklio skaidymas",
             "action": "Padalijame rodiklį 2026 iš gauto periodo 3.",
             "reason": "Tai leidžia išreikšti didelį laipsnį per mažesnį, kurio reikšmė moduliu 7 yra žinoma.",
-            "result": "$2026 = 3 \\\\cdot 675 + 1$.",
-            "latex": "2026 = 3 \\\\times 675 + 1"
+            "result": "$2026 = 3 \\cdot 675 + 1$.",
+            "latex": "2026 = 3 \\times 675 + 1"
           },
           {
             "title": "Galutinė liekana",
             "action": "Pertvarkome reiškinį naudodami laipsnių savybes.",
-            "reason": "Kadangi $2^3 \\\\equiv 1$, tai bet koks jo laipsnis išlieka lygus 1 moduliu 7.",
-            "result": "$2^{2026} = (2^3)^{675} \\\\cdot 2^1 \\\\equiv 1^{675} \\\\cdot 2 \\\\equiv 2 \\\\pmod 7$.",
-            "latex": "2^{2026} \\\\equiv 1^{675} \\\\cdot 2 \\\\equiv 2 \\\\pmod 7"
+            "reason": "Kadangi $2^3 \\equiv 1$, tai bet koks jo laipsnis išlieka lygus 1 moduliu 7.",
+            "result": "$2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
+            "latex": "2^{2026} \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7"
           }
         ],
         "finalAnswer": "Dalybos liekana yra 2."
@@ -29794,8 +29794,8 @@ export const exercises = [
         "wrongMove": "Teigti, kad liekana kartojasi kas 7 laipsnius.",
         "whyTempting": "Manoma, kad periodas būtinai sutampa su pačiu dalikliu (moduliu).",
         "whyItHappens": "Neperskaitomos pirmosios liekanos ir daroma skubota prielaida.",
-        "wrongPattern": "2^n \\\\pmod 7 \\text{ kartojasi kas } 7 \\text{ žingsnius}.",
-        "correction": "Liekanų periodas visada yra daliklio $m$ daliklis (pagal Ferma mažąją teoremą $n^{m-1} \\\\equiv 1$), bet nebūtinai pats $m$. Reikia tikrinti konkrečias reikšmes.",
+        "wrongPattern": "2^n \\pmod 7 \\text{ kartojasi kas } 7 \\text{ žingsnius}.",
+        "correction": "Liekanų periodas visada yra daliklio $m$ daliklis (pagal Ferma mažąją teoremą $n^{m-1} \\equiv 1$), bet nebūtinai pats $m$. Reikia tikrinti konkrečias reikšmes.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -29807,8 +29807,8 @@ export const exercises = [
         "wrongMove": "Manyti, kad $2^3 = 6$.",
         "whyTempting": "Skubant laipsnio rodiklis supainiojamas su daugikliu.",
         "whyItHappens": "Elementari dėmesio klaida atliekant mintinus skaičiavimus.",
-        "wrongPattern": "2^3 = 6 \\\\implies 6 \\\\equiv -1 \\\\pmod 7.",
-        "correction": "Būtina prisiminti, kad kėlimas laipsniu yra kartotinė daugyba: $2^3 = 2 \\\\cdot 2 \\\\cdot 2 = 8$.",
+        "wrongPattern": "2^3 = 6 \\implies 6 \\equiv -1 \\pmod 7.",
+        "correction": "Būtina prisiminti, kad kėlimas laipsniu yra kartotinė daugyba: $2^3 = 2 \\cdot 2 \\cdot 2 = 8$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -29824,8 +29824,8 @@ export const exercises = [
         "id": "ex-olimpiada-07-1db2920b-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kaip greitai rasti didelio laipsnio $a^n \\\\pmod m$ liekaną?",
-        "back": "Ieškome tokio mažo laipsnio $k$, kad $a^k \\\\equiv 1 \\\\pmod m$, tada laipsnio rodiklį $n$ dalijame iš $k$.",
+        "front": "Kaip greitai rasti didelio laipsnio $a^n \\pmod m$ liekaną?",
+        "back": "Ieškome tokio mažo laipsnio $k$, kad $a^k \\equiv 1 \\pmod m$, tada laipsnio rodiklį $n$ dalijame iš $k$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -29839,7 +29839,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "fact",
         "front": "Kokia yra $2^{2026}$ dalybos iš 7 liekana?",
-        "back": "Liekana yra 2. Tai gaunama pastebėjus, kad $2^3 \\\\equiv 1 \\\\pmod 7$ ir $2026 = 3 \\\\cdot 675 + 1$.",
+        "back": "Liekana yra 2. Tai gaunama pastebėjus, kad $2^3 \\equiv 1 \\pmod 7$ ir $2026 = 3 \\cdot 675 + 1$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -29858,21 +29858,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pastebėkite, kad $2^3 = 8 \\\\equiv 1 \\\\pmod 7$.",
+        "text": "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Užrašykite rodiklį $2026$ kaip $3 \\\\cdot 675 + 1$.",
+        "text": "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\\\cdot 2^1 \\\\equiv 1^{675} \\\\cdot 2 \\\\pmod 7$.",
+        "text": "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -29897,9 +29897,9 @@ export const exercises = [
       "Prisiminkite dalumo iš 9 taisyklę.",
       "Apskaičiuokite visų skaitmenų nuo 1 iki 20 sumą.",
       "Suskaičiuokite vienetų ir dešimčių skaitmenų sumą atskirai: skaitmenys 1-9 sumuojasi į 45, o skaičiams 10-19 dešimtys yra 10 vienetų, o vienetai vėl yra 0-9.",
-      "Bendra skaitmenų suma: $45 + 10 \\\\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną."
+      "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną."
     ],
-    "solution": "Apskaičiuojame skaitmenų sumą: nuo 1 iki 9 suma yra $45$. Nuo 10 iki 19 skaitmenų suma yra $10 \\\\times 1 + 45 = 55$. Skaičiaus 20 skaitmenų suma yra $2 + 0 = 2$. Bendra skaitmenų suma lygi $45 + 55 + 2 = 102$. Skaičiaus 102 skaitmenų suma lygi $1+0+2=3$. Todėl liekana dalijant iš 9 yra 3.",
+    "solution": "Apskaičiuojame skaitmenų sumą: nuo 1 iki 9 suma yra $45$. Nuo 10 iki 19 skaitmenų suma yra $10 \\times 1 + 45 = 55$. Skaičiaus 20 skaitmenų suma yra $2 + 0 = 2$. Bendra skaitmenų suma lygi $45 + 55 + 2 = 102$. Skaičiaus 102 skaitmenų suma lygi $1+0+2=3$. Todėl liekana dalijant iš 9 yra 3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -29939,15 +29939,15 @@ export const exercises = [
             "title": "Dešimčių skaitmenų suma",
             "action": "Suskaičiuojame dešimčių pozicijose esančių skaitmenų sumą.",
             "reason": "Skaičiai nuo 10 iki 19 visi turi dešimtį 1, o skaičius 20 turi 2.",
-            "result": "Dešimtys nuo 10 iki 19 duoda $10 \\\\cdot 1 = 10$. Skaičius 20 prideda 2. Bendra: $10+2=12$.",
-            "latex": "S_d = 10 \\\\cdot 1 + 2 = 12"
+            "result": "Dešimtys nuo 10 iki 19 duoda $10 \\cdot 1 = 10$. Skaičius 20 prideda 2. Bendra: $10+2=12$.",
+            "latex": "S_d = 10 \\cdot 1 + 2 = 12"
           },
           {
             "title": "Galutinės liekanos radimas",
             "action": "Sudedame visas dalines sumas ir randame liekaną moduliu 9.",
             "reason": "Pagal dalumo požymį, skaičiaus liekana sutampa su jo skaitmenų sumos liekana.",
             "result": "Bendra suma $90 + 12 = 102$. Skaičiaus 102 skaitmenų suma $1+0+2=3$.",
-            "latex": "102 \\\\equiv 3 \\\\pmod 9"
+            "latex": "102 \\equiv 3 \\pmod 9"
           }
         ],
         "finalAnswer": "Dalybos liekana yra 3."
@@ -29961,8 +29961,8 @@ export const exercises = [
         "wrongMove": "Sudėti pačius skaičius nuo 1 iki 20 vietoje jų skaitmenų.",
         "whyTempting": "Greitai skaitant užduotį „skaitmenų suma“ suprantama kaip „skaičių seka“.",
         "whyItHappens": "Nepakankamas dėmesys sąvokai „skaitmuo“.",
-        "wrongPattern": "1+2+3+\\\\dots+20 = 210 \\\\implies 210 \\\\pmod 9 = 3.",
-        "correction": "Nors atsakymas šiame pavyzdyje sutapo atsitiktinai, taisyklė reikalauja sumuoti atskirus skaitmenis ($1+2+3+4+5+6+7+8+9+1+0+1+1 \\\\dots$), o ne pačias vertes.",
+        "wrongPattern": "1+2+3+\\dots+20 = 210 \\implies 210 \\pmod 9 = 3.",
+        "correction": "Nors atsakymas šiame pavyzdyje sutapo atsitiktinai, taisyklė reikalauja sumuoti atskirus skaitmenis ($1+2+3+4+5+6+7+8+9+1+0+1+1 \\dots$), o ne pačias vertes.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -29974,7 +29974,7 @@ export const exercises = [
         "wrongMove": "Manyti, kad liekana lygi paskutiniam skaitmeniui (0).",
         "whyTempting": "Supainiojama su dalumu iš 2, 5 arba 10.",
         "whyItHappens": "Dalybos iš 10 taisyklė (liekana lygi paskutiniam skaitmeniui) klaidingai perkeliama kitiems dalikliams.",
-        "wrongPattern": "A \\text{ baigiasi } 0 \\\\implies A \\\\equiv 0 \\\\pmod 9.",
+        "wrongPattern": "A \\text{ baigiasi } 0 \\implies A \\equiv 0 \\pmod 9.",
         "correction": "Dalybai iš 9 svarbi tik visų skaitmenų suma, o ne skaičiaus pabaiga.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -29992,7 +29992,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra dalumo iš 9 taisyklė liekanų požiūriu?",
-        "back": "Skaičius $N$ ir jo skaitmenų suma $S(N)$ duoda tą pačią liekaną dalijant iš 9, t. y. $N \\\\equiv S(N) \\\\pmod 9$.",
+        "back": "Skaičius $N$ ir jo skaitmenų suma $S(N)$ duoda tą pačią liekaną dalijant iš 9, t. y. $N \\equiv S(N) \\pmod 9$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -30039,7 +30039,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Bendra skaitmenų suma: $45 + 10 \\\\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną.",
+        "text": "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -30050,7 +30050,7 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Fibonacci seka apibrėžiama taip: $F_1 = 1$, $F_2 = 1$, $F_{n} = F_{n-1} + F_{n-2}$ visiems $n \\\\ge 3$. Įrodykite, kad kas trečias Fibonacci sekos narys yra lyginis.",
+    "statement": "Fibonacci seka apibrėžiama taip: $F_1 = 1$, $F_2 = 1$, $F_{n} = F_{n-1} + F_{n-2}$ visiems $n \\ge 3$. Įrodykite, kad kas trečias Fibonacci sekos narys yra lyginis.",
     "answer": "Kas trečias Fibonacci sekos narys yra lyginis.",
     "acceptedAnswers": [
       "Kas trečias Fibonacci sekos narys yra lyginis."
@@ -30062,11 +30062,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite pirmųjų 6 narių reikšmes ir nustatykite jų paritetą (lyginis/nelyginis).",
-      "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\\\dots$",
+      "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
       "Kadangi $F_n = F_{n-1} + F_{n-2}$, tai narių paritetas moduliu 2 priklauso tik nuo dviejų prieš tai einančių narių.",
-      "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\\\dots$ Parodykite, kad šis periodas išlieka visada."
+      "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada."
     ],
-    "solution": "Apskaičiuojame paritetą moduliu 2: $F_1 \\\\equiv 1$, $F_2 \\\\equiv 1$ (abu nelyginiai). Tada $F_3 = F_2 + F_1 \\\\equiv 1 + 1 \\\\equiv 0$ (lyginis). Sekantys nariai: $F_4 = F_3 + F_2 \\\\equiv 0 + 1 \\\\equiv 1$, $F_5 = F_4 + F_3 \\\\equiv 1 + 0 \\\\equiv 1$. Galiausiai $F_6 = F_5 + F_4 \\\\equiv 1 + 1 \\\\equiv 0$. Kadangi ciklas $1, 1, 0$ kartojasi, tai $F_{3k}$ visada yra lyginiai.",
+    "solution": "Apskaičiuojame paritetą moduliu 2: $F_1 \\equiv 1$, $F_2 \\equiv 1$ (abu nelyginiai). Tada $F_3 = F_2 + F_1 \\equiv 1 + 1 \\equiv 0$ (lyginis). Sekantys nariai: $F_4 = F_3 + F_2 \\equiv 0 + 1 \\equiv 1$, $F_5 = F_4 + F_3 \\equiv 1 + 0 \\equiv 1$. Galiausiai $F_6 = F_5 + F_4 \\equiv 1 + 1 \\equiv 0$. Kadangi ciklas $1, 1, 0$ kartojasi, tai $F_{3k}$ visada yra lyginiai.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -30100,21 +30100,21 @@ export const exercises = [
             "action": "Nustatome pirmųjų trijų Fibonacci narių lyginumą (paritetą).",
             "reason": "Fibonacci seka apibrėžiama per du ankstesnius narius, todėl paritetas taip pat priklauso nuo jų.",
             "result": "$F_1=1$ (N), $F_2=1$ (N), $F_3=1+1=2$ (L). Seka moduliu 2: $1, 1, 0$.",
-            "latex": "F_1, F_2, F_3 \\\\equiv 1, 1, 0 \\\\pmod 2"
+            "latex": "F_1, F_2, F_3 \\equiv 1, 1, 0 \\pmod 2"
           },
           {
             "title": "Ciklo tęstinumo įrodymas",
             "action": "Apskaičiuojame sekančių trijų narių paritetą.",
             "reason": "Ieškome pasikartojančio dėsningumo (ciklo).",
-            "result": "$F_4 = 0+1=1$ (N), $F_5 = 1+0=1$ (N), $F_6 = 1+1=2 \\\\equiv 0$ (L).",
-            "latex": "F_4, F_5, F_6 \\\\equiv 1, 1, 0 \\\\pmod 2"
+            "result": "$F_4 = 0+1=1$ (N), $F_5 = 1+0=1$ (N), $F_6 = 1+1=2 \\equiv 0$ (L).",
+            "latex": "F_4, F_5, F_6 \\equiv 1, 1, 0 \\pmod 2"
           },
           {
             "title": "Išvada apie periodiškumą",
             "action": "Pastebime, kad blokas $(1, 1, 0)$ kartojasi.",
-            "reason": "Kadangi bet kuris narys $F_n \\\\pmod 2$ priklauso tik nuo $F_{n-1}$ ir $F_{n-2}$ paritetų, radus pasikartojančią porą $(1, 1)$, visa tolimesnė seka bus identiška.",
-            "result": "Nariai $F_3, F_6, F_9, \\\\dots, F_{3k}$ visada yra lygūs 0 moduliu 2, t. y. lyginiai.",
-            "latex": "F_{3k} \\\\equiv 0 \\\\pmod 2"
+            "reason": "Kadangi bet kuris narys $F_n \\pmod 2$ priklauso tik nuo $F_{n-1}$ ir $F_{n-2}$ paritetų, radus pasikartojančią porą $(1, 1)$, visa tolimesnė seka bus identiška.",
+            "result": "Nariai $F_3, F_6, F_9, \\dots, F_{3k}$ visada yra lygūs 0 moduliu 2, t. y. lyginiai.",
+            "latex": "F_{3k} \\equiv 0 \\pmod 2"
           }
         ],
         "finalAnswer": "Kas trečias Fibonacci sekos narys yra lyginis."
@@ -30128,7 +30128,7 @@ export const exercises = [
         "wrongMove": "Bandyti įrodyti teiginį skaičiuojant pačius Fibonacci skaičius.",
         "whyTempting": "Atrodo, kad parodžius daugiau pavyzdžių ($F_{12}=144$ ir pan.), įrodymas bus svaresnis.",
         "whyItHappens": "Nesuprantama, kad Fibonacci seka auga eksponentiškai ir skaičiavimas ranka greitai tampa nebeįmanomas.",
-        "wrongPattern": "F_{12} = 144 \\text{ (lyginis)}, F_{15} = 610 \\text{ (lyginis)}, \\\\dots \\\\implies \\text{įrodyta}.",
+        "wrongPattern": "F_{12} = 144 \\text{ (lyginis)}, F_{15} = 610 \\text{ (lyginis)}, \\dots \\implies \\text{įrodyta}.",
         "correction": "Olimpiadose pavyzdžiai nėra įrodymas. Reikia naudoti pariteto (lyginumo) savybes moduliu 2, kurios parodo dėsningumą be didelių skaičiavimų.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30139,10 +30139,10 @@ export const exercises = [
         "title": "Indukcijos bazės praleidimas",
         "type": "mistake",
         "wrongMove": "Manyti, kad seka prasideda nuo lyginio skaičiaus.",
-        "whyTempting": "Norisi, kad „kas trečias“ sutaptų su paprastu dalumu iš 3 ($3, 6, 9 \\\\dots$).",
+        "whyTempting": "Norisi, kad „kas trečias“ sutaptų su paprastu dalumu iš 3 ($3, 6, 9 \\dots$).",
         "whyItHappens": "Nepatikrinami patys pirmieji sekos nariai $F_1$ ir $F_2$.",
-        "wrongPattern": "F_0=0, F_1=1, F_2=1 \\\\dots \\text{ (jei pradedama nuo nulio)}.",
-        "correction": "Svarbu griežtai laikytis užduoties apibrėžimo: $F_1=1, F_2=1$. Lyginiai skaičiai pasirodo pozicijose $3, 6, 9 \\\\dots$, o ne $1, 4, 7 \\\\dots$.",
+        "wrongPattern": "F_0=0, F_1=1, F_2=1 \\dots \\text{ (jei pradedama nuo nulio)}.",
+        "correction": "Svarbu griežtai laikytis užduoties apibrėžimo: $F_1=1, F_2=1$. Lyginiai skaičiai pasirodo pozicijose $3, 6, 9 \\dots$, o ne $1, 4, 7 \\dots$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -30192,7 +30192,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\\\dots$",
+        "text": "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -30206,7 +30206,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\\\dots$ Parodykite, kad šis periodas išlieka visada.",
+        "text": "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -30229,11 +30229,11 @@ export const exercises = [
     ],
     "hints": [
       "Padalykite 2026 iš 1492 su liekana.",
-      "Pirmas žingsnis: $2026 = 1 \\\\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
-      "Tęskite dalybą su liekanomis: $1492 = 2 \\\\cdot 534 + 424$, tada $534 = 1 \\\\cdot 424 + 110$ ir t. t.",
-      "Gausite: $424 = 3 \\\\cdot 110 + 94$, $110 = 1 \\\\cdot 94 + 16$, $94 = 5 \\\\cdot 16 + 14$, $16 = 1 \\\\cdot 14 + 2$, $14 = 7 \\\\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas."
+      "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
+      "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
+      "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas."
     ],
-    "solution": "$2026 = 1 \\\\times 1492 + 534$. $1492 = 2 \\\\times 534 + 424$. $534 = 1 \\\\times 424 + 110$. $424 = 3 \\\\times 110 + 94$. $110 = 1 \\\\times 94 + 16$. $94 = 5 \\\\times 16 + 14$. $16 = 1 \\\\times 14 + 2$ ir $14 = 7 \\\\times 2 + 0$. Paskutinė neulinė liekana yra 2, todėl $\\text{dbd}(2026, 1492) = 2$.",
+    "solution": "$2026 = 1 \\times 1492 + 534$. $1492 = 2 \\times 534 + 424$. $534 = 1 \\times 424 + 110$. $424 = 3 \\times 110 + 94$. $110 = 1 \\times 94 + 16$. $94 = 5 \\times 16 + 14$. $16 = 1 \\times 14 + 2$ ir $14 = 7 \\times 2 + 0$. Paskutinė neulinė liekana yra 2, todėl $\\text{dbd}(2026, 1492) = 2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -30266,21 +30266,21 @@ export const exercises = [
             "title": "Pirminis dalijimas",
             "action": "Padalijame 2026 iš 1492 su liekana.",
             "reason": "Euklido algoritmas remiasi savybe $\\text{dbd}(a, b) = \\text{dbd}(b, r)$, kur $r$ yra liekana.",
-            "result": "$2026 = 1 \\\\cdot 1492 + 534$.",
-            "latex": "2026 = 1 \\\\times 1492 + 534"
+            "result": "$2026 = 1 \\cdot 1492 + 534$.",
+            "latex": "2026 = 1 \\times 1492 + 534"
           },
           {
             "title": "Iteracinė liekanų paieška",
             "action": "Tęsiame dalijimą naudodami ankstesnį daliklį ir gautą liekaną.",
             "reason": "DBD išlieka toks pat per visą liekanų grandinę.",
-            "result": "Gautos lygybės: $1492 = 2 \\\\cdot 534 + 424$; $534 = 1 \\\\cdot 424 + 110$; $424 = 3 \\\\cdot 110 + 94$; $110 = 1 \\\\cdot 94 + 16$.",
-            "latex": "1492 = 2 \\\\times 534 + 424 \\\\dots 110 = 1 \\\\times 94 + 16"
+            "result": "Gautos lygybės: $1492 = 2 \\cdot 534 + 424$; $534 = 1 \\cdot 424 + 110$; $424 = 3 \\cdot 110 + 94$; $110 = 1 \\cdot 94 + 16$.",
+            "latex": "1492 = 2 \\times 534 + 424 \\dots 110 = 1 \\times 94 + 16"
           },
           {
             "title": "Galutinio rezultato radimas",
             "action": "Užbaigiame algoritmą iki liekanos 0.",
             "reason": "Paskutinė neulinė liekana grandinėje yra ieškomas DBD.",
-            "result": "$94 = 5 \\\\cdot 16 + 14$; $16 = 1 \\\\cdot 14 + 2$; $14 = 7 \\\\cdot 2 + 0$. DBD yra 2.",
+            "result": "$94 = 5 \\cdot 16 + 14$; $16 = 1 \\cdot 14 + 2$; $14 = 7 \\cdot 2 + 0$. DBD yra 2.",
             "latex": "\\text{dbd}(2026, 1492) = 2"
           }
         ],
@@ -30295,7 +30295,7 @@ export const exercises = [
         "wrongMove": "Sustoti ties liekana 0 ir teigti, kad DBD lygus 0.",
         "whyTempting": "Skubant supainiojama paskutinė gauta reikšmė grandinėje su pačiu dalikliu.",
         "whyItHappens": "Neteisingas algoritmo užbaigimo sąlygos supratimas.",
-        "wrongPattern": "14 = 7 \\\\cdot 2 + 0 \\\\implies \\text{dbd} = 0.",
+        "wrongPattern": "14 = 7 \\cdot 2 + 0 \\implies \\text{dbd} = 0.",
         "correction": "Didžiausias bendrasis daliklis yra paskutinė NEULINĖ liekana. Nulis niekada negali būti DBD (nebent abu skaičiai pradiniai yra nuliai).",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30359,21 +30359,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pirmas žingsnis: $2026 = 1 \\\\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
+        "text": "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Tęskite dalybą su liekanomis: $1492 = 2 \\\\cdot 534 + 424$, tada $534 = 1 \\\\cdot 424 + 110$ ir t. t.",
+        "text": "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Gausite: $424 = 3 \\\\cdot 110 + 94$, $110 = 1 \\\\cdot 94 + 16$, $94 = 5 \\\\cdot 16 + 14$, $16 = 1 \\\\cdot 14 + 2$, $14 = 7 \\\\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas.",
+        "text": "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -30397,7 +30397,7 @@ export const exercises = [
     "hints": [
       "Tarkime, kad bendras daliklis yra $d$. Tada $d$ turi dalyti ir skaitiklį, ir vardiklį.",
       "Raskite tokius koeficientus $A$ ir $B$, kad sandaugose $A(21n+4)$ ir $B(14n+3)$ kintamasis $n$ susiprastintų.",
-      "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\\\cdot 21 = 42$ ir $3 \\\\cdot 14 = 42$.",
+      "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
       "Apskaičiuokite: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$. Kadangi $d$ dalija 1, tai $d=1$."
     ],
     "solution": "Tarkime, kad $d = \\text{dbd}(21n+4, 14n+3)$. Tada $d$ dalija bet kokį šių skaičių tiesinį derinį su sveikaisiais koeficientais. Sudėliokime derinį, kuris pašalina $n$: $3(14n+3) - 2(21n+4) = 42n + 9 - 42n - 8 = 1$. Kadangi $d$ dalija skirtumą, o šis lygus 1, tai $d$ privalo dalyti 1. Vadinasi, $d=1$, ir trupmena yra nesuprastinama.",
@@ -30448,7 +30448,7 @@ export const exercises = [
             "action": "Kadangi $d$ dalija gautą skirtumą, nustatome $d$ reikšmę.",
             "reason": "Vienintelis natūralusis skaičius, dalijantis 1, yra 1.",
             "result": "$d$ privalo būti lygus 1. Vadinasi, trupmena yra nesuprastinama bet kuriam $n$.",
-            "latex": "d | 1 \\\\implies d = 1"
+            "latex": "d | 1 \\implies d = 1"
           }
         ],
         "finalAnswer": "Įrodyta, kad trupmena yra nesuprastinama."
@@ -30460,9 +30460,9 @@ export const exercises = [
         "title": "Įrodymas pavyzdžiais",
         "type": "mistake",
         "wrongMove": "Bandyti įrodyti teiginį įstatant tik konkrečias $n$ reikšmes.",
-        "whyTempting": "Patikrinus $n=1, 2, 3$, gaunamos nesuprastinamos trupmenos ($25/17, 46/31 \\\\dots$), todėl atrodo, kad tai pakankama.",
+        "whyTempting": "Patikrinus $n=1, 2, 3$, gaunamos nesuprastinamos trupmenos ($25/17, 46/31 \\dots$), todėl atrodo, kad tai pakankama.",
         "whyItHappens": "Nesuprantamas skirtumas tarp pavyzdžio ir bendro matematinio įrodymo.",
-        "wrongPattern": "n=1 \\\\implies 25/17 \\text{ (nesuprastinama)} \\\\implies \\text{teisinga visada}.",
+        "wrongPattern": "n=1 \\implies 25/17 \\text{ (nesuprastinama)} \\implies \\text{teisinga visada}.",
         "correction": "Olimpiadose pavyzdžiai neįrodo bendro teiginio. Reikia naudoti algebra, kuri veiktų bet kokiam kintamajam $n$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30475,7 +30475,7 @@ export const exercises = [
         "wrongMove": "Manyti, kad jei skaitiklis ir vardiklis skiriasi nedideliu skaičiumi, jie visada nesuprastinami.",
         "whyTempting": "Painiojama su savybe, kad du gretimi skaičiai ($n$ ir $n+1$) visada yra tarpusavyje pirminiai.",
         "whyItHappens": "Paviršutiniškas panašių savybių taikymas.",
-        "wrongPattern": "(21n+4) - (14n+3) = 7n+1 \\neq 0 \\\\implies \\text{nesuprastinama}.",
+        "wrongPattern": "(21n+4) - (14n+3) = 7n+1 \\neq 0 \\implies \\text{nesuprastinama}.",
         "correction": "Skirtumas nebūtinai parodo DBD. Pavyzdžiui, 10 ir 15 skiriasi 5, bet yra suprastinami iš 5. Tik skirtumas, lygus 1, garantuoja nesuprastinumą.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30493,7 +30493,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kaip įrodoma, kad du reiškiniai su $n$ yra tarpusavyje pirminiai?",
-        "back": "Ieškome tiesinio derinio $A \\\\cdot f(n) + B \\\\cdot g(n) = 1$. Jei toks egzistuoja, tai $\\text{dbd}(f(n), g(n)) = 1$.",
+        "back": "Ieškome tiesinio derinio $A \\cdot f(n) + B \\cdot g(n) = 1$. Jei toks egzistuoja, tai $\\text{dbd}(f(n), g(n)) = 1$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -30533,7 +30533,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\\\cdot 21 = 42$ ir $3 \\\\cdot 14 = 42$.",
+        "text": "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -30551,7 +30551,7 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išspręskite realiaisiais skaičiais lygtį $2\\\\lfloor x \\rfloor = x + \\\\{x\\\\}$, kur $\\\\{x\\\\} = x - \\\\lfloor x \\rfloor$ yra skaičiaus trupmeninė dalis.",
+    "statement": "Išspręskite realiaisiais skaičiais lygtį $2\\lfloor x \\rfloor = x + \\{x\\}$, kur $\\{x\\} = x - \\lfloor x \\rfloor$ yra skaičiaus trupmeninė dalis.",
     "answer": "Sprendiniai yra $x = 0$ ir $x = 1.5$.",
     "acceptedAnswers": [
       "Sprendiniai yra $x = 0$ ir $x = 1.5$."
@@ -30563,11 +30563,11 @@ export const exercises = [
     ],
     "hints": [
       "Pakeiskite $x$ išraiška per sveikąją ir trupmeninę dalį.",
-      "Įstačius gauname $2\\\\lfloor x \\rfloor = \\\\lfloor x \\rfloor + 2\\\\{x\\\\} \\\\implies \\\\lfloor x \\rfloor = 2\\\\{x\\\\}$.",
-      "Kadangi $0 \\\\le \\\\{x\\\\} < 1$, tai $2\\\\{x\\\\}$ privalo priklausyti intervalui $[0, 2)$.",
-      "Kadangi $\\\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\\\lfloor x \\rfloor = 2\\\\{x\\\\}$, tai $\\\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams."
+      "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
+      "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
+      "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams."
     ],
-    "solution": "Pakeičiame $x = \\\\lfloor x \\rfloor + \\\\{x\\\\}$, tada lygtis tampa $2\\\\lfloor x \\rfloor = \\\\lfloor x \\rfloor + 2\\\\{x\\\\}$. Supaprastiname: $\\\\lfloor x \\rfloor = 2\\\\{x\\\\}$. Kadangi trupmeninė dalis tenkina $0 \\\\le \\\\{x\\\\} < 1$, tai $0 \\\\le 2\\\\{x\\\\} < 2$. Kadangi $\\\\lfloor x \\rfloor$ yra sveikasis skaičius, turime du atvejus: $\\\\lfloor x \\rfloor = 0$ arba $\\\\lfloor x \\rfloor = 1$. Jei $\\\\lfloor x \\rfloor = 0$, tai $\\\\{x\\\\} = 0$, todėl $x = 0$. Jei $\\\\lfloor x \\rfloor = 1$, tai $\\\\{x\\\\} = 0.5$, todėl $x = 1.5$.",
+    "solution": "Pakeičiame $x = \\lfloor x \\rfloor + \\{x\\}$, tada lygtis tampa $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\}$. Supaprastiname: $\\lfloor x \\rfloor = 2\\{x\\}$. Kadangi trupmeninė dalis tenkina $0 \\le \\{x\\} < 1$, tai $0 \\le 2\\{x\\} < 2$. Kadangi $\\lfloor x \\rfloor$ yra sveikasis skaičius, turime du atvejus: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $\\{x\\} = 0$, todėl $x = 0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\} = 0.5$, todėl $x = 1.5$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -30575,7 +30575,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Trupmeninės dalies apribojimai",
-      "text": "Pakeiskite $x = \\\\lfloor x \\rfloor + \\\\{x\\\\}$ ir panaudokite savybę, kad $0 \\\\le \\\\{x\\\\} < 1$."
+      "text": "Pakeiskite $x = \\lfloor x \\rfloor + \\{x\\}$ ir panaudokite savybę, kad $0 \\le \\{x\\} < 1$."
     },
     "strategyTags": [
       "advanced",
@@ -30598,24 +30598,24 @@ export const exercises = [
         "steps": [
           {
             "title": "Kintamojo skaidymas",
-            "action": "Pakeičiame $x$ išraiška $\\\\lfloor x \\rfloor + \\\\{x\\\\}$ pradinėje lygtyje.",
+            "action": "Pakeičiame $x$ išraiška $\\lfloor x \\rfloor + \\{x\\}$ pradinėje lygtyje.",
             "reason": "Tai leidžia lygtį su vienu kintamuoju paversti lygtimi su dviem specifiniais komponentais, kurių savybės gerai žinomos.",
-            "result": "Lygtis tampa: $2\\\\lfloor x \\rfloor = (\\\\lfloor x \\rfloor + \\\\{x\\\\}) + \\\\{x\\\\} \\\\implies \\\\lfloor x \\rfloor = 2\\\\{x\\\\}$.",
-            "latex": "\\\\lfloor x \\rfloor = 2\\\\{x\\\\}"
+            "result": "Lygtis tampa: $2\\lfloor x \\rfloor = (\\lfloor x \\rfloor + \\{x\\}) + \\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
+            "latex": "\\lfloor x \\rfloor = 2\\{x\\}"
           },
           {
             "title": "Rėžių taikymas",
-            "action": "Pritaikome trupmeninės dalies savybę $0 \\\\le \\\\{x\\\\} < 1$.",
+            "action": "Pritaikome trupmeninės dalies savybę $0 \\le \\{x\\} < 1$.",
             "reason": "Kadangi sveikoji dalis lygi dvigubai trupmeninei, jos galimos vertės yra griežtai apribotos.",
-            "result": "Išreiškiame $\\\\{x\\\\} = \\\\lfloor x \\rfloor / 2$. Tada $0 \\\\le \\\\lfloor x \\rfloor / 2 < 1$, vadinasi $0 \\\\le \\\\lfloor x \\rfloor < 2$.",
-            "latex": "0 \\\\le \\\\lfloor x \\rfloor < 2"
+            "result": "Išreiškiame $\\{x\\} = \\lfloor x \\rfloor / 2$. Tada $0 \\le \\lfloor x \\rfloor / 2 < 1$, vadinasi $0 \\le \\lfloor x \\rfloor < 2$.",
+            "latex": "0 \\le \\lfloor x \\rfloor < 2"
           },
           {
             "title": "Atvejų analizė",
             "action": "Randame visus sveikuosius skaičius duotame intervale.",
             "reason": "Sveikoji dalis privalo būti sveikasis skaičius.",
-            "result": "Galimos vertės: $\\\\lfloor x \\rfloor = 0$ arba $\\\\lfloor x \\rfloor = 1$. Jei $\\\\lfloor x \\rfloor = 0$, tai $x=0$. Jei $\\\\lfloor x \\rfloor = 1$, tai $\\\\{x\\\\}=0.5$, todėl $x=1.5$.",
-            "latex": "x \\\\in \\\\{0, 1.5\\\\}"
+            "result": "Galimos vertės: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $x=0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\}=0.5$, todėl $x=1.5$.",
+            "latex": "x \\in \\{0, 1.5\\}"
           }
         ],
         "finalAnswer": "Sprendiniai yra $x = 0$ ir $x = 1.5$."
@@ -30626,11 +30626,11 @@ export const exercises = [
         "id": "ex-olimpiada-07-a17dfa35-trap-1",
         "title": "Trupmeninės dalies savybių nepaisymas",
         "type": "mistake",
-        "wrongMove": "Spręsti lygtį algebraiškai neatsižvelgiant į tai, kad $\\\\{x\\\\}$ negali būti bet koks skaičius.",
-        "whyTempting": "Atrodo, kad $\\\\{x\\\\}$ galima traktuoti kaip paprastą kintamąjį $y$.",
-        "whyItHappens": "Užmirštama, kad $\\\\{x\\\\}$ yra griežtai apribota intervalu $[0, 1)$.",
-        "wrongPattern": "\\\\lfloor x \\rfloor = 2\\\\{x\\\\} \\\\implies \\text{begalybė sprendinių}.",
-        "correction": "Būtina visada naudoti nelygybę $0 \\\\le \\\\{x\\\\} < 1$, kuri susiaurina sprendinių aibę iki baigtinio skaičiaus.",
+        "wrongMove": "Spręsti lygtį algebraiškai neatsižvelgiant į tai, kad $\\{x\\}$ negali būti bet koks skaičius.",
+        "whyTempting": "Atrodo, kad $\\{x\\}$ galima traktuoti kaip paprastą kintamąjį $y$.",
+        "whyItHappens": "Užmirštama, kad $\\{x\\}$ yra griežtai apribota intervalu $[0, 1)$.",
+        "wrongPattern": "\\lfloor x \\rfloor = 2\\{x\\} \\implies \\text{begalybė sprendinių}.",
+        "correction": "Būtina visada naudoti nelygybę $0 \\le \\{x\\} < 1$, kuri susiaurina sprendinių aibę iki baigtinio skaičiaus.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -30639,11 +30639,11 @@ export const exercises = [
         "id": "ex-olimpiada-07-a17dfa35-trap-2",
         "title": "Sveikosios dalies painiojimas su apvalinimu",
         "type": "mistake",
-        "wrongMove": "Manyti, kad $\\\\lfloor x \\rfloor$ yra artimiausias sveikasis skaičius.",
+        "wrongMove": "Manyti, kad $\\lfloor x \\rfloor$ yra artimiausias sveikasis skaičius.",
         "whyTempting": "Kasdienėje kalboje „sveikoji dalis“ dažnai tapatinama su skaičiaus „nukirpimu“ po kablelio.",
         "whyItHappens": "Trūksta griežto matematinio apibrėžimo taikymo.",
-        "wrongPattern": "\\\\lfloor 1.9 \\rfloor = 2 \\text{ (klaidingas apvalinimas aukštyn)}.",
-        "correction": "Sveikoji dalis visada eina „į kairę“ skaičių tiesėje: $\\\\lfloor 1.9 \\rfloor = 1$, $\\\\lfloor -1.1 \\rfloor = -2$.",
+        "wrongPattern": "\\lfloor 1.9 \\rfloor = 2 \\text{ (klaidingas apvalinimas aukštyn)}.",
+        "correction": "Sveikoji dalis visada eina „į kairę“ skaičių tiesėje: $\\lfloor 1.9 \\rfloor = 1$, $\\lfloor -1.1 \\rfloor = -2$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -30659,8 +30659,8 @@ export const exercises = [
         "id": "ex-olimpiada-07-a17dfa35-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra svarbiausia skaičiaus trupmeninės dalies $\\\\{x\\\\}$ savybė lygtims?",
-        "back": "Savybė, kad trupmeninė dalis visada tenkina griežtas ribas: $0 \\\\le \\\\{x\\\\} < 1$.",
+        "front": "Kokia yra svarbiausia skaičiaus trupmeninės dalies $\\{x\\}$ savybė lygtims?",
+        "back": "Savybė, kad trupmeninė dalis visada tenkina griežtas ribas: $0 \\le \\{x\\} < 1$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -30673,7 +30673,7 @@ export const exercises = [
         "id": "ex-olimpiada-07-a17dfa35-srs-2",
         "deck": "practice",
         "cardType": "fact",
-        "front": "Kiek lygi $\\\\lfloor -3.2 \\rfloor$?",
+        "front": "Kiek lygi $\\lfloor -3.2 \\rfloor$?",
         "back": "Lygi -4. Tai didžiausias sveikasis skaičius, ne didesnis už -3.2.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30693,21 +30693,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Įstačius gauname $2\\\\lfloor x \\rfloor = \\\\lfloor x \\rfloor + 2\\\\{x\\\\} \\\\implies \\\\lfloor x \\rfloor = 2\\\\{x\\\\}$.",
+        "text": "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Kadangi $0 \\\\le \\\\{x\\\\} < 1$, tai $2\\\\{x\\\\}$ privalo priklausyti intervalui $[0, 2)$.",
+        "text": "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi $\\\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\\\lfloor x \\rfloor = 2\\\\{x\\\\}$, tai $\\\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams.",
+        "text": "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -30732,9 +30732,9 @@ export const exercises = [
       "Tegul dviračių yra $x$, o triračių $y$. Užrašykite bendrą priemonių skaičių.",
       "Priemonių lygtis: $x + y = 15$. Ratų lygtis: $2x + 3y = 36$.",
       "Išreikškite $x = 15 - y$ iš pirmosios lygties ir įstatykite į antrąją.",
-      "Sprendžiame: $2(15-y) + 3y = 36 \\\\implies 30 - 2y + 3y = 36 \\\\implies y = 6$. Raskite $x$."
+      "Sprendžiame: $2(15-y) + 3y = 36 \\implies 30 - 2y + 3y = 36 \\implies y = 6$. Raskite $x$."
     ],
-    "solution": "Pažymime dviračius $x$, o triračius $y$. Sudarome lygčių sistemą: $x + y = 15$ ir $2x + 3y = 36$. Iš pirmos lygties $x = 15 - y$. Įstatome: $2(15 - y) + 3y = 36$. Apskaičiuojame: $30 - 2y + 3y = 36 \\\\implies y = 6$. Tada $x = 15 - 6 = 9$.",
+    "solution": "Pažymime dviračius $x$, o triračius $y$. Sudarome lygčių sistemą: $x + y = 15$ ir $2x + 3y = 36$. Iš pirmos lygties $x = 15 - y$. Įstatome: $2(15 - y) + 3y = 36$. Apskaičiuojame: $30 - 2y + 3y = 36 \\implies y = 6$. Tada $x = 15 - 6 = 9$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -30775,13 +30775,13 @@ export const exercises = [
             "action": "Sudarome dvi lygtis remdamiesi bendru priemonių skaičiumi ir bendru ratų skaičiumi.",
             "reason": "Viso yra 15 priemonių ($x+y=15$) ir 36 ratai ($2x+3y=36$).",
             "result": "Lygtys: $x+y=15$ ir $2x+3y=36$.",
-            "latex": "\\\begin{cases} x+y=15 \\\\\\ 2x+3y=36 \\\\\\end{cases}"
+            "latex": "\\begin{cases} x+y=15 \\\\ 2x+3y=36 \\end{cases}"
           },
           {
             "title": "Pakaitos metodas",
             "action": "Išreiškiame $x=15-y$ ir įstatome į antrąją lygtį.",
             "reason": "Tai leidžia rasti vieną kintamąjį eliminuojant kitą.",
-            "result": "$2(15-y) + 3y = 36 \\\\implies 30 - 2y + 3y = 36 \\\\implies y = 6$.",
+            "result": "$2(15-y) + 3y = 36 \\implies 30 - 2y + 3y = 36 \\implies y = 6$.",
             "latex": "2(15-y) + 3y = 36"
           },
           {
@@ -30816,7 +30816,7 @@ export const exercises = [
         "wrongMove": "Sukeisti ratų skaičių rūšims: priskirti 3 ratus dviračiui.",
         "whyTempting": "Skubant nepastabiai sukeičiami koeficientai lygtyje.",
         "whyItHappens": "Dėmesio klaida nustatant sąryšius tarp kintamųjų ir jų savybių.",
-        "wrongPattern": "3x + 2y = 36 \\\\implies x=6, y=9.",
+        "wrongPattern": "3x + 2y = 36 \\implies x=6, y=9.",
         "correction": "Visada pasitikrinkite logiką: dviračiai turi 2 ratus ($2x$), o triračiai 3 ($3y$).",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -30881,7 +30881,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sprendžiame: $2(15-y) + 3y = 36 \\\\implies 30 - 2y + 3y = 36 \\\\implies y = 6$. Raskite $x$.",
+        "text": "Sprendžiame: $2(15-y) + 3y = 36 \\implies 30 - 2y + 3y = 36 \\implies y = 6$. Raskite $x$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -30906,9 +30906,9 @@ export const exercises = [
       "Pagalvokite, kaip susiję $x+y$ kvadratas su ieškomu reiškiniu.",
       "Užrašykite sumos kvadrato formulę: $(x+y)^2 = x^2 + 2xy + y^2$.",
       "Įstatykite $x+y=5$ ir $xy=6$ į formulę: $5^2 = x^2 + y^2 + 2(6)$.",
-      "Apskaičiuokite: $25 = x^2 + y^2 + 12 \\\\implies x^2 + y^2 = 25 - 12$."
+      "Apskaičiuokite: $25 = x^2 + y^2 + 12 \\implies x^2 + y^2 = 25 - 12$."
     ],
-    "solution": "Užrašome formulę: $(x+y)^2 = x^2 + 2xy + y^2$. Įstatome žinomas vertes: $5^2 = x^2 + y^2 + 2 \\\\times 6$. Apskaičiuojame: $25 = x^2 + y^2 + 12$. Išreiškiame ieškomą dydį: $x^2 + y^2 = 25 - 12 = 13$.",
+    "solution": "Užrašome formulę: $(x+y)^2 = x^2 + 2xy + y^2$. Įstatome žinomas vertes: $5^2 = x^2 + y^2 + 2 \\times 6$. Apskaičiuojame: $25 = x^2 + y^2 + 12$. Išreiškiame ieškomą dydį: $x^2 + y^2 = 25 - 12 = 13$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -30955,7 +30955,7 @@ export const exercises = [
             "title": "Skaitinis apskaičiavimas",
             "action": "Įstatome duotas vertes $x+y=5$ ir $xy=6$.",
             "reason": "Pakeitus kintamuosius skaičiais, gauname galutinį rezultatą.",
-            "result": "$x^2 + y^2 = 5^2 - 2 \\\\cdot 6 = 25 - 12 = 13$.",
+            "result": "$x^2 + y^2 = 5^2 - 2 \\cdot 6 = 25 - 12 = 13$.",
             "latex": "25 - 12 = 13"
           }
         ],
@@ -30970,7 +30970,7 @@ export const exercises = [
         "wrongMove": "Pirmiausia bandyti išspręsti lygtis ir surasti konkrečias $x$ ir $y$ reikšmes.",
         "whyTempting": "Atrodo, kad radus skaičius ($x=2, y=3$ arba atvirkščiai), apskaičiuoti kvadratų sumą bus lengviau.",
         "whyItHappens": "Nesuprantama, kad olimpiadose simetriniai reiškiniai dažnai randami nesprendžiant sistemos (kas gali būti neįmanoma su sudėtingesniais skaičiais).",
-        "wrongPattern": "x=2, y=3 \\\\implies 2^2+3^2 = 13.",
+        "wrongPattern": "x=2, y=3 \\implies 2^2+3^2 = 13.",
         "correction": "Nors atsakymas teisingas, metodas neefektyvus. Reikėtų naudoti algebrines formules, kurios veikia net tada, kai $x$ ir $y$ yra neracionalieji skaičiai.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31048,7 +31048,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $25 = x^2 + y^2 + 12 \\\\implies x^2 + y^2 = 25 - 12$.",
+        "text": "Apskaičiuokite: $25 = x^2 + y^2 + 12 \\implies x^2 + y^2 = 25 - 12$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -31072,7 +31072,7 @@ export const exercises = [
     "hints": [
       "Pritaikykite Vijeto teoremos atvirkštinį principą laisvajam nariui ir koeficientui prie x.",
       "Ieškome tokių skaičių $p$ ir $q$, kad $(x-p)(x-q) = x^2 - (p+q)x + pq$.",
-      "Mums reikia, kad $p+q = 5$ ir $p \\\\cdot q = 6$. Tokie skaičiai yra 2 ir 3.",
+      "Mums reikia, kad $p+q = 5$ ir $p \\cdot q = 6$. Tokie skaičiai yra 2 ir 3.",
       "Užrašykite daugianarį kaip $(x-2)(x-3)$. Šaknys randamos prilyginus šį reiškinį nuliui."
     ],
     "solution": "Ieškome skaičių $p, q$ tokių, kad $p+q=5$ ir $pq=6$. Tinkantys skaičiai yra $2$ ir $3$. Užrašome sandaugos pavidalu: $x^2 - 5x + 6 = (x-2)(x-3)$. Prilyginus nuliui $(x-2)(x-3) = 0$, gauname šaknis $x=2$ arba $x=3$.",
@@ -31109,7 +31109,7 @@ export const exercises = [
             "action": "Ieškome dviejų skaičių $p$ ir $q$ pagal trinario koeficientus.",
             "reason": "Skaidymui $x^2+bx+c = (x-p)(x-q)$ reikia, kad šaknų suma būtų lygi $-b$, o sandauga lygi $c$.",
             "result": "$p+q = 5$ ir $pq = 6$.",
-            "latex": "p+q=5, \\\\quad p \\\\cdot q = 6"
+            "latex": "p+q=5, \\quad p \\cdot q = 6"
           },
           {
             "title": "Daugiklių parinkimas",
@@ -31135,7 +31135,7 @@ export const exercises = [
         "title": "Ženklų klaida daugikliuose",
         "type": "mistake",
         "wrongMove": "Supainioti ženklus skliausteliuose, pvz., užrašyti $(x+2)(x+3)$.",
-        "whyTempting": "Kadangi sandauga $(+2) \\\\cdot (+3) = 6$ sutampa su laisvuoju nariu, mokiniai kartais pamiršta patikrinti sumos ženklą.",
+        "whyTempting": "Kadangi sandauga $(+2) \\cdot (+3) = 6$ sutampa su laisvuoju nariu, mokiniai kartais pamiršta patikrinti sumos ženklą.",
         "whyItHappens": "Neatliekamas atvirkštinis veiksmas – skliaustų skleidimas patikrai.",
         "wrongPattern": "(x+2)(x+3) = x^2 + 5x + 6 \\neq x^2 - 5x + 6.",
         "correction": "Visada patikrinkite vidurinį narį: $(-2) + (-3) = -5$, todėl daugikliai privalo turėti minuso ženklus: $(x-2)$ ir $(x-3)$.",
@@ -31182,7 +31182,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "fact",
         "front": "Ar tiesa, kad $x^2 - 5x + 6 = (x-2)(x-3)$?",
-        "back": "Taip, nes $(-2) \\\\cdot (-3) = 6$ ir $(-2) + (-3) = -5$.",
+        "back": "Taip, nes $(-2) \\cdot (-3) = 6$ ir $(-2) + (-3) = -5$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -31208,7 +31208,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Mums reikia, kad $p+q = 5$ ir $p \\\\cdot q = 6$. Tokie skaičiai yra 2 ir 3.",
+        "text": "Mums reikia, kad $p+q = 5$ ir $p \\cdot q = 6$. Tokie skaičiai yra 2 ir 3.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -31238,11 +31238,11 @@ export const exercises = [
     ],
     "hints": [
       "Pagalvokite: ar daugiau darbininkų dirbs ilgiau, ar trumpiau?",
-      "Apskaičiuokite bendrą darbą, reikalingą namui pastatyti: $6 \\\\times 12 = 72$ darbininko-dienos.",
+      "Apskaičiuokite bendrą darbą, reikalingą namui pastatyti: $6 \\times 12 = 72$ darbininko-dienos.",
       "Jei darbą atlieka 9 žmonės, padalykite bendrą darbo kiekį iš darbininkų skaičiaus.",
       "Atlikite veiksmą: $72 / 9$ ir raskite atsakymą."
     ],
-    "solution": "Apskaičiuojame bendrą darbo apimtį: $6 \\text{ darbininkai} \\\\times 12 \\text{ dienų} = 72 \\text{ darbininko-dienos}$. Kadangi dirbs 9 darbininkai, laikas $T$ apskaičiuojamas dalijant bendrą darbą iš darbininkų skaičiaus. $T = 72 / 9 = 8$ dienos.",
+    "solution": "Apskaičiuojame bendrą darbo apimtį: $6 \\text{ darbininkai} \\times 12 \\text{ dienų} = 72 \\text{ darbininko-dienos}$. Kadangi dirbs 9 darbininkai, laikas $T$ apskaičiuojamas dalijant bendrą darbą iš darbininkų skaičiaus. $T = 72 / 9 = 8$ dienos.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -31276,7 +31276,7 @@ export const exercises = [
             "action": "Apskaičiuojame, kiek iš viso „darbo vienetų“ (darbininko-dienų) reikia namui pastatyti.",
             "reason": "Kadangi našumas vienodas, bendras darbo kiekis išlieka toks pat nepriklausomai nuo žmonių skaičiaus.",
             "result": "6 darbininkai * 12 dienų = 72 darbininko-dienos.",
-            "latex": "W = 6 \\\\times 12 = 72"
+            "latex": "W = 6 \\times 12 = 72"
           },
           {
             "title": "Naujo laiko apskaičiavimas",
@@ -31294,10 +31294,10 @@ export const exercises = [
         "id": "ex-olimpiada-07-9cbe13cb-trap-1",
         "title": "Tiesioginio proporcingumo taikymas",
         "type": "mistake",
-        "wrongMove": "Taikyti kryžminę taisyklę: $6/12 = 9/x \\\\implies x = 18$.",
+        "wrongMove": "Taikyti kryžminę taisyklę: $6/12 = 9/x \\implies x = 18$.",
         "whyTempting": "Proporcijos dažniausiai sprendžiamos dauginant kryžmai, nesigilinant į dydžių prigimtį.",
         "whyItHappens": "Mechaninis taisyklių taikymas neatpažinus atvirkštinio proporcingumo.",
-        "wrongPattern": "6 \\\\cdot x = 9 \\\\cdot 12",
+        "wrongPattern": "6 \\cdot x = 9 \\cdot 12",
         "correction": "Darbininkų skaičius ir laikas yra atvirkščiai proporcingi: daugiau žmonių dirba trumpiau. Reikia naudoti lygybę $x_1 y_1 = x_2 y_2$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31307,11 +31307,11 @@ export const exercises = [
         "id": "ex-olimpiada-07-9cbe13cb-trap-2",
         "title": "Aritmetinė klaida daugyboje",
         "type": "mistake",
-        "wrongMove": "Teigti, kad $6 \\\\times 12 = 62$ arba $74$.",
+        "wrongMove": "Teigti, kad $6 \\times 12 = 62$ arba $74$.",
         "whyTempting": "Skubant atliekami neteisingi mintiniai skaičiavimai.",
         "whyItHappens": "Koncentracijos stoka paprastuose žingsniuose.",
         "wrongPattern": "W = 60",
-        "correction": "Visada verta pasitikrinti: $6 \\\\times 10 = 60$, $6 \\\\times 2 = 12$, $60 + 12 = 72$.",
+        "correction": "Visada verta pasitikrinti: $6 \\times 10 = 60$, $6 \\times 2 = 12$, $60 + 12 = 72$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -31328,7 +31328,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kuo skiriasi tiesioginis ir atvirkštinis proporcingumas?",
-        "back": "Tiesioginiame santykis $y/x$ yra pastovus, o atvirkštiniame sandauga $x \\\\cdot y$ yra pastovi.",
+        "back": "Tiesioginiame santykis $y/x$ yra pastovus, o atvirkštiniame sandauga $x \\cdot y$ yra pastovi.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -31342,7 +31342,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "fact",
         "front": "Kaip rasti bendrą darbo apimtį (W), kai žinomas galingumas (P) ir laikas (t)?",
-        "back": "Darbo apimtis lygi galingumo ir laiko sandaugai: $W = P \\\\cdot t$.",
+        "back": "Darbo apimtis lygi galingumo ir laiko sandaugai: $W = P \\cdot t$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -31361,7 +31361,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Apskaičiuokite bendrą darbą, reikalingą namui pastatyti: $6 \\\\times 12 = 72$ darbininko-dienos.",
+        "text": "Apskaičiuokite bendrą darbą, reikalingą namui pastatyti: $6 \\times 12 = 72$ darbininko-dienos.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -31399,10 +31399,10 @@ export const exercises = [
     "hints": [
       "Užrašykite mažiausią ir didžiausią dviženklį skaičių, dalų iš 3.",
       "Pirmasis progresijos narys $a_1 = 12$, paskutinis $a_n = 99$, o skirtumas $d = 3$.",
-      "Raskite narių skaičių $n$ iš formulės $a_n = a_1 + (n-1)d \\\\implies 99 = 12 + (n-1)3$.",
-      "Gausite $n=30$. Dabar pritaikykite sumos formulę $S_n = \\frac{a_1 + a_n}{2} \\\\cdot n$."
+      "Raskite narių skaičių $n$ iš formulės $a_n = a_1 + (n-1)d \\implies 99 = 12 + (n-1)3$.",
+      "Gausite $n=30$. Dabar pritaikykite sumos formulę $S_n = \\frac{a_1 + a_n}{2} \\cdot n$."
     ],
-    "solution": "Nustatome progresijos parametrus: $a_1 = 12$, $a_n = 99$, progresijos skirtumas $d=3$. Randame narių skaičių $n$: $99 = 12 + (n-1) \\\\times 3 \\\\implies 87 = 3(n-1) \\\\implies n-1 = 29 \\\\implies n = 30$. Apskaičiuojame sumą: $S_{30} = \\frac{12 + 99}{2} \\\\times 30 = \\frac{111}{2} \\\\times 30 = 111 \\\\times 15 = 1665$.",
+    "solution": "Nustatome progresijos parametrus: $a_1 = 12$, $a_n = 99$, progresijos skirtumas $d=3$. Randame narių skaičių $n$: $99 = 12 + (n-1) \\times 3 \\implies 87 = 3(n-1) \\implies n-1 = 29 \\implies n = 30$. Apskaičiuojame sumą: $S_{30} = \\frac{12 + 99}{2} \\times 30 = \\frac{111}{2} \\times 30 = 111 \\times 15 = 1665$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -31450,7 +31450,7 @@ export const exercises = [
             "action": "Pritaikome Gauso sumos formulę aritmetinei progresijai.",
             "reason": "Suma yra lygi pirmo ir paskutinio narių vidurkiui, padaugintam iš narių skaičiaus.",
             "result": "S = (12 + 99)/2 * 30 = 111 * 15 = 1665.",
-            "latex": "S_{30} = \\frac{12 + 99}{2} \\\\cdot 30 = 1665"
+            "latex": "S_{30} = \\frac{12 + 99}{2} \\cdot 30 = 1665"
           }
         ],
         "finalAnswer": "Suma yra 1665."
@@ -31495,7 +31495,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra aritmetinės progresijos sumos formulė?",
-        "back": "$S_n = \\frac{a_1 + a_n}{2} \\\\cdot n$ arba $S_n = \\frac{2a_1 + (n-1)d}{2} \\\\cdot n$.",
+        "back": "$S_n = \\frac{a_1 + a_n}{2} \\cdot n$ arba $S_n = \\frac{2a_1 + (n-1)d}{2} \\cdot n$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -31535,14 +31535,14 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Raskite narių skaičių $n$ iš formulės $a_n = a_1 + (n-1)d \\\\implies 99 = 12 + (n-1)3$.",
+        "text": "Raskite narių skaičių $n$ iš formulės $a_n = a_1 + (n-1)d \\implies 99 = 12 + (n-1)3$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Gausite $n=30$. Dabar pritaikykite sumos formulę $S_n = \\frac{a_1 + a_n}{2} \\\\cdot n$.",
+        "text": "Gausite $n=30$. Dabar pritaikykite sumos formulę $S_n = \\frac{a_1 + a_n}{2} \\cdot n$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -31566,10 +31566,10 @@ export const exercises = [
     "hints": [
       "Užrašykite progresijos sumos formulę.",
       "Žinome, kad $a_1 = 3$, $r = 2$, $n = 6$.",
-      "Įstatykite šiuos duomenis į formulę: $S_6 = 3 \\\\cdot \\frac{2^6 - 1}{2 - 1}$.",
+      "Įstatykite šiuos duomenis į formulę: $S_6 = 3 \\cdot \\frac{2^6 - 1}{2 - 1}$.",
       "Apskaičiuokite $2^6 = 64$ ir atlikite likusius veiksmus."
     ],
-    "solution": "Naudojame geometrinės progresijos sumos formulę: $S_n = a_1 \\frac{r^n - 1}{r - 1}$. Įstatome duomenis $a_1 = 3$, $r = 2$ ir $n = 6$: $S_6 = 3 \\\\times \\frac{2^6 - 1}{2 - 1}$. Kadangi $2^6 = 64$ ir vardiklis $2-1=1$, turime $S_6 = 3 \\\\times (64 - 1) = 3 \\\\times 63 = 189$.",
+    "solution": "Naudojame geometrinės progresijos sumos formulę: $S_n = a_1 \\frac{r^n - 1}{r - 1}$. Įstatome duomenis $a_1 = 3$, $r = 2$ ir $n = 6$: $S_6 = 3 \\times \\frac{2^6 - 1}{2 - 1}$. Kadangi $2^6 = 64$ ir vardiklis $2-1=1$, turime $S_6 = 3 \\times (64 - 1) = 3 \\times 63 = 189$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -31610,14 +31610,14 @@ export const exercises = [
             "action": "Pritaikome sumos formulę, skirtą geometrinei progresijai.",
             "reason": "Geometrinė progresija reikalauja specifinės sumos formulės su laipsniais.",
             "result": "S = a1 * (r^n - 1) / (r - 1).",
-            "latex": "S_6 = 3 \\\\cdot \\frac{2^6 - 1}{2 - 1}"
+            "latex": "S_6 = 3 \\cdot \\frac{2^6 - 1}{2 - 1}"
           },
           {
             "title": "Skaičiavimas",
             "action": "Apskaičiuojame laipsnio reikšmę ir atliekame veiksmus.",
             "reason": "2^6 = 64, todėl (64-1)=63.",
             "result": "S = 3 * 63 / 1 = 189.",
-            "latex": "S_6 = 3 \\\\cdot 63 = 189"
+            "latex": "S_6 = 3 \\cdot 63 = 189"
           }
         ],
         "finalAnswer": "Suma lygi 189."
@@ -31631,7 +31631,7 @@ export const exercises = [
         "wrongMove": "Dauginti pirmąjį narį iš vardiklio prieš pakeliant laipsniu: (3*2)^6.",
         "whyTempting": "Atrodo paprasčiau sudauginti skaičius pagrinde.",
         "whyItHappens": "Neteisingas supratimas, kaip laipsnis veikia sandaugą formulėje.",
-        "wrongPattern": "S = (3 \\\\cdot 2)^6 - 1",
+        "wrongPattern": "S = (3 \\cdot 2)^6 - 1",
         "correction": "Pirmiausia keliame r laipsniu n, tada atimame 1, ir tik tada dauginame iš a1.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31644,7 +31644,7 @@ export const exercises = [
         "wrongMove": "Naudoti r^(n-1) sumos formulėje.",
         "whyTempting": "n-1 naudojamas bendrojo nario formulėje an = a1 * r^(n-1).",
         "whyItHappens": "Dviejų skirtingų progresijos formulių supainiojimas.",
-        "wrongPattern": "S = a_1 \\\\cdot \\frac{r^{n-1} - 1}{r - 1}",
+        "wrongPattern": "S = a_1 \\cdot \\frac{r^{n-1} - 1}{r - 1}",
         "correction": "Sumos formulėje laipsnis visada sutampa su narių skaičiumi n: r^n.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31702,7 +31702,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite šiuos duomenis į formulę: $S_6 = 3 \\\\cdot \\frac{2^6 - 1}{2 - 1}$.",
+        "text": "Įstatykite šiuos duomenis į formulę: $S_6 = 3 \\cdot \\frac{2^6 - 1}{2 - 1}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -31720,7 +31720,7 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išspręskite nelygybę $|2x - 5| \\\\le 9$ ir raskite sveikųjų sprendinių skaičių.",
+    "statement": "Išspręskite nelygybę $|2x - 5| \\le 9$ ir raskite sveikųjų sprendinių skaičių.",
     "answer": "Yra 10 sveikųjų sprendinių.",
     "acceptedAnswers": [
       "Yra 10 sveikųjų sprendinių."
@@ -31732,11 +31732,11 @@ export const exercises = [
     ],
     "hints": [
       "Atsikratykite modulio ženklo pakeisdami nelygybę dviem susijusiomis ribomis.",
-      "Užrašykite: $-9 \\\\le 2x - 5 \\\\le 9$.",
-      "Pridėkite 5 prie visų dalių: $-4 \\\\le 2x \\\\le 14$, tada padalinkite iš 2.",
-      "Gausite $-2 \\\\le x \\\\le 7$. Suskaičiuokite visus sveikuosius skaičius šiame intervale."
+      "Užrašykite: $-9 \\le 2x - 5 \\le 9$.",
+      "Pridėkite 5 prie visų dalių: $-4 \\le 2x \\le 14$, tada padalinkite iš 2.",
+      "Gausite $-2 \\le x \\le 7$. Suskaičiuokite visus sveikuosius skaičius šiame intervale."
     ],
-    "solution": "Modulio nelygybę užrašome dviguba nelygybe: $-9 \\\\le 2x - 5 \\\\le 9$. Pridedame 5 prie visų dalių: $-4 \\\\le 2x \\\\le 14$. Padalijame iš 2: $-2 \\\\le x \\\\le 7$. Sveikieji sprendiniai yra $-2, -1, 0, 1, 2, 3, 4, 5, 6, 7$. Jų iš viso yra $7 - (-2) + 1 = 10$.",
+    "solution": "Modulio nelygybę užrašome dviguba nelygybe: $-9 \\le 2x - 5 \\le 9$. Pridedame 5 prie visų dalių: $-4 \\le 2x \\le 14$. Padalijame iš 2: $-2 \\le x \\le 7$. Sveikieji sprendiniai yra $-2, -1, 0, 1, 2, 3, 4, 5, 6, 7$. Jų iš viso yra $7 - (-2) + 1 = 10$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -31744,7 +31744,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Modulio nelygybės skleidimas",
-      "text": "Nelygybę $|f(x)| \\\\le A$ užrašykite kaip dvigubą nelygybę $-A \\\\le f(x) \\\\le A$."
+      "text": "Nelygybę $|f(x)| \\le A$ užrašykite kaip dvigubą nelygybę $-A \\le f(x) \\le A$."
     },
     "strategyTags": [
       "standard",
@@ -31770,14 +31770,14 @@ export const exercises = [
             "action": "Paverčiame modulio nelygybę į dvigubą tiesinę nelygybę.",
             "reason": "Modulis yra mažesnis už skaičių tik tada, kai pošaknis yra tarp to skaičiaus ir jam priešingo.",
             "result": "-9 <= 2x - 5 <= 9.",
-            "latex": "-9 \\\\le 2x - 5 \\\\le 9"
+            "latex": "-9 \\le 2x - 5 \\le 9"
           },
           {
             "title": "Kintamojo išskyrimas",
             "action": "Atliekame veiksmus visoms trims nelygybės dalims vienu metu.",
             "reason": "Kad išlaikytume nelygybės ekvivalentumą.",
             "result": "-4 <= 2x <= 14, tada -2 <= x <= 7.",
-            "latex": "-4 \\\\le 2x \\\\le 14 \\\\implies -2 \\\\le x \\\\le 7"
+            "latex": "-4 \\le 2x \\le 14 \\implies -2 \\le x \\le 7"
           },
           {
             "title": "Sveikųjų skaičių skaičiavimas",
@@ -31811,7 +31811,7 @@ export const exercises = [
         "wrongMove": "Spręsti tik 2x - 5 <= 9, pamirštant neigiamą pusę.",
         "whyTempting": "Modulio ženklas tiesiog „numetamas“.",
         "whyItHappens": "Modulio apibrėžimo spragos.",
-        "wrongPattern": "x \\\\le 7",
+        "wrongPattern": "x \\le 7",
         "correction": "Modulis apibrėžia atstumą, todėl nelygybė visada turi dvi puses (nebent dešinė pusė neigiama).",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31828,8 +31828,8 @@ export const exercises = [
         "id": "ex-olimpiada-07-5cb75c1f-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kaip sprendžiama modulio nelygybė $|x| \\\\le a$?",
-        "back": "Ji ekvivalenti dvigubai nelygybei $-a \\\\le x \\\\le a$.",
+        "front": "Kaip sprendžiama modulio nelygybė $|x| \\le a$?",
+        "back": "Ji ekvivalenti dvigubai nelygybei $-a \\le x \\le a$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -31850,21 +31850,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite: $-9 \\\\le 2x - 5 \\\\le 9$.",
+        "text": "Užrašykite: $-9 \\le 2x - 5 \\le 9$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pridėkite 5 prie visų dalių: $-4 \\\\le 2x \\\\le 14$, tada padalinkite iš 2.",
+        "text": "Pridėkite 5 prie visų dalių: $-4 \\le 2x \\le 14$, tada padalinkite iš 2.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Gausite $-2 \\\\le x \\\\le 7$. Suskaičiuokite visus sveikuosius skaičius šiame intervale.",
+        "text": "Gausite $-2 \\le x \\le 7$. Suskaičiuokite visus sveikuosius skaičius šiame intervale.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -31875,10 +31875,10 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite funkcijos $f(x) = \\frac{1}{\\\\sqrt{x - 3}}$ apibrėžimo sritį.",
-    "answer": "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\\\infty)$).",
+    "statement": "Raskite funkcijos $f(x) = \\frac{1}{\\sqrt{x - 3}}$ apibrėžimo sritį.",
+    "answer": "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\infty)$).",
     "acceptedAnswers": [
-      "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\\\infty)$)."
+      "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\infty)$)."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -31891,7 +31891,7 @@ export const exercises = [
       "Išspręskite gautą griežtą nelygybę $x-3 > 0$.",
       "Sprendinys yra $x > 3$. Užrašykite tai intervalo pavidalu."
     ],
-    "solution": "Nustatome apribojimus: pošaknis reikalauja $x-3 \\\\ge 0$, o buvimas vardiklyje neleidžia $\\\\sqrt{x-3} = 0$. Sujungus šias dvi sąlygas gauname vieną griežtą nelygybę: $x - 3 > 0$. Išsprendžiame nelygybę: $x > 3$.",
+    "solution": "Nustatome apribojimus: pošaknis reikalauja $x-3 \\ge 0$, o buvimas vardiklyje neleidžia $\\sqrt{x-3} = 0$. Sujungus šias dvi sąlygas gauname vieną griežtą nelygybę: $x - 3 > 0$. Išsprendžiame nelygybę: $x > 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -31925,7 +31925,7 @@ export const exercises = [
             "action": "Nustatome reikalavimus pošakniui ir vardikliui.",
             "reason": "Kvadratinė šaknis apibrėžta tik neneigiamiems skaičiams, o vardiklis negali būti nulis.",
             "result": "x - 3 >= 0 (šakniai) ir sqrt(x - 3) != 0 (vardikliui).",
-            "latex": "x - 3 \\\\ge 0 \\\\quad \\text{ir} \\\\quad \\\\sqrt{x - 3} \neq 0"
+            "latex": "x - 3 \\ge 0 \\quad \\text{ir} \\quad \\sqrt{x - 3} \neq 0"
           },
           {
             "title": "Nelygybės sudarymas",
@@ -31939,10 +31939,10 @@ export const exercises = [
             "action": "Išsprendžiame nelygybę kintamojo x atžvilgiu.",
             "reason": "Tai nurodo visą leistinų x reikšmių aibę.",
             "result": "x > 3.",
-            "latex": "x > 3 \\\\implies x \\\\in (3, \\\\infty)"
+            "latex": "x > 3 \\implies x \\in (3, \\infty)"
           }
         ],
-        "finalAnswer": "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\\\infty)$)."
+        "finalAnswer": "Apibrėžimo sritis yra $x > 3$ (arba $(3, \\infty)$)."
       }
     ],
     "commonTraps": [
@@ -31953,7 +31953,7 @@ export const exercises = [
         "wrongMove": "Leisti pošakniui būti lygiam nuliui, užrašant x >= 3.",
         "whyTempting": "Įprasta manyti, kad pošaknis visada reikalauja >= 0.",
         "whyItHappens": "Užmirštama patikrinti, ar reiškinys nėra vardiklyje.",
-        "wrongPattern": "x \\\\ge 3",
+        "wrongPattern": "x \\ge 3",
         "correction": "Kadangi šaknis yra vardiklyje, x=3 duotų dalybą iš nulio, todėl ši reikšmė turi būti atmesta: x > 3.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -31983,7 +31983,7 @@ export const exercises = [
         "id": "ex-olimpiada-07-cc31e7e8-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokie apribojimai taikomi reiškiniui $\\frac{1}{\\\\sqrt{A}}$?",
+        "front": "Kokie apribojimai taikomi reiškiniui $\\frac{1}{\\sqrt{A}}$?",
         "back": "Apribojimas yra griežtas teigiamumas: $A > 0$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32042,10 +32042,10 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Trikampyje $ABC$ kampas $A$ yra dvigubai didesnis už kampą $B$, o priekampis prie viršūnės $C$ lygus $120^\\\\circ$. Raskite trikampio vidinių kampų dydžius.",
-    "answer": "Kampai yra: $\\\\angle A = 80^\\\\circ$, $\\\\angle B = 40^\\\\circ$, $\\\\angle C = 60^\\\\circ$.",
+    "statement": "Trikampyje $ABC$ kampas $A$ yra dvigubai didesnis už kampą $B$, o priekampis prie viršūnės $C$ lygus $120^\\circ$. Raskite trikampio vidinių kampų dydžius.",
+    "answer": "Kampai yra: $\\angle A = 80^\\circ$, $\\angle B = 40^\\circ$, $\\angle C = 60^\\circ$.",
     "acceptedAnswers": [
-      "Kampai yra: $\\\\angle A = 80^\\\\circ$, $\\\\angle B = 40^\\\\circ$, $\\\\angle C = 60^\\\\circ$."
+      "Kampai yra: $\\angle A = 80^\\circ$, $\\angle B = 40^\\circ$, $\\angle C = 60^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -32054,11 +32054,11 @@ export const exercises = [
     ],
     "hints": [
       "Prisiminkite priekampio savybę arba kaip priekampis susijęs su gretutiniu vidiniu kampu.",
-      "Priekampis prie $C$ lygus $120^\\\\circ$, vadinasi vidinis kampas $C = 180^\\\\circ - 120^\\\\circ = 60^\\\\circ$.",
-      "Taip pat $\\\\angle A + \\\\angle B = 120^\\\\circ$. Žinome, kad $\\\\angle A = 2\\\\angle B$.",
-      "Įstatykite: $2\\\\angle B + \\\\angle B = 120^\\\\circ \\\\implies 3\\\\angle B = 120^\\\\circ$. Raskite $\\\\angle B$ ir $\\\\angle A$."
+      "Priekampis prie $C$ lygus $120^\\circ$, vadinasi vidinis kampas $C = 180^\\circ - 120^\\circ = 60^\\circ$.",
+      "Taip pat $\\angle A + \\angle B = 120^\\circ$. Žinome, kad $\\angle A = 2\\angle B$.",
+      "Įstatykite: $2\\angle B + \\angle B = 120^\\circ \\implies 3\\angle B = 120^\\circ$. Raskite $\\angle B$ ir $\\angle A$."
     ],
-    "solution": "Apskaičiuojame vidinį kampą $C$: $\\\\angle C = 180^\\\\circ - 120^\\\\circ = 60^\\\\circ$. Pagal priekampio teoremą, $\\\\angle A + \\\\angle B = 120^\\\\circ$. Kadangi $\\\\angle A = 2\\\\angle B$, gauname $2\\\\angle B + \\\\angle B = 120^\\\\circ \\\\implies 3\\\\angle B = 120^\\\\circ \\\\implies \\\\angle B = 40^\\\\circ$. Tada $\\\\angle A = 2 \\\\times 40^\\\\circ = 80^\\\\circ$.",
+    "solution": "Apskaičiuojame vidinį kampą $C$: $\\angle C = 180^\\circ - 120^\\circ = 60^\\circ$. Pagal priekampio teoremą, $\\angle A + \\angle B = 120^\\circ$. Kadangi $\\angle A = 2\\angle B$, gauname $2\\angle B + \\angle B = 120^\\circ \\implies 3\\angle B = 120^\\circ \\implies \\angle B = 40^\\circ$. Tada $\\angle A = 2 \\times 40^\\circ = 80^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -32092,24 +32092,24 @@ export const exercises = [
             "action": "Apskaičiuojame kampą C kaip priekampiui gretutinį kampą.",
             "reason": "Gretutinių kampų suma lygi 180 laipsnių.",
             "result": "C = 180 - 120 = 60.",
-            "latex": "\\\\angle C = 180^\\\\circ - 120^\\\\circ = 60^\\\\circ"
+            "latex": "\\angle C = 180^\\circ - 120^\\circ = 60^\\circ"
           },
           {
             "title": "Lygties sudarymas kampams A ir B",
             "action": "Pritaikome teoremą, kad priekampis lygus neprišlietų vidinių kampų sumai.",
             "reason": "Tai leidžia susieti A ir B kintamuosius su duotu priekampiu.",
             "result": "A + B = 120.",
-            "latex": "\\\\angle A + \\\\angle B = 120^\\\\circ"
+            "latex": "\\angle A + \\angle B = 120^\\circ"
           },
           {
             "title": "Sistemos sprendimas",
             "action": "Įstatome ryšį A = 2B į sudarytą lygybę.",
             "reason": "Turime vieną lygtį su vienu nežinomuoju.",
             "result": "2B + B = 120 => 3B = 120 => B = 40, tada A = 80.",
-            "latex": "2\\\\angle B + \\\\angle B = 120^\\\\circ \\\\implies \\\\angle B = 40^\\\\circ, \\\\angle A = 80^\\\\circ"
+            "latex": "2\\angle B + \\angle B = 120^\\circ \\implies \\angle B = 40^\\circ, \\angle A = 80^\\circ"
           }
         ],
-        "finalAnswer": "Kampai yra: $\\\\angle A = 80^\\\\circ$, $\\\\angle B = 40^\\\\circ$, $\\\\angle C = 60^\\\\circ$."
+        "finalAnswer": "Kampai yra: $\\angle A = 80^\\circ$, $\\angle B = 40^\\circ$, $\\angle C = 60^\\circ$."
       }
     ],
     "commonTraps": [
@@ -32117,11 +32117,11 @@ export const exercises = [
         "id": "ex-olimpiada-07-0f8394c4-trap-1",
         "title": "Kampų sumos klaida",
         "type": "mistake",
-        "wrongMove": "Manyti, kad visi trys trikampio kampai sumuojasi į $360^\\\\circ$.",
+        "wrongMove": "Manyti, kad visi trys trikampio kampai sumuojasi į $360^\\circ$.",
         "whyTempting": "Supainiojama su keturkampio kampų suma arba pilnu apskritimu.",
         "whyItHappens": "Pagrindinių geometrijos faktų užmiršimas.",
         "wrongPattern": "A + B + C = 360",
-        "correction": "Trikampio vidinių kampų suma visada lygi $180^\\\\circ$.",
+        "correction": "Trikampio vidinių kampų suma visada lygi $180^\\circ$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -32133,7 +32133,7 @@ export const exercises = [
         "wrongMove": "Prilyginti vidinį kampą C pačiam priekampiui (C = 120).",
         "whyTempting": "Neteisingas priekampio apibrėžimo supratimas.",
         "whyItHappens": "Painiojami vidiniai ir išoriniai kampai.",
-        "wrongPattern": "\\\\angle C = 120^\\\\circ",
+        "wrongPattern": "\\angle C = 120^\\circ",
         "correction": "Vidinis kampas ir jo priekampis yra gretutiniai, todėl jų suma yra 180, o ne jie patys yra lygūs.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32184,21 +32184,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Priekampis prie $C$ lygus $120^\\\\circ$, vadinasi vidinis kampas $C = 180^\\\\circ - 120^\\\\circ = 60^\\\\circ$.",
+        "text": "Priekampis prie $C$ lygus $120^\\circ$, vadinasi vidinis kampas $C = 180^\\circ - 120^\\circ = 60^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Taip pat $\\\\angle A + \\\\angle B = 120^\\\\circ$. Žinome, kad $\\\\angle A = 2\\\\angle B$.",
+        "text": "Taip pat $\\angle A + \\angle B = 120^\\circ$. Žinome, kad $\\angle A = 2\\angle B$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Įstatykite: $2\\\\angle B + \\\\angle B = 120^\\\\circ \\\\implies 3\\\\angle B = 120^\\\\circ$. Raskite $\\\\angle B$ ir $\\\\angle A$.",
+        "text": "Įstatykite: $2\\angle B + \\angle B = 120^\\circ \\implies 3\\angle B = 120^\\circ$. Raskite $\\angle B$ ir $\\angle A$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -32209,10 +32209,10 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Stačiojo trikampio vienas iš smailųjų kampų lygus $30^\\\\circ$, o įžambinė lygi $10$ cm. Raskite trikampio plotą.",
-    "answer": "Plotas lygus $\\frac{25\\\\sqrt{3}}{2}$ $\\text{cm}^2$.",
+    "statement": "Stačiojo trikampio vienas iš smailųjų kampų lygus $30^\\circ$, o įžambinė lygi $10$ cm. Raskite trikampio plotą.",
+    "answer": "Plotas lygus $\\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$.",
     "acceptedAnswers": [
-      "Plotas lygus $\\frac{25\\\\sqrt{3}}{2}$ $\\text{cm}^2$."
+      "Plotas lygus $\\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -32220,20 +32220,20 @@ export const exercises = [
       "olimpiada-07-concept-logic"
     ],
     "hints": [
-      "Raskite trumpesnįjį statinį naudodami $30^\\\\circ$ kampo taisyklę.",
-      "Statinis prieš $30^\\\\circ$ kampą yra $a = 10 / 2 = 5$ cm.",
-      "Pagal Pitagoro teoremą arba trigonometriją, kitas statinis yra $b = 5\\\\sqrt{3}$ cm.",
-      "Apskaičiuokite trikampio plotą pagal formulę $S = \\frac{a \\\\cdot b}{2}$."
+      "Raskite trumpesnįjį statinį naudodami $30^\\circ$ kampo taisyklę.",
+      "Statinis prieš $30^\\circ$ kampą yra $a = 10 / 2 = 5$ cm.",
+      "Pagal Pitagoro teoremą arba trigonometriją, kitas statinis yra $b = 5\\sqrt{3}$ cm.",
+      "Apskaičiuokite trikampio plotą pagal formulę $S = \\frac{a \\cdot b}{2}$."
     ],
-    "solution": "Kadangi kampas lygus $30^\\\\circ$, prieš jį esantis statinis lygus pusei įžambinės: $a = 10 / 2 = 5$ cm. Naudodami Pitagoro teoremą arba santykį randame kitą statinį: $b = 5\\\\sqrt{3}$ cm. Apskaičiuojame stačiojo trikampio plotą: $S = \\frac{a \\\\times b}{2} = \\frac{5 \\\\times 5\\\\sqrt{3}}{2} = \\frac{25\\\\sqrt{3}}{2}$ $\\text{cm}^2$.",
+    "solution": "Kadangi kampas lygus $30^\\circ$, prieš jį esantis statinis lygus pusei įžambinės: $a = 10 / 2 = 5$ cm. Naudodami Pitagoro teoremą arba santykį randame kitą statinį: $b = 5\\sqrt{3}$ cm. Apskaičiuojame stačiojo trikampio plotą: $S = \\frac{a \\times b}{2} = \\frac{5 \\times 5\\sqrt{3}}{2} = \\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "introductory",
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
-      "title": "$30^\\\\circ-60^\\\\circ-90^\\\\circ$ trikampio savybės",
-      "text": "Statinis prieš $30^\\\\circ$ kampą yra lygus pusei įžambinės, o kitas statinis lygus $a\\\\sqrt{3}$."
+      "title": "$30^\\circ-60^\\circ-90^\\circ$ trikampio savybės",
+      "text": "Statinis prieš $30^\\circ$ kampą yra lygus pusei įžambinės, o kitas statinis lygus $a\\sqrt{3}$."
     },
     "strategyTags": [
       "introductory",
@@ -32266,17 +32266,17 @@ export const exercises = [
             "action": "Apskaičiuojame kitą statinį naudodami 30-60-90 trikampio proporcijas.",
             "reason": "Statinis prieš 60 laipsnių kampą yra sqrt(3) kartų ilgesnis už trumpąjį statinį.",
             "result": "b = 5 * sqrt(3) cm.",
-            "latex": "b = 5\\\\sqrt{3}"
+            "latex": "b = 5\\sqrt{3}"
           },
           {
             "title": "Ploto skaičiavimas",
             "action": "Sudedame statinius į stačiojo trikampio ploto formulę.",
             "reason": "Plotas yra lygus statinių sandaugos pusei.",
             "result": "S = (5 * 5*sqrt(3)) / 2.",
-            "latex": "S = \\frac{5 \\\\cdot 5\\\\sqrt{3}}{2} = 12.5\\\\sqrt{3}"
+            "latex": "S = \\frac{5 \\cdot 5\\sqrt{3}}{2} = 12.5\\sqrt{3}"
           }
         ],
-        "finalAnswer": "Plotas lygus $\\frac{25\\\\sqrt{3}}{2}$ $\\text{cm}^2$."
+        "finalAnswer": "Plotas lygus $\\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$."
       }
     ],
     "commonTraps": [
@@ -32287,7 +32287,7 @@ export const exercises = [
         "wrongMove": "Dauginti įžambinę iš vieno iš statinių skaičiuojant plotą (S = 10*5 / 2).",
         "whyTempting": "Įžambinė yra duota skaitinė vertė, todėl ją norisi naudoti tiesiogiai.",
         "whyItHappens": "Ploto formulės (pagrindas * aukštinė) nepritaikymas konkrečiai stačiajam trikampiui.",
-        "wrongPattern": "S = \\frac{c \\\\cdot a}{2}",
+        "wrongPattern": "S = \\frac{c \\cdot a}{2}",
         "correction": "Stačiojo trikampio plotui reikia naudoti abu statinius, o ne įžambinę: $S = \\frac{ab}{2}$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32300,7 +32300,7 @@ export const exercises = [
         "wrongMove": "Padalyti trumpąjį statinį iš sqrt(3) ieškant ilgojo statinio.",
         "whyTempting": "Painiojama, kuris statinis yra ilgesnis.",
         "whyItHappens": "Atminties klaida dėl 30-60-90 trikampio proporcijų.",
-        "wrongPattern": "b = 5 / \\\\sqrt{3}",
+        "wrongPattern": "b = 5 / \\sqrt{3}",
         "correction": "Statinis prieš 60 laipsnių kampą visada yra ILGESNIS už statinį prieš 30 laipsnių kampą.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32317,8 +32317,8 @@ export const exercises = [
         "id": "ex-olimpiada-07-13051fff-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokios yra trikampio su $30^\\\\circ, 60^\\\\circ, 90^\\\\circ$ kampais kraštinių proporcijos?",
-        "back": "Jei įžambinė lygi $2x$, tai statinis prieš $30^\\\\circ$ kampą yra $x$, o prieš $60^\\\\circ$ kampą yra $x\\\\sqrt{3}$.",
+        "front": "Kokios yra trikampio su $30^\\circ, 60^\\circ, 90^\\circ$ kampais kraštinių proporcijos?",
+        "back": "Jei įžambinė lygi $2x$, tai statinis prieš $30^\\circ$ kampą yra $x$, o prieš $60^\\circ$ kampą yra $x\\sqrt{3}$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -32344,28 +32344,28 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Raskite trumpesnįjį statinį naudodami $30^\\\\circ$ kampo taisyklę.",
+        "text": "Raskite trumpesnįjį statinį naudodami $30^\\circ$ kampo taisyklę.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Statinis prieš $30^\\\\circ$ kampą yra $a = 10 / 2 = 5$ cm.",
+        "text": "Statinis prieš $30^\\circ$ kampą yra $a = 10 / 2 = 5$ cm.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pagal Pitagoro teoremą arba trigonometriją, kitas statinis yra $b = 5\\\\sqrt{3}$ cm.",
+        "text": "Pagal Pitagoro teoremą arba trigonometriją, kitas statinis yra $b = 5\\sqrt{3}$ cm.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite trikampio plotą pagal formulę $S = \\frac{a \\\\cdot b}{2}$.",
+        "text": "Apskaičiuokite trikampio plotą pagal formulę $S = \\frac{a \\cdot b}{2}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -32392,7 +32392,7 @@ export const exercises = [
       "Palyginkite kraštinių santykius: ar $\\frac{AD}{AC} = \\frac{AE}{AB}$?",
       "Atlikite skaičiavimus: $\\frac{4}{8} = \\frac{1}{2}$ ir $\\frac{5}{10} = \\frac{1}{2}$. Kadangi santykiai lygūs ir kampas bendras, taikykite SAS kriterijų."
     ],
-    "solution": "Apskaičiuojame kraštines: $AB = 4 + 6 = 10$, $AC = 5 + 3 = 8$. Užrašome atitinkamų kraštinių santykius: $\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}$ ir $\\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}$. Kadangi santykiai sutampa (abu lygūs $1/2$) ir kampas $\\\\angle A$ yra bendras, trikampiai $\\triangle ADE$ ir $\\triangle ACB$ yra panašūs pagal SAS kriterijų.",
+    "solution": "Apskaičiuojame kraštines: $AB = 4 + 6 = 10$, $AC = 5 + 3 = 8$. Užrašome atitinkamų kraštinių santykius: $\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}$ ir $\\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}$. Kadangi santykiai sutampa (abu lygūs $1/2$) ir kampas $\\angle A$ yra bendras, trikampiai $\\triangle ADE$ ir $\\triangle ACB$ yra panašūs pagal SAS kriterijų.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -32433,14 +32433,14 @@ export const exercises = [
             "action": "Palyginame mažojo trikampio kraštines su atitinkamomis didžiojo trikampio kraštinėmis.",
             "reason": "Ieškome proporcingumo koeficiento aplink bendrą kampą.",
             "result": "4/8 = 0.5 ir 5/10 = 0.5. Santykiai lygūs.",
-            "latex": "\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}, \\\\quad \\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}"
+            "latex": "\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}, \\quad \\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}"
           },
           {
             "title": "Išvados formulavimas",
             "action": "Nurodome panašumo kriterijų.",
             "reason": "Dvi kraštinės yra proporcingos ir kampas tarp jų (kampas A) yra bendras.",
             "result": "Trikampiai panašūs pagal SAS.",
-            "latex": "\\triangle ADE \\\\sim \\triangle ACB"
+            "latex": "\\triangle ADE \\sim \\triangle ACB"
           }
         ],
         "finalAnswer": "Trikampiai yra panašūs."
@@ -32532,9 +32532,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Dvi lygiagrečios tiesės $a$ ir $b$ kertamos kirstine $c$. Vieno iš gautų vienašalių kampų dydis yra 4 kartus didesnis už kitą. Raskite šių kampų dydžius.",
-    "answer": "Kampai yra $36^\\\\circ$ ir $144^\\\\circ$.",
+    "answer": "Kampai yra $36^\\circ$ ir $144^\\circ$.",
     "acceptedAnswers": [
-      "Kampai yra $36^\\\\circ$ ir $144^\\\\circ$."
+      "Kampai yra $36^\\circ$ ir $144^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -32543,11 +32543,11 @@ export const exercises = [
     ],
     "hints": [
       "Pažymėkite mažesnį kampą $x$. Kaip užrašysite didesnį?",
-      "Didesnis kampas yra $4x$. Šių kampų suma lygi $180^\\\\circ$.",
-      "Sudarome lygtį: $x + 4x = 180^\\\\circ$.",
-      "Sprendžiame: $5x = 180^\\\\circ \\\\implies x = 36^\\\\circ$. Raskite antrąjį kampą."
+      "Didesnis kampas yra $4x$. Šių kampų suma lygi $180^\\circ$.",
+      "Sudarome lygtį: $x + 4x = 180^\\circ$.",
+      "Sprendžiame: $5x = 180^\\circ \\implies x = 36^\\circ$. Raskite antrąjį kampą."
     ],
-    "solution": "Pažymime mažesnį kampą $x$, tada didesnis yra $4x$. Sudarome lygtį pagal vienašalių kampų sumos savybę: $x + 4x = 180^\\\\circ$. Sprendžiame lygtį: $5x = 180^\\\\circ \\\\implies x = 36^\\\\circ$. Kitas kampas yra $4 \\\\times 36^\\\\circ = 144^\\\\circ$.",
+    "solution": "Pažymime mažesnį kampą $x$, tada didesnis yra $4x$. Sudarome lygtį pagal vienašalių kampų sumos savybę: $x + 4x = 180^\\circ$. Sprendžiame lygtį: $5x = 180^\\circ \\implies x = 36^\\circ$. Kitas kampas yra $4 \\times 36^\\circ = 144^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -32555,7 +32555,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Vienašalių kampų suma",
-      "text": "Vienašaliai kampai, gauti kertant lygiagrečias tieses kirstine, papildo vienas kitą iki $180^\\\\circ$."
+      "text": "Vienašaliai kampai, gauti kertant lygiagrečias tieses kirstine, papildo vienas kitą iki $180^\\circ$."
     },
     "strategyTags": [
       "introductory",
@@ -32581,24 +32581,24 @@ export const exercises = [
             "action": "Pažymime vieną iš kampų x, o kitą išreiškiame per jį.",
             "reason": "Uždavinyje duotas santykis tarp dviejų nežinomų dydžių.",
             "result": "Pirmas kampas = x, antras kampas = 4x.",
-            "latex": "x, \\\\quad 4x"
+            "latex": "x, \\quad 4x"
           },
           {
             "title": "Geometrinės savybės taikymas",
             "action": "Sudarome lygtį remdamiesi vienašalių kampų suma.",
             "reason": "Lygiagrečių tiesių vienašalių kampų suma visada lygi 180 laipsnių.",
             "result": "x + 4x = 180.",
-            "latex": "x + 4x = 180^\\\\circ"
+            "latex": "x + 4x = 180^\\circ"
           },
           {
             "title": "Lygties sprendimas",
             "action": "Randame x reikšmę ir apskaičiuojame abu kampus.",
             "reason": "Tai leidžia gauti konkrečias skaitines vertes.",
             "result": "5x = 180 => x = 36. 4x = 144.",
-            "latex": "5x = 180^\\\\circ \\\\implies x = 36^\\\\circ, \\\\quad 4x = 144^\\\\circ"
+            "latex": "5x = 180^\\circ \\implies x = 36^\\circ, \\quad 4x = 144^\\circ"
           }
         ],
-        "finalAnswer": "Kampai yra $36^\\\\circ$ ir $144^\\\\circ$."
+        "finalAnswer": "Kampai yra $36^\\circ$ ir $144^\\circ$."
       }
     ],
     "commonTraps": [
@@ -32640,7 +32640,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra lygiagrečių tiesių vienašalių kampų savybė?",
-        "back": "Vienašalių kampų suma visada lygi $180^\\\\circ$.",
+        "back": "Vienašalių kampų suma visada lygi $180^\\circ$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -32673,21 +32673,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Didesnis kampas yra $4x$. Šių kampų suma lygi $180^\\\\circ$.",
+        "text": "Didesnis kampas yra $4x$. Šių kampų suma lygi $180^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Sudarome lygtį: $x + 4x = 180^\\\\circ$.",
+        "text": "Sudarome lygtį: $x + 4x = 180^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sprendžiame: $5x = 180^\\\\circ \\\\implies x = 36^\\\\circ$. Raskite antrąjį kampą.",
+        "text": "Sprendžiame: $5x = 180^\\circ \\implies x = 36^\\circ$. Raskite antrąjį kampą.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -32865,10 +32865,10 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskritime nubrėžtas kampas $\\\\angle ABC$ yra įbrėžtinis, o kampas $\\\\angle AOC$ yra centrinis, kur $O$ – apskritimo centras. Taškai $B$ ir $O$ yra skirtingose tiesės $AC$ pusėse. Jei įbrėžtinis kampas lygus $55^\\\\circ$, raskite iškilo centrinio kampo $\\\\angle AOC$ dydį.",
-    "answer": "Kampas $\\\\angle AOC = 110^\\\\circ$.",
+    "statement": "Apskritime nubrėžtas kampas $\\angle ABC$ yra įbrėžtinis, o kampas $\\angle AOC$ yra centrinis, kur $O$ – apskritimo centras. Taškai $B$ ir $O$ yra skirtingose tiesės $AC$ pusėse. Jei įbrėžtinis kampas lygus $55^\\circ$, raskite iškilo centrinio kampo $\\angle AOC$ dydį.",
+    "answer": "Kampas $\\angle AOC = 110^\\circ$.",
     "acceptedAnswers": [
-      "Kampas $\\\\angle AOC = 110^\\\\circ$."
+      "Kampas $\\angle AOC = 110^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -32877,11 +32877,11 @@ export const exercises = [
     ],
     "hints": [
       "Ar centrinis kampas yra didesnis, ar mažesnis už įbrėžtinį kampą?",
-      "Kadangi jie remiasi į tą patį lanką $AC$, tai $\\\\angle AOC = 2 \\\\angle ABC$.",
+      "Kadangi jie remiasi į tą patį lanką $AC$, tai $\\angle AOC = 2 \\angle ABC$.",
       "Padauginkite įbrėžtinį kampą iš 2.",
-      "Apskaičiuokite: $2 \\\\times 55^\\\\circ$."
+      "Apskaičiuokite: $2 \\times 55^\\circ$."
     ],
-    "solution": "Kadangi įbrėžtinis kampas $\\\\angle ABC$ ir centrinis kampas $\\\\angle AOC$ remiasi į tą patį lanką $AC$ ir $B$ yra kitoje lanko pusėje, galioja teiginys: $\\\\angle AOC = 2 \\\\angle ABC$. Įstatome žinomą reikšmę $\\\\angle ABC = 55^\\\\circ$. Apskaičiuojame: $\\\\angle AOC = 2 \\\\times 55^\\\\circ = 110^\\\\circ$.",
+    "solution": "Kadangi įbrėžtinis kampas $\\angle ABC$ ir centrinis kampas $\\angle AOC$ remiasi į tą patį lanką $AC$ ir $B$ yra kitoje lanko pusėje, galioja teiginys: $\\angle AOC = 2 \\angle ABC$. Įstatome žinomą reikšmę $\\angle ABC = 55^\\circ$. Apskaičiuojame: $\\angle AOC = 2 \\times 55^\\circ = 110^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -32922,17 +32922,17 @@ export const exercises = [
             "action": "Pritaikome centrinio kampo savybę.",
             "reason": "Centrinis kampas yra dvigubai didesnis už bet kurį į jį besiremiantį įbrėžtinį kampą.",
             "result": "AOC = 2 * ABC.",
-            "latex": "\\\\angle AOC = 2\\\\angle ABC"
+            "latex": "\\angle AOC = 2\\angle ABC"
           },
           {
             "title": "Skaitinis rezultatas",
             "action": "Atliekame daugybos veiksmą.",
             "reason": "ABC reikšmė duota sąlygoje (55 laipsniai).",
             "result": "110 laipsnių.",
-            "latex": "2 \\\\cdot 55^\\\\circ = 110^\\\\circ"
+            "latex": "2 \\cdot 55^\\circ = 110^\\circ"
           }
         ],
-        "finalAnswer": "Kampas $\\\\angle AOC = 110^\\\\circ$."
+        "finalAnswer": "Kampas $\\angle AOC = 110^\\circ$."
       }
     ],
     "commonTraps": [
@@ -32943,7 +32943,7 @@ export const exercises = [
         "wrongMove": "Teigti, kad centrinis kampas lygus pusei įbrėžtinio (AOC = 55 / 2).",
         "whyTempting": "Painiojama, kuris kampas yra didesnis - centrinis ar įbrėžtinis.",
         "whyItHappens": "Atminties klaida dėl santykio 1/2 krypties.",
-        "wrongPattern": "\\\\angle AOC = \\frac{1}{2}\\\\angle ABC",
+        "wrongPattern": "\\angle AOC = \\frac{1}{2}\\angle ABC",
         "correction": "Centrinis kampas visada yra didesnis (arba lygus), nes jo viršūnė yra apskritimo centre, o įbrėžtinio - ant lanko.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32956,7 +32956,7 @@ export const exercises = [
         "wrongMove": "Apskaičiuoti įlinkąjį centrinį kampą (360 - 110 = 250).",
         "whyTempting": "Uždavinyje gali būti neaišku, apie kurį AOC kampą klausiama.",
         "whyItHappens": "Du taškai apskritime visada apibrėžia du centrinius kampus, kurių suma 360.",
-        "wrongPattern": "\\\\angle AOC = 250^\\\\circ",
+        "wrongPattern": "\\angle AOC = 250^\\circ",
         "correction": "Įbrėžtinis kampas, besiremiantis į mažąjį lanką, atitinka iškiląjį (mažesnį už 180) centrinį kampą.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -32974,7 +32974,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra įbrėžtinio ir centrinio kampų santykis?",
-        "back": "Įbrėžtinis kampas lygus pusei centrinio kampo, besiremiančio į tą patį lanką: $\\\\angle inscribed = \\frac{1}{2} \\\\angle central$.",
+        "back": "Įbrėžtinis kampas lygus pusei centrinio kampo, besiremiančio į tą patį lanką: $\\angle inscribed = \\frac{1}{2} \\angle central$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -32995,7 +32995,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi jie remiasi į tą patį lanką $AC$, tai $\\\\angle AOC = 2 \\\\angle ABC$.",
+        "text": "Kadangi jie remiasi į tą patį lanką $AC$, tai $\\angle AOC = 2 \\angle ABC$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -33009,7 +33009,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $2 \\\\times 55^\\\\circ$.",
+        "text": "Apskaičiuokite: $2 \\times 55^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -33034,9 +33034,9 @@ export const exercises = [
       "Nubrėžkite spindulį $OT$. Koks kampas yra tarp $OT$ ir liestinės $AB$?",
       "Trikampis $\\triangle OTA$ yra status su stačiuoju kampu viršūnėje $T$. Spindulys $OT$ yra vienas iš statinių.",
       "Taikykite Pitagoro teoremą trikampiui $\\triangle OTA$: $OT^2 + AT^2 = OA^2$.",
-      "Įstatykite žinomas vertes: $OT^2 + 12^2 = 13^2 \\\\implies OT^2 + 144 = 169$. Raskite $OT$."
+      "Įstatykite žinomas vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$. Raskite $OT$."
     ],
-    "solution": "Nubrėžiame spindulį $OT$ į lietimosi tašką $T$. Kampas $\\\\angle OTA = 90^\\\\circ$. Trikampiui $\\triangle OTA$ taikome Pitagoro teoremą: $OT^2 + AT^2 = OA^2$. Įstatome vertes: $OT^2 + 12^2 = 13^2 \\\\implies OT^2 + 144 = 169$. $OT^2 = 25 \\\\implies OT = 5$ cm. Spindulys lygus 5 cm.",
+    "solution": "Nubrėžiame spindulį $OT$ į lietimosi tašką $T$. Kampas $\\angle OTA = 90^\\circ$. Trikampiui $\\triangle OTA$ taikome Pitagoro teoremą: $OT^2 + AT^2 = OA^2$. Įstatome vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$. $OT^2 = 25 \\implies OT = 5$ cm. Spindulys lygus 5 cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -33068,9 +33068,9 @@ export const exercises = [
           {
             "title": "Liestinės savybės taikymas",
             "action": "Nubrėžiame spindulį $OT$ į lietimosi tašką $T$ ir nustatome kampą.",
-            "reason": "Spindulys, nubrėžtas į lietimosi tašką, visada yra statmenas liestinei ($OT \\\\perp AB$).",
-            "result": "Gauname statųjį trikampį $\\triangle OTA$, kurio $\\\\angle T = 90^\\\\circ$.",
-            "latex": "OT \\\\perp AT \\\\implies \\\\angle OTA = 90^\\\\circ"
+            "reason": "Spindulys, nubrėžtas į lietimosi tašką, visada yra statmenas liestinei ($OT \\perp AB$).",
+            "result": "Gauname statųjį trikampį $\\triangle OTA$, kurio $\\angle T = 90^\\circ$.",
+            "latex": "OT \\perp AT \\implies \\angle OTA = 90^\\circ"
           },
           {
             "title": "Pitagoro lygties sudarymas",
@@ -33084,7 +33084,7 @@ export const exercises = [
             "action": "Išsprendžiame lygtį spindulio $OT$ atžvilgiu.",
             "reason": "Spindulys yra vienas iš statinių, o $OA$ yra įžambinė.",
             "result": "$OT^2 = 169 - 144 = 25$, todėl $OT = 5$.",
-            "latex": "OT = \\\\sqrt{169 - 144} = 5"
+            "latex": "OT = \\sqrt{169 - 144} = 5"
           }
         ],
         "finalAnswer": "Apskritimo spindulys yra 5 cm."
@@ -33111,8 +33111,8 @@ export const exercises = [
         "wrongMove": "Manyti, kad $AT$ yra įžambinė: $OT^2 + OA^2 = AT^2$.",
         "whyTempting": "Skubant bet kuris ilgiausias skaičius gali būti palaikytas įžambine.",
         "whyItHappens": "Nepiešiamas brėžinis ir neteisingai nustatomas statusis kampas.",
-        "wrongPattern": "OT^2 + 13^2 = 12^2 \\\\implies OT^2 = -25",
-        "correction": "Įžambinė visada yra prieš statųjį kampą. Kadangi $\\\\angle T = 90^\\\\circ$, įžambinė yra $OA$.",
+        "wrongPattern": "OT^2 + 13^2 = 12^2 \\implies OT^2 = -25",
+        "correction": "Įžambinė visada yra prieš statųjį kampą. Kadangi $\\angle T = 90^\\circ$, įžambinė yra $OA$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -33129,7 +33129,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks kampas susidaro tarp apskritimo spindulio ir liestinės lietimosi taške?",
-        "back": "Kampas visada yra status ($90^\\\\circ$).",
+        "back": "Kampas visada yra status ($90^\\circ$).",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -33176,7 +33176,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Įstatykite žinomas vertes: $OT^2 + 12^2 = 13^2 \\\\implies OT^2 + 144 = 169$. Raskite $OT$.",
+        "text": "Įstatykite žinomas vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$. Raskite $OT$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -33188,9 +33188,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Ritino spindulys yra $3$ cm, o jo aukštinė lygi $5$ cm. Apskaičiuokite šio ritinio viso paviršiaus plotą.",
-    "answer": "Ritinio paviršiaus plotas lygus $48\\\\pi$ $\\text{cm}^2$.",
+    "answer": "Ritinio paviršiaus plotas lygus $48\\pi$ $\\text{cm}^2$.",
     "acceptedAnswers": [
-      "Ritinio paviršiaus plotas lygus $48\\\\pi$ $\\text{cm}^2$."
+      "Ritinio paviršiaus plotas lygus $48\\pi$ $\\text{cm}^2$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -33199,11 +33199,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite ritinio viso paviršiaus ploto formulę.",
-      "Formulė: $S = 2\\\\pi r^2 + 2\\\\pi r h$. Žinome $r=3$ ir $h=5$.",
+      "Formulė: $S = 2\\pi r^2 + 2\\pi r h$. Žinome $r=3$ ir $h=5$.",
       "Įstatykite spindulio ir aukštinės vertes į formulę.",
-      "Apskaičiuokite: $S = 2\\\\pi (3^2) + 2\\\\pi (3)(5) = 18\\\\pi + 30\\\\pi$."
+      "Apskaičiuokite: $S = 2\\pi (3^2) + 2\\pi (3)(5) = 18\\pi + 30\\pi$."
     ],
-    "solution": "Naudojame ritinio paviršiaus ploto formulę $S = 2\\\\pi r^2 + 2\\\\pi r h$. Apskaičiuojame dviejų pagrindų plotą: $2 \\\\times \\\\pi \\\\times 3^2 = 18\\\\pi$ $\\text{cm}^2$. Apskaičiuojame šoninio paviršiaus plotą: $2 \\\\times  \\\\pi \\\\times 3 \\\\times 5 = 30\\\\pi$ $\\text{cm}^2$. Sudedame abi dalis: $S = 18\\\\pi + 30\\\\pi = 48\\\\pi$ $\\text{cm}^2$.",
+    "solution": "Naudojame ritinio paviršiaus ploto formulę $S = 2\\pi r^2 + 2\\pi r h$. Apskaičiuojame dviejų pagrindų plotą: $2 \\times \\pi \\times 3^2 = 18\\pi$ $\\text{cm}^2$. Apskaičiuojame šoninio paviršiaus plotą: $2 \\times  \\pi \\times 3 \\times 5 = 30\\pi$ $\\text{cm}^2$. Sudedame abi dalis: $S = 18\\pi + 30\\pi = 48\\pi$ $\\text{cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -33236,25 +33236,25 @@ export const exercises = [
             "title": "Pagrindų ploto skaičiavimas",
             "action": "Apskaičiuojame dviejų apskritimų (pagrindų) plotą.",
             "reason": "Ritinys turi du vienodus pagrindus viršuje ir apačioje.",
-            "result": "$2 \\\\cdot \\\\pi \\\\cdot 3^2 = 18\\\\pi$.",
-            "latex": "2S_{pagr} = 2\\\\pi r^2 = 18\\\\pi"
+            "result": "$2 \\cdot \\pi \\cdot 3^2 = 18\\pi$.",
+            "latex": "2S_{pagr} = 2\\pi r^2 = 18\\pi"
           },
           {
             "title": "Šoninio paviršiaus ploto skaičiavimas",
             "action": "Apskaičiuojame išklotinės stačiakampio plotą.",
-            "reason": "Šoninis paviršius išvyniojamas į stačiakampį, kurio ilgis yra pagrindo apskritimo ilgis ($2\\\\pi r$), o plotis - aukštinė $h$.",
-            "result": "$2 \\\\cdot \\\\pi \\\\cdot 3 \\\\cdot 5 = 30\\\\pi$.",
-            "latex": "S_{\\text{šon}} = 2\\\\pi r h = 30\\\\pi"
+            "reason": "Šoninis paviršius išvyniojamas į stačiakampį, kurio ilgis yra pagrindo apskritimo ilgis ($2\\pi r$), o plotis - aukštinė $h$.",
+            "result": "$2 \\cdot \\pi \\cdot 3 \\cdot 5 = 30\\pi$.",
+            "latex": "S_{\\text{šon}} = 2\\pi r h = 30\\pi"
           },
           {
             "title": "Bendro ploto radimas",
             "action": "Sudedame pagrindų ir šoninio paviršiaus plotus.",
             "reason": "Visas paviršius susideda iš visų jo dalių sumos.",
-            "result": "$18\\\\pi + 30\\\\pi = 48\\\\pi$.",
-            "latex": "S = 18\\\\pi + 30\\\\pi = 48\\\\pi"
+            "result": "$18\\pi + 30\\pi = 48\\pi$.",
+            "latex": "S = 18\\pi + 30\\pi = 48\\pi"
           }
         ],
-        "finalAnswer": "Ritinio paviršiaus plotas lygus $48\\\\pi$ $\\text{cm}^2$."
+        "finalAnswer": "Ritinio paviršiaus plotas lygus $48\\pi$ $\\text{cm}^2$."
       }
     ],
     "commonTraps": [
@@ -33265,8 +33265,8 @@ export const exercises = [
         "wrongMove": "Pamiršti padauginti pagrindo plotą iš 2.",
         "whyTempting": "Apskaičiuojamas tik vienas apskritimas, užmirstant „dangtį“.",
         "whyItHappens": "Neatidumas skaitant terminą „viso paviršiaus plotas“.",
-        "wrongPattern": "S = \\\\pi r^2 + 2\\\\pi r h",
-        "correction": "Ritinys turi du pagrindus, todėl formulėje turi būti $2\\\\pi r^2$.",
+        "wrongPattern": "S = \\pi r^2 + 2\\pi r h",
+        "correction": "Ritinys turi du pagrindus, todėl formulėje turi būti $2\\pi r^2$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -33275,10 +33275,10 @@ export const exercises = [
         "id": "ex-olimpiada-07-56dd662d-trap-2",
         "title": "Tūrio ir ploto painiojimas",
         "type": "mistake",
-        "wrongMove": "Taikyti tūrio formulę $V = \\\\pi r^2 h$.",
+        "wrongMove": "Taikyti tūrio formulę $V = \\pi r^2 h$.",
         "whyTempting": "Tūrio formulė dažnai geriau įsimenama nei paviršiaus ploto.",
         "whyItHappens": "Sąvokų „tūris“ ir „plotas“ painiojimas stereometrijoje.",
-        "wrongPattern": "S = \\\\pi \\\\cdot 3^2 \\\\cdot 5 = 45\\\\pi",
+        "wrongPattern": "S = \\pi \\cdot 3^2 \\cdot 5 = 45\\pi",
         "correction": "Plotas matuojamas kvadratiniais vienetais ir skaičiuojamas per paviršiaus išklotinę, o ne užpildomą erdvę.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -33296,7 +33296,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra ritinio viso paviršiaus ploto formulė?",
-        "back": "$S = 2\\\\pi r^2 + 2\\\\pi r h$ arba $S = 2\\\\pi r(r + h)$.",
+        "back": "$S = 2\\pi r^2 + 2\\pi r h$ arba $S = 2\\pi r(r + h)$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -33310,7 +33310,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "fact",
         "front": "Kaip atrodo ritinio šoninio paviršiaus išklotinė?",
-        "back": "Tai stačiakampis, kurio viena kraštinė lygi pagrindo apskritimo ilgiui ($2\\\\pi r$), o kita - ritinio aukštinei ($h$).",
+        "back": "Tai stačiakampis, kurio viena kraštinė lygi pagrindo apskritimo ilgiui ($2\\pi r$), o kita - ritinio aukštinei ($h$).",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -33329,7 +33329,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Formulė: $S = 2\\\\pi r^2 + 2\\\\pi r h$. Žinome $r=3$ ir $h=5$.",
+        "text": "Formulė: $S = 2\\pi r^2 + 2\\pi r h$. Žinome $r=3$ ir $h=5$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -33343,7 +33343,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $S = 2\\\\pi (3^2) + 2\\\\pi (3)(5) = 18\\\\pi + 30\\\\pi$.",
+        "text": "Apskaičiuokite: $S = 2\\pi (3^2) + 2\\pi (3)(5) = 18\\pi + 30\\pi$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -33368,7 +33368,7 @@ export const exercises = [
       "Kaip apskaičiuojamas tiesės krypties koeficientas $m$ per du taškus?",
       "$m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$. Tiesės lygtis yra $y = 3x + b$.",
       "Įstatykite taško $A(2, 5)$ koordinates į lygtį: $5 = 3(2) + b$.",
-      "Sprendžiame: $5 = 6 + b \\\\implies b = -1$. Užrašykite tiesės lygtį."
+      "Sprendžiame: $5 = 6 + b \\implies b = -1$. Užrašykite tiesės lygtį."
     ],
     "solution": "Apskaičiuojame tiesės krypties koeficientą $m$: $m = \\frac{11 - 5}{4 - 2} = 3$. Užrašome tiesės lygtį su nežinomu $b$: $y = 3x + b$. Įstatome taško $A(2, 5)$ koordinates: $5 = 3(2) + b$. Apskaičiuojame laisvąjį narį: $b = 5 - 6 = -1$. Tiesės lygtis: $y = 3x - 1$.",
     "alternate": "",
@@ -33410,8 +33410,8 @@ export const exercises = [
             "title": "Laisvojo nario radimas",
             "action": "Įstatome vieną iš taškų į lygtį $y = 3x + b$.",
             "reason": "Bet kuris tiesės taškas privalo tenkinti jos lygtį.",
-            "result": "$5 = 3(2) + b \\\\implies b = -1$.",
-            "latex": "5 = 3 \\\\cdot 2 + b \\\\implies b = -1"
+            "result": "$5 = 3(2) + b \\implies b = -1$.",
+            "latex": "5 = 3 \\cdot 2 + b \\implies b = -1"
           },
           {
             "title": "Galutinė lygtis",
@@ -33429,7 +33429,7 @@ export const exercises = [
         "id": "ex-olimpiada-07-5545558b-trap-1",
         "title": "Koeficiento $m$ apvertimas",
         "type": "mistake",
-        "wrongMove": "Skaičiuoti $m = \\\\Delta x / \\\\Delta y$.",
+        "wrongMove": "Skaičiuoti $m = \\Delta x / \\Delta y$.",
         "whyTempting": "Supainiojama, kuris pokytis turi būti skaitiklyje.",
         "whyItHappens": "Neteisingas funkcijos statumo suvokimas koordinačių plokštumoje.",
         "wrongPattern": "m = (4-2)/(11-5) = 1/3",
@@ -33510,7 +33510,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sprendžiame: $5 = 6 + b \\\\implies b = -1$. Užrašykite tiesės lygtį.",
+        "text": "Sprendžiame: $5 = 6 + b \\implies b = -1$. Užrašykite tiesės lygtį.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -33533,11 +33533,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite atstumo formulę koordinačių plokštumoje.",
-      "Formulė: $d = \\\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
-      "Įstatykite koordinates: $d = \\\\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
-      "Apskaičiuokite skirtumų kvadratus: $d = \\\\sqrt{6^2 + (-8)^2} = \\\\sqrt{36 + 64}$."
+      "Formulė: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+      "Įstatykite koordinates: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
+      "Apskaičiuokite skirtumų kvadratus: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64}$."
     ],
-    "solution": "Naudojame atstumo formulę: $d = \\\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Įstatome koordinates $P(-1, 3)$ ir $Q(5, -5)$: $d = \\\\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$. Apskaičiuojame: $d = \\\\sqrt{6^2 + (-8)^2} = \\\\sqrt{36 + 64} = \\\\sqrt{100}$. Ištraukiame šaknį: $d = 10$.",
+    "solution": "Naudojame atstumo formulę: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. Įstatome koordinates $P(-1, 3)$ ir $Q(5, -5)$: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$. Apskaičiuojame: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100}$. Ištraukiame šaknį: $d = 10$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -33568,10 +33568,10 @@ export const exercises = [
         "steps": [
           {
             "title": "Koordinačių skirtumų nustatymas",
-            "action": "Apskaičiuojame pokyčius $\\\\Delta x$ ir $\\\\Delta y$.",
+            "action": "Apskaičiuojame pokyčius $\\Delta x$ ir $\\Delta y$.",
             "reason": "Atstumas priklauso nuo to, kiek taškai nutolę ašių atžvilgiu.",
-            "result": "$\\\\Delta x = 6$, $\\\\Delta y = -8$.",
-            "latex": "x_2 - x_1 = 6, \\\\quad y_2 - y_1 = -8"
+            "result": "$\\Delta x = 6$, $\\Delta y = -8$.",
+            "latex": "x_2 - x_1 = 6, \\quad y_2 - y_1 = -8"
           },
           {
             "title": "Kvadratų sumos radimas",
@@ -33585,7 +33585,7 @@ export const exercises = [
             "action": "Ištraukiame kvadratinę šaknį iš sumos.",
             "reason": "Atstumas yra teigiamas dydis, lygus hipotenuzės ilgiui.",
             "result": "10.",
-            "latex": "d = \\\\sqrt{100} = 10"
+            "latex": "d = \\sqrt{100} = 10"
           }
         ],
         "finalAnswer": "Atstumas lygus 10."
@@ -33609,10 +33609,10 @@ export const exercises = [
         "id": "ex-olimpiada-07-eb9f63ec-trap-2",
         "title": "Kvadrato ir šaknies naikinimas",
         "type": "mistake",
-        "wrongMove": "Teigti, kad $\\\\sqrt{a^2 + b^2} = a + b$.",
+        "wrongMove": "Teigti, kad $\\sqrt{a^2 + b^2} = a + b$.",
         "whyTempting": "Atrodo, kad šaknies ženklas gali tiesiog „panaikinti“ abu kvadratus.",
         "whyItHappens": "Algebrinių savybių klaidingas apibendrinimas.",
-        "wrongPattern": "\\\\sqrt{36+64} = 6+8 = 14",
+        "wrongPattern": "\\sqrt{36+64} = 6+8 = 14",
         "correction": "Šaknies negalima ištraukti iš sumos narių atskirai. Pirmiausia reikia sudėti, tada traukti šaknį.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -33630,7 +33630,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra atstumo tarp dviejų taškų formulė?",
-        "back": "$d = \\\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+        "back": "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -33663,21 +33663,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Formulė: $d = \\\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+        "text": "Formulė: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite koordinates: $d = \\\\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
+        "text": "Įstatykite koordinates: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite skirtumų kvadratus: $d = \\\\sqrt{6^2 + (-8)^2} = \\\\sqrt{36 + 64}$.",
+        "text": "Apskaičiuokite skirtumų kvadratus: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -33688,7 +33688,7 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Taškas $A(3, -4)$ atspindimas koordinačių pradžios taško $O(0, 0)$ atžvilgiu, o gautas taškas pastumiamas per vektorių $\\\\vec{v} = (-2, 5)$. Raskite galutines taško koordinates.",
+    "statement": "Taškas $A(3, -4)$ atspindimas koordinačių pradžios taško $O(0, 0)$ atžvilgiu, o gautas taškas pastumiamas per vektorių $\\vec{v} = (-2, 5)$. Raskite galutines taško koordinates.",
     "answer": "Galutinės taško koordinatės yra $(-5, 9)$.",
     "acceptedAnswers": [
       "Galutinės taško koordinatės yra $(-5, 9)$."
@@ -33701,10 +33701,10 @@ export const exercises = [
     "hints": [
       "Atlikite transformacijas po vieną eilės tvarka.",
       "Atspindys $O(0,0)$ atžvilgiu tašką $(x,y)$ paverčia $(-x,-y)$. Taškas $A$ tampa $A'(-3, 4)$.",
-      "Poslinkis per vektorių $\\\\vec{v}(a, b)$ prideda koordinates prie taško: $A'' = (x' + a, y' + b)$.",
+      "Poslinkis per vektorių $\\vec{v}(a, b)$ prideda koordinates prie taško: $A'' = (x' + a, y' + b)$.",
       "Apskaičiuokite: $A'' = (-3 + (-2), 4 + 5)$."
     ],
-    "solution": "Atliekame simetriją koordinačių pradžios taško atžvilgiu: taško $A(3, -4)$ koordinatės pakeičia ženklus, gauname $A'(-3, 4)$. Atliekame poslinkį per vektorių $\\\\vec{v} = (-2, 5)$. Prie taško $A'$ koordinačių pridedame vektoriaus koordinates: $x'' = -3 + (-2) = -5$, $y'' = 4 + 5 = 9$. Galutinis taškas yra $(-5, 9)$.",
+    "solution": "Atliekame simetriją koordinačių pradžios taško atžvilgiu: taško $A(3, -4)$ koordinatės pakeičia ženklus, gauname $A'(-3, 4)$. Atliekame poslinkį per vektorių $\\vec{v} = (-2, 5)$. Prie taško $A'$ koordinačių pridedame vektoriaus koordinates: $x'' = -3 + (-2) = -5$, $y'' = 4 + 5 = 9$. Galutinis taškas yra $(-5, 9)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -33742,7 +33742,7 @@ export const exercises = [
           },
           {
             "title": "Vektoriaus pridėjimas",
-            "action": "Prie gauto taško pridedame vektoriaus $\\\\vec{v}$ koordinates.",
+            "action": "Prie gauto taško pridedame vektoriaus $\\vec{v}$ koordinates.",
             "reason": "Poslinkis (transliacija) per vektorių $(a, b)$ prideda šias vertes prie atitinkamų koordinačių.",
             "result": "$x = -3 + (-2) = -5$, $y = 4 + 5 = 9$.",
             "latex": "(-3, 4) + (-2, 5) = (-5, 9)"
@@ -33773,7 +33773,7 @@ export const exercises = [
         "whyTempting": "Painiojama su vektoriaus radimu iš dviejų taškų.",
         "whyItHappens": "Atvirkštinio veiksmo taikymas poslinkio operacijai.",
         "wrongPattern": "x = -3 - (-2) = -1",
-        "correction": "Atliekant poslinkį taškas P judinamas vektoriaus kryptimi: $P' = P + \\\\vec{v}$.",
+        "correction": "Atliekant poslinkį taškas P judinamas vektoriaus kryptimi: $P' = P + \\vec{v}$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ]
@@ -33830,7 +33830,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Poslinkis per vektorių $\\\\vec{v}(a, b)$ prideda koordinates prie taško: $A'' = (x' + a, y' + b)$.",
+        "text": "Poslinkis per vektorių $\\vec{v}(a, b)$ prideda koordinates prie taško: $A'' = (x' + a, y' + b)$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -33861,10 +33861,10 @@ export const exercises = [
     "hints": [
       "Suskaičiuokite bendrą raidžių skaičių žodyje.",
       "Žodyje yra 10 raidžių: M kartojasi 2 kartus, A – 3 kartus, T – 2 kartus, E – 1, I – 1, K – 1.",
-      "Formulė: $P = \\frac{n!}{n_1! \\\\cdot n_2! \\\\dots n_k!}$, kur $n=10$.",
-      "Apskaičiuokite: $P = \\frac{10!}{2! \\\\cdot 3! \\\\cdot 2!}$."
+      "Formulė: $P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n=10$.",
+      "Apskaičiuokite: $P = \\frac{10!}{2! \\cdot 3! \\cdot 2!}$."
     ],
-    "solution": "Suskaičiuojame raidžių dažnius: viso 10 raidžių. M kartojasi 2 kartus, A - 3, T - 2, o E, I, K po 1 kartą. Taikome kėlinių su pasikartojimais formulę: $P = \\frac{10!}{2! \\\\times 3! \\\\times 2! \\\\times 1! \\\\times 1! \\\\times 1!}$. Apskaičiuojame: $10! = 3628800$, daliklis yra $2 \\\\times 6 \\\\times 2 = 24$. Padalijame: $\\frac{3628800}{24} = 151200$.",
+    "solution": "Suskaičiuojame raidžių dažnius: viso 10 raidžių. M kartojasi 2 kartus, A - 3, T - 2, o E, I, K po 1 kartą. Taikome kėlinių su pasikartojimais formulę: $P = \\frac{10!}{2! \\times 3! \\times 2! \\times 1! \\times 1! \\times 1!}$. Apskaičiuojame: $10! = 3628800$, daliklis yra $2 \\times 6 \\times 2 = 24$. Padalijame: $\\frac{3628800}{24} = 151200$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -33905,7 +33905,7 @@ export const exercises = [
             "action": "Apskaičiuojame kėlinius dalindami bendrą faktorialą iš pasikartojimų faktorialų.",
             "reason": "Dalyba pašalina perteklinį skaičiavimą dėl identiškų raidžių.",
             "result": "10! / (2! * 3! * 2!).",
-            "latex": "P = \\frac{10!}{2! \\\\cdot 3! \\\\cdot 2! \\\\cdot 1! \\\\cdot 1! \\\\cdot 1!}"
+            "latex": "P = \\frac{10!}{2! \\cdot 3! \\cdot 2! \\cdot 1! \\cdot 1! \\cdot 1!}"
           },
           {
             "title": "Skaitinis apskaičiavimas",
@@ -33957,7 +33957,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra kėlinių su pasikartojimais formulė?",
-        "back": "$P = \\frac{n!}{n_1! \\\\cdot n_2! \\\\dots n_k!}$, kur $n$ - bendras elementų skaičius, o $n_i$ - pasikartojančių elementų kiekiai.",
+        "back": "$P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n$ - bendras elementų skaičius, o $n_i$ - pasikartojančių elementų kiekiai.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -33997,14 +33997,14 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Formulė: $P = \\frac{n!}{n_1! \\\\cdot n_2! \\\\dots n_k!}$, kur $n=10$.",
+        "text": "Formulė: $P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n=10$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $P = \\frac{10!}{2! \\\\cdot 3! \\\\cdot 2!}$.",
+        "text": "Apskaičiuokite: $P = \\frac{10!}{2! \\cdot 3! \\cdot 2!}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -34031,7 +34031,7 @@ export const exercises = [
       "Apskaičiuokite derinius: $\\binom{6}{0}=1$, $\\binom{6}{1}=6$, $\\binom{6}{2}=15$, $\\binom{6}{3}=20$ ir t. t.",
       "Kadangi reikšmės auga iki vidurio ir po to simetriškai mažėja, didžiausia yra vidurinė reikšmė $\\binom{6}{3}$."
     ],
-    "solution": "Paskalio trikampio 6-osios eilutės koeficientai yra $\\binom{6}{k}$ reikšmės: $1, 6, 15, 20, 15, 6, 1$. Reikšmės yra simetriškos ir didėja link centro. Didžiausias skaičius yra vidurinis narys $\\binom{6}{3} = \\frac{6 \\\\times 5 \\\\times 4}{3 \\\\times 2 \\\\times 1} = 20$.",
+    "solution": "Paskalio trikampio 6-osios eilutės koeficientai yra $\\binom{6}{k}$ reikšmės: $1, 6, 15, 20, 15, 6, 1$. Reikšmės yra simetriškos ir didėja link centro. Didžiausias skaičius yra vidurinis narys $\\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -34064,7 +34064,7 @@ export const exercises = [
             "title": "Eilutės narių nustatymas",
             "action": "Užrašome 6-osios eilutės narius kaip derinius $\\binom{6}{k}$.",
             "reason": "Paskalio trikampio n-tosios eilutės elementai tiksliai atitinka derinius iš n po k.",
-            "result": "7 nariai: $\\binom{6}{0}, \\binom{6}{1}, \\\\dots, \\binom{6}{6}$.",
+            "result": "7 nariai: $\\binom{6}{0}, \\binom{6}{1}, \\dots, \\binom{6}{6}$.",
             "latex": ""
           },
           {
@@ -34072,7 +34072,7 @@ export const exercises = [
             "action": "Nustatome, kuris narys yra didžiausias.",
             "reason": "Derinių reikšmės auga iki eilutės vidurio ir tada simetriškai mažėja.",
             "result": "Didžiausias yra $\\binom{6}{3}$.",
-            "latex": "\\binom{6}{3} = \\frac{6 \\\\cdot 5 \\\\cdot 4}{3 \\\\cdot 2 \\\\cdot 1} = 20"
+            "latex": "\\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20"
           }
         ],
         "finalAnswer": "Didžiausias skaičius yra 20."
@@ -34191,7 +34191,7 @@ export const exercises = [
       "Nereikia pilnai išskleisti viso binomo.",
       "Atlikite skaičiavimą: $(2 - 1)^4 = 1^4$."
     ],
-    "solution": "Bet kurio daugianario skleistinės koeficientų sumą galima rasti įstačius visus kintamuosius lygius 1. Įstatome $x = 1$ ir $y = 1$ į pradinį reiškinį $(2x - y)^4$. Apskaičiuojame reikšmę: $(2 \\\\times 1 - 1)^4 = (2 - 1)^4 = 1^4 = 1$.",
+    "solution": "Bet kurio daugianario skleistinės koeficientų sumą galima rasti įstačius visus kintamuosius lygius 1. Įstatome $x = 1$ ir $y = 1$ į pradinį reiškinį $(2x - y)^4$. Apskaičiuojame reikšmę: $(2 \\times 1 - 1)^4 = (2 - 1)^4 = 1^4 = 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -34223,7 +34223,7 @@ export const exercises = [
           {
             "title": "Principas",
             "action": "Suvokiame, kad koeficientų suma lygi daugianario reikšmei, kai visi kintamieji lygūs 1.",
-            "reason": "Išskleidus $(Ax+By)^n = C_0 x^n + C_1 x^{n-1}y + \\\\dots$, įstačius $x=1, y=1$, dešinėje lieka tik $C_0 + C_1 + \\\\dots$.",
+            "reason": "Išskleidus $(Ax+By)^n = C_0 x^n + C_1 x^{n-1}y + \\dots$, įstačius $x=1, y=1$, dešinėje lieka tik $C_0 + C_1 + \\dots$.",
             "result": "Suma = f(1, 1).",
             "latex": ""
           },
@@ -34232,7 +34232,7 @@ export const exercises = [
             "action": "Įstatome vertes į pradinį reiškinį.",
             "reason": "Tai greičiausias būdas rasti sumą be pilno skleidimo.",
             "result": "$(2-1)^4 = 1$.",
-            "latex": "(2 \\\\cdot 1 - 1)^4 = 1^4 = 1"
+            "latex": "(2 \\cdot 1 - 1)^4 = 1^4 = 1"
           }
         ],
         "finalAnswer": "Koeficientų suma lygi 1."
@@ -34246,7 +34246,7 @@ export const exercises = [
         "wrongMove": "Bandyti pilnai išskleisti $(2x-y)^4$.",
         "whyTempting": "Tai tiesioginis būdas pamatyti koeficientus.",
         "whyItHappens": "Nežinojimas apie greitąjį kintamųjų įstatymo metodą.",
-        "wrongPattern": "16x^4 - 32x^3y + \\\\dots",
+        "wrongPattern": "16x^4 - 32x^3y + \\dots",
         "correction": "Skleidimas užima daug laiko ir padidina klaidų tikimybę. Įstatyti 1 yra kur kas efektyviau.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -34259,7 +34259,7 @@ export const exercises = [
         "wrongMove": "Ignoruoti minuso ženklus prieš koeficientus.",
         "whyTempting": "Manoma, kad koeficientas yra tik skaičius be jo ženklo.",
         "whyItHappens": "Neteisingas koeficiento apibrėžimo supratimas.",
-        "wrongPattern": "16 + 32 + \\\\dots",
+        "wrongPattern": "16 + 32 + \\dots",
         "correction": "Koeficientas apima ir jo ženklą. Įstatymas $x=1, y=1$ automatiškai išlaiko teisingus ženklus.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -34495,7 +34495,7 @@ export const exercises = [
     "topicId": "olimpiada-07",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, suma $1 + 2 + \\\\dots + n = \\frac{n(n+1)}{2}$.",
+    "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, suma $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.",
     "answer": "Teiginys įrodytas indukcijos metodu.",
     "acceptedAnswers": [
       "Teiginys įrodytas indukcijos metodu."
@@ -34509,9 +34509,9 @@ export const exercises = [
       "Pirmasis žingsnis: patikrinkite indukcijos bazę, kai $n=1$.",
       "Bazė: $1 = \\frac{1(1+1)}{2}$, teisinga. Tarkime, kad suma galioja su $n=k$: $S_k = \\frac{k(k+1)}{2}$.",
       "Pridėkite sekantį narį $k+1$ prie prielaidos sumos: $S_{k+1} = S_k + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.",
-      "Iškelkite bendrą daugiklį $(k+1)$ prieš skliaustus ir suprastinkite: $(k+1)\\\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$."
+      "Iškelkite bendrą daugiklį $(k+1)$ prieš skliaustus ir suprastinkite: $(k+1)\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$."
     ],
-    "solution": "Indukcijos bazė: kai $n=1$, kairėje turime $1$, o dešinėje $\\frac{1(1+1)}{2} = 1$. Lygybė teisinga. Indukcijos prielaida: tarkime, kad lygybė teisinga, kai $n=k$, t. y. $1 + 2 + \\\\dots + k = \\frac{k(k+1)}{2}$. Indukcijos žingsnis: įrodysime lygybę sekančiam nariui $n=k+1$. Prie prielaidos pridedame naują narį: $(1 + 2 + \\\\dots + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$. Pertvarkome reiškinį: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Lygybė įrodyta visiems $n \\\\ge 1$.",
+    "solution": "Indukcijos bazė: kai $n=1$, kairėje turime $1$, o dešinėje $\\frac{1(1+1)}{2} = 1$. Lygybė teisinga. Indukcijos prielaida: tarkime, kad lygybė teisinga, kai $n=k$, t. y. $1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$. Indukcijos žingsnis: įrodysime lygybę sekančiam nariui $n=k+1$. Prie prielaidos pridedame naują narį: $(1 + 2 + \\dots + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$. Pertvarkome reiškinį: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Lygybė įrodyta visiems $n \\ge 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -34552,7 +34552,7 @@ export const exercises = [
             "action": "Tariame, kad galioja P(k), ir įrodome P(k+1).",
             "reason": "Parodome „domino efektą“: jei galioja vienam, galioja ir kitam.",
             "result": "S_{k+1} = k(k+1)/2 + (k+1) = (k+1)(k/2 + 1) = (k+1)(k+2)/2.",
-            "latex": "1 + \\\\dots + k + (k+1) = \\frac{k(k+1)}{2} + (k+1) = \\frac{(k+1)(k+2)}{2}"
+            "latex": "1 + \\dots + k + (k+1) = \\frac{k(k+1)}{2} + (k+1) = \\frac{(k+1)(k+2)}{2}"
           }
         ],
         "finalAnswer": "Teiginys įrodytas indukcijos metodu."
@@ -34566,7 +34566,7 @@ export const exercises = [
         "wrongMove": "Pradėti įrodymą tik nuo k žingsnio.",
         "whyTempting": "Bazė atrodo pernelyg akivaizdi.",
         "whyItHappens": "Nesuprantama griežta indukcijos struktūra.",
-        "wrongPattern": "\\text{Tarkime } P(k) \\\\dots",
+        "wrongPattern": "\\text{Tarkime } P(k) \\dots",
         "correction": "Be bazės galėtume „įrodyti“ neteisingus teiginius, kurie tiesiog išlaiko žingsnio savybę.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
@@ -34644,7 +34644,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Iškelkite bendrą daugiklį $(k+1)$ prieš skliaustus ir suprastinkite: $(k+1)\\\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$.",
+        "text": "Iškelkite bendrą daugiklį $(k+1)$ prieš skliaustus ir suprastinkite: $(k+1)\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -34679,7 +34679,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Sąlyginės tikimybės formulė",
-      "text": "Sąlyginė tikimybė $P(A|B) = \\frac{P(A \\\\cap B)}{P(B)}$ apriboja galimų baigčių aibę iki tų, kurios tenkina sąlygą $B$."
+      "text": "Sąlyginė tikimybė $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ apriboja galimų baigčių aibę iki tų, kurios tenkina sąlygą $B$."
     },
     "strategyTags": [
       "standard",
@@ -34836,9 +34836,9 @@ export const exercises = [
       "Kokia yra tikimybė, kad iškris herbas, ir kokia tikimybė, kad iškris skaičius?",
       "Abi tikimybės yra lygios $0.5$, nes moneta simetriška.",
       "Sudauginkite laimėjimą iš herbo ir pralaimėjimą iš skaičiaus su jų tikimybėmis ir sudėkite.",
-      "Apskaičiuokite: $E = 10 \\\\cdot 0.5 + (-4) \\\\cdot 0.5$."
+      "Apskaičiuokite: $E = 10 \\cdot 0.5 + (-4) \\cdot 0.5$."
     ],
-    "solution": "Nustatome baigtis ir jų tikimybes: Herbas su $P=0.5$ ir laimėjimu $+10$ eurų; Skaičius su $P=0.5$ ir laimėjimu $-4$ eurai. Taikome matematinio viltingumo formulę: $E = x_1 P_1 + x_2 P_2$. $E = 10 \\\\times 0.5 + (-4) \\\\times 0.5 = 5 - 2 = 3$ eurai.",
+    "solution": "Nustatome baigtis ir jų tikimybes: Herbas su $P=0.5$ ir laimėjimu $+10$ eurų; Skaičius su $P=0.5$ ir laimėjimu $-4$ eurai. Taikome matematinio viltingumo formulę: $E = x_1 P_1 + x_2 P_2$. $E = 10 \\times 0.5 + (-4) \\times 0.5 = 5 - 2 = 3$ eurai.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -34879,7 +34879,7 @@ export const exercises = [
             "action": "Sudauginame kiekvieną vertę iš jos tikimybės ir sudedame.",
             "reason": "Tai vidutinė laimėjimo vertė per ilgą žaidimų seriją.",
             "result": "10 * 0.5 + (-4) * 0.5 = 5 - 2 = 3.",
-            "latex": "E(X) = \\\\sum x_i p_i = 10 \\\\cdot 0.5 + (-4) \\\\cdot 0.5"
+            "latex": "E(X) = \\sum x_i p_i = 10 \\cdot 0.5 + (-4) \\cdot 0.5"
           }
         ],
         "finalAnswer": "Matematinis viltingumas yra 3 eurai."
@@ -34924,7 +34924,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kaip apskaičiuojamas atsitiktinio dydžio matematinis viltingumas?",
-        "back": "Kaip visų galimų dydžio reikšmių ir jas atitinkančių tikimybių sandaugų suma: $E(X) = \\\\sum x_i P(X = x_i)$.",
+        "back": "Kaip visų galimų dydžio reikšmių ir jas atitinkančių tikimybių sandaugų suma: $E(X) = \\sum x_i P(X = x_i)$.",
         "conceptIds": [
           "olimpiada-07-concept-logic"
         ],
@@ -34971,7 +34971,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $E = 10 \\\\cdot 0.5 + (-4) \\\\cdot 0.5$.",
+        "text": "Apskaičiuokite: $E = 10 \\cdot 0.5 + (-4) \\cdot 0.5$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -36919,9 +36919,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Išspręskite sveikaisiais skaičiais lygtį $15x + 6y = 9$. Raskite bendrąjį sprendinį.",
-    "answer": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\\\in \\\\mathbb{Z}$.",
+    "answer": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\in \\mathbb{Z}$.",
     "acceptedAnswers": [
-      "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\\\in \\\\mathbb{Z}$."
+      "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\in \\mathbb{Z}$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -36932,9 +36932,9 @@ export const exercises = [
       "Raskite didžiausią bendrą daliklį tarp 15 ir 6 ir patikrinkite dalumą.",
       "Kadangi $\\text{dbd}(15, 6) = 3$, o 9 dalijasi iš 3, supaprastinkite lygtį padalindami iš 3: $5x + 2y = 3$.",
       "Raskite sveikųjų skaičių porą $(x, y)$, tenkinančią $5x + 2y = 3$. Pavyzdžiui, pabandykite $x=1$.",
-      "Jei $x_0 = 1$, tai $2y = 3 - 5 = -2 \\\\implies y_0 = -1$. Bendrasis sprendinys yra $x = 1 + 2t$, $y = -1 - 5t$."
+      "Jei $x_0 = 1$, tai $2y = 3 - 5 = -2 \\implies y_0 = -1$. Bendrasis sprendinys yra $x = 1 + 2t$, $y = -1 - 5t$."
     ],
-    "solution": "Surandame $\\text{dbd}(15, 6) = 3$. Kadangi 9 dalijasi iš 3, lygtis turi sveikųjų sprendinių. Padalijame abi lygties puses iš 3, gauname: $5x + 2y = 3$. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\\\implies y = -1$. Sprendinys $(1, -1)$. Užrašome bendrąjį sprendinį su parametru $t \\\\in \\\\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$.",
+    "solution": "Surandame $\\text{dbd}(15, 6) = 3$. Kadangi 9 dalijasi iš 3, lygtis turi sveikųjų sprendinių. Padalijame abi lygties puses iš 3, gauname: $5x + 2y = 3$. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\implies y = -1$. Sprendinys $(1, -1)$. Užrašome bendrąjį sprendinį su parametru $t \\in \\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -36981,18 +36981,18 @@ export const exercises = [
             "title": "Žingsnis 3",
             "action": "Atskirojo sprendinio radimas",
             "reason": "Būtinas bendrajam sprendiniui.",
-            "result": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\\\implies y = -1$. Sprendinys $(1, -1)$.",
+            "result": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\implies y = -1$. Sprendinys $(1, -1)$.",
             "latex": ""
           },
           {
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Užrašome bendrąjį sprendinį su parametru $t \\\\in \\\\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$.",
+            "result": "Užrašome bendrąjį sprendinį su parametru $t \\in \\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\\\in \\\\mathbb{Z}$."
+        "finalAnswer": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\in \\mathbb{Z}$."
       }
     ],
     "commonTraps": [
@@ -37069,7 +37069,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Jei $x_0 = 1$, tai $2y = 3 - 5 = -2 \\\\implies y_0 = -1$. Bendrasis sprendinys yra $x = 1 + 2t$, $y = -1 - 5t$.",
+        "text": "Jei $x_0 = 1$, tai $2y = 3 - 5 = -2 \\implies y_0 = -1$. Bendrasis sprendinys yra $x = 1 + 2t$, $y = -1 - 5t$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -37092,11 +37092,11 @@ export const exercises = [
     ],
     "hints": [
       "Raskite 2027 dalybos iš 11 liekaną.",
-      "$2027 = 11 \\times 184 + 3 \\\\implies 2027 \\\\equiv 3 \\\\pmod{11}$.",
-      "Taip pat nustatykite kitų skaičių liekanas: $2028 \\\\equiv 4$ ir $2029 \\\\equiv 5$. Sudauginkite jas: $3 \\times 4 \\times 5$.",
-      "Apskaičiuokite sandaugą $60 \\\\pmod{11}$."
+      "$2027 = 11 \\times 184 + 3 \\implies 2027 \\equiv 3 \\pmod{11}$.",
+      "Taip pat nustatykite kitų skaičių liekanas: $2028 \\equiv 4$ ir $2029 \\equiv 5$. Sudauginkite jas: $3 \\times 4 \\times 5$.",
+      "Apskaičiuokite sandaugą $60 \\pmod{11}$."
     ],
-    "solution": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\\\equiv 3 \\\\pmod{11}$. Tada $2028 \\\\equiv 4 \\\\pmod{11}$ ir $2029 \\\\equiv 5 \\\\pmod{11}$. Sudauginame gautas liekanas: $3 \\times 4 \\times 5 = 60$. Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\\\implies 60 \\\\equiv 5 \\\\pmod{11}$.",
+    "solution": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\equiv 3 \\pmod{11}$. Tada $2028 \\equiv 4 \\pmod{11}$ ir $2029 \\equiv 5 \\pmod{11}$. Sudauginame gautas liekanas: $3 \\times 4 \\times 5 = 60$. Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\implies 60 \\equiv 5 \\pmod{11}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -37129,14 +37129,14 @@ export const exercises = [
             "title": "Pradinė analizė",
             "action": "Liekanų radimas",
             "reason": "Daugybos savybė moduliu m.",
-            "result": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\\\equiv 3 \\\\pmod{11}$.",
+            "result": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\equiv 3 \\pmod{11}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Tada $2028 \\\\equiv 4 \\\\pmod{11}$ ir $2029 \\\\equiv 5 \\\\pmod{11}$.",
+            "result": "Tada $2028 \\equiv 4 \\pmod{11}$ ir $2029 \\equiv 5 \\pmod{11}$.",
             "latex": ""
           },
           {
@@ -37150,7 +37150,7 @@ export const exercises = [
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\\\implies 60 \\\\equiv 5 \\\\pmod{11}$.",
+            "result": "Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\implies 60 \\equiv 5 \\pmod{11}$.",
             "latex": ""
           }
         ],
@@ -37196,7 +37196,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra sandaugos liekanos savybė moduliu m?",
-        "back": "$(a \\\\cdot b) \\\\pmod m = ((a \\\\pmod m) \\\\cdot (b \\\\pmod m)) \\\\pmod m$.",
+        "back": "$(a \\cdot b) \\pmod m = ((a \\pmod m) \\cdot (b \\pmod m)) \\pmod m$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -37217,21 +37217,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$2027 = 11 \\times 184 + 3 \\\\implies 2027 \\\\equiv 3 \\\\pmod{11}$.",
+        "text": "$2027 = 11 \\times 184 + 3 \\implies 2027 \\equiv 3 \\pmod{11}$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Taip pat nustatykite kitų skaičių liekanas: $2028 \\\\equiv 4$ ir $2029 \\\\equiv 5$. Sudauginkite jas: $3 \\times 4 \\times 5$.",
+        "text": "Taip pat nustatykite kitų skaičių liekanas: $2028 \\equiv 4$ ir $2029 \\equiv 5$. Sudauginkite jas: $3 \\times 4 \\times 5$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite sandaugą $60 \\\\pmod{11}$.",
+        "text": "Apskaičiuokite sandaugą $60 \\pmod{11}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -37254,11 +37254,11 @@ export const exercises = [
     ],
     "hints": [
       "Ką teigia Ferma mažoji teorema apie sveikojo skaičiaus $a^p$ liekaną moduliu $p$?",
-      "Pagal teoremą, jei $p$ yra pirminis, tai $a^p \\\\equiv a \\\\pmod p$ bet kuriam sveikajam $a$.",
+      "Pagal teoremą, jei $p$ yra pirminis, tai $a^p \\equiv a \\pmod p$ bet kuriam sveikajam $a$.",
       "Pasirinkite $p=5$ ir $a=n$. Užrašykite gaunamą kongruenciją.",
-      "Iš $n^5 \\\\equiv n \\\\pmod 5$ atimkite $n$ iš abiejų pusių, kad gautumėte dalumo iš 5 įrodymą."
+      "Iš $n^5 \\equiv n \\pmod 5$ atimkite $n$ iš abiejų pusių, kad gautumėte dalumo iš 5 įrodymą."
     ],
-    "solution": "Kadangi skaičius 5 yra pirminis, galime taikyti Ferma mažąją teoremą. Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\\\equiv n \\\\pmod 5$. Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\\\equiv 0 \\\\pmod 5$. Tai reiškia, kad skirtumas $n^5 - n$ dalijasi iš 5 be liekanos.",
+    "solution": "Kadangi skaičius 5 yra pirminis, galime taikyti Ferma mažąją teoremą. Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\equiv n \\pmod 5$. Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\equiv 0 \\pmod 5$. Tai reiškia, kad skirtumas $n^5 - n$ dalijasi iš 5 be liekanos.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -37298,14 +37298,14 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\\\equiv n \\\\pmod 5$.",
+            "result": "Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\equiv n \\pmod 5$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\\\equiv 0 \\\\pmod 5$.",
+            "result": "Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\equiv 0 \\pmod 5$.",
             "latex": ""
           },
           {
@@ -37358,7 +37358,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra Ferma mažosios teoremos bendroji forma?",
-        "back": "$a^p \\\\equiv a \\\\pmod p$, kur $p$ yra pirminis skaičius, o $a$ yra bet koks sveikasis skaičius.",
+        "back": "$a^p \\equiv a \\pmod p$, kur $p$ yra pirminis skaičius, o $a$ yra bet koks sveikasis skaičius.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -37379,7 +37379,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pagal teoremą, jei $p$ yra pirminis, tai $a^p \\\\equiv a \\\\pmod p$ bet kuriam sveikajam $a$.",
+        "text": "Pagal teoremą, jei $p$ yra pirminis, tai $a^p \\equiv a \\pmod p$ bet kuriam sveikajam $a$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -37393,7 +37393,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Iš $n^5 \\\\equiv n \\\\pmod 5$ atimkite $n$ iš abiejų pusių, kad gautumėte dalumo iš 5 įrodymą.",
+        "text": "Iš $n^5 \\equiv n \\pmod 5$ atimkite $n$ iš abiejų pusių, kad gautumėte dalumo iš 5 įrodymą.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -37416,11 +37416,11 @@ export const exercises = [
     ],
     "hints": [
       "Ar skaičius 11 yra pirminis?",
-      "Kadangi 11 yra pirminis, galime naudoti Vilsono teoremą, kuri teigia $(p-1)! \\\\equiv -1 \\\\pmod p$.",
-      "Įstatykite $p=11$, gausite: $10! \\\\equiv -1 \\\\pmod{11}$.",
+      "Kadangi 11 yra pirminis, galime naudoti Vilsono teoremą, kuri teigia $(p-1)! \\equiv -1 \\pmod p$.",
+      "Įstatykite $p=11$, gausite: $10! \\equiv -1 \\pmod{11}$.",
       "Kadangi liekana turi būti teigiama ir mažesnė už 11, pakeiskite $-1$ ekvivalenčiu skaičiumi."
     ],
-    "solution": "Skaičius 11 yra pirminis, todėl galime taikyti Vilsono teoremą. Pagal Vilsono teoremą: $(p-1)! \\\\equiv -1 \\\\pmod p$. Įstatome $p=11$: $(11-1)! = 10! \\\\equiv -1 \\\\pmod{11}$. Kadangi $-1 \\\\equiv 10 \\\\pmod{11}$, tai dalybos liekana yra 10.",
+    "solution": "Skaičius 11 yra pirminis, todėl galime taikyti Vilsono teoremą. Pagal Vilsono teoremą: $(p-1)! \\equiv -1 \\pmod p$. Įstatome $p=11$: $(11-1)! = 10! \\equiv -1 \\pmod{11}$. Kadangi $-1 \\equiv 10 \\pmod{11}$, tai dalybos liekana yra 10.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -37460,21 +37460,21 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Vilsono teoremą: $(p-1)! \\\\equiv -1 \\\\pmod p$.",
+            "result": "Pagal Vilsono teoremą: $(p-1)! \\equiv -1 \\pmod p$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome $p=11$: $(11-1)! = 10! \\\\equiv -1 \\\\pmod{11}$.",
+            "result": "Įstatome $p=11$: $(11-1)! = 10! \\equiv -1 \\pmod{11}$.",
             "latex": ""
           },
           {
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $-1 \\\\equiv 10 \\\\pmod{11}$, tai dalybos liekana yra 10.",
+            "result": "Kadangi $-1 \\equiv 10 \\pmod{11}$, tai dalybos liekana yra 10.",
             "latex": ""
           }
         ],
@@ -37520,7 +37520,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Ką teigia Vilsono teorema?",
-        "back": "Jei $p$ yra pirminis skaičius, tai $(p-1)! \\\\equiv -1 \\\\pmod p$ (arba $\\\\equiv p-1 \\\\pmod p$).",
+        "back": "Jei $p$ yra pirminis skaičius, tai $(p-1)! \\equiv -1 \\pmod p$ (arba $\\equiv p-1 \\pmod p$).",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -37541,14 +37541,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi 11 yra pirminis, galime naudoti Vilsono teoremą, kuri teigia $(p-1)! \\\\equiv -1 \\\\pmod p$.",
+        "text": "Kadangi 11 yra pirminis, galime naudoti Vilsono teoremą, kuri teigia $(p-1)! \\equiv -1 \\pmod p$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite $p=11$, gausite: $10! \\\\equiv -1 \\\\pmod{11}$.",
+        "text": "Įstatykite $p=11$, gausite: $10! \\equiv -1 \\pmod{11}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -37578,11 +37578,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite sąlygas kaip kongruencijų sistemą.",
-      "Sustatykite: $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 3 \\\\pmod 5$.",
-      "Iš pirmos lygties $x = 3k + 2$. Įstatykite šią išraišką į antrąją: $3k + 2 \\\\equiv 3 \\\\pmod 5$.",
-      "Supaprastinkite: $3k \\\\equiv 1 \\\\pmod 5$. Raskite mažiausią teigiamą $k$, o tada apskaičiuokite $x$."
+      "Sustatykite: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$.",
+      "Iš pirmos lygties $x = 3k + 2$. Įstatykite šią išraišką į antrąją: $3k + 2 \\equiv 3 \\pmod 5$.",
+      "Supaprastinkite: $3k \\equiv 1 \\pmod 5$. Raskite mažiausią teigiamą $k$, o tada apskaičiuokite $x$."
     ],
-    "solution": "Sudarome sistemą: $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 3 \\\\pmod 5$. Iš pirmos lygties turime $x = 3k + 2$, kur $k \\\\in \\\\mathbb{Z}$. Įstatome į antrąją: $3k + 2 \\\\equiv 3 \\\\pmod 5 \\\\implies 3k \\\\equiv 1 \\\\pmod 5$. Dauginame abi puses iš 2, kad gautume $k$: $6k \\\\equiv 2 \\\\pmod 5 \\\\implies k \\\\equiv 2 \\\\pmod 5$. Mažiausias teigiamas $k$ yra 2. Įstatome: $x = 3(2) + 2 = 8$.",
+    "solution": "Sudarome sistemą: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$. Iš pirmos lygties turime $x = 3k + 2$, kur $k \\in \\mathbb{Z}$. Įstatome į antrąją: $3k + 2 \\equiv 3 \\pmod 5 \\implies 3k \\equiv 1 \\pmod 5$. Dauginame abi puses iš 2, kad gautume $k$: $6k \\equiv 2 \\pmod 5 \\implies k \\equiv 2 \\pmod 5$. Mažiausias teigiamas $k$ yra 2. Įstatome: $x = 3(2) + 2 = 8$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -37615,28 +37615,28 @@ export const exercises = [
             "title": "Pradinė analizė",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudarome sistemą: $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 3 \\\\pmod 5$.",
+            "result": "Sudarome sistemą: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Iš pirmos lygties turime $x = 3k + 2$, kur $k \\\\in \\\\mathbb{Z}$.",
+            "result": "Iš pirmos lygties turime $x = 3k + 2$, kur $k \\in \\mathbb{Z}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome į antrąją: $3k + 2 \\\\equiv 3 \\\\pmod 5 \\\\implies 3k \\\\equiv 1 \\\\pmod 5$.",
+            "result": "Įstatome į antrąją: $3k + 2 \\equiv 3 \\pmod 5 \\implies 3k \\equiv 1 \\pmod 5$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 4",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Dauginame abi puses iš 2, kad gautume $k$: $6k \\\\equiv 2 \\\\pmod 5 \\\\implies k \\\\equiv 2 \\\\pmod 5$.",
+            "result": "Dauginame abi puses iš 2, kad gautume $k$: $6k \\equiv 2 \\pmod 5 \\implies k \\equiv 2 \\pmod 5$.",
             "latex": ""
           },
           {
@@ -37710,21 +37710,21 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Sustatykite: $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 3 \\\\pmod 5$.",
+        "text": "Sustatykite: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Iš pirmos lygties $x = 3k + 2$. Įstatykite šią išraišką į antrąją: $3k + 2 \\\\equiv 3 \\\\pmod 5$.",
+        "text": "Iš pirmos lygties $x = 3k + 2$. Įstatykite šią išraišką į antrąją: $3k + 2 \\equiv 3 \\pmod 5$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Supaprastinkite: $3k \\\\equiv 1 \\\\pmod 5$. Raskite mažiausią teigiamą $k$, o tada apskaičiuokite $x$.",
+        "text": "Supaprastinkite: $3k \\equiv 1 \\pmod 5$. Raskite mažiausią teigiamą $k$, o tada apskaičiuokite $x$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -38064,8 +38064,8 @@ export const exercises = [
     ],
     "hints": [
       "Pradėkite dalinti 109 iš 2 su liekana.",
-      "$109 = 54 \\\\cdot 2 + 1$, liekana 1. Dabar dalinkite 54.",
-      "Tęskite: $54 = 27 \\\\cdot 2 + 0$, $27 = 13 \\\\cdot 2 + 1$, $13 = 6 \\\\cdot 2 + 1$, $6 = 3 \\\\cdot 2 + 0$, $3 = 1 \\\\cdot 2 + 1$, $1 = 0 \\\\cdot 2 + 1$.",
+      "$109 = 54 \\cdot 2 + 1$, liekana 1. Dabar dalinkite 54.",
+      "Tęskite: $54 = 27 \\cdot 2 + 0$, $27 = 13 \\cdot 2 + 1$, $13 = 6 \\cdot 2 + 1$, $6 = 3 \\cdot 2 + 0$, $3 = 1 \\cdot 2 + 1$, $1 = 0 \\cdot 2 + 1$.",
       "Užrašykite gautas liekanas atbuline tvarka nuo paskutinės iki pirmosios."
     ],
     "solution": "$109 / 2 = 54$ liekana $1$. $54 / 2 = 27$ liekana $0$. $27 / 2 = 13$ liekana $1$. $13 / 2 = 6$ liekana $1$. $6 / 2 = 3$ liekana $0$. $3 / 2 = 1$ liekana $1$. $1 / 2 = 0$ liekana $1$. Užrašome liekanas nuo galo: $1101101_2$.",
@@ -38217,14 +38217,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$109 = 54 \\\\cdot 2 + 1$, liekana 1. Dabar dalinkite 54.",
+        "text": "$109 = 54 \\cdot 2 + 1$, liekana 1. Dabar dalinkite 54.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Tęskite: $54 = 27 \\\\cdot 2 + 0$, $27 = 13 \\\\cdot 2 + 1$, $13 = 6 \\\\cdot 2 + 1$, $6 = 3 \\\\cdot 2 + 0$, $3 = 1 \\\\cdot 2 + 1$, $1 = 0 \\\\cdot 2 + 1$.",
+        "text": "Tęskite: $54 = 27 \\cdot 2 + 0$, $27 = 13 \\cdot 2 + 1$, $13 = 6 \\cdot 2 + 1$, $6 = 3 \\cdot 2 + 0$, $3 = 1 \\cdot 2 + 1$, $1 = 0 \\cdot 2 + 1$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -38254,7 +38254,7 @@ export const exercises = [
     ],
     "hints": [
       "Nustatykite koeficientus: $a=1$, $b=-6$, $c=9$.",
-      "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\\\cdot 1 \\\\cdot 9 = 36 - 36 = 0$.",
+      "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.",
       "Kadangi $D=0$, lygtis turi vieną kartotinę (dvigubą) šaknį.",
       "Šaknis randama pagal formulę $x = -b / (2a)$. Apskaičiuokite jos vertę."
     ],
@@ -38379,7 +38379,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\\\cdot 1 \\\\cdot 9 = 36 - 36 = 0$.",
+        "text": "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -38490,7 +38490,7 @@ export const exercises = [
         "whyTempting": "Norisi dirbti su konkrečiais skaičiais.",
         "whyItHappens": "Norisi dirbti su konkrečiais skaičiais.",
         "wrongPattern": "Pirmiausia spręsti lygtį ir gauti iracionalias šaknis.",
-        "correction": "Šaknys yra iracionalios ($x = 2 \\\\pm \\frac{\\\\sqrt{6}}{2}$), todėl jas sudėti ir dalinti tiesiogiai yra labai sudėtinga. Vijeto teorema leidžia rasti atsakymą be šaknų skaičiavimo.",
+        "correction": "Šaknys yra iracionalios ($x = 2 \\pm \\frac{\\sqrt{6}}{2}$), todėl jas sudėti ir dalinti tiesiogiai yra labai sudėtinga. Vijeto teorema leidžia rasti atsakymą be šaknų skaičiavimo.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ]
@@ -38890,7 +38890,7 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Suprastinkite reiškinį $\\frac{x^2 - 9}{x^2 + 3x} \\\\div \\frac{x - 3}{x^2}$.",
+    "statement": "Suprastinkite reiškinį $\\frac{x^2 - 9}{x^2 + 3x} \\div \\frac{x - 3}{x^2}$.",
     "answer": "Reiškinys lygus $x$.",
     "acceptedAnswers": [
       "Reiškinys lygus $x$."
@@ -38903,7 +38903,7 @@ export const exercises = [
     "hints": [
       "Išskaidykite $x^2-9$ ir $x^2+3x$ daugikliais.",
       "$x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-      "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\\\cdot \\frac{x^2}{x-3}$.",
+      "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\cdot \\frac{x^2}{x-3}$.",
       "Suprastinkite vienodus skliaustus $(x-3)$, $(x+3)$ bei kintamąjį $x$."
     ],
     "solution": "Išskaidome daugikliais pirmosios trupmenos dalis: $x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$. Dalybos veiksmą pakeičiame daugyba iš apverstos trupmenos: $\\frac{(x-3)(x+3)}{x(x+3)} \\times \\frac{x^2}{x-3}$. Suprastiname bendrus daugiklius $(x+3)$ ir $(x-3)$ skaitiklyje ir vardiklyje: $\\frac{1}{x} \\times x^2$. Supaprastiname $x^2 / x = x$ (kai $x \\neq 0, 3, -3$).",
@@ -39034,7 +39034,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\\\cdot \\frac{x^2}{x-3}$.",
+        "text": "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\cdot \\frac{x^2}{x-3}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -39052,7 +39052,7 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite reiškinio reikšmę: $\\\\log_2(24) - \\\\log_2(3)$.",
+    "statement": "Apskaičiuokite reiškinio reikšmę: $\\log_2(24) - \\log_2(3)$.",
     "answer": "Reikšmė lygi 3.",
     "acceptedAnswers": [
       "Reikšmė lygi 3."
@@ -39064,11 +39064,11 @@ export const exercises = [
     ],
     "hints": [
       "Prisiminkite, kaip sujungti du logaritmus su vienodais pagrindais, kai jie yra atimami.",
-      "Skirtumas virsta dalmens logaritmu: $\\\\log_2(\\frac{24}{3})$.",
-      "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\\\log_2(8)$.",
+      "Skirtumas virsta dalmens logaritmu: $\\log_2(\\frac{24}{3})$.",
+      "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\log_2(8)$.",
       "Išreikškite 8 kaip 2 laipsnį ir raskite galutinę vertę."
     ],
-    "solution": "Taikome logaritmų savybę: $\\\\log_2(24) - \\\\log_2(3) = \\\\log_2(\\frac{24}{3})$. Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$. Įstatome: $\\\\log_2(8)$. Kadangi $8 = 2^3$, tai $\\\\log_2(2^3) = 3$.",
+    "solution": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$. Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$. Įstatome: $\\log_2(8)$. Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -39076,7 +39076,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Logaritmų skirtumo savybė",
-      "text": "Pritaikykite logaritmų skirtumo formulę $\\\\log_a(x) - \\\\log_a(y) = \\\\log_a(\\frac{x}{y})$."
+      "text": "Pritaikykite logaritmų skirtumo formulę $\\log_a(x) - \\log_a(y) = \\log_a(\\frac{x}{y})$."
     },
     "strategyTags": [
       "standard",
@@ -39101,7 +39101,7 @@ export const exercises = [
             "title": "Pradinė analizė",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome logaritmų savybę: $\\\\log_2(24) - \\\\log_2(3) = \\\\log_2(\\frac{24}{3})$.",
+            "result": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$.",
             "latex": ""
           },
           {
@@ -39115,14 +39115,14 @@ export const exercises = [
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome: $\\\\log_2(8)$.",
+            "result": "Įstatome: $\\log_2(8)$.",
             "latex": ""
           },
           {
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $8 = 2^3$, tai $\\\\log_2(2^3) = 3$.",
+            "result": "Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$.",
             "latex": ""
           }
         ],
@@ -39134,11 +39134,11 @@ export const exercises = [
         "id": "ex-olimpiada-08-d16de0a6-trap-1",
         "title": "Logaritmų savybių painiojimas",
         "type": "mistake",
-        "wrongMove": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\\\log_2(24 - 3) = \\\\log_2(21)$.",
+        "wrongMove": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
         "whyTempting": "Neteisingai suformuluota analogija su skliaustais.",
         "whyItHappens": "Neteisingai suformuluota analogija su skliaustais.",
-        "wrongPattern": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\\\log_2(24 - 3) = \\\\log_2(21)$.",
-        "correction": "Logaritmų skirtumas yra lygus dalmens logaritmui: $\\\\log_a x - \\\\log_a y = \\\\log_a (x/y)$ (o ne $\\\\log(x-y)$).",
+        "wrongPattern": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
+        "correction": "Logaritmų skirtumas yra lygus dalmens logaritmui: $\\log_a x - \\log_a y = \\log_a (x/y)$ (o ne $\\log(x-y)$).",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ]
@@ -39168,7 +39168,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra logaritmų skirtumo formulė?",
-        "back": "$\\\\log_a x - \\\\log_a y = \\\\log_a \\\\left(\\frac{x}{y}\\right)$.",
+        "back": "$\\log_a x - \\log_a y = \\log_a \\left(\\frac{x}{y}\\right)$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -39189,14 +39189,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Skirtumas virsta dalmens logaritmu: $\\\\log_2(\\frac{24}{3})$.",
+        "text": "Skirtumas virsta dalmens logaritmu: $\\log_2(\\frac{24}{3})$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\\\log_2(8)$.",
+        "text": "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\log_2(8)$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -39230,7 +39230,7 @@ export const exercises = [
       "Pritaikykite laipsnio kėlimo laipsniu taisyklę: $3^{2(x-1)} = 3^{3x}$.",
       "Sulyginkite rodiklius: $2x - 2 = 3x$ ir išspręskite lygtį."
     ],
-    "solution": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$. Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$. Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$. Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\\\implies x = -2$.",
+    "solution": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$. Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$. Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$. Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -39284,7 +39284,7 @@ export const exercises = [
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\\\implies x = -2$.",
+            "result": "Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$.",
             "latex": ""
           }
         ],
@@ -39296,10 +39296,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-3fa10af9-trap-1",
         "title": "Skliaustų ignoravimas rodiklyje",
         "type": "mistake",
-        "wrongMove": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\\\cdot (x-1) = 3 \\\\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
+        "wrongMove": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
         "whyTempting": "Skubėjimas atskleidžiant skliaustus.",
         "whyItHappens": "Skubėjimas atskleidžiant skliaustus.",
-        "wrongPattern": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\\\cdot (x-1) = 3 \\\\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
+        "wrongPattern": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
         "correction": "Keliant laipsnį laipsniu, padauginamas visas rodiklis: $2(x-1) = 2x - 2$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -39390,9 +39390,9 @@ export const exercises = [
       "Pabandykite išskirti kvadratą iš narių $x^2 - 4x$.",
       "Prisiminkite, kad $(x-2)^2 = x^2 - 4x + 4$.",
       "Užrašykite: $x^2 - 4x + 7 = (x^2 - 4x + 4) + 3 = (x-2)^2 + 3$.",
-      "Kadangi $(x-2)^2 \\\\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?"
+      "Kadangi $(x-2)^2 \\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?"
     ],
-    "solution": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$. Užrašome kaip sumą: $x^2 - 4x + 4 + 3$. Suskleidžiame kvadratą: $(x-2)^2 + 3$. Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
+    "solution": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$. Užrašome kaip sumą: $x^2 - 4x + 4 + 3$. Suskleidžiame kvadratą: $(x-2)^2 + 3$. Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -39446,7 +39446,7 @@ export const exercises = [
             "title": "Apibendrinimas",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
+            "result": "Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
             "latex": ""
           }
         ],
@@ -39492,7 +39492,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kaip išskiriamas pilnasis kvadratas trinaryje $x^2 + bx + c$?",
-        "back": "Pridedame ir atimame laisvąjį narį $\\\\left(\\frac{b}{2}\\right)^2$, kad gautume $\\\\left(x + \\frac{b}{2}\\right)^2 + \\\\left(c - \\frac{b^2}{4}\\right)$.",
+        "back": "Pridedame ir atimame laisvąjį narį $\\left(\\frac{b}{2}\\right)^2$, kad gautume $\\left(x + \\frac{b}{2}\\right)^2 + \\left(c - \\frac{b^2}{4}\\right)$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -39527,7 +39527,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi $(x-2)^2 \\\\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?",
+        "text": "Kadangi $(x-2)^2 \\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -39550,11 +39550,11 @@ export const exercises = [
     ],
     "hints": [
       "Kurį kintamąjį lengviausia pašalinti sudedant lygtis?",
-      "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\\\implies 2x + 3y = 8$.",
-      "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\\\implies 3x + y = 5$.",
+      "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\implies 2x + 3y = 8$.",
+      "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\implies 3x + y = 5$.",
       "Išspręskite gautą sistemą iš $2x+3y=8$ ir $3x+y=5$, o tada suraskite $z$."
     ],
-    "solution": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\\\implies 2x + 3y = 8$. Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\\\implies 3x + y = 5$. Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\\\implies 2x + 15 - 9x = 8 \\\\implies -7x = -7 \\\\implies x = 1$. Randame $y = 5 - 3(1) = 2$. Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\\\implies z = 3$.",
+    "solution": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$. Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$. Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$. Randame $y = 5 - 3(1) = 2$. Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -39587,21 +39587,21 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\\\implies 2x + 3y = 8$.",
+            "result": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\\\implies 3x + y = 5$.",
+            "result": "Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\\\implies 2x + 15 - 9x = 8 \\\\implies -7x = -7 \\\\implies x = 1$.",
+            "result": "Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$.",
             "latex": ""
           },
           {
@@ -39615,7 +39615,7 @@ export const exercises = [
             "title": "Žingsnis 5",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\\\implies z = 3$.",
+            "result": "Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$.",
             "latex": ""
           }
         ],
@@ -39682,14 +39682,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\\\implies 2x + 3y = 8$.",
+        "text": "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\implies 2x + 3y = 8$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\\\implies 3x + y = 5$.",
+        "text": "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\implies 3x + y = 5$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -39707,7 +39707,7 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite begalinės nykstamosios geometrinės progresijos $4 + 2 + 1 + \\frac{1}{2} + \\\\dots$ sumą.",
+    "statement": "Raskite begalinės nykstamosios geometrinės progresijos $4 + 2 + 1 + \\frac{1}{2} + \\dots$ sumą.",
     "answer": "Suma lygi 8.",
     "acceptedAnswers": [
       "Suma lygi 8."
@@ -39786,7 +39786,7 @@ export const exercises = [
         "whyTempting": "Supainiojamos dvi skirtingos sumų formulės.",
         "whyItHappens": "Supainiojamos dvi skirtingos sumų formulės.",
         "wrongPattern": "Naudoti baigtinės progresijos sumos formulę su nežinomu $n$.",
-        "correction": "Begaliniam narių skaičiui taikoma speciali formulė $S = \\frac{a_1}{1-r}$, kuri yra baigtinės formulės riba, kai $n \\to \\\\infty$.",
+        "correction": "Begaliniam narių skaičiui taikoma speciali formulė $S = \\frac{a_1}{1-r}$, kuri yra baigtinės formulės riba, kai $n \\to \\infty$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ]
@@ -39862,7 +39862,7 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Seka apibrėžiama rekurentiniu sąryšiu: $a_1 = 2$, $a_{n+1} = 3a_n - 1$ visiems $n \\\\ge 1$. Raskite ketvirtąjį sekos narį $a_4$.",
+    "statement": "Seka apibrėžiama rekurentiniu sąryšiu: $a_1 = 2$, $a_{n+1} = 3a_n - 1$ visiems $n \\ge 1$. Raskite ketvirtąjį sekos narį $a_4$.",
     "answer": "$a_4 = 41$.",
     "acceptedAnswers": [
       "$a_4 = 41$."
@@ -40195,7 +40195,7 @@ export const exercises = [
       "Pritaikykite Pitagoro teoremą rombo kraštinei $a$ rasti: $a^2 = 6^2 + 8^2$.",
       "Gausite $a = 10$ cm. Apskaičiuokite perimetrą $P = 4a$."
     ],
-    "solution": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai. Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm. Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\\\implies a = 10$ cm. Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm.",
+    "solution": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai. Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm. Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm. Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -40242,7 +40242,7 @@ export const exercises = [
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\\\implies a = 10$ cm.",
+            "result": "Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm.",
             "latex": ""
           },
           {
@@ -40295,7 +40295,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokie yra rombo įstrižainių geometriniai ypatumai?",
-        "back": "Įstrižainės yra statmenos (kertasi $90^\\\\circ$ kampu) ir susikirtimo taške dalijasi pusiau.",
+        "back": "Įstrižainės yra statmenos (kertasi $90^\\circ$ kampu) ir susikirtimo taške dalijasi pusiau.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -40341,10 +40341,10 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Stačiajame trikampyje statinis prieš smailųjį kampą $\\\\alpha$ lygus $3$ cm, o įžambinė lygi $5$ cm. Raskite $\\\\cos \\\\alpha$.",
-    "answer": "$\\\\cos \\\\alpha = 4/5$ (arba 0.8).",
+    "statement": "Stačiajame trikampyje statinis prieš smailųjį kampą $\\alpha$ lygus $3$ cm, o įžambinė lygi $5$ cm. Raskite $\\cos \\alpha$.",
+    "answer": "$\\cos \\alpha = 4/5$ (arba 0.8).",
     "acceptedAnswers": [
-      "$\\\\cos \\\\alpha = 4/5$ (arba 0.8)."
+      "$\\cos \\alpha = 4/5$ (arba 0.8)."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -40353,11 +40353,11 @@ export const exercises = [
     ],
     "hints": [
       "Raskite priglaustinį statinį $b$ naudodami Pitagoro teoremą.",
-      "$b = \\\\sqrt{5^2 - 3^2} = 4$ cm.",
-      "Pagal apibrėžimą, $\\\\cos \\\\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
+      "$b = \\sqrt{5^2 - 3^2} = 4$ cm.",
+      "Pagal apibrėžimą, $\\cos \\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
       "Santykis: $b / c = 4 / 5$."
     ],
-    "solution": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\\\sqrt{5^2 - 3^2} = 4$ cm. Kosinuso apibrėžimas: $\\\\cos \\\\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$. Įstatome vertes: $\\\\cos \\\\alpha = 4 / 5 = 0.8$.",
+    "solution": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm. Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$. Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -40390,25 +40390,25 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\\\sqrt{5^2 - 3^2} = 4$ cm.",
+            "result": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kosinuso apibrėžimas: $\\\\cos \\\\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$.",
+            "result": "Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome vertes: $\\\\cos \\\\alpha = 4 / 5 = 0.8$.",
+            "result": "Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "$\\\\cos \\\\alpha = 4/5$ (arba 0.8)."
+        "finalAnswer": "$\\cos \\alpha = 4/5$ (arba 0.8)."
       }
     ],
     "commonTraps": [
@@ -40416,10 +40416,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-22b2c6e7-trap-1",
         "title": "Dažna klaida",
         "type": "mistake",
-        "wrongMove": "Parašyti $\\\\cos \\\\alpha = 3/5$ tiesiogiai.",
+        "wrongMove": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
         "whyTempting": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
         "whyItHappens": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
-        "wrongPattern": "Parašyti $\\\\cos \\\\alpha = 3/5$ tiesiogiai.",
+        "wrongPattern": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
         "correction": "Sinusas yra priešpriešinio statinio santykis, o kosinusas – priglaustinio statinio santykis su įžambine.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -40450,7 +40450,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kas yra kosinusas stačiajame trikampyje?",
-        "back": "Tai priglaustinio statinio ir įžambinės ilgių santykis: $\\\\cos \\\\alpha = \\frac{adjacent}{hypotenuse}$.",
+        "back": "Tai priglaustinio statinio ir įžambinės ilgių santykis: $\\cos \\alpha = \\frac{adjacent}{hypotenuse}$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -40471,14 +40471,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$b = \\\\sqrt{5^2 - 3^2} = 4$ cm.",
+        "text": "$b = \\sqrt{5^2 - 3^2} = 4$ cm.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pagal apibrėžimą, $\\\\cos \\\\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
+        "text": "Pagal apibrėžimą, $\\cos \\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -40497,9 +40497,9 @@ export const exercises = [
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskaičiuokite trikampio, kurio kraštinės yra 5 cm, 6 cm ir 9 cm, plotą naudodami Herono formulę.",
-    "answer": "Plotas lygus $10\\\\sqrt{2}$ $\\text{cm}^2$.",
+    "answer": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$.",
     "acceptedAnswers": [
-      "Plotas lygus $10\\\\sqrt{2}$ $\\text{cm}^2$."
+      "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -40509,10 +40509,10 @@ export const exercises = [
     "hints": [
       "Raskite trikampio pusperimetrį $p$.",
       "$p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
-      "Taikykite formulę: $S = \\\\sqrt{10(10-5)(10-6)(10-9)}$.",
-      "Apskaičiuokite: $S = \\\\sqrt{10 \\\\cdot 5 \\\\cdot 4 \\\\cdot 1} = \\\\sqrt{200}$. Supaprastinkite šaknį."
+      "Taikykite formulę: $S = \\sqrt{10(10-5)(10-6)(10-9)}$.",
+      "Apskaičiuokite: $S = \\sqrt{10 \\cdot 5 \\cdot 4 \\cdot 1} = \\sqrt{200}$. Supaprastinkite šaknį."
     ],
-    "solution": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm. Taikome Herono formulę: $S = \\\\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome kraštines: $S = \\\\sqrt{10(10-5)(10-6)(10-9)} = \\\\sqrt{10 \\times 5 \\times 4 \\times 1}$. $S = \\\\sqrt{200} = \\\\sqrt{100 \\times 2} = 10\\\\sqrt{2}$ $\\text{cm}^2$.",
+    "solution": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm. Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$. $S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -40520,7 +40520,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Herono formulės taikymas",
-      "text": "Apskaičiuokite pusperimetrį $p$ ir pritaikykite plotui formulę $S = \\\\sqrt{p(p-a)(p-b)(p-c)}$."
+      "text": "Apskaičiuokite pusperimetrį $p$ ir pritaikykite plotui formulę $S = \\sqrt{p(p-a)(p-b)(p-c)}$."
     },
     "strategyTags": [
       "standard",
@@ -40552,25 +40552,25 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome Herono formulę: $S = \\\\sqrt{p(p-a)(p-b)(p-c)}$.",
+            "result": "Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome kraštines: $S = \\\\sqrt{10(10-5)(10-6)(10-9)} = \\\\sqrt{10 \\times 5 \\times 4 \\times 1}$.",
+            "result": "Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 4",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "$S = \\\\sqrt{200} = \\\\sqrt{100 \\times 2} = 10\\\\sqrt{2}$ $\\text{cm}^2$.",
+            "result": "$S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "Plotas lygus $10\\\\sqrt{2}$ $\\text{cm}^2$."
+        "finalAnswer": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
       }
     ],
     "commonTraps": [
@@ -40612,7 +40612,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra Herono trikampio ploto formulė?",
-        "back": "$S = \\\\sqrt{p(p-a)(p-b)(p-c)}$, kur $p = \\frac{a+b+c}{2}$ yra pusperimetris.",
+        "back": "$S = \\sqrt{p(p-a)(p-b)(p-c)}$, kur $p = \\frac{a+b+c}{2}$ yra pusperimetris.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -40640,14 +40640,14 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite formulę: $S = \\\\sqrt{10(10-5)(10-6)(10-9)}$.",
+        "text": "Taikykite formulę: $S = \\sqrt{10(10-5)(10-6)(10-9)}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $S = \\\\sqrt{10 \\\\cdot 5 \\\\cdot 4 \\\\cdot 1} = \\\\sqrt{200}$. Supaprastinkite šaknį.",
+        "text": "Apskaičiuokite: $S = \\sqrt{10 \\cdot 5 \\cdot 4 \\cdot 1} = \\sqrt{200}$. Supaprastinkite šaknį.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -40671,7 +40671,7 @@ export const exercises = [
     "hints": [
       "Užrašykite formulę, jungiančią kraštines, plotą ir apibrėžtinį spindulį.",
       "Formulė yra $R = \\frac{abc}{4S}$. Mums duota $a=13$, $b=14$, $c=15$ ir $S=84$.",
-      "Įstatykite vertes: $R = \\frac{13 \\\\cdot 14 \\\\cdot 15}{4 \\\\cdot 84}$.",
+      "Įstatykite vertes: $R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84}$.",
       "Suprastinkite trupmeną dalindami bendrus daliklius (14 ir 84 dalijasi iš 14, lieka 6; 15 ir 6 dalijasi iš 3)."
     ],
     "solution": "Naudojame apibrėžto apskritimo spindulio formulę $R = \\frac{abc}{4S}$. Įstatome žinomus skaičius: $R = \\frac{13 \\times 14 \\times 15}{4 \\times 84}$. Suprastiname skaitiklį ir vardiklį: $\\frac{14}{84} = \\frac{1}{6}$. Gauname $R = \\frac{13 \\times 15}{4 \\times 6} = \\frac{13 \\times 5}{4 \\times 2} = \\frac{65}{8} = 8.125$ cm.",
@@ -40802,7 +40802,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite vertes: $R = \\frac{13 \\\\cdot 14 \\\\cdot 15}{4 \\\\cdot 84}$.",
+        "text": "Įstatykite vertes: $R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -40820,10 +40820,10 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskritimo stygos $AB$ ir $CD$ susikerta taške $P$. Žinoma, kad lankas $AC = 40^\\\\circ$, o lankas $BD = 60^\\\\circ$. Raskite kampą $\\\\angle APD$.",
-    "answer": "Kampas $\\\\angle APD = 130^\\\\circ$.",
+    "statement": "Apskritimo stygos $AB$ ir $CD$ susikerta taške $P$. Žinoma, kad lankas $AC = 40^\\circ$, o lankas $BD = 60^\\circ$. Raskite kampą $\\angle APD$.",
+    "answer": "Kampas $\\angle APD = 130^\\circ$.",
     "acceptedAnswers": [
-      "Kampas $\\\\angle APD = 130^\\\\circ$."
+      "Kampas $\\angle APD = 130^\\circ$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -40831,12 +40831,12 @@ export const exercises = [
       "olimpiada-08-concept-logic"
     ],
     "hints": [
-      "Raskite kampą $\\\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
-      "Pagal apskritimo kampų savybes, $\\\\angle APC = \\frac{\\\\cup AC + \\\\cup BD}{2}$.",
-      "Apskaičiuokite: $\\\\angle APC = \\frac{40^\\\\circ + 60^\\\\circ}{2} = 50^\\\\circ$.",
-      "Kampas $\\\\angle APD$ yra gretutinis kampui $\\\\angle APC$, todėl jų suma lygi $180^\\\\circ$. Raskite $\\\\angle APD$."
+      "Raskite kampą $\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
+      "Pagal apskritimo kampų savybes, $\\angle APC = \\frac{\\cup AC + \\cup BD}{2}$.",
+      "Apskaičiuokite: $\\angle APC = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
+      "Kampas $\\angle APD$ yra gretutinis kampui $\\angle APC$, todėl jų suma lygi $180^\\circ$. Raskite $\\angle APD$."
     ],
-    "solution": "Apskaičiuojame kampą tarp stygų $\\\\angle APC$: $\\\\angle APC = \\frac{\\\\cup AC + \\\\cup BD}{2} = \\frac{40^\\\\circ + 60^\\\\circ}{2} = 50^\\\\circ$. Kampai $\\\\angle APC$ ir $\\\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$). Todėl jų suma lygi $180^\\\\circ$: $\\\\angle APD = 180^\\\\circ - \\\\angle APC = 180^\\\\circ - 50^\\\\circ = 130^\\\\circ$.",
+    "solution": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$. Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$). Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -40844,7 +40844,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Kampas tarp susikertančių stygų",
-      "text": "Kampas tarp dviejų apskritimo stygų yra lygus lankų, kuriuos jos atkerta, sumos pusei. Kampas $\\\\angle APD$ yra gretutinis šiam kampui."
+      "text": "Kampas tarp dviejų apskritimo stygų yra lygus lankų, kuriuos jos atkerta, sumos pusei. Kampas $\\angle APD$ yra gretutinis šiam kampui."
     },
     "strategyTags": [
       "standard",
@@ -40869,25 +40869,25 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame kampą tarp stygų $\\\\angle APC$: $\\\\angle APC = \\frac{\\\\cup AC + \\\\cup BD}{2} = \\frac{40^\\\\circ + 60^\\\\circ}{2} = 50^\\\\circ$.",
+            "result": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kampai $\\\\angle APC$ ir $\\\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$).",
+            "result": "Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$).",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Todėl jų suma lygi $180^\\\\circ$: $\\\\angle APD = 180^\\\\circ - \\\\angle APC = 180^\\\\circ - 50^\\\\circ = 130^\\\\circ$.",
+            "result": "Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "Kampas $\\\\angle APD = 130^\\\\circ$."
+        "finalAnswer": "Kampas $\\angle APD = 130^\\circ$."
       }
     ],
     "commonTraps": [
@@ -40895,10 +40895,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-ed9ada96-trap-1",
         "title": "Dažna klaida",
         "type": "mistake",
-        "wrongMove": "Teigti, kad $\\\\angle APD = 50^\\\\circ$ tiesiogiai.",
+        "wrongMove": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
         "whyTempting": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
         "whyItHappens": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
-        "wrongPattern": "Teigti, kad $\\\\angle APD = 50^\\\\circ$ tiesiogiai.",
+        "wrongPattern": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
         "correction": "Formulė duoda kampą, nukreiptą tiesiai į nurodytus lankus (t. y. smailųjį kampą tarp stygų). Šoninis kampas yra gretutinis.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -40929,7 +40929,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kaip randamas kampas tarp susikertančių stygų apskritimo viduje?",
-        "back": "Jis lygus lankų, į kuriuos remiasi šis kampas ir jam priešpriešinis kampas, sumos pusei: $\\theta = \\frac{\\\\cup_1 + \\\\cup_2}{2}$.",
+        "back": "Jis lygus lankų, į kuriuos remiasi šis kampas ir jam priešpriešinis kampas, sumos pusei: $\\theta = \\frac{\\cup_1 + \\cup_2}{2}$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -40943,28 +40943,28 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Raskite kampą $\\\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
+        "text": "Raskite kampą $\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pagal apskritimo kampų savybes, $\\\\angle APC = \\frac{\\\\cup AC + \\\\cup BD}{2}$.",
+        "text": "Pagal apskritimo kampų savybes, $\\angle APC = \\frac{\\cup AC + \\cup BD}{2}$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite: $\\\\angle APC = \\frac{40^\\\\circ + 60^\\\\circ}{2} = 50^\\\\circ$.",
+        "text": "Apskaičiuokite: $\\angle APC = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kampas $\\\\angle APD$ yra gretutinis kampui $\\\\angle APC$, todėl jų suma lygi $180^\\\\circ$. Raskite $\\\\angle APD$.",
+        "text": "Kampas $\\angle APD$ yra gretutinis kampui $\\angle APC$, todėl jų suma lygi $180^\\circ$. Raskite $\\angle APD$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -40987,11 +40987,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite liestinės ir kirstinės teoremos lygtį.",
-      "$PT^2 = PA \\\\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
-      "Įstatykite vertes: $6^2 = 4 \\\\cdot PB \\\\implies 36 = 4 \\\\cdot PB \\\\implies PB = 9$ cm.",
+      "$PT^2 = PA \\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
+      "Įstatykite vertes: $6^2 = 4 \\cdot PB \\implies 36 = 4 \\cdot PB \\implies PB = 9$ cm.",
       "Kadangi $PB$ susideda iš $PA$ ir $AB$, tai $AB = PB - PA$. Apskaičiuokite $AB$."
     ],
-    "solution": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$. Įstatome reikšmes: $6^2 = 4 \\times PB \\\\implies 36 = 4 \\times PB$. Randame visos kirstinės ilgį: $PB = 9$ cm. Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm.",
+    "solution": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$. Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$. Randame visos kirstinės ilgį: $PB = 9$ cm. Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -40999,7 +40999,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Liestinės ir kirstinės teorema",
-      "text": "Pagal taško galios teoremą, iš to paties taško išvestos liestinės kvadratas yra lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\\\cdot PB$."
+      "text": "Pagal taško galios teoremą, iš to paties taško išvestos liestinės kvadratas yra lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$."
     },
     "strategyTags": [
       "standard",
@@ -41031,7 +41031,7 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome reikšmes: $6^2 = 4 \\times PB \\\\implies 36 = 4 \\times PB$.",
+            "result": "Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$.",
             "latex": ""
           },
           {
@@ -41057,10 +41057,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-c034e9e3-trap-1",
         "title": "Dažna klaida",
         "type": "mistake",
-        "wrongMove": "Užrašyti teoremą kaip $PT^2 = PA \\\\cdot AB$, gaunant $36 = 4 \\\\cdot AB \\\\implies AB = 9$ cm.",
+        "wrongMove": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
         "whyTempting": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
         "whyItHappens": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
-        "wrongPattern": "Užrašyti teoremą kaip $PT^2 = PA \\\\cdot AB$, gaunant $36 = 4 \\\\cdot AB \\\\implies AB = 9$ cm.",
+        "wrongPattern": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
         "correction": "Teoremoje reikalaujama dauginti išorinė dalis $PA$ iš VISOS kirstinės $PB$, t. y. $PT^2 = PA(PA + AB)$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -41091,7 +41091,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra apskritimo liestinės ir kirstinės teorema (taško galia)?",
-        "back": "Liestinės atkarpos kvadratas lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\\\cdot PB$.",
+        "back": "Liestinės atkarpos kvadratas lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -41112,14 +41112,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$PT^2 = PA \\\\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
+        "text": "$PT^2 = PA \\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite vertes: $6^2 = 4 \\\\cdot PB \\\\implies 36 = 4 \\\\cdot PB \\\\implies PB = 9$ cm.",
+        "text": "Įstatykite vertes: $6^2 = 4 \\cdot PB \\implies 36 = 4 \\cdot PB \\implies PB = 9$ cm.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -41149,11 +41149,11 @@ export const exercises = [
     ],
     "hints": [
       "Raskite trikampių panašumo koeficientą $k$ iš plotų santykio.",
-      "$k^2 = 9/16 \\\\implies k = 3/4$.",
+      "$k^2 = 9/16 \\implies k = 3/4$.",
       "Perimetrų santykis atitinka panašumo koeficientą: $\\frac{P_{small}}{P_{large}} = k$.",
-      "Įstatykite žinomas reikšmes: $P_{small} = 24 \\\\cdot \\frac{3}{4}$."
+      "Įstatykite žinomas reikšmes: $P_{small} = 24 \\cdot \\frac{3}{4}$."
     ],
-    "solution": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$. Ištraukiame šaknį ir randame koeficientą: $k = \\\\sqrt{\\frac{9}{16}} = \\frac{3}{4}$. Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$. Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm.",
+    "solution": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$. Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$. Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$. Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -41193,7 +41193,7 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Ištraukiame šaknį ir randame koeficientą: $k = \\\\sqrt{\\frac{9}{16}} = \\frac{3}{4}$.",
+            "result": "Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$.",
             "latex": ""
           },
           {
@@ -41274,7 +41274,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$k^2 = 9/16 \\\\implies k = 3/4$.",
+        "text": "$k^2 = 9/16 \\implies k = 3/4$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -41288,7 +41288,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Įstatykite žinomas reikšmes: $P_{small} = 24 \\\\cdot \\frac{3}{4}$.",
+        "text": "Įstatykite žinomas reikšmes: $P_{small} = 24 \\cdot \\frac{3}{4}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -41311,7 +41311,7 @@ export const exercises = [
     ],
     "hints": [
       "Koks yra taškų $O$, $G$, $H$ išsidėstymo eiliškumas ir proporcijos tiesėje?",
-      "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\\\cdot OG$.",
+      "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\cdot OG$.",
       "Žinome, kad atstumas $OG = 4$ cm.",
       "Padauginkite atstumą $OG$ iš 2, kad gautumėte $GH$."
     ],
@@ -41378,7 +41378,7 @@ export const exercises = [
         "whyTempting": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
         "whyItHappens": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
         "wrongPattern": "Manyti, kad $G$ yra vidurio taškas, todėl $GH = OG = 4$ cm.",
-        "correction": "Centroidas dalija atkarpą būtent santykiu $2:1$ (ortocentro pusėje atkarpa dvigubai ilgesnė), todėl $GH = 2 \\\\cdot OG$.",
+        "correction": "Centroidas dalija atkarpą būtent santykiu $2:1$ (ortocentro pusėje atkarpa dvigubai ilgesnė), todėl $GH = 2 \\cdot OG$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ]
@@ -41408,7 +41408,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra Oilerio tiesės taškų $O$ (apibrėžtinio centras), $G$ (centroidas) ir $H$ (ortocentras) santykis?",
-        "back": "Taškai yra vienoje tiesėje tvarka $O-G-H$, o atkarpa $GH = 2 \\\\cdot OG$.",
+        "back": "Taškai yra vienoje tiesėje tvarka $O-G-H$, o atkarpa $GH = 2 \\cdot OG$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -41429,7 +41429,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\\\cdot OG$.",
+        "text": "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\cdot OG$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -41609,10 +41609,10 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Žinoma, kad $\\\\sin \\theta = \\frac{3}{5}$ ir $\\theta$ yra smailusis kampas. Apskaičiuokite $\\\\sin 2\\theta$ reikšmę.",
-    "answer": "$\\\\sin 2\\theta = 24/25$ (arba 0.96).",
+    "statement": "Žinoma, kad $\\sin \\theta = \\frac{3}{5}$ ir $\\theta$ yra smailusis kampas. Apskaičiuokite $\\sin 2\\theta$ reikšmę.",
+    "answer": "$\\sin 2\\theta = 24/25$ (arba 0.96).",
     "acceptedAnswers": [
-      "$\\\\sin 2\\theta = 24/25$ (arba 0.96)."
+      "$\\sin 2\\theta = 24/25$ (arba 0.96)."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -41620,12 +41620,12 @@ export const exercises = [
       "olimpiada-08-concept-logic"
     ],
     "hints": [
-      "Raskite $\\\\cos \\theta$ naudodami formulę $\\\\sin^2 \\theta + \\\\cos^2 \\theta = 1$.",
-      "Kadangi kampas smailusis, kosinusas teigiamas: $\\\\cos \\theta = \\\\sqrt{1 - (3/5)^2} = 4/5$.",
-      "Užrašykite dvigubo kampo formulę: $\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$.",
-      "Apskaičiuokite: $2 \\\\cdot \\frac{3}{5} \\\\cdot \\frac{4}{5}$."
+      "Raskite $\\cos \\theta$ naudodami formulę $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
+      "Kadangi kampas smailusis, kosinusas teigiamas: $\\cos \\theta = \\sqrt{1 - (3/5)^2} = 4/5$.",
+      "Užrašykite dvigubo kampo formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
+      "Apskaičiuokite: $2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5}$."
     ],
-    "solution": "Pirmiausia apskaičiuojame $\\\\cos \\theta$ naudodami pagrindinę tapatybę: $\\\\sin^2 \\theta + \\\\cos^2 \\theta = 1$. Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\\\cos \\theta = \\\\sqrt{1 - \\\\sin^2 \\theta} = \\\\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$. Taikome dvigubo kampo sinusą formulę: $\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$. Apskaičiuojame: $\\\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
+    "solution": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$. Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$. Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -41633,7 +41633,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Dvigubo kampo sinuso formulė",
-      "text": "Taikykite formulę $\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$. Kosinusą raskite pagal pagrindinę tapatybę."
+      "text": "Taikykite formulę $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. Kosinusą raskite pagal pagrindinę tapatybę."
     },
     "strategyTags": [
       "standard",
@@ -41658,32 +41658,32 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pirmiausia apskaičiuojame $\\\\cos \\theta$ naudodami pagrindinę tapatybę: $\\\\sin^2 \\theta + \\\\cos^2 \\theta = 1$.",
+            "result": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\\\cos \\theta = \\\\sqrt{1 - \\\\sin^2 \\theta} = \\\\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$.",
+            "result": "Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome dvigubo kampo sinusą formulę: $\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$.",
+            "result": "Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 4",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame: $\\\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
+            "result": "Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "$\\\\sin 2\\theta = 24/25$ (arba 0.96)."
+        "finalAnswer": "$\\sin 2\\theta = 24/25$ (arba 0.96)."
       }
     ],
     "commonTraps": [
@@ -41691,10 +41691,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-ce546a26-trap-1",
         "title": "Dažna klaida",
         "type": "mistake",
-        "wrongMove": "Manyti, kad $\\\\sin 2\\theta = 2 \\\\sin \\theta = 6/5$.",
+        "wrongMove": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
         "whyTempting": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
         "whyItHappens": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
-        "wrongPattern": "Manyti, kad $\\\\sin 2\\theta = 2 \\\\sin \\theta = 6/5$.",
+        "wrongPattern": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
         "correction": "Sinuso reikšmė negali viršyti 1, todėl $6/5$ yra matematiškai neįmanoma. Būtina taikyti sandaugos formulę su kosinusu.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -41725,7 +41725,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra dvigubo kampo sinuso formulė?",
-        "back": "$\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$.",
+        "back": "$\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -41739,28 +41739,28 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Raskite $\\\\cos \\theta$ naudodami formulę $\\\\sin^2 \\theta + \\\\cos^2 \\theta = 1$.",
+        "text": "Raskite $\\cos \\theta$ naudodami formulę $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi kampas smailusis, kosinusas teigiamas: $\\\\cos \\theta = \\\\sqrt{1 - (3/5)^2} = 4/5$.",
+        "text": "Kadangi kampas smailusis, kosinusas teigiamas: $\\cos \\theta = \\sqrt{1 - (3/5)^2} = 4/5$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Užrašykite dvigubo kampo formulę: $\\\\sin 2\\theta = 2 \\\\sin \\theta \\\\cos \\theta$.",
+        "text": "Užrašykite dvigubo kampo formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Apskaičiuokite: $2 \\\\cdot \\frac{3}{5} \\\\cdot \\frac{4}{5}$.",
+        "text": "Apskaičiuokite: $2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5}$.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -41787,7 +41787,7 @@ export const exercises = [
       "Norėdami rasti nelankančiųjų skaičių, atimkite bent vieną lankančius mokinius iš bendro klasės skaičiaus.",
       "Apskaičiuokite: $30 - 25$."
     ],
-    "solution": "Tegul $M$ – matematikos būrelį lankantys mokiniai ($|M| = 18$), o $P$ – programavimą lankantys ($|P| = 12$). Abu būrelius lanko $M \\\\cap P$ ($|M \\\\cap P| = 5$ mokiniai). Mokinių, lankančių bent vieną būrelį, skaičius yra: $|M \\\\cup P| = |M| + |P| - |M \\\\cap P| = 18 + 12 - 5 = 25$ mokinių. Mokinių, nelankančių nė vieno būrelio, skaičius lygus: $30 - 25 = 5$ mokinių.",
+    "solution": "Tegul $M$ – matematikos būrelį lankantys mokiniai ($|M| = 18$), o $P$ – programavimą lankantys ($|P| = 12$). Abu būrelius lanko $M \\cap P$ ($|M \\cap P| = 5$ mokiniai). Mokinių, lankančių bent vieną būrelį, skaičius yra: $|M \\cup P| = |M| + |P| - |M \\cap P| = 18 + 12 - 5 = 25$ mokinių. Mokinių, nelankančių nė vieno būrelio, skaičius lygus: $30 - 25 = 5$ mokinių.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -41795,7 +41795,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Įtraukimo ir išskyrimo principas",
-      "text": "Pagal įtraukimo-išskyrimo principą (PIE) dviejų aibių sąjungos dydis yra $|A \\\\cup B| = |A| + |B| - |A \\\\cap B|$."
+      "text": "Pagal įtraukimo-išskyrimo principą (PIE) dviejų aibių sąjungos dydis yra $|A \\cup B| = |A| + |B| - |A \\cap B|$."
     },
     "strategyTags": [
       "standard",
@@ -41827,14 +41827,14 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Abu būrelius lanko $M \\\\cap P$ ($|M \\\\cap P| = 5$ mokiniai).",
+            "result": "Abu būrelius lanko $M \\cap P$ ($|M \\cap P| = 5$ mokiniai).",
             "latex": ""
           },
           {
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Mokinių, lankančių bent vieną būrelį, skaičius yra: $|M \\\\cup P| = |M| + |P| - |M \\\\cap P| = 18 + 12 - 5 = 25$ mokinių.",
+            "result": "Mokinių, lankančių bent vieną būrelį, skaičius yra: $|M \\cup P| = |M| + |P| - |M \\cap P| = 18 + 12 - 5 = 25$ mokinių.",
             "latex": ""
           },
           {
@@ -41887,7 +41887,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra įtraukimo-išskyrimo principo formulė dviem aibėms?",
-        "back": "$|A \\\\cup B| = |A| + |B| - |A \\\\cap B|$.",
+        "back": "$|A \\cup B| = |A| + |B| - |A \\cap B|$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -42095,7 +42095,7 @@ export const exercises = [
     "topicId": "olimpiada-08",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Seka apibrėžiama taip: $a_1 = 1$, $a_2 = 3$, $a_n = 2a_{n-1} - a_{n-2}$ visiems $n \\\\ge 3$. Raskite bendrojo nario $a_n$ formulę.",
+    "statement": "Seka apibrėžiama taip: $a_1 = 1$, $a_2 = 3$, $a_n = 2a_{n-1} - a_{n-2}$ visiems $n \\ge 3$. Raskite bendrojo nario $a_n$ formulę.",
     "answer": "$a_n = 2n - 1$.",
     "acceptedAnswers": [
       "$a_n = 2n - 1$."
@@ -42107,11 +42107,11 @@ export const exercises = [
     ],
     "hints": [
       "Užrašykite charakteristinę lygtį sekai $a_n - 2a_{n-1} + a_{n-2} = 0$.",
-      "Lygtis: $r^2 - 2r + 1 = 0 \\\\implies (r-1)^2 = 0$. Šaknis $r=1$ yra kartotinė.",
-      "Kartotinės šaknies atveju, bendrasis narys turi pavidalą $a_n = (A + Bn) \\\\cdot r^n = A + Bn$.",
+      "Lygtis: $r^2 - 2r + 1 = 0 \\implies (r-1)^2 = 0$. Šaknis $r=1$ yra kartotinė.",
+      "Kartotinės šaknies atveju, bendrasis narys turi pavidalą $a_n = (A + Bn) \\cdot r^n = A + Bn$.",
       "Įstatykite $n=1$ ($a_1=1$) ir $n=2$ ($a_2=3$), kad rastumėte konstantas $A$ ir $B$."
     ],
-    "solution": "Rekurentinis ryšys atitinka charakteristinę lygtį $r^2 - 2r + 1 = 0$. Suskleidžiame pilnu kvadratu: $(r-1)^2 = 0 \\\\implies r = 1$ (kartotinė šaknis). Bendrasis sprendinys yra: $a_n = A + Bn$. Įstatome pradinėse sąlygose: kai $n=1$, $A + B = 1$; kai $n=2$, $A + 2B = 3$. Atimame lygtis: $B = 2$. Tada $A = 1 - 2 = -1$. Bendrasis narys yra $a_n = 2n - 1$.",
+    "solution": "Rekurentinis ryšys atitinka charakteristinę lygtį $r^2 - 2r + 1 = 0$. Suskleidžiame pilnu kvadratu: $(r-1)^2 = 0 \\implies r = 1$ (kartotinė šaknis). Bendrasis sprendinys yra: $a_n = A + Bn$. Įstatome pradinėse sąlygose: kai $n=1$, $A + B = 1$; kai $n=2$, $A + 2B = 3$. Atimame lygtis: $B = 2$. Tada $A = 1 - 2 = -1$. Bendrasis narys yra $a_n = 2n - 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -42151,7 +42151,7 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suskleidžiame pilnu kvadratu: $(r-1)^2 = 0 \\\\implies r = 1$ (kartotinė šaknis).",
+            "result": "Suskleidžiame pilnu kvadratu: $(r-1)^2 = 0 \\implies r = 1$ (kartotinė šaknis).",
             "latex": ""
           },
           {
@@ -42239,14 +42239,14 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Lygtis: $r^2 - 2r + 1 = 0 \\\\implies (r-1)^2 = 0$. Šaknis $r=1$ yra kartotinė.",
+        "text": "Lygtis: $r^2 - 2r + 1 = 0 \\implies (r-1)^2 = 0$. Šaknis $r=1$ yra kartotinė.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Kartotinės šaknies atveju, bendrasis narys turi pavidalą $a_n = (A + Bn) \\\\cdot r^n = A + Bn$.",
+        "text": "Kartotinės šaknies atveju, bendrasis narys turi pavidalą $a_n = (A + Bn) \\cdot r^n = A + Bn$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
@@ -42277,10 +42277,10 @@ export const exercises = [
     "hints": [
       "Patikrinkite indukcijos bazę, kai $n=1$.",
       "Bazė: $2^3 - 1 = 7$, kuris dalijasi iš 7. Dabar tarkime, kad teiginys teisingas su $n=k$: $2^{3k}-1 = 7m$.",
-      "Nagrinėkite narį su $n=k+1$: $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\\\cdot 2^{3k} - 1$.",
-      "Užrašykite $8 \\\\cdot 2^{3k} - 1 = 7 \\\\cdot 2^{3k} + (2^{3k} - 1)$. Kadangi abu dėmenys dalijasi iš 7, teiginys įrodytas."
+      "Nagrinėkite narį su $n=k+1$: $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\cdot 2^{3k} - 1$.",
+      "Užrašykite $8 \\cdot 2^{3k} - 1 = 7 \\cdot 2^{3k} + (2^{3k} - 1)$. Kadangi abu dėmenys dalijasi iš 7, teiginys įrodytas."
     ],
-    "solution": "Indukcijos bazė: kai $n=1$, $2^{3(1)} - 1 = 2^3 - 1 = 7$. Kadangi 7 dalijasi iš 7, bazė teisinga. Indukcijos prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $2^{3k} - 1 = 7m$ su kažkokiu $m \\\\in \\\\mathbb{Z}$. Indukcijos žingsnis: įrodome teiginį su $n=k+1$. Nagrinėjame $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\times 2^{3k} - 1$. Pertvarkome: $8 \\times 2^{3k} - 1 = 7 \\times 2^{3k} + (2^{3k} - 1) = 7 \\times 2^{3k} + 7m = 7(2^{3k} + m)$. Kadangi bendras daugiklis yra 7, reiškinys dalijasi iš 7.",
+    "solution": "Indukcijos bazė: kai $n=1$, $2^{3(1)} - 1 = 2^3 - 1 = 7$. Kadangi 7 dalijasi iš 7, bazė teisinga. Indukcijos prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $2^{3k} - 1 = 7m$ su kažkokiu $m \\in \\mathbb{Z}$. Indukcijos žingsnis: įrodome teiginį su $n=k+1$. Nagrinėjame $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\times 2^{3k} - 1$. Pertvarkome: $8 \\times 2^{3k} - 1 = 7 \\times 2^{3k} + (2^{3k} - 1) = 7 \\times 2^{3k} + 7m = 7(2^{3k} + m)$. Kadangi bendras daugiklis yra 7, reiškinys dalijasi iš 7.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -42320,7 +42320,7 @@ export const exercises = [
             "title": "Žingsnis 2",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Indukcijos prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $2^{3k} - 1 = 7m$ su kažkokiu $m \\\\in \\\\mathbb{Z}$.",
+            "result": "Indukcijos prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $2^{3k} - 1 = 7m$ su kažkokiu $m \\in \\mathbb{Z}$.",
             "latex": ""
           },
           {
@@ -42346,10 +42346,10 @@ export const exercises = [
         "id": "ex-olimpiada-08-4105b937-trap-1",
         "title": "Dažna klaida",
         "type": "mistake",
-        "wrongMove": "Tiesiog teigti, kad reiškinys dalijasi iš 7, nes $2^3 = 8 \\\\equiv 1 \\\\pmod 7$.",
+        "wrongMove": "Tiesiog teigti, kad reiškinys dalijasi iš 7, nes $2^3 = 8 \\equiv 1 \\pmod 7$.",
         "whyTempting": "Šis sprendimas yra teisingas, bet tai yra kongruencijų metodas, o ne matematinė indukcija, kurios buvo prašoma.",
         "whyItHappens": "Šis sprendimas yra teisingas, bet tai yra kongruencijų metodas, o ne matematinė indukcija, kurios buvo prašoma.",
-        "wrongPattern": "Tiesiog teigti, kad reiškinys dalijasi iš 7, nes $2^3 = 8 \\\\equiv 1 \\\\pmod 7$.",
+        "wrongPattern": "Tiesiog teigti, kad reiškinys dalijasi iš 7, nes $2^3 = 8 \\equiv 1 \\pmod 7$.",
         "correction": "Jei užduotyje reikalaujama įrodyti indukcija, būtina pateikti formalų bazės ir žingsnio formatą.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
@@ -42408,14 +42408,14 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Nagrinėkite narį su $n=k+1$: $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\\\cdot 2^{3k} - 1$.",
+        "text": "Nagrinėkite narį su $n=k+1$: $2^{3(k+1)} - 1 = 2^{3k+3} - 1 = 8 \\cdot 2^{3k} - 1$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Užrašykite $8 \\\\cdot 2^{3k} - 1 = 7 \\\\cdot 2^{3k} + (2^{3k} - 1)$. Kadangi abu dėmenys dalijasi iš 7, teiginys įrodytas.",
+        "text": "Užrašykite $8 \\cdot 2^{3k} - 1 = 7 \\cdot 2^{3k} + (2^{3k} - 1)$. Kadangi abu dėmenys dalijasi iš 7, teiginys įrodytas.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -42438,11 +42438,11 @@ export const exercises = [
     ],
     "hints": [
       "Tegul atvykimo laikai yra $x$ ir $y$ (minutėmis nuo 12:00). Kokias ribas jie tenkina?",
-      "$0 \\\\le x, y \\\\le 60$. Draugai susitiks, jei laiko skirtumas $|x-y| \\\\le 15$.",
+      "$0 \\le x, y \\le 60$. Draugai susitiks, jei laiko skirtumas $|x-y| \\le 15$.",
       "Pavaizduokite sritį geometriškai. Tai yra juosta tarp tiesių $y = x - 15$ ir $y = x + 15$ kvadrate.",
       "Apskaičiuokite nenaudojamos srities (dviejų stačiųjų trikampių su statiniais 45) plotą: $S_{out} = 45 \\times 45 = 2025$. Tikimybė yra $1 - S_{out}/S_{total}$, kur $S_{total} = 3600$."
     ],
-    "solution": "Pažymime draugų atvykimo laikus $x$ ir $y$ minutėmis. Kadangi jie atvyksta per valandą, $0 \\\\le x, y \\\\le 60$. Visi įmanomi atvykimai sudaro kvadratą koordinačių plokštumoje su plotu $S_{total} = 60 \\times 60 = 3600$. Susitikimas įvyks, jei $|x - y| \\\\le 15$. Šią sritį riboja tiesės $y = x + 15$ ir $y = x - 15$. Palankios srities plotą randame iš bendro ploto atimdami du nenaudojamus trikampius. Nenaudojamų trikampių statiniai yra $60 - 15 = 45$. Jų bendras plotas $S_{out} = 2 \\times \\frac{45 \\times 45}{2} = 2025$. Palankios srities plotas: $S_{in} = 3600 - 2025 = 1575$. Tikimybė $P = 1575 / 3600 = 7/16$.",
+    "solution": "Pažymime draugų atvykimo laikus $x$ ir $y$ minutėmis. Kadangi jie atvyksta per valandą, $0 \\le x, y \\le 60$. Visi įmanomi atvykimai sudaro kvadratą koordinačių plokštumoje su plotu $S_{total} = 60 \\times 60 = 3600$. Susitikimas įvyks, jei $|x - y| \\le 15$. Šią sritį riboja tiesės $y = x + 15$ ir $y = x - 15$. Palankios srities plotą randame iš bendro ploto atimdami du nenaudojamus trikampius. Nenaudojamų trikampių statiniai yra $60 - 15 = 45$. Jų bendras plotas $S_{out} = 2 \\times \\frac{45 \\times 45}{2} = 2025$. Palankios srities plotas: $S_{in} = 3600 - 2025 = 1575$. Tikimybė $P = 1575 / 3600 = 7/16$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -42475,7 +42475,7 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pažymime draugų atvykimo laikus $x$ ir $y$ minutėmis. Kadangi jie atvyksta per valandą, $0 \\\\le x, y \\\\le 60$.",
+            "result": "Pažymime draugų atvykimo laikus $x$ ir $y$ minutėmis. Kadangi jie atvyksta per valandą, $0 \\le x, y \\le 60$.",
             "latex": ""
           },
           {
@@ -42489,7 +42489,7 @@ export const exercises = [
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Susitikimas įvyks, jei $|x - y| \\\\le 15$.",
+            "result": "Susitikimas įvyks, jei $|x - y| \\le 15$.",
             "latex": ""
           },
           {
@@ -42577,7 +42577,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$0 \\\\le x, y \\\\le 60$. Draugai susitiks, jei laiko skirtumas $|x-y| \\\\le 15$.",
+        "text": "$0 \\le x, y \\le 60$. Draugai susitiks, jei laiko skirtumas $|x-y| \\le 15$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -42618,7 +42618,7 @@ export const exercises = [
       "Surašykite sandaugas: $E = \\frac{1}{6}(-2) + \\frac{1}{6}(2) + \\frac{1}{6}(-2) + \\frac{1}{6}(4) + \\frac{1}{6}(-2) + \\frac{1}{6}(6)$.",
       "Sudėkite šias reikšmes ir padalykite iš 6."
     ],
-    "solution": "Visos kauliuko baigtys ($1, 2, 3, 4, 5, 6$) turi vienodą tikimybę $1/6$. Priskiriame laimėjimus: nelyginiams (1, 3, 5) laimėjimas yra $-2$. Lyginiams: 2 laimi $+2$, 4 laimi $+4$, 6 laimi $+6$. Taikome matematinio viltingumo formulę: $E = \\\\sum x_i P(X = x_i)$. $E = \\frac{1}{6}(-2 + 2 - 2 + 4 - 2 + 6) = \\frac{6}{6} = 1$.",
+    "solution": "Visos kauliuko baigtys ($1, 2, 3, 4, 5, 6$) turi vienodą tikimybę $1/6$. Priskiriame laimėjimus: nelyginiams (1, 3, 5) laimėjimas yra $-2$. Lyginiams: 2 laimi $+2$, 4 laimi $+4$, 6 laimi $+6$. Taikome matematinio viltingumo formulę: $E = \\sum x_i P(X = x_i)$. $E = \\frac{1}{6}(-2 + 2 - 2 + 4 - 2 + 6) = \\frac{6}{6} = 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -42665,7 +42665,7 @@ export const exercises = [
             "title": "Žingsnis 3",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome matematinio viltingumo formulę: $E = \\\\sum x_i P(X = x_i)$.",
+            "result": "Taikome matematinio viltingumo formulę: $E = \\sum x_i P(X = x_i)$.",
             "latex": ""
           },
           {
@@ -42940,9 +42940,9 @@ export const exercises = [
       "Užrašykite Rankų paspaudimo lemos formulę šiam grafui.",
       "Dvigubas briaunų skaičius lygus $2 \\times 15 = 30$. Tai turi būti lygu laipsnių sumai.",
       "Tegul bendras viršūnių skaičius yra $n$. Tada viršūnių, turinčių laipsnį 3, skaičius lygus $n - 3$.",
-      "Sudarome lygtį: $3 \\\\cdot 4 + (n-3) \\\\cdot 3 = 30$. Išspręskite šią lygtį."
+      "Sudarome lygtį: $3 \\cdot 4 + (n-3) \\cdot 3 = 30$. Išspręskite šią lygtį."
     ],
-    "solution": "Pagal Rankų paspaudimo lemą: $\\\\sum \\text{deg}(v) = 2E$. Mums duota, kad briaunų skaičius $E = 15$, todėl laipsnių suma turi būti lygi $2 \\times 15 = 30$. Pažymime bendrą viršūnių skaičių $n$. Tuomet $3$ viršūnės turi laipsnį 4, o likusios $n-3$ viršūnės turi laipsnį 3. Sudarome lygtį: $3 \\times 4 + (n - 3) \\times 3 = 30 \\\\implies 12 + 3n - 9 = 30$. $3n + 3 = 30 \\\\implies 3n = 27 \\\\implies n = 9$ viršūnės.",
+    "solution": "Pagal Rankų paspaudimo lemą: $\\sum \\text{deg}(v) = 2E$. Mums duota, kad briaunų skaičius $E = 15$, todėl laipsnių suma turi būti lygi $2 \\times 15 = 30$. Pažymime bendrą viršūnių skaičių $n$. Tuomet $3$ viršūnės turi laipsnį 4, o likusios $n-3$ viršūnės turi laipsnį 3. Sudarome lygtį: $3 \\times 4 + (n - 3) \\times 3 = 30 \\implies 12 + 3n - 9 = 30$. $3n + 3 = 30 \\implies 3n = 27 \\implies n = 9$ viršūnės.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -42975,7 +42975,7 @@ export const exercises = [
             "title": "Žingsnis 1",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Rankų paspaudimo lemą: $\\\\sum \\text{deg}(v) = 2E$.",
+            "result": "Pagal Rankų paspaudimo lemą: $\\sum \\text{deg}(v) = 2E$.",
             "latex": ""
           },
           {
@@ -42996,14 +42996,14 @@ export const exercises = [
             "title": "Žingsnis 4",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudarome lygtį: $3 \\times 4 + (n - 3) \\times 3 = 30 \\\\implies 12 + 3n - 9 = 30$.",
+            "result": "Sudarome lygtį: $3 \\times 4 + (n - 3) \\times 3 = 30 \\implies 12 + 3n - 9 = 30$.",
             "latex": ""
           },
           {
             "title": "Žingsnis 5",
             "action": "Atliekame loginį žingsnį.",
             "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "$3n + 3 = 30 \\\\implies 3n = 27 \\\\implies n = 9$ viršūnės.",
+            "result": "$3n + 3 = 30 \\implies 3n = 27 \\implies n = 9$ viršūnės.",
             "latex": ""
           }
         ],
@@ -43049,7 +43049,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Ką teigia Rankų paspaudimo lema grafų teorijoje?",
-        "back": "Visų grafo viršūnių laipsnių suma yra lygi dvigubam jo briaunų skaičiui: $\\\\sum \\text{deg}(v) = 2E$.",
+        "back": "Visų grafo viršūnių laipsnių suma yra lygi dvigubam jo briaunų skaičiui: $\\sum \\text{deg}(v) = 2E$.",
         "conceptIds": [
           "olimpiada-08-concept-logic"
         ],
@@ -43084,7 +43084,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sudarome lygtį: $3 \\\\cdot 4 + (n-3) \\\\cdot 3 = 30$. Išspręskite šią lygtį.",
+        "text": "Sudarome lygtį: $3 \\cdot 4 + (n-3) \\cdot 3 = 30$. Išspręskite šią lygtį.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }
@@ -48681,10 +48681,10 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite visus natūraliuosius skaičius $n$, kuriems galioja lygybė $\\\\varphi(n) = 8$.",
-    "answer": "Išspręsta lygtis $\\\\varphi(n) = 8$.",
+    "statement": "Raskite visus natūraliuosius skaičius $n$, kuriems galioja lygybė $\\varphi(n) = 8$.",
+    "answer": "Išspręsta lygtis $\\varphi(n) = 8$.",
     "acceptedAnswers": [
-      "Išspręsta lygtis $\\\\varphi(n) = 8$."
+      "Išspręsta lygtis $\\varphi(n) = 8$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -48694,7 +48694,7 @@ export const exercises = [
     "hints": [
       "Prisiminkite Oilerio funkcijos formulę ir tai, kad kiekvienas pirminis daliklis $p$ prisideda prie sandaugos faktoriumi $p^{k-1}(p-1)$.",
       "Kadangi $p-1$ turi dalyti 8, galimi pirminiai dalikliai yra tik $p = 2, 3, 5$.",
-      "Išnagrinėkite atvejus pagal didžiausią pirminį daliklį. Pavyzdžiui, jei $p=5$, tai $n$ forma yra $5^k \\\\cdot m$.",
+      "Išnagrinėkite atvejus pagal didžiausią pirminį daliklį. Pavyzdžiui, jei $p=5$, tai $n$ forma yra $5^k \\cdot m$.",
       "Sudarykite lygtis kiekvienam atvejui ir raskite visas galimas $n$ reikšmes: 15, 16, 20, 24, 30."
     ],
     "solution": "Pritaikome Oilerio funkcijos reiškinį per pirminius daliklius. Nustatome, kad galimi pirminiai dalikliai yra tik 2, 3 ir 5. Nagrinėjame atvejus pagal didžiausią pirminį daliklį ir atitinkamus laipsnius. Gaudami sprendinius, juos patikriname: 15, 16, 20, 24, 30.",
@@ -48705,7 +48705,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Skaidymas pirminiais",
-      "text": "Naudokite formulę $\\\\varphi(n) = n \\\\prod (1 - 1/p)$. Kadangi $\\\\varphi(n) = 8$, pirminiai dalikliai $p$ gali būti tik tokie, kur $p-1$ dalija 8, t. y. $p \\\\in \\\\{2, 3, 5\\\\}$."
+      "text": "Naudokite formulę $\\varphi(n) = n \\prod (1 - 1/p)$. Kadangi $\\varphi(n) = 8$, pirminiai dalikliai $p$ gali būti tik tokie, kur $p-1$ dalija 8, t. y. $p \\in \\{2, 3, 5\\}$."
     },
     "strategyTags": [
       "modular-arithmetic",
@@ -48728,27 +48728,27 @@ export const exercises = [
         "steps": [
           {
             "title": "Formulės užrašymas",
-            "action": "Užrašome $\\\\varphi(n) = p_1^{a_1-1}(p_1-1) \\\\dots p_r^{a_r-1}(p_r-1) = 8$.",
+            "action": "Užrašome $\\varphi(n) = p_1^{a_1-1}(p_1-1) \\dots p_r^{a_r-1}(p_r-1) = 8$.",
             "reason": "Tai yra Oilerio funkcijos pirminio skaidymo savybė.",
-            "latex": "\\\\varphi(n) = 8",
+            "latex": "\\varphi(n) = 8",
             "result": "Apribojamas pirminių skaičių $p_i$ rinkinys."
           },
           {
             "title": "Atvejų analizė",
-            "action": "Kadangi $p_i - 1$ dalija 8, tai $p_i - 1 \\\\in \\\\{1, 2, 4, 8\\\\} \\\\implies p_i \\\\in \\\\{2, 3, 5\\\\}$.",
+            "action": "Kadangi $p_i - 1$ dalija 8, tai $p_i - 1 \\in \\{1, 2, 4, 8\\} \\implies p_i \\in \\{2, 3, 5\\}$.",
             "reason": "Kiekvienas $p_i-1$ turi būti 8 daliklis.",
-            "latex": "p_i \\\\in \\\\{2, 3, 5\\\\}",
+            "latex": "p_i \\in \\{2, 3, 5\\}",
             "result": "Nustatyta, kad $n = 2^a 3^b 5^c$."
           },
           {
             "title": "Sprendinių radimas",
-            "action": "Išsprendžiame kiekvieną derinį: $a=4 \\\\implies n=16$; $a=2, c=1 \\\\implies n=20$; $a=3, b=1 \\\\implies n=24$; $b=1, c=1 \\\\implies n=15$ arba $n=30$.",
+            "action": "Išsprendžiame kiekvieną derinį: $a=4 \\implies n=16$; $a=2, c=1 \\implies n=20$; $a=3, b=1 \\implies n=24$; $b=1, c=1 \\implies n=15$ arba $n=30$.",
             "reason": "Suderiname laipsnius taip, kad sandauga būtų 8.",
-            "latex": "n \\\\in \\\\{15, 16, 20, 24, 30\\\\}",
+            "latex": "n \\in \\{15, 16, 20, 24, 30\\}",
             "result": "Gautas pilnas sprendinių rinkinys."
           }
         ],
-        "finalAnswer": "$n \\\\in \\\\{15, 16, 20, 24, 30\\\\}$"
+        "finalAnswer": "$n \\in \\{15, 16, 20, 24, 30\\}$"
       }
     ],
     "commonTraps": [
@@ -48784,7 +48784,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite visus natūraliuosius skaičius $n$, kuriems galioja l...?",
-        "back": "Naudokite formulę $\\\\varphi(n) = n \\\\prod (1 - 1/p)$. Kadangi $\\\\varphi(n) = 8$, pirminiai dalikliai $p$ gali būti tik tokie, kur $p-1$ dalija 8, t. y. $p \\\\in \\\\{2, 3, 5\\\\}$.",
+        "back": "Naudokite formulę $\\varphi(n) = n \\prod (1 - 1/p)$. Kadangi $\\varphi(n) = 8$, pirminiai dalikliai $p$ gali būti tik tokie, kur $p-1$ dalija 8, t. y. $p \\in \\{2, 3, 5\\}$.",
         "conceptIds": [
           "olimpiada-09-concept-euler-totient"
         ],
@@ -48810,7 +48810,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Išnagrinėkite atvejus pagal didžiausią pirminį daliklį. Pavyzdžiui, jei $p=5$, tai $n$ forma yra $5^k \\\\cdot m$.",
+        "text": "Išnagrinėkite atvejus pagal didžiausią pirminį daliklį. Pavyzdžiui, jei $p=5$, tai $n$ forma yra $5^k \\cdot m$.",
         "penalty": 0.09
       },
       {
@@ -48838,11 +48838,11 @@ export const exercises = [
     ],
     "hints": [
       "Paskutiniai du skaitmenys yra liekana moduliu 100. Patikrinkite, ar $7$ ir $100$ yra tarpusavyje pirminiai.",
-      "Apskaičiuokite $\\\\varphi(100)$ reikšmę.",
-      "Pritaikykite Oilerio teoremą: $7^{\\\\varphi(100)} \\\\equiv 1 \\\\pmod{100}$.",
-      "Sumažinkite laipsnio rodiklį 1003 moduliu 40: $1003 = 40 \\\\cdot 25 + 3$. Tada apskaičiuokite $7^3 \\\\pmod{100}$."
+      "Apskaičiuokite $\\varphi(100)$ reikšmę.",
+      "Pritaikykite Oilerio teoremą: $7^{\\varphi(100)} \\equiv 1 \\pmod{100}$.",
+      "Sumažinkite laipsnio rodiklį 1003 moduliu 40: $1003 = 40 \\cdot 25 + 3$. Tada apskaičiuokite $7^3 \\pmod{100}$."
     ],
-    "solution": "Nustatome, kad reikia rasti $7^{1003} \\\\pmod{100}$. Apskaičiuojame $\\\\varphi(100) = 100 \\\\cdot (1-1/2) \\\\cdot (1-1/5) = 40$. Pagal Oilerio teoremą turime $7^{40} \\\\equiv 1 \\\\pmod{100}$. Pertvarkome laipsnį: $7^{1003} = (7^{40})^{25} \\\\cdot 7^3 \\\\equiv 1 \\\\cdot 343 \\\\equiv 43 \\\\pmod{100}$.",
+    "solution": "Nustatome, kad reikia rasti $7^{1003} \\pmod{100}$. Apskaičiuojame $\\varphi(100) = 100 \\cdot (1-1/2) \\cdot (1-1/5) = 40$. Pagal Oilerio teoremą turime $7^{40} \\equiv 1 \\pmod{100}$. Pertvarkome laipsnį: $7^{1003} = (7^{40})^{25} \\cdot 7^3 \\equiv 1 \\cdot 343 \\equiv 43 \\pmod{100}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -48850,7 +48850,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Oilerio teorema moduliu 100",
-      "text": "Paskutiniai du skaitmenys atitinka liekaną dalijant iš 100. Kadangi $\\\\gcd(7, 100) = 1$, galime taikyti Oilerio teoremą su moduliu 100, kur $\\\\varphi(100) = 40$."
+      "text": "Paskutiniai du skaitmenys atitinka liekaną dalijant iš 100. Kadangi $\\gcd(7, 100) = 1$, galime taikyti Oilerio teoremą su moduliu 100, kur $\\varphi(100) = 40$."
     },
     "strategyTags": [
       "modular-arithmetic"
@@ -48871,23 +48871,23 @@ export const exercises = [
         "steps": [
           {
             "title": "Modulio pasirinkimas",
-            "action": "Ieškome $x \\\\equiv 7^{1003} \\\\pmod{100}$.",
+            "action": "Ieškome $x \\equiv 7^{1003} \\pmod{100}$.",
             "reason": "Paskutiniai du skaičiaus skaitmenys yra liekana dalijant iš 100.",
-            "latex": "7^{1003} \\\\pmod{100}",
+            "latex": "7^{1003} \\pmod{100}",
             "result": "Uždavinys suformuluotas moduliu 100."
           },
           {
             "title": "Oilerio funkcijos skaičiavimas",
-            "action": "Apskaičiuojame $\\\\varphi(100) = 40$.",
-            "reason": "Kadangi $100 = 2^2 \\\\cdot 5^2$, naudojame totiento formulę.",
-            "latex": "\\\\varphi(100) = 40",
+            "action": "Apskaičiuojame $\\varphi(100) = 40$.",
+            "reason": "Kadangi $100 = 2^2 \\cdot 5^2$, naudojame totiento formulę.",
+            "latex": "\\varphi(100) = 40",
             "result": "Gautas laipsnio periodas."
           },
           {
             "title": "Teoremos taikymas",
-            "action": "Kadangi $\\\\gcd(7, 100) = 1$, tai $7^{40} \\\\equiv 1 \\\\pmod{100}$. Todėl $7^{1003} \\\\equiv 7^3 \\\\equiv 343 \\\\equiv 43 \\\\pmod{100}$.",
-            "reason": "Pagal Oilerio teoremą laipsnį galime sumažinti moduliu $\\\\varphi(100)$.",
-            "latex": "7^{1003} \\\\equiv 43 \\\\pmod{100}",
+            "action": "Kadangi $\\gcd(7, 100) = 1$, tai $7^{40} \\equiv 1 \\pmod{100}$. Todėl $7^{1003} \\equiv 7^3 \\equiv 343 \\equiv 43 \\pmod{100}$.",
+            "reason": "Pagal Oilerio teoremą laipsnį galime sumažinti moduliu $\\varphi(100)$.",
+            "latex": "7^{1003} \\equiv 43 \\pmod{100}",
             "result": "Rasta liekana 43."
           }
         ],
@@ -48907,9 +48907,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-02-trap-2",
         "title": "Klaidingas Oilerio funkcijos skaičiavimas",
-        "wrongMove": "Manoma, kad $\\\\varphi(100) = 100$ arba naudojama neteisinga formulė.",
-        "whyTempting": "Pamirštama, kad $\\\\varphi(n)$ skaičiuoja tik tarpusavyje pirminius skaičius.",
-        "correction": "Naudokite formulę $\\\\varphi(n) = n \\\\prod (1 - 1/p)$ su visais pirminiais $n$ dalikliais.",
+        "wrongMove": "Manoma, kad $\\varphi(100) = 100$ arba naudojama neteisinga formulė.",
+        "whyTempting": "Pamirštama, kad $\\varphi(n)$ skaičiuoja tik tarpusavyje pirminius skaičius.",
+        "correction": "Naudokite formulę $\\varphi(n) = n \\prod (1 - 1/p)$ su visais pirminiais $n$ dalikliais.",
         "reviewConceptIds": [
           "olimpiada-09-concept-euler-totient"
         ],
@@ -48927,7 +48927,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite paskutinius du skaičiaus $7^{1003}$ skaitmenis....?",
-        "back": "Paskutiniai du skaitmenys atitinka liekaną dalijant iš 100. Kadangi $\\\\gcd(7, 100) = 1$, galime taikyti Oilerio teoremą su moduliu 100, kur $\\\\varphi(100) = 40$.",
+        "back": "Paskutiniai du skaitmenys atitinka liekaną dalijant iš 100. Kadangi $\\gcd(7, 100) = 1$, galime taikyti Oilerio teoremą su moduliu 100, kur $\\varphi(100) = 40$.",
         "conceptIds": [
           "olimpiada-09-concept-euler-theorem"
         ],
@@ -48947,19 +48947,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Apskaičiuokite $\\\\varphi(100)$ reikšmę.",
+        "text": "Apskaičiuokite $\\varphi(100)$ reikšmę.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pritaikykite Oilerio teoremą: $7^{\\\\varphi(100)} \\\\equiv 1 \\\\pmod{100}$.",
+        "text": "Pritaikykite Oilerio teoremą: $7^{\\varphi(100)} \\equiv 1 \\pmod{100}$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sumažinkite laipsnio rodiklį 1003 moduliu 40: $1003 = 40 \\\\cdot 25 + 3$. Tada apskaičiuokite $7^3 \\\\pmod{100}$.",
+        "text": "Sumažinkite laipsnio rodiklį 1003 moduliu 40: $1003 = 40 \\cdot 25 + 3$. Tada apskaičiuokite $7^3 \\pmod{100}$.",
         "penalty": 0.11
       }
     ]
@@ -48969,7 +48969,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina lygčių sistemą: $x \\\\equiv 2 \\\\pmod 3$, $x \\\\equiv 3 \\\\pmod 5$ ir $x \\\\equiv 2 \\\\pmod 7$.",
+    "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina lygčių sistemą: $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 5$ ir $x \\equiv 2 \\pmod 7$.",
     "answer": "Rastas mažiausias sistemos sprendinys.",
     "acceptedAnswers": [
       "Rastas mažiausias sistemos sprendinys."
@@ -48978,12 +48978,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Kadangi $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 2 \\\\pmod 7$, skaičius $x-2$ turi dalytis iš $3$ ir $7$, t. y. iš 21.",
+      "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, skaičius $x-2$ turi dalytis iš $3$ ir $7$, t. y. iš 21.",
       "Užrašykite $x$ pavidalu $21k + 2$.",
-      "Patikrinkite šį pavidalą su paskutine lygtimi moduliu 5: $21k + 2 \\\\equiv 3 \\\\pmod 5$.",
-      "Supaprastinkite iki $k \\\\equiv 1 \\\\pmod 5$. Mažiausia teigiama $k$ reikšmė yra 1. Apskaičiuokite $x$."
+      "Patikrinkite šį pavidalą su paskutine lygtimi moduliu 5: $21k + 2 \\equiv 3 \\pmod 5$.",
+      "Supaprastinkite iki $k \\equiv 1 \\pmod 5$. Mažiausia teigiama $k$ reikšmė yra 1. Apskaičiuokite $x$."
     ],
-    "solution": "Sujungiame pirmąją ir trečiąją lygtis: $x \\\\equiv 2 \\\\pmod{21}$. Išreiškiame $x = 21k + 2$ su sveikuoju $k$. Įstatome į antrąją lygtį: $21k + 2 \\\\equiv 3 \\\\pmod 5$. Kadangi $21 \\\\equiv 1 \\\\pmod 5$, lygtis tampa $k \\\\equiv 1 \\\\pmod 5$. Mažiausia teigiama reikšmė yra $k=1$, todėl $x = 21(1) + 2 = 23$.",
+    "solution": "Sujungiame pirmąją ir trečiąją lygtis: $x \\equiv 2 \\pmod{21}$. Išreiškiame $x = 21k + 2$ su sveikuoju $k$. Įstatome į antrąją lygtį: $21k + 2 \\equiv 3 \\pmod 5$. Kadangi $21 \\equiv 1 \\pmod 5$, lygtis tampa $k \\equiv 1 \\pmod 5$. Mažiausia teigiama reikšmė yra $k=1$, todėl $x = 21(1) + 2 = 23$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -49010,22 +49010,22 @@ export const exercises = [
         "steps": [
           {
             "title": "Dalių sujungimas",
-            "action": "Jei $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 2 \\\\pmod 7$, tai $x \\\\equiv 2 \\\\pmod{21}$.",
-            "reason": "Kadangi $\\\\gcd(3,7)=1$, bendras sprendinys yra moduliu $3 \\\\cdot 7$.",
-            "latex": "x \\\\equiv 2 \\\\pmod{21}",
+            "action": "Jei $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, tai $x \\equiv 2 \\pmod{21}$.",
+            "reason": "Kadangi $\\gcd(3,7)=1$, bendras sprendinys yra moduliu $3 \\cdot 7$.",
+            "latex": "x \\equiv 2 \\pmod{21}",
             "result": "Sujungtos dvi sistemos lygtys."
           },
           {
             "title": "Parametrinis įrašymas",
-            "action": "Užrašome $x = 21k + 2$ ir įstatome į $x \\\\equiv 3 \\\\pmod 5$.",
+            "action": "Užrašome $x = 21k + 2$ ir įstatome į $x \\equiv 3 \\pmod 5$.",
             "reason": "Tai leidžia rasti $k$ reikšmę moduliu 5.",
-            "latex": "21k+2 \\\\equiv 3 \\\\pmod 5",
+            "latex": "21k+2 \\equiv 3 \\pmod 5",
             "result": "Gauta lygtis kintamajam $k$."
           },
           {
             "title": "Sprendimas",
-            "action": "Supaprastiname: $k \\\\equiv 1 \\\\pmod 5$. Mažiausias teigiamas sprendinys yra $k=1 \\\\implies x=23$.",
-            "reason": "Kadangi $21 \\\\equiv 1 \\\\pmod 5$, lygtis tampa labai paprasta.",
+            "action": "Supaprastiname: $k \\equiv 1 \\pmod 5$. Mažiausias teigiamas sprendinys yra $k=1 \\implies x=23$.",
+            "reason": "Kadangi $21 \\equiv 1 \\pmod 5$, lygtis tampa labai paprasta.",
             "latex": "x = 23",
             "result": "Rastas mažiausias teigiamas skaičius."
           }
@@ -49046,7 +49046,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-03-trap-2",
         "title": "Aritmetinė klaida sprendžiant palyginimus",
-        "wrongMove": "Klaidingai suprastinamas palyginimas, pvz., $21k \\\\equiv 1 \\\\pmod 5$ paverčiamas į klaidingą $k$ reikšmę.",
+        "wrongMove": "Klaidingai suprastinamas palyginimas, pvz., $21k \\equiv 1 \\pmod 5$ paverčiamas į klaidingą $k$ reikšmę.",
         "whyTempting": "Greitas skaičiavimas mintinai be nuoseklaus tikrinimo.",
         "correction": "Visada patikrinkite gautą $k$ reikšmę pradinėje lygybėje moduliu $m$.",
         "reviewConceptIds": [],
@@ -49074,7 +49074,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Kadangi $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 2 \\\\pmod 7$, skaičius $x-2$ turi dalytis iš $3$ ir $7$, t. y. iš 21.",
+        "text": "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, skaičius $x-2$ turi dalytis iš $3$ ir $7$, t. y. iš 21.",
         "penalty": 0.05
       },
       {
@@ -49086,13 +49086,13 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Patikrinkite šį pavidalą su paskutine lygtimi moduliu 5: $21k + 2 \\\\equiv 3 \\\\pmod 5$.",
+        "text": "Patikrinkite šį pavidalą su paskutine lygtimi moduliu 5: $21k + 2 \\equiv 3 \\pmod 5$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Supaprastinkite iki $k \\\\equiv 1 \\\\pmod 5$. Mažiausia teigiama $k$ reikšmė yra 1. Apskaičiuokite $x$.",
+        "text": "Supaprastinkite iki $k \\equiv 1 \\pmod 5$. Mažiausia teigiama $k$ reikšmė yra 1. Apskaičiuokite $x$.",
         "penalty": 0.11
       }
     ]
@@ -49111,12 +49111,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Prisiminkite daliklių skaičiaus funkciją $\\tau(n) = (a_1+1)(a_2+1)\\\\dots$.",
-      "Susklaidykite 12 į dauginamuosius: 12, $6 \\\\cdot 2$, $4 \\\\cdot 3$, $3 \\\\cdot 2 \\\\cdot 2$.",
+      "Prisiminkite daliklių skaičiaus funkciją $\\tau(n) = (a_1+1)(a_2+1)\\dots$.",
+      "Susklaidykite 12 į dauginamuosius: 12, $6 \\cdot 2$, $4 \\cdot 3$, $3 \\cdot 2 \\cdot 2$.",
       "Kiekvienam skaidiniui raskite mažiausią skaičių, priskirdami mažesnius pirminius pagrindus ($2, 3, 5$) didesniems rodikliams.",
-      "Palyginkite gautus skaičius: $2^{11} = 2048$, $2^5 \\\\cdot 3 = 96$, $2^3 \\\\cdot 3^2 = 72$, $2^2 \\\\cdot 3 \\\\cdot 5 = 60$."
+      "Palyginkite gautus skaičius: $2^{11} = 2048$, $2^5 \\cdot 3 = 96$, $2^3 \\cdot 3^2 = 72$, $2^2 \\cdot 3 \\cdot 5 = 60$."
     ],
-    "solution": "Užrašome $\\tau(n) = 12$. Suskirstome 12 į visus įmanomus sveikuosius dauginamuosius. Apskaičiuojame mažiausias vertes kiekvienam skaidiniui, pradedant nuo mažiausių pirminių skaičių. Palyginame rezultatus ir matome, kad $2^2 \\\\cdot 3^1 \\\\cdot 5^1 = 60$ yra mažiausias.",
+    "solution": "Užrašome $\\tau(n) = 12$. Suskirstome 12 į visus įmanomus sveikuosius dauginamuosius. Apskaičiuojame mažiausias vertes kiekvienam skaidiniui, pradedant nuo mažiausių pirminių skaičių. Palyginame rezultatus ir matome, kad $2^2 \\cdot 3^1 \\cdot 5^1 = 60$ yra mažiausias.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -49124,7 +49124,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Daliklių skaičiaus formulė",
-      "text": "Skaičiaus $n = p_1^{a_1} \\\\dots p_k^{a_k}$ daliklių skaičius yra $(a_1+1)\\\\dots(a_k+1) = 12$. Norėdami rasti mažiausią $n$, didesnius laipsnius turime priskirti mažesniems pirminiams skaičiams."
+      "text": "Skaičiaus $n = p_1^{a_1} \\dots p_k^{a_k}$ daliklių skaičius yra $(a_1+1)\\dots(a_k+1) = 12$. Norėdami rasti mažiausią $n$, didesnius laipsnius turime priskirti mažesniems pirminiams skaičiams."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -49143,21 +49143,21 @@ export const exercises = [
         "steps": [
           {
             "title": "Daliklių formulė",
-            "action": "Užrašome $\\tau(n) = (a_1+1)(a_2+1)\\\\dots(a_r+1) = 12$.",
+            "action": "Užrašome $\\tau(n) = (a_1+1)(a_2+1)\\dots(a_r+1) = 12$.",
             "reason": "Sveikojo skaičiaus daliklių kiekio formulė.",
             "latex": "\\tau(n) = 12",
             "result": "Apribojami laipsnių rodikliai."
           },
           {
             "title": "Atvejų nagrinėjimas",
-            "action": "Galimi rinkiniai $\\\\{a_i\\\\}$ yra: $\\\\{11\\\\}$, $\\\\{5, 1\\\\}$, $\\\\{3, 2\\\\}$, $\\\\{2, 1, 1\\\\}$.",
+            "action": "Galimi rinkiniai $\\{a_i\\}$ yra: $\\{11\\}$, $\\{5, 1\\}$, $\\{3, 2\\}$, $\\{2, 1, 1\\}$.",
             "reason": "Skaidome 12 visais įmanomais būdais.",
-            "latex": "\\text{Deriniai: } \\\\{11\\\\}, \\\\{5,1\\\\}, \\\\{3,2\\\\}, \\\\{2,1,1\\\\}",
+            "latex": "\\text{Deriniai: } \\{11\\}, \\{5,1\\}, \\{3,2\\}, \\{2,1,1\\}",
             "result": "Nustatyti keturi galimi laipsnių tipai."
           },
           {
             "title": "Skaičių palyginimas",
-            "action": "Skaičiuojame: $2^{11}=2048$; $2^5 \\\\cdot 3^1 = 96$; $2^3 \\\\cdot 3^2 = 72$; $2^2 \\\\cdot 3^1 \\\\cdot 5^1 = 60$. Mažiausias yra 60.",
+            "action": "Skaičiuojame: $2^{11}=2048$; $2^5 \\cdot 3^1 = 96$; $2^3 \\cdot 3^2 = 72$; $2^2 \\cdot 3^1 \\cdot 5^1 = 60$. Mažiausias yra 60.",
             "reason": "Didžiausius rodiklius priskiriame mažiausiems pirminiams skaičiams 2, 3 ir 5.",
             "latex": "n = 60",
             "result": "Rastas minimalus skaičius."
@@ -49179,7 +49179,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-04-trap-2",
         "title": "Netinkamas pirminių skaičių priskyrimas",
-        "wrongMove": "Didesni laipsnių rodikliai priskiriami didesniems pirminiams skaičiams (pvz., $2^1 \\\\cdot 3^2 \\\\cdot 5^2$).",
+        "wrongMove": "Didesni laipsnių rodikliai priskiriami didesniems pirminiams skaičiams (pvz., $2^1 \\cdot 3^2 \\cdot 5^2$).",
         "whyTempting": "Nesuvokiama, kad mažiausią skaičių gausime didžiausius laipsnius duodami mažiausiems pagrindams.",
         "correction": "Rikiuokite pirminius skaičius didėjimo tvarka, o laipsnių rodiklius - mažėjimo tvarka.",
         "reviewConceptIds": [],
@@ -49197,7 +49197,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią natūralųjį skaičių $n$, kuris turi tikslia...?",
-        "back": "Skaičiaus $n = p_1^{a_1} \\\\dots p_k^{a_k}$ daliklių skaičius yra $(a_1+1)\\\\dots(a_k+1) = 12$. Norėdami rasti mažiausią $n$, didesnius laipsnius turime priskirti mažesniems pirminiams skaičiams.",
+        "back": "Skaičiaus $n = p_1^{a_1} \\dots p_k^{a_k}$ daliklių skaičius yra $(a_1+1)\\dots(a_k+1) = 12$. Norėdami rasti mažiausią $n$, didesnius laipsnius turime priskirti mažesniems pirminiams skaičiams.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -49207,13 +49207,13 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Prisiminkite daliklių skaičiaus funkciją $\\tau(n) = (a_1+1)(a_2+1)\\\\dots$.",
+        "text": "Prisiminkite daliklių skaičiaus funkciją $\\tau(n) = (a_1+1)(a_2+1)\\dots$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Susklaidykite 12 į dauginamuosius: 12, $6 \\\\cdot 2$, $4 \\\\cdot 3$, $3 \\\\cdot 2 \\\\cdot 2$.",
+        "text": "Susklaidykite 12 į dauginamuosius: 12, $6 \\cdot 2$, $4 \\cdot 3$, $3 \\cdot 2 \\cdot 2$.",
         "penalty": 0.07
       },
       {
@@ -49225,7 +49225,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Palyginkite gautus skaičius: $2^{11} = 2048$, $2^5 \\\\cdot 3 = 96$, $2^3 \\\\cdot 3^2 = 72$, $2^2 \\\\cdot 3 \\\\cdot 5 = 60$.",
+        "text": "Palyginkite gautus skaičius: $2^{11} = 2048$, $2^5 \\cdot 3 = 96$, $2^3 \\cdot 3^2 = 72$, $2^2 \\cdot 3 \\cdot 5 = 60$.",
         "penalty": 0.11
       }
     ]
@@ -49245,11 +49245,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Skaičiaus galinių nulių skaičius priklauso nuo to, kiek kartų $10$ įeina į jo pirminių daugtuvių skaidinį.",
-      "Kadangi $10 = 2 \\\\cdot 5$, o pirminių daliklių 2 yra gerokai daugiau nei 5, pakanka rasti penketų skaičių skaičiaus $100!$ skaidinyje.",
+      "Kadangi $10 = 2 \\cdot 5$, o pirminių daliklių 2 yra gerokai daugiau nei 5, pakanka rasti penketų skaičių skaičiaus $100!$ skaidinyje.",
       "Taikykite Legendre formulę pirminiam skaičiui $p=5$.",
-      "Suskaičiuokite: $\\\\lfloor 100/5 \\rfloor + \\\\lfloor 100/25 \\rfloor = 20 + 4 = 24$."
+      "Suskaičiuokite: $\\lfloor 100/5 \\rfloor + \\lfloor 100/25 \\rfloor = 20 + 4 = 24$."
     ],
-    "solution": "Nuliai susidaro iš $2 \\\\cdot 5$ sandaugų. Kadangi 2 yra daugiau, skaičiuojame tik 5 laipsnį. Taikome Legendre formulę pirminiam skaičiui 5. Daliname 100 iš 5, o gautą sveikąją dalį vėl daliname iš 5 (arba iš 25). Sudedame gautas dalis: $20 + 4 = 24$.",
+    "solution": "Nuliai susidaro iš $2 \\cdot 5$ sandaugų. Kadangi 2 yra daugiau, skaičiuojame tik 5 laipsnį. Taikome Legendre formulę pirminiam skaičiui 5. Daliname 100 iš 5, o gautą sveikąją dalį vėl daliname iš 5 (arba iš 25). Sudedame gautas dalis: $20 + 4 = 24$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -49257,7 +49257,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Legendre formulė pirminiam 5",
-      "text": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\\\sum \\\\lfloor 100/5^i \\rfloor$."
+      "text": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\sum \\lfloor 100/5^i \\rfloor$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -49276,15 +49276,15 @@ export const exercises = [
         "steps": [
           {
             "title": "Idėjos formulavimas",
-            "action": "Nulių skaičius lygus $\\\\min(v_2(100!), v_5(100!)) = v_5(100!)$.",
-            "reason": "Kiekvienas nulis atitinka sandaugą $2 \\\\cdot 5$, o penketų yra mažiau nei dvejetų.",
+            "action": "Nulių skaičius lygus $\\min(v_2(100!), v_5(100!)) = v_5(100!)$.",
+            "reason": "Kiekvienas nulis atitinka sandaugą $2 \\cdot 5$, o penketų yra mažiau nei dvejetų.",
             "latex": "v_5(100!)",
             "result": "Problema supaprastinta iki penketų skaičiavimo."
           },
           {
             "title": "Legendre formulės taikymas",
-            "action": "Apskaičiuojame $v_5(100!) = \\\\lfloor \\frac{100}{5} \\rfloor + \\\\lfloor \\frac{100}{25} \\rfloor$.",
-            "reason": "Pagal Legendre teoremą pirminio $p$ laipsnis faktoriale yra $\\\\sum \\\\lfloor n/p^k \\rfloor$.",
+            "action": "Apskaičiuojame $v_5(100!) = \\lfloor \\frac{100}{5} \\rfloor + \\lfloor \\frac{100}{25} \\rfloor$.",
+            "reason": "Pagal Legendre teoremą pirminio $p$ laipsnis faktoriale yra $\\sum \\lfloor n/p^k \\rfloor$.",
             "latex": "v_5(100!) = 20 + 4 = 24",
             "result": "Gautas tikslus laipsnio rodiklis 24."
           }
@@ -49306,7 +49306,7 @@ export const exercises = [
         "id": "ex-olimpiada-09-05-trap-2",
         "title": "Dvejetų skaičiavimas vietoj penketų",
         "wrongMove": "Bandoma skaičiuoti, kiek kartų 2 įeina į $100!$ skaidinį, tikintis, kad tai apibrėš nulių skaičių.",
-        "whyTempting": "Nulį sudaro $2 \\\\cdot 5$, todėl pradedama nuo mažiausio pirminio skaičiaus.",
+        "whyTempting": "Nulį sudaro $2 \\cdot 5$, todėl pradedama nuo mažiausio pirminio skaičiaus.",
         "correction": "Nulių skaičių riboja rečiau pasitaikantis faktorius 5, todėl skaičiuokite tik $v_5(n!)$.",
         "reviewConceptIds": [],
         "srsRecommended": true
@@ -49323,7 +49323,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Keliais nuliais baigiasi skaičius $100!$?...?",
-        "back": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\\\sum \\\\lfloor 100/5^i \\rfloor$.",
+        "back": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\sum \\lfloor 100/5^i \\rfloor$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -49339,7 +49339,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi $10 = 2 \\\\cdot 5$, o pirminių daliklių 2 yra gerokai daugiau nei 5, pakanka rasti penketų skaičių skaičiaus $100!$ skaidinyje.",
+        "text": "Kadangi $10 = 2 \\cdot 5$, o pirminių daliklių 2 yra gerokai daugiau nei 5, pakanka rasti penketų skaičių skaičiaus $100!$ skaidinyje.",
         "penalty": 0.07
       },
       {
@@ -49351,7 +49351,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Suskaičiuokite: $\\\\lfloor 100/5 \\rfloor + \\\\lfloor 100/25 \\rfloor = 20 + 4 = 24$.",
+        "text": "Suskaičiuokite: $\\lfloor 100/5 \\rfloor + \\lfloor 100/25 \\rfloor = 20 + 4 = 24$.",
         "penalty": 0.11
       }
     ]
@@ -49371,11 +49371,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Pabandykite ištirti šią lygtį moduliu 5. Kodėl patogu rinktis būtent 5?",
-      "Moduliu 5 lygtis supaprastėja iki $x^2 \\\\equiv 3 \\\\pmod 5$.",
-      "Apskaičiuokite visus galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\\\pmod 5$).",
-      "Gautos kvadratinės liekanos yra $\\\\{0, 1, 4\\\\}$. Kadangi 3 nėra tarp jų, lygtis sprendinių neturi."
+      "Moduliu 5 lygtis supaprastėja iki $x^2 \\equiv 3 \\pmod 5$.",
+      "Apskaičiuokite visus galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\pmod 5$).",
+      "Gautos kvadratinės liekanos yra $\\{0, 1, 4\\}$. Kadangi 3 nėra tarp jų, lygtis sprendinių neturi."
     ],
-    "solution": "Tarkime, kad sprendinys $(x, y)$ egzistuoja. Sumažiname lygtį moduliu 5: $x^2 - 5y^2 \\\\equiv 3 \\\\pmod 5 \\\\implies x^2 \\\\equiv 3 \\\\pmod 5$. Išnagrinėjame visų sveikųjų skaičių kvadratus moduliu 5. Matome, kad kvadratinės liekanos yra tik 0, 1, 4. Kadangi 3 negalimas, gauname prieštaravimą.",
+    "solution": "Tarkime, kad sprendinys $(x, y)$ egzistuoja. Sumažiname lygtį moduliu 5: $x^2 - 5y^2 \\equiv 3 \\pmod 5 \\implies x^2 \\equiv 3 \\pmod 5$. Išnagrinėjame visų sveikųjų skaičių kvadratus moduliu 5. Matome, kad kvadratinės liekanos yra tik 0, 1, 4. Kadangi 3 negalimas, gauname prieštaravimą.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -49383,7 +49383,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Kvadratinės liekanos moduliu 5",
-      "text": "Išnagrinėjus lygtį moduliu 5, narys $5y^2$ išnyksta, ir gauname kvadratinį palyginimą $x^2 \\\\equiv 3 \\\\pmod 5$. Parodysime, kad 3 nėra kvadratinė liekana moduliu 5."
+      "text": "Išnagrinėjus lygtį moduliu 5, narys $5y^2$ išnyksta, ir gauname kvadratinį palyginimą $x^2 \\equiv 3 \\pmod 5$. Parodysime, kad 3 nėra kvadratinė liekana moduliu 5."
     },
     "strategyTags": [
       "contradiction",
@@ -49406,21 +49406,21 @@ export const exercises = [
             "title": "Pakeitimas moduliu 5",
             "action": "Redukuojame lygtį $x^2 - 5y^2 = 3$ moduliu 5.",
             "reason": "Narys $5y^2$ dalijasi iš 5, todėl jis tampa lygus 0.",
-            "latex": "x^2 \\\\equiv 3 \\\\pmod 5",
+            "latex": "x^2 \\equiv 3 \\pmod 5",
             "result": "Gauta lygtis su vienu nežinomuoju."
           },
           {
             "title": "Kvadratų analizė",
-            "action": "Apskaičiuojame $k^2 \\\\pmod 5$ visiems $k \\\\in \\\\mathbb{Z}_5$. Gauname $0, 1, 4, 4, 1$.",
+            "action": "Apskaičiuojame $k^2 \\pmod 5$ visiems $k \\in \\mathbb{Z}_5$. Gauname $0, 1, 4, 4, 1$.",
             "reason": "Suskaičiuojame visus galimus kvadratus moduliu 5.",
-            "latex": "x^2 \\\\in \\\\{0, 1, 4\\\\} \\\\pmod 5",
+            "latex": "x^2 \\in \\{0, 1, 4\\} \\pmod 5",
             "result": "Nustatytas kvadratinių liekanų rinkinys."
           },
           {
             "title": "Išvada",
-            "action": "Kadangi $3 \\notin \\\\{0, 1, 4\\\\}$, lygybė $x^2 \\\\equiv 3 \\\\pmod 5$ neturi sprendinių, vadinasi, ir pradinė lygtis neturi sveikųjų sprendinių.",
+            "action": "Kadangi $3 \\notin \\{0, 1, 4\\}$, lygybė $x^2 \\equiv 3 \\pmod 5$ neturi sprendinių, vadinasi, ir pradinė lygtis neturi sveikųjų sprendinių.",
             "reason": "Prieštaravimas parodo, kad prielaida apie sprendinių egzistavimą buvo klaidinga.",
-            "latex": "\\\\emptyset",
+            "latex": "\\emptyset",
             "result": "Įrodymas baigtas."
           }
         ],
@@ -49458,7 +49458,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad lygtis $x^2 - 5y^2 = 3$ neturi sveikųjų spren...?",
-        "back": "Išnagrinėjus lygtį moduliu 5, narys $5y^2$ išnyksta, ir gauname kvadratinį palyginimą $x^2 \\\\equiv 3 \\\\pmod 5$. Parodysime, kad 3 nėra kvadratinė liekana moduliu 5.",
+        "back": "Išnagrinėjus lygtį moduliu 5, narys $5y^2$ išnyksta, ir gauname kvadratinį palyginimą $x^2 \\equiv 3 \\pmod 5$. Parodysime, kad 3 nėra kvadratinė liekana moduliu 5.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -49474,19 +49474,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Moduliu 5 lygtis supaprastėja iki $x^2 \\\\equiv 3 \\\\pmod 5$.",
+        "text": "Moduliu 5 lygtis supaprastėja iki $x^2 \\equiv 3 \\pmod 5$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite visus galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\\\pmod 5$).",
+        "text": "Apskaičiuokite visus galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\pmod 5$).",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Gautos kvadratinės liekanos yra $\\\\{0, 1, 4\\\\}$. Kadangi 3 nėra tarp jų, lygtis sprendinių neturi.",
+        "text": "Gautos kvadratinės liekanos yra $\\{0, 1, 4\\}$. Kadangi 3 nėra tarp jų, lygtis sprendinių neturi.",
         "penalty": 0.11
       }
     ]
@@ -49510,7 +49510,7 @@ export const exercises = [
       "Įstatykite taškus $x = 1$ ir $x = -1$, kuriuose daliklis $x^2 - 1$ virsta nuliu.",
       "Išspręskite gautą tiesinių lygčių sistemą: $a+b = P(1)$ ir $-a+b = P(-1)$."
     ],
-    "solution": "Užrašome $P(x) = (x^2-1)Q(x) + ax+b$. Įstatome $x=1$: $P(1) = 1^{100} - 2(1)^{51} + 1 = 0 \\\\implies a+b = 0$. Įstatome $x=-1$: $P(-1) = (-1)^{100} - 2(-1)^{51} + 1 = 4 \\\\implies -a+b = 4$. Išsprendžiame sistemą: $b=2, a=-2$. Liekana yra $-2x+2$.",
+    "solution": "Užrašome $P(x) = (x^2-1)Q(x) + ax+b$. Įstatome $x=1$: $P(1) = 1^{100} - 2(1)^{51} + 1 = 0 \\implies a+b = 0$. Įstatome $x=-1$: $P(-1) = (-1)^{100} - 2(-1)^{51} + 1 = 4 \\implies -a+b = 4$. Išsprendžiame sistemą: $b=2, a=-2$. Liekana yra $-2x+2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -49545,13 +49545,13 @@ export const exercises = [
           {
             "title": "Šaknų įstatymas",
             "action": "Skaičiuojame $P(1) = 0$ ir $P(-1) = 4$. Gauname sistemą: $a+b=0$ ir $-a+b=4$.",
-            "reason": "Įstatome $x=\\\\pm 1$, nes šiose reikšmėse $x^2-1=0$.",
-            "latex": "\\begin{cases} a+b = 0 \\\\\\ -a+b = 4 \\\\end{cases}",
+            "reason": "Įstatome $x=\\pm 1$, nes šiose reikšmėse $x^2-1=0$.",
+            "latex": "\\begin{cases} a+b = 0 \\\\ -a+b = 4 \\end{cases}",
             "result": "Gauta dviejų kintamųjų tiesinė sistema."
           },
           {
             "title": "Sistemos sprendimas",
-            "action": "Sudedame lygtis: $2b = 4 \\\\implies b = 2$. Tada $a = -2$. Liekana yra $-2x + 2$.",
+            "action": "Sudedame lygtis: $2b = 4 \\implies b = 2$. Tada $a = -2$. Liekana yra $-2x + 2$.",
             "reason": "Išsprendžiame sistemą sudėties būdu.",
             "latex": "R(x) = -2x+2",
             "result": "Rasta ieškoma liekana."
@@ -49590,7 +49590,7 @@ export const exercises = [
         "id": "ex-olimpiada-09-07-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite liekaną, gautą dalijant daugianarį $P(x) = x^{100} -...?",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite liekaną, gautą dalijant daugianarį $P(x) = x^{100} -...?$",
         "back": "Liekana dalijant iš antrojo laipsnio daugianario $x^2-1$ yra pirmojo laipsnio daugianaris $R(x) = ax + b$. Naudojame lygybę $P(x) = (x^2-1)Q(x) + ax+b$ ir įstatome daliklio šaknis $x = 1$ ir $x = -1$.",
         "conceptIds": [],
         "methodIds": [],
@@ -49672,7 +49672,7 @@ export const exercises = [
             "title": "Vietos formulių taikymas",
             "action": "Užrašome $e_1 = x_1+x_2+x_3 = 3$ ir $e_2 = x_1x_2+x_2x_3+x_3x_1 = 2$.",
             "reason": "Pagal Vietos formules polinomo koeficientai yra susiję su šaknų simetriniais daugianariais.",
-            "latex": "\\\\sum x_i = 3, \\\\quad \\\\sum x_i x_j = 2",
+            "latex": "\\sum x_i = 3, \\quad \\sum x_i x_j = 2",
             "result": "Gautos reikšmės pirminėms simetrinėms formoms."
           },
           {
@@ -49755,10 +49755,10 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Įrodykite, kad teigiamiems realiesiems skaičiams $a, b, c$ galioja nelygybė: $(a+b)(b+c)(c+a) \\\\ge 8abc$.",
-    "answer": "Įrodyta $(a+b)(b+c)(c+a) \\\\ge 8abc$.",
+    "statement": "Įrodykite, kad teigiamiems realiesiems skaičiams $a, b, c$ galioja nelygybė: $(a+b)(b+c)(c+a) \\ge 8abc$.",
+    "answer": "Įrodyta $(a+b)(b+c)(c+a) \\ge 8abc$.",
     "acceptedAnswers": [
-      "Įrodyta $(a+b)(b+c)(c+a) \\\\ge 8abc$."
+      "Įrodyta $(a+b)(b+c)(c+a) \\ge 8abc$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -49767,11 +49767,11 @@ export const exercises = [
     ],
     "hints": [
       "Pabandykite pritaikyti AM-GM nelygybę kiekvienam skliaustui atskirai.",
-      "Užrašykite: $a+b \\\\ge 2\\\\sqrt{ab}$ ir t. t. Kodėl galime tai daryti?",
+      "Užrašykite: $a+b \\ge 2\\sqrt{ab}$ ir t. t. Kodėl galime tai daryti?",
       "Sudauginkite tris gautas nelygybes. Kadangi visi nariai yra teigiami, nelygybės ženklas išlieka.",
-      "Supaprastinkite dešinę pusę: $2\\\\sqrt{ab} \\\\cdot 2\\\\sqrt{bc} \\\\cdot 2\\\\sqrt{ca} = 8abc$."
+      "Supaprastinkite dešinę pusę: $2\\sqrt{ab} \\cdot 2\\sqrt{bc} \\cdot 2\\sqrt{ca} = 8abc$."
     ],
-    "solution": "Kadangi $a, b, c > 0$, taikome AM-GM: $a+b \\\\ge 2\\\\sqrt{ab}$. Taip pat gauname $b+c \\\\ge 2\\\\sqrt{bc}$ ir $c+a \\\\ge 2\\\\sqrt{ca}$. Kadangi visi nariai teigiami, sudauginame nelygybes. Gauname $(a+b)(b+c)(c+a) \\\\ge 8\\\\sqrt{a^2 b^2 c^2} = 8abc$.",
+    "solution": "Kadangi $a, b, c > 0$, taikome AM-GM: $a+b \\ge 2\\sqrt{ab}$. Taip pat gauname $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$. Kadangi visi nariai teigiami, sudauginame nelygybes. Gauname $(a+b)(b+c)(c+a) \\ge 8\\sqrt{a^2 b^2 c^2} = 8abc$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -49779,7 +49779,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "AM-GM taikymas atskiriems skliaustams",
-      "text": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\\\ge 2\\\\sqrt{ab}$, $b+c \\\\ge 2\\\\sqrt{bc}$ ir $c+a \\\\ge 2\\\\sqrt{ca}$, o tada jas sudauginkite."
+      "text": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$, o tada jas sudauginkite."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -49800,16 +49800,16 @@ export const exercises = [
         "steps": [
           {
             "title": "Dinaris AM-GM",
-            "action": "Apskaičiuojame $a+b \\\\ge 2\\\\sqrt{ab}$, $b+c \\\\ge 2\\\\sqrt{bc}$, $c+a \\\\ge 2\\\\sqrt{ca}$.",
+            "action": "Apskaičiuojame $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$, $c+a \\ge 2\\sqrt{ca}$.",
             "reason": "Taikome aritmetinio ir geometrinio vidurkių nelygybę dviem teigiamiems realiesiems skaičiams.",
-            "latex": "x+y \\\\ge 2\\\\sqrt{xy}",
+            "latex": "x+y \\ge 2\\sqrt{xy}",
             "result": "Gautos trys atskiros nelygybės."
           },
           {
             "title": "Sudauginimas",
-            "action": "Sudauginame nelygybes: $(a+b)(b+c)(c+a) \\\\ge 8\\\\sqrt{ab \\\\cdot bc \\\\cdot ca} = 8abc$.",
+            "action": "Sudauginame nelygybes: $(a+b)(b+c)(c+a) \\ge 8\\sqrt{ab \\cdot bc \\cdot ca} = 8abc$.",
             "reason": "Kadangi visos pusės teigiamos, galime sudauginti išlaikydami ženklą.",
-            "latex": "(a+b)(b+c)(c+a) \\\\ge 8abc",
+            "latex": "(a+b)(b+c)(c+a) \\ge 8abc",
             "result": "Uždavinys sėkmingai įrodytas."
           }
         ],
@@ -49849,7 +49849,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad teigiamiems realiesiems skaičiams $a, b, c$ g...?",
-        "back": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\\\ge 2\\\\sqrt{ab}$, $b+c \\\\ge 2\\\\sqrt{bc}$ ir $c+a \\\\ge 2\\\\sqrt{ca}$, o tada jas sudauginkite.",
+        "back": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$, o tada jas sudauginkite.",
         "conceptIds": [
           "olimpiada-09-concept-am-gm"
         ],
@@ -49869,7 +49869,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite: $a+b \\\\ge 2\\\\sqrt{ab}$ ir t. t. Kodėl galime tai daryti?",
+        "text": "Užrašykite: $a+b \\ge 2\\sqrt{ab}$ ir t. t. Kodėl galime tai daryti?",
         "penalty": 0.07
       },
       {
@@ -49881,7 +49881,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Supaprastinkite dešinę pusę: $2\\\\sqrt{ab} \\\\cdot 2\\\\sqrt{bc} \\\\cdot 2\\\\sqrt{ca} = 8abc$.",
+        "text": "Supaprastinkite dešinę pusę: $2\\sqrt{ab} \\cdot 2\\sqrt{bc} \\cdot 2\\sqrt{ca} = 8abc$.",
         "penalty": 0.11
       }
     ]
@@ -49901,11 +49901,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Norint rasti tiesinės kombinacijos maksimumą esant kvadratų ribojimui, idealiai tinka Cauchy-Schwarz nelygybė.",
-      "Užrašykite Cauchy-Schwarz formą: $(ax+by+cz)^2 \\\\le (a^2+b^2+c^2)(x^2+y^2+z^2)$.",
+      "Užrašykite Cauchy-Schwarz formą: $(ax+by+cz)^2 \\le (a^2+b^2+c^2)(x^2+y^2+z^2)$.",
       "Parinkite tinkamus $x, y, z$ koeficientus, kad gautumėte ieškomą reiškinį $a + 2b + 3c$.",
-      "Įstatykite $x=1, y=2, z=3$ ir $a^2+b^2+c^2=1$. Maksimali vertė bus $\\\\sqrt{14}$."
+      "Įstatykite $x=1, y=2, z=3$ ir $a^2+b^2+c^2=1$. Maksimali vertė bus $\\sqrt{14}$."
     ],
-    "solution": "Užrašome Cauchy-Schwarz nelygybę dviem rinkiniams $(a,b,c)$ ir $(1,2,3)$. Gauname $(a+2b+3c)^2 \\\\le (a^2+b^2+c^2)(1^2+2^2+3^2)$. Įstatome žinomas vertes: $(a+2b+3c)^2 \\\\le 1 \\\\cdot (1+4+9) = 14$. Iš čia $a+2b+3c \\\\le \\\\sqrt{14}$. Maksimali reikšmė pasiekiama, kai koeficientai yra proporcingi.",
+    "solution": "Užrašome Cauchy-Schwarz nelygybę dviem rinkiniams $(a,b,c)$ ir $(1,2,3)$. Gauname $(a+2b+3c)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$. Įstatome žinomas vertes: $(a+2b+3c)^2 \\le 1 \\cdot (1+4+9) = 14$. Iš čia $a+2b+3c \\le \\sqrt{14}$. Maksimali reikšmė pasiekiama, kai koeficientai yra proporcingi.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -49913,7 +49913,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Cauchy-Schwarz su konstantų vektoriais",
-      "text": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\\\cdot 1 + b \\\\cdot 2 + c \\\\cdot 3)^2 \\\\le (a^2+b^2+c^2)(1^2+2^2+3^2)$."
+      "text": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -49932,20 +49932,20 @@ export const exercises = [
         "steps": [
           {
             "title": "Nelygybės formulavimas",
-            "action": "Užrašome $(a \\\\cdot 1 + b \\\\cdot 2 + c \\\\cdot 3)^2 \\\\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
+            "action": "Užrašome $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
             "reason": "Pagal Cauchy-Schwarz nelygybę dviem vektoriams realiųjų skaičių erdvėje.",
-            "latex": "(a+2b+3c)^2 \\\\le (a^2+b^2+c^2)(1^2+2^2+3^2)",
+            "latex": "(a+2b+3c)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)",
             "result": "Apribojamas ieškomas reiškinys kvadratu."
           },
           {
             "title": "Verčių įstatymas",
-            "action": "Kadangi $a^2+b^2+c^2=1$, gauname $(a+2b+3c)^2 \\\\le 14 \\\\implies a+2b+3c \\\\le \\\\sqrt{14}$.",
+            "action": "Kadangi $a^2+b^2+c^2=1$, gauname $(a+2b+3c)^2 \\le 14 \\implies a+2b+3c \\le \\sqrt{14}$.",
             "reason": "Paprasti aritmetiniai veiksmai ir kvadratinės šaknies traukimas.",
-            "latex": "a+2b+3c \\\\le \\\\sqrt{14}",
-            "result": "Maksimali vertė yra $\\\\sqrt{14}$."
+            "latex": "a+2b+3c \\le \\sqrt{14}",
+            "result": "Maksimali vertė yra $\\sqrt{14}$."
           }
         ],
-        "finalAnswer": "$\\\\sqrt{14}$"
+        "finalAnswer": "$\\sqrt{14}$"
       }
     ],
     "commonTraps": [
@@ -49978,8 +49978,8 @@ export const exercises = [
         "id": "ex-olimpiada-09-10-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Jei realieji skaičiai $a, b, c$ tenkina lygtį $a^2 + b^2 + c...?",
-        "back": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\\\cdot 1 + b \\\\cdot 2 + c \\\\cdot 3)^2 \\\\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Jei realieji skaičiai $a, b, c$ tenkina lygtį $a^2 + b^2 + c...?$",
+        "back": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -49995,7 +49995,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite Cauchy-Schwarz formą: $(ax+by+cz)^2 \\\\le (a^2+b^2+c^2)(x^2+y^2+z^2)$.",
+        "text": "Užrašykite Cauchy-Schwarz formą: $(ax+by+cz)^2 \\le (a^2+b^2+c^2)(x^2+y^2+z^2)$.",
         "penalty": 0.07
       },
       {
@@ -50007,7 +50007,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Įstatykite $x=1, y=2, z=3$ ir $a^2+b^2+c^2=1$. Maksimali vertė bus $\\\\sqrt{14}$.",
+        "text": "Įstatykite $x=1, y=2, z=3$ ir $a^2+b^2+c^2=1$. Maksimali vertė bus $\\sqrt{14}$.",
         "penalty": 0.11
       }
     ]
@@ -50017,7 +50017,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išspręskite nelygybę: $|x - 1| + |x - 3| \\\\ge 4$.",
+    "statement": "Išspręskite nelygybę: $|x - 1| + |x - 3| \\ge 4$.",
     "answer": "Rasta nelygybės sprendinių aibė.",
     "acceptedAnswers": [
       "Rasta nelygybės sprendinių aibė."
@@ -50027,11 +50027,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Modulio reiškiniai keičia ženklus taškuose $x=1$ ir $x=3$.",
-      "Išnagrinėkite tris atvejus: 1) $x < 1$, 2) $1 \\\\le x < 3$, 3) $x \\\\ge 3$.",
+      "Išnagrinėkite tris atvejus: 1) $x < 1$, 2) $1 \\le x < 3$, 3) $x \\ge 3$.",
       "Kiekviename intervale atskleiskite modulius ir išspręskite paprastas tiesines nelygybes.",
       "Apjunkite gautus sprendinius iš visų trijų intervalų."
     ],
-    "solution": "Jei $x < 1$, turime $-(x-1) - (x-3) \\\\ge 4 \\\\implies -2x + 4 \\\\ge 4 \\\\implies x \\\\le 0$. Vadinasi, $x \\\\in (-\\\\infty, 0]$. Jei $1 \\\\le x < 3$, turime $(x-1) - (x-3) \\\\ge 4 \\\\implies 2 \\\\ge 4$ (sprendinių nėra). Jei $x \\\\ge 3$, turime $(x-1) + (x-3) \\\\ge 4 \\\\implies 2x - 4 \\\\ge 4 \\\\implies x \\\\ge 4$. Vadinasi, $x \\\\in [4, \\\\infty)$. Sujungiame gautus intervalus: $x \\\\in (-\\\\infty, 0] \\\\cup [4, \\\\infty)$.",
+    "solution": "Jei $x < 1$, turime $-(x-1) - (x-3) \\ge 4 \\implies -2x + 4 \\ge 4 \\implies x \\le 0$. Vadinasi, $x \\in (-\\infty, 0]$. Jei $1 \\le x < 3$, turime $(x-1) - (x-3) \\ge 4 \\implies 2 \\ge 4$ (sprendinių nėra). Jei $x \\ge 3$, turime $(x-1) + (x-3) \\ge 4 \\implies 2x - 4 \\ge 4 \\implies x \\ge 4$. Vadinasi, $x \\in [4, \\infty)$. Sujungiame gautus intervalus: $x \\in (-\\infty, 0] \\cup [4, \\infty)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -50039,7 +50039,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Intervalų metodas moduliams",
-      "text": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\\\le x < 3$ ir $x \\\\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus."
+      "text": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\le x < 3$ ir $x \\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus."
     },
     "strategyTags": [
       "casework"
@@ -50058,27 +50058,27 @@ export const exercises = [
         "steps": [
           {
             "title": "Intervalų išskyrimas",
-            "action": "Padalijame $\\\\mathbb{R}$ į intervalus $(-\\\\infty, 1)$, $[1, 3)$ ir $[3, \\\\infty)$.",
+            "action": "Padalijame $\\mathbb{R}$ į intervalus $(-\\infty, 1)$, $[1, 3)$ ir $[3, \\infty)$.",
             "reason": "Modulio pošakniai lygūs nuliui taškuose 1 ir 3.",
-            "latex": "\\text{Intervalai: } x < 1, \\\\ 1 \\\\le x < 3, \\\\ x \\\\ge 3",
+            "latex": "\\text{Intervalai: } x < 1, \\ 1 \\le x < 3, \\ x \\ge 3",
             "result": "Uždavinys išskaidytas į tris paprastesnius atvejus."
           },
           {
             "title": "Atvejų sprendimas",
-            "action": "1) $x < 1 \\\\implies 1-x+3-x \\\\ge 4 \\\\implies x \\\\le 0$. 2) $1 \\\\le x < 3 \\\\implies x-1+3-x \\\\ge 4 \\\\implies 2 \\\\ge 4$ (neįmanoma). 3) $x \\\\ge 3 \\\\implies x-1+x-3 \\\\ge 4 \\\\implies x \\\\ge 4$.",
+            "action": "1) $x < 1 \\implies 1-x+3-x \\ge 4 \\implies x \\le 0$. 2) $1 \\le x < 3 \\implies x-1+3-x \\ge 4 \\implies 2 \\ge 4$ (neįmanoma). 3) $x \\ge 3 \\implies x-1+x-3 \\ge 4 \\implies x \\ge 4$.",
             "reason": "Atskleidžiame modulius pagal jų apibrėžimą kiekviename intervale.",
-            "latex": "\\begin{cases} x \\\\le 0 & \\text{kai } x < 1 \\\\\\ \\\\emptyset & \\text{kai } 1 \\\\le x < 3 \\\\\\ x \\\\ge 4 & \\text{kai } x \\\\ge 3 \\\\end{cases}",
+            "latex": "\\begin{cases} x \\le 0 & \\text{kai } x < 1 \\\\ \\emptyset & \\text{kai } 1 \\le x < 3 \\\\ x \\ge 4 & \\text{kai } x \\ge 3 \\end{cases}",
             "result": "Gauti sprendiniai atskiriems intervalams."
           },
           {
             "title": "Sujungimas",
-            "action": "Sujungę gauname $x \\\\in (-\\\\infty, 0] \\\\cup [4, \\\\infty)$.",
+            "action": "Sujungę gauname $x \\in (-\\infty, 0] \\cup [4, \\infty)$.",
             "reason": "Sujungiame visų intervalų sprendinius.",
-            "latex": "x \\\\in (-\\\\infty, 0] \\\\cup [4, \\\\infty)",
+            "latex": "x \\in (-\\infty, 0] \\cup [4, \\infty)",
             "result": "Gautas galutinis atsakymas."
           }
         ],
-        "finalAnswer": "$x \\\\in (-\\\\infty, 0] \\\\cup [4, \\\\infty)$"
+        "finalAnswer": "$x \\in (-\\infty, 0] \\cup [4, \\infty)$"
       }
     ],
     "commonTraps": [
@@ -50111,8 +50111,8 @@ export const exercises = [
         "id": "ex-olimpiada-09-11-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Išspręskite nelygybę: $|x - 1| + |x - 3| \\\\ge 4$....?",
-        "back": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\\\le x < 3$ ir $x \\\\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Išspręskite nelygybę: $|x - 1| + |x - 3| \\ge 4$....?",
+        "back": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\le x < 3$ ir $x \\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -50128,7 +50128,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Išnagrinėkite tris atvejus: 1) $x < 1$, 2) $1 \\\\le x < 3$, 3) $x \\\\ge 3$.",
+        "text": "Išnagrinėkite tris atvejus: 1) $x < 1$, 2) $1 \\le x < 3$, 3) $x \\ge 3$.",
         "penalty": 0.07
       },
       {
@@ -50150,7 +50150,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite visas tolydžiąsias funkcijas $f: \\\\mathbb{R} \\to \\\\mathbb{R}$, kurios visiems realiesiems skaičiams $x, y$ tenkina lygtį $f(x+y) = f(x) + f(y)$.",
+    "statement": "Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, kurios visiems realiesiems skaičiams $x, y$ tenkina lygtį $f(x+y) = f(x) + f(y)$.",
     "answer": "Rastos visos lygties funkcija.",
     "acceptedAnswers": [
       "Rastos visos lygties funkcija."
@@ -50161,10 +50161,10 @@ export const exercises = [
     "hints": [
       "Pirmiausia raskite $f(0)$ ir parodykite, kad $f(-x) = -f(x)$.",
       "Naudodami indukciją parodykite, kad $f(nx) = nf(x)$ natūraliesiems $n$.",
-      "Parodykite, kad visiems racionaliesiems $q = m/n$ galioja $f(q) = q \\\\cdot f(1)$.",
-      "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, ši lygybė $f(x) = x \\\\cdot f(1)$ galioja ir visiems realiesiems $x$."
+      "Parodykite, kad visiems racionaliesiems $q = m/n$ galioja $f(q) = q \\cdot f(1)$.",
+      "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, ši lygybė $f(x) = x \\cdot f(1)$ galioja ir visiems realiesiems $x$."
     ],
-    "solution": "Įstatome $x=0, y=0 \\\\implies f(0) = 2f(0) \\\\implies f(0) = 0$. Parodome $f(nx) = nf(x)$ natūraliesiems $n$ naudojant indukciją pagal $n$. Išplečiame savybę neigiamiems skaičiams ir trupmenoms, todėl $f(q) = cq$ visiems $q \\\\in \\\\mathbb{Q}$ (čia $c = f(1)$). Kadangi $f$ yra tolydi, bet kuriam realiajam $x$ galime parinkti racionaliųjų skaičių seką $q_n \\to x$, todėl $f(x) = \\\\lim f(q_n) = \\\\lim c q_n = cx$.",
+    "solution": "Įstatome $x=0, y=0 \\implies f(0) = 2f(0) \\implies f(0) = 0$. Parodome $f(nx) = nf(x)$ natūraliesiems $n$ naudojant indukciją pagal $n$. Išplečiame savybę neigiamiems skaičiams ir trupmenoms, todėl $f(q) = cq$ visiems $q \\in \\mathbb{Q}$ (čia $c = f(1)$). Kadangi $f$ yra tolydi, bet kuriam realiajam $x$ galime parinkti racionaliųjų skaičių seką $q_n \\to x$, todėl $f(x) = \\lim f(q_n) = \\lim c q_n = cx$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Funkcijos",
@@ -50191,14 +50191,14 @@ export const exercises = [
         "steps": [
           {
             "title": "Racionalusis taškas",
-            "action": "Įrodome $f(nx) = nf(x)$ visam $n \\\\in \\\\mathbb{Z}$ ir $f(q) = f(1)q$ visiems $q \\\\in \\\\mathbb{Q}$.",
+            "action": "Įrodome $f(nx) = nf(x)$ visam $n \\in \\mathbb{Z}$ ir $f(q) = f(1)q$ visiems $q \\in \\mathbb{Q}$.",
             "reason": "Matematinė indukcija ir dalumo savybės.",
-            "latex": "f(q) = cq, \\\\ c = f(1)",
+            "latex": "f(q) = cq, \\ c = f(1)",
             "result": "Lygybė įrodyta racionaliems skaičiams."
           },
           {
             "title": "Tolydumo plėtinys",
-            "action": "Kiekvienam realiajam $x$ egzistuoja racionaliųjų skaičių seka $q_n$, artėjanti į $x$. Kadangi $f$ tolydi, $f(x) = \\\\lim_{n\\to\\\\infty} f(q_n) = \\\\lim_{n\\to\\\\infty} cq_n = cx$.",
+            "action": "Kiekvienam realiajam $x$ egzistuoja racionaliųjų skaičių seka $q_n$, artėjanti į $x$. Kadangi $f$ tolydi, $f(x) = \\lim_{n\\to\\infty} f(q_n) = \\lim_{n\\to\\infty} cq_n = cx$.",
             "reason": "Tolydumo apibrėžimas ir racionaliųjų skaičių tirštumas realiųjų aibėje.",
             "latex": "f(x) = cx",
             "result": "Gautas sprendinys visiems realiesiems skaičiams."
@@ -50222,7 +50222,7 @@ export const exercises = [
         "title": "Tolydumo sąlygos praleidimas",
         "wrongMove": "Teigiama, kad $f(x)=cx$ galioja visiems realiesiems skaičiams tik įrodžius tai racionaliesiems.",
         "whyTempting": "Racionalieji skaičiai atrodo pakankami padengti visą skaičių tiesę.",
-        "correction": "Būtina paminėti, kad tik tolydumas (arba monotoniškumas) leidžia išplėsti sprendinį iš $\\\\mathbb{Q}$ į $\\\\mathbb{R}$.",
+        "correction": "Būtina paminėti, kad tik tolydumas (arba monotoniškumas) leidžia išplėsti sprendinį iš $\\mathbb{Q}$ į $\\mathbb{R}$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -50237,7 +50237,7 @@ export const exercises = [
         "id": "ex-olimpiada-09-12-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite visas tolydžiąsias funkcijas $f: \\\\mathbb{R} \\to \\\\mat...?",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mat...?$",
         "back": "Tai yra klasikinė Košy funkcinė lygtis. Naudodami indukciją įrodome, kad $f(x) = cx$ visiems racionaliesiems skaičiams, o tolydumas leidžia išplėsti šią savybę visiems realiesiems skaičiams.",
         "conceptIds": [],
         "methodIds": [],
@@ -50260,13 +50260,13 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Parodykite, kad visiems racionaliesiems $q = m/n$ galioja $f(q) = q \\\\cdot f(1)$.",
+        "text": "Parodykite, kad visiems racionaliesiems $q = m/n$ galioja $f(q) = q \\cdot f(1)$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, ši lygybė $f(x) = x \\\\cdot f(1)$ galioja ir visiems realiesiems $x$.",
+        "text": "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, ši lygybė $f(x) = x \\cdot f(1)$ galioja ir visiems realiesiems $x$.",
         "penalty": 0.11
       }
     ]
@@ -50276,7 +50276,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite sumą: $\\\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$.",
+    "statement": "Apskaičiuokite sumą: $\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$.",
     "answer": "Apskaičiuota teleskopinė suma.",
     "acceptedAnswers": [
       "Apskaičiuota teleskopinė suma."
@@ -50287,10 +50287,10 @@ export const exercises = [
     "hints": [
       "Pabandykite nario trupmeną užrašyti dviejų paprastesnių trupmenų skirtumu.",
       "Pasinaudokite tapatybe: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
-      "Užrašykite pirmuosius kelis sumos narius: $(1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + \\\\dots$.",
+      "Užrašykite pirmuosius kelis sumos narius: $(1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + \\dots$.",
       "Pastebėkite, kad visi nariai, išskyrus pirmąjį ir paskutinįjį, susiprastina. Apskaičiuokite likutį."
     ],
-    "solution": "Užrašome bendrąjį narį kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Suma išsiplečia į: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\\\dots + (\\frac{1}{99} - \\frac{1}{100})$. Visi tarpiniai nariai susiprastina. Liekantis rezultatas yra $1 - \\frac{1}{100} = \\frac{99}{100}$.",
+    "solution": "Užrašome bendrąjį narį kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Suma išsiplečia į: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\dots + (\\frac{1}{99} - \\frac{1}{100})$. Visi tarpiniai nariai susiprastina. Liekantis rezultatas yra $1 - \\frac{1}{100} = \\frac{99}{100}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -50324,7 +50324,7 @@ export const exercises = [
           },
           {
             "title": "Sumos supaprastinimas",
-            "action": "Suma lygi $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\\\dots + (\\frac{1}{99} - \\frac{1}{100}) = 1 - \\frac{1}{100}$.",
+            "action": "Suma lygi $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\dots + (\\frac{1}{99} - \\frac{1}{100}) = 1 - \\frac{1}{100}$.",
             "reason": "Visi nariai pavidalu $-1/k$ ir $+1/k$ susiprastina (teleskopinis efektas).",
             "latex": "S = 1 - \\frac{1}{100} = \\frac{99}{100}",
             "result": "Rastas galutinis sumos dydis."
@@ -50363,7 +50363,7 @@ export const exercises = [
         "id": "ex-olimpiada-09-13-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Apskaičiuokite sumą: $\\\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$....?",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Apskaičiuokite sumą: $\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$....?",
         "back": "Kiekvieną sumos narį galime užrašyti kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Užrašius visą sumą, viduriniai nariai susiprastina.",
         "conceptIds": [],
         "methodIds": [],
@@ -50386,7 +50386,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Užrašykite pirmuosius kelis sumos narius: $(1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + \\\\dots$.",
+        "text": "Užrašykite pirmuosius kelis sumos narius: $(1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + \\dots$.",
         "penalty": 0.09
       },
       {
@@ -50412,11 +50412,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Kuri teorema sieja tris trikampio kraštines ir vieną kampą?",
-      "Užrašykite kosinusų teoremą kampui $C$: $c^2 = a^2 + b^2 - 2ab \\\\cos C$.",
-      "Įstatykite žinomas reikšmes $a=3, b=5, c=7$ ir išreikškite $\\\\cos C$.",
-      "Gausite $\\\\cos C = -1/2$. Raskite atitinkamą kampą trikampyje."
+      "Užrašykite kosinusų teoremą kampui $C$: $c^2 = a^2 + b^2 - 2ab \\cos C$.",
+      "Įstatykite žinomas reikšmes $a=3, b=5, c=7$ ir išreikškite $\\cos C$.",
+      "Gausite $\\cos C = -1/2$. Raskite atitinkamą kampą trikampyje."
     ],
-    "solution": "Pritaikome kosinusų teoremą: $7^2 = 3^2 + 5^2 - 2(3)(5) \\\\cos C$. Suprastiname skaičius: $49 = 9 + 25 - 30 \\\\cos C$. Išreiškiame kosinusą: $49 = 34 - 30 \\\\cos C \\\\implies 15 = -30 \\\\cos C \\\\implies \\\\cos C = -1/2$. Kadangi trikampio kampas turi būti tarp $0^\\\\circ$ ir $180^\\\\circ$, tai $C = 120^\\\\circ$.",
+    "solution": "Pritaikome kosinusų teoremą: $7^2 = 3^2 + 5^2 - 2(3)(5) \\cos C$. Suprastiname skaičius: $49 = 9 + 25 - 30 \\cos C$. Išreiškiame kosinusą: $49 = 34 - 30 \\cos C \\implies 15 = -30 \\cos C \\implies \\cos C = -1/2$. Kadangi trikampio kampas turi būti tarp $0^\\circ$ ir $180^\\circ$, tai $C = 120^\\circ$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -50424,7 +50424,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Kosinusų teorema",
-      "text": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\\\cos C$."
+      "text": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\cos C$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -50443,27 +50443,27 @@ export const exercises = [
         "steps": [
           {
             "title": "Kosinusų teoremos užrašymas",
-            "action": "Užrašome $c^2 = a^2 + b^2 - 2ab \\\\cos C$.",
+            "action": "Užrašome $c^2 = a^2 + b^2 - 2ab \\cos C$.",
             "reason": "Kosinusų teorema sieja visas tris trikampio kraštines su vienu kampu.",
-            "latex": "c^2 = a^2 + b^2 - 2ab \\\\cos C",
+            "latex": "c^2 = a^2 + b^2 - 2ab \\cos C",
             "result": "Sukurta lygtis kampo kosinusui rasti."
           },
           {
             "title": "Skaičiavimas",
-            "action": "Įstatome vertes: $49 = 9 + 25 - 30 \\\\cos C \\\\implies 15 = -30 \\\\cos C \\\\implies \\\\cos C = -\\frac{1}{2}$.",
+            "action": "Įstatome vertes: $49 = 9 + 25 - 30 \\cos C \\implies 15 = -30 \\cos C \\implies \\cos C = -\\frac{1}{2}$.",
             "reason": "Įstatome žinomus kraštinių ilgius ir atliekame algebrinius pertvarkymus.",
-            "latex": "\\\\cos C = -\\frac{1}{2}",
+            "latex": "\\cos C = -\\frac{1}{2}",
             "result": "Rastas kampo kosinusas."
           },
           {
             "title": "Kampo radimas",
-            "action": "Kadangi $0 < C < 180^\\\\circ$, tai $C = \\\\arccos(-1/2) = 120^\\\\circ$.",
-            "reason": "Vienintelis kampas trikampyje su neigiamu kosinusu $-1/2$ yra $120^\\\\circ$.",
-            "latex": "C = 120^\\\\circ",
+            "action": "Kadangi $0 < C < 180^\\circ$, tai $C = \\arccos(-1/2) = 120^\\circ$.",
+            "reason": "Vienintelis kampas trikampyje su neigiamu kosinusu $-1/2$ yra $120^\\circ$.",
+            "latex": "C = 120^\\circ",
             "result": "Gautas ieškomas kampas."
           }
         ],
-        "finalAnswer": "$120^\\\\circ$ (arba $\\frac{2\\\\pi}{3}$ rad)"
+        "finalAnswer": "$120^\\circ$ (arba $\\frac{2\\pi}{3}$ rad)"
       }
     ],
     "commonTraps": [
@@ -50479,9 +50479,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-14-trap-2",
         "title": "Atbukusio kampo ignoravimas",
-        "wrongMove": "Gavus $\\\\cos C = -1/2$, klaidingai nurodomas kampas $60^\\\\circ$.",
+        "wrongMove": "Gavus $\\cos C = -1/2$, klaidingai nurodomas kampas $60^\\circ$.",
         "whyTempting": "Mokiniai dažnai pamiršta, kad kosinusas yra neigiamas antrajame ketvirtyje.",
-        "correction": "Jei kosinusas neigiamas, kampas trikampyje yra atbukas ($>90^\\\\circ$).",
+        "correction": "Jei kosinusas neigiamas, kampas trikampyje yra atbukas ($>90^\\circ$).",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -50497,7 +50497,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio kraštinės yra $a=3, b=5, c=7$. Raskite kampą $C$, ...?",
-        "back": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\\\cos C$.",
+        "back": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\cos C$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -50513,19 +50513,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite kosinusų teoremą kampui $C$: $c^2 = a^2 + b^2 - 2ab \\\\cos C$.",
+        "text": "Užrašykite kosinusų teoremą kampui $C$: $c^2 = a^2 + b^2 - 2ab \\cos C$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite žinomas reikšmes $a=3, b=5, c=7$ ir išreikškite $\\\\cos C$.",
+        "text": "Įstatykite žinomas reikšmes $a=3, b=5, c=7$ ir išreikškite $\\cos C$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Gausite $\\\\cos C = -1/2$. Raskite atitinkamą kampą trikampyje.",
+        "text": "Gausite $\\cos C = -1/2$. Raskite atitinkamą kampą trikampyje.",
         "penalty": 0.11
       }
     ]
@@ -50535,7 +50535,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Trikampyje $ABC$ kampas $A = 30^\\\\circ$, o prieš jį esanti kraštinė $a = 10$. Raskite šio trikampio apibrėžtinio apskritimo spindulį $R$.",
+    "statement": "Trikampyje $ABC$ kampas $A = 30^\\circ$, o prieš jį esanti kraštinė $a = 10$. Raskite šio trikampio apibrėžtinio apskritimo spindulį $R$.",
     "answer": "Rastas apibrėžtinio apskritimo spindulys.",
     "acceptedAnswers": [
       "Rastas apibrėžtinio apskritimo spindulys."
@@ -50545,11 +50545,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Prisiminkite ryšį tarp trikampio kraštinių, kampų ir apibrėžtinio apskritimo spindulio.",
-      "Užrašykite apibendrintą sinusų teoremą: $\\frac{a}{\\\\sin A} = 2R$.",
-      "Įstatykite reikšmes: $a = 10$ ir $A = 30^\\\\circ$.",
-      "Prisiminkite, kad $\\\\sin 30^\\\\circ = 1/2$. Apskaičiuokite $R$."
+      "Užrašykite apibendrintą sinusų teoremą: $\\frac{a}{\\sin A} = 2R$.",
+      "Įstatykite reikšmes: $a = 10$ ir $A = 30^\\circ$.",
+      "Prisiminkite, kad $\\sin 30^\\circ = 1/2$. Apskaičiuokite $R$."
     ],
-    "solution": "Užrašome formulę $\\frac{a}{\\\\sin A} = 2R$. Įstatome kraštinę $a = 10$ ir kampą $A = 30^\\\\circ$. Apskaičiuojame: $\\frac{10}{\\\\sin 30^\\\\circ} = \\frac{10}{1/2} = 20$. Kadangi $2R = 20$, tai apibrėžtinio apskritimo spindulys $R = 10$.",
+    "solution": "Užrašome formulę $\\frac{a}{\\sin A} = 2R$. Įstatome kraštinę $a = 10$ ir kampą $A = 30^\\circ$. Apskaičiuojame: $\\frac{10}{\\sin 30^\\circ} = \\frac{10}{1/2} = 20$. Kadangi $2R = 20$, tai apibrėžtinio apskritimo spindulys $R = 10$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -50557,7 +50557,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Apibendrinta sinusų teorema",
-      "text": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\\\sin A} = 2R$."
+      "text": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -50576,14 +50576,14 @@ export const exercises = [
         "steps": [
           {
             "title": "Sinusų teoremos formulavimas",
-            "action": "Užrašome lygybę $\\frac{a}{\\\\sin A} = 2R$.",
+            "action": "Užrašome lygybę $\\frac{a}{\\sin A} = 2R$.",
             "reason": "Pagal apibendrintąją sinusų teoremą, kraštinės ir priešpriešinio kampo sinuso santykis yra apibrėžtinio apskritimo skersmuo.",
-            "latex": "\\frac{a}{\\\\sin A} = 2R",
+            "latex": "\\frac{a}{\\sin A} = 2R",
             "result": "Sukurta lygtis spinduliui $R$ rasti."
           },
           {
             "title": "Apskaičiavimas",
-            "action": "Kadangi $\\\\sin 30^\\\\circ = 0.5$, gauname $2R = \\frac{10}{0.5} = 20 \\\\implies R = 10$.",
+            "action": "Kadangi $\\sin 30^\\circ = 0.5$, gauname $2R = \\frac{10}{0.5} = 20 \\implies R = 10$.",
             "reason": "Įstatome žinomus kintamuosius ir išsprendžiame tiesinę lygtį.",
             "latex": "R = 10",
             "result": "Rastas spindulio ilgis."
@@ -50605,7 +50605,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-15-trap-2",
         "title": "Sinusų teoremos formulės klaida",
-        "wrongMove": "Naudojama formulė $R = a/\\\\sin A$ vietoj teisingos $2R = a/\\\\sin A$.",
+        "wrongMove": "Naudojama formulė $R = a/\\sin A$ vietoj teisingos $2R = a/\\sin A$.",
         "whyTempting": "Dažnas painiojimas tarp spindulio ir skersmens geometrinėse formulėse.",
         "correction": "Prisiminkite, kad santykis yra lygus APBRĖŽTINIO apskritimo SKERSMENIUI ($2R$).",
         "reviewConceptIds": [],
@@ -50622,8 +50622,8 @@ export const exercises = [
         "id": "ex-olimpiada-09-15-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampyje $ABC$ kampas $A = 30^\\\\circ$, o prieš jį esanti kr...?",
-        "back": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\\\sin A} = 2R$.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampyje $ABC$ kampas $A = 30^\\circ$, o prieš jį esanti kr...?",
+        "back": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -50639,19 +50639,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite apibendrintą sinusų teoremą: $\\frac{a}{\\\\sin A} = 2R$.",
+        "text": "Užrašykite apibendrintą sinusų teoremą: $\\frac{a}{\\sin A} = 2R$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite reikšmes: $a = 10$ ir $A = 30^\\\\circ$.",
+        "text": "Įstatykite reikšmes: $a = 10$ ir $A = 30^\\circ$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Prisiminkite, kad $\\\\sin 30^\\\\circ = 1/2$. Apskaičiuokite $R$.",
+        "text": "Prisiminkite, kad $\\sin 30^\\circ = 1/2$. Apskaičiuokite $R$.",
         "penalty": 0.11
       }
     ]
@@ -50673,11 +50673,11 @@ export const exercises = [
     ],
     "hints": [
       "Trys tiesės kertasi viename taške trikampio viduje. Tai rodo, kad reikia taikyti Čevos teoremą.",
-      "Čevos teorema teigia: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+      "Čevos teorema teigia: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
       "Įstatykite duotus santykius $\\frac{BD}{DC} = 2$ ir $\\frac{CE}{EA} = 3$.",
       "Iš gautos lygties išreikškite nežinomą santykį $\\frac{AF}{FB}$."
     ],
-    "solution": "Pagal sąlygą tiesės susikerta viename taške, todėl galioja Čevos teorema. Užrašome Čevos teoremos lygybę trikampiui $ABC$. Įstatome duotus santykius: $2 \\\\cdot 3 \\\\cdot \\frac{AF}{FB} = 1$. Gauname $6 \\\\cdot \\frac{AF}{FB} = 1 \\\\implies \\frac{AF}{FB} = \\frac{1}{6}$.",
+    "solution": "Pagal sąlygą tiesės susikerta viename taške, todėl galioja Čevos teorema. Užrašome Čevos teoremos lygybę trikampiui $ABC$. Įstatome duotus santykius: $2 \\cdot 3 \\cdot \\frac{AF}{FB} = 1$. Gauname $6 \\cdot \\frac{AF}{FB} = 1 \\implies \\frac{AF}{FB} = \\frac{1}{6}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -50685,7 +50685,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Čevos teorema",
-      "text": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$."
+      "text": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -50706,16 +50706,16 @@ export const exercises = [
         "steps": [
           {
             "title": "Teoremos pasirinkimas",
-            "action": "Užrašome Čevos teoremos formulę: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+            "action": "Užrašome Čevos teoremos formulę: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
             "reason": "Trijų cevianų susikirtimas viename taške yra ekvivalentus šiai lygybei.",
-            "latex": "\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1",
+            "latex": "\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1",
             "result": "Gauta lygybė kraštinių santykiams."
           },
           {
             "title": "Verčių įstatymas",
-            "action": "Įstatome žinomas vertes $BD/DC = 2$ ir $CE/EA = 3$, todėl $2 \\\\cdot 3 \\\\cdot \\frac{AF}{FB} = 1$.",
+            "action": "Įstatome žinomas vertes $BD/DC = 2$ ir $CE/EA = 3$, todėl $2 \\cdot 3 \\cdot \\frac{AF}{FB} = 1$.",
             "reason": "Paprastas dydžių pakeitimas iš uždavinio sąlygos.",
-            "latex": "6 \\\\cdot \\frac{AF}{FB} = 1",
+            "latex": "6 \\cdot \\frac{AF}{FB} = 1",
             "result": "Supaprastinta tiesinė lygtis."
           },
           {
@@ -50742,7 +50742,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-16-trap-2",
         "title": "Neteisinga santykių tvarka",
-        "wrongMove": "Santykių sandauga užrašoma supainiojus viršūnes (pvz., $\\frac{BD}{DC} \\\\cdot \\frac{EA}{CE} \\\\cdot \\frac{AF}{FB} = 1$).",
+        "wrongMove": "Santykių sandauga užrašoma supainiojus viršūnes (pvz., $\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB} = 1$).",
         "whyTempting": "Nepastebimas „ėjimo ratu“ principas aplink trikampį.",
         "correction": "Sekite viršūnes viena kryptimi: $A \\to F \\to B \\to D \\to C \\to E \\to A$.",
         "reviewConceptIds": [
@@ -50761,8 +50761,8 @@ export const exercises = [
         "id": "ex-olimpiada-09-16-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio $ABC$ viduje pažymėtas taškas $P$. Tiesės $AP, BP,...?",
-        "back": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio $ABC$ viduje pažymėtas taškas $P$. Tiesės $AP, BP,...?$",
+        "back": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
         "conceptIds": [
           "olimpiada-09-concept-ceva"
         ],
@@ -50776,7 +50776,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "concept",
         "front": "Suformuluokite Čevos teoremą trikampiui $ABC$ su taškais $D, E, F$ kraštinėse.",
-        "back": "Tiesės $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+        "back": "Tiesės $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
         "conceptIds": [
           "olimpiada-09-concept-ceva"
         ],
@@ -50794,7 +50794,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Čevos teorema teigia: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+        "text": "Čevos teorema teigia: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
         "penalty": 0.07
       },
       {
@@ -50826,11 +50826,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Šiame uždavinyje tiesė kerta dvi trikampio kraštines ir trečiosios pratęsimą. Tai klasikinis Menelajaus teoremos atvejis.",
-      "Užrašykite Menelajaus teoremą trikampiui $ABC$ su tiese $F-E-D$: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$.",
+      "Užrašykite Menelajaus teoremą trikampiui $ABC$ su tiese $F-E-D$: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
       "Įstatykite žinomas reikšmes $AF/FB = 2$ ir $BD/DC = 3$.",
       "Išreikškite santykį $\\frac{AE}{EC}$ (atsižvelkite, kad formulėje turite $\\frac{CE}{EA}$)."
     ],
-    "solution": "Tiesė kerta dvi kraštines ir pratęsimą, todėl taikome Menelajaus teoremą. Formulė: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$. Įstatome duotas reikšmes: $2 \\\\cdot 3 \\\\cdot \\frac{CE}{EA} = 1 \\\\implies 6 \\\\cdot \\frac{CE}{EA} = 1$. Iš čia $\\frac{CE}{EA} = \\frac{1}{6}$, vadinasi $\\frac{AE}{EC} = 6$.",
+    "solution": "Tiesė kerta dvi kraštines ir pratęsimą, todėl taikome Menelajaus teoremą. Formulė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Įstatome duotas reikšmes: $2 \\cdot 3 \\cdot \\frac{CE}{EA} = 1 \\implies 6 \\cdot \\frac{CE}{EA} = 1$. Iš čia $\\frac{CE}{EA} = \\frac{1}{6}$, vadinasi $\\frac{AE}{EC} = 6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -50838,7 +50838,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Menelajaus teorema",
-      "text": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį."
+      "text": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -50857,14 +50857,14 @@ export const exercises = [
         "steps": [
           {
             "title": "Teoremos pritaikymas",
-            "action": "Užrašome Menelajaus teoremą trikampiui $ABC$: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$.",
+            "action": "Užrašome Menelajaus teoremą trikampiui $ABC$: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
             "reason": "Tiesė kerta tris trikampio tieses, todėl taikome Menelajaus teoremą.",
-            "latex": "\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1",
+            "latex": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
             "result": "Gauta pagrindinė lygybė."
           },
           {
             "title": "Apskaičiavimas",
-            "action": "Įstatome vertes: $2 \\\\cdot 3 \\\\cdot \\frac{CE}{EA} = 1 \\\\implies \\frac{CE}{EA} = \\frac{1}{6}$.",
+            "action": "Įstatome vertes: $2 \\cdot 3 \\cdot \\frac{CE}{EA} = 1 \\implies \\frac{CE}{EA} = \\frac{1}{6}$.",
             "reason": "Suderiname narius iš sąlygos.",
             "latex": "\\frac{CE}{EA} = \\frac{1}{6}",
             "result": "Rastas atvirkštinis santykis."
@@ -50913,7 +50913,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tiesė kerta trikampio $ABC$ kraštines $AB$ ir $AC$ taškuose ...?",
-        "back": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį.",
+        "back": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -50922,8 +50922,8 @@ export const exercises = [
         "id": "ex-olimpiada-09-17-srs-2",
         "deck": "practice",
         "cardType": "concept",
-        "front": "Užrašykite Menelajaus teoremos lygybę trikampiui $ABC$, kai tiesė kerta kraštines taškuose $F \\\\in AB$, $E \\\\in AC$ ir $D \\\\in BC$ pratęsime.",
-        "back": "$\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$.",
+        "front": "Užrašykite Menelajaus teoremos lygybę trikampiui $ABC$, kai tiesė kerta kraštines taškuose $F \\in AB$, $E \\in AC$ ir $D \\in BC$ pratęsime.",
+        "back": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -50939,7 +50939,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite Menelajaus teoremą trikampiui $ABC$ su tiese $F-E-D$: $\\frac{AF}{FB} \\\\cdot \\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} = 1$.",
+        "text": "Užrašykite Menelajaus teoremą trikampiui $ABC$ su tiese $F-E-D$: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
         "penalty": 0.07
       },
       {
@@ -50975,7 +50975,7 @@ export const exercises = [
       "Apskaičiuokite santykį $\\frac{AB}{AC} = \\frac{6}{8} = \\frac{3}{4}$.",
       "Kadangi $BD + DC = BC = 7$, o $BD$ sudaro 3 dalis iš 7, raskite $BD$ ilgį."
     ],
-    "solution": "Naudojame pusiaukampinės teoremą: $BD/DC = AB/AC = 6/8 = 3/4$. Pažymime $BD = 3k$ ir $DC = 4k$ su tam tikru $k > 0$. Kadangi $BD + DC = BC = 7$, turime $3k + 4k = 7 \\\\implies 7k = 7 \\\\implies k = 1$. Apskaičiuojame $BD$: $BD = 3(1) = 3$.",
+    "solution": "Naudojame pusiaukampinės teoremą: $BD/DC = AB/AC = 6/8 = 3/4$. Pažymime $BD = 3k$ ir $DC = 4k$ su tam tikru $k > 0$. Kadangi $BD + DC = BC = 7$, turime $3k + 4k = 7 \\implies 7k = 7 \\implies k = 1$. Apskaičiuojame $BD$: $BD = 3(1) = 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -51009,7 +51009,7 @@ export const exercises = [
           },
           {
             "title": "Atkarpos ilgio radimas",
-            "action": "Kadangi $BD + DC = 7$, tai $BD = 7 \\\\cdot \\frac{3}{3+4} = 3$.",
+            "action": "Kadangi $BD + DC = 7$, tai $BD = 7 \\cdot \\frac{3}{3+4} = 3$.",
             "reason": "Padalijame bendrą ilgį proporcingai santykiui $3:4$.",
             "latex": "BD = 3",
             "result": "Rastas atkarpos $BD$ ilgis."
@@ -51107,11 +51107,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Uždavinyje kalbama apie įbrėžtinio keturkampio kraštines ir įstrižaines. Kuri teorema jas susieja?",
-      "Pritaikykite Ptolemėjo teoremą: $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$.",
+      "Pritaikykite Ptolemėjo teoremą: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
       "Įstatykite žinomus dydžius: $AB=3, BC=4, CD=3, AD=6$ ir $BD=5$.",
-      "Išspręskite lygtį: $AC \\\\cdot 5 = 3 \\\\cdot 3 + 4 \\\\cdot 6$. Raskite $AC$."
+      "Išspręskite lygtį: $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6$. Raskite $AC$."
     ],
-    "solution": "Keturkampis įbrėžtas į apskritimą, todėl galioja Ptolemėjo teorema. Formulė: $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$. Įstatome skaičius: $AC \\\\cdot 5 = 3 \\\\cdot 3 + 4 \\\\cdot 6 = 9 + 24 = 33$. Daliname iš 5: $AC = 33 / 5 = 6.6$.",
+    "solution": "Keturkampis įbrėžtas į apskritimą, todėl galioja Ptolemėjo teorema. Formulė: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$. Įstatome skaičius: $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6 = 9 + 24 = 33$. Daliname iš 5: $AC = 33 / 5 = 6.6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -51119,7 +51119,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Ptolemėjo teorema įbrėžtiniam keturkampiui",
-      "text": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$. Visi kiti ilgiai yra žinomi."
+      "text": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$. Visi kiti ilgiai yra žinomi."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -51138,14 +51138,14 @@ export const exercises = [
         "steps": [
           {
             "title": "Ptolemėjo teoremos užrašymas",
-            "action": "Užrašome $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$.",
+            "action": "Užrašome $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
             "reason": "Įbrėžtiniam keturkampiui įstrižainių sandauga yra priešpriešinių kraštinių sandaugų suma.",
-            "latex": "AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD",
+            "latex": "AC \\cdot BD = AB \\cdot CD + BC \\cdot AD",
             "result": "Gauta lygtis nežinomai įstrižainei."
           },
           {
             "title": "Lygties sprendimas",
-            "action": "Įstatome vertes ir gauname $AC \\\\cdot 5 = 3 \\\\cdot 3 + 4 \\\\cdot 6 = 33 \\\\implies AC = 6.6$.",
+            "action": "Įstatome vertes ir gauname $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6 = 33 \\implies AC = 6.6$.",
             "reason": "Paprasta vieno kintamojo tiesinė lygtis.",
             "latex": "AC = 6.6",
             "result": "Apskaičiuotas įstrižainės $AC$ ilgis."
@@ -51167,9 +51167,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-09-19-trap-2",
         "title": "Ptolemėjo teoremos taikymas bet kokiam keturkampiui",
-        "wrongMove": "Bandoma naudoti lygybę $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$ keturkampiui, kurio negalima įbrėžti į apskritimą.",
+        "wrongMove": "Bandoma naudoti lygybę $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$ keturkampiui, kurio negalima įbrėžti į apskritimą.",
         "whyTempting": "Pamirštama, kad ši lygybė galioja tik cikliškiems (įbrėžtiniams) keturkampiams.",
-        "correction": "Bendruoju atveju galioja Ptolemėjo nelygybė ($AC \\\\cdot BD \\\\le AB \\\\cdot CD + BC \\\\cdot AD$). Lygybė tik kai keturkampis įbrėžtinis.",
+        "correction": "Bendruoju atveju galioja Ptolemėjo nelygybė ($AC \\cdot BD \\le AB \\cdot CD + BC \\cdot AD$). Lygybė tik kai keturkampis įbrėžtinis.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -51185,7 +51185,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Į apskritimą įbrėžtas keturkampis $ABCD$. Žinomos jo kraštin...?",
-        "back": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$. Visi kiti ilgiai yra žinomi.",
+        "back": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$. Visi kiti ilgiai yra žinomi.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -51195,7 +51195,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "concept",
         "front": "Kokia yra Ptolemėjo teoremos formuluotė įbrėžtiniam keturkampiui?",
-        "back": "$AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$, kur $AC, BD$ – įstrižainės, o likusios – kraštinės.",
+        "back": "$AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$, kur $AC, BD$ – įstrižainės, o likusios – kraštinės.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -51211,7 +51211,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pritaikykite Ptolemėjo teoremą: $AC \\\\cdot BD = AB \\\\cdot CD + BC \\\\cdot AD$.",
+        "text": "Pritaikykite Ptolemėjo teoremą: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
         "penalty": 0.07
       },
       {
@@ -51223,7 +51223,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Išspręskite lygtį: $AC \\\\cdot 5 = 3 \\\\cdot 3 + 4 \\\\cdot 6$. Raskite $AC$.",
+        "text": "Išspręskite lygtį: $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6$. Raskite $AC$.",
         "penalty": 0.11
       }
     ]
@@ -51233,7 +51233,7 @@ export const exercises = [
     "topicId": "olimpiada-09",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Ant lentos užrašyti skaičiai $1, 2, \\\\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutinti ir vietoj jų užrašyti skaičių $a+b-1$. Žingsnis kartojamas tol, kol lieka vienas skaičius. Raskite šį skaičių.",
+    "statement": "Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutinti ir vietoj jų užrašyti skaičių $a+b-1$. Žingsnis kartojamas tol, kol lieka vienas skaičius. Raskite šį skaičių.",
     "answer": "Rastas galutinis vienintelis skaičius.",
     "acceptedAnswers": [
       "Rastas galutinis vienintelis skaičius."
@@ -51244,10 +51244,10 @@ export const exercises = [
     "hints": [
       "Kiekviename žingsnyje skaičių kiekis sumažėja vienetu. Kadangi iš pradžių yra 20 skaičių, bus atlikta 19 žingsnių.",
       "Pabandyk ištirti, kaip kinta skaičių suma po kiekvieno žingsnio. Ji visada sumažėja vienetu.",
-      "Jei suma po kiekvieno žingsnio sumažėja 1, o pradinė suma yra $1+2+\\\\dots+20$, kokia bus suma pabaigoje?",
+      "Jei suma po kiekvieno žingsnio sumažėja 1, o pradinė suma yra $1+2+\\dots+20$, kokia bus suma pabaigoje?",
       "Apskaičiuokite pradinę sumą: $S_0 = 210$. Po 19 žingsnių suma sumažės 19. Raskite paskutinį skaičių."
     ],
-    "solution": "Pradinė skaičių suma yra $S_0 = 1 + 2 + \\\\dots + 20 = 210$. Skaičių kiekis $n_0 = 20$. Kiekviename žingsnyje nutriname du skaičius ir pridedame vieną, todėl skaičių kiekis sumažėja viena vienetu, o suma sumažėja vienetu. Po 19 žingsnių liks 1 skaičius, o jo suma bus $210 - 19 = 191$.",
+    "solution": "Pradinė skaičių suma yra $S_0 = 1 + 2 + \\dots + 20 = 210$. Skaičių kiekis $n_0 = 20$. Kiekviename žingsnyje nutriname du skaičius ir pridedame vieną, todėl skaičių kiekis sumažėja viena vienetu, o suma sumažėja vienetu. Po 19 žingsnių liks 1 skaičius, o jo suma bus $210 - 19 = 191$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -51288,7 +51288,7 @@ export const exercises = [
           },
           {
             "title": "Galutinio skaičiaus radimas",
-            "action": "Pabaigoje $n_f = 1$, todėl $S_f - 1 = 190 \\\\implies S_f = 191$.",
+            "action": "Pabaigoje $n_f = 1$, todėl $S_f - 1 = 190 \\implies S_f = 191$.",
             "reason": "Kadangi invariantas nekinta, galutinio skaičiaus suma turi tenkinti $S_f - n_f = I_0$.",
             "latex": "S_f = 191",
             "result": "Rastas galutinis skaičius."
@@ -51327,7 +51327,7 @@ export const exercises = [
         "id": "ex-olimpiada-09-20-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Ant lentos užrašyti skaičiai $1, 2, \\\\dots, 20$. Vienu ėjimu ...?",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu ...?",
         "back": "Tegul $S$ yra skaičių suma ant lentos, o $n$ yra jų skaičius. Kiekviename žingsnyje nauja suma yra $S' = S - a - b + (a+b-1) = S - 1$, o skaičių kiekis sumažėja vienetu $n' = n - 1$. Vadinasi, skirtumas $S - n$ yra invariantas.",
         "conceptIds": [],
         "methodIds": [],
@@ -51360,7 +51360,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Jei suma po kiekvieno žingsnio sumažėja 1, o pradinė suma yra $1+2+\\\\dots+20$, kokia bus suma pabaigoje?",
+        "text": "Jei suma po kiekvieno žingsnio sumažėja 1, o pradinė suma yra $1+2+\\dots+20$, kokia bus suma pabaigoje?",
         "penalty": 0.09
       },
       {
@@ -54127,7 +54127,7 @@ export const exercises = [
     "topicId": "olimpiada-10",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\\\equiv 3 \\\\pmod{11}$.",
+    "statement": "Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
     "answer": "Nustatyta kvadratinės liekanos savybė moduliu 11.",
     "acceptedAnswers": [
       "Nustatyta kvadratinės liekanos savybė moduliu 11."
@@ -54138,12 +54138,12 @@ export const exercises = [
       "olimpiada-10-concept-quad-reciprocity"
     ],
     "hints": [
-      "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\\\left(\\frac{3}{11}\\right)$.",
-      "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\\\left(\\frac{3}{11}\\right)\\\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
-      "Todėl $\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\\\left(\\frac{11}{3}\\right)$.",
-      "Sumažinkite moduliu 3: $11 \\\\equiv 2 \\\\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\\\equiv 3 \\\\pmod{11}$."
+      "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
+      "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
+      "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
+      "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
     ],
-    "solution": "Uždavinį suformuluojame kaip kvadratinio palyginimo sprendžiamumą moduliu 11. Taikome kvadratinio abipusiškumo dėsnį Legendre simboliui $\\\\left(\\frac{3}{11}\\right)$. Pakeičiame jį į $-\\\\left(\\frac{11}{3}\\right) = -\\\\left(\\frac{2}{3}\\right)$. Kadangi 2 nėra kvadratas moduliu 3, gauname $-(-1) = 1$. Todėl sprendinys egzistuoja.",
+    "solution": "Uždavinį suformuluojame kaip kvadratinio palyginimo sprendžiamumą moduliu 11. Taikome kvadratinio abipusiškumo dėsnį Legendre simboliui $\\left(\\frac{3}{11}\\right)$. Pakeičiame jį į $-\\left(\\frac{11}{3}\\right) = -\\left(\\frac{2}{3}\\right)$. Kadangi 2 nėra kvadratas moduliu 3, gauname $-(-1) = 1$. Todėl sprendinys egzistuoja.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -54151,7 +54151,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Legendre simbolis",
-      "text": "Turime apskaičiuoti Legendre simbolį $\\\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį."
+      "text": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį."
     },
     "strategyTags": [
       "modular-arithmetic"
@@ -54172,24 +54172,24 @@ export const exercises = [
         "steps": [
           {
             "title": "Legendre simbolio užrašymas",
-            "action": "Turime apskaičiuoti $\\\\left(\\frac{3}{11}\\right)$.",
+            "action": "Turime apskaičiuoti $\\left(\\frac{3}{11}\\right)$.",
             "reason": "Sprendinio egzistavimas ekvivalentus Legendre simbolio reikšmei 1.",
-            "latex": "\\\\left(\\frac{3}{11}\\right)",
+            "latex": "\\left(\\frac{3}{11}\\right)",
             "result": "Suformuluotas liekanos uždavinys."
           },
           {
             "title": "Abipusiškumo dėsnio taikymas",
-            "action": "$\\\\left(\\frac{3}{11}\\right)\\\\left(\\frac{11}{3}\\right) = (-1)^{1 \\\\cdot 5} = -1 \\\\implies \\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$.",
+            "action": "$\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{1 \\cdot 5} = -1 \\implies \\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
             "reason": "Pagal kvadratinio abipusiškumo dėsnį, nes abu pirminiai yra nelyginiai.",
-            "latex": "\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)",
+            "latex": "\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)",
             "result": "Modulis sumažintas iki 3."
           },
           {
             "title": "Simbolio moduliu 3 skaičiavimas",
-            "action": "$\\\\left(\\frac{11}{3}\\right) = \\\\left(\\frac{2}{3}\\right) = -1 \\\\implies \\\\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
-            "reason": "Kadangi $11 \\\\equiv 2 \\\\pmod 3$, o 2 nėra kvadratas mod 3.",
-            "latex": "\\\\left(\\frac{3}{11}\\right) = 1",
-            "result": "Įrodytas sprendinio egzistavimas. Pavyzdžiui, $5^2 = 25 \\\\equiv 3 \\\\pmod{11}$."
+            "action": "$\\left(\\frac{11}{3}\\right) = \\left(\\frac{2}{3}\\right) = -1 \\implies \\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
+            "reason": "Kadangi $11 \\equiv 2 \\pmod 3$, o 2 nėra kvadratas mod 3.",
+            "latex": "\\left(\\frac{3}{11}\\right) = 1",
+            "result": "Įrodytas sprendinio egzistavimas. Pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
           }
         ],
         "finalAnswer": "Taip, egzistuoja (pavyzdžiui, $x = 5$)."
@@ -54199,9 +54199,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-01-trap-1",
         "title": "Kvadratinio abipusiškumo ženklo klaida",
-        "wrongMove": "Pamirštamas $(-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$ daugiklis, teigiant, kad $\\\\left(\\frac{3}{11}\\right) = \\\\left(\\frac{11}{3}\\right)$.",
+        "wrongMove": "Pamirštamas $(-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$ daugiklis, teigiant, kad $\\left(\\frac{3}{11}\\right) = \\left(\\frac{11}{3}\\right)$.",
         "whyTempting": "Daugeliu atvejų Legendre simboliai sutampa, todėl mokiniai linkę supaprastinti taisyklę.",
-        "correction": "Kadangi $3 \\\\equiv 3 \\\\pmod{4}$ ir $11 \\\\equiv 3 \\\\pmod{4}$, tai $\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$.",
+        "correction": "Kadangi $3 \\equiv 3 \\pmod{4}$ ir $11 \\equiv 3 \\pmod{4}$, tai $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
         "reviewConceptIds": [
           "olimpiada-10-concept-quad-reciprocity"
         ],
@@ -54212,7 +54212,7 @@ export const exercises = [
         "title": "Nepilnas liekanų tikrinimas",
         "wrongMove": "Patikrinami tik keli skaičiai (pvz., $x=1, 2$) ir daroma išvada, kad sprendinio nėra.",
         "whyTempting": "Rankinis tikrinimas yra lėtas ir imlus klaidoms.",
-        "correction": "Naudokite Legendre simbolį arba patikrinkite visas liekanas iki $x=5$ (nes $x^2 \\\\equiv (-x)^2$).",
+        "correction": "Naudokite Legendre simbolį arba patikrinkite visas liekanas iki $x=5$ (nes $x^2 \\equiv (-x)^2$).",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -54228,7 +54228,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad ...?",
-        "back": "Turime apskaičiuoti Legendre simbolį $\\\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį.",
+        "back": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį.",
         "conceptIds": [
           "olimpiada-10-concept-quad-reciprocity"
         ],
@@ -54242,25 +54242,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\\\left(\\frac{3}{11}\\right)$.",
+        "text": "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\\\left(\\frac{3}{11}\\right)\\\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
+        "text": "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Todėl $\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\\\left(\\frac{11}{3}\\right)$.",
+        "text": "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Sumažinkite moduliu 3: $11 \\\\equiv 2 \\\\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\\\equiv 3 \\\\pmod{11}$.",
+        "text": "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$.",
         "penalty": 0.11
       }
     ]
@@ -54286,7 +54286,7 @@ export const exercises = [
       "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
       "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$."
     ],
-    "solution": "Ieškome skaidinio $5 = (a+bi)(c+di)$. Taikome normą: $N(5) = 25 \\\\implies N(a+bi)N(c+di) = 25$. Kadangi ieškome netrivialių daliklių, jų normos turi būti lygios 5. Lygtis $a^2+b^2=5$ turi sprendinį $a=2, b=1$, todėl $5 = (2+i)(2-i)$.",
+    "solution": "Ieškome skaidinio $5 = (a+bi)(c+di)$. Taikome normą: $N(5) = 25 \\implies N(a+bi)N(c+di) = 25$. Kadangi ieškome netrivialių daliklių, jų normos turi būti lygios 5. Lygtis $a^2+b^2=5$ turi sprendinį $a=2, b=1$, todėl $5 = (2+i)(2-i)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -54294,7 +54294,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Gauso skaičių norma",
-      "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\\\cdot w$, tai $N(z) \\\\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$."
+      "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -54316,13 +54316,13 @@ export const exercises = [
           {
             "title": "Normos lygybė",
             "action": "Užrašome $N(5) = 25 = N(z)N(w)$.",
-            "reason": "Normos multiplikatyvumas $\\\\mathbb{Z}[i]$ aibėje.",
+            "reason": "Normos multiplikatyvumas $\\mathbb{Z}[i]$ aibėje.",
             "latex": "N(z)N(w) = 25",
             "result": "Apribotos galimos daliklių normos."
           },
           {
             "title": "Normos vertės radimas",
-            "action": "Kadangi dalikliai nėra vienetiniai, $N(z) = 5 \\\\implies a^2+b^2=5$.",
+            "action": "Kadangi dalikliai nėra vienetiniai, $N(z) = 5 \\implies a^2+b^2=5$.",
             "reason": "Vieninteliai netrivialūs 25 dalikliai yra 5 ir 5.",
             "latex": "a^2+b^2 = 5",
             "result": "Gauta sveikųjų skaičių kvadratų lygtis."
@@ -54342,9 +54342,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-02-trap-1",
         "title": "Klaidinga prielaida apie pirminių skaičių savybes",
-        "wrongMove": "Teigiama, kad 5 negalima suskaidyti, nes jis yra pirminis skaičius sveikųjų skaičių aibėje $\\\\mathbb{Z}$.",
-        "whyTempting": "Mokiniai dažnai painioja pirminius skaičius $\\\\mathbb{Z}$ aibėje su pirminiais Gauso skaičiais $\\\\mathbb{Z}[i]$.",
-        "correction": "Gauso sveikųjų skaičių aibėje pirminis skaičius $p \\\\equiv 1 \\\\pmod 4$ visada yra sudėtinis.",
+        "wrongMove": "Teigiama, kad 5 negalima suskaidyti, nes jis yra pirminis skaičius sveikųjų skaičių aibėje $\\mathbb{Z}$.",
+        "whyTempting": "Mokiniai dažnai painioja pirminius skaičius $\\mathbb{Z}$ aibėje su pirminiais Gauso skaičiais $\\mathbb{Z}[i]$.",
+        "correction": "Gauso sveikųjų skaičių aibėje pirminis skaičius $p \\equiv 1 \\pmod 4$ visada yra sudėtinis.",
         "reviewConceptIds": [
           "olimpiada-10-concept-gaussian-integers"
         ],
@@ -54371,7 +54371,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaiči...?",
-        "back": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\\\cdot w$, tai $N(z) \\\\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$.",
+        "back": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$.",
         "conceptIds": [
           "olimpiada-10-concept-gaussian-integers"
         ],
@@ -54422,12 +54422,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\\\equiv 1 \\\\pmod 4$.",
+      "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
       "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
-      "Kadangi $2017 = 4 \\\\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
-      "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\\\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma."
+      "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
+      "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma."
     ],
-    "solution": "Patikriname pirminį skaičių 2017 moduliu 4. Kadangi $2017 \\\\equiv 1 \\\\pmod 4$, jis yra dviejų kvadratų suma. Skaidome skaičių 2019: $2019 = 3 \\\\cdot 673$. Daliklis 3 yra pirminis pavidalo $4k+3$. Kadangi pirminio 3 laipsnio rodiklis skaičiuje 2019 yra nelyginis (lygus 1), 2019 negalima užrašyti dviejų kvadratų suma.",
+    "solution": "Patikriname pirminį skaičių 2017 moduliu 4. Kadangi $2017 \\equiv 1 \\pmod 4$, jis yra dviejų kvadratų suma. Skaidome skaičių 2019: $2019 = 3 \\cdot 673$. Daliklis 3 yra pirminis pavidalo $4k+3$. Kadangi pirminio 3 laipsnio rodiklis skaičiuje 2019 yra nelyginis (lygus 1), 2019 negalima užrašyti dviejų kvadratų suma.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -54435,7 +54435,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Fermo teorema apie dviejų kvadratų sumą",
-      "text": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\\\equiv 1 \\\\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\\\pmod 4$, įeina su lyginiu laipsniu."
+      "text": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu."
     },
     "strategyTags": [
       "modular-arithmetic"
@@ -54454,29 +54454,29 @@ export const exercises = [
         "steps": [
           {
             "title": "Pirmojo skaičiaus analizė",
-            "action": "Skaičius 2017 yra pirminis ir $2017 \\\\equiv 1 \\\\pmod 4$.",
+            "action": "Skaičius 2017 yra pirminis ir $2017 \\equiv 1 \\pmod 4$.",
             "reason": "Pagal Fermo teoremą apie dviejų kvadratų sumą.",
-            "latex": "2017 \\\\equiv 1 \\\\pmod 4",
+            "latex": "2017 \\equiv 1 \\pmod 4",
             "result": "2017 galima išreikšti kaip $a^2+b^2$."
           },
           {
             "title": "Antrojo skaičiaus analizė",
-            "action": "Skaidome $2019 = 3 \\\\cdot 673$, kur $3 \\\\equiv 3 \\\\pmod 4$ yra pirminis, įeinantis laipsniu 1.",
-            "reason": "Fermo teoremos apibendrinimas sudėtiniams skaičiams reikalauja lyginių laipsnių pirminiams $p \\\\equiv 3 \\\\pmod 4$.",
-            "latex": "2019 = 3^1 \\\\cdot 673^1",
+            "action": "Skaidome $2019 = 3 \\cdot 673$, kur $3 \\equiv 3 \\pmod 4$ yra pirminis, įeinantis laipsniu 1.",
+            "reason": "Fermo teoremos apibendrinimas sudėtiniams skaičiams reikalauja lyginių laipsnių pirminiams $p \\equiv 3 \\pmod 4$.",
+            "latex": "2019 = 3^1 \\cdot 673^1",
             "result": "2019 negalima išreikšti dviejų kvadratų suma."
           }
         ],
-        "finalAnswer": "Tik 2017 (nes $2017 \\\\equiv 1 \\\\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\\\equiv 3 \\\\pmod 4$ su nelyginiu rodikliu)."
+        "finalAnswer": "Tik 2017 (nes $2017 \\equiv 1 \\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\equiv 3 \\pmod 4$ su nelyginiu rodikliu)."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-10-03-trap-1",
         "title": "Tikrinimas tik moduliu 4 be faktorizacijos",
-        "wrongMove": "Nusprendžiama, kad 2019 gali būti užrašytas kvadratų suma, nes $2019 \\\\equiv 3 \\\\pmod 4$ (klaidinga logika).",
+        "wrongMove": "Nusprendžiama, kad 2019 gali būti užrašytas kvadratų suma, nes $2019 \\equiv 3 \\pmod 4$ (klaidinga logika).",
         "whyTempting": "Mokiniai dažnai bando taikyti paprastą taisyklę visam skaičiui, užuot skaidę jį pirminiais.",
-        "correction": "Sudėtiniam skaičiui neužtenka patikrinti liekanos moduliu 4; būtina užtikrinti, kad visi pirminiai dalikliai $p \\\\equiv 3 \\\\pmod 4$ turėtų lyginį laipsnį.",
+        "correction": "Sudėtiniam skaičiui neužtenka patikrinti liekanos moduliu 4; būtina užtikrinti, kad visi pirminiai dalikliai $p \\equiv 3 \\pmod 4$ turėtų lyginį laipsnį.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
@@ -54501,7 +54501,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatyk...?",
-        "back": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\\\equiv 1 \\\\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\\\pmod 4$, įeina su lyginiu laipsniu.",
+        "back": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -54511,7 +54511,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\\\equiv 1 \\\\pmod 4$.",
+        "text": "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
         "penalty": 0.05
       },
       {
@@ -54523,13 +54523,13 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Kadangi $2017 = 4 \\\\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
+        "text": "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\\\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma.",
+        "text": "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma.",
         "penalty": 0.11
       }
     ]
@@ -54589,7 +54589,7 @@ export const exercises = [
             "title": "Artinių apskaičiavimas",
             "action": "Apskaičiuojame: $C_0=1$, $C_1=1+\\frac{1}{2}=\\frac{3}{2}$, $C_2=1+\\frac{1}{2+\\frac{1}{3}}=\\frac{10}{7}$, $C_3=\\frac{43}{30}$.",
             "reason": "Artiniai randami iš dalinių grandininės trupmenos narių.",
-            "latex": "C_0=1, \\\\ C_1=\\frac{3}{2}, \\\\ C_2=\\frac{10}{7}, \\\\ C_3=\\frac{43}{30}",
+            "latex": "C_0=1, \\ C_1=\\frac{3}{2}, \\ C_2=\\frac{10}{7}, \\ C_3=\\frac{43}{30}",
             "result": "Rasti visi keturi konvergentai."
           }
         ],
@@ -54600,9 +54600,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-04-trap-1",
         "title": "Aritmetinės klaidos Euklido algoritme",
-        "wrongMove": "Neteisingai apskaičiuojama liekana, pvz., teigiant, kad $30 = 2 \\\\cdot 13 + 6$ vietoje $4$.",
+        "wrongMove": "Neteisingai apskaičiuojama liekana, pvz., teigiant, kad $30 = 2 \\cdot 13 + 6$ vietoje $4$.",
         "whyTempting": "Nuoseklus dalijimas reikalauja didelio susikaupimo, ypač su didesniais skaičiais.",
-        "correction": "Kiekviename žingsnyje patikrinkite daugybą: $dalinys = daliklis \\\\cdot sveikoji\\\\_dalis + liekana$.",
+        "correction": "Kiekviename žingsnyje patikrinkite daugybą: $dalinys = daliklis \\cdot sveikoji\\_dalis + liekana$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
@@ -54674,12 +54674,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\\\dots$.",
+      "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
       "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
-      "If $y=2$, tai $x^2 = 1 + 2 \\\\cdot 4 = 9$.",
+      "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
       "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$."
     ],
-    "solution": "Pradedame tikrinti natūraliąsias reikšmes $y = 1, 2, 3 \\\\dots$. Įstatome $y=1 \\\\implies x^2 = 3$, sprendinių nėra. Įstatome $y=2 \\\\implies x^2 = 1 + 2(4) = 9 \\\\implies x = 3$. Mažiausias teigiamas sveikasis sprendinys yra $(3, 2)$.",
+    "solution": "Pradedame tikrinti natūraliąsias reikšmes $y = 1, 2, 3 \\dots$. Įstatome $y=1 \\implies x^2 = 3$, sprendinių nėra. Įstatome $y=2 \\implies x^2 = 1 + 2(4) = 9 \\implies x = 3$. Mažiausias teigiamas sveikasis sprendinys yra $(3, 2)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -54687,7 +54687,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Pelio lygties fundamentalusis sprendinys",
-      "text": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\\\sqrt{2}$ artiniai yra $1, 3/2, \\\\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$."
+      "text": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -54706,14 +54706,14 @@ export const exercises = [
         "steps": [
           {
             "title": "Sprendinių perrinkimas",
-            "action": "Pertvarkome lygtį: $x^2 = 1 + 2y^2$ ir tikriname $y \\\\ge 1$.",
+            "action": "Pertvarkome lygtį: $x^2 = 1 + 2y^2$ ir tikriname $y \\ge 1$.",
             "reason": "Mažiausią sprendinį natūraliuose skaičiuose patogu rasti perrinkimo būdu mažoms $y$ vertėms.",
             "latex": "x^2 = 1 + 2y^2",
             "result": "Pasiruošta reikšmių tikrinimui."
           },
           {
             "title": "Vertės radimas",
-            "action": "Kai $y=2 \\\\implies x^2 = 9 \\\\implies x=3$.",
+            "action": "Kai $y=2 \\implies x^2 = 9 \\implies x=3$.",
             "reason": "9 yra tikslusis kvadratas, todėl gauname sveikąjį sprendinį.",
             "latex": "3^2 - 2(2)^2 = 9 - 8 = 1",
             "result": "Rastas sprendinys $(3, 2)$."
@@ -54728,7 +54728,7 @@ export const exercises = [
         "title": "Trivialaus sprendinio pateikimas",
         "wrongMove": "Pateikiamas sprendinys $(1, 0)$.",
         "whyTempting": "Ši pora tenkina lygtį $1^2 - 2(0)^2 = 1$.",
-        "correction": "Sąlygoje prašoma natūraliųjų skaičių ($x, y \\\\ge 1$), todėl $y=0$ netinka.",
+        "correction": "Sąlygoje prašoma natūraliųjų skaičių ($x, y \\ge 1$), todėl $y=0$ netinka.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
@@ -54737,7 +54737,7 @@ export const exercises = [
         "title": "Per ankstyvas sustojimas perrinkime",
         "wrongMove": "Patikrinama tik $y=1$ ir daroma išvada, kad lygtis neturi sprendinių natūraliuose skaičiuose.",
         "whyTempting": "Jei pirmas bandymas nepavyksta, mokiniai dažnai abejoja sprendinių egzistavimu.",
-        "correction": "Tęskite tikrinimą $y=2, 3, \\\\dots$ arba naudokite grandininių trupmenų metodą fundamentaliajam sprendiniui rasti.",
+        "correction": "Tęskite tikrinimą $y=2, 3, \\dots$ arba naudokite grandininių trupmenų metodą fundamentaliajam sprendiniui rasti.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -54753,7 +54753,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčia...?",
-        "back": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\\\sqrt{2}$ artiniai yra $1, 3/2, \\\\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$.",
+        "back": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -54763,7 +54763,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\\\dots$.",
+        "text": "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
         "penalty": 0.05
       },
       {
@@ -54775,7 +54775,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "If $y=2$, tai $x^2 = 1 + 2 \\\\cdot 4 = 9$.",
+        "text": "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
         "penalty": 0.09
       },
       {
@@ -54803,9 +54803,9 @@ export const exercises = [
       "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
       "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
       "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
-      "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\\\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius."
+      "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius."
     ],
-    "solution": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas. Indukcijos prielaida: tarkime, kad bet kuris $2 \\\\le k < n$ gali būti suskaidytas pirminiais daugtuviais. Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\\\cdot b$, kur $2 \\\\le a, b < n$. Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\\\dots p_r$, $b = q_1 \\\\dots q_s$. Tada $n = p_1 \\\\dots p_r q_1 \\\\dots q_s$.",
+    "solution": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas. Indukcijos prielaida: tarkime, kad bet kuris $2 \\le k < n$ gali būti suskaidytas pirminiais daugtuviais. Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\cdot b$, kur $2 \\le a, b < n$. Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\dots p_r$, $b = q_1 \\dots q_s$. Tada $n = p_1 \\dots p_r q_1 \\dots q_s$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Strategijos ir įrodymai",
@@ -54813,7 +54813,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Pilnoji indukcija",
-      "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\\\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\\\cdot b$, kur $2 \\\\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
+      "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
     },
     "strategyTags": [
       "induction"
@@ -54839,16 +54839,16 @@ export const exercises = [
           },
           {
             "title": "Indukcijos žingsnis",
-            "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\\\cdot b$, kur $a, b < n$.",
+            "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\cdot b$, kur $a, b < n$.",
             "reason": "Taikome stipriąją indukciją, kur prielaida galioja visiems mažesniems nariams.",
             "latex": "n = ab",
             "result": "Sudėtinis skaičius išreikštas sandauga."
           },
           {
             "title": "Skaidinių sujungimas",
-            "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\\\prod p_i$, $b = \\\\prod q_j \\\\implies n = \\\\prod p_i \\\\prod q_j$.",
+            "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\prod p_i$, $b = \\prod q_j \\implies n = \\prod p_i \\prod q_j$.",
             "reason": "Įstatome mažesnių skaičių skaidinius į sandaugą.",
-            "latex": "n = p_1 \\\\dots p_r q_1 \\\\dots q_s",
+            "latex": "n = p_1 \\dots p_r q_1 \\dots q_s",
             "result": "Teiginys įrodytas."
           }
         ],
@@ -54886,7 +54886,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvi...?",
-        "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\\\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\\\cdot b$, kur $2 \\\\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
+        "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -54914,7 +54914,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\\\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
+        "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
         "penalty": 0.11
       }
     ]
@@ -54935,10 +54935,10 @@ export const exercises = [
     "hints": [
       "Prisiminkite trijų kintamųjų kubų sumos formulę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - xy - yz - zx)$.",
       "Pirmiausia apskaičiuokite kvadratų sumą $x^2+y^2+z^2 = (x+y+z)^2 - 2(xy+yz+zx)$.",
-      "Įstatykite vertes: $x^2+y^2+z^2 = 3^2 - 2 \\\\cdot 2 = 5$.",
+      "Įstatykite vertes: $x^2+y^2+z^2 = 3^2 - 2 \\cdot 2 = 5$.",
       "Įstatykite visas gautas vertes į pagrindinę formulę: $x^3+y^3+z^3 - 3(1) = 3(5 - 2)$. Išspręskite kubų sumą."
     ],
-    "solution": "Apskaičiuojame kvadratų sumą: $x^2+y^2+z^2 = (x+y+z)^2 - 2(xy+yz+zx) = 3^2 - 2(2) = 5$. Užrašome tapatybę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$. Įstatome reikšmes: $x^3+y^3+z^3 - 3(1) = 3 \\\\cdot (5 - 2)$. Atliekame veiksmus: $x^3+y^3+z^3 - 3 = 9$, todėl $x^3+y^3+z^3 = 12$.",
+    "solution": "Apskaičiuojame kvadratų sumą: $x^2+y^2+z^2 = (x+y+z)^2 - 2(xy+yz+zx) = 3^2 - 2(2) = 5$. Užrašome tapatybę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$. Įstatome reikšmes: $x^3+y^3+z^3 - 3(1) = 3 \\cdot (5 - 2)$. Atliekame veiksmus: $x^3+y^3+z^3 - 3 = 9$, todėl $x^3+y^3+z^3 = 12$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -55041,7 +55041,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite vertes: $x^2+y^2+z^2 = 3^2 - 2 \\\\cdot 2 = 5$.",
+        "text": "Įstatykite vertes: $x^2+y^2+z^2 = 3^2 - 2 \\cdot 2 = 5$.",
         "penalty": 0.09
       },
       {
@@ -55099,7 +55099,7 @@ export const exercises = [
           {
             "title": "Šaknų pakeitimas laipsniais",
             "action": "Užrašome $x_i^4 = x_i^2 + x_i$ kiekvienam $i$.",
-            "reason": "Kadangi $x_i^3 - x_i - 1 = 0 \\\\implies x_i^3 = x_i+1$, padauginame iš $x_i$.",
+            "reason": "Kadangi $x_i^3 - x_i - 1 = 0 \\implies x_i^3 = x_i+1$, padauginame iš $x_i$.",
             "latex": "x_i^4 = x_i^2 + x_i",
             "result": "Sumažintas laipsnis nuo 4 iki 2."
           },
@@ -55190,10 +55190,10 @@ export const exercises = [
     "topicId": "olimpiada-10",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams $a$ ir $b$ galioja nelygybė: $a^3 b^2 \\\\le \\frac{3a^5 + 2b^5}{5}$.",
-    "answer": "Įrodyta $a^3 b^2 \\\\le \\frac{3a^5 + 2b^5}{5}$.",
+    "statement": "Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams $a$ ir $b$ galioja nelygybė: $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
+    "answer": "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
     "acceptedAnswers": [
-      "Įrodyta $a^3 b^2 \\\\le \\frac{3a^5 + 2b^5}{5}$."
+      "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -55202,9 +55202,9 @@ export const exercises = [
       "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
       "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
       "Šių narių suma yra $3a^5 + 2b^5$, o jų sandauga yra $a^{15}b^{10}$.",
-      "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\\\ge \\\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta."
+      "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta."
     ],
-    "solution": "Pasirenkame penkis teigiamus skaičius: $a^5, a^5, a^5, b^5, b^5$. Pritaikome jiems aritmetinio-geometrinio vidurkio (AM-GM) nelygybę. Aritmetinis vidurkis yra $\\frac{3a^5 + 2b^5}{5}$. Geometrinis vidurkis yra $\\\\sqrt[5]{a^5 \\\\cdot a^5 \\\\cdot a^5 \\\\cdot b^5 \\\\cdot b^5} = \\\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
+    "solution": "Pasirenkame penkis teigiamus skaičius: $a^5, a^5, a^5, b^5, b^5$. Pritaikome jiems aritmetinio-geometrinio vidurkio (AM-GM) nelygybę. Aritmetinis vidurkis yra $\\frac{3a^5 + 2b^5}{5}$. Geometrinis vidurkis yra $\\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5} = \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Nelygybės",
@@ -55212,7 +55212,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Pasvertasis AM-GM",
-      "text": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\\\ge \\\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
+      "text": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -55233,21 +55233,21 @@ export const exercises = [
             "title": "Penkių narių pasirinkimas",
             "action": "Tegul duoti skaičiai yra $x_1=x_2=x_3=a^5$ ir $x_4=x_5=b^5$.",
             "reason": "Suderiname narius taip, kad geometrinis vidurkis turėtų laipsnius 3 ir 2.",
-            "latex": "\\\\{a^5, a^5, a^5, b^5, b^5\\\\}",
+            "latex": "\\{a^5, a^5, a^5, b^5, b^5\\}",
             "result": "Nustatyti AM-GM kintamieji."
           },
           {
             "title": "AM-GM taikymas",
-            "action": "$\\frac{a^5+a^5+a^5+b^5+b^5}{5} \\\\ge \\\\sqrt[5]{a^5 \\\\cdot a^5 \\\\cdot a^5 \\\\cdot b^5 \\\\cdot b^5}$.",
+            "action": "$\\frac{a^5+a^5+a^5+b^5+b^5}{5} \\ge \\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5}$.",
             "reason": "Taikome klasikinę AM-GM nelygybę 5 nariams.",
-            "latex": "\\frac{3a^5 + 2b^5}{5} \\\\ge \\\\sqrt[5]{a^{15}b^{10}}",
+            "latex": "\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}}",
             "result": "Gauta pradinė nelygybės forma."
           },
           {
             "title": "Supaprastinimas",
-            "action": "$\\\\sqrt[5]{a^{15}b^{10}} = a^3b^2 \\\\implies a^3b^2 \\\\le \\frac{3a^5+2b^5}{5}$.",
+            "action": "$\\sqrt[5]{a^{15}b^{10}} = a^3b^2 \\implies a^3b^2 \\le \\frac{3a^5+2b^5}{5}$.",
             "reason": "Šaknies traukimas iš kintamųjų laipsnių.",
-            "latex": "a^3 b^2 \\\\le \\frac{3a^5+2b^5}{5}",
+            "latex": "a^3 b^2 \\le \\frac{3a^5+2b^5}{5}",
             "result": "Nelygybė įrodyta."
           }
         ],
@@ -55258,18 +55258,18 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-09-trap-1",
         "title": "Netinkamas AM-GM narių pasirinkimas",
-        "wrongMove": "Bandoma taikyti AM-GM nelygybę tik dviem nariams $a^5$ ir $b^5$, gaunant $\\frac{a^5+b^5}{2} \\\\ge a^{2.5}b^{2.5}$.",
+        "wrongMove": "Bandoma taikyti AM-GM nelygybę tik dviem nariams $a^5$ ir $b^5$, gaunant $\\frac{a^5+b^5}{2} \\ge a^{2.5}b^{2.5}$.",
         "whyTempting": "Dviejų narių vidurkis yra paprasčiausia AM-GM forma.",
-        "correction": "Norint gauti nelygybę su $a^3b^2$, reikia 5 narių (trijų $a^5$ ir dviejų $b^5$), kad geometrinis vidurkis būtų $\\\\sqrt[5]{a^{15}b^{10}}$.",
+        "correction": "Norint gauti nelygybę su $a^3b^2$, reikia 5 narių (trijų $a^5$ ir dviejų $b^5$), kad geometrinis vidurkis būtų $\\sqrt[5]{a^{15}b^{10}}$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
       {
         "id": "ex-olimpiada-10-09-trap-2",
         "title": "Aritmetinės klaidos laipsnių skaičiavime",
-        "wrongMove": "Neteisingai apskaičiuojama sandauga $a^5 \\\\cdot a^5 \\\\cdot a^5 = a^{125}$ (dauginant rodiklius vietoje sudėties).",
+        "wrongMove": "Neteisingai apskaičiuojama sandauga $a^5 \\cdot a^5 \\cdot a^5 = a^{125}$ (dauginant rodiklius vietoje sudėties).",
         "whyTempting": "Mokiniai dažnai painioja laipsnių daugybos taisykles su kėlimu laipsniu.",
-        "correction": "Dauginant laipsnius su vienodais pagrindais, rodikliai sudedami: $a^5 \\\\cdot a^5 \\\\cdot a^5 = a^{5+5+5} = a^{15}$.",
+        "correction": "Dauginant laipsnius su vienodais pagrindais, rodikliai sudedami: $a^5 \\cdot a^5 \\cdot a^5 = a^{5+5+5} = a^{15}$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -55285,7 +55285,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams...?",
-        "back": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\\\ge \\\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
+        "back": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -55313,7 +55313,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\\\ge \\\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta.",
+        "text": "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta.",
         "penalty": 0.11
       }
     ]
@@ -55323,10 +55323,10 @@ export const exercises = [
     "topicId": "olimpiada-10",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\\\ge \\frac{a+b+c}{2}$.",
-    "answer": "Įrodyta $\\\\sum \\frac{a^2}{b+c} \\\\ge \\frac{a+b+c}{2}$.",
+    "statement": "Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{a+b+c}{2}$.",
+    "answer": "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$.",
     "acceptedAnswers": [
-      "Įrodyta $\\\\sum \\frac{a^2}{b+c} \\\\ge \\frac{a+b+c}{2}$."
+      "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$."
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -55335,11 +55335,11 @@ export const exercises = [
     ],
     "hints": [
       "Kairėje nelygybės pusėje turime kvadratų ir vardiklių santykių sumą. Tam idealiai tinka Titu lema.",
-      "Užrašykite bendrąją Titu lemos formą: $\\\\sum \\frac{x_i^2}{y_i} \\\\ge \\frac{(\\\\sum x_i)^2}{\\\\sum y_i}$.",
+      "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
       "Priskirkite $x_1=a, x_2=b, x_3=c$ ir $y_1=b+c, y_2=c+a, y_3=a+b$.",
       "Suskaičiuokite vardiklių sumą: $y_1+y_2+y_3 = 2(a+b+c)$. Įrašykite į nelygybę ir suprastinkite."
     ],
-    "solution": "Pritaikome Titu lemą trims nariams su $x_i \\\\in \\\\{a, b, c\\\\}$ ir $y_i \\\\in \\\\{b+c, c+a, a+b\\\\}$. Formulė duoda: $\\\\sum \\frac{a^2}{b+c} \\\\ge \\frac{(a+b+c)^2}{(b+c) + (c+a) + (a+b)}$. Vardiklio suma yra $2(a+b+c)$. Sutrumpiname $(a+b+c)$ ir gauname dešinėje pusėje $\\frac{a+b+c}{2}$.",
+    "solution": "Pritaikome Titu lemą trims nariams su $x_i \\in \\{a, b, c\\}$ ir $y_i \\in \\{b+c, c+a, a+b\\}$. Formulė duoda: $\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{(b+c) + (c+a) + (a+b)}$. Vardiklio suma yra $2(a+b+c)$. Sutrumpiname $(a+b+c)$ ir gauname dešinėje pusėje $\\frac{a+b+c}{2}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Nelygybės",
@@ -55347,7 +55347,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Titu lema",
-      "text": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\\\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$."
+      "text": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -55368,16 +55368,16 @@ export const exercises = [
         "steps": [
           {
             "title": "Titu lemos taikymas",
-            "action": "Užrašome $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\\\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)}$.",
+            "action": "Užrašome $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)}$.",
             "reason": "Titu lema teigia, kad kvadratų ir teigiamų vardiklių santykių suma yra ne mažesnė už sumos kvadratą, padalintą iš vardiklių sumos.",
-            "latex": "\\\\sum \\frac{a^2}{b+c} \\\\ge \\frac{(a+b+c)^2}{2(a+b+c)}",
+            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}",
             "result": "Gauta bendroji nelygybės forma."
           },
           {
             "title": "Supaprastinimas",
             "action": "Kadangi $a+b+c > 0$, galime suprastinti: $\\frac{(a+b+c)^2}{2(a+b+c)} = \\frac{a+b+c}{2}$.",
             "reason": "Trupmenos skaitiklio ir vardiklio dalijimas iš teigiamo reiškinio $a+b+c$.",
-            "latex": "\\\\sum \\frac{a^2}{b+c} \\\\ge \\frac{a+b+c}{2}",
+            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}",
             "result": "Nelygybė įrodyta."
           }
         ],
@@ -55397,7 +55397,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-10-trap-2",
         "title": "Netinkamas Titu lemos narių priskyrimas",
-        "wrongMove": "Bandoma taikyti nelygybę formoje $\\\\sum \\frac{a}{b+c}$ tiesiogiai, nepaverčiant skaitiklio kvadratu.",
+        "wrongMove": "Bandoma taikyti nelygybę formoje $\\sum \\frac{a}{b+c}$ tiesiogiai, nepaverčiant skaitiklio kvadratu.",
         "whyTempting": "Titu lema (Sedrakiano nelygybė) reikalauja skaitiklių kvadratų.",
         "correction": "Jei turite $\\frac{a}{b+c}$, užrašykite tai kaip $\\frac{a^2}{a(b+c)}$ prieš taikydami lemą, arba užtikrinkite, kad skaitiklis jau yra kvadratas.",
         "reviewConceptIds": [
@@ -55416,8 +55416,8 @@ export const exercises = [
         "id": "ex-olimpiada-10-10-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\fra...?",
-        "back": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\\\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\fra...?$",
+        "back": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$.",
         "conceptIds": [
           "olimpiada-10-concept-titus-lemma"
         ],
@@ -55437,7 +55437,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite bendrąją Titu lemos formą: $\\\\sum \\frac{x_i^2}{y_i} \\\\ge \\frac{(\\\\sum x_i)^2}{\\\\sum y_i}$.",
+        "text": "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
         "penalty": 0.07
       },
       {
@@ -55459,21 +55459,21 @@ export const exercises = [
     "topicId": "olimpiada-10",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioja nelygybė: $\\\\sin A + \\\\sin B + \\\\sin C \\\\le \\frac{3\\\\sqrt{3}}{2}$.",
-    "answer": "Įrodyta $\\\\sum \\\\sin A \\\\le \\frac{3\\\\sqrt{3}}{2}$.",
+    "statement": "Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioja nelygybė: $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
+    "answer": "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$.",
     "acceptedAnswers": [
-      "Įrodyta $\\\\sum \\\\sin A \\\\le \\frac{3\\\\sqrt{3}}{2}$."
+      "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$."
     ],
     "answerTolerance": 0,
     "choices": [],
     "concepts": [],
     "hints": [
-      "Ištirkite funkcijos $f(x) = \\\\sin x$ išgaubtumą intervale $(0, \\\\pi)$.",
-      "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\\\le$.",
-      "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\\\sin A + \\\\sin B + \\\\sin C \\\\le 3 \\\\sin\\\\left(\\frac{A+B+C}{3}\\right)$.",
-      "Kadangi trikampio kampų suma yra $A+B+C = 180^\\\\circ$, tai kampų vidurkis yra $60^\\\\circ$. Apskaičiuokite $3 \\\\sin 60^\\\\circ$."
+      "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
+      "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
+      "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
+      "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$."
     ],
-    "solution": "Funkcija $f(x) = \\\\sin x$ yra du kartus diferencijuojama intervale $(0, \\\\pi)$. Antroji išvestinė $f''(x) = -\\\\sin x < 0$ visame smailiojo trikampio kampų intervale, todėl funkcija yra įgaubta. Pagal Jenseno nelygybę, $\\frac{\\\\sin A + \\\\sin B + \\\\sin C}{3} \\\\le \\\\sin\\\\left(\\frac{A+B+C}{3}\\right) = \\\\sin(60^\\\\circ) = \\frac{\\\\sqrt{3}}{2}$. Padauginame iš 3 ir gauname $\\\\sin A + \\\\sin B + \\\\sin C \\\\le \\frac{3\\\\sqrt{3}}{2}$.",
+    "solution": "Funkcija $f(x) = \\sin x$ yra du kartus diferencijuojama intervale $(0, \\pi)$. Antroji išvestinė $f''(x) = -\\sin x < 0$ visame smailiojo trikampio kampų intervale, todėl funkcija yra įgaubta. Pagal Jenseno nelygybę, $\\frac{\\sin A + \\sin B + \\sin C}{3} \\le \\sin\\left(\\frac{A+B+C}{3}\\right) = \\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$. Padauginame iš 3 ir gauname $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Nelygybės",
@@ -55481,7 +55481,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Jenseno nelygybė trigonometrinėms funkcijoms",
-      "text": "Funkcija $f(x) = \\\\sin x$ yra įgaubta (concave) intervale $(0, \\\\pi)$, nes jos antroji išvestinė $f''(x) = -\\\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\\\le f\\\\left(\\frac{A+B+C}{3}\\right)$."
+      "text": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -55500,45 +55500,45 @@ export const exercises = [
         "steps": [
           {
             "title": "Funkcijos analizė",
-            "action": "Nagrinėjame $f(x) = \\\\sin x$, $f''(x) = -\\\\sin x$.",
+            "action": "Nagrinėjame $f(x) = \\sin x$, $f''(x) = -\\sin x$.",
             "reason": "Išvestinė parodo funkcijos įgaubtumą.",
-            "latex": "f''(x) < 0 \\text{ intervale } (0, \\\\pi)",
+            "latex": "f''(x) < 0 \\text{ intervale } (0, \\pi)",
             "result": "Funkcija yra įgaubta."
           },
           {
             "title": "Jenseno nelygybės užrašymas",
-            "action": "$\\frac{f(A)+f(B)+f(C)}{3} \\\\le f\\\\left(\\frac{A+B+C}{3}\\right) \\\\implies \\frac{\\\\sum \\\\sin A}{3} \\\\le \\\\sin\\\\left(\\frac{\\\\pi}{3}\\right)$.",
+            "action": "$\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right) \\implies \\frac{\\sum \\sin A}{3} \\le \\sin\\left(\\frac{\\pi}{3}\\right)$.",
             "reason": "Jenseno nelygybė įgaubtoms funkcijoms su svoriais $1/3$.",
-            "latex": "\\\\sum \\\\sin A \\\\le 3 \\\\sin(60^\\\\circ)",
+            "latex": "\\sum \\sin A \\le 3 \\sin(60^\\circ)",
             "result": "Gauta ribinė nelygybės vertė."
           },
           {
             "title": "Galutinis vertinimas",
-            "action": "$\\\\sum \\\\sin A \\\\le 3 \\\\cdot \\frac{\\\\sqrt{3}}{2} = \\frac{3\\\\sqrt{3}}{2}$.",
+            "action": "$\\sum \\sin A \\le 3 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{3\\sqrt{3}}{2}$.",
             "reason": "Įstatome žinomą sinuso vertę ir padauginame iš 3.",
-            "latex": "\\\\sum \\\\sin A \\\\le \\frac{3\\\\sqrt{3}}{2}",
+            "latex": "\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}",
             "result": "Nelygybė įrodyta."
           }
         ],
-        "finalAnswer": "Nelygybė įrodyta taikant Jenseno nelygybę tolydžiai įgaubtai funkcijai $f(x) = \\\\sin x$ intervale $(0, \\\\pi)$."
+        "finalAnswer": "Nelygybė įrodyta taikant Jenseno nelygybę tolydžiai įgaubtai funkcijai $f(x) = \\sin x$ intervale $(0, \\pi)$."
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-10-11-trap-1",
         "title": "Neteisinga nelygybės kryptis",
-        "wrongMove": "Taikoma Jenseno nelygybė kaip išgaubtai (convex) funkcijai: $\\frac{\\\\sum f(x_i)}{3} \\\\ge f(\\frac{\\\\sum x_i}{3})$.",
+        "wrongMove": "Taikoma Jenseno nelygybė kaip išgaubtai (convex) funkcijai: $\\frac{\\sum f(x_i)}{3} \\ge f(\\frac{\\sum x_i}{3})$.",
         "whyTempting": "Mokiniai dažnai painioja įgaubtų (concave) ir išgaubtų (convex) funkcijų savybes bei nelygybės ženklus.",
-        "correction": "$\\\\sin x$ intervale $(0, \\\\pi)$ yra įgaubta ($f'' < 0$), todėl vidurkių sinusas yra didesnis arba lygus sinusų vidurkiui.",
+        "correction": "$\\sin x$ intervale $(0, \\pi)$ yra įgaubta ($f'' < 0$), todėl vidurkių sinusas yra didesnis arba lygus sinusų vidurkiui.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
       {
         "id": "ex-olimpiada-10-11-trap-2",
         "title": "Taikymo srities nepaisymas",
-        "wrongMove": "Taikoma nelygybė kampams, kurie nepatenka į intervalą $(0, \\\\pi)$.",
+        "wrongMove": "Taikoma nelygybė kampams, kurie nepatenka į intervalą $(0, \\pi)$.",
         "whyTempting": "Tikimasi, kad nelygybė galioja visiems kampams, neatsižvelgiant į trikampio savybes.",
-        "correction": "Jenseno nelygybė reikalauja, kad funkcija būtų įgaubta visame nagrinėjamame intervale. Trikampio kampai $A, B, C$ visada yra $(0, \\\\pi)$, kur $\\\\sin x$ yra įgaubta.",
+        "correction": "Jenseno nelygybė reikalauja, kad funkcija būtų įgaubta visame nagrinėjamame intervale. Trikampio kampai $A, B, C$ visada yra $(0, \\pi)$, kur $\\sin x$ yra įgaubta.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -55554,7 +55554,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioj...?",
-        "back": "Funkcija $f(x) = \\\\sin x$ yra įgaubta (concave) intervale $(0, \\\\pi)$, nes jos antroji išvestinė $f''(x) = -\\\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\\\le f\\\\left(\\frac{A+B+C}{3}\\right)$.",
+        "back": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -55564,25 +55564,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Ištirkite funkcijos $f(x) = \\\\sin x$ išgaubtumą intervale $(0, \\\\pi)$.",
+        "text": "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\\\le$.",
+        "text": "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\\\sin A + \\\\sin B + \\\\sin C \\\\le 3 \\\\sin\\\\left(\\frac{A+B+C}{3}\\right)$.",
+        "text": "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi trikampio kampų suma yra $A+B+C = 180^\\\\circ$, tai kampų vidurkis yra $60^\\\\circ$. Apskaičiuokite $3 \\\\sin 60^\\\\circ$.",
+        "text": "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$.",
         "penalty": 0.11
       }
     ]
@@ -55592,7 +55592,7 @@ export const exercises = [
     "topicId": "olimpiada-10",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^3+b^3+c^3 + 3abc \\\\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
+    "statement": "Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
     "answer": "Įrodyta Šūro nelygybė.",
     "acceptedAnswers": [
       "Įrodyta Šūro nelygybė."
@@ -55602,11 +55602,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Tai klasikinė Šūro nelygybė su parametru $r=1$.",
-      "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\\\ge 0$.",
-      "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\\\ge b \\\\ge c$.",
+      "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
+      "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
       "Atskliauskite ir sugrupuokite narius, kad gautumėte pateiktą nelygybę."
     ],
-    "solution": "Tarkime be bendrumo praradimo, kad $a \\\\ge b \\\\ge c$. Užrašome Šūro formą su $r=1$: $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\\\ge 0$. Atskliaudžiame reiškinius: $a^3 - a^2 b - a^2 c + abc + b^3 - b^2 a - b^2 c + abc + c^3 - c^2 a - c^2 b + abc \\\\ge 0$. Sugrupuojame neigiamus narius ir perkeliame juos į dešinę pusę: $a^3+b^3+c^3 + 3abc \\\\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
+    "solution": "Tarkime be bendrumo praradimo, kad $a \\ge b \\ge c$. Užrašome Šūro formą su $r=1$: $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$. Atskliaudžiame reiškinius: $a^3 - a^2 b - a^2 c + abc + b^3 - b^2 a - b^2 c + abc + c^3 - c^2 a - c^2 b + abc \\ge 0$. Sugrupuojame neigiamus narius ir perkeliame juos į dešinę pusę: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Nelygybės",
@@ -55614,7 +55614,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Šūro nelygybės forma",
-      "text": "Šūro nelygybė teigia, kad $\\\\sum a^r(a-b)(a-c) \\\\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę."
+      "text": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -55633,23 +55633,23 @@ export const exercises = [
         "steps": [
           {
             "title": "Šūro nelygybės užrašymas",
-            "action": "Užrašome $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\\\ge 0$.",
+            "action": "Užrašome $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$.",
             "reason": "Šūro nelygybė su $r=1$ visada galioja neneigiamiems realiesiems skaičiams.",
-            "latex": "\\\\sum_{cyc} a(a-b)(a-c) \\\\ge 0",
+            "latex": "\\sum_{cyc} a(a-b)(a-c) \\ge 0",
             "result": "Gauta pradinė sistemos forma."
           },
           {
             "title": "Išskleidimas",
-            "action": "Išskleisdami gauname $a^3+b^3+c^3 + 3abc - (a^2b+ab^2+b^2c+bc^2+c^2a+ca^2) \\\\ge 0$.",
+            "action": "Išskleisdami gauname $a^3+b^3+c^3 + 3abc - (a^2b+ab^2+b^2c+bc^2+c^2a+ca^2) \\ge 0$.",
             "reason": "Atliekame algebrinį skliaustų atidarymą.",
-            "latex": "a^3+b^3+c^3 + 3abc \\\\ge \\\\sum_{sym} a^2 b",
+            "latex": "a^3+b^3+c^3 + 3abc \\ge \\sum_{sym} a^2 b",
             "result": "Nelygybė išreikšta simetrinėmis sumomis."
           },
           {
             "title": "Grupavimas",
-            "action": "Sutvarkome dešinę pusę: $\\\\sum_{sym} a^2b = ab(a+b) + bc(b+c) + ca(c+a)$.",
+            "action": "Sutvarkome dešinę pusę: $\\sum_{sym} a^2b = ab(a+b) + bc(b+c) + ca(c+a)$.",
             "reason": "Sugrupuojame narius po du su bendru daugikliu.",
-            "latex": "a^3+b^3+c^3 + 3abc \\\\ge ab(a+b) + bc(b+c) + ca(c+a)",
+            "latex": "a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)",
             "result": "Uždavinys įrodytas."
           }
         ],
@@ -55662,7 +55662,7 @@ export const exercises = [
         "title": "AM-GM nelygybės netinkamas taikymas",
         "wrongMove": "Bandoma įrodyti nelygybę tiesiogiai taikant AM-GM kiekvienam nariui atskirai.",
         "whyTempting": "AM-GM yra populiariausia nelygybė, todėl mokiniai bando ją taikyti visur, net jei kintamųjų laipsniai nesutampa.",
-        "correction": "Šūro nelygybė yra stipresnė už AM-GM tam tikrose srityse. Geriausia ją įrodyti naudojant ciklinę sumą $\\\\sum a(a-b)(a-c) \\\\ge 0$.",
+        "correction": "Šūro nelygybė yra stipresnė už AM-GM tam tikrose srityse. Geriausia ją įrodyti naudojant ciklinę sumą $\\sum a(a-b)(a-c) \\ge 0$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
@@ -55686,8 +55686,8 @@ export const exercises = [
         "id": "ex-olimpiada-10-12-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^...?",
-        "back": "Šūro nelygybė teigia, kad $\\\\sum a^r(a-b)(a-c) \\\\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę.",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^...?$",
+        "back": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -55703,13 +55703,13 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\\\ge 0$.",
+        "text": "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\\\ge b \\\\ge c$.",
+        "text": "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
         "penalty": 0.09
       },
       {
@@ -55870,11 +55870,11 @@ export const exercises = [
     ],
     "hints": [
       "Pasirinkite tašką $O$ kaip koordinačių pradžią ir nubrėžkite statmenį $OA$ iš $O$ į tiesę $l$.",
-      "Tegul $A'$ yra taško $A$ inversijos vaizdas. Bet kuriam kitam tiesės taškui $P$ ir jo vaizdui $P'$ galioja $OP \\\\cdot OP' = OA \\\\cdot OA' = R^2$.",
+      "Tegul $A'$ yra taško $A$ inversijos vaizdas. Bet kuriam kitam tiesės taškui $P$ ir jo vaizdui $P'$ galioja $OP \\cdot OP' = OA \\cdot OA' = R^2$.",
       "Iš to seka santykis $OP/OA = OA'/OP'$, todėl trikampiai $OAP$ ir $OP'A'$ yra panašūs (bendras kampas $O$).",
-      "Kadangi kampas $OAP = 90^\\\\circ$ (nes $OA$ status tiesei), tai ir kampas $OP'A'$ turi būti $90^\\\\circ$. Taškas $P'$ guli ant apskritimo, kurio skersmuo yra $OA'$."
+      "Kadangi kampas $OAP = 90^\\circ$ (nes $OA$ status tiesei), tai ir kampas $OP'A'$ turi būti $90^\\circ$. Taškas $P'$ guli ant apskritimo, kurio skersmuo yra $OA'$."
     ],
-    "solution": "Nubrėžiame statmenį $OA$ iš centro $O$ į duotąją tiesę $l$. Tegul $A'$ yra $A$ vaizdas po inversijos, o $P$ – bet koks tiesės $l$ taškas, o $P'$ – jo vaizdas. Pagal inversijos apibrėžimą, $OP \\\\cdot OP' = OA \\\\cdot OA' = R^2 \\\\implies \\frac{OP}{OA} = \\frac{OA'}{OP'}$. Trikampiai $OAP$ ir $OP'A'$ turi bendrą kampą $O$ ir proporcingas kraštines, todėl jie yra panašūs. Kadangi $\\\\angle OAP = 90^\\\\circ$, tai ir $\\\\angle OP'A' = 90^\\\\circ$. Vadinasi, $P'$ visada guli ant apskritimo su skersmeniu $OA'$.",
+    "solution": "Nubrėžiame statmenį $OA$ iš centro $O$ į duotąją tiesę $l$. Tegul $A'$ yra $A$ vaizdas po inversijos, o $P$ – bet koks tiesės $l$ taškas, o $P'$ – jo vaizdas. Pagal inversijos apibrėžimą, $OP \\cdot OP' = OA \\cdot OA' = R^2 \\implies \\frac{OP}{OA} = \\frac{OA'}{OP'}$. Trikampiai $OAP$ ir $OP'A'$ turi bendrą kampą $O$ ir proporcingas kraštines, todėl jie yra panašūs. Kadangi $\\angle OAP = 90^\\circ$, tai ir $\\angle OP'A' = 90^\\circ$. Vadinasi, $P'$ visada guli ant apskritimo su skersmeniu $OA'$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -55903,23 +55903,23 @@ export const exercises = [
         "steps": [
           {
             "title": "Statmens nubrėžimas",
-            "action": "Tegul $OA \\\\perp l$ su $A \\\\in l$, ir $A'$ yra $A$ inversijos vaizdas: $OA \\\\cdot OA' = R^2$.",
+            "action": "Tegul $OA \\perp l$ su $A \\in l$, ir $A'$ yra $A$ inversijos vaizdas: $OA \\cdot OA' = R^2$.",
             "reason": "Sukuriamas atskaitos taškas tiesėje.",
-            "latex": "OA \\\\cdot OA' = R^2",
+            "latex": "OA \\cdot OA' = R^2",
             "result": "Nubrėžtas statmuo ir nustatytas jo vaizdas."
           },
           {
             "title": "Panašumo nustatymas",
-            "action": "Bet kuriam $P \\\\in l$, $OP \\\\cdot OP' = OA \\\\cdot OA' \\\\implies \\triangle OAP \\\\sim \\triangle OP'A'$.",
+            "action": "Bet kuriam $P \\in l$, $OP \\cdot OP' = OA \\cdot OA' \\implies \\triangle OAP \\sim \\triangle OP'A'$.",
             "reason": "Pagal kraštinių santykius ir bendrą kampą $O$.",
-            "latex": "\\triangle OAP \\\\sim \\triangle OP'A'",
+            "latex": "\\triangle OAP \\sim \\triangle OP'A'",
             "result": "Įrodytas dviejų trikampių panašumas."
           },
           {
             "title": "Kampo savybė",
-            "action": "$\\\\angle OAP = 90^\\\\circ \\\\implies \\\\angle OP'A' = 90^\\\\circ$. Taškas $P'$ guli ant apskritimo su skersmeniu $OA'$.",
-            "reason": "Panašių trikampių atitinkami kampai yra lygūs, o $90^\\\\circ$ kampas brėžia apskritimą pagal Taleso teoremą.",
-            "latex": "\\\\angle OP'A' = 90^\\\\circ",
+            "action": "$\\angle OAP = 90^\\circ \\implies \\angle OP'A' = 90^\\circ$. Taškas $P'$ guli ant apskritimo su skersmeniu $OA'$.",
+            "reason": "Panašių trikampių atitinkami kampai yra lygūs, o $90^\\circ$ kampas brėžia apskritimą pagal Taleso teoremą.",
+            "latex": "\\angle OP'A' = 90^\\circ",
             "result": "Įrodytas tiesės atvaizdavimas į apskritimą, einantį per $O$."
           }
         ],
@@ -55981,7 +55981,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Tegul $A'$ yra taško $A$ inversijos vaizdas. Bet kuriam kitam tiesės taškui $P$ ir jo vaizdui $P'$ galioja $OP \\\\cdot OP' = OA \\\\cdot OA' = R^2$.",
+        "text": "Tegul $A'$ yra taško $A$ inversijos vaizdas. Bet kuriam kitam tiesės taškui $P$ ir jo vaizdui $P'$ galioja $OP \\cdot OP' = OA \\cdot OA' = R^2$.",
         "penalty": 0.07
       },
       {
@@ -55993,7 +55993,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi kampas $OAP = 90^\\\\circ$ (nes $OA$ status tiesei), tai ir kampas $OP'A'$ turi būti $90^\\\\circ$. Taškas $P'$ guli ant apskritimo, kurio skersmuo yra $OA'$.",
+        "text": "Kadangi kampas $OAP = 90^\\circ$ (nes $OA$ status tiesei), tai ir kampas $OP'A'$ turi būti $90^\\circ$. Taškas $P'$ guli ant apskritimo, kurio skersmuo yra $OA'$.",
         "penalty": 0.11
       }
     ]
@@ -56012,12 +56012,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Lygiakraščiame trikampyje kraštinę $AC$ galima gauti pasukus kraštinę $AB$ $60^\\\\circ$ kampu apie tašką $A$.",
-      "Kompleksiniais skaičiais tai užrašoma: $c-a = (b-a)\\\\omega$, kur $\\\\omega = e^{i\\\\pi/3}$ tenkina lygtį $\\\\omega^2 - \\\\omega + 1 = 0$.",
-      "Pertvarkykite lygtį: $c - a(1-\\\\omega) - b\\\\omega = 0$. Kadangi $1-\\\\omega = -\\\\omega^2$, gauname $c + a\\\\omega^2 - b\\\\omega = 0$.",
-      "Pakelkite šį ryšį kvadratu arba sudauginkite su konjuguotu, kad pašalintumėte $\\\\omega$, ir gausite simetrinę formą $a^2+b^2+c^2 = ab+bc+ca$."
+      "Lygiakraščiame trikampyje kraštinę $AC$ galima gauti pasukus kraštinę $AB$ $60^\\circ$ kampu apie tašką $A$.",
+      "Kompleksiniais skaičiais tai užrašoma: $c-a = (b-a)\\omega$, kur $\\omega = e^{i\\pi/3}$ tenkina lygtį $\\omega^2 - \\omega + 1 = 0$.",
+      "Pertvarkykite lygtį: $c - a(1-\\omega) - b\\omega = 0$. Kadangi $1-\\omega = -\\omega^2$, gauname $c + a\\omega^2 - b\\omega = 0$.",
+      "Pakelkite šį ryšį kvadratu arba sudauginkite su konjuguotu, kad pašalintumėte $\\omega$, ir gausite simetrinę formą $a^2+b^2+c^2 = ab+bc+ca$."
     ],
-    "solution": "Tegul $\\\\omega = e^{i\\\\pi/3}$, kuris tenkina $\\\\omega^2 - \\\\omega + 1 = 0 \\\\implies \\\\omega^2 = \\\\omega - 1$. Lygiakraščio trikampio sąlyga yra $c - a = (b - a)\\\\omega$. Pertvarkome lygtį: $c - a(1-\\\\omega) - b\\\\omega = 0 \\\\implies c + a\\\\omega^2 - b\\\\omega = 0$. Panaudoję sąryšį su šaknimis, gauname, kad ši sąlyga ekvivalentu kvadratinei tapatybei $a^2+b^2+c^2 = ab+bc+ca$.",
+    "solution": "Tegul $\\omega = e^{i\\pi/3}$, kuris tenkina $\\omega^2 - \\omega + 1 = 0 \\implies \\omega^2 = \\omega - 1$. Lygiakraščio trikampio sąlyga yra $c - a = (b - a)\\omega$. Pertvarkome lygtį: $c - a(1-\\omega) - b\\omega = 0 \\implies c + a\\omega^2 - b\\omega = 0$. Panaudoję sąryšį su šaknimis, gauname, kad ši sąlyga ekvivalentu kvadratinei tapatybei $a^2+b^2+c^2 = ab+bc+ca$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -56025,7 +56025,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Sukimas kompleksinėje plokštumoje",
-      "text": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\\\circ$ ($e^{i\\\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\\\pi/3}$."
+      "text": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\circ$ ($e^{i\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\pi/3}$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -56044,27 +56044,27 @@ export const exercises = [
         "steps": [
           {
             "title": "Sukimo lygtis",
-            "action": "Užrašome $c-a = (b-a)\\\\omega$, kur $\\\\omega^2 - \\\\omega + 1 = 0$.",
-            "reason": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus vieną vektorių $60^\\\\circ$ kampu gauname kitą.",
-            "latex": "c-a = (b-a)\\\\omega",
+            "action": "Užrašome $c-a = (b-a)\\omega$, kur $\\omega^2 - \\omega + 1 = 0$.",
+            "reason": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus vieną vektorių $60^\\circ$ kampu gauname kitą.",
+            "latex": "c-a = (b-a)\\omega",
             "result": "Sukurta geometrinė lygtis kompleksinėje formoje."
           },
           {
             "title": "Pertvarkymas",
-            "action": "Suvedame į $a(\\\\omega - 1) - b\\\\omega + c = 0 \\\\implies -a\\\\omega^2 - b\\\\omega + c = 0 \\\\implies a\\\\omega^2 + b\\\\omega - c = 0$.",
-            "reason": "Naudojame tapatybę $\\\\omega - 1 = \\\\omega^2$.",
-            "latex": "a\\\\omega^2 + b\\\\omega - c = 0",
-            "result": "Gauta tiesinė priklausomybė su $\\\\omega$."
+            "action": "Suvedame į $a(\\omega - 1) - b\\omega + c = 0 \\implies -a\\omega^2 - b\\omega + c = 0 \\implies a\\omega^2 + b\\omega - c = 0$.",
+            "reason": "Naudojame tapatybę $\\omega - 1 = \\omega^2$.",
+            "latex": "a\\omega^2 + b\\omega - c = 0",
+            "result": "Gauta tiesinė priklausomybė su $\\omega$."
           },
           {
             "title": "Šaknies eliminavimas",
-            "action": "Šis reiškinys dalijasi iš $\\\\omega^2-\\\\omega+1$, kas atitinka simetrinę lygybę $a^2+b^2+c^2 - ab-bc-ca = 0$.",
-            "reason": "Kadangi $\\\\omega$ yra polinomo $x^2-x+1$ šaknis, išreiškiame per simetrinius koeficientus.",
+            "action": "Šis reiškinys dalijasi iš $\\omega^2-\\omega+1$, kas atitinka simetrinę lygybę $a^2+b^2+c^2 - ab-bc-ca = 0$.",
+            "reason": "Kadangi $\\omega$ yra polinomo $x^2-x+1$ šaknis, išreiškiame per simetrinius koeficientus.",
             "latex": "a^2+b^2+c^2 = ab+bc+ca",
             "result": "Įrodyta abipusė sąlyga."
           }
         ],
-        "finalAnswer": "Įrodyta naudojant sukimo operatorių $e^{i\\\\pi/3}$."
+        "finalAnswer": "Įrodyta naudojant sukimo operatorių $e^{i\\pi/3}$."
       }
     ],
     "commonTraps": [
@@ -56073,14 +56073,14 @@ export const exercises = [
         "title": "Klaidinga prielaida apie realiuosius skaičius",
         "wrongMove": "Manoma, kad lygybė $a^2+b^2+c^2 = ab+bc+ca$ galioja tik jei $a, b, c$ yra realieji skaičiai.",
         "whyTempting": "Realiųjų skaičių aibėje ši lygybė reiškia $a=b=c$ (taškas), todėl mokiniai nesitiki, kad kompleksinėje plokštumoje ji aprašo lygiakraštį trikampį.",
-        "correction": "Kompleksinėje plokštumoje ši lygybė yra ekvivalentu sukimo sąlygai $c-a = (b-a)e^{\\\\pm i\\\\pi/3}$.",
+        "correction": "Kompleksinėje plokštumoje ši lygybė yra ekvivalentu sukimo sąlygai $c-a = (b-a)e^{\\pm i\\pi/3}$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
       {
         "id": "ex-olimpiada-10-15-trap-2",
         "title": "Sukimo krypties nepaisymas",
-        "wrongMove": "Bandoma įrodyti teiginį naudojant tik vieną sukimo kryptį (pvz., $+60^\\\\circ$).",
+        "wrongMove": "Bandoma įrodyti teiginį naudojant tik vieną sukimo kryptį (pvz., $+60^\\circ$).",
         "whyTempting": "Mokiniai dažnai pamiršta, kad trikampio viršūnės gali būti išvardytos prieš laikrodžio rodyklę arba pagal ją.",
         "correction": "Lygiakraščiam trikampiui tapatybė $a^2+b^2+c^2 - ab-bc-ca = 0$ apima abu atvejus, nes ji gauta sudauginus abi galimas sukimo lygtis.",
         "reviewConceptIds": [],
@@ -56098,7 +56098,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul trys kompleksiniai skaičiai $a, b, c$ žymi trikampio v...?",
-        "back": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\\\circ$ ($e^{i\\\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\\\pi/3}$.",
+        "back": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\circ$ ($e^{i\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\pi/3}$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -56108,25 +56108,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Lygiakraščiame trikampyje kraštinę $AC$ galima gauti pasukus kraštinę $AB$ $60^\\\\circ$ kampu apie tašką $A$.",
+        "text": "Lygiakraščiame trikampyje kraštinę $AC$ galima gauti pasukus kraštinę $AB$ $60^\\circ$ kampu apie tašką $A$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kompleksiniais skaičiais tai užrašoma: $c-a = (b-a)\\\\omega$, kur $\\\\omega = e^{i\\\\pi/3}$ tenkina lygtį $\\\\omega^2 - \\\\omega + 1 = 0$.",
+        "text": "Kompleksiniais skaičiais tai užrašoma: $c-a = (b-a)\\omega$, kur $\\omega = e^{i\\pi/3}$ tenkina lygtį $\\omega^2 - \\omega + 1 = 0$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pertvarkykite lygtį: $c - a(1-\\\\omega) - b\\\\omega = 0$. Kadangi $1-\\\\omega = -\\\\omega^2$, gauname $c + a\\\\omega^2 - b\\\\omega = 0$.",
+        "text": "Pertvarkykite lygtį: $c - a(1-\\omega) - b\\omega = 0$. Kadangi $1-\\omega = -\\omega^2$, gauname $c + a\\omega^2 - b\\omega = 0$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Pakelkite šį ryšį kvadratu arba sudauginkite su konjuguotu, kad pašalintumėte $\\\\omega$, ir gausite simetrinę formą $a^2+b^2+c^2 = ab+bc+ca$.",
+        "text": "Pakelkite šį ryšį kvadratu arba sudauginkite su konjuguotu, kad pašalintumėte $\\omega$, ir gausite simetrinę formą $a^2+b^2+c^2 = ab+bc+ca$.",
         "penalty": 0.11
       }
     ]
@@ -56186,7 +56186,7 @@ export const exercises = [
             "title": "Plotų skaičiavimas",
             "action": "Užrašome $S_{IBC} = \\frac{1}{2}ar$, $S_{ICA} = \\frac{1}{2}br$, $S_{IAB} = \\frac{1}{2}cr$.",
             "reason": "Kampo pusiaukampinių sankirta $I$ nutolusi nuo kraštinių vienodu spinduliu $r$.",
-            "latex": "S_a = \\frac{1}{2}ar, \\\\ S_b = \\frac{1}{2}br, \\\\ S_c = \\frac{1}{2}cr",
+            "latex": "S_a = \\frac{1}{2}ar, \\ S_b = \\frac{1}{2}br, \\ S_c = \\frac{1}{2}cr",
             "result": "Gauti plotų reiškiniai per kraštines."
           },
           {
@@ -56230,7 +56230,7 @@ export const exercises = [
         "id": "ex-olimpiada-10-16-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite trikampio $ABC$, kurio kraštinių ilgiai yra $a, b, c...?",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite trikampio $ABC$, kurio kraštinių ilgiai yra $a, b, c...?$",
         "back": "Baricentrinės koordinatės $(x:y:z)$ atitinka priešpriešinių trikampių plotus: $x:y:z = S_{IBC}:S_{ICA}:S_{IAB}$. Kadangi $I$ yra incenter, visų trijų trikampių aukštinės lygios $r$ (įbrėžto apskritimo spinduliui), todėl plotai proporcingi kraštinėms.",
         "conceptIds": [],
         "methodIds": [],
@@ -56278,12 +56278,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Panašumas $\\triangle ABC \\\\sim \\triangle ADE$ reiškia, kad kraštinių santykiai yra lygūs: $\\frac{AB}{AD} = \\frac{AC}{AE}$.",
+      "Panašumas $\\triangle ABC \\sim \\triangle ADE$ reiškia, kad kraštinių santykiai yra lygūs: $\\frac{AB}{AD} = \\frac{AC}{AE}$.",
       "Pertvarkykite šį santykį į $\\frac{AB}{AC} = \\frac{AD}{AE}$.",
-      "Išnagrinėkite kampus $\\\\angle BAD$ ir $\\\\angle CAE$. Pastebėkite, kad $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC$ (arba su pliuso ženklu priklausomai nuo orientacijos).",
-      "Kadangi $\\\\angle BAC = \\\\angle DAE$, kampai $\\\\angle BAD$ ir $\\\\angle CAE$ yra lygūs. Pagal dvi kraštines ir kampą tarp jų (SUS), $\\triangle ABD \\\\sim \\triangle ACE$."
+      "Išnagrinėkite kampus $\\angle BAD$ ir $\\angle CAE$. Pastebėkite, kad $\\angle BAD = \\angle BAC - \\angle DAC$ (arba su pliuso ženklu priklausomai nuo orientacijos).",
+      "Kadangi $\\angle BAC = \\angle DAE$, kampai $\\angle BAD$ ir $\\angle CAE$ yra lygūs. Pagal dvi kraštines ir kampą tarp jų (SUS), $\\triangle ABD \\sim \\triangle ACE$."
     ],
-    "solution": "Pagal trikampių tiesioginį panašumą, kraštinių santykiai yra: $AB/AC = AD/AE$. Suapvaliname ir sukeičiame narius vietomis: $AB/AD = AC/AE$. Nagrinėjame kampus: $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC$ ir $\\\\angle CAE = \\\\angle DAE - \\\\angle DAC$. Kadangi $\\\\angle BAC = \\\\angle DAE$, tai $\\\\angle BAD = \\\\angle CAE$. Todėl trikampiai yra panašūs pagal SUS požymį.",
+    "solution": "Pagal trikampių tiesioginį panašumą, kraštinių santykiai yra: $AB/AC = AD/AE$. Suapvaliname ir sukeičiame narius vietomis: $AB/AD = AC/AE$. Nagrinėjame kampus: $\\angle BAD = \\angle BAC - \\angle DAC$ ir $\\angle CAE = \\angle DAE - \\angle DAC$. Kadangi $\\angle BAC = \\angle DAE$, tai $\\angle BAD = \\angle CAE$. Todėl trikampiai yra panašūs pagal SUS požymį.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -56291,7 +56291,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Kombinuotas kraštinių santykis ir kampas",
-      "text": "Kadangi $\\triangle ABC \\\\sim \\triangle ADE$, tai $AB/AC = AD/AE \\\\implies AB/AD = AC/AE$. Be to, kampas $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC = \\\\angle DAE - \\\\angle DAC = \\\\angle CAE$."
+      "text": "Kadangi $\\triangle ABC \\sim \\triangle ADE$, tai $AB/AC = AD/AE \\implies AB/AD = AC/AE$. Be to, kampas $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -56310,23 +56310,23 @@ export const exercises = [
         "steps": [
           {
             "title": "Kraštinių santykių lygybė",
-            "action": "Užrašome $\\frac{AB}{AC} = \\frac{AD}{AE} \\\\implies \\frac{AB}{AD} = \\frac{AC}{AE}$.",
+            "action": "Užrašome $\\frac{AB}{AC} = \\frac{AD}{AE} \\implies \\frac{AB}{AD} = \\frac{AC}{AE}$.",
             "reason": "Panašių trikampių atitinkamų kraštinių santykių savybė.",
             "latex": "\\frac{AB}{AD} = \\frac{AC}{AE}",
             "result": "Nustatyta kraštinių proporcija naujiems trikampiams."
           },
           {
             "title": "Kampų lygybės įrodymas",
-            "action": "Užrašome $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC = \\\\angle DAE - \\\\angle DAC = \\\\angle CAE$.",
-            "reason": "Atimame bendrą kampą $\\\\angle DAC$ iš lygių kampų $\\\\angle BAC$ ir $\\\\angle DAE$.",
-            "latex": "\\\\angle BAD = \\\\angle CAE",
+            "action": "Užrašome $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$.",
+            "reason": "Atimame bendrą kampą $\\angle DAC$ iš lygių kampų $\\angle BAC$ ir $\\angle DAE$.",
+            "latex": "\\angle BAD = \\angle CAE",
             "result": "Įrodyta kampų lygybė."
           },
           {
             "title": "Išvada",
             "action": "Trikampiai $ABD$ ir $ACE$ yra panašūs pagal dvi kraštines ir kampą tarp jų (SUS požymis).",
             "reason": "Kampai tarp proporcingų kraštinių yra lygūs.",
-            "latex": "\\triangle ABD \\\\sim \\triangle ACE",
+            "latex": "\\triangle ABD \\sim \\triangle ACE",
             "result": "Panašumas sėkmingai įrodytas."
           }
         ],
@@ -56337,9 +56337,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-10-17-trap-1",
         "title": "Viršūnių eilės klaida",
-        "wrongMove": "Neteisingai nurodoma panašių trikampių viršūnių eilė, pvz., teigiant $\\triangle ABD \\\\sim \\triangle AEC$.",
+        "wrongMove": "Neteisingai nurodoma panašių trikampių viršūnių eilė, pvz., teigiant $\\triangle ABD \\sim \\triangle AEC$.",
         "whyTempting": "Mokiniai dažnai surašo viršūnes intuityviai, nepatikrinę atitinkamų kampų lygybės.",
-        "correction": "Būtina griežtai sekti kampų atitikmenis: taškas $B$ atitinka $C$, o $D$ atitinka $E$, todėl $\\triangle ABD \\\\sim \\triangle ACE$.",
+        "correction": "Būtina griežtai sekti kampų atitikmenis: taškas $B$ atitinka $C$, o $D$ atitinka $E$, todėl $\\triangle ABD \\sim \\triangle ACE$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
@@ -56348,7 +56348,7 @@ export const exercises = [
         "title": "Santykio sukeitimo klaida",
         "wrongMove": "Bandoma naudoti santykį $AB/AC = AE/AD$ vietoj $AB/AC = AD/AE$.",
         "whyTempting": "Painiojami panašių trikampių atitinkamų kraštinių santykiai, ypač kai trikampiai turi bendrą viršūnę.",
-        "correction": "Iš $\\triangle ABC \\\\sim \\triangle ADE$ seka $AB/AD = AC/AE$, kas po sukeitimo duoda $AB/AC = AD/AE$.",
+        "correction": "Iš $\\triangle ABC \\sim \\triangle ADE$ seka $AB/AD = AC/AE$, kas po sukeitimo duoda $AB/AC = AD/AE$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -56364,7 +56364,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul trikampiai $ABC$ ir $ADE$ yra tiesiogiai panašūs ir tu...?",
-        "back": "Kadangi $\\triangle ABC \\\\sim \\triangle ADE$, tai $AB/AC = AD/AE \\\\implies AB/AD = AC/AE$. Be to, kampas $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC = \\\\angle DAE - \\\\angle DAC = \\\\angle CAE$.",
+        "back": "Kadangi $\\triangle ABC \\sim \\triangle ADE$, tai $AB/AC = AD/AE \\implies AB/AD = AC/AE$. Be to, kampas $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -56374,7 +56374,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Panašumas $\\triangle ABC \\\\sim \\triangle ADE$ reiškia, kad kraštinių santykiai yra lygūs: $\\frac{AB}{AD} = \\frac{AC}{AE}$.",
+        "text": "Panašumas $\\triangle ABC \\sim \\triangle ADE$ reiškia, kad kraštinių santykiai yra lygūs: $\\frac{AB}{AD} = \\frac{AC}{AE}$.",
         "penalty": 0.05
       },
       {
@@ -56386,13 +56386,13 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Išnagrinėkite kampus $\\\\angle BAD$ ir $\\\\angle CAE$. Pastebėkite, kad $\\\\angle BAD = \\\\angle BAC - \\\\angle DAC$ (arba su pliuso ženklu priklausomai nuo orientacijos).",
+        "text": "Išnagrinėkite kampus $\\angle BAD$ ir $\\angle CAE$. Pastebėkite, kad $\\angle BAD = \\angle BAC - \\angle DAC$ (arba su pliuso ženklu priklausomai nuo orientacijos).",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi $\\\\angle BAC = \\\\angle DAE$, kampai $\\\\angle BAD$ ir $\\\\angle CAE$ yra lygūs. Pagal dvi kraštines ir kampą tarp jų (SUS), $\\triangle ABD \\\\sim \\triangle ACE$.",
+        "text": "Kadangi $\\angle BAC = \\angle DAE$, kampai $\\angle BAD$ ir $\\angle CAE$ yra lygūs. Pagal dvi kraštines ir kampą tarp jų (SUS), $\\triangle ABD \\sim \\triangle ACE$.",
         "penalty": 0.11
       }
     ]
@@ -56412,11 +56412,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Kadangi $AM$ yra kampo $A$ pusiaukampinė, taškas $M$ yra lanko $BC$ vidurio taškas, todėl $MB = MC$.",
-      "Norint parodyti $MB = MI$, pakanka įrodyti, kad trikampis $MBI$ yra lygiašonis, t. y. $\\\\angle MBI = \\\\angle MIB$.",
-      "Kampas $\\\\angle MIB$ yra trikampio $ABI$ išorinis kampas, todėl $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = \\frac{1}{2}\\\\angle A + \\frac{1}{2}\\\\angle B$.",
-      "Kampas $\\\\angle MBI = \\\\angle MBC + \\\\angle CBI$. Kadangi įbrėžtiniai kampai $\\\\angle MBC$ ir $\\\\angle MAC$ remiasi į tą patį lanką $MC$, jie lygūs. Todėl $\\\\angle MBI = \\frac{1}{2}\\\\angle A + \\frac{1}{2}\\\\angle B$. Kampai lygūs, todėl $MB = MI$."
+      "Norint parodyti $MB = MI$, pakanka įrodyti, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$.",
+      "Kampas $\\angle MIB$ yra trikampio $ABI$ išorinis kampas, todėl $\\angle MIB = \\angle IAB + \\angle IBA = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$.",
+      "Kampas $\\angle MBI = \\angle MBC + \\angle CBI$. Kadangi įbrėžtiniai kampai $\\angle MBC$ ir $\\angle MAC$ remiasi į tą patį lanką $MC$, jie lygūs. Todėl $\\angle MBI = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$. Kampai lygūs, todėl $MB = MI$."
     ],
-    "solution": "Kadangi $M$ yra apskritimo lanko vidurys, iškart turime $MB = MC$. Apskaičiuojame kampą $\\\\angle MIB$ kaip trikampio $ABI$ išorinį kampą: $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = A/2 + B/2$. Kampą $\\\\angle MBI$ išreiškiame kaip dviejų kampų sumą: $\\\\angle MBI = \\\\angle MBC + \\\\angle CBI$. Kadangi $\\\\angle MBC = \\\\angle MAC = A/2$ ir $\\\\angle CBI = B/2$, gauname $\\\\angle MBI = A/2 + B/2$. Kadangi du kampai lygūs, trikampis $MBI$ lygiašonis, todėl $MB = MI$.",
+    "solution": "Kadangi $M$ yra apskritimo lanko vidurys, iškart turime $MB = MC$. Apskaičiuojame kampą $\\angle MIB$ kaip trikampio $ABI$ išorinį kampą: $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$. Kampą $\\angle MBI$ išreiškiame kaip dviejų kampų sumą: $\\angle MBI = \\angle MBC + \\angle CBI$. Kadangi $\\angle MBC = \\angle MAC = A/2$ ir $\\angle CBI = B/2$, gauname $\\angle MBI = A/2 + B/2$. Kadangi du kampai lygūs, trikampis $MBI$ lygiašonis, todėl $MB = MI$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -56424,7 +56424,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 70,
     "coreIdea": {
       "title": "Trikampio kampų skaičiavimas",
-      "text": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\\\angle MBI = \\\\angle MIB$. Kampas $\\\\angle MBI = \\\\angle MBC + \\\\angle CBI = \\\\angle MAC + \\\\angle CBI = A/2 + B/2$. Kampas $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas)."
+      "text": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$. Kampas $\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = A/2 + B/2$. Kampas $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas)."
     },
     "strategyTags": [
       "algebraic-transformation"
@@ -56450,17 +56450,17 @@ export const exercises = [
           },
           {
             "title": "Išorinio kampo skaičiavimas",
-            "action": "Kampas $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = \\frac{A}{2} + \\frac{B}{2}$.",
+            "action": "Kampas $\\angle MIB = \\angle IAB + \\angle IBA = \\frac{A}{2} + \\frac{B}{2}$.",
             "reason": "Trikampio išorinis kampas yra lygus kitų dviejų trikampio kampų sumai.",
-            "latex": "\\\\angle MIB = \\frac{A+B}{2}",
-            "result": "Rastas kampo $\\\\angle MIB$ dydis."
+            "latex": "\\angle MIB = \\frac{A+B}{2}",
+            "result": "Rastas kampo $\\angle MIB$ dydis."
           },
           {
             "title": "Kampo MBI analizė",
-            "action": "$\\\\angle MBI = \\\\angle MBC + \\\\angle CBI = \\\\angle MAC + \\\\angle CBI = \\frac{A}{2} + \\frac{B}{2}$.",
-            "reason": "Kampai $\\\\angle MBC$ ir $\\\\angle MAC$ yra įbrėžtiniai ir remiasi į tą patį lanką $MC$.",
-            "latex": "\\\\angle MBI = \\frac{A+B}{2}",
-            "result": "Įrodyta kampų lygybė $\\\\angle MBI = \\\\angle MIB$, todėl trikampis $MBI$ yra lygiašonis $\\\\implies MB = MI$."
+            "action": "$\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = \\frac{A}{2} + \\frac{B}{2}$.",
+            "reason": "Kampai $\\angle MBC$ ir $\\angle MAC$ yra įbrėžtiniai ir remiasi į tą patį lanką $MC$.",
+            "latex": "\\angle MBI = \\frac{A+B}{2}",
+            "result": "Įrodyta kampų lygybė $\\angle MBI = \\angle MIB$, todėl trikampis $MBI$ yra lygiašonis $\\implies MB = MI$."
           }
         ],
         "finalAnswer": "Teiginys įrodytas apskaičiavus trikampio $MBI$ kampus."
@@ -56472,16 +56472,16 @@ export const exercises = [
         "title": "Lanko savybės nepaisymas",
         "wrongMove": "Nesuprantama, kodėl taškas $M$ yra lanko $BC$ vidurio taškas.",
         "whyTempting": "Mokiniai dažnai nepastebi ryšio tarp kampo pusiaukampinės ir lankų, kuriuos ji kerta apibrėžtiniame apskritime.",
-        "correction": "Įbrėžtiniai kampai, besiremiantys į lygius lankus, yra lygūs. Kadangi $\\\\angle BAM = \\\\angle CAM$, tai lankai $BM$ ir $MC$ yra lygūs $\\\\implies MB = MC$.",
+        "correction": "Įbrėžtiniai kampai, besiremiantys į lygius lankus, yra lygūs. Kadangi $\\angle BAM = \\angle CAM$, tai lankai $BM$ ir $MC$ yra lygūs $\\implies MB = MC$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       },
       {
         "id": "ex-olimpiada-10-18-trap-2",
         "title": "Išorinio kampo skaičiavimo klaida",
-        "wrongMove": "Neteisingai taikoma išorinio kampo teorema kampui $\\\\angle MIB$.",
+        "wrongMove": "Neteisingai taikoma išorinio kampo teorema kampui $\\angle MIB$.",
         "whyTempting": "Trikampyje $ABI$ yra daug kampų, todėl lengva sumaišyti, kurių vidinių kampų sumai lygus išorinis kampas.",
-        "correction": "$\\\\angle MIB$ yra trikampio $ABI$ išorinis kampas ties viršūne $I$, todėl jis lygus $\\\\angle IAB + \\\\angle IBA = A/2 + B/2$.",
+        "correction": "$\\angle MIB$ yra trikampio $ABI$ išorinis kampas ties viršūne $I$, todėl jis lygus $\\angle IAB + \\angle IBA = A/2 + B/2$.",
         "reviewConceptIds": [],
         "srsRecommended": true
       }
@@ -56497,7 +56497,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio $ABC$ apibrėžtiniame apskritime kampo $A$ pusiauka...?",
-        "back": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\\\angle MBI = \\\\angle MIB$. Kampas $\\\\angle MBI = \\\\angle MBC + \\\\angle CBI = \\\\angle MAC + \\\\angle CBI = A/2 + B/2$. Kampas $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas).",
+        "back": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$. Kampas $\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = A/2 + B/2$. Kampas $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas).",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -56513,19 +56513,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Norint parodyti $MB = MI$, pakanka įrodyti, kad trikampis $MBI$ yra lygiašonis, t. y. $\\\\angle MBI = \\\\angle MIB$.",
+        "text": "Norint parodyti $MB = MI$, pakanka įrodyti, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$.",
         "penalty": 0.07
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Kampas $\\\\angle MIB$ yra trikampio $ABI$ išorinis kampas, todėl $\\\\angle MIB = \\\\angle IAB + \\\\angle IBA = \\frac{1}{2}\\\\angle A + \\frac{1}{2}\\\\angle B$.",
+        "text": "Kampas $\\angle MIB$ yra trikampio $ABI$ išorinis kampas, todėl $\\angle MIB = \\angle IAB + \\angle IBA = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$.",
         "penalty": 0.09
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kampas $\\\\angle MBI = \\\\angle MBC + \\\\angle CBI$. Kadangi įbrėžtiniai kampai $\\\\angle MBC$ ir $\\\\angle MAC$ remiasi į tą patį lanką $MC$, jie lygūs. Todėl $\\\\angle MBI = \\frac{1}{2}\\\\angle A + \\frac{1}{2}\\\\angle B$. Kampai lygūs, todėl $MB = MI$.",
+        "text": "Kampas $\\angle MBI = \\angle MBC + \\angle CBI$. Kadangi įbrėžtiniai kampai $\\angle MBC$ ir $\\angle MAC$ remiasi į tą patį lanką $MC$, jie lygūs. Todėl $\\angle MBI = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$. Kampai lygūs, todėl $MB = MI$.",
         "penalty": 0.11
       }
     ]
@@ -56549,9 +56549,9 @@ export const exercises = [
       "Kadangi grafas yra sujungtas ir plokščias, galime taikyti Oilerio formulę.",
       "Formulė teigia: $V - E + F = 2$.",
       "Įstatykite duotus skaičius: viršūnių skaičių $V = 6$ ir briaunų skaičių $E = 10$.",
-      "Išspręskite lygtį: $6 - 10 + F = 2 \\\\implies F = 6$."
+      "Išspręskite lygtį: $6 - 10 + F = 2 \\implies F = 6$."
     ],
-    "solution": "Pritaikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įstatome sąlygoje pateiktas vertes: $V = 6, E = 10$. Gauname lygtį: $6 - 10 + F = 2$. Išsprendžiame sričių skaičių: $-4 + F = 2 \\\\implies F = 6$.",
+    "solution": "Pritaikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įstatome sąlygoje pateiktas vertes: $V = 6, E = 10$. Gauname lygtį: $6 - 10 + F = 2$. Išsprendžiame sričių skaičių: $-4 + F = 2 \\implies F = 6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -56670,7 +56670,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Išspręskite lygtį: $6 - 10 + F = 2 \\\\implies F = 6$.",
+        "text": "Išspręskite lygtį: $6 - 10 + F = 2 \\implies F = 6$.",
         "penalty": 0.11
       }
     ]
@@ -60459,7 +60459,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina lygčių sistemą: $x \\\\equiv 2 \\\\pmod 3$, $x \\\\equiv 3 \\\\pmod 5$, $x \\\\equiv 2 \\\\pmod 7$.",
+    "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina lygčių sistemą: $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 5$, $x \\equiv 2 \\pmod 7$.",
     "answer": "23",
     "acceptedAnswers": [
       "23"
@@ -60471,11 +60471,11 @@ export const exercises = [
     ],
     "hints": [
       "Pirmiausia apjunkite lygtis su moduliais 3 ir 7, nes jos turi tą pačią liekaną.",
-      "Kadangi $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 2 \\\\pmod 7$, tai skaičius $x$ tenkina lygti $x \\\\equiv 2 \\\\pmod{21}$.",
-      "Ieškokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokį $k$, kad $21k + 2 \\\\equiv 3 \\\\pmod 5$.",
-      "Supaprastinkite lygtį: $21k + 2 \\\\equiv k + 2 \\\\equiv 3 \\\\pmod 5$. Mažiausias teigiamas $k=1$."
+      "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, tai skaičius $x$ tenkina lygti $x \\equiv 2 \\pmod{21}$.",
+      "Ieškokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokį $k$, kad $21k + 2 \\equiv 3 \\pmod 5$.",
+      "Supaprastinkite lygtį: $21k + 2 \\equiv k + 2 \\equiv 3 \\pmod 5$. Mažiausias teigiamas $k=1$."
     ],
-    "solution": "Apjungiame pirmąją ir trečiąją lygtis: $x \\\\equiv 2 \\\\pmod{\\text{lcm}(3,7)} \\\\implies x \\\\equiv 2 \\\\pmod{21}$. Užrašome $x$ bendra forma: $x = 21k + 2$ kokiam nors sveikajam $k$. Įstatome į antrąją lygtį: $21k + 2 \\\\equiv 3 \\\\pmod 5$. Kadangi $21 \\\\equiv 1 \\\\pmod 5$, lygtis tampa $1k + 2 \\\\equiv 3 \\\\pmod 5$. Atimame 2 iš abiejų pusių: $k \\\\equiv 1 \\\\pmod 5$. Mažiausias teigiamas $k=1$, tada $x = 21(1) + 2 = 23$.",
+    "solution": "Apjungiame pirmąją ir trečiąją lygtis: $x \\equiv 2 \\pmod{\\text{lcm}(3,7)} \\implies x \\equiv 2 \\pmod{21}$. Užrašome $x$ bendra forma: $x = 21k + 2$ kokiam nors sveikajam $k$. Įstatome į antrąją lygtį: $21k + 2 \\equiv 3 \\pmod 5$. Kadangi $21 \\equiv 1 \\pmod 5$, lygtis tampa $1k + 2 \\equiv 3 \\pmod 5$. Atimame 2 iš abiejų pusių: $k \\equiv 1 \\pmod 5$. Mažiausias teigiamas $k=1$, tada $x = 21(1) + 2 = 23$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -60512,15 +60512,15 @@ export const exercises = [
             "title": "Sujungimas",
             "action": "Nustatome, kad $x-2$ dalijasi iš $3$ ir $7$.",
             "reason": "Abi liekanos yra vienodos.",
-            "result": "$x \\\\equiv 2 \\\\pmod{21}$",
-            "latex": "x \\\\equiv 2 \\\\pmod{21}"
+            "result": "$x \\equiv 2 \\pmod{21}$",
+            "latex": "x \\equiv 2 \\pmod{21}"
           },
           {
             "title": "Liekanos pritaikymas",
-            "action": "Ieškome $x = 21k + 2$ tenkinančio $x \\\\equiv 3 \\\\pmod 5$.",
+            "action": "Ieškome $x = 21k + 2$ tenkinančio $x \\equiv 3 \\pmod 5$.",
             "reason": "Tai paskutinė sąlyga.",
-            "result": "$k \\\\equiv 1 \\\\pmod 5$",
-            "latex": "21k+2 \\\\equiv k+2 \\\\equiv 3 \\\\pmod 5"
+            "result": "$k \\equiv 1 \\pmod 5$",
+            "latex": "21k+2 \\equiv k+2 \\equiv 3 \\pmod 5"
           },
           {
             "title": "Rezultatas",
@@ -60547,9 +60547,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-01-trap-2",
         "title": "Klaida redukuojant koeficientą",
-        "wrongMove": "Manoma, kad $21k \\\\equiv 21k \\\\pmod 5$ be redukcijos į $1k$.",
+        "wrongMove": "Manoma, kad $21k \\equiv 21k \\pmod 5$ be redukcijos į $1k$.",
         "whyTempting": "Pamirštama, kad koeficientą prieš nežinomąjį galima pakeisti jo liekana.",
-        "correction": "Prieš spręsdami lygti $Ak \\\\equiv B \\\\pmod M$, pakeiskite $A$ liekana dalijant iš $M$.",
+        "correction": "Prieš spręsdami lygti $Ak \\equiv B \\pmod M$, pakeiskite $A$ liekana dalijant iš $M$.",
         "conceptIds": [
           "olimpiada-11-concept-crt"
         ]
@@ -60565,8 +60565,8 @@ export const exercises = [
         "id": "ex-olimpiada-11-01-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Koks yra pirmas žingsnis sprendžiant $x \\\\equiv a \\\\pmod m$ ir $x \\\\equiv a \\\\pmod n$, kai $\\text{gcd}(m,n)=1$?",
-        "back": "Apjungti į vieną lygtį $x \\\\equiv a \\\\pmod{mn}$.",
+        "front": "Koks yra pirmas žingsnis sprendžiant $x \\equiv a \\pmod m$ ir $x \\equiv a \\pmod n$, kai $\\text{gcd}(m,n)=1$?",
+        "back": "Apjungti į vieną lygtį $x \\equiv a \\pmod{mn}$.",
         "conceptIds": [
           "olimpiada-11-concept-crt"
         ],
@@ -60584,19 +60584,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kadangi $x \\\\equiv 2 \\\\pmod 3$ ir $x \\\\equiv 2 \\\\pmod 7$, tai skaičius $x$ tenkina lygti $x \\\\equiv 2 \\\\pmod{21}$.",
+        "text": "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, tai skaičius $x$ tenkina lygti $x \\equiv 2 \\pmod{21}$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Ieškokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokį $k$, kad $21k + 2 \\\\equiv 3 \\\\pmod 5$.",
+        "text": "Ieškokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokį $k$, kad $21k + 2 \\equiv 3 \\pmod 5$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Supaprastinkite lygtį: $21k + 2 \\\\equiv k + 2 \\\\equiv 3 \\\\pmod 5$. Mažiausias teigiamas $k=1$.",
+        "text": "Supaprastinkite lygtį: $21k + 2 \\equiv k + 2 \\equiv 3 \\pmod 5$. Mažiausias teigiamas $k=1$.",
         "penalty": 0.12
       }
     ]
@@ -60617,12 +60617,12 @@ export const exercises = [
       "olimpiada-11-concept-order"
     ],
     "hints": [
-      "Eilė $d$ yra mažiausias laipsnis, kuriam $3^d \\\\equiv 1 \\\\pmod{17}$.",
+      "Eilė $d$ yra mažiausias laipsnis, kuriam $3^d \\equiv 1 \\pmod{17}$.",
       "Tikrinkite tik skaičiaus 16 daliklius. Jei joks mažesnis laipsnis netinka, eilė bus 16.",
       "Skaičiuokite laipsnius nuosekliai keldami kvadratu: $3^2, 3^4, 3^8$.",
-      "$3^8 \\\\equiv 16 \\\\equiv -1 \\\\pmod{17}$. Ką tai sako apie mažiausią laipsnį, duodantį 1?"
+      "$3^8 \\equiv 16 \\equiv -1 \\pmod{17}$. Ką tai sako apie mažiausią laipsnį, duodantį 1?"
     ],
-    "solution": "Apskaičiuojame $\\\\varphi(17) = 16$. Eilė turi būti 1, 2, 4, 8 arba 16. $3^1 \\\\equiv 3$, $3^2 \\\\equiv 9$. $3^4 = (3^2)^2 \\\\equiv 9^2 = 81 = 4 \\\\cdot 17 + 13 \\\\equiv 13 \\\\equiv -4 \\\\pmod{17}$. $3^8 = (3^4)^2 \\\\equiv (-4)^2 = 16 \\\\equiv -1 \\\\pmod{17}$. Kadangi $3^8 \\not\\\\equiv 1$, bet $(3^8)^2 \\\\equiv (-1)^2 \\\\equiv 1 \\\\pmod{17}$, mažiausia eilė yra 16. Kadangi eilė lygi $\\\\varphi(17)$, skaičius 3 yra pradinė šaknis.",
+    "solution": "Apskaičiuojame $\\varphi(17) = 16$. Eilė turi būti 1, 2, 4, 8 arba 16. $3^1 \\equiv 3$, $3^2 \\equiv 9$. $3^4 = (3^2)^2 \\equiv 9^2 = 81 = 4 \\cdot 17 + 13 \\equiv 13 \\equiv -4 \\pmod{17}$. $3^8 = (3^4)^2 \\equiv (-4)^2 = 16 \\equiv -1 \\pmod{17}$. Kadangi $3^8 \\not\\equiv 1$, bet $(3^8)^2 \\equiv (-1)^2 \\equiv 1 \\pmod{17}$, mažiausia eilė yra 16. Kadangi eilė lygi $\\varphi(17)$, skaičius 3 yra pradinė šaknis.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -60630,7 +60630,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 75,
     "coreIdea": {
       "title": "Eilės dalumas",
-      "text": "Pagal Fermos mažąją teoremą, eilė turi dalinti $\\\\varphi(17) = 16$. Tikriname tik 16 daliklius: 1, 2, 4, 8."
+      "text": "Pagal Fermos mažąją teoremą, eilė turi dalinti $\\varphi(17) = 16$. Tikriname tik 16 daliklius: 1, 2, 4, 8."
     },
     "strategyTags": [
       "modular-arithmetic",
@@ -60658,13 +60658,13 @@ export const exercises = [
             "title": "Kėlimas kvadratu",
             "action": "Skaičiuojame $3^2, 3^4, 3^8$.",
             "reason": "Tai greičiausias būdas pasiekti didelius laipsnius.",
-            "result": "$3^8 \\\\equiv -1 \\\\pmod{17}$",
-            "latex": "3^8 \\\\equiv 16 \\\\equiv -1 \\\\pmod{17}"
+            "result": "$3^8 \\equiv -1 \\pmod{17}$",
+            "latex": "3^8 \\equiv 16 \\equiv -1 \\pmod{17}"
           },
           {
             "title": "Išvada apie eilę",
             "action": "Nustatome eilę pagal paskutinį neigiamą rezultatą.",
-            "reason": "Jei $a^k \\\\equiv -1$, tai eilė yra $2k$.",
+            "reason": "Jei $a^k \\equiv -1$, tai eilė yra $2k$.",
             "result": "16",
             "latex": "d = 2 \\times 8 = 16"
           }
@@ -60676,9 +60676,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-02-trap-1",
         "title": "Visų laipsnių skaičiavimas",
-        "wrongMove": "Mokinys skaičiuoja $3^1, 3^2, 3^3, \\\\dots, 3^{16}$ iš eilės.",
+        "wrongMove": "Mokinys skaičiuoja $3^1, 3^2, 3^3, \\dots, 3^{16}$ iš eilės.",
         "whyTempting": "Atrodo saugu ir nereikia galvoti apie savybes.",
-        "correction": "Naudokite kėlimą kvadratu ir tikrinkite tik $\\\\varphi(m)$ daliklius.",
+        "correction": "Naudokite kėlimą kvadratu ir tikrinkite tik $\\varphi(m)$ daliklius.",
         "conceptIds": [
           "olimpiada-11-concept-order"
         ]
@@ -60686,7 +60686,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-02-trap-2",
         "title": "Liekanos ženklas",
-        "wrongMove": "Pamirštama, kad $16 \\\\equiv -1$ palengvina skaičiavimą.",
+        "wrongMove": "Pamirštama, kad $16 \\equiv -1$ palengvina skaičiavimą.",
         "whyTempting": "Teigiami skaičiai atrodo įprastesni.",
         "correction": "Naudokite neigiamas liekanas (pvz., $-1$), kad pakėlus kvadratu gautumėte $1$.",
         "conceptIds": [
@@ -60695,7 +60695,7 @@ export const exercises = [
       }
     ],
     "reflectionPrompts": [
-      "Kodėl žinant, kad $3^8 \\\\equiv -1$, galime iškart pasakyti, kad eilė nėra 1, 2, 4 ar 8?",
+      "Kodėl žinant, kad $3^8 \\equiv -1$, galime iškart pasakyti, kad eilė nėra 1, 2, 4 ar 8?",
       "Kiek iš viso pradinių šaknų turi modulis 17?"
     ],
     "extensionQuestions": [],
@@ -60705,7 +60705,7 @@ export const exercises = [
         "deck": "theory",
         "cardType": "method",
         "front": "Kokie laipsniai yra kandidatai į skaičiaus $a$ eilę moduliu $m$?",
-        "back": "Skaičiaus $\\\\varphi(m)$ dalikliai.",
+        "back": "Skaičiaus $\\varphi(m)$ dalikliai.",
         "conceptIds": [
           "olimpiada-11-concept-order"
         ],
@@ -60717,7 +60717,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Eilė $d$ yra mažiausias laipsnis, kuriam $3^d \\\\equiv 1 \\\\pmod{17}$.",
+        "text": "Eilė $d$ yra mažiausias laipsnis, kuriam $3^d \\equiv 1 \\pmod{17}$.",
         "penalty": 0.05
       },
       {
@@ -60735,7 +60735,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "$3^8 \\\\equiv 16 \\\\equiv -1 \\\\pmod{17}$. Ką tai sako apie mažiausią laipsnį, duodantį 1?",
+        "text": "$3^8 \\equiv 16 \\equiv -1 \\pmod{17}$. Ką tai sako apie mažiausią laipsnį, duodantį 1?",
         "penalty": 0.12
       }
     ]
@@ -60745,7 +60745,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išspręskite lygtį $3^x \\\\equiv 5 \\\\pmod{17}$, žinodami, kad $3$ yra pradinė šaknis moduliu $17$. Raskite mažiausią teigiamą $x$.",
+    "statement": "Išspręskite lygtį $3^x \\equiv 5 \\pmod{17}$, žinodami, kad $3$ yra pradinė šaknis moduliu $17$. Raskite mažiausią teigiamą $x$.",
     "answer": "5",
     "acceptedAnswers": [
       "5"
@@ -60757,11 +60757,11 @@ export const exercises = [
     ],
     "hints": [
       "Kelkite 3 laipsniais moduliu 17, kol gausite 5.",
-      "Jau žinote iš praeito uždavinio: $3^2 \\\\equiv 9, 3^4 \\\\equiv 13$.",
-      "Apskaičiuokite $3^5$ naudodami $3^4 \\\\cdot 3$.",
-      "$13 \\\\cdot 3 = 39$. Kokia šio skaičiaus liekana dalijant iš 17?"
+      "Jau žinote iš praeito uždavinio: $3^2 \\equiv 9, 3^4 \\equiv 13$.",
+      "Apskaičiuokite $3^5$ naudodami $3^4 \\cdot 3$.",
+      "$13 \\cdot 3 = 39$. Kokia šio skaičiaus liekana dalijant iš 17?"
     ],
-    "solution": "$3^1 = 3$ $3^2 = 9$ $3^3 = 27 \\\\equiv 10 \\\\pmod{17}$ $3^4 = 30 \\\\equiv 13 \\\\pmod{17}$ $3^5 = 13 \\\\cdot 3 = 39$ Dalijame 39 iš 17: $39 = 2 \\\\cdot 17 + 5$. Liekana yra 5. Taigi $3^5 \\\\equiv 5 \\\\pmod{17}$, atsakymas $x=5$.",
+    "solution": "$3^1 = 3$ $3^2 = 9$ $3^3 = 27 \\equiv 10 \\pmod{17}$ $3^4 = 30 \\equiv 13 \\pmod{17}$ $3^5 = 13 \\cdot 3 = 39$ Dalijame 39 iš 17: $39 = 2 \\cdot 17 + 5$. Liekana yra 5. Taigi $3^5 \\equiv 5 \\pmod{17}$, atsakymas $x=5$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -60797,15 +60797,15 @@ export const exercises = [
             "title": "Laipsnių kėlimas",
             "action": "Nuosekliai skaičiuojame $3^k$ liekanas moduliu 17.",
             "reason": "Mažas modulis leidžia rasti sprendinį perrankos būdu.",
-            "result": "$3^2 \\\\equiv 9, 3^3 \\\\equiv 10, 3^4 \\\\equiv 13$",
-            "latex": "3^4 \\\\equiv 13 \\\\pmod{17}"
+            "result": "$3^2 \\equiv 9, 3^3 \\equiv 10, 3^4 \\equiv 13$",
+            "latex": "3^4 \\equiv 13 \\pmod{17}"
           },
           {
             "title": "Sprendinio radimas",
             "action": "Apskaičiuojame $3^5$.",
             "reason": "Tęsiame seką.",
             "result": "5",
-            "latex": "3^5 = 3 \\\\cdot 13 = 39 \\\\equiv 5 \\\\pmod{17}"
+            "latex": "3^5 = 3 \\cdot 13 = 39 \\equiv 5 \\pmod{17}"
           }
         ],
         "finalAnswer": "5"
@@ -60815,7 +60815,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-03-trap-1",
         "title": "Klaidingas ciklo ilgis",
-        "wrongMove": "Manoma, kad jei $3^x \\\\equiv 5$, tai sprendiniai yra $x + 17k$.",
+        "wrongMove": "Manoma, kad jei $3^x \\equiv 5$, tai sprendiniai yra $x + 17k$.",
         "whyTempting": "Painiojamas modulis su ciklo ilgiu.",
         "correction": "Sprendiniai kartojasi kas $\\text{ord}_m a$, šiuo atveju kas 16.",
         "conceptIds": [
@@ -60827,7 +60827,7 @@ export const exercises = [
         "title": "Netinkamas laipsnių perrinkimas",
         "wrongMove": "Bandoma spėti x be jokios sistemos, praleidžiant mažas reikšmes.",
         "whyTempting": "Atrodo, kad sprendimas turi būti didelis skaičius.",
-        "correction": "Kelkite laipsniu sistemingai: $3^1, 3^2, \\\\dots$, kol pasieksite liekaną 5.",
+        "correction": "Kelkite laipsniu sistemingai: $3^1, 3^2, \\dots$, kol pasieksite liekaną 5.",
         "conceptIds": [
           "olimpiada-11-concept-order"
         ]
@@ -60844,7 +60844,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra diskrečiojo logaritmo apibrėžtis?",
-        "back": "Tai rodiklis $x$, tenkinantis $a^x \\\\equiv b \\\\pmod m$.",
+        "back": "Tai rodiklis $x$, tenkinantis $a^x \\equiv b \\pmod m$.",
         "conceptIds": [
           "olimpiada-11-concept-order"
         ],
@@ -60862,19 +60862,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Jau žinote iš praeito uždavinio: $3^2 \\\\equiv 9, 3^4 \\\\equiv 13$.",
+        "text": "Jau žinote iš praeito uždavinio: $3^2 \\equiv 9, 3^4 \\equiv 13$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite $3^5$ naudodami $3^4 \\\\cdot 3$.",
+        "text": "Apskaičiuokite $3^5$ naudodami $3^4 \\cdot 3$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "$13 \\\\cdot 3 = 39$. Kokia šio skaičiaus liekana dalijant iš 17?",
+        "text": "$13 \\cdot 3 = 39$. Kokia šio skaičiaus liekana dalijant iš 17?",
         "penalty": 0.12
       }
     ]
@@ -60884,7 +60884,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Nustatykite, ar lygtis $x^2 \\\\equiv 3 \\\\pmod{73}$ turi sprendinių. Naudokite kvadratinio savitarpiškumo dėsnį.",
+    "statement": "Nustatykite, ar lygtis $x^2 \\equiv 3 \\pmod{73}$ turi sprendinių. Naudokite kvadratinio savitarpiškumo dėsnį.",
     "answer": "Taip",
     "acceptedAnswers": [
       "Taip"
@@ -60896,11 +60896,11 @@ export const exercises = [
     ],
     "hints": [
       "Sprendinių egzistavimas ekvivalentus Legendro simbolio $(\\frac{3}{73}) = 1$ reikšmei.",
-      "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jų lygus $1 \\\\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
-      "Kadangi $73 = 4 \\\\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
-      "Redukuokite 73 moduliu 3: $73 \\\\equiv 1 \\\\pmod 3$. Ar 1 yra kvadratas?"
+      "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jų lygus $1 \\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+      "Kadangi $73 = 4 \\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
+      "Redukuokite 73 moduliu 3: $73 \\equiv 1 \\pmod 3$. Ar 1 yra kvadratas?"
     ],
-    "solution": "Tiriame Legendro simbolį $(\\frac{3}{73})$. Tikriname savitarpiškumo sąlygą: $73 \\\\equiv 1 \\\\pmod 4$. Todėl $(\\frac{3}{73}) = (\\frac{73}{3})$. Supaprastiname viršutinį skaičių: $73 \\\\equiv 1 \\\\pmod 3$. Gauname $(\\frac{1}{3}) = 1$, nes $1 = 1^2$. Kadangi simbolio reikšmė 1, lygtis turi sprendinių. Atsakymas: Taip.",
+    "solution": "Tiriame Legendro simbolį $(\\frac{3}{73})$. Tikriname savitarpiškumo sąlygą: $73 \\equiv 1 \\pmod 4$. Todėl $(\\frac{3}{73}) = (\\frac{73}{3})$. Supaprastiname viršutinį skaičių: $73 \\equiv 1 \\pmod 3$. Gauname $(\\frac{1}{3}) = 1$, nes $1 = 1^2$. Kadangi simbolio reikšmė 1, lygtis turi sprendinių. Atsakymas: Taip.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -60908,7 +60908,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 75,
     "coreIdea": {
       "title": "Legendro simbolio apvertimas",
-      "text": "Reikia apskaičiuoti $(\\frac{3}{73})$. Pagal savitarpiškumo dėsnį, kadangi $73 \\\\equiv 1 \\\\pmod 4$, tai $(\\frac{3}{73}) = (\\frac{73}{3})$."
+      "text": "Reikia apskaičiuoti $(\\frac{3}{73})$. Pagal savitarpiškumo dėsnį, kadangi $73 \\equiv 1 \\pmod 4$, tai $(\\frac{3}{73}) = (\\frac{73}{3})$."
     },
     "strategyTags": [
       "modular-arithmetic",
@@ -60935,7 +60935,7 @@ export const exercises = [
           {
             "title": "Apvertimas",
             "action": "Pakeičiame $(\\frac{3}{73})$ į $(\\frac{73}{3})$.",
-            "reason": "$73 \\\\equiv 1 \\\\pmod 4$.",
+            "reason": "$73 \\equiv 1 \\pmod 4$.",
             "result": "$(\\frac{73}{3})$",
             "latex": "(\\frac{3}{73}) = (\\frac{73}{3})"
           },
@@ -60956,7 +60956,7 @@ export const exercises = [
         "title": "Ženklo klaida apverčiant",
         "wrongMove": "Manoma, kad visada $(\\frac{p}{q}) = (\\frac{q}{p})$.",
         "whyTempting": "Tai paprasčiausia taisyklė.",
-        "correction": "Jei abu skaičiai yra $3 \\\\pmod 4$, atsiranda minuso ženklas.",
+        "correction": "Jei abu skaičiai yra $3 \\pmod 4$, atsiranda minuso ženklas.",
         "conceptIds": [
           "olimpiada-11-concept-reciprocity"
         ]
@@ -60974,7 +60974,7 @@ export const exercises = [
     ],
     "reflectionPrompts": [
       "Kaip savitarpiškumo dėsnis padeda išvengti didelių skaičių kėlimo laipsniu?",
-      "Kas būtų pasikeitę, jei lygtis būtų $x^2 \\\\equiv 3 \\\\pmod{71}$?"
+      "Kas būtų pasikeitę, jei lygtis būtų $x^2 \\equiv 3 \\pmod{71}$?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -61001,19 +61001,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jų lygus $1 \\\\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+        "text": "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jų lygus $1 \\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Kadangi $73 = 4 \\\\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
+        "text": "Kadangi $73 = 4 \\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Redukuokite 73 moduliu 3: $73 \\\\equiv 1 \\\\pmod 3$. Ar 1 yra kvadratas?",
+        "text": "Redukuokite 73 moduliu 3: $73 \\equiv 1 \\pmod 3$. Ar 1 yra kvadratas?",
         "penalty": 0.12
       }
     ]
@@ -61023,7 +61023,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite Jakobio simbolį $\\\\left(\\frac{29}{45}\\right)$.",
+    "statement": "Apskaičiuokite Jakobio simbolį $\\left(\\frac{29}{45}\\right)$.",
     "answer": "1",
     "acceptedAnswers": [
       "1"
@@ -61034,12 +61034,12 @@ export const exercises = [
       "olimpiada-11-concept-jacobi"
     ],
     "hints": [
-      "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\\\cdot (\\frac{29}{9})$.",
+      "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\cdot (\\frac{29}{9})$.",
       "$(\\frac{29}{9})$ visada lygus 1, jei $\\text{gcd}(29, 9)=1$, nes 9 yra kvadratas.",
       "Arba taikykite savitarpiškumą tiesiogiai: $(\\frac{29}{45}) = (\\frac{45}{29})$.",
-      "$45 \\\\equiv 16 \\\\pmod{29}$. Ar 16 yra kvadratas?"
+      "$45 \\equiv 16 \\pmod{29}$. Ar 16 yra kvadratas?"
     ],
-    "solution": "Naudojame Jakobio savitarpiškumo savybę: $(\\frac{29}{45}) = (\\frac{45}{29})$, nes $29 \\\\equiv 1 \\\\pmod 4$. Redukuojame moduliu 29: $45 \\\\equiv 16 \\\\pmod{29}$. Gauname $(\\frac{16}{29})$. Kadangi $16 = 4^2$, tai $(\\frac{16}{29}) = 1$.",
+    "solution": "Naudojame Jakobio savitarpiškumo savybę: $(\\frac{29}{45}) = (\\frac{45}{29})$, nes $29 \\equiv 1 \\pmod 4$. Redukuojame moduliu 29: $45 \\equiv 16 \\pmod{29}$. Gauname $(\\frac{16}{29})$. Kadangi $16 = 4^2$, tai $(\\frac{16}{29}) = 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -61074,7 +61074,7 @@ export const exercises = [
           {
             "title": "Apvertimas",
             "action": "Sukeičiame skaitiklį ir vardiklį.",
-            "reason": "$29 \\\\equiv 1 \\\\pmod 4$.",
+            "reason": "$29 \\equiv 1 \\pmod 4$.",
             "result": "(\\frac{45}{29})",
             "latex": "(\\frac{29}{45}) = (\\frac{45}{29})"
           },
@@ -61093,7 +61093,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-05-trap-1",
         "title": "Neteisinga išvada apie sprendinius",
-        "wrongMove": "Manoma, kad jei $(\\frac{a}{n}) = 1$, tai $x^2 \\\\equiv a \\\\pmod n$ būtinai turi sprendinių.",
+        "wrongMove": "Manoma, kad jei $(\\frac{a}{n}) = 1$, tai $x^2 \\equiv a \\pmod n$ būtinai turi sprendinių.",
         "whyTempting": "Tai galioja Legendro simboliui (pirminiams moduliams).",
         "correction": "Jakobio simbolis $1$ tik sako, kad blogų (reikšmė $-1$) pirminių daliklių yra lyginis skaičius. Reikia patikrinti kiekvieną pirminį daliklį.",
         "conceptIds": [
@@ -61113,7 +61113,7 @@ export const exercises = [
     ],
     "reflectionPrompts": [
       "Kokia yra pagrindinė nauda naudojant Jakobio simbolį vietoje Legendro simbolio?",
-      "Ar lygtis $x^2 \\\\equiv 29 \\\\pmod{45}$ turi sprendinių? (Patikrinkite mod 5 ir mod 9)."
+      "Ar lygtis $x^2 \\equiv 29 \\pmod{45}$ turi sprendinių? (Patikrinkite mod 5 ir mod 9)."
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -61134,7 +61134,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\\\cdot (\\frac{29}{9})$.",
+        "text": "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\cdot (\\frac{29}{9})$.",
         "penalty": 0.05
       },
       {
@@ -61152,7 +61152,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "$45 \\\\equiv 16 \\\\pmod{29}$. Ar 16 yra kvadratas?",
+        "text": "$45 \\equiv 16 \\pmod{29}$. Ar 16 yra kvadratas?",
         "penalty": 0.12
       }
     ]
@@ -61171,12 +61171,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Ištirkite, kokias liekanas duoda skaičiai $0^2, 1^2, 2^2, 3^4, \\\\dots, 7^2$ dalijant iš 8.",
-      "Kvadratinės liekanos mod 8 yra tik $\\\\{0, 1, 4\\\\}$.",
-      "Pabandykite sudėti tris skaičius iš aibės $\\\\{0, 1, 4\\\\}$ (leidžiant jiems kartotis) ir pažiūrėkite, ar galite gauti 7 moduliu 8.",
-      "Didžiausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\\\equiv 0$. Ar galima pasiekti 7?"
+      "Ištirkite, kokias liekanas duoda skaičiai $0^2, 1^2, 2^2, 3^4, \\dots, 7^2$ dalijant iš 8.",
+      "Kvadratinės liekanos mod 8 yra tik $\\{0, 1, 4\\}$.",
+      "Pabandykite sudėti tris skaičius iš aibės $\\{0, 1, 4\\}$ (leidžiant jiems kartotis) ir pažiūrėkite, ar galite gauti 7 moduliu 8.",
+      "Didžiausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\equiv 0$. Ar galima pasiekti 7?"
     ],
-    "solution": "Randame kvadratines liekanas mod 8: $0^2 \\\\equiv 0, 1^2 \\\\equiv 1, 2^2 \\\\equiv 4, 3^2 \\\\equiv 9 \\\\equiv 1, 4^2 \\\\equiv 0, 5^2 \\\\equiv 1, 6^2 \\\\equiv 4, 7^2 \\\\equiv 1$. Aibė yra $S = \\\\{0, 1, 4\\\\}$. Nagrinėjame $a^2 + b^2 + c^2 \\\\pmod 8$. Visos galimos kombinacijos: $(0,0,0) \\to 0$, $(1,1,1) \\to 3$, $(4,4,4) \\to 12 \\\\equiv 4$, $(4,1,1) \\to 6$, $(4,4,1) \\to 9 \\\\equiv 1$, $(4,0,0) \\to 4$, $(1,0,0) \\to 1$, $(1,1,0) \\to 2$, $(4,1,0) \\to 5$. Pastebime, kad nė viena kombinacija neduoda sumos 7. Todėl skaičius $8k+7$ negali būti trijų kvadratų suma.",
+    "solution": "Randame kvadratines liekanas mod 8: $0^2 \\equiv 0, 1^2 \\equiv 1, 2^2 \\equiv 4, 3^2 \\equiv 9 \\equiv 1, 4^2 \\equiv 0, 5^2 \\equiv 1, 6^2 \\equiv 4, 7^2 \\equiv 1$. Aibė yra $S = \\{0, 1, 4\\}$. Nagrinėjame $a^2 + b^2 + c^2 \\pmod 8$. Visos galimos kombinacijos: $(0,0,0) \\to 0$, $(1,1,1) \\to 3$, $(4,4,4) \\to 12 \\equiv 4$, $(4,1,1) \\to 6$, $(4,4,1) \\to 9 \\equiv 1$, $(4,0,0) \\to 4$, $(1,0,0) \\to 1$, $(1,1,0) \\to 2$, $(4,1,0) \\to 5$. Pastebime, kad nė viena kombinacija neduoda sumos 7. Todėl skaičius $8k+7$ negali būti trijų kvadratų suma.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -61213,14 +61213,14 @@ export const exercises = [
             "action": "Apskaičiuojame kvadratus mod 8.",
             "reason": "Norime apriboti galimas sumas.",
             "result": "{0, 1, 4}",
-            "latex": "x^2 \\\\in \\\\{0, 1, 4\\\\} \\\\pmod 8"
+            "latex": "x^2 \\in \\{0, 1, 4\\} \\pmod 8"
           },
           {
             "title": "Perranka",
             "action": "Patikriname visas trijų elementų sumas.",
             "reason": "Tai baigtinis skaičius atvejų.",
             "result": "7 nepasiekiamas",
-            "latex": "s_1+s_2+s_3 \\not\\\\equiv 7 \\\\pmod 8"
+            "latex": "s_1+s_2+s_3 \\not\\equiv 7 \\pmod 8"
           }
         ],
         "finalAnswer": "0, 1 arba 4; suma niekada nebus 7"
@@ -61232,7 +61232,7 @@ export const exercises = [
         "title": "Modulio 4 naudojimas",
         "wrongMove": "Mokinys bando įrodyti naudodamas mod 4.",
         "whyTempting": "Kvadratai mod 4 yra paprastesni (0, 1).",
-        "correction": "Moduliu 4 suma gali būti 3 (pvz., $1+1+1 \\\\equiv 3 \\\\equiv 7 \\\\pmod 4$), todėl tai nieko neįrodo. Reikia tikslesnio modulio 8.",
+        "correction": "Moduliu 4 suma gali būti 3 (pvz., $1+1+1 \\equiv 3 \\equiv 7 \\pmod 4$), todėl tai nieko neįrodo. Reikia tikslesnio modulio 8.",
         "conceptIds": []
       },
       {
@@ -61265,25 +61265,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Ištirkite, kokias liekanas duoda skaičiai $0^2, 1^2, 2^2, 3^4, \\\\dots, 7^2$ dalijant iš 8.",
+        "text": "Ištirkite, kokias liekanas duoda skaičiai $0^2, 1^2, 2^2, 3^4, \\dots, 7^2$ dalijant iš 8.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kvadratinės liekanos mod 8 yra tik $\\\\{0, 1, 4\\\\}$.",
+        "text": "Kvadratinės liekanos mod 8 yra tik $\\{0, 1, 4\\}$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Pabandykite sudėti tris skaičius iš aibės $\\\\{0, 1, 4\\\\}$ (leidžiant jiems kartotis) ir pažiūrėkite, ar galite gauti 7 moduliu 8.",
+        "text": "Pabandykite sudėti tris skaičius iš aibės $\\{0, 1, 4\\}$ (leidžiant jiems kartotis) ir pažiūrėkite, ar galite gauti 7 moduliu 8.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Didžiausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\\\equiv 0$. Ar galima pasiekti 7?",
+        "text": "Didžiausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\equiv 0$. Ar galima pasiekti 7?",
         "penalty": 0.12
       }
     ]
@@ -61306,10 +61306,10 @@ export const exercises = [
     "hints": [
       "Pirmykštis daliklis yra toks, kuris nedalina $2^k-1$ jokiems $k < n$.",
       "Ištirkite $n=3, 4, 5, 6$.",
-      "$2^6 - 1 = 63 = 3^2 \\\\cdot 7$. Ar 3 ir 7 jau pasirodė ankstesnėse reikšmėse?",
+      "$2^6 - 1 = 63 = 3^2 \\cdot 7$. Ar 3 ir 7 jau pasirodė ankstesnėse reikšmėse?",
       "$2^2-1=3$, $2^3-1=7$. Taigi abu skaičiaus 63 dalikliai jau buvo panaudoti."
     ],
-    "solution": "$n=3: 2^3-1=7$. Pirmykštis daliklis 7. $n=4: 2^4-1=15=3 \\\\cdot 5$. Pirmykštis daliklis 5 (nes 3 pasirodė prie $n=2$). $n=5: 2^5-1=31$. Pirmykštis daliklis 31. $n=6: 2^6-1=63=3^2 \\\\cdot 7$. Tikriname ankstesnius: $2^1-1=1$, $2^2-1=3$, $2^3-1=7$, $2^4-1=15$ (3, 5), $2^5-1=31$. Matome, kad 63 dalikliai $\\\\{3, 7\\\\}$ jau pasirodė prie $n=2$ ir $n=3$. Vadinasi, $n=6$ yra ieškoma išimtis.",
+    "solution": "$n=3: 2^3-1=7$. Pirmykštis daliklis 7. $n=4: 2^4-1=15=3 \\cdot 5$. Pirmykštis daliklis 5 (nes 3 pasirodė prie $n=2$). $n=5: 2^5-1=31$. Pirmykštis daliklis 31. $n=6: 2^6-1=63=3^2 \\cdot 7$. Tikriname ankstesnius: $2^1-1=1$, $2^2-1=3$, $2^3-1=7$, $2^4-1=15$ (3, 5), $2^5-1=31$. Matome, kad 63 dalikliai $\\{3, 7\\}$ jau pasirodė prie $n=2$ ir $n=3$. Vadinasi, $n=6$ yra ieškoma išimtis.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -61412,7 +61412,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "$2^6 - 1 = 63 = 3^2 \\\\cdot 7$. Ar 3 ir 7 jau pasirodė ankstesnėse reikšmėse?",
+        "text": "$2^6 - 1 = 63 = 3^2 \\cdot 7$. Ar 3 ir 7 jau pasirodė ankstesnėse reikšmėse?",
         "penalty": 0.1
       },
       {
@@ -61437,12 +61437,12 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Užrašykite skaičius $x$ ir $y$ pavidalu $3^k \\\\cdot m$.",
+      "Užrašykite skaičius $x$ ir $y$ pavidalu $3^k \\cdot m$.",
       "$x = 9a, y = 27b$, kur $a$ nesidalija iš 3.",
       "Iškelkite bendrą dauginamąjį prieš skliaustus sumoje $x+y$.",
       "$x+y = 9a + 27b = 9(a + 3b)$. Ar $a+3b$ dalijasi iš 3?"
     ],
-    "solution": "$v_3(x) = 2 \\\\implies x = 3^2 \\\\cdot a = 9a$, kur $3 \\nmid a$. $v_3(y) = 3 \\\\implies y = 3^3 \\\\cdot b = 27b$, kur $3 \\nmid b$. $x+y = 9a + 27b = 9(a + 3b)$. Tiriame skliaustus: $a + 3b$. Kadangi $3 \\nmid a$, tai $a + 3b$ nesidalija iš 3. Vadinasi, didžiausias 3-eto laipsnis sumoje yra $3^2$. $v_3(x+y) = 2$.",
+    "solution": "$v_3(x) = 2 \\implies x = 3^2 \\cdot a = 9a$, kur $3 \\nmid a$. $v_3(y) = 3 \\implies y = 3^3 \\cdot b = 27b$, kur $3 \\nmid b$. $x+y = 9a + 27b = 9(a + 3b)$. Tiriame skliaustus: $a + 3b$. Kadangi $3 \\nmid a$, tai $a + 3b$ nesidalija iš 3. Vadinasi, didžiausias 3-eto laipsnis sumoje yra $3^2$. $v_3(x+y) = 2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -61476,7 +61476,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Faktorizacija",
-            "action": "Iškeliame $3^{\\\\min(v_3(x), v_3(y))}$.",
+            "action": "Iškeliame $3^{\\min(v_3(x), v_3(y))}$.",
             "reason": "Tai bendras didžiausias žinomas daliklis.",
             "result": "9(a+3b)",
             "latex": "x+y = 3^2(a+3b)"
@@ -61485,8 +61485,8 @@ export const exercises = [
             "title": "Patikra",
             "action": "Tikriname liekaną mod 3.",
             "reason": "Norime įsitikinti, kad laipsnis nedidėja.",
-            "result": "a+3b \\\\equiv a \\neq 0",
-            "latex": "a+3b \\\\equiv a \\\\pmod 3"
+            "result": "a+3b \\equiv a \\neq 0",
+            "latex": "a+3b \\equiv a \\pmod 3"
           }
         ],
         "finalAnswer": "2"
@@ -61498,15 +61498,15 @@ export const exercises = [
         "title": "Manymas, kad laipsniai susideda",
         "wrongMove": "Spėjama, kad $v(x+y) = v(x) + v(y) = 5$.",
         "whyTempting": "Painiojama su sandaugos savybe $v(xy) = v(x) + v(y)$.",
-        "correction": "Sumos vertinimui galioja ultrametrinė nelygybė $v(x+y) \\\\ge \\\\min(v(x), v(y))$. Lygybė galioja, kai vertinimai skirtingi.",
+        "correction": "Sumos vertinimui galioja ultrametrinė nelygybė $v(x+y) \\ge \\min(v(x), v(y))$. Lygybė galioja, kai vertinimai skirtingi.",
         "conceptIds": []
       },
       {
         "id": "ex-olimpiada-11-08-trap-2",
         "title": "Sumažintas tikslumas",
         "wrongMove": "Spėjama, kad vertinimas yra bent mažiausias, bet ne tiksliai lygus jam.",
-        "whyTempting": "Ultrametrinė nelygybė $v(x+y) \\\\ge \\\\min(v(x), v(y))$ dažnai pateikiama tik kaip nelygybė.",
-        "correction": "Jei vertinimai skiriasi, nelygybė virsta griežta lygybe: $v(x+y) = \\\\min(v(x), v(y))$.",
+        "whyTempting": "Ultrametrinė nelygybė $v(x+y) \\ge \\min(v(x), v(y))$ dažnai pateikiama tik kaip nelygybė.",
+        "correction": "Jei vertinimai skiriasi, nelygybė virsta griežta lygybe: $v(x+y) = \\min(v(x), v(y))$.",
         "conceptIds": []
       }
     ],
@@ -61521,7 +61521,7 @@ export const exercises = [
         "deck": "theory",
         "cardType": "method",
         "front": "Kokia yra pagrindinė p-adinio vertinimo savybė sumai $v_p(x+y)$, kai $v_p(x) \\neq v_p(y)$?",
-        "back": "$v_p(x+y) = \\\\min(v_p(x), v_p(y))$.",
+        "back": "$v_p(x+y) = \\min(v_p(x), v_p(y))$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -61531,7 +61531,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Užrašykite skaičius $x$ ir $y$ pavidalu $3^k \\\\cdot m$.",
+        "text": "Užrašykite skaičius $x$ ir $y$ pavidalu $3^k \\cdot m$.",
         "penalty": 0.05
       },
       {
@@ -61559,7 +61559,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Naudodami Eizenšteino kriterijų, nustatykite, su kuriuo pirminiu skaičiumi $p$ galime įrodyti daugianario $P(x) = x^5 - 10x + 10$ neredukuojamumą virš $\\\\mathbb{Q}$.",
+    "statement": "Naudodami Eizenšteino kriterijų, nustatykite, su kuriuo pirminiu skaičiumi $p$ galime įrodyti daugianario $P(x) = x^5 - 10x + 10$ neredukuojamumą virš $\\mathbb{Q}$.",
     "answer": "5",
     "acceptedAnswers": [
       "5"
@@ -61690,7 +61690,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite 12-ojo ciklotoninio daugianario $\\\\Phi_{12}(x)$ išraišką naudodami ryšį $x^n - 1 = \\\\prod_{d|n} \\\\Phi_d(x)$.",
+    "statement": "Raskite 12-ojo ciklotoninio daugianario $\\Phi_{12}(x)$ išraišką naudodami ryšį $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
     "answer": "x^4 - x^2 + 1",
     "acceptedAnswers": [
       "x^4 - x^2 + 1"
@@ -61701,12 +61701,12 @@ export const exercises = [
       "olimpiada-11-concept-cyclotomic"
     ],
     "hints": [
-      "Pastebėkite, kad $\\\\Phi_1 \\\\Phi_2 \\\\Phi_3 \\\\Phi_6 = x^6 - 1$.",
-      "Vadinasi, $\\\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\\\Phi_4(x)}$.",
-      "Apskaičiuokite $\\\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ šaknų. $\\\\Phi_4(x) = x^2+1$.",
+      "Pastebėkite, kad $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$.",
+      "Vadinasi, $\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\Phi_4(x)}$.",
+      "Apskaičiuokite $\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ šaknų. $\\Phi_4(x) = x^2+1$.",
       "Supaprastinkite: $\\frac{x^6+1}{x^2+1}$. Naudokite kubų sumos formulę $a^3+b^3 = (a+b)(a^2-ab+b^2)$ su $a=x^2$."
     ],
-    "solution": "Žinome, kad $x^{12}-1 = \\\\Phi_1 \\\\Phi_2 \\\\Phi_3 \\\\Phi_4 \\\\Phi_6 \\\\Phi_{12}$. Grupė $\\\\Phi_1 \\\\Phi_2 \\\\Phi_3 \\\\Phi_6 = x^6 - 1$. $\\\\Phi_4(x) = \\frac{x^4-1}{\\\\Phi_1 \\\\Phi_2} = \\frac{x^4-1}{x^2-1} = x^2 + 1$. $\\\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1)(x^2+1)}$. $\\frac{x^{12}-1}{x^6-1} = x^6 + 1$. $\\\\Phi_{12}(x) = \\frac{x^6+1}{x^2+1} = \\frac{(x^2)^3+1}{x^2+1} = (x^2)^2 - x^2 + 1 = x^4 - x^2 + 1$.",
+    "solution": "Žinome, kad $x^{12}-1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6 \\Phi_{12}$. Grupė $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$. $\\Phi_4(x) = \\frac{x^4-1}{\\Phi_1 \\Phi_2} = \\frac{x^4-1}{x^2-1} = x^2 + 1$. $\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1)(x^2+1)}$. $\\frac{x^{12}-1}{x^6-1} = x^6 + 1$. $\\Phi_{12}(x) = \\frac{x^6+1}{x^2+1} = \\frac{(x^2)^3+1}{x^2+1} = (x^2)^2 - x^2 + 1 = x^4 - x^2 + 1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -61714,7 +61714,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 75,
     "coreIdea": {
       "title": "Daliklio eliminavimas",
-      "text": "$\\\\Phi_{12}(x) = \\frac{x^{12}-1}{\\\\Phi_1 \\\\Phi_2 \\\\Phi_3 \\\\Phi_4 \\\\Phi_6}$. Svarbu suprasti, kad $\\\\Phi_d$ sandaugos dažnai sudaro kitus $x^k-1$ tipo narius."
+      "text": "$\\Phi_{12}(x) = \\frac{x^{12}-1}{\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6}$. Svarbu suprasti, kad $\\Phi_d$ sandaugos dažnai sudaro kitus $x^k-1$ tipo narius."
     },
     "strategyTags": [
       "polynomials",
@@ -61747,7 +61747,7 @@ export const exercises = [
           },
           {
             "title": "Finalizavimas",
-            "action": "Padaliname iš $\\\\Phi_4$.",
+            "action": "Padaliname iš $\\Phi_4$.",
             "reason": "Lieka tik 12-os eilės šaknys.",
             "result": "x^4-x^2+1",
             "latex": "\\frac{x^6+1}{x^2+1} = x^4-x^2+1"
@@ -61760,9 +61760,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-10-trap-1",
         "title": "Daugianarių laipsnių painiojimas",
-        "wrongMove": "Tikimasi, kad $\\\\Phi_{12}$ laipsnis bus $\\\\varphi(12) = 4$, bet mokinys gauna kitokį dėl klaidų dalinant.",
+        "wrongMove": "Tikimasi, kad $\\Phi_{12}$ laipsnis bus $\\varphi(12) = 4$, bet mokinys gauna kitokį dėl klaidų dalinant.",
         "whyTempting": "Dalinimas kampu dažnai veda prie klaidų.",
-        "correction": "Visada patikrinkite, ar gauto daugianario laipsnis sutampa su $\\\\varphi(n)$.",
+        "correction": "Visada patikrinkite, ar gauto daugianario laipsnis sutampa su $\\varphi(n)$.",
         "conceptIds": [
           "olimpiada-11-concept-cyclotomic"
         ]
@@ -61772,14 +61772,14 @@ export const exercises = [
         "title": "Neteisingas daliklių parinkimas",
         "wrongMove": "Naudojami ne visi d, kurie dalija n.",
         "whyTempting": "Pamirštami maži dalikliai, pvz., 1.",
-        "correction": "Sandauga $\\\\prod \\\\Phi_d(x)$ turi apimti VISUS daliklius $d|n$.",
+        "correction": "Sandauga $\\prod \\Phi_d(x)$ turi apimti VISUS daliklius $d|n$.",
         "conceptIds": [
           "olimpiada-11-concept-cyclotomic"
         ]
       }
     ],
     "reflectionPrompts": [
-      "Kokia yra $\\\\Phi_n(1)$ reikšmė, kai $n$ yra pirminio skaičiaus laipsnis?",
+      "Kokia yra $\\Phi_n(1)$ reikšmė, kai $n$ yra pirminio skaičiaus laipsnis?",
       "Kodėl ciklotoniniai daugianariai visada turi sveikuosius koeficientus?"
     ],
     "extensionQuestions": [],
@@ -61788,8 +61788,8 @@ export const exercises = [
         "id": "ex-olimpiada-11-10-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Koks yra ciklotoninio daugianario $\\\\Phi_n(x)$ laipsnis?",
-        "back": "Eulerio funkcija $\\\\varphi(n)$.",
+        "front": "Koks yra ciklotoninio daugianario $\\Phi_n(x)$ laipsnis?",
+        "back": "Eulerio funkcija $\\varphi(n)$.",
         "conceptIds": [
           "olimpiada-11-concept-cyclotomic"
         ],
@@ -61801,19 +61801,19 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Pastebėkite, kad $\\\\Phi_1 \\\\Phi_2 \\\\Phi_3 \\\\Phi_6 = x^6 - 1$.",
+        "text": "Pastebėkite, kad $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Vadinasi, $\\\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\\\Phi_4(x)}$.",
+        "text": "Vadinasi, $\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\Phi_4(x)}$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Apskaičiuokite $\\\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ šaknų. $\\\\Phi_4(x) = x^2+1$.",
+        "text": "Apskaičiuokite $\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ šaknų. $\\Phi_4(x) = x^2+1$.",
         "penalty": 0.1
       },
       {
@@ -61845,7 +61845,7 @@ export const exercises = [
       "Dabar įstatykite $T_2$ ir $T_1$ į formulę $T_3(x) = 2x T_2(x) - T_1(x)$.",
       "$2x(2x^2 - 1) - x$. Atskliauskite ir sutraukite panašius narius."
     ],
-    "solution": "$T_0(x) = 1$ $T_1(x) = x$ $T_2(x) = 2x \\\\cdot T_1(x) - T_0(x) = 2x \\\\cdot x - 1 = 2x^2 - 1$ $T_3(x) = 2x \\\\cdot T_2(x) - T_1(x) = 2x(2x^2 - 1) - x$ $T_3(x) = 4x^3 - 2x - x = 4x^3 - 3x$",
+    "solution": "$T_0(x) = 1$ $T_1(x) = x$ $T_2(x) = 2x \\cdot T_1(x) - T_0(x) = 2x \\cdot x - 1 = 2x^2 - 1$ $T_3(x) = 2x \\cdot T_2(x) - T_1(x) = 2x(2x^2 - 1) - x$ $T_3(x) = 4x^3 - 2x - x = 4x^3 - 3x$",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -61918,7 +61918,7 @@ export const exercises = [
       }
     ],
     "reflectionPrompts": [
-      "Kaip patikrinti rezultatą naudojant trigonometrinę tapatybę $\\\\cos(3\\theta) = 4\\\\cos^3\\theta - 3\\\\cos\\theta$?",
+      "Kaip patikrinti rezultatą naudojant trigonometrinę tapatybę $\\cos(3\\theta) = 4\\cos^3\\theta - 3\\cos\\theta$?",
       "Koks bus vyriausiasis koeficientas $T_n(x)$ daugianaryje?"
     ],
     "extensionQuestions": [],
@@ -61968,7 +61968,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite visas funkcijas $f: \\\\mathbb{R} \\to \\\\mathbb{R}$, tenkinančias lygtį $f(x + f(y)) = f(x) + y$ visiems $x, y \\\\in \\\\mathbb{R}$.",
+    "statement": "Raskite visas funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias lygtį $f(x + f(y)) = f(x) + y$ visiems $x, y \\in \\mathbb{R}$.",
     "answer": "f(x) = x arba f(x) = -x",
     "acceptedAnswers": [
       "f(x) = x arba f(x) = -x"
@@ -61982,7 +61982,7 @@ export const exercises = [
       "Įstatykite $x=0$. Gausite $f(f(y)) = f(0) + y$. Tai rodo, kad $f(f(y))$ yra tiesinė funkcija.",
       "Pritaikykite $f$ abiem lygties pusėms: $f(f(x+f(y))) = f(f(x)+y)$. Naudokite gautą sąryšį $f(f(z)) = c+z$."
     ],
-    "solution": "Injektyvumas: jei $f(y_1)=f(y_2)$, tai $f(x+f(y_1))=f(x+f(y_2)) \\\\implies f(x)+y_1 = f(x)+y_2 \\\\implies y_1=y_2$. Surjektyvumas: dešinė pusė $f(x)+y$ gali įgyti bet kokią reikšmę keičiant $y$. Įstatome $x=0$: $f(f(y)) = y + f(0)$. Tegu $f(0) = c$. Tada $f(f(y)) = y+c$. Pritaikome $f$ pagrindinei lygčiai: $f(f(x+f(y))) = f(f(x)+y)$. $(x+f(y)) + c = (f(x)+y) + c \\\\implies x + f(y) = f(x) + y$. $f(x) - x = f(y) - y$ visiems $x, y$. Tai reiškia, kad $f(x)-x = k$ (konstanta). Įstatome $f(x) = x+k$ į pradinę lygtį: $(x+(y+k))+k = (x+k)+y \\\\implies x+y+2k = x+y+k \\\\implies k=0$. Gavome $f(x)=x$. Tačiau dar turime galimybę $f(x)=-x+k$ iš kitų transformacijų. Patikriname $f(x)=-x$: $- (x + (-y)) = -x + y \\\\implies -x+y = -x+y$. Tinka.",
+    "solution": "Injektyvumas: jei $f(y_1)=f(y_2)$, tai $f(x+f(y_1))=f(x+f(y_2)) \\implies f(x)+y_1 = f(x)+y_2 \\implies y_1=y_2$. Surjektyvumas: dešinė pusė $f(x)+y$ gali įgyti bet kokią reikšmę keičiant $y$. Įstatome $x=0$: $f(f(y)) = y + f(0)$. Tegu $f(0) = c$. Tada $f(f(y)) = y+c$. Pritaikome $f$ pagrindinei lygčiai: $f(f(x+f(y))) = f(f(x)+y)$. $(x+f(y)) + c = (f(x)+y) + c \\implies x + f(y) = f(x) + y$. $f(x) - x = f(y) - y$ visiems $x, y$. Tai reiškia, kad $f(x)-x = k$ (konstanta). Įstatome $f(x) = x+k$ į pradinę lygtį: $(x+(y+k))+k = (x+k)+y \\implies x+y+2k = x+y+k \\implies k=0$. Gavome $f(x)=x$. Tačiau dar turime galimybę $f(x)=-x+k$ iš kitų transformacijų. Patikriname $f(x)=-x$: $- (x + (-y)) = -x + y \\implies -x+y = -x+y$. Tinka.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -62020,7 +62020,7 @@ export const exercises = [
             "action": "Įrodome bijekciją.",
             "reason": "Tai leidžia saugiai taikyti inversines operacijas.",
             "result": "Injektyvi ir surjektyvi",
-            "latex": "f(y_1)=f(y_2) \\\\implies y_1=y_2"
+            "latex": "f(y_1)=f(y_2) \\implies y_1=y_2"
           },
           {
             "title": "Konstravimas",
@@ -62110,11 +62110,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Surašykite lygtį $r^2 - 5r + 6 = 0$ ir raskite jos šaknis.",
-      "Šaknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\\\cdot 2^n + B \\\\cdot 3^n$.",
+      "Šaknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\cdot 2^n + B \\cdot 3^n$.",
       "Naudokite $a_0=1$ ir $a_1=5$, kad sudarytumėte sistemą koeficientams $A$ ir $B$ rasti.",
       "$A+B=1$ ir $2A+3B=5$. Išspręskite šią sistemą."
     ],
-    "solution": "Sudarome charakteringąją lygtį: $r^2 - 5r + 6 = 0$. Sprendžiame: $(r-2)(r-3) = 0$, taigi šaknys $r_1=2, r_2=3$. Užrašome bendrą formą: $a_n = A \\\\cdot 2^n + B \\\\cdot 3^n$. Taikome pradines sąlygas: $n=0 \\\\implies A+B=1$; $n=1 \\\\implies 2A+3B=5$. Iš pirmos lygties $A=1-B$. Įstatome: $2(1-B)+3B=5 \\\\implies 2+B=5 \\\\implies B=3$. $A = 1-3 = -2$. $a_n = -2 \\\\cdot 2^n + 3 \\\\cdot 3^n = -2^{n+1} + 3^{n+1} = 3^{n+1} - 2^{n+1}$.",
+    "solution": "Sudarome charakteringąją lygtį: $r^2 - 5r + 6 = 0$. Sprendžiame: $(r-2)(r-3) = 0$, taigi šaknys $r_1=2, r_2=3$. Užrašome bendrą formą: $a_n = A \\cdot 2^n + B \\cdot 3^n$. Taikome pradines sąlygas: $n=0 \\implies A+B=1$; $n=1 \\implies 2A+3B=5$. Iš pirmos lygties $A=1-B$. Įstatome: $2(1-B)+3B=5 \\implies 2+B=5 \\implies B=3$. $A = 1-3 = -2$. $a_n = -2 \\cdot 2^n + 3 \\cdot 3^n = -2^{n+1} + 3^{n+1} = 3^{n+1} - 2^{n+1}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -62151,14 +62151,14 @@ export const exercises = [
             "action": "Išsprendžiame kvadratinę lygtį.",
             "reason": "Ji nustato bazines sekas.",
             "result": "r=2, r=3",
-            "latex": "r^2-5r+6=0 \\\\implies r \\\\in \\\\{2, 3\\\\}"
+            "latex": "r^2-5r+6=0 \\implies r \\in \\{2, 3\\}"
           },
           {
             "title": "Koeficientai",
             "action": "Išsprendžiame tiesinių lygčių sistemą.",
             "reason": "Pradinės sąlygos fiksuoja seką.",
             "result": "A=-2, B=3",
-            "latex": "a_n = -2 \\\\cdot 2^n + 3 \\\\cdot 3^n"
+            "latex": "a_n = -2 \\cdot 2^n + 3 \\cdot 3^n"
           }
         ],
         "finalAnswer": "3^{n+1} - 2^{n+1}"
@@ -62209,7 +62209,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Šaknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\\\cdot 2^n + B \\\\cdot 3^n$.",
+        "text": "Šaknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\cdot 2^n + B \\cdot 3^n$.",
         "penalty": 0.08
       },
       {
@@ -62231,21 +62231,21 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Supaprastinkite sumą $S = \\\\sin(\\theta) + \\\\sin(3\\theta) + \\\\dots + \\\\sin((2n-1)\\theta)$ visiems leistiniems $\\theta$.",
-    "answer": "\\frac{\\\\sin^2(n\\theta)}{\\\\sin\\theta}",
+    "statement": "Supaprastinkite sumą $S = \\sin(\\theta) + \\sin(3\\theta) + \\dots + \\sin((2n-1)\\theta)$ visiems leistiniems $\\theta$.",
+    "answer": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}",
     "acceptedAnswers": [
-      "\\frac{\\\\sin^2(n\\theta)}{\\\\sin\\theta}"
+      "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
     ],
     "answerTolerance": 0,
     "choices": [],
     "concepts": [],
     "hints": [
-      "Pabandykite padauginti sumą iš $2\\\\sin\\theta$.",
-      "$2\\\\sin(k\\theta)\\\\sin\\theta = \\\\cos((k-1)\\theta) - \\\\cos((k+1)\\theta)$.",
-      "Užrašykite kelis pirmuosius narius po daugybos: $(\\\\cos 0 - \\\\cos 2\\theta) + (\\\\cos 2\\theta - \\\\cos 4\\theta) + \\\\dots$.",
-      "Dauguma narių susiprastins. Liks $1 - \\\\cos(2n\\theta)$. Naudokite pusės kampo formulę $1-\\\\cos 2A = 2\\\\sin^2 A$."
+      "Pabandykite padauginti sumą iš $2\\sin\\theta$.",
+      "$2\\sin(k\\theta)\\sin\\theta = \\cos((k-1)\\theta) - \\cos((k+1)\\theta)$.",
+      "Užrašykite kelis pirmuosius narius po daugybos: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots$.",
+      "Dauguma narių susiprastins. Liks $1 - \\cos(2n\\theta)$. Naudokite pusės kampo formulę $1-\\cos 2A = 2\\sin^2 A$."
     ],
-    "solution": "$S \\\\cdot 2\\\\sin\\theta = \\\\sum_{k=1}^n 2\\\\sin((2k-1)\\theta)\\\\sin\\theta$. Taikome formulę: $2\\\\sin((2k-1)\\theta)\\\\sin\\theta = \\\\cos((2k-2)\\theta) - \\\\cos(2k\\theta)$. Suma: $(\\\\cos 0 - \\\\cos 2\\theta) + (\\\\cos 2\\theta - \\\\cos 4\\theta) + \\\\dots + (\\\\cos(2n-2)\\theta - \\\\cos(2n\\theta))$. Susiprastinus lieka $S \\\\cdot 2\\\\sin\\theta = \\\\cos 0 - \\\\cos(2n\\theta) = 1 - \\\\cos(2n\\theta)$. Naudojame tapatybę $1 - \\\\cos(2n\\theta) = 2\\\\sin^2(n\\theta)$. $S \\\\cdot 2\\\\sin\\theta = 2\\\\sin^2(n\\theta) \\\\implies S = \\frac{\\\\sin^2(n\\theta)}{\\\\sin\\theta}$.",
+    "solution": "$S \\cdot 2\\sin\\theta = \\sum_{k=1}^n 2\\sin((2k-1)\\theta)\\sin\\theta$. Taikome formulę: $2\\sin((2k-1)\\theta)\\sin\\theta = \\cos((2k-2)\\theta) - \\cos(2k\\theta)$. Suma: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots + (\\cos(2n-2)\\theta - \\cos(2n\\theta))$. Susiprastinus lieka $S \\cdot 2\\sin\\theta = \\cos 0 - \\cos(2n\\theta) = 1 - \\cos(2n\\theta)$. Naudojame tapatybę $1 - \\cos(2n\\theta) = 2\\sin^2(n\\theta)$. $S \\cdot 2\\sin\\theta = 2\\sin^2(n\\theta) \\implies S = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -62253,7 +62253,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Trigonometrinis teleskopavimas",
-      "text": "Padauginkite visą sumą iš $2\\\\sin\\theta$. Naudokite sandaugos vertimo suma formulę $2\\\\sin A \\\\sin B = \\\\cos(A-B) - \\\\cos(A+B)$. Suma taps teleskopine."
+      "text": "Padauginkite visą sumą iš $2\\sin\\theta$. Naudokite sandaugos vertimo suma formulę $2\\sin A \\sin B = \\cos(A-B) - \\cos(A+B)$. Suma taps teleskopine."
     },
     "strategyTags": [
       "trigonometry",
@@ -62279,42 +62279,42 @@ export const exercises = [
         "steps": [
           {
             "title": "Dauginimas",
-            "action": "Padauginame iš $2\\\\sin\\theta$.",
+            "action": "Padauginame iš $2\\sin\\theta$.",
             "reason": "Tai sukurs teleskopinę struktūrą.",
             "result": "2S sin\\theta = 1 - cos(2n\\theta)",
-            "latex": "2\\\\sin\\theta \\\\sum \\\\sin((2k-1)\\theta) = 1 - \\\\cos(2n\\theta)"
+            "latex": "2\\sin\\theta \\sum \\sin((2k-1)\\theta) = 1 - \\cos(2n\\theta)"
           },
           {
             "title": "Supaprastinimas",
             "action": "Taikome dvigubo kampo sinusą.",
             "reason": "Norime kompaktiško atsakymo.",
             "result": "sin^2(n\\theta)/sin\\theta",
-            "latex": "S = \\frac{2\\\\sin^2(n\\theta)}{2\\\\sin\\theta} = \\frac{\\\\sin^2(n\\theta)}{\\\\sin\\theta}"
+            "latex": "S = \\frac{2\\sin^2(n\\theta)}{2\\sin\\theta} = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
           }
         ],
-        "finalAnswer": "\\frac{\\\\sin^2(n\\theta)}{\\\\sin\\theta}"
+        "finalAnswer": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-11-14-trap-1",
         "title": "Klaida redukuojant sumą",
-        "wrongMove": "Pamirštamas pirmasis narys $\\\\cos 0 = 1$.",
+        "wrongMove": "Pamirštamas pirmasis narys $\\cos 0 = 1$.",
         "whyTempting": "Dažnai manoma, kad visi nariai virsta cos.",
         "correction": "Atidžiai išrašykite ribinius narius ($k=1$ ir $k=n$).",
         "conceptIds": []
       },
       {
         "id": "ex-olimpiada-11-14-trap-2",
-        "title": "Tapatybės $1-\\\\cos(2A)$ klaida",
-        "wrongMove": "Manoma, kad $1-\\\\cos(2A) = 2\\\\cos^2 A$.",
-        "whyTempting": "Painiojama su $1+\\\\cos(2A)$.",
-        "correction": "Naudokite $1-\\\\cos(2A) = 2\\\\sin^2 A$ sumoms su sinusais.",
+        "title": "Tapatybės $1-\\cos(2A)$ klaida",
+        "wrongMove": "Manoma, kad $1-\\cos(2A) = 2\\cos^2 A$.",
+        "whyTempting": "Painiojama su $1+\\cos(2A)$.",
+        "correction": "Naudokite $1-\\cos(2A) = 2\\sin^2 A$ sumoms su sinusais.",
         "conceptIds": []
       }
     ],
     "reflectionPrompts": [
-      "Kas nutiktų, jei $\\theta$ būtų $\\\\pi/n$ kartotinis?",
+      "Kas nutiktų, jei $\\theta$ būtų $\\pi/n$ kartotinis?",
       "Kaip sumą galima būtų suskaičiuoti naudojant kompleksinius skaičius (Oilerio formulę)?"
     ],
     "extensionQuestions": [],
@@ -62323,8 +62323,8 @@ export const exercises = [
         "id": "ex-olimpiada-11-14-srs-1",
         "deck": "theory",
         "cardType": "method",
-        "front": "Kokia trigonometrinė formulė naudojama sandaugai $2\\\\sin A \\\\sin B$ paversti suma?",
-        "back": "$\\\\cos(A-B) - \\\\cos(A+B)$.",
+        "front": "Kokia trigonometrinė formulė naudojama sandaugai $2\\sin A \\sin B$ paversti suma?",
+        "back": "$\\cos(A-B) - \\cos(A+B)$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -62334,25 +62334,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Pabandykite padauginti sumą iš $2\\\\sin\\theta$.",
+        "text": "Pabandykite padauginti sumą iš $2\\sin\\theta$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "$2\\\\sin(k\\theta)\\\\sin\\theta = \\\\cos((k-1)\\theta) - \\\\cos((k+1)\\theta)$.",
+        "text": "$2\\sin(k\\theta)\\sin\\theta = \\cos((k-1)\\theta) - \\cos((k+1)\\theta)$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Užrašykite kelis pirmuosius narius po daugybos: $(\\\\cos 0 - \\\\cos 2\\theta) + (\\\\cos 2\\theta - \\\\cos 4\\theta) + \\\\dots$.",
+        "text": "Užrašykite kelis pirmuosius narius po daugybos: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Dauguma narių susiprastins. Liks $1 - \\\\cos(2n\\theta)$. Naudokite pusės kampo formulę $1-\\\\cos 2A = 2\\\\sin^2 A$.",
+        "text": "Dauguma narių susiprastins. Liks $1 - \\cos(2n\\theta)$. Naudokite pusės kampo formulę $1-\\cos 2A = 2\\sin^2 A$.",
         "penalty": 0.12
       }
     ]
@@ -62362,7 +62362,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Tegu $a, b, c > 0$ yra tokie, kad $a+b+c=3$. Įrodykite nelygybę $a^2+b^2+c^2 + ab+bc+ca \\\\ge 6$ naudodami elementariuosius simetrinius daugianarius $p=a+b+c$ ir $q=ab+bc+ca$.",
+    "statement": "Tegu $a, b, c > 0$ yra tokie, kad $a+b+c=3$. Įrodykite nelygybę $a^2+b^2+c^2 + ab+bc+ca \\ge 6$ naudodami elementariuosius simetrinius daugianarius $p=a+b+c$ ir $q=ab+bc+ca$.",
     "answer": "Atsakymas gautas perrašius į p^2 - q >= 6",
     "acceptedAnswers": [
       "Atsakymas gautas perrašius į p^2 - q >= 6"
@@ -62373,10 +62373,10 @@ export const exercises = [
     "hints": [
       "Išreikškite sumą $a^2+b^2+c^2$ per $p$ ir $q$.",
       "$a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca) = p^2 - 2q$.",
-      "Įstatykite tai į pradinę nelygybę: $(p^2 - 2q) + q \\\\ge 6$.",
-      "Kadangi $p=3$, gauname $9 - q \\\\ge 6$. Ar tiesa, kad $q \\\\le 3$? Naudokite $p^2 \\\\ge 3q$."
+      "Įstatykite tai į pradinę nelygybę: $(p^2 - 2q) + q \\ge 6$.",
+      "Kadangi $p=3$, gauname $9 - q \\ge 6$. Ar tiesa, kad $q \\le 3$? Naudokite $p^2 \\ge 3q$."
     ],
-    "solution": "Turime $p = a+b+c = 3$ ir $q = ab+bc+ca$. Išraiška: $a^2+b^2+c^2 + ab+bc+ca = (p^2 - 2q) + q = p^2 - q$. Nelygybė tampa $p^2 - q \\\\ge 6$, t.y. $9 - q \\\\ge 6$, arba $q \\\\le 3$. Žinome klasikinę nelygybę $(a+b+c)^2 \\\\ge 3(ab+bc+ca)$, kuri ekvivalenti $p^2 \\\\ge 3q$. Kadangi $p=3$, tai $9 \\\\ge 3q \\\\implies q \\\\le 3$. Vadinasi, $9-q \\\\ge 9-3 = 6$. Įrodyta.",
+    "solution": "Turime $p = a+b+c = 3$ ir $q = ab+bc+ca$. Išraiška: $a^2+b^2+c^2 + ab+bc+ca = (p^2 - 2q) + q = p^2 - q$. Nelygybė tampa $p^2 - q \\ge 6$, t.y. $9 - q \\ge 6$, arba $q \\le 3$. Žinome klasikinę nelygybę $(a+b+c)^2 \\ge 3(ab+bc+ca)$, kuri ekvivalenti $p^2 \\ge 3q$. Kadangi $p=3$, tai $9 \\ge 3q \\implies q \\le 3$. Vadinasi, $9-q \\ge 9-3 = 6$. Įrodyta.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -62414,14 +62414,14 @@ export const exercises = [
             "action": "Pakeičiame kintamuosius.",
             "reason": "Tai supaprastina nelygybės struktūrą.",
             "result": "9-q >= 6",
-            "latex": "(a+b+c)^2 - (ab+bc+ca) \\\\ge 6"
+            "latex": "(a+b+c)^2 - (ab+bc+ca) \\ge 6"
           },
           {
             "title": "Pabaiga",
             "action": "Taikome q <= p^2/3.",
             "reason": "Standartinė tapatybė.",
             "result": "q <= 3",
-            "latex": "q \\\\le 3 \\\\implies 9-q \\\\ge 6"
+            "latex": "q \\le 3 \\implies 9-q \\ge 6"
           }
         ],
         "finalAnswer": "Atsakymas gautas perrašius į p^2 - q >= 6"
@@ -62439,9 +62439,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-15-trap-2",
         "title": "Klaidingas p, q ryšys",
-        "wrongMove": "Manoma, kad $q \\\\ge 3$, kai $p=3$.",
+        "wrongMove": "Manoma, kad $q \\ge 3$, kai $p=3$.",
         "whyTempting": "Atvirkštinis mąstymas.",
-        "correction": "Naudokite $(a+b+c)^2 \\\\ge 3(ab+bc+ca)$, kas reiškia $q \\\\le p^2/3$.",
+        "correction": "Naudokite $(a+b+c)^2 \\ge 3(ab+bc+ca)$, kas reiškia $q \\le p^2/3$.",
         "conceptIds": []
       }
     ],
@@ -62478,13 +62478,13 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite tai į pradinę nelygybę: $(p^2 - 2q) + q \\\\ge 6$.",
+        "text": "Įstatykite tai į pradinę nelygybę: $(p^2 - 2q) + q \\ge 6$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi $p=3$, gauname $9 - q \\\\ge 6$. Ar tiesa, kad $q \\\\le 3$? Naudokite $p^2 \\\\ge 3q$.",
+        "text": "Kadangi $p=3$, gauname $9 - q \\ge 6$. Ar tiesa, kad $q \\le 3$? Naudokite $p^2 \\ge 3q$.",
         "penalty": 0.12
       }
     ]
@@ -62692,7 +62692,7 @@ export const exercises = [
             "action": "Išsprendžiame gautą tiesinę lygtį kintamojo x atžvilgiu.",
             "reason": " BD ilgis tiesiogiai randamas iš proporcijos.",
             "result": "x = 2",
-            "latex": "3x = 4 + x \\\\implies 2x = 4 \\\\implies x = 2"
+            "latex": "3x = 4 + x \\implies 2x = 4 \\implies x = 2"
           }
         ],
         "finalAnswer": "2"
@@ -62797,7 +62797,7 @@ export const exercises = [
     "hints": [
       "Poliarė yra tiesė, susijusi su konkrečiu tašku (poliu) apskritimo atžvilgiu. Naudokite analizinę formulę $x x_0 + y y_0 = R^2$, kur $(x_0, y_0)$ yra taško P koordinatės.",
       "Iš apskritimo lygties $x^2 + y^2 = 9$ matome, kad spindulio kvadratas $R^2 = 9$. Taško P koordinatės yra $x_0 = 5$ ir $y_0 = 0$.",
-      "Įstatykite šias vertes į poliarės formulę: $x \\\\cdot 5 + y \\\\cdot 0 = 9$.",
+      "Įstatykite šias vertes į poliarės formulę: $x \\cdot 5 + y \\cdot 0 = 9$.",
       "Supaprastinkite lygtį: $5x = 9$. Išreikškite x kaip skaičių arba paprastąją trupmeną."
     ],
     "solution": "Identifikuojame taško P (polio) koordinates: $x_0 = 5, y_0 = 0$. Iš apskritimo lygties $x^2 + y^2 = 9$ nustatome $R^2 = 9$. Taikome poliarės tiesės formulę apskritimui: $x x_0 + y y_0 = R^2$. Įstatome vertes: $x(5) + y(0) = 9$. Gauname tiesės lygtį: $5x = 9$, kurią perrašome $x = 9/5$ arba $x = 1.8$.",
@@ -62844,7 +62844,7 @@ export const exercises = [
             "action": "Įstatome koordinates į lygtį $x x_0 + y y_0 = R^2$.",
             "reason": "Tai tiesioginis poliarės apibrėžimas analizinėje geometrijoje.",
             "result": "5x = 9",
-            "latex": "x \\\\cdot 5 + y \\\\cdot 0 = 9"
+            "latex": "x \\cdot 5 + y \\cdot 0 = 9"
           },
           {
             "title": "Rezultato supaprastinimas",
@@ -62925,7 +62925,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Įstatykite šias vertes į poliarės formulę: $x \\\\cdot 5 + y \\\\cdot 0 = 9$.",
+        "text": "Įstatykite šias vertes į poliarės formulę: $x \\cdot 5 + y \\cdot 0 = 9$.",
         "penalty": 0.1
       },
       {
@@ -62941,7 +62941,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Inversija su centru $O$ ir spinduliu $R$ atvaizduoja apskritimą $\\\\omega$, einantį per centrą $O$. Koks geometrinis objektas yra šio apskritimo vaizdas?",
+    "statement": "Inversija su centru $O$ ir spinduliu $R$ atvaizduoja apskritimą $\\omega$, einantį per centrą $O$. Koks geometrinis objektas yra šio apskritimo vaizdas?",
     "answer": "Tiesė, neeinanti per centrą O",
     "acceptedAnswers": [
       "Tiesė, neeinanti per centrą O"
@@ -62957,7 +62957,7 @@ export const exercises = [
       "Apskritimas, einantis per centrą, po inversijos visada tampa tiese. Kurioje vietoje ši tiesė bus centro atžvilgiu?",
       "Apskritimas be centro taško O virsta vientisa tiese, kuri nekerta O (nes O nukeliavo į begalybę). Taigi vaizdas yra tiesė, neeinanti per O."
     ],
-    "solution": "Inversija plokštumoje bet kokį apskritimą arba tiesę atvaizduoja į apskritimą arba tiesę. Taškas, esantis inversijos centre O, pagal apibrėžimą atvaizduojamas į begalybės tašką. Kadangi apskritimas $\\\\omega$ eina per centrą O, jo vaizdas $f(\\\\omega)$ turi turėti tašką begalybėje. Objektas, turintis tašką begalybėje, yra tiesė. Kadangi pradinis objektas $\\\\omega$ nėra pati tiesė, einanti per O, jo vaizdas bus tiesė, neeinanti per O (nes joks kitas taškas nebuvo atvaizduotas į O).",
+    "solution": "Inversija plokštumoje bet kokį apskritimą arba tiesę atvaizduoja į apskritimą arba tiesę. Taškas, esantis inversijos centre O, pagal apibrėžimą atvaizduojamas į begalybės tašką. Kadangi apskritimas $\\omega$ eina per centrą O, jo vaizdas $f(\\omega)$ turi turėti tašką begalybėje. Objektas, turintis tašką begalybėje, yra tiesė. Kadangi pradinis objektas $\\omega$ nėra pati tiesė, einanti per O, jo vaizdas bus tiesė, neeinanti per O (nes joks kitas taškas nebuvo atvaizduotas į O).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -62994,21 +62994,21 @@ export const exercises = [
             "action": "Nustatome inversijos centro vaizdą.",
             "reason": "Centro taškas diktuoja objekto elgseną begalybėje.",
             "result": "O -> ∞",
-            "latex": "f(O) = \\\\infty"
+            "latex": "f(O) = \\infty"
           },
           {
             "title": "Objekto klasifikavimas",
             "action": "Priskiriame vaizdą tiesių arba apskritimų klasei.",
             "reason": "Tik tiesės plokštumoje siekia begalybės tašką.",
             "result": "Vaizdas yra tiesė",
-            "latex": "\\\\omega \\ni O \\\\implies f(\\\\omega) = \\text{Line}"
+            "latex": "\\omega \\ni O \\implies f(\\omega) = \\text{Line}"
           },
           {
             "title": "Padėties nustatymas",
             "action": "Patikriname, ar tiesė eina per centrą O.",
             "reason": "Tik tiesės, kurios pačios yra inversijos spinduliuose, lieka eiti per centrą.",
             "result": "Tiesė, neeinanti per O",
-            "latex": "O \\notin f(\\\\omega)"
+            "latex": "O \\notin f(\\omega)"
           }
         ],
         "finalAnswer": "Tiesė, neeinanti per centrą O"
@@ -63120,9 +63120,9 @@ export const exercises = [
       "Nagrinėkite santykį kaip funkciją, kurioje taškas P yra kintamasis. Įsivaizduokite, kas nutinka su skaitiklio ir vardiklio reikšmėmis, kai P sutampa su B.",
       "Atstumas PB artėja prie nulio, nes P juda tiesiai link B. Taškas C yra fiksuotas ir nėra tame pačiame taške kaip B, todėl atstumas PC artėja prie teigiamo skaičiaus BC.",
       "Taikykite ribų dėsnius: jei skaitiklis artėja prie 0, o vardiklis artėja prie teigiamos konstantos, tai visas santykis artėja prie 0.",
-      "Suskaičiuokite: $\\\\lim_{P \\to B} PB = 0$ ir $\\\\lim_{P \\to B} PC = BC > 0$. Santykis yra $0 / BC$. Kokia tai reikšmė?"
+      "Suskaičiuokite: $\\lim_{P \\to B} PB = 0$ ir $\\lim_{P \\to B} PC = BC > 0$. Santykis yra $0 / BC$. Kokia tai reikšmė?"
     ],
-    "solution": "Tarkime, kad tiesėje įvesta koordinačių sistema, kurioje taško B koordinatė yra $b$, o judančio taško P koordinatė yra $x$. Kai P artėja prie B, tai $x \\to b$, todėl atstumas $PB = |x - b|$ artėja prie $0$. Taškas C yra fiksuotas plokštumoje, todėl atstumas $PC$ artėja prie fiksuoto atstumo $BC$. Pagal sąlygą C yra kitoje tiesės pusėje (arba tiesiog ne taške B), todėl $BC > 0$. Santykio riba yra $\\\\lim_{P \\to B} \\frac{PB}{PC} = \\frac{\\\\lim PB}{\\\\lim PC} = \\frac{0}{BC} = 0$.",
+    "solution": "Tarkime, kad tiesėje įvesta koordinačių sistema, kurioje taško B koordinatė yra $b$, o judančio taško P koordinatė yra $x$. Kai P artėja prie B, tai $x \\to b$, todėl atstumas $PB = |x - b|$ artėja prie $0$. Taškas C yra fiksuotas plokštumoje, todėl atstumas $PC$ artėja prie fiksuoto atstumo $BC$. Pagal sąlygą C yra kitoje tiesės pusėje (arba tiesiog ne taške B), todėl $BC > 0$. Santykio riba yra $\\lim_{P \\to B} \\frac{PB}{PC} = \\frac{\\lim PB}{\\lim PC} = \\frac{0}{BC} = 0$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -63160,7 +63160,7 @@ export const exercises = [
             "action": "Nustatome skaitiklio ir vardiklio ribas.",
             "reason": "Riba priklauso nuo atskirų narių elgsenos.",
             "result": "PB -> 0, PC -> BC",
-            "latex": "\\\\lim_{P \\to B} PB = 0, \\\\quad \\\\lim_{P \\to B} PC = BC"
+            "latex": "\\lim_{P \\to B} PB = 0, \\quad \\lim_{P \\to B} PC = BC"
           },
           {
             "title": "Santykių taisyklė",
@@ -63247,7 +63247,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Suskaičiuokite: $\\\\lim_{P \\to B} PB = 0$ ir $\\\\lim_{P \\to B} PC = BC > 0$. Santykis yra $0 / BC$. Kokia tai reikšmė?",
+        "text": "Suskaičiuokite: $\\lim_{P \\to B} PB = 0$ ir $\\lim_{P \\to B} PC = BC > 0$. Santykis yra $0 / BC$. Kokia tai reikšmė?",
         "penalty": 0.12
       }
     ]
@@ -63419,7 +63419,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Trikampyje $ABC$ trys čevianos $AD, BE, CF$ susikerta viename taške $P$. Pagal trigonometrinę Čevos teoremos formą, koks turi būti santykių $\\frac{\\\\sin \\\\angle BAD}{\\\\sin \\\\angle CAD} \\\\cdot \\frac{\\\\sin \\\\angle CBE}{\\\\sin \\\\angle ABE} \\\\cdot \\frac{\\\\sin \\\\angle ACF}{\\\\sin \\\\angle BCF}$ rezultatas?",
+    "statement": "Trikampyje $ABC$ trys čevianos $AD, BE, CF$ susikerta viename taške $P$. Pagal trigonometrinę Čevos teoremos formą, koks turi būti santykių $\\frac{\\sin \\angle BAD}{\\sin \\angle CAD} \\cdot \\frac{\\sin \\angle CBE}{\\sin \\angle ABE} \\cdot \\frac{\\sin \\angle ACF}{\\sin \\angle BCF}$ rezultatas?",
     "answer": "1",
     "acceptedAnswers": [
       "1"
@@ -63429,11 +63429,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Trigonometrinė Čevos teoremos forma yra tiesioginis klasikinės Čevos teoremos (apie kraštinių santykius) atitikmuo naudojant kampus. Prisiminkite, kokią sandaugos reikšmę garantuoja čevianų susikirtimas viename taške.",
-      "Teorema teigia, kad sandauga $\\\\prod_{i=1}^3 \\frac{\\\\sin \\\\alpha_i}{\\\\sin \\beta_i}$ turi specifinę skaitinę vertę, kai tiesės yra konkurentios (kertasi viename taške).",
+      "Teorema teigia, kad sandauga $\\prod_{i=1}^3 \\frac{\\sin \\alpha_i}{\\sin \\beta_i}$ turi specifinę skaitinę vertę, kai tiesės yra konkurentios (kertasi viename taške).",
       "Pagalvokite apie simetriją: jei sandauga būtų ne 1, tai tiesių eiliškumas pakeistų rezultatą. Standartinėse olimpiadinėse teoremose (Čeva, Menelajas) rezultatas dažniausiai yra 1 arba -1.",
       "Konkrečiu čevianų susikirtimo atveju visų šešių kampų sinusų santykis visada duoda tą patį sveikąjį skaičių. Koks tai skaičius?"
     ],
-    "solution": "Klasikinė Čevos teorema teigia, kad čevianos $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$. Naudojant sinusų teoremą trikampiuose $ABD$ ir $ACD$, kraštinių santykį $\\frac{BD}{DC}$ galima išreikšti kaip $\\frac{AB \\\\sin \\\\angle BAD}{AC \\\\sin \\\\angle CAD}$. Pritaikius šią išraišką visoms trims kraštinių poroms ir sutraukus trikampio kraštines $AB, BC, CA$, gauname trigonometrinę formą. Gautoje lygtyje kampų sinusų santykių sandauga $\\frac{\\\\sin \\\\angle BAD}{\\\\sin \\\\angle CAD} \\\\cdot \\frac{\\\\sin \\\\angle CBE}{\\\\sin \\\\angle ABE} \\\\cdot \\frac{\\\\sin \\\\angle ACF}{\\\\sin \\\\angle BCF}$ privalo būti lygi 1.",
+    "solution": "Klasikinė Čevos teorema teigia, kad čevianos $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$. Naudojant sinusų teoremą trikampiuose $ABD$ ir $ACD$, kraštinių santykį $\\frac{BD}{DC}$ galima išreikšti kaip $\\frac{AB \\sin \\angle BAD}{AC \\sin \\angle CAD}$. Pritaikius šią išraišką visoms trims kraštinių poroms ir sutraukus trikampio kraštines $AB, BC, CA$, gauname trigonometrinę formą. Gautoje lygtyje kampų sinusų santykių sandauga $\\frac{\\sin \\angle BAD}{\\sin \\angle CAD} \\cdot \\frac{\\sin \\angle CBE}{\\sin \\angle ABE} \\cdot \\frac{\\sin \\angle ACF}{\\sin \\angle BCF}$ privalo būti lygi 1.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -63472,14 +63472,14 @@ export const exercises = [
             "action": "Identifikuojame kampus tarp čevianų ir trikampio kraštinių.",
             "reason": "Teorema sieja būtent šiuos šešis kampus.",
             "result": "BAD, CAD, CBE, ABE, ACF, BCF",
-            "latex": "\\\\alpha_1, \\beta_1, \\\\alpha_2, \\beta_2, \\\\alpha_3, \\beta_3"
+            "latex": "\\alpha_1, \\beta_1, \\alpha_2, \\beta_2, \\alpha_3, \\beta_3"
           },
           {
             "title": "Konkurentumo sąlyga",
             "action": "Taikome trigonometrinę tapatybę konkurentiškoms tiesėms.",
             "reason": "Tai tiesioginė teoremos išvada.",
             "result": "Sandauga = 1",
-            "latex": "\\frac{\\\\sin \\\\alpha_1}{\\\\sin \\beta_1} \\\\cdot \\frac{\\\\sin \\\\alpha_2}{\\\\sin \\beta_2} \\\\cdot \\frac{\\\\sin \\\\alpha_3}{\\\\sin \\beta_3} = 1"
+            "latex": "\\frac{\\sin \\alpha_1}{\\sin \\beta_1} \\cdot \\frac{\\sin \\alpha_2}{\\sin \\beta_2} \\cdot \\frac{\\sin \\alpha_3}{\\sin \\beta_3} = 1"
           }
         ],
         "finalAnswer": "1"
@@ -63547,7 +63547,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Teorema teigia, kad sandauga $\\\\prod_{i=1}^3 \\frac{\\\\sin \\\\alpha_i}{\\\\sin \\beta_i}$ turi specifinę skaitinę vertę, kai tiesės yra konkurentios (kertasi viename taške).",
+        "text": "Teorema teigia, kad sandauga $\\prod_{i=1}^3 \\frac{\\sin \\alpha_i}{\\sin \\beta_i}$ turi specifinę skaitinę vertę, kai tiesės yra konkurentios (kertasi viename taške).",
         "penalty": 0.08
       },
       {
@@ -63583,7 +63583,7 @@ export const exercises = [
       "Tegu D yra pusiaukampinės susikirtimo su pagrindu taškas. Tada trikampis ABD yra statusis, kurio įžambinė yra AB = 5, o vienas statinis BD = 6/2 = 3.",
       "Pritaikykite Pitagoro teoremą statiajam trikampiui ABD: $AD^2 + BD^2 = AB^2$. Apskaičiuokite AD ilgį."
     ],
-    "solution": "Kadangi trikampis $ABC$ yra lygiašonis ($AB=AC=5$), tai pusiaukampinė $AD$ iš viršūnės $A$ sutampa su aukštine ir pusiaukraštine. Taškas $D$ dalija pagrindą $BC$ pusiau, todėl $BD = BC / 2 = 6 / 2 = 3$. Kadangi $AD$ yra aukštinė, trikampis $ABD$ yra statusis su stačiuoju kampu viršūnėje $D$. Pagal Pitagoro teoremą: $AD^2 + BD^2 = AB^2 \\\\implies AD^2 + 3^2 = 5^2$. Apskaičiuojame: $AD^2 = 25 - 9 = 16$. Iš čia $AD = 4$.",
+    "solution": "Kadangi trikampis $ABC$ yra lygiašonis ($AB=AC=5$), tai pusiaukampinė $AD$ iš viršūnės $A$ sutampa su aukštine ir pusiaukraštine. Taškas $D$ dalija pagrindą $BC$ pusiau, todėl $BD = BC / 2 = 6 / 2 = 3$. Kadangi $AD$ yra aukštinė, trikampis $ABD$ yra statusis su stačiuoju kampu viršūnėje $D$. Pagal Pitagoro teoremą: $AD^2 + BD^2 = AB^2 \\implies AD^2 + 3^2 = 5^2$. Apskaičiuojame: $AD^2 = 25 - 9 = 16$. Iš čia $AD = 4$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -63628,7 +63628,7 @@ export const exercises = [
             "action": "Taikome Pitagoro teoremą trikampiui ABD.",
             "reason": "Tai stačiakampis trikampis.",
             "result": "4",
-            "latex": "AD = \\\\sqrt{AB^2 - BD^2} = \\\\sqrt{5^2 - 3^2} = 4"
+            "latex": "AD = \\sqrt{AB^2 - BD^2} = \\sqrt{5^2 - 3^2} = 4"
           }
         ],
         "finalAnswer": "4"
@@ -63638,7 +63638,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-23-trap-1",
         "title": "Sudėtingų formulių naudojimas",
-        "wrongMove": "Mokinys bando taikyti bendrąją pusiaukampinės ilgio formulę $l_a = \\\\sqrt{bc(1 - \\frac{a^2}{(b+c)^2})}$.",
+        "wrongMove": "Mokinys bando taikyti bendrąją pusiaukampinės ilgio formulę $l_a = \\sqrt{bc(1 - \\frac{a^2}{(b+c)^2})}$.",
         "whyTempting": "Tai standartinė formulė, tinkanti visiems trikampiams.",
         "correction": "Nors ši formulė teisinga, lygiašoniame trikampyje (viršūnės atveju) Pitagoro teorema yra nepalyginamai paprastesnė ir mažiau reikalaujanti skaičiavimų.",
         "conceptIds": []
@@ -63728,11 +63728,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Erdišo-Mordelio nelygybė yra vienas gražiausių geometrijos rezultatų, siejantis taško padėtį trikampio viduje su jo atstumais iki viršūnių ir kraštinių.",
-      "Tegu $R_1, R_2, R_3$ yra atstumai iki viršūnių, o $d_1, d_2, d_3$ – atstumai iki kraštinių. Nelygybė teigia, kad $\\\\sum R_i \\\\ge K \\\\sum d_i$ kokiai nors konstantai K.",
+      "Tegu $R_1, R_2, R_3$ yra atstumai iki viršūnių, o $d_1, d_2, d_3$ – atstumai iki kraštinių. Nelygybė teigia, kad $\\sum R_i \\ge K \\sum d_i$ kokiai nors konstantai K.",
       "Lygybė šioje nelygybėje pasiekiama tik tada, kai trikampis yra lygiakraštis, o taškas P yra jo centras. Pabandykite suskaičiuoti santykį šiame simetriškame atveju.",
-      "Lygiakraščiame trikampyje su kraštine a, atstumas nuo centro iki viršūnės yra spindulys $R = a/\\\\sqrt{3}$, o iki kraštinės – apotema $d = a/(2\\\\sqrt{3})$. Koks yra santykis $R/d$?"
+      "Lygiakraščiame trikampyje su kraštine a, atstumas nuo centro iki viršūnės yra spindulys $R = a/\\sqrt{3}$, o iki kraštinės – apotema $d = a/(2\\sqrt{3})$. Koks yra santykis $R/d$?"
     ],
-    "solution": "Erdišo-Mordelio teorema teigia, kad bet kuriam taškui P trikampio ABC viduje galioja nelygybė: $PA + PB + PC \\\\ge 2(pd(P, BC) + pd(P, CA) + pd(P, AB))$. Naudojant žymėjimą $\\\\sum R_i \\\\ge 2 \\\\sum d_i$, matome, kad santykis $(\\\\sum R_i) / (\\\\sum d_i)$ visada yra ne mažesnis už 2. Mažiausia vertė 2 pasiekiama, kai trikampis yra lygiakraštis, o taškas P yra jo svorio (ir apibrėžtinio apskritimo) centras. Tokiu atveju $R_1 = R_2 = R_3 = R$ ir $d_1 = d_2 = d_3 = r$. Žinome, kad lygiakraščio trikampio apibrėžtinio apskritimo spindulys $R$ yra dvigubai didesnis už įbrėžtinio apskritimo spindulį $r$ ($R = 2r$).",
+    "solution": "Erdišo-Mordelio teorema teigia, kad bet kuriam taškui P trikampio ABC viduje galioja nelygybė: $PA + PB + PC \\ge 2(pd(P, BC) + pd(P, CA) + pd(P, AB))$. Naudojant žymėjimą $\\sum R_i \\ge 2 \\sum d_i$, matome, kad santykis $(\\sum R_i) / (\\sum d_i)$ visada yra ne mažesnis už 2. Mažiausia vertė 2 pasiekiama, kai trikampis yra lygiakraštis, o taškas P yra jo svorio (ir apibrėžtinio apskritimo) centras. Tokiu atveju $R_1 = R_2 = R_3 = R$ ir $d_1 = d_2 = d_3 = r$. Žinome, kad lygiakraščio trikampio apibrėžtinio apskritimo spindulys $R$ yra dvigubai didesnis už įbrėžtinio apskritimo spindulį $r$ ($R = 2r$).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -63740,7 +63740,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Erdos-Mordell teorema",
-      "text": "Nelygybė teigia, kad $R_1 + R_2 + R_3 \\\\ge 2(d_1 + d_2 + d_3)$. Lygybė pasiekiama tik lygiašoniam trikampiui ir taškui centre."
+      "text": "Nelygybė teigia, kad $R_1 + R_2 + R_3 \\ge 2(d_1 + d_2 + d_3)$. Lygybė pasiekiama tik lygiašoniam trikampiui ir taškui centre."
     },
     "strategyTags": [
       "geometry",
@@ -63770,14 +63770,14 @@ export const exercises = [
             "action": "Atpažįstame, kad uždavinyje aprašytas santykis tarp atstumų iki viršūnių ir kraštinių yra Erdišo-Mordelio nelygybė.",
             "reason": "Uždavinyje minimos standartinės Erdišo-Mordelio kintamųjų žymėjimo sistemos (Ri ir di).",
             "result": "Erdišo-Mordelio teorema: Sum(Ri) >= 2 Sum(di)",
-            "latex": "\\\\sum_{i=1}^3 R_i \\\\ge 2 \\\\sum_{i=1}^3 d_i"
+            "latex": "\\sum_{i=1}^3 R_i \\ge 2 \\sum_{i=1}^3 d_i"
           },
           {
             "title": "Santykio išraiška",
             "action": "Pertvarkome nelygybę taip, kad gautume prašomą santykį.",
-            "reason": "Mums reikia rasti $(\\\\sum R_i) / (\\\\sum d_i)$ apatinį rėžį.",
+            "reason": "Mums reikia rasti $(\\sum R_i) / (\\sum d_i)$ apatinį rėžį.",
             "result": "Santykis >= 2",
-            "latex": "\\frac{\\\\sum_{i=1}^3 R_i}{\\\\sum_{i=1}^3 d_i} \\\\ge 2"
+            "latex": "\\frac{\\sum_{i=1}^3 R_i}{\\sum_{i=1}^3 d_i} \\ge 2"
           },
           {
             "title": "Minimalios vertės pagrindimas",
@@ -63802,7 +63802,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-24-trap-2",
         "title": "Nelygybės krypties sukeitimas",
-        "wrongMove": "Mokinys rašo $2 \\\\sum R_i \\\\ge \\\\sum d_i$.",
+        "wrongMove": "Mokinys rašo $2 \\sum R_i \\ge \\sum d_i$.",
         "whyTempting": "Painiojami koeficientai tarp R ir d.",
         "correction": "Visada prisiminkite, kad R (iki viršūnių) yra didesni atstumai, todėl mažesnis skaičius (d) turi būti dauginamas iš koeficiento (2), kad pasivytų didesnį.",
         "conceptIds": []
@@ -63819,7 +63819,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra Erdišo-Mordelio nelygybė trikampiui su atstumais iki viršūnių ($R_i$) ir kraštinių ($d_i$)?",
-        "back": "$R_1 + R_2 + R_3 \\\\ge 2(d_1 + d_2 + d_3)$",
+        "back": "$R_1 + R_2 + R_3 \\ge 2(d_1 + d_2 + d_3)$",
         "conceptIds": [],
         "methodIds": [
           "ex-olimpiada-11-24-method-1"
@@ -63837,7 +63837,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Tegu $R_1, R_2, R_3$ yra atstumai iki viršūnių, o $d_1, d_2, d_3$ – atstumai iki kraštinių. Nelygybė teigia, kad $\\\\sum R_i \\\\ge K \\\\sum d_i$ kokiai nors konstantai K.",
+        "text": "Tegu $R_1, R_2, R_3$ yra atstumai iki viršūnių, o $d_1, d_2, d_3$ – atstumai iki kraštinių. Nelygybė teigia, kad $\\sum R_i \\ge K \\sum d_i$ kokiai nors konstantai K.",
         "penalty": 0.08
       },
       {
@@ -63849,7 +63849,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Lygiakraščiame trikampyje su kraštine a, atstumas nuo centro iki viršūnės yra spindulys $R = a/\\\\sqrt{3}$, o iki kraštinės – apotema $d = a/(2\\\\sqrt{3})$. Koks yra santykis $R/d$?",
+        "text": "Lygiakraščiame trikampyje su kraštine a, atstumas nuo centro iki viršūnės yra spindulys $R = a/\\sqrt{3}$, o iki kraštinės – apotema $d = a/(2\\sqrt{3})$. Koks yra santykis $R/d$?",
         "penalty": 0.12
       }
     ]
@@ -63869,11 +63869,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Izogonalinės linijos yra tiesės, simetriškos kampo pusiaukampinės atžvilgiu. Jei du taškai yra izogonaliniai konjugatai, tai jų jungtys su viršūnėmis sudaro lygius kampus su atitinkamomis kraštinėmis.",
-      "Nagrinėkite viršūnę A. Spindulys į apibrėžtinio apskritimo centrą AO sudaro kampą $90^\\\\circ - C$ su kraštine AB. Kokia trikampio linija sudaro tokį patį kampą su kraštine AC?",
-      "Aukštinė iš viršūnės A į kraštinę BC kerta ją taške D. Stačiajame trikampyje ADC kampas $\\\\angle DAC = 90^\\\\circ - C$.",
-      "Kadangi $\\\\angle BAO = \\\\angle CAH$, tai spindulys AO ir aukštinė AH yra izogonalinės linijos. Ši savybė galioja visoms viršūnėms. Kaip vadinamas visų trijų aukštinių susikirtimo taškas?"
+      "Nagrinėkite viršūnę A. Spindulys į apibrėžtinio apskritimo centrą AO sudaro kampą $90^\\circ - C$ su kraštine AB. Kokia trikampio linija sudaro tokį patį kampą su kraštine AC?",
+      "Aukštinė iš viršūnės A į kraštinę BC kerta ją taške D. Stačiajame trikampyje ADC kampas $\\angle DAC = 90^\\circ - C$.",
+      "Kadangi $\\angle BAO = \\angle CAH$, tai spindulys AO ir aukštinė AH yra izogonalinės linijos. Ši savybė galioja visoms viršūnėms. Kaip vadinamas visų trijų aukštinių susikirtimo taškas?"
     ],
-    "solution": "Tarkime, kad trikampio $ABC$ kampai yra $A, B, C$. Spindulys $AO$ į apibrėžtinio apskritimo centrą kartu su kraštine $AB$ sudaro kampą $\\\\angle BAO = (180^\\\\circ - \\\\angle AOB)/2 = (180^\\\\circ - 2C)/2 = 90^\\\\circ - C$. Aukštinė iš viršūnės $A$ sudaro su kraštine $AC$ kampą, lygų $180^\\\\circ - 90^\\\\circ - C = 90^\\\\circ - C$ (iš stačiojo trikampio, kurį suformuoja aukštinė ir kraštinė $AC$). Kadangi abu kampai su gretimomis kraštinėmis yra lygūs, spindulys $AO$ ir aukštinė per $A$ yra simetriški kampo $A$ pusiaukampinės atžvilgiu, t.y., yra izogonalinės linijos. Kadangi visų trijų viršūnių spinduliai į $O$ yra izogonalūs atitinkamoms aukštinėms, tai taško $O$ izogonalinis konjugatas yra aukštinių susikirtimo taškas $H$ (ortocentras).",
+    "solution": "Tarkime, kad trikampio $ABC$ kampai yra $A, B, C$. Spindulys $AO$ į apibrėžtinio apskritimo centrą kartu su kraštine $AB$ sudaro kampą $\\angle BAO = (180^\\circ - \\angle AOB)/2 = (180^\\circ - 2C)/2 = 90^\\circ - C$. Aukštinė iš viršūnės $A$ sudaro su kraštine $AC$ kampą, lygų $180^\\circ - 90^\\circ - C = 90^\\circ - C$ (iš stačiojo trikampio, kurį suformuoja aukštinė ir kraštinė $AC$). Kadangi abu kampai su gretimomis kraštinėmis yra lygūs, spindulys $AO$ ir aukštinė per $A$ yra simetriški kampo $A$ pusiaukampinės atžvilgiu, t.y., yra izogonalinės linijos. Kadangi visų trijų viršūnių spinduliai į $O$ yra izogonalūs atitinkamoms aukštinėms, tai taško $O$ izogonalinis konjugatas yra aukštinių susikirtimo taškas $H$ (ortocentras).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -63910,14 +63910,14 @@ export const exercises = [
             "action": "Apskaičiuojame kampą tarp spindulio AO ir kraštinės AB.",
             "reason": "Norime nustatyti linijos padėtį kampo atžvilgiu.",
             "result": "90-C",
-            "latex": "\\\\angle BAO = 90^\\\\circ - C"
+            "latex": "\\angle BAO = 90^\\circ - C"
           },
           {
             "title": "Aukštinės kampo skaičiavimas",
             "action": "Apskaičiuojame kampą tarp aukštinės per A ir kraštinės AC.",
             "reason": "Lyginame su AO linija.",
             "result": "90-C",
-            "latex": "\\\\angle CAH = 90^\\\\circ - C"
+            "latex": "\\angle CAH = 90^\\circ - C"
           },
           {
             "title": "Konjugato nustatymas",
@@ -63977,19 +63977,19 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Nagrinėkite viršūnę A. Spindulys į apibrėžtinio apskritimo centrą AO sudaro kampą $90^\\\\circ - C$ su kraštine AB. Kokia trikampio linija sudaro tokį patį kampą su kraštine AC?",
+        "text": "Nagrinėkite viršūnę A. Spindulys į apibrėžtinio apskritimo centrą AO sudaro kampą $90^\\circ - C$ su kraštine AB. Kokia trikampio linija sudaro tokį patį kampą su kraštine AC?",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Aukštinė iš viršūnės A į kraštinę BC kerta ją taške D. Stačiajame trikampyje ADC kampas $\\\\angle DAC = 90^\\\\circ - C$.",
+        "text": "Aukštinė iš viršūnės A į kraštinę BC kerta ją taške D. Stačiajame trikampyje ADC kampas $\\angle DAC = 90^\\circ - C$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Kadangi $\\\\angle BAO = \\\\angle CAH$, tai spindulys AO ir aukštinė AH yra izogonalinės linijos. Ši savybė galioja visoms viršūnėms. Kaip vadinamas visų trijų aukštinių susikirtimo taškas?",
+        "text": "Kadangi $\\angle BAO = \\angle CAH$, tai spindulys AO ir aukštinė AH yra izogonalinės linijos. Ši savybė galioja visoms viršūnėms. Kaip vadinamas visų trijų aukštinių susikirtimo taškas?",
         "penalty": 0.12
       }
     ]
@@ -64013,7 +64013,7 @@ export const exercises = [
       "Šis tolygumas reiškia, kad briaunų tankis tarp bet kokių didelių tų dalių poaibių yra beveik toks pat, kaip ir tarp pačių dalių. Tokios poros vadinamos specifiniu terminu.",
       "Terminas tiesiogiai atspindi lemos pavadinimą. Jei lema vadinasi 'reguliarumo lema', tai kaip vadinamos ją tenkinančios poros?"
     ],
-    "solution": "Szemerédi reguliarumo lema teigia, kad kiekvienam $\\\\epsilon > 0$ ir kiekvienam sveikajam skaičiui $m$, egzistuoja skaičius $M$ toks, kad bet kurį grafą su bent $n \\\\ge m$ viršūnių galima padalinti į $k$ dalių ($m \\\\le k \\\\le M$). Šis skaidymas pasižymi savybe, kad beveik visos (visos, išskyrus daugiausiai $\\\\epsilon k^2$) dalių poros $(V_i, V_j)$ yra $\\\\epsilon$-reguliarios. Pora $(A, B)$ vadinama reguliariąja, jei bet kokiems pakankamai dideliems poaibiams $X \\\\subseteq A, Y \\\\subseteq B$, briaunų tankis $d(X, Y)$ yra artimas bendram tankiui $d(A, B)$. Todėl ieškomas terminas yra 'reguliariosios poros'.",
+    "solution": "Szemerédi reguliarumo lema teigia, kad kiekvienam $\\epsilon > 0$ ir kiekvienam sveikajam skaičiui $m$, egzistuoja skaičius $M$ toks, kad bet kurį grafą su bent $n \\ge m$ viršūnių galima padalinti į $k$ dalių ($m \\le k \\le M$). Šis skaidymas pasižymi savybe, kad beveik visos (visos, išskyrus daugiausiai $\\epsilon k^2$) dalių poros $(V_i, V_j)$ yra $\\epsilon$-reguliarios. Pora $(A, B)$ vadinama reguliariąja, jei bet kokiems pakankamai dideliems poaibiams $X \\subseteq A, Y \\subseteq B$, briaunų tankis $d(X, Y)$ yra artimas bendram tankiui $d(A, B)$. Todėl ieškomas terminas yra 'reguliariosios poros'.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -64059,7 +64059,7 @@ export const exercises = [
             "action": "Nustatome sąlygą, kad briaunų tankis tarp poaibių yra artimas bendram tankiui.",
             "reason": "Tai yra pagrindinis lemoje naudojamas 'reguliarumo' kriterijus.",
             "result": "|d(X,Y) - d(A,B)| < epsilon",
-            "latex": "|d(X, Y) - d(A, B)| < \\\\epsilon"
+            "latex": "|d(X, Y) - d(A, B)| < \\epsilon"
           },
           {
             "title": "Termino fiksavimas",
@@ -64155,9 +64155,9 @@ export const exercises = [
       "Mantelio teorema (specialus Turano teoremos atvejis) nurodo maksimalų briaunų skaičių grafe, kuriame nėra tam tikro dydžio pilnojo pakgrafio. Šiuo atveju draudžiamas objektas yra trikampis $K_3$.",
       "Didžiausias briaunų skaičius pasiekiamas tada, kai grafas yra pilnas dvidalias grafas. Norėdami maksimizuoti briaunų skaičių, turite padalinti viršūnes į dvi kuo lygesnes dalis.",
       "Jei turime n viršūnių ir jas padaliname į dalis dydžiais $x$ ir $n-x$, briaunų skaičius pilnajame dvidaliam grafe bus $x(n-x)$. Raskite šios sandaugos maksimumą, kai $n=6$.",
-      "Pagal Mantelio formulę, briaunų skaičius yra $\\\\lfloor n^2/4 \\rfloor$. Įstatykite $n=6$ ir apskaičiuokite rezultatą."
+      "Pagal Mantelio formulę, briaunų skaičius yra $\\lfloor n^2/4 \\rfloor$. Įstatykite $n=6$ ir apskaičiuokite rezultatą."
     ],
-    "solution": "Pagal Turano teoremą, grafas su $n$ viršūnių, neturintis $K_{r+1}$ pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$. Trikampis yra $K_3$, todėl čia $r+1 = 3$, vadinasi $r=2$. Turano grafas $T(n, 2)$ yra pilnas dvidalias grafas $K_{\\\\lfloor n/2 \\rfloor, \\\\lceil n/2 \\rceil}$. Kai $n=6$, viršūnės padalinamos į dvi lygias dalis: $3$ ir $3$. Briaunų skaičius yra $3 \\times 3 = 9$. Alternatyviai naudojant Mantelio formulę: $E \\\\le \\\\lfloor 6^2/4 \\rfloor = \\\\lfloor 36/4 \\rfloor = 9$.",
+    "solution": "Pagal Turano teoremą, grafas su $n$ viršūnių, neturintis $K_{r+1}$ pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$. Trikampis yra $K_3$, todėl čia $r+1 = 3$, vadinasi $r=2$. Turano grafas $T(n, 2)$ yra pilnas dvidalias grafas $K_{\\lfloor n/2 \\rfloor, \\lceil n/2 \\rceil}$. Kai $n=6$, viršūnės padalinamos į dvi lygias dalis: $3$ ir $3$. Briaunų skaičius yra $3 \\times 3 = 9$. Alternatyviai naudojant Mantelio formulę: $E \\le \\lfloor 6^2/4 \\rfloor = \\lfloor 36/4 \\rfloor = 9$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -64245,7 +64245,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Koks yra maksimalus briaunų skaičius grafe su n viršūnių be trikampių ($K_3$)?",
-        "back": "$\\\\lfloor n^2 / 4 \\rfloor$ (Mantelio teorema).",
+        "back": "$\\lfloor n^2 / 4 \\rfloor$ (Mantelio teorema).",
         "conceptIds": [
           "olimpiada-11-concept-turan"
         ],
@@ -64277,7 +64277,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Pagal Mantelio formulę, briaunų skaičius yra $\\\\lfloor n^2/4 \\rfloor$. Įstatykite $n=6$ ir apskaičiuokite rezultatą.",
+        "text": "Pagal Mantelio formulę, briaunų skaičius yra $\\lfloor n^2/4 \\rfloor$. Įstatykite $n=6$ ir apskaičiuokite rezultatą.",
         "penalty": 0.12
       }
     ]
@@ -64287,7 +64287,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Lauke $\\\\mathbb{F}_2$ (liekanos mod 2) raskite visus antrojo laipsnio neredukuojamus daugianarius. Užrašykite tik patį daugianarį.",
+    "statement": "Lauke $\\mathbb{F}_2$ (liekanos mod 2) raskite visus antrojo laipsnio neredukuojamus daugianarius. Užrašykite tik patį daugianarį.",
     "answer": "x^2 + x + 1",
     "acceptedAnswers": [
       "x^2 + x + 1"
@@ -64297,11 +64297,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Daugianaris yra neredukuojamas tam tikrame lauke, jei jo negalima išskaidyti į žemesnio laipsnio daugianarių sandaugą tame pačiame lauke. Antrojo ir trečiojo laipsnio daugianariams tai ekvivalentu neturėjimui šaknų tame lauke.",
-      "Lauke $\\\\mathbb{F}_2$ (liekanos mod 2) galime tiesiog išrašyti visus antrojo laipsnio daugianarius: $x^2, x^2+1, x^2+x, x^2+x+1$. Kurie iš jų neturi šaknų 0 ir 1?",
+      "Lauke $\\mathbb{F}_2$ (liekanos mod 2) galime tiesiog išrašyti visus antrojo laipsnio daugianarius: $x^2, x^2+1, x^2+x, x^2+x+1$. Kurie iš jų neturi šaknų 0 ir 1?",
       "Patikrinkite $x=0$. Kad daugianaris neturėtų šaknies 0, jo laisvasis narys privalo būti 1. Tai palieka du kandidatus: $x^2+1$ ir $x^2+x+1$.",
-      "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\\\equiv 0 \\\\pmod 2$, o $1^2+1+1 = 3 \\\\equiv 1 \\\\pmod 2$. Kuris iš jų yra neredukuojamas?"
+      "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\equiv 0 \\pmod 2$, o $1^2+1+1 = 3 \\equiv 1 \\pmod 2$. Kuris iš jų yra neredukuojamas?"
     ],
-    "solution": "Antrojo laipsnio daugianaris $P(x) \\\\in \\\\mathbb{F}_2[x]$ yra neredukuojamas tada ir tik tada, kai jis neturi šaknų pačiame lauke $\\\\mathbb{F}_2 = \\\\{0, 1\\\\}$. Sudarome visus galimus antrojo laipsnio daugianarius: $x^2$, $x^2+1$, $x^2+x$, $x^2+x+1$. Tikriname šaknį $x=0$: $P(0) = 0$ daugianariams $x^2$ ir $x^2+x$. Jie yra redukuojami. Tikriname šaknį $x=1$ likusiems: $x^2+1$ prie $x=1$ duoda $1+1=0$ mod 2. Jis yra redukuojamas: $x^2+1 = (x+1)^2$. Tikriname $x^2+x+1$: $P(0)=1 \neq 0$ ir $P(1)=1+1+1=1 \neq 0$. Šaknų nėra. Vienintelis neredukuojamas antrojo laipsnio daugianaris lauke $\\\\mathbb{F}_2$ yra $x^2+x+1$.",
+    "solution": "Antrojo laipsnio daugianaris $P(x) \\in \\mathbb{F}_2[x]$ yra neredukuojamas tada ir tik tada, kai jis neturi šaknų pačiame lauke $\\mathbb{F}_2 = \\{0, 1\\}$. Sudarome visus galimus antrojo laipsnio daugianarius: $x^2$, $x^2+1$, $x^2+x$, $x^2+x+1$. Tikriname šaknį $x=0$: $P(0) = 0$ daugianariams $x^2$ ir $x^2+x$. Jie yra redukuojami. Tikriname šaknį $x=1$ likusiems: $x^2+1$ prie $x=1$ duoda $1+1=0$ mod 2. Jis yra redukuojamas: $x^2+1 = (x+1)^2$. Tikriname $x^2+x+1$: $P(0)=1 \neq 0$ ir $P(1)=1+1+1=1 \neq 0$. Šaknų nėra. Vienintelis neredukuojamas antrojo laipsnio daugianaris lauke $\\mathbb{F}_2$ yra $x^2+x+1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -64309,7 +64309,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 75,
     "coreIdea": {
       "title": "Šaknų tikrinimas",
-      "text": "Antro laipsnio daugianaris yra redukuojamas tada ir tik tada, kai jis turi bent vieną šaknį lauke. Lauke $\\\\mathbb{F}_2$ yra tik dvi galimos šaknys: 0 ir 1."
+      "text": "Antro laipsnio daugianaris yra redukuojamas tada ir tik tada, kai jis turi bent vieną šaknį lauke. Lauke $\\mathbb{F}_2$ yra tik dvi galimos šaknys: 0 ir 1."
     },
     "strategyTags": [
       "polynomials",
@@ -64354,7 +64354,7 @@ export const exercises = [
             "action": "Įstatome likusią lauko reikšmę x=1 į abu kandidatus.",
             "reason": "Lauke F2 yra tik dvi reikšmės: 0 ir 1.",
             "result": "x^2+x+1 neturi šaknų",
-            "latex": "P(1) = 1^2+1+1 = 3 \\\\equiv 1 \\neq 0 \\\\pmod 2"
+            "latex": "P(1) = 1^2+1+1 = 3 \\equiv 1 \\neq 0 \\pmod 2"
           }
         ],
         "finalAnswer": "x^2 + x + 1"
@@ -64379,7 +64379,7 @@ export const exercises = [
       }
     ],
     "reflectionPrompts": [
-      "Kiek neredukuojamų antro laipsnio daugianarių yra lauke su 3 elementais $\\\\mathbb{F}_3$?",
+      "Kiek neredukuojamų antro laipsnio daugianarių yra lauke su 3 elementais $\\mathbb{F}_3$?",
       "Kodėl baigtiniuose laukuose neredukuojamumas yra toks svarbus kodavimo teorijoje?"
     ],
     "extensionQuestions": [],
@@ -64388,7 +64388,7 @@ export const exercises = [
         "id": "ex-olimpiada-11-28-srs-1",
         "deck": "practice",
         "cardType": "fact",
-        "front": "Koks yra vienintelis 2-ojo laipsnio neredukuojamas daugianaris lauke $\\\\mathbb{F}_2$?",
+        "front": "Koks yra vienintelis 2-ojo laipsnio neredukuojamas daugianaris lauke $\\mathbb{F}_2$?",
         "back": "$x^2 + x + 1$",
         "conceptIds": [],
         "methodIds": [
@@ -64407,7 +64407,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Lauke $\\\\mathbb{F}_2$ (liekanos mod 2) galime tiesiog išrašyti visus antrojo laipsnio daugianarius: $x^2, x^2+1, x^2+x, x^2+x+1$. Kurie iš jų neturi šaknų 0 ir 1?",
+        "text": "Lauke $\\mathbb{F}_2$ (liekanos mod 2) galime tiesiog išrašyti visus antrojo laipsnio daugianarius: $x^2, x^2+1, x^2+x, x^2+x+1$. Kurie iš jų neturi šaknų 0 ir 1?",
         "penalty": 0.08
       },
       {
@@ -64419,7 +64419,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\\\equiv 0 \\\\pmod 2$, o $1^2+1+1 = 3 \\\\equiv 1 \\\\pmod 2$. Kuris iš jų yra neredukuojamas?",
+        "text": "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\equiv 0 \\pmod 2$, o $1^2+1+1 = 3 \\equiv 1 \\pmod 2$. Kuris iš jų yra neredukuojamas?",
         "penalty": 0.12
       }
     ]
@@ -64445,7 +64445,7 @@ export const exercises = [
       "Teorema buvo publikuota 1999 m. ir pavadinta autoriaus vardu. Jo vardas yra keturių raidžių (lietuviškai penkių), o pavardė taip pat trumpa.",
       "Ieškomas asmuo yra Noga Alonas. Kaip taisyklingai užrašyti jo vardą ir pavardę lietuviškai?"
     ],
-    "solution": "Kombinatorinį Nulstellensatz suformulavo ir išpopuliarino Noga Alonas 1999 metais. Teorema teigia, kad jei daugianaris turi narį $x_1^{t_1} \\\\dots x_n^{t_n}$ su nelygiu nuliui koeficientu ir jo laipsnis yra maksimalus, tai jis negali būti nulis visuose gardelės $S_1 \times \\\\dots \times S_n$ taškuose, kai $|S_i| > t_i$. Tai yra galingas algebrinis įrankis kombinatorikoje, leidžiantis paprastai įrodyti tokius rezultatus kaip Cauchy-Davenport teorema.",
+    "solution": "Kombinatorinį Nulstellensatz suformulavo ir išpopuliarino Noga Alonas 1999 metais. Teorema teigia, kad jei daugianaris turi narį $x_1^{t_1} \\dots x_n^{t_n}$ su nelygiu nuliui koeficientu ir jo laipsnis yra maksimalus, tai jis negali būti nulis visuose gardelės $S_1 times \\dots times S_n$ taškuose, kai $|S_i| > t_i$. Tai yra galingas algebrinis įrankis kombinatorikoje, leidžiantis paprastai įrodyti tokius rezultatus kaip Cauchy-Davenport teorema.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -64565,7 +64565,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Holo vedybų teorema nurodo sąlygą, kada galima parinkti skirtingus atstovus aibių šeimai. Tegu $S_1 = \\\\{1, 2\\\\}, S_2 = \\\\{1, 3\\\\}, S_3 = \\\\{2, 3\\\\}, S_4 = \\\\{1, 2, 3\\\\}$. Ar šiai šeimai galioja Holo sąlyga? Atsakykite 'Taip' arba 'Ne'.",
+    "statement": "Holo vedybų teorema nurodo sąlygą, kada galima parinkti skirtingus atstovus aibių šeimai. Tegu $S_1 = \\{1, 2\\}, S_2 = \\{1, 3\\}, S_3 = \\{2, 3\\}, S_4 = \\{1, 2, 3\\}$. Ar šiai šeimai galioja Holo sąlyga? Atsakykite 'Taip' arba 'Ne'.",
     "answer": "Ne",
     "acceptedAnswers": [
       "Ne"
@@ -64575,11 +64575,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Holo vedybų teorema (arba skirtingų atstovų aibių teorema) reikalauja, kad bet kurios aibių grupės sąjunga būtų bent jau tokio pat dydžio, kiek yra pačių aibių.",
-      "Suskaičiuokite, kiek unikalių elementų yra visose keturiose aibėse kartu paėmus. Tai ir bus aibių sąjungos $S_1 \\\\cup S_2 \\\\cup S_3 \\\\cup S_4$ dydis.",
-      "Holo sąlyga teigia: $|\\\\cup_{i \\\\in I} S_i| \\\\ge |I|$ kiekvienam poaibiui $I \\\\subseteq \\\\{1, 2, 3, 4\\\\}$. Patikrinkite šią sąlygą visai grupei, kai $|I| = 4$.",
+      "Suskaičiuokite, kiek unikalių elementų yra visose keturiose aibėse kartu paėmus. Tai ir bus aibių sąjungos $S_1 \\cup S_2 \\cup S_3 \\cup S_4$ dydis.",
+      "Holo sąlyga teigia: $|\\cup_{i \\in I} S_i| \\ge |I|$ kiekvienam poaibiui $I \\subseteq \\{1, 2, 3, 4\\}$. Patikrinkite šią sąlygą visai grupei, kai $|I| = 4$.",
       "Visose aibėse rasti elementai yra tik 1, 2 ir 3. Vadinasi, sąjungos dydis yra 3. Ar 3 yra daugiau arba lygu už aibių skaičių 4?"
     ],
-    "solution": "Holo vedybų teorema nurodo būtinas ir pakankamas sąlygas skirtingiems atstovams parinkti: $|\\\\cup_{i \\\\in I} S_i| \\\\ge |I|$ bet kuriam aibių indeksų poaibiui $I$. Nagrinėjame visą aibių šeimą ($n=4$): $I = \\\\{1, 2, 3, 4\\\\}$. Todėl $|I| = 4$. Randame visų aibių sąjungą: $S_1 \\\\cup S_2 \\\\cup S_3 \\\\cup S_4 = \\\\{1, 2\\\\} \\\\cup \\\\{1, 3\\\\} \\\\cup \\\\{2, 3\\\\} \\\\cup \\\\{1, 2, 3\\\\} = \\\\{1, 2, 3\\\\}$. Sąjungos dydis $|\\\\{1, 2, 3\\\\}| = 3$. Kadangi $3 < 4$, egzistuoja poaibis $I$, kuriam Holo sąlyga negalioja. Vadinasi, šiai šeimai Holo sąlyga negalioja.",
+    "solution": "Holo vedybų teorema nurodo būtinas ir pakankamas sąlygas skirtingiems atstovams parinkti: $|\\cup_{i \\in I} S_i| \\ge |I|$ bet kuriam aibių indeksų poaibiui $I$. Nagrinėjame visą aibių šeimą ($n=4$): $I = \\{1, 2, 3, 4\\}$. Todėl $|I| = 4$. Randame visų aibių sąjungą: $S_1 \\cup S_2 \\cup S_3 \\cup S_4 = \\{1, 2\\} \\cup \\{1, 3\\} \\cup \\{2, 3\\} \\cup \\{1, 2, 3\\} = \\{1, 2, 3\\}$. Sąjungos dydis $|\\{1, 2, 3\\}| = 3$. Kadangi $3 < 4$, egzistuoja poaibis $I$, kuriam Holo sąlyga negalioja. Vadinasi, šiai šeimai Holo sąlyga negalioja.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -64617,7 +64617,7 @@ export const exercises = [
             "action": "Surandame visus unikalius elementus, esančius nagrinėjamose aibėse.",
             "reason": "Holo teorema remiasi aibių sąjungos dydžiu.",
             "result": "{1, 2, 3}",
-            "latex": "S_{total} = \\bigcup_{i=1}^4 S_i = \\\\{1, 2, 3\\\\}"
+            "latex": "S_{total} = \\bigcup_{i=1}^4 S_i = \\{1, 2, 3\\}"
           },
           {
             "title": "Kardinalumo palyginimas",
@@ -64665,8 +64665,8 @@ export const exercises = [
         "id": "ex-olimpiada-11-30-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra pagrindinė Holo vedybų teoremos sąlyga aibių šeimai $S_1, \\\\dots, S_n$?",
-        "back": "Kiekvienam poaibiui $I$, $|\\\\cup_{i \\\\in I} S_i| \\\\ge |I|$.",
+        "front": "Kokia yra pagrindinė Holo vedybų teoremos sąlyga aibių šeimai $S_1, \\dots, S_n$?",
+        "back": "Kiekvienam poaibiui $I$, $|\\cup_{i \\in I} S_i| \\ge |I|$.",
         "conceptIds": [],
         "methodIds": [
           "ex-olimpiada-11-30-method-1"
@@ -64684,13 +64684,13 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Suskaičiuokite, kiek unikalių elementų yra visose keturiose aibėse kartu paėmus. Tai ir bus aibių sąjungos $S_1 \\\\cup S_2 \\\\cup S_3 \\\\cup S_4$ dydis.",
+        "text": "Suskaičiuokite, kiek unikalių elementų yra visose keturiose aibėse kartu paėmus. Tai ir bus aibių sąjungos $S_1 \\cup S_2 \\cup S_3 \\cup S_4$ dydis.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Holo sąlyga teigia: $|\\\\cup_{i \\\\in I} S_i| \\\\ge |I|$ kiekvienam poaibiui $I \\\\subseteq \\\\{1, 2, 3, 4\\\\}$. Patikrinkite šią sąlygą visai grupei, kai $|I| = 4$.",
+        "text": "Holo sąlyga teigia: $|\\cup_{i \\in I} S_i| \\ge |I|$ kiekvienam poaibiui $I \\subseteq \\{1, 2, 3, 4\\}$. Patikrinkite šią sąlygą visai grupei, kai $|I| = 4$.",
         "penalty": 0.1
       },
       {
@@ -64706,7 +64706,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaičiuojamas panašiai kaip determinantas, bet be ženklų kaitaliojimo. Apskaičiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\\\\\ 1 & 1 \\\\end{pmatrix}$ permanentą.",
+    "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaičiuojamas panašiai kaip determinantas, bet be ženklų kaitaliojimo. Apskaičiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ permanentą.",
     "answer": "2",
     "acceptedAnswers": [
       "2"
@@ -64716,11 +64716,11 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Permanentas yra matricos funkcija, labai panaši į determinantą, tačiau jos skaičiavime visi nariai sumuojami su pliuso ženklu, nepaisant permutacijų lygiškumo.",
-      "2x2 matricos $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
+      "2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
       "Nagrinėjamoje matricoje visi elementai yra lygūs 1. Įstatykite šias vertes į permanento formulę ir atlikite sudėtį.",
-      "Suskaičiuokite: $1 \\\\cdot 1 + 1 \\\\cdot 1$. Koks rezultatas?"
+      "Suskaičiuokite: $1 \\cdot 1 + 1 \\cdot 1$. Koks rezultatas?"
     ],
-    "solution": "Permanentas kvadratinei $2 \\times 2$ matricai apskaičiuojamas sudedant pagrindinės ir šalutinės įstrižainių narių sandaugas. Matricos $A = \\begin{pmatrix} 1 & 1 \\\\\\ 1 & 1 \\\\end{pmatrix}$ elementai yra $a_{11}=1, a_{22}=1, a_{12}=1, a_{21}=1$. Taikome formulę: $\\text{per}(A) = a_{11} a_{22} + a_{12} a_{21}$. Įstatome skaičius: $1 \\\\cdot 1 + 1 \\\\cdot 1 = 1 + 1 = 2$.",
+    "solution": "Permanentas kvadratinei $2 \\times 2$ matricai apskaičiuojamas sudedant pagrindinės ir šalutinės įstrižainių narių sandaugas. Matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ elementai yra $a_{11}=1, a_{22}=1, a_{12}=1, a_{21}=1$. Taikome formulę: $\\text{per}(A) = a_{11} a_{22} + a_{12} a_{21}$. Įstatome skaičius: $1 \\cdot 1 + 1 \\cdot 1 = 1 + 1 = 2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -64772,7 +64772,7 @@ export const exercises = [
             "action": "Sudauginame narius ir juos sudedame.",
             "reason": "Tai tiesioginis formulės taikymas.",
             "result": "2",
-            "latex": "1 \\\\cdot 1 + 1 \\\\cdot 1 = 2"
+            "latex": "1 \\cdot 1 + 1 \\cdot 1 = 2"
           }
         ],
         "finalAnswer": "2"
@@ -64782,7 +64782,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-11-31-trap-1",
         "title": "Painiojimas su determinantu",
-        "wrongMove": "Mokinys atima šalutinės įstrižainės sandaugą: $1 \\\\cdot 1 - 1 \\\\cdot 1 = 0$.",
+        "wrongMove": "Mokinys atima šalutinės įstrižainės sandaugą: $1 \\cdot 1 - 1 \\cdot 1 = 0$.",
         "whyTempting": "Determinantas yra viena dažniausiai naudojamų matricos charakteristikų, o jo formulė beveik identiška.",
         "correction": "Permanento skaičiavime nenaudojami minuso ženklai (nėra kofaktorių ženklų kaitaliojimo). Visos sandaugos sumuojamos teigiamai.",
         "conceptIds": []
@@ -64806,7 +64806,7 @@ export const exercises = [
         "id": "ex-olimpiada-11-31-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kaip skaičiuojamas 2x2 matricos $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$ permanentas?",
+        "front": "Kaip skaičiuojamas 2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentas?",
         "back": "$ad + bc$.",
         "conceptIds": [],
         "methodIds": [
@@ -64825,7 +64825,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "2x2 matricos $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
+        "text": "2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
         "penalty": 0.08
       },
       {
@@ -64837,7 +64837,7 @@ export const exercises = [
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "Suskaičiuokite: $1 \\\\cdot 1 + 1 \\\\cdot 1$. Koks rezultatas?",
+        "text": "Suskaičiuokite: $1 \\cdot 1 + 1 \\cdot 1$. Koks rezultatas?",
         "penalty": 0.12
       }
     ]
@@ -64978,7 +64978,7 @@ export const exercises = [
     "topicId": "olimpiada-11",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Taikant Lovaso lokaliąją lemą įvykiams $A_i$, kurių tikimybė $P(A_i) \\\\le p$ ir kiekvienas priklauso nuo daugiausiai $d=2$ kitų įvykių. Jei $p = 0.05$, ar galime teigti, kad su teigiama tikimybe joks įvykis neįvyks? Naudokite pakankamąją sąlygą $ep(d+1) \\\\le 1$.",
+    "statement": "Taikant Lovaso lokaliąją lemą įvykiams $A_i$, kurių tikimybė $P(A_i) \\le p$ ir kiekvienas priklauso nuo daugiausiai $d=2$ kitų įvykių. Jei $p = 0.05$, ar galime teigti, kad su teigiama tikimybe joks įvykis neįvyks? Naudokite pakankamąją sąlygą $ep(d+1) \\le 1$.",
     "answer": "Taip",
     "acceptedAnswers": [
       "Taip"
@@ -64989,12 +64989,12 @@ export const exercises = [
       "olimpiada-11-concept-lovasz"
     ],
     "hints": [
-      "Įstatykite $e \\\\approx 2.718, p = 0.05, d = 2$.",
-      "Skaičiuojame: $2.718 \\\\cdot 0.05 \\\\cdot (2+1)$.",
-      "$0.05 \\\\cdot 3 = 0.15$. Padauginkite iš $e$.",
-      "$0.15 \\\\cdot 2.718$ yra apie $0.407$. Ar tai mažiau už 1?"
+      "Įstatykite $e \\approx 2.718, p = 0.05, d = 2$.",
+      "Skaičiuojame: $2.718 \\cdot 0.05 \\cdot (2+1)$.",
+      "$0.05 \\cdot 3 = 0.15$. Padauginkite iš $e$.",
+      "$0.15 \\cdot 2.718$ yra apie $0.407$. Ar tai mažiau už 1?"
     ],
-    "solution": "Sąlyga: $ep(d+1) \\\\le 1$. $e \\\\cdot 0.05 \\\\cdot (2+1) = 3e \\\\cdot 0.05 = 0.15e$. Kadangi $e < 3$, tai $0.15e < 0.45$. $0.45 \\\\le 1$, vadinasi sąlyga tenkinama. Išvada: Taip, teigiama tikimybė garantuota.",
+    "solution": "Sąlyga: $ep(d+1) \\le 1$. $e \\cdot 0.05 \\cdot (2+1) = 3e \\cdot 0.05 = 0.15e$. Kadangi $e < 3$, tai $0.15e < 0.45$. $0.45 \\le 1$, vadinasi sąlyga tenkinama. Išvada: Taip, teigiama tikimybė garantuota.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -65002,7 +65002,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 80,
     "coreIdea": {
       "title": "Lemos tikrinimas",
-      "text": "Reikia įstatyti reikšmes į formulę $e \\\\cdot p \\\\cdot (d+1)$ ir patikrinti, ar rezultatas neviršija 1."
+      "text": "Reikia įstatyti reikšmes į formulę $e \\cdot p \\cdot (d+1)$ ir patikrinti, ar rezultatas neviršija 1."
     },
     "strategyTags": [
       "combinatorics",
@@ -65040,7 +65040,7 @@ export const exercises = [
             "action": "Apskaičiuojame sandaugą ep(d+1).",
             "reason": "Tai pakankama sąlyga, kad joks 'blogas' įvykis neįvyktų.",
             "result": "0.407 < 1",
-            "latex": "e \\\\cdot 0.05 \\\\cdot (2+1) \\\\approx 2.718 \\\\cdot 0.15 = 0.4077"
+            "latex": "e \\cdot 0.05 \\cdot (2+1) \\approx 2.718 \\cdot 0.15 = 0.4077"
           },
           {
             "title": "Išvada",
@@ -65059,7 +65059,7 @@ export const exercises = [
         "title": "e vertės pamiršimas",
         "wrongMove": "Mokinys nežino, kas yra 'e' arba naudoja jį kaip nežinomąjį.",
         "whyTempting": "Tai matematinė konstanta, nebūtinai žinoma visiems.",
-        "correction": "Oilerio skaičius $e \\\\approx 2.718$.",
+        "correction": "Oilerio skaičius $e \\approx 2.718$.",
         "conceptIds": []
       },
       {
@@ -65082,7 +65082,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra paprasčiausia Lovaso lokaliosios lemos pakankama sąlyga (naudojant e, p, d)?",
-        "back": "$ep(d+1) \\\\le 1$.",
+        "back": "$ep(d+1) \\le 1$.",
         "conceptIds": [
           "olimpiada-11-concept-lovasz"
         ],
@@ -65096,25 +65096,25 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Įstatykite $e \\\\approx 2.718, p = 0.05, d = 2$.",
+        "text": "Įstatykite $e \\approx 2.718, p = 0.05, d = 2$.",
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Skaičiuojame: $2.718 \\\\cdot 0.05 \\\\cdot (2+1)$.",
+        "text": "Skaičiuojame: $2.718 \\cdot 0.05 \\cdot (2+1)$.",
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "$0.05 \\\\cdot 3 = 0.15$. Padauginkite iš $e$.",
+        "text": "$0.05 \\cdot 3 = 0.15$. Padauginkite iš $e$.",
         "penalty": 0.1
       },
       {
         "order": 4,
         "kind": "scaffold",
-        "text": "$0.15 \\\\cdot 2.718$ yra apie $0.407$. Ar tai mažiau už 1?",
+        "text": "$0.15 \\cdot 2.718$ yra apie $0.407$. Ar tai mažiau už 1?",
         "penalty": 0.12
       }
     ]
@@ -68850,10 +68850,10 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Tegu $K = \\\\mathbb{Q}(\\\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\\\mathcal{O}_K$.",
-    "answer": "\\\\mathbb{Z}[\\\\sqrt{2}]",
+    "statement": "Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.",
+    "answer": "\\mathbb{Z}[\\sqrt{2}]",
     "acceptedAnswers": [
-      "\\\\mathbb{Z}[\\\\sqrt{2}]"
+      "\\mathbb{Z}[\\sqrt{2}]"
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -68861,11 +68861,11 @@ export const exercises = [
       "olimpiada-12-concept-vietas-jumping"
     ],
     "hints": [
-      "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\\\mathbb{Q}(\\\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
+      "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\mathbb{Q}(\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
       "Patikrinkite skaičiaus $d=2$ liekaną moduliu 4.",
-      "Kadangi $2 \\\\equiv 2 \\\\pmod 4$, sveikasis skaičius $\\\\alpha = a + b\\\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\\\in \\\\mathbb{Z}$."
+      "Kadangi $2 \\equiv 2 \\pmod 4$, sveikasis skaičius $\\alpha = a + b\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\in \\mathbb{Z}$."
     ],
-    "solution": "Nustatome, kad laukas $K$ yra suformuotas iš $d=2$. Tikriname sąlygą: $2 \\\\equiv 2 \\\\pmod 4$. Pagal bendrąją algebrinės skaičių teorijos teoremą, šiuo atveju bazė yra $\\\\{1, \\\\sqrt{2}\\\\}$. Išvada: $\\\\mathcal{O}_K = \\\\mathbb{Z}[\\\\sqrt{2}]$.",
+    "solution": "Nustatome, kad laukas $K$ yra suformuotas iš $d=2$. Tikriname sąlygą: $2 \\equiv 2 \\pmod 4$. Pagal bendrąją algebrinės skaičių teorijos teoremą, šiuo atveju bazė yra $\\{1, \\sqrt{2}\\}$. Išvada: $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{2}]$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -68873,7 +68873,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Kvadratinių laukų struktūra",
-      "text": "Kvadratiniam laukui $\\\\mathbb{Q}(\\\\sqrt{d})$ sveikųjų skaičių žiedas priklauso nuo $d$ liekanos moduliu 4. Jei $d \\\\equiv 2, 3 \\\\pmod 4$, tai $\\\\mathcal{O}_K = \\\\mathbb{Z}[\\\\sqrt{d}]$."
+      "text": "Kvadratiniam laukui $\\mathbb{Q}(\\sqrt{d})$ sveikųjų skaičių žiedas priklauso nuo $d$ liekanos moduliu 4. Jei $d \\equiv 2, 3 \\pmod 4$, tai $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{d}]$."
     },
     "strategyTags": [
       "proof",
@@ -68893,20 +68893,20 @@ export const exercises = [
         "steps": [
           {
             "title": "Minimaliojo polinomo analizė",
-            "action": "Tiriame skaičių $\\\\alpha = \frac{a+b\\\\sqrt{2}}{c}$ tenkinantį lygtį su sveikaisiais koeficientais.",
+            "action": "Tiriame skaičių $\\alpha = frac{a+b\\sqrt{2}}{c}$ tenkinantį lygtį su sveikaisiais koeficientais.",
             "reason": "Sveikasis algebrinis skaičius apibrėžiamas per jo minimalųjį polinomą.",
             "result": "Nustatyta, kad vardiklis gali būti tik 1.",
-            "latex": "x^2 - \\text{Tr}(\\\\alpha)x + \\text{N}(\\\\alpha) = 0"
+            "latex": "x^2 - \\text{Tr}(\\alpha)x + \\text{N}(\\alpha) = 0"
           }
         ],
-        "finalAnswer": "\\\\mathbb{Z}[\\\\sqrt{2}]"
+        "finalAnswer": "\\mathbb{Z}[\\sqrt{2}]"
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-12-01-trap-1",
         "title": "Maišymas su d=1 mod 4",
-        "wrongMove": "Manoma, kad visada reikia pridėti narius su vardikliu 2, kaip pavyzdžiui $\\\\mathbb{Q}(\\\\sqrt{5})$ atveju.",
+        "wrongMove": "Manoma, kad visada reikia pridėti narius su vardikliu 2, kaip pavyzdžiui $\\mathbb{Q}(\\sqrt{5})$ atveju.",
         "whyTempting": "Auksinis pjūvis ir panašios struktūros dažnai pasitaiko olimpiadose.",
         "correction": "Visada tikrinkite liekaną moduliu 4; tik esant liekanai 1 atsiranda papildomi elementai.",
         "conceptIds": []
@@ -68922,7 +68922,7 @@ export const exercises = [
     ],
     "reflectionPrompts": [
       "Kodėl liekana moduliu 4 yra tokia svarbi kvadratiniams laukams?",
-      "Kaip pasikeistų atsakymas, jei nagrinėtume $\\\\mathbb{Q}(\\\\sqrt{5})$?"
+      "Kaip pasikeistų atsakymas, jei nagrinėtume $\\mathbb{Q}(\\sqrt{5})$?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -68930,8 +68930,8 @@ export const exercises = [
         "id": "ex-olimpiada-12-01-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Koks yra $\\\\mathcal{O}_K$ laukui $K = \\\\mathbb{Q}(\\\\sqrt{2})$?",
-        "back": "$\\\\mathbb{Z}[\\\\sqrt{2}]$, nes $2 \\\\equiv 2 \\\\pmod 4$.",
+        "front": "Koks yra $\\mathcal{O}_K$ laukui $K = \\mathbb{Q}(\\sqrt{2})$?",
+        "back": "$\\mathbb{Z}[\\sqrt{2}]$, nes $2 \\equiv 2 \\pmod 4$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -68941,7 +68941,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\\\mathbb{Q}(\\\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
+        "text": "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\mathbb{Q}(\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
@@ -68955,7 +68955,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Kadangi $2 \\\\equiv 2 \\\\pmod 4$, sveikasis skaičius $\\\\alpha = a + b\\\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\\\in \\\\mathbb{Z}$.",
+        "text": "Kadangi $2 \\equiv 2 \\pmod 4$, sveikasis skaičius $\\alpha = a + b\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\in \\mathbb{Z}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -68966,7 +68966,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\\\mathbb{F}_3$ (įskaitant begalybės tašką).",
+    "statement": "Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\mathbb{F}_3$ (įskaitant begalybės tašką).",
     "answer": "4",
     "acceptedAnswers": [
       "4"
@@ -68975,11 +68975,11 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Surašykite visas $x$ reikšmes lauke $\\\\mathbb{F}_3$: 0, 1 ir 2.",
-      "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\\\pmod 3$.",
-      "Nustatykite, kurie rezultatai yra kvadratai lauke $\\\\mathbb{F}_3$ (kvadratai yra 0 ir 1)."
+      "Surašykite visas $x$ reikšmes lauke $\\mathbb{F}_3$: 0, 1 ir 2.",
+      "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\pmod 3$.",
+      "Nustatykite, kurie rezultatai yra kvadratai lauke $\\mathbb{F}_3$ (kvadratai yra 0 ir 1)."
     ],
-    "solution": "Kai $x=0$, $y^2 = 1 \\\\implies y=1, 2$ (2 taškai). Kai $x=1$, $y^2 = 1^3 + 1 + 1 = 3 \\\\equiv 0 \\\\implies y=0$ (1 taškas). Kai $x=2$, $y^2 = 2^3 + 2 + 1 = 11 \\\\equiv 2 \\\\pmod 3$. Skaičius 2 nėra kvadratas $\\\\mathbb{F}_3$ (0 taškų). Pridedame begalybės tašką $\\\\mathcal{O}$. Suma: $2 + 1 + 0 + 1 = 4$.",
+    "solution": "Kai $x=0$, $y^2 = 1 \\implies y=1, 2$ (2 taškai). Kai $x=1$, $y^2 = 1^3 + 1 + 1 = 3 \\equiv 0 \\implies y=0$ (1 taškas). Kai $x=2$, $y^2 = 2^3 + 2 + 1 = 11 \\equiv 2 \\pmod 3$. Skaičius 2 nėra kvadratas $\\mathbb{F}_3$ (0 taškų). Pridedame begalybės tašką $\\mathcal{O}$. Suma: $2 + 1 + 0 + 1 = 4$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -69020,7 +69020,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-12-02-trap-1",
         "title": "Pamirštas begalybės taškas",
-        "wrongMove": "Suskaičiuojami tik taškai plokštumoje (3) ir pamirštama pridėti $\\\\mathcal{O}$.",
+        "wrongMove": "Suskaičiuojami tik taškai plokštumoje (3) ir pamirštama pridėti $\\mathcal{O}$.",
         "whyTempting": "Begalybės taškas yra abstrakti sąvoka, nepastebima lygtyje.",
         "correction": "Eliptinė kreivė visada apibrėžiama projektinėje plokštumoje.",
         "conceptIds": []
@@ -69028,9 +69028,9 @@ export const exercises = [
       {
         "id": "ex-olimpiada-12-02-trap-2",
         "title": "Klaidingas kvadratų nustatymas",
-        "wrongMove": "Manoma, kad 2 yra kvadratas $\\\\mathbb{F}_3$.",
+        "wrongMove": "Manoma, kad 2 yra kvadratas $\\mathbb{F}_3$.",
         "whyTempting": "Sumišimas su kitais baigtiniais laukais.",
-        "correction": "Tikrinkite: $0^2=0, 1^2=1, 2^2=4 \\\\equiv 1$. Kvadratai yra tik {0, 1}.",
+        "correction": "Tikrinkite: $0^2=0, 1^2=1, 2^2=4 \\equiv 1$. Kvadratai yra tik {0, 1}.",
         "conceptIds": []
       }
     ],
@@ -69044,7 +69044,7 @@ export const exercises = [
         "id": "ex-olimpiada-12-02-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kiek taškų turi $y^2 = x^3 + x + 1$ virš $\\\\mathbb{F}_3$?",
+        "front": "Kiek taškų turi $y^2 = x^3 + x + 1$ virš $\\mathbb{F}_3$?",
         "back": "4 (įskaitant begalybės tašką).",
         "conceptIds": [],
         "methodIds": [],
@@ -69055,21 +69055,21 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Surašykite visas $x$ reikšmes lauke $\\\\mathbb{F}_3$: 0, 1 ir 2.",
+        "text": "Surašykite visas $x$ reikšmes lauke $\\mathbb{F}_3$: 0, 1 ir 2.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\\\pmod 3$.",
+        "text": "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\pmod 3$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Nustatykite, kurie rezultatai yra kvadratai lauke $\\\\mathbb{F}_3$ (kvadratai yra 0 ir 1).",
+        "text": "Nustatykite, kurie rezultatai yra kvadratai lauke $\\mathbb{F}_3$ (kvadratai yra 0 ir 1).",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -69090,10 +69090,10 @@ export const exercises = [
     "concepts": [],
     "hints": [
       "Išnagrinėkite abiejų pusių liekanas moduliu 4.",
-      "$2026 = 2000 + 24 + 2 \\\\equiv 2 \\\\pmod 4$.",
+      "$2026 = 2000 + 24 + 2 \\equiv 2 \\pmod 4$.",
       "Surašykite visas galimas $x^2 - y^2$ liekanas moduliu 4 naudodami {0, 1}."
     ],
-    "solution": "Pastebime, kad bet kurio skaičiaus kvadratas $n^2 \\\\equiv 0 \\\\pmod 4$ (jei $n$ lyginis) arba $n^2 \\\\equiv 1 \\\\pmod 4$ (jei $n$ nelyginis). Galimos skirtumo $x^2 - y^2 \\\\pmod 4$ reikšmės: $0-0=0$, $1-1=0$, $1-0=1$, $0-1=-1 \\\\equiv 3$. Reikšmė 2 moduliu 4 niekada nepasiekiama. Kadangi $2026 \\\\equiv 2 \\\\pmod 4$, lygtis sprendinių neturi.",
+    "solution": "Pastebime, kad bet kurio skaičiaus kvadratas $n^2 \\equiv 0 \\pmod 4$ (jei $n$ lyginis) arba $n^2 \\equiv 1 \\pmod 4$ (jei $n$ nelyginis). Galimos skirtumo $x^2 - y^2 \\pmod 4$ reikšmės: $0-0=0$, $1-1=0$, $1-0=1$, $0-1=-1 \\equiv 3$. Reikšmė 2 moduliu 4 niekada nepasiekiama. Kadangi $2026 \\equiv 2 \\pmod 4$, lygtis sprendinių neturi.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Skaičių teorija",
@@ -69159,7 +69159,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kodėl $x^2 - y^2 = 2026$ neturi sprendinių?",
-        "back": "Nes $x^2-y^2 \\not\\\\equiv 2 \\\\pmod 4$, o $2026 \\\\equiv 2 \\\\pmod 4$.",
+        "back": "Nes $x^2-y^2 \\not\\equiv 2 \\pmod 4$, o $2026 \\equiv 2 \\pmod 4$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -69176,7 +69176,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "$2026 = 2000 + 24 + 2 \\\\equiv 2 \\\\pmod 4$.",
+        "text": "$2026 = 2000 + 24 + 2 \\equiv 2 \\pmod 4$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -69194,7 +69194,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Jei $a, b \\\\in \\\\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
+    "statement": "Jei $a, b \\in \\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
     "answer": "Pilnas kvadratas",
     "acceptedAnswers": [
       "Pilnas kvadratas"
@@ -69206,7 +69206,7 @@ export const exercises = [
     ],
     "hints": [
       "Tarkime, kad fiksuotam $k$ egzistuoja sprendinių pora $(a, b)$, bet $k$ nėra pilnas kvadratas.",
-      "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\\\ge b$.",
+      "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\ge b$.",
       "Išnagrinėkite kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$ ir jos antrąją šaknį $x_2$."
     ],
     "solution": "Užrašome lygtį $a^2 - kba + b^2 - k = 0$. Jei $(a, b)$ yra sprendinys, tai kita šaknis $x_2 = kb - a = (b^2-k)/a$ taip pat turi tenkinti lygtį. Įrodoma, kad $x_2$ turi būti sveikas skaičius. Jei $k$ nėra kvadratas, įrodoma, kad $x_2 \\neq 0$ ir $x_2 > 0$. Tačiau $x_2 = (b^2-k)/a < a^2/a = a$, todėl $x_2+b < a+b$. Tai prieštarauja sprendinio minimalumui, todėl $k$ privalo būti pilnas kvadratas.",
@@ -69296,7 +69296,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\\\ge b$.",
+        "text": "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\ge b$.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -69448,7 +69448,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "LTE (Lifting The Exponent) lema",
-      "text": "Nelyginiam pirminiam skaičiui $p$, jei $p \\\\mid a+b$ (n nelyginis), tai $v_p(a^n + b^n) = v_p(a+b) + v_p(n)$."
+      "text": "Nelyginiam pirminiam skaičiui $p$, jei $p \\mid a+b$ (n nelyginis), tai $v_p(a^n + b^n) = v_p(a+b) + v_p(n)$."
     },
     "strategyTags": [
       "proof",
@@ -69541,7 +69541,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite visas tolydžias funkcijas $f: \\\\mathbb{R} \\to \\\\mathbb{R}$, tenkinančias Koši lygtį $f(x+y) = f(x) + f(y)$. Užrašykite bendrąją formą per kintamąjį c.",
+    "statement": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias Koši lygtį $f(x+y) = f(x) + f(y)$. Užrašykite bendrąją formą per kintamąjį c.",
     "answer": "f(x) = cx",
     "acceptedAnswers": [
       "f(x) = cx"
@@ -69556,7 +69556,7 @@ export const exercises = [
       "Išplėskite savybę iki racionaliųjų skaičių $q$: $f(qx) = qf(x)$.",
       "Naudokite tolydumo sąlygą, kad 'užpildytumėte' tarpus tarp racionaliųjų skaičių bet kokiam realiam skaičiui."
     ],
-    "solution": "$f(0+0) = f(0)+f(0) \\\\implies f(0) = 0$. Indukcija: $f(nx) = nf(x)$ visiems $n \\\\in \\\\mathbb{N}$. Tegu $n/m = q \\\\in \\\\mathbb{Q}$. Tada $mf(qx) = f(mqx) = f(nx) = nf(x) \\\\implies f(qx) = qf(x)$. Tegu $x = 1$. Tada $f(q) = f(1) \\\\cdot q = cq$, kur $c = f(1)$. Kadangi $f$ tolydi, o racionalieji skaičiai yra tiršti $\\\\mathbb{R}$, tai $f(x) = cx$ visiems $x \\\\in \\\\mathbb{R}$.",
+    "solution": "$f(0+0) = f(0)+f(0) \\implies f(0) = 0$. Indukcija: $f(nx) = nf(x)$ visiems $n \\in \\mathbb{N}$. Tegu $n/m = q \\in \\mathbb{Q}$. Tada $mf(qx) = f(mqx) = f(nx) = nf(x) \\implies f(qx) = qf(x)$. Tegu $x = 1$. Tada $f(q) = f(1) \\cdot q = cq$, kur $c = f(1)$. Kadangi $f$ tolydi, o racionalieji skaičiai yra tiršti $\\mathbb{R}$, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -69584,7 +69584,7 @@ export const exercises = [
         "steps": [
           {
             "title": "Racionalusis pagrindimas",
-            "action": "Įrodome tiesiškumą virš $\\\\mathbb{Q}$.",
+            "action": "Įrodome tiesiškumą virš $\\mathbb{Q}$.",
             "reason": "Tai visų Koši lygčių sprendimo pagrindas.",
             "result": "Gauta $f(q) = cq$.",
             "latex": ""
@@ -69607,7 +69607,7 @@ export const exercises = [
         "title": "Laisvojo nario pridėjimas",
         "wrongMove": "Rašoma $f(x) = cx + d$.",
         "whyTempting": "Įprasta tiesinės funkcijos forma.",
-        "correction": "Įstačius į lygtį $c(x+y)+d = cx+d+cy+d \\\\implies d=0$. Funkcija privalo eiti per koordinačių pradžią.",
+        "correction": "Įstačius į lygtį $c(x+y)+d = cx+d+cy+d \\implies d=0$. Funkcija privalo eiti per koordinačių pradžią.",
         "conceptIds": []
       }
     ],
@@ -69657,7 +69657,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$. Kokia minimali reikšmė pasiekiama, kai kintamieji lygūs?",
+    "statement": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$. Kokia minimali reikšmė pasiekiama, kai kintamieji lygūs?",
     "answer": "3",
     "acceptedAnswers": [
       "3"
@@ -69672,7 +69672,7 @@ export const exercises = [
       "Kairėje AM-HM pusėje turite $(a+b+c)/3$, dešinėje – $3/(1/a+1/b+1/c)$.",
       "Įstatykite žinomą sumą $a+b+c=3$ ir išreikškite apverstų narių sumą."
     ],
-    "solution": "Naudojame AM-HM nelygybę: $\\frac{a+b+c}{3} \\\\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$. Kadangi $a+b+c=3$, tai $\\frac{3}{3} = 1$. $1 \\\\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\\\implies \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$. Lygybė pasiekiama tik tada, kai $a=b=c=1$.",
+    "solution": "Naudojame AM-HM nelygybę: $\\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$. Kadangi $a+b+c=3$, tai $\\frac{3}{3} = 1$. $1 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\implies \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$. Lygybė pasiekiama tik tada, kai $a=b=c=1$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -69713,7 +69713,7 @@ export const exercises = [
       {
         "id": "ex-olimpiada-12-08-trap-1",
         "title": "Nelygybės ženklo supainiojimas",
-        "wrongMove": "Rašoma $1/a + 1/b + 1/c \\\\le 3$.",
+        "wrongMove": "Rašoma $1/a + 1/b + 1/c \\le 3$.",
         "whyTempting": "Klaidingas AM-HM interpretavimas.",
         "correction": "Harmoninis vidurkis yra mažiausias, todėl jo vardiklyje esanti suma turi būti didelė, kad bendra vertė būtų maža.",
         "conceptIds": []
@@ -69737,7 +69737,7 @@ export const exercises = [
         "id": "ex-olimpiada-12-08-srs-1",
         "deck": "practice",
         "cardType": "method",
-        "front": "Kokia yra $\\\\sum 1/a$ minimumo reikšmė, jei $\\\\sum a = 3$ ($a,b,c>0$)?",
+        "front": "Kokia yra $\\sum 1/a$ minimumo reikšmė, jei $\\sum a = 3$ ($a,b,c>0$)?",
         "back": "3 (pasiekiama, kai $a=b=c=1$).",
         "conceptIds": [],
         "methodIds": [],
@@ -69773,10 +69773,10 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\\\dots$ išreikštą per n naudojant kompleksines vieneto šaknis.",
-    "answer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}",
+    "statement": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ išreikštą per n naudojant kompleksines vieneto šaknis.",
+    "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}",
     "acceptedAnswers": [
-      "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+      "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
     ],
     "answerTolerance": 0,
     "choices": [],
@@ -69784,11 +69784,11 @@ export const exercises = [
       "olimpiada-12-concept-unity-filter"
     ],
     "hints": [
-      "Naudokite trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
-      "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\\\omega)^n$ ir $(1+\\\\omega^2)^n$ skleidinius.",
-      "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\\\omega^k + \\\\omega^{2k}$."
+      "Naudokite trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
+      "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\omega)^n$ ir $(1+\\omega^2)^n$ skleidinius.",
+      "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\omega^k + \\omega^{2k}$."
     ],
-    "solution": "Pagal filtrą: $S = \\frac{1}{3} ((1+1)^n + (1+\\\\omega)^n + (1+\\\\omega^2)^n)$. Pastebime: $1+\\\\omega = 1 + \\\\cos(2\\\\pi/3) + i\\\\sin(2\\\\pi/3) = 1/2 + i\\\\sqrt{3}/2 = e^{i\\\\pi/3}$. $1+\\\\omega^2 = e^{-i\\\\pi/3}$. $S = \\frac{2^n + (e^{i\\\\pi/3})^n + (e^{-i\\\\pi/3})^n}{3} = \\frac{2^n + e^{in\\\\pi/3} + e^{-in\\\\pi/3}}{3}$. Naudojant Eulerio formulę: $e^{i\\theta} + e^{-i\\theta} = 2\\\\cos(\\theta)$. $S = \\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}$.",
+    "solution": "Pagal filtrą: $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$. Pastebime: $1+\\omega = 1 + \\cos(2\\pi/3) + i\\sin(2\\pi/3) = 1/2 + i\\sqrt{3}/2 = e^{i\\pi/3}$. $1+\\omega^2 = e^{-i\\pi/3}$. $S = \\frac{2^n + (e^{i\\pi/3})^n + (e^{-i\\pi/3})^n}{3} = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3}$. Naudojant Eulerio formulę: $e^{i\\theta} + e^{-i\\theta} = 2\\cos(\\theta)$. $S = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -69824,16 +69824,16 @@ export const exercises = [
             "latex": ""
           }
         ],
-        "finalAnswer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
+        "finalAnswer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-12-09-trap-1",
         "title": "Klaidingas nario 1+omega skaičiavimas",
-        "wrongMove": "Manoma, kad $|1+\\\\omega| = 1$.",
-        "whyTempting": "Nes $|\\\\omega| = 1$.",
-        "correction": "Brėžkite vektorius: $1$ ir $\\\\omega$ sudaro $120$ laipsnių kampą, jų suma yra rombo įstrižainė lygi 1 (bet kryptis pasikeičia).",
+        "wrongMove": "Manoma, kad $|1+\\omega| = 1$.",
+        "whyTempting": "Nes $|\\omega| = 1$.",
+        "correction": "Brėžkite vektorius: $1$ ir $\\omega$ sudaro $120$ laipsnių kampą, jų suma yra rombo įstrižainė lygi 1 (bet kryptis pasikeičia).",
         "conceptIds": []
       },
       {
@@ -69841,12 +69841,12 @@ export const exercises = [
         "title": "Dalybos iš 3 pamiršimas",
         "wrongMove": "Sudedamos trys reikšmės ir paliekamas bendras rezultatas.",
         "whyTempting": "Dėmesys sutelkiamas į kompleksinius skaičiavimus.",
-        "correction": "Kadangi filtras $1+\\\\omega^k + \\\\omega^{2k}$ duoda reikšmę 3 (o ne 1), būtina padalyti iš m=3.",
+        "correction": "Kadangi filtras $1+\\omega^k + \\omega^{2k}$ duoda reikšmę 3 (o ne 1), būtina padalyti iš m=3.",
         "conceptIds": []
       }
     ],
     "reflectionPrompts": [
-      "Kaip pasikeistų suma, jei reikėtų $\\binom{n}{1} + \\binom{n}{4} + \\\\dots$?",
+      "Kaip pasikeistų suma, jei reikėtų $\\binom{n}{1} + \\binom{n}{4} + \\dots$?",
       "Ar šis metodas tinka bet kokiam žingsniui $k$?"
     ],
     "extensionQuestions": [],
@@ -69856,7 +69856,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia yra binominių koeficientų suma kas 3 žingsnius?",
-        "back": "$(2^n + 2\\\\cos(n\\\\pi/3))/3$ (naudojant vieneto šaknų filtrą).",
+        "back": "$(2^n + 2\\cos(n\\pi/3))/3$ (naudojant vieneto šaknų filtrą).",
         "conceptIds": [
           "olimpiada-12-concept-unity-filter"
         ],
@@ -69868,21 +69868,21 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Naudokite trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
+        "text": "Naudokite trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
       {
         "order": 2,
         "kind": "observation",
-        "text": "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\\\omega)^n$ ir $(1+\\\\omega^2)^n$ skleidinius.",
+        "text": "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\omega)^n$ ir $(1+\\omega^2)^n$ skleidinius.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
       {
         "order": 3,
         "kind": "method",
-        "text": "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\\\omega^k + \\\\omega^{2k}$.",
+        "text": "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\omega^k + \\omega^{2k}$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -69902,11 +69902,11 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Daugianarį užrašykite kaip $P(z) = a \\\\prod (z-z_k)$.",
+      "Daugianarį užrašykite kaip $P(z) = a \\prod (z-z_k)$.",
       "Apskaičiuokite logaritminę išvestinę $P'(z)/P(z)$.",
-      "Išnagrinėkite lygtį $\\\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis."
+      "Išnagrinėkite lygtį $\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis."
     ],
-    "solution": "Tegu $z_1, \\\\dots, z_n$ yra $P(z)$ šaknys. Išvestinės šaknis $w$ tenkina $\\\\sum \\frac{1}{w-z_k} = 0$. Jungtinių skaičių suma $\\\\sum \\frac{\\bar{w}-\\bar{z}_k}{|w-z_k|^2} = 0$. Tai parodo, kad $w$ yra $z_k$ svertinis vidurkis su teigiamais svoriais. Bet koks svertinis vidurkis su teigiamais svoriais privalo gulėti taškų iškiliame kevale.",
+    "solution": "Tegu $z_1, \\dots, z_n$ yra $P(z)$ šaknys. Išvestinės šaknis $w$ tenkina $\\sum \\frac{1}{w-z_k} = 0$. Jungtinių skaičių suma $\\sum \\frac{\\bar{w}-\\bar{z}_k}{|w-z_k|^2} = 0$. Tai parodo, kad $w$ yra $z_k$ svertinis vidurkis su teigiamais svoriais. Bet koks svertinis vidurkis su teigiamais svoriais privalo gulėti taškų iškiliame kevale.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -69982,7 +69982,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Daugianarį užrašykite kaip $P(z) = a \\\\prod (z-z_k)$.",
+        "text": "Daugianarį užrašykite kaip $P(z) = a \\prod (z-z_k)$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
@@ -69996,7 +69996,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Išnagrinėkite lygtį $\\\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis.",
+        "text": "Išnagrinėkite lygtį $\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis.",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -70016,11 +70016,11 @@ export const exercises = [
     "choices": [],
     "concepts": [],
     "hints": [
-      "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$.",
+      "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$.",
       "Permanento formulė $2 \\times 2$ matricai yra $ad + bc$.",
       "Įstatykite visas reikšmes $1/2$."
     ],
-    "solution": "Matrica yra $\\begin{pmatrix} 1/2 & 1/2 \\\\\\ 1/2 & 1/2 \\\\end{pmatrix}$. Pagal formulę $\\text{perm}(A) = (1/2)(1/2) + (1/2)(1/2)$. Skaičiuojame: $1/4 + 1/4 = 2/4 = 1/2$.",
+    "solution": "Matrica yra $\\begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \\end{pmatrix}$. Pagal formulę $\\text{perm}(A) = (1/2)(1/2) + (1/2)(1/2)$. Skaičiuojame: $1/4 + 1/4 = 2/4 = 1/2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -70095,7 +70095,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\\\\\ c & d \\\\end{pmatrix}$.",
+        "text": "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
@@ -70234,20 +70234,20 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Jei $a, b, c$ yra taisyklingojo trikampio viršūnės kompleksinėje plokštumoje, tenkinančios sąlygą $a + b\\\\omega + c\\\\omega^2 = 0$, koks yra $\\\\omega$ apibrėžimas, užtikrinantis šį ryšį?",
-    "answer": "e^{2\\\\pi i / 3}",
+    "statement": "Jei $a, b, c$ yra taisyklingojo trikampio viršūnės kompleksinėje plokštumoje, tenkinančios sąlygą $a + b\\omega + c\\omega^2 = 0$, koks yra $\\omega$ apibrėžimas, užtikrinantis šį ryšį?",
+    "answer": "e^{2\\pi i / 3}",
     "acceptedAnswers": [
-      "e^{2\\\\pi i / 3}"
+      "e^{2\\pi i / 3}"
     ],
     "answerTolerance": 0,
     "choices": [],
     "concepts": [],
     "hints": [
       "Viršūnes laikykite vektoriais iš trikampio centro (tada $a+b+c=0$).",
-      "Vektorius $b$ gaunamas pasukus $a$ per $120^\\\\circ$ kampą.",
+      "Vektorius $b$ gaunamas pasukus $a$ per $120^\\circ$ kampą.",
       "Užrašykite šį sukinį per kompleksinę eksponentę."
     ],
-    "solution": "Taisyklingajame trikampyje viršūnės yra išsidėsčiusios kas $120^\\\\circ$ aplink centrą. Pasukimas per $120^\\\\circ$ atitinka daugybą iš $e^{2\\\\pi i / 3}$. Lygties struktūra $a + b\\\\omega + c\\\\omega^2 = 0$ yra ekvivalenti teiginiui, kad taškai sudaro taisyklingąjį trikampį. Išvada: $\\\\omega$ yra trečiojo laipsnio vieneto šaknis.",
+    "solution": "Taisyklingajame trikampyje viršūnės yra išsidėsčiusios kas $120^\\circ$ aplink centrą. Pasukimas per $120^\\circ$ atitinka daugybą iš $e^{2\\pi i / 3}$. Lygties struktūra $a + b\\omega + c\\omega^2 = 0$ yra ekvivalenti teiginiui, kad taškai sudaro taisyklingąjį trikampį. Išvada: $\\omega$ yra trečiojo laipsnio vieneto šaknis.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -70255,7 +70255,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Kompleksiniai skaičiai ir sukiniai",
-      "text": "Taisyklingasis trikampis pasižymi simetrija sukiniui per 120 laipsnių. Kompleksinis skaičius $\\\\omega = e^{2\\\\pi i / 3}$ atlieka būtent šį sukinį."
+      "text": "Taisyklingasis trikampis pasižymi simetrija sukiniui per 120 laipsnių. Kompleksinis skaičius $\\omega = e^{2\\pi i / 3}$ atlieka būtent šį sukinį."
     },
     "strategyTags": [
       "algebraic-transformation",
@@ -70277,34 +70277,34 @@ export const exercises = [
             "title": "Vektorių sulyginimas",
             "action": "Išreiškiame viršūnes per centro sukinį.",
             "reason": "Tai patogiausias būdas dirbti su taisyklingomis figūromis.",
-            "result": "Identifikuotas kampas $120^\\\\circ$.",
+            "result": "Identifikuotas kampas $120^\\circ$.",
             "latex": ""
           }
         ],
-        "finalAnswer": "e^{2\\\\pi i / 3}"
+        "finalAnswer": "e^{2\\pi i / 3}"
       }
     ],
     "commonTraps": [
       {
         "id": "ex-olimpiada-12-13-trap-1",
         "title": "Kampo sumaišymas",
-        "wrongMove": "Manoma, kad $\\\\omega$ atitinka $60^\\\\circ$ kampą.",
-        "whyTempting": "Taisyklingo trikampio vidaus kampai yra $60^\\\\circ$.",
+        "wrongMove": "Manoma, kad $\\omega$ atitinka $60^\\circ$ kampą.",
+        "whyTempting": "Taisyklingo trikampio vidaus kampai yra $60^\\circ$.",
         "correction": "Centrinis kampas (nuo centro iki viršūnių) yra $360/3 = 120$ laipsnių.",
         "conceptIds": []
       },
       {
         "id": "ex-olimpiada-12-13-trap-2",
         "title": "Ženklo klaida eksponentėje",
-        "wrongMove": "Rašoma $e^{\\\\pi i / 3}$.",
+        "wrongMove": "Rašoma $e^{\\pi i / 3}$.",
         "whyTempting": "Panašių formulių gausa trigonometrijoje.",
-        "correction": "Visada pasitikrinkite: visas ratas yra $2\\\\pi$, todėl trečdalis rato yra $2\\\\pi/3$.",
+        "correction": "Visada pasitikrinkite: visas ratas yra $2\\pi$, todėl trečdalis rato yra $2\\pi/3$.",
         "conceptIds": []
       }
     ],
     "reflectionPrompts": [
       "Kaip atrodytų lygtis kvadratui kompleksinėje plokštumoje?",
-      "Kokia yra $1 + \\\\omega + \\\\omega^2$ reikšmė?"
+      "Kokia yra $1 + \\omega + \\omega^2$ reikšmė?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
@@ -70313,7 +70313,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia kompleksinė konstanta susieja taisyklingo trikampio viršūnes?",
-        "back": "$\\\\omega = e^{2\\\\pi i / 3}$.",
+        "back": "$\\omega = e^{2\\pi i / 3}$.",
         "conceptIds": [],
         "methodIds": [],
         "defaultEnabled": true
@@ -70330,7 +70330,7 @@ export const exercises = [
       {
         "order": 2,
         "kind": "observation",
-        "text": "Vektorius $b$ gaunamas pasukus $a$ per $120^\\\\circ$ kampą.",
+        "text": "Vektorius $b$ gaunamas pasukus $a$ per $120^\\circ$ kampą.",
         "revealsConceptIds": [],
         "penalty": 0.08
       },
@@ -70713,7 +70713,7 @@ export const exercises = [
       "Trikampio $ABC$ plotas yra trijų mažų trikampių $PAB, PBC, PCA$ plotų suma.",
       "Užrašykite plotus naudodami kraštinę $s$ ir atstumus $h_1, h_2, h_3$."
     ],
-    "solution": "Trikampio $ABC$ plotas $S = \\frac{1}{2} s \\\\cdot h$, kur $s$ yra kraštinė. Mažųjų trikampių plotų suma: $\\frac{1}{2} s h_1 + \\frac{1}{2} s h_2 + \\frac{1}{2} s h_3$. Išlyginame: $\\frac{1}{2} s h = \\frac{1}{2} s (h_1 + h_2 + h_3)$. Suprastiname $s$ ir $1/2$, gauname $h = h_1 + h_2 + h_3$.",
+    "solution": "Trikampio $ABC$ plotas $S = \\frac{1}{2} s \\cdot h$, kur $s$ yra kraštinė. Mažųjų trikampių plotų suma: $\\frac{1}{2} s h_1 + \\frac{1}{2} s h_2 + \\frac{1}{2} s h_3$. Išlyginame: $\\frac{1}{2} s h = \\frac{1}{2} s (h_1 + h_2 + h_3)$. Suprastiname $s$ ir $1/2$, gauname $h = h_1 + h_2 + h_3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
@@ -70814,7 +70814,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Atsitiktinis dydis $X \\\\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X=0)$ iš viršaus naudodami antrojo momento metodo principą (Čebyševo nelygybės formą).",
+    "statement": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X=0)$ iš viršaus naudodami antrojo momento metodo principą (Čebyševo nelygybės formą).",
     "answer": "0.05",
     "acceptedAnswers": [
       "0.05"
@@ -70825,11 +70825,11 @@ export const exercises = [
       "olimpiada-12-concept-probabilistic-second-moment"
     ],
     "hints": [
-      "Naudokite nelygybę $P(X=0) \\\\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
+      "Naudokite nelygybę $P(X=0) \\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
       "Apskaičiuokite vardiklį: $10^2$.",
       "Padalykite dispersiją iš gauto rezultato."
     ],
-    "solution": "Formulė: $P(X=0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2}$. Įstatome duomenis: $E[X] = 10$, $\\text{Var}(X) = 5$. $P(X=0) \\\\le \\frac{5}{100} = 0.05$.",
+    "solution": "Formulė: $P(X=0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$. Įstatome duomenis: $E[X] = 10$, $\\text{Var}(X) = 5$. $P(X=0) \\le \\frac{5}{100} = 0.05$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -70874,7 +70874,7 @@ export const exercises = [
         "title": "Vardiklio klaida",
         "wrongMove": "Dalijama iš $E[X]$ vietoj $E[X]^2$.",
         "whyTempting": "Painiojimas su Markovo nelygybe.",
-        "correction": "Markovo nelygybė įvertina $P(X \\\\ge a)$, o antrojo momento metodui būtinas kvadratas dispersijai atliepti.",
+        "correction": "Markovo nelygybė įvertina $P(X \\ge a)$, o antrojo momento metodui būtinas kvadratas dispersijai atliepti.",
         "conceptIds": []
       },
       {
@@ -70897,7 +70897,7 @@ export const exercises = [
         "deck": "practice",
         "cardType": "method",
         "front": "Kokia formulė įvertina $P(X=0)$ naudojant dispersiją?",
-        "back": "$P(X=0) \\\\le \\text{Var}(X)/E[X]^2$.",
+        "back": "$P(X=0) \\le \\text{Var}(X)/E[X]^2$.",
         "conceptIds": [
           "olimpiada-12-concept-probabilistic-second-moment"
         ],
@@ -70909,7 +70909,7 @@ export const exercises = [
       {
         "order": 1,
         "kind": "orientation",
-        "text": "Naudokite nelygybę $P(X=0) \\\\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
+        "text": "Naudokite nelygybę $P(X=0) \\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
         "revealsConceptIds": [],
         "penalty": 0.05
       },
@@ -70947,7 +70947,7 @@ export const exercises = [
       "Koks yra kiekvienos viršūnės laipsnis (kaimynų skaičius) grafe $K_3$?",
       "Prisiminkite ryšį tarp $d$-reguliaraus grafo ir jo spektro."
     ],
-    "solution": "$K_3$ yra grafas su 3 viršūnėmis, kur kiekviena sujungta su visomis kitomis. Viršūnės laipsnis $d = 3-1 = 2$. Matrica yra $\\begin{pmatrix} 0 & 1 & 1 \\\\\\ 1 & 0 & 1 \\\\\\ 1 & 1 & 0 \\\\end{pmatrix}$. Eilučių sumos yra pastovios ir lygios 2. Didžiausia tikrinė reikšmė reguliariam grafui lygi jo laipsniui, t.y. 2.",
+    "solution": "$K_3$ yra grafas su 3 viršūnėmis, kur kiekviena sujungta su visomis kitomis. Viršūnės laipsnis $d = 3-1 = 2$. Matrica yra $\\begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\end{pmatrix}$. Eilučių sumos yra pastovios ir lygios 2. Didžiausia tikrinė reikšmė reguliariam grafui lygi jo laipsniui, t.y. 2.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -70955,7 +70955,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Spektrinė grafų teorija",
-      "text": "Reguliariam grafui, kurio kiekviena viršūnė turi laipsnį $d$, didžiausia tikrinė reikšmė visada lygi $d$. Taip pat atitinkamas tikrinis vektorius yra $(1, 1, \\\\dots, 1)$."
+      "text": "Reguliariam grafui, kurio kiekviena viršūnė turi laipsnį $d$, didžiausia tikrinė reikšmė visada lygi $d$. Taip pat atitinkamas tikrinis vektorius yra $(1, 1, \\dots, 1)$."
     },
     "strategyTags": [
       "algebraic-transformation",
@@ -71048,7 +71048,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Raskite incidencyvumo matricos (virš lauko $\\\\mathbb{F}_2$) rangą jungiamame grafe su 5 viršūnėmis.",
+    "statement": "Raskite incidencyvumo matricos (virš lauko $\\mathbb{F}_2$) rangą jungiamame grafe su 5 viršūnėmis.",
     "answer": "4",
     "acceptedAnswers": [
       "4"
@@ -71059,9 +71059,9 @@ export const exercises = [
     "hints": [
       "Apsvarstykite paprasčiausią jungiamą grafą su 5 viršūnėmis – medį.",
       "Kiek briaunų turi medis su $n$ viršūnių? ($n-1$).",
-      "Pastebėkite, kad visų eilučių suma $\\\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu."
+      "Pastebėkite, kad visų eilučių suma $\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu."
     ],
-    "solution": "Incidencyvumo matrica turi $n=5$ eilučių (viršūnių). Kiekvienas stulpelis (briauna) turi lygiai du vienetus, todėl visų eilučių suma moduliu 2 yra 0. Tai reiškia, kad eilutės yra tiesiškai priklausomos, tad $Rangas \\\\le n-1$. Jungiamam grafui bet kurios $n-1$ eilutės yra nepriklausomos. Išvada: $Rangas = 5-1 = 4$.",
+    "solution": "Incidencyvumo matrica turi $n=5$ eilučių (viršūnių). Kiekvienas stulpelis (briauna) turi lygiai du vienetus, todėl visų eilučių suma moduliu 2 yra 0. Tai reiškia, kad eilutės yra tiesiškai priklausomos, tad $Rangas \\le n-1$. Jungiamam grafui bet kurios $n-1$ eilutės yra nepriklausomos. Išvada: $Rangas = 5-1 = 4$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -71069,7 +71069,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Algebrinė grafų teorija: Rangas",
-      "text": "Jungiamam grafui su $n$ viršūnių incidencyvumo matricos rangas virš $\\\\mathbb{F}_2$ yra lygus $n-1$. Tai tiesiogiai susiję su faktu, kad bet kurio medžio briaunos yra tiesiškai nepriklausomos, o ciklas sukuria priklausomybę."
+      "text": "Jungiamam grafui su $n$ viršūnių incidencyvumo matricos rangas virš $\\mathbb{F}_2$ yra lygus $n-1$. Tai tiesiogiai susiję su faktu, kad bet kurio medžio briaunos yra tiesiškai nepriklausomos, o ciklas sukuria priklausomybę."
     },
     "strategyTags": [
       "logic",
@@ -71151,7 +71151,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Pastebėkite, kad visų eilučių suma $\\\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu.",
+        "text": "Pastebėkite, kad visų eilučių suma $\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu.",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -71287,9 +71287,9 @@ export const exercises = [
     "hints": [
       "Pabandykite padalyti 5 viršūnes į dvi grupes ir sujungti visas briaunas tarp grupių.",
       "Suskaičiuokite briaunas skaidymams (1, 4) ir (2, 3).",
-      "Taikykite Mantelio formulę $\\\\lfloor n^2/4 \\rfloor$."
+      "Taikykite Mantelio formulę $\\lfloor n^2/4 \\rfloor$."
     ],
-    "solution": "Grafas be trikampių negali turėti briaunų savo vidinėse dalyse, jei jis yra dvidalis. Pagal Mantelio teoremą, ekstremalus grafas yra dvidalis. Suskirstome viršūnes į aibes po 2 ir 3. Briaunų skaičius $2 \\\\cdot 3 = 6$. Patikriname formulę: $\\\\lfloor 5^2 / 4 \\rfloor = \\\\lfloor 25 / 4 \\rfloor = 6$.",
+    "solution": "Grafas be trikampių negali turėti briaunų savo vidinėse dalyse, jei jis yra dvidalis. Pagal Mantelio teoremą, ekstremalus grafas yra dvidalis. Suskirstome viršūnes į aibes po 2 ir 3. Briaunų skaičius $2 \\cdot 3 = 6$. Patikriname formulę: $\\lfloor 5^2 / 4 \\rfloor = \\lfloor 25 / 4 \\rfloor = 6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -71297,7 +71297,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Turano teorema (ir Mantelio teorema)",
-      "text": "Mantelio teorema teigia, kad grafas be trikampių gali turėti ne daugiau kaip $n^2/4$ briaunų. Didžiausias toks grafas yra pilnasis dvidalis grafas $K_{\\\\lfloor n/2 \\rfloor, \\\\lceil n/2 \\rceil}$."
+      "text": "Mantelio teorema teigia, kad grafas be trikampių gali turėti ne daugiau kaip $n^2/4$ briaunų. Didžiausias toks grafas yra pilnasis dvidalis grafas $K_{\\lfloor n/2 \\rfloor, \\lceil n/2 \\rceil}$."
     },
     "strategyTags": [
       "logic",
@@ -71379,7 +71379,7 @@ export const exercises = [
       {
         "order": 3,
         "kind": "method",
-        "text": "Taikykite Mantelio formulę $\\\\lfloor n^2/4 \\rfloor$.",
+        "text": "Taikykite Mantelio formulę $\\lfloor n^2/4 \\rfloor$.",
         "revealsConceptIds": [],
         "penalty": 0.1
       }
@@ -71403,7 +71403,7 @@ export const exercises = [
       "Rotho rezultatas buvo istorinis lūžis būtent konkrečiam ilgiui.",
       "Klausimas apie tankį, o ne spalvinimą (kaip Van der Vardeno atveju)."
     ],
-    "solution": "Aibės tankis $\\\\delta > 0$ reiškia, kad aibė yra 'didelė'. Rotho teorema (1953) įrodė, kad tokia aibė turi 3 narių progresiją. Bendresnė Szemerédi teorema vėliau tai išplėtė bet kokiam $k$. Atsakymas remiantis konkrečia Rotho pavarde yra 3.",
+    "solution": "Aibės tankis $\\delta > 0$ reiškia, kad aibė yra 'didelė'. Rotho teorema (1953) įrodė, kad tokia aibė turi 3 narių progresiją. Bendresnė Szemerédi teorema vėliau tai išplėtė bet kokiam $k$. Atsakymas remiantis konkrečia Rotho pavarde yra 3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -71411,7 +71411,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Rotho ir Szemerédi teoremos",
-      "text": "Rotho teorema yra Szemerédi teoremos atvejis $k=3$. Ji teigia, kad jei aibė $A \\\\subset \\\\mathbb{N}$ turi teigiamą tankį, joje yra be galo daug 3 narių aritmetinių progresijų."
+      "text": "Rotho teorema yra Szemerédi teoremos atvejis $k=3$. Ji teigia, kad jei aibė $A \\subset \\mathbb{N}$ turi teigiamą tankį, joje yra be galo daug 3 narių aritmetinių progresijų."
     },
     "strategyTags": [
       "logic"
@@ -71503,7 +71503,7 @@ export const exercises = [
     "topicId": "olimpiada-12",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Tegu $|A|=3$ ir $|B|=4$ yra poaibiai lauke $\\\\mathbb{Z}_{11}$. Raskite mažiausią galimą sumos aibės $A+B = \\\\{a+b : a\\\\in A, b\\\\in B\\\\}$ dydį pagal Koši-Davenporto teoremą.",
+    "statement": "Tegu $|A|=3$ ir $|B|=4$ yra poaibiai lauke $\\mathbb{Z}_{11}$. Raskite mažiausią galimą sumos aibės $A+B = \\{a+b : a\\in A, b\\in B\\}$ dydį pagal Koši-Davenporto teoremą.",
     "answer": "6",
     "acceptedAnswers": [
       "6"
@@ -71516,7 +71516,7 @@ export const exercises = [
       "Apskaičiuokite $|A|+|B|-1$.",
       "Palyginkite rezultatą su $p$ ir pasirinkite mažesnįjį."
     ],
-    "solution": "$|A| + |B| - 1 = 3 + 4 - 1 = 6$. Tikriname rėžį: $\\\\min(11, 6) = 6$. Mažiausias galimas dydis yra 6.",
+    "solution": "$|A| + |B| - 1 = 3 + 4 - 1 = 6$. Tikriname rėžį: $\\min(11, 6) = 6$. Mažiausias galimas dydis yra 6.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Kombinatorika",
@@ -71524,7 +71524,7 @@ export const exercises = [
     "requiredPrerequisiteMastery": 85,
     "coreIdea": {
       "title": "Koši-Davenporto teorema",
-      "text": "Adityviojoje kombinatorikoje ši teorema teigia, kad sumos aibės dydis moduliu pirminis skaičius $p$ tenkina nelygybę $|A+B| \\\\ge \\\\min(p, |A|+|B|-1)$."
+      "text": "Adityviojoje kombinatorikoje ši teorema teigia, kad sumos aibės dydis moduliu pirminis skaičius $p$ tenkina nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
     },
     "strategyTags": [
       "algebraic-transformation",

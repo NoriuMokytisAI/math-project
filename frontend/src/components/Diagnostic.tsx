@@ -227,9 +227,10 @@ export const Diagnostic: React.FC<DiagnosticProps> = ({ state, navigate, updateS
 
         {item.choices?.length ? (
           <div className="choice-list diagnostic-choice-list">
-            {item.choices.map((choice) => (
-              <label key={choice} className={`choice-option ${answer === choice ? "active" : ""}`}>
+            {item.choices.map((choice, cIdx) => (
+              <label key={choice} className={`choice-option ${answer === choice ? "active" : ""}`} htmlFor={`diag-choice-${cIdx}`}>
                 <input
+                  id={`diag-choice-${cIdx}`}
                   type="radio"
                   name="diagnostic-answer"
                   value={choice}
@@ -242,6 +243,8 @@ export const Diagnostic: React.FC<DiagnosticProps> = ({ state, navigate, updateS
           </div>
         ) : (
           <input
+            id="diagnostic-answer-text"
+            name="diagnostic-answer-text"
             className="answer-input"
             value={answer}
             onChange={(event) => setAnswer(event.target.value)}

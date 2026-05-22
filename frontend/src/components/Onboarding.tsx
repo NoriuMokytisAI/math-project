@@ -118,6 +118,8 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
       ? defaultGradeBandForPreparation(draft.preparationType)
       : draft.gradeBand;
 
+    const relevantTopicIds = selectedTopicId ? [selectedTopicId] : [];
+
     onComplete({
       onboarded: true,
       goal: draft.goal,
@@ -125,6 +127,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
       preparationType: draft.startMode === 'targeted' ? draft.preparationType : undefined,
       targetedStartChoice: draft.startMode === 'targeted' ? draft.targetedStartChoice : undefined,
       targetTopicId: topicId,
+      relevantTopicIds,
       grade: topic?.grade || gradesForBand(gradeBand)[0] || 9,
       gradeBand,
       confidence: 'Nežinoma',
