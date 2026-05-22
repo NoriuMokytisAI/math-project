@@ -1,4 +1,4 @@
-// Generated split content chunk. Source: ../content.generated.js
+// Generated split content chunk. Source: scripts/build_frontend_content.py
 export const achievements = {
   "onboarded": "Pirmas žingsnis",
   "firstTheory": "Teorijos startas",

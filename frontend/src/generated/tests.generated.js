@@ -1,4 +1,4 @@
-// Generated split content chunk. Source: ../content.generated.js
+// Generated split content chunk. Source: scripts/build_frontend_content.py
 export const tests = [
   {
     "id": "desningumai-ir-lenteles-5-test-topic",
@@ -1383,16 +1383,16 @@ export const tests = [
       "olimpiada-09"
     ],
     "exerciseIds": [
-      "ex-olimpiada-09-8ddd9673",
-      "ex-olimpiada-09-f73eca26",
-      "ex-olimpiada-09-eddec866",
-      "ex-olimpiada-09-19d0112d",
-      "ex-olimpiada-09-77061f7e",
-      "ex-olimpiada-09-229e6715",
-      "ex-olimpiada-09-c693c783",
-      "ex-olimpiada-09-2e27f916",
-      "ex-olimpiada-09-1118c252",
-      "ex-olimpiada-09-f01a35ea"
+      "ex-olimpiada-09-01",
+      "ex-olimpiada-09-02",
+      "ex-olimpiada-09-03",
+      "ex-olimpiada-09-04",
+      "ex-olimpiada-09-05",
+      "ex-olimpiada-09-06",
+      "ex-olimpiada-09-07",
+      "ex-olimpiada-09-08",
+      "ex-olimpiada-09-09",
+      "ex-olimpiada-09-10"
     ],
     "masteryWeight": 1.5
   },
@@ -1619,16 +1619,16 @@ export const tests = [
       "olimpiada-10"
     ],
     "exerciseIds": [
-      "ex-olimpiada-10-2bfbc9dd",
-      "ex-olimpiada-10-88e338a5",
-      "ex-olimpiada-10-ce6873b7",
-      "ex-olimpiada-10-5ff16d4a",
-      "ex-olimpiada-10-8d8b9250",
-      "ex-olimpiada-10-1d1651c7",
-      "ex-olimpiada-10-3399f5d5",
-      "ex-olimpiada-10-4b1c5ff9",
-      "ex-olimpiada-10-efeb795a",
-      "ex-olimpiada-10-6630bb67"
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05",
+      "ex-olimpiada-10-06",
+      "ex-olimpiada-10-07",
+      "ex-olimpiada-10-08",
+      "ex-olimpiada-10-09",
+      "ex-olimpiada-10-10"
     ],
     "masteryWeight": 1.5
   },
@@ -1922,23 +1922,23 @@ export const tests = [
   },
   {
     "id": "olimpiada-11-test-challenge",
-    "title": "Olimpiadinis iššūkis (11 klasė)",
+    "title": "11 klasės olimpiadinis iššūkis",
     "topicIds": [
       "olimpiada-11"
     ],
     "exerciseIds": [
-      "ex-olimpiada-11-21310c8f",
-      "ex-olimpiada-11-cc94e859",
-      "ex-olimpiada-11-3c6ceffa",
-      "ex-olimpiada-11-c1131f39",
-      "ex-olimpiada-11-d305b3be",
-      "ex-olimpiada-11-73638d81",
-      "ex-olimpiada-11-a6f31c8c",
-      "ex-olimpiada-11-1fdc6e3e",
-      "ex-olimpiada-11-f41e9586",
-      "ex-olimpiada-11-193fcb1d"
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-24",
+      "ex-olimpiada-11-32"
     ],
-    "masteryWeight": 1.5
+    "masteryWeight": 2.0
   },
   {
     "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-test-topic",
@@ -2235,16 +2235,16 @@ export const tests = [
       "olimpiada-12"
     ],
     "exerciseIds": [
-      "ex-olimpiada-12-920eac68",
-      "ex-olimpiada-12-b325fc64",
-      "ex-olimpiada-12-00b650e0",
-      "ex-olimpiada-12-abed44a1",
-      "ex-olimpiada-12-80468feb",
-      "ex-olimpiada-12-47b7da6d",
-      "ex-olimpiada-12-d01c239d",
-      "ex-olimpiada-12-1a7ec789",
-      "ex-olimpiada-12-5665b063",
-      "ex-olimpiada-12-e5add28e"
+      "ex-olimpiada-12-01",
+      "ex-olimpiada-12-02",
+      "ex-olimpiada-12-03",
+      "ex-olimpiada-12-04",
+      "ex-olimpiada-12-05",
+      "ex-olimpiada-12-06",
+      "ex-olimpiada-12-07",
+      "ex-olimpiada-12-08",
+      "ex-olimpiada-12-09",
+      "ex-olimpiada-12-10"
     ],
     "masteryWeight": 1.5
   },

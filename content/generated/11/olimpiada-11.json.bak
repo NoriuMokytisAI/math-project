@@ -1,0 +1,4262 @@
+﻿{
+  "contentVersion": "0.1.1",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "OlimpiadinÄ—s matematikos autoravimo gairÄ—s",
+    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+  },
+  "topic": {
+    "id": "olimpiada-11",
+    "title": "OlimpiadinÄ— matematika (11 klasÄ—)",
+    "grade": 11,
+    "strand": "Olimpiada",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 1200,
+    "prerequisiteTopicIds": [
+      "olimpiada-10",
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+    ],
+    "nextTopicIds": [
+      "olimpiada-12"
+    ],
+    "conceptIds": [
+      "olimpiada-11-concept-crt",
+      "olimpiada-11-concept-order",
+      "olimpiada-11-concept-reciprocity",
+      "olimpiada-11-concept-jacobi",
+      "olimpiada-11-concept-cyclotomic",
+      "olimpiada-11-concept-chebyshev",
+      "olimpiada-11-concept-inversion",
+      "olimpiada-11-concept-projective",
+      "olimpiada-11-concept-nullstellensatz",
+      "olimpiada-11-concept-lovasz",
+      "olimpiada-11-concept-turan"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [
+      "olimpiada-11-trap-1",
+      "olimpiada-11-trap-2",
+      "olimpiada-11-trap-3"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-02",
+      "ex-olimpiada-11-03",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-05",
+      "ex-olimpiada-11-06",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-08",
+      "ex-olimpiada-11-09",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-11",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-13",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-15",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-17",
+      "ex-olimpiada-11-18",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-20",
+      "ex-olimpiada-11-21",
+      "ex-olimpiada-11-22",
+      "ex-olimpiada-11-23",
+      "ex-olimpiada-11-24",
+      "ex-olimpiada-11-25",
+      "ex-olimpiada-11-26",
+      "ex-olimpiada-11-27",
+      "ex-olimpiada-11-28",
+      "ex-olimpiada-11-29",
+      "ex-olimpiada-11-30",
+      "ex-olimpiada-11-31",
+      "ex-olimpiada-11-32",
+      "ex-olimpiada-11-33"
+    ]
+  },
+  "theory": [
+    {
+      "title": "KiniÅ¡koji liekanÅ³ teorema ir jos taikymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "KiniÅ¡koji liekanÅ³ teorema (KLT) yra galingas Ä¯rankis sprendÅ¾iant sveikÅ³jÅ³ skaiÄiÅ³ lygÄiÅ³ sistemas moduliu keli skaiÄiai. PagrindinÄ— idÄ—ja â€“ jei moduliai yra tarpusavyje pirminiai, tai liekanos kiekvienu moduliu nepriklausomai nustato skaiÄiÅ³ moduliu tÅ³ moduliÅ³ sandauga."
+        },
+        {
+          "type": "method",
+          "text": "NorÄ—dami rasti skaiÄiÅ³ $x$, kuris tenkina $x \\equiv a_i \\pmod{m_i}$, galite naudoti konstruktyvÅ³ metodÄ…: raskite bazinius skaiÄius $e_i$, kurie yra lygÅ«s $1$ moduliu $m_i$ ir $0$ visais kitais moduliais $m_j$. Tada $x = \\sum a_i e_i$ bus sprendinys."
+        }
+      ]
+    },
+    {
+      "title": "Kvadratinis savitarpiÅ¡kumas ir Legendro simbolis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kvadratinis savitarpiÅ¡kumas leidÅ¾ia atsakyti Ä¯ klausimÄ…: â€žAr skaiÄius yra kvadratinÄ— liekana moduliu $p$?â€œ. Tai viena svarbiausiÅ³ Gauso teoremÅ³, siejanti dviejÅ³ skirtingÅ³ pirminiÅ³ skaiÄiÅ³ savybes."
+        },
+        {
+          "type": "method",
+          "text": "Naudokite Legendro simbolÄ¯ $\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. SkaiÄiavimams taikykite savybes: $\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right)$ ir patÄ¯ savitarpiÅ¡kumo dÄ—snÄ¯ pirminiams $p, q$."
+        }
+      ]
+    },
+    {
+      "title": "Inversijos galia geometrijoje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inversija apskritimo atÅ¾vilgiu yra transformacija, kuri â€žiÅ¡verÄiaâ€œ plokÅ¡tumÄ…: taÅ¡kai arti centro nukeliauja toli, o apskritimai, einantys per centrÄ…, tampa tiesÄ—mis."
+        },
+        {
+          "type": "method",
+          "text": "SunkÅ«s uÅ¾daviniai su besilieÄianÄiais apskritimais daÅ¾nai tampa paprasti, jei pasirenkate tinkamÄ… inversijos centrÄ… (paprastai lietimosi taÅ¡kÄ…). Tada besilieÄiantys apskritimai tampa lygiagreÄiomis tiesÄ—mis."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-11-concept-crt",
+      "title": "KiniÅ¡koji liekanÅ³ teorema (KLT)",
+      "type": "concept",
+      "shortDefinition": "Jei moduliai yra poromis tarpusavyje pirminiai, tai liekanÅ³ sistema turi vienintelÄ¯ sprendinÄ¯ jungtiniu moduliu.",
+      "intuition": "Tai tarsi koordinaÄiÅ³ sistema skaiÄiams: Å¾inodami skaiÄiaus â€žprojekcijasâ€œ (liekanas) Ä¯vairiomis kryptimis (moduliais), galime tiksliai nustatyti jo padÄ—tÄ¯.",
+      "formal": "Tegu $m_1, m_2, \\dots, m_k$ yra natÅ«ralieji skaiÄiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygÄiÅ³ sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelÄ¯ sprendinÄ¯ moduliu $M = m_1 m_2 \\dots m_k$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-order",
+      "title": "EilÄ— ir pradinÄ—s Å¡aknys",
+      "type": "concept",
+      "shortDefinition": "MaÅ¾iausias teigiamas laipsnis $d$, kuriam $a^d \\equiv 1 \\pmod m$.",
+      "intuition": "SkaiÄiaus laipsniai moduliu $m$ sukasi ratu; eilÄ— nurodo Å¡io rato ilgÄ¯.",
+      "formal": "Sveikojo skaiÄiaus $a$ eilÄ— moduliu $m$ (Å¾ymima $\\text{ord}_m a$) yra maÅ¾iausias $d > 0$, tenkinantis $a^d \\equiv 1 \\pmod m$. Jei $\\text{ord}_m g = \\varphi(m)$, tai $g$ vadinama pradine Å¡aknimi.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-reciprocity",
+      "title": "Kvadratinis savitarpiÅ¡kumas",
+      "type": "concept",
+      "shortDefinition": "DÄ—snis, siejantis Legendro simbolius $(\\frac{p}{q})$ ir $(\\frac{q}{p})$.",
+      "intuition": "LeidÅ¾ia apversti â€žtrupmenÄ…â€œ Legendro simbolyje, palengvinant kvadratiniÅ³ liekanÅ³ skaiÄiavimÄ….",
+      "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-jacobi",
+      "title": "Jakobio simbolis",
+      "type": "concept",
+      "shortDefinition": "Legendro simbolio apibendrinimas sudÄ—tiniams moduliams.",
+      "intuition": "LeidÅ¾ia naudoti savitarpiÅ¡kumo savybes net kai modulis nÄ—ra pirminis, nors simbolio reikÅ¡mÄ— tiesiogiai negarantuoja lygties sprendÅ¾iamumo.",
+      "formal": "Jei $n = p_1 p_2 \\dots p_k$ (nelyginis), tai $\\left(\\frac{a}{n}\\right) = \\prod_{i=1}^k \\left(\\frac{a}{p_i}\\right)$.",
+      "relatedConceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ]
+    },
+    {
+      "id": "olimpiada-11-concept-cyclotomic",
+      "title": "Ciklotoniniai daugianariai",
+      "type": "concept",
+      "shortDefinition": "Daugianariai, kuriÅ³ Å¡aknys yra pirmykÅ¡tÄ—s $n$-tojo laipsnio vieneto Å¡aknys.",
+      "intuition": "Tai elementariausios â€žplytelÄ—sâ€œ, iÅ¡ kuriÅ³ susideda daugianaris $x^n - 1$ virÅ¡ racionalÅ³jÅ³ skaiÄiÅ³ lauko.",
+      "formal": "$\\Phi_n(x) = \\prod_{\\text{gcd}(k,n)=1, 1 \\le k \\le n} (x - e^{2\\pi i k / n})$. Galioja savybÄ—: $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-chebyshev",
+      "title": "ÄŒebyÅ¡evo daugianariai",
+      "type": "concept",
+      "shortDefinition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\cos \\theta) = \\cos(n\\theta)$.",
+      "intuition": "Jie susieja trigonometrijÄ… su algebriniais daugianariais ir pasiÅ¾ymi unikaliomis ekstremaliomis savybÄ—mis.",
+      "formal": "$T_0(x)=1, T_1(x)=x, T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-inversion",
+      "title": "Inversija",
+      "type": "concept",
+      "shortDefinition": "Transformacija, kuri taÅ¡kÄ… $P$ atvaizduoja Ä¯ $P'$ taip, kad $OP \\cdot OP' = R^2$.",
+      "intuition": "Tai tarsi atspindys apskritime: tai, kas buvo viduje, atsiduria iÅ¡orÄ—je, ir atvirkÅ¡Äiai.",
+      "formal": "Inversija centro $O$ ir spindulio $R$ atÅ¾vilgiu: $f(P) = P'$, kur $P'$ yra spindulyje $OP$ ir $|OP'| = R^2/|OP|$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-projective",
+      "title": "Dvigubasis santykis",
+      "type": "concept",
+      "shortDefinition": "ProjekcinÄ—s geometrijos invariantas keturiems taÅ¡kams.",
+      "intuition": "Nors projekcija keiÄia atstumus, ji iÅ¡saugo Å¡Ä¯ specifinÄ¯ keturiÅ³ taÅ¡kÅ³ santykÄ¯.",
+      "formal": "$(A,B;C,D) = \\frac{AC}{BC} / \\frac{AD}{BD}$ (naudojant orientuotas atkarpas).",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-nullstellensatz",
+      "title": "Kombinatorinis Nulstellensatz",
+      "type": "concept",
+      "shortDefinition": "Teorema apie daugianario nelygumÄ… nuliui gardelÄ—s taÅ¡kuose.",
+      "intuition": "Jei daugianaris turi pakankamai aukÅ¡tÄ… laipsnÄ¯, jis negali â€žiÅ¡vengtiâ€œ visÅ³ taÅ¡kÅ³ tam tikroje aibiÅ³ sandaugoje.",
+      "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\sum t_i$ ir nario $x_1^{t_1} \\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibÄ—ms $S_i$ su $|S_i| > t_i$ egzistuoja taÅ¡kas $(s_1, \\dots, s_n) \\in S_1 \\times \\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-lovasz",
+      "title": "Lovaso lokalioji lema",
+      "type": "concept",
+      "shortDefinition": "Tikimybinio metodo Ä¯rankis, garantuojantis Ä¯vykiÅ³ iÅ¡vengimÄ….",
+      "intuition": "Jei â€žblogiâ€œ Ä¯vykiai yra reti ir maÅ¾ai susijÄ™ tarpusavyje, tai su teigiama tikimybe nÄ— vienas jÅ³ neÄ¯vyks.",
+      "formal": "Jei $P(A_i) \\le p$ ir kiekvienas Ä¯vykis priklauso nuo daugiausiai $d$ kitÅ³ Ä¯vykiÅ³, tai jei $ep(d+1) \\le 1$, $P(\\cap A_i^c) > 0$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-turan",
+      "title": "Turano teorema",
+      "type": "concept",
+      "shortDefinition": "Ekstremaliosios grafÅ³ teorijos rezultatas apie maksimalÅ³ briaunÅ³ skaiÄiÅ³.",
+      "intuition": "Nurodo, kiek briaunÅ³ gali turÄ—ti grafas, kol jame bÅ«tinai atsiras $k$-virÅ¡Å«niÅ³ pilnasis pakgrafis (klikÄ—).",
+      "formal": "Grafas su $n$ virÅ¡Å«niÅ³, neturintis $K_{r+1}$ kaip pakgrafio, turi daugiausiai briaunÅ³, kai jis yra Turano grafas $T(n, r)$ (beveik lygiÅ³ daliÅ³ pilnasis $r$-dalis grafas).",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [
+    {
+      "id": "olimpiada-11-trap-1",
+      "title": "BendrÅ³ dalikliÅ³ ignoravimas KLT",
+      "type": "mistake",
+      "whyItHappens": "Mokiniai pamirÅ¡ta patikrinti, ar moduliai yra tarpusavyje pirminiai.",
+      "wrongPattern": "SprendÅ¾iama sistema $x \\equiv 1 \\pmod 4$ ir $x \\equiv 2 \\pmod 6$ tiesiogiai dauginant modulius.",
+      "correction": "Skaidykite modulius Ä¯ pirminiÅ³ laipsnius: $x \\equiv 1 \\pmod 4$ ir $x \\equiv 2 \\pmod 2$, $x \\equiv 2 \\pmod 3$. Patikrinkite suderinamumÄ… ($1 \\equiv 2 \\pmod 2$ â€“ neteisinga, sprendiniÅ³ nÄ—ra).",
+      "conceptIds": [
+        "olimpiada-11-concept-crt"
+      ]
+    },
+    {
+      "id": "olimpiada-11-trap-2",
+      "title": "Inversija ne per centrÄ…",
+      "type": "mistake",
+      "whyItHappens": "Manoma, kad bet koks apskritimas po inversijos tampa tiese.",
+      "wrongPattern": "Apskritimas, kuris neina per inversijos centrÄ… $O$, po transformacijos vaizduojamas kaip tiesÄ—.",
+      "correction": "Tik apskritimai, einantys per $O$, tampa tiesÄ—mis. Kiti apskritimai virsta apskritimais.",
+      "conceptIds": [
+        "olimpiada-11-concept-inversion"
+      ]
+    },
+    {
+      "id": "olimpiada-11-trap-3",
+      "title": "Netinkamas n-tojo laipsnio vieneto Å¡aknÅ³ parinkimas",
+      "type": "mistake",
+      "whyItHappens": "Painiojamos visos $n$-tojo laipsnio Å¡aknys su pirmykÅ¡tÄ—mis (primityviosiomis) Å¡aknimis.",
+      "wrongPattern": "Naudojamos visos Å¡aknys, kurioms $z^n=1$, skaiÄiuojant ciklotoninÄ¯ daugianarÄ¯.",
+      "correction": "PirmykÅ¡tÄ—s Å¡aknys yra tos, kuriÅ³ eilÄ— yra lygiai $n$. Jas nurodo rodikliai $k$, tarpusavyje pirminiai su $n$.",
+      "conceptIds": [
+        "olimpiada-11-concept-cyclotomic"
+      ]
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Sistemos sprendimas naudojant KLT",
+      "problem": "Raskite maÅ¾iausiÄ… teigiamÄ… sveikÄ…jÄ¯ skaiÄiÅ³ $x$, tenkinantÄ¯ sistemÄ…: $x \\equiv 1 \\pmod 3, x \\equiv 2 \\pmod 4, x \\equiv 3 \\pmod 5$.",
+      "steps": [
+        {
+          "text": "Moduliai $3, 4, 5$ yra tarpusavyje pirminiai. Sprendinio ieÅ¡kome pavidalu $x = 1 \\cdot e_1 + 2 \\cdot e_2 + 3 \\cdot e_3$."
+        },
+        {
+          "text": "$e_1$ turi dalintis iÅ¡ $4 \\cdot 5 = 20$ ir $e_1 \\equiv 1 \\pmod 3$. SkaiÄius $40$ tinka ($40 = 3 \\cdot 13 + 1$)."
+        },
+        {
+          "text": "$e_2$ dalijasi iÅ¡ $3 \\cdot 5 = 15$ ir $e_2 \\equiv 1 \\pmod 4$. $45$ tinka ($45 = 4 \\cdot 11 + 1$)."
+        },
+        {
+          "text": "$e_3$ dalijasi iÅ¡ $3 \\cdot 4 = 12$ ir $e_3 \\equiv 1 \\pmod 5$. SkaiÄius $36$ tinka."
+        },
+        {
+          "text": "$x = 1 \\cdot 40 + 2 \\cdot 45 + 3 \\cdot 36 = 40 + 90 + 108 = 238$."
+        },
+        {
+          "text": "MaÅ¾iausias teigiamas sprendinys: $238 \\pmod{60} = 58$."
+        }
+      ],
+      "answer": "58"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-11-01",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite maÅ¾iausiÄ… teigiamÄ… sveikÄ…jÄ¯ skaiÄiÅ³ $x$, kuris tenkina lygÄiÅ³ sistemÄ…: $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 5$, $x \\equiv 2 \\pmod 7$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "23"
+      },
+      "answerText": "23",
+      "coreIdea": {
+        "title": "Bendros liekanos pastebÄ—jimas",
+        "text": "Atkreipkite dÄ—mesÄ¯, kad liekana moduliu 3 ir moduliu 7 yra ta pati (2). Tai reiÅ¡kia, kad $x-2$ dalijasi iÅ¡ $\\text{lcm}(3, 7)$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "chinese-remainder-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "dalumas",
+        "liekana"
+      ],
+      "expectedMethodIds": [
+        "chinese-remainder-theorem-solution"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-crt"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia apjunkite lygtis su moduliais 3 ir 7, nes jos turi tÄ… paÄiÄ… liekanÄ….",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, tai skaiÄius $x$ tenkina lygti $x \\equiv 2 \\pmod{21}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "IeÅ¡kokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokÄ¯ $k$, kad $21k + 2 \\equiv 3 \\pmod 5$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite lygtÄ¯: $21k + 2 \\equiv k + 2 \\equiv 3 \\pmod 5$. MaÅ¾iausias teigiamas $k=1$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apjungiame pirmÄ…jÄ… ir treÄiÄ…jÄ… lygtis: $x \\equiv 2 \\pmod{\\text{lcm}(3,7)} \\implies x \\equiv 2 \\pmod{21}$."
+        },
+        {
+          "text": "UÅ¾raÅ¡ome $x$ bendra forma: $x = 21k + 2$ kokiam nors sveikajam $k$."
+        },
+        {
+          "text": "Ä®statome Ä¯ antrÄ…jÄ… lygtÄ¯: $21k + 2 \\equiv 3 \\pmod 5$."
+        },
+        {
+          "text": "Kadangi $21 \\equiv 1 \\pmod 5$, lygtis tampa $1k + 2 \\equiv 3 \\pmod 5$."
+        },
+        {
+          "text": "Atimame 2 iÅ¡ abiejÅ³ pusiÅ³: $k \\equiv 1 \\pmod 5$."
+        },
+        {
+          "text": "MaÅ¾iausias teigiamas $k=1$, tada $x = 21(1) + 2 = 23$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-01-method-1",
+          "title": "Konstruktyvusis apjungimas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Sujungimas",
+              "action": "Nustatome, kad $x-2$ dalijasi iÅ¡ $3$ ir $7$.",
+              "reason": "Abi liekanos yra vienodos.",
+              "result": "$x \\equiv 2 \\pmod{21}$",
+              "latex": "x \\equiv 2 \\pmod{21}"
+            },
+            {
+              "title": "Liekanos pritaikymas",
+              "action": "IeÅ¡kome $x = 21k + 2$ tenkinanÄio $x \\equiv 3 \\pmod 5$.",
+              "reason": "Tai paskutinÄ— sÄ…lyga.",
+              "result": "$k \\equiv 1 \\pmod 5$",
+              "latex": "21k+2 \\equiv k+2 \\equiv 3 \\pmod 5"
+            },
+            {
+              "title": "Rezultatas",
+              "action": "ApskaiÄiuojame $x$.",
+              "reason": "Sistemos sprendinys.",
+              "result": "23",
+              "latex": "x = 21(1) + 2 = 23"
+            }
+          ],
+          "finalAnswer": "23"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-01-trap-1",
+          "title": "Dauginimas be liekanÅ³ supaprastinimo",
+          "wrongMove": "Bandoma rasti bendrÄ… modulÄ¯ 105 tiesiogiai perrenkant visus skaiÄius.",
+          "whyTempting": "Tai garantuoja rezultatÄ…, bet uÅ¾ima per daug laiko.",
+          "correction": "Naudokite KLT Å¾ingsnis po Å¾ingsnio arba apjunkite lygtis su bendromis liekanomis.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-01-trap-2",
+          "title": "Klaida redukuojant koeficientÄ…",
+          "wrongMove": "Manoma, kad $21k \\equiv 21k \\pmod 5$ be redukcijos Ä¯ $1k$.",
+          "whyTempting": "PamirÅ¡tama, kad koeficientÄ… prieÅ¡ neÅ¾inomÄ…jÄ¯ galima pakeisti jo liekana.",
+          "correction": "PrieÅ¡ sprÄ™sdami lygti $Ak \\equiv B \\pmod M$, pakeiskite $A$ liekana dalijant iÅ¡ $M$.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l sprendimas pagreitÄ—jo pastebÄ—jus bendrÄ… liekanÄ… (2) moduliams 3 ir 7?",
+        "Kas bÅ«tÅ³ pasikeitÄ™, jei moduliai nebÅ«tÅ³ tarpusavyje pirminiai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-01-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra pirmas Å¾ingsnis sprendÅ¾iant $x \\equiv a \\pmod m$ ir $x \\equiv a \\pmod n$, kai $\\text{gcd}(m,n)=1$?",
+          "back": "Apjungti Ä¯ vienÄ… lygtÄ¯ $x \\equiv a \\pmod{mn}$.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-02",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Nustatykite skaiÄiaus $3$ eilÄ™ moduliu $17$ ir nurodykite, ar $3$ yra pradinÄ— Å¡aknis moduliu $17$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "16, taip"
+      },
+      "answerText": "16, taip",
+      "coreIdea": {
+        "title": "EilÄ—s dalumas",
+        "text": "Pagal Fermos maÅ¾Ä…jÄ… teoremÄ…, eilÄ— turi dalinti $\\varphi(17) = 16$. Tikriname tik 16 daliklius: 1, 2, 4, 8."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "order-modulo-n"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "order-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "EilÄ— $d$ yra maÅ¾iausias laipsnis, kuriam $3^d \\equiv 1 \\pmod{17}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tikrinkite tik skaiÄiaus 16 daliklius. Jei joks maÅ¾esnis laipsnis netinka, eilÄ— bus 16.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "SkaiÄiuokite laipsnius nuosekliai keldami kvadratu: $3^2, 3^4, 3^8$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$3^8 \\equiv 16 \\equiv -1 \\pmod{17}$. KÄ… tai sako apie maÅ¾iausiÄ… laipsnÄ¯, duodantÄ¯ 1?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "ApskaiÄiuojame $\\varphi(17) = 16$. EilÄ— turi bÅ«ti 1, 2, 4, 8 arba 16."
+        },
+        {
+          "text": "$3^1 \\equiv 3$, $3^2 \\equiv 9$."
+        },
+        {
+          "text": "$3^4 = (3^2)^2 \\equiv 9^2 = 81 = 4 \\cdot 17 + 13 \\equiv 13 \\equiv -4 \\pmod{17}$."
+        },
+        {
+          "text": "$3^8 = (3^4)^2 \\equiv (-4)^2 = 16 \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "Kadangi $3^8 \\not\\equiv 1$, bet $(3^8)^2 \\equiv (-1)^2 \\equiv 1 \\pmod{17}$, maÅ¾iausia eilÄ— yra 16."
+        },
+        {
+          "text": "Kadangi eilÄ— lygi $\\varphi(17)$, skaiÄius 3 yra pradinÄ— Å¡aknis."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-02-method-1",
+          "title": "LaipsniÅ³ perranka per daliklius",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "KÄ—limas kvadratu",
+              "action": "SkaiÄiuojame $3^2, 3^4, 3^8$.",
+              "reason": "Tai greiÄiausias bÅ«das pasiekti didelius laipsnius.",
+              "result": "$3^8 \\equiv -1 \\pmod{17}$",
+              "latex": "3^8 \\equiv 16 \\equiv -1 \\pmod{17}"
+            },
+            {
+              "title": "IÅ¡vada apie eilÄ™",
+              "action": "Nustatome eilÄ™ pagal paskutinÄ¯ neigiamÄ… rezultatÄ….",
+              "reason": "Jei $a^k \\equiv -1$, tai eilÄ— yra $2k$.",
+              "result": "16",
+              "latex": "d = 2 \\times 8 = 16"
+            }
+          ],
+          "finalAnswer": "16, taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-02-trap-1",
+          "title": "VisÅ³ laipsniÅ³ skaiÄiavimas",
+          "wrongMove": "Mokinys skaiÄiuoja $3^1, 3^2, 3^3, \\dots, 3^{16}$ iÅ¡ eilÄ—s.",
+          "whyTempting": "Atrodo saugu ir nereikia galvoti apie savybes.",
+          "correction": "Naudokite kÄ—limÄ… kvadratu ir tikrinkite tik $\\varphi(m)$ daliklius.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-02-trap-2",
+          "title": "Liekanos Å¾enklas",
+          "wrongMove": "PamirÅ¡tama, kad $16 \\equiv -1$ palengvina skaiÄiavimÄ….",
+          "whyTempting": "Teigiami skaiÄiai atrodo Ä¯prastesni.",
+          "correction": "Naudokite neigiamas liekanas (pvz., $-1$), kad pakÄ—lus kvadratu gautumÄ—te $1$.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l Å¾inant, kad $3^8 \\equiv -1$, galime iÅ¡kart pasakyti, kad eilÄ— nÄ—ra 1, 2, 4 ar 8?",
+        "Kiek iÅ¡ viso pradiniÅ³ Å¡aknÅ³ turi modulis 17?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-02-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokie laipsniai yra kandidatai Ä¯ skaiÄiaus $a$ eilÄ™ moduliu $m$?",
+          "back": "SkaiÄiaus $\\varphi(m)$ dalikliai.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-03",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "IÅ¡sprÄ™skite lygtÄ¯ $3^x \\equiv 5 \\pmod{17}$, Å¾inodami, kad $3$ yra pradinÄ— Å¡aknis moduliu $17$. Raskite maÅ¾iausiÄ… teigiamÄ… $x$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "5"
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "RodykliÅ³ perranka",
+        "text": "Kadangi 3 yra pradinÄ— Å¡aknis, ji generuoja visas liekanas. Reikia tiesiog kelti 3 laipsniais, kol gausime 5."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "discrete-logarithm"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "expectedMethodIds": [
+        "index-calculus-basic"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kelkite 3 laipsniais moduliu 17, kol gausite 5.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jau Å¾inote iÅ¡ praeito uÅ¾davinio: $3^2 \\equiv 9, 3^4 \\equiv 13$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "ApskaiÄiuokite $3^5$ naudodami $3^4 \\cdot 3$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$13 \\cdot 3 = 39$. Kokia Å¡io skaiÄiaus liekana dalijant iÅ¡ 17?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$3^1 = 3$"
+        },
+        {
+          "text": "$3^2 = 9$"
+        },
+        {
+          "text": "$3^3 = 27 \\equiv 10 \\pmod{17}$"
+        },
+        {
+          "text": "$3^4 = 30 \\equiv 13 \\pmod{17}$"
+        },
+        {
+          "text": "$3^5 = 13 \\cdot 3 = 39$"
+        },
+        {
+          "text": "Dalijame 39 iÅ¡ 17: $39 = 2 \\cdot 17 + 5$. Liekana yra 5."
+        },
+        {
+          "text": "Taigi $3^5 \\equiv 5 \\pmod{17}$, atsakymas $x=5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-03-method-1",
+          "title": "Nuoseklus kÄ—limas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "LaipsniÅ³ skaiÄiavimas",
+              "action": "SkaiÄiuojame $3^k$ kol gauname 5.",
+              "reason": "MaÅ¾as modulis leidÅ¾ia tiesioginÄ¯ skaiÄiavimÄ….",
+              "result": "5",
+              "latex": "3^5 = 243 = 14 \\times 17 + 5 \\equiv 5 \\pmod{17}"
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-03-trap-1",
+          "title": "Klaidingas ciklo ilgis",
+          "wrongMove": "Manoma, kad jei $3^x \\equiv 5$, tai sprendiniai yra $x + 17k$.",
+          "whyTempting": "Painiojamas modulis su ciklo ilgiu.",
+          "correction": "Sprendiniai kartojasi kas $\\text{ord}_m a$, Å¡iuo atveju kas 16.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l pradinÄ—s Å¡aknies savybÄ— garantavo, kad sprendinys $x$ egzistuoja?",
+        "Kaip Å¡is uÅ¾davinys susijÄ™s su diskreÄiojo logaritmo problema?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-04",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Nustatykite, ar lygtis $x^2 \\equiv 3 \\pmod{73}$ turi sprendiniÅ³. Naudokite kvadratinio savitarpiÅ¡kumo dÄ—snÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taip"
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Legendro simbolio apvertimas",
+        "text": "Reikia apskaiÄiuoti $(\\frac{3}{73})$. Pagal savitarpiÅ¡kumo dÄ—snÄ¯, kadangi $73 \\equiv 1 \\pmod 4$, tai $(\\frac{3}{73}) = (\\frac{73}{3})$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "quadratic-reciprocity"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ],
+      "expectedMethodIds": [
+        "legendre-symbol-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "SprendiniÅ³ egzistavimas ekvivalentus Legendro simbolio $(\\frac{3}{73}) = 1$ reikÅ¡mei.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jÅ³ lygus $1 \\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi $73 = 4 \\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Redukuokite 73 moduliu 3: $73 \\equiv 1 \\pmod 3$. Ar 1 yra kvadratas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tiriame Legendro simbolÄ¯ $(\\frac{3}{73})$."
+        },
+        {
+          "text": "Tikriname savitarpiÅ¡kumo sÄ…lygÄ…: $73 \\equiv 1 \\pmod 4$."
+        },
+        {
+          "text": "TodÄ—l $(\\frac{3}{73}) = (\\frac{73}{3})$."
+        },
+        {
+          "text": "Supaprastiname virÅ¡utinÄ¯ skaiÄiÅ³: $73 \\equiv 1 \\pmod 3$."
+        },
+        {
+          "text": "Gauname $(\\frac{1}{3}) = 1$, nes $1 = 1^2$."
+        },
+        {
+          "text": "Kadangi simbolio reikÅ¡mÄ— 1, lygtis turi sprendiniÅ³. Atsakymas: Taip."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-04-method-1",
+          "title": "Kvadratinis savitarpiÅ¡kumas",
+          "methodType": "main",
+          "strategyTags": [
+            "number-theory"
+          ],
+          "steps": [
+            {
+              "title": "Apvertimas",
+              "action": "PakeiÄiame $(\\frac{3}{73})$ Ä¯ $(\\frac{73}{3})$.",
+              "reason": "$73 \\equiv 1 \\pmod 4$.",
+              "result": "$(\\frac{73}{3})$",
+              "latex": "(\\frac{3}{73}) = (\\frac{73}{3})"
+            },
+            {
+              "title": "Redukcija",
+              "action": "SumaÅ¾iname skaiÄiÅ³ moduliu 3.",
+              "reason": "Legendro simbolis priklauso tik nuo liekanos.",
+              "result": "1",
+              "latex": "(\\frac{73}{3}) = (\\frac{1}{3}) = 1"
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-04-trap-1",
+          "title": "Å½enklo klaida apverÄiant",
+          "wrongMove": "Manoma, kad visada $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+          "whyTempting": "Tai paprasÄiausia taisyklÄ—.",
+          "correction": "Jei abu skaiÄiai yra $3 \\pmod 4$, atsiranda minuso Å¾enklas.",
+          "conceptIds": [
+            "olimpiada-11-concept-reciprocity"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip savitarpiÅ¡kumo dÄ—snis padeda iÅ¡vengti dideliÅ³ skaiÄiÅ³ kÄ—limo laipsniu?",
+        "Kas bÅ«tÅ³ pasikeitÄ™, jei lygtis bÅ«tÅ³ $x^2 \\equiv 3 \\pmod{71}$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-05",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "ApskaiÄiuokite Jakobio simbolÄ¯ $\\left(\\frac{29}{45}\\right)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1"
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "IÅ¡skaidymas",
+        "text": "Jakobio simbolÄ¯ galima skaiÄiuoti iÅ¡skaidÅ¾ius modulÄ¯ Ä¯ pirminius arba taikant apibendrintÄ… savitarpiÅ¡kumo dÄ—snÄ¯."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "jacobi-symbol"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-jacobi"
+      ],
+      "expectedMethodIds": [
+        "jacobi-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-jacobi"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\cdot (\\frac{29}{9})$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$(\\frac{29}{9})$ visada lygus 1, jei $\\text{gcd}(29, 9)=1$, nes 9 yra kvadratas.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Arba taikykite savitarpiÅ¡kumÄ… tiesiogiai: $(\\frac{29}{45}) = (\\frac{45}{29})$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$45 \\equiv 16 \\pmod{29}$. Ar 16 yra kvadratas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame Jakobio savitarpiÅ¡kumo savybÄ™: $(\\frac{29}{45}) = (\\frac{45}{29})$, nes $29 \\equiv 1 \\pmod 4$."
+        },
+        {
+          "text": "Redukuojame moduliu 29: $45 \\equiv 16 \\pmod{29}$."
+        },
+        {
+          "text": "Gauname $(\\frac{16}{29})$."
+        },
+        {
+          "text": "Kadangi $16 = 4^2$, tai $(\\frac{16}{29}) = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-05-method-1",
+          "title": "Tiesioginis savitarpiÅ¡kumas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Apvertimas",
+              "action": "SukeiÄiame skaitiklÄ¯ ir vardiklÄ¯.",
+              "reason": "$29 \\equiv 1 \\pmod 4$.",
+              "result": "(\\frac{45}{29})",
+              "latex": "(\\frac{29}{45}) = (\\frac{45}{29})"
+            },
+            {
+              "title": "Redukcija",
+              "action": "ApskaiÄiuojame liekanÄ….",
+              "reason": "Supaprastiname skaiÄiavimÄ….",
+              "result": "1",
+              "latex": "(\\frac{45}{29}) = (\\frac{16}{29}) = 1"
+            }
+          ],
+          "finalAnswer": "1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-05-trap-1",
+          "title": "Neteisinga iÅ¡vada apie sprendinius",
+          "wrongMove": "Manoma, kad jei $(\\frac{a}{n}) = 1$, tai $x^2 \\equiv a \\pmod n$ bÅ«tinai turi sprendiniÅ³.",
+          "whyTempting": "Tai galioja Legendro simboliui (pirminiams moduliams).",
+          "correction": "Jakobio simbolis $1$ tik sako, kad blogÅ³ (reikÅ¡mÄ— $-1$) pirminiÅ³ dalikliÅ³ yra lyginis skaiÄius. Reikia patikrinti kiekvienÄ… pirminÄ¯ daliklÄ¯.",
+          "conceptIds": [
+            "olimpiada-11-concept-jacobi"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra pagrindinÄ— nauda naudojant Jakobio simbolÄ¯ vietoje Legendro simbolio?",
+        "Ar lygtis $x^2 \\equiv 29 \\pmod{45}$ turi sprendiniÅ³? (Patikrinkite mod 5 ir mod 9)."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-06",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Ä®rodykite, kad joks sveikasis skaiÄius $n$, kurio pavidalas yra $8k + 7$, negali bÅ«ti uÅ¾raÅ¡ytas trijÅ³ sveikÅ³jÅ³ skaiÄiÅ³ kvadratÅ³ suma. Kokias liekanas Ä¯gyja kvadratai moduliu 8?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "0, 1 arba 4; suma niekada nebus 7"
+      },
+      "answerText": "0, 1 arba 4; suma niekada nebus 7",
+      "coreIdea": {
+        "title": "KvadratinÄ—s liekanos mod 8",
+        "text": "Sveikojo skaiÄiaus kvadratas moduliu 8 gali bÅ«ti tik 0, 1 arba 4. Reikia patikrinti visas Ä¯manomas trijÅ³ tokiÅ³ liekanÅ³ sumas."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "sum-of-squares"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "lyginis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "modular-analysis"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "IÅ¡tirkite, kokias liekanas duoda skaiÄiai $0^2, 1^2, 2^2, 3^4, \\dots, 7^2$ dalijant iÅ¡ 8.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "KvadratinÄ—s liekanos mod 8 yra tik $\{0, 1, 4\}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pabandykite sudÄ—ti tris skaiÄius iÅ¡ aibÄ—s $\{0, 1, 4\}$ (leidÅ¾iant jiems kartotis) ir paÅ¾iÅ«rÄ—kite, ar galite gauti 7 moduliu 8.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "DidÅ¾iausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\equiv 0$. Ar galima pasiekti 7?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame kvadratines liekanas mod 8: $0^2 \\equiv 0, 1^2 \\equiv 1, 2^2 \\equiv 4, 3^2 \\equiv 9 \\equiv 1, 4^2 \\equiv 0, 5^2 \\equiv 1, 6^2 \\equiv 4, 7^2 \\equiv 1$."
+        },
+        {
+          "text": "AibÄ— yra $S = \\{0, 1, 4\\}$."
+        },
+        {
+          "text": "NagrinÄ—jame $a^2 + b^2 + c^2 \\pmod 8$. Visos galimos kombinacijos: $(0,0,0) \\to 0$, $(1,1,1) \\to 3$, $(4,4,4) \\to 12 \\equiv 4$, $(4,1,1) \\to 6$, $(4,4,1) \\to 9 \\equiv 1$, $(4,0,0) \\to 4$, $(1,0,0) \\to 1$, $(1,1,0) \\to 2$, $(4,1,0) \\to 5$."
+        },
+        {
+          "text": "Pastebime, kad nÄ— viena kombinacija neduoda sumos 7."
+        },
+        {
+          "text": "TodÄ—l skaiÄius $8k+7$ negali bÅ«ti trijÅ³ kvadratÅ³ suma."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-06-method-1",
+          "title": "ModulinÄ— analizÄ—",
+          "methodType": "main",
+          "strategyTags": [
+            "proof-by-exhaustion"
+          ],
+          "steps": [
+            {
+              "title": "LiekanÅ³ nustatymas",
+              "action": "ApskaiÄiuojame kvadratus mod 8.",
+              "reason": "Norime apriboti galimas sumas.",
+              "result": "{0, 1, 4}",
+              "latex": "x^2 \\in \\{0, 1, 4\\} \\pmod 8"
+            },
+            {
+              "title": "Perranka",
+              "action": "Patikriname visas trijÅ³ elementÅ³ sumas.",
+              "reason": "Tai baigtinis skaiÄius atvejÅ³.",
+              "result": "7 nepasiekiamas",
+              "latex": "s_1+s_2+s_3 \\not\\equiv 7 \\pmod 8"
+            }
+          ],
+          "finalAnswer": "0, 1 arba 4; suma niekada nebus 7"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-06-trap-1",
+          "title": "Modulio 4 naudojimas",
+          "wrongMove": "Mokinys bando Ä¯rodyti naudodamas mod 4.",
+          "whyTempting": "Kvadratai mod 4 yra paprastesni (0, 1).",
+          "correction": "Moduliu 4 suma gali bÅ«ti 3 (pvz., $1+1+1 \\equiv 3 \\equiv 7 \\pmod 4$), todÄ—l tai nieko neÄ¯rodo. Reikia tikslesnio modulio 8.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra Legendre trijÅ³ kvadratÅ³ teorema apie skaiÄius, kurie nÄ—ra uÅ¾raÅ¡omi trijÅ³ kvadratÅ³ suma?",
+        "KodÄ—l moduliu 8 skaiÄiavimas yra toks efektyvus kvadratams?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-07",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu $a=2, b=1$. ZigmondÅ¾io teorema teigia, kad beveik visada seka $a^n - b^n$ turi â€žpirmykÅ¡tÄ¯â€œ pirminÄ¯ daliklÄ¯. Raskite vienintelÄ™ reikÅ¡mÄ™ $n > 2$, kuriai $2^n - 1$ neturi tokio daliklio.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6"
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "IÅ¡imÄiÅ³ radimas",
+        "text": "ZigmondÅ¾io teorema turi kelias Å¾inomas iÅ¡imtis. Reikia patikrinti maÅ¾us $n$ ir pamatyti, kada visi $2^n-1$ dalikliai jau pasirodÄ— ankstesniuose nariuose."
+      },
+      "strategyTags": [
+        "number-theory",
+        "zygsmondy-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "divisor-analysis"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "PirmykÅ¡tis daliklis yra toks, kuris nedalina $2^k-1$ jokiems $k < n$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "IÅ¡tirkite $n=3, 4, 5, 6$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$2^6 - 1 = 63 = 3^2 \\cdot 7$. Ar 3 ir 7 jau pasirodÄ— ankstesnÄ—se reikÅ¡mÄ—se?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$2^2-1=3$, $2^3-1=7$. Taigi abu skaiÄiaus 63 dalikliai jau buvo panaudoti.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$n=3: 2^3-1=7$. PirmykÅ¡tis daliklis 7."
+        },
+        {
+          "text": "$n=4: 2^4-1=15=3 \\cdot 5$. PirmykÅ¡tis daliklis 5 (nes 3 pasirodÄ— prie $n=2$)."
+        },
+        {
+          "text": "$n=5: 2^5-1=31$. PirmykÅ¡tis daliklis 31."
+        },
+        {
+          "text": "$n=6: 2^6-1=63=3^2 \\cdot 7$."
+        },
+        {
+          "text": "Tikriname ankstesnius: $2^1-1=1$, $2^2-1=3$, $2^3-1=7$, $2^4-1=15$ (3, 5), $2^5-1=31$."
+        },
+        {
+          "text": "Matome, kad 63 dalikliai $\{3, 7\}$ jau pasirodÄ— prie $n=2$ ir $n=3$."
+        },
+        {
+          "text": "Vadinasi, $n=6$ yra ieÅ¡koma iÅ¡imtis."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-07-method-1",
+          "title": "Nuoseklus skaidymas",
+          "methodType": "main",
+          "strategyTags": [
+            "number-theory"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "Skaidome $2^n-1$ pirminiais dauginamaisiais.",
+              "reason": "Norime suÅ¾inoti visus daliklius.",
+              "result": "63 = 9 * 7",
+              "latex": "2^6-1 = 63 = 3^2 \\times 7"
+            },
+            {
+              "title": "PirmykÅ¡tiÅ¡kumo tikrinimas",
+              "action": "Lyginame su ankstesniais nariais.",
+              "reason": "IeÅ¡kome naujÅ³ pirminiÅ³ skaiÄiÅ³.",
+              "result": "NÄ—ra naujÅ³",
+              "latex": "3|2^2-1, 7|2^3-1"
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-07-trap-1",
+          "title": "MaÅ¾Å³ n praleidimas",
+          "wrongMove": "Mokinys bando taikyti bendras formules netyrinÄ—damas iÅ¡imÄiÅ³.",
+          "whyTempting": "Teorema teigia, kad daliklis egzistuoja â€žbeveik visadaâ€œ.",
+          "correction": "Olimpiadose bÅ«tent iÅ¡imtys (pvz., $2^6-1$ arba $a=2, b=1, n=6$) yra svarbiausios.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokiomis sÄ…lygomis dar gali neegzistuoti pirmykÅ¡tis daliklis?",
+        "Kaip ZigmondÅ¾io teorema naudojama tiriant skaiÄiÅ³ eiles?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-08",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "SkaiÄiÅ³ teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tegu $v_p(n)$ Å¾ymi didÅ¾iausiÄ… pirminio skaiÄiaus $p$ laipsnÄ¯, dalijantÄ¯ $n$. Jei $v_3(x) = 2$ ir $v_3(y) = 3$, kokia yra tiksli $v_3(x+y)$ reikÅ¡mÄ—?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "UltrametrinÄ— lygybÄ—",
+        "text": "Jei dviejÅ³ skaiÄiÅ³ $p$-adiniai vertinimai yra skirtingi, tai jÅ³ sumos vertinimas lygus maÅ¾iausiam iÅ¡ jÅ³."
+      },
+      "strategyTags": [
+        "number-theory",
+        "p-adic-valuation"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "dalumas"
+      ],
+      "expectedMethodIds": [
+        "p-adic-properties"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "UÅ¾raÅ¡ykite skaiÄius $x$ ir $y$ pavidalu $3^k \\cdot m$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$x = 9a, y = 27b$, kur $a$ nesidalija iÅ¡ 3.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "IÅ¡kelkite bendrÄ… dauginamÄ…jÄ¯ prieÅ¡ skliaustus sumoje $x+y$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$x+y = 9a + 27b = 9(a + 3b)$. Ar $a+3b$ dalijasi iÅ¡ 3?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$v_3(x) = 2 \\implies x = 3^2 \\cdot a = 9a$, kur $3 \\nmid a$."
+        },
+        {
+          "text": "$v_3(y) = 3 \\implies y = 3^3 \\cdot b = 27b$, kur $3 \\nmid b$."
+        },
+        {
+          "text": "$x+y = 9a + 27b = 9(a + 3b)$."
+        },
+        {
+          "text": "Tiriame skliaustus: $a + 3b$. Kadangi $3 \\nmid a$, tai $a + 3b$ nesidalija iÅ¡ 3."
+        },
+        {
+          "text": "Vadinasi, didÅ¾iausias 3-eto laipsnis sumoje yra $3^2$."
+        },
+        {
+          "text": "$v_3(x+y) = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-08-method-1",
+          "title": "IÅ¡kÄ—limas prieÅ¡ skliaustus",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Faktorizacija",
+              "action": "IÅ¡keliame $3^{\\min(v_3(x), v_3(y))}$.",
+              "reason": "Tai bendras didÅ¾iausias Å¾inomas daliklis.",
+              "result": "9(a+3b)",
+              "latex": "x+y = 3^2(a+3b)"
+            },
+            {
+              "title": "Patikra",
+              "action": "Tikriname liekanÄ… mod 3.",
+              "reason": "Norime Ä¯sitikinti, kad laipsnis nedidÄ—ja.",
+              "result": "a+3b \\equiv a \\neq 0",
+              "latex": "a+3b \\equiv a \\pmod 3"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-08-trap-1",
+          "title": "Manymas, kad laipsniai susideda",
+          "wrongMove": "SpÄ—jama, kad $v(x+y) = v(x) + v(y) = 5$.",
+          "whyTempting": "Painiojama su sandaugos savybe $v(xy) = v(x) + v(y)$.",
+          "correction": "Sumos vertinimui galioja ultrametrinÄ— nelygybÄ— $v(x+y) \\ge \\min(v(x), v(y))$. LygybÄ— galioja, kai vertinimai skirtingi.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktÅ³, jei $v_3(x) = v_3(y) = 2$? Ar galÄ—tume tiksliai nustatyti $v_3(x+y)$?",
+        "Kokia yra $v_p(n!)$ formulÄ— (LeÅ¾andro formulÄ—)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-09",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Naudodami EizenÅ¡teino kriterijÅ³, nustatykite, su kuriuo pirminiu skaiÄiumi $p$ galime Ä¯rodyti daugianario $P(x) = x^5 - 10x + 10$ neredukuojamumÄ… virÅ¡ $\\mathbb{Q}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "5"
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "KoeficientÅ³ dalumas",
+        "text": "EizenÅ¡teino kriterijui reikia pirminio $p$, kuris dalintÅ³ visus koeficientus iÅ¡skyrus vyriausiÄ…jÄ¯, o jo kvadratas nedalintÅ³ laisvojo nario."
+      },
+      "strategyTags": [
+        "polynomials",
+        "eisenstein-criterion"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "eisenstein-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "PerÅ¾iÅ«rÄ—kite koeficientus: 1 (prie $x^5$), 0, 0, 0, -10, 10.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "IeÅ¡kokite pirminio skaiÄiaus, kuris dalija -10 ir 10.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kandidatai yra 2 ir 5. Patikrinkite sÄ…lygÄ… dÄ—l $p^2$ dalumo laisvajam nariui (10).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei $p=2$, tai $p^2=4 \\nmid 10$. Jei $p=5$, tai $p^2=25 \\nmid 10$. Abu tinka, bet 5 daÅ¾niau naudojamas pavyzdÅ¾iuose. Patikrinkite vyriausiÄ… koeficientÄ….",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "UÅ¾raÅ¡ome koeficientus: $a_5=1, a_4=0, a_3=0, a_2=0, a_1=-10, a_0=10$."
+        },
+        {
+          "text": "Tikriname $p=5$: $5 \\nmid 1$ (tinka), 5 dalija $0, 0, 0, -10, 10$ (tinka)."
+        },
+        {
+          "text": "Tikriname $p^2=25$: $25 \\nmid 10$ (tinka)."
+        },
+        {
+          "text": "Visos kriterijaus sÄ…lygos tenkinamos su $p=5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-09-method-1",
+          "title": "Kriterijaus taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "P parinkimas",
+              "action": "Pasirenkame $p=5$.",
+              "reason": "Jis dalija laisvÄ…jÄ¯ narÄ¯.",
+              "result": "p=5",
+              "latex": "p=5"
+            },
+            {
+              "title": "Patikra",
+              "action": "Tikriname visas sÄ…lygas.",
+              "reason": "EizenÅ¡teino kriterijaus reikalavimai.",
+              "result": "Tenkinama",
+              "latex": "5|10, 25 \\nmid 10"
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-09-trap-1",
+          "title": "Klaidingas dalumas",
+          "wrongMove": "Pasirenkamas $p=2$ ir manoma, kad $2^2=4$ turi dalinti 10.",
+          "whyTempting": "SumaÅ¡omos dalumo ir nedalumo sÄ…lygos.",
+          "correction": "SÄ…lyga yra $p^2 \\nmid a_0$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar galime sakyti, kad daugianaris $x^2+4$ neredukuojamas pagal EizenÅ¡teinÄ…? KodÄ—l ne?",
+        "Kas yra Gauso lema ir kaip ji susijusi su neredukuojamumu virÅ¡ Q?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-10",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite 12-ojo ciklotoninio daugianario $\\Phi_{12}(x)$ iÅ¡raiÅ¡kÄ… naudodami ryÅ¡Ä¯ $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x^4 - x^2 + 1"
+      },
+      "answerText": "x^4 - x^2 + 1",
+      "coreIdea": {
+        "title": "Daliklio eliminavimas",
+        "text": "$\\Phi_{12}(x) = \\frac{x^{12}-1}{\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6}$. Svarbu suprasti, kad $\\Phi_d$ sandaugos daÅ¾nai sudaro kitus $x^k-1$ tipo narius."
+      },
+      "strategyTags": [
+        "polynomials",
+        "cyclotomic-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-cyclotomic"
+      ],
+      "expectedMethodIds": [
+        "cyclotomic-formula"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-cyclotomic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "PastebÄ—kite, kad $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Vadinasi, $\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\Phi_4(x)}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "ApskaiÄiuokite $\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ Å¡aknÅ³. $\\Phi_4(x) = x^2+1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite: $\\frac{x^6+1}{x^2+1}$. Naudokite kubÅ³ sumos formulÄ™ $a^3+b^3 = (a+b)(a^2-ab+b^2)$ su $a=x^2$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Å½inome, kad $x^{12}-1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6 \\Phi_{12}$."
+        },
+        {
+          "text": "GrupÄ— $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$."
+        },
+        {
+          "text": "$\\Phi_4(x) = \\frac{x^4-1}{\\Phi_1 \\Phi_2} = \\frac{x^4-1}{x^2-1} = x^2 + 1$."
+        },
+        {
+          "text": "$\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1)(x^2+1)}$."
+        },
+        {
+          "text": "$\\frac{x^{12}-1}{x^6-1} = x^6 + 1$."
+        },
+        {
+          "text": "$\\Phi_{12}(x) = \\frac{x^6+1}{x^2+1} = \\frac{(x^2)^3+1}{x^2+1} = (x^2)^2 - x^2 + 1 = x^4 - x^2 + 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-10-method-1",
+          "title": "LaipsniÅ³ redukcija",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Dalinimas",
+              "action": "Padaliname $x^{12}-1$ iÅ¡ $x^6-1$.",
+              "reason": "Tai supaprastina iÅ¡raiÅ¡kÄ….",
+              "result": "x^6+1",
+              "latex": "\\frac{x^{12}-1}{x^6-1} = x^6+1"
+            },
+            {
+              "title": "Finalizavimas",
+              "action": "Padaliname iÅ¡ $\\Phi_4$.",
+              "reason": "Lieka tik 12-os eilÄ—s Å¡aknys.",
+              "result": "x^4-x^2+1",
+              "latex": "\\frac{x^6+1}{x^2+1} = x^4-x^2+1"
+            }
+          ],
+          "finalAnswer": "x^4 - x^2 + 1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-10-trap-1",
+          "title": "DaugianariÅ³ laipsniÅ³ painiojimas",
+          "wrongMove": "Tikimasi, kad $\\Phi_{12}$ laipsnis bus $\\varphi(12) = 4$, bet mokinys gauna kitokÄ¯ dÄ—l klaidÅ³ dalinant.",
+          "whyTempting": "Dalinimas kampu daÅ¾nai veda prie klaidÅ³.",
+          "correction": "Visada patikrinkite, ar gauto daugianario laipsnis sutampa su $\\varphi(n)$.",
+          "conceptIds": [
+            "olimpiada-11-concept-cyclotomic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra $\\Phi_n(1)$ reikÅ¡mÄ—, kai $n$ yra pirminio skaiÄiaus laipsnis?",
+        "KodÄ—l ciklotoniniai daugianariai visada turi sveikuosius koeficientus?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-11",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite treÄiojo laipsnio ÄŒebyÅ¡evo daugianario $T_3(x)$ iÅ¡raiÅ¡kÄ… naudodami rekurentinÄ¯ sÄ…ryÅ¡Ä¯ $T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4x^3 - 3x"
+      },
+      "answerText": "4x^3 - 3x",
+      "coreIdea": {
+        "title": "Rekurencija",
+        "text": "Naudokite Å¾inomas pradines vertes $T_0=1$ ir $T_1=x$, tada nuosekliai apskaiÄiuokite $T_2$ ir $T_3$."
+      },
+      "strategyTags": [
+        "polynomials",
+        "chebyshev-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-chebyshev"
+      ],
+      "expectedMethodIds": [
+        "recurrence-relation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-chebyshev"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "PradÄ—kite nuo $T_0(x)=1$ ir $T_1(x)=x$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "ApskaiÄiuokite $T_2(x) = 2x(x) - 1$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dabar Ä¯statykite $T_2$ ir $T_1$ Ä¯ formulÄ™ $T_3(x) = 2x T_2(x) - T_1(x)$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$2x(2x^2 - 1) - x$. Atskliauskite ir sutraukite panaÅ¡ius narius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$T_0(x) = 1$"
+        },
+        {
+          "text": "$T_1(x) = x$"
+        },
+        {
+          "text": "$T_2(x) = 2x \\cdot T_1(x) - T_0(x) = 2x \\cdot x - 1 = 2x^2 - 1$"
+        },
+        {
+          "text": "$T_3(x) = 2x \\cdot T_2(x) - T_1(x) = 2x(2x^2 - 1) - x$"
+        },
+        {
+          "text": "$T_3(x) = 4x^3 - 2x - x = 4x^3 - 3x$"
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-11-method-1",
+          "title": "Rekurentinis skaiÄiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "T2 radimas",
+              "action": "ApskaiÄiuojame antrÄ…jÄ¯ daugianarÄ¯.",
+              "reason": "Å½ingsnis link T3.",
+              "result": "2x^2-1",
+              "latex": "T_2(x) = 2x^2-1"
+            },
+            {
+              "title": "T3 radimas",
+              "action": "ApskaiÄiuojame galutinÄ¯ rezultatÄ….",
+              "reason": "Rekurencijos taikymas.",
+              "result": "4x^3-3x",
+              "latex": "T_3(x) = 4x^3-3x"
+            }
+          ],
+          "finalAnswer": "4x^3 - 3x"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-11-trap-1",
+          "title": "Klaida koeficiento 2 praleidime",
+          "wrongMove": "Naudojama formulÄ— $x T_n - T_{n-1}$ be koeficiento 2.",
+          "whyTempting": "Painiojama su kitomis rekurentinÄ—mis sekomis (pvz., FibonaÄio).",
+          "correction": "ÄŒebyÅ¡evo daugianariams visada yra daugyba iÅ¡ $2x$.",
+          "conceptIds": [
+            "olimpiada-11-concept-chebyshev"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip patikrinti rezultatÄ… naudojant trigonometrinÄ™ tapatybÄ™ $\\cos(3\\theta) = 4\\cos^3\\theta - 3\\cos\\theta$?",
+        "Koks bus vyriausiasis koeficientas $T_n(x)$ daugianaryje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-12",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite visas funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinanÄias lygtÄ¯ $f(x + f(y)) = f(x) + y$ visiems $x, y \\in \\mathbb{R}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "f(x) = x arba f(x) = -x"
+      },
+      "answerText": "f(x) = x arba f(x) = -x",
+      "coreIdea": {
+        "title": "Injektyvumas ir surjektyvumas",
+        "text": "Pirmiausia Ä¯rodykite, kad $f$ yra bijekcija. Tada raskite $f(0)$ ir nustatykite linijinÄ™ formÄ…."
+      },
+      "strategyTags": [
+        "functional-equations",
+        "bijectivity",
+        "substitution"
+      ],
+      "prerequisiteTopicIds": [
+        "funkcijos-ir-ju-savybes"
+      ],
+      "prerequisiteConceptIds": [
+        "funkcija"
+      ],
+      "expectedMethodIds": [
+        "substitution-method"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Fiksuokite $x$ ir paÅ¾iÅ«rÄ—kite Ä¯ deÅ¡inÄ™ pusÄ™ kaip Ä¯ $y$ funkcijÄ…. KÄ… tai sako apie $f$ reikÅ¡miÅ³ aibÄ™?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $f(y_1) = f(y_2)$, tai $f(x) + y_1 = f(x + f(y_1)) = f(x + f(y_2)) = f(x) + y_2$. Vadinasi, $f$ yra injektyvi.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite $x=0$. Gausite $f(f(y)) = f(0) + y$. Tai rodo, kad $f(f(y))$ yra tiesinÄ— funkcija.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pritaikykite $f$ abiem lygties pusÄ—ms: $f(f(x+f(y))) = f(f(x)+y)$. Naudokite gautÄ… sÄ…ryÅ¡Ä¯ $f(f(z)) = c+z$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Injektyvumas: jei $f(y_1)=f(y_2)$, tai $f(x+f(y_1))=f(x+f(y_2)) \\implies f(x)+y_1 = f(x)+y_2 \\implies y_1=y_2$."
+        },
+        {
+          "text": "Surjektyvumas: deÅ¡inÄ— pusÄ— $f(x)+y$ gali Ä¯gyti bet kokiÄ… reikÅ¡mÄ™ keiÄiant $y$."
+        },
+        {
+          "text": "Ä®statome $x=0$: $f(f(y)) = y + f(0)$. Tegu $f(0) = c$. Tada $f(f(y)) = y+c$."
+        },
+        {
+          "text": "Pritaikome $f$ pagrindinei lygÄiai: $f(f(x+f(y))) = f(f(x)+y)$."
+        },
+        {
+          "text": "$(x+f(y)) + c = (f(x)+y) + c \\implies x + f(y) = f(x) + y$."
+        },
+        {
+          "text": "$f(x) - x = f(y) - y$ visiems $x, y$. Tai reiÅ¡kia, kad $f(x)-x = k$ (konstanta)."
+        },
+        {
+          "text": "Ä®statome $f(x) = x+k$ Ä¯ pradinÄ™ lygtÄ¯: $(x+(y+k))+k = (x+k)+y \\implies x+y+2k = x+y+k \\implies k=0$."
+        },
+        {
+          "text": "Gavome $f(x)=x$. TaÄiau dar turime galimybÄ™ $f(x)=-x+k$ iÅ¡ kitÅ³ transformacijÅ³."
+        },
+        {
+          "text": "Patikriname $f(x)=-x$: $- (x + (-y)) = -x + y \\implies -x+y = -x+y$. Tinka."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-12-method-1",
+          "title": "Bijekcijos ir tiesiÅ¡kumo analizÄ—",
+          "methodType": "main",
+          "strategyTags": [
+            "functional-equations"
+          ],
+          "steps": [
+            {
+              "title": "SavybiÅ³ nustatymas",
+              "action": "Ä®rodome bijekcijÄ….",
+              "reason": "Tai leidÅ¾ia saugiai taikyti inversines operacijas.",
+              "result": "Injektyvi ir surjektyvi",
+              "latex": "f(y_1)=f(y_2) \\implies y_1=y_2"
+            },
+            {
+              "title": "Konstravimas",
+              "action": "Randame f(f(y)) iÅ¡raiÅ¡kÄ….",
+              "reason": "Sluoksniavimas padeda rasti funkcijos pavidalÄ….",
+              "result": "f(f(y)) = y+c",
+              "latex": "f(f(y)) = y+f(0)"
+            }
+          ],
+          "finalAnswer": "f(x) = x arba f(x) = -x"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-12-trap-1",
+          "title": "Tik vieno sprendinio radimas",
+          "wrongMove": "Mokinys randa $f(x)=x$ ir pamirÅ¡ta patikrinti $f(x)=-x$.",
+          "whyTempting": "Teigiama tapatybÄ— atrodo natÅ«raliausia.",
+          "correction": "Visada patikrinkite, ar kvadratai ar kiti pokyÄiai neleidÅ¾ia neigiamÅ³ sprendiniÅ³.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuris Å¾ingsnis parodÄ—, kad funkcija turi bÅ«ti tiesinÄ—?",
+        "Kaip pasikeistÅ³ lygtis, jei deÅ¡inÄ—je pusÄ—je bÅ«tÅ³ $f(y) + x$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-13",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite sekos $a_n$, apibrÄ—Å¾tos sÄ…ryÅ¡iu $a_{n+2} = 5a_{n+1} - 6a_n$ su pradinÄ—mis sÄ…lygomis $a_0 = 1, a_1 = 5$, bendrojo nario formulÄ™.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3^{n+1} - 2^{n+1}"
+      },
+      "answerText": "3^{n+1} - 2^{n+1}",
+      "coreIdea": {
+        "title": "Charakteringoji lygtis",
+        "text": "Antros eilÄ—s tiesinei rekurentinei sekai sudarome kvadratinÄ™ lygtÄ¯ $r^2 - 5r + 6 = 0$. Jos Å¡aknys nusako bendrÄ… nario pavidalÄ…."
+      },
+      "strategyTags": [
+        "sequences",
+        "linear-recurrence"
+      ],
+      "prerequisiteTopicIds": [
+        "tiesinis-sarysis"
+      ],
+      "prerequisiteConceptIds": [
+        "skaiciu-seka"
+      ],
+      "expectedMethodIds": [
+        "characteristic-equation-method"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "SuraÅ¡ykite lygtÄ¯ $r^2 - 5r + 6 = 0$ ir raskite jos Å¡aknis.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Å aknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\cdot 2^n + B \\cdot 3^n$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite $a_0=1$ ir $a_1=5$, kad sudarytumÄ—te sistemÄ… koeficientams $A$ ir $B$ rasti.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$A+B=1$ ir $2A+3B=5$. IÅ¡sprÄ™skite Å¡iÄ… sistemÄ….",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome charakteringÄ…jÄ… lygtÄ¯: $r^2 - 5r + 6 = 0$."
+        },
+        {
+          "text": "SprendÅ¾iame: $(r-2)(r-3) = 0$, taigi Å¡aknys $r_1=2, r_2=3$."
+        },
+        {
+          "text": "UÅ¾raÅ¡ome bendrÄ… formÄ…: $a_n = A \\cdot 2^n + B \\cdot 3^n$."
+        },
+        {
+          "text": "Taikome pradines sÄ…lygas: $n=0 \\implies A+B=1$; $n=1 \\implies 2A+3B=5$."
+        },
+        {
+          "text": "IÅ¡ pirmos lygties $A=1-B$. Ä®statome: $2(1-B)+3B=5 \\implies 2+B=5 \\implies B=3$."
+        },
+        {
+          "text": "$A = 1-3 = -2$."
+        },
+        {
+          "text": "$a_n = -2 \\cdot 2^n + 3 \\cdot 3^n = -2^{n+1} + 3^{n+1} = 3^{n+1} - 2^{n+1}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-13-method-1",
+          "title": "Charakteringoji lygtis",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Å aknÅ³ radimas",
+              "action": "IÅ¡sprendÅ¾iame kvadratinÄ™ lygtÄ¯.",
+              "reason": "Ji nustato bazines sekas.",
+              "result": "r=2, r=3",
+              "latex": "r^2-5r+6=0 \\implies r \\in \\{2, 3\\}"
+            },
+            {
+              "title": "Koeficientai",
+              "action": "IÅ¡sprendÅ¾iame tiesiniÅ³ lygÄiÅ³ sistemÄ….",
+              "reason": "PradinÄ—s sÄ…lygos fiksuoja sekÄ….",
+              "result": "A=-2, B=3",
+              "latex": "a_n = -2 \\cdot 2^n + 3 \\cdot 3^n"
+            }
+          ],
+          "finalAnswer": "3^{n+1} - 2^{n+1}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-13-trap-1",
+          "title": "Klaidingas bendras narys esant sutampanÄioms Å¡aknims",
+          "wrongMove": "Jei Å¡aknys bÅ«tÅ³ vienodos (pvz., 2 ir 2), mokinys raÅ¡ytÅ³ $(A+B)2^n$.",
+          "whyTempting": "FibonaÄio stiliaus mÄ…stymas.",
+          "correction": "SutampanÄioms Å¡aknims reikia dauginti iÅ¡ $n$: $a_n = (A+Bn)r^n$. (Å iame uÅ¾davinyje Å¡aknys skirtingos, tad tiesiog priminimas).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip FibonaÄio seka atrodo charakteringosios lygties rÄ—muose?",
+        "Kas nutiktÅ³, jei lygtis turÄ—tÅ³ kompleksines Å¡aknis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-14",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Supaprastinkite sumÄ… $S = \\sin(\\theta) + \\sin(3\\theta) + \\dots + \\sin((2n-1)\\theta)$ visiems leistiniems $\\theta$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+      },
+      "answerText": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}",
+      "coreIdea": {
+        "title": "Trigonometrinis teleskopavimas",
+        "text": "Padauginkite visÄ… sumÄ… iÅ¡ $2\\sin\\theta$. Naudokite sandaugos vertimo suma formulÄ™ $2\\sin A \\sin B = \\cos(A-B) - \\cos(A+B)$. Suma taps teleskopine."
+      },
+      "strategyTags": [
+        "trigonometry",
+        "telescoping-sum"
+      ],
+      "prerequisiteTopicIds": [
+        "trikampiu-trigonometrija-ir-apskritimai"
+      ],
+      "prerequisiteConceptIds": [
+        "trigonometrinis-reiskinys"
+      ],
+      "expectedMethodIds": [
+        "trigonometric-telescoping"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite padauginti sumÄ… iÅ¡ $2\\sin\\theta$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2\\sin(k\\theta)\\sin\\theta = \\cos((k-1)\\theta) - \\cos((k+1)\\theta)$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "UÅ¾raÅ¡ykite kelis pirmuosius narius po daugybos: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Dauguma nariÅ³ susiprastins. Liks $1 - \\cos(2n\\theta)$. Naudokite pusÄ—s kampo formulÄ™ $1-\\cos 2A = 2\\sin^2 A$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$S \\cdot 2\\sin\\theta = \\sum_{k=1}^n 2\\sin((2k-1)\\theta)\\sin\\theta$."
+        },
+        {
+          "text": "Taikome formulÄ™: $2\\sin((2k-1)\\theta)\\sin\\theta = \\cos((2k-2)\\theta) - \\cos(2k\\theta)$."
+        },
+        {
+          "text": "Suma: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots + (\\cos(2n-2)\\theta - \\cos(2n\\theta))$."
+        },
+        {
+          "text": "Susiprastinus lieka $S \\cdot 2\\sin\\theta = \\cos 0 - \\cos(2n\\theta) = 1 - \\cos(2n\\theta)$."
+        },
+        {
+          "text": "Naudojame tapatybÄ™ $1 - \\cos(2n\\theta) = 2\\sin^2(n\\theta)$."
+        },
+        {
+          "text": "$S \\cdot 2\\sin\\theta = 2\\sin^2(n\\theta) \\implies S = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-14-method-1",
+          "title": "TeleskopinÄ— suma",
+          "methodType": "main",
+          "strategyTags": [
+            "trigonometry"
+          ],
+          "steps": [
+            {
+              "title": "Dauginimas",
+              "action": "Padauginame iÅ¡ $2\\sin\\theta$.",
+              "reason": "Tai sukurs teleskopinÄ™ struktÅ«rÄ….",
+              "result": "2S sin\\theta = 1 - cos(2n\\theta)",
+              "latex": "2\\sin\\theta \\sum \\sin((2k-1)\\theta) = 1 - \\cos(2n\\theta)"
+            },
+            {
+              "title": "Supaprastinimas",
+              "action": "Taikome dvigubo kampo sinusÄ….",
+              "reason": "Norime kompaktiÅ¡ko atsakymo.",
+              "result": "sin^2(n\\theta)/sin\\theta",
+              "latex": "S = \\frac{2\\sin^2(n\\theta)}{2\\sin\\theta} = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+            }
+          ],
+          "finalAnswer": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-14-trap-1",
+          "title": "Klaida redukuojant sumÄ…",
+          "wrongMove": "PamirÅ¡tamas pirmasis narys $\\cos 0 = 1$.",
+          "whyTempting": "DaÅ¾nai manoma, kad visi nariai virsta cos.",
+          "correction": "AtidÅ¾iai iÅ¡raÅ¡ykite ribinius narius ($k=1$ ir $k=n$).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktÅ³, jei $\\theta$ bÅ«tÅ³ $\\pi/n$ kartotinis?",
+        "Kaip sumÄ… galima bÅ«tÅ³ suskaiÄiuoti naudojant kompleksinius skaiÄius (Oilerio formulÄ™)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-15",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Tegu $a, b, c > 0$ yra tokie, kad $a+b+c=3$. Ä®rodykite nelygybÄ™ $a^2+b^2+c^2 + ab+bc+ca \\ge 6$ naudodami elementariuosius simetrinius daugianarius $p=a+b+c$ ir $q=ab+bc+ca$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atsakymas gautas perraÅ¡ius Ä¯ p^2 - q >= 6"
+      },
+      "answerText": "Atsakymas gautas perraÅ¡ius Ä¯ p^2 - q >= 6",
+      "coreIdea": {
+        "title": "PerraÅ¡ymas per p ir q",
+        "text": "$a^2+b^2+c^2$ iÅ¡reiÅ¡kiamas kaip $p^2 - 2q$. Tada visa nelygybÄ— tampa priklausoma tik nuo $p$ ir $q$."
+      },
+      "strategyTags": [
+        "inequalities",
+        "pqr-method",
+        "symmetric-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "nelygybe"
+      ],
+      "expectedMethodIds": [
+        "pqr-substitution"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "IÅ¡reikÅ¡kite sumÄ… $a^2+b^2+c^2$ per $p$ ir $q$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca) = p^2 - 2q$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite tai Ä¯ pradinÄ™ nelygybÄ™: $(p^2 - 2q) + q \\ge 6$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $p=3$, gauname $9 - q \\ge 6$. Ar tiesa, kad $q \\le 3$? Naudokite $p^2 \\ge 3q$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime $p = a+b+c = 3$ ir $q = ab+bc+ca$."
+        },
+        {
+          "text": "IÅ¡raiÅ¡ka: $a^2+b^2+c^2 + ab+bc+ca = (p^2 - 2q) + q = p^2 - q$."
+        },
+        {
+          "text": "NelygybÄ— tampa $p^2 - q \\ge 6$, t.y. $9 - q \\ge 6$, arba $q \\le 3$."
+        },
+        {
+          "text": "Å½inome klasikinÄ™ nelygybÄ™ $(a+b+c)^2 \\ge 3(ab+bc+ca)$, kuri ekvivalenti $p^2 \\ge 3q$."
+        },
+        {
+          "text": "Kadangi $p=3$, tai $9 \\ge 3q \\implies q \\le 3$."
+        },
+        {
+          "text": "Vadinasi, $9-q \\ge 9-3 = 6$. Ä®rodyta."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-15-method-1",
+          "title": "PQR pakeitimas",
+          "methodType": "main",
+          "strategyTags": [
+            "inequalities"
+          ],
+          "steps": [
+            {
+              "title": "Substitucija",
+              "action": "PakeiÄiame kintamuosius.",
+              "reason": "Tai supaprastina nelygybÄ—s struktÅ«rÄ….",
+              "result": "9-q >= 6",
+              "latex": "(a+b+c)^2 - (ab+bc+ca) \\ge 6"
+            },
+            {
+              "title": "Pabaiga",
+              "action": "Taikome q <= p^2/3.",
+              "reason": "StandartinÄ— tapatybÄ—.",
+              "result": "q <= 3",
+              "latex": "q \\le 3 \\implies 9-q \\ge 6"
+            }
+          ],
+          "finalAnswer": "Atsakymas gautas perraÅ¡ius Ä¯ p^2 - q >= 6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-15-trap-1",
+          "title": "SumaÅ¡ymas su AM-GM",
+          "wrongMove": "Bandoma taikyti AM-GM atskirai kiekvienam nariui.",
+          "whyTempting": "AM-GM yra populiariausias Ä¯rankis.",
+          "correction": "SimetrinÄ—ms nelygybÄ—ms su sumos apribojimu daÅ¾nai geriau tinka simetriniai daugianariai arba Jenseno nelygybÄ—.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada Å¡ioje nelygybÄ—je pasiekiama lygybÄ—?",
+        "Kokias kitas nelygybes galima sprÄ™sti per p, q, r?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-16",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Naudodami Sturmo teoremÄ…, nustatykite realiÅ³jÅ³ Å¡aknÅ³ skaiÄiÅ³ daugianariui $P(x) = x^3 - 3x + 1$ intervale $[-2, 2]$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Sturmo seka",
+        "text": "Sudarome sekÄ…: $P_0=P(x)$, $P_1=P'(x)$, $P_2 = -\\text{rem}(P_0, P_1)$, ir t.t. Å aknÅ³ skaiÄius lygus Å¾enklÅ³ pasikeitimÅ³ skirtumui galiniuose taÅ¡kuose."
+      },
+      "strategyTags": [
+        "polynomials",
+        "sturm-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "isvestine-ir-diferencijavimas"
+      ],
+      "expectedMethodIds": [
+        "sturm-sequence-calculation"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite iÅ¡vestinÄ™ $P_1(x) = 3x^2 - 3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Padalinkite $P_0$ iÅ¡ $P_1$ su liekana. $P_2$ yra liekana su prieÅ¡ingu Å¾enklu.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Seka: $P_0 = x^3-3x+1$, $P_1 = 3x^2-3$, $P_2 = 2x-1$, $P_3 = 3/4$ (teigiama konstanta).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "SuskaiÄiuokite Å¾enklus taÅ¡kuose $x=-2$ ir $x=2$. SkaiÄius $V(x)$ yra Å¾enklÅ³ pasikeitimÅ³ skaiÄius sekoje.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$P_0 = x^3 - 3x + 1$."
+        },
+        {
+          "text": "$P_1 = 3x^2 - 3$."
+        },
+        {
+          "text": "$P_2 = -\\text{rem}(P_0, P_1) = 2x - 1$ (po dalybos)."
+        },
+        {
+          "text": "$P_3 = -\\text{rem}(P_1, P_2) = 3/4$ (konstanta)."
+        },
+        {
+          "text": "TaÅ¡kas $x=-2$: $P_0(-2)=-1, P_1(-2)=9, P_2(-2)=-5, P_3(-2)=0.75$. Å½enklai: $(-, +, -, +)$. $V(-2) = 3$ pasikeitimai."
+        },
+        {
+          "text": "TaÅ¡kas $x=2$: $P_0(2)=3, P_1(2)=9, P_2(2)=3, P_3(2)=0.75$. Å½enklai: $(+, +, +, +)$. $V(2) = 0$ pasikeitimÅ³."
+        },
+        {
+          "text": "Å aknÅ³ skaiÄius: $V(-2) - V(2) = 3 - 0 = 3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-16-method-1",
+          "title": "Sturmo seka",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sekos sudarymas",
+              "action": "ApskaiÄiuojame iÅ¡vestines ir liekanas.",
+              "reason": "Tai nustato daugianario elgsenÄ….",
+              "result": "4 nariai",
+              "latex": "P_0, P_1, P_2, P_3"
+            },
+            {
+              "title": "Å½enklÅ³ skaiÄiavimas",
+              "action": "Tikriname rÄ—Å¾ius.",
+              "reason": "Intervalo savybÄ—.",
+              "result": "3",
+              "latex": "V(-2) - V(2) = 3"
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-16-trap-1",
+          "title": "Liekanos Å¾enklo ignoravimas",
+          "wrongMove": "Paimama tiesioginÄ— dalybos liekana vietoj neigiamos liekanos.",
+          "whyTempting": "Dalyba kampu yra Ä¯prastesnÄ—.",
+          "correction": "Seka grieÅ¾tai reikalauja $P_{k+1} = -\\text{rem}(P_{k-1}, P_k)$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡is metodas pranaÅ¡esnis uÅ¾ paprastÄ… kritiniÅ³ taÅ¡kÅ³ tyrimÄ…?",
+        "Kada Sturmo seka baigiasi?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-17",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "TiesÄ—je paÅ¾ymÄ—ti keturi taÅ¡kai $A, B, C, D$ tokia tvarka. Å½inoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Dvigubojo santykio formulÄ—",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius, kai $C$ viduje, o $D$ iÅ¡orÄ—je."
+      },
+      "strategyTags": [
+        "geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "expectedMethodIds": [
+        "cross-ratio-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite sÄ…ryÅ¡Ä¯ $\\frac{AC}{CB} = \\frac{AD}{DB}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Å½inome $AC=3$ ir $CB=1$, tad $AB = 3+1 = 4$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tegu $BD = x$. Tada $AD = AB + BD = 4 + x$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sudarykite proporcijÄ…: $\\frac{3}{1} = \\frac{4+x}{x}$. IÅ¡sprÄ™skite $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome atstumus: $AC=3, CB=1$. Tada $AB=4$."
+        },
+        {
+          "text": "Kadangi santykis harmoninis, taÅ¡kas $D$ turi bÅ«ti iÅ¡orÄ—je (uÅ¾ $B$)."
+        },
+        {
+          "text": "Tegu $BD=x$. Tada $AD = 4+x$."
+        },
+        {
+          "text": "FormulÄ—: $\\frac{AC}{CB} = \\frac{AD}{DB} \\implies \\frac{3}{1} = \\frac{4+x}{x}$."
+        },
+        {
+          "text": "Dauginame kryÅ¾mai: $3x = 4+x$."
+        },
+        {
+          "text": "$2x = 4 \\implies x = 2$."
+        },
+        {
+          "text": "Atsakymas $BD=2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-17-method-1",
+          "title": "Harmoninio santykio proporcija",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "Lygties sudarymas",
+              "action": "UÅ¾raÅ¡ome atstumÅ³ santykius.",
+              "reason": "Dvigubojo santykio savybÄ—.",
+              "result": "3/1 = (4+x)/x",
+              "latex": "\\frac{AC}{CB} = \\frac{AD}{DB}"
+            },
+            {
+              "title": "Sprendimas",
+              "action": "IÅ¡sprendÅ¾iame tiesinÄ™ lygtÄ¯.",
+              "reason": "Algebrinis veiksmas.",
+              "result": "2",
+              "latex": "3x = 4+x \\implies x=2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-17-trap-1",
+          "title": "Neteisingas AD ilgio skaiÄiavimas",
+          "wrongMove": "Manoma, kad $AD = 4-x$ arba kiti variantai.",
+          "whyTempting": "Painiojama taÅ¡kÅ³ tvarka.",
+          "correction": "Jei $(A,B;C,D)=-1$ ir $C$ yra viduje, tai $D$ bÅ«tinai yra uÅ¾ atkarpos $AB$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra harmoninio santykio reikÅ¡mÄ—, jei $C$ yra atkarpos $AB$ vidurio taÅ¡kas?",
+        "Kur projektuojamas taÅ¡kas $D$, kai $AC=CB$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-18",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Apskritimo lygtis yra $x^2 + y^2 = 9$. Raskite taÅ¡ko $P(5, 0)$ poliarÄ—s lygtÄ¯ Å¡io apskritimo atÅ¾vilgiu.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x = 1.8 (arba x = 9/5)"
+      },
+      "answerText": "x = 1.8 (arba x = 9/5)",
+      "coreIdea": {
+        "title": "PoliarÄ—s formulÄ—",
+        "text": "TaÅ¡ko $(x_0, y_0)$ poliarÄ— apskritimui $x^2+y^2=R^2$ yra tiesÄ— $x x_0 + y y_0 = R^2$."
+      },
+      "strategyTags": [
+        "geometry",
+        "poles-and-polars"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "apskritimas"
+      ],
+      "expectedMethodIds": [
+        "polar-line-formula"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite formulÄ™ $x x_0 + y y_0 = R^2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "ÄŒia $x_0 = 5, y_0 = 0$ ir $R^2 = 9$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite vertes Ä¯ lygtÄ¯.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$x \\cdot 5 + y \\cdot 0 = 9$. IÅ¡reikÅ¡kite $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Identifikuojame parametrus: $x_0=5, y_0=0, R^2=9$."
+        },
+        {
+          "text": "Taikome formulÄ™: $x \\cdot 5 + y \\cdot 0 = 9$."
+        },
+        {
+          "text": "$5x = 9$."
+        },
+        {
+          "text": "$x = 9/5 = 1.8$."
+        },
+        {
+          "text": "Tai yra vertikali tiesÄ—."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-18-method-1",
+          "title": "AnalizinÄ— geometrija",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "FormulÄ—s taikymas",
+              "action": "Ä®statome koordinates Ä¯ poliarÄ—s lygtÄ¯.",
+              "reason": "Tai standartinis metodas poliarÄ—ms rasti.",
+              "result": "5x = 9",
+              "latex": "5x + 0y = 9"
+            }
+          ],
+          "finalAnswer": "x = 1.8 (arba x = 9/5)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-18-trap-1",
+          "title": "Painiojimas su poliarinÄ—mis koordinatÄ—mis",
+          "wrongMove": "Mokinys bando keisti koordinates Ä¯ $(r, \\theta)$.",
+          "whyTempting": "PanaÅ¡us pavadinimas.",
+          "correction": "PoliarÄ— yra tiesÄ—, o ne koordinatÄ—. Naudokite analizinÄ™ tiesÄ—s formulÄ™.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia bÅ«tÅ³ taÅ¡ko, esanÄio ant apskritimo, poliarÄ—?",
+        "Kas yra poliarinis abipusiÅ¡kumas (dualybÄ—)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-19",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Inversija su centru $O$ ir spinduliu $R$ atvaizduoja apskritimÄ… $\\omega$, einantÄ¯ per centrÄ… $O$. Koks geometrinis objektas yra Å¡io apskritimo vaizdas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "TiesÄ—, neeinanti per centrÄ… O"
+      },
+      "answerText": "TiesÄ—, neeinanti per centrÄ… O",
+      "coreIdea": {
+        "title": "Inversijos bazinÄ— savybÄ—",
+        "text": "TaÅ¡kai arti centro atvaizduojami Ä¯ begalybÄ™. Kadangi apskritimas eina per centrÄ…, jo vaizdas turi â€žiÅ¡eitiâ€œ Ä¯ begalybÄ™ â€“ tai tiesÄ—."
+      },
+      "strategyTags": [
+        "geometry",
+        "inversion"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-inversion"
+      ],
+      "expectedMethodIds": [
+        "inversion-properties"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-inversion"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite, kur atsiduria taÅ¡kas $O$ po inversijos.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "TaÅ¡kas $O$ keliauja Ä¯ begalybÄ™. Tik tiesÄ—s plokÅ¡tumoje â€žeinaâ€œ per begalybÄ—s taÅ¡kÄ….",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskritimas be vieno taÅ¡ko ($O$) virsta vientisa tiese.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi apskritimas nÄ—ra tiesÄ— per $O$, jo vaizdas bus tiesÄ—, kuri nelieÄia $O$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Inversija atvaizduoja apskritimus ir tieses Ä¯ apskritimus ir tieses."
+        },
+        {
+          "text": "Objektas tenkina sÄ…lygÄ…: einantis per $O$ $\\to$ turintis taÅ¡kÄ… begalybÄ—je."
+        },
+        {
+          "text": "Tik tiesÄ—s turi taÅ¡kÄ… begalybÄ—je."
+        },
+        {
+          "text": "Kadangi pradinis objektas nÄ—ra tiesÄ— per $O$, vaizdas nebus tiesÄ— per $O$."
+        },
+        {
+          "text": "Vaizdas yra tiesÄ—, neeinanti per $O$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-19-method-1",
+          "title": "GeometrinÄ— intuicija",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "Klasifikacija",
+              "action": "Nustatome transformacijos tipÄ….",
+              "reason": "Inversija keiÄia kreivumÄ….",
+              "result": "TiesÄ—",
+              "latex": "\\omega \\ni O \\implies f(\\omega) = \\text{tiesÄ—}"
+            }
+          ],
+          "finalAnswer": "TiesÄ—, neeinanti per centrÄ… O"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-19-trap-1",
+          "title": "Manymas, kad lieka apskritimu",
+          "wrongMove": "Teigiama, kad vaizdas yra maÅ¾esnis apskritimas.",
+          "whyTempting": "Inversija daÅ¾nai vaizduoja apskritimÄ… Ä¯ apskritimÄ….",
+          "correction": "Tai galioja tik jei apskritimas NEINA per centrÄ…. Einantys per centrÄ… tampa tiesÄ—mis.",
+          "conceptIds": [
+            "olimpiada-11-concept-inversion"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kur projektuojamas apskritimo centras po inversijos? (Atsargiai: ne bÅ«tinai Ä¯ tiesÄ—s centrÄ…!)",
+        "Kokia tiesÄ— tampa apskritimu po inversijos?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-20",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "TiesÄ—je judantis taÅ¡kas $P$ artÄ—ja prie fiksuoto taÅ¡ko $B$. NagrinÄ—jame taÅ¡kÄ… $C$, esantÄ¯ kitoje tiesÄ—s pusÄ—je. Kokia yra santykio $PB/PC$ ribinÄ— reikÅ¡mÄ—, kai $P$ sutampa su $B$?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "0"
+      },
+      "answerText": "0",
+      "coreIdea": {
+        "title": "Atstumo maÅ¾Ä—jimas",
+        "text": "Atstumas $PB$ artÄ—ja prie nulio, o $PC$ artÄ—ja prie fiksuoto teigiamo atstumo $BC$. Skaitiklis maÅ¾Ä—ja, o vardiklis lieka teigiamas."
+      },
+      "strategyTags": [
+        "geometry",
+        "limits"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "atstumas"
+      ],
+      "expectedMethodIds": [
+        "limit-reasoning"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ä®sivaizduokite, kas nutinka su $PB$ ilgiu.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kai $P = B$, tai $PB = 0$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Atstumas $PC$ tampa atstumu $BC$, kuris yra teigiamas.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Dalykite $0$ iÅ¡ $BC$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime $P$ koordinatÄ— artÄ—ja prie $B$ koordinaÄiÅ³."
+        },
+        {
+          "text": "$PB = |x_P - x_B| \\to 0$."
+        },
+        {
+          "text": "$PC = |x_P - x_C| \\to |x_B - x_C| = BC > 0$."
+        },
+        {
+          "text": "Santykis $PB/PC \\to 0/BC = 0$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-20-method-1",
+          "title": "Tiesioginis Ä¯vertinimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Ribos radimas",
+              "action": "ApskaiÄiuojame limitÄ….",
+              "reason": "Atstumo apibrÄ—Å¾imas.",
+              "result": "0",
+              "latex": "\\lim_{P \\to B} \\frac{PB}{PC} = 0"
+            }
+          ],
+          "finalAnswer": "0"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-20-trap-1",
+          "title": "NeapibrÄ—Å¾tumas",
+          "wrongMove": "Mokinys mano, kad gaunama 0/0.",
+          "whyTempting": "Manoma, kad abu atstumai tampa nuliu.",
+          "correction": "TaÅ¡kas $C$ yra fiksuotas ir ne ant tiesÄ—s (arba bent jau ne tame paÄiame taÅ¡ke), tad $PC$ lieka teigiamas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡is paprastas pavyzdys padeda suprasti geometriniÅ³ santykiÅ³ tolydumÄ…?",
+        "Kas nutiktÅ³, jei $C$ taip pat judÄ—tÅ³ link $B$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-21",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Pilnajame keturkampyje (suformuotame keturiÅ³ tiesiÅ³) Ä¯striÅ¾ainÄ—s kertasi taÅ¡kuose. Harmoninio ketverto savybÄ— teigia, kad bet kurioje Ä¯striÅ¾ainÄ—je taÅ¡kas, gautas susikirtus su kita Ä¯striÅ¾aine, kartu su likusiais taÅ¡kais sudaro dvigubÄ…jÄ¯ santykÄ¯, lygÅ³:",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "-1"
+      },
+      "answerText": "-1",
+      "coreIdea": {
+        "title": "Pilnojo keturkampio harmonika",
+        "text": "Tai klasikinÄ— projekcinÄ—s geometrijos teorema: Ä¯striÅ¾ainÄ—s dalija viena kitÄ… harmoniÅ¡kai."
+      },
+      "strategyTags": [
+        "geometry",
+        "projective-geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "expectedMethodIds": [
+        "projective-theorems"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite projekcinÄ—s geometrijos invariantus.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Harmoninis santykis visada lygus -1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dvigubasis santykis Å¾ymimas $(A,B;C,D)$. Harmoniniame atveju jis yra -1.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atsakymas yra tiesiog skaiÄius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pilnasis keturkampis turi 3 Ä¯striÅ¾aines."
+        },
+        {
+          "text": "Pagal Desargo arba paprastas projekcines savybes, bet kuri Ä¯striÅ¾ainÄ— kerta kitas dvi taÅ¡kuose, kurie kartu su Ä¯striÅ¾ainÄ—s galais sudaro harmoninÄ¯ ketvertÄ…."
+        },
+        {
+          "text": "Harmoninio ketverto dvigubasis santykis yra -1."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-21-method-1",
+          "title": "Teorinis apibrÄ—Å¾imas",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "Konstatavimas",
+              "action": "Nurodome reikÅ¡mÄ™.",
+              "reason": "Tai fundamentali savybÄ—.",
+              "result": "-1",
+              "latex": "(A,B;C,D) = -1"
+            }
+          ],
+          "finalAnswer": "-1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-21-trap-1",
+          "title": "Santykio 1 nurodymas",
+          "wrongMove": "SpÄ—jama, kad santykis lygus 1.",
+          "whyTempting": "1 yra graÅ¾us skaiÄius.",
+          "correction": "Dvigubasis santykis 1 reikÅ¡tÅ³, kad taÅ¡kai sutampa. Harmoninis santykis visada -1.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡iÄ… savybÄ™ galima panaudoti braiÅ¾ant tik su liniuote?",
+        "Kur dar geometrijoje pasitaiko skaiÄius -1?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-22",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Trikampyje $ABC$ trys Äevianos $AD, BE, CF$ susikerta viename taÅ¡ke $P$. Pagal trigonometrinÄ™ ÄŒevos teoremos formÄ…, koks turi bÅ«ti santykiÅ³ $\\frac{\\sin \\angle BAD}{\\sin \\angle CAD} \\cdot \\frac{\\sin \\angle CBE}{\\sin \\angle ABE} \\cdot \\frac{\\sin \\angle ACF}{\\sin \\angle BCF}$ rezultatas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1"
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Trig Ceva",
+        "text": "Tai tiesioginis trigonometrinis ÄŒevos teoremos atitikmuo. Santykis visada lygus 1, kai tiesÄ—s kertasi viename taÅ¡ke."
+      },
+      "strategyTags": [
+        "geometry",
+        "trigonometry",
+        "ceva-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "trikampiai-ir-pitagoro-teorema"
+      ],
+      "prerequisiteConceptIds": [
+        "trikampis"
+      ],
+      "expectedMethodIds": [
+        "trig-ceva-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite apie standartinÄ™ ÄŒevos teoremÄ… kraÅ¡tinÄ—ms.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "TrigonometrinÄ— forma naudoja kampus vietoj atkarpÅ³ ilgiÅ³.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "SÄ…lyga susikirtimui viename taÅ¡ke yra tokia pati â€“ sandauga lygi 1.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Rezultatas yra sveikas skaiÄius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal sinusÅ³ teoremÄ… trikampiams $ABD$ ir $ACD$, santykis $BD/CD$ gali bÅ«ti iÅ¡reikÅ¡tas per kampÅ³ sinusus."
+        },
+        {
+          "text": "Sujungus visus tris tokius santykius ir pritaikius standartinÄ™ ÄŒevos teoremÄ… ($BD/CD \\cdot CE/AE \\cdot AF/BF = 1$), gauname kampinÄ™ formÄ…."
+        },
+        {
+          "text": "Sandauga $\\prod \\frac{\\sin \\alpha_i}{\\sin \\beta_i}$ turi bÅ«ti lygi 1."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-22-method-1",
+          "title": "Teorinis taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "Rezultato fiksavimas",
+              "action": "Nurodome reikÅ¡mÄ™ 1.",
+              "reason": "ÄŒevos teoremos kriterijus.",
+              "result": "1",
+              "latex": "\\prod \\frac{\\sin \\angle PAD}{\\sin \\angle CAD} = 1"
+            }
+          ],
+          "finalAnswer": "1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-22-trap-1",
+          "title": "KampÅ³ supainiojimas",
+          "wrongMove": "Mokinys mano, kad tai kampÅ³ tangentÅ³ santykis.",
+          "whyTempting": "Tangentai taip pat daÅ¾nai naudojami geometrijoje.",
+          "correction": "Teorema grieÅ¾tai naudoja sinusus (sinusÅ³ teoremos pasekmÄ—).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip trig ÄŒeva padeda sprÄ™sti uÅ¾davinius su izogonalinÄ—mis sankryÅ¾omis?",
+        "Kas nutinka, jei tiesÄ—s yra lygiagreÄios?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-23",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "LygiaÅ¡onio trikampio kraÅ¡tinÄ—s yra $AB = AC = 5$ ir $BC = 6$. Raskite pusiaukampinÄ—s, iÅ¡vestos iÅ¡ virÅ¡Å«nÄ—s $A$, ilgÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4"
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "SavybÄ— lygiaÅ¡oniame trikampyje",
+        "text": "LygiaÅ¡oniame trikampyje pusiaukampinÄ— iÅ¡ virÅ¡Å«nÄ—s sutampa su aukÅ¡tine ir pusiaukraÅ¡tine. Galima taikyti Pitagoro teoremÄ…."
+      },
+      "strategyTags": [
+        "geometry",
+        "pythagorean-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "trikampiai-ir-pitagoro-teorema"
+      ],
+      "prerequisiteConceptIds": [
+        "pusiaukampine",
+        "aukstine"
+      ],
+      "expectedMethodIds": [
+        "pythagorean-theorem-calculation"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "NupieÅ¡kite pusiaukampinÄ™ $AD$. Kur ji kerta $BC$?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$D$ yra $BC$ vidurio taÅ¡kas, tad $BD = 3$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Trikampis $ABD$ yra statusis.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Naudokite $AD^2 + 3^2 = 5^2$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "PusiaukampinÄ— $AD$ lygiaÅ¡oniame trikampyje yra ir pusiaukraÅ¡tinÄ—."
+        },
+        {
+          "text": "Tada $BD = BC/2 = 6/2 = 3$."
+        },
+        {
+          "text": "Kampas $ADB$ yra statusis (aukÅ¡tinÄ—)."
+        },
+        {
+          "text": "$AD = \\sqrt{AB^2 - BD^2} = \\sqrt{5^2 - 3^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-23-method-1",
+          "title": "Pitagoro teorema",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "AtstumÅ³ radimas",
+              "action": "ApskaiÄiuojame BD.",
+              "reason": "LygiaÅ¡onio savybÄ—.",
+              "result": "3",
+              "latex": "BD = 3"
+            },
+            {
+              "title": "SkaiÄiavimas",
+              "action": "Taikome Pitagoro teoremÄ….",
+              "reason": "Statusis trikampis.",
+              "result": "4",
+              "latex": "AD = \\sqrt{5^2-3^2} = 4"
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-23-trap-1",
+          "title": "PusiaukampinÄ—s formulÄ—s naudojimas",
+          "wrongMove": "Mokinys bando taikyti sudÄ—tingÄ… pusiaukampinÄ—s ilgio formulÄ™ per visas kraÅ¡tines.",
+          "whyTempting": "Tai bendras metodas.",
+          "correction": "Nors formulÄ— teisinga, lygiaÅ¡oniame trikampyje Pitagoro teorema yra daug greitesnÄ— ir paprastesnÄ—.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktÅ³, jei trikampis bÅ«tÅ³ bukasis?",
+        "Kaip pasikeistÅ³ rezultatas, jei skaiÄiuotume pusiaukampinÄ™ iÅ¡ virÅ¡Å«nÄ—s B?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-24",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Pagal ErdiÅ¡o-Mordelio nelygybÄ™, bet kokiam taÅ¡kui $P$ trikampio $ABC$ viduje galioja santykis tarp atstumÅ³ iki virÅ¡Å«niÅ³ ($R_1, R_2, R_3$) ir atstumÅ³ iki kraÅ¡tiniÅ³ ($d_1, d_2, d_3$). Kokia yra maÅ¾iausia galima santykio $(R_1 + R_2 + R_3) / (d_1 + d_2 + d_3)$ reikÅ¡mÄ—?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Erdos-Mordell teorema",
+        "text": "NelygybÄ— teigia, kad $R_1 + R_2 + R_3 \\ge 2(d_1 + d_2 + d_3)$. LygybÄ— pasiekiama tik lygiaÅ¡oniam trikampiui ir taÅ¡kui centre."
+      },
+      "strategyTags": [
+        "geometry",
+        "geometric-inequalities"
+      ],
+      "prerequisiteTopicIds": [
+        "geometrijos-ir-matavimu-pradmenys"
+      ],
+      "prerequisiteConceptIds": [
+        "atstumas"
+      ],
+      "expectedMethodIds": [
+        "geometric-inequality-theorems"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite ErdiÅ¡o-Mordelio nelygybÄ—s formuluotÄ™.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "NelygybÄ— sieja sumas $R_i$ ir $d_i$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Santykis visada yra bent 2.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atsakymas yra sveikas skaiÄius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "NelygybÄ—: $\\sum R_i \\ge 2 \\sum d_i$."
+        },
+        {
+          "text": "Padalinus abi puses iÅ¡ $\\sum d_i$, gauname santykÄ¯ $\\ge 2$."
+        },
+        {
+          "text": "MaÅ¾iausia reikÅ¡mÄ— yra 2, pasiekiama lygiakraÅ¡Äiame trikampyje, kai $P$ yra centras."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-24-method-1",
+          "title": "TeorinÄ— reikÅ¡mÄ—",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "Rezultatas",
+              "action": "Nurodome 2.",
+              "reason": "Pagal Erdos-Mordell teoremÄ….",
+              "result": "2",
+              "latex": "\\frac{\\sum R_i}{\\sum d_i} \\ge 2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-24-trap-1",
+          "title": "Santykio 1 spÄ—jimas",
+          "wrongMove": "Manoma, kad sumos lygios.",
+          "whyTempting": "Simetrija.",
+          "correction": "Atstumai iki virÅ¡Å«niÅ³ visada yra â€žsunkesniâ€œ nei iki kraÅ¡tiniÅ³. Koeficientas 2 yra klasikinÄ— olimpiadinÄ— konstanta.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada pasiekiama lygybÄ— ErdiÅ¡o-Mordelio nelygybÄ—je?",
+        "Kas Ä¯rodÄ— Å¡iÄ… nelygybÄ™?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-25",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Ä®rodykite, kad trikampio apibrÄ—Å¾tinio apskritimo centro $O$ izogonalinÄ— sankryÅ¾a yra aukÅ¡tiniÅ³ susikirtimo taÅ¡kas. Ä®raÅ¡ykite Å¡io taÅ¡ko Ä¯prastÄ… raidÄ™.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "H"
+      },
+      "answerText": "H",
+      "coreIdea": {
+        "title": "Izogonalinis konjugatas",
+        "text": "IzogonalinÄ—s sankryÅ¾os taÅ¡kai gaunami atspindint tieses pusiaukampiniÅ³ atÅ¾vilgiu. ApibrÄ—Å¾tinio apskritimo centras ir ortocentras yra klasikinÄ— konjugatÅ³ pora."
+      },
+      "strategyTags": [
+        "geometry",
+        "isogonal-conjugates"
+      ],
+      "prerequisiteTopicIds": [
+        "trikampiai-ir-pitagoro-teorema"
+      ],
+      "prerequisiteConceptIds": [
+        "aukstine"
+      ],
+      "expectedMethodIds": [
+        "isogonal-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite apie kampus tarp kraÅ¡tiniÅ³ ir spindulio Ä¯ $O$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kampas tarp $AB$ ir $AO$ lygus $90 - \\angle C$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kampas tarp $AB$ ir aukÅ¡tinÄ—s iÅ¡ $A$ taip pat lygus $90 - \\angle C$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Tai reiÅ¡kia, kad spindulys ir aukÅ¡tinÄ— yra izogonalinÄ—s tiesÄ—s.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "NagrinÄ—jame virÅ¡Å«nÄ™ $A$. Spindulys $AO$ sudaro su kraÅ¡tine $AB$ kampÄ… $90-C$ (lygiaÅ¡onis trikampis $AOB$)."
+        },
+        {
+          "text": "AukÅ¡tinÄ— iÅ¡ $A$ sudaro su kraÅ¡tine $AC$ kampÄ… $90-C$ (statusis trikampis su kampu $C$)."
+        },
+        {
+          "text": "Kadangi kampai su gretimomis kraÅ¡tinÄ—mis lygÅ«s, Å¡ios tiesÄ—s yra izogonalinÄ—s."
+        },
+        {
+          "text": "Taip galioja visoms virÅ¡Å«nÄ—ms, tad sankryÅ¾a yra ortocentras $H$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-25-method-1",
+          "title": "KampÅ³ lyginimas",
+          "methodType": "main",
+          "strategyTags": [
+            "geometry"
+          ],
+          "steps": [
+            {
+              "title": "SÄ…ryÅ¡io radimas",
+              "action": "Parodome, kad spindulys ir aukÅ¡tinÄ— simetriÅ¡ki pusiaukampinÄ—s atÅ¾vilgiu.",
+              "reason": "Abu sudaro tÄ… patÄ¯ kampÄ… su skirtingomis kraÅ¡tinÄ—mis.",
+              "result": "H",
+              "latex": "\\angle BAO = 90-C = \\angle CAH"
+            }
+          ],
+          "finalAnswer": "H"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-25-trap-1",
+          "title": "Painiojimas su pusiaukraÅ¡tinÄ—mis",
+          "wrongMove": "Manoma, kad centro $O$ konjugatas yra centroidas $G$.",
+          "whyTempting": "G ir O yra svarbÅ«s centrai.",
+          "correction": "Centroido $G$ konjugatas yra simedianos taÅ¡kas $K$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks taÅ¡kas yra Ä¯brÄ—Å¾tinio apskritimo centro $I$ izogonalinis konjugatas?",
+        "Kurioje tiesÄ—je (Oilerio tiesÄ—?) guli $O, G, H$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-26",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "SzemerÃ©di reguliarumo lema teigia, kad bet kurÄ¯ didelÄ¯ grafÄ… galima suskaidyti Ä¯ dalis taip, kad briaunÅ³ pasiskirstymas tarp jÅ³ bÅ«tÅ³ panaÅ¡us Ä¯ atsitiktinÄ¯. Kaip vadinamos tokios daliÅ³ poros?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "reguliariosios poros"
+      },
+      "answerText": "reguliariosios poros",
+      "coreIdea": {
+        "title": "Reguliarumas",
+        "text": "Lema garantuoja daliÅ³, tarp kuriÅ³ briaunos pasiskirsÄiusios tolygiai (reguliariai), egzistavimÄ…."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "graph-theory",
+        "extremal-combinatorics"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "expectedMethodIds": [
+        "regularity-definition"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite apie lemos pavadinimÄ….",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Terminas yra susijÄ™s su briaunÅ³ tankio tolygumu.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tai yra â€žreguliariosiosâ€œ poros.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atsakymas lietuviÅ¡kai â€“ reguliariosios poros.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Lema sako: bet kokiam $\\epsilon > 0$ egzistuoja skaidinys, kur beveik visos poros yra $\\epsilon$-reguliarios."
+        },
+        {
+          "text": "Terminas yra reguliariosios poros."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-26-method-1",
+          "title": "ApibrÄ—Å¾imo atpaÅ¾inimas",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Terminologija",
+              "action": "Nurodome pavadinimÄ….",
+              "reason": "Tai lemos esmÄ—.",
+              "result": "reguliariosios poros",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "reguliariosios poros"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-26-trap-1",
+          "title": "AtsitiktiniÅ³ porÅ³ pavadinimas",
+          "wrongMove": "Vadinama â€žatsitiktinÄ—mis poromisâ€œ.",
+          "whyTempting": "Briaunos pasiskirsÄiusios kaip atsitiktiniame grafe.",
+          "correction": "SavybÄ— yra reguliarumas, nes grafas nÄ—ra atsitiktinis, jis tik elgiasi panaÅ¡iai.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l Å¡i lema laikoma viena svarbiausiÅ³ Å¡iuolaikinÄ—je kombinatorikoje?",
+        "Kas yra briaunÅ³ tankis (density) tarp dviejÅ³ aibiÅ³?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-27",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite didÅ¾iausiÄ… Ä¯manomÄ… briaunÅ³ skaiÄiÅ³ grafe su $n=6$ virÅ¡Å«nÄ—mis, kuriame nÄ—ra nÄ— vieno trikampio ($K_3$).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "9"
+      },
+      "answerText": "9",
+      "coreIdea": {
+        "title": "Mantelio teorema",
+        "text": "DidÅ¾iausias briaunÅ³ skaiÄius be trikampiÅ³ pasiekiamas pilnajame dvidaliam grafe su lygiomis dalimis. Tai speciali Turano teoremos iÅ¡vada."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "graph-theory",
+        "turan-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "expectedMethodIds": [
+        "turan-graph-construction"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Padalinkite 6 virÅ¡Å«nes Ä¯ dvi grupes.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei virÅ¡Å«nes padalinsite po 3 ir sujungsite visas virÅ¡Å«nes tarp grupiÅ³, trikampiÅ³ nebus.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "SuskaiÄiuokite briaunas: tai $3 \\times 3$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Mantelio formulÄ—: $\\lfloor n^2/4 \\rfloor$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Mantelio teoremÄ…, maksimalus briaunÅ³ skaiÄius be $K_3$ yra $\\lfloor n^2/4 \\rfloor$."
+        },
+        {
+          "text": "Ä®statome $n=6$: $\\lfloor 36/4 \\rfloor = 9$."
+        },
+        {
+          "text": "Konstrukcija: pilnas dvidalis grafas $K_{3,3}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-27-method-1",
+          "title": "Mantelio formulÄ—",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "SkaiÄiavimas",
+              "action": "Taikome formulÄ™ n^2/4.",
+              "reason": "Maksimalus briaunÅ³ skaiÄius be trikampiÅ³.",
+              "result": "9",
+              "latex": "\\lfloor 6^2/4 \\rfloor = 9"
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-27-trap-1",
+          "title": "Netolygus daliÅ³ skirstymas",
+          "wrongMove": "Bandoma dalinti virÅ¡Å«nes Ä¯ $4+2$.",
+          "whyTempting": "Neteisingas spÄ—jimas apie sandaugos maksimizavimÄ….",
+          "correction": "Sandauga $x(n-x)$ yra maksimali, kai $x = n/2$. Dalys turi bÅ«ti kuo lygesnÄ—s.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistÅ³ atsakymas, jei neleistume $K_4$ (ketverto pilnojo grafo)?",
+        "Ar toks grafas visada yra dvidalias?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-28",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Lauke $\\mathbb{F}_2$ (liekanos mod 2) raskite visus antrojo laipsnio neredukuojamus daugianarius. UÅ¾raÅ¡ykite tik patÄ¯ daugianarÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x^2 + x + 1"
+      },
+      "answerText": "x^2 + x + 1",
+      "coreIdea": {
+        "title": "Å aknÅ³ tikrinimas",
+        "text": "Antro laipsnio daugianaris yra redukuojamas tada ir tik tada, kai jis turi bent vienÄ… Å¡aknÄ¯ lauke. Lauke $\\mathbb{F}_2$ yra tik dvi galimos Å¡aknys: 0 ir 1."
+      },
+      "strategyTags": [
+        "polynomials",
+        "finite-fields",
+        "irreducibility"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "daugianaris"
+      ],
+      "expectedMethodIds": [
+        "root-check-finite-field"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "IÅ¡raÅ¡ykite visus antrojo laipsnio daugianarius su koeficientais 0 ir 1.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Vyriausias koeficientas turi bÅ«ti 1. Laisvasis narys taip pat turi bÅ«ti 1 (kitaip $x=0$ bus Å¡aknis).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kandidatai: $x^2 + 1$ ir $x^2 + x + 1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Ä®statykite $x=1$ Ä¯ abu daugianarius. Jei rezultatas nelyginis, Å¡aknies nÄ—ra.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Antro laipsnio daugianariai turi pavidalÄ… $x^2 + ax + b$ (nes vyriausias koeficientas negali bÅ«ti 0)."
+        },
+        {
+          "text": "Jei $b=0$, daugianaris dalijasi iÅ¡ $x$ (redukuojamas)."
+        },
+        {
+          "text": "Vadinasi, $b=1$. Kandidatai: $x^2 + 1$ ir $x^2 + x + 1$."
+        },
+        {
+          "text": "Tikriname $x^2+1$: Ä¯staÄius $x=1$ gauname $1+1 = 2 \\equiv 0$. Redukuojamas ($x^2+1 = (x+1)^2$)."
+        },
+        {
+          "text": "Tikriname $x^2+x+1$: Ä¯staÄius $x=0$ gauname $1$; Ä¯staÄius $x=1$ gauname $1+1+1=3 \\equiv 1$."
+        },
+        {
+          "text": "Å aknÅ³ nÄ—ra, tad daugianaris neredukuojamas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-28-method-1",
+          "title": "Å aknÅ³ perranka",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Atranka",
+              "action": "Atmetame daugianarius su Å¡aknimis.",
+              "reason": "Redukuojamumo kriterijus Å¾emiems laipsniams.",
+              "result": "x^2+x+1",
+              "latex": "P(0) \\neq 0, P(1) \\neq 0"
+            }
+          ],
+          "finalAnswer": "x^2 + x + 1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-28-trap-1",
+          "title": "Laisvojo nario ignoravimas",
+          "wrongMove": "Mokinys pamirÅ¡ta, kad $x^2+x$ taip pat yra antro laipsnio daugianaris.",
+          "whyTempting": "Atrodo per daug akivaizdu.",
+          "correction": "Visi nariai be laisvojo nario dalijasi iÅ¡ $x$ laukuose be liekanos.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kiek neredukuojamÅ³ antro laipsnio daugianariÅ³ yra lauke su 3 elementais?",
+        "KodÄ—l 3-io laipsnio daugianariui uÅ¾tenka patikrinti tik Å¡aknis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-29",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "KombinatorinÄ— Nulstellensatz teorema leidÅ¾ia Ä¯rodyti objektÅ³ egzistavimÄ… tiriant daugianariÅ³ Å¡aknis. Kas yra Å¡ios teoremos autorius?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Noga Alonas (Noga Alon)"
+      },
+      "answerText": "Noga Alonas (Noga Alon)",
+      "coreIdea": {
+        "title": "Teoremos autorystÄ—",
+        "text": "Noga Alonas 1999 m. publikavo Å¡Ä¯ metodÄ…, kuris tapo vienu pagrindiniÅ³ algebrinÄ—s kombinatorikos Ä¯rankiÅ³."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "algebraic-combinatorics"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-nullstellensatz"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-11-concept-nullstellensatz"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tai garsus izraelieÄiÅ³ matematikas.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jo vardas asocijuojasi su â€žvaisiÅ³â€œ pavadinimu (nors tai tik sutapimas).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "PavardÄ— keturiÅ³ raidÅ¾iÅ³: Alon.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Vardas Noga.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Teorema buvo suformuluota Noga Alono."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-29-method-1",
+          "title": "FaktÅ³ Å¾inojimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Identifikavimas",
+              "action": "Nurodome autoriÅ³.",
+              "reason": "Istorinis faktas.",
+              "result": "Noga Alonas",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Noga Alonas (Noga Alon)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-29-trap-1",
+          "title": "Painiojimas su Hilberto Nulstellensatz",
+          "wrongMove": "SpÄ—jama, kad autorius yra Hilbertas.",
+          "whyTempting": "Pavadinime yra â€žNulstellensatzâ€œ.",
+          "correction": "Hilbertas Ä¯rodÄ— klasikinÄ™ versijÄ… algebrinÄ—je geometrijoje. KombinatorinÄ™ versijÄ… Ä¯rodÄ— Alonas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡is metodas panaudojamas Ä¯rodant ÄŒoÅ¡y-Davenporto teoremÄ…?",
+        "KokiÄ… informacijÄ… apie daugianarÄ¯ reikia Å¾inoti norint pritaikyti Å¡iÄ… teoremÄ…?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-30",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Holo vedybÅ³ teorema nurodo sÄ…lygÄ…, kada galima parinkti skirtingus atstovus aibiÅ³ Å¡eimai. Tegu $S_1 = \\{1, 2\\}, S_2 = \\{1, 3\\}, S_3 = \\{2, 3\\}, S_4 = \\{1, 2, 3\\}$. Ar Å¡iai Å¡eimai galioja Holo sÄ…lyga? Atsakykite 'Taip' arba 'Ne'.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne"
+      },
+      "answerText": "Ne",
+      "coreIdea": {
+        "title": "Holo sÄ…lyga",
+        "text": "Bet kurios $k$ aibiÅ³ sÄ…junga turi turÄ—ti bent $k$ elementÅ³. Reikia patikrinti visas aibiÅ³ kombinacijas."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "hall-marriage-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "aibes"
+      ],
+      "expectedMethodIds": [
+        "hall-condition-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "SuskaiÄiuokite aibiÅ³ skaiÄiÅ³ ($n=4$).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "SuskaiÄiuokite visÅ³ unikaliÅ³ elementÅ³ skaiÄiÅ³ visose aibÄ—se.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Elementai yra $\{1, 2, 3\}$. Kiek jÅ³ iÅ¡ viso?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Turime 4 aibes, bet jÅ³ sÄ…junga turi tik 3 elementus. Ar tenkinama sÄ…lyga $|\\cup S_i| \\ge k$?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Holo sÄ…lyga visoms $k=1 \\dots n$ aibiÅ³ poaibiams: $|\\cup_{i \\in I} S_i| \\ge |I|$."
+        },
+        {
+          "text": "Paimame visas $n=4$ aibes."
+        },
+        {
+          "text": "$S_1 \\cup S_2 \\cup S_3 \\cup S_4 = \\{1, 2, 3\\}$."
+        },
+        {
+          "text": "ElementÅ³ skaiÄius yra 3."
+        },
+        {
+          "text": "Kadangi $3 < 4$, Holo sÄ…lyga paÅ¾eista."
+        },
+        {
+          "text": "Atsakymas: Ne."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-30-method-1",
+          "title": "SÄ…lygos tikrinimas",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "SÄ…jungos radimas",
+              "action": "Randame visus elementus.",
+              "reason": "Tikriname Holo kriterijÅ³.",
+              "result": "{1,2,3}",
+              "latex": "|\\cup S_i| = 3"
+            },
+            {
+              "title": "Palyginimas",
+              "action": "Lyginame su aibiÅ³ skaiÄiumi.",
+              "reason": "Kriterijus reikalauja |sÄ…junga| >= skaiÄius.",
+              "result": "Ne",
+              "latex": "3 < 4 \\implies \\text{Ne}"
+            }
+          ],
+          "finalAnswer": "Ne"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-30-trap-1",
+          "title": "Tik po vienÄ… aibÄ™ tikrinimas",
+          "wrongMove": "Mokinys sako â€žkiekviena aibÄ— turi elementÅ³, vadinasi galimaâ€œ.",
+          "whyTempting": "Atrodo, kad svarbu tik tai, kad aibÄ—s nebÅ«tÅ³ tuÅ¡Äios.",
+          "correction": "Svarbi sÄ…veika tarp aibiÅ³. Jei kelios aibÄ—s dalijasi per maÅ¾ai elementÅ³, pasirinkimas neÄ¯manomas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡iÄ… teoremÄ… pritaikyti grafÅ³ teorijoje (bipartite matchings)?",
+        "Kas nutiktÅ³, jei paÅ¡alintume aibÄ™ S4?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-31",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaiÄiuojamas panaÅ¡iai kaip determinantas, bet be Å¾enklÅ³ kaitaliojimo. ApskaiÄiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$ permanentÄ….",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Permanento apibrÄ—Å¾imas",
+        "text": "DvieilÄ—s matricos permanentas yra $a_{11} a_{22} + a_{12} a_{21}$."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "matrix-theory"
+      ],
+      "prerequisiteTopicIds": [
+        "tiesiniu-lygciu-sistemos-8"
+      ],
+      "prerequisiteConceptIds": [
+        "lygciu-sistema"
+      ],
+      "expectedMethodIds": [
+        "permanent-calculation"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sudauginkite narius pagrindinÄ—je ir Å¡alutinÄ—je Ä¯striÅ¾ainÄ—je.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Permanento formulÄ— skiriasi nuo determinanto tik tuo, kad viduryje yra pliusas.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "ApskaiÄiuokite $1 \\cdot 1 + 1 \\cdot 1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Rezultatas yra sveikas skaiÄius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "FormulÄ—: $\\text{per}(A) = a_{11} a_{22} + a_{12} a_{21}$."
+        },
+        {
+          "text": "$1 \\cdot 1 + 1 \\cdot 1 = 1 + 1 = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-31-method-1",
+          "title": "Tiesioginis skaiÄiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "SkaiÄiavimas",
+              "action": "Sudedame sandaugas.",
+              "reason": "Permanento apibrÄ—Å¾imas.",
+              "result": "2",
+              "latex": "1 \\times 1 + 1 \\times 1 = 2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-31-trap-1",
+          "title": "Painiojimas su determinantu",
+          "wrongMove": "Mokinys atima narius ir gauna 0.",
+          "whyTempting": "Determinantas yra daug populiaresnis.",
+          "correction": "Permanentui visos sandaugos imamos su teigiamu Å¾enklu.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l permanentÄ… skaiÄiuoti yra sunkiau nei determinantÄ… didelÄ—ms matricoms?",
+        "Kokia yra van der Vardeno hipotezÄ— apie dvigubai stochastines matricas?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-32",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Haleso-DÅ¾iueto (Hales-Jewett) teorema teigia, kad bet kokiame pakankamai dideliame hiperkube, kurio taÅ¡kai nuspalvinti baigtiniu spalvÅ³ skaiÄiumi, egzistuoja tam tikra linija. Kaip vadinama tokia linija?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "monochromatinÄ— linija"
+      },
+      "answerText": "monochromatinÄ— linija",
+      "coreIdea": {
+        "title": "Ramzio teorija",
+        "text": "Tai vienas stipriausiÅ³ Ramzio teorijos rezultatÅ³. Teiginys garantuoja vienos spalvos darinio egzistavimÄ…."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "ramsey-theory"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-lovasz"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite apie spalvÅ³ vienodumÄ….",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Viena spalva graikiÅ¡kai â€“ monochromatinÄ—.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tai linija, kurios visi taÅ¡kai yra tos paÄios spalvos.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atsakymas â€“ monochromatinÄ— linija.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Teorema garantuoja linijÄ…, kurios visi taÅ¡kai nuspalvinti viena spalva."
+        },
+        {
+          "text": "Tai vadinama monochromatine linija."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-32-method-1",
+          "title": "Terminologija",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Ä®vardijimas",
+              "action": "Nurodome terminÄ….",
+              "reason": "Teoremos iÅ¡vada.",
+              "result": "monochromatinÄ— linija",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "monochromatinÄ— linija"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-32-trap-1",
+          "title": "Sutapatinimas su Van der Vardeno teorema",
+          "wrongMove": "Manoma, kad tai tiesiog Van der Vardeno teorema.",
+          "whyTempting": "Hales-Jewett yra Van der Vardeno teoremos apibendrinimas.",
+          "correction": "Nors jos susijusios, Hales-Jewett kalba apie struktÅ«ras hiperkubuose (simboliÅ³ sekas), o ne tik skaiÄiÅ³ progresijas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Å¡iÄ… teoremÄ… pritaikyti Å¾aidimui 'kryÅ¾iukai-nuliukai' aukÅ¡tesnÄ—se dimensijose?",
+        "KodÄ—l Å¡i teorema vadinama 'kombinatoriniu Å¡edevru'?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-33",
+      "topicId": "olimpiada-11",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Taikant Lovaso lokaliÄ…jÄ… lemÄ… Ä¯vykiams $A_i$, kuriÅ³ tikimybÄ— $P(A_i) \\le p$ ir kiekvienas priklauso nuo daugiausiai $d=2$ kitÅ³ Ä¯vykiÅ³. Jei $p = 0.05$, ar galime teigti, kad su teigiama tikimybe joks Ä¯vykis neÄ¯vyks? Naudokite pakankamÄ…jÄ… sÄ…lygÄ… $ep(d+1) \\le 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taip"
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Lemos tikrinimas",
+        "text": "Reikia Ä¯statyti reikÅ¡mes Ä¯ formulÄ™ $e \\cdot p \\cdot (d+1)$ ir patikrinti, ar rezultatas nevirÅ¡ija 1."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "probabilistic-method",
+        "lovasz-local-lemma"
+      ],
+      "prerequisiteTopicIds": [
+        "duomenu-charakteristikos-ir-tikimybe-6"
+      ],
+      "prerequisiteConceptIds": [
+        "tikimybe",
+        "olimpiada-11-concept-lovasz"
+      ],
+      "expectedMethodIds": [
+        "lovasz-condition-check"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-lovasz"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ä®statykite $e \\approx 2.718, p = 0.05, d = 2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "SkaiÄiuojame: $2.718 \\cdot 0.05 \\cdot (2+1)$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$0.05 \\cdot 3 = 0.15$. Padauginkite iÅ¡ $e$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$0.15 \\cdot 2.718$ yra apie $0.407$. Ar tai maÅ¾iau uÅ¾ 1?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "SÄ…lyga: $ep(d+1) \\le 1$."
+        },
+        {
+          "text": "$e \\cdot 0.05 \\cdot (2+1) = 3e \\cdot 0.05 = 0.15e$."
+        },
+        {
+          "text": "Kadangi $e < 3$, tai $0.15e < 0.45$."
+        },
+        {
+          "text": "$0.45 \\le 1$, vadinasi sÄ…lyga tenkinama."
+        },
+        {
+          "text": "IÅ¡vada: Taip, teigiama tikimybÄ— garantuota."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-33-method-1",
+          "title": "SÄ…lygos skaiÄiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "ApskaiÄiavimas",
+              "action": "Dauginame ep(d+1).",
+              "reason": "Tikriname lemos prielaidÄ….",
+              "result": "0.407 <= 1",
+              "latex": "2.718 \\times 0.05 \\times 3 \\approx 0.407"
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-33-trap-1",
+          "title": "e vertÄ—s pamirÅ¡imas",
+          "wrongMove": "Mokinys neÅ¾ino, kas yra 'e' arba naudoja jÄ¯ kaip neÅ¾inomÄ…jÄ¯.",
+          "whyTempting": "Tai matematinÄ— konstanta, nebÅ«tinai Å¾inoma visiems.",
+          "correction": "Oilerio skaiÄius $e \\approx 2.718$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "KodÄ—l Å¡i lema yra 'lokali'? KÄ… tai reiÅ¡kia Ä¯vykiÅ³ nepriklausomumui?",
+        "Kas nutiktÅ³, jei kiekvienas Ä¯vykis priklausytÅ³ nuo visÅ³ kitÅ³?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-11-test-challenge",
+      "title": "11 klasÄ—s olimpiadinis iÅ¡Å¡Å«kis",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-11"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-11-01",
+        "ex-olimpiada-11-04",
+        "ex-olimpiada-11-07",
+        "ex-olimpiada-11-10",
+        "ex-olimpiada-11-12",
+        "ex-olimpiada-11-14",
+        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-19",
+        "ex-olimpiada-11-24",
+        "ex-olimpiada-11-32"
+      ],
+      "masteryWeight": 2.0
+    }
+  ],
+  "srsCards": []
+}
+

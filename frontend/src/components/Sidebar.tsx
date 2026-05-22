@@ -2,14 +2,16 @@ import React from 'react';
 import { State } from '../types';
 import { getDueSrsCards, recommendation } from '../systems';
 import { inferStartMode, START_MODE_LABELS } from '../startModes';
+import { exercises, topics } from '../content';
 
 interface SidebarProps {
   state: State;
   currentPage: string;
+  currentId?: string;
   navigate: (page: string, id?: string) => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, currentId, navigate }) => {
   const due = getDueSrsCards(state.srsCards, state.preferences?.srs).length;
   const solved = new Set(state.attempts.filter((a) => a.correct).map((a) => a.exerciseId)).size;
 
@@ -20,6 +22,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
 
   const rec = recommendation(state);
   const mode = inferStartMode(state.profile);
+  const olympiadTopics = Object.values(topics)
+    .filter((topic) => topic.level === 'olympiad')
+    .sort((a, b) => a.grade - b.grade);
+  const currentOlympiadId = currentId || (topics[state.activeTopicId]?.level === 'olympiad' ? state.activeTopicId : '');
 
   const navItems = [
     { page: 'dashboard', label: 'Apžvalga', icon: '⧉' },
@@ -63,6 +69,48 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, navigate }
           );
         })}
       </nav>
+
+      {olympiadTopics.length > 0 && (
+        <section className="side-card olympiad-side-card" aria-label="Olimpiadiniai uždaviniai">
+          <div className="side-card-head">
+            <span className="eyebrow">Olimpiada</span>
+            <strong>Uždaviniai pagal klasę</strong>
+          </div>
+          <div className="olympiad-grade-links">
+            {olympiadTopics.map((topic) => {
+              const topicExercises = exercises.filter((exercise) => exercise.topicId === topic.id && exercise.level === 'olympiad');
+              const mastery = state.mastery[topic.id];
+              const progress = mastery?.olympiadValue ?? 0;
+              const isActive = currentPage === 'practice' && currentOlympiadId === topic.id;
+              return (
+                <button
+                  key={topic.id}
+                  type="button"
+                  className={isActive ? 'active' : ''}
+                  onClick={() => navigate('practice', topic.id)}
+                  title={`${topic.grade} klasės olimpiadiniai uždaviniai`}
+                >
+                  <span>{topic.grade}</span>
+                  <small>{topicExercises.length} užd.</small>
+                  <i style={{ '--p': progress } as React.CSSProperties}></i>
+                </button>
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            className="olympiad-side-cta"
+            onClick={() => {
+              const profileGrade = state.profile.grade || 9;
+              const directId = `olimpiada-${String(profileGrade).padStart(2, '0')}`;
+              const fallback = olympiadTopics.find((topic) => topic.grade >= profileGrade) || olympiadTopics[0];
+              navigate('practice', topics[directId] ? directId : fallback.id);
+            }}
+          >
+            Spręsti artimiausią lygį
+          </button>
+        </section>
+      )}
 
       <div className="side-card">
         <span className="eyebrow">Pradžios režimas</span>

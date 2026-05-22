@@ -1,0 +1,1765 @@
+﻿          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-c0b5286d",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskritime nubrÄ—Å¾tas kampas $\\angle ABC$ yra Ä¯brÄ—Å¾tinis, o kampas $\\angle AOC$ yra centrinis, kur $O$ â€“ apskritimo centras. TaÅ¡kai $B$ ir $O$ yra skirtingose tiesÄ—s $AC$ pusÄ—se. Jei Ä¯brÄ—Å¾tinis kampas lygus $55^\\circ$, raskite iÅ¡kilo centrinio kampo $\\angle AOC$ dydÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kampas $\\angle AOC = 110^\\circ$."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "Ä®brÄ—Å¾tinio ir centrinio kampÅ³ ryÅ¡ys",
+        "text": "Ä®brÄ—Å¾tinis kampas yra lygus pusei centrinio kampo, besiremianÄio Ä¯ tÄ… patÄ¯ lankÄ…."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ar centrinis kampas yra didesnis, ar maÅ¾esnis uÅ¾ Ä¯brÄ—Å¾tinÄ¯ kampÄ…?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi jie remiasi Ä¯ tÄ… patÄ¯ lankÄ… $AC$, tai $\\angle AOC = 2 \\angle ABC$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padauginkite Ä¯brÄ—Å¾tinÄ¯ kampÄ… iÅ¡ 2.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite: $2 \\times 55^\\circ$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi Ä¯brÄ—Å¾tinis kampas $\\angle ABC$ ir centrinis kampas $\\angle AOC$ remiasi Ä¯ tÄ… patÄ¯ lankÄ… $AC$ ir $B$ yra kitoje lanko pusÄ—je, galioja teiginys: $\\angle AOC = 2 \\angle ABC$."
+        },
+        {
+          "text": "Ä®statome Å¾inomÄ… reikÅ¡mÄ™ $\\angle ABC = 55^\\circ$."
+        },
+        {
+          "text": "ApskaiÄiuojame: $\\angle AOC = 2 \\times 55^\\circ = 110^\\circ$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-c0b5286d-method-1",
+          "title": "Apskritimo kampÅ³ teoremos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lanko identifikavimas",
+              "action": "Nustatome, Ä¯ kurÄ¯ lankÄ… remiasi abu kampai.",
+              "reason": "Teorema apie kampÅ³ ryÅ¡Ä¯ galioja tik jei jie remiasi Ä¯ tÄ… patÄ¯ lankÄ….",
+              "result": "Abu kampai remiasi Ä¯ maÅ¾Ä…jÄ¯ lankÄ… AC.",
+              "latex": ""
+            },
+            {
+              "title": "RyÅ¡io formulavimas",
+              "action": "Pritaikome centrinio kampo savybÄ™.",
+              "reason": "Centrinis kampas yra dvigubai didesnis uÅ¾ bet kurÄ¯ Ä¯ jÄ¯ besiremiantÄ¯ Ä¯brÄ—Å¾tinÄ¯ kampÄ….",
+              "result": "AOC = 2 * ABC.",
+              "latex": "\angle AOC = 2\angle ABC"
+            },
+            {
+              "title": "Skaitinis rezultatas",
+              "action": "Atliekame daugybos veiksmÄ….",
+              "reason": "ABC reikÅ¡mÄ— duota sÄ…lygoje (55 laipsniai).",
+              "result": "110 laipsniÅ³.",
+              "latex": "2 \cdot 55^\circ = 110^\circ"
+            }
+          ],
+          "finalAnswer": "Kampas $\\angle AOC = 110^\\circ$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-c0b5286d-trap-1",
+          "title": "KampÅ³ sukeitimas",
+          "type": "mistake",
+          "wrongMove": "Teigti, kad centrinis kampas lygus pusei Ä¯brÄ—Å¾tinio (AOC = 55 / 2).",
+          "whyTempting": "Painiojama, kuris kampas yra didesnis - centrinis ar Ä¯brÄ—Å¾tinis.",
+          "whyItHappens": "Atminties klaida dÄ—l santykio 1/2 krypties.",
+          "wrongPattern": "\angle AOC = \frac{1}{2}\angle ABC",
+          "correction": "Centrinis kampas visada yra didesnis (arba lygus), nes jo virÅ¡Å«nÄ— yra apskritimo centre, o Ä¯brÄ—Å¾tinio - ant lanko.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-c0b5286d-trap-2",
+          "title": "IÅ¡kilo vs Ä¯linko kampo klaida",
+          "type": "mistake",
+          "wrongMove": "ApskaiÄiuoti Ä¯linkÄ…jÄ¯ centrinÄ¯ kampÄ… (360 - 110 = 250).",
+          "whyTempting": "UÅ¾davinyje gali bÅ«ti neaiÅ¡ku, apie kurÄ¯ AOC kampÄ… klausiama.",
+          "whyItHappens": "Du taÅ¡kai apskritime visada apibrÄ—Å¾ia du centrinius kampus, kuriÅ³ suma 360.",
+          "wrongPattern": "\angle AOC = 250^\circ",
+          "correction": "Ä®brÄ—Å¾tinis kampas, besiremiantis Ä¯ maÅ¾Ä…jÄ¯ lankÄ…, atitinka iÅ¡kilÄ…jÄ¯ (maÅ¾esnÄ¯ uÅ¾ 180) centrinÄ¯ kampÄ….",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-c0b5286d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra Ä¯brÄ—Å¾tinio ir centrinio kampÅ³ santykis?",
+          "back": "Ä®brÄ—Å¾tinis kampas lygus pusei centrinio kampo, besiremianÄio Ä¯ tÄ… patÄ¯ lankÄ…: $\\angle inscribed = \\frac{1}{2} \\angle central$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-556b0ef2",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "TiesÄ— $AB$ lieÄia apskritimÄ… su centru $O$ taÅ¡ke $T$. Atkarpa $OA$ kerta apskritimÄ… taÅ¡ke $M$, o $OA = 13$ cm, $AT = 12$ cm. Raskite apskritimo spindulÄ¯.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskritimo spindulys yra 5 cm."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "LiestinÄ—s ir spindulio statmenumas",
+        "text": "Apskritimo spindulys, nubrÄ—Å¾tas Ä¯ lietimosi taÅ¡kÄ…, yra statmenas liestinei. Tai leidÅ¾ia sudaryti statÅ³jÄ¯ trikampÄ¯."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "NubrÄ—Å¾kite spindulÄ¯ $OT$. Koks kampas yra tarp $OT$ ir liestinÄ—s $AB$?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Trikampis $\\triangle OTA$ yra status su staÄiuoju kampu virÅ¡Å«nÄ—je $T$. Spindulys $OT$ yra vienas iÅ¡ statiniÅ³.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite Pitagoro teoremÄ… trikampiui $\\triangle OTA$: $OT^2 + AT^2 = OA^2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Ä®statykite Å¾inomas vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$. Raskite $OT$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "NubrÄ—Å¾iame spindulÄ¯ $OT$ Ä¯ lietimosi taÅ¡kÄ… $T$. Kampas $\\angle OTA = 90^\\circ$."
+        },
+        {
+          "text": "Trikampiui $\\triangle OTA$ taikome Pitagoro teoremÄ…: $OT^2 + AT^2 = OA^2$."
+        },
+        {
+          "text": "Ä®statome vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$."
+        },
+        {
+          "text": "$OT^2 = 25 \\implies OT = 5$ cm. Spindulys lygus 5 cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-556b0ef2-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Apskritimo spindulys yra 5 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-556b0ef2-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad spindulys lygus $OA - AT = 13 - 12 = 1$ cm.",
+          "whyTempting": "KraÅ¡tiniÅ³ ilgiai neteisingai atimami tiesiogiai, neatsiÅ¾velgiant Ä¯ tai, kad jie sudaro trikampÄ¯.",
+          "whyItHappens": "KraÅ¡tiniÅ³ ilgiai neteisingai atimami tiesiogiai, neatsiÅ¾velgiant Ä¯ tai, kad jie sudaro trikampÄ¯.",
+          "wrongPattern": "Manyti, kad spindulys lygus $OA - AT = 13 - 12 = 1$ cm.",
+          "correction": "Atkarpos nesutampa tiesÄ—je. Reikia naudoti Pitagoro teoremÄ… staÄiajame trikampyje.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-556b0ef2-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks kampas susidaro tarp apskritimo spindulio ir liestinÄ—s lietimosi taÅ¡ke?",
+          "back": "Kampas visada yra status ($90^\\circ$).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-56dd662d",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Ritino spindulys yra $3$ cm, o jo aukÅ¡tinÄ— lygi $5$ cm. ApskaiÄiuokite Å¡io ritinio viso pavirÅ¡iaus plotÄ….",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ritinio pavirÅ¡iaus plotas lygus $48\\pi$ $\\text{cm}^2$."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "Ritinio pavirÅ¡iaus ploto formulÄ—",
+        "text": "Ritinio viso pavirÅ¡iaus plotas susideda iÅ¡ dviejÅ³ pagrindÅ³ plotÅ³ (apskritimÅ³) ir Å¡oninio pavirÅ¡iaus ploto (staÄiakampio)."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "UÅ¾raÅ¡ykite ritinio viso pavirÅ¡iaus ploto formulÄ™.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "FormulÄ—: $S = 2\\pi r^2 + 2\\pi r h$. Å½inome $r=3$ ir $h=5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite spindulio ir aukÅ¡tinÄ—s vertes Ä¯ formulÄ™.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite: $S = 2\\pi (3^2) + 2\\pi (3)(5) = 18\\pi + 30\\pi$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame ritinio pavirÅ¡iaus ploto formulÄ™ $S = 2\\pi r^2 + 2\\pi r h$."
+        },
+        {
+          "text": "ApskaiÄiuojame dviejÅ³ pagrindÅ³ plotÄ…: $2 \\times \\pi \\times 3^2 = 18\\pi$ $\\text{cm}^2$."
+        },
+        {
+          "text": "ApskaiÄiuojame Å¡oninio pavirÅ¡iaus plotÄ…: $2 \\times  \\pi \\times 3 \\times 5 = 30\\pi$ $\\text{cm}^2$."
+        },
+        {
+          "text": "Sudedame abi dalis: $S = 18\\pi + 30\\pi = 48\\pi$ $\\text{cm}^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-56dd662d-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Ritinio pavirÅ¡iaus plotas lygus $48\\pi$ $\\text{cm}^2$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-56dd662d-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "PamirÅ¡ti padauginti pagrindo plotÄ… iÅ¡ 2.",
+          "whyTempting": "ApskaiÄiuojamas tik vieno apskritimo plotas.",
+          "whyItHappens": "ApskaiÄiuojamas tik vieno apskritimo plotas.",
+          "wrongPattern": "PamirÅ¡ti padauginti pagrindo plotÄ… iÅ¡ 2.",
+          "correction": "Ritinys turi du pagrindus (virÅ¡utinÄ¯ ir apatinÄ¯), todÄ—l formulÄ—je privalo bÅ«ti $2\\pi r^2$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-56dd662d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra ritinio viso pavirÅ¡iaus ploto formulÄ—?",
+          "back": "$S = 2\\pi r^2 + 2\\pi r h$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-5545558b",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite tiesÄ—s, einanÄios per taÅ¡kus $A(2, 5)$ ir $B(4, 11)$, lygtÄ¯ pavidalu $y = mx + b$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "TiesÄ—s lygtis yra $y = 3x - 1$."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "TiesÄ—s krypties koeficientas",
+        "text": "Pirmiausia apskaiÄiuokite krypties koeficientÄ… $m = \\frac{y_2 - y_1}{x_2 - x_1}$, o tada raskite laisvÄ…jÄ¯ narÄ¯ $b$ Ä¯statÄ™ vieno iÅ¡ taÅ¡kÅ³ koordinates."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kaip apskaiÄiuojamas tiesÄ—s krypties koeficientas $m$ per du taÅ¡kus?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$. TiesÄ—s lygtis yra $y = 3x + b$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite taÅ¡ko $A(2, 5)$ koordinates Ä¯ lygtÄ¯: $5 = 3(2) + b$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "SprendÅ¾iame: $5 = 6 + b \\implies b = -1$. UÅ¾raÅ¡ykite tiesÄ—s lygtÄ¯.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "ApskaiÄiuojame tiesÄ—s krypties koeficientÄ… $m$: $m = \\frac{11 - 5}{4 - 2} = 3$."
+        },
+        {
+          "text": "UÅ¾raÅ¡ome tiesÄ—s lygtÄ¯ su neÅ¾inomu $b$: $y = 3x + b$."
+        },
+        {
+          "text": "Ä®statome taÅ¡ko $A(2, 5)$ koordinates: $5 = 3(2) + b$."
+        },
+        {
+          "text": "ApskaiÄiuojame laisvÄ…jÄ¯ narÄ¯: $b = 5 - 6 = -1$. TiesÄ—s lygtis: $y = 3x - 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-5545558b-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "TiesÄ—s lygtis yra $y = 3x - 1$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-5545558b-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Supainioti vietomis skaitiklÄ¯ ir vardiklÄ¯ skaiÄiuojant koeficientÄ…: $m = \\frac{x_2-x_1}{y_2-y_1}$.",
+          "whyTempting": "Skubant sumaiÅ¡omos abscisiÅ³ ir ordinaÄiÅ³ pokyÄiÅ³ vietos.",
+          "whyItHappens": "Skubant sumaiÅ¡omos abscisiÅ³ ir ordinaÄiÅ³ pokyÄiÅ³ vietos.",
+          "wrongPattern": "Supainioti vietomis skaitiklÄ¯ ir vardiklÄ¯ skaiÄiuojant koeficientÄ…: $m = \\frac{x_2-x_1}{y_2-y_1}$.",
+          "correction": "Koeficientas $m$ parodo ordinaÄiÅ³ pokytÄ¯ (aukÅ¡tÄ¯) padalintÄ… iÅ¡ abscisiÅ³ pokyÄio (ploÄio): $\\Delta y / \\Delta x$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-5545558b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip randamas tiesÄ—s krypties koeficientas per du taÅ¡kus?",
+          "back": "$m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-eb9f63ec",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "ApskaiÄiuokite atstumÄ… tarp taÅ¡kÅ³ $P(-1, 3)$ and $Q(5, -5)$ koordinaÄiÅ³ plokÅ¡tumoje.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atstumas lygus 10."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "Atstumo tarp dviejÅ³ taÅ¡kÅ³ formulÄ—",
+        "text": "Pritaikykite atstumo formulÄ™ koordinaÄiÅ³ plokÅ¡tumoje, kuri iÅ¡ esmÄ—s yra Pitagoro teorema."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "UÅ¾raÅ¡ykite atstumo formulÄ™ koordinaÄiÅ³ plokÅ¡tumoje.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "FormulÄ—: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ä®statykite koordinates: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite skirtumÅ³ kvadratus: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame atstumo formulÄ™: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$."
+        },
+        {
+          "text": "Ä®statome koordinates $P(-1, 3)$ ir $Q(5, -5)$: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$."
+        },
+        {
+          "text": "ApskaiÄiuojame: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100}$."
+        },
+        {
+          "text": "IÅ¡traukiame Å¡aknÄ¯: $d = 10$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-eb9f63ec-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Atstumas lygus 10."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-eb9f63ec-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Padaryti Å¾enklo klaidÄ… skliausteliuose, pvz. skaiÄiuoti $5 - 1 = 4$ vietoje $5 - (-1) = 6$.",
+          "whyTempting": "Atimant neigiamÄ… skaiÄiÅ³ pamirÅ¡tama pakeisti Å¾enklÄ… Ä¯ pliusÄ….",
+          "whyItHappens": "Atimant neigiamÄ… skaiÄiÅ³ pamirÅ¡tama pakeisti Å¾enklÄ… Ä¯ pliusÄ….",
+          "wrongPattern": "Padaryti Å¾enklo klaidÄ… skliausteliuose, pvz. skaiÄiuoti $5 - 1 = 4$ vietoje $5 - (-1) = 6$.",
+          "correction": "Atimtis iÅ¡ neigiamo skaiÄiaus virsta sudÄ—timi: $x_2 - x_1 = 5 - (-1) = 5 + 1 = 6$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-eb9f63ec-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra atstumo tarp dviejÅ³ taÅ¡kÅ³ formulÄ—?",
+          "back": "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-6e5da0fd",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "TaÅ¡kas $A(3, -4)$ atspindimas koordinaÄiÅ³ pradÅ¾ios taÅ¡ko $O(0, 0)$ atÅ¾vilgiu, o gautas taÅ¡kas pastumiamas per vektoriÅ³ $\\vec{v} = (-2, 5)$. Raskite galutines taÅ¡ko koordinates.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "GalutinÄ—s taÅ¡ko koordinatÄ—s yra $(-5, 9)$."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "KoordinaÄiÅ³ transformacijos",
+        "text": "Simetrija koordinaÄiÅ³ pradÅ¾ios atÅ¾vilgiu pakeiÄia abiejÅ³ koordinaÄiÅ³ Å¾enklus, o poslinkis prideda vektoriaus koordinates."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atlikite transformacijas po vienÄ… eilÄ—s tvarka.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atspindys $O(0,0)$ atÅ¾vilgiu taÅ¡kÄ… $(x,y)$ paverÄia $(-x,-y)$. TaÅ¡kas $A$ tampa $A'(-3, 4)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Poslinkis per vektoriÅ³ $\\vec{v}(a, b)$ prideda koordinates prie taÅ¡ko: $A'' = (x' + a, y' + b)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite: $A'' = (-3 + (-2), 4 + 5)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame simetrijÄ… koordinaÄiÅ³ pradÅ¾ios taÅ¡ko atÅ¾vilgiu: taÅ¡ko $A(3, -4)$ koordinatÄ—s pakeiÄia Å¾enklus, gauname $A'(-3, 4)$."
+        },
+        {
+          "text": "Atliekame poslinkÄ¯ per vektoriÅ³ $\\vec{v} = (-2, 5)$."
+        },
+        {
+          "text": "Prie taÅ¡ko $A'$ koordinaÄiÅ³ pridedame vektoriaus koordinates: $x'' = -3 + (-2) = -5$, $y'' = 4 + 5 = 9$. Galutinis taÅ¡kas yra $(-5, 9)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-6e5da0fd-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "GalutinÄ—s taÅ¡ko koordinatÄ—s yra $(-5, 9)$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-6e5da0fd-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Atspindint pakeisti tik vienos koordinatÄ—s Å¾enklÄ… (pvz., gauti $(-3, -4)$).",
+          "whyTempting": "Supainiojama simetrija koordinaÄiÅ³ pradÅ¾ios atÅ¾vilgiu su simetrija aÅ¡iÅ³ atÅ¾vilgiu.",
+          "whyItHappens": "Supainiojama simetrija koordinaÄiÅ³ pradÅ¾ios atÅ¾vilgiu su simetrija aÅ¡iÅ³ atÅ¾vilgiu.",
+          "wrongPattern": "Atspindint pakeisti tik vienos koordinatÄ—s Å¾enklÄ… (pvz., gauti $(-3, -4)$).",
+          "correction": "Simetrija taÅ¡ko atÅ¾vilgiu pakeiÄia abi koordinates: $(x, y) \\to (-x, -y)$. Simetrija aÅ¡iÅ³ atÅ¾vilgiu pakeiÄia tik vienÄ….",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-6e5da0fd-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip keiÄiasi taÅ¡ko koordinatÄ—s jÄ¯ atspindint koordinaÄiÅ³ pradÅ¾ios atÅ¾vilgiu?",
+          "back": "Abi koordinatÄ—s pakeiÄia savo Å¾enklus: $(x, y) \\to (-x, -y)$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-e2f6d6a5",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek skirtingÅ³ Å¾odÅ¾iÅ³ (nebÅ«tinai prasmingÅ³) galima sudaryti sukeiÄiant raides Å¾odyje â€žMATEMATIKAâ€œ?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Galima sudaryti 151200 Å¾odÅ¾iÅ³."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "KÄ—liniai su pasikartojimais",
+        "text": "Naudokite kÄ—liniÅ³ su pasikartojimais formulÄ™, kadangi kai kurios raidÄ—s Å¾odyje kartojasi."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "SuskaiÄiuokite bendrÄ… raidÅ¾iÅ³ skaiÄiÅ³ Å¾odyje.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Å½odyje yra 10 raidÅ¾iÅ³: M kartojasi 2 kartus, A â€“ 3 kartus, T â€“ 2 kartus, E â€“ 1, I â€“ 1, K â€“ 1.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "FormulÄ—: $P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n=10$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite: $P = \\frac{10!}{2! \\cdot 3! \\cdot 2!}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "SuskaiÄiuojame raidÅ¾iÅ³ daÅ¾nius: viso 10 raidÅ¾iÅ³. M kartojasi 2 kartus, A - 3, T - 2, o E, I, K po 1 kartÄ…."
+        },
+        {
+          "text": "Taikome kÄ—liniÅ³ su pasikartojimais formulÄ™: $P = \\frac{10!}{2! \\times 3! \\times 2! \\times 1! \\times 1! \\times 1!}$."
+        },
+        {
+          "text": "ApskaiÄiuojame: $10! = 3628800$, daliklis yra $2 \\times 6 \\times 2 = 24$."
+        },
+        {
+          "text": "Padalijame: $\\frac{3628800}{24} = 151200$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Galima sudaryti 151200 Å¾odÅ¾iÅ³."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "SkaiÄiuoti paprastus kÄ—linius be pasikartojimÅ³: $10! = 3628800$.",
+          "whyTempting": "Manoma, kad visos raidÄ—s yra skirtingos.",
+          "whyItHappens": "Manoma, kad visos raidÄ—s yra skirtingos.",
+          "wrongPattern": "SkaiÄiuoti paprastus kÄ—linius be pasikartojimÅ³: $10! = 3628800$.",
+          "correction": "Sukeitus dvi vienodas raides (pvz. A), Å¾odis nepasikeiÄia, todÄ—l turime padalyti iÅ¡ pasikartojanÄiÅ³ raidÅ¾iÅ³ kÄ—liniÅ³ skaiÄiaus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra kÄ—liniÅ³ su pasikartojimais formulÄ—?",
+          "back": "$P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n$ - bendras elementÅ³ skaiÄius, o $n_i$ - pasikartojanÄiÅ³ elementÅ³ kiekiai.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-378e23f6",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite Paskalio trikampio 6-osios eilutÄ—s (laikant 0-inÄ™ eilutÄ™ ta, kuri atitinka $(a+b)^0 = 1$) didÅ¾iausiÄ… skaiÄiÅ³.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "DidÅ¾iausias skaiÄius yra 20."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "DeriniÅ³ koeficientÅ³ simetrija",
+        "text": "Paskalio trikampio $n$-tosios eilutÄ—s koeficientai yra deriniai $\\binom{n}{k}$. DidÅ¾iausia reikÅ¡mÄ— pasiekiama eilutÄ—s viduryje."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "UÅ¾raÅ¡ykite 6-osios eilutÄ—s koeficientus kaip derinius.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Koeficientai atitinka $\\binom{6}{k}$ reikÅ¡mes, kur $k=0, 1, 2, 3, 4, 5, 6$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "ApskaiÄiuokite derinius: $\\binom{6}{0}=1$, $\\binom{6}{1}=6$, $\\binom{6}{2}=15$, $\\binom{6}{3}=20$ ir t. t.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi reikÅ¡mÄ—s auga iki vidurio ir po to simetriÅ¡kai maÅ¾Ä—ja, didÅ¾iausia yra vidurinÄ— reikÅ¡mÄ— $\\binom{6}{3}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Paskalio trikampio 6-osios eilutÄ—s koeficientai yra $\\binom{6}{k}$ reikÅ¡mÄ—s: $1, 6, 15, 20, 15, 6, 1$."
+        },
+        {
+          "text": "ReikÅ¡mÄ—s yra simetriÅ¡kos ir didÄ—ja link centro."
+        },
+        {
+          "text": "DidÅ¾iausias skaiÄius yra vidurinis narys $\\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "DidÅ¾iausias skaiÄius yra 20."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad didÅ¾iausias skaiÄius yra 6-oje eilutÄ—je yra 15 (skaiÄiuojant nuo 5-os eilutÄ—s).",
+          "whyTempting": "Neteisingai pradedama skaiÄiuoti eilutÄ— nuo 1, o ne nuo 0.",
+          "whyItHappens": "Neteisingai pradedama skaiÄiuoti eilutÄ— nuo 1, o ne nuo 0.",
+          "wrongPattern": "Manyti, kad didÅ¾iausias skaiÄius yra 6-oje eilutÄ—je yra 15 (skaiÄiuojant nuo 5-os eilutÄ—s).",
+          "correction": "Pirmoji Paskalio trikampio virÅ¡Å«nÄ— (tik vienetas) laikoma 0-ine eilute. 6-oji eilutÄ— turi 7 skaiÄius.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kur pasiekiamas didÅ¾iausias Paskalio trikampio eilutÄ—s skaiÄius?",
+          "back": "EilutÄ—s viduryje (jei eilutÄ— turi nelyginÄ¯ nariÅ³ skaiÄiÅ³, tai vidurinis; jei lyginÄ¯ â€“ du viduriniai yra lygÅ«s ir didÅ¾iausi).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-efb52880",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite reiÅ¡kinio $(2x - y)^4$ skleistinÄ—s nariÅ³ koeficientÅ³ sumÄ….",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "KoeficientÅ³ suma lygi 1."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "KoeficientÅ³ sumos nustatymas",
+        "text": "Norint rasti bet kurio daugianario skleistinÄ—s koeficientÅ³ sumÄ…, pakanka Ä¯statyti kintamuosius lygius 1."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite: kas nutinka su kintamaisiais $x$ ir $y$ skleistinÄ—je, kai jie abu tampa lygÅ«s 1?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $x=1$ ir $y=1$, tai reiÅ¡kinys $(2x - y)^4$ tampa $(2(1) - 1)^4$, o skleistinÄ—je lieka tik koeficientÅ³ suma.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nereikia pilnai iÅ¡skleisti viso binomo.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite skaiÄiavimÄ…: $(2 - 1)^4 = 1^4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bet kurio daugianario skleistinÄ—s koeficientÅ³ sumÄ… galima rasti Ä¯staÄius visus kintamuosius lygius 1."
+        },
+        {
+          "text": "Ä®statome $x = 1$ ir $y = 1$ Ä¯ pradinÄ¯ reiÅ¡kinÄ¯ $(2x - y)^4$."
+        },
+        {
+          "text": "ApskaiÄiuojame reikÅ¡mÄ™: $(2 \\times 1 - 1)^4 = (2 - 1)^4 = 1^4 = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-efb52880-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "KoeficientÅ³ suma lygi 1."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-efb52880-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Pilnai iÅ¡skleisti $(2x-y)^4$ naudojant binomo formulÄ™, o po to sudÄ—ti gautus skaiÄius.",
+          "whyTempting": "Tai tiesioginis ir mechaniÅ¡kas kelias, taÄiau jame lengva padaryti aritmetiniÅ³ klaidÅ³.",
+          "whyItHappens": "Tai tiesioginis ir mechaniÅ¡kas kelias, taÄiau jame lengva padaryti aritmetiniÅ³ klaidÅ³.",
+          "wrongPattern": "Pilnai iÅ¡skleisti $(2x-y)^4$ naudojant binomo formulÄ™, o po to sudÄ—ti gautus skaiÄius.",
+          "correction": "Metodas Ä¯statyti 1 yra kur kas greitesnis ir eliminuoja visas skaiÄiavimo klaidas.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-efb52880-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti daugianario skleistinÄ—s koeficientÅ³ sumÄ…?",
+          "back": "Visus kintamuosius prilyginame 1 ir apskaiÄiuojame pradinio reiÅ¡kinio reikÅ¡mÄ™.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-6c338d21",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "StalÄiuje yra 10 porÅ³ juodÅ³ ir 10 porÅ³ rudÅ³ kojiniÅ³ (visos kojinÄ—s sumaiÅ¡ytos). Kiek maÅ¾iausiai kojiniÅ³ reikia iÅ¡traukti neÅ¾iÅ«rint, kad garantuotume turintys bent vienÄ… vienodos spalvos kojiniÅ³ porÄ…?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Reikia iÅ¡traukti maÅ¾iausiai 3 kojines."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "DirichlÄ— principo taikymas",
+        "text": "Naudokite DirichlÄ— principÄ…. Turime 2 spalvas (narvelius), todÄ—l bet koks didesnis iÅ¡trauktÅ³ kojiniÅ³ kiekis uÅ¾tikrina pasikartojimÄ…."
+      },
+      "strategyTags": [
+        "introductory",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek iÅ¡ viso yra skirtingÅ³ kojiniÅ³ spalvÅ³?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Spalvos yra dvi: juoda ir ruda. Tai mÅ«sÅ³ â€žnarveliaiâ€œ.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "KojinÄ—s yra â€žbalandÅ¾iaiâ€œ. Pagal DirichlÄ— principÄ…, kad bent du balandÅ¾iai patektÅ³ Ä¯ tÄ… patÄ¯ narvelÄ¯, reikia $n+1$ balandÅ¾iÅ³.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $n=2$, tai balandÅ¾iÅ³ skaiÄius turi bÅ«ti $2+1 = 3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime dvi spalvas (juodÄ… ir rudÄ…), kurios atitinka 2 narvelius."
+        },
+        {
+          "text": "KojinÄ—s, kurias iÅ¡traukiame, yra balandÅ¾iai."
+        },
+        {
+          "text": "Pagal DirichlÄ— principÄ…, iÅ¡traukus 3 kojines, bent dvi iÅ¡ jÅ³ bus tos paÄios spalvos, taigi sudarys vienÄ… porÄ…."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Reikia iÅ¡traukti maÅ¾iausiai 3 kojines."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad reikia iÅ¡traukti 11 kojiniÅ³, norint garantuoti porÄ….",
+          "whyTempting": "Supainiojama su uÅ¾daviniu, kur reikalaujama garantuoti KONKREÄŒIOS spalvos porÄ… (pvz., juodÅ³).",
+          "whyItHappens": "Supainiojama su uÅ¾daviniu, kur reikalaujama garantuoti KONKREÄŒIOS spalvos porÄ… (pvz., juodÅ³).",
+          "wrongPattern": "Manyti, kad reikia iÅ¡traukti 11 kojiniÅ³, norint garantuoti porÄ….",
+          "correction": "Kadangi tinka BENT VIENOS spalvos pora, pakanka 3 kojiniÅ³. 11 kojiniÅ³ reikÄ—tÅ³, jei norÄ—tume garantuoti konkreÄiÄ… spalvÄ….",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kada taikomas DirichlÄ— principas kojiniÅ³ traukimo uÅ¾daviniuose?",
+          "back": "Kai ieÅ¡kome maÅ¾iausio elementÅ³ kiekio, garantuojanÄio bent vienÄ… sutapimÄ… tarp riboto skaiÄiaus kategorijÅ³.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-1088790e",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Ä®rodykite, kad bet kuriam natÅ«raliajam skaiÄiui $n$, suma $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys Ä¯rodytas indukcijos metodu."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "MatematinÄ—s indukcijos Ä¯rodymas",
+        "text": "Patikrinkite bazÄ™ $n=1$ ir parodykite, kad jei teiginys teisingas su $k$, jis teisingas ir su $k+1$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmasis Å¾ingsnis: patikrinkite indukcijos bazÄ™, kai $n=1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "BazÄ—: $1 = \\frac{1(1+1)}{2}$, teisinga. Tarkime, kad suma galioja su $n=k$: $S_k = \\frac{k(k+1)}{2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "PridÄ—kite sekantÄ¯ narÄ¯ $k+1$ prie prielaidos sumos: $S_{k+1} = S_k + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "IÅ¡kelkite bendrÄ… daugiklÄ¯ $(k+1)$ prieÅ¡ skliaustus ir suprastinkite: $(k+1)\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Indukcijos bazÄ—: kai $n=1$, kairÄ—je turime $1$, o deÅ¡inÄ—je $\\frac{1(1+1)}{2} = 1$. LygybÄ— teisinga."
+        },
+        {
+          "text": "Indukcijos prielaida: tarkime, kad lygybÄ— teisinga, kai $n=k$, t. y. $1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$."
+        },
+        {
+          "text": "Indukcijos Å¾ingsnis: Ä¯rodysime lygybÄ™ sekanÄiam nariui $n=k+1$. Prie prielaidos pridedame naujÄ… narÄ¯: $(1 + 2 + \\dots + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$."
+        },
+        {
+          "text": "Pertvarkome reiÅ¡kinÄ¯: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. LygybÄ— Ä¯rodyta visiems $n \\ge 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-1088790e-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Teiginys Ä¯rodytas indukcijos metodu."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-1088790e-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "PamirÅ¡ti patikrinti bazinÄ¯ Å¾ingsnÄ¯ ir iÅ¡kart pereiti prie indukcijos prielaidos.",
+          "whyTempting": "Manoma, kad bazinis Å¾ingsnis yra per paprastas ir nereikÅ¡mingas.",
+          "whyItHappens": "Manoma, kad bazinis Å¾ingsnis yra per paprastas ir nereikÅ¡mingas.",
+          "wrongPattern": "PamirÅ¡ti patikrinti bazinÄ¯ Å¾ingsnÄ¯ ir iÅ¡kart pereiti prie indukcijos prielaidos.",
+          "correction": "Be indukcijos bazÄ—s Ä¯rodymas neturi pagrindo. PavyzdÅ¾iui, klaidingas teiginys $1+2+\\dots+n = 100 + \\frac{n(n+1)}{2}$ iÅ¡laikytÅ³ indukcijos Å¾ingsnÄ¯, bet neturi bazÄ—s.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-1088790e-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokie yra du pagrindiniai matematinÄ—s indukcijos Å¾ingsniai?",
+          "back": "1. Indukcijos bazÄ— (patikrinama maÅ¾iausia reikÅ¡mÄ—). 2. Indukcijos Å¾ingsnis (Ä¯rodoma, kad iÅ¡ teisingumo $k$ seka teisingumas $k+1$).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-c29d91fb",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Metami du standartiniai loÅ¡imo kauliukai. Å½inoma, kad iÅ¡kritusiÅ³ akuÄiÅ³ suma yra lygi 8. Kokia tikimybÄ—, kad bent ant vieno kauliuko iÅ¡krito 5 akutÄ—s?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "TikimybÄ— lygi 2/5 (arba 0.4)."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "SÄ…lyginÄ—s tikimybÄ—s formulÄ—",
+        "text": "SÄ…lyginÄ— tikimybÄ— $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ apriboja galimÅ³ baigÄiÅ³ aibÄ™ iki tÅ³, kurios tenkina sÄ…lygÄ… $B$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "UÅ¾raÅ¡ykite visas galimas baigtis, kuriÅ³ suma lygi 8. Tai bus nauja baigÄiÅ³ erdvÄ—.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suma lygi 8 gaunama Å¡iais atvejais: $(2,6), (3,5), (4,4), (5,3), (6,2)$. Viso yra 5 atvejai.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Keli iÅ¡ Å¡iÅ³ 5 atvejÅ³ turi bent vienÄ… penketukÄ…?",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Tinkantys atvejai yra $(3,5)$ ir $(5,3)$. Padalykite Å¡Ä¯ skaiÄiÅ³ iÅ¡ bendro galimÅ³ atvejÅ³ skaiÄiaus.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome Ä¯vykio $B$ (akuÄiÅ³ suma lygi 8) galimÅ³ baigÄiÅ³ aibÄ™: $(2,6), (3,5), (4,4), (5,3), (6,2)$. IÅ¡ viso $5$ atvejai."
+        },
+        {
+          "text": "IÅ¡ Å¡iÅ³ atvejÅ³ randame tuos, kurie tenkina Ä¯vykÄ¯ $A$ (iÅ¡krito bent vienas penketas): tai yra $(3,5)$ ir $(5,3)$. IÅ¡ viso $2$ atvejai."
+        },
+        {
+          "text": "SÄ…lyginÄ— tikimybÄ— $P(A|B) = \\frac{\\text{palankÅ«s atvejai}}{\\text{visi galimi atvejai}} = \\frac{2}{5}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "TikimybÄ— lygi 2/5 (arba 0.4)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "Dalyti iÅ¡ visos 36 baigÄiÅ³ erdvÄ—s, gaunant $2/36 = 1/18$.",
+          "whyTempting": "UÅ¾mirÅ¡tama, kad informacija apie sumÄ… 8 apriboja galimas baigtis.",
+          "whyItHappens": "UÅ¾mirÅ¡tama, kad informacija apie sumÄ… 8 apriboja galimas baigtis.",
+          "wrongPattern": "Dalyti iÅ¡ visos 36 baigÄiÅ³ erdvÄ—s, gaunant $2/36 = 1/18$.",
+          "correction": "SÄ…lyginÄ—je tikimybÄ—je daliklis yra Ä¯vykio-sÄ…lygos baigÄiÅ³ skaiÄius, o ne visÅ³ teoriÅ¡kai Ä¯manomÅ³ baigÄiÅ³ skaiÄius.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip keiÄiasi tikimybiÅ³ erdvÄ— esant sÄ…lyginei tikimybei?",
+          "back": "Ji susiaurÄ—ja nuo pradinÄ—s erdvÄ—s iki baigÄiÅ³, kurios tenkina Å¾inomÄ… sÄ…lygÄ… $B$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-27644fbd",
+      "topicId": "olimpiada-07",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Å½aidÄ—jas meta monetÄ…. Jei iÅ¡krenta herbas, jis laimi 10 eurÅ³, o jei skaiÄius â€“ pralaimi 4 eurus. Raskite vieno Å¾aidimo laimÄ—jimo matematinÄ¯ viltingumÄ….",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Matematinis viltingumas yra 3 eurai."
+      },
+      "answerText": "Ä®rodymas pateiktas sprendimo Å¾ingsniuose.",
+      "coreIdea": {
+        "title": "Matematinis viltingumas",
+        "text": "Matematinis viltingumas apskaiÄiuojamas kaip visÅ³ galimÅ³ laimÄ—jimÅ³ reikÅ¡miÅ³ ir jÅ³ tikimybiÅ³ sandaugÅ³ suma."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kokia yra tikimybÄ—, kad iÅ¡kris herbas, ir kokia tikimybÄ—, kad iÅ¡kris skaiÄius?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Abi tikimybÄ—s yra lygios $0.5$, nes moneta simetriÅ¡ka.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudauginkite laimÄ—jimÄ… iÅ¡ herbo ir pralaimÄ—jimÄ… iÅ¡ skaiÄiaus su jÅ³ tikimybÄ—mis ir sudÄ—kite.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "ApskaiÄiuokite: $E = 10 \\cdot 0.5 + (-4) \\cdot 0.5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome baigtis ir jÅ³ tikimybes: Herbas su $P=0.5$ ir laimÄ—jimu $+10$ eurÅ³; SkaiÄius su $P=0.5$ ir laimÄ—jimu $-4$ eurai."
+        },
+        {
+          "text": "Taikome matematinio viltingumo formulÄ™: $E = x_1 P_1 + x_2 P_2$."
+        },
+        {
+          "text": "$E = 10 \\times 0.5 + (-4) \\times 0.5 = 5 - 2 = 3$ eurai."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-method-1",
+          "title": "GrieÅ¾tas Ä¯rodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "AnalizÄ— ir iÅ¡vedimas",
+              "action": "Atliekame reikalingus veiksmus ir skaiÄiavimus.",
+              "reason": "Tai leidÅ¾ia nuosekliai gauti atsakymÄ….",
+              "result": "Gautas galutinis rezultatas.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Matematinis viltingumas yra 3 eurai."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-trap-1",
+          "title": "DaÅ¾na klaida",
+          "type": "mistake",
+          "wrongMove": "PridÄ—ti reikÅ¡mes nenaudojant Å¾enklÅ³: $10 \\times 0.5 + 4 \\times 0.5 = 7$.",
+          "whyTempting": "PamirÅ¡tama, kad pralaimÄ—jimas yra neigiama vertÄ—.",
+          "whyItHappens": "PamirÅ¡tama, kad pralaimÄ—jimas yra neigiama vertÄ—.",
+          "wrongPattern": "PridÄ—ti reikÅ¡mes nenaudojant Å¾enklÅ³: $10 \\times 0.5 + 4 \\times 0.5 = 7$.",
+          "correction": "Nuostoliai arba pralaimÄ—jimai visada turi turÄ—ti neigiamÄ… Å¾enklÄ… skaiÄiuojant viltingumÄ….",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias Å¡io uÅ¾davinio persilauÅ¾imo taÅ¡kas?",
+        "Kaip Å¡Ä¯ sprendimÄ… galÄ—tume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip apskaiÄiuojamas atsitiktinio dydÅ¾io matematinis viltingumas?",
+          "back": "Kaip visÅ³ galimÅ³ dydÅ¾io reikÅ¡miÅ³ ir jas atitinkanÄiÅ³ tikimybiÅ³ sandaugÅ³ suma: $E(X) = \\sum x_i P(X = x_i)$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-07-test-challenge",
+      "title": "Olimpiadinis iÅ¡Å¡Å«kis (7 klasÄ—)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-07"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-07-1db2920b",
+        "ex-olimpiada-07-3305c4d4",
+        "ex-olimpiada-07-9dc52ddd",
+        "ex-olimpiada-07-f4b5c481",
+        "ex-olimpiada-07-c98149bb",
+        "ex-olimpiada-07-a17dfa35",
+        "ex-olimpiada-07-15e75e74",
+        "ex-olimpiada-07-7e30a65c",
+        "ex-olimpiada-07-5585385b",
+        "ex-olimpiada-07-9cbe13cb"
+      ],
+      "masteryWeight": 1.5
+    }
+  ],
+  "srsCards": []
+}

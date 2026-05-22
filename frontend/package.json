@@ -4,10 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:content": "python ../scripts/build_frontend_content.py",
+    "prestart": "npm run build:content",
     "start": "vite --host 127.0.0.1",
+    "predev": "npm run build:content",
     "dev": "vite",
+    "prebuild": "npm run build:content",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "pretest": "npm run build:content",
     "test": "vitest run"
   },
   "dependencies": {

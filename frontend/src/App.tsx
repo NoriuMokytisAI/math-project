@@ -287,6 +287,7 @@ export const App: React.FC = () => {
       <Sidebar
         state={state}
         currentPage={route.page}
+        currentId={route.id}
         navigate={navigate}
       />
       <main className="main">

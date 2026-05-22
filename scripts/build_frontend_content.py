@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GEN = ROOT / "content" / "generated"
 OUT = ROOT / "frontend" / "src" / "content.generated.js"
+SPLIT_OUT = ROOT / "frontend" / "src" / "generated"
 
 
 def js(value: object) -> str:
@@ -56,6 +57,7 @@ def render_content() -> str:
     concepts = {}
     topics = {}
     exercises = []
+    exercises_by_grade = defaultdict(list)
     tests = []
     achievements = {
         "onboarded": "Pirmas žingsnis",
@@ -209,6 +211,7 @@ def render_content() -> str:
                     "hintsRaw": ex.get("hints", []),
                 })
             exercises.append(ex_obj)
+            exercises_by_grade[f"{topic['grade']:02d}"].append(ex_obj)
 
 
         for test in data.get("tests", []):
@@ -220,6 +223,22 @@ def render_content() -> str:
                 "masteryWeight": test["masteryWeight"],
             })
 
+    achievements = {
+        "onboarded": "Pirmas žingsnis",
+        "firstTheory": "Teorijos startas",
+        "firstSrs": "Atminties ratas",
+        "firstExercise": "Pirmas išspręstas",
+        "noHints": "Be užuominų",
+        "topicMastered": "Tema įveikta",
+        "testAced": "Testas be panikos",
+    }
+    goals = [
+        "Noriu sustiprinti 9 klasės matematiką",
+        "Ruošiuosi kontroliniui",
+        "Ruošiuosi PUPP / VBE ateičiai",
+        "Noriu olimpiadinio iššūkio",
+        "Nežinau nuo ko pradėti",
+    ]
     curriculum = {int(grade): [title for _, title in sorted(items, key=lambda item: item[0])] for grade, items in sorted(topics_by_grade.items(), key=lambda item: int(item[0]))}
     output = "\n".join([
         "export const curriculum = " + js(curriculum) + ";",
@@ -237,6 +256,64 @@ def render_content() -> str:
         "export const achievements = " + js(achievements) + ";",
     ])
     OUT.write_text(output + "\n", encoding="utf-8")
+
+    SPLIT_OUT.mkdir(parents=True, exist_ok=True)
+    (SPLIT_OUT / "curriculum.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const curriculum = " + js(curriculum) + ";\n",
+        encoding="utf-8",
+    )
+    (SPLIT_OUT / "concepts.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const concepts = " + js(concepts) + ";\n",
+        encoding="utf-8",
+    )
+    (SPLIT_OUT / "topics.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const topics = " + js(topics) + ";\n",
+        encoding="utf-8",
+    )
+    (SPLIT_OUT / "tests.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const tests = " + js(tests) + ";\n",
+        encoding="utf-8",
+    )
+    goals = [
+        "Noriu sustiprinti 9 klasės matematiką",
+        "Ruošiuosi kontroliniui",
+        "Ruošiuosi PUPP / VBE ateičiai",
+        "Noriu olimpiadinio iššūkio",
+        "Nežinau nuo ko pradėti",
+    ]
+    (SPLIT_OUT / "goals.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const goals = " + js(goals) + ";\n",
+        encoding="utf-8",
+    )
+    (SPLIT_OUT / "achievements.generated.js").write_text(
+        "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+        "export const achievements = " + js(achievements) + ";\n",
+        encoding="utf-8",
+    )
+
+    exercise_imports = []
+    exercise_exports = []
+    for grade in sorted(exercises_by_grade.keys(), key=int):
+        name = f"exercises_{grade}"
+        exercise_imports.append(f"import {{ {name} }} from './{name}.generated.js';")
+        exercise_exports.append(f"...{name}")
+        (SPLIT_OUT / f"{name}.generated.js").write_text(
+            "// Generated split content chunk. Source: scripts/build_frontend_content.py\n"
+            f"export const {name} = " + js(exercises_by_grade[grade]) + ";\n",
+            encoding="utf-8",
+        )
+    (SPLIT_OUT / "exercises.generated.js").write_text(
+        "\n".join(exercise_imports)
+        + "\n\nexport const exercises = ["
+        + ", ".join(exercise_exports)
+        + "];\n",
+        encoding="utf-8",
+    )
     return f"Wrote {len(topics)} topics, {len(concepts)} concepts, {len(exercises)} exercises"
 
 

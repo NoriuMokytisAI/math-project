@@ -1,4 +1,4 @@
-// Generated split content chunk. Source: ../content.generated.js
+// Generated split content chunk. Source: scripts/build_frontend_content.py
 export const topics = {
   "desningumai-ir-lenteles-5": {
     "id": "desningumai-ir-lenteles-5",
@@ -677,62 +677,65 @@ export const topics = {
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 5 klasės apžvalga",
+        "title": "Matematinis mąstymas ir loginė dedukcija",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Sveiki atvykę į olimpiadinę matematiką! Skirtingai nuo įprastų pamokų, čia svarbiausia yra ne atlikti standartinius veiksmus pagal taisykles, bet atrasti naujus kelius ir juos logiškai pagrįsti.",
+          "Spręsdami olimpiadinius uždavinius, visada pradėkite nuo sąlygos analizės. Užsirašykite, kas yra duota, ir pabandykite išspręsti supaprastintą uždavinio versiją (pvz., su mažesniais skaičiais).",
+          "Metodas. Taikykite **dedukcijos metodą**: jei žinome, kad teiginys A yra teisingas, o iš jo seka B, vadinasi, B taip pat teisingas. Niekada nesiremkite spėjimais – kiekvienas jūsų teiginys turi turėti aiškų matematinį pagrindimą."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Paritetas: lyginių ir nelyginių skaičių magija",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Vienas galingiausių ir paprasčiausių įrankių pradinėse olimpiadose yra skaičių lyginumas (paritetas).",
+          "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\\\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\\\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\\\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$",
+          "Metodas. Jei uždavinyje kalbama apie objektų mainus, lentelės spalvinimą ar operacijas su skaičiais, stebėkite, kaip keičiasi lyginių arba nelyginių skaičių kiekis. Šis savybės nekintamumas vadinamas **invariantu**."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Sistemingas sąrašų sudarymas ir skaičiavimas",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Kombinatorikos uždaviniuose dažnai reikia rasti galimų derinių skaičių. Pagrindinis pradedančiojo priešas – netvarkingas skaičiavimas, kai kai kurie variantai praleidžiami, o kiti suskaičiuojami du kartus.",
+          "Įspėjimas. Visada sudarykite sąrašus sistemiškai! Pavyzdžiui, jei ieškote triženklių skaičių, rašykite juos didėjimo tvarka (nuo mažiausio iki didžiausio).",
+          "Metodas. **Daugybos taisyklė**: Jeigu pirmąjį objektą galime pasirinkti $a$ būdais, o antrąjį – $b$ būdais, tai abiejų objektų poros pasirinkimo būdų skaičius yra $a \\times b$."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Dalinis atvejų tikrinimas vietoje įrodymo — Būtina pateikti bendrą įrodymą (pvz., naudojant kintamuosius arba pariteto dėsnius), kuris apimtų visas įmanomas reikšmes.",
+      "Nulinių ar kraštutinių reikšmių nepaisymas — Visada atskirai išnagrinėkite mažiausias leistinas kintamųjų reikšmes ir patikrinkite, ar jos nepažeidžia uždavinio sąlygos."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "1 Pavyzdys: Skaitmenų eilė",
+        "text": "Triženklio skaičiaus pirmasis skaitmuo yra $3$. Jei šį skaitmenį perkeltume į skaičiaus galą, gautasis skaičius būtų $9$ vienetais didesnis už pradinį. Raskite pradinį skaičių.",
+        "solution": "Pažymėkime pradinį skaičių kaip $\\\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$. Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$. Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\\\overline{ab3} - \\\\overline{3ab} = 9$. Užrašome lygtį: $(100a + 10b + 3) - (300 + 10a + b) = 9$. Supaprastiname: $90a + 9b - 297 = 9 \\\\implies 90a + 9b = 306$. Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$). Pradinis skaičius buvo $334$. Patikriname: $343 - 334 = 9$. Viskas tinka!",
+        "answer": "$334$"
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "2 Pavyzdys: Monetų paritetas",
+        "text": "Ant stalo padėta $11$ monetų, visos atvirstos skaičiumi aukštyn. Vienu ėjimu leidžiama apversti bet kurias dvi monetas. Ar įmanoma po kelių ėjimų pasiekti, kad visos monetos būtų atvirstos herbu aukštyn?",
+        "solution": "Kiekviena moneta gali būti būsenos 'Skaičius' (S) arba 'Herbas' (H). Mums reikia, kad pradžioje buvo $11$ S monetų (ir $0$ H monetų), o pabaigoje būtų $11$ H monetų. Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia. Pastebime, kad visais atvejais H monetų skaičius pakinta lyginiu skaičiumi ($+2$, $-2$ arba $0$). Kadangi pradžioje H monetų skaičius buvo $0$ (lyginis skaičius), tai po bet kokio ėjimų skaičiaus H monetų skaičius visada išliks lyginis. Mums reikia gauti $11$ H monetų. Kadangi $11$ yra nelyginis skaičius, o H monetų skaičius visada turi būti lyginis, pasiekti šį tikslą neįmanoma.",
+        "answer": "Ne, neįmanoma."
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "3 Pavyzdys: Loginis detektyvas",
+        "text": "Aistė, Beata ir Cecilia dalyvavo matematikos konkurse. Po konkurso jų paklausė apie rezultatus. Aistė pasakė: 'Aš užėmiau pirmą vietą'. Beata pasakė: 'Aš neužėmiau pirmos vietos'. Cecilia pasakė: 'Aistė neužėmė pirmos vietos'. Žinoma, kad tik viena mergaitė pasakė tiesą, o visos kitos sumelavo. Kas užėmė pirmąją vietą, jei mergaitės nesidalino jokia vieta?",
+        "solution": "Panagrinėkime Aistės ir Cecilijos teiginius. Aistė sako: 'Aš užėmiau pirmą vietą', o Cecilia sako: 'Aistė neužėmė pirmos vietos'. Šie teiginiai yra priešingi – vienas iš jų būtinai yra tiesa, o kitas – melas. Kadangi tik viena iš trijų mergaičių pasakė tiesą, o viena iš tiesų jau yra tarp Aistės ir Cecilijos, tai Beatos teiginys 'Aš neužėmiau pirmos vietos' būtinai yra melas. Jei Beatos teiginys yra melagingas, tai reiškia, kad Beata iš tikrųjų užėmė pirmą vietą. Patikriname šį atvejį: jei Beata užėmė pirmą vietą, tai:\n- Aistės teiginys yra melas (nes pirmą vietą užėmė Beata);\n- Beatos teiginys yra melas;\n- Cecilijos teiginys 'Aistė neužėmė pirmos vietos' yra tiesa. Viskas puikiai sutampa su sąlyga.",
+        "answer": "Beata"
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "4 Pavyzdys: Kvadrato dalijimas",
+        "text": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
+        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą. Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\\\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\\\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\\\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\\\implies 3 \\times 8$ arba $4 \\times 6$. Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka! Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$.",
+        "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 5 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "5 Pavyzdys: Kelių skaičiavimas",
+        "text": "Kvadratinėje lentelėje $3 \\times 3$ norime nukeliauti iš viršutinio kairiojo langelio į apatinį dešinįjį langelį. Galima judėti tik po vieną langelį į dešinę arba žemyn. Keliais skirtingais būdais galima tai padaryti?",
+        "solution": "Pažymėkime lentelės langelius koordinatėmis $(row, col)$ nuo $(1,1)$ iki $(3,3)$. Kiekviename žingsnyje, norint patekti į langelį $(r, c)$, galime ateiti tik iš kairės $(r, c-1)$ arba iš viršaus $(r-1, c)$. Todėl būdų skaičius pasiekti langelį yra lygus būdų sumai pasiekti jo kaimynus iš kairės ir viršaus. Užrašome būdų skaičių kiekviename langelyje:\n- Viršutinėje eilutėje judėti galima tik į dešinę, todėl visur yra po $1$ būdą: $(1,1)=1$, $(1,2)=1$, $(1,3)=1$.\n- Kairiajame stulpelyje judėti galima tik žemyn, todėl visur po $1$ būdą: $(2,1)=1$, $(3,1)=1$.\n- Skaičiuojame vidinius langelius:\n  - $(2,2) = (1,2) + (2,1) = 1 + 1 = 2$ būdai.\n  - $(2,3) = (1,3) + (2,2) = 1 + 2 = 3$ būdai.\n  - $(3,2) = (2,2) + (3,1) = 2 + 1 = 3$ būdai.\n  - Galutinis langelis: $(3,3) = (2,3) + (3,2) = 3 + 3 = 6$ būdų. Iš viso yra $6$ skirtingi būdai nukeliauti.",
+        "answer": "$6$ būdais"
       }
     ]
   },
@@ -1421,62 +1424,63 @@ export const topics = {
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 6 klasės apžvalga",
+        "title": "Pirminiai skaičiai – aritmetikos statybiniai blokai",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Skaičių teorijoje visi teigiami sveikieji skaičiai gali būti išreikšti kaip pirminių skaičių sandaugos. Tai leidžia lengvai analizuoti dalumą, didžiausius bendrus daliklius (DBD) ir mažiausius bendrus kartotinius (MBK).",
+          "Norėdami rasti skaičiaus daliklių skaičių, išskaidykite jį pirminiais daugikliais: $n = p_1^{a_1} p_2^{a_2} \\\\dots p_k^{a_k}$. Skirtingų daliklių skaičius lygus: $(a_1 + 1)(a_2 + 1) \\\\dots (a_k + 1)$.",
+          "Metodas. Pavyzdžiui, skaičius $72 = 2^3 \\times 3^2$ turi $(3+1)(2+1) = 4 \\times 3 = 12$ daliklių. Šis metodas padeda išvengti ilgų sąrašų rašymo ranka."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Kombinatorikos formulės: kėliniai ir deriniai",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "6 klasėje susipažinsime su svarbiomis kombinatorikos sąvokomis:\n- **Kėliniai (Faktorialas)**: būdų išrikiuoti $n$ skirtingų objektų skaičius yra $n! = n \\times (n-1) \\\\dots \\times 1$.\n- **Deriniai**: būdų pasirinkti $k$ objektų iš $n$ objektų aibės, neatsižvelgiant į tvarką, skaičius užrašomas formule: $C_n^k = \\frac{n!}{k!(n-k)!}$.",
+          "Įspėjimas. Visada atskirkite, ar tvarka yra svarbi! Jei renkame komandos prezidentą ir pavaduotoją – tvarka svarbi (kėliniai). Jei tiesiog du komandos narius – tvarka nesvarbi (deriniai)."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Pitagoro teorema ir geometrinės figūros",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Geometrijos olimpiadose statusis trikampis yra viena dažniausių figūrų. Pitagoro teorema leidžia rasti kraštinių ilgius.",
+          "Metodas. Pitagoro teorema teigia: $\\\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Daugiklių dubliavimas MBK skaičiavime — Būtina naudoti pirminį išskaidymą arba formulę $MBK(a, b) = \\frac{a \\times b}{DBD(a, b)}$. Tikrasis $MBK(12, 18) = 36$.",
+      "Priklausomų įvykių tikimybių dauginimas — Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\\\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 6 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "1 Pavyzdys: Sandaugos dalikliai",
+        "text": "Raskite dviejų natūraliųjų skaičių, kurių sandauga lygi $1000$ ir nei vienas iš jų nesibaigia nuliu, sumą.",
+        "solution": "Išskaidome skaičių $1000$ pirminiais daugikliais: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$. Tarkime, šie du skaičiai yra $A$ ir $B$. Kadangi $A \\times B = 2^3 \\times 5^3$, tai jų pirminiai daugikliai gali būti tik $2$ ir $5$. Jeigu kuris nors iš skaičių $A$ arba $B$ turėtų savo sudėtyje ir daugiklį $2$, ir daugiklį $5$, tai šis skaičius dalytųsi iš $10$ ir todėl baigtųsi nuliu. Kadangi sąlyga tai draudžia, vienas iš skaičių turi turėti tik daugiklius $2$, o kitas – tik daugiklius $5$. Vadinasi, vienas skaičius yra $2^3 = 8$, o kitas – $5^3 = 125$. Šie skaičiai nesibaigia nuliu, o jų sandauga lygi $1000$. Jų suma yra $8 + 125 = 133$.",
+        "answer": "$133$"
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 6 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "2 Pavyzdys: Laipsnių palyginimas",
+        "text": "Palyginkite skaičius $2^{300}$ ir $3^{200}$. Kuri reikšmė didesnė?",
+        "solution": "Norėdami palyginti šiuos du skaičius, pabandykime suvienodinti jų rodiklius. Pastebime, kad rodikliai $300$ ir $200$ abu dalijasi iš $100$. Pertvarkome pirmąjį skaičių: $2^{300} = (2^3)^{100} = 8^{100}$. Pertvarkome antrąjį skaičių: $3^{200} = (3^2)^{100} = 9^{100}$. Kadangi pagrindas $9$ yra didesnis už $8$, tai $9^{100} > 8^{100}$, vadinasi, $3^{200} > 2^{300}$.",
+        "answer": "$3^{200}$ yra didesnis."
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 6 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "3 Pavyzdys: Įbrėžtinis plotas",
+        "text": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\\\pi$).",
+        "solution": "Kadangi kvadrato plotas yra $36\\text{ cm}^2$, jo kraštinės ilgis yra $a = \\\\sqrt{36} = 6$ cm. Įbrėžto apskritimo skersmuo yra lygus kvadrato kraštinei, todėl $d = 6$ cm, o spindulys $r = d / 2 = 3$ cm. Apskaičiuojame apskritimo plotą: $S_{apskr} = \\\\pi r^2 = \\\\pi \\times 3^2 = 9\\\\pi\\text{ cm}^2$. Dalis už apskritimo ribų gaunama iš kvadrato ploto atėmus apskritimo plotą: $S = 36 - 9\\\\pi\\text{ cm}^2$.",
+        "answer": "$36 - 9\\\\pi\\text{ cm}^2$"
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 6 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "4 Pavyzdys: Skaitmenų rikiavimas",
+        "text": "Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skaitmenų $1, 2, 3, 4, 5$, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą, o skaičius turi būti lyginis?",
+        "solution": "Penkiaženklis skaičius turi būti lyginis, todėl jo paskutinis skaitmuo turi būti lyginis. Mūsų turimoje aibėje $\\\\{1, 2, 3, 4, 5\\\\}$ lyginiams skaičiams tinka tik $2$ arba $4$. Vadinasi, paskutinę poziciją galime užpildyti $2$ būdais. Likusios keturios pozicijos gali būti užpildytos bet kokia tvarka keturiais likusiais skaitmenimis. Būdų skaičius išdėstyti likusius $4$ skaitmenis yra $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai. Bendrai galimų skaičių yra $2 \\times 24 = 48$.",
+        "answer": "$48$"
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 6 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "5 Pavyzdys: Dirichlė principas",
+        "text": "Dėžėje yra $12$ juodų ir $12$ baltų kojinių. Koks yra mažiausias kojinių skaičius, kurį reikia ištraukti nežiūrint, kad būtume visiškai tikri, jog turime bent vieną vienodos spalvos porą?",
+        "solution": "Ieškome 'stalčių' šioje situacijoje. Stalčiai yra dvi spalvos: juoda ir balta. Iš viso $m = 2$ stalčiai. Jei ištrauksime tik $2$ kojines, jos gali būti skirtingų spalvų (viena juoda, viena balta). Poros neturėsime. Jei ištrauksime $3$ kojines, tai pagal Dirichlė principą, kadangi objektų skaičius ($3$) yra didesnis už stalčių skaičių ($2$), bent du objektai pateks į tą patį stalčių. Tai reiškia, kad bent dvi kojinės bus tos pačios spalvos. Vadinasi, mažiausiai reikia ištraukti $3$ kojines.",
+        "answer": "$3$ kojines"
       }
     ]
   },
@@ -2393,62 +2397,62 @@ export const topics = {
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 7 klasės apžvalga",
+        "title": "Kongruencijos ir liekanos (Modulinė aritmetika)",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Spęsdami uždavinius apie skaičių dalumą, dažnai susiduriame su labai dideliais laipsniais arba sudėtingomis sandaugomis. Čia mums padeda kongruencijos (lyginiai pagal modulį). Sakome, kad skaičius $a$ yra kongruentus skaičiui $b$ moduliu $m$ (rašome $a \\\\equiv b \\\\pmod m$), jeigu skirtumas $a - b$ dalijasi iš $m$. Tai reiškia, kad abu skaičiai dalijami iš $m$ duoda tą pačią liekaną.",
+          "Metodas. Kongruencijos leidžia lengvai atlikti sudėtį, atimtį ir daugybą: jei $a \\\\equiv b \\\\pmod m$ ir $c \\\\equiv d \\\\pmod m$, tai $a + c \\\\equiv b + d \\\\pmod m$ bei $a \\\\cdot c \\\\equiv b \\\\cdot d \\\\pmod m$. Tai padeda rasti labai didelių skaičių dalybos liekanas (pavyzdžiui, paskutinį skaitmenį)."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Euklido algoritmas ir tarpusavyje pirminiai skaičiai",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\\\pmod b$).",
+          "Metodas. Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais (arba pirminiais vienas kitam). Tai svarbu dirbant su trupmenomis ir lygtimis."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Dirichlė principas (narvelių principas)",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Dirichlė principas yra galinga kombinatorikos strategija: jeigu turime $n$ narvelių ir daugiau negu $n$ balandžių, tai bent viename narvelyje turi nutūpti bent du balandžiai.",
+          "Metodas. Sprendžiant uždavinius, svarbu teisingai nustatyti, kas yra „balandžiai“ (elementai) ir kas yra „narveliai“ (savybės ar sritys). Pavyzdžiui, jei stalčiuje yra dviejų spalvų kojinės, traukiant 3 kojines bent dvi bus tos pačios spalvos."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Liekanos prilyginimas neigiamam skaičiui — Liekana visada turi būti neneigiama: $0 \\\\le r < m$. Kadangi $-5 = -2 \\\\cdot 3 + 1$, tai liekana yra 1.",
+      "Klaidingas įrodymas pavyzdžiais — Būtina įrodyti bendruoju atveju naudojant kintamuosius (pvz., $(2a+1) + (2b+1) = 2(a+b+1)$)."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 7 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Laipsnio paskutinis skaitmuo",
+        "text": "Raskite skaičiaus $3^{100}$ paskutinį skaitmenį.",
+        "solution": "Paskutinis skaitmuo sutampa su dalybos iš 10 liekana: $3^{100} \\\\pmod{10}$. Nagrinėjame 3 laipsnių liekanas moduliu 10: $3^1 \\\\equiv 3$, $3^2 \\\\equiv 9$, $3^3 \\\\equiv 7$, $3^4 \\\\equiv 1 \\\\pmod{10}$. Kadangi $3^4 \\\\equiv 1 \\\\pmod{10}$, liekanos kartojasi periodiškai kas 4 žingsnius. Kadangi rodiklis 100 dalijasi iš 4 be liekanos ($100 = 4 \\\\times 25$), tai $3^{100} = (3^4)^{25} \\\\equiv 1^{25} \\\\equiv 1 \\\\pmod{10}$.",
+        "answer": "Paskutinis skaitmuo yra 1."
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 7 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Lyginumo savybių įrodymas",
+        "text": "Įrodykite, kad dviejų nelyginių skaičių suma yra lyginis skaičius.",
+        "solution": "Užrašome du nelyginius skaičius bendru pavidalu: $x = 2a + 1$ ir $y = 2b + 1$, kur $a, b \\\\in \\\\mathbb{Z}$. Sudedame juos: $x + y = (2a + 1) + (2b + 1) = 2a + 2b + 2$. Iškeliame 2 prieš skliaustus: $x + y = 2(a + b + 1)$. Kadangi gautas reiškinys turi bendrą daugiklį 2, suma dalijasi iš 2, todėl ji yra lyginis skaičius.",
+        "answer": "Teiginys įrodytas."
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 7 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Euklido algoritmo taikymas",
+        "text": "Raskite skaičių 123 ir 36 didžiausią bendrąjį daliklį $\\text{dbd}(123, 36)$ naudodami Euklido algoritmą.",
+        "solution": "Dalijame didesnį skaičių iš mažesnio su liekana: $123 = 3 \\\\times 36 + 15$. Toliau dalijame daliklį iš gautos liekanos: $36 = 2 \\\\times 15 + 6$. Toliau dalijame prieš tai buvusią liekaną iš naujos liekanos: $15 = 2 \\\\times 6 + 3$. Galiausiai dalijame: $6 = 2 \\\\times 3 + 0$. Paskutinė nulinė liekana rodo, kad bendrasis daliklis yra 3.",
+        "answer": "Didžiausias bendrasis daliklis yra 3."
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 7 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Dirichlė principo taikymas su spalvomis",
+        "text": "Dėžėje yra 5 poros raudonų ir 5 poros mėlynų pirštinių (visos sumaišytos po vieną). Kiek mažiausiai pirštinių reikia ištraukti nežiūrint, kad garantuotume turintys bent vieną vienodos spalvos porą?",
+        "solution": "Dėžėje yra dvi spalvos – raudona ir mėlyna (tai mūsų „narveliai“). Balandžiai yra ištrauktos pirštinės. Pagal Dirichlė principą, jei ištrauksime 3 pirštines (balandžius), bent dvi iš jų turės tą pačią spalvą (narvelį). Dvi vienodos spalvos pirštinės sudaro porą.",
+        "answer": "Reikia ištraukti mažiausiai 3 pirštines."
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 7 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Dviejų tiesinių lygčių sistema",
+        "text": "Išspręskite lygčių sistemą: $2x + y = 10$ ir $x - y = 2$.",
+        "solution": "Sudedame abi lygtis nariu nariais: $(2x + y) + (x - y) = 10 + 2$. Supaprastiname: $3x = 12 \\\\implies x = 4$. Įstatome $x=4$ į antrąją lygtį: $4 - y = 2 \\\\implies y = 2$.",
+        "answer": "Sprendinys yra $x = 4$, $y = 2$."
       }
     ]
   },
@@ -2912,62 +2916,62 @@ export const topics = {
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 8 klasės apžvalga",
+        "title": "Diofantinės lygtys ir dalumas",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Sveikųjų skaičių lygtys, vadinamos Diofantinėmis lygtimis, turi ilgą istoriją. Tiesinė Diofantinė lygtis su dviem kintamaisiais turi pavidalą $ax + by = c$, kur $a, b, c$ yra sveikieji skaičiai. Ji turi sveikųjų skaičių sprendinių tada ir tik tada, kai skaičių $a$ ir $b$ didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ dalija laisvąjį narį $c$.",
+          "Metodas. Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\\\in \\\\mathbb{Z}$."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Ferma mažoji teorema ir taikymai",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Ferma mažoji teorema teigia, kad jei $p$ yra pirminis skaičius, tai bet kuriam sveikajam skaičiui $a$ galioja kongruencija $a^p \\\\equiv a \\\\pmod p$. Jeigu $a$ nesidalija iš $p$, galime užrašyti patogesne forma: $a^{p-1} \\\\equiv 1 \\\\pmod p$.",
+          "Metodas. Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\\\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\\\equiv 1 \\\\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\\\cdot 2^2 \\\\equiv 1^8 \\\\cdot 4 \\\\equiv 4 \\\\pmod 7$."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Apskritimo geometrija ir taško galia",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Geometrijoje ryšiai tarp kampų ir atkarpų apskritime leidžia įrodyti daugelį teoremų. Kampas tarp stygų arba liestinių yra susijęs su atitinkamų lankų dydžiais, o stygų susikirtimo taškas turi pastovią sandaugą.",
+          "Metodas. Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\\\cdot PB = PC \\\\cdot PD$. Jei taškas $P$ yra apskritimo išorėje, ir iš jo nubrėžta liestinė $PT$ bei kirstinė $PAB$, tai galioja $PT^2 = PA \\\\cdot PB$. Tai leidžia rasti atkarpų ilgius ir įrodyti panašumus."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Diofantinės lygties sprendimas nesuprastinus koeficientų — Visada patikrinkite, ar laisvasis narys dalijasi iš DBD: kadangi $\\text{dbd}(6, 9) = 3$, o 4 nesidalija iš 3, lygtis sprendinių neturi.",
+      "Laipsnio rodiklio pakeitimas liekana moduliu m — Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\\\equiv 2 \\\\pmod 6$, tai $2^{50} \\\\equiv 2^2 \\\\equiv 4 \\\\pmod 7$."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 8 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Tiesinės diofantinės lygties sprendimas",
+        "text": "Išspręskite sveikaisiais skaičiais lygtį $3x - 5y = 1$.",
+        "solution": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\\\implies y = 1$. Sprendinys yra $(2, 1)$. Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\\\in \\\\mathbb{Z}$.",
+        "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\\\in \\\\mathbb{Z}$."
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 8 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Ferma mažosios teoremos taikymas",
+        "text": "Raskite skaičiaus $2^{50}$ dalybos iš 7 liekaną.",
+        "solution": "Skaičius 7 yra pirminis. Pagal Ferma mažąją teoremą, kadangi 2 nesidalija iš 7, turime $2^6 \\\\equiv 1 \\\\pmod 7$. Daliname rodiklį 50 iš 6 su liekana: $50 = 6 \\times 8 + 2$. Pertvarkome: $2^{50} = (2^6)^8 \\times 2^2 \\\\equiv 1^8 \\times 4 \\\\equiv 4 \\\\pmod 7$.",
+        "answer": "Liekana lygi 4."
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 8 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Herono formulės taikymas trikampio plotui",
+        "text": "Raskite trikampio su kraštinėmis 13, 14, 15 plotą.",
+        "solution": "Pirmiausia apskaičiuojame pusperimetrį $p = \\frac{13 + 14 + 15}{2} = 21$. Taikome Herono formulę: $S = \\\\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome vertes: $S = \\\\sqrt{21(21-13)(21-14)(21-15)} = \\\\sqrt{21 \\times 8 \\times 7 \\times 6}$. Apskaičiuojame daugindami pirminiais: $S = \\\\sqrt{3 \\times 7 \\times 2^3 \\times 7 \\times 2 \\times 3} = \\\\sqrt{3^2 \\times 7^2 \\times 2^4} = 3 \\times 7 \\times 4 = 84$.",
+        "answer": "Trikampio plotas lygus 84."
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 8 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Taško galios teorema apskritime",
+        "text": "Apskritime susikerta dvi stygos $AB$ ir $CD$ taške $P$. Žinoma, kad $AP = 4$ cm, $PB = 6$ cm, o $CP = 3$ cm. Raskite atkarpos $PD$ ilgį.",
+        "solution": "Pagal stygų susikirtimo savybę (Taško galios teoremą), gautų atkarpų sandaugos yra lygios: $AP \\times PB = CP \\times PD$. Įstatome žinomas vertes: $4 \\times 6 = 3 \\times PD \\\\implies 24 = 3 \\times PD$. Išreiškiame atkarpos ilgį: $PD = 24 / 3 = 8$ cm.",
+        "answer": "Atkarpos $PD$ ilgis lygus 8 cm."
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 8 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Rankų paspaudimo lema grafe",
+        "text": "Grafas turi 5 viršūnes, kurių laipsniai yra $2, 3, 3, 4, 4$. Kiek briaunų turi šis grafas?",
+        "solution": "Pagal Rankų paspaudimo lemą, visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui: $\\\\sum \\text{deg}(v) = 2E$. Apskaičiuojame laipsnių sumą: $S = 2 + 3 + 3 + 4 + 4 = 16$. Sudarome lygtį: $2E = 16 \\\\implies E = 8$.",
+        "answer": "Grafas turi 8 briaunas."
       }
     ]
   },
@@ -4327,70 +4331,70 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-09-concept-logic",
-      "olimpiada-09-concept-method",
-      "olimpiada-09-concept-invariant",
-      "olimpiada-09-concept-parity",
-      "olimpiada-09-concept-extremal"
+      "olimpiada-09-concept-euler-totient",
+      "olimpiada-09-concept-euler-theorem",
+      "olimpiada-09-concept-am-gm",
+      "olimpiada-09-concept-ceva",
+      "olimpiada-09-concept-catalan"
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 9 klasės apžvalga",
+        "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis.",
+          "Metodas. Naudokite Oilerio teoremą $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\\\gcd(a, n) = 1$."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Geometriniai įrodymai ir trigonometrija",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Geometrijos uždaviniuose svarbu ne tik apskaičiuoti dydžius, bet ir įrodyti taškų kolinearumą, tiesių susikirtimą ar atkarpų lygybę.",
+          "Metodas. Taikykite Čevos ir Menelajaus teoremas, kai reikia rasti santykius trikampio kraštinėse arba įrodyti, kad trys tiesės kertasi viename taške."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Kombinatoriniai metodai ir invariantai",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus).",
+          "Metodas. Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Įrodymas tik keliais pavyzdžiais — Reikia pateikti bendrą įrodymą visiems atvejams naudojant algebrinius metodus arba teoremas.",
+      "Kraštutinių atvejų ignoravimas — Visada patikrinkite, ar tenkinamos teoremos sąlygos, prieš ją taikydami."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 9 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
+        "title": "Skaičiaus $\\\\varphi(24)$ apskaičiavimas",
+        "text": "Raskite, kiek yra natūraliųjų skaičių, mažesnių už 24 ir tarpusavyje pirminių su 24.",
+        "solution": "Skaidome skaičių 24 pirminiais daugtuviais: $24 = 2^3 \\\\cdot 3$. Taikome Oilerio totiento funkcijos formulę: $\\\\varphi(24) = 24 \\\\cdot (1 - 1/2) \\\\cdot (1 - 1/3)$. Atliekame veiksmus: $\\\\varphi(24) = 24 \\\\cdot \\frac{1}{2} \\\\cdot \\frac{2}{3} = 8$.",
+        "answer": "$8$"
+      },
+      {
+        "title": "Paskutinis skaičiaus skaitmuo",
+        "text": "Raskite skaičiaus $3^{400}$ paskutinį skaitmenį.",
+        "solution": "Paskutinis skaitmuo atitinka liekaną moduliu 10. Kadangi $\\\\gcd(3, 10) = 1$, taikome Oilerio teoremą. Apskaičiuojame $\\\\varphi(10) = 10 \\\\cdot (1 - 1/2) \\\\cdot (1 - 1/5) = 4$. Remiantis Oilerio teorema, $3^4 \\\\equiv 1 \\\\pmod{10}$. Kadangi $400$ dalijasi iš 4, tai $3^{400} = (3^4)^{100} \\\\equiv 1^{100} \\\\equiv 1 \\\\pmod{10}$.",
+        "answer": "$1$"
+      },
+      {
+        "title": "Nelygybės įrodymas naudojant AM-GM",
+        "text": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\\\ge 2$.",
+        "solution": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$. Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\\\ge \\\\sqrt{\\frac{a}{b} \\\\cdot \\frac{b}{a}}$. Kadangi $\\frac{a}{b} \\\\cdot \\frac{b}{a} = 1$, tai $\\\\sqrt{1} = 1$. Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\\\ge 2$.",
         "answer": "Įrodyta."
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 9 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Čevos teoremos taikymas",
+        "text": "Trikampio $ABC$ kraštinėse parinkti taškai $D$, $E$, $F$ taip, kad $AD$, $BE$, $CF$ kertasi taške $P$. Žinoma, kad $BD = DC$ ir $AE = 2EC$. Raskite santykį $AF/FB$.",
+        "solution": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$. Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$. Įrašome šias vertes į lygtį: $1 \\\\cdot \\frac{1}{2} \\\\cdot \\frac{AF}{FB} = 1$. Iš čia gauname $\\frac{AF}{FB} = 2$.",
+        "answer": "$2$"
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 9 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 9 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 9 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Teisingų skliaustų sekų skaičius",
+        "text": "Kiek yra taisyklingų skliaustų sekų, sudarytų iš 2 atidarančių ir 2 uždarančių skliaustų?",
+        "solution": "Tokių sekų skaičių nurodo Katalano skaičius $C_2$. Apskaičiuojame pagal formulę: $C_2 = \\frac{1}{3} \\binom{4}{2}$. Kadangi $\\binom{4}{2} = 6$, tai $C_2 = \\frac{6}{3} = 2$. Šios sekos yra: `(())` ir `()()`.",
+        "answer": "$2$"
       }
     ]
   },
@@ -5069,70 +5073,70 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-10-concept-logic",
-      "olimpiada-10-concept-method",
-      "olimpiada-10-concept-invariant",
-      "olimpiada-10-concept-parity",
-      "olimpiada-10-concept-extremal"
+      "olimpiada-10-concept-quad-reciprocity",
+      "olimpiada-10-concept-gaussian-integers",
+      "olimpiada-10-concept-titus-lemma",
+      "olimpiada-10-concept-inversion",
+      "olimpiada-10-concept-euler-formula-planar"
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 10 klasės apžvalga",
+        "title": "Aukštesnioji skaičių teorija ir Gauso sveikieji skaičiai",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "10 klasėje skaičių teorija plečiasi už paprastų sveikųjų skaičių ribų. Susipažįstame su Gauso sveikaisiais skaičiais $\\\\mathbb{Z}[i]$ ir jų dalumo savybėmis.",
+          "Metodas. Naudokite Gauso skaičių normą $N(a+bi) = a^2+b^2$ norėdami įvertinti pirminių skaičių skaidymą."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Algebrinės nelygybės ir simetriniai daugianariai",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Sudėtingesnėse algebros temose naudojamos tokios nelygybės kaip Jenseno, Šūro, ir Cauchy-Schwarz Engel formos (Titu lema).",
+          "Metodas. Trupmeninėms nelygybėms taikykite Titu lemą, kad sujungtumėte vardiklius ir supaprastintumėte skaitiklį."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Inversija apskritimo atžvilgiu ir grafų teorija",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius.",
+          "Metodas. Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Ženklų klaidos simetriniuose daugianariuose — Griežtai taikykite formules: $p_2 = e_1 p_1 - 2e_2$, kur $e_2 = xy+yz+zx$.",
+      "Oilerio formulės taikymas neplokštiems grafams — Prieš taikydami Oilerio formulę, įsitikinkite, kad grafas yra susietas ir plokščias (jį galima nupiešti plokštumoje be susikertančių briaunų)."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 10 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
+        "title": "Kvadratinio abipusiškumo dėsnio taikymas",
+        "text": "Nustatykite Legendre simbolio vertę $\\\\left(\\frac{3}{11}\\right)$.",
+        "solution": "Kadangi abu skaičiai 3 ir 11 yra pirminiai ir nelyginiai, taikome kvadratinio abipusiškumo dėsnį. Dėsnis teigia: $\\\\left(\\frac{3}{11}\\right)\\\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = (-1)^{1 \\\\cdot 5} = -1$. Vadinasi, $\\\\left(\\frac{3}{11}\\right) = -\\\\left(\\frac{11}{3}\\right)$. Apskaičiuojame $\\\\left(\\frac{11}{3}\\right)$: kadangi $11 \\\\equiv 2 \\\\pmod{3}$, tai $\\\\left(\\frac{11}{3}\\right) = \\\\left(\\frac{2}{3}\\right)$. Kadangi $2$ nėra kvadratinė liekana moduliu 3 (vienintelė nulinė liekana yra 1), tai $\\\\left(\\frac{2}{3}\\right) = -1$. Įrašome atgal: $\\\\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
+        "answer": "$1$"
+      },
+      {
+        "title": "Gauso sveikojo skaičiaus skaidymas",
+        "text": "Susklaidykite skaičių 5 pirminiais daugtuviais Gauso sveikųjų skaičių aibėje $\\\\mathbb{Z}[i]$.",
+        "solution": "Ieškome skaidinio pavidalu $5 = (a + bi)(a - bi) = a^2 + b^2$. Žinome, kad $5 = 2^2 + 1^2$, todėl galime pasirinkti $a = 2, b = 1$. Gausime skaidinį: $5 = (2 + i)(2 - i)$. Patikriname normą $N(2+i) = 2^2 + 1^2 = 5$, kuri yra pirminis skaičius, todėl $2+i$ ir $2-i$ yra pirminiai Gauso skaičiai.",
+        "answer": "$(2+i)(2-i)$"
+      },
+      {
+        "title": "Titu lemos taikymas nelygybės įrodyme",
+        "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\\\ge \\frac{9}{x+y+z}$.",
+        "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\\\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
         "answer": "Įrodyta."
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 10 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Inversijos taikymas geometrijoje",
+        "text": "Nustatykite, į ką inversija su centru $O$ ir spinduliu $R$ atvaizduoja tiesę, einančią per centrą $O$.",
+        "solution": "Tegul tiesė $l$ eina per inversijos centrą $O$. Kiekvienas taškas $P \\\\in l$ ($P \\neq O$) yra atvaizduojamas į tašką $P'$ tiesėje $OP$. Kadangi tiesė eina per $O$, tiesė $OP$ sutampa su pačia tiese $l$. Todėl visi taškai $P'$ taip pat priklauso tai pačiai tiesei $l$. Vadinasi, tiesė, einanti per centrą, yra atvaizduojama į save pačią (atmetus patį centrą $O$).",
+        "answer": "Į save pačią (be taško $O$)"
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 10 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 10 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 10 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Oilerio formulės taikymas grafui",
+        "text": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
+        "solution": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$. Gauname lygtį: $8 - E + 5 = 2 \\\\implies 13 - E = 2$. Išsprendžiame briaunų skaičių: $E = 11$.",
+        "answer": "$11$"
       }
     ]
   },
@@ -6058,74 +6062,89 @@ export const topics = {
     "title": "Olimpiadinė matematika (11 klasė)",
     "strand": "Olimpiada",
     "level": "olympiad",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [],
+    "prerequisites": [
+      "Olimpiadinė matematika (10 klasė)",
+      "Lygtys, nelygybės ir raidiniai reiškiniai"
+    ],
+    "prerequisiteTopicIds": [
+      "olimpiada-10",
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+    ],
+    "nextTopicIds": [
+      "olimpiada-12"
+    ],
     "concepts": [
-      "olimpiada-11-concept-logic",
-      "olimpiada-11-concept-method",
-      "olimpiada-11-concept-invariant",
-      "olimpiada-11-concept-parity",
-      "olimpiada-11-concept-extremal"
+      "olimpiada-11-concept-crt",
+      "olimpiada-11-concept-order",
+      "olimpiada-11-concept-reciprocity",
+      "olimpiada-11-concept-jacobi",
+      "olimpiada-11-concept-cyclotomic",
+      "olimpiada-11-concept-chebyshev",
+      "olimpiada-11-concept-inversion",
+      "olimpiada-11-concept-projective",
+      "olimpiada-11-concept-nullstellensatz",
+      "olimpiada-11-concept-lovasz",
+      "olimpiada-11-concept-turan"
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 11 klasės apžvalga",
+        "title": "Kiniškoji liekanų teorema ir jos taikymai",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Kiniškoji liekanų teorema (KLT) yra galingas įrankis sprendžiant sveikųjų skaičių lygčių sistemas moduliu keli skaičiai. Pagrindinė idėja – jei moduliai yra tarpusavyje pirminiai, tai liekanos kiekvienu moduliu nepriklausomai nustato skaičių moduliu tų modulių sandauga.",
+          "Metodas. Norėdami rasti skaičių $x$, kuris tenkina $x \\\\equiv a_i \\\\pmod{m_i}$, galite naudoti konstruktyvų metodą: raskite bazinius skaičius $e_i$, kurie yra lygūs $1$ moduliu $m_i$ ir $0$ visais kitais moduliais $m_j$. Tada $x = \\\\sum a_i e_i$ bus sprendinys."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Kvadratinis savitarpiškumas ir Legendro simbolis",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Kvadratinis savitarpiškumas leidžia atsakyti į klausimą: „Ar skaičius yra kvadratinė liekana moduliu $p$?“. Tai viena svarbiausių Gauso teoremų, siejanti dviejų skirtingų pirminių skaičių savybes.",
+          "Metodas. Naudokite Legendro simbolį $\\\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\\\left(\\frac{ab}{p}\\right) = \\\\left(\\frac{a}{p}\\right)\\\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Inversijos galia geometrijoje",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Inversija apskritimo atžvilgiu yra transformacija, kuri „išverčia“ plokštumą: taškai arti centro nukeliauja toli, o apskritimai, einantys per centrą, tampa tiesėmis.",
+          "Metodas. Sunkūs uždaviniai su besiliečiančiais apskritimais dažnai tampa paprasti, jei pasirenkate tinkamą inversijos centrą (paprastai lietimosi tašką). Tada besiliečiantys apskritimai tampa lygiagrečiomis tiesėmis."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Bendrų daliklių ignoravimas KLT — Skaidykite modulius į pirminių laipsnius: $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 2$, $x \\\\equiv 2 \\\\pmod 3$. Patikrinkite suderinamumą ($1 \\\\equiv 2 \\\\pmod 2$ – neteisinga, sprendinių nėra).",
+      "Inversija ne per centrą — Tik apskritimai, einantys per $O$, tampa tiesėmis. Kiti apskritimai virsta apskritimais.",
+      "Netinkamas n-tojo laipsnio vieneto šaknų parinkimas — Pirmykštės šaknys yra tos, kurių eilė yra lygiai $n$. Jas nurodo rodikliai $k$, tarpusavyje pirminiai su $n$."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 11 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Sistemos sprendimas naudojant KLT",
+        "text": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, tenkinantį sistemą: $x \\\\equiv 1 \\\\pmod 3, x \\\\equiv 2 \\\\pmod 4, x \\\\equiv 3 \\\\pmod 5$.",
+        "solution": "Moduliai $3, 4, 5$ yra tarpusavyje pirminiai. Sprendinio ieškome pavidalu $x = 1 \\\\cdot e_1 + 2 \\\\cdot e_2 + 3 \\\\cdot e_3$. $e_1$ turi dalintis iš $4 \\\\cdot 5 = 20$ ir $e_1 \\\\equiv 1 \\\\pmod 3$. Skaičius $40$ tinka ($40 = 3 \\\\cdot 13 + 1$). $e_2$ dalijasi iš $3 \\\\cdot 5 = 15$ ir $e_2 \\\\equiv 1 \\\\pmod 4$. $45$ tinka ($45 = 4 \\\\cdot 11 + 1$). $e_3$ dalijasi iš $3 \\\\cdot 4 = 12$ ir $e_3 \\\\equiv 1 \\\\pmod 5$. Skaičius $36$ tinka. $x = 1 \\\\cdot 40 + 2 \\\\cdot 45 + 3 \\\\cdot 36 = 40 + 90 + 108 = 238$. Mažiausias teigiamas sprendinys: $238 \\\\pmod{60} = 58$.",
+        "answer": "58"
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 11 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Ciklotoniniai daugianariai ir dalumas",
+        "text": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
+        "solution": "Ciklotoninis daugianaris $\\\\Phi_n(x)$ apibrėžiamas kaip $\\\\prod (x - \\\\zeta)$, kur $\\\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys. Kiekviena šaknis $\\\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\\\bar{\\\\zeta}$ (jei ji nėra reali). Sandauga $(x - \\\\zeta)(x - \\\\bar{\\\\zeta}) = x^2 - (2 \\\\text{Re} \\\\zeta)x + 1$. Kadangi $|\\\\zeta| = 1$, tai $2 \\\\text{Re} \\\\zeta \\\\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\\\text{Re} \\\\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\\\text{Re} \\\\zeta)^2 - 4 \\\\le 0$. Jei $n=2$, $\\\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$. Kadangi visi sandaugos nariai yra teigiami, tai ir $\\\\Phi_n(x) > 0$.",
+        "answer": "Įrodyta"
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 11 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Inversijos taikymas besiliečiantiems apskritimams",
+        "text": "Du apskritimai $\\\\omega_1$ ir $\\\\omega_2$ liečiasi taške $P$. Tiesi per $P$ kerta $\\\\omega_1$ taške $A$ ir $\\\\omega_2$ taške $B$. Įrodykite, kad liestinės taškuose $A$ ir $B$ yra lygiagrečios.",
+        "solution": "Taikome inversiją su centru taške $P$. Po inversijos abu apskritimai $\\\\omega_1$ ir $\\\\omega_2$, einantys per centrą $P$, virsta lygiagrečiomis tiesėmis $L_1$ ir $L_2$. Tiesė $PAB$, einanti per inversijos centrą, virsta ta pačia tiese $PAB$. Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$. Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Tačiau savybė, kad liestinė statmena spinduliui, po inversijos virsta kampų išsaugojimo savybe. Inversija išsaugo lygiagretumą tarp liestinių besiliečiančiuose taškuose, nes jos tampa simetriškos lygiagrečių tiesių atžvilgiu.",
+        "answer": "Įrodyta"
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 11 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Kombinatorinis Nulstellensatz",
+        "text": "Įrodykite, kad bet kokiame reguliariame grafe, kurio viršūnių laipsnis lygus $d$, egzistuoja pakgrafis, kurio visų viršūnių laipsniai yra lygūs.",
+        "solution": "Suformuluojame uždavinį kaip daugianarį virš baigtinio lauko. Tarkime, grafas turi $n$ viršūnių ir $m$ briaunų. Kiekvienai briaunai priskiriame kintamąjį $x_e \\\\in \\\\{0, 1\\\\}$. Sudarytas daugianaris turi nurodyti viršūnių laipsnių sumas. Taikydami Alono Nulstellensatz teoremą, parodome, kad egzistuoja nulinis rinkinys, kuris nėra trivialus, jei laipsnių apribojimai yra tenkinami.",
+        "answer": "Remiantis Nulstellensatz"
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 11 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Koši funkcinė lygtis",
+        "text": "Raskite visas tolydžias funkcijas $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$, tenkinančias $f(x+y) = f(x) + f(y)$ visiems $x, y \\\\in \\\\mathbb{R}$.",
+        "solution": "Pirmiausia nustatome $f(0)$: $f(0+0) = f(0) + f(0) \\\\implies f(0) = 0$. Indukcija parodome, kad $f(nx) = nf(x)$ visiems natūraliesiems $n$. Tegu $f(1) = c$. Tada $f(n) = cn$ visiems natūraliesiems $n$. Išplėčiame racionaliesiems skaičiams: $f(p/q \\\\cdot q) = f(p) \\\\implies qf(p/q) = cp \\\\implies f(p/q) = c(p/q)$. Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, tai $f(x) = cx$ visiems $x \\\\in \\\\mathbb{R}$.",
+        "answer": "f(x) = cx"
       }
     ]
   },
@@ -7072,70 +7091,71 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-12-concept-logic",
-      "olimpiada-12-concept-method",
-      "olimpiada-12-concept-invariant",
-      "olimpiada-12-concept-parity",
-      "olimpiada-12-concept-extremal"
+      "olimpiada-12-concept-vietas-jumping",
+      "olimpiada-12-concept-tangent-trick",
+      "olimpiada-12-concept-unity-filter",
+      "olimpiada-12-concept-barycentric",
+      "olimpiada-12-concept-feuerbach",
+      "olimpiada-12-concept-probabilistic-second-moment"
     ],
     "sections": [
       {
-        "title": "Olimpiadinė matematika: 12 klasės apžvalga",
+        "title": "Diofantinių lygčių sprendimas: Vijetos šuolis ir nusileidimo metodas",
         "body": [
-          "Olimpiadiniai uždaviniai reikalauja kūrybiškumo ir gilaus supratimo.",
-          "Šiame skyriuje nagrinėsime pagrindinius metodus, kurie padės išspręsti sudėtingiausius iššūkius."
+          "Diofantinės lygtys 12 klasėje reikalauja pažangių technikų. Vijetos šuolis yra metodas, leidžiantis iš esamo sprendinio sukonstruoti mažesnį sprendinį kvadratinės lygties šaknų savybių dėka.",
+          "Metodas. Jei turite lygtį, kurią galima suvesti į kvadratinę vieno iš kintamųjų atžvilgiu, pritaikykite Vijetos formules kitoje šaknyje ir įrodykite prieštarą dėl minimalumo."
         ]
       },
       {
-        "title": "Pagrindinės strategijos",
+        "title": "Šiuolaikiniai geometrijos metodai: baricentrinės koordinatės ir judantys taškai",
         "body": [
-          "Metodas. Visada ieškok invariantų – savybių, kurios nekinta atliekant uždavinio operacijas.",
-          "Metodas. Bandydamas rasti dėsningumą, nagrinėk mažus atvejus (n=1, 2, 3)."
+          "Geometrijos uždaviniuose, kur sunku rasti sintetinį įrodymą, baricentrinės koordinatės leidžia atlikti tikslų algebrinį skaičiavimą.",
+          "Metodas. Kiekvieną tašką išreikškite svoriais $(x:y:z)$ trikampio viršūnėse. Tiesės lygtis tampa tiesine lygtimi, o collinearity (taškų gulėjimas vienoje tiesėje) tikrinamas matricų determinantais."
         ]
       },
       {
-        "title": "Dažnos klaidos ir kaip jų išvengti",
+        "title": "Ekstremalioji ir adityvioji kombinatorika",
         "body": [
-          "Įspėjimas. Pavyzdžių patikrinimas nėra įrodymas!",
-          "Įspėjimas. Nepamiršk išnagrinėti kraštutinių atvejų."
+          "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai.",
+          "Metodas. Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\\\ge \\\\min(p, |A|+|B|-1)$."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [
-      "Neišnagrinėti visi atvejai — Būtina išnagrinėti visus įmanomus variantus.",
-      "Klaidingas įrodymas pavyzdžiais — Naudoti griežtą įrodymą vietoje pavyzdžių."
+      "Simetrijos praradimas taikant Vijetos šuolį — Visada atskirai išnagrinėkite atvejį $a = b$ prieš darydami prielaidą $a > b$.",
+      "Netinkamas išgaubtumo taikymas liestinės triuke — Griežtai įrodykite nelygybę $f(x) \\\\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus."
     ],
     "examples": [
       {
-        "title": "Olimpiadinis pavyzdys 1",
-        "text": "Pavyzdinis 12 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 1)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Vijetos šuolis",
+        "text": "Tegu $a, b \\\\in \\\\mathbb{N}$ tokie, kad $ab+1$ dalija $a^2+b^2$. Įrodykite, kad $k = \\frac{a^2+b^2}{ab+1}$ yra pilnas kvadratas.",
+        "solution": "Tarkime, kad $k$ nėra kvadratas. Fiksuojame $k$ ir pasirenkame sprendinį $(a,b)$, kuris minimizuoja $a+b$, su $a \\\\ge b$. Užrašome kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$. Kita šaknis $x_2$ tenkina $x_2 + a = kb$ ir $x_2 \\\\cdot a = b^2 - k$. Iš čia $x_2 = kb - a = \\frac{b^2-k}{a}$. Įrodoma, kad $x_2$ yra teigiamas sveikas skaičius ir $x_2 < a$, kas prieštarauja minimalumui.",
+        "answer": "Įrodyta"
       },
       {
-        "title": "Olimpiadinis pavyzdys 2",
-        "text": "Pavyzdinis 12 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 2)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Liestinės triukas",
+        "text": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\\\ge 3$.",
+        "solution": "Randame funkcijos $f(x) = \\frac{1}{x}$ liestinę taške $x=1$. Liestinės lygtis yra $y = 2 - x$. Įrodome nelygybę $\\frac{1}{x} \\\\ge 2 - x \\\\implies \\frac{(x-1)^2}{x} \\\\ge 0$, kuri yra teisinga visiems $x > 0$. Sudedame šias nelygybes trims kintamiesiems: $\\\\sum \\frac{1}{a} \\\\ge 6 - (a+b+c) = 3$.",
+        "answer": "Įrodyta"
       },
       {
-        "title": "Olimpiadinis pavyzdys 3",
-        "text": "Pavyzdinis 12 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 3)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Vieneto šaknų filtras",
+        "text": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\\\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\\\omega = e^{2\\\\pi i / 3}$.",
+        "solution": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\\\omega)^n + (1+\\\\omega^2)^n)$. Kadangi $1+\\\\omega = e^{i\\\\pi/3}$ ir $1+\\\\omega^2 = e^{-i\\\\pi/3}$. Sudedame reikšmes: $S = \\frac{2^n + e^{in\\\\pi/3} + e^{-in\\\\pi/3}}{3} = \\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}$.",
+        "answer": "\\frac{2^n + 2\\\\cos(n\\\\pi/3)}{3}"
       },
       {
-        "title": "Olimpiadinis pavyzdys 4",
-        "text": "Pavyzdinis 12 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 4)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Baricentrinės koordinatės",
+        "text": "Trikampyje $ABC$ raskite pusiaukraštinių susikirtimo taško (centroido) $G$ baricentrines koordinates.",
+        "solution": "Centroidas dalija pusiaukraštines santykiu 2:1. Jo atstumai iki kraštinių, sverti kraštinių ilgiais, sukuria tris vienodo ploto trikampius $S_{GBC} = S_{GCA} = S_{GAB}$. Todėl baricentrinės koordinatės yra lygios ir užrašomos santykiu $(1 : 1 : 1)$.",
+        "answer": "(1 : 1 : 1)"
       },
       {
-        "title": "Olimpiadinis pavyzdys 5",
-        "text": "Pavyzdinis 12 klasės olimpiados uždavinys, reikalaujantis loginio mąstymo. (Metodas 5)",
-        "solution": "Pirmas žingsnis: suprasti sąlygą ir išskirti žinomus faktus. Antras žingsnis: taikyti strategiją (pvz. paritetą arba invariantą). Trečias žingsnis: gauti išvadą.",
-        "answer": "Įrodyta."
+        "title": "Antrojo momento metodas",
+        "text": "Atsitiktinis dydis $X \\\\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
+        "solution": "Taikome formulę $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2}$. Įstatome reikšmes: $P(X=0) \\\\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$.",
+        "answer": "0.05"
       }
     ]
   },

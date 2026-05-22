@@ -398,16 +398,18 @@ export function ensureSrsCard(state: State, input: Partial<SrsCard> & { id: stri
   return { ...state, srsCards: [...state.srsCards, card], updatedAt: now };
 }
 
-export function scoreAttempt(exercise: any, { correct, seconds, hintsUsed, attempts }: { correct: boolean, seconds: number, hintsUsed: number, attempts: number }): number {
+export function scoreAttempt(exercise: any, { correct, seconds, hintsUsed, attempts, revealed }: { correct: boolean, seconds: number, hintsUsed: number, attempts: number, revealed?: boolean }): number {
+  if (revealed) return 0.1;
   const base = correct ? 1 : 0;
   const expected = exercise.estimatedSeconds || 60;
   const timeFactor = Math.min(1.2, Math.max(0.4, expected / Math.max(10, seconds)));
-  const hintPenalty = hintsUsed * 0.12;
+  const isOlympiad = exercise.level === 'olympiad';
+  const hintPenalty = hintsUsed * (isOlympiad ? 0.05 : 0.12);
   const attemptPenalty = Math.max(0, attempts - 1) * 0.15;
   return Math.min(1, Math.max(0, base * timeFactor - hintPenalty - attemptPenalty));
 }
 
-export function recordAttempt(state: State, exercise: any, result: { correct: boolean, seconds: number, hintsUsed: number, attempts: number }): State {
+export function recordAttempt(state: State, exercise: any, result: { correct: boolean, seconds: number, hintsUsed: number, attempts: number, revealed?: boolean }): State {
   const now = Date.now();
   const score = scoreAttempt(exercise, result);
   const attempt: Attempt = {
@@ -419,7 +421,8 @@ export function recordAttempt(state: State, exercise: any, result: { correct: bo
     hintsUsed: result.hintsUsed,
     attempts: result.attempts,
     score,
-    createdAt: now
+    createdAt: now,
+    revealed: result.revealed
   };
   const attempts = [...state.attempts, attempt];
   let next = { ...state, attempts };
@@ -520,9 +523,26 @@ export function calculateMastery(state: Omit<State, 'mastery'> & { testAttempts?
     const rawValue = coverage * 0.34 + avgScore * 0.32 + testScore * 0.24;
     const value = completedAllExercises ? 100 : Math.round(Math.max(0, Math.min(100, rawValue * 100 - hintPenalty * 100)));
 
+    let totalOlympiadContribution = 0;
+    for (const ex of topicOlympiadExercises) {
+      const exAttempts = olympiadAttempts.filter((att) => att.exerciseId === ex.id);
+      if (exAttempts.length > 0) {
+        const correctAttempts = exAttempts.filter((att) => att.correct);
+        if (correctAttempts.length > 0) {
+          const maxCorrectScore = Math.max(...correctAttempts.map((att) => att.score));
+          totalOlympiadContribution += maxCorrectScore;
+        } else {
+          const hasRevealed = exAttempts.some((att) => (att as any).revealed);
+          if (hasRevealed) {
+            totalOlympiadContribution += 0.1;
+          }
+        }
+      }
+    }
+
     const solvedOlympiad = new Set(olympiadAttempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)).size;
     const olympiadTotal = topicOlympiadExercises.length;
-    const olympiadValue = olympiadTotal > 0 ? Math.round((solvedOlympiad / olympiadTotal) * 100) : undefined;
+    const olympiadValue = olympiadTotal > 0 ? Math.round((totalOlympiadContribution / olympiadTotal) * 100) : undefined;
 
     mastery[topicId] = {
       value,

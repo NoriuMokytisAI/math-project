@@ -123,6 +123,7 @@ export interface Attempt {
   attempts: number;
   score: number;
   createdAt: number;
+  revealed?: boolean;
 }
 
 export interface TestAttempt {
