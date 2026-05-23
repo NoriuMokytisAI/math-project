@@ -35,6 +35,18 @@ content/curriculum/grades/09/kvadratine-funkcija.json
 content/olympiad/grades/09/funkcijos-olimpiada.json
 ```
 
+Olympiad extensions must also be topic-level objects. A grade can group olympiad topics in the UI, but a grade must not be modeled as one visible mega-topic containing all olympiad material.
+
+Good olympiad topic examples:
+
+```txt
+content/generated/09/olimpiada-09-skaiciu-teorija.json
+content/generated/09/olimpiada-09-algebra.json
+content/generated/09/olimpiada-09-geometrija.json
+```
+
+Avoid using `olimpiada-09` as the primary learning topic. Whole-grade olympiad ids may exist only as overview or migration aliases.
+
 ## Topic Schema
 
 ```ts

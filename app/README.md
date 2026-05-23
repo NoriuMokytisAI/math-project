@@ -66,6 +66,8 @@ The dashboard topic area is **Aktualios temos**. It is a focused local list of t
 
 The full curriculum and olympiad browser lives in **Teorija** and **Praktika**. Both pages use a card-based library layout with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters. Recommended cards appear first; all other matching topics appear below.
 
+Olympiad content follows the same topic-level browsing rule as school content. Grades may group or filter olympiad cards, but the student must choose a specific olympiad topic such as `Skaičių teorija`, `Algebra`, `Geometrija`, `Kombinatorika`, `Funkcijos`, `Nelygybės`, or `Strategijos ir įrodymai`. The app should not send the student to one giant page containing all olympiad material for a grade.
+
 ## Canonical Phone Web Standard
 
 The website must be usable on phone widths down to `360px` without zooming, clipped text, thin vertical cards, hidden primary actions, or whole-page horizontal scrolling.

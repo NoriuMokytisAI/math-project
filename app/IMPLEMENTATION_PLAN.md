@@ -153,6 +153,7 @@ The dashboard should not be the full curriculum browser. The broad topic library
 Deliverables:
 
 - card-library `Teorija` index page with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters,
+- olympiad `Teorija` cards split by specific topic inside the selected grade, not by one whole-grade bundle,
 - phone-safe `Teorija` and `Praktika` library controls with collapsed filters and one-column topic cards,
 - recommended topic cards above all other matching topic cards,
 - theory reader for all curriculum topics,
@@ -183,6 +184,7 @@ Additional entry behavior:
 
 - `/practice` should open a card-library practice index, not a random/default exercise.
 - The practice index uses the same `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, difficulty filters, and recommended-first card ordering as `Teorija`.
+- In olympiad mode, practice cards must represent specific olympiad topics within a grade, for example `Skaičių teorija`, `Algebra`, `Geometrija`, or `Kombinatorika`; a whole-grade olympiad card may be an overview only.
 - Practice topic cards open `/practice/:practiceSetId` or the equivalent topic practice route.
 
 Deliverables:

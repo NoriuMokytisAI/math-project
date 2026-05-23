@@ -463,6 +463,8 @@ For olympiad topics, target:
 - 10-30 advanced problems,
 - 5-15 selection-level problems where appropriate.
 
+Olympiad expansion must happen per specific topic, not per whole grade. A content pass such as "add grade 9 olympiad content" should produce several focused topic files and cards, for example number theory, algebra, functions, geometry, and combinatorics. Do not expand by creating one large grade page that mixes all olympiad disciplines together.
+
 These are long-term targets, not a requirement for one generation pass.
 
 ## Prioritization Score

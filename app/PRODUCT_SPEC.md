@@ -231,6 +231,17 @@ The content box must show card-based topic presentations:
 - short description,
 - visible grade/band, strand, mastery, and olympiad difficulty metadata where relevant.
 
+Olympiad content must be split at the same browsing level as school content. A selected grade may group olympiad cards, but it must not open one page containing all olympiad content for that grade. The student should choose a specific olympiad topic card, for example `Skaičių teorija`, `Algebra`, `Funkcijos`, `Geometrija`, `Kombinatorika`, `Nelygybės`, or `Strategijos ir įrodymai`.
+
+For olympiad browsing:
+
+- grade or grade band is a filter/grouping control,
+- the card is a specific olympiad topic,
+- clicking a Teorija card opens only that topic's theory,
+- clicking a Praktika card starts only that topic's practice pool,
+- optional whole-grade olympiad overview cards may exist only as summaries or navigation aids,
+- whole-grade overview cards must not replace topic-level cards.
+
 Recommended topics should be based on diagnostic recommendations first, then `Aktualios temos`, then the current target/active topic, then low-mastery topics in the selected grade band. Recommendations must respect the current toggle and filters.
 
 Clicking a Teorija card opens the individual theory topic page. Clicking a Praktika card starts practice for that topic.

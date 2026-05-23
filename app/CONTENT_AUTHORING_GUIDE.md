@@ -37,18 +37,25 @@ content/generated/09/kvadratine-funkcija.json
 
 The file must contain valid UTF-8 JSON only. Do not include Markdown fences, comments, or explanatory text outside JSON.
 
-Olympiad grade packs must use these canonical files:
+Olympiad content must be split into specific grade-and-track topic files, not one whole-grade mega-topic. Grade is a grouping/filter in the app; the actual learning unit is a concrete olympiad topic such as number theory, algebra, geometry, combinatorics, inequalities, functions, or proof strategies.
+
+Canonical olympiad topic paths use this pattern:
 
 ```txt
-content/generated/05/olimpiada-05.json
-content/generated/06/olimpiada-06.json
-content/generated/07/olimpiada-07.json
-content/generated/08/olimpiada-08.json
-content/generated/09/olimpiada-09.json
-content/generated/10/olimpiada-10.json
-content/generated/11/olimpiada-11.json
-content/generated/12/olimpiada-12.json
+content/generated/{grade}/olimpiada-{grade}-{track_slug}.json
 ```
+
+Examples:
+
+```txt
+content/generated/09/olimpiada-09-skaiciu-teorija.json
+content/generated/09/olimpiada-09-algebra.json
+content/generated/09/olimpiada-09-funkcijos.json
+content/generated/09/olimpiada-09-geometrija.json
+content/generated/09/olimpiada-09-kombinatorika.json
+```
+
+Do not author a visible primary topic such as `olimpiada-09` that contains all olympiad content for the grade. A whole-grade olympiad overview may exist only as a lightweight navigation/summary object or as a migration alias; it must not be the default Teorija or Praktika destination.
 
 When a task asks for app content, write finished JSON content files directly. Do not create generator scripts, parser scripts, extraction scripts, or temporary automation as a substitute for the content.
 
@@ -127,6 +134,36 @@ Use exactly one of:
 curriculum
 olympiad
 ```
+
+## Olympiad Topic Layout
+
+Olympiad content follows the same topic schema as curriculum content, but it is organized more narrowly.
+
+Required rules:
+
+- one olympiad JSON file equals one specific topic/track within one grade or grade band,
+- `topic.id` must include the grade and track, for example `olimpiada-09-geometrija`,
+- `topic.title` should be the topic name, for example `Geometrija`, not `Olimpiadine matematika (9 klase)`,
+- `topic.level` must be `olympiad`,
+- `topic.strand` should use the olympiad track shown to the learner,
+- all theory, concepts, worked examples, exercises, tests, mistakes, and SRS seeds in the file must belong to that same topic,
+- exercises in the file must use the same `topicId` as the topic,
+- exercises must include `olympiadTrack` matching the topic track,
+- grade-level cards may group these topics visually, but clicking a Teorija or Praktika card must open a specific olympiad topic, not an entire grade dump.
+
+Recommended olympiad track slugs:
+
+```txt
+skaiciu-teorija
+algebra
+funkcijos
+nelygybes
+geometrija
+kombinatorika
+strategijos-ir-irodymai
+```
+
+If a grade uses several tracks, create several files. For example, grade 9 should be represented as multiple topic cards such as `olimpiada-09-skaiciu-teorija`, `olimpiada-09-algebra`, `olimpiada-09-funkcijos`, `olimpiada-09-geometrija`, and `olimpiada-09-kombinatorika`.
 
 ## Theory Sections
 

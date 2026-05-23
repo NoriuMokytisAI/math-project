@@ -249,6 +249,16 @@ Both `Teorija` and `Praktika` must have card-library index pages when opened wit
 
 The default content toggle must come from onboarding mode: olympiad mode defaults to `Olimpiadinis`; other modes default to `Mokyklinis`.
 
+Olympiad library requirements:
+
+- olympiad grade selection is only a filter or visual group,
+- the primary selectable cards must be specific olympiad topics, not whole-grade bundles,
+- examples of olympiad topic cards include `Skaičių teorija`, `Algebra`, `Funkcijos`, `Nelygybės`, `Geometrija`, `Kombinatorika`, and `Strategijos ir įrodymai`,
+- opening an olympiad theory card must show only theory, concepts, examples, and SRS seeds for that topic,
+- opening an olympiad practice card must show only exercises for that topic,
+- optional grade overview cards are allowed only as navigation summaries and must not hide or replace topic-level cards,
+- stored old whole-grade olympiad ids must be handled as migration aliases or redirected to the grade-filtered olympiad library.
+
 ### Full Course With Diagnostic Mode
 
 Selected by: `Nežinau nuo ko pradėti`
