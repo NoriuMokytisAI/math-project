@@ -16,7 +16,11 @@
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
-      "olimpiada-10-concept-inversion"
+      "olimpiada-10-concept-inversion",
+      "concept-ceva-teorema",
+      "concept-menelajaus-teorema",
+      "concept-tasko-galia",
+      "concept-spiralinis-panasumas"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -25,7 +29,22 @@
       "ex-olimpiada-10-15",
       "ex-olimpiada-10-16",
       "ex-olimpiada-10-17",
-      "ex-olimpiada-10-18"
+      "ex-olimpiada-10-18",
+      "ex-olimpiada-10-geo-01",
+      "ex-olimpiada-10-geo-02",
+      "ex-olimpiada-10-geo-03",
+      "ex-olimpiada-10-geo-04",
+      "ex-olimpiada-10-geo-05",
+      "ex-olimpiada-10-geo-06",
+      "ex-olimpiada-10-geo-07",
+      "ex-olimpiada-10-geo-08",
+      "ex-olimpiada-10-geo-09",
+      "ex-olimpiada-10-geo-10",
+      "ex-olimpiada-10-geo-11",
+      "ex-olimpiada-10-geo-12",
+      "ex-olimpiada-10-geo-13",
+      "ex-olimpiada-10-geo-14",
+      "ex-olimpiada-10-geo-15"
     ]
   },
   "theory": [
@@ -41,6 +60,32 @@
           "text": "Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
         }
       ]
+    },
+    {
+      "title": "Panašumas ir spiralinis panašumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spiralinis panašumas yra transformacija, kuri apjungia posūkį apie tašką ir homotetiją (mastelio keitimą) tuo pačiu centru."
+        },
+        {
+          "type": "method",
+          "text": "Jei du trikampiai yra tiesiogiai panašūs, tai egzistuoja spiralinis panašumas, kuris vieną perveda į kitą."
+        }
+      ]
+    },
+    {
+      "title": "Baricentrinės koordinatės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baricentrinės koordinatės aprašo taško padėtį trikampio atžvilgiu per trijų svorių santykį (x:y:z), kurie proporcingi atitinkamų trikampių plotams."
+        },
+        {
+          "type": "formula",
+          "latex": "P = \\frac{x A + y B + z C}{x + y + z}"
+        }
+      ]
     }
   ],
   "concepts": [
@@ -52,6 +97,40 @@
       "intuition": "Erdvės transformacija, kuri tieses ir apskritimus paverčia kitais apskritimais ar tiesėmis.",
       "formal": "Atvaizdis $\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\in OP$ ir $OP \\cdot OP' = R^2$.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "concept-ceva-teorema",
+      "title": "Čevos teorema",
+      "type": "theorem",
+      "shortDefinition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, susikerta viename taške.",
+      "formal": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$",
+      "relatedConceptIds": [
+        "concept-menelajaus-teorema"
+      ]
+    },
+    {
+      "id": "concept-menelajaus-teorema",
+      "title": "Menelajaus teorema",
+      "type": "theorem",
+      "shortDefinition": "Sąlyga, kada trys taškai ant trikampio kraštinių (ar jų tęsinių) yra vienoje tiesėje.",
+      "formal": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$",
+      "relatedConceptIds": [
+        "concept-ceva-teorema"
+      ]
+    },
+    {
+      "id": "concept-tasko-galia",
+      "title": "Taško galia apskritimo atžvilgiu",
+      "type": "concept",
+      "shortDefinition": "Pastovus dydis ^2 - R^2$, būdingas taškui ir apskritimui.",
+      "intuition": "Bet kuriai kirtei per tašką P, atkarpų nuo P iki susikirtimo su apskritimu sandauga yra pastovi."
+    },
+    {
+      "id": "concept-spiralinis-panasumas",
+      "title": "Spiralinis panašumas",
+      "type": "concept",
+      "shortDefinition": "Posūkio ir homotetijos kompozicija turinti bendrą centrą.",
+      "intuition": "Transformacija, kuri ne tik didina/mažina objektą, bet ir jį pasuka."
     }
   ],
   "formulas": [],
@@ -788,7 +867,1357 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-10-geo-01",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio $ABC$ kraštinėse $BC, CA, AB$ parinkti taškai $D, E, F$ taip, kad tiesės $AD, BE, CF$ susikerta viename taške. Įrodykite Čevos teoremą: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Čevos teorema."
+      },
+      "answerText": "Įrodyta naudojant trikampių plotų santykius.",
+      "coreIdea": {
+        "title": "Plotų santykiai",
+        "text": "Atkarpų santykis kraštinėje yra lygus trikampių, turinčių bendrą aukštinę, plotų santykiui."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul $P$ yra tiesių sankirtos taškas. Nagrinėkite trikampių $ABP$ ir $ACP$ plotų santykį.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pastebėkite, kad $BD/DC = S_{ABD}/S_{ACD} = S_{PBD}/S_{PCD}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iš savybės $\\frac{a}{b} = \\frac{c}{d} \\implies \\frac{a-c}{b-d} = \\frac{a}{b}$ seka, kad $BD/DC = S_{ABP}/S_{ACP}$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Užrašykite analogiškas išraiškas kitiems santykiams ir juos sudauginkite.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul $P$ yra tiesių $AD, BE, CF$ sankirtos taškas."
+        },
+        {
+          "text": "Santykius išreiškiame per plotus: $BD/DC = S_{ABP}/S_{ACP}$."
+        },
+        {
+          "text": "Analogiškai $CE/EA = S_{BCP}/S_{BAP}$ ir $AF/FB = S_{CAP}/S_{CBP}$."
+        },
+        {
+          "text": "Sudauginę šiuos tris santykius: $\\frac{S_{CAP}}{S_{CBP}} \\cdot \\frac{S_{ABP}}{S_{ACP}} \\cdot \\frac{S_{BCP}}{S_{BAP}} = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-01-method-1",
+          "title": "Plotų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Santykių nustatymas",
+              "action": "Užrašome $BD/DC = S_{ABD}/S_{ACD} = S_{PBD}/S_{PCD} = (S_{ABD}-S_{PBD})/(S_{ACD}-S_{PCD}) = S_{ABP}/S_{ACP}$.",
+              "reason": "Trikampiai su bendra aukštine turi plotus, proporcingus pagrindams.",
+              "latex": "\\frac{BD}{DC} = \\frac{S_{ABP}}{S_{ACP}}",
+              "result": "Pirmas santykis išreikštas plotais."
+            },
+            {
+              "title": "Likusių santykių užrašymas",
+              "action": "$\\frac{CE}{EA} = \\frac{S_{BCP}}{S_{BAP}}$ ir $\\frac{AF}{FB} = \\frac{S_{CAP}}{S_{CBP}}$.",
+              "reason": "Taikome tą pačią logiką kitoms kraštinėms.",
+              "latex": "\\frac{CE}{EA} = \\frac{S_{BCP}}{S_{BAP}}, \\frac{AF}{FB} = \\frac{S_{CAP}}{S_{CBP}}",
+              "result": "Visi santykiai paruošti daugybai."
+            },
+            {
+              "title": "Sandaugos skaičiavimas",
+              "action": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = \\frac{S_{CAP}}{S_{CBP}} \\cdot \\frac{S_{ABP}}{S_{ACP}} \\cdot \\frac{S_{BCP}}{S_{BAP}} = 1$.",
+              "reason": "Visi plotai vardikliuose ir skaitikliuose susiprastina.",
+              "latex": "\\prod = 1",
+              "result": "Teorema įrodyta."
+            }
+          ],
+          "finalAnswer": "Įrodyta naudojant trikampių plotų santykius."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-geo-01-trap-1",
+          "title": "Santykių krypties supainiojimas",
+          "wrongMove": "Surašomi santykiai ne ta pačia kryptimi (pvz., AF/FB * DC/BD * ...).",
+          "whyTempting": "Mokiniai nesilaiko apeinimo tvarkos (pagal laikrodžio rodyklę ar prieš).",
+          "correction": "Būtina sekti viršūnes eilės tvarka: A->F->B, B->D->C, C->E->A.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuo Čevos teorema skiriasi nuo Menelajaus teoremos?",
+        "Ar ši teorema galioja, jei taškas P yra trikampio išorėje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-geo-01-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra Čevos teoremos formuluotė?",
+          "back": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$, kai AD, BE, CF susikerta viename taške.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-geo-02",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tiesė kerta trikampio $ABC$ kraštines $AB$ (taške $F$), $BC$ (taške $D$) ir kraštinės $AC$ tęsinį (taške $E$). Įrodykite Menelajaus teoremą: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Menelajaus teorema."
+      },
+      "answerText": "Įrodyta naudojant panašius trikampius arba statmenis į tiesę.",
+      "coreIdea": {
+        "title": "Statmenys į kirtę",
+        "text": "Iš trikampio viršūnių nuleisti statmenys į tiesę leidžia sudaryti panašius trikampius, kurių kraštinių santykiai sutampa su ieškomaisiais."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nuleiskite statmenis $h_A, h_B, h_C$ iš viršūnių $A, B, C$ į tiesę $FED$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pastebėkite panašius stačiuosius trikampius, pvz., su pagrindais ant tiesės.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Santykis $AF/FB = h_A/h_B$. Užrašykite kitus santykius analogiškai.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sudauginkite gautus aukštinių santykius ir pamatysite, kad jie susiprastina.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nuleidžiame statmenis $h_A, h_B, h_C$ iš viršūnių į tiesę."
+        },
+        {
+          "text": "Iš panašių trikampių: $AF/FB = h_A/h_B$, $BD/DC = h_B/h_C$, $CE/EA = h_C/h_A$."
+        },
+        {
+          "text": "Sandauga: $\\frac{h_A}{h_B} \\cdot \\frac{h_B}{h_C} \\cdot \\frac{h_C}{h_A} = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-02-method-1",
+          "title": "Aukštinių metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Konstrukcija",
+              "action": "Tegul $a, b, c$ yra statmenų ilgiai iš $A, B, C$ į kirtę.",
+              "reason": "Sukuriami atskaitos dydžiai panašumui.",
+              "latex": "h_A, h_B, h_C",
+              "result": "Nubrėžti statmenys."
+            },
+            {
+              "title": "Panašumo taikymas",
+              "action": "$\\frac{AF}{FB} = \\frac{h_A}{h_B}, \\frac{BD}{DC} = \\frac{h_B}{h_C}, \\frac{CE}{EA} = \\frac{h_C}{h_A}$.",
+              "reason": "Atitinkami statieji trikampiai yra panašūs.",
+              "latex": "\\frac{AF}{FB} = \\frac{h_A}{h_B}",
+              "result": "Gauti santykiai per aukštines."
+            },
+            {
+              "title": "Sudauginimas",
+              "action": "Sandauga lygi 1.",
+              "reason": "Visi nariai susiprastina.",
+              "latex": "\\frac{h_A}{h_B} \\cdot \\frac{h_B}{h_C} \\cdot \\frac{h_C}{h_A} = 1",
+              "result": "Teorema įrodyta."
+            }
+          ],
+          "finalAnswer": "Įrodyta naudojant panašius trikampius."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-geo-02-trap-1",
+          "title": "Orientuotų atkarpų ženklų ignoravimas",
+          "wrongMove": "Pamirštama, kad viena iš atkarpų yra tęsinyje, todėl orientuotų atkarpų sandauga turėtų būti -1.",
+          "whyTempting": "Geometrijos uždaviniuose dažnai naudojami tik ilgiai (teigiamos reikšmės).",
+          "correction": "Nors ilgių sandauga yra 1, naudojant orientuotas atkarpas sandauga yra -1, nes tiesė kerta nelyginį skaičių kraštinių tęsinių (vieną arba tris).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada naudojame Menelajaus teoremą, o kada Čevos?",
+        "Kaip pasikeistų įrodymas, jei tiesė kirstų visus tris kraštinių tęsinius?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-03",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Taškas $P$ yra apskritimo išorėje. Per $P$ nubrėžta tiesė kerta apskritimą taškuose $A$ ir $B$ taip, kad $PA = 4$ ir $AB = 5$. Kita tiesė, einanti per $P$, kerta apskritimą taškuose $C$ ir $D$. Jei $PC = 3$, raskite $CD$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "answerText": "9",
+      "coreIdea": {
+        "title": "Taško galia apskritimo atžvilgiu",
+        "text": "Bet kurioms dviem kirtėms, einančioms per tą patį tašką $P$, atkarpų sandaugos yra lygios: $PA \\cdot PB = PC \\cdot PD$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite taško galios teoremą kirtėms: $PA \\cdot PB = PC \\cdot PD$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite $PB$. Atkreipkite dėmesį, kad $PB = PA + AB$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomas reikšmes: $4 \\cdot (4+5) = 3 \\cdot PD$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Raskite $PD$ ir tada apskaičiuokite $CD = PD - PC$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame $PB$: $PB = PA + AB = 4 + 5 = 9$."
+        },
+        {
+          "text": "Taikome teoremą: $PA \\cdot PB = PC \\cdot PD \\implies 4 \\cdot 9 = 3 \\cdot PD$."
+        },
+        {
+          "text": "Randame $PD$: $36 = 3 \\cdot PD \\implies PD = 12$."
+        },
+        {
+          "text": "Randame $CD$: $CD = PD - PC = 12 - 3 = 9$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-03-method-1",
+          "title": "Taško galia",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Duomenų paruošimas",
+              "action": "PB = 4 + 5 = 9.",
+              "reason": "PB yra visa kirtės atkarpa.",
+              "latex": "PB=9",
+              "result": "Žinoma PB reikšmė."
+            },
+            {
+              "title": "Lygties sudarymas",
+              "action": "$4 \\cdot 9 = 3 \\cdot PD$.",
+              "reason": "Pagal taško galios teoremą.",
+              "latex": "36 = 3PD",
+              "result": "PD = 12."
+            },
+            {
+              "title": "Atsakymo skaičiavimas",
+              "action": "CD = 12 - 3 = 9.",
+              "reason": "Atimame išorinę kirtės dalį.",
+              "latex": "CD=9",
+              "result": "Rasta CD."
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-geo-03-trap-1",
+          "title": "Atkarpų painiojimas",
+          "wrongMove": "Naudojama $PA \\cdot AB = PC \\cdot CD$ (dauginamos vidinės ir išorinės dalys).",
+          "whyTempting": "Intuityviai atrodo, kad reikia dauginti matomus segmentus.",
+          "correction": "Teorema teigia, kad dauginama atkarpa nuo taško iki pirmo susikirtimo ir atkarpa nuo taško iki antro susikirtimo.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-04",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad bet kurių dviejų nesikertančių apskritimų radikalinė ašis yra tiesė, statmena juos jungiantiems centrams.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta radikalinės ašies savybė."
+      },
+      "answerText": "Įrodyta naudojant Pitagoro teoremą arba koordinačių metodą.",
+      "coreIdea": {
+        "title": "Galių lygybė",
+        "text": "Radikalinės ašies taškų galios abiejų apskritimų atžvilgiu yra lygios. Taško galia apskritimui su centru $O$ ir spinduliu $R$ yra $d^2 - R^2$, kur $d$ yra atstumas iki centro."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul apskritimų centrai yra $O_1$ ir $O_2$, o spinduliai $R_1$ ir $R_2$. Taškas $P$ priklauso radikalinei ašiai, jei $PO_1^2 - R_1^2 = PO_2^2 - R_2^2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Įsiveskite koordinačių sistemą taip, kad $O_1 = (0,0)$ ir $O_2 = (d, 0)$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite $P = (x, y)$ ir sudarykite lygtį $x^2 + y^2 - R_1^2 = (x-d)^2 + y^2 - R_2^2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Suprastinkite lygtį ir pamatysite, kad $y^2$ nariai susiprastina, o lieka tik tiesinė priklausomybė nuo $x$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul centrai yra $O_1(0,0)$ ir $O_2(d,0)$, spinduliai $R_1, R_2$."
+        },
+        {
+          "text": "Taško $P(x,y)$ galios: $x^2 + y^2 - R_1^2$ ir $(x-d)^2 + y^2 - R_2^2$."
+        },
+        {
+          "text": "Sulyginame: $x^2 + y^2 - R_1^2 = x^2 - 2dx + d^2 + y^2 - R_2^2$."
+        },
+        {
+          "text": "Suprastiname: $-R_1^2 = -2dx + d^2 - R_2^2 \\implies 2dx = d^2 + R_1^2 - R_2^2$."
+        },
+        {
+          "text": "Tai yra vertikalios tiesės lygtis $x = \\text{const}$, kuri yra statmena abscisių ašiai (centrų linijai)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-04-method-1",
+          "title": "Koordinačių metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Ašių pasirinkimas",
+              "action": "Pasirenkame $X$ ašį per centrus, $Y$ ašį per $O_1$.",
+              "reason": "Supaprastina skaičiavimus.",
+              "latex": "O_1=(0,0), O_2=(d,0)",
+              "result": "Nustatytos koordinačių pradžios."
+            },
+            {
+              "title": "Galių lygybė",
+              "action": "Sulyginame $d_1^2-R_1^2 = d_2^2-R_2^2$.",
+              "reason": "Radikalinės ašies apibrėžimas.",
+              "latex": "x^2+y^2-R_1^2 = (x-d)^2+y^2-R_2^2",
+              "result": "Sukurta geometrinė lygtis."
+            },
+            {
+              "title": "Analizė",
+              "action": "Lygtis tampa $2dx = d^2+R_1^2-R_2^2$.",
+              "reason": "Kvadratiniai nariai susiprastina.",
+              "latex": "x = \\frac{d^2+R_1^2-R_2^2}{2d}",
+              "result": "Gauta vertikalios tiesės lygtis."
+            }
+          ],
+          "finalAnswer": "Įrodyta radikalinės ašies savybė."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-geo-04-trap-1",
+          "title": "Ašies padėties klaida",
+          "wrongMove": "Manoma, kad radikalinė ašis visada eina per centrų vidurį.",
+          "whyTempting": "Jei spinduliai lygūs, ašis tikrai yra vidurio statmuo.",
+          "correction": "Jei spinduliai skiriasi, ašis pasislenka link apskritimo su mažesniu spinduliu.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutinka radikalinei ašiai, kai apskritimai kertasi?",
+        "Ar radikalinė ašis egzistuoja koncentriniams apskritimams?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-05",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Į apskritimą įbrėžtas keturkampis $ABCD$. Kraštinių ilgiai yra $AB = 7, BC = 24, CD = 15, DA = 20$. Raskite įstrižainės $AC$ ilgį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "answerText": "25",
+      "coreIdea": {
+        "title": "Pitagoro teorema ir apibrėžtinumas",
+        "text": "Pastebėkite, kad $7^2 + 24^2 = 49 + 576 = 625 = 25^2$. Vadinasi, trikampis $ABC$ yra status."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite, ar trikampis $ABC$ yra status naudodami Pitagoro teoremą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite $7^2 + 24^2$ ir palyginkite su kvadratu.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi trikampis status, $AC$ yra apskritimo skersmuo.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite $AC = \\sqrt{7^2 + 24^2}$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tikriname Pitagoro teoremą trikampiui $ABC$: $7^2 + 24^2 = 49 + 576 = 625$."
+        },
+        {
+          "text": "Kadangi $\\sqrt{625} = 25$, tai $AC = 25$."
+        },
+        {
+          "text": "Pastebime, kad $15^2 + 20^2 = 225 + 400 = 625$, todėl trikampis $ADC$ taip pat status."
+        },
+        {
+          "text": "Tai patvirtina, kad $ABCD$ yra įbrėžtinis, o $AC$ yra skersmuo."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-05-method-1",
+          "title": "Pitagoro teorema",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaičiavimas",
+              "action": "$AC = \\sqrt{AB^2 + BC^2}$.",
+              "reason": "Taisyklingas Pitagoro skaičių rinkinys.",
+              "latex": "7^2+24^2 = 625",
+              "result": "AC = 25."
+            }
+          ],
+          "finalAnswer": "25"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-06",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "hard",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Tegul $P$ yra taškas trikampio $ABC$ apibrėžtiniame apskritime. Nuleidžiame statmenis iš $P$ į trikampio kraštines $BC, CA, AB$ ir pažymime jų pagrindus atitinkamai $X, Y, Z$. Įrodykite, kad taškai $X, Y, Z$ yra kolinearūs (guli vienoje tiesėje, vadinamoje Simsono tiese).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodytas Simsono tiesės egzistavimas."
+      },
+      "answerText": "Įrodyta naudojant įbrėžtinių keturkampių savybes.",
+      "coreIdea": {
+        "title": "Įbrėžtiniai keturkampiai",
+        "text": "Statmenų pagrindai kartu su trikampio viršūnėmis ir tašku $P$ sudaro kelis įbrėžtinius keturkampius, kurių kampų ryšiai leidžia įrodyti kolinearumą."
+      },
+      "strategyTags": [
+        "geometric-auxiliary-line"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pastebėkite, kad keturkampiai $PXCY, PYA Z, PZBX$ yra įbrėžtiniai (arba bent kai kurie iš jų), nes turi stačiuosius kampus priešpriešiais arba ant tos pačios kraštinės.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Norėdami įrodyti, kad $X, Y, Z$ yra vienoje tiesėje, parodykite, kad $\\angle XYC + \\angle AY Z = 180^\\circ$ (arba kitą ekvivalentišką kampų sumą).",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite įbrėžtinio keturkampio $PXCY$ savybę: $\\angle XYC = \\angle XPC = 90^\\circ - \\angle PCX$.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Keturkampis $PXCY$ yra įbrėžtinis, nes $\\angle PXC = \\angle PYC = 90^\\circ$."
+        },
+        {
+          "text": "Todėl $\\angle XYC = \\angle XPC = 90^\\circ - \\angle PCX$."
+        },
+        {
+          "text": "Keturkampis $PYAZ$ yra įbrėžtinis, todėl $\\angle AY Z = \\angle APZ = 90^\\circ - \\angle PAZ$."
+        },
+        {
+          "text": "Kadangi $P$ yra ant apskritimo, $\\angle PCX + \\angle PAZ = 180^\\circ$ (arba panašus ryšys), kas leidžia susieti kampus į tiesę."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-06-method-1",
+          "title": "Kampų vijimasis",
+          "methodType": "main",
+          "strategyTags": [
+            "geometric-auxiliary-line"
+          ],
+          "steps": [
+            {
+              "title": "Įbrėžtinių keturkampių radimas",
+              "action": "Pažymime, kad $\\angle PYC = \\angle PXC = 90^\\circ \\implies PXCY$ įbrėžtinis. Taip pat $PYAZ$ įbrėžtinis.",
+              "reason": "Stačiųjų kampų savybė.",
+              "latex": "\\angle PYC = \\angle PXC = 90^\\circ",
+              "result": "Nustatyti du įbrėžtiniai keturkampiai."
+            },
+            {
+              "title": "Kampų sulyginimas",
+              "action": "$\\angle XYC = \\angle XPC$ ir $\\angle AY Z = \\angle APZ$.",
+              "reason": "Įbrėžtiniai kampai, besiremiantys į tą patį lanką.",
+              "latex": "\\angle XYC = \\angle XPC",
+              "result": "Kampai perkeliami į tašką P."
+            },
+            {
+              "title": "Finalinis įrodymas",
+              "action": "Parodoma, kad $\\angle XY Z = 180^\\circ$.",
+              "reason": "Naudojant faktą, kad $P$ yra ant trikampio apibrėžtinio apskritimo.",
+              "latex": "\\angle XY Z = 180^\\circ",
+              "result": "Kolinearumas įrodytas."
+            }
+          ],
+          "finalAnswer": "Įrodytas Simsono tiesės egzistavimas."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-07",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "hard",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Įrodykite, kad trikampio kraštinių vidurio taškai, aukštinių pagrindai ir atkarpos tarp ortocentro ir viršūnių vidurio taškai (iš viso 9 taškai) visi guli ant vieno apskritimo (Devynių taškų apskritimo).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Devynių taškų apskritimo teorema."
+      },
+      "answerText": "Įrodyta naudojant homotetiją arba stačiakampio savybes.",
+      "coreIdea": {
+        "title": "Homotetija su centru ortocentre",
+        "text": "Homotetija su centru $H$ (ortocentru) ir koeficientu $1/2$ atvaizduoja trikampio apibrėžtinį apskritimą į Devynių taškų apskritimą."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul $H$ yra ortocentras, o $O$ – apibrėžtinio apskritimo centras. Nagrinėkite homotetiją $h(H, 1/2)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Ši homotetija atvaizduoja viršūnes $A, B, C$ į atkarpų $AH, BH, CH$ vidurio taškus.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Homotetija $h(H, 1/2)$ atvaizduoja apibrėžtinį apskritimą į naują apskritimą."
+        },
+        {
+          "text": "Viršūnės $A, B, C$ atsiduria atkarpų vidurio taškuose."
+        },
+        {
+          "text": "Taškai, simetriški $H$ kraštinių atžvilgiu, guli ant apibrėžtinio apskritimo, todėl jų vaizdai (aukštinių pagrindai) guli ant naujo apskritimo."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-07-method-1",
+          "title": "Homotetijos metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Transformacijos pasirinkimas",
+              "action": "Taikome homotetiją $h(H, 0.5)$.",
+              "reason": "Sutraukia trikampio elementus per pusę link ortocentro.",
+              "latex": "k=1/2",
+              "result": "Nustatytas ryšys tarp apskritimų."
+            }
+          ],
+          "finalAnswer": "Įrodyta Devynių taškų apskritimo teorema."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-08",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad bet kurio trikampio ortocentras $H$, sunkio centras $G$ ir apibrėžtinio apskritimo centras $O$ yra kolinearūs (Oilerio tiesė) ir galioja santykis $HG = 2GO$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Oilerio tiesės savybė."
+      },
+      "answerText": "Įrodyta naudojant homotetiją su centru sunkio centre.",
+      "coreIdea": {
+        "title": "Homotetija sunkio centre",
+        "text": "Homotetija su centru $G$ (centroidu) ir koeficientu $-1/2$ atvaizduoja trikampį į jo vidurinį trikampį (medial triangle)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sunkio centras $G$ dalija medianas santykiu 2:1. Tai sufleruoja homotetiją su centru $G$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Medialinio trikampio apibrėžtinio apskritimo centras yra $O$, o jo ortocentras sutampa su originalaus trikampio centru $O$.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Homotetija $h(G, -1/2)$ atvaizduoja viršūnę $A$ į priešpriešinės kraštinės vidurio tašką $M_a$."
+        },
+        {
+          "text": "Aukštinė iš $A$ atvaizduojama į statmenį iš $M_a$ į tą pačią kraštinę (vidurio statmenį)."
+        },
+        {
+          "text": "Ortocentras $H$ (aukštinių sankirta) atvaizduojamas į $O$ (vidurio statmenų sankirtą)."
+        },
+        {
+          "text": "Todėl $G, H, O$ yra vienoje tiesėje ir $\\vec{GO} = -1/2 \\vec{GH}$, kas reiškia $HG = 2GO$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-08-method-1",
+          "title": "Homotetija G taške",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sąryšio nustatymas",
+              "action": "Taikome $h(G, -1/2)$.",
+              "reason": "Atvaizduoja trikampį į vidurinį trikampį.",
+              "latex": "h(G, -1/2)",
+              "result": "H atvaizduojamas į O."
+            }
+          ],
+          "finalAnswer": "Įrodyta Oilerio tiesės savybė."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-09",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Simediana yra atkarpa, simetriška medianai kampo pusiaukampinės atžvilgiu. Įrodykite, kad simediana iš viršūnės $A$ dalija kraštinę $BC$ santykiu, lygiam šoninių kraštinių kvadratų santykiui: $BD/DC = AB^2 / AC^2$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta simedianų savybė."
+      },
+      "answerText": "Įrodyta naudojant sinusų teoremą.",
+      "coreIdea": {
+        "title": "Sinusų teorema ir simetrija",
+        "text": "Simetriškų kampų sinusai leidžia susieti atkarpų ilgius su kraštinių ilgiais per trikampių plotus arba sinusų teoremą."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul $\\angle BAD = \\alpha_1$ ir $\\angle CAD = \\alpha_2$. Medianai šie kampai tenkina sinusų ryšį per plotus.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Naudokite trikampio ploto formulę per sinusą: $S_{ABD}/S_{ACD} = (AB \\cdot AD \\sin \\alpha_1) / (AC \\cdot AD \\sin \\alpha_2) = BD/DC$.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul $M$ yra medianos pagrindas, $D$ – simedianos pagrindas."
+        },
+        {
+          "text": "Medianos atveju $S_{ABM} = S_{ACM} \\implies AB \\sin(\\angle BAM) = AC \\sin(\\angle CAM)$."
+        },
+        {
+          "text": "Simedianos atveju kampai sukeičiami: $\\angle BAD = \\angle CAM$ ir $\\angle CAD = \\angle BAM$."
+        },
+        {
+          "text": "Įstatę į ploto santykį gauname $BD/DC = (AB^2 \\sin(\\angle CAM)) / (AC^2 \\sin(\\angle BAM)) \\cdot \\dots = AB^2/AC^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-09-method-1",
+          "title": "Sinusų/Plotų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Santykių užrašymas",
+              "action": "$\\frac{BD}{DC} = \\frac{AB \\sin(\\angle BAD)}{AC \\sin(\\angle CAD)}$.",
+              "reason": "Iš trikampių ABD ir ACD plotų santykio.",
+              "latex": "\\frac{BD}{DC} = \\frac{AB \\sin \\alpha_1}{AC \\sin \\alpha_2}",
+              "result": "Gauta bazinė lygtis."
+            }
+          ],
+          "finalAnswer": "Įrodyta simedianų savybė."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-10",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "hard",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tegul $ABC$ yra trikampis, o $D, E, F$ yra taškai kraštinėse $BC, CA, AB$. Įrodykite, kad trys apskritimai, apibrėžti apie trikampius $AFE, BDF, CED$, susikerta viename taške (Mikelio taške).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Mikelio taško teorema."
+      },
+      "answerText": "Įrodyta naudojant įbrėžtinių keturkampių kampų savybes.",
+      "coreIdea": {
+        "title": "Kampų suma",
+        "text": "Parodysime, kad dviejų apskritimų sankirtos taškas būtinai guli ir ant trečiojo apskritimo, patikrinę kampų sumą iki $180^\\circ$."
+      },
+      "strategyTags": [
+        "geometric-auxiliary-line"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul $M$ yra apskritimų $AFE$ ir $BDF$ sankirtos taškas (be $F$).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi $AEMF$ įbrėžtinis, $\\angle EMF = 180^\\circ - \\angle A$. Kadangi $BDMF$ įbrėžtinis, $\\angle DMF = 180^\\circ - \\angle B$.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame kampą $\\angle EMD = 360^\\circ - (\\angle EMF + \\angle DMF)$."
+        },
+        {
+          "text": "Įstatome: $\\angle EMD = 360^\\circ - (180^\\circ - A + 180^\\circ - B) = A + B$."
+        },
+        {
+          "text": "Kadangi $A + B = 180^\\circ - C$ (trikampio kampų suma), tai $\\angle EMD = 180^\\circ - C$."
+        },
+        {
+          "text": "Tai reiškia, kad keturkampis $CEMD$ yra įbrėžtinis, todėl $M$ guli ant trečiojo apskritimo."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-10-method-1",
+          "title": "Kampų vijimasis",
+          "methodType": "main",
+          "strategyTags": [
+            "geometric-auxiliary-line"
+          ],
+          "steps": [
+            {
+              "title": "Sankirtos analizė",
+              "action": "Tarkime $M$ yra dviejų apskritimų sankirta.",
+              "reason": "Sukuriamas kandidatas Mikelio taškui.",
+              "latex": "M \\in (AFE) \\cap (BDF)",
+              "result": "Gautas taškas M."
+            }
+          ],
+          "finalAnswer": "Įrodyta Mikelio taško teorema."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-11",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Du apskritimai liečiasi išoriškai taške $T$. Bendroji išorinė liestinė liečia apskritimus taškuose $A$ ir $B$. Įrodykite, kad kampas $\\angle ATB = 90^\\circ$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta, kad kampas ATB status."
+      },
+      "answerText": "Įrodyta naudojant taško galios arba liestinių savybes.",
+      "coreIdea": {
+        "title": "Bendroji liestinė per lietimosi tašką",
+        "text": "Nubrėžus bendrąją vidinę liestinę per tašką $T$, ji kerta išorinę liestinę $AB$ taške $M$, kuris yra vienodai nutolęs nuo $A, B$ ir $T$."
+      },
+      "strategyTags": [
+        "geometric-auxiliary-line"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nubrėžkite bendrąją vidinę liestinę per tašką $T$. Tegul ji kerta atkarpą $AB$ taške $M$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagal liestinių, išvestų iš vieno taško, savybę: $MA = MT$ ir $MB = MT$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tai reiškia, kad $M$ yra atkarpos $AB$ vidurio taškas ir $MT = AB/2$.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nubrėžiame vidinę liestinę, kuri kerta $AB$ taške $M$."
+        },
+        {
+          "text": "Iš liestinių savybės $MA = MT$ (pirmajam apskritimui) ir $MB = MT$ (antrajam)."
+        },
+        {
+          "text": "Vadinasi, $MA = MB = MT$."
+        },
+        {
+          "text": "Trikampyje $ATB$ mediana $TM$ lygi pusei kraštinės $AB$, kuriai ji nubrėžta. Todėl trikampis status."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-11-method-1",
+          "title": "Medianų savybė",
+          "methodType": "main",
+          "strategyTags": [
+            "geometric-auxiliary-line"
+          ],
+          "steps": [
+            {
+              "title": "Pagalbinė liestinė",
+              "action": "Nubrėžiame liestinę per T.",
+              "reason": "Sukuriamas simetrijos taškas M.",
+              "latex": "MA=MT=MB",
+              "result": "M yra AB vidurys."
+            }
+          ],
+          "finalAnswer": "Kampas ATB status."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-12",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "hard",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Tegul $A, B, C, D, E, F$ yra taškai ant apskritimo bet kokia tvarka. Įrodykite Paskalio teoremą: priešpriešinių kraštinių sankirtos taškai $X = AB \\cap DE$, $Y = BC \\cap EF$, $Z = CD \\cap FA$ yra kolinearūs.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Paskalio teorema."
+      },
+      "answerText": "Įrodyta naudojant Menelajaus teoremą trikampiui, sudarytam iš kraštinių tęsinių.",
+      "coreIdea": {
+        "title": "Menelajaus teorema ir taško galia",
+        "text": "Taikome Menelajaus teoremą trikampiui, kurį sudaro tiesės $AB, CD, EF$, ir naudojame taškų galias apskritimo atžvilgiu santykiams suprastinti."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul $L, M, N$ yra trikampio, sudaryto iš tiesių $AB, CD, EF$ sankirtų, viršūnės.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome Menelajaus santykius taškams $X, Y, Z$ trikampio $LMN$ atžvilgiu."
+        },
+        {
+          "text": "Naudojame taškų $L, M, N$ galias apskritimo atžvilgiu."
+        },
+        {
+          "text": "Sandauga susiprastina iki 1, todėl taškai kolinearūs."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-12-method-1",
+          "title": "Menelajaus metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Konstrukcija",
+              "action": "Sudaryti pagalbinį trikampį iš kraštinių.",
+              "reason": "Paruošiama erdvė Menelajaus teoremai.",
+              "latex": "L, M, N",
+              "result": "Trikampis paruoštas."
+            }
+          ],
+          "finalAnswer": "Taškai X, Y, Z kolinearūs."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-13",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul $A, B, C, D$ yra keturi kolinearūs taškai. Jų dvigubas santykis apibrėžiamas kaip $(A, B; C, D) = \\frac{AC/CB}{AD/DB}$. Įrodykite, kad atliekant centrinę projekciją (projekciją iš taško $P$ į kitą tiesę), šis santykis išlieka nepakitęs.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodytas dvigubo santykio invariantas."
+      },
+      "answerText": "Įrodyta naudojant sinusų teoremą trikampių plotams išreikšti.",
+      "coreIdea": {
+        "title": "Sinusų santykis",
+        "text": "Dvigubas santykis gali būti išreikštas tik per kampus tarp spindulių, išeinančių iš projekcijos centro $P$. Kadangi kampai projekcijos metu nesikeičia (tie patys spinduliai), santykis išlieka toks pat."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išreikškite atkarpų ilgius per trikampių $PAC, PBC$ ir kt. plotus arba sinusų teoremą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$AC = (PA \\cdot PC \\sin \\angle APC) / h$, kur $h$ yra atstumas nuo $P$ iki tiesės.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome $AC = \\frac{PA \\cdot PC \\sin \\angle APC}{h}$ ir analogiškas išraiškas kitoms atkarpoms."
+        },
+        {
+          "text": "Įstatome į dvigubo santykio formulę."
+        },
+        {
+          "text": "Atstumai $PA, PB, PC, PD$ ir $h$ susiprastina, lieka tik kampų sinusų santykis."
+        },
+        {
+          "text": "Kadangi spinduliai tie patys bet kuriai kertančiajai tiesei, santykis nepriklauso nuo tiesės."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-13-method-1",
+          "title": "Sinusų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Plotų išraiška",
+              "action": "$AC = 2S_{PAC}/(PA \\sin \\alpha)$ vietoj to geriau naudoti sinusų teoremą tiesiogiai.",
+              "reason": "Susiejame ilgius su spinduliais.",
+              "latex": "(A,B;C,D) = \\frac{\\sin \\angle APC}{\\sin \\angle BPC} / \\frac{\\sin \\angle APD}{\\sin \\angle BPD}",
+              "result": "Išraiška per kampus."
+            }
+          ],
+          "finalAnswer": "Santykis invariantinis."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-14",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio $ABC$ viršūnėje $A$ nubrėžtos vidinė ir išorinė kampo pusiaukampinės, kurios kerta tiesę $BC$ taškuose $D$ ir $E$. Įrodykite, kad taškai $B, C, D, E$ sudaro harmoninį ketvertą, t. y. $(B, C; D, E) = -1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta harmoninio ketverto savybė."
+      },
+      "answerText": "Įrodyta naudojant pusiaukampinių savybes.",
+      "coreIdea": {
+        "title": "Vidinė ir išorinė pusiaukampinės",
+        "text": "Vidinė pusiaukampinė dalija kraštinę santykiu $BD/DC = AB/AC$. Išorinė pusiaukampinė dalija tęsinį santykiu $BE/EC = AB/AC$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taikykite vidinės kampo pusiaukampinės teoremą: $BD/DC = AB/AC$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Taikykite išorinės kampo pusiaukampinės teoremą: $BE/EC = AB/AC$.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal teoremą $BD/DC = AB/AC$."
+        },
+        {
+          "text": "Pagal išorinės pusiaukampinės teoremą $BE/EC = AB/AC$."
+        },
+        {
+          "text": "Vadinasi $BD/DC = BE/EC$."
+        },
+        {
+          "text": "Dvigubas santykis $(B, C; D, E) = \\frac{BD/DC}{BE/EC}$ (atsižvelgiant į kryptis) yra lygus -1."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-14-method-1",
+          "title": "Pusiaukampinių teorema",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Santykių radimas",
+              "action": "$BD/DC = AB/AC$ ir $BE/CE = AB/AC$.",
+              "reason": "Pusiaukampinių savybės.",
+              "latex": "\\frac{BD}{DC} = \\frac{BE}{EC}",
+              "result": "Harmoninis santykis."
+            }
+          ],
+          "finalAnswer": "Sudaro harmoninį ketvertą."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-geo-15",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "medium",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visų taškų $P$ plokštumoje geometrinę vietą, kuriems atstumų iki dviejų fiksuotų taškų $A$ ir $B$ santykis yra pastovus: $PA/PB = k$ ($k \\neq 1$).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nustatyta geometrinė vieta – Apolonijaus apskritimas."
+      },
+      "answerText": "Geometrinė vieta yra apskritimas (Apolonijaus apskritimas).",
+      "coreIdea": {
+        "title": "Pusiaukampinės ir status kampas",
+        "text": "Tegul $D$ ir $E$ yra atkarpos $AB$ vidinis ir išorinis taškai, dalijantys ją santykiu $k$. Taškui $P$ linijos $PD$ ir $PE$ yra trikampio $APB$ pusiaukampinės, todėl kampas tarp jų visada status."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pasirinkite $D$ tiesėje $AB$ tokį, kad $AD/DB = k$, ir $E$ tokį, kad $AE/EB = k$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pastebėkite, kad $PD$ yra trikampio $APB$ vidinė pusiaukampinė, o $PE$ – išorinė.",
+          "penalty": 0.07
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi $PA/PB = k$, taškai $D$ ir $E$ tenkina sąlygą ir guli tiesėje $AB$."
+        },
+        {
+          "text": "Bet kuriam kitam taškui $P$, $PD$ yra pusiaukampinė, nes dalija priešpriešinę kraštinę santykiu $PA/PB$."
+        },
+        {
+          "text": "Vidinė ir išorinė pusiaukampinės visada yra statmenos viena kitai."
+        },
+        {
+          "text": "Taigi $\\angle DPE = 90^\\circ$, o tai reiškia, kad $P$ guli ant apskritimo, kurio skersmuo yra $DE$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-geo-15-method-1",
+          "title": "Pusiaukampinių metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Taškų fiksavimas",
+              "action": "Randame D ir E tiesėje AB.",
+              "reason": "Tai apskritimo skersmens galai.",
+              "latex": "AD/DB = AE/EB = k",
+              "result": "Nustatytas skersmuo."
+            }
+          ],
+          "finalAnswer": "Apolonijaus apskritimas."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-10-geo-test-1",
+      "title": "10 klasė: Geometrijos olimpiadinis testas",
+      "scope": "topic",
+      "topicIds": [
+        "olimpiada-10-geometrija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-10-geo-03",
+        "ex-olimpiada-10-geo-05",
+        "ex-olimpiada-10-geo-01",
+        "ex-olimpiada-10-geo-08",
+        "ex-olimpiada-10-geo-12"
+      ],
+      "timeLimitSeconds": 3600,
+      "masteryWeight": 2.0,
+      "passingThreshold": 0.6
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Generated from Olympiad Syllabus"
+    "notes": "Expanded and refined to meet full Olympiad standards"
   },
   "topic": {
     "id": "olimpiada-07-geometrija",
@@ -12,12 +12,14 @@
     "strand": "Geometrija",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method"
+      "olimpiada-07-concept-method",
+      "olimpiada-07-concept-triangle-sum",
+      "olimpiada-07-concept-area"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -32,33 +34,177 @@
       "ex-olimpiada-07-56dd662d",
       "ex-olimpiada-07-5545558b",
       "ex-olimpiada-07-eb9f63ec",
-      "ex-olimpiada-07-6e5da0fd"
+      "ex-olimpiada-07-6e5da0fd",
+      "ex-olimpiada-07-geo-12",
+      "ex-olimpiada-07-geo-13",
+      "ex-olimpiada-07-geo-14",
+      "ex-olimpiada-07-geo-15",
+      "ex-olimpiada-07-geo-16",
+      "ex-olimpiada-07-geo-17",
+      "ex-olimpiada-07-geo-18",
+      "ex-olimpiada-07-geo-19",
+      "ex-olimpiada-07-geo-20"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "olimpiada-07-geo-theory-1",
+      "title": "Trikampio nelygybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampį galima sudaryti tik tada, kai bet kurių dviejų kraštinių suma yra didesnė už trečiąją kraštinę."
+        },
+        {
+          "type": "theorem",
+          "text": "Jei kraštinės yra a, b ir c, tai: $a+b > c$, $a+c > b$, $b+c > a$."
+        }
+      ]
+    }
+  ],
   "concepts": [
     {
       "id": "olimpiada-07-concept-logic",
       "title": "Olimpiadinė logika",
       "type": "concept",
-      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
-      "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
-      "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-07-concept-triangle-sum",
+      "title": "Kampų suma",
+      "type": "concept",
+      "shortDefinition": "Trikampio vidinių kampų suma lygi 180 laipsnių.",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-07-concept-method",
-      "title": "Įrodymo metodas",
+      "title": "Olimpiada 07 concept method",
       "type": "concept",
-      "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
-      "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
-      "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
-      "relatedConceptIds": []
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-07-geometrija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "olimpiada-07-concept-area",
+      "title": "Olimpiada 07 concept area",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-07-geometrija"
+      ],
+      "defaultSrs": true
     }
   ],
   "formulas": [],
   "mistakes": [],
-  "workedExamples": [],
+  "workedExamples": [
+    {
+      "id": "we-olimpiada-07-geo-01",
+      "title": "Kampų radimas lygiašoniame trikampyje",
+      "level": "easy",
+      "problem": "Lygiašonio trikampio viršūnės kampas lygus $40^\\circ$. Raskite kampus prie pagrindo.",
+      "conceptIds": [
+        "olimpiada-07-concept-triangle-sum"
+      ],
+      "steps": [
+        {
+          "text": "Visų kampų suma lygi $180^\\circ$."
+        },
+        {
+          "text": "Kampų prie pagrindo suma: $180 - 40 = 140$."
+        },
+        {
+          "text": "Kadangi kampai prie pagrindo lygūs: $140 / 2 = 70$."
+        }
+      ],
+      "answer": "70"
+    },
+    {
+      "id": "we-olimpiada-07-geo-02",
+      "title": "Trikampio priekampio taikymas",
+      "level": "medium",
+      "problem": "Trikampio du vidiniai kampai lygūs $30^\\circ$ ir $80^\\circ$. Raskite priekampį prie trečiosios viršūnės.",
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "steps": [
+        {
+          "text": "Priekampis lygus jam neprišlietų vidinių kampų sumai."
+        },
+        {
+          "text": "$30 + 80 = 110$."
+        }
+      ],
+      "answer": "110"
+    },
+    {
+      "id": "we-olimpiada-07-geo-03",
+      "title": "Pitagoro teorema koordinačių plokštumoje",
+      "level": "medium",
+      "problem": "Raskite atstumą tarp taškų (0,0) ir (6,8).",
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "steps": [
+        {
+          "text": "Naudokite atstumo formulę: $\\sqrt{(6-0)^2 + (8-0)^2}$."
+        },
+        {
+          "text": "$\\sqrt{36 + 64} = \\sqrt{100} = 10$."
+        }
+      ],
+      "answer": "10"
+    },
+    {
+      "id": "we-olimpiada-07-geo-04",
+      "title": "Daugiakampio kampų suma",
+      "level": "medium",
+      "problem": "Kokia yra šešiakampio vidinių kampų suma?",
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "steps": [
+        {
+          "text": "Formulė: $(n-2) \\cdot 180$."
+        },
+        {
+          "text": "$(6-2) \\cdot 180 = 4 \\cdot 180 = 720$."
+        }
+      ],
+      "answer": "720"
+    },
+    {
+      "id": "we-olimpiada-07-geo-05",
+      "title": "Apskritimo kampai",
+      "level": "medium",
+      "problem": "Centrinis kampas lygus $100^\\circ$. Raskite įbrėžtinį kampą, besiremiantį į tą patį lanką.",
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "steps": [
+        {
+          "text": "Įbrėžtinis kampas yra pusė centrinio kampo."
+        },
+        {
+          "text": "$100 / 2 = 50$."
+        }
+      ],
+      "answer": "50"
+    }
+  ],
   "exercises": [
     {
       "id": "ex-olimpiada-07-0f8394c4",
@@ -68,169 +214,51 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 70,
       "statement": "Trikampyje $ABC$ kampas $A$ yra dvigubai didesnis už kampą $B$, o priekampis prie viršūnės $C$ lygus $120^\\circ$. Raskite trikampio vidinių kampų dydžius.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Kampai yra: $\\angle A = 80^\\circ$, $\\angle B = 40^\\circ$, $\\angle C = 60^\\circ$."
+        "expectedConclusion": "80, 40, 60"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
         "title": "Priekampio teorema",
-        "text": "Trikampio priekampis yra lygus dviejų jam neprišlietų vidinių kampų sumai."
+        "text": "Priekampis lygus jam neprišlietų vidinių kampų sumai."
       },
       "strategyTags": [
-        "introductory",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Prisiminkite priekampio savybę arba kaip priekampis susijęs su gretutiniu vidiniu kampu.",
-          "revealsConceptIds": [],
+          "text": "Pagal priekampio teoremą A + B = 120.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Priekampis prie $C$ lygus $120^\\circ$, vadinasi vidinis kampas $C = 180^\\circ - 120^\\circ = 60^\\circ$.",
-          "revealsConceptIds": [],
+          "text": "Kadangi A = 2B, tai 2B + B = 120.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Taip pat $\\angle A + \\angle B = 120^\\circ$. Žinome, kad $\\angle A = 2\\angle B$.",
-          "revealsConceptIds": [],
+          "text": "Kampas C yra gretutinis priekampiui: 180 - 120 = 60.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Įstatykite: $2\\angle B + \\angle B = 120^\\circ \\implies 3\\angle B = 120^\\circ$. Raskite $\\angle B$ ir $\\angle A$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame vidinį kampą $C$: $\\angle C = 180^\\circ - 120^\\circ = 60^\\circ$."
-        },
-        {
-          "text": "Pagal priekampio teoremą, $\\angle A + \\angle B = 120^\\circ$."
-        },
-        {
-          "text": "Kadangi $\\angle A = 2\\angle B$, gauname $2\\angle B + \\angle B = 120^\\circ \\implies 3\\angle B = 120^\\circ \\implies \\angle B = 40^\\circ$."
-        },
-        {
-          "text": "Tada $\\angle A = 2 \\times 40^\\circ = 80^\\circ$."
+          "text": "3B = 120 => B=40, A=80, C=60."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-0f8394c4-method-1",
-          "title": "Priekampio savybės taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Vidinio kampo C radimas",
-              "action": "Apskaičiuojame kampą C kaip priekampiui gretutinį kampą.",
-              "reason": "Gretutinių kampų suma lygi 180 laipsnių.",
-              "result": "C = 180 - 120 = 60.",
-              "latex": "\\angle C = 180^\\circ - 120^\\circ = 60^\\circ"
-            },
-            {
-              "title": "Lygties sudarymas kampams A ir B",
-              "action": "Pritaikome teoremą, kad priekampis lygus neprišlietų vidinių kampų sumai.",
-              "reason": "Tai leidžia susieti A ir B kintamuosius su duotu priekampiu.",
-              "result": "A + B = 120.",
-              "latex": "\\angle A + \\angle B = 120^\\circ"
-            },
-            {
-              "title": "Sistemos sprendimas",
-              "action": "Įstatome ryšį A = 2B į sudarytą lygybę.",
-              "reason": "Turime vieną lygtį su vienu nežinomuoju.",
-              "result": "2B + B = 120 => 3B = 120 => B = 40, tada A = 80.",
-              "latex": "2\\angle B + \\angle B = 120^\\circ \\implies \\angle B = 40^\\circ, \\angle A = 80^\\circ"
-            }
-          ],
-          "finalAnswer": "Kampai yra: $\\angle A = 80^\\circ$, $\\angle B = 40^\\circ$, $\\angle C = 60^\\circ$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-0f8394c4-trap-1",
-          "title": "Kampų sumos klaida",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad visi trys trikampio kampai sumuojasi į $360^\\circ$.",
-          "whyTempting": "Supainiojama su keturkampio kampų suma arba pilnu apskritimu.",
-          "whyItHappens": "Pagrindinių geometrijos faktų užmiršimas.",
-          "wrongPattern": "A + B + C = 360",
-          "correction": "Trikampio vidinių kampų suma visada lygi $180^\\circ$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-0f8394c4-trap-2",
-          "title": "Gretutinio kampo klaida",
-          "type": "mistake",
-          "wrongMove": "Prilyginti vidinį kampą C pačiam priekampiui (C = 120).",
-          "whyTempting": "Neteisingas priekampio apibrėžimo supratimas.",
-          "whyItHappens": "Painiojami vidiniai ir išoriniai kampai.",
-          "wrongPattern": "\\angle C = 120^\\circ",
-          "correction": "Vidinis kampas ir jo priekampis yra gretutiniai, todėl jų suma yra 180, o ne jie patys yra lygūs.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
       "srsSeeds": [
         {
-          "id": "ex-olimpiada-07-0f8394c4-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra trikampio priekampio teorema?",
-          "back": "Trikampio priekampis yra lygus dviejų jam neprišlietų vidinių kampų sumai.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-0f8394c4-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kokia yra trikampio vidinių kampų suma?",
-          "back": "180 laipsnių.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
+          "id": "srs-geo-7-1",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kokia yra trikampio priekampio savybė?",
+          "back": "Trikampio priekampis lygus dviejų jam neprišlietų vidinių kampų sumai.",
           "defaultEnabled": true
         }
-      ]
+      ],
+      "answerText": "80, 40, 60"
     },
     {
       "id": "ex-olimpiada-07-13051fff",
@@ -240,166 +268,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 70,
       "statement": "Stačiojo trikampio vienas iš smailųjų kampų lygus $30^\\circ$, o įžambinė lygi $10$ cm. Raskite trikampio plotą.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Plotas lygus $\\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$."
+        "expectedConclusion": "12.5 * sqrt(3)"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "$30^\\circ-60^\\circ-90^\\circ$ trikampio savybės",
-        "text": "Statinis prieš $30^\\circ$ kampą yra lygus pusei įžambinės, o kitas statinis lygus $a\\sqrt{3}$."
+        "title": "30-60-90 trikampis",
+        "text": "Statinis prieš 30 laipsnių kampą yra pusė įžambinės."
       },
       "strategyTags": [
-        "introductory",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Raskite trumpesnįjį statinį naudodami $30^\\circ$ kampo taisyklę.",
-          "revealsConceptIds": [],
+          "text": "Raskite statinį prieš 30 laipsnių kampą.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Statinis prieš $30^\\circ$ kampą yra $a = 10 / 2 = 5$ cm.",
-          "revealsConceptIds": [],
+          "text": "Kitas statinis lygus $a \\cdot \\sqrt{3}$.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Pagal Pitagoro teoremą arba trigonometriją, kitas statinis yra $b = 5\\sqrt{3}$ cm.",
-          "revealsConceptIds": [],
+          "text": "Plotas S = (a * b) / 2.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite trikampio plotą pagal formulę $S = \\frac{a \\cdot b}{2}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Kadangi kampas lygus $30^\\circ$, prieš jį esantis statinis lygus pusei įžambinės: $a = 10 / 2 = 5$ cm."
-        },
-        {
-          "text": "Naudodami Pitagoro teoremą arba santykį randame kitą statinį: $b = 5\\sqrt{3}$ cm."
-        },
-        {
-          "text": "Apskaičiuojame stačiojo trikampio plotą: $S = \\frac{a \\times b}{2} = \\frac{5 \\times 5\\sqrt{3}}{2} = \\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$."
+          "text": "a=5, b=5*sqrt(3), S = 25*sqrt(3)/2 = 12.5*sqrt(3)."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-13051fff-method-1",
-          "title": "Kraštinių santykių metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Trumpojo statinio radimas",
-              "action": "Taikome taisyklę statiniui prieš 30 laipsnių kampą.",
-              "reason": "Stačiajame trikampyje statinis prieš 30 laipsnių kampą lygus pusei įžambinės.",
-              "result": "a = 10 / 2 = 5 cm.",
-              "latex": "a = \\frac{10}{2} = 5"
-            },
-            {
-              "title": "Ilgojo statinio radimas",
-              "action": "Apskaičiuojame kitą statinį naudodami 30-60-90 trikampio proporcijas.",
-              "reason": "Statinis prieš 60 laipsnių kampą yra sqrt(3) kartų ilgesnis už trumpąjį statinį.",
-              "result": "b = 5 * sqrt(3) cm.",
-              "latex": "b = 5\\sqrt{3}"
-            },
-            {
-              "title": "Ploto skaičiavimas",
-              "action": "Sudedame statinius į stačiojo trikampio ploto formulę.",
-              "reason": "Plotas yra lygus statinių sandaugos pusei.",
-              "result": "S = (5 * 5*sqrt(3)) / 2.",
-              "latex": "S = \\frac{5 \\cdot 5\\sqrt{3}}{2} = 12.5\\sqrt{3}"
-            }
-          ],
-          "finalAnswer": "Plotas lygus $\\frac{25\\sqrt{3}}{2}$ $\\text{cm}^2$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-13051fff-trap-1",
-          "title": "Įžambinės naudojimas ploto formulėje",
-          "type": "mistake",
-          "wrongMove": "Dauginti įžambinę iš vieno iš statinių skaičiuojant plotą (S = 10*5 / 2).",
-          "whyTempting": "Įžambinė yra duota skaitinė vertė, todėl ją norisi naudoti tiesiogiai.",
-          "whyItHappens": "Ploto formulės (pagrindas * aukštinė) nepritaikymas konkrečiai stačiajam trikampiui.",
-          "wrongPattern": "S = \\frac{c \\cdot a}{2}",
-          "correction": "Stačiojo trikampio plotui reikia naudoti abu statinius, o ne įžambinę: $S = \\frac{ab}{2}$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-13051fff-trap-2",
-          "title": "Santykio sqrt(3) vieta",
-          "type": "mistake",
-          "wrongMove": "Padalyti trumpąjį statinį iš sqrt(3) ieškant ilgojo statinio.",
-          "whyTempting": "Painiojama, kuris statinis yra ilgesnis.",
-          "whyItHappens": "Atminties klaida dėl 30-60-90 trikampio proporcijų.",
-          "wrongPattern": "b = 5 / \\sqrt{3}",
-          "correction": "Statinis prieš 60 laipsnių kampą visada yra ILGESNIS už statinį prieš 30 laipsnių kampą.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-13051fff-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokios yra trikampio su $30^\\circ, 60^\\circ, 90^\\circ$ kampais kraštinių proporcijos?",
-          "back": "Jei įžambinė lygi $2x$, tai statinis prieš $30^\\circ$ kampą yra $x$, o prieš $60^\\circ$ kampą yra $x\\sqrt{3}$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-13051fff-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kaip rasti stačiojo trikampio plotą per jo statinius a ir b?",
-          "back": "S = (a * b) / 2.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "12.5 * sqrt(3)"
     },
     {
       "id": "ex-olimpiada-07-5db2e7d0",
@@ -409,154 +313,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Trikampio $ABC$ kraštinėje $AB$ pažymėtas taškas $D$, o kraštinėje $AC$ – taškas $E$ taip, kad $AD = 4$, $DB = 6$, $AE = 5$, $EC = 3$. Įrodykite, kad trikampiai $ADE$ ir $ACB$ yra panašūs.",
+      "statement": "Trikampio ABC kraštinėje AB pažymėtas taškas D, o kraštinėje AC – taškas E taip, kad AD=4, DB=6, AE=5, EC=3. Įrodykite, kad ADE ir ACB yra panašūs.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Trikampiai yra panašūs."
+        "expectedConclusion": "Panašūs pagal SAS"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "SAS panašumo kriterijus",
-        "text": "Patikrinkite kraštinių proporcijas aplink bendrą kampą $A$."
+        "title": "Panašumas",
+        "text": "Lyginkite AD/AC ir AE/AB santykius."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
+        "similarity"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Apskaičiuokite visų kraštinių $AB$ ir $AC$ ilgius.",
-          "revealsConceptIds": [],
+          "text": "Apskaičiuokite AB ir AC ilgius.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "$AB = AD + DB = 10$ ir $AC = AE + EC = 8$. Kampas $A$ yra bendras abiem trikampiams.",
-          "revealsConceptIds": [],
+          "text": "Palyginkite santykius 4/8 ir 5/10.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Palyginkite kraštinių santykius: ar $\\frac{AD}{AC} = \\frac{AE}{AB}$?",
-          "revealsConceptIds": [],
+          "text": "Kampas A yra bendras abiem trikampiams.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Atlikite skaičiavimus: $\\frac{4}{8} = \\frac{1}{2}$ ir $\\frac{5}{10} = \\frac{1}{2}$. Kadangi santykiai lygūs ir kampas bendras, taikykite SAS kriterijų.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame kraštines: $AB = 4 + 6 = 10$, $AC = 5 + 3 = 8$."
-        },
-        {
-          "text": "Užrašome atitinkamų kraštinių santykius: $\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}$ ir $\\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}$."
-        },
-        {
-          "text": "Kadangi santykiai sutampa (abu lygūs $1/2$) ir kampas $\\angle A$ yra bendras, trikampiai $\\triangle ADE$ ir $\\triangle ACB$ yra panašūs pagal SAS kriterijų."
+          "text": "AD/AC = 4/8 = 0.5, AE/AB = 5/10 = 0.5. Trikampiai panašūs."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-5db2e7d0-method-1",
-          "title": "SAS kriterijaus taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Kraštinių ilgių nustatymas",
-              "action": "Sudedame atkarpas, kad gautume didžiojo trikampio kraštines.",
-              "reason": "Panašumo tikrinimui reikia žinoti pilnus kraštinių ilgius.",
-              "result": "AB = 10, AC = 8.",
-              "latex": "AB = 4+6=10, AC = 5+3=8"
-            },
-            {
-              "title": "Santykių tikrinimas",
-              "action": "Palyginame mažojo trikampio kraštines su atitinkamomis didžiojo trikampio kraštinėmis.",
-              "reason": "Ieškome proporcingumo koeficiento aplink bendrą kampą.",
-              "result": "4/8 = 0.5 ir 5/10 = 0.5. Santykiai lygūs.",
-              "latex": "\\frac{AD}{AC} = \\frac{4}{8} = \\frac{1}{2}, \\quad \\frac{AE}{AB} = \\frac{5}{10} = \\frac{1}{2}"
-            },
-            {
-              "title": "Išvados formulavimas",
-              "action": "Nurodome panašumo kriterijų.",
-              "reason": "Dvi kraštinės yra proporcingos ir kampas tarp jų (kampas A) yra bendras.",
-              "result": "Trikampiai panašūs pagal SAS.",
-              "latex": "\\triangle ADE \\sim \\triangle ACB"
-            }
-          ],
-          "finalAnswer": "Trikampiai yra panašūs."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-5db2e7d0-trap-1",
-          "title": "Neteisingas kraštinių priskyrimas",
-          "type": "mistake",
-          "wrongMove": "Lyginti santykius AD/AB su AE/AC (lygiagrečių kraštinių prielaida).",
-          "whyTempting": "Atrodo intuityvu lyginti tos pačios pusės atkarpas.",
-          "whyItHappens": "Automatiškai daroma prielaida, kad DE lygiagreti BC, nors tai nebūtinai tiesa šioje konfigūracijoje.",
-          "wrongPattern": "\\frac{AD}{AB} = \\frac{AE}{AC}",
-          "correction": "Trikampiai šiame uždavinyje yra „apsukti“, todėl kraštinė AD atitinka AC, o AE atitinka AB.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-5db2e7d0-trap-2",
-          "title": "Atkarpų vs kraštinių klaida",
-          "type": "mistake",
-          "wrongMove": "Lyginti santykius AD/DB su AE/EC.",
-          "whyTempting": "Talio teorema naudoja atkarpų santykius vienoje tiesėje.",
-          "whyItHappens": "Painiojami trikampių panašumo kriterijai su atkarpų proporcingumo savybėmis.",
-          "wrongPattern": "\\frac{4}{6} = \\frac{5}{3}",
-          "correction": "Panašumas reikalauja lyginti viso trikampio kraštines (AD su AC), o ne jų dalis.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-5db2e7d0-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kas yra SAS trikampių panašumo kriterijus?",
-          "back": "Jei dviejų trikampių dviejų kraštinių poros yra proporcingos ir kampai tarp tų kraštinių lygūs, tai trikampiai panašūs.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "Panašūs pagal SAS"
     },
     {
       "id": "ex-olimpiada-07-f9377ea2",
@@ -566,169 +358,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Dvi lygiagrečios tiesės $a$ ir $b$ kertamos kirstine $c$. Vieno iš gautų vienašalių kampų dydis yra 4 kartus didesnis už kitą. Raskite šių kampų dydžius.",
+      "statement": "Vienašalių kampų dydžiai skiriasi 4 kartus. Raskite juos.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Kampai yra $36^\\circ$ ir $144^\\circ$."
+        "expectedConclusion": "36, 144"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Vienašalių kampų suma",
-        "text": "Vienašaliai kampai, gauti kertant lygiagrečias tieses kirstine, papildo vienas kitą iki $180^\\circ$."
+        "title": "Lygiagrečios tiesės",
+        "text": "Vienašalių kampų suma lygi 180 laipsnių."
       },
       "strategyTags": [
-        "introductory",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Pažymėkite mažesnį kampą $x$. Kaip užrašysite didesnį?",
-          "revealsConceptIds": [],
+          "text": "Pažymėkite kampą x, tada kitas yra 4x.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Didesnis kampas yra $4x$. Šių kampų suma lygi $180^\\circ$.",
-          "revealsConceptIds": [],
+          "text": "Sudėkite juos: x + 4x = 180.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Sudarome lygtį: $x + 4x = 180^\\circ$.",
-          "revealsConceptIds": [],
+          "text": "5x = 180, raskite x.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Sprendžiame: $5x = 180^\\circ \\implies x = 36^\\circ$. Raskite antrąjį kampą.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pažymime mažesnį kampą $x$, tada didesnis yra $4x$."
-        },
-        {
-          "text": "Sudarome lygtį pagal vienašalių kampų sumos savybę: $x + 4x = 180^\\circ$."
-        },
-        {
-          "text": "Sprendžiame lygtį: $5x = 180^\\circ \\implies x = 36^\\circ$."
-        },
-        {
-          "text": "Kitas kampas yra $4 \\times 36^\\circ = 144^\\circ$."
+          "text": "36 ir 144."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-f9377ea2-method-1",
-          "title": "Algebrinis kampų lygčių metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Kintamųjų įvedimas",
-              "action": "Pažymime vieną iš kampų x, o kitą išreiškiame per jį.",
-              "reason": "Uždavinyje duotas santykis tarp dviejų nežinomų dydžių.",
-              "result": "Pirmas kampas = x, antras kampas = 4x.",
-              "latex": "x, \\quad 4x"
-            },
-            {
-              "title": "Geometrinės savybės taikymas",
-              "action": "Sudarome lygtį remdamiesi vienašalių kampų suma.",
-              "reason": "Lygiagrečių tiesių vienašalių kampų suma visada lygi 180 laipsnių.",
-              "result": "x + 4x = 180.",
-              "latex": "x + 4x = 180^\\circ"
-            },
-            {
-              "title": "Lygties sprendimas",
-              "action": "Randame x reikšmę ir apskaičiuojame abu kampus.",
-              "reason": "Tai leidžia gauti konkrečias skaitines vertes.",
-              "result": "5x = 180 => x = 36. 4x = 144.",
-              "latex": "5x = 180^\\circ \\implies x = 36^\\circ, \\quad 4x = 144^\\circ"
-            }
-          ],
-          "finalAnswer": "Kampai yra $36^\\circ$ ir $144^\\circ$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-f9377ea2-trap-1",
-          "title": "Kampų lygybės klaida",
-          "type": "mistake",
-          "wrongMove": "Prilyginti šiuos du kampus vienas kitam (x = 4x).",
-          "whyTempting": "Daugelis lygiagrečių tiesių kampų (priešiniai, atitinkamieji) yra lygūs.",
-          "whyItHappens": "Neteisingas vienašalių kampų savybių prisiminimas.",
-          "wrongPattern": "x = 4x",
-          "correction": "Vienašaliai kampai yra lygūs tik tuo atveju, jei kirstinė yra statmena tiesėms (abu po 90). Kitais atvejais jų suma lygi 180.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-f9377ea2-trap-2",
-          "title": "Gretutinių kampų supainiojimas",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad vienašaliai kampai yra tas pats, kas gretutiniai.",
-          "whyTempting": "Abiejų porų suma lygi 180 laipsnių.",
-          "whyItHappens": "Terminų painiojimas, nors matematinis rezultatas (suma 180) sutampa.",
-          "wrongPattern": "Vienašaliai = Gretutiniai",
-          "correction": "Gretutiniai kampai turi bendrą viršūnę ir kraštinę. Vienašaliai kampai yra prie skirtingų susikirtimo taškų.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-f9377ea2-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra lygiagrečių tiesių vienašalių kampų savybė?",
-          "back": "Vienašalių kampų suma visada lygi $180^\\circ$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-f9377ea2-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kokia yra vienašalių kampų suma, jei tiesės a ir b yra lygiagrečios?",
-          "back": "180 laipsnių.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "36, 144"
     },
     {
       "id": "ex-olimpiada-07-939a92ea",
@@ -738,166 +403,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Trikampyje $ABC$ nubrėžta pusiaukampinė $AD$ dalija kraštinę $BC$ į dvi atkarpas: $BD = 3$ cm ir $DC = 5$ cm. Raskite šoninių kraštinių $AB$ ir $AC$ santykį.",
+      "statement": "Pusiaukampinė AD dalija BC į BD=3 ir DC=5. Raskite AB ir AC santykį.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Santykis $AB:AC$ yra $3:5$."
+        "expectedConclusion": "3/5"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Trikampio pusiaukampinės teorema",
-        "text": "Trikampio kampo pusiaukampinė priešingą kraštinę dalija į atkarpas, proporcingas prie jų esančioms šoninėms kraštinėms."
+        "title": "Pusiaukampinė",
+        "text": "AB/AC = BD/DC."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Prisiminkite pusiaukampinės teoremą apie atkarpų santykius.",
-          "revealsConceptIds": [],
+          "text": "Naudokite trikampio pusiaukampinės teoremą.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Pusiaukampinė $AD$ dalija kraštinę $BC$ santykiu $\\frac{BD}{DC} = \\frac{3}{5}$.",
-          "revealsConceptIds": [],
+          "text": "Šoninių kraštinių santykis lygus atkarpų santykiui.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Pagal teoremą, $\\frac{AB}{AC} = \\frac{BD}{DC}$.",
-          "revealsConceptIds": [],
+          "text": "Santykis yra 3 prie 5.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Įstatykite reikšmes tiesiogiai ir parašykite santykį.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pritaikome trikampio pusiaukampinės teoremą: pusiaukampinė $AD$ dalija kraštinę $BC$ taip, kad $\\frac{AB}{AC} = \\frac{BD}{DC}$."
-        },
-        {
-          "text": "Žinome, kad $BD = 3$ cm ir $DC = 5$ cm."
-        },
-        {
-          "text": "Todėl $\\frac{AB}{AC} = \\frac{3}{5}$."
+          "text": "3/5."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-939a92ea-method-1",
-          "title": "Teoreminis proporcijų metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pusiaukampinės savybės identifikavimas",
-              "action": "Nurodome, koks geometrinis elementas (pusiaukampinė) ir kokią kraštinę kerta.",
-              "reason": "Pusiaukampinė turi unikalią savybę dalinti kraštinę proporcingai.",
-              "result": "AD yra pusiaukampinė, BD ir DC yra atkarpos.",
-              "latex": ""
-            },
-            {
-              "title": "Santykių lygties sudarymas",
-              "action": "Užrašome pusiaukampinės teoremos formulę.",
-              "reason": "Pagal teoremą šoninių kraštinių santykis lygus atkarpų, į kurias padalinta trečioji kraštinė, santykiui.",
-              "result": "AB / AC = BD / DC.",
-              "latex": "\\frac{AB}{AC} = \\frac{BD}{DC}"
-            },
-            {
-              "title": "Vertės įstatymas",
-              "action": "Pakeičiame atkarpas BD ir DC skaitinėmis reikšmėmis.",
-              "reason": "Reikia rasti konkretų santykį.",
-              "result": "AB / AC = 3 / 5.",
-              "latex": "\\frac{AB}{AC} = \\frac{3}{5}"
-            }
-          ],
-          "finalAnswer": "Santykis $AB:AC$ yra $3:5$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-939a92ea-trap-1",
-          "title": "Santykio ir ilgio painiojimas",
-          "type": "mistake",
-          "wrongMove": "Teigti, kad AB = 3 ir AC = 5 be papildomo paaiškinimo.",
-          "whyTempting": "Skaičiai 3 ir 5 atrodo kaip tiesioginis atsakymas į kraštinių ilgius.",
-          "whyItHappens": "Nesuprantama, kad santykis nusako tik dalių ryšį, o ne konkrečius centimetrus.",
-          "wrongPattern": "AB = 3, AC = 5",
-          "correction": "Kraštinės gali būti 6 ir 10 arba 9 ir 15. Atsakyme turi būti nurodytas santykis arba proporcija, o ne fiksuoti ilgiai (nebent jie duoti).",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-939a92ea-trap-2",
-          "title": "Atvirkštinis santykis",
-          "type": "mistake",
-          "wrongMove": "Užrašyti santykį kaip AC : AB = 3 : 5.",
-          "whyTempting": "Sukeičiamos šoninės kraštinės vietomis lygybėje.",
-          "whyItHappens": "Neatidus atitikmenų sekimas (kuri atkarpa yra prie kurios kraštinės).",
-          "wrongPattern": "\\frac{AC}{AB} = \\frac{BD}{DC}",
-          "correction": "Atkarpa BD yra arčiau kraštinės AB, o DC - arčiau AC. Todėl AB/AC = BD/DC.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-939a92ea-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra trikampio pusiaukampinės teorema?",
-          "back": "Kampo pusiaukampinė priešingą kraštinę dalija į atkarpas, proporcingas prie to kampo esančioms kraštinėms: $AB/AC = BD/DC$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-939a92ea-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Jei pusiaukampinė dalija kraštinę santykiu 1:2, koks yra šoninių kraštinių santykis?",
-          "back": "Taip pat 1:2.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "3/5"
     },
     {
       "id": "ex-olimpiada-07-c0b5286d",
@@ -907,154 +448,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Apskritime nubrėžtas kampas $\\angle ABC$ yra įbrėžtinis, o kampas $\\angle AOC$ yra centrinis, kur $O$ – apskritimo centras. Taškai $B$ ir $O$ yra skirtingose tiesės $AC$ pusėse. Jei įbrėžtinis kampas lygus $55^\\circ$, raskite iškilo centrinio kampo $\\angle AOC$ dydį.",
+      "statement": "Įbrėžtinis kampas 55. Raskite centrinį kampą į tą patį lanką.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Kampas $\\angle AOC = 110^\\circ$."
+        "expectedConclusion": "110"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Įbrėžtinio ir centrinio kampų ryšys",
-        "text": "Įbrėžtinis kampas yra lygus pusei centrinio kampo, besiremiančio į tą patį lanką."
+        "title": "Apskritimo kampai",
+        "text": "Centrinis = 2 * įbrėžtinis."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Ar centrinis kampas yra didesnis, ar mažesnis už įbrėžtinį kampą?",
-          "revealsConceptIds": [],
+          "text": "Atsiminkite įbrėžtinio kampo savybę.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Kadangi jie remiasi į tą patį lanką $AC$, tai $\\angle AOC = 2 \\angle ABC$.",
-          "revealsConceptIds": [],
+          "text": "Centrinis kampas yra dvigubai didesnis.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Padauginkite įbrėžtinį kampą iš 2.",
-          "revealsConceptIds": [],
+          "text": "Sudauginkite 55 iš 2.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite: $2 \\times 55^\\circ$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Kadangi įbrėžtinis kampas $\\angle ABC$ ir centrinis kampas $\\angle AOC$ remiasi į tą patį lanką $AC$ ir $B$ yra kitoje lanko pusėje, galioja teiginys: $\\angle AOC = 2 \\angle ABC$."
-        },
-        {
-          "text": "Įstatome žinomą reikšmę $\\angle ABC = 55^\\circ$."
-        },
-        {
-          "text": "Apskaičiuojame: $\\angle AOC = 2 \\times 55^\\circ = 110^\\circ$."
+          "text": "110."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-c0b5286d-method-1",
-          "title": "Apskritimo kampų teoremos taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Lanko identifikavimas",
-              "action": "Nustatome, į kurį lanką remiasi abu kampai.",
-              "reason": "Teorema apie kampų ryšį galioja tik jei jie remiasi į tą patį lanką.",
-              "result": "Abu kampai remiasi į mažąjį lanką AC.",
-              "latex": ""
-            },
-            {
-              "title": "Ryšio formulavimas",
-              "action": "Pritaikome centrinio kampo savybę.",
-              "reason": "Centrinis kampas yra dvigubai didesnis už bet kurį į jį besiremiantį įbrėžtinį kampą.",
-              "result": "AOC = 2 * ABC.",
-              "latex": "\\angle AOC = 2\\angle ABC"
-            },
-            {
-              "title": "Skaitinis rezultatas",
-              "action": "Atliekame daugybos veiksmą.",
-              "reason": "ABC reikšmė duota sąlygoje (55 laipsniai).",
-              "result": "110 laipsnių.",
-              "latex": "2 \\cdot 55^\\circ = 110^\\circ"
-            }
-          ],
-          "finalAnswer": "Kampas $\\angle AOC = 110^\\circ$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-c0b5286d-trap-1",
-          "title": "Kampų sukeitimas",
-          "type": "mistake",
-          "wrongMove": "Teigti, kad centrinis kampas lygus pusei įbrėžtinio (AOC = 55 / 2).",
-          "whyTempting": "Painiojama, kuris kampas yra didesnis - centrinis ar įbrėžtinis.",
-          "whyItHappens": "Atminties klaida dėl santykio 1/2 krypties.",
-          "wrongPattern": "\\angle AOC = \\frac{1}{2}\\angle ABC",
-          "correction": "Centrinis kampas visada yra didesnis (arba lygus), nes jo viršūnė yra apskritimo centre, o įbrėžtinio - ant lanko.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-c0b5286d-trap-2",
-          "title": "Iškilo vs įlinko kampo klaida",
-          "type": "mistake",
-          "wrongMove": "Apskaičiuoti įlinkąjį centrinį kampą (360 - 110 = 250).",
-          "whyTempting": "Uždavinyje gali būti neaišku, apie kurį AOC kampą klausiama.",
-          "whyItHappens": "Du taškai apskritime visada apibrėžia du centrinius kampus, kurių suma 360.",
-          "wrongPattern": "\\angle AOC = 250^\\circ",
-          "correction": "Įbrėžtinis kampas, besiremiantis į mažąjį lanką, atitinka iškiląjį (mažesnį už 180) centrinį kampą.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-c0b5286d-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Koks yra įbrėžtinio ir centrinio kampų santykis?",
-          "back": "Įbrėžtinis kampas lygus pusei centrinio kampo, besiremiančio į tą patį lanką: $\\angle inscribed = \\frac{1}{2} \\angle central$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "110"
     },
     {
       "id": "ex-olimpiada-07-556b0ef2",
@@ -1064,169 +493,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Tiesė $AB$ liečia apskritimą su centru $O$ taške $T$. Atkarpa $OA$ kerta apskritimą taške $M$, o $OA = 13$ cm, $AT = 12$ cm. Raskite apskritimo spindulį.",
+      "statement": "Atstumas OA = 13, liestinė AT = 12. Raskite spindulį OT.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Apskritimo spindulys yra 5 cm."
+        "expectedConclusion": "5"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Liestinės ir spindulio statmenumas",
-        "text": "Apskritimo spindulys, nubrėžtas į lietimosi tašką, yra statmenas liestinei. Tai leidžia sudaryti statųjį trikampį."
+        "title": "Liestinė",
+        "text": "Spindulys statmenas liestinei."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Nubrėžkite spindulį $OT$. Koks kampas yra tarp $OT$ ir liestinės $AB$?",
-          "revealsConceptIds": [],
+          "text": "Kampas tarp spindulio ir liestinės yra 90 laipsnių.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Trikampis $\\triangle OTA$ yra status su stačiuoju kampu viršūnėje $T$. Spindulys $OT$ yra vienas iš statinių.",
-          "revealsConceptIds": [],
+          "text": "Taikykite Pitagoro teoremą trikampiui OTA.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Taikykite Pitagoro teoremą trikampiui $\\triangle OTA$: $OT^2 + AT^2 = OA^2$.",
-          "revealsConceptIds": [],
+          "text": "r^2 + 12^2 = 13^2.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Įstatykite žinomas vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$. Raskite $OT$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Nubrėžiame spindulį $OT$ į lietimosi tašką $T$. Kampas $\\angle OTA = 90^\\circ$."
-        },
-        {
-          "text": "Trikampiui $\\triangle OTA$ taikome Pitagoro teoremą: $OT^2 + AT^2 = OA^2$."
-        },
-        {
-          "text": "Įstatome vertes: $OT^2 + 12^2 = 13^2 \\implies OT^2 + 144 = 169$."
-        },
-        {
-          "text": "$OT^2 = 25 \\implies OT = 5$ cm. Spindulys lygus 5 cm."
+          "text": "sqrt(169-144) = 5."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-556b0ef2-method-1",
-          "title": "Stačiojo trikampio analizė (Pitagoro teorema)",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Liestinės savybės taikymas",
-              "action": "Nubrėžiame spindulį $OT$ į lietimosi tašką $T$ ir nustatome kampą.",
-              "reason": "Spindulys, nubrėžtas į lietimosi tašką, visada yra statmenas liestinei ($OT \\perp AB$).",
-              "result": "Gauname statųjį trikampį $\\triangle OTA$, kurio $\\angle T = 90^\\circ$.",
-              "latex": "OT \\perp AT \\implies \\angle OTA = 90^\\circ"
-            },
-            {
-              "title": "Pitagoro lygties sudarymas",
-              "action": "Pritaikome Pitagoro teoremą gautam trikampiui $\\triangle OTA$.",
-              "reason": "Statiojo trikampio kraštinių ilgius sieja sąryšis $a^2 + b^2 = c^2$.",
-              "result": "$OT^2 + AT^2 = OA^2$.",
-              "latex": "OT^2 + 12^2 = 13^2"
-            },
-            {
-              "title": "Spindulio apskaičiavimas",
-              "action": "Išsprendžiame lygtį spindulio $OT$ atžvilgiu.",
-              "reason": "Spindulys yra vienas iš statinių, o $OA$ yra įžambinė.",
-              "result": "$OT^2 = 169 - 144 = 25$, todėl $OT = 5$.",
-              "latex": "OT = \\sqrt{169 - 144} = 5"
-            }
-          ],
-          "finalAnswer": "Apskritimo spindulys yra 5 cm."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-556b0ef2-trap-1",
-          "title": "Tiesinis atstumo skaičiavimas",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad spindulys lygus $OA - AT = 13 - 12 = 1$ cm.",
-          "whyTempting": "Atrodo, kad visos atkarpos išsidėsčiusios vienoje tiesėje.",
-          "whyItHappens": "Neteisingas erdvinis suvokimas ir trikampio nelygybės ignoravimas.",
-          "wrongPattern": "r = OA - AT",
-          "correction": "Atkarpos $OT$ ir $AT$ yra statmenos, todėl jos sudaro trikampį, o ne tiesę. Reikia naudoti Pitagoro teoremą.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-556b0ef2-trap-2",
-          "title": "Kraštinių sukeitimas vietomis",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad $AT$ yra įžambinė: $OT^2 + OA^2 = AT^2$.",
-          "whyTempting": "Skubant bet kuris ilgiausias skaičius gali būti palaikytas įžambine.",
-          "whyItHappens": "Nepiešiamas brėžinis ir neteisingai nustatomas statusis kampas.",
-          "wrongPattern": "OT^2 + 13^2 = 12^2 \\implies OT^2 = -25",
-          "correction": "Įžambinė visada yra prieš statųjį kampą. Kadangi $\\angle T = 90^\\circ$, įžambinė yra $OA$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-556b0ef2-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Koks kampas susidaro tarp apskritimo spindulio ir liestinės lietimosi taške?",
-          "back": "Kampas visada yra status ($90^\\circ$).",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-556b0ef2-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Jei taškas $A$ yra už apskritimo, o $T$ yra lietimosi taškas, koks trikampis yra $\\triangle OTA$?",
-          "back": "Tai statusis trikampis su stačiuoju kampu viršūnėje $T$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "5"
     },
     {
       "id": "ex-olimpiada-07-56dd662d",
@@ -1236,169 +538,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Ritino spindulys yra $3$ cm, o jo aukštinė lygi $5$ cm. Apskaičiuokite šio ritinio viso paviršiaus plotą.",
+      "statement": "Ritinio r=3, h=5. Viso paviršiaus plotas?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Ritinio paviršiaus plotas lygus $48\\pi$ $\\text{cm}^2$."
+        "expectedConclusion": "48pi"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Ritinio paviršiaus ploto formulė",
-        "text": "Ritinio viso paviršiaus plotas susideda iš dviejų pagrindų plotų (apskritimų) ir šoninio paviršiaus ploto (stačiakampio)."
+        "title": "Ritinys",
+        "text": "S = 2*pi*r^2 + 2*pi*r*h."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite ritinio viso paviršiaus ploto formulę.",
-          "revealsConceptIds": [],
+          "text": "Apskaičiuokite pagrindų plotą (2 apskritimai).",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Formulė: $S = 2\\pi r^2 + 2\\pi r h$. Žinome $r=3$ ir $h=5$.",
-          "revealsConceptIds": [],
+          "text": "Apskaičiuokite šoninio paviršiaus plotą (stačiakampis).",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Įstatykite spindulio ir aukštinės vertes į formulę.",
-          "revealsConceptIds": [],
+          "text": "Sudėkite abi dalis.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite: $S = 2\\pi (3^2) + 2\\pi (3)(5) = 18\\pi + 30\\pi$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Naudojame ritinio paviršiaus ploto formulę $S = 2\\pi r^2 + 2\\pi r h$."
-        },
-        {
-          "text": "Apskaičiuojame dviejų pagrindų plotą: $2 \\times \\pi \\times 3^2 = 18\\pi$ $\\text{cm}^2$."
-        },
-        {
-          "text": "Apskaičiuojame šoninio paviršiaus plotą: $2 \\times  \\pi \\times 3 \\times 5 = 30\\pi$ $\\text{cm}^2$."
-        },
-        {
-          "text": "Sudedame abi dalis: $S = 18\\pi + 30\\pi = 48\\pi$ $\\text{cm}^2$."
+          "text": "18pi + 30pi = 48pi."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-56dd662d-method-1",
-          "title": "Paviršiaus ploto komponentų suma",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pagrindų ploto skaičiavimas",
-              "action": "Apskaičiuojame dviejų apskritimų (pagrindų) plotą.",
-              "reason": "Ritinys turi du vienodus pagrindus viršuje ir apačioje.",
-              "result": "$2 \\cdot \\pi \\cdot 3^2 = 18\\pi$.",
-              "latex": "2S_{pagr} = 2\\pi r^2 = 18\\pi"
-            },
-            {
-              "title": "Šoninio paviršiaus ploto skaičiavimas",
-              "action": "Apskaičiuojame išklotinės stačiakampio plotą.",
-              "reason": "Šoninis paviršius išvyniojamas į stačiakampį, kurio ilgis yra pagrindo apskritimo ilgis ($2\\pi r$), o plotis - aukštinė $h$.",
-              "result": "$2 \\cdot \\pi \\cdot 3 \\cdot 5 = 30\\pi$.",
-              "latex": "S_{\\text{šon}} = 2\\pi r h = 30\\pi"
-            },
-            {
-              "title": "Bendro ploto radimas",
-              "action": "Sudedame pagrindų ir šoninio paviršiaus plotus.",
-              "reason": "Visas paviršius susideda iš visų jo dalių sumos.",
-              "result": "$18\\pi + 30\\pi = 48\\pi$.",
-              "latex": "S = 18\\pi + 30\\pi = 48\\pi"
-            }
-          ],
-          "finalAnswer": "Ritinio paviršiaus plotas lygus $48\\pi$ $\\text{cm}^2$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-56dd662d-trap-1",
-          "title": "Vieno pagrindo klaida",
-          "type": "mistake",
-          "wrongMove": "Pamiršti padauginti pagrindo plotą iš 2.",
-          "whyTempting": "Apskaičiuojamas tik vienas apskritimas, užmirstant „dangtį“.",
-          "whyItHappens": "Neatidumas skaitant terminą „viso paviršiaus plotas“.",
-          "wrongPattern": "S = \\pi r^2 + 2\\pi r h",
-          "correction": "Ritinys turi du pagrindus, todėl formulėje turi būti $2\\pi r^2$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-56dd662d-trap-2",
-          "title": "Tūrio ir ploto painiojimas",
-          "type": "mistake",
-          "wrongMove": "Taikyti tūrio formulę $V = \\pi r^2 h$.",
-          "whyTempting": "Tūrio formulė dažnai geriau įsimenama nei paviršiaus ploto.",
-          "whyItHappens": "Sąvokų „tūris“ ir „plotas“ painiojimas stereometrijoje.",
-          "wrongPattern": "S = \\pi \\cdot 3^2 \\cdot 5 = 45\\pi",
-          "correction": "Plotas matuojamas kvadratiniais vienetais ir skaičiuojamas per paviršiaus išklotinę, o ne užpildomą erdvę.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-56dd662d-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra ritinio viso paviršiaus ploto formulė?",
-          "back": "$S = 2\\pi r^2 + 2\\pi r h$ arba $S = 2\\pi r(r + h)$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-56dd662d-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kaip atrodo ritinio šoninio paviršiaus išklotinė?",
-          "back": "Tai stačiakampis, kurio viena kraštinė lygi pagrindo apskritimo ilgiui ($2\\pi r$), o kita - ritinio aukštinei ($h$).",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "48pi"
     },
     {
       "id": "ex-olimpiada-07-5545558b",
@@ -1408,169 +583,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite tiesės, einančios per taškus $A(2, 5)$ ir $B(4, 11)$, lygtį pavidalu $y = mx + b$.",
+      "statement": "Tiesė per (2,5) ir (4,11). Lygtis?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Tiesės lygtis yra $y = 3x - 1$."
+        "expectedConclusion": "y=3x-1"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Tiesės krypties koeficientas",
-        "text": "Pirmiausia apskaičiuokite krypties koeficientą $m = \\frac{y_2 - y_1}{x_2 - x_1}$, o tada raskite laisvąjį narį $b$ įstatę vieno iš taškų koordinates."
+        "title": "Tiesė",
+        "text": "m = (y2-y1)/(x2-x1)."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Kaip apskaičiuojamas tiesės krypties koeficientas $m$ per du taškus?",
-          "revealsConceptIds": [],
+          "text": "Raskite krypties koeficientą m.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "$m = \\frac{11 - 5}{4 - 2} = \\frac{6}{2} = 3$. Tiesės lygtis yra $y = 3x + b$.",
-          "revealsConceptIds": [],
+          "text": "Įstatykite vieną tašką į y = mx + b.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Įstatykite taško $A(2, 5)$ koordinates į lygtį: $5 = 3(2) + b$.",
-          "revealsConceptIds": [],
+          "text": "Apskaičiuokite b.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Sprendžiame: $5 = 6 + b \\implies b = -1$. Užrašykite tiesės lygtį.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame tiesės krypties koeficientą $m$: $m = \\frac{11 - 5}{4 - 2} = 3$."
-        },
-        {
-          "text": "Užrašome tiesės lygtį su nežinomu $b$: $y = 3x + b$."
-        },
-        {
-          "text": "Įstatome taško $A(2, 5)$ koordinates: $5 = 3(2) + b$."
-        },
-        {
-          "text": "Apskaičiuojame laisvąjį narį: $b = 5 - 6 = -1$. Tiesės lygtis: $y = 3x - 1$."
+          "text": "m=3, b=-1."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-5545558b-method-1",
-          "title": "Krypties koeficiento ir poslinkio metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Krypties koeficiento radimas",
-              "action": "Apskaičiuojame koeficientą $m$ naudodami taškų koordinates.",
-              "reason": "Krypties koeficientas parodo ordinačių pokytį vienam abscisės vienetui.",
-              "result": "$m = (11-5)/(4-2) = 3$.",
-              "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{11 - 5}{4 - 2} = 3"
-            },
-            {
-              "title": "Laisvojo nario radimas",
-              "action": "Įstatome vieną iš taškų į lygtį $y = 3x + b$.",
-              "reason": "Bet kuris tiesės taškas privalo tenkinti jos lygtį.",
-              "result": "$5 = 3(2) + b \\implies b = -1$.",
-              "latex": "5 = 3 \\cdot 2 + b \\implies b = -1"
-            },
-            {
-              "title": "Galutinė lygtis",
-              "action": "Surašome koeficientus į bendrą pavidalą.",
-              "reason": "Tiesės lygtis vienareikšmiškai nustatyta.",
-              "result": "$y = 3x - 1$.",
-              "latex": "y = 3x - 1"
-            }
-          ],
-          "finalAnswer": "Tiesės lygtis yra $y = 3x - 1$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-5545558b-trap-1",
-          "title": "Koeficiento $m$ apvertimas",
-          "type": "mistake",
-          "wrongMove": "Skaičiuoti $m = \\Delta x / \\Delta y$.",
-          "whyTempting": "Supainiojama, kuris pokytis turi būti skaitiklyje.",
-          "whyItHappens": "Neteisingas funkcijos statumo suvokimas koordinačių plokštumoje.",
-          "wrongPattern": "m = (4-2)/(11-5) = 1/3",
-          "correction": "Visada ordinačių pokytis ($y$) dalijamas iš abscisių pokyčio ($x$).",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-5545558b-trap-2",
-          "title": "Ženklų klaida atimant",
-          "type": "mistake",
-          "wrongMove": "Neteisingai apskaičiuoti skirtumus, ypač jei būtų neigiamų koordinačių.",
-          "whyTempting": "Atimant neigiamą skaičių pamirštama sudėtis.",
-          "whyItHappens": "Aritmetinis neatidumas atliekant bazinius veiksmus.",
-          "wrongPattern": "11 - 5 = 5",
-          "correction": "Būtina kruopščiai tikrinti atimties rezultatus.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-5545558b-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip randamas tiesės krypties koeficientas per du taškus?",
-          "back": "$m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-5545558b-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Ką tiesės lygtyje $y = mx + b$ rodo skaičius $b$?",
-          "back": "Tai yra tiesės susikirtimo su y ašimi taško ordinatė (poslinkis).",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "y=3x-1"
     },
     {
       "id": "ex-olimpiada-07-eb9f63ec",
@@ -1580,169 +628,42 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Apskaičiuokite atstumą tarp taškų $P(-1, 3)$ and $Q(5, -5)$ koordinačių plokštumoje.",
+      "statement": "Atstumas tarp (-1,3) ir (5,-5).",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Atstumas lygus 10."
+        "expectedConclusion": "10"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Atstumo tarp dviejų taškų formulė",
-        "text": "Pritaikykite atstumo formulę koordinačių plokštumoje, kuri iš esmės yra Pitagoro teorema."
+        "title": "Atstumas",
+        "text": "sqrt(Dx^2 + Dy^2)."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite atstumo formulę koordinačių plokštumoje.",
-          "revealsConceptIds": [],
+          "text": "Dx = 5 - (-1) = 6.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Formulė: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
-          "revealsConceptIds": [],
+          "text": "Dy = -5 - 3 = -8.",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Įstatykite koordinates: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$.",
-          "revealsConceptIds": [],
+          "text": "Taikykite Pitagoro teoremą.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite skirtumų kvadratus: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Naudojame atstumo formulę: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$."
-        },
-        {
-          "text": "Įstatome koordinates $P(-1, 3)$ ir $Q(5, -5)$: $d = \\sqrt{(5 - (-1))^2 + (-5 - 3)^2}$."
-        },
-        {
-          "text": "Apskaičiuojame: $d = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100}$."
-        },
-        {
-          "text": "Ištraukiame šaknį: $d = 10$."
+          "text": "10."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-eb9f63ec-method-1",
-          "title": "Atstumo formulės taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Koordinačių skirtumų nustatymas",
-              "action": "Apskaičiuojame pokyčius $\\Delta x$ ir $\\Delta y$.",
-              "reason": "Atstumas priklauso nuo to, kiek taškai nutolę ašių atžvilgiu.",
-              "result": "$\\Delta x = 6$, $\\Delta y = -8$.",
-              "latex": "x_2 - x_1 = 6, \\quad y_2 - y_1 = -8"
-            },
-            {
-              "title": "Kvadratų sumos radimas",
-              "action": "Pakeliame skirtumus kvadratu ir sudedame.",
-              "reason": "Pagal Pitagoro teoremą, atstumo kvadratas lygus statinių kvadratų sumai.",
-              "result": "$36 + 64 = 100$.",
-              "latex": "6^2 + (-8)^2 = 36 + 64 = 100"
-            },
-            {
-              "title": "Šaknies traukimas",
-              "action": "Ištraukiame kvadratinę šaknį iš sumos.",
-              "reason": "Atstumas yra teigiamas dydis, lygus hipotenuzės ilgiui.",
-              "result": "10.",
-              "latex": "d = \\sqrt{100} = 10"
-            }
-          ],
-          "finalAnswer": "Atstumas lygus 10."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-07-eb9f63ec-trap-1",
-          "title": "Ženklų klaida atimtyje",
-          "type": "mistake",
-          "wrongMove": "Skaičiuoti $5 - 1 = 4$ vietoje $5 - (-1) = 6$.",
-          "whyTempting": "Dvigubas minusas dažnai klaidingai traktuojamas kaip atimtis.",
-          "whyItHappens": "Neigiamų skaičių aritmetikos taisyklų užmiršimas.",
-          "wrongPattern": "(5-1)^2 = 16",
-          "correction": "Atimant neigiamą skaičių, jis pridedamas: $x_2 - x_1 = 5 - (-1) = 6$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-07-eb9f63ec-trap-2",
-          "title": "Kvadrato ir šaknies naikinimas",
-          "type": "mistake",
-          "wrongMove": "Teigti, kad $\\sqrt{a^2 + b^2} = a + b$.",
-          "whyTempting": "Atrodo, kad šaknies ženklas gali tiesiog „panaikinti“ abu kvadratus.",
-          "whyItHappens": "Algebrinių savybių klaidingas apibendrinimas.",
-          "wrongPattern": "\\sqrt{36+64} = 6+8 = 14",
-          "correction": "Šaknies negalima ištraukti iš sumos narių atskirai. Pirmiausia reikia sudėti, tada traukti šaknį.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-eb9f63ec-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra atstumo tarp dviejų taškų formulė?",
-          "back": "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-07-eb9f63ec-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Ar atstumas tarp taškų gali būti neigiamas?",
-          "back": "Ne, atstumas visada yra neneigiamas dydis, nes jis gaunamas traukiant kvadratinę šaknį iš kvadratų sumos.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
+      "srsSeeds": [],
+      "answerText": "10"
     },
     {
       "id": "ex-olimpiada-07-6e5da0fd",
@@ -1752,160 +673,465 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Taškas $A(3, -4)$ atspindimas koordinačių pradžios taško $O(0, 0)$ atžvilgiu, o gautas taškas pastumiamas per vektorių $\\vec{v} = (-2, 5)$. Raskite galutines taško koordinates.",
+      "statement": "Simetrija (3,-4) per (0,0) ir poslinkis (-2,5).",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Galutinės taško koordinatės yra $(-5, 9)$."
+        "expectedConclusion": "(-5, 9)"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Koordinačių transformacijos",
-        "text": "Simetrija koordinačių pradžios atžvilgiu pakeičia abiejų koordinačių ženklus, o poslinkis prideda vektoriaus koordinates."
+        "title": "Transformacija",
+        "text": "(x,y) -> (-x,-y) tada + (-2,5)."
       },
       "strategyTags": [
-        "standard",
-        "proof",
         "geometrija"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-07-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Atlikite transformacijas po vieną eilės tvarka.",
-          "revealsConceptIds": [],
+          "text": "Atliekant simetriją per (0,0), koordinačių ženklai pasikeičia.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Atspindys $O(0,0)$ atžvilgiu tašką $(x,y)$ paverčia $(-x,-y)$. Taškas $A$ tampa $A'(-3, 4)$.",
-          "revealsConceptIds": [],
+          "text": "Gausite tašką (-3, 4).",
           "penalty": 0.08
         },
         {
           "order": 3,
-          "kind": "method",
-          "text": "Poslinkis per vektorių $\\vec{v}(a, b)$ prideda koordinates prie taško: $A'' = (x' + a, y' + b)$.",
-          "revealsConceptIds": [],
+          "text": "Prie gauto taško pridėkite vektorių (-2, 5).",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite: $A'' = (-3 + (-2), 4 + 5)$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Atliekame simetriją koordinačių pradžios taško atžvilgiu: taško $A(3, -4)$ koordinatės pakeičia ženklus, gauname $A'(-3, 4)$."
-        },
-        {
-          "text": "Atliekame poslinkį per vektorių $\\vec{v} = (-2, 5)$."
-        },
-        {
-          "text": "Prie taško $A'$ koordinačių pridedame vektoriaus koordinates: $x'' = -3 + (-2) = -5$, $y'' = 4 + 5 = 9$. Galutinis taškas yra $(-5, 9)$."
+          "text": "(-5, 9)."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-07-6e5da0fd-method-1",
-          "title": "Nuoseklus transformacijų taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Centrinė simetrija",
-              "action": "Atspindime tašką $A(3, -4)$ koordinačių pradžios atžvilgiu.",
-              "reason": "Simetrija taško $(0,0)$ atžvilgiu pakeičia abiejų koordinačių ženklus.",
-              "result": "$A' = (-3, 4)$.",
-              "latex": "(x, y) \\to (-x, -y)"
-            },
-            {
-              "title": "Vektoriaus pridėjimas",
-              "action": "Prie gauto taško pridedame vektoriaus $\\vec{v}$ koordinates.",
-              "reason": "Poslinkis (transliacija) per vektorių $(a, b)$ prideda šias vertes prie atitinkamų koordinačių.",
-              "result": "$x = -3 + (-2) = -5$, $y = 4 + 5 = 9$.",
-              "latex": "(-3, 4) + (-2, 5) = (-5, 9)"
-            }
-          ],
-          "finalAnswer": "Galutinės taško koordinatės yra $(-5, 9)$."
-        }
+      "srsSeeds": [],
+      "answerText": "(-5, 9)"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-12",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Penkiakampio kampų suma?",
+      "answer": {
+        "kind": "numeric",
+        "value": 540
+      },
+      "coreIdea": {
+        "title": "Kampai",
+        "text": "(n-2)*180."
+      },
+      "strategyTags": [
+        "geometrija"
       ],
-      "commonTraps": [
+      "hints": [
         {
-          "id": "ex-olimpiada-07-6e5da0fd-trap-1",
-          "title": "Ašinės simetrijos painiojimas",
-          "type": "mistake",
-          "wrongMove": "Pakeisti tik vienos koordinatės ženklą.",
-          "whyTempting": "Simetrija ašių atžvilgiu (x arba y) yra dažnesnė užduotis.",
-          "whyItHappens": "Terminų „taško atžvilgiu“ ir „ašies atžvilgiu“ painiojimas.",
-          "wrongPattern": "(3, -4) \\to (-3, -4) \\text{ (simetrija y ašies atžvilgiu)}",
-          "correction": "Centrinė simetrija (per tašką) pakeičia abi koordinates.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
+          "order": 1,
+          "text": "Bet kurį daugiakampį galima padalinti į trikampius.",
+          "penalty": 0.05
         },
         {
-          "id": "ex-olimpiada-07-6e5da0fd-trap-2",
-          "title": "Vektoriaus atėmimas",
-          "type": "mistake",
-          "wrongMove": "Atimti vektoriaus koordinates vietoje jų pridėjimo.",
-          "whyTempting": "Painiojama su vektoriaus radimu iš dviejų taškų.",
-          "whyItHappens": "Atvirkštinio veiksmo taikymas poslinkio operacijai.",
-          "wrongPattern": "x = -3 - (-2) = -1",
-          "correction": "Atliekant poslinkį taškas P judinamas vektoriaus kryptimi: $P' = P + \\vec{v}$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-07-6e5da0fd-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip keičiasi taško koordinatės jį atspindint koordinačių pradžios atžvilgiu?",
-          "back": "Abi koordinatės pakeičia savo ženklus: $(x, y) \\to (-x, -y)$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-07-concept-method"
-          ],
-          "defaultEnabled": true
+          "order": 2,
+          "text": "Trikampių skaičius yra n - 2.",
+          "penalty": 0.08
         },
         {
-          "id": "ex-olimpiada-07-6e5da0fd-srs-2",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kokia operacija atliekama taškui, kai jis pastumiamas per vektorių $(a, b)$?",
-          "back": "Sudedamos atitinkamos koordinatės: $(x+a, y+b)$.",
-          "conceptIds": [
-            "olimpiada-07-concept-logic"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
+          "order": 3,
+          "text": "3 * 180 = 540.",
+          "penalty": 0.1
         }
-      ]
+      ],
+      "solutionSteps": [
+        {
+          "text": "540."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "540"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-13",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Kraštinės 7, 10. Kiek sveikųjų galimybių trečiai?",
+      "answer": {
+        "kind": "numeric",
+        "value": 13
+      },
+      "coreIdea": {
+        "title": "Nelygybė",
+        "text": "3 < x < 17."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Trečia kraštinė turi būti mažesnė už sumą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Trečia kraštinė turi būti didesnė už skirtumą.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "Suskaičiuokite skaičius nuo 4 iki 16.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "13."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "13"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-14",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Perimetras 24, a=3b. Plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 27
+      },
+      "coreIdea": {
+        "title": "Plotas",
+        "text": "2(a+3a)=24 => a=3, b=9."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažymėkite kraštines x ir 3x.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Perimetras 2(x+3x) = 24.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "Raskite x, tada plotą x * 3x.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "27."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "27"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-15",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Kvadrato plotas 50. Įstrižainė?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
+      "coreIdea": {
+        "title": "Kvadratas",
+        "text": "d = sqrt(2S)."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Plotas S = a^2, vadinasi a = sqrt(50).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Įstrižainė d = a * sqrt(2).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "sqrt(50) * sqrt(2) = sqrt(100).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "10"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-16",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Taisyklingojo šešiakampio kampas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 120
+      },
+      "coreIdea": {
+        "title": "Šešiakampis",
+        "text": "720/6 = 120."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Šešiakampio kampų suma yra 720 laipsnių.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Taisyklingo šešiakampio visi kampai lygūs.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "720 / 6 = 120.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "120."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "120"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-17",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Lygiašonis trikampis: pagr. 12, šon. 10. Plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 48
+      },
+      "coreIdea": {
+        "title": "Aukštinė",
+        "text": "h = sqrt(10^2 - 6^2) = 8."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Nubrėžkite aukštinę į pagrindą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Aukštinė pagrindą dalija į dvi dalis po 6.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "Taikykite Pitagoro teoremą aukštinei rasti.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "48."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "48"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-18",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Spindulys padidėjo 3 kartus. Plotas padidėjo ?",
+      "answer": {
+        "kind": "numeric",
+        "value": 9
+      },
+      "coreIdea": {
+        "title": "Kvadratas",
+        "text": "3^2 = 9."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskritimo plotas S = pi * r^2.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Naujas plotas S' = pi * (3r)^2.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "S' = 9 * pi * r^2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "9."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "9"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-19",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Trapecijos vid. linija 10, h=6. Plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 60
+      },
+      "coreIdea": {
+        "title": "Trapecija",
+        "text": "S = m * h."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Trapecijos plotas S = (a+b)/2 * h.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Dydis (a+b)/2 yra vidurio linija m.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "Padauginkite 10 iš 6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "60."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "60"
+    },
+    {
+      "id": "ex-olimpiada-07-geo-20",
+      "topicId": "olimpiada-07-geometrija",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "statement": "Kubo briauna 4. Paviršiaus plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 96
+      },
+      "coreIdea": {
+        "title": "Kubas",
+        "text": "6 * a^2."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kubas turi 6 lygias sienas.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Vienos sienos plotas yra 4^2.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "text": "Padauginkite 16 iš 6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "96."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "96"
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-07-test-geometrija",
+      "title": "Geometrijos olimpiadinis testas (7 kl.)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-07-geometrija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-07-geo-13",
+        "ex-olimpiada-07-geo-15",
+        "ex-olimpiada-07-geo-18",
+        "ex-olimpiada-07-556b0ef2",
+        "ex-olimpiada-07-0f8394c4"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
 }

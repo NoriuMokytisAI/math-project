@@ -1,0 +1,1143 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "10 klasės programa nagrinėja įbrėžtinius ir apibrėžtinius daugiakampius, jų savybes bei sąryšį su apskritimo spinduliais."
+  },
+  "topic": {
+    "id": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+    "title": "Įbrėžtiniai ir apibrėžtiniai daugiakampiai",
+    "grade": 10,
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "order": 10,
+    "estimatedStudyMinutes": 160,
+    "prerequisiteTopicIds": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ],
+    "nextTopicIds": [
+      "stereometrija-tieses-plokstumos-ir-kampai"
+    ],
+    "conceptIds": [
+      "ibreztinis-daugiakampis",
+      "apibreztinis-daugiakampis",
+      "ibreztinis-apskritimas",
+      "apibreztinis-apskritimas",
+      "ibreztinio-apskritimo-centras",
+      "apibreztinio-apskritimo-centras",
+      "ibreztinis-keturkampis",
+      "apibreztinis-keturkampis"
+    ],
+    "formulaIds": [
+      "trikampio-ploto-r-formule",
+      "trikampio-ploto-R-formule",
+      "ibreztinio-keturkampio-savybe",
+      "apibreztinio-keturkampio-savybe"
+    ],
+    "mistakeIds": [
+      "painioja-centrus-pusiaukrastines-ir-pusiaukampines",
+      "keturkampio-savybiu-sumaisymas"
+    ],
+    "exerciseIds": [
+      "daugiakampiai-ex-001",
+      "daugiakampiai-ex-002",
+      "daugiakampiai-ex-003",
+      "daugiakampiai-ex-004",
+      "daugiakampiai-ex-005",
+      "daugiakampiai-ex-006",
+      "daugiakampiai-ex-007",
+      "daugiakampiai-ex-008",
+      "daugiakampiai-ex-009",
+      "daugiakampiai-ex-010",
+      "daugiakampiai-ex-011",
+      "daugiakampiai-ex-012",
+      "daugiakampiai-ex-013",
+      "daugiakampiai-ex-014",
+      "daugiakampiai-ex-015",
+      "daugiakampiai-ex-016",
+      "daugiakampiai-ex-017",
+      "daugiakampiai-ex-018",
+      "daugiakampiai-ex-019",
+      "daugiakampiai-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "daugiakampiai-ivadas",
+      "title": "Įbrėžtiniai ir apibrėžtiniai daugiakampiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugiakampis vadinamas [[ibreztinis-daugiakampis|įbrėžtiniu]] į apskritimą, jei visos jo viršūnės priklauso apskritimui. Daugiakampis vadinamas [[apibreztinis-daugiakampis|apibrėžtiniu]] apie apskritimą, jei visos jo kraštinės liečia apskritimą."
+        },
+        {
+          "type": "note",
+          "text": "Apie kiekvieną trikampį galima apibrėžti apskritimą ir į kiekvieną trikampį galima įbrėžti apskritimą."
+        }
+      ]
+    },
+    {
+      "id": "trikampio-apskritimu-centrai",
+      "title": "Apskritimų centrai",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "ibreztinio-apskritimo-centras",
+          "text": "Į trikampį įbrėžto apskritimo centras yra jo [[pusiaukampine|pusiaukampinių]] susikirtimo taškas."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apibreztinio-apskritimo-centras",
+          "text": "Apie trikampį apibrėžto apskritimo centras yra jo kraštinių vidurio statmenų susikirtimo taškas."
+        }
+      ]
+    },
+    {
+      "id": "keturkampiu-savybes",
+      "title": "Įbrėžtiniai ir apibrėžtiniai keturkampiai",
+      "blocks": [
+        {
+          "type": "property",
+          "conceptId": "ibreztinis-keturkampis",
+          "text": "Keturkampį galima įbrėžti į apskritimą tada ir tik tada, kai jo priešingų kampų suma lygi $180^\\circ$."
+        },
+        {
+          "type": "property",
+          "conceptId": "apibreztinis-keturkampis",
+          "text": "Keturkampį galima apibrėžti apie apskritimą tada ir tik tada, kai jo priešingų kraštinių ilgių sumos yra lygios."
+        }
+      ]
+    },
+    {
+      "id": "ploto-formules-su-spinduliais",
+      "title": "Ploto formulės su spinduliais",
+      "blocks": [
+        {
+          "type": "formula",
+          "formulaId": "trikampio-ploto-r-formule",
+          "latex": "S = p \\cdot r",
+          "text": "Čia $p$ yra pusperimetris, $r$ – įbrėžtinio apskritimo spindulys."
+        },
+        {
+          "type": "formula",
+          "formulaId": "trikampio-ploto-R-formule",
+          "latex": "S = \\frac{abc}{4R}",
+          "text": "Čia $a, b, c$ – kraštinės, $R$ – apibrėžtinio apskritimo spindulys."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "ibreztinis-daugiakampis",
+      "title": "Įbrėžtinis daugiakampis",
+      "type": "concept",
+      "shortDefinition": "Daugiakampis, kurio visos viršūnės yra ant apskritimo.",
+      "intuition": "Daugiakampis yra apskritimo 'viduje'.",
+      "relatedConceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "apibreztinis-daugiakampis",
+      "title": "Apibrėžtinis daugiakampis",
+      "type": "concept",
+      "shortDefinition": "Daugiakampis, kurio visos kraštinės liečia apskritimą.",
+      "intuition": "Apskritimas yra daugiakampio 'viduje'.",
+      "relatedConceptIds": [
+        "ibreztinis-apskritimas"
+      ],
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "ibreztinis-apskritimas",
+      "title": "Įbrėžtinis apskritimas",
+      "type": "concept",
+      "shortDefinition": "Apskritimas, liečiantis visas daugiakampio kraštines.",
+      "notation": [
+        "r"
+      ],
+      "relatedConceptIds": [
+        "ibreztinio-apskritimo-centras"
+      ],
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "apibreztinis-apskritimas",
+      "title": "Apibrėžtinis apskritimas",
+      "type": "concept",
+      "shortDefinition": "Apskritimas, einantis per visas daugiakampio viršūnes.",
+      "notation": [
+        "R"
+      ],
+      "relatedConceptIds": [
+        "apibreztinio-apskritimo-centras"
+      ],
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "ibreztinio-apskritimo-centras",
+      "title": "Įbrėžtinio apskritimo centras",
+      "type": "concept",
+      "shortDefinition": "Pusiaukampinių susikirtimo taškas.",
+      "intuition": "Taškas, vienodai nutolęs nuo visų kraštinių.",
+      "relatedConceptIds": [
+        "pusiaukampine"
+      ],
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "apibreztinio-apskritimo-centras",
+      "title": "Apibrėžtinio apskritimo centras",
+      "type": "concept",
+      "shortDefinition": "Vidurio statmenų susikirtimo taškas.",
+      "intuition": "Taškas, vienodai nutolęs nuo visų viršūnių.",
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "ibreztinis-keturkampis",
+      "title": "Įbrėžtinis keturkampis",
+      "type": "concept",
+      "shortDefinition": "Keturkampis, kurio priešingų kampų suma lygi 180 laipsnių.",
+      "formal": "$\\alpha + \\gamma = \\beta + \\delta = 180^\\circ$.",
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "apibreztinis-keturkampis",
+      "title": "Apibrėžtinis keturkampis",
+      "type": "concept",
+      "shortDefinition": "Keturkampis, kurio priešingų kraštinių sumos lygios.",
+      "formal": "$a + c = b + d$.",
+      "appearsInTopicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "trikampio-ploto-r-formule",
+      "title": "Trikampio ploto formulė per įbrėžtinį spindulį",
+      "latex": "S = p \\cdot r",
+      "variables": {
+        "S": "trikampio plotas",
+        "p": "pusperimetris (a+b+c)/2",
+        "r": "įbrėžtinio apskritimo spindulys"
+      },
+      "explanation": "Ši formulė sieja plotą, perimetrą ir įbrėžtinį spindulį.",
+      "defaultSrs": true
+    },
+    {
+      "id": "trikampio-ploto-R-formule",
+      "title": "Trikampio ploto formulė per apibrėžtinį spindulį",
+      "latex": "S = \\frac{abc}{4R}",
+      "variables": {
+        "S": "trikampio plotas",
+        "a, b, c": "trikampio kraštinės",
+        "R": "apibrėžtinio apskritimo spindulys"
+      },
+      "explanation": "Ši formulė sieja plotą, kraštines ir apibrėžtinį spindulį.",
+      "defaultSrs": true
+    },
+    {
+      "id": "ibreztinio-keturkampio-savybe",
+      "title": "Įbrėžtinio keturkampio kampų savybė",
+      "latex": "\\angle A + \\angle C = 180^\\circ",
+      "explanation": "Priešingų kampų suma įbrėžtiniame keturkampyje visada lygi 180 laipsnių.",
+      "defaultSrs": true
+    },
+    {
+      "id": "apibreztinio-keturkampio-savybe",
+      "title": "Apibrėžtinio keturkampio kraštinių savybė",
+      "latex": "a + c = b + d",
+      "explanation": "Priešingų kraštinių ilgių sumos apibrėžtiniame keturkampyje yra lygios.",
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "painioja-centrus-pusiaukrastines-ir-pusiaukampines",
+      "title": "Painioja apskritimų centrų apibrėžimus",
+      "conceptIds": [
+        "ibreztinio-apskritimo-centras",
+        "apibreztinio-apskritimo-centras"
+      ],
+      "wrongPattern": "Mano, kad įbrėžtinio apskritimo centras yra vidurio statmenų sankirta.",
+      "whyItHappens": "Abi sąvokos panašios, abi susijusios su sankirtos taškais.",
+      "correction": "Įbrėžtinis (r) - pusiaukampinės (kampas liečia kraštines). Apibrėžtinis (R) - vidurio statmenys.",
+      "defaultSrs": true
+    },
+    {
+      "id": "keturkampio-savybiu-sumaisymas",
+      "title": "Sumažo keturkampių savybes",
+      "conceptIds": [
+        "ibreztinis-keturkampis",
+        "apibreztinis-keturkampis"
+      ],
+      "wrongPattern": "Taikomą kampų taisyklę kraštinėms arba atvirkščiai.",
+      "whyItHappens": "Abi taisyklės teigia kažką apie priešingus elementus.",
+      "correction": "Įbrėžtas (viduj) - kampai. Apibrėžtas (išorėj) - kraštinės.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "trikampis-r-example-1",
+      "title": "Įbrėžtinio spindulio radimas",
+      "level": "easy",
+      "problem": "Trikampio kraštinės yra 3, 4, 5. Raskite įbrėžtinio apskritimo spindulį.",
+      "conceptIds": [
+        "ibreztinis-apskritimas",
+        "trikampio-ploto-r-formule"
+      ],
+      "steps": [
+        {
+          "text": "Trikampis yra status, nes $3^2 + 4^2 = 5^2$.",
+          "latex": "S = \\frac{3 \\cdot 4}{2} = 6"
+        },
+        {
+          "text": "Randame pusperimetrį p.",
+          "latex": "p = \\frac{3+4+5}{2} = 6"
+        },
+        {
+          "text": "Naudojame formulę S = p * r.",
+          "latex": "6 = 6 \\cdot r \\implies r = 1"
+        }
+      ],
+      "answer": "1"
+    },
+    {
+      "id": "keturkampis-kampas-example-1",
+      "title": "Įbrėžtinio keturkampio kampas",
+      "level": "easy",
+      "problem": "Įbrėžtinio keturkampio trys kampai yra $80^\\circ, 100^\\circ, 100^\\circ$. Raskite ketvirtąjį kampą.",
+      "conceptIds": [
+        "ibreztinis-keturkampis"
+      ],
+      "steps": [
+        {
+          "text": "Priešingų kampų suma lygi 180 laipsnių."
+        },
+        {
+          "text": "Jei vienas kampas 80, tai priešingas jam 180-80 = 100."
+        },
+        {
+          "text": "Jei kitas 100, tai jam priešingas 180-100 = 80."
+        }
+      ],
+      "answer": "80"
+    },
+    {
+      "id": "apibreztinis-keturkampis-example-1",
+      "title": "Apibrėžtinio keturkampio kraštinė",
+      "level": "medium",
+      "problem": "Apibrėžtinio keturkampio kraštinės iš eilės yra 5, 8, 10. Raskite ketvirtąją kraštinę.",
+      "conceptIds": [
+        "apibreztinis-keturkampis"
+      ],
+      "steps": [
+        {
+          "text": "Priešingų kraštinių sumos lygios.",
+          "latex": "5 + 10 = 8 + x"
+        },
+        {
+          "text": "15 = 8 + x.",
+          "latex": "x = 7"
+        }
+      ],
+      "answer": "7"
+    },
+    {
+      "id": "trikampis-R-example-1",
+      "title": "Apibrėžtinio spindulio radimas",
+      "level": "medium",
+      "problem": "Raskite apie trikampį su kraštinėmis 13, 14, 15 apibrėžto apskritimo spindulį (trikampio plotas 84).",
+      "conceptIds": [
+        "apibreztinis-apskritimas",
+        "trikampio-ploto-R-formule"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame formulę $S = abc / 4R$.",
+          "latex": "84 = \\frac{13 \\cdot 14 \\cdot 15}{4R}"
+        },
+        {
+          "text": "Išreiškiame R.",
+          "latex": "R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84} = \\frac{2730}{336} = 8,125"
+        }
+      ],
+      "answer": "8,125"
+    },
+    {
+      "id": "status-trikampis-R-hard-1",
+      "title": "Stačiojo trikampio apibrėžtinis spindulys",
+      "level": "hard",
+      "problem": "Įrodykite, kad apie statųjį trikampį apibrėžto apskritimo spindulys lygus pusei įžambinės.",
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "steps": [
+        {
+          "text": "Stačiojo trikampio įbrėžtinis kampas, remiantis į skersmenį, yra status."
+        },
+        {
+          "text": "Vadinasi, įžambinė yra apskritimo skersmuo d = 2R."
+        },
+        {
+          "text": "R = c / 2."
+        }
+      ],
+      "answer": "Įrodyta"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "daugiakampiai-ex-001",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Įbrėžtinio keturkampio priešingas kampas lygus 70 laipsnių. Koks kito priešingo kampo dydis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 110,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Priešingų kampų suma 180.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "180 - 70 = 110."
+        }
+      ],
+      "conceptIds": [
+        "ibreztinis-keturkampis"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "110"
+    },
+    {
+      "id": "daugiakampiai-ex-002",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apibrėžtinio keturkampio priešingų kraštinių ilgiai yra 6 ir 9. Kokia yra kitų dviejų priešingų kraštinių suma?",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Priešingų kraštinių sumos yra lygios.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 + 9 = 15."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-keturkampis"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "15"
+    },
+    {
+      "id": "daugiakampiai-ex-003",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Trikampio plotas 20, o pusperimetris 10. Koks įbrėžtinio apskritimo spindulys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite S = p * r.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "20 = 10 * r -> r = 2."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 20,
+      "answerText": "2"
+    },
+    {
+      "id": "daugiakampiai-ex-004",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Į trikampį įbrėžto apskritimo centras yra:",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Pusiaukraštinių sankirta"
+          },
+          {
+            "id": "b",
+            "text": "Pusiaukampinių sankirta"
+          },
+          {
+            "id": "c",
+            "text": "Aukštinių sankirta"
+          },
+          {
+            "id": "d",
+            "text": "Vidurio statmenų sankirta"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskritimas liečia kraštines, todėl centras turi būti vienodai nutolęs nuo jų.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pusiaukampinės yra geometrinė vieta taškų, vienodai nutolusių nuo kampo kraštinių."
+        }
+      ],
+      "conceptIds": [
+        "ibreztinio-apskritimo-centras"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "daugiakampiai-ex-005",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Stačiojo trikampio įžambinė lygi 10. Koks apie jį apibrėžto apskritimo spindulys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Statusis trikampis remiasi į skersmenį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "R = c / 2 = 10 / 2 = 5."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "5"
+    },
+    {
+      "id": "daugiakampiai-ex-006",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Taisyklingojo šešiakampio kraštinė lygi 6. Koks apie jį apibrėžto apskritimo spindulys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Taisyklingasis šešiakampis susideda iš 6 lygiakraščių trikampių.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "R = a = 6."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "6"
+    },
+    {
+      "id": "daugiakampiai-ex-007",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Lygiašonio trikampio kraštinės yra 5, 5, 6. Raskite įbrėžtinio apskritimo spindulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1.5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite plotą. Aukštinė į pagrindą h = sqrt(5^2 - 3^2) = 4.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "S = 0.5 * 6 * 4 = 12.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "p = (5+5+6)/2 = 8. r = S / p = 12 / 8 = 1,5."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 60,
+      "answerText": "1.5"
+    },
+    {
+      "id": "daugiakampiai-ex-008",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apibrėžtinės lygiašonės trapecijos šoninė kraštinė lygi 10. Koks jos perimetras?",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Priešingų kraštinių sumos lygios.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Pagrindų suma lygi šoninių kraštinių sumai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 + 10 = 20 (šoninės). Pagrindų suma irgi 20. Perimetras 20 + 20 = 40."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-keturkampis"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "40"
+    },
+    {
+      "id": "daugiakampiai-ex-009",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Įbrėžtinio keturkampio kampų santykis yra 2:3:4. Koks yra didžiausias kampas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 120,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Priešingi kampai yra 2x ir 4x, arba 3x ir kažkas kitas.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "2x + 4x = 180 -> 6x = 180 -> x = 30.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kampai: 2*30=60, 3*30=90, 4*30=120, 180-90=90. Didžiausias 120."
+        }
+      ],
+      "conceptIds": [
+        "ibreztinis-keturkampis"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "120"
+    },
+    {
+      "id": "daugiakampiai-ex-010",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės 7, 24, 25. Raskite R (apibrėžtinį spindulį).",
+      "answer": {
+        "kind": "numeric",
+        "value": 12.5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Patikrinkite ar trikampis status: 7^2 + 24^2 = 49 + 576 = 625 = 25^2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "R = 25 / 2 = 12,5."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "12.5"
+    },
+    {
+      "id": "daugiakampiai-ex-011",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Įbrėžtinio apskritimo spindulys r = 3, o trikampio perimetras 30. Koks jo plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 45,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "p = 30 / 2 = 15.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "S = p * r = 15 * 3 = 45."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 20,
+      "answerText": "45"
+    },
+    {
+      "id": "daugiakampiai-ex-012",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Stačiojo trikampio statiniai 6 ir 8. Raskite r (įbrėžtinį spindulį).",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "c = sqrt(6^2+8^2) = 10.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "S = 24, p = (6+8+10)/2 = 12.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "r = 24 / 12 = 2."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 40,
+      "answerText": "2"
+    },
+    {
+      "id": "daugiakampiai-ex-013",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Aukštis lygiakraščio trikampio yra $3\\sqrt{3}$. Raskite į jį įbrėžto apskritimo spindulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1.732,
+        "tolerance": 0.001
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Lygiakraščio trikampio r = h / 3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "r = 3*sqrt(3) / 3 = sqrt(3) approx 1,732."
+        }
+      ],
+      "conceptIds": [
+        "ibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "1.732"
+    },
+    {
+      "id": "daugiakampiai-ex-014",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kvadrato kraštinė 10. Koks apie jį apibrėžto apskritimo spindulys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 7.07,
+        "tolerance": 0.01
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "R = d / 2, kur d yra įstrižainė.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "d = 10 * sqrt(2). R = 5 * sqrt(2) approx 7,07."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "7.07"
+    },
+    {
+      "id": "daugiakampiai-ex-015",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Stačiametrio kraštinės 5 ir 12. Koks apie jį apibrėžto apskritimo spindulys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 6.5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskritimas eina per visas viršūnes, tad įstrižainė yra skersmuo.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "d = sqrt(5^2+12^2) = 13. R = 13 / 2 = 6,5."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "6.5"
+    },
+    {
+      "id": "daugiakampiai-ex-016",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės 10, 10, 12. Raskite R (apibrėžtinį spindulį).",
+      "answer": {
+        "kind": "numeric",
+        "value": 6.25,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "S = 48 (aukštinė į pagrindą 8, 0.5*12*8=48).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "R = (10*10*12) / (4*48) = 1200 / 192 = 6,25."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 70,
+      "answerText": "6.25"
+    },
+    {
+      "id": "daugiakampiai-ex-017",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apie trikampį apibrėžto apskritimo spindulys R = 10, o vienas kampas 30 laipsnių. Kokia prieš tą kampą esanti kraštinė?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite sinusų teoremą: a / sin(A) = 2R.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "a = 2 * 10 * sin(30) = 20 * 0.5 = 10."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-apskritimas"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "10"
+    },
+    {
+      "id": "daugiakampiai-ex-018",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apibrėžtinio keturkampio plotas 50, o spindulys r = 2. Koks jo perimetras?",
+      "answer": {
+        "kind": "numeric",
+        "value": 50,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Formulė S = p * r galioja bet kokiam apibrėžtiniam daugiakampiui.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "p = S / r = 50 / 2 = 25. P = 2 * p = 50."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinis-daugiakampis"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "50"
+    },
+    {
+      "id": "daugiakampiai-ex-019",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Rombas įbrėžtas į apskritimą. Koks tai keturkampis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Kvadratas"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Rombo priešingi kampai lygūs. Kad būtų įbrėžtinis, jų suma turi būti 180.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2x = 180 -> x = 90. Rombas su 90 laipsnių kampu yra kvadratas."
+        }
+      ],
+      "conceptIds": [
+        "ibreztinis-keturkampis"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "daugiakampiai-ex-020",
+      "topicId": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apie trikampį apibrėžtas apskritimas. Jei centras yra ant vienos kraštinės, koks tai trikampis? (Įrašykite 'statusis')",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "statusis"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Centras yra vidurio statmenų sankirta. Jei jis ant kraštinės, ta kraštinė yra skersmuo.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kampas, besiremiantis į skersmenį, yra status."
+        }
+      ],
+      "conceptIds": [
+        "apibreztinio-apskritimo-centras"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "Correct choice"
+    }
+  ],
+  "tests": [
+    {
+      "id": "daugiakampiai-test-1",
+      "title": "Įbrėžtiniai ir apibrėžtiniai daugiakampiai: testas",
+      "scope": "topic",
+      "topicIds": [
+        "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+      ],
+      "exerciseIds": [
+        "daugiakampiai-ex-003",
+        "daugiakampiai-ex-005",
+        "daugiakampiai-ex-007",
+        "daugiakampiai-ex-009",
+        "daugiakampiai-ex-012",
+        "daugiakampiai-ex-014",
+        "daugiakampiai-ex-016",
+        "daugiakampiai-ex-018",
+        "daugiakampiai-ex-019",
+        "daugiakampiai-ex-020"
+      ],
+      "timeLimitSeconds": 1200,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.75
+    }
+  ],
+  "srsSeeds": [
+    {
+      "id": "srs-ibreztinis-keturkampis-kampai",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada keturkampį galima įbrėžti į apskritimą?",
+      "back": "Kai jo priešingų kampų suma lygi 180 laipsnių.",
+      "conceptIds": [
+        "ibreztinis-keturkampis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-apibreztinis-keturkampis-krastines",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada į keturkampį galima įbrėžti apskritimą?",
+      "back": "Kai jo priešingų kraštinių ilgių sumos yra lygios.",
+      "conceptIds": [
+        "apibreztinis-keturkampis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-trikampio-centras-r",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kur yra į trikampį įbrėžto apskritimo centras?",
+      "back": "Pusiaukampinių susikirtimo taške.",
+      "conceptIds": [
+        "ibreztinio-apskritimo-centras"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-trikampio-centras-R",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kur yra apie trikampį apibrėžto apskritimo centras?",
+      "back": "Kraštinių vidurio statmenų susikirtimo taške.",
+      "conceptIds": [
+        "apibreztinio-apskritimo-centras"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-S-pr",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Kokia trikampio ploto formulė per pusperimetrį p ir įbrėžtinį spindulį r?",
+      "back": "S = p * r",
+      "formulaIds": [
+        "trikampio-ploto-r-formule"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

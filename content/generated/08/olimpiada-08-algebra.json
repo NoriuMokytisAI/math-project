@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Generated from Olympiad Syllabus"
+    "notes": "Expanded Grade 8 Olympiad Algebra content."
   },
   "topic": {
     "id": "olimpiada-08-algebra",
@@ -12,14 +12,22 @@
     "strand": "Algebra",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
-    "prerequisiteTopicIds": [],
+    "estimatedStudyMinutes": 120,
+    "prerequisiteTopicIds": [
+      "laipsniai-ir-saknys"
+    ],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method"
+      "olimpiada-08-concept-method",
+      "am-gm-nelygybe",
+      "pilnojo-kvadrato-isskyrimas",
+      "diofanto-lygtys"
     ],
-    "formulaIds": [],
+    "formulaIds": [
+      "vijeto-teorema-kvadratine",
+      "am-gm-formule"
+    ],
     "mistakeIds": [],
     "exerciseIds": [
       "ex-olimpiada-08-fe7262fc",
@@ -32,11 +40,21 @@
       "ex-olimpiada-08-ec7e6993",
       "ex-olimpiada-08-c4bc99e0",
       "ex-olimpiada-08-811014ef",
-      "ex-olimpiada-08-5225d7a2"
+      "ex-olimpiada-08-5225d7a2",
+      "ex-olimpiada-08-efad3e02",
+      "ex-olimpiada-08-9c8a454f",
+      "ex-olimpiada-08-b19cc2f8",
+      "ex-olimpiada-08-4670481e",
+      "ex-olimpiada-08-8a5b6d7c",
+      "ex-olimpiada-08-371ff322",
+      "ex-olimpiada-08-8f8af17c",
+      "ex-olimpiada-08-ef659ec4",
+      "ex-olimpiada-08-alg-020"
     ]
   },
   "theory": [
     {
+      "id": "diofantines-lygtys-ir-dalumas",
       "title": "Diofantinės lygtys ir dalumas",
       "blocks": [
         {
@@ -46,6 +64,39 @@
         {
           "type": "method",
           "text": "Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\in \\mathbb{Z}$."
+        }
+      ]
+    },
+    {
+      "id": "vijeto-teorema-ir-simetrija",
+      "title": "Vijeto teorema ir simetriniai reiškiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vijeto teorema sieja lygties koeficientus su jos šaknų suma ir sandauga. Kvadratinei lygčiai $ax^2 + bx + c = 0$ galioja: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$."
+        },
+        {
+          "type": "note",
+          "text": "Simetriniai reiškiniai, tokie kaip $x_1^2 + x_2^2$ arba $\\frac{1}{x_1} + \\frac{1}{x_2}$, gali būti išreikšti per šaknų sumą ir sandaugą, net nežinant pačių šaknų reikšmių."
+        }
+      ]
+    },
+    {
+      "id": "nelygybes-am-gm",
+      "title": "Nelygybės: AM-GM principas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) teigia, kad neneigiamiems skaičiams jų aritmetinis vidurkis yra ne mažesnis už geometrinį vidurkį."
+        },
+        {
+          "type": "formula",
+          "formulaId": "am-gm-formule",
+          "latex": "\\frac{a+b}{2} \\ge \\sqrt{ab}"
+        },
+        {
+          "type": "note",
+          "text": "Lygybė galioja tada ir tik tada, kai $a = b$. Ši nelygybė yra galingas įrankis įrodant kitas nelygybes ir ieškant funkcijų ekstremumų."
         }
       ]
     }
@@ -68,10 +119,58 @@
       "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
       "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "am-gm-nelygybe",
+      "title": "AM-GM nelygybė",
+      "type": "method",
+      "shortDefinition": "Aritmetinio ir geometrinio vidurkių sąryšis.",
+      "intuition": "Skaičių vidurkis visada didesnis arba lygus jų geometriniam vidurkiui.",
+      "formal": "Neneigiamiems $a_1, a_2, \\dots, a_n$: $\\frac{a_1 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 \\dots a_n}$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "pilnojo-kvadrato-isskyrimas",
+      "title": "Pilnojo kvadrato išskyrimas",
+      "type": "method",
+      "shortDefinition": "Kvadratinio trynio pertvarkymas į binomo kvadratą ir konstantą.",
+      "intuition": "Užrašome $x^2 + bx + c$ kaip $(x+k)^2 + m$.",
+      "formal": "$ax^2 + bx + c = a(x + \\frac{b}{2a})^2 + (c - \\frac{b^2}{4a})$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "diofanto-lygtys",
+      "title": "Diofanto lygtys",
+      "type": "concept",
+      "shortDefinition": "Lygtys, kurių sprendinių ieškoma tik sveikųjų skaičių aibėje.",
+      "intuition": "Uždaviniai, kur atsakymai privalo būti sveiki skaičiai.",
+      "formal": "Lygtis $f(x_1, \\dots, x_n) = 0$, kur $x_i \\in \\mathbb{Z}$.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "vijeto-teorema-kvadratine",
+      "title": "Vijeto teorema kvadratinei lygčiai",
+      "latex": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 x_2 = \\frac{c}{a}",
+      "explanation": "Sieja kvadratinės lygties šaknis su koeficientais."
+    },
+    {
+      "id": "am-gm-formule",
+      "title": "AM-GM nelygybė dviems skaičiams",
+      "latex": "\\frac{a+b}{2} \\ge \\sqrt{ab}",
+      "explanation": "Galioja neneigiamiems a ir b."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "am-gm-neigiami-skaiciai",
+      "title": "AM-GM taikymas neigiamiems skaičiams",
+      "wrongPattern": "Taikyti AM-GM, kai skaičiai gali būti neigiami.",
+      "correction": "AM-GM galioja tik neneigiamiems skaičiams. Jei skaičiai neigiami, reikia dirbti su jų moduliais arba keisti ženklus.",
+      "whyItHappens": "Pamirštama esminė nelygybės galiojimo sąlyga."
+    }
+  ],
   "workedExamples": [
     {
       "title": "Tiesinės diofantinės lygties sprendimas",
@@ -81,13 +180,80 @@
           "text": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių."
         },
         {
-          "text": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\implies y = 1$. Sprendinys yra $(2, 1)$."
+          "text": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1$. Sprendinys $(2, 1)$."
         },
         {
-          "text": "Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
+          "text": "Bendrasis sprendinys: $x = 2 + 5t, y = 1 + 3t, t \\in \\mathbb{Z}$."
         }
       ],
-      "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
+      "answer": "x = 2+5t, y = 1+3t"
+    },
+    {
+      "title": "Skaičių palyginimas laipsniais",
+      "problem": "Kuris skaičius didesnis: $2^{300}$ ar $3^{200}$?",
+      "steps": [
+        {
+          "text": "$2^{300} = (2^3)^{100} = 8^{100}$."
+        },
+        {
+          "text": "$3^{200} = (3^2)^{100} = 9^{100}$."
+        },
+        {
+          "text": "$9 > 8$, todėl $3^{200}$ yra didesnis."
+        }
+      ],
+      "answer": "3^200"
+    },
+    {
+      "title": "Lygtis su moduliais",
+      "problem": "Išspręskite lygtį $|x-1| + |x-3| = 2$.",
+      "steps": [
+        {
+          "text": "Nagrinėjame intervalus: $x < 1$, $1 \\le x \\le 3$, $x > 3$."
+        },
+        {
+          "text": "Intervale $[1, 3]$ lygtis tampa $x-1 + 3-x = 2$, t.y. $2=2$. Visi taškai tinka."
+        }
+      ],
+      "answer": "x ∈ [1, 3]"
+    },
+    {
+      "title": "Simetrinio reiškinio reikšmė",
+      "problem": "Jei $a+b=5$ ir $ab=6$, raskite $a^2+b^2$.",
+      "steps": [
+        {
+          "text": "$(a+b)^2 = a^2+2ab+b^2$."
+        },
+        {
+          "text": "$5^2 = a^2+b^2 + 2(6) \\implies 25 = a^2+b^2+12$."
+        },
+        {
+          "text": "$a^2+b^2 = 13$."
+        }
+      ],
+      "answer": "13"
+    },
+    {
+      "title": "Diofantinė lygtis su dauginimu",
+      "problem": "Raskite sveikus sprendinius: $(x-1)(y+2) = 3$.",
+      "steps": [
+        {
+          "text": "Skaičiaus 3 dalikliai yra: 1, 3, -1, -3."
+        },
+        {
+          "text": "1 atvejis: $x-1=1, y+2=3 \\implies x=2, y=1$."
+        },
+        {
+          "text": "2 atvejis: $x-1=3, y+2=1 \\implies x=4, y=-1$."
+        },
+        {
+          "text": "3 atvejis: $x-1=-1, y+2=-3 \\implies x=0, y=-5$."
+        },
+        {
+          "text": "4 atvejis: $x-1=-3, y+2=-1 \\implies x=-2, y=-3$."
+        }
+      ],
+      "answer": "(2,1), (4,-1), (0,-5), (-2,-3)"
     }
   ],
   "exercises": [
@@ -111,9 +277,7 @@
         "text": "Apskaičiuokite diskriminantą $D = b^2 - 4ac$. Jo ženklas nurodo šaknų skaičių."
       },
       "strategyTags": [
-        "introductory",
-        "proof",
-        "algebra"
+        "algebraic-transformation"
       ],
       "prerequisiteTopicIds": [],
       "prerequisiteConceptIds": [],
@@ -126,134 +290,41 @@
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Nustatykite koeficientus: $a=1$, $b=-6$, $c=9$.",
-          "revealsConceptIds": [],
+          "text": "Nustatykite koeficientus: $a=1, b=-6, c=9$.",
           "penalty": 0.05
         },
         {
           "order": 2,
-          "kind": "observation",
-          "text": "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.",
-          "revealsConceptIds": [],
+          "text": "D = 0.",
           "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Kadangi $D=0$, lygtis turi vieną kartotinę (dvigubą) šaknį.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Šaknis randama pagal formulę $x = -b / (2a)$. Apskaičiuokite jos vertę.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Nustatome koeficientus: $a=1, b=-6, c=9$."
+          "text": "$D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 0$."
         },
         {
-          "text": "Apskaičiuojame diskriminantą: $D = (-6)^2 - 4 \\times 1 \\times 9 = 36 - 36 = 0$."
-        },
-        {
-          "text": "Kadangi $D = 0$, lygtis turi tik vieną sprendinį (dvigubą šaknį)."
-        },
-        {
-          "text": "Randame šaknį: $x = \\frac{6}{2 \\times 1} = 3$. (Taip pat galima pastebėti, kad $x^2 - 6x + 9 = (x-3)^2 = 0$)."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-fe7262fc-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Nustatome koeficientus: $a=1, b=-6, c=9$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Apskaičiuojame diskriminantą: $D = (-6)^2 - 4 \\times 1 \\times 9 = 36 - 36 = 0$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Kadangi $D = 0$, lygtis turi tik vieną sprendinį (dvigubą šaknį).",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Randame šaknį: $x = \\frac{6}{2 \\times 1} = 3$. (Taip pat galima pastebėti, kad $x^2 - 6x + 9 = (x-3)^2 = 0$).",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Viena šaknis $x = 3$."
+          "text": "Viena šaknis $x = 6/2 = 3$."
         }
       ],
       "commonTraps": [
         {
           "id": "ex-olimpiada-08-fe7262fc-trap-1",
-          "title": "Diskriminanto nulio interpretacija",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad jei $D=0$, tai lygtis neturi šaknų.",
-          "whyTempting": "Supainiojama su sąlyga $D < 0$.",
-          "whyItHappens": "Supainiojama su sąlyga $D < 0$.",
-          "wrongPattern": "Manyti, kad jei $D=0$, tai lygtis neturi šaknų.",
-          "correction": "Kai $D > 0$, lygtis turi 2 skirtingas šaknis, kai $D = 0$ – 1 dvigubą šaknį, o kai $D < 0$ – realiųjų šaknų neturi.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-fe7262fc-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
+          "title": "D=0 interpretacija",
+          "wrongMove": "Manyti, kad nėra šaknų.",
+          "correction": "Yra viena kartotinė šaknis."
         }
       ],
       "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+        "Ar galima spręsti be D?"
       ],
-      "extensionQuestions": [],
       "srsSeeds": [
         {
           "id": "ex-olimpiada-08-fe7262fc-srs-1",
-          "deck": "practice",
+          "deck": "theory",
           "cardType": "method",
-          "front": "Ką parodo diskriminanto reikšmė kvadratinėje lygtyje?",
-          "back": "$D > 0$: dvi realios šaknys; $D = 0$: viena dviguba reali šaknis; $D < 0$: realių šaknų nėra.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
+          "front": "Ką sako D=0?",
+          "back": "Viena dviguba šaknis.",
           "defaultEnabled": true
         }
       ]
@@ -266,164 +337,30 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Jei $x_1$ ir $x_2$ yra lygties $2x^2 - 8x + 5 = 0$ šaknys, raskite $\\frac{1}{x_1} + \\frac{1}{x_2}$ reikšmę.",
+      "statement": "Raskite $1/x_1 + 1/x_2$, jei $2x^2 - 8x + 5 = 0$.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Reikšmė lygi 8/5 (arba 1.6)."
+        "expectedConclusion": "1.6"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Vijeto teoremos taikymas",
-        "text": "Bendra vardikliu suvestas reiškinys išreiškiamas šaknų suma ir sandauga, kurias nustato Vijeto teorema."
+        "title": "Vijetas",
+        "text": "Trupmenų suma per šaknų sumą ir sandaugą."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Suveskite ieškomą reiškinį prie bendro vardiklio.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Reiškinys tampa $\\frac{x_1 + x_2}{x_1 x_2}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pagal Vijeto teoremą: $x_1 + x_2 = -b/a = 8/2 = 4$ ir $x_1 x_2 = c/a = 5/2$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Įstatykite šias reikšmes į suvestą trupmeną: $\\frac{4}{5/2}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Suvedame trupmenas prie bendro vardiklio: $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2}$."
+          "text": "$1/x_1 + 1/x_2 = (x_1+x_2)/(x_1x_2)$."
         },
         {
-          "text": "Pagal Vijeto teoremą kvadratinei lygtyje $ax^2 + bx + c = 0$: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$."
+          "text": "$x_1+x_2 = 4, x_1x_2 = 2.5$."
         },
         {
-          "text": "Mūsų lygtyje $a=2, b=-8, c=5$, todėl $x_1 + x_2 = 4$ ir $x_1 x_2 = \\frac{5}{2}$."
-        },
-        {
-          "text": "Įstatome: $\\frac{4}{5/2} = 4 \\times \\frac{2}{5} = \\frac{8}{5} = 1.6$."
+          "text": "$4 / 2.5 = 1.6$."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-56d15a87-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Suvedame trupmenas prie bendro vardiklio: $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2}$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Pagal Vijeto teoremą kvadratinei lygtyje $ax^2 + bx + c = 0$: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Mūsų lygtyje $a=2, b=-8, c=5$, todėl $x_1 + x_2 = 4$ ir $x_1 x_2 = \\frac{5}{2}$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Įstatome: $\\frac{4}{5/2} = 4 \\times \\frac{2}{5} = \\frac{8}{5} = 1.6$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Reikšmė lygi 8/5 (arba 1.6)."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-56d15a87-trap-1",
-          "title": "Sprendimas be Vijeto teoremos",
-          "type": "mistake",
-          "wrongMove": "Pirmiausia spręsti lygtį ir gauti iracionalias šaknis.",
-          "whyTempting": "Norisi dirbti su konkrečiais skaičiais.",
-          "whyItHappens": "Norisi dirbti su konkrečiais skaičiais.",
-          "wrongPattern": "Pirmiausia spręsti lygtį ir gauti iracionalias šaknis.",
-          "correction": "Šaknys yra iracionalios ($x = 2 \\pm \\frac{\\sqrt{6}}{2}$), todėl jas sudėti ir dalinti tiesiogiai yra labai sudėtinga. Vijeto teorema leidžia rasti atsakymą be šaknų skaičiavimo.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-56d15a87-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-56d15a87-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokios yra Vijeto formulės kvadratinei lygtyje $ax^2 + bx + c = 0$?",
-          "back": "$x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "1.6"
     },
     {
       "id": "ex-olimpiada-08-50649dd3",
@@ -433,164 +370,24 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Išskaidykite daugikliais reiškinį $x^3 + x^2 - 4x - 4$.",
+      "statement": "Išskaidykite $x^3 + x^2 - 4x - 4$.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "$(x+1)(x-2)(x+2)$."
+        "expectedConclusion": "(x+1)(x-2)(x+2)"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Grupavimo metodas",
-        "text": "Sugrupuokite narius poromis, iškelkite bendrus daugiklius ir pritaikykite kvadratų skirtumo formulę."
+        "title": "Grupavimas",
+        "text": "Sugrupuokite narius poromis."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Sugrupuokite pirmus du narius ir paskutinius du narius.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Sustatykite: $(x^3 + x^2) - (4x + 4)$. Iškelkite $x^2$ iš pirmosios grupės ir 4 iš antrosios.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Gausite: $x^2(x + 1) - 4(x + 1)$. Dabar iškelkite bendrą skliaustą $(x + 1)$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Reiškinys tampa $(x+1)(x^2 - 4)$. Išskaidykite antrąjį skliaustą pagal kvadratų skirtumo formulę.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "casework"
       ],
       "solutionSteps": [
         {
-          "text": "Sugrupuojame narius: $(x^3 + x^2) - (4x + 4)$."
-        },
-        {
-          "text": "Iškeliame bendrus daugiklius: $x^2(x + 1) - 4(x + 1)$."
-        },
-        {
-          "text": "Iškeliame bendrą skliaustą $(x+1)$: $(x+1)(x^2 - 4)$."
-        },
-        {
-          "text": "Taikome kvadratų skirtumo formulę $x^2 - 4 = (x-2)(x+2)$, gauname: $(x+1)(x-2)(x+2)$."
+          "text": "$x^2(x+1) - 4(x+1) = (x+1)(x^2-4) = (x+1)(x-2)(x+2)$."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-50649dd3-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Sugrupuojame narius: $(x^3 + x^2) - (4x + 4)$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Iškeliame bendrus daugiklius: $x^2(x + 1) - 4(x + 1)$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Iškeliame bendrą skliaustą $(x+1)$: $(x+1)(x^2 - 4)$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Taikome kvadratų skirtumo formulę $x^2 - 4 = (x-2)(x+2)$, gauname: $(x+1)(x-2)(x+2)$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "$(x+1)(x-2)(x+2)$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-50649dd3-trap-1",
-          "title": "Nebaigtas skaidymas daugikliais",
-          "type": "mistake",
-          "wrongMove": "Palikti atsakymą pavidalu $(x+1)(x^2-4)$ kaip pilnai išskaidytą.",
-          "whyTempting": "Manoma, kad darbas baigtas radus pirmąjį bendrąjį daugiklį.",
-          "whyItHappens": "Manoma, kad darbas baigtas radus pirmąjį bendrąjį daugiklį.",
-          "wrongPattern": "Palikti atsakymą pavidalu $(x+1)(x^2-4)$ kaip pilnai išskaidytą.",
-          "correction": "Skliaustas $(x^2 - 4)$ vis dar gali būti išskaidytas žemesnio laipsnio daugikliais, todėl skaidymą būtina tęsti iki galo.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-50649dd3-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-50649dd3-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip taikomas grupavimo metodas daugianariams?",
-          "back": "Nariai suskirstomi į grupes, iš kurių iškeliami bendri daugikliai, siekiant rasti bendrą skliaustą visam reiškiniui.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "(x+1)(x-2)(x+2)"
     },
     {
       "id": "ex-olimpiada-08-f6fadbfd",
@@ -600,164 +397,24 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Padalykite daugianarį $x^3 - 3x^2 + 5x - 3$ iš $x - 1$ kampu (daugianarių dalyba).",
+      "statement": "Padalykite $x^3 - 3x^2 + 5x - 3$ iš $x - 1$ kampu.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "$x^2 - 2x + 3$."
+        "expectedConclusion": "x^2 - 2x + 3"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Daugianarių dalyba kampu",
-        "text": "Atlikite dalybą analogiškai paprastų skaičių dalybai, laipsniškai naikindami aukščiausiojo laipsnio narius."
+        "title": "Dalyba",
+        "text": "Dalyba kampu."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pirmasis žingsnis: padalinkite $x^3$ iš $x$, gaunate $x^2$.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Padauginkite $x^2(x-1) = x^3 - x^2$. Atimkite tai iš pradinio reiškinio: lieka $-2x^2 + 5x - 3$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Dabar padalinkite $-2x^2$ iš $x$, gausite $-2x$. Padauginkite ir atimkite.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Liekantis narys bus $3x - 3$. Padalinkite jį iš $x-1$, gausite 3. Užrašykite pilną dalmenį.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Dalijame $x^3$ iš $x$, gauname $x^2$. Padauginame $x^2(x-1) = x^3 - x^2$. Atimame: $(x^3 - 3x^2 + 5x - 3) - (x^3 - x^2) = -2x^2 + 5x - 3$."
-        },
-        {
-          "text": "Dalijame $-2x^2$ iš $x$, gauname $-2x$. Padauginame $-2x(x-1) = -2x^2 + 2x$. Atimame: $(-2x^2 + 5x - 3) - (-2x^2 + 2x) = 3x - 3$."
-        },
-        {
-          "text": "Dalijame $3x$ iš $x$, gauname $3$. Padauginame $3(x-1) = 3x - 3$. Atimame: $(3x - 3) - (3x - 3) = 0$."
-        },
-        {
-          "text": "Gautas dalmuo yra $x^2 - 2x + 3$."
+          "text": "Dalijant gaunama $x^2 - 2x + 3$."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-f6fadbfd-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Dalijame $x^3$ iš $x$, gauname $x^2$. Padauginame $x^2(x-1) = x^3 - x^2$. Atimame: $(x^3 - 3x^2 + 5x - 3) - (x^3 - x^2) = -2x^2 + 5x - 3$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Dalijame $-2x^2$ iš $x$, gauname $-2x$. Padauginame $-2x(x-1) = -2x^2 + 2x$. Atimame: $(-2x^2 + 5x - 3) - (-2x^2 + 2x) = 3x - 3$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Dalijame $3x$ iš $x$, gauname $3$. Padauginame $3(x-1) = 3x - 3$. Atimame: $(3x - 3) - (3x - 3) = 0$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Gautas dalmuo yra $x^2 - 2x + 3$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "$x^2 - 2x + 3$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-f6fadbfd-trap-1",
-          "title": "Strateginė klaida",
-          "type": "mistake",
-          "wrongMove": "Padaryti ženklo klaidą atimties žingsnyje, pvz. $-3x^2 - (-x^2) = -4x^2$ vietoje $-2x^2$.",
-          "whyTempting": "Atimant neigiamus narius dažnai prarandamas minuso ženklas.",
-          "whyItHappens": "Atimant neigiamus narius dažnai prarandamas minuso ženklas.",
-          "wrongPattern": "Padaryti ženklo klaidą atimties žingsnyje, pvz. $-3x^2 - (-x^2) = -4x^2$ vietoje $-2x^2$.",
-          "correction": "Būkite labai atidūs su ženklais: atimant neigiamą narį jo ženklas pasikeičia į teigiamą.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-f6fadbfd-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-f6fadbfd-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Koks yra pagrindinis daugianarių dalybos kampu principas?",
-          "back": "Dalijame aukščiausiąjį dalinio narį iš aukščiausiojo daliklio nario, gautą rezultatą dauginame iš daliklio ir atimame iš dalinio.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "x^2 - 2x + 3"
     },
     {
       "id": "ex-olimpiada-08-7f2e3b87",
@@ -767,665 +424,108 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Suprastinkite reiškinį $\\frac{x^2 - 9}{x^2 + 3x} \\div \\frac{x - 3}{x^2}$.",
+      "statement": "Suprastinkite $(x^2-9)/(x^2+3x) : (x-3)/x^2$.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Reiškinys lygus $x$."
+        "expectedConclusion": "x"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Racionaliųjų reiškinių suprastinimas",
-        "text": "Išskaidykite daugikliais skaitiklius ir vardiklius, o dalybą pakeiskite daugyba iš apverstos trupmenos."
+        "title": "Skaidymas",
+        "text": "Daugiklių iškėlimas."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Išskaidykite $x^2-9$ ir $x^2+3x$ daugikliais.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "$x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\cdot \\frac{x^2}{x-3}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Suprastinkite vienodus skliaustus $(x-3)$, $(x+3)$ bei kintamąjį $x$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Išskaidome daugikliais pirmosios trupmenos dalis: $x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$."
-        },
-        {
-          "text": "Dalybos veiksmą pakeičiame daugyba iš apverstos trupmenos: $\\frac{(x-3)(x+3)}{x(x+3)} \\times \\frac{x^2}{x-3}$."
-        },
-        {
-          "text": "Suprastiname bendrus daugiklius $(x+3)$ ir $(x-3)$ skaitiklyje ir vardiklyje: $\\frac{1}{x} \\times x^2$."
-        },
-        {
-          "text": "Supaprastiname $x^2 / x = x$ (kai $x \\neq 0, 3, -3$)."
+          "text": "$(x-3)(x+3)/(x(x+3)) * x^2/(x-3) = x$."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-7f2e3b87-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Išskaidome daugikliais pirmosios trupmenos dalis: $x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Dalybos veiksmą pakeičiame daugyba iš apverstos trupmenos: $\\frac{(x-3)(x+3)}{x(x+3)} \\times \\frac{x^2}{x-3}$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Suprastiname bendrus daugiklius $(x+3)$ ir $(x-3)$ skaitiklyje ir vardiklyje: $\\frac{1}{x} \\times x^2$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Supaprastiname $x^2 / x = x$ (kai $x \\neq 0, 3, -3$).",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Reiškinys lygus $x$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-7f2e3b87-trap-1",
-          "title": "Neteisingas prastinimas",
-          "type": "mistake",
-          "wrongMove": "Tiesiog braukti $x^2$ narius skaitiklyje ir vardiklyje prieš išskaidant daugikliais.",
-          "whyTempting": "Skubėjimas ir neteisingas algebrinių taisyklių taikymas.",
-          "whyItHappens": "Skubėjimas ir neteisingas algebrinių taisyklių taikymas.",
-          "wrongPattern": "Tiesiog braukti $x^2$ narius skaitiklyje ir vardiklyje prieš išskaidant daugikliais.",
-          "correction": "Suprastinti galima tik tuos narius, kurie yra visos išraiškos sandaugos daugikliai, o ne atskiri dėmenys sumoje.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-7f2e3b87-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-7f2e3b87-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip atliekama racionaliųjų trupmenų dalyba?",
-          "back": "Pirmąją trupmeną padauginame iš antrosios trupmenos apversto pavidalo.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "x"
     },
     {
       "id": "ex-olimpiada-08-d16de0a6",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Algebra",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Apskaičiuokite reiškinio reikšmę: $\\log_2(24) - \\log_2(3)$.",
+      "olympiadTier": "introductory",
+      "statement": "Apskaičiuokite log2(24) - log2(3).",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Reikšmė lygi 3."
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Logaritmų skirtumo savybė",
-        "text": "Pritaikykite logaritmų skirtumo formulę $\\log_a(x) - \\log_a(y) = \\log_a(\\frac{x}{y})$."
+        "title": "Logaritmų savybė",
+        "text": "Logaritmas dalmens."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Prisiminkite, kaip sujungti du logaritmus su vienodais pagrindais, kai jie yra atimami.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Skirtumas virsta dalmens logaritmu: $\\log_2(\\frac{24}{3})$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\log_2(8)$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Išreikškite 8 kaip 2 laipsnį ir raskite galutinę vertę.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$."
-        },
-        {
-          "text": "Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$."
-        },
-        {
-          "text": "Įstatome: $\\log_2(8)$."
-        },
-        {
-          "text": "Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$."
+          "text": "log2(24/3) = log2(8) = 3."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-d16de0a6-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Įstatome: $\\log_2(8)$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Reikšmė lygi 3."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-d16de0a6-trap-1",
-          "title": "Logaritmų savybių painiojimas",
-          "type": "mistake",
-          "wrongMove": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
-          "whyTempting": "Neteisingai suformuluota analogija su skliaustais.",
-          "whyItHappens": "Neteisingai suformuluota analogija su skliaustais.",
-          "wrongPattern": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
-          "correction": "Logaritmų skirtumas yra lygus dalmens logaritmui: $\\log_a x - \\log_a y = \\log_a (x/y)$ (o ne $\\log(x-y)$).",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-d16de0a6-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-d16de0a6-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra logaritmų skirtumo formulė?",
-          "back": "$\\log_a x - \\log_a y = \\log_a \\left(\\frac{x}{y}\\right)$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "3"
     },
     {
       "id": "ex-olimpiada-08-3fa10af9",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Išspręskite lygtį $9^{x - 1} = 27^x$.",
+      "statement": "Išspręskite 9^(x-1) = 27^x.",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "$x = -2$."
+        "kind": "numeric",
+        "value": -2,
+        "tolerance": 0
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Rodiklinių lygčių pagrindų suvienodinimas",
-        "text": "Išreikškite abu pagrindus 9 ir 27 kaip skaičiaus 3 laipsnius ir sulyginkite laipsnio rodiklius."
+        "title": "Laipsnių pagrindai",
+        "text": "Suvienodinkite pagrindus."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Koks yra bendras pagrindas skaičiams 9 ir 27?",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "$9 = 3^2$ ir $27 = 3^3$. Lygtis tampa $(3^2)^{x-1} = (3^3)^x$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pritaikykite laipsnio kėlimo laipsniu taisyklę: $3^{2(x-1)} = 3^{3x}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Sulyginkite rodiklius: $2x - 2 = 3x$ ir išspręskite lygtį.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$."
-        },
-        {
-          "text": "Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$."
-        },
-        {
-          "text": "Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$."
-        },
-        {
-          "text": "Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$."
+          "text": "3^(2x-2) = 3^(3x) \\implies 2x-2=3x \\implies x=-2$."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-3fa10af9-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "$x = -2$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-3fa10af9-trap-1",
-          "title": "Skliaustų ignoravimas rodiklyje",
-          "type": "mistake",
-          "wrongMove": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
-          "whyTempting": "Skubėjimas atskleidžiant skliaustus.",
-          "whyItHappens": "Skubėjimas atskleidžiant skliaustus.",
-          "wrongPattern": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
-          "correction": "Keliant laipsnį laipsniu, padauginamas visas rodiklis: $2(x-1) = 2x - 2$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-3fa10af9-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-3fa10af9-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip sprendžiama paprasta rodiklinė lygtis $a^{f(x)} = a^{g(x)}$?",
-          "back": "Jei $a > 0$ ir $a \\neq 1$, tai prilyginame rodiklius: $f(x) = g(x)$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "-2"
     },
     {
       "id": "ex-olimpiada-08-ec7e6993",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite funkcijos $f(x) = x^2 - 4x + 7$ mažiausią reikšmę realiesiems skaičiams.",
+      "statement": "Raskite x^2 - 4x + 7 mažiausią reikšmę.",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Mažiausia reikšmė lygi 3."
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Pilnojo kvadrato išskyrimas",
-        "text": "Išskirkite pilnąjį kvadratą kvadratiniame trinaryje, kad pamatytumėte jo minimalią vertę."
+        "title": "Pilnas kvadratas",
+        "text": "(x-2)^2 + 3."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pabandykite išskirti kvadratą iš narių $x^2 - 4x$.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Prisiminkite, kad $(x-2)^2 = x^2 - 4x + 4$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Užrašykite: $x^2 - 4x + 7 = (x^2 - 4x + 4) + 3 = (x-2)^2 + 3$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Kadangi $(x-2)^2 \\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$."
-        },
-        {
-          "text": "Užrašome kaip sumą: $x^2 - 4x + 4 + 3$."
-        },
-        {
-          "text": "Suskleidžiame kvadratą: $(x-2)^2 + 3$."
-        },
-        {
-          "text": "Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3."
+          "text": "Mažiausia reikšmė 3."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-ec7e6993-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė analizė",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Užrašome kaip sumą: $x^2 - 4x + 4 + 3$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Suskleidžiame kvadratą: $(x-2)^2 + 3$.",
-              "latex": ""
-            },
-            {
-              "title": "Apibendrinimas",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Mažiausia reikšmė lygi 3."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-ec7e6993-trap-1",
-          "title": "Strateginė klaida",
-          "type": "mistake",
-          "wrongMove": "Teigti, kad mažiausia reikšmė pasiekiama prie $x=0$, t. y. lygi 7.",
-          "whyTempting": "Manoma, kad nulis yra mažiausias galimas kintamasis.",
-          "whyItHappens": "Manoma, kad nulis yra mažiausias galimas kintamasis.",
-          "wrongPattern": "Teigti, kad mažiausia reikšmė pasiekiama prie $x=0$, t. y. lygi 7.",
-          "correction": "Kvadratinė funkcija savo minimumą (jei $a > 0$) pasiekia viršūnėje, kurios koordinatė $x_0 = -b/2a = 2$, o ne taške 0.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-ec7e6993-trap-2",
-          "title": "Apibrėžimo srities nepaisymas",
-          "type": "mistake",
-          "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-          "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-ec7e6993-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kaip išskiriamas pilnasis kvadratas trinaryje $x^2 + bx + c$?",
-          "back": "Pridedame ir atimame laisvąjį narį $\\left(\\frac{b}{2}\\right)^2$, kad gautume $\\left(x + \\frac{b}{2}\\right)^2 + \\left(c - \\frac{b^2}{4}\\right)$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "3"
     },
     {
       "id": "ex-olimpiada-08-c4bc99e0",
@@ -1435,499 +535,368 @@
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Išspręskite trijų kintamųjų lygčių sistemą:\n$x + y + z = 6$\n$2x - y + z = 3$\n$x + 2y - z = 2$\nRaskite $x$, $y$, $z$.",
+      "statement": "Išspręskite sistemą: x+y+z=6, 2x-y+z=3, x+2y-z=2.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "$x=1, y=2, z=3$."
+        "expectedConclusion": "x=1, y=2, z=3"
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Gauso eliminavimo metodas",
-        "text": "Eliminuokite vieną iš kintamųjų (pvz. $z$) sudedami lygtis poromis, kad gautumėte dviejų kintamųjų sistemą."
+        "title": "Eliminacija",
+        "text": "Sudėties metodas."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kurį kintamąjį lengviausia pašalinti sudedant lygtis?",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\implies 2x + 3y = 8$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\implies 3x + y = 5$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Išspręskite gautą sistemą iš $2x+3y=8$ ir $3x+y=5$, o tada suraskite $z$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$."
-        },
-        {
-          "text": "Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$."
-        },
-        {
-          "text": "Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$."
-        },
-        {
-          "text": "Randame $y = 5 - 3(1) = 2$."
-        },
-        {
-          "text": "Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$."
+          "text": "x=1, y=2, z=3."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-c4bc99e0-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Žingsnis 1",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 4",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Randame $y = 5 - 3(1) = 2$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 5",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "$x=1, y=2, z=3$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-c4bc99e0-trap-1",
-          "title": "Dažna klaida",
-          "type": "mistake",
-          "wrongMove": "Bandyti spręsti išreiškiant sudėtingus kintamuosius iškart, kas veda prie painių trupmenų.",
-          "whyTempting": "Spontaniškas kintamojo pakeitimas.",
-          "whyItHappens": "Spontaniškas kintamojo pakeitimas.",
-          "wrongPattern": "Bandyti spręsti išreiškiant sudėtingus kintamuosius iškart, kas veda prie painių trupmenų.",
-          "correction": "Sisteminė eliminacija (sudėties metodas) leidžia greičiau ir švariau išspręsti trijų kintamųjų sistemas.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-c4bc99e0-trap-2",
-          "title": "Sąlygos interpretacija",
-          "type": "mistake",
-          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-c4bc99e0-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Koks yra Gauso eliminavimo metodo principas?",
-          "back": "Sistemingas kintamųjų skaičiaus mažinimas tiesinėmis lygčių kombinacijomis (sudėtimi), kol gaunama viena lygtis su vienu kintamuoju.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "x=1, y=2, z=3"
     },
     {
       "id": "ex-olimpiada-08-811014ef",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite begalinės nykstamosios geometrinės progresijos $4 + 2 + 1 + \\frac{1}{2} + \\dots$ sumą.",
+      "statement": "Suma: 4 + 2 + 1 + 1/2 + ...",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Suma lygi 8."
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Begalinės geometrinės eilutės suma",
-        "text": "Kai geometrinės progresijos vardiklio modulis $|r| < 1$, jos narių suma apskaičiuojama pagal formulę $S = \\frac{a_1}{1-r}$."
+        "title": "Nykstamoji seka",
+        "text": "S = a1 / (1-q)."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Nustatykite progresijos pirmąjį narį $a_1$ ir vardiklį $r$.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "$a_1 = 4$, o vardiklis $r = 2 / 4 = 1/2$. Kadangi $|1/2| < 1$, eilutė yra nykstamoji.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pritaikykite sumos formulę: $S = \\frac{4}{1 - 1/2}$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskaičiuokite dalmenį $4$ iš $1/2$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Nustatome parametrus: $a_1 = 4$, $r = 1/2$."
-        },
-        {
-          "text": "Kadangi $|r| < 1$, taikome begalinės geometrinės progresijos sumos formulę: $S = \\frac{a_1}{1-r}$."
-        },
-        {
-          "text": "Įstatome reikšmes: $S = \\frac{4}{1 - 1/2} = \\frac{4}{1/2} = 8$."
+          "text": "4 / (1 - 0.5) = 8."
         }
       ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-08-811014ef-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Žingsnis 1",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Nustatome parametrus: $a_1 = 4$, $r = 1/2$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Kadangi $|r| < 1$, taikome begalinės geometrinės progresijos sumos formulę: $S = \\frac{a_1}{1-r}$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Įstatome reikšmes: $S = \\frac{4}{1 - 1/2} = \\frac{4}{1/2} = 8$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "Suma lygi 8."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-811014ef-trap-1",
-          "title": "Dažna klaida",
-          "type": "mistake",
-          "wrongMove": "Naudoti baigtinės progresijos sumos formulę su nežinomu $n$.",
-          "whyTempting": "Supainiojamos dvi skirtingos sumų formulės.",
-          "whyItHappens": "Supainiojamos dvi skirtingos sumų formulės.",
-          "wrongPattern": "Naudoti baigtinės progresijos sumos formulę su nežinomu $n$.",
-          "correction": "Begaliniam narių skaičiui taikoma speciali formulė $S = \\frac{a_1}{1-r}$, kuri yra baigtinės formulės riba, kai $n \\to \\infty$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-811014ef-trap-2",
-          "title": "Sąlygos interpretacija",
-          "type": "mistake",
-          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-08-811014ef-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra begalinės nykstamosios geometrinės progresijos sumos formulė?",
-          "back": "$S = \\frac{a_1}{1 - r}$ kai $|r| < 1$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
-        }
-      ]
+      "answerText": "8"
     },
     {
       "id": "ex-olimpiada-08-5225d7a2",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Seka apibrėžiama rekurentiniu sąryšiu: $a_1 = 2$, $a_{n+1} = 3a_n - 1$ visiems $n \\ge 1$. Raskite ketvirtąjį sekos narį $a_4$.",
+      "statement": "a1=2, a(n+1)=3an-1. Raskite a4.",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "$a_4 = 41$."
+        "kind": "numeric",
+        "value": 41,
+        "tolerance": 0
       },
-      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
       "coreIdea": {
-        "title": "Nuoseklus rekurentinis skaičiavimas",
-        "text": "Sprendžiame nuosekliai skaičiuodami kiekvieną sekos narį pagal prieš tai gautą reikšmę."
+        "title": "Rekurencija",
+        "text": "Skaičiuojame nuosekliai."
       },
       "strategyTags": [
-        "standard",
-        "proof",
-        "algebra"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-08-concept-method"
-      ],
-      "conceptIds": [
-        "olimpiada-08-concept-logic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Apskaičiuokite antrąjį narį $a_2$ įstatydami $n=1$.",
-          "revealsConceptIds": [],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "$a_2 = 3(2) - 1 = 5$.",
-          "revealsConceptIds": [],
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Dabar apskaičiuokite $a_3$ pagal formulę $a_3 = 3a_2 - 1$.",
-          "revealsConceptIds": [],
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Gausite $a_3 = 14$. Analogiškai apskaičiuokite $a_4$.",
-          "revealsConceptIds": [],
-          "penalty": 0.12
-        }
+        "algebraic-transformation"
       ],
       "solutionSteps": [
         {
-          "text": "Apskaičiuojame antrąjį sekos narį: $a_2 = 3a_1 - 1 = 3(2) - 1 = 5$."
-        },
-        {
-          "text": "Apskaičiuojame trečiąjį sekos narį: $a_3 = 3a_2 - 1 = 3(5) - 1 = 14$."
-        },
-        {
-          "text": "Apskaičiuojame ketvirtąjį sekos narį: $a_4 = 3a_3 - 1 = 3(14) - 1 = 41$."
+          "text": "a2=5, a3=14, a4=41."
         }
       ],
-      "solutionMethods": [
+      "answerText": "41"
+    },
+    {
+      "id": "ex-olimpiada-08-efad3e02",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "statement": "Kuris didžiausias: 2^300, 3^200, 4^150, 5^100?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "2^300"
+          },
+          {
+            "id": "b",
+            "text": "3^200"
+          },
+          {
+            "id": "c",
+            "text": "4^150"
+          },
+          {
+            "id": "d",
+            "text": "5^100"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "coreIdea": {
+        "title": "Rodikliai",
+        "text": "Suvienodinkite rodiklius į 100."
+      },
+      "strategyTags": [
+        "bounding"
+      ],
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-08-5225d7a2-method-1",
-          "title": "Griežtas įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Žingsnis 1",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Apskaičiuojame antrąjį sekos narį: $a_2 = 3a_1 - 1 = 3(2) - 1 = 5$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 2",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Apskaičiuojame trečiąjį sekos narį: $a_3 = 3a_2 - 1 = 3(5) - 1 = 14$.",
-              "latex": ""
-            },
-            {
-              "title": "Žingsnis 3",
-              "action": "Atliekame loginį žingsnį.",
-              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-              "result": "Apskaičiuojame ketvirtąjį sekos narį: $a_4 = 3a_3 - 1 = 3(14) - 1 = 41$.",
-              "latex": ""
-            }
-          ],
-          "finalAnswer": "$a_4 = 41$."
+          "text": "8^100, 9^100, 8^100, 5^100. Didžiausias 9^100."
         }
       ],
-      "commonTraps": [
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-08-9c8a454f",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Išspręskite |x-1| + |x-3| = 2.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x ∈ [1, 3]"
+      },
+      "coreIdea": {
+        "title": "Intervalai",
+        "text": "Nagrinėjame 3 intervalus."
+      },
+      "strategyTags": [
+        "casework"
+      ],
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-08-5225d7a2-trap-1",
-          "title": "Dažna klaida",
-          "type": "mistake",
-          "wrongMove": "Bandyti iškart gauti $a_4$ nenaudojant $a_2$ ir $a_3$ reikšmių.",
-          "whyTempting": "Norisi rasti bendrąją formulę prieš skaičiavimą.",
-          "whyItHappens": "Norisi rasti bendrąją formulę prieš skaičiavimą.",
-          "wrongPattern": "Bandyti iškart gauti $a_4$ nenaudojant $a_2$ ir $a_3$ reikšmių.",
-          "correction": "Kadangi prašomas tik ketvirtasis narys, nuoseklus skaičiavimas yra kur kas greitesnis nei bendrosios sekos formulės išvedimas.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-5225d7a2-trap-2",
-          "title": "Sąlygos interpretacija",
-          "type": "mistake",
-          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
+          "text": "Viduriniame intervale [1, 3] tapatybė 2=2."
         }
       ],
-      "reflectionPrompts": [
-        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      "answerText": "x ∈ [1, 3]"
+    },
+    {
+      "id": "ex-olimpiada-08-b19cc2f8",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Įrodykite a/b + b/a >= 2 teigiamiems skaičiams.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta"
+      },
+      "coreIdea": {
+        "title": "AM-GM",
+        "text": "Taikykite vidurkių nelygybę."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
       ],
-      "extensionQuestions": [],
-      "srsSeeds": [
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-08-5225d7a2-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kas yra rekurentiniu būdu apibrėžta seka?",
-          "back": "Tai seka, kurios kiekvienas narys apibrėžiamas per vieną ar kelis prieš tai einančius sekos narius.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-          "methodIds": [
-            "olimpiada-08-concept-method"
-          ],
-          "defaultEnabled": true
+          "text": "(a/b + b/a)/2 >= sqrt(a/b * b/a) = 1."
         }
-      ]
+      ],
+      "answerText": "Įrodyta"
+    },
+    {
+      "id": "ex-olimpiada-08-4670481e",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Raskite sveikus (x,y): xy + 3x - 2y = 10.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendiniai: (3, 1), (1, -7), (6, -2), (-2, 4), (0, -5)"
+      },
+      "coreIdea": {
+        "title": "Faktorius",
+        "text": "(x-2)(y+3) = 4."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išnagrinėjus 4 daliklius gauname sprendinius."
+        }
+      ],
+      "answerText": "Sprendiniai: (3, 1), (1, -7), (6, -2), (-2, 4), (0, -5)"
+    },
+    {
+      "id": "ex-olimpiada-08-8a5b6d7c",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Suprastinkite sqrt(7 + 4*sqrt(3)).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2 + sqrt(3)"
+      },
+      "coreIdea": {
+        "title": "Kvadratas saknyje",
+        "text": "(2 + sqrt(3))^2 = 7 + 4sqrt(3)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "sqrt((2+sqrt(3))^2) = 2 + sqrt(3)."
+        }
+      ],
+      "answerText": "2 + sqrt(3)"
+    },
+    {
+      "id": "ex-olimpiada-08-371ff322",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "x + 1/x = 5. Raskite x^2 + 1/x^2.",
+      "answer": {
+        "kind": "numeric",
+        "value": 23,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Kvadratas",
+        "text": "(x+1/x)^2 - 2."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "25 - 2 = 23."
+        }
+      ],
+      "answerText": "23"
+    },
+    {
+      "id": "ex-olimpiada-08-8f8af17c",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "statement": "Raskite f(x): f(x) + 2f(1-x) = x.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "f(x) = (2-3x)/3"
+      },
+      "coreIdea": {
+        "title": "Keitimas",
+        "text": "Pakeiskite x į 1-x."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "f(x) = (2-3x)/3."
+        }
+      ],
+      "answerText": "f(x) = (2-3x)/3"
+    },
+    {
+      "id": "ex-olimpiada-08-ef659ec4",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Du darbininkai per 12 val. Pirmas 10 val. ilgiau. Raskite antrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Sparta",
+        "text": "1/(x+10) + 1/x = 1/12."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "x^2 - 14x - 120 = 0 \\implies x=20."
+        }
+      ],
+      "answerText": "20"
+    },
+    {
+      "id": "ex-olimpiada-08-alg-020",
+      "topicId": "olimpiada-08-algebra",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "statement": "x^3 - 6x^2 + 11x - 6 = 0. Raskite a^2 + b^2 + c^2.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Suma kvadratų",
+        "text": "(a+b+c)^2 - 2(ab+bc+ca)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "solutionSteps": [
+        {
+          "text": "36 - 22 = 14."
+        }
+      ],
+      "answerText": "14"
     }
   ],
   "tests": [
     {
       "id": "olimpiada-08-test-challenge",
-      "title": "Olimpiadinis iššūkis (8 klasė)",
+      "title": "Algebra: Olimpiadinis iššūkis (8 klasė)",
       "type": "olympiad",
       "topicIds": [
         "olimpiada-08-algebra"
       ],
       "exerciseIds": [
+        "ex-olimpiada-08-fe7262fc",
+        "ex-olimpiada-08-56d15a87",
+        "ex-olimpiada-08-50649dd3",
+        "ex-olimpiada-08-f6fadbfd",
+        "ex-olimpiada-08-7f2e3b87",
+        "ex-olimpiada-08-d16de0a6",
+        "ex-olimpiada-08-3fa10af9",
+        "ex-olimpiada-08-ec7e6993",
+        "ex-olimpiada-08-c4bc99e0",
+        "ex-olimpiada-08-811014ef",
+        "ex-olimpiada-08-5225d7a2",
         "ex-olimpiada-08-efad3e02",
         "ex-olimpiada-08-9c8a454f",
         "ex-olimpiada-08-b19cc2f8",
@@ -1936,10 +905,9 @@
         "ex-olimpiada-08-371ff322",
         "ex-olimpiada-08-8f8af17c",
         "ex-olimpiada-08-ef659ec4",
-        "ex-olimpiada-08-fe7262fc",
-        "ex-olimpiada-08-56d15a87"
+        "ex-olimpiada-08-alg-020"
       ],
-      "masteryWeight": 1.5
+      "masteryWeight": 2.0
     }
   ]
 }

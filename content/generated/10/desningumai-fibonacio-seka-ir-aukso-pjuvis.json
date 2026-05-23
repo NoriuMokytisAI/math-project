@@ -1,0 +1,1248 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "10 klasės programa nagrinėja Fibonačio seką, aukso pjūvį ir jų savybes dėsningumų skyriuje."
+  },
+  "topic": {
+    "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+    "title": "Dėsningumai: Fibonačio seka ir Aukso pjūvis",
+    "grade": 10,
+    "strand": "Modeliai ir sąryšiai",
+    "level": "curriculum",
+    "order": 2,
+    "estimatedStudyMinutes": 120,
+    "prerequisiteTopicIds": [
+      "skaiciu-sekos-9"
+    ],
+    "nextTopicIds": [
+      "sudetiniai-procentai-misiniai-ir-proporcingoji-dalyba"
+    ],
+    "conceptIds": [
+      "fibonacio-seka",
+      "aukso-pjuvis",
+      "skaiciaus-skaidymas-proporcingai",
+      "sekos-desningumas",
+      "rekurentine-formule",
+      "aukso-pjuvio-skaicius",
+      "aukso-pjuvio-seka",
+      "proporcingoji-dalyba"
+    ],
+    "formulaIds": [
+      "fibonacio-formule",
+      "aukso-pjuvio-reiksme",
+      "aukso-pjuvio-sarysis"
+    ],
+    "mistakeIds": [
+      "painioja-aukso-pjuvi-su-vidurkiu",
+      "neteisingas-rekurentinis-skaiciavimas"
+    ],
+    "exerciseIds": [
+      "fibonacio-ex-001",
+      "fibonacio-ex-002",
+      "fibonacio-ex-003",
+      "fibonacio-ex-004",
+      "fibonacio-ex-005",
+      "fibonacio-ex-006",
+      "fibonacio-ex-007",
+      "fibonacio-ex-008",
+      "fibonacio-ex-009",
+      "fibonacio-ex-010",
+      "fibonacio-ex-011",
+      "fibonacio-ex-012",
+      "fibonacio-ex-013",
+      "fibonacio-ex-014",
+      "fibonacio-ex-015",
+      "fibonacio-ex-016",
+      "fibonacio-ex-017",
+      "fibonacio-ex-018",
+      "fibonacio-ex-019",
+      "fibonacio-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "fibonacio-seka-ivadas",
+      "title": "Fibonačio seka",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fibonačio seka yra viena garsiausių matematinių sekų, kurioje kiekvienas narys (nuo trečiojo) yra lygus dviejų prieš jį einančių narių sumai."
+        },
+        {
+          "type": "definition",
+          "conceptId": "fibonacio-seka",
+          "text": "Seka $1, 1, 2, 3, 5, 8, 13, 21, ...$, kurioje $F_1=1$, $F_2=1$ ir $F_n = F_{n-1} + F_{n-2}$."
+        },
+        {
+          "type": "note",
+          "text": "Kartais seka pradedama nuo 0, bet mokyklinėje programoje dažniausiai nuo 1."
+        }
+      ]
+    },
+    {
+      "id": "aukso-pjuvis-ivadas",
+      "title": "Aukso pjūvis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aukso pjūvis (arba dieviškoji proporcija) yra toks atkarpos padalijimas į dvi dalis, kai ilgesnės dalies santykis su trumpesne yra lygus visos atkarpos santykiui su ilgesne dalimi."
+        },
+        {
+          "type": "formula",
+          "formulaId": "aukso-pjuvio-reiksme",
+          "latex": "\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1,618"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis skaičius žymimas graikiška raide $\\phi$ (fi)."
+        }
+      ]
+    },
+    {
+      "id": "fibonacio-ir-aukso-pjuvio-rysys",
+      "title": "Fibonačio sekos ir Aukso pjūvio ryšys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Didėjant narių skaičiui, dviejų gretimų Fibonačio sekos narių santykis $\\frac{F_{n+1}}{F_n}$ artėja prie aukso pjūvio reikšmės $\\phi$."
+        },
+        {
+          "type": "method",
+          "text": "Aukso pjūvio seką sudaro laipsniai: $\\phi, \\phi^2, \\phi^3, ...$, kur kiekvienas narys taip pat tenkina sąryšį $\\phi^n = \\phi^{n-1} + \\phi^{n-2}$."
+        }
+      ]
+    },
+    {
+      "id": "proporcingoji-dalyba",
+      "title": "Proporcingoji dalyba",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dažnai uždaviniuose reikia padalinti skaičių ar dydį į dalis, kurios būtų proporcingos tam tikriems skaičiams."
+        },
+        {
+          "type": "definition",
+          "conceptId": "proporcingoji-dalyba",
+          "text": "Dydžio padalijimas į dalis pagal santykį $a:b:c$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "fibonacio-seka",
+      "title": "Fibonačio seka",
+      "type": "concept",
+      "shortDefinition": "Seka, kurios kiekvienas narys lygus dviejų prieš jį einančių narių sumai.",
+      "intuition": "Pradedame nuo 1 ir 1, tada sudedame paskutinius du: 1+1=2, 1+2=3, 2+3=5...",
+      "formal": "$F_1=1, F_2=1, F_n = F_{n-1} + F_{n-2}$, kai $n \\in \\mathbb{N}, n > 2$.",
+      "notation": [
+        "F_n"
+      ],
+      "relatedConceptIds": [
+        "rekurentine-formule",
+        "aukso-pjuvis"
+      ],
+      "prerequisiteConceptIds": [
+        "skaiciu-sekos-9"
+      ],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aukso-pjuvis",
+      "title": "Aukso pjūvis",
+      "type": "concept",
+      "shortDefinition": "Proporcija, kai didesnės dalies santykis su mažesne lygus visumos santykiui su didesne.",
+      "intuition": "Tai pati estetiškiausia proporcija gamtoje ir mene.",
+      "notation": [
+        "\\phi"
+      ],
+      "relatedConceptIds": [
+        "aukso-pjuvio-skaicius",
+        "fibonacio-seka"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aukso-pjuvio-skaicius",
+      "title": "Aukso pjūvio skaičius",
+      "type": "concept",
+      "shortDefinition": "Iracionalusis skaičius $\\phi = \\frac{1+\\sqrt{5}}{2}$.",
+      "intuition": "Maždaug 1,618.",
+      "formal": "Lygties $x^2 - x - 1 = 0$ teigiamas sprendinys.",
+      "notation": [
+        "\\phi"
+      ],
+      "relatedConceptIds": [
+        "aukso-pjuvis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "proporcingoji-dalyba",
+      "title": "Proporcingoji dalyba",
+      "type": "method",
+      "shortDefinition": "Dydžio skirstymas dalimis, kurios proporcingos nurodytiems skaičiams.",
+      "intuition": "Jei daliname santykiu 2:3, tai viena dalis gaus 2 'porcijas', kita 3.",
+      "relatedConceptIds": [
+        "aukso-pjuvis"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "rekurentine-formule",
+      "title": "Rekurentinė formulė",
+      "type": "notation",
+      "shortDefinition": "Taisyklė, apibrėžianti sekos narį per prieš jį einančius narius.",
+      "intuition": "Žingsnis po žingsnio taisyklė.",
+      "relatedConceptIds": [
+        "fibonacio-seka"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sekos-desningumas",
+      "title": "Sekos dėsningumas",
+      "type": "concept",
+      "shortDefinition": "Taisyklė, pagal kurią sudaromi sekos nariai.",
+      "intuition": "Logika, jungianti skaičius į eilę.",
+      "relatedConceptIds": [
+        "fibonacio-seka"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aukso-pjuvio-seka",
+      "title": "Aukso pjūvio seka",
+      "type": "concept",
+      "shortDefinition": "Seka, sudaryta iš aukso pjūvio skaičiaus $\\phi$ laipsnių.",
+      "intuition": "Seka $\\phi^1, \\phi^2, \\phi^3, ...$, kurios nariai turi panašias savybes kaip Fibonačio seka.",
+      "formal": "$a_n = \\phi^n$.",
+      "relatedConceptIds": [
+        "aukso-pjuvis",
+        "fibonacio-seka"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "skaiciaus-skaidymas-proporcingai",
+      "title": "Skaičiaus skaidymas proporcingai",
+      "type": "method",
+      "shortDefinition": "Skaičiaus padalinimas į dalis pagal nurodytą santykį.",
+      "intuition": "Sudedame dalis, randame vienos dalies vertę.",
+      "relatedConceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "fibonacio-formule",
+      "title": "Fibonačio sekos rekurentinė formulė",
+      "latex": "F_n = F_{n-1} + F_{n-2}",
+      "conditions": [
+        "n > 2",
+        "F_1 = 1",
+        "F_2 = 1"
+      ],
+      "variables": {
+        "F_n": "n-tasis narys",
+        "F_{n-1}": "prieš tai einantis narys",
+        "F_{n-2}": "priešpaskutinis narys"
+      },
+      "explanation": "Kiekvienas narys yra dviejų ankstesnių narių suma.",
+      "relatedConceptIds": [
+        "fibonacio-seka"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aukso-pjuvio-reiksme",
+      "title": "Aukso pjūvio reikšmė",
+      "latex": "\\phi = \\frac{1 + \\sqrt{5}}{2}",
+      "conditions": [],
+      "variables": {
+        "\\phi": "Aukso pjūvio konstanta"
+      },
+      "explanation": "Tikslioji aukso pjūvio skaičiaus reikšmė.",
+      "relatedConceptIds": [
+        "aukso-pjuvio-skaicius"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aukso-pjuvio-sarysis",
+      "title": "Aukso pjūvio pagrindinis sąryšis",
+      "latex": "\\phi^2 = \\phi + 1",
+      "conditions": [],
+      "variables": {
+        "\\phi": "Aukso pjūvio konstanta"
+      },
+      "explanation": "Ši lygybė parodo, kad aukso pjūvio kvadratas yra lygus pačiam skaičiui plius vienetas.",
+      "relatedConceptIds": [
+        "aukso-pjuvis"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "painioja-aukso-pjuvi-su-vidurkiu",
+      "title": "Painioja aukso pjūvį su vidurkiu",
+      "conceptIds": [
+        "aukso-pjuvis"
+      ],
+      "wrongPattern": "Mokinys mano, kad aukso pjūvis reiškia padalijimą pusiau.",
+      "whyItHappens": "Žodis 'pjūvis' gali asocijuotis su pusiau dalijimu.",
+      "correction": "Aukso pjūvis yra apytiksliai santykiu 1,618:1, o ne 1:1.",
+      "wrongExample": "Padalinti atkarpa aukso pjūviu reiškia gauti dvi lygias dalis.",
+      "correctExample": "Padalinti atkarpa aukso pjūviu reiškia gauti dalis santykiu ~1,618.",
+      "defaultSrs": true
+    },
+    {
+      "id": "neteisingas-rekurentinis-skaiciavimas",
+      "title": "Neteisingas rekurentinis skaičiavimas",
+      "conceptIds": [
+        "rekurentine-formule"
+      ],
+      "wrongPattern": "Praleidžiamas narys arba neteisingai sudedama sekoje.",
+      "whyItHappens": "Dėmesio klaida skaičiuojant ilgą seką.",
+      "correction": "Visada pasitikrinkite paskutines dvi sumas.",
+      "wrongExample": "1, 1, 2, 3, 5, 7 (čia 3+5 nėra 7).",
+      "correctExample": "1, 1, 2, 3, 5, 8.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "fibonacio-example-1",
+      "title": "Fibonačio sekos nario radimas",
+      "level": "easy",
+      "problem": "Raskite 7-ąjį Fibonačio sekos narį, jei seka prasideda 1, 1.",
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "steps": [
+        {
+          "text": "Užrašome pirmuosius du narius.",
+          "latex": "F_1=1, F_2=1"
+        },
+        {
+          "text": "Skaičiuojame toliau: $F_3 = 1+1=2$."
+        },
+        {
+          "text": "$F_4 = 1+2=3$."
+        },
+        {
+          "text": "$F_5 = 2+3=5$."
+        },
+        {
+          "text": "$F_6 = 3+5=8$."
+        },
+        {
+          "text": "$F_7 = 5+8=13$."
+        }
+      ],
+      "answer": "13"
+    },
+    {
+      "id": "proporcingoji-dalyba-example-1",
+      "title": "Skaičiaus padalinimas santykiu",
+      "level": "easy",
+      "problem": "Padalinkite skaičių 60 santykiu 2:3.",
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendrą dalių skaičių.",
+          "latex": "2+3=5"
+        },
+        {
+          "text": "Randame vienos dalies vertę.",
+          "latex": "60 : 5 = 12"
+        },
+        {
+          "text": "Randame abi dalis.",
+          "latex": "2 \\cdot 12 = 24, \\quad 3 \\cdot 12 = 36"
+        }
+      ],
+      "answer": "24 ir 36"
+    },
+    {
+      "id": "aukso-pjuvis-example-1",
+      "title": "Atkarpos dalijimas aukso pjūviu",
+      "level": "medium",
+      "problem": "Atkarpos ilgis yra 10 cm. Raskite ilgesnę jos dalį, jei ji padalinta aukso pjūviu (naudokite $\\phi \\approx 1,618$).",
+      "conceptIds": [
+        "aukso-pjuvis"
+      ],
+      "steps": [
+        {
+          "text": "Visos atkarpos santykis su ilgesne dalimi $x$ yra $\\phi$.",
+          "latex": "\\frac{10}{x} = 1,618"
+        },
+        {
+          "text": "Išreiškiame $x$.",
+          "latex": "x = \\frac{10}{1,618}"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "x \\approx 6,18 \\text{ cm}"
+        }
+      ],
+      "answer": "6,18 cm"
+    },
+    {
+      "id": "fibonacio-example-2",
+      "title": "Atvirkštinis Fibonačio uždavinys",
+      "level": "medium",
+      "problem": "Duoti du gretimi Fibonačio sekos nariai: 34 ir 55. Koks bus kitas narys ir koks buvo prieš juos?",
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "steps": [
+        {
+          "text": "Kitas narys yra jų suma.",
+          "latex": "34 + 55 = 89"
+        },
+        {
+          "text": "Ankstesnis narys $x$ tenkina lygybę $x + 34 = 55$.",
+          "latex": "x = 55 - 34 = 21"
+        }
+      ],
+      "answer": "Prieš tai: 21, po to: 89"
+    },
+    {
+      "id": "aukso-pjuvis-hard-1",
+      "title": "Aukso pjūvio savybės įrodymas",
+      "level": "hard",
+      "problem": "Įrodykite, kad $\\phi^2 = \\phi + 1$ tiesiogiai iš apibrėžimo $\\frac{a+b}{a} = \\frac{a}{b} = \\phi$.",
+      "conceptIds": [
+        "aukso-pjuvis"
+      ],
+      "steps": [
+        {
+          "text": "Iš $\\frac{a+b}{a} = \\phi$ turime $1 + \\frac{b}{a} = \\phi$.",
+          "latex": "1 + \\frac{b}{a} = \\phi"
+        },
+        {
+          "text": "Iš $\\frac{a}{b} = \\phi$ turime $\\frac{b}{a} = \\frac{1}{\\phi}$."
+        },
+        {
+          "text": "Įrašome: $1 + \\frac{1}{\\phi} = \\phi$."
+        },
+        {
+          "text": "Padauginame abi puses iš $\\phi$.",
+          "latex": "\\phi + 1 = \\phi^2"
+        }
+      ],
+      "answer": "Įrodyta"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "fibonacio-ex-001",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Tęskite Fibonačio seką: 1, 1, 2, 3, 5, 8, ... Koks kitas narys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudedame paskutinius du žinomus narius.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuok 5 + 8.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal taisyklę $F_n = F_{n-1} + F_{n-2}$.",
+          "latex": "F_7 = 8 + 5 = 13"
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "13"
+    },
+    {
+      "id": "fibonacio-ex-002",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kokia yra Fibonačio sekos narių 8 ir 13 suma?",
+      "answer": {
+        "kind": "numeric",
+        "value": 21,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tiesiog sudėkite šiuos skaičius.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "8 + 13 = 21."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 15,
+      "answerText": "21"
+    },
+    {
+      "id": "fibonacio-ex-003",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris iš šių skaičių NĖRA Fibonačio sekos narys (pradedant 1, 1)?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "5"
+          },
+          {
+            "id": "b",
+            "text": "8"
+          },
+          {
+            "id": "c",
+            "text": "10"
+          },
+          {
+            "id": "d",
+            "text": "13"
+          }
+        ],
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Surašykite seką: 1, 1, 2, 3, 5, 8, 13...",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sekoje yra 8 ir 13, bet 10 nėra (prieš jį 8, po jo 13)."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "fibonacio-ex-004",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Padalinkite 100 į dvi dalis santykiu 1:4. Kokia yra mažesnioji dalis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Iš viso yra 1 + 4 = 5 dalys.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Viena dalis yra 100 : 5 = 20.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bendras dalių skaičius: 1 + 4 = 5.",
+          "latex": "100 / 5 = 20"
+        },
+        {
+          "text": "Mažesnioji dalis yra viena dalis, t. y. 20."
+        }
+      ],
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "20"
+    },
+    {
+      "id": "fibonacio-ex-005",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Padalinkite 50 į dvi dalis santykiu 2:3. Kokia yra didesnioji dalis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Iš viso 5 dalys.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Viena dalis 10, didesnioji yra 3 dalys.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "50 / (2+3) = 10.",
+          "latex": "10 \\cdot 3 = 30"
+        }
+      ],
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "30"
+    },
+    {
+      "id": "fibonacio-ex-006",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Fibonačio seka: 1, 1, 2, 3, 5, 8, 13, 21. Koks yra 9-asis narys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 34,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite 13 ir 21.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "13 + 21 = 34."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "34"
+    },
+    {
+      "id": "fibonacio-ex-007",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite x, jei skaičiai x, 15, 24 yra iš eilės einantys Fibonačio sekos nariai.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagal taisyklę x + 15 = 24.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "x = 24 - 15 = 9."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "9"
+    },
+    {
+      "id": "fibonacio-ex-008",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Aukso pjūvio skaičius $\\phi$ yra apytiksliai 1,618. Kokia yra $\\phi^2$ apytikslė reikšmė (suapvalinkite iki tūkstantųjų)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2.618,
+        "tolerance": 0.001
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite savybę $\\phi^2 = \\phi + 1$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1,618 + 1 = 2,618."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 40,
+      "answerText": "2.618"
+    },
+    {
+      "id": "fibonacio-ex-009",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Jei atkarpa padalinta aukso pjūviu, koks yra visos atkarpos ir ilgesnės dalies santykis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "$\\phi$"
+          },
+          {
+            "id": "c",
+            "text": "$\\phi^2$"
+          },
+          {
+            "id": "d",
+            "text": "$\\sqrt{2}$"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tai aukso pjūvio apibrėžimas.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal apibrėžimą visas ilgis padalintas iš ilgesnės dalies yra $\\phi$."
+        }
+      ],
+      "conceptIds": [
+        "aukso-pjuvis"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "fibonacio-ex-010",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Skaičių 120 padalinkite į tris dalis santykiu 1:2:3. Kokia yra didžiausia dalis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Iš viso yra 1 + 2 + 3 = 6 dalys.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Viena dalis yra 20. Didžiausia yra 3 dalys.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "120 / 6 = 20.",
+          "latex": "20 \\cdot 3 = 60"
+        }
+      ],
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "estimatedSeconds": 50,
+      "answerText": "60"
+    },
+    {
+      "id": "fibonacio-ex-011",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kokia yra Fibonačio sekos narių $F_1 + F_2 + F_3 + F_4 + F_5$ suma?",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Nariai yra 1, 1, 2, 3, 5.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1 + 1 + 2 + 3 + 5 = 12."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "12"
+    },
+    {
+      "id": "fibonacio-ex-012",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Stačiakampio kraštinės santykis yra aukso pjūvis. Jei trumpesnė kraštinė yra 5 cm, kokia yra ilgesnė kraštinė (naudokite $\\phi=1,618$)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8.09,
+        "tolerance": 0.01
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ilgesnė dalis yra $5 \\cdot \\phi$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "5 \\cdot 1,618 = 8,09."
+        }
+      ],
+      "conceptIds": [
+        "aukso-pjuvis"
+      ],
+      "estimatedSeconds": 45,
+      "answerText": "8.09"
+    },
+    {
+      "id": "fibonacio-ex-013",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite Fibonačio sekos narių skirtumą $F_{10} - F_8$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 34,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Žinome, kad $F_{10} = F_9 + F_8$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Vadinasi $F_{10} - F_8 = F_9$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "$F_9$ yra 34.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "F_9 = 34. Kadangi F_{10} = F_9 + F_8, tai skirtumas lygus F_9."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 50,
+      "answerText": "34"
+    },
+    {
+      "id": "fibonacio-ex-014",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek yra Fibonačio sekos narių tarp 10 ir 100?",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Surašykite juos: 13, 21, 34, 55, 89...",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nariai: 13, 21, 34, 55, 89. Iš viso 5? Palaukit: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144. Taip, 5 skaičiai."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "6"
+    },
+    {
+      "id": "fibonacio-ex-015",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Padalinkite 210 santykiu 3:4:7. Kokia yra vidurinioji dalis (atitinkanti 4)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Iš viso 3+4+7=14 dalių.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "210 / 14 = 15.",
+          "latex": "15 \\cdot 4 = 60"
+        }
+      ],
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "estimatedSeconds": 50,
+      "answerText": "60"
+    },
+    {
+      "id": "fibonacio-ex-016",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite $F_{12}$, jei $F_{10}=55$ ir $F_{11}=89$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 144,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite juos.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "55 + 89 = 144."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "144"
+    },
+    {
+      "id": "fibonacio-ex-017",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kokia yra tiksli $\\frac{1}{\\phi}$ reikšmė?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "$\\phi + 1$"
+          },
+          {
+            "id": "b",
+            "text": "$\\phi - 1$"
+          },
+          {
+            "id": "c",
+            "text": "$\\phi$"
+          },
+          {
+            "id": "d",
+            "text": "$1 - \\phi$"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite $\\phi^2 = \\phi + 1$. Padalinkite iš $\\phi$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$\\phi^2 = \\phi + 1 \\implies \\phi = 1 + \\frac{1}{\\phi} \\implies \\frac{1}{\\phi} = \\phi - 1$."
+        }
+      ],
+      "conceptIds": [],
+      "estimatedSeconds": 60,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "fibonacio-ex-018",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite Fibonačio sekos narį $F_n$, jei $F_{n-2}=144$ ir $F_n=377$. Koks yra $F_{n-1}$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 233,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagal taisyklę $F_{n-2} + F_{n-1} = F_n$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "F_{n-1} = 377 - 144 = 233."
+        }
+      ],
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "233"
+    },
+    {
+      "id": "fibonacio-ex-019",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Aukso pjūvio sekoje $a_n = \\phi^n$. Kokia yra reikšmė $\\phi^4 - \\phi^3$?",
+      "answer": {
+        "kind": "expression",
+        "canonical": "phi^2",
+        "acceptedEquivalentForms": [
+          "phi+1"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite taisyklę $a_n = a_{n-1} + a_{n-2}$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi $\\phi^4 = \\phi^3 + \\phi^2$, tai $\\phi^4 - \\phi^3 = \\phi^2$."
+        }
+      ],
+      "conceptIds": [
+        "aukso-pjuvio-seka"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "phi^2"
+    },
+    {
+      "id": "fibonacio-ex-020",
+      "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Seka prasideda $x, y, x+y, ...$ Jei 4-asis narys yra 7, o 5-asis 11, raskite $x$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "3-iasis narys yra 11-7=4.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "y + (x+y) = 7, vadinasi 2-asis narys yra 7-4=3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nariai: a, b, a+b, a+2b, 2a+3b. Ne, paprasčiau: F5=11, F4=7, tada F3=4, F2=3, F1=1."
+        }
+      ],
+      "conceptIds": [
+        "rekurentine-formule"
+      ],
+      "estimatedSeconds": 70,
+      "answerText": "1"
+    }
+  ],
+  "tests": [
+    {
+      "id": "fibonacio-test-1",
+      "title": "Dėsningumai: Fibonačio seka ir Aukso pjūvis",
+      "scope": "topic",
+      "topicIds": [
+        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+      ],
+      "exerciseIds": [
+        "fibonacio-ex-001",
+        "fibonacio-ex-003",
+        "fibonacio-ex-004",
+        "fibonacio-ex-007",
+        "fibonacio-ex-008",
+        "fibonacio-ex-010",
+        "fibonacio-ex-012",
+        "fibonacio-ex-017",
+        "fibonacio-ex-018",
+        "fibonacio-ex-020"
+      ],
+      "timeLimitSeconds": 1200,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.7
+    }
+  ],
+  "srsSeeds": [
+    {
+      "id": "srs-fibonacio-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra Fibonačio seka?",
+      "back": "Seka, kurioje kiekvienas narys lygus dviejų prieš jį einančių narių sumai (1, 1, 2, 3, 5...)",
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-phi-val",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Kokia yra apytikslė aukso pjūvio $\\phi$ reikšmė?",
+      "back": "1,618",
+      "formulaIds": [
+        "aukso-pjuvio-reiksme"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-phi-prop",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Koks sąryšis sieja $\\phi^2$, $\\phi$ ir 1?",
+      "back": "$\\phi^2 = \\phi + 1$",
+      "formulaIds": [
+        "aukso-pjuvio-sarysis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-prop-dalyba",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kaip dalinti skaičių santykiu a:b?",
+      "back": "Sudėti a+b, padalinti skaičių iš sumos (rasti vieną dalį) ir padauginti iš a bei b.",
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

@@ -1,0 +1,1400 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Atsitiktinių dydžių charakteristikos, Bernulio bandymai ir normalusis skirstinys."
+  },
+  "topic": {
+    "id": "atsitiktiniai-dydziai",
+    "title": "Atsitiktiniai dydžiai ir jų skirstiniai",
+    "grade": 12,
+    "strand": "Duomenys ir tikimybės",
+    "level": "curriculum",
+    "order": 3,
+    "estimatedStudyMinutes": 180,
+    "prerequisiteTopicIds": [
+      "kombinatorika-ir-binomas"
+    ],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "atsitiktinis-dydis",
+      "diskretusis-atsitiktinis-dydis",
+      "skirstinio-lentele",
+      "matematine-viltis",
+      "dispersija",
+      "standartinis-nuokrypis",
+      "normalusis-skirstinys",
+      "gauso-kreive",
+      "bernulio-bandymai",
+      "tikimybinis-skirstinys"
+    ],
+    "formulaIds": [
+      "matematines-vilties-formule",
+      "dispersijos-formule",
+      "standartinio-nuokrypio-formule",
+      "bernulio-formule"
+    ],
+    "mistakeIds": [
+      "tikimybiu-suma-ne-vienetas",
+      "dispersija-neigiama",
+      "vilties-skaiciavimo-klaida",
+      "normalusis-kreives-plotas"
+    ],
+    "exerciseIds": [
+      "atsit-ex-001",
+      "atsit-ex-002",
+      "atsit-ex-003",
+      "atsit-ex-004",
+      "atsit-ex-005",
+      "atsit-ex-006",
+      "atsit-ex-007",
+      "atsit-ex-008",
+      "atsit-ex-009",
+      "atsit-ex-010",
+      "atsit-ex-011",
+      "atsit-ex-012",
+      "atsit-ex-013",
+      "atsit-ex-014",
+      "atsit-ex-015",
+      "atsit-ex-016",
+      "atsit-ex-017",
+      "atsit-ex-018",
+      "atsit-ex-019",
+      "atsit-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "atsitiktinio-dydžio-savoka",
+      "title": "Atsitiktinis dydis ir jo skirstinys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[atsitiktinis-dydis|Atsitiktinis dydis]] yra dydis, kuris bandymo metu įgyja vieną (iš anksto nežinomą) reikšmę priklausomai nuo atsitiktinumo."
+        },
+        {
+          "type": "definition",
+          "conceptId": "diskretusis-atsitiktinis-dydis",
+          "text": "Diskretusis atsitiktinis dydis – tai dydis, kurio galimų reikšmių aibė yra baigtinė arba suskaičiuojama (pavyzdžiui, iškritusių akučių skaičius)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ryšys tarp atsitiktinio dydžio reikšmių ir jų tikimybių vadinamas [[tikimybinis-skirstinys|tikimybiniu skirstiniu]]. Jis dažnai pateikiamas kaip [[skirstinio-lentele|skirstinio lentelė]]."
+        },
+        {
+          "type": "note",
+          "text": "Svarbiausia taisyklė: visų skirstinio lentelės tikimybių suma visada turi būti lygi 1."
+        }
+      ]
+    },
+    {
+      "id": "skaitines-charakteristikos",
+      "title": "Matematinė viltis ir dispersija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Norėdami apibūdinti atsitiktinį dydį vienu skaičiumi, naudojame [[matematine-viltis|matematinę viltį]] (vidutinę reikšmę)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "matematines-vilties-formule",
+          "latex": "E(X) = \\sum x_i p_i = x_1 p_1 + x_2 p_2 + \\dots + x_n p_n"
+        },
+        {
+          "type": "paragraph",
+          "text": "[[dispersija|Dispersija]] ir [[standartinis-nuokrypis|standartinis nuokrypis]] rodo, kaip stipriai reikšmės yra nutolusios nuo vidurkio (sklaidą)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "dispersijos-formule",
+          "latex": "Var(X) = E(X^2) - (E(X))^2"
+        },
+        {
+          "type": "formula",
+          "formulaId": "standartinio-nuokrypio-formule",
+          "latex": "\\sigma = \\sqrt{Var(X)}"
+        }
+      ]
+    },
+    {
+      "id": "bernulio-bandymai-theory",
+      "title": "Bernulio bandymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[bernulio-bandymai|Bernulio bandymai]] – tai seka nepriklausomų bandymų, kurių kiekvienas turi tik dvi galimas baigtis: 'sėkmę' (su tikimybe p) arba 'nesėkmę' (su tikimybe q = 1 - p)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "bernulio-formule",
+          "latex": "P_n(k) = C_n^k p^k q^{n-k}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė skaičiuoja tikimybę, kad atlikus n bandymų, sėkmė pasikartos lygiai k kartų."
+        }
+      ]
+    },
+    {
+      "id": "normalusis-skirstinys-theory",
+      "title": "Normalusis skirstinys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[normalusis-skirstinys|Normalusis skirstinys]] yra dažniausiai gamtoje pasitaikantis tolydusis skirstinys, kurio grafikas yra varpo formos [[gauso-kreive|Gauso kreivė]]."
+        },
+        {
+          "type": "property",
+          "text": "Normalusis skirstinys yra simetriškas savo vidurkio atžvilgiu. Plotas po visa kreive lygus 1."
+        },
+        {
+          "type": "note",
+          "text": "Dauguma reikšmių (apie 68%) normaliajame skirstinyje patenka į vieno standartinio nuokrypio intervalą aplink vidurkį."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "atsitiktinis-dydis",
+      "title": "Atsitiktinis dydis",
+      "type": "concept",
+      "shortDefinition": "Kintamasis, kurio reikšmės priklauso nuo atsitiktinio bandymo baigties.",
+      "intuition": "Tai tarsi žaidimo rezultatas – kol nemetei kauliuko, nežinai, koks bus skaičius.",
+      "formal": "Funkcija, apibrėžta elementariųjų baigčių aibėje.",
+      "relatedConceptIds": [
+        "diskretusis-atsitiktinis-dydis",
+        "tikimybinis-skirstinys"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "diskretusis-atsitiktinis-dydis",
+      "title": "Diskretusis atsitiktinis dydis",
+      "type": "concept",
+      "shortDefinition": "Atsitiktinis dydis, įgyjantis atskiras, izoliuotas reikšmes.",
+      "intuition": "Dydžiai, kuriuos galima suskaičiuoti: 1, 2, 3...",
+      "formal": "Atsitiktinis dydis, kurio galimų reikšmių aibė yra baigtinė arba suskaičiuojama.",
+      "relatedConceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "skirstinio-lentele",
+      "title": "Skirstinio lentelė",
+      "type": "concept",
+      "shortDefinition": "Lentelė, kurioje surašytos atsitiktinio dydžio reikšmės ir jų tikimybės.",
+      "intuition": "Sąrašas: koks rezultatas ir kaip dažnai jis pasitaiko.",
+      "formal": "Atsitiktinio dydžio X galimų reikšmių xi ir jas atitinkančių tikimybių pi rinkinys.",
+      "relatedConceptIds": [
+        "diskretusis-atsitiktinis-dydis",
+        "matematine-viltis"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "matematine-viltis",
+      "title": "Matematinė viltis",
+      "type": "concept",
+      "shortDefinition": "Vidutinė atsitiktinio dydžio reikšmė.",
+      "intuition": "Tai skaičius, kurį tikėtumėmės gauti vidutiniškai, jei bandymą kartotume begalę kartų.",
+      "formal": "Svertinis atsitiktinio dydžio reikšmių vidurkis, kur svoriai yra tikimybės.",
+      "notation": [
+        "E(X)",
+        "μ"
+      ],
+      "relatedConceptIds": [
+        "dispersija",
+        "skirstinio-lentele"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "dispersija",
+      "title": "Dispersija",
+      "type": "concept",
+      "shortDefinition": "Reikšmių sklaidos aplink vidurkį matas.",
+      "intuition": "Rodo, kaip toli nuo vidurkio vidutiniškai yra nutolusios reikšmės.",
+      "formal": "Atsitiktinio dydžio nuokrypio nuo matematinės vilties kvadrato matematinė viltis.",
+      "notation": [
+        "Var(X)",
+        "D(X)"
+      ],
+      "relatedConceptIds": [
+        "matematine-viltis",
+        "standartinis-nuokrypis"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "standartinis-nuokrypis",
+      "title": "Standartinis nuokrypis",
+      "type": "concept",
+      "shortDefinition": "Sklaidos matas, išreiškiamas tomis pačiomis vienetais kaip ir dydis.",
+      "intuition": "Tai tiesiog kvadratinė šaknis iš dispersijos.",
+      "formal": "Teigiamas kvadratinės šaknies iš dispersijos rezultatas.",
+      "notation": [
+        "σ"
+      ],
+      "relatedConceptIds": [
+        "dispersija"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "normalusis-skirstinys",
+      "title": "Normalusis skirstinys",
+      "type": "concept",
+      "shortDefinition": "Tolydusis tikimybinis skirstinys, aprašomas Gauso kreive.",
+      "intuition": "Dauguma žmonių yra vidutinio ūgio, labai mažai itin aukštų ar žemų – tai normalusis skirstinys.",
+      "formal": "Skirstinys, kurio tankio funkcija f(x) = (1/σ√(2π)) * exp(-(x-μ)²/2σ²).",
+      "relatedConceptIds": [
+        "gauso-kreive",
+        "matematine-viltis"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "bernulio-bandymai",
+      "title": "Bernulio bandymai",
+      "type": "concept",
+      "shortDefinition": "Nepriklausomų bandymų seka su dviem baigtimis.",
+      "intuition": "Monetos metimas 10 kartų: kiekvieną kartą tik 'herbas' arba 'skaičius'.",
+      "formal": "Bandymų seka, kurioje kiekvieno bandymo 'sėkmės' tikimybė p yra pastovi.",
+      "relatedConceptIds": [
+        "kombinatorika-ir-binomas",
+        "tikimybinis-skirstinys"
+      ],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "gauso-kreive",
+      "title": "Gauso kreive",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "tikimybinis-skirstinys",
+      "title": "Tikimybinis skirstinys",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "matematines-vilties-formule",
+      "title": "Matematinės vilties formulė",
+      "latex": "E(X) = x_1 p_1 + x_2 p_2 + \\dots + x_n p_n",
+      "conditions": [
+        "X yra diskretusis atsitiktinis dydis"
+      ],
+      "variables": {
+        "xi": "galimos reikšmės",
+        "pi": "reikšmių tikimybės"
+      },
+      "explanation": "Sudauginame kiekvieną reikšmę su jos tikimybe ir viską sudedame.",
+      "relatedConceptIds": [
+        "matematine-viltis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "dispersijos-formule",
+      "title": "Dispersijos formulė",
+      "latex": "Var(X) = E(X^2) - (E(X))^2",
+      "conditions": [
+        "E(X) jau žinoma"
+      ],
+      "variables": {
+        "E(X^2)": "reikšmių kvadratų matematinė viltis"
+      },
+      "explanation": "Patogiausia formulė dispersijai skaičiuoti praktikoje.",
+      "relatedConceptIds": [
+        "dispersija"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "standartinio-nuokrypio-formule",
+      "title": "Standartinio nuokrypio formulė",
+      "latex": "\\sigma = \\sqrt{Var(X)}",
+      "conditions": [
+        "Var(X) >= 0"
+      ],
+      "variables": {
+        "\\sigma": "standartinis nuokrypis"
+      },
+      "explanation": "Paverčia dispersiją į pradinį matavimo vienetą.",
+      "relatedConceptIds": [
+        "standartinis-nuokrypis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "bernulio-formule",
+      "title": "Bernulio formulė",
+      "latex": "P_n(k) = C_n^k p^k (1-p)^{n-k}",
+      "conditions": [
+        "p yra sėkmės tikimybė",
+        "bandymai nepriklausomi"
+      ],
+      "variables": {
+        "n": "bandymų skaičius",
+        "k": "sėkmių skaičius"
+      },
+      "explanation": "Skaičiuoja tikimybę gauti k sėkmių per n bandymų.",
+      "relatedConceptIds": [
+        "bernulio-bandymai"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "tikimybiu-suma-ne-vienetas",
+      "title": "Tikimybių suma lentelėje nelygi 1",
+      "conceptIds": [
+        "skirstinio-lentele"
+      ],
+      "wrongPattern": "Užpildoma lentelė, kurios tikimybių suma yra 0.9 arba 1.1.",
+      "whyItHappens": "Netikslus skaičiavimas arba pamiršta viena iš baigčių.",
+      "correction": "Visada patikrinkite: p1 + p2 + ... + pn = 1. Jei ne 1, vadinasi skirstinys neteisingas.",
+      "wrongExample": "P(X=0)=0.5, P(X=1)=0.4. Suma 0.9.",
+      "correctExample": "P(X=0)=0.5, P(X=1)=0.5. Suma 1.0.",
+      "defaultSrs": true
+    },
+    {
+      "id": "dispersija-neigiama",
+      "title": "Gaunama neigiama dispersija",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "wrongPattern": "Var(X) = -2.5.",
+      "whyItHappens": "Supainiojama E(X^2) su (E(X))^2 arba padaroma aritmetinė klaida.",
+      "correction": "Dispersija yra kvadratų vidurkis, ji NIEKADA negali būti neigiama.",
+      "wrongExample": "Var(X) = 4 - 9 = -5.",
+      "correctExample": "Var(X) = 10 - 4 = 6.",
+      "defaultSrs": true
+    },
+    {
+      "id": "vilties-skaiciavimo-klaida",
+      "title": "Matematinė viltis nesutampa su vidurkiu",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "wrongPattern": "Mokinys tiesiog sudeda reikšmes xi ir dalija iš n.",
+      "whyItHappens": "Painiojamas paprastas aritmetinis vidurkis su svertiniu (tikimybiniu) vidurkiu.",
+      "correction": "Reikia kiekvieną reikšmę padauginti iš jos tikimybės, o NE tiesiog sudėti.",
+      "wrongExample": "E(X) = (1+2+3)/3 = 2, kai P(X=1)=0.1, P(X=2)=0.1, P(X=3)=0.8.",
+      "correctExample": "E(X) = 1*0.1 + 2*0.1 + 3*0.8 = 0.1 + 0.2 + 2.4 = 2.7.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "atsit-worked-1",
+      "title": "Skirstinio lentelės sudarymas",
+      "level": "easy",
+      "problem": "Metame monetą 2 kartus. Atsitiktinis dydis X – atsivertusių herbų skaičius. Sudarykite skirstinio lentelę.",
+      "conceptIds": [
+        "skirstinio-lentele",
+        "atsitiktinis-dydis"
+      ],
+      "steps": [
+        {
+          "text": "Galimos baigtys: SS, SH, HS, HH (S-skaičius, H-herbas).",
+          "latex": "n=4"
+        },
+        {
+          "text": "X gali įgyti reikšmes 0, 1, 2.",
+          "latex": "x \\in \\{0, 1, 2\\}"
+        },
+        {
+          "text": "P(X=0) (tik SS) = 1/4.",
+          "latex": "0.25"
+        },
+        {
+          "text": "P(X=1) (SH ir HS) = 2/4 = 0.5.",
+          "latex": "0.5"
+        },
+        {
+          "text": "P(X=2) (tik HH) = 1/4.",
+          "latex": "0.25"
+        }
+      ],
+      "answer": "X: 0(0.25), 1(0.5), 2(0.25)"
+    },
+    {
+      "id": "atsit-worked-2",
+      "title": "Matematinės vilties skaičiavimas",
+      "level": "easy",
+      "problem": "Duotas skirstinys: X įgyja 2 su p=0.3 ir 5 su p=0.7. Raskite E(X).",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame formulę E(X) = x1*p1 + x2*p2.",
+          "latex": "E(X) = 2 \\cdot 0.3 + 5 \\cdot 0.7"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "0.6 + 3.5 = 4.1"
+        }
+      ],
+      "answer": "E(X) = 4.1"
+    },
+    {
+      "id": "atsit-worked-3",
+      "title": "Dispersijos radimas",
+      "level": "medium",
+      "problem": "Atsitiktinio dydžio E(X)=3, o E(X^2)=13. Raskite Var(X) ir standartinį nuokrypį.",
+      "conceptIds": [
+        "dispersija",
+        "standartinis-nuokrypis"
+      ],
+      "steps": [
+        {
+          "text": "Var(X) = E(X^2) - (E(X))^2.",
+          "latex": "13 - 3^2 = 13 - 9 = 4"
+        },
+        {
+          "text": "Standartinis nuokrypis yra šaknis iš dispersijos.",
+          "latex": "\\sigma = \\sqrt{4} = 2"
+        }
+      ],
+      "answer": "Var(X)=4, σ=2"
+    },
+    {
+      "id": "atsit-worked-4",
+      "title": "Bernulio formulės taikymas",
+      "level": "medium",
+      "problem": "Šaulys pataiko į taikinį su tikimybe 0.8. Jis šauna 3 kartus. Kokia tikimybė, kad jis pataikys lygiai 2 kartus?",
+      "conceptIds": [
+        "bernulio-bandymai"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame Bernulio formulę su n=3, k=2, p=0.8, q=0.2.",
+          "latex": "P_3(2) = C_3^2 \\cdot (0.8)^2 \\cdot (0.2)^1"
+        },
+        {
+          "text": "C(3, 2) = 3.",
+          "latex": "3 \\cdot 0.64 \\cdot 0.2 = 3 \\cdot 0.128 = 0.384"
+        }
+      ],
+      "answer": "0.384"
+    },
+    {
+      "id": "atsit-worked-5",
+      "title": "Normalusis skirstinys (68-95-99.7 taisyklė)",
+      "level": "hard",
+      "problem": "Ūgis pasiskirstęs normaliai su vidurkiu μ=170 cm ir σ=10 cm. Kiek procentų žmonių ūgis yra tarp 160 ir 180 cm?",
+      "conceptIds": [
+        "normalusis-skirstinys"
+      ],
+      "steps": [
+        {
+          "text": "Intervalas [160, 180] yra lygiai [μ - σ, μ + σ].",
+          "latex": "170-10, 170+10"
+        },
+        {
+          "text": "Pagal normaliojo skirstinio savybę, šiame intervale yra apie 68% reikšmių.",
+          "latex": "68\\%"
+        }
+      ],
+      "answer": "Apie 68%"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "atsit-ex-001",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Skirstinio lentelėje p1=0.2, p2=0.5. Kokia turi būti p3 reikšmė, kad tai būtų pilnas skirstinys?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.3
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tikimybių suma turi būti lygi 1.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1 - (0.2 + 0.5) = 0.3.",
+          "latex": "0.3"
+        }
+      ],
+      "answerText": "0.3",
+      "conceptIds": [
+        "skirstinio-lentele"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "atsit-ex-002",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite E(X), jei X įgyja reikšmę 10 su p=0.4 ir 20 su p=0.6.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Dauginkite reikšmes iš jų tikimybių ir sudėkite.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 * 0.4 + 20 * 0.6 = 4 + 12 = 16.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "atsit-ex-003",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Raskite standartinį nuokrypį σ, jei dispersija Var(X) = 25.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ištraukite šaknį iš dispersijos.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "sqrt(25) = 5.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "standartinis-nuokrypis"
+      ],
+      "estimatedSeconds": 15
+    },
+    {
+      "id": "atsit-ex-004",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris iš šių dydžių yra diskretusis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Žmogaus ūgis"
+          },
+          {
+            "id": "b",
+            "text": "Vaikų skaičius šeimoje"
+          },
+          {
+            "id": "c",
+            "text": "Oro temperatūra"
+          },
+          {
+            "id": "d",
+            "text": "Automobilio greitis"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Diskretūs dydžiai įgyja tik sveikus arba atskirus skaičius.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Vaikų skaičius gali būti tik 0, 1, 2... tai diskretus dydis.",
+          "latex": "\\text{Vaikų skaičius}"
+        }
+      ],
+      "answerText": "Vaikų skaičius šeimoje",
+      "conceptIds": [
+        "diskretusis-atsitiktinis-dydis"
+      ],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "atsit-ex-005",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite dispersiją, jei E(X) = 2, o E(X^2) = 10.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Var(X) = E(X^2) - (E(X))^2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 - 2^2 = 10 - 4 = 6.",
+          "latex": "6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "atsit-ex-006",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Moneta metama 3 kartus. Kokia tikimybė, kad herbas atsivers lygiai 1 kartą?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.375
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite Bernulio formulę: n=3, k=1, p=0.5.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "C(3, 1) * 0.5^1 * 0.5^2 = 3 * 0.125 = 0.375.",
+          "latex": "0.375"
+        }
+      ],
+      "answerText": "0.375",
+      "conceptIds": [
+        "bernulio-bandymai"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "atsit-ex-007",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "X: 1(0.1), 2(0.2), 3(0.7). Raskite E(X).",
+      "answer": {
+        "kind": "numeric",
+        "value": 2.6
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "1*0.1 + 2*0.2 + 3*0.7.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "0.1 + 0.4 + 2.1 = 2.6.",
+          "latex": "2.6"
+        }
+      ],
+      "answerText": "2.6",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "atsit-ex-008",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kokia yra Gauso kreivės simetrijos ašis normaliajame skirstinyje N(μ, σ²)?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "x = 0"
+          },
+          {
+            "id": "b",
+            "text": "x = μ"
+          },
+          {
+            "id": "c",
+            "text": "x = σ"
+          },
+          {
+            "id": "d",
+            "text": "x = 1"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Simetrija visada eina per vidurkį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Normalioji kreivė yra simetriška vidurkio μ atžvilgiu.",
+          "latex": "x = \\mu"
+        }
+      ],
+      "answerText": "x = μ",
+      "conceptIds": [
+        "gauso-kreive",
+        "normalusis-skirstinys"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "atsit-ex-009",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Bernulio bandyme sėkmės tikimybė p=0.4. Atliekami 2 bandymai. Raskite sėkmių skaičiaus X dispersiją Var(X).",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.48
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Bernulio skirstinio (binominio) dispersija yra Var(X) = n * p * q.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Čia n=2, p=0.4, q=0.6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2 * 0.4 * 0.6 = 0.48.",
+          "latex": "0.48"
+        }
+      ],
+      "answerText": "0.48",
+      "conceptIds": [
+        "dispersija",
+        "bernulio-bandymai"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "atsit-ex-010",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atsitiktinis dydis X įgyja reikšmes -1, 0, 1 su lygiomis tikimybėmis. Raskite E(X^2).",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.6667,
+        "tolerance": 0.001
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kiekviena tikimybė p = 1/3.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "E(X^2) = (-1)^2 * (1/3) + 0^2 * (1/3) + 1^2 * (1/3).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1/3 + 0 + 1/3 = 2/3 ≈ 0.6667.",
+          "latex": "2/3"
+        }
+      ],
+      "answerText": "2/3",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "atsit-ex-011",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kokia tikimybė, kad normaliojo skirstinio reikšmė bus DIDESNĖ už vidurkį μ?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.5
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kreivė yra simetriška.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pusė ploto yra kairėje, pusė – dešinėje nuo vidurkio. Todėl P(X > μ) = 0.5.",
+          "latex": "0.5"
+        }
+      ],
+      "answerText": "0.5",
+      "conceptIds": [
+        "normalusis-skirstinys"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "atsit-ex-012",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Loterijoje bilietas kainuoja 2 eurus. Tikimybė laimėti 10 eurų yra 0.1, o 0 eurų – 0.9. Kokia yra šios loterijos matematinė viltis (tikėtinas pelnas žaidėjui, atėmus bilieto kainą)?",
+      "answer": {
+        "kind": "numeric",
+        "value": -1
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma raskite tikėtiną laimėjimą: 10 * 0.1 + 0 * 0.9.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Atimkite išlaidas (bilieto kainą).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tikėtinas laimėjimas = 1. Pelno viltis = 1 - 2 = -1.",
+          "latex": "-1"
+        }
+      ],
+      "answerText": "-1",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "atsit-ex-013",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite C(4, 2) * 0.1^2 * 0.9^2. (Tai dalis Bernulio skaičiavimo).",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.0486
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "C(4, 2) = 6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 * 0.01 * 0.81 = 0.0486.",
+          "latex": "0.0486"
+        }
+      ],
+      "answerText": "0.0486",
+      "conceptIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atsit-ex-014",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Jei X vidurkis yra 5, koks bus dydžio Y = 2X + 3 vidurkis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 13
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite savybę E(aX + b) = a*E(X) + b.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2 * 5 + 3 = 13.",
+          "latex": "13"
+        }
+      ],
+      "answerText": "13",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "atsit-ex-015",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Normaliojo skirstinio parametrai μ=50, σ=5. Kokia tikimybė, kad X įgis reikšmę tarp 45 ir 55?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.68
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tai vieno standartinio nuokrypio intervalas.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Intervalas [μ-σ, μ+σ] visada apima apie 68% tikimybės.",
+          "latex": "0.68"
+        }
+      ],
+      "answerText": "0.68",
+      "conceptIds": [
+        "normalusis-skirstinys"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "atsit-ex-016",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kauliukas metamas 100 kartų. Kokia yra iškritusių 'šešetų' skaičiaus matematinė viltis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 16.6667,
+        "tolerance": 0.01
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Binominio skirstinio E(X) = n * p.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "n=100, p=1/6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "100 / 6 = 16.6667.",
+          "latex": "16.6667"
+        }
+      ],
+      "answerText": "16.67",
+      "conceptIds": [
+        "matematine-viltis",
+        "bernulio-bandymai"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "atsit-ex-017",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Atsitiktinis dydis X: 0(p), 1(2p), 2(0.4). Raskite p.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.2
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "p + 2p + 0.4 = 1.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Išspręskite 3p = 0.6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3p = 0.6 => p = 0.2.",
+          "latex": "0.2"
+        }
+      ],
+      "answerText": "0.2",
+      "conceptIds": [
+        "skirstinio-lentele"
+      ],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "atsit-ex-018",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Jei visos atsitiktinio dydžio reikšmės padidės 5-iais, kaip pasikeis jo dispersija?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Padidės 5-iais"
+          },
+          {
+            "id": "b",
+            "text": "Padidės 25-iais"
+          },
+          {
+            "id": "c",
+            "text": "Nepasikeis"
+          },
+          {
+            "id": "d",
+            "text": "Sumažės"
+          }
+        ],
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Dispersija matuoja sklaidą (atstumus tarp reikšmių).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Visiems nariams pajudėjus per tą patį atstumą, atstumai tarp jų nesikeičia. Var(X + c) = Var(X).",
+          "latex": "\\text{Nepasikeis}"
+        }
+      ],
+      "answerText": "Nepasikeis",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "atsit-ex-019",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite Var(X), jei X įgyja reikšmes 0 ir 1 su tikimybėmis 0.5.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.25
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "E(X) = 0.5. E(X^2) = 0.5.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "0.5 - 0.5^2 = 0.5 - 0.25 = 0.25.",
+          "latex": "0.25"
+        }
+      ],
+      "answerText": "0.25",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "atsit-ex-020",
+      "topicId": "atsitiktiniai-dydziai",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kokia tikimybė, kad sėkmės nebus nei karto (k=0) per 5 Bernulio bandymus, jei p=0.1?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.59049
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "P = q^n = (1 - p)^n.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "0.9^5 = 0.59049.",
+          "latex": "0.59049"
+        }
+      ],
+      "answerText": "0.59049",
+      "conceptIds": [],
+      "estimatedSeconds": 40
+    }
+  ],
+  "tests": [
+    {
+      "id": "atsit-test-1",
+      "title": "Atsitiktinių dydžių charakteristikos",
+      "scope": "topic",
+      "topicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "exerciseIds": [
+        "atsit-ex-001",
+        "atsit-ex-002",
+        "atsit-ex-003",
+        "atsit-ex-005",
+        "atsit-ex-007",
+        "atsit-ex-012",
+        "atsit-ex-014",
+        "atsit-ex-017"
+      ],
+      "timeLimitSeconds": 1500,
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75
+    },
+    {
+      "id": "atsit-test-2",
+      "title": "Bernulio bandymai ir normalusis skirstinys",
+      "scope": "topic",
+      "topicIds": [
+        "atsitiktiniai-dydziai"
+      ],
+      "exerciseIds": [
+        "atsit-ex-006",
+        "atsit-ex-008",
+        "atsit-ex-009",
+        "atsit-ex-011",
+        "atsit-ex-013",
+        "atsit-ex-015",
+        "atsit-ex-019",
+        "atsit-ex-020"
+      ],
+      "timeLimitSeconds": 2400,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.65
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "srs-atsitiktinis-dydis-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra atsitiktinis dydis?",
+      "back": "Kintamasis, kurio reikšmės priklauso nuo atsitiktinio bandymo baigties.",
+      "conceptIds": [
+        "atsitiktinis-dydis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-tikimybiu-suma",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kam lygi visų skirstinio lentelės tikimybių suma?",
+      "back": "Visada lygi 1.",
+      "conceptIds": [
+        "skirstinio-lentele"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-viltis-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra matematinė viltis E(X)?",
+      "back": "Atsitiktinio dydžio vidutinė tikėtina reikšmė.",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dispersija-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra dispersija?",
+      "back": "Atsitiktinio dydžio reikšmių sklaidos (išsibarstymo) aplink vidurkį matas.",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-nuokrypis-v-dispersija",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Ryšys tarp σ ir Var(X)?",
+      "back": "σ = √Var(X)",
+      "conceptIds": [
+        "standartinis-nuokrypis",
+        "dispersija"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-viltis-formule",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Diskretinio dydžio E(X) formulė?",
+      "back": "Σ xi * pi",
+      "conceptIds": [
+        "matematine-viltis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-bernoulli-trials-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra Bernulio bandymai?",
+      "back": "Nepriklausomų bandymų seka su dviem baigtimis (sėkmė/nesėkmė) ir pastovia tikimybe p.",
+      "conceptIds": [
+        "bernulio-bandymai"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-normal-distribution-shape",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokios formos yra normaliojo skirstinio grafikas?",
+      "back": "Varpo formos (Gauso kreivė).",
+      "conceptIds": [
+        "normalusis-skirstinys",
+        "gauso-kreive"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dispersija-non-negative",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Ar dispersija gali būti neigiama?",
+      "back": "Ne, ji visada Var(X) ≥ 0.",
+      "conceptIds": [
+        "dispersija"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-sigma-rule-1",
+      "deck": "practice",
+      "cardType": "concept",
+      "front": "Kokia tikimybė normaliajame skirstinyje patekti į [μ-σ, μ+σ]?",
+      "back": "Apie 68%.",
+      "conceptIds": [
+        "normalusis-skirstinys"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

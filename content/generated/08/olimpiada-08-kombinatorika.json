@@ -29,10 +29,74 @@
       "ex-olimpiada-08-677450b0",
       "ex-olimpiada-08-d502bad3",
       "ex-olimpiada-08-f8a3db45",
-      "ex-olimpiada-08-b2061e01"
+      "ex-olimpiada-08-b2061e01",
+      "ex-olimpiada-08-comb-009",
+      "ex-olimpiada-08-comb-010",
+      "ex-olimpiada-08-comb-011",
+      "ex-olimpiada-08-comb-012",
+      "ex-olimpiada-08-comb-013",
+      "ex-olimpiada-08-comb-014",
+      "ex-olimpiada-08-comb-015",
+      "ex-olimpiada-08-comb-016",
+      "ex-olimpiada-08-comb-017",
+      "ex-olimpiada-08-comb-018",
+      "ex-olimpiada-08-comb-019",
+      "ex-olimpiada-08-comb-020"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "theory-pie",
+      "title": "Įtraukimo ir išskyrimo principas (PIE)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant uždavinius, kuriuose reikia suskaičiuoti elementus, priklausančius bent vienai iš kelių aibių, naudojamas įtraukimo ir išskyrimo principas. Jei tiesiog sudėsime aibių elementus, tuos, kurie priklauso kelioms aibėms, suskaičiuosime per daug kartų."
+        },
+        {
+          "type": "formula",
+          "latex": "|A \\cup B| = |A| + |B| - |A \\cap B|"
+        },
+        {
+          "type": "paragraph",
+          "text": "Trims aibėms formulė tampa sudėtingesnė: reikia sudėti visas aibes, atimti visas porines sankirtas ir vėl pridėti trijų aibių sankirtą."
+        },
+        {
+          "type": "formula",
+          "latex": "|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|"
+        }
+      ]
+    },
+    {
+      "id": "theory-stars-bars",
+      "title": "„Žvaigždutės ir brūkšneliai“ metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šis metodas naudojamas skaičiuojant, kiek yra būdų išskirstyti $n$ vienodų objektų $k$ skirtingų dėžučių (arba gavėjų). Objektus vaizduojame žvaigždutėmis, o pertvaras tarp dėžučių – brūkšneliais."
+        },
+        {
+          "type": "note",
+          "text": "Jei kiekviena dėžutė turi gauti bent po vieną objektą, būdų skaičius yra $\\binom{n-1}{k-1}$. Jei dėžutės gali būti ir tuščios, naudojame formulę $\\binom{n+k-1}{k-1}$."
+        }
+      ]
+    },
+    {
+      "id": "theory-graphs",
+      "title": "Grafų teorijos pagrindai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grafas susideda iš viršūnių ir jas jungiančių briaunų. Viršūnės laipsnis yra briaunų, išeinančių iš tos viršūnės, skaičius."
+        },
+        {
+          "type": "theorem",
+          "title": "Rankų paspaudimo lema",
+          "text": "Visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui. Iš to išplaukia, kad kiekviename grafe viršūnių su nelyginiu laipsniu skaičius yra lyginis."
+        }
+      ]
+    }
+  ],
   "concepts": [
     {
       "id": "olimpiada-08-concept-logic",
@@ -50,6 +114,33 @@
       "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
       "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
       "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-pigeonhole",
+      "title": "Grebėsto (Dirichlė) principas",
+      "type": "concept",
+      "shortDefinition": "Jei $n$ objektų dedami į $m$ dėžučių ir $n > m$, tai bent vienoje dėžutėje bus bent du objektai.",
+      "intuition": "Jei turite daugiau kojinių nei stalčių, bent viename stalčiuje turės būti daugiau nei viena kojinė.",
+      "formal": "Funkcija iš aibės $A$ į aibę $B$, kur $|A| > |B|$, negali būti injektyvi.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-induction",
+      "title": "Matematinė indukcija",
+      "type": "concept",
+      "shortDefinition": "Įrodymo būdas, susidedantis iš bazės patikrinimo ir indukcinio žingsnio.",
+      "intuition": "Jei nuvirsta pirma domino kaladėlė ir kiekviena griūdama nuverčia kitą, tai nuvirs visos.",
+      "formal": "Teiginys $P(n)$ teisingas visiems $n$, jei $P(1)$ teisingas ir iš $P(k)$ teisingumo seka $P(k+1)$ teisingumas.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-geom-prob",
+      "title": "Geometrinė tikimybė",
+      "type": "concept",
+      "shortDefinition": "Tikimybė, skaičiuojama kaip geometrinių sričių (ilgių, plotų) santykis.",
+      "intuition": "Tikimybė pataikyti į tam tikrą sritį priklauso nuo tos srities dydžio, palyginus su visa galima sritimi.",
+      "formal": "P(A) = m(A) / m(Ω), kur m yra geometrinis matas.",
       "relatedConceptIds": []
     }
   ],
@@ -71,6 +162,73 @@
         }
       ],
       "answer": "Grafas turi 8 briaunas."
+    },
+    {
+      "title": "Įtraukimo ir išskyrimo principas 3 aibėms",
+      "problem": "Iš 100 mokinių 50 mokosi anglų kalbos, 40 – vokiečių, 30 – prancūzų. 20 mokosi anglų ir vokiečių, 15 – anglų ir prancūzų, 10 – vokiečių ir prancūzų, o 5 mokosi visas tris kalbas. Kiek mokinių mokosi bent vieną užsienio kalbą?",
+      "steps": [
+        {
+          "text": "Naudojame PIE formulę 3 aibėms: $|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |A \\cap P| + |V \\cap P|) + |A \\cap V \\cap P|$."
+        },
+        {
+          "text": "Įstatome skaičius: $50 + 40 + 30 - (20 + 15 + 10) + 5$."
+        },
+        {
+          "text": "Skaičiuojame: $120 - 45 + 5 = 80$."
+        }
+      ],
+      "answer": "80 mokinių mokosi bent vieną užsienio kalbą."
+    },
+    {
+      "title": "Matematinė indukcija: sumos formulė",
+      "problem": "Įrodykite, kad $1 + 2 + 3 + ... + n = \\frac{n(n+1)}{2}$ visiems natūraliesiems $n$.",
+      "steps": [
+        {
+          "text": "Bazė: kai $n=1$, $1 = \\frac{1(1+1)}{2} = 1$. Teisinga."
+        },
+        {
+          "text": "Prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $1 + 2 + ... + k = \\frac{k(k+1)}{2}$."
+        },
+        {
+          "text": "Žingsnis: nagrinėjame sumą iki $k+1$: $(1 + 2 + ... + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$."
+        },
+        {
+          "text": "Bendravardikliname: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Tai atitinka formulę su $n=k+1$. Įrodyta."
+        }
+      ],
+      "answer": "Formulė įrodyta matematinės indukcijos metodu."
+    },
+    {
+      "title": "Stars and Bars: nuliniai variantai",
+      "problem": "Kiek yra būdų padalinti 10 vienodų obuolių 4 vaikams? (Vaikas gali negauti nė vieno obuolio).",
+      "steps": [
+        {
+          "text": "Naudojame „žvaigždučių ir brūkšnelių“ formulę, kai dėžutės gali būti tuščios: $\\binom{n+k-1}{k-1}$."
+        },
+        {
+          "text": "Čia $n=10$ (obuoliai), $k=4$ (vaikai). Pertvarų skaičius yra $k-1 = 3$."
+        },
+        {
+          "text": "Būdų skaičius: $\\binom{10+3}{3} = \\binom{13}{3}$."
+        },
+        {
+          "text": "Skaičiuojame: $\\frac{13 \\cdot 12 \\cdot 11}{3 \\cdot 2 \\cdot 1} = 13 \\cdot 2 \\cdot 11 = 286$."
+        }
+      ],
+      "answer": "Yra 286 būdai."
+    },
+    {
+      "title": "Grebėsto principas",
+      "problem": "Dėžėje yra 10 porų juodų kojinių ir 10 porų mėlynų kojinių. Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad būtume tikri, jog turime bent vieną spalviškai suderintą porą?",
+      "steps": [
+        {
+          "text": "Blogiausias atvejis: ištraukiame po vieną skirtingos spalvos kojinę."
+        },
+        {
+          "text": "Turime 2 spalvas (dėžutes). Pagal Grebėsto principą, ištraukus $2+1=3$ kojines, bent dvi iš jų bus tos pačios spalvos."
+        }
+      ],
+      "answer": "Mažiausiai reikia ištraukti 3 kojines."
     }
   ],
   "exercises": [
@@ -1449,7 +1607,611 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-08-comb-009",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Grupėje yra 100 žmonių. 45 iš jų moka groti pianinu, 40 – gitara, 35 – smuiku. 20 moka groti pianinu ir gitara, 15 – pianinu ir smuiku, 10 – gitara ir smuiku. 5 žmonės moka groti visais trimis instrumentais. Kiek žmonių moka groti bent vienu instrumentu?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "80 žmonių."
+      },
+      "coreIdea": {
+        "title": "PIE 3 aibėms",
+        "text": "Naudokite bendrąją įtraukimo ir išskyrimo principo formulę trims aibėms."
+      },
+      "strategyTags": [
+        "standard",
+        "kombinatorika",
+        "PIE"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite PIE formulę trims aibėms: $A \\cup B \\cup C$."
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Formulė: $|A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|$."
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite vertes: $45 + 40 + 35 - (20 + 15 + 10) + 5$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudedame atskiras aibes: $45 + 40 + 35 = 120$."
+        },
+        {
+          "text": "Atimame porines sankirtas: $120 - (20 + 15 + 10) = 120 - 45 = 75$."
+        },
+        {
+          "text": "Pridedame trijų aibių sankirtą: $75 + 5 = 80$."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl formulėje reikia vėl pridėti trijų aibių sankirtą?"
+      ],
+      "srsSeeds": [],
+      "answerText": "80 žmonių."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-010",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kiek yra būdų padalinti 8 vienodus saldainius 3 vaikams? (Vaikas gali negauti nė vieno saldainio).",
+      "answer": {
+        "kind": "numeric",
+        "value": 45,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Stars and Bars (nuliniai)",
+        "text": "Kai leidžiama gauti 0 objektų, naudojame formulę $\binom{n+k-1}{k-1}$."
+      },
+      "strategyTags": [
+        "stars-and-bars",
+        "kombinatorika"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Čia $n=8$ saldainiai ir $k=3$ vaikai."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Suskaičiuokite $\binom{8+3-1}{3-1} = \binom{10}{2}$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Formulė $\binom{10}{2} = \frac{10 \\cdot 9}{2 \\cdot 1} = 45$."
+        }
+      ],
+      "answerText": "45",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-comb-011",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "hard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Kiek yra būdų padalinti 10 vienodų saldainių 3 vaikams taip, kad nė vienas vaikas negautų daugiau nei 5 saldainių?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "21 būdas."
+      },
+      "coreIdea": {
+        "title": "Papildomas skaičiavimas su PIE",
+        "text": "Suskaičiuokite visus būdus ir atimkite tuos, kur bent vienas vaikas gauna daugiau nei 5 saldainius."
+      },
+      "strategyTags": [
+        "PIE",
+        "stars-and-bars",
+        "kombinatorika"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Visas būdų skaičius yra $\binom{10+3-1}{3-1} = \binom{12}{2} = 66$."
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tarkime, vaikas A gauna bent 6 saldainius. Tada likusius 4 daliname 3 vaikams: $\binom{4+3-1}{3-1} = \binom{6}{2} = 15$."
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi vaikų yra 3, atimkite $3 \\cdot 15$ iš 66. Ar gali du vaikai gauti po 6 ar daugiau?"
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Visi būdai: $\binom{12}{2} = 66$."
+        },
+        {
+          "text": "Būdai, kur konkretus vaikas turi $\\ge 6$: $\binom{4+3-1}{2} = 15$. Tokių vaikų gali būti bet kuris iš 3, tad $3 \\cdot 15 = 45$."
+        },
+        {
+          "text": "Ar gali du vaikai turėti po $\\ge 6$? Ne, nes $6+6=12 > 10$. Tad sankirtų nėra."
+        },
+        {
+          "text": "Atsakymas: $66 - 45 = 21$."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "21 būdas."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-012",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Matematinės indukcijos metodu įrodykite, kad pirmųjų $n$ nelyginių natūraliųjų skaičių suma lygi $n^2$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas."
+      },
+      "coreIdea": {
+        "title": "Nelyginių skaičių suma",
+        "text": "$1 + 3 + 5 + ... + (2n-1) = n^2$."
+      },
+      "strategyTags": [
+        "induction",
+        "kombinatorika"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite bazę $n=1$: $1 = 1^2$."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Žingsnis: prie $k^2$ pridėkite sekantį nelyginį skaičių $2k+1$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bazė: $n=1$, $1=1^2$. Teisinga."
+        },
+        {
+          "text": "Prielaida: $1 + 3 + ... + (2k-1) = k^2$."
+        },
+        {
+          "text": "Žingsnis: $1 + 3 + ... + (2k-1) + (2k+1) = k^2 + 2k + 1 = (k+1)^2$."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Teiginys įrodytas."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-013",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad $2^n > n$ visiems natūraliesiems $n$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas."
+      },
+      "coreIdea": {
+        "title": "Eksponentinis augimas",
+        "text": "Indukcinis žingsnis parodo, kad dvigubėjimas visada viršija pradinio rodiklio padidėjimą vienetu."
+      },
+      "strategyTags": [
+        "induction",
+        "inequality"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Bazė $n=1$: $2^1 = 2 > 1$."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Žingsnis: $2^{k+1} = 2 \\cdot 2^k$. Naudokite prielaidą $2^k > k$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bazė $n=1$: $2 > 1$. Teisinga."
+        },
+        {
+          "text": "Prielaida: $2^k > k$."
+        },
+        {
+          "text": "Žingsnis: $2^{k+1} = 2 \\cdot 2^k > 2k$. Kadangi $2k \\ge k+1$ visiems $k \\ge 1$, teiginys įrodytas."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Teiginys įrodytas."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-014",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Ar egzistuoja grafas, kurio viršūnių laipsniai yra: 3, 3, 3, 2, 2, 1?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
+        ],
+        "correctChoiceIds": [
+          "yes"
+        ]
+      },
+      "coreIdea": {
+        "title": "Nelyginių laipsnių skaičius",
+        "text": "Pagal Rankų paspaudimo lemą, viršūnių su nelyginiu laipsniu turi būti lyginis skaičius."
+      },
+      "strategyTags": [
+        "graphs",
+        "handshake-lemma"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suskaičiuokite viršūnes su nelyginiais laipsniais."
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nelyginiai laipsniai yra 3, 3, 3 ir 1. Jų yra 4. 4 yra lyginis skaičius."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Laipsnių suma: $3+3+3+2+2+1 = 14$."
+        },
+        {
+          "text": "Suma yra lyginė, nelyginių laipsnių skaičius (4) yra lyginis. Toks grafas gali egzistuoti."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-08-comb-015",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Plokščiasis (planarusis) grafas turi 7 viršūnes ir dalija plokštumą į 6 sritis (įskaitant išorinę). Kiek briaunų turi šis grafas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Oilerio formulė plokštiesiems grafams",
+        "text": "Naudokite formulę $V - E + F = 2$."
+      },
+      "strategyTags": [
+        "graphs",
+        "euler-formula"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "$V$ – viršūnės, $E$ – briaunos, $F$ – sritys (veidai)."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Įstatykite $V=7$ ir $F=6$ į formulę $7 - E + 6 = 2$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$13 - E = 2 \\implies E = 11$."
+        }
+      ],
+      "answerText": "11",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-comb-016",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Seka apibrėžiama: $f_1=1, f_2=1, f_n = f_{n-1} + f_{n-2}$. Įrodykite indukcija, kad $f_1 + f_2 + ... + f_n = f_{n+2} - 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas."
+      },
+      "coreIdea": {
+        "title": "Fibonačio sekos sumos savybė",
+        "text": "Naudokite sekos apibrėžimą $f_{n+2} = f_{n+1} + f_n$."
+      },
+      "strategyTags": [
+        "induction",
+        "recursion"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Bazė $n=1$: $f_1 = 1$, $f_3 - 1 = 2 - 1 = 1$."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Žingsnis: prie $f_{k+2} - 1$ pridėkite $f_{k+1}$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bazė teisinga."
+        },
+        {
+          "text": "Prielaida: Suma iki $k$ yra $f_{k+2} - 1$."
+        },
+        {
+          "text": "Žingsnis: $(f_{k+2} - 1) + f_{k+1} = (f_{k+2} + f_{k+1}) - 1 = f_{k+3} - 1$."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Teiginys įrodytas."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-017",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Metami 10 lošimo kauliukų. Koks yra iškritusių akučių sumos matematinis viltingumas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 35,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Viltingumo tiesiškumas",
+        "text": "Sumos viltingumas lygus viltingumų sumai, net jei įvykiai priklausomi (čia jie nepriklausomi)."
+      },
+      "strategyTags": [
+        "probability",
+        "expected-value"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Vieno kauliuko viltingumas yra $(1+2+3+4+5+6)/6 = 3.5$."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Sudauginkite vieno kauliuko viltingumą iš kauliukų skaičiaus."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$E(X_1) = 3.5$. $E(X_1 + ... + X_{10}) = 10 \\cdot 3.5 = 35$."
+        }
+      ],
+      "answerText": "35",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-comb-018",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Atsitiktinis taškas padedamas skritulio viduje. Kokia tikimybė, kad jis bus arčiau centro nei skritulio krašto?",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.25,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Geometrinė tikimybė skritulyje",
+        "text": "Atstumas iki centro mažesnis už atstumą iki krašto reiškia, kad taškas yra mažesnio skritulio su spinduliu $R/2$ viduje."
+      },
+      "strategyTags": [
+        "probability",
+        "geometric-probability"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul skritulio spindulys yra $R$. Taškas turi būti nutolęs nuo centro mažiau nei $R/2$."
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Tikimybė yra mažesnio skritulio ploto ir didelio skritulio ploto santykis."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$P = \frac{\\pi (R/2)^2}{\\pi R^2} = \frac{R^2/4}{R^2} = 1/4 = 0.25$."
+        }
+      ],
+      "answerText": "0.25",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-comb-019",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kvadrate, kurio kraštinė yra 2, atsitiktinai padedami 5 taškai. Įrodykite, kad bent du taškai yra nutolę vienas nuo kito ne daugiau kaip per $\\sqrt{2}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas."
+      },
+      "coreIdea": {
+        "title": "Grebėsto principas plote",
+        "text": "Padalinkite kvadratą į mažesnes dalis (dėžutes) taip, kad atstumas tarp taškų vienoje dalyje būtų ribotas."
+      },
+      "strategyTags": [
+        "pigeonhole-principle",
+        "kombinatorika"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Padalinkite kvadratą $2 \times 2$ į 4 mažus kvadratus $1 \times 1$."
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Turime 5 taškus ir 4 kvadratus. Bent viename kvadrate bus 2 taškai."
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Koks yra didžiausias įmanomas atstumas tarp dviejų taškų $1 \times 1$ kvadrate?"
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Padaliname į 4 kvadratus $1 \times 1$."
+        },
+        {
+          "text": "Pagal Grebėsto principą, bent viename kvadrate bus bent 2 taškai."
+        },
+        {
+          "text": "Didžiausias atstumas $1 \times 1$ kvadrate yra įstrižainė $\\sqrt{1^2 + 1^2} = \\sqrt{2}$."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Teiginys įrodytas."
+    },
+    {
+      "id": "ex-olimpiada-08-comb-020",
+      "topicId": "olimpiada-08-kombinatorika",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "hard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Kiek yra būdų išdalyti 12 vienodų pieštukų 3 vaikams taip, kad kiekvienas vaikas gautų bent po 2 pieštukus?",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Stars and Bars su minimaliu kiekiu",
+        "text": "Pirmiausia duokite kiekvienam vaikui po 2 pieštukus, tada likusius dalinkite be apribojimų."
+      },
+      "strategyTags": [
+        "stars-and-bars",
+        "kombinatorika"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Iš viso yra 12 pieštukų. Kiek pieštukų liks išdalinus po 2?"
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "$12 - (3 \\cdot 2) = 6$. Dabar 6 pieštukus dalinkite 3 vaikams be jokių apribojimų."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Liko 6 pieštukai, 3 vaikai."
+        },
+        {
+          "text": "Formulė: $\binom{6+3-1}{3-1} = \binom{8}{2} = \frac{8 \\cdot 7}{2 \\cdot 1} = 28$."
+        }
+      ],
+      "answerText": "28",
+      "srsSeeds": []
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-08-kombinatorika-test-1",
+      "title": "Kombinatorikos olimpiadinis iššūkis",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-08-kombinatorika"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-08-ee85013b",
+        "ex-olimpiada-08-87abf18f",
+        "ex-olimpiada-08-comb-011",
+        "ex-olimpiada-08-comb-013",
+        "ex-olimpiada-08-comb-015",
+        "ex-olimpiada-08-comb-020"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
 }

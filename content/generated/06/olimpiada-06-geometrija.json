@@ -17,7 +17,10 @@
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-06-concept-logic",
-      "olimpiada-06-concept-method"
+      "olimpiada-06-concept-method",
+      "olimpiada-06-geo-concept-angles",
+      "olimpiada-06-geo-concept-triangle-inequality",
+      "olimpiada-06-geo-concept-symmetry"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -29,11 +32,24 @@
       "ex-olimpiada-06-70725241",
       "ex-olimpiada-06-806b3717",
       "ex-olimpiada-06-5dc5710d",
-      "ex-olimpiada-06-7a255d9b"
+      "ex-olimpiada-06-7a255d9b",
+      "ex-olimpiada-06-geo-09",
+      "ex-olimpiada-06-geo-10",
+      "ex-olimpiada-06-geo-11",
+      "ex-olimpiada-06-geo-12",
+      "ex-olimpiada-06-geo-13",
+      "ex-olimpiada-06-geo-14",
+      "ex-olimpiada-06-geo-15",
+      "ex-olimpiada-06-geo-16",
+      "ex-olimpiada-06-geo-17",
+      "ex-olimpiada-06-geo-18",
+      "ex-olimpiada-06-geo-19",
+      "ex-olimpiada-06-geo-20"
     ]
   },
   "theory": [
     {
+      "id": "olimpiada-06-geo-theory-1",
       "title": "Pitagoro teorema ir geometrinės figūros",
       "blocks": [
         {
@@ -45,6 +61,34 @@
           "text": "Pitagoro teorema teigia: $\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
         }
       ]
+    },
+    {
+      "id": "olimpiada-06-geo-theory-2",
+      "title": "Kampai ir jų savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kampai yra pagrindinis geometrijos elementas. Olimpiadose dažnai naudojami kryžminiai, gretiniai kampai bei kampai, susidarantys kertant lygiagrečias tieses."
+        },
+        {
+          "type": "property",
+          "text": "Kryžminiai kampai yra lygūs. Gretinių kampų suma lygi $180^\\circ$."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geo-theory-3",
+      "title": "Trikampio nelygybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ne iš bet kokių trijų atkarpų galima sudėti trikampį."
+        },
+        {
+          "type": "theorem",
+          "text": "Trikampio bet kurių dviejų kraštinių ilgių suma visada yra didesnė už trečiosios kraštinės ilgį."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -52,18 +96,40 @@
       "id": "olimpiada-06-concept-logic",
       "title": "Matematinė dedukcija ir prieštaravimas",
       "type": "concept",
-      "shortDefinition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
-      "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
-      "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+      "shortDefinition": "Loginis metodo tipas įrodymams.",
+      "intuition": "Tarkime priešingai ir gaukime nesąmonę.",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-06-concept-method",
       "title": "Aritmetikos pagrindinė teorema",
       "type": "concept",
-      "shortDefinition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
-      "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
-      "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+      "shortDefinition": "Skaidymas pirminiais daugikliais.",
+      "intuition": "Skaičių 'atomai'.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-geo-concept-angles",
+      "title": "Kryžminiai ir gretiniai kampai",
+      "type": "concept",
+      "shortDefinition": "Kampų poros, turinčios bendras kraštines ar viršūnes.",
+      "intuition": "Gretiniai kampai kartu sudaro tiesę.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-geo-concept-triangle-inequality",
+      "title": "Trikampio nelygybė",
+      "type": "concept",
+      "shortDefinition": "Taisyklė, nurodanti, kada trikampis egzistuoja.",
+      "intuition": "Trumpiausias kelias tarp dviejų taškų yra tiesė, o ne lankstas per trečią tašką.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-geo-concept-symmetry",
+      "title": "Simetrijos ašis",
+      "type": "concept",
+      "shortDefinition": "Tiesė, kuri dalija figūrą į dvi lygias, veidrodines dalis.",
+      "intuition": "Jei figūrą perlenktume per šią tiesę, abi pusės sutaptų.",
       "relatedConceptIds": []
     }
   ],
@@ -71,7 +137,8 @@
   "mistakes": [],
   "workedExamples": [
     {
-      "title": "3 Pavyzdys: Įbrėžtinis plotas",
+      "id": "olimpiada-06-geo-example-1",
+      "title": "Įbrėžtinis plotas",
       "problem": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\pi$).",
       "steps": [
         {
@@ -88,6 +155,81 @@
         }
       ],
       "answer": "$36 - 9\\pi\\text{ cm}^2$"
+    },
+    {
+      "id": "olimpiada-06-geo-example-2",
+      "title": "Kampų radimas",
+      "level": "easy",
+      "problem": "Duoti du gretiniai kampai. Vieno jų dydis yra $40^\\circ$. Koks kito kampo dydis?",
+      "steps": [
+        {
+          "text": "Gretinių kampų suma visada lygi $180^\\circ$."
+        },
+        {
+          "text": "Atimame žinomą kampą iš sumos: $180^\\circ - 40^\\circ = 140^\\circ$."
+        }
+      ],
+      "answer": "140°"
+    },
+    {
+      "id": "olimpiada-06-geo-example-3",
+      "title": "Trikampio egzistavimas",
+      "level": "medium",
+      "problem": "Ar egzistuoja trikampis, kurio kraštinės yra 5 cm, 8 cm ir 15 cm?",
+      "steps": [
+        {
+          "text": "Tikriname trikampio nelygybę: ar dviejų trumpesnių kraštinių suma didesnė už ilgiausiąją?"
+        },
+        {
+          "text": "Sudedame 5 ir 8: $5 + 8 = 13$."
+        },
+        {
+          "text": "Lyginame su 15: $13 < 15$."
+        },
+        {
+          "text": "Kadangi suma mažesnė, toks trikampis neegzistuoja."
+        }
+      ],
+      "answer": "Neegzistuoja"
+    },
+    {
+      "id": "olimpiada-06-geo-example-4",
+      "title": "Sudėtinės figūros plotas",
+      "level": "medium",
+      "problem": "Figūra sudaryta iš kvadrato (kraštinė 4 cm) ir ant jo viršaus nubrėžto lygiakraščio trikampio (kraštinė 4 cm). Koks figūros perimetras?",
+      "steps": [
+        {
+          "text": "Figūros perimetrą sudaro išorinės linijos."
+        },
+        {
+          "text": "Iš kvadrato lieka 3 kraštinės (apačia ir šonai)."
+        },
+        {
+          "text": "Iš trikampio lieka 2 viršutinės kraštinės."
+        },
+        {
+          "text": "Iš viso yra 5 kraštinės po 4 cm: $5 \\times 4 = 20$ cm."
+        }
+      ],
+      "answer": "20 cm"
+    },
+    {
+      "id": "olimpiada-06-geo-example-5",
+      "title": "Paviršiaus plotas",
+      "level": "hard",
+      "problem": "Kubo briauna yra 3 cm. Iš jo kampo išpjautas mažas kubelis, kurio briauna 1 cm. Kaip pasikeitė didžiojo kubo paviršiaus plotas?",
+      "steps": [
+        {
+          "text": "Išpjovus kampinį kubelį, pašalinamos 3 išorinės sienelės."
+        },
+        {
+          "text": "Tačiau atsiranda 3 naujos vidinės sienelės (duobės viduje)."
+        },
+        {
+          "text": "Kadangi pašalintų ir naujų sienelių plotai lygūs, bendras paviršiaus plotas nepasikeičia."
+        }
+      ],
+      "answer": "Nepasikeitė"
     }
   ],
   "exercises": [
@@ -1299,7 +1441,423 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-06-geo-09",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Dvi tiesės kertasi taške. Vienas iš susidariusių kampų lygus $35^\\circ$. Raskite didžiausią iš susidariusių kampų dydį laipsniais.",
+      "answer": {
+        "kind": "numeric",
+        "value": 145
+      },
+      "coreIdea": {
+        "title": "Gretiniai kampai",
+        "text": "Kertantis dviem tiesėms susidaro dvi poros lygių kampų, o gretimų kampų suma lygi $180^\\circ$."
+      },
+      "strategyTags": [
+        "angles"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kampas, gretimas $35^\\circ$ kampui, sudaro kartu su juo ištiestinį kampą.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Ieškome gretinio kampo: $180^\\circ - 35^\\circ = 145^\\circ$."
+        },
+        {
+          "text": "Susidarę kampai yra $35^\\circ$ ir $145^\\circ$. Didžiausias yra $145^\\circ$."
+        }
+      ],
+      "answerText": "145"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-10",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Dvi lygiagrečias tieses kerta trečioji tiesė. Vidaus vienašalių kampų skirtumas lygus $40^\\circ$. Raskite mažesnįjį iš šių kampų.",
+      "answer": {
+        "kind": "numeric",
+        "value": 70
+      },
+      "coreIdea": {
+        "title": "Vienašaliai kampai",
+        "text": "Vidaus vienašalių kampų suma lygi $180^\\circ$."
+      },
+      "strategyTags": [
+        "angles"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažymėkite kampus $x$ ir $x+40$. Jų suma yra 180.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome lygtį: $x + (x+40) = 180$."
+        },
+        {
+          "text": "$2x = 140 \\implies x = 70$."
+        }
+      ],
+      "answerText": "70"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-11",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Trikampio kampų dydžiai sutinka kaip $2:3:4$. Raskite didžiausią trikampio kampą laipsniais.",
+      "answer": {
+        "kind": "numeric",
+        "value": 80
+      },
+      "coreIdea": {
+        "title": "Dalių metodas",
+        "text": "Trikampio kampų suma visada lygi $180^\\circ$."
+      },
+      "strategyTags": [
+        "triangle-properties"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažymėkite vieną dalį $x$. Kampai yra $2x, 3x, 4x$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$2x + 3x + 4x = 180 \\implies 9x = 180 \\implies x = 20$."
+        },
+        {
+          "text": "Didžiausias kampas: $4 \\times 20 = 80^\\circ$."
+        }
+      ],
+      "answerText": "80"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-12",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "statement": "Kuri iš šių atkarpų rinkinių negali sudaryti trikampio?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "3, 4, 5"
+          },
+          {
+            "id": "b",
+            "text": "6, 6, 6"
+          },
+          {
+            "id": "c",
+            "text": "2, 10, 12"
+          },
+          {
+            "id": "d",
+            "text": "5, 12, 13"
+          }
+        ],
+        "correctChoiceIds": [
+          "c"
+        ]
+      },
+      "coreIdea": {
+        "title": "Griežta nelygybė",
+        "text": "Suma privalo būti GRIEŽTAI didesnė."
+      },
+      "strategyTags": [
+        "triangle-inequality"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Patikrinkite $2+10$ ir palyginkite su 12.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Variante C: $2 + 10 = 12$. Kadangi suma lygi trečiajai kraštinei, tai yra tiesė, o ne trikampis."
+        }
+      ],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-13",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Trapecijos aukštinė lygi 5 cm, o jos plotas lygus $40\\text{ cm}^2$. Raskite trapecijos vidurinės linijos ilgį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8
+      },
+      "coreIdea": {
+        "title": "Ploto formulė",
+        "text": "Trapecijos plotas lygus vidurinės linijos ir aukštinės sandaugai."
+      },
+      "strategyTags": [
+        "area"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "$S = m \\times h$, kur $m$ - vidurinė linija.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$m = S / h = 40 / 5 = 8$ cm."
+        }
+      ],
+      "answerText": "8"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-14",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Apskritimo ilgis lygus $20\\pi$ cm. Raskite šio apskritimo spindulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
+      "coreIdea": {
+        "title": "Apskritimo ilgio formulė",
+        "text": "$C = 2\\pi r$."
+      },
+      "strategyTags": [
+        "circle"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Padalykite ilgį iš $2\\pi$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$20\\pi = 2\\pi r \\implies r = 10$ cm."
+        }
+      ],
+      "answerText": "10"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-15",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Figūra sudaryta iš dviejų stačiakampių gretasienių. Vieno matmenys $2 \\times 3 \\times 4$ cm, kito $1 \\times 1 \\times 1$ cm. Koks bendras figūros tūris?",
+      "answer": {
+        "kind": "numeric",
+        "value": 25
+      },
+      "coreIdea": {
+        "title": "Tūrių sudėtis",
+        "text": "Bendras tūris lygus dalių tūrių sumai."
+      },
+      "strategyTags": [
+        "volume"
+      ],
+      "solutionSteps": [
+        {
+          "text": "$V_1 = 2 \\times 3 \\times 4 = 24\\text{ cm}^3$."
+        },
+        {
+          "text": "$V_2 = 1 \\times 1 \\times 1 = 1\\text{ cm}^3$."
+        },
+        {
+          "text": "Suma: $24 + 1 = 25\\text{ cm}^3$."
+        }
+      ],
+      "answerText": "25"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-16",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Kubo briauna yra 2 cm. Raskite visą jo paviršiaus plotą cm$^2$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 24
+      },
+      "coreIdea": {
+        "title": "Šešios sienos",
+        "text": "Kubas turi 6 lygias sienas, kurių kiekviena yra kvadratas."
+      },
+      "strategyTags": [
+        "surface-area"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Vienos sienos plotas: $2 \\times 2 = 4\\text{ cm}^2$."
+        },
+        {
+          "text": "Visas plotas: $6 \\times 4 = 24\\text{ cm}^2$."
+        }
+      ],
+      "answerText": "24"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-17",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Kiek simetrijos ašių turi taisyklingasis šešiakampis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
+      "coreIdea": {
+        "title": "Taisyklingosios figūros",
+        "text": "Taisyklingasis n-kampis turi n simetrijos ašių."
+      },
+      "strategyTags": [
+        "symmetry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ašys eina per viršūnes ir per kraštinių vidurio taškus.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3 ašys eina per priešingas viršūnes."
+        },
+        {
+          "text": "3 ašys eina per priešingų kraštinių vidurius."
+        },
+        {
+          "text": "Iš viso 6."
+        }
+      ],
+      "answerText": "6"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-18",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Stačiakampio plotas lygus $24\\text{ cm}^2$, o viena kraštinė lygi 4 cm. Koks šio stačiakampio perimetras?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20
+      },
+      "coreIdea": {
+        "title": "Atvirkštinis veiksmas",
+        "text": "Iš ploto randame kitą kraštinę, tada skaičiuojame perimetrą."
+      },
+      "strategyTags": [
+        "area",
+        "perimeter"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kita kraštinė: $24 / 4 = 6$ cm."
+        },
+        {
+          "text": "Perimetras: $2 \\times (4 + 6) = 20$ cm."
+        }
+      ],
+      "answerText": "20"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-19",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Du apskritimai liečiasi išoriškai. Jų spinduliai yra 3 cm ir 5 cm. Koks atstumas tarp jų centrų?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8
+      },
+      "coreIdea": {
+        "title": "Išorinis lietimasis",
+        "text": "Atstumas tarp centrų lygus spindulių sumai."
+      },
+      "strategyTags": [
+        "circle"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atstumas = $r_1 + r_2 = 3 + 5 = 8$ cm."
+        }
+      ],
+      "answerText": "8"
+    },
+    {
+      "id": "ex-olimpiada-06-geo-20",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Trikampio kampas lygus $80^\\circ$. Nubrėžta šio kampo pusiaukampinė. Į kokio dydžio kampus ji padalija šį kampą?",
+      "answer": {
+        "kind": "numeric",
+        "value": 40
+      },
+      "coreIdea": {
+        "title": "Pusiaukampinė",
+        "text": "Pusiaukampinė dalija kampą į dvi lygias dalis."
+      },
+      "strategyTags": [
+        "angles"
+      ],
+      "solutionSteps": [
+        {
+          "text": "$80 / 2 = 40^\\circ$."
+        }
+      ],
+      "answerText": "40"
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-06-geo-test-1",
+      "title": "Geometrijos olimpiadinis iššūkis",
+      "scope": "topic",
+      "topicIds": [
+        "olimpiada-06-geometrija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-06-bfec6fed",
+        "ex-olimpiada-06-507d1998",
+        "ex-olimpiada-06-885cff7f",
+        "ex-olimpiada-06-geo-11",
+        "ex-olimpiada-06-geo-12"
+      ],
+      "timeLimitSeconds": 1200,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.7
+    }
+  ]
 }

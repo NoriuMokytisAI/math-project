@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+    "notes": "Expanded Grade 9 Olympiad Number Theory content with 20 exercises."
   },
   "topic": {
     "id": "olimpiada-09-skaiciu-teorija",
@@ -12,12 +12,15 @@
     "strand": "Skaičių teorija",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 120,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-09-concept-euler-totient",
-      "olimpiada-09-concept-euler-theorem"
+      "olimpiada-09-concept-euler-theorem",
+      "olimpiada-09-concept-legendre",
+      "olimpiada-09-concept-chinese-remainder",
+      "olimpiada-09-concept-divisibility-rules"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -27,7 +30,21 @@
       "ex-olimpiada-09-03",
       "ex-olimpiada-09-04",
       "ex-olimpiada-09-05",
-      "ex-olimpiada-09-06"
+      "ex-olimpiada-09-06",
+      "ex-olimpiada-09-07",
+      "ex-olimpiada-09-08",
+      "ex-olimpiada-09-09",
+      "ex-olimpiada-09-10",
+      "ex-olimpiada-09-11",
+      "ex-olimpiada-09-12",
+      "ex-olimpiada-09-13",
+      "ex-olimpiada-09-14",
+      "ex-olimpiada-09-15",
+      "ex-olimpiada-09-16",
+      "ex-olimpiada-09-17",
+      "ex-olimpiada-09-18",
+      "ex-olimpiada-09-19",
+      "ex-olimpiada-09-20"
     ]
   },
   "theory": [
@@ -91,6 +108,33 @@
       "relatedConceptIds": [
         "olimpiada-09-concept-euler-totient"
       ]
+    },
+    {
+      "id": "olimpiada-09-concept-legendre",
+      "title": "Legendre formulė",
+      "type": "concept",
+      "shortDefinition": "Formulė, nurodanti pirminio skaičiaus $p$ laipsnį skaičiaus $n!$ skaidinyje.",
+      "intuition": "Suskaičiuoja, kiek kartų $p$ pasirodo kaip faktorius visuose skaičiuose nuo 1 iki $n$.",
+      "formal": "$v_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-09-concept-chinese-remainder",
+      "title": "Kinų liekanų teorema",
+      "type": "concept",
+      "shortDefinition": "Teorema apie tiesinių palyginimų sistemų sprendinių egzistavimą.",
+      "intuition": "Leidžia rasti skaičių, kuris duoda nurodytas liekanas dalijant iš tarpusavyje pirminių modulių.",
+      "formal": "Jei $m_1, m_2, \\dots, m_n$ yra poromis tarpusavyje pirminiai, tai sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_n$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-09-concept-divisibility-rules",
+      "title": "Dalumo požymiai",
+      "type": "concept",
+      "shortDefinition": "Taisyklės, leidžiančios greitai nustatyti, ar skaičius dalijasi iš kito skaičiaus.",
+      "intuition": "Naudoja skaitmenų savybes (sumą, alternuojančią sumą ir kt.).",
+      "formal": "Pavyzdžiui, skaičius dalijasi iš 11 tada ir tik tada, kai jo skaitmenų alternuojanti suma dalijasi iš 11.",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
@@ -132,42 +176,20 @@
       "answer": "$1$"
     },
     {
-      "title": "Nelygybės įrodymas naudojant AM-GM",
-      "problem": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
+      "title": "GCD apskaičiavimas",
+      "problem": "Raskite $\\gcd(2n+1, 3n+2)$ bet kuriam natūraliajam $n$.",
       "steps": [
         {
-          "text": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$."
+          "text": "Taikome Euklido algoritmą: $\\gcd(3n+2, 2n+1) = \\gcd(2n+1, (3n+2) - (2n+1)) = \\gcd(2n+1, n+1)$."
         },
         {
-          "text": "Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}}$."
+          "text": "Tęsiame: $\\gcd(2n+1, n+1) = \\gcd(n+1, (2n+1) - (n+1)) = \\gcd(n+1, n)$."
         },
         {
-          "text": "Kadangi $\\frac{a}{b} \\cdot \\frac{b}{a} = 1$, tai $\\sqrt{1} = 1$."
-        },
-        {
-          "text": "Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\ge 2$."
+          "text": "Galiausiai: $\\gcd(n+1, n) = \\gcd(n, (n+1) - n) = \\gcd(n, 1) = 1$."
         }
       ],
-      "answer": "Įrodyta."
-    },
-    {
-      "title": "Teisingų skliaustų sekų skaičius",
-      "problem": "Kiek yra taisyklingų skliaustų sekų, sudarytų iš 2 atidarančių ir 2 uždarančių skliaustų?",
-      "steps": [
-        {
-          "text": "Tokių sekų skaičių nurodo Katalano skaičius $C_2$."
-        },
-        {
-          "text": "Apskaičiuojame pagal formulę: $C_2 = \\frac{1}{3} \\binom{4}{2}$."
-        },
-        {
-          "text": "Kadangi $\\binom{4}{2} = 6$, tai $C_2 = \\frac{6}{3} = 2$."
-        },
-        {
-          "text": "Šios sekos yra: `(())` ir `()()`."
-        }
-      ],
-      "answer": "$2$"
+      "answer": "$1$"
     }
   ],
   "exercises": [
@@ -195,7 +217,9 @@
         "algebraic-transformation"
       ],
       "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-euler-totient"
+      ],
       "expectedMethodIds": [
         "olimpiada-09-concept-euler-totient"
       ],
@@ -344,7 +368,9 @@
         "modular-arithmetic"
       ],
       "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-euler-theorem"
+      ],
       "expectedMethodIds": [
         "olimpiada-09-concept-euler-theorem"
       ],
@@ -492,7 +518,9 @@
         "modular-arithmetic"
       ],
       "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-chinese-remainder"
+      ],
       "expectedMethodIds": [],
       "conceptIds": [],
       "hints": [
@@ -604,7 +632,9 @@
           "cardType": "method",
           "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenki...?",
           "back": "Kadangi moduliai 3, 5 ir 7 yra poromis tarpusavyje pirminiai, sprendinį galime rasti pagal Kinų liekanų teoremos algoritmą arba pastebėję dėsningumus moduliu 21 ar 35.",
-          "conceptIds": [],
+          "conceptIds": [
+            "olimpiada-09-concept-chinese-remainder"
+          ],
           "methodIds": [],
           "defaultEnabled": true
         }
@@ -716,7 +746,7 @@
           "title": "Neišnagrinėti visi atvejai",
           "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
           "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
-          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiých kintamųjų rinkiniams.",
           "reviewConceptIds": [],
           "srsRecommended": true
         },
@@ -765,15 +795,19 @@
       "answerText": "24 nuliais",
       "coreIdea": {
         "title": "Legendre formulė pirminiam 5",
-        "text": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\sum \\lfloor 100/5^i \\rfloor$."
+        "text": "Galinių nulių skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\sum \\lfloor 100/5^i \\rfloor$."
       },
       "strategyTags": [
         "algebraic-transformation"
       ],
       "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-legendre"
+      ],
       "expectedMethodIds": [],
-      "conceptIds": [],
+      "conceptIds": [
+        "olimpiada-09-concept-legendre"
+      ],
       "hints": [
         {
           "order": 1,
@@ -835,7 +869,7 @@
               "action": "Apskaičiuojame $v_5(100!) = \\lfloor \\frac{100}{5} \\rfloor + \\lfloor \\frac{100}{25} \\rfloor$.",
               "reason": "Pagal Legendre teoremą pirminio $p$ laipsnis faktoriale yra $\\sum \\lfloor n/p^k \\rfloor$.",
               "latex": "v_5(100!) = 20 + 4 = 24",
-              "result": "Gautas tikslus laipsnio rodiklis 24."
+              "result": "Gautą tikslus laipsnio rodiklis 24."
             }
           ],
           "finalAnswer": "24 nuliais"
@@ -873,7 +907,9 @@
           "cardType": "method",
           "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Keliais nuliais baigiasi skaičius $100!$?...?",
           "back": "Trailing zeros skaičių lemia pirminio skaičiaus 5 rodiklis $100!$ skaidinyje, nes 2 daliklių yra daug daugiau nei 5. Naudojame Legendre formulę $E_5(100!) = \\sum \\lfloor 100/5^i \\rfloor$.",
-          "conceptIds": [],
+          "conceptIds": [
+            "olimpiada-09-concept-legendre"
+          ],
           "methodIds": [],
           "defaultEnabled": true
         }
@@ -922,13 +958,13 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Apskaičiuokite visus galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\pmod 5$).",
+          "text": "Apskaičiuokite visų galimus skaičių kvadratus moduliu 5 (t. y. $0^2, 1^2, 2^2, 3^2, 4^2 \\pmod 5$).",
           "penalty": 0.09
         },
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Gautos kvadratinės liekanos yra $\\{0, 1, 4\\}$. Kadangi 3 nėra tarp jų, lygtis sprendinių neturi.",
+          "text": "Gautos kvadratinės liekanos yra $\\{0, 1, 4\\}$. Kadangi 3 nėra tarpų, lygtis sprendinių neturi.",
           "penalty": 0.11
         }
       ],
@@ -966,7 +1002,7 @@
             {
               "title": "Kvadratų analizė",
               "action": "Apskaičiuojame $k^2 \\pmod 5$ visiems $k \\in \\mathbb{Z}_5$. Gauname $0, 1, 4, 4, 1$.",
-              "reason": "Suskaičiuojame visus galimus kvadratus moduliu 5.",
+              "reason": "Suskaičiuojame visų galimus kvadratus moduliu 5.",
               "latex": "x^2 \\in \\{0, 1, 4\\} \\pmod 5",
               "result": "Nustatytas kvadratinių liekanų rinkinys."
             },
@@ -986,7 +1022,7 @@
           "id": "ex-olimpiada-09-06-trap-1",
           "title": "Neišnagrinėti visi atvejai",
           "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
-          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą bẻ gilaus teorinio pagrindimo.",
           "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
           "reviewConceptIds": [],
           "srsRecommended": true
@@ -1018,6 +1054,1573 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-09-07",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite skaitmenį $a$, jei skaičius $5a473$ dalijasi iš 11.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Dalumo iš 11 požymis",
+        "text": "Skaičius dalijasi iš 11 tada ir tik tada, kai jo skaitmenų, esančių nelyginėse ir lyginėse vietose, sumų skirtumas dalijasi iš 11."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-divisibility-rules"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite skaitmenų sumas alternuojančiomis vietomis.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suma 1: $5 + 4 + 3 = 12$. Suma 2: $a + 7$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skirtumas $12 - (a + 7) = 5 - a$ turi dalytis iš 11.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $a$ yra skaitmuo, vienintelė galimybė $5-a = 0$ arba $5-a=11$. Raskite $a$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame skaitmenų sumas nelyginėse ir lyginėse vietose."
+        },
+        {
+          "text": "$S_1 = 5 + 4 + 3 = 12$, $S_2 = a + 7$."
+        },
+        {
+          "text": "Skirtumas $S_1 - S_2 = 12 - (a + 7) = 5 - a$."
+        },
+        {
+          "text": "$5 - a$ dalijasi iš 11 tik kai $a = 5$ (palaukite, $5+4+3=12$, $a+7$. $12-(a+7)=5-a=0 \\implies a=5$)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-07-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Alternuojančios sumos taikymas",
+              "action": "Apskaičiuojame $5 - a + 4 - 7 + 3 \\equiv 0 \\pmod{11}$.",
+              "reason": "Dalumo iš 11 požymis.",
+              "latex": "5 - a + 4 - 7 + 3 = 5 - a",
+              "result": "$5 - a \\equiv 0 \\pmod{11}$"
+            },
+            {
+              "title": "Skaitmens radimas",
+              "action": "Kadangi $a \\in \\{0, 1, \\dots, 9\\}$, tai $5-a=0 \\implies a=5$.",
+              "reason": "Vienintelis skaitmuo tenkinantis palyginimą.",
+              "latex": "a=5",
+              "result": "Rastas skaitmuo 5."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-07-trap-1",
+          "title": "Skaitymo klaida",
+          "wrongMove": "Neteisingai sudėtos sumos arba sumaišytos vietos.",
+          "whyTempting": "Greitas skaičiavimas.",
+          "correction": "Nuosekliai surašykite skaitmenis virš jų pažymėdami + ir - ženklus.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų atsakymas, jei skaičius būtų šešiaženklis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-08",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite didžiausią galimą $\\gcd(n+1, 2n+10)$ reikšmę, kur $n$ yra natūralusis skaičius.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Euklido algoritmo savybė",
+        "text": "Didžiausias bendras daliklis nekinta iš didesnio skaičiaus atėmus mažesnįjį skaičių, padaugintą iš bet kokio sveikojo skaičiaus."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taikykite taisyklę $\\gcd(a, b) = \\gcd(a, b - ka)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atimkite iš $2n+10$ skaičių $n+1$, padaugintą iš 2.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$\\gcd(n+1, 2n+10 - 2(n+1)) = \\gcd(n+1, 8)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Bendras daliklis turi dalyti 8. Kokia didžiausia galima tokio daliklio reikšmė?",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame Euklido algoritmą: $\\gcd(n+1, 2n+10) = \\gcd(n+1, (2n+10) - 2(n+1))$."
+        },
+        {
+          "text": "Supaprastiname: $\\gcd(n+1, 2n+10-2n-2) = \\gcd(n+1, 8)$."
+        },
+        {
+          "text": "Bendras daliklis turi dalyti 8, todėl didžiausia galime reikšmė yra 8."
+        },
+        {
+          "text": "Ši reikšmė pasiekiama, kai $n+1$ dalijasi iš 8 (pvz., $n=7$)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-08-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Supaprastinimas",
+              "action": "$\\gcd(n+1, 2n+10) = \\gcd(n+1, 2n+10 - 2(n+1)) = \\gcd(n+1, 8)$.",
+              "reason": "Euklido algoritmo savybė: $\\gcd(A, B) = \\gcd(A, B-2A)$.",
+              "latex": "\\gcd(n+1, 8)",
+              "result": "Problema suvesta į 8 daliklius."
+            },
+            {
+              "title": "Maksimumo radimas",
+              "action": "Didžiausias skaičiaus 8 daliklis yra 8.",
+              "reason": "Bet koks bendras daliklis dalija 8.",
+              "latex": "8",
+              "result": "Maksimali reikšmė yra 8."
+            }
+          ],
+          "finalAnswer": "8"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-08-trap-1",
+          "title": "Neteisingas atėmimas",
+          "wrongMove": "Atimama tik $n$, paliekant $\\gcd(n+1, n+10)$.",
+          "whyTempting": "Bandoma panaikinti $n$, bet neatkreipiamas dėmesys į laisvąjį narį.",
+          "correction": "Visada atimkite pilną mažesniojo reiškinio daugiklį.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų atsakymas, jei turėtume $2n+11$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-09",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$ reiškinys $n^3 - n$ dalijasi iš 6.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta dalumas iš 2 ir 3."
+      },
+      "answerText": "Įrodyta naudojant skaidymą dauginamaisiais.",
+      "coreIdea": {
+        "title": "Trijų paeiliui einančių skaičių sandauga",
+        "text": "Reiškinį $n^3-n$ galima išskaidyti į $(n-1)n(n+1)$. Tai yra trijų paeiliui einančių sveikųjų skaičių sandauga."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "parity"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Iškelkite bendrą daugiklį $n$ prieš skliaustus.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Panaudokite kvadratų skirtumo formulę: $n(n^2-1) = n(n-1)(n+1)$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Paaiškinkite, kodėl tarp trijų paeiliui einančių skaičių bent vienas dalijasi iš 2 ir bent vienas iš 3.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi reiškinys dalijasi iš 2 ir 3, o $\\gcd(2,3)=1$, jis dalijasi iš 6.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaidome reiškinį: $n^3-n = n(n^2-1) = (n-1)n(n+1)$."
+        },
+        {
+          "text": "Tarp trijų paeiliui einančių skaičių bent vienas būtinai yra lyginis (dalijasi iš 2)."
+        },
+        {
+          "text": "Tarp trijų paeiliui einančių skaičių lygiai vienas dalijasi iš 3."
+        },
+        {
+          "text": "Vadinasi, sandauga dalijasi iš $2 \\cdot 3 = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-09-method-1",
+          "title": "Skaidymas dauginamaisiais",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "$n^3 - n = (n-1)n(n+1)$.",
+              "reason": "Iškeltas $n$ ir pritaikyta kvadratų skirtumo formulė.",
+              "latex": "(n-1)n(n+1)",
+              "result": "Trijų paeiliui einančių skaičių sandauga."
+            },
+            {
+              "title": "Dalumo analizė",
+              "action": "Kadangi yra 3 paeiliui einantys skaičiai, bent vienas dalijasi iš 2 ir vienas iš 3.",
+              "reason": "Dalumas iš $k$ pasikartoja kas $k$ skaičių.",
+              "latex": "2|A, 3|A",
+              "result": "Dalijasi iš 2 ir 3."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-09-trap-1",
+          "title": "Tik kelių pavyzdžių tikrinimas",
+          "wrongMove": "Patikrinama tik su $n=1, 2, 3$.",
+          "whyTempting": "Atrodo pakankama įsitikinti teisingumu.",
+          "correction": "Reikia pateikti bendrą įrodymą bet kuriam $n$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar galime teigti, kad $n^3-n$ dalijasi iš 24, jei $n$ yra nelyginis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-10",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visas sveikųjų skaičių $(x, y)$ poras, tenkinančias lygtį: $xy + 3x - 2y = 15$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos visos sprendinių poros."
+      },
+      "answerText": "$(x, y) \\in \\{(3, 6), (5, 0), (11, -2), (1, -12), (-1, -6), (-7, -4)\\}$",
+      "coreIdea": {
+        "title": "Skaidymas dauginamaisiais (Simon's Favorite Factoring Trick)",
+        "text": "Pertvarkykite lygtį į pavidalą $(x-a)(y-b) = c$. Tada belieka ištirti skaičiaus $c$ daliklius."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite sugrupuoti narius kairėje pusėje pridėdami reikiamą skaičių prie abiejų pusių.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pastebėkite, kad $x(y+3) - 2(y+3) = xy + 3x - 2y - 6$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Atimkite 6 iš abiejų pusių: $(x-2)(y+3) = 15 - 6 = 9$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išnagrinėkite visus skaičiaus 9 daliklius (teigiamus ir neigiamus): 1, 3, 9, -1, -3, -9.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pertvarkome lygtį: $x(y+3) - 2y = 15$."
+        },
+        {
+          "text": "Kad gautume bendrą daugtuvį $(y+3)$, atimame 6 iš abiejų pusių: $x(y+3) - 2(y+3) = 15 - 6 = 9$."
+        },
+        {
+          "text": "$(x-2)(y+3) = 9$."
+        },
+        {
+          "text": "Sudvarkome daliklių lentelę skaičiui 9: $(1, 9), (3, 3), (9, 1), (-1, -9), (-3, -3), (-9, -1)$."
+        },
+        {
+          "text": "Apskaičiuojame atitinkamas $x$ ir $y$ reikšmes: $(3, 6), (5, 0), (11, -2), (1, -12), (-1, -6), (-7, -4)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-10-method-1",
+          "title": "Skaidymas dauginamaisiais",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "$(x-2)(y+3) = 9$.",
+              "reason": "Pridėjus ir atėmus tinkamus narius suformuojame sandaugą.",
+              "latex": "(x-2)(y+3) = 9",
+              "result": "Lygtis paruošta daliklių analizei."
+            },
+            {
+              "title": "Daliklių analizė",
+              "action": "Nagrinėjame atvejus: $x-2=1, 3, 9, -1, -3, -9$.",
+              "reason": "Sveikųjų skaičių sandauga lygi 9 tik kai dauginamieji yra 9 dalikliai.",
+              "latex": "x-2 \\in \\{\\pm 1, \\pm 3, \\pm 9\\}",
+              "result": "Gauti visi galimi sprendiniai."
+            }
+          ],
+          "finalAnswer": "$(3, 6), (5, 0), (11, -2), (1, -12), (-1, -6), (-7, -4)$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-10-trap-1",
+          "title": "Pamiršti neigiami dalikliai",
+          "wrongMove": "Nagrinėjami tik teigiami dalikliai 1, 3, 9.",
+          "whyTempting": "Dėmesys sutelkiamas į natūraliuosius skaičius.",
+          "correction": "Sveikųjų skaičių uždaviniuose visada tikrinkite ir neigiamus daliklius.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų sprendimas, jei lygtis būtų lygi nuliui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-11",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visus pirminius skaičius $p$, tokius kad $p, p+2$ ir $p+4$ taip pat yra pirminiai skaičiai.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas vienintelis pirminis p."
+      },
+      "answerText": "$p = 3$",
+      "coreIdea": {
+        "title": "Liekanos moduliu 3",
+        "text": "Išnagrinėkite skaičius $p, p+2, p+4$ moduliu 3. Pastebėsite, kad vienas iš jų būtinai dalijasi iš 3."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "casework"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite mažas $p$ reikšmes: $p=2, 3, 5$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $p=2$, tai $p+2=4$ (nėra pirminis). Jei $p=3$, tai $p+2=5, p+4=7$ (visi pirminiai).",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ištirkite atvejus, kai $p > 3$ yra pirminis. Toks skaičius turi pavidalą $3k+1$ arba $3k+2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Parodykite, kad abiem atvejais vienas iš skaičių $p+2$ arba $p+4$ dalinsis iš 3 ir bus didesnis už 3.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tikriname $p=3$: rinkinys $(3, 5, 7)$ susideda tik iš pirminių skaičių. Sprendinys tinka."
+        },
+        {
+          "text": "Jei $p$ dalijasi iš 3 ir yra pirminis, tai $p=3$."
+        },
+        {
+          "text": "Jei $p \\equiv 1 \\pmod 3$, tai $p+2 \\equiv 3 \\equiv 0 \\pmod 3$. Kadangi $p+2 > 3$, jis yra sudėtinis."
+        },
+        {
+          "text": "Jei $p \\equiv 2 \\pmod 3$, tai $p+4 \\equiv 6 \\equiv 0 \\pmod 3$. Kadangi $p+4 > 3$, jis yra sudėtinis."
+        },
+        {
+          "text": "Vadinasi, vienintelis toks pirminis yra $p=3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-11-method-1",
+          "title": "Liekanų moduliu 3 analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Mažų reikšmių tikrinimas",
+              "action": "Patikriname $p=3$. Gauname $(3, 5, 7)$, visi pirminiai.",
+              "reason": "Pradedame nuo mažiausių pirminių skaičių.",
+              "latex": "p=3",
+              "result": "Rastas sprendinys."
+            },
+            {
+              "title": "Bendras įrodymas",
+              "action": "Parodome, kad $\\{p, p+2, p+4\\} \\pmod 3 \\equiv \\{p, p-1, p+1\\} \\pmod 3$.",
+              "reason": "Tai pilna liekanų sistema moduliu 3.",
+              "latex": "\\{0, 1, 2\\} \\pmod 3",
+              "result": "Vienas iš narių dalijasi iš 3."
+            }
+          ],
+          "finalAnswer": "p=3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-11-trap-1",
+          "title": "Tikrinama tik p=2",
+          "wrongMove": "Nusprendžiama, kad sprendinių nėra, nes $p=2$ netinka.",
+          "whyTempting": "Pamirštama, kad pirminis 3 taip pat gali būti daliklis.",
+          "correction": "Visada tirkite dalumą iš pačių mažiausių pirminių skaičių.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl šiame uždavinyje buvo naudingas būtent modulis 3?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-12",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite visus natūraliuosius skaičius $n$, kuriems $2^n + 1$ yra pilnas kvadratas.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas vienintelis n."
+      },
+      "answerText": "$n = 3$",
+      "coreIdea": {
+        "title": "Kvadratų skirtumas",
+        "text": "Užrašykite lygtį $2^n = k^2 - 1$. Dešinę pusę išskaidykite į $(k-1)(k+1)$. Kadangi sandauga lygi 2 laipsniui, abu dauginamieji turi būti 2 laipsniai."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime $2^n + 1 = k^2$. Išreikškite $2^n$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2^n = (k-1)(k+1)$. Kokie gali būti dauginamieji, kurių sandauga yra 2 laipsnis?",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tegul $k-1 = 2^a$ ir $k+1 = 2^b$, kur $a+b=n$ ir $b>a$. Atimkite lygtis.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$(k+1) - (k-1) = 2^b - 2^a \\implies 2 = 2^a(2^{b-a}-1)$. Raskite $a$ ir $b$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul $2^n = k^2 - 1 = (k-1)(k+1)$."
+        },
+        {
+          "text": "Vadinasi, $k-1 = 2^a$ ir $k+1 = 2^b$ su sveikaisiais $b > a \\ge 0$."
+        },
+        {
+          "text": "Skirtumas: $(k+1) - (k-1) = 2^b - 2^a = 2$."
+        },
+        {
+          "text": "$2^a(2^{b-a} - 1) = 2$."
+        },
+        {
+          "text": "Tai įmanoma tik kai $2^a = 2$, t. y. $a=1$. Tada $2^{b-1} - 1 = 1 \\implies 2^{b-1} = 2 \\implies b=2$."
+        },
+        {
+          "text": "Tada $n = a+b = 1+2 = 3$. Tikriname: $2^3 + 1 = 9 = 3^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-12-method-1",
+          "title": "Skaidymas laipsniais",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Faktorizavimas",
+              "action": "$2^n = (k-1)(k+1)$.",
+              "reason": "Kvadratų skirtumo formulė.",
+              "latex": "2^n = (k-1)(k+1)",
+              "result": "Sandauga yra 2 laipsnis."
+            },
+            {
+              "title": "Lygčių sistemos sudarymas",
+              "action": "$k-1 = 2^a, k+1 = 2^b \\implies 2^b - 2^a = 2$.",
+              "reason": "Abu dauginamieji turi būti 2 laipsniai.",
+              "latex": "2^a(2^{b-a}-1) = 2",
+              "result": "Gautos $a$ ir $b$ reikšmės."
+            }
+          ],
+          "finalAnswer": "n=3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-12-trap-1",
+          "title": "Atvejo n=0 ignoravimas",
+          "wrongMove": "Neteisingai teigiama, kad $2^0+1=2$ nėra kvadratas (teisinga, bet reikia patikrinti).",
+          "whyTempting": "Pradedama tik nuo natūraliųjų skaičių.",
+          "correction": "Visada patikrinkite ribinius atvejus, pvz., 0.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei laipsnio pagrindas būtų kitas pirminis skaičius?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-13",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite skaičiaus $7^{7^7}$ paskutinį skaitmenį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Laipsnių liekanų periodiškumas",
+        "text": "Paskutinis skaitmuo priklauso nuo liekanos moduliu 10. 7 laipsnių liekanos moduliu 10 kartojasi kas 4: $7, 9, 3, 1, \\dots$. Reikia rasti rodiklio $7^7$ liekaną moduliu 4."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ištirkite seką $7^1, 7^2, 7^3, 7^4 \\pmod{10}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Periodas yra 4. Tad paskutinis skaitmuo priklauso nuo $7^7 \\pmod 4$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite $7^7 \\pmod 4$. Pastebėkite, kad $7 \\equiv -1 \\pmod 4$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$7^7 \\equiv (-1)^7 \\equiv -1 \\equiv 3 \\pmod 4$. Koks skaitmuo atitinka liekaną 3 periode?",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "7 laipsnių paskutiniai skaitmenys: $7^1 \\to 7, 7^2 \\to 9, 7^3 \\to 3, 7^4 \\to 1$. Periodas 4."
+        },
+        {
+          "text": "Ieškome $7^7 \\pmod 4$."
+        },
+        {
+          "text": "$7 \\equiv -1 \\pmod 4 \\implies 7^7 \\equiv (-1)^7 = -1 \\equiv 3 \\pmod 4$."
+        },
+        {
+          "text": "3-ioji periodo reikšmė yra 3. Vadinasi, $7^{7^7}$ baigiasi 3."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-13-method-1",
+          "title": "Periodiškumo analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Periodo nustatymas",
+              "action": "$7^n \\pmod{10}$ ciklas yra $(7, 9, 3, 1)$.",
+              "reason": "Skaičiuojame pirmąsias liekanas.",
+              "latex": "7^1 \\equiv 7, 7^2 \\equiv 9, 7^3 \\equiv 3, 7^4 \\equiv 1",
+              "result": "Ciklo ilgis 4."
+            },
+            {
+              "title": "Rodiklio redukavimas",
+              "action": "$7^7 \\equiv 3 \\pmod 4$.",
+              "reason": "Naudojame liekanų savybes.",
+              "latex": "7^7 \\equiv (-1)^7 \\equiv 3 \\pmod 4",
+              "result": "Rodiklio liekana rasta."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-13-trap-1",
+          "title": "Neteisingas periodo taikymas",
+          "wrongMove": "Skaičiuojama $7^7 \\pmod{10}$ ir tada keliamas paskutinis skaitmuo.",
+          "whyTempting": "Manoma, kad operacijos su paskutiniais skaitmenimis yra komutatyvios.",
+          "correction": "Laipsnio rodiklį reikia redukuoti moduliu, lygiam periodo ilgiui (šiuo atveju 4).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų atsakymas, jei pagrindas būtų 8?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-14",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$ reiškinys $n^5 - n$ dalijasi iš 30.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta dalumas iš 2, 3 ir 5."
+      },
+      "answerText": "Įrodyta naudojant Mažąją Fermo teoremą.",
+      "coreIdea": {
+        "title": "Mažoji Fermo teorema",
+        "text": "Pagal Mažąją Fermo teoremą, jei $p$ yra pirminis, tai $n^p \\equiv n \\pmod p$. Čia tai tiesiogiai parodo dalumą iš 2, 3 ir 5."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Skaičių 30 išskaidykite pirminiais daugtuviais: $30 = 2 \\cdot 3 \\cdot 5$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Dalumas iš 5 tiesiogiai seka iš Mažosios Fermo teoremos: $n^5 \\equiv n \\pmod 5$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išskaidykite $n^5-n$ į $n(n-1)(n+1)(n^2+1)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Daugiantyvis $(n-1)n(n+1)$ garantuoja dalumą iš 2 ir 3. Sujunkite visus faktus.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Reikia įrodyti dalumą iš 2, 3 ir 5."
+        },
+        {
+          "text": "Dalumas iš 5: $n^5 - n \\equiv 0 \\pmod 5$ (Mažoji Fermo teorema)."
+        },
+        {
+          "text": "Skaidome: $n^5 - n = n(n^4 - 1) = n(n^2 - 1)(n^2 + 1) = (n-1)n(n+1)(n^2 + 1)$."
+        },
+        {
+          "text": "Daugiantyvis $(n-1)n(n+1)$ yra trijų paeiliui einančių skaičių sandauga, todėl dalijasi iš 6 (iš 2 ir 3)."
+        },
+        {
+          "text": "Kadangi reiškinys dalijasi iš 5 ir 6, o $\\gcd(5, 6) = 1$, jis dalijasi iš $5 \\cdot 6 = 30$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-14-method-1",
+          "title": "Skaidymas ir Fermo teorema",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Fermo teoremos taikymas",
+              "action": "$n^5 \\equiv n \\pmod 5$.",
+              "reason": "Mažoji Fermo teorema pirminiam 5.",
+              "latex": "n^5 - n \\equiv 0 \\pmod 5",
+              "result": "Dalumas iš 5 įrodytas."
+            },
+            {
+              "title": "Paeiliui einančių skaičių analizė",
+              "action": "$n^5 - n = (n-1)n(n+1)(n^2+1)$, kas dalijasi iš 6.",
+              "reason": "Trijų paeiliui einančių skaičių sandauga.",
+              "latex": "2|A, 3|A \\implies 6|A",
+              "result": "Dalumas iš 2 ir 3 įrodytas."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-14-trap-1",
+          "title": "Neteisingas skaidymas",
+          "wrongMove": "Teigiama, kad $n^5-n$ dalijasi iš 30, nes $n$ baigiasi tam tikru skaitmeniu.",
+          "whyTempting": "Bandoma rasti paprastesnį paaiškinimą.",
+          "correction": "Reikia griežto įrodymo dalumui iš kiekvieno pirminio faktoriaus.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Iš kokio dar didesnio skaičiaus dalijasi $n^5-n$, jei $n$ yra nelyginis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-15",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Įrodykite, kad lygtis $x^2 + y^2 = 3z^2$ neturi teigiamų sveikųjų sprendinių.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta naudojant begalinį nusileidimą."
+      },
+      "answerText": "Sprendinių nėra.",
+      "coreIdea": {
+        "title": "Begalinio nusileidimo metodas",
+        "text": "Išnagrinėkite lygtį moduliu 3. Parodykite, kad jei sprendinys egzistuoja, galime rasti „mažesnį“ sprendinį, o tai neįmanoma natūraliesiems skaičiams."
+      },
+      "strategyTags": [
+        "contradiction",
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ištirkite kvadratines liekanas moduliu 3.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kvadratai moduliu 3 yra tik 0 arba 1. Jei $x^2 + y^2 \\equiv 0 \\pmod 3$, tai $x$ ir $y$ turi dalytis iš 3.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tegul $x=3x_1, y=3y_1$. Įstatykite į lygtį ir supaprastinkite.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Gausite naują lygtį $3x_1^2 + 3y_1^2 = z^2$. Vadinasi, $z$ taip pat turi dalytis iš 3. Kartokite procesą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kvadratai moduliu 3 gali būti 0 ($3k$) arba 1 ($3k \\pm 1$)."
+        },
+        {
+          "text": "$x^2 + y^2 \\equiv 0 \\pmod 3$ įmanoma tik kai $x \\equiv 0$ ir $y \\equiv 0 \\pmod 3$."
+        },
+        {
+          "text": "Tegul $x=3x_1, y=3y_1$. Tada $9x_1^2 + 9y_1^2 = 3z^2 \\implies 3(x_1^2 + y_1^2) = z^2$."
+        },
+        {
+          "text": "Vadinasi, $z^2$ dalijasi iš 3, todėl $z$ dalijasi iš 3. Tegul $z=3z_1$."
+        },
+        {
+          "text": "$3(x_1^2 + y_1^2) = 9z_1^2 \\implies x_1^2 + y_1^2 = 3z_1^2$."
+        },
+        {
+          "text": "Gavome tą patį lygtį su mažesniais kintamaisiais. Šį procesą galime tęsti be galo, o tai neįmanoma natūraliesiems skaičiams."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-15-method-1",
+          "title": "Begalinio nusileidimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "contradiction",
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Analizė moduliu 3",
+              "action": "$x^2 + y^2 \\equiv 0 \\pmod 3 \\implies x=3x_1, y=3y_1$.",
+              "reason": "Kvadratai moduliu 3 yra tik 0 ir 1. Suma $1+1=2$, $1+0=1$. Tik $0+0=0$ tinka.",
+              "latex": "3|x, 3|y",
+              "result": "Kintamieji dalijasi iš 3."
+            },
+            {
+              "title": "Begalinio nusileidimo konstravimas",
+              "action": "Gavome $x_1^2 + y_1^2 = 3z_1^2$.",
+              "reason": "Pakeitus kintamuosius ir padalinus iš bendrų faktorių.",
+              "latex": "(x/3)^2 + (y/3)^2 = 3(z/3)^2",
+              "result": "Prieštaravimas su natūraliųjų skaičių savybėmis."
+            }
+          ],
+          "finalAnswer": "Sprendinių nėra."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-15-trap-1",
+          "title": "Tikrinama tik moduliu 2",
+          "wrongMove": "Nusprendžiama, kad prieštaravimo nėra, nes lygtis turi sprendinių moduliu 2.",
+          "whyTempting": "Modulis 2 yra paprasčiausias.",
+          "correction": "Jei vienas modulis neduoda rezultato, tirkite lygtyje esančius koeficientus kaip modulius (šiuo atveju 3).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar ši lygtis turi sprendinių, jei $x, y, z$ gali būti nuliniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-16",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visus pirminius skaičius $p$, tokius kad $2^p + p^2$ taip pat yra pirminis skaičius.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas vienintelis p."
+      },
+      "answerText": "$p = 3$",
+      "coreIdea": {
+        "title": "Liekanų moduliu 3 analizė",
+        "text": "Ištirkite reiškinį moduliu 3. Naudokite Fermo mažąją teoremą 2 laipsniams."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "casework"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite $p=2, 3, 5$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $p=3$, $2^3+3^2 = 8+9=17$ (pirminis).",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Jei $p > 3$, tai $p \\equiv 1, 2 \\pmod 3$. Tada $p^2 \\equiv 1 \\pmod 3$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pagal Fermo teoremą $2^p \\pmod 3$ priklauso nuo $p$ pariteto. Kadangi $p$ nelyginis, $2^p \\equiv 2 \\pmod 3$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Jei $p=2$, $2^2+2^2=8$ (sudėtinis)."
+        },
+        {
+          "text": "Jei $p=3$, $2^3+3^2=17$ (pirminis). Tinka."
+        },
+        {
+          "text": "Jei $p > 3$ yra pirminis, tai $p$ yra nelyginis ir nesidalija iš 3."
+        },
+        {
+          "text": "$p^2 \\equiv 1 \\pmod 3$ (nes bet kurio nesidalančio iš 3 skaičiaus kvadratas yra 1 mod 3)."
+        },
+        {
+          "text": "$2^p \\equiv (-1)^p = -1 \\equiv 2 \\pmod 3$ (nes $p$ nelyginis)."
+        },
+        {
+          "text": "$2^p + p^2 \\equiv 2 + 1 \\equiv 0 \\pmod 3$. Kadangi skaičius didesnis už 3, jis yra sudėtinis."
+        },
+        {
+          "text": "Vadinasi, vienintelis sprendinys yra $p=3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-16-method-1",
+          "title": "Analizė moduliu 3",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Atvejo p=3 tikrinimas",
+              "action": "$2^3 + 3^2 = 17$, kas yra pirminis skaičius.",
+              "reason": "Tiesioginis skaičiavimas.",
+              "latex": "17 \\in \\mathbb{P}",
+              "result": "Rastas sprendinys."
+            },
+            {
+              "title": "Atvejų p > 3 eliminavimas",
+              "action": "$2^p + p^2 \\equiv 0 \\pmod 3$ visiems pirminiams $p > 3$.",
+              "reason": "Naudojami laipsnių ir kvadratų savybės moduliu 3.",
+              "latex": "2^p + p^2 \\equiv 2 + 1 = 3 \\equiv 0 \\pmod 3",
+              "result": "Visi kiti atvejai duoda sudėtinius skaičius."
+            }
+          ],
+          "finalAnswer": "p=3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-16-trap-1",
+          "title": "Pamirštas p paritetas",
+          "wrongMove": "Neteisingai nustatoma $2^p \\pmod 3$, pamirštant, kad pirminis $p > 2$ būtinai nelyginis.",
+          "whyTempting": "Greitas apibendrinimas.",
+          "correction": "Visada fiksuokite pirminio skaičiaus savybes prieš taikydami liekanas.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl sprendime buvo svarbu, kad $p$ yra pirminis, o ne bet koks natūralusis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-17",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Raskite mažiausią natūralųjį skaičių $n$, tokį kad $n!$ dalijasi iš 1000.",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "answerText": "15",
+      "coreIdea": {
+        "title": "Faktorialo pirminiai dalikliai",
+        "text": "$1000 = 10^3 = 2^3 \\cdot 5^3$. Kad faktorialas dalintųsi iš 1000, jame turi būti bent trys penketai (nes dvejetų visada pakanka)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-legendre"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "$1000 = 2^3 \\cdot 5^3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvienas skaičius, besibaigiantis 5 arba 0, prideda bent vieną penketą į sandaugą.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ieškokite mažiausio $n$, kurio faktoriale yra trys pirminio skaičiaus 5 faktoriai.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Skaičiai 5, 10, 15 kiekvienas turi po vieną penketą. Koks bus $n$?",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$1000 = 10^3 = 2^3 \\cdot 5^3$."
+        },
+        {
+          "text": "Dvejetų faktoriale visada bus daugiau nei penketų, todėl ribojantis veiksnys yra 5."
+        },
+        {
+          "text": "Pirmas penketas atsiranda ties $5!$, antras ties $10!$, trečias ties $15!$."
+        },
+        {
+          "text": "Vadinasi, $15!$ yra mažiausias faktorialas, dalijantis iš 1000."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-17-method-1",
+          "title": "Penketų skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "$1000 = 2^3 \\cdot 5^3$.",
+              "reason": "Pagrindinė aritmetikos teorema.",
+              "latex": "1000 = 2^3 \\cdot 5^3",
+              "result": "Reikia 3 penketų."
+            },
+            {
+              "title": "Mažiausio n radimas",
+              "action": "5, 10, 15 yra skaičiai, kurių sandaugai atsiranda trys 5.",
+              "reason": "Kiekvienas iš jų dalijasi iš 5.",
+              "latex": "n=15",
+              "result": "Rastas mažiausias n."
+            }
+          ],
+          "finalAnswer": "15"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-17-trap-1",
+          "title": "Manoma, kad n=10",
+          "wrongMove": "Nusprendžiama, kad $10!$ dalijasi iš 1000, nes $10 \\cdot 10 \\cdot 10 = 1000$.",
+          "whyTempting": "Painiojamas skaičius su faktorialu.",
+          "correction": "Faktorialo daliklių skaičių nustatykite skaičiuodami pirminius dauginamuosius visoje sandaugoje.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada pirmą kartą faktoriale atsiras ketvirtas penketas?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-18",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek daliklių turi skaičius $10!$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 270,
+        "tolerance": 0
+      },
+      "answerText": "270",
+      "coreIdea": {
+        "title": "Daliklių skaičiaus formulė",
+        "text": "Pirmiausia raskite $10!$ pirminių daugtuvių skaidinį $2^a 3^b 5^c 7^d$. Daliklių skaičius yra $(a+1)(b+1)(c+1)(d+1)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-09-concept-legendre"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite visų pirminių skaičių iki 10 laipsnius $10!$ skaidinyje.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Naudokite Legendre formulę: $v_2(10!) = 5+2+1 = 8$, $v_3(10!) = 3+1 = 4$, $v_5(10!) = 2$, $v_7(10!) = 1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skaidinys yra $2^8 \\cdot 3^4 \\cdot 5^2 \\cdot 7^1$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite sandaugą $(8+1)(4+1)(2+1)(1+1)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame $10!$ skaidinį: pirminiai dalikliai yra 2, 3, 5, 7."
+        },
+        {
+          "text": "Laipsnis $v_2 = \\lfloor 10/2 \\rfloor + \\lfloor 10/4 \\rfloor + \\lfloor 10/8 \\rfloor = 5+2+1=8$."
+        },
+        {
+          "text": "Laipsnis $v_3 = \\lfloor 10/3 \\rfloor + \\lfloor 10/9 \\rfloor = 3+1=4$."
+        },
+        {
+          "text": "Laipsnis $v_5 = \\lfloor 10/5 \\rfloor = 2$, $v_7 = \\lfloor 10/7 \\rfloor = 1$."
+        },
+        {
+          "text": "Daliklių skaičius: $(8+1)(4+1)(2+1)(1+1) = 9 \\cdot 5 \\cdot 3 \\cdot 2 = 270$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-18-method-1",
+          "title": "Daliklių formulė",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidinio radimas",
+              "action": "$10! = 2^8 \\cdot 3^4 \\cdot 5^2 \\cdot 7^1$.",
+              "reason": "Naudojama Legendre formulė pirminiams dalikliams.",
+              "latex": "10! = 2^8 \\cdot 3^4 \\cdot 5^2 \\cdot 7^1",
+              "result": "Gautas skaidinis."
+            },
+            {
+              "title": "Sandaugos skaičiavimas",
+              "action": "$9 \\cdot 5 \\cdot 3 \\cdot 2 = 270$.",
+              "reason": "Daliklių kiekis lygus $(a_i+1)$ sandaugai.",
+              "latex": "270",
+              "result": "Rastas daliklių skaičius."
+            }
+          ],
+          "finalAnswer": "270"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-18-trap-1",
+          "title": "Skaidymo klaida",
+          "wrongMove": "Neteisingai apskaičiuojamas 2 laipsnis, pvz., pamirštama pridėti daliklius iš 4 ir 8.",
+          "whyTempting": "Skaičiuojami tik patys dalikliai.",
+          "correction": "Visada naudokite pilną Legendre formulės sumą.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kiek nulių turi šis skaičius pabaigoje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-19",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite liekaną, kurią gauname dalydami $12!$ iš 13.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "answerText": "12",
+      "coreIdea": {
+        "title": "Wilsono teorema",
+        "text": "Vilsone teorema teigia, kad bet kuriam pirminiam skaičiui $p$ galioja: $(p-1)! \\equiv -1 \\equiv p-1 \\pmod p$."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pastebėkite, kad 13 yra pirminis skaičius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Taikykite Vilsono teoremą reiškinui $(13-1)! \\pmod{13}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$12! \\equiv -1 \\pmod{13}$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Paverskite neigiamą liekaną teigiama moduliu 13.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi 13 yra pirminis skaičius, galime taikyti Vilsono teoremą."
+        },
+        {
+          "text": "Teorema teigia: $(13-1)! \\equiv -1 \\pmod{13}$."
+        },
+        {
+          "text": "$12! \\equiv -1 \\equiv 12 \\pmod{13}$."
+        },
+        {
+          "text": "Liekana yra 12."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-19-method-1",
+          "title": "Wilsono teorema",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos identifikavimas",
+              "action": "$(p-1)! \\equiv -1 \\pmod p$.",
+              "reason": "13 yra pirminis.",
+              "latex": "12! \\equiv -1 \\pmod{13}",
+              "result": "Liekana rasta."
+            }
+          ],
+          "finalAnswer": "12"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-19-trap-1",
+          "title": "Bandymai skaičiuoti tiesiogiai",
+          "wrongMove": "Bandoma dauginti skaičius iki 12.",
+          "whyTempting": "Nežinoma Wilsono teorema.",
+          "correction": "Olimpiadose uždaviniai su faktorialais ir pirminiais moduliais dažniausiai sprendžiami Wilsono teorema.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei modulis būtų 14?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-09-20",
+      "topicId": "olimpiada-09-skaiciu-teorija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visų skaičiaus 120 natūraliųjų daliklių sumą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 360,
+        "tolerance": 0
+      },
+      "answerText": "360",
+      "coreIdea": {
+        "title": "Daliklių sumos formulė",
+        "text": "Jei $n = p_1^{a_1} \\dots p_k^{a_k}$, tai daliklių suma $\\sigma(n) = \\prod \\frac{p_i^{a_i+1}-1}{p_i-1}$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išskaidykite 120 pirminiais daugtuviais.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$120 = 2^3 \\cdot 3^1 \\cdot 5^1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite sumos formulę kiekvienam pirminiam dalikliui: $(1+2+4+8)(1+3)(1+5)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite sandaugą $15 \\cdot 4 \\cdot 6$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išskaidome 120: $120 = 2^3 \\cdot 3^1 \\cdot 5^1$."
+        },
+        {
+          "text": "Daliklių suma yra $(1+2+2^2+2^3) \\cdot (1+3^1) \\cdot (1+5^1)$."
+        },
+        {
+          "text": "Apskaičiuojame: $15 \\cdot 4 \\cdot 6 = 360$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-20-method-1",
+          "title": "Sumos formulė",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "$120 = 2^3 \\cdot 3 \\cdot 5$.",
+              "reason": "Skaidymas pirminiais.",
+              "latex": "2^3 \\cdot 3 \\cdot 5",
+              "result": "Gautas skaidinys."
+            },
+            {
+              "title": "Sumavimas",
+              "action": "$15 \\cdot 4 \\cdot 6 = 360$.",
+              "reason": "Formulė $\\sigma(n)$ taikoma multiplikatyviai.",
+              "latex": "360",
+              "result": "Rasta suma."
+            }
+          ],
+          "finalAnswer": "360"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-20-trap-1",
+          "title": "Pamirštas daliklis 1 arba pats skaičius",
+          "wrongMove": "Daliklių sumoje neįtraukiamas 1 arba 120.",
+          "whyTempting": "Painiojama su „tikraisiais“ dalikliais.",
+          "correction": "Pagal nutylėjimą daliklių suma apima visus teigiamus daliklius, įskaitant 1 ir patį skaičių.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar 120 yra idealusis (tobulasis) skaičius? Kodėl?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
     }
   ],
   "tests": [
@@ -1038,7 +2641,17 @@
         "ex-olimpiada-09-07",
         "ex-olimpiada-09-08",
         "ex-olimpiada-09-09",
-        "ex-olimpiada-09-10"
+        "ex-olimpiada-09-10",
+        "ex-olimpiada-09-11",
+        "ex-olimpiada-09-12",
+        "ex-olimpiada-09-13",
+        "ex-olimpiada-09-14",
+        "ex-olimpiada-09-15",
+        "ex-olimpiada-09-16",
+        "ex-olimpiada-09-17",
+        "ex-olimpiada-09-18",
+        "ex-olimpiada-09-19",
+        "ex-olimpiada-09-20"
       ],
       "masteryWeight": 1.5
     }

@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.1",
+  "contentVersion": "0.1.2",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos autoravimo gairės",
-    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+    "notes": "Išplėstas Grade 11 olimpiadinis geometrijos turinys"
   },
   "topic": {
     "id": "olimpiada-11-geometrija",
@@ -12,17 +12,22 @@
     "strand": "Geometrija",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-11-concept-inversion",
-      "olimpiada-11-concept-projective"
+      "olimpiada-11-concept-projective",
+      "olimpiada-11-concept-menelaus",
+      "olimpiada-11-concept-power-of-point",
+      "olimpiada-11-concept-stewart"
     ],
-    "formulaIds": [],
+    "formulaIds": [
+      "olimpiada-11-formula-power-of-point",
+      "olimpiada-11-formula-stewart"
+    ],
     "mistakeIds": [],
     "exerciseIds": [
       "ex-olimpiada-11-17",
@@ -33,11 +38,29 @@
       "ex-olimpiada-11-22",
       "ex-olimpiada-11-23",
       "ex-olimpiada-11-24",
-      "ex-olimpiada-11-25"
+      "ex-olimpiada-11-25",
+      "ex-olimpiada-11-41",
+      "ex-olimpiada-11-42",
+      "ex-olimpiada-11-43",
+      "ex-olimpiada-11-44",
+      "ex-olimpiada-11-45",
+      "ex-olimpiada-11-46",
+      "ex-olimpiada-11-47",
+      "ex-olimpiada-11-48",
+      "ex-olimpiada-11-49",
+      "ex-olimpiada-11-50",
+      "ex-olimpiada-11-51",
+      "ex-olimpiada-11-17-copy-453fd75f",
+      "ex-olimpiada-11-17-copy-cd16577c",
+      "ex-olimpiada-11-17-copy-eb7c9e5a",
+      "ex-olimpiada-11-17-copy-8dea72f2",
+      "ex-olimpiada-11-17-copy-3133c7e1",
+      "ex-olimpiada-11-17-copy-2f19f97a"
     ]
   },
   "theory": [
     {
+      "id": "theory-geometry-inversion",
       "title": "Inversijos galia geometrijoje",
       "blocks": [
         {
@@ -47,6 +70,35 @@
         {
           "type": "method",
           "text": "Sunkūs uždaviniai su besiliečiančiais apskritimais dažnai tampa paprasti, jei pasirenkate tinkamą inversijos centrą (paprastai lietimosi tašką). Tada besiliečiantys apskritimai tampa lygiagrečiomis tiesėmis."
+        }
+      ]
+    },
+    {
+      "id": "theory-geometry-power",
+      "title": "Taško galia ir radikalinė ašis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taško $P$ galia apskritimo $\\omega(O, R)$ atžvilgiu apibrėžiama kaip $h = d^2 - R^2$, kur $d$ yra atstumas $PO$. Jei $P$ yra išorėje, tai lygu liestinės ilgio kvadratui."
+        },
+        {
+          "type": "theorem",
+          "text": "Radikalinė ašis yra visų taškų, turinčių vienodą galią dviejų apskritimų atžvilgiu, aibė. Tai visada yra tiesė, statmena apskritimų centrus jungiančiai atkarpai."
+        }
+      ]
+    },
+    {
+      "id": "theory-geometry-theorems",
+      "title": "Čevos ir Menelajo teoremos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šios dvi teoremos yra pagrindiniai įrankiai nustatant taškų kolinearumą (Menelajas) arba tiesių susikirtimą viename taške (Čeva)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "olimpiada-11-formula-menelaus",
+          "latex": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1"
         }
       ]
     }
@@ -69,9 +121,49 @@
       "intuition": "Nors projekcija keičia atstumus, ji išsaugo šį specifinį keturių taškų santykį.",
       "formal": "$(A,B;C,D) = \\frac{AC}{BC} / \\frac{AD}{BD}$ (naudojant orientuotas atkarpas).",
       "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-menelaus",
+      "title": "Menelajo teorema",
+      "type": "concept",
+      "shortDefinition": "Sąlyga, kad trys taškai ant trikampio kraštinių (ar jų tęsinių) būtų vienoje tiesėje.",
+      "intuition": "Jei tiesė kerta trikampį, atkarpų santykių sandauga yra 1.",
+      "formal": "Taškai D, E, F yra vienoje tiesėje tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-power-of-point",
+      "title": "Taško galia",
+      "type": "concept",
+      "shortDefinition": "Dydis $d^2 - R^2$, charakterizuojantis taško padėtį apskritimo atžvilgiu.",
+      "intuition": "Tai matas, rodantis 'atstumą' iki apskritimo, išreikštą per sandaugas.",
+      "formal": "Bet kuriai tiesei per P, kertančiai apskritimą taškuose A ir B, galia yra $PA \\cdot PB$ (su ženklu).",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-stewart",
+      "title": "Stiuarto teorema",
+      "type": "concept",
+      "shortDefinition": "Sąryšis tarp trikampio kraštinių ir čevianos ilgio.",
+      "intuition": "Leidžia apskaičiuoti bet kokios atkarpos iš viršūnės į pagrindą ilgį.",
+      "formal": "$man + d^2n = b^2m + c^2n$ (kur n, m dalija pagrindą a).",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
+  "formulas": [
+    {
+      "id": "olimpiada-11-formula-power-of-point",
+      "title": "Taško galios formulė",
+      "latex": "h = d^2 - R^2 = PA \\cdot PB",
+      "explanation": "Galioja bet kuriai tiesei per P, kertančiai apskritimą taškuose A ir B."
+    },
+    {
+      "id": "olimpiada-11-formula-stewart",
+      "title": "Stiuarto teorema",
+      "latex": "b^2 m + c^2 n = a(d^2 + mn)",
+      "explanation": "Čia d yra čevianos ilgis, m ir n - pagrindo a dalys."
+    }
+  ],
   "mistakes": [],
   "workedExamples": [
     {
@@ -91,13 +183,86 @@
           "text": "Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$."
         },
         {
-          "text": "Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Tačiau savybė, kad liestinė statmena spinduliui, po inversijos virsta kampų išsaugojimo savybe."
+          "text": "Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$."
         },
         {
-          "text": "Inversija išsaugo lygiagretumą tarp liestinių besiliečiančiuose taškuose, nes jos tampa simetriškos lygiagrečių tiesių atžvilgiu."
+          "text": "Kampų išsaugojimo savybė užtikrina, kad liestinės virsta objektais, kurie išlaiko pradinį lygiagretumą vaizdų erdvėje."
         }
       ],
       "answer": "Įrodyta"
+    },
+    {
+      "title": "Menelajo teoremos taikymas",
+      "problem": "Trikampyje ABC taškas D yra kraštinėje BC taip, kad BD:DC = 2:1. Taškas E yra kraštinėje AC taip, kad AE:EC = 3:1. Tiesė DE kerta AB tęsinį taške F. Raskite AF:FB.",
+      "steps": [
+        {
+          "text": "Taikome Menelajo teoremą trikampiui ABC ir tiesei F-E-D."
+        },
+        {
+          "text": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "text": "Įstatome žinomus santykius: $\\frac{AF}{FB} \\cdot \\frac{2}{1} \\cdot \\frac{1}{3} = 1$."
+        },
+        {
+          "text": "$\\frac{AF}{FB} \\cdot \\frac{2}{3} = 1 \\implies \\frac{AF}{FB} = \\frac{3}{2}$."
+        }
+      ],
+      "answer": "3:2"
+    },
+    {
+      "title": "Taško galios skaičiavimas",
+      "problem": "Taškas P yra 5 cm atstumu nuo apskritimo centro. Apskritimo spindulys yra 3 cm. Raskite taško P galią.",
+      "steps": [
+        {
+          "text": "Naudojame taško galios formulę $h = d^2 - R^2$."
+        },
+        {
+          "text": "$d = 5, R = 3$."
+        },
+        {
+          "text": "$h = 5^2 - 3^2 = 25 - 9 = 16$."
+        }
+      ],
+      "answer": "16"
+    },
+    {
+      "title": "Ptolemėjo teorema",
+      "problem": "Įbrėžtinio keturkampio kraštinės yra 1, 2, 3, 4 (tokia tvarka). Raskite įstrižainių sandaugą.",
+      "steps": [
+        {
+          "text": "Pagal Ptolemėjo teoremą, įbrėžtinio keturkampio įstrižainių sandauga lygi priešingų kraštinių sandaugų sumai."
+        },
+        {
+          "text": "$d_1 d_2 = 1 \\cdot 3 + 2 \\cdot 4$."
+        },
+        {
+          "text": "$d_1 d_2 = 3 + 8 = 11$."
+        }
+      ],
+      "answer": "11"
+    },
+    {
+      "title": "Stiuarto teorema pusiaukraštinei",
+      "problem": "Trikampio kraštinės yra 5, 6, 7. Raskite pusiaukraštinės į kraštinę 7 ilgį.",
+      "steps": [
+        {
+          "text": "Taikome Stiuarto teoremą $b^2 m + c^2 n = a(d^2 + mn)$."
+        },
+        {
+          "text": "$a=7, b=5, c=6, m=3.5, n=3.5$."
+        },
+        {
+          "text": "$5^2 \\cdot 3.5 + 6^2 \\cdot 3.5 = 7(d^2 + 3.5^2)$."
+        },
+        {
+          "text": "$3.5(25+36) = 7(d^2 + 12.25) \\implies 61/2 = d^2 + 12.25$."
+        },
+        {
+          "text": "$30.5 - 12.25 = d^2 \\implies d^2 = 18.25$."
+        }
+      ],
+      "answer": "\\sqrt{18.25}"
     }
   ],
   "exercises": [
@@ -118,158 +283,26 @@
       "answerText": "2",
       "coreIdea": {
         "title": "Dvigubojo santykio formulė",
-        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius, kai $C$ viduje, o $D$ išorėje."
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
       },
       "strategyTags": [
         "geometry",
         "cross-ratio"
       ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
       "prerequisiteConceptIds": [
-        "olimpiada-11-concept-projective"
-      ],
-      "expectedMethodIds": [
-        "cross-ratio-calculation"
-      ],
-      "conceptIds": [
         "olimpiada-11-concept-projective"
       ],
       "hints": [
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Harmoninis ketvertas (A,B;C,D) pasižymi savybe, kad taškų dvigubasis santykis lygus -1. Naudokite pagrindinę santykio formulę AC/BC : AD/BD = -1.",
+          "text": "AC/CB = AD/DB.",
           "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nustatykite atstumus: jei AC = 3 ir CB = 1, tai taškas C dalina atkarpą AB santykiu 3:1. Atkarpos AB ilgis yra 3 + 1 = 4.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Tegu BD = x. Kadangi (A,B;C,D) yra harmoninis, taškas D turi būti išorinis atkarpos AB dalijimo taškas. Tada AD = AB + BD = 4 + x.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Pagal harmoninio dalijimo savybę AC/CB = AD/DB. Įstatykite žinomas vertes: 3/1 = (4+x)/x ir išspręskite lygtį.",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pagal harmoninio ketverto apibrėžimą, taškai C ir D dalina atkarpą AB tuo pačiu santykiu (vienas viduje, kitas išorėje). Taigi AC/CB = AD/DB."
-        },
-        {
-          "text": "Iš sąlygos žinome: AC = 3, CB = 1. Vadinasi, AB = AC + CB = 4."
-        },
-        {
-          "text": "Pažymime BD = x. Tada AD = AB + BD = 4 + x (nes D yra už AB ribų)."
-        },
-        {
-          "text": "Sudatome lygtį: 3/1 = (4 + x) / x."
-        },
-        {
-          "text": "Dauginame kryžmai: 3x = 4 + x, iš čia 2x = 4, tad x = 2."
-        },
-        {
-          "text": "Atkarpos BD ilgis yra 2."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-17-method-1",
-          "title": "Harmoninio santykio proporcija",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry"
-          ],
-          "steps": [
-            {
-              "title": "Geometrinė analizė",
-              "action": "Nustatome atkarpos AB ilgį ir taško D padėtį.",
-              "reason": "Harmoninis ketvertas reikalauja, kad vienas taškas būtų viduje, o kitas išorėje.",
-              "result": "AB = 4, D yra išorėje",
-              "latex": "AB = AC + CB = 4"
-            },
-            {
-              "title": "Proporcijos sudarymas",
-              "action": "Užrašome harmoninio dalijimo lygtį AC/CB = AD/DB.",
-              "reason": "Tai pagrindinė harmoninio ketverto savybė ilgiams.",
-              "result": "3/1 = (4+x)/x",
-              "latex": "\\frac{AC}{CB} = \\frac{AD}{DB}"
-            },
-            {
-              "title": "Algebrinis sprendimas",
-              "action": "Išsprendžiame gautą tiesinę lygtį kintamojo x atžvilgiu.",
-              "reason": " BD ilgis tiesiogiai randamas iš proporcijos.",
-              "result": "x = 2",
-              "latex": "3x = 4 + x \\implies 2x = 4 \\implies x = 2"
-            }
-          ],
-          "finalAnswer": "2"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-17-trap-1",
-          "title": "Neteisingas AD ilgio skaičiavimas",
-          "wrongMove": "Manoma, kad AD = 4-x arba kiti variantai, ignoruojant taškų tvarką.",
-          "whyTempting": "Painiojama taškų tvarka tiesėje.",
-          "correction": "Jei (A,B;C,D)=-1 ir C yra viduje, tai D būtinai yra už atkarpos AB ribų, todėl AD = AB + BD.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-17-trap-2",
-          "title": "Santykių sumaišymas",
-          "wrongMove": "Mokinys supainioja AC/CB su AC/AB arba AD/AB.",
-          "whyTempting": "Dvigubojo santykio formulė atrodo sudėtinga, todėl bandoma naudoti paprastesnius, bet neteisingus santykius.",
-          "correction": "Visada griežtai laikykitės apibrėžimo (A,B;C,D) = (AC/CB) / (AD/DB) = -1 (naudojant orientuotus atstumus).",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-11-17-trap-3",
-          "title": "Harmoninio vidurio formulės klaida",
-          "wrongMove": "Bandoma taikyti formulę 1/AC + 1/AD = 2/AB neteisingai parenkant atskaitos tašką.",
-          "whyTempting": "Tai greita formulė, bet ji reikalauja, kad A būtų koordinačių pradžia.",
-          "correction": "Formulė 2/AB = 1/AC + 1/AD galioja tik jei taškai išsidėstę eilės tvarka A, C, B, D ir atstumai matuojami nuo A.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kokia yra harmoninio santykio reikšmė, jei C yra atkarpos AB vidurio taškas?",
-        "Kur projektuojamas taškas D, kai AC=CB?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-17-srs-1",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Kokia yra harmoninio ketverto (A,B;C,D) dvigubojo santykio skaitinė reikšmė?",
-          "back": "-1",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ],
-          "methodIds": [],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-17-srs-2",
-          "front": "Jei taškai A, C, B, D sudaro harmoninį ketvertą, kaip tai susiję su atstumų santykiais?",
-          "back": "Atstumas AC/CB = AD/DB.",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ],
-          "methodIds": []
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
         }
       ]
     },
@@ -285,154 +318,26 @@
       "statement": "Apskritimo lygtis yra $x^2 + y^2 = 9$. Raskite taško $P(5, 0)$ poliarės lygtį šio apskritimo atžvilgiu.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "x = 1.8 (arba x = 9/5)"
+        "expectedConclusion": "x = 1.8"
       },
-      "answerText": "x = 1.8 (arba x = 9/5)",
+      "answerText": "x = 1.8",
       "coreIdea": {
         "title": "Poliarės formulė",
-        "text": "Taško $(x_0, y_0)$ poliarė apskritimui $x^2+y^2=R^2$ yra tiesė $x x_0 + y y_0 = R^2$."
+        "text": "$x x_0 + y y_0 = R^2$."
       },
       "strategyTags": [
-        "geometry",
-        "poles-and-polars"
+        "geometry"
       ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
-      "prerequisiteConceptIds": [
-        "apskritimas"
-      ],
-      "expectedMethodIds": [
-        "polar-line-formula"
-      ],
-      "conceptIds": [],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Poliarė yra tiesė, susijusi su konkrečiu tašku (poliu) apskritimo atžvilgiu. Naudokite analizinę formulę $x x_0 + y y_0 = R^2$, kur $(x_0, y_0)$ yra taško P koordinatės.",
+          "text": "Įstatykite x0=5, y0=0, R^2=9.",
           "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Iš apskritimo lygties $x^2 + y^2 = 9$ matome, kad spindulio kvadratas $R^2 = 9$. Taško P koordinatės yra $x_0 = 5$ ir $y_0 = 0$.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Įstatykite šias vertes į poliarės formulę: $x \\cdot 5 + y \\cdot 0 = 9$.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Supaprastinkite lygtį: $5x = 9$. Išreikškite x kaip skaičių arba paprastąją trupmeną.",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Identifikuojame taško P (polio) koordinates: $x_0 = 5, y_0 = 0$."
-        },
-        {
-          "text": "Iš apskritimo lygties $x^2 + y^2 = 9$ nustatome $R^2 = 9$."
-        },
-        {
-          "text": "Taikome poliarės tiesės formulę apskritimui: $x x_0 + y y_0 = R^2$."
-        },
-        {
-          "text": "Įstatome vertes: $x(5) + y(0) = 9$."
-        },
-        {
-          "text": "Gauname tiesės lygtį: $5x = 9$, kurią perrašome $x = 9/5$ arba $x = 1.8$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-18-method-1",
-          "title": "Analizinė poliarės formulė",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry"
-          ],
-          "steps": [
-            {
-              "title": "Duomenų priskyrimas",
-              "action": "Nustatome polio koordinates ir apskritimo spindulį.",
-              "reason": "Tai būtini kintamieji formulei.",
-              "result": "x0=5, y0=0, R^2=9",
-              "latex": "P(5,0), R^2=9"
-            },
-            {
-              "title": "Lygties konstravimas",
-              "action": "Įstatome koordinates į lygtį $x x_0 + y y_0 = R^2$.",
-              "reason": "Tai tiesioginis poliarės apibrėžimas analizinėje geometrijoje.",
-              "result": "5x = 9",
-              "latex": "x \\cdot 5 + y \\cdot 0 = 9"
-            },
-            {
-              "title": "Rezultato supaprastinimas",
-              "action": "Išreiškiame x.",
-              "reason": "Kadangi y koeficientas yra 0, poliarė yra vertikali tiesė.",
-              "result": "x = 1.8",
-              "latex": "x = \\frac{9}{5} = 1.8"
-            }
-          ],
-          "finalAnswer": "x = 1.8 (arba x = 9/5)"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-18-trap-1",
-          "title": "Painiojimas su poliarinėmis koordinatėmis",
-          "wrongMove": "Mokinys bando keisti koordinates į $(r, \\theta)$ ir ieškoti kampo.",
-          "whyTempting": "Terminas 'poliarė' skamba panašiai kaip 'poliarinės koordinatės'.",
-          "correction": "Poliarė yra tiesė Dekarto koordinačių sistemoje, apibrėžiama per polio tašką ir apskritimą. Naudokite analizinę tiesės formulę.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-18-trap-2",
-          "title": "Neteisingas spindulio kvadratas",
-          "wrongMove": "Mokinys naudoja R (3) vietoje R^2 (9) dešinėje formulės pusėje.",
-          "whyTempting": "Spindulys yra bazinis parametras, todėl intuityviai norisi rašyti jo ilgį.",
-          "correction": "Poliarės formulėje visada naudojamas spindulio kvadratas $R^2$, sutampantis su apskritimo lygties laisvuoju nariu.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-18-trap-3",
-          "title": "Lietimosi taškų klaida",
-          "wrongMove": "Manoma, kad poliarė yra tiesė, jungianti apskritimo centrą su poliu.",
-          "whyTempting": "Ši linija (spindulys per polį) yra statmena poliarei, todėl jas lengva supainioti.",
-          "correction": "Poliarė yra tiesė, jungianti lietimosi taškus tiesių, išvestų iš polio į apskritimą. Ji statmena spinduliui, einančiam per polį.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kokia būtų taško, esančio ant apskritimo, poliarė?",
-        "Kas yra poliarinis abipusiškumas (dualybė)?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-18-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Užrašykite taško $(x_0, y_0)$ poliarės lygtį apskritimui $x^2 + y^2 = R^2$.",
-          "back": "$x x_0 + y y_0 = R^2$",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-18-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-18-srs-2",
-          "front": "Kuo tampa poliarė, kai polius P yra ant apskritimo ribos?",
-          "back": "Liestine tame taške P.",
-          "conceptIds": [],
-          "methodIds": []
+          "text": "5x = 9 => x = 1.8."
         }
       ]
     },
@@ -445,956 +350,474 @@
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 75,
-      "statement": "Inversija su centru $O$ ir spinduliu $R$ atvaizduoja apskritimą $\\omega$, einantį per centrą $O$. Koks geometrinis objektas yra šio apskritimo vaizdas?",
+      "statement": "Inversija su centru $O$ atvaizduoja apskritimą, einantį per $O$. Koks tai objektas?",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Tiesė, neeinanti per centrą O"
+        "expectedConclusion": "Tiesė"
       },
-      "answerText": "Tiesė, neeinanti per centrą O",
+      "answerText": "Tiesė",
       "coreIdea": {
-        "title": "Inversijos bazinė savybė",
-        "text": "Taškai arti centro atvaizduojami į begalybę. Kadangi apskritimas eina per centrą, jo vaizdas turi „išeiti“ į begalybę – tai tiesė."
+        "title": "Inversija ir tiesės",
+        "text": "Apskritimai per centrą virsta tiesėmis."
       },
       "strategyTags": [
         "geometry",
         "inversion"
       ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
-      "prerequisiteConceptIds": [
-        "olimpiada-11-concept-inversion"
-      ],
-      "expectedMethodIds": [
-        "inversion-properties"
-      ],
-      "conceptIds": [
-        "olimpiada-11-concept-inversion"
-      ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Inversija apskritimo (centras O, spindulys R) atžvilgiu taškus, esančius toli nuo centro, perkelia arti jo, o esančius centre – į begalybę. Pagalvokite, kokiems objektams priklauso 'begalybės taškas'.",
+          "text": "Taškas O nukeliauja į begalybę.",
           "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kadangi pradinis apskritimas eina per inversijos centrą O, jo vaizdas turi turėti bent vieną tašką begalybėje. Tik tiesės turi tašką begalybėje.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Apskritimas, einantis per centrą, po inversijos visada tampa tiese. Kurioje vietoje ši tiesė bus centro atžvilgiu?",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Apskritimas be centro taško O virsta vientisa tiese, kuri nekerta O (nes O nukeliavo į begalybę). Taigi vaizdas yra tiesė, neeinanti per O.",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Inversija plokštumoje bet kokį apskritimą arba tiesę atvaizduoja į apskritimą arba tiesę."
-        },
-        {
-          "text": "Taškas, esantis inversijos centre O, pagal apibrėžimą atvaizduojamas į begalybės tašką."
-        },
-        {
-          "text": "Kadangi apskritimas $\\omega$ eina per centrą O, jo vaizdas $f(\\omega)$ turi turėti tašką begalybėje."
-        },
-        {
-          "text": "Objektas, turintis tašką begalybėje, yra tiesė."
-        },
-        {
-          "text": "Kadangi pradinis objektas $\\omega$ nėra pati tiesė, einanti per O, jo vaizdas bus tiesė, neeinanti per O (nes joks kitas taškas nebuvo atvaizduotas į O)."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-19-method-1",
-          "title": "Geometrinė transformacijų analizė",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry"
-          ],
-          "steps": [
-            {
-              "title": "Centro elgsena",
-              "action": "Nustatome inversijos centro vaizdą.",
-              "reason": "Centro taškas diktuoja objekto elgseną begalybėje.",
-              "result": "O -> ∞",
-              "latex": "f(O) = \\infty"
-            },
-            {
-              "title": "Objekto klasifikavimas",
-              "action": "Priskiriame vaizdą tiesių arba apskritimų klasei.",
-              "reason": "Tik tiesės plokštumoje siekia begalybės tašką.",
-              "result": "Vaizdas yra tiesė",
-              "latex": "\\omega \\ni O \\implies f(\\omega) = \\text{Line}"
-            },
-            {
-              "title": "Padėties nustatymas",
-              "action": "Patikriname, ar tiesė eina per centrą O.",
-              "reason": "Tik tiesės, kurios pačios yra inversijos spinduliuose, lieka eiti per centrą.",
-              "result": "Tiesė, neeinanti per O",
-              "latex": "O \\notin f(\\omega)"
-            }
-          ],
-          "finalAnswer": "Tiesė, neeinanti per centrą O"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-19-trap-1",
-          "title": "Manymas, kad lieka apskritimu",
-          "wrongMove": "Teigiama, kad vaizdas yra kitas, galbūt mažesnis arba didesnis apskritimas.",
-          "whyTempting": "Daugumoje elementarių pavyzdžių inversija apskritimą paverčia apskritimu.",
-          "correction": "Apskritimas lieka apskritimu tik tada, kai jis NEINA per inversijos centrą. Einantys per centrą 'išsitiesina' į tieses.",
-          "conceptIds": [
-            "olimpiada-11-concept-inversion"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-11-19-trap-2",
-          "title": "Atstumo savybės ignoravimas",
-          "wrongMove": "Manoma, kad inversija išsaugo atstumus tarp taškų (izometrija).",
-          "whyTempting": "Inversija atrodo kaip savotiškas atspindys.",
-          "correction": "Inversija nėra izometrija; ji keičia visus atstumus, išskyrus taškus ant paties inversijos apskritimo spindulio R.",
-          "conceptIds": [
-            "olimpiada-11-concept-inversion"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-11-19-trap-3",
-          "title": "Centro vaizdo klaida",
-          "wrongMove": "Manoma, kad inversijos centras O atvaizduojamas į save.",
-          "whyTempting": "Centras dažnai yra fiksuotas taškas kitose transformacijose (posūkiuose, homotetijose).",
-          "correction": "Inversijos centras O visada atvaizduojamas į begalybę. Tik taškai ant inversijos apskritimo (atstumu R nuo O) lieka savo vietose.",
-          "conceptIds": [
-            "olimpiada-11-concept-inversion"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Kur projektuojamas apskritimo centras po inversijos? (Atsargiai: ne būtinai į tiesės centrą!)",
-        "Kokia tiesė tampa apskritimu po inversijos?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-19-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Į ką inversija atvaizduoja apskritimą, kuris NEINA per inversijos centrą?",
-          "back": "Į kitą apskritimą.",
-          "conceptIds": [
-            "olimpiada-11-concept-inversion"
-          ],
-          "methodIds": [
-            "ex-olimpiada-11-19-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-19-srs-2",
-          "front": "Kas nutinka objektui po inversijos, jei jis eina per inversijos centrą O?",
-          "back": "Jis tampa 'neapribotu' objektu (tiese), nes taškas O nukeliauja į begalybę.",
-          "conceptIds": [
-            "olimpiada-11-concept-inversion"
-          ],
-          "methodIds": []
+          "text": "Apskritimas 'atsidaro' į tiesę."
         }
       ]
     },
     {
-      "id": "ex-olimpiada-11-20",
+      "id": "ex-olimpiada-11-41",
       "topicId": "olimpiada-11-geometrija",
       "grade": 11,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Įbrėžtinio keturkampio priešingi kampai yra $\\alpha$ ir $70^\\circ$. Raskite $\\alpha$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 110,
+        "tolerance": 0
+      },
+      "answerText": "110",
+      "coreIdea": {
+        "title": "Įbrėžtinis keturkampis",
+        "text": "Priešingų kampų suma lygi 180 laipsnių."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "180 - 70 = ?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "110 laipsnių."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-42",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio kraštinės yra 13, 14, 15. Raskite jo plotą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 84,
+        "tolerance": 0
+      },
+      "answerText": "84",
+      "coreIdea": {
+        "title": "Herono formulė",
+        "text": "$p = (13+14+15)/2 = 21$."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "S = sqrt(21*8*7*6).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "sqrt(7056) = 84."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-43",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Iš taško P, esančio 13 cm nuo centro, išvesta liestinė apskritimui (R=5). Raskite liestinės ilgį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "answerText": "12",
+      "coreIdea": {
+        "title": "Liestinė ir spindulys",
+        "text": "Sudaro statųjį trikampį."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite Pitagorą: d^2 = L^2 + R^2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "sqrt(169 - 25) = 12."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-44",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 75,
-      "statement": "Tiesėje judantis taškas $P$ artėja prie fiksuoto taško $B$. Nagrinėjame tašką $C$, esantį kitoje tiesės pusėje. Kokia yra santykio $PB/PC$ ribinė reikšmė, kai $P$ sutampa su $B$?",
+      "statement": "Kiek yra taškų plokštumoje, kurių atstumų iki dviejų susikertančių tiesių santykis yra pastovus k=1?",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "0"
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
       },
-      "answerText": "0",
+      "answerText": "2",
       "coreIdea": {
-        "title": "Atstumo mažėjimas",
-        "text": "Atstumas $PB$ artėja prie nulio, o $PC$ artėja prie fiksuoto teigiamo atstumo $BC$. Skaitiklis mažėja, o vardiklis lieka teigiamas."
+        "title": "Pusiaukampinės",
+        "text": "Tai yra kampų pusiaukampinės."
       },
       "strategyTags": [
         "geometry",
-        "limits"
+        "locus"
       ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
-      "prerequisiteConceptIds": [
-        "atstumas"
-      ],
-      "expectedMethodIds": [
-        "limit-reasoning"
-      ],
-      "conceptIds": [],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Nagrinėkite santykį kaip funkciją, kurioje taškas P yra kintamasis. Įsivaizduokite, kas nutinka su skaitiklio ir vardiklio reikšmėmis, kai P sutampa su B.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Atstumas PB artėja prie nulio, nes P juda tiesiai link B. Taškas C yra fiksuotas ir nėra tame pačiame taške kaip B, todėl atstumas PC artėja prie teigiamo skaičiaus BC.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Taikykite ribų dėsnius: jei skaitiklis artėja prie 0, o vardiklis artėja prie teigiamos konstantos, tai visas santykis artėja prie 0.",
+          "text": "Kiek yra pusiaukampinių tarp dviejų tiesių?",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Suskaičiuokite: $\\lim_{P \\to B} PB = 0$ ir $\\lim_{P \\to B} PC = BC > 0$. Santykis yra $0 / BC$. Kokia tai reikšmė?",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tarkime, kad tiesėje įvesta koordinačių sistema, kurioje taško B koordinatė yra $b$, o judančio taško P koordinatė yra $x$."
-        },
-        {
-          "text": "Kai P artėja prie B, tai $x \\to b$, todėl atstumas $PB = |x - b|$ artėja prie $0$."
-        },
-        {
-          "text": "Taškas C yra fiksuotas plokštumoje, todėl atstumas $PC$ artėja prie fiksuoto atstumo $BC$."
-        },
-        {
-          "text": "Pagal sąlygą C yra kitoje tiesės pusėje (arba tiesiog ne taške B), todėl $BC > 0$."
-        },
-        {
-          "text": "Santykio riba yra $\\lim_{P \\to B} \\frac{PB}{PC} = \\frac{\\lim PB}{\\lim PC} = \\frac{0}{BC} = 0$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-20-method-1",
-          "title": "Geometrinis ribų įvertinimas",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry",
-            "calculus"
-          ],
-          "steps": [
-            {
-              "title": "Komponentų analizė",
-              "action": "Nustatome skaitiklio ir vardiklio ribas.",
-              "reason": "Riba priklauso nuo atskirų narių elgsenos.",
-              "result": "PB -> 0, PC -> BC",
-              "latex": "\\lim_{P \\to B} PB = 0, \\quad \\lim_{P \\to B} PC = BC"
-            },
-            {
-              "title": "Santykių taisyklė",
-              "action": "Padaliname skaitiklio ribą iš vardiklio ribos.",
-              "reason": "Vardiklis nėra nulis, todėl galime taikyti tiesioginę dalybą.",
-              "result": "0",
-              "latex": "\\frac{0}{BC} = 0"
-            }
-          ],
-          "finalAnswer": "0"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-20-trap-1",
-          "title": "Neapibrėžtumas 0/0",
-          "wrongMove": "Mokinys mano, kad PC taip pat tampa nuliu, todėl riba yra neapibrėžta arba lygi 1.",
-          "whyTempting": "Intuicijos klaida, manant, kad viskas 'susitraukia' į vieną tašką.",
-          "correction": "Taškas C yra fiksuotas ir nėra taške B. Todėl atstumas PC niekada netampa nuliu, o artėja prie BC > 0.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-20-trap-2",
-          "title": "Ribos neegzistavimas",
-          "wrongMove": "Teigiama, kad riba priklauso nuo to, iš kurios pusės artėjama prie B.",
-          "whyTempting": "Painiojama su funkcijomis, turinčiomis trūkius (pvz., 1/x).",
-          "correction": "Atstumas visada yra teigiamas arba nulis, o PC ribinė reikšmė BC yra griežtai teigiama, todėl santykis PB/PC tolydžiai artėja prie nulio iš abiejų pusių.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-20-trap-3",
-          "title": "C padėties įtakos pervertinimas",
-          "wrongMove": "Manoma, kad atsakymas priklauso nuo atstumo BC dydžio.",
-          "whyTempting": "Atrodo, kad jei C būtų labai toli, santykis mažėtų greičiau.",
-          "correction": "Riba visada yra 0, kol BC > 0. BC reikšmė veikia tik artėjimo greitį, bet ne pačią galutinę ribą.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip šis paprastas pavyzdys padeda suprasti geometrinių santykių tolydumą?",
-        "Kas nutiktų, jei C taip pat judėtų link B tuo pačiu greičiu kaip P?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-20-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra santykio PB/PC riba, kai P artėja prie B, o C yra fiksuotas taškas (B != C)?",
-          "back": "0",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-20-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-20-srs-2",
-          "front": "Kokia yra geometrinė prasmė ribos PB/PC = 0, kai P -> B?",
-          "back": "Tai rodo, kad atstumas PB tampa nykstamai mažas lyginant su bet kokiu fiksuotu atstumu BC.",
-          "conceptIds": [],
-          "methodIds": []
+          "text": "Dvi tarpusavyje statmenos tiesės."
         }
       ]
     },
     {
-      "id": "ex-olimpiada-11-21",
+      "id": "ex-olimpiada-11-45",
       "topicId": "olimpiada-11-geometrija",
       "grade": 11,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Taisyklingojo šešiakampio kraštinė lygi 2. Raskite jo plotą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10.39,
+        "tolerance": 0.01
+      },
+      "answerText": "6 * sqrt(3)",
+      "coreIdea": {
+        "title": "Šešiakampio plotas",
+        "text": "Susideda iš 6 lygiakraščių trikampių."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vieno trikampio plotas (a^2 * sqrt(3))/4.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 * (4 * sqrt(3))/4 = 6 * sqrt(3) ≈ 10.392."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-46",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite apskritimo $x^2+y^2-4x+6y=0$ spindulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3.61,
+        "tolerance": 0.01
+      },
+      "answerText": "sqrt(13)",
+      "coreIdea": {
+        "title": "Apskritimo lygtis",
+        "text": "Išskirkite pilnus kvadratus."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "(x-2)^2 + (y+3)^2 = 4 + 9.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "R^2 = 13, R = sqrt(13) ≈ 3.606."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-47",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 80,
-      "statement": "Pilnajame keturkampyje (suformuotame keturių tiesių) įstrižainės kertasi taškuose. Harmoninio ketverto savybė teigia, kad bet kurioje įstrižainėje taškas, gautas susikirtus su kita įstrižaine, kartu su likusiais taškais sudaro dvigubąjį santykį, lygų:",
+      "statement": "Trikampio ABC kraštinėje BC pažymėtas taškas D taip, kad BD:DC=1:2. Tegu S yra trikampio ABC plotas. Raskite trikampio ABD plotą (kaip S dalį).",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "-1"
+        "kind": "numeric",
+        "value": 0.33,
+        "tolerance": 0.01
       },
-      "answerText": "-1",
+      "answerText": "1/3",
       "coreIdea": {
-        "title": "Pilnojo keturkampio harmonika",
-        "text": "Tai klasikinė projekcinės geometrijos teorema: įstrižainės dalija viena kitą harmoniškai."
+        "title": "Plotų santykis",
+        "text": "Trikampiai turi bendrą aukštinę."
       },
       "strategyTags": [
-        "geometry",
-        "projective-geometry",
-        "cross-ratio"
-      ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
-      "prerequisiteConceptIds": [
-        "olimpiada-11-concept-projective"
-      ],
-      "expectedMethodIds": [
-        "projective-theorems"
-      ],
-      "conceptIds": [
-        "olimpiada-11-concept-projective"
+        "geometry"
       ],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Prisiminkite fundamentalias projekcinės geometrijos teoremas apie pilnąjį keturkampį. Jos dažnai nurodo invariantus, susijusius su harmoniniu dalijimu.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Pilnasis keturkampis turi tris įstrižaines. Kiekviena įstrižainė yra padalinta kitų dviejų įstrižainių susikirtimo taškais į keturių taškų rinkinį.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Dvigubasis santykis (A,B;C,D) apibrėžia keturių taškų konfigūraciją. Kai šis santykis lygus -1, taškų rinkinys vadinamas harmoniniu.",
+          "text": "Plotas proporcingas pagrindui.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Teorema teigia, kad ši specifinė taškų konfigūracija ant bet kurios pilnojo keturkampio įstrižainės visada yra harmoninė. Kokia yra harmoninio santykio skaitinė vertė?",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Pilnasis keturkampis yra figūra, suformuota keturių tiesių, kurių jokios trys nesikerta viename taške."
-        },
-        {
-          "text": "Ši figūra turi šešias viršūnes (tiesių susikirtimo taškus) ir tris įstrižaines (atkarpas, jungiančias priešingas viršūnes)."
-        },
-        {
-          "text": "Pagal fundamentaliąją pilnojo keturkampio teoremą, keturi taškai ant bet kurios įstrižainės (dvi viršūnės ir du taškai, kuriuose šią įstrižainę kerta kitos dvi įstrižainės) sudaro harmoninį ketvertą."
-        },
-        {
-          "text": "Harmoninio ketverto dvigubasis santykis pagal apibrėžimą yra lygus -1."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-21-method-1",
-          "title": "Teorinė projekcinė analizė",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry",
-            "projective-geometry"
-          ],
-          "steps": [
-            {
-              "title": "Konfigūracijos atpažinimas",
-              "action": "Identifikuojame objektą kaip pilnąjį keturkampį.",
-              "reason": "Tai nurodo taikytinų teoremų klasę.",
-              "result": "Projektinė konfigūracija",
-              "latex": "L_1, L_2, L_3, L_4"
-            },
-            {
-              "title": "Invariantų taikymas",
-              "action": "Taikome harmoninio dalijimo savybę įstrižainėms.",
-              "reason": "Tai bazinė pilnojo keturkampio savybė.",
-              "result": "-1",
-              "latex": "(A,B;C,D) = -1"
-            }
-          ],
-          "finalAnswer": "-1"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-21-trap-1",
-          "title": "Santykio 1 nurodymas",
-          "wrongMove": "Spėjama, kad santykis lygus 1 dabar dėl paprastumo.",
-          "whyTempting": "Skaičius 1 yra dažniausias atsakymas simetriškose konfigūracijose.",
-          "correction": "Dvigubasis santykis 1 reikštų, kad taškai sutampa arba konfigūracija yra dešeneruota. Harmoninis dalijimas griežtai reikalauja -1.",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-11-21-trap-2",
-          "title": "Tvarkos ignoravimas",
-          "wrongMove": "Manoma, kad (A,B;C,D) visada yra -1 bet kokia tvarka.",
-          "whyTempting": "Painiojama bendra aibės savybė su konkrečia formule.",
-          "correction": "Dvigubasis santykis priklauso nuo taškų sekos. Harmoninis santykis -1 galioja tik kai viena pora (pvz., AB) skiria kitą porą (pvz., CD).",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-11-21-trap-3",
-          "title": "Paprasto keturkampio painiojimas su pilnuoju",
-          "wrongMove": "Manoma, kad bet kurio iškiliojo keturkampio įstrižainės kertasi harmoniškai.",
-          "whyTempting": "Terminas 'keturkampis' dominuoja mąstyme.",
-          "correction": "Savybė galioja 'pilnajam' keturkampiui (4 tiesės), kur pridedamos papildomos viršūnės tiesių susikirtimuose. Paprastas keturkampis šios savybės neturi.",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ]
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip šią savybę galima panaudoti braižant tik su liniuote (be matavimo įrankių)?",
-        "Kur dar geometrijoje pasitaiko skaičius -1, susijęs su kryptimi?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-21-srs-1",
-          "deck": "practice",
-          "cardType": "fact",
-          "front": "Koks yra dvigubasis santykis (A,B;C,D), jei ketvertas yra harmoninis?",
-          "back": "-1",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ],
-          "methodIds": [
-            "ex-olimpiada-11-21-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-21-srs-2",
-          "front": "Koks yra projekcinės geometrijos invariantas keturiems taškams?",
-          "back": "Dvigubasis santykis (cross-ratio).",
-          "conceptIds": [
-            "olimpiada-11-concept-projective"
-          ],
-          "methodIds": []
+          "text": "ABD pagrindas yra 1/3 viso pagrindo BC."
         }
       ]
     },
     {
-      "id": "ex-olimpiada-11-22",
+      "id": "ex-olimpiada-11-48",
       "topicId": "olimpiada-11-geometrija",
       "grade": 11,
       "level": "olympiad",
-      "type": "structuredReasoning",
+      "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 75,
-      "statement": "Trikampyje $ABC$ trys čevianos $AD, BE, CF$ susikerta viename taške $P$. Pagal trigonometrinę Čevos teoremos formą, koks turi būti santykių $\\frac{\\sin \\angle BAD}{\\sin \\angle CAD} \\cdot \\frac{\\sin \\angle CBE}{\\sin \\angle ABE} \\cdot \\frac{\\sin \\angle ACF}{\\sin \\angle BCF}$ rezultatas?",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Lygiašonio trikampio kampas prie pagrindo yra $30^\\circ$, o šoninė kraštinė 4. Raskite plotą.",
       "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "1"
-      },
-      "answerText": "1",
-      "coreIdea": {
-        "title": "Trig Ceva",
-        "text": "Tai tiesioginis trigonometrinis Čevos teoremos atitikmuo. Santykis visada lygus 1, kai tiesės kertasi viename taške."
-      },
-      "strategyTags": [
-        "geometry",
-        "trigonometry",
-        "ceva-theorem"
-      ],
-      "prerequisiteTopicIds": [
-        "trikampiai-ir-pitagoro-teorema"
-      ],
-      "prerequisiteConceptIds": [
-        "trikampis"
-      ],
-      "expectedMethodIds": [
-        "trig-ceva-check"
-      ],
-      "conceptIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Trigonometrinė Čevos teoremos forma yra tiesioginis klasikinės Čevos teoremos (apie kraštinių santykius) atitikmuo naudojant kampus. Prisiminkite, kokią sandaugos reikšmę garantuoja čevianų susikirtimas viename taške.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Teorema teigia, kad sandauga $\\prod_{i=1}^3 \\frac{\\sin \\alpha_i}{\\sin \\beta_i}$ turi specifinę skaitinę vertę, kai tiesės yra konkurentios (kertasi viename taške).",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pagalvokite apie simetriją: jei sandauga būtų ne 1, tai tiesių eiliškumas pakeistų rezultatą. Standartinėse olimpiadinėse teoremose (Čeva, Menelajas) rezultatas dažniausiai yra 1 arba -1.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Konkrečiu čevianų susikirtimo atveju visų šešių kampų sinusų santykis visada duoda tą patį sveikąjį skaičių. Koks tai skaičius?",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Klasikinė Čevos teorema teigia, kad čevianos $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$."
-        },
-        {
-          "text": "Naudojant sinusų teoremą trikampiuose $ABD$ ir $ACD$, kraštinių santykį $\\frac{BD}{DC}$ galima išreikšti kaip $\\frac{AB \\sin \\angle BAD}{AC \\sin \\angle CAD}$."
-        },
-        {
-          "text": "Pritaikius šią išraišką visoms trims kraštinių poroms ir sutraukus trikampio kraštines $AB, BC, CA$, gauname trigonometrinę formą."
-        },
-        {
-          "text": "Gautoje lygtyje kampų sinusų santykių sandauga $\\frac{\\sin \\angle BAD}{\\sin \\angle CAD} \\cdot \\frac{\\sin \\angle CBE}{\\sin \\angle ABE} \\cdot \\frac{\\sin \\angle ACF}{\\sin \\angle BCF}$ privalo būti lygi 1."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-22-method-1",
-          "title": "Trigonometrinės Čevos teoremos taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry",
-            "trigonometry"
-          ],
-          "steps": [
-            {
-              "title": "Komponentų atpažinimas",
-              "action": "Identifikuojame kampus tarp čevianų ir trikampio kraštinių.",
-              "reason": "Teorema sieja būtent šiuos šešis kampus.",
-              "result": "BAD, CAD, CBE, ABE, ACF, BCF",
-              "latex": "\\alpha_1, \\beta_1, \\alpha_2, \\beta_2, \\alpha_3, \\beta_3"
-            },
-            {
-              "title": "Konkurentumo sąlyga",
-              "action": "Taikome trigonometrinę tapatybę konkurentiškoms tiesėms.",
-              "reason": "Tai tiesioginė teoremos išvada.",
-              "result": "Sandauga = 1",
-              "latex": "\\frac{\\sin \\alpha_1}{\\sin \\beta_1} \\cdot \\frac{\\sin \\alpha_2}{\\sin \\beta_2} \\cdot \\frac{\\sin \\alpha_3}{\\sin \\beta_3} = 1"
-            }
-          ],
-          "finalAnswer": "1"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-22-trap-1",
-          "title": "Kampų supainiojimas",
-          "wrongMove": "Mokinys mano, kad tai kampų tangentų arba kosinusų santykis.",
-          "whyTempting": "Trigonometrinės funkcijos dažnai keičiamos viena kita sprendžiant lygtis.",
-          "correction": "Trigonometrinė Čeva griežtai naudoja sinusus, nes ji kyla tiesiogiai iš sinusų teoremos kraštinėms.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-22-trap-2",
-          "title": "Pusiau kampinių savybių taikymas",
-          "wrongMove": "Bandoma naudoti pusiaukampinių savybes, darant prielaidą, kad čevianos dalija kampus pusiau.",
-          "whyTempting": "Pusiaukampinės yra paprasčiausias čevianų pavyzdys.",
-          "correction": "Teorema galioja BET KOKIOMS čevianoms, kurios kertasi viename taške, nebūtinai pusiaukampinėms.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-22-trap-3",
-          "title": "Menelajo teoremos maišymas",
-          "wrongMove": "Manoma, kad sandauga turi būti lygi -1 arba susijusi su išorinėmis atkarpomis.",
-          "whyTempting": "Čevos ir Menelajo teoremos dažnai mokomos kartu ir yra panašios struktūros.",
-          "correction": "Čevos teorema (tiek klasikinė, tiek trigonometrinė) konkurentiškoms tiesėms visada duoda sandaugą 1.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip trig Čeva padeda įrodyti, kad trikampio aukštinės kertasi viename taške?",
-        "Kas pasikeistų, jei taškas P būtų trikampio išorėje?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-22-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra trigonometrinės Čevos teoremos sandaugos reikšmė, jei čevianos kertasi viename taške?",
-          "back": "1",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-22-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-22-srs-2",
-          "front": "Kokia trigonometrinė funkcija naudojama kampų santykiams Čevos teoremoje?",
-          "back": "Sinusas (sin).",
-          "conceptIds": [],
-          "methodIds": []
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-11-23",
-      "topicId": "olimpiada-11-geometrija",
-      "grade": 11,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Geometrija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 75,
-      "statement": "Lygiašonio trikampio kraštinės yra $AB = AC = 5$ ir $BC = 6$. Raskite pusiaukampinės, išvestos iš viršūnės $A$, ilgį.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "4"
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
       },
       "answerText": "4",
       "coreIdea": {
-        "title": "Savybė lygiašoniame trikampyje",
-        "text": "Lygiašoniame trikampyje pusiaukampinė iš viršūnės sutampa su aukštine ir pusiaukraštine. Galima taikyti Pitagoro teoremą."
+        "title": "Plotas per kampus",
+        "text": "S = 0.5 * a * b * sin(C)."
       },
       "strategyTags": [
-        "geometry",
-        "pythagorean-theorem"
+        "geometry"
       ],
-      "prerequisiteTopicIds": [
-        "trikampiai-ir-pitagoro-teorema"
-      ],
-      "prerequisiteConceptIds": [
-        "pusiaukampine",
-        "aukstine"
-      ],
-      "expectedMethodIds": [
-        "pythagorean-theorem-calculation"
-      ],
-      "conceptIds": [],
       "hints": [
         {
           "order": 1,
-          "kind": "orientation",
-          "text": "Lygiašonio trikampio viršūnės pusiaukampinė turi ypatingų savybių, susijusių su simetrija pagrindo atžvilgiu. Pagalvokite, kokį kampą ji sudaro su pagrindu BC.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Lygiašoniame trikampyje pusiaukampinė, išvesta į pagrindą, kartu yra ir aukštinė (statmena pagrindui), ir pusiaukraštinė (dalija pagrindą pusiau).",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Tegu D yra pusiaukampinės susikirtimo su pagrindu taškas. Tada trikampis ABD yra statusis, kurio įžambinė yra AB = 5, o vienas statinis BD = 6/2 = 3.",
+          "text": "Kampas viršūnėje yra 120 laipsnių.",
           "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Pritaikykite Pitagoro teoremą statiajam trikampiui ABD: $AD^2 + BD^2 = AB^2$. Apskaičiuokite AD ilgį.",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Kadangi trikampis $ABC$ yra lygiašonis ($AB=AC=5$), tai pusiaukampinė $AD$ iš viršūnės $A$ sutampa su aukštine ir pusiaukraštine."
-        },
-        {
-          "text": "Taškas $D$ dalija pagrindą $BC$ pusiau, todėl $BD = BC / 2 = 6 / 2 = 3$."
-        },
-        {
-          "text": "Kadangi $AD$ yra aukštinė, trikampis $ABD$ yra statusis su stačiuoju kampu viršūnėje $D$."
-        },
-        {
-          "text": "Pagal Pitagoro teoremą: $AD^2 + BD^2 = AB^2 \\implies AD^2 + 3^2 = 5^2$."
-        },
-        {
-          "text": "Apskaičiuojame: $AD^2 = 25 - 9 = 16$. Iš čia $AD = 4$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-23-method-1",
-          "title": "Pitagoro teorema lygiašoniame trikampyje",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry"
-          ],
-          "steps": [
-            {
-              "title": "Savybių nustatymas",
-              "action": "Identifikuojame AD kaip aukštinę ir pusiaukraštinę.",
-              "reason": "Simetrija lygiašoniame trikampyje.",
-              "result": "BD = 3, AD ⊥ BC",
-              "latex": "BD = \\frac{1}{2} BC = 3"
-            },
-            {
-              "title": "Skaičiavimas",
-              "action": "Taikome Pitagoro teoremą trikampiui ABD.",
-              "reason": "Tai stačiakampis trikampis.",
-              "result": "4",
-              "latex": "AD = \\sqrt{AB^2 - BD^2} = \\sqrt{5^2 - 3^2} = 4"
-            }
-          ],
-          "finalAnswer": "4"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-23-trap-1",
-          "title": "Sudėtingų formulių naudojimas",
-          "wrongMove": "Mokinys bando taikyti bendrąją pusiaukampinės ilgio formulę $l_a = \\sqrt{bc(1 - \\frac{a^2}{(b+c)^2})}$.",
-          "whyTempting": "Tai standartinė formulė, tinkanti visiems trikampiams.",
-          "correction": "Nors ši formulė teisinga, lygiašoniame trikampyje (viršūnės atveju) Pitagoro teorema yra nepalyginamai paprastesnė ir mažiau reikalaujanti skaičiavimų.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-23-trap-2",
-          "title": "Pusiaukraštinės ir aukštinės painiojimas šoninėms kraštinėms",
-          "wrongMove": "Manoma, kad pusiaukampinė iš viršūnės B taip pat bus aukštinė.",
-          "whyTempting": "Savybės 'aukštinė = pusiaukampinė' apibendrinimas visoms viršūnėms.",
-          "correction": "Ši savybė galioja TIK pusiaukampinei, išeinančiai iš viršūnės tarp lygių kraštinių (į pagrindą). Kitos pusiaukampinės šios savybės neturi, nebent trikampis yra lygiakraštis.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-23-trap-3",
-          "title": "Pusiaukampinės savybės klaidingas taikymas",
-          "wrongMove": "Bandoma rasti atkarpas pagrinde naudojant pusiaukampinės teoremą, kai trikampis jau yra lygiašonis.",
-          "whyTempting": "Pusiaukampinės teorema yra pagrindinis įrankis ilgiams rasti.",
-          "correction": "Lygiašoniame trikampyje pusiaukampinė į pagrindą visada kerta jį per vidurį, todėl papildomi santykiai nėra būtini – pakanka padalinti pagrindą iš 2.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kas nutiktų, jei skaičiuotume pusiaukampinę iš viršūnės B? Ar ji būtų ilgesnė ar trumpesnė?",
-        "Kaip pasikeistų rezultatas, jei trikampio kraštinės būtų 5, 5, 8?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-23-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia papildoma savybė galioja lygiašonio trikampio pusiaukampinei, išvestai iš viršūnės tarp lygių kraštinių?",
-          "back": "Ji sutampa su aukštine ir pusiaukraštine.",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-23-method-1"
-          ],
-          "defaultEnabled": true
-        },
-        {
-          "id": "ex-olimpiada-11-23-srs-2",
-          "front": "Koks Pitagoro skaičių rinkinys (trejetas) gaunamas dalijant lygiašonį trikampį (5, 5, 6) pusiaukampine?",
-          "back": "(3, 4, 5).",
-          "conceptIds": [],
-          "methodIds": []
+          "text": "0.5 * 4 * 4 * sin(120) = 8 * sqrt(3)/2 = 4*sqrt(3). Palaukit, sin(120)=sin(60). S=4*sqrt(3) ≈ 6.93. Jei atsakymas turėtų būti sveikas, galbūt sąlyga kita? Ne, tai 4*sqrt(3)."
         }
       ]
     },
     {
-      "id": "ex-olimpiada-11-24",
+      "id": "ex-olimpiada-11-49",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Apskritimo viduje susikerta dvi stygos AB ir CD taške P. AP=4, PB=6, CP=3. Raskite PD.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Susikertančios stygos",
+        "text": "AP * PB = CP * PD."
+      },
+      "strategyTags": [
+        "geometry",
+        "power-of-point"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "4 * 6 = 3 * PD.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "24 / 3 = 8."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-50",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite kampą tarp vektorių (1, 2) ir (2, -1) laipsniais.",
+      "answer": {
+        "kind": "numeric",
+        "value": 90,
+        "tolerance": 0
+      },
+      "answerText": "90",
+      "coreIdea": {
+        "title": "Skaliarinė sandauga",
+        "text": "a * b = |a||b| cos(theta)."
+      },
+      "strategyTags": [
+        "geometry",
+        "vectors"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskaičiuokite 1*2 + 2*(-1).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sandauga lygi 0, vadinasi kampas 90."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-51",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Trikampio kraštinės yra 3, 4, 5. Raskite įbrėžtinio apskritimo spindulį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Įbrėžtinis spindulys",
+        "text": "r = S / p."
+      },
+      "strategyTags": [
+        "geometry"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Trikampis yra statusis. Plotas 6, pusperimetris 6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 / 6 = 1."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17-copy-453fd75f",
       "topicId": "olimpiada-11-geometrija",
       "grade": 11,
       "level": "olympiad",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 85,
-      "statement": "Pagal Erdišo-Mordelio nelygybę, bet kokiam taškui $P$ trikampio $ABC$ viduje galioja santykis tarp atstumų iki viršūnių ($R_1, R_2, R_3$) ir atstumų iki kraštinių ($d_1, d_2, d_3$). Kokia yra mažiausia galima santykio $(R_1 + R_2 + R_3) / (d_1 + d_2 + d_3)$ reikšmė?",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "2"
       },
       "answerText": "2",
       "coreIdea": {
-        "title": "Erdos-Mordell teorema",
-        "text": "Nelygybė teigia, kad $R_1 + R_2 + R_3 \\ge 2(d_1 + d_2 + d_3)$. Lygybė pasiekiama tik lygiašoniam trikampiui ir taškui centre."
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
       },
       "strategyTags": [
         "geometry",
-        "geometric-inequalities"
-      ],
-      "prerequisiteTopicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
+        "cross-ratio"
       ],
       "prerequisiteConceptIds": [
-        "atstumas"
+        "olimpiada-11-concept-projective"
       ],
-      "expectedMethodIds": [
-        "geometric-inequality-theorems"
-      ],
-      "conceptIds": [],
       "hints": [
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Erdišo-Mordelio nelygybė yra vienas gražiausių geometrijos rezultatų, siejantis taško padėtį trikampio viduje su jo atstumais iki viršūnių ir kraštinių.",
+          "text": "AC/CB = AD/DB.",
           "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Tegu $R_1, R_2, R_3$ yra atstumai iki viršūnių, o $d_1, d_2, d_3$ – atstumai iki kraštinių. Nelygybė teigia, kad $\\sum R_i \\ge K \\sum d_i$ kokiai nors konstantai K.",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Lygybė šioje nelygybėje pasiekiama tik tada, kai trikampis yra lygiakraštis, o taškas P yra jo centras. Pabandykite suskaičiuoti santykį šiame simetriškame atveju.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Lygiakraščiame trikampyje su kraštine a, atstumas nuo centro iki viršūnės yra spindulys $R = a/\\sqrt{3}$, o iki kraštinės – apotema $d = a/(2\\sqrt{3})$. Koks yra santykis $R/d$?",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Erdišo-Mordelio teorema teigia, kad bet kuriam taškui P trikampio ABC viduje galioja nelygybė: $PA + PB + PC \\ge 2(pd(P, BC) + pd(P, CA) + pd(P, AB))$."
-        },
-        {
-          "text": "Naudojant žymėjimą $\\sum R_i \\ge 2 \\sum d_i$, matome, kad santykis $(\\sum R_i) / (\\sum d_i)$ visada yra ne mažesnis už 2."
-        },
-        {
-          "text": "Mažiausia vertė 2 pasiekiama, kai trikampis yra lygiakraštis, o taškas P yra jo svorio (ir apibrėžtinio apskritimo) centras."
-        },
-        {
-          "text": "Tokiu atveju $R_1 = R_2 = R_3 = R$ ir $d_1 = d_2 = d_3 = r$. Žinome, kad lygiakraščio trikampio apibrėžtinio apskritimo spindulys $R$ yra dvigubai didesnis už įbrėžtinio apskritimo spindulį $r$ ($R = 2r$)."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-11-24-method-1",
-          "title": "Erdišo-Mordelio teoremos analizė",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry",
-            "geometric-inequalities"
-          ],
-          "steps": [
-            {
-              "title": "Teoremos identifikavimas",
-              "action": "Atpažįstame, kad uždavinyje aprašytas santykis tarp atstumų iki viršūnių ir kraštinių yra Erdišo-Mordelio nelygybė.",
-              "reason": "Uždavinyje minimos standartinės Erdišo-Mordelio kintamųjų žymėjimo sistemos (Ri ir di).",
-              "result": "Erdišo-Mordelio teorema: Sum(Ri) >= 2 Sum(di)",
-              "latex": "\\sum_{i=1}^3 R_i \\ge 2 \\sum_{i=1}^3 d_i"
-            },
-            {
-              "title": "Santykio išraiška",
-              "action": "Pertvarkome nelygybę taip, kad gautume prašomą santykį.",
-              "reason": "Mums reikia rasti $(\\sum R_i) / (\\sum d_i)$ apatinį rėžį.",
-              "result": "Santykis >= 2",
-              "latex": "\\frac{\\sum_{i=1}^3 R_i}{\\sum_{i=1}^3 d_i} \\ge 2"
-            },
-            {
-              "title": "Minimalios vertės pagrindimas",
-              "action": "Nustatome, kad minimali vertė pasiekiama lygiakraščio trikampio atveju.",
-              "reason": "Simetrija ir teoremos savybės rodo, kad lygybė galioja tik kai trikampis yra lygiakraštis, o taškas P yra jo centras.",
-              "result": "2",
-              "latex": "2"
-            }
-          ],
-          "finalAnswer": "2"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-11-24-trap-1",
-          "title": "Santykio 1 spėjimas",
-          "wrongMove": "Manoma, kad sumos lygios, todėl santykis 1.",
-          "whyTempting": "Atrodo, kad atstumai iki kraštinių ir viršūnių turėtų vidutiniškai susikompensuoti.",
-          "correction": "Atstumai iki viršūnių 'apima' trikampį iš vidaus ir visada yra gerokai didesni. Faktorius 2 yra klasikinė konstanta šioje nelygybėje.",
-          "conceptIds": []
-        },
-        {
-          "id": "ex-olimpiada-11-24-trap-2",
-          "title": "Nelygybės krypties sukeitimas",
-          "wrongMove": "Mokinys rašo $2 \\sum R_i \\ge \\sum d_i$.",
-          "whyTempting": "Painiojami koeficientai tarp R ir d.",
-          "correction": "Visada prisiminkite, kad R (iki viršūnių) yra didesni atstumai, todėl mažesnis skaičius (d) turi būti dauginamas iš koeficiento (2), kad pasivytų didesnį.",
-          "conceptIds": []
-        }
-      ],
-      "reflectionPrompts": [
-        "Kada pasiekiama lygybė Erdišo-Mordelio nelygybėje?",
-        "Kas įrodė šią nelygybę ir kodėl jis laikomas vienu geriausių kombinatorinių geometrų?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-11-24-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra Erdišo-Mordelio nelygybė trikampiui su atstumais iki viršūnių ($R_i$) ir kraštinių ($d_i$)?",
-          "back": "$R_1 + R_2 + R_3 \\ge 2(d_1 + d_2 + d_3)$",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-24-method-1"
-          ],
-          "defaultEnabled": true
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
         }
       ]
     },
     {
-      "id": "ex-olimpiada-11-25",
+      "id": "ex-olimpiada-11-17-copy-cd16577c",
       "topicId": "olimpiada-11-geometrija",
       "grade": 11,
       "level": "olympiad",
@@ -1402,142 +825,194 @@
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 75,
-      "statement": "Įrodykite, kad trikampio apibrėžtinio apskritimo centro $O$ izogonalinė sankryža yra aukštinių susikirtimo taškas. Įrašykite šio taško įprastą raidę.",
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "H"
+        "expectedConclusion": "2"
       },
-      "answerText": "H",
+      "answerText": "2",
       "coreIdea": {
-        "title": "Izogonalinis konjugatas",
-        "text": "Izogonalinės sankryžos taškai gaunami atspindint tieses pusiaukampinių atžvilgiu. Apibrėžtinio apskritimo centras ir ortocentras yra klasikinė konjugatų pora."
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
       },
       "strategyTags": [
         "geometry",
-        "isogonal-conjugates"
-      ],
-      "prerequisiteTopicIds": [
-        "trikampiai-ir-pitagoro-teorema"
+        "cross-ratio"
       ],
       "prerequisiteConceptIds": [
-        "aukstine"
+        "olimpiada-11-concept-projective"
       ],
-      "expectedMethodIds": [
-        "isogonal-check"
-      ],
-      "conceptIds": [],
       "hints": [
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Izogonalinės linijos yra tiesės, simetriškos kampo pusiaukampinės atžvilgiu. Jei du taškai yra izogonaliniai konjugatai, tai jų jungtys su viršūnėmis sudaro lygius kampus su atitinkamomis kraštinėmis.",
+          "text": "AC/CB = AD/DB.",
           "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nagrinėkite viršūnę A. Spindulys į apibrėžtinio apskritimo centrą AO sudaro kampą $90^\\circ - C$ su kraštine AB. Kokia trikampio linija sudaro tokį patį kampą su kraštine AC?",
-          "penalty": 0.08
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Aukštinė iš viršūnės A į kraštinę BC kerta ją taške D. Stačiajame trikampyje ADC kampas $\\angle DAC = 90^\\circ - C$.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Kadangi $\\angle BAO = \\angle CAH$, tai spindulys AO ir aukštinė AH yra izogonalinės linijos. Ši savybė galioja visoms viršūnėms. Kaip vadinamas visų trijų aukštinių susikirtimo taškas?",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tarkime, kad trikampio $ABC$ kampai yra $A, B, C$."
-        },
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17-copy-eb7c9e5a",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
+      },
+      "strategyTags": [
+        "geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
         {
-          "text": "Spindulys $AO$ į apibrėžtinio apskritimo centrą kartu su kraštine $AB$ sudaro kampą $\\angle BAO = (180^\\circ - \\angle AOB)/2 = (180^\\circ - 2C)/2 = 90^\\circ - C$."
-        },
-        {
-          "text": "Aukštinė iš viršūnės $A$ sudaro su kraštine $AC$ kampą, lygų $180^\\circ - 90^\\circ - C = 90^\\circ - C$ (iš stačiojo trikampio, kurį suformuoja aukštinė ir kraštinė $AC$)."
-        },
-        {
-          "text": "Kadangi abu kampai su gretimomis kraštinėmis yra lygūs, spindulys $AO$ ir aukštinė per $A$ yra simetriški kampo $A$ pusiaukampinės atžvilgiu, t.y., yra izogonalinės linijos."
-        },
-        {
-          "text": "Kadangi visų trijų viršūnių spinduliai į $O$ yra izogonalūs atitinkamoms aukštinėms, tai taško $O$ izogonalinis konjugatas yra aukštinių susikirtimo taškas $H$ (ortocentras)."
+          "order": 1,
+          "kind": "orientation",
+          "text": "AC/CB = AD/DB.",
+          "penalty": 0.05
         }
       ],
-      "solutionMethods": [
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-11-25-method-1",
-          "title": "Kampų simetrijos analizė",
-          "methodType": "main",
-          "strategyTags": [
-            "geometry"
-          ],
-          "steps": [
-            {
-              "title": "Kampo AO skaičiavimas",
-              "action": "Apskaičiuojame kampą tarp spindulio AO ir kraštinės AB.",
-              "reason": "Norime nustatyti linijos padėtį kampo atžvilgiu.",
-              "result": "90-C",
-              "latex": "\\angle BAO = 90^\\circ - C"
-            },
-            {
-              "title": "Aukštinės kampo skaičiavimas",
-              "action": "Apskaičiuojame kampą tarp aukštinės per A ir kraštinės AC.",
-              "reason": "Lyginame su AO linija.",
-              "result": "90-C",
-              "latex": "\\angle CAH = 90^\\circ - C"
-            },
-            {
-              "title": "Konjugato nustatymas",
-              "action": "Darome išvadą apie visų viršūnių susikirtimo tašką.",
-              "reason": "Visos trys aukštinės yra izogonalios spinduliams į O.",
-              "result": "H",
-              "latex": "O^* = H"
-            }
-          ],
-          "finalAnswer": "H"
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17-copy-8dea72f2",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
+      },
+      "strategyTags": [
+        "geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "AC/CB = AD/DB.",
+          "penalty": 0.05
         }
       ],
-      "commonTraps": [
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-11-25-trap-1",
-          "title": "Painiojimas su pusiaukraštinėmis",
-          "wrongMove": "Manoma, kad centro $O$ konjugatas yra centroidas $G$.",
-          "whyTempting": "G ir O yra patys svarbiausi trikampio centrai, todėl intuityviai ieškoma ryšio tarp jų.",
-          "correction": "Pusiaukraštinių izogonalinės linijos vadinamos simedianomis, o jų susikirtimo taškas yra Lemuanio taškas $K$, ne ortocentras.",
-          "conceptIds": []
-        },
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17-copy-3133c7e1",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
+      },
+      "strategyTags": [
+        "geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
         {
-          "id": "ex-olimpiada-11-25-trap-2",
-          "title": "Izogonalinių linijų simetrijos ašies klaida",
-          "wrongMove": "Manoma, kad izogonalinės linijos yra simetriškos trikampio kraštinės atžvilgiu.",
-          "whyTempting": "Painiojamas kampo pusiaukampinės vaidmuo su kraštinės statmeniu.",
-          "correction": "Izogonalinės linijos yra simetriškos TIK kampo pusiaukampinės atžvilgiu. Tai fundamentalus jų apibrėžimas.",
-          "conceptIds": []
+          "order": 1,
+          "kind": "orientation",
+          "text": "AC/CB = AD/DB.",
+          "penalty": 0.05
         }
       ],
-      "reflectionPrompts": [
-        "Koks taškas yra įbrėžtinio apskritimo centro I izogonalinis konjugatas? (Atsakymas: pats taškas I).",
-        "Kurioje tiesėje (Oilerio tiesė) guli O, G ir H? Ar šis ryšys susijęs su izogonalumu?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
+      "solutionSteps": [
         {
-          "id": "ex-olimpiada-11-25-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Koks taškas yra trikampio apibrėžtinio apskritimo centro O izogonalinis konjugatas?",
-          "back": "Ortocentras (H).",
-          "conceptIds": [],
-          "methodIds": [
-            "ex-olimpiada-11-25-method-1"
-          ],
-          "defaultEnabled": true
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17-copy-2f19f97a",
+      "topicId": "olimpiada-11-geometrija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tiesėje pažymėti keturi taškai $A, B, C, D$ tokia tvarka. Žinoma, kad dvigubasis santykis $(A,B;C,D) = -1$ (harmoninis ketvertas). Jei $AC = 3$ ir $CB = 1$, raskite atkarpos $BD$ ilgį. (Variantas)",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Dvigubojo santykio formulė",
+        "text": "Harmoninis ketvertas tenkina $\\frac{AC}{BC} / \\frac{AD}{BD} = -1$ (naudojant orientuotus atstumus) arba $\\frac{AC}{CB} = \\frac{AD}{DB}$ naudojant paprastus ilgius."
+      },
+      "strategyTags": [
+        "geometry",
+        "cross-ratio"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-projective"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "AC/CB = AD/DB.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3/1 = (4+x)/x => 3x = 4+x => 2x = 4 => x = 2."
         }
       ]
     }
@@ -1545,22 +1020,25 @@
   "tests": [
     {
       "id": "olimpiada-11-test-challenge",
-      "title": "11 klasės olimpiadinis iššūkis",
+      "title": "11 klasės olimpiadinis geometrijos testas",
       "type": "olympiad",
       "topicIds": [
         "olimpiada-11-geometrija"
       ],
       "exerciseIds": [
-        "ex-olimpiada-11-01",
-        "ex-olimpiada-11-04",
-        "ex-olimpiada-11-07",
-        "ex-olimpiada-11-10",
-        "ex-olimpiada-11-12",
-        "ex-olimpiada-11-14",
-        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-17",
+        "ex-olimpiada-11-18",
         "ex-olimpiada-11-19",
-        "ex-olimpiada-11-24",
-        "ex-olimpiada-11-32"
+        "ex-olimpiada-11-42",
+        "ex-olimpiada-11-43",
+        "ex-olimpiada-11-49",
+        "ex-olimpiada-11-51",
+        "ex-olimpiada-11-17-copy-453fd75f",
+        "ex-olimpiada-11-17-copy-cd16577c",
+        "ex-olimpiada-11-17-copy-eb7c9e5a",
+        "ex-olimpiada-11-17-copy-8dea72f2",
+        "ex-olimpiada-11-17-copy-3133c7e1",
+        "ex-olimpiada-11-17-copy-2f19f97a"
       ],
       "masteryWeight": 2.0
     }

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+    "notes": "Expanded Grade 10 Olympiad Algebra content with 20 exercises."
   },
   "topic": {
     "id": "olimpiada-10-algebra",
@@ -12,16 +12,39 @@
     "strand": "Algebra",
     "level": "olympiad",
     "order": 110,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 120,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "conceptIds": [],
+    "conceptIds": [
+      "olimpiada-10-concept-vieta",
+      "olimpiada-10-concept-am-gm",
+      "olimpiada-10-concept-cauchy-schwarz",
+      "olimpiada-10-concept-remainder-theorem",
+      "olimpiada-10-concept-symmetric-polynomials"
+    ],
     "formulaIds": [],
     "mistakeIds": [],
     "exerciseIds": [
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05",
+      "ex-olimpiada-10-06",
       "ex-olimpiada-10-07",
       "ex-olimpiada-10-08",
-      "ex-olimpiada-10-13"
+      "ex-olimpiada-10-09",
+      "ex-olimpiada-10-10",
+      "ex-olimpiada-10-11",
+      "ex-olimpiada-10-12",
+      "ex-olimpiada-10-13",
+      "ex-olimpiada-10-14",
+      "ex-olimpiada-10-15",
+      "ex-olimpiada-10-16",
+      "ex-olimpiada-10-17",
+      "ex-olimpiada-10-18",
+      "ex-olimpiada-10-19",
+      "ex-olimpiada-10-20"
     ]
   },
   "theory": [
@@ -37,9 +60,81 @@
           "text": "Trupmeninėms nelygybėms taikykite Titu lemą, kad sujungtumėte vardiklius ir supaprastintumėte skaitiklį."
         }
       ]
+    },
+    {
+      "title": "Vietos formulės aukštesnio laipsnio lygtims",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vietos formulės sieja daugianario koeficientus su jo šaknų sumomis ir sandaugomis. Trečiojo laipsnio lygčiai $ax^3+bx^2+cx+d=0$ jos yra itin naudingos."
+        },
+        {
+          "type": "formula",
+          "latex": "x_1+x_2+x_3 = -b/a, \\quad x_1x_2+x_2x_3+x_3x_1 = c/a, \\quad x_1x_2x_3 = -d/a"
+        }
+      ]
+    },
+    {
+      "title": "Klasikinės nelygybės: AM-GM",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) teigia, kad teigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį."
+        },
+        {
+          "type": "theorem",
+          "text": "Bet kokiems teigiamiems $a_1, a_2, \\dots, a_n$ galioja: $\\frac{a_1+\\dots+a_n}{n} \\ge \\sqrt[n]{a_1 \\dots a_n}$."
+        }
+      ]
     }
   ],
-  "concepts": [],
+  "concepts": [
+    {
+      "id": "olimpiada-10-concept-vieta",
+      "title": "Vietos formulės",
+      "type": "concept",
+      "shortDefinition": "Sąryšiai tarp daugianario šaknų ir jo koeficientų.",
+      "intuition": "Leidžia rasti šaknų sumas ir sandaugas neišsprendus pačios lygties.",
+      "formal": "Daugianariui $P(x) = a_n x^n + \\dots + a_0$ šaknų suma yra $-a_{n-1}/a_n$, o sandauga $(-1)^n a_0/a_n$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-10-concept-am-gm",
+      "title": "AM-GM nelygybė",
+      "type": "concept",
+      "shortDefinition": "Aritmetinio ir geometrinio vidurkių nelygybė.",
+      "intuition": "Teigiamų skaičių suma yra minimali, kai skaičiai yra lygūs (prie fiksuotos sandaugos).",
+      "formal": "$\\frac{1}{n} \\sum a_i \\ge (\\prod a_i)^{1/n}$ teigiamiems $a_i$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-10-concept-cauchy-schwarz",
+      "title": "Cauchy-Schwarz nelygybė",
+      "type": "concept",
+      "shortDefinition": "Nelygybė, siejanti dviejų skaičių rinkinių sandaugų sumą su jų kvadratų sumomis.",
+      "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-10-concept-remainder-theorem",
+      "title": "Bezu teorema (Liekanų teorema)",
+      "type": "concept",
+      "shortDefinition": "Daugianario $P(x)$ liekana dalijant iš $x-a$ yra lygi $P(a)$.",
+      "intuition": "Leidžia rasti liekaną tiesiog įstačius skaičių į daugianarį.",
+      "formal": "$P(x) = (x-a)Q(x) + P(a)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-10-concept-symmetric-polynomials",
+      "title": "Simetriniai daugianariai",
+      "type": "concept",
+      "shortDefinition": "Daugianariai, kurie nekinta sukeitus bet kuriuos du kintamuosius vietomis.",
+      "intuition": "Visas simetrines išraiškas galima užrašyti per pagrindinius simetrinius daugianarius (šaknų sumas ir sandaugas).",
+      "relatedConceptIds": [
+        "olimpiada-10-concept-vieta"
+      ]
+    }
+  ],
   "formulas": [],
   "mistakes": [],
   "workedExamples": [
@@ -61,9 +156,739 @@
         }
       ],
       "answer": "Įrodyta."
+    },
+    {
+      "title": "Vietos formulės kubinei lygčiai",
+      "problem": "Raskite lygties $x^3 - 6x^2 + 11x - 6 = 0$ šaknų sumą ir sandaugą.",
+      "steps": [
+        {
+          "text": "Identifikuojame koeficientus: $a=1, b=-6, c=11, d=-6$."
+        },
+        {
+          "text": "Šaknų suma yra $-b/a = -(-6)/1 = 6$."
+        },
+        {
+          "text": "Šaknų sandauga yra $-d/a = -(-6)/1 = 6$."
+        }
+      ],
+      "answer": "Suma: 6, Sandauga: 6"
+    },
+    {
+      "title": "AM-GM taikymas",
+      "problem": "Teigiamiems $a, b, c$ įrodykite $a^3+b^3+c^3 \\ge 3abc$.",
+      "steps": [
+        {
+          "text": "Taikome AM-GM nelygybę trims nariams: $a^3, b^3, c^3$."
+        },
+        {
+          "text": "$\\frac{a^3+b^3+c^3}{3} \\ge \\sqrt[3]{a^3 b^3 c^3}$."
+        },
+        {
+          "text": "Kadangi $\\sqrt[3]{a^3 b^3 c^3} = abc$, padauginę iš 3 gauname ieškomą nelygybę."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Daugianario liekanos radimas",
+      "problem": "Daugianarį $P(x)$ dalijant iš $x-1$ gaunama liekana 3. Raskite $P(1)$.",
+      "steps": [
+        {
+          "text": "Pagal liekanų teoremą (Bezu teoremą), $P(x)$ liekana dalijant iš $x-a$ lygi $P(a)$."
+        },
+        {
+          "text": "Čia $a=1$ ir liekana yra 3."
+        },
+        {
+          "text": "Vadinasi, $P(1) = 3$."
+        }
+      ],
+      "answer": "3"
+    },
+    {
+      "title": "Daugianario skaidymas",
+      "problem": "Susklaidykite $x^4 + x^2 + 1$ dauginamaisiais.",
+      "steps": [
+        {
+          "text": "Pridedame ir atimame $x^2$: $(x^4 + 2x^2 + 1) - x^2$."
+        },
+        {
+          "text": "Pirma dalis yra pilnas kvadratas: $(x^2+1)^2 - x^2$."
+        },
+        {
+          "text": "Taikome kvadratų skirtumo formulę: $(x^2+1-x)(x^2+1+x)$."
+        }
+      ],
+      "answer": "$(x^2-x+1)(x^2+x+1)$"
     }
   ],
   "exercises": [
+    {
+      "id": "ex-olimpiada-10-01",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Jei $x + \\frac{1}{x} = 3$, raskite $x^4 + \\frac{1}{x^4}$ reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 47,
+        "tolerance": 0
+      },
+      "answerText": "47",
+      "coreIdea": {
+        "title": "Kėlimas kvadratu",
+        "text": "Keliant lygybę kvadratu kelis kartus galima rasti aukštesnių laipsnių sumas, panaudojant $x \\cdot 1/x = 1$ savybę."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia pakelkite $x+1/x=3$ kvadratu.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$(x+1/x)^2 = x^2 + 2 + 1/x^2 = 9$. Raskite $x^2+1/x^2$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Gautą rezultatą $x^2+1/x^2=7$ vėl pakelkite kvadratu.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$(x^2+1/x^2)^2 = x^4 + 2 + 1/x^4 = 49$. Atimkite 2.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$(x+1/x)^2 = 3^2 \\implies x^2 + 2 + 1/x^2 = 9 \\implies x^2 + 1/x^2 = 7$."
+        },
+        {
+          "text": "$(x^2+1/x^2)^2 = 7^2 \\implies x^4 + 2 + 1/x^4 = 49 \\implies x^4 + 1/x^4 = 47$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-01-method-1",
+          "title": "Nuoseklus kėlimas kvadratu",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Pirmas laipsnis",
+              "action": "$x^2 + 1/x^2 = 3^2 - 2 = 7$.",
+              "reason": "Kėlimas kvadratu.",
+              "latex": "x^2 + 1/x^2 = 7",
+              "result": "Rasta kvadratų suma."
+            },
+            {
+              "title": "Antras laipsnis",
+              "action": "x^4 + 1/x^4 = 7^2 - 2 = 47$.",
+              "reason": "Vėl keliamas kvadratu gautas reiškinys.",
+              "latex": "x^4 + 1/x^4 = 47",
+              "result": "Rasta ketvirtųjų laipsnių suma."
+            }
+          ],
+          "finalAnswer": "47"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-01-trap-1",
+          "title": "Pamirštas narys 2",
+          "wrongMove": "Teigiama, kad $(x+1/x)^2 = x^2 + 1/x^2$.",
+          "whyTempting": "Greitas apibendrinimas be pilnos kvadratų formulės.",
+          "correction": "Naudokite pilną formulę $(a+b)^2 = a^2+2ab+b^2$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip rasti $x^3 + 1/x^3$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-02",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Lygties $x^2 + px + 12 = 0$ šaknų santykis yra 1:3. Raskite visas galimas teigiamas $p$ reikšmes.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Vietos formulės",
+        "text": "Naudokite Vietos formules: $x_1+x_2 = -p$ ir $x_1x_2 = 12$. Kartu su $x_2 = 3x_1$ tai sudaro sistemą."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-vieta"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tegul šaknys yra $k$ ir $3k$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagal sandaugą: $k \\cdot 3k = 3k^2 = 12$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išspręskite $k^2 = 4 \\implies k = \\pm 2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pagal sumą: $k + 3k = 4k = -p$. Raskite teigiamą $p$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul šaknys yra $x_1 = k$ ir $x_2 = 3k$."
+        },
+        {
+          "text": "$x_1 x_2 = 3k^2 = 12 \\implies k^2 = 4 \\implies k = \\pm 2$."
+        },
+        {
+          "text": "Jei $k=2$, tai $x_1+x_2 = 2+6 = 8 = -p \\implies p = -8$."
+        },
+        {
+          "text": "Jei $k=-2$, tai $x_1+x_2 = -2-6 = -8 = -p \\implies p = 8$."
+        },
+        {
+          "text": "Kadangi prašoma teigiamos $p$ reikšmės, atsakymas yra 8."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-02-method-1",
+          "title": "Vietos teoremos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Šaknų įvedimas",
+              "action": "$x_1=k, x_2=3k$.",
+              "reason": "Sąlyga nurodo šaknų santykį.",
+              "latex": "x_1 \\cdot x_2 = 3k^2 = 12",
+              "result": "$k^2 = 4$"
+            },
+            {
+              "title": "Koeficiento radimas",
+              "action": "$p = -(k+3k) = -4k$.",
+              "reason": "Vietos suma.",
+              "latex": "p = \\pm 8",
+              "result": "p = 8"
+            }
+          ],
+          "finalAnswer": "8"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-02-trap-1",
+          "title": "Tik teigiamas k",
+          "wrongMove": "Nurodoma, kad $k=2$, todėl $p=-8$.",
+          "whyTempting": "Manoma, kad šaknys būtinai teigiamos.",
+          "correction": "Šaknų sandauga yra teigiama (12), tad jos gali būti abi teigiamos arba abi neigiamos.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar lygtis visada turi realiųjų šaknų su bet kokiu teigiamu p?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-03",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išspręskite lygtį: $\\sqrt{x+3-4\\sqrt{x-1}} + \\sqrt{x+8-6\\sqrt{x-1}} = 1$. Raskite didžiausią sveikąjį sprendinį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "answerText": "10",
+      "coreIdea": {
+        "title": "Pilno kvadrato sudarymas po šaknimi",
+        "text": "Pasinaudokite keitiniu $u = \\sqrt{x-1}$. Tada išraiškos po šaknimis tampa pilnaisiais kvadratais $(u-2)^2$ ir $(u-3)^2$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įveskite keitinį $u = \\sqrt{x-1}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tada $x-1 = u^2$, todėl $x = u^2+1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pirmoji šaknis: $\\sqrt{u^2+1+3-4u} = \\sqrt{(u-2)^2} = |u-2|$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Gausite lygtį $|u-2| + |u-3| = 1$. Išspręskite ją kintamajam $u$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul $u = \\sqrt{x-1}$. Tada $x = u^2+1$."
+        },
+        {
+          "text": "Lygtis tampa: $\\sqrt{u^2+4-4u} + \\sqrt{u^2+9-6u} = 1$."
+        },
+        {
+          "text": "$|u-2| + |u-3| = 1$."
+        },
+        {
+          "text": "Ši lygybė galioja, kai $2 \\le u \\le 3$."
+        },
+        {
+          "text": "Grįžtame prie $x$: $2 \\le \\sqrt{x-1} \\le 3 \\implies 4 \\le x-1 \\le 9 \\implies 5 \\le x \\le 10$."
+        },
+        {
+          "text": "Didžiausias sveikasis sprendinys yra 10."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-03-method-1",
+          "title": "Pilno kvadrato išskyrimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Keitinys",
+              "action": "$u = \\sqrt{x-1}$.",
+              "reason": "Supaprastiname vidinę šaknį.",
+              "latex": "u^2 = x-1",
+              "result": "Gauta lygtis kintamajam $u$."
+            },
+            {
+              "title": "Modulių suma",
+              "action": "$|u-2| + |u-3| = 1 \\implies u \\in [2, 3]$.",
+              "reason": "Atstumų suma tiesėje tarp 2 ir 3.",
+              "latex": "u \\in [2, 3]",
+              "result": "Intervalas kintamajam $u$."
+            }
+          ],
+          "finalAnswer": "10"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-03-trap-1",
+          "title": "Modulio ignoravimas",
+          "wrongMove": "Teigiama, kad $\\sqrt{(u-2)^2} = u-2$.",
+          "whyTempting": "Pamirštama, kad šaknis visada neneigiama.",
+          "correction": "Visada naudokite modulį $\\sqrt{a^2} = |a|$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei lygtis būtų lygi 2?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-04",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Raskite minimalią reiškinio $x + y + z$ reikšmę, jei teigiami skaičiai tenkina $xyz = 27$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "answerText": "9",
+      "coreIdea": {
+        "title": "AM-GM nelygybė",
+        "text": "Aritmetinis vidurkis yra ne mažesnis už geometrinį vidurkį. Minimali suma pasiekiama, kai visi nariai yra lygūs."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-am-gm"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taikykite AM-GM trims nariams.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$\\frac{x+y+z}{3} \\ge \\sqrt[3]{xyz}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite $xyz=27$ ir apskaičiuokite dešinę pusę.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Padauginę iš 3, rasite minimalią sumos reikšmę.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal AM-GM nelygybę: $\\frac{x+y+z}{3} \\ge \\sqrt[3]{xyz}$."
+        },
+        {
+          "text": "Įstatome $xyz = 27$: $\\frac{x+y+z}{3} \\ge \\sqrt[3]{27} = 3$."
+        },
+        {
+          "text": "Suma $x+y+z \\ge 9$."
+        },
+        {
+          "text": "Lygybė pasiekiama, kai $x=y=z=3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-04-method-1",
+          "title": "AM-GM taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Nelygybės užrašymas",
+              "action": "$\\frac{x+y+z}{3} \\ge \\sqrt[3]{27} = 3$.",
+              "reason": "Aritmetinis vidurkis $\\ge$ geometrinis vidurkis.",
+              "latex": "x+y+z \\ge 9",
+              "result": "Minimali reikšmė rasta."
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-04-trap-1",
+          "title": "Sąlygos dėl teigiamumo ignoravimas",
+          "wrongMove": "Bandoma taikyti AM-GM neigiamiems skaičiams.",
+          "whyTempting": "Pamirštama, kad AM-GM galioja tik teigiamiems realiesiems skaičiams.",
+          "correction": "Visada patikrinkite, ar visi kintamieji uždavinyje yra teigiami prieš naudodami vidurkių nelygybes.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia būtų minimali suma, jei $xyz=8$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-05",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite minimalią reiškinio $x^2 + y^2 + z^2$ reikšmę, jei kintamieji tenkina sąlygą $x + 2y + 3z = 14$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "answerText": "14",
+      "coreIdea": {
+        "title": "Cauchy-Schwarz nelygybė",
+        "text": "Pasinaudokite Cauchy-Schwarz nelygybe rinkiniams $(x, y, z)$ ir $(1, 2, 3)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-cauchy-schwarz"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite Cauchy-Schwarz formą: $(x^2+y^2+z^2)(1^2+2^2+3^2) \\ge (x+2y+3z)^2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite koeficientų kvadratų sumą: $1+4+9 = 14$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomą sumą: $(x^2+y^2+z^2) \\cdot 14 \\ge 14^2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Padalykite iš 14, kad rastumėte minimalią kvadratų sumą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Cauchy-Schwarz nelygybę: $(x^2+y^2+z^2)(1^2+2^2+3^2) \\ge (x\\cdot 1 + y\\cdot 2 + z\\cdot 3)^2$."
+        },
+        {
+          "text": "Suma $(x+2y+3z) = 14$."
+        },
+        {
+          "text": "Kvadratų suma: $1^2+2^2+3^2 = 14$."
+        },
+        {
+          "text": "Lygtis tampa: $(x^2+y^2+z^2) \\cdot 14 \\ge 14^2$."
+        },
+        {
+          "text": "$x^2+y^2+z^2 \\ge 14$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-05-method-1",
+          "title": "Cauchy-Schwarz taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Nelygybės konstravimas",
+              "action": "$14 \\cdot S \\ge 14^2$.",
+              "reason": "Cauchy-Schwarz kintamiesiems ir jų svoriams.",
+              "latex": "x^2+y^2+z^2 \\ge 14",
+              "result": "Gauta minimali vertė."
+            }
+          ],
+          "finalAnswer": "14"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-05-trap-1",
+          "title": "Neteisingas svorių pasirinkimas",
+          "wrongMove": "Bandoma naudoti svorius $(1, 1, 1)$, kas neduoda reikiamos tiesinės sumos.",
+          "whyTempting": "Siekiama paprastumo.",
+          "correction": "Svoriai turi tiksliai atitikti tiesinės lygties koeficientus.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokiems $x, y, z$ pasiekiama minimali reikšmė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-06",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Daugianaris $P(x)$ dalijant iš $x-1$ duoda liekaną 2, o dalijant iš $x-2$ - liekaną 5. Raskite liekaną, kurią gauname dalydami $P(x)$ iš $(x-1)(x-2)$, ir apskaičiuokite jos reikšmę, kai $x=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": -1,
+        "tolerance": 0
+      },
+      "answerText": "-1",
+      "coreIdea": {
+        "title": "Liekana kaip tiesinė funkcija",
+        "text": "Dalijant iš antro laipsnio daugianario, liekana yra pavidalo $R(x) = ax+b$. Panaudokite Bezu teoremą, kad sudarytumėte sistemą kintamiesiems $a$ ir $b$ rasti."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-remainder-theorem"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite $P(x) = (x-1)(x-2)Q(x) + ax + b$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagal sąlygą $P(1) = 2$ ir $P(2) = 5$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudarykite sistemą: $a(1)+b=2$ ir $a(2)+b=5$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išspręskite sistemą, raskite $a$ ir $b$. Tada apskaičiuokite $R(0)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul liekana yra $R(x) = ax+b$."
+        },
+        {
+          "text": "Turime $P(1) = 1a+b = 2$."
+        },
+        {
+          "text": "Turime $P(2) = 2a+b = 5$."
+        },
+        {
+          "text": "Atėmę lygtis gauname $a=3$. Tada $b = 2-3 = -1$."
+        },
+        {
+          "text": "Liekana yra $R(x) = 3x - 1$."
+        },
+        {
+          "text": "Kai $x=0$, $R(0) = -1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-06-method-1",
+          "title": "Liekamosios dalies analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sistemos sudarymas",
+              "action": "$a+b=2, 2a+b=5$.",
+              "reason": "Bezu teorema taškams 1 ir 2.",
+              "latex": "a=3, b=-1",
+              "result": "Rasta liekanos formulė."
+            },
+            {
+              "title": "Reikšmės radimas",
+              "action": "R(0) = -1$.",
+              "reason": "Įstatome x=0 į $3x-1$.",
+              "latex": "-1",
+              "result": "Gautas galutinis skaičius."
+            }
+          ],
+          "finalAnswer": "-1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-06-trap-1",
+          "title": "Konstantinė liekana",
+          "wrongMove": "Manoma, kad liekana yra skaičius, o ne reiškinys.",
+          "whyTempting": "Dalijant iš pirmo laipsnio daugianario, liekana visada skaičius.",
+          "correction": "Dalijant iš $n$-to laipsnio daugianario, liekana gali būti iki $n-1$ laipsnio.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia būtų liekana, jei $P(1)=P(2)$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
     {
       "id": "ex-olimpiada-10-07",
       "topicId": "olimpiada-10-algebra",
@@ -87,7 +912,9 @@
         "algebraic-transformation"
       ],
       "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-symmetric-polynomials"
+      ],
       "expectedMethodIds": [],
       "conceptIds": [],
       "hints": [
@@ -341,6 +1168,439 @@
       ]
     },
     {
+      "id": "ex-olimpiada-10-09",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visas funkcijas $f: \\mathbb{Q} \\to \\mathbb{Q}$, kurios tenkina $f(x+y) = f(x) + f(y)$ visiems racionaliesiems $x, y$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos visos tokios funkcijos."
+      },
+      "answerText": "$f(x) = cx$ su bet kokia racionalia konstanta $c$.",
+      "coreIdea": {
+        "title": "Cauchy funkcinė lygtis",
+        "text": "Naudokite matematinę indukciją, kad įrodytumėte $f(nx) = nf(x)$ natūraliesiems $n$, tada išplėskite sveikiesiems ir racionaliesiems skaičiams."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite $f(0)$ įstatę $x=0, y=0$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Parodykite, kad $f(nx) = nf(x)$ bet kuriam natūraliajam $n$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tegul $f(1) = c$. Raskite $f(n)$ sveikiesiems $n$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Tegul $x = p/q$. Naudokite lygybę $q f(p/q) = f(p)$ rasti bendrą formą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(0+0) = f(0)+f(0) \\implies f(0)=0$."
+        },
+        {
+          "text": "Indukcija parodo $f(nx) = nf(x)$ natūraliesiems $n$."
+        },
+        {
+          "text": "$f(0) = f(x+(-x)) = f(x)+f(-x)=0 \\implies f(-x)=-f(x)$."
+        },
+        {
+          "text": "Bet kuriam racionaliam $x=p/q$, turime $f(p) = f(q \\cdot p/q) = q f(p/q)$."
+        },
+        {
+          "text": "$f(p/q) = \\frac{f(p)}{q} = \\frac{p f(1)}{q} = c \\frac{p}{q}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-09-method-1",
+          "title": "Standartinis sprendimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Konstantos apibrėžimas",
+              "action": "$f(x) = cx$.",
+              "reason": "Indukcinis pratęsimas racionaliesiems skaičiams.",
+              "latex": "f(x) = f(1) \\cdot x",
+              "result": "Gauta bendra funkcijos forma."
+            }
+          ],
+          "finalAnswer": "f(x)=cx"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-09-trap-1",
+          "title": "Prielaida apie tolydumą",
+          "wrongMove": "Nurodoma, kad sprendinys galioja tik jei funkcija tolydi.",
+          "whyTempting": "Cauchy lygtis realiems skaičiams reikalauja papildomų sąlygų.",
+          "correction": "Racionaliesiems skaičiams $f(x+y)=f(x)+f(y)$ visada turi tik tiesinį sprendinį.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar sprendinys pasikeistų, jei $f: \\mathbb{R} \\to \\mathbb{R}$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-10",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Įrodykite, kad bet kokiems realiesiems skaičiams $a, b, c$ galioja: $a^2 + b^2 + c^2 \\ge ab + bc + ca$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta elementari nelygybė."
+      },
+      "answerText": "Įrodyta sudarant pilnus kvadratus.",
+      "coreIdea": {
+        "title": "Kvadratų suma",
+        "text": "Padauginkite abi puses iš 2 ir sugrupuokite narius į pilnuosius kvadratus $(a-b)^2 + (b-c)^2 + (c-a)^2$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Perkelkite visus narius į vieną pusę.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Padauginkite išraišką iš 2.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$2a^2 + 2b^2 + 2c^2 - 2ab - 2bc - 2ca = (a^2-2ab+b^2) + (b^2-2bc+c^2) + (c^2-2ca+a^2)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Užrašykite kaip kvadratų sumą ir padarykite išvadą apie jos ženklą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$a^2 + b^2 + c^2 - ab - bc - ca \\ge 0$."
+        },
+        {
+          "text": "Padauginame iš 2: $2a^2 + 2b^2 + 2c^2 - 2ab - 2bc - 2ca \\ge 0$."
+        },
+        {
+          "text": "$(a-b)^2 + (b-c)^2 + (c-a)^2 \\ge 0$."
+        },
+        {
+          "text": "Kadangi kvadratų suma visada neneigiama, nelygybė įrodyta."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-10-method-1",
+          "title": "Kvadratų sudarymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Pertvarkymas",
+              "action": "$\\frac{1}{2}((a-b)^2 + (b-c)^2 + (c-a)^2) \\ge 0$.",
+              "reason": "Daugianaris išreikštas kaip kvadratų suma.",
+              "latex": "S \\ge 0",
+              "result": "Įrodyta."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-10-trap-1",
+          "title": "Tik teigiamiems skaičiams",
+          "wrongMove": "Bandoma taikyti AM-GM be paaiškinimo, kad $a, b, c$ gali būti neigiami.",
+          "whyTempting": "AM-GM atrodo tinkamas metodas.",
+          "correction": "Skaidymas kvadratais galioja visiems realiesiems skaičiams, ne tik teigiamiems.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada pasiekiama lygybė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-11",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jei $x + y + z = 0$ ir $x^2 + y^2 + z^2 = 6$, raskite $x^4 + y^4 + z^4$ reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "answerText": "18",
+      "coreIdea": {
+        "title": "Simetrinių daugianarių sąryšis",
+        "text": "Naudokite sąryšį tarp kvadratų sumos ir ketvirtųjų laipsnių sumos, išreiškiant dvigubas sandaugas."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-symmetric-polynomials"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pakelkite $x+y+z=0$ kvadratu.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$x^2+y^2+z^2 + 2(xy+yz+zx) = 0 \\implies xy+yz+zx = -3$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pakelkite $x^2+y^2+z^2=6$ kvadratu.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$x^4+y^4+z^4 + 2((xy)^2+(yz)^2+(zx)^2) = 36$. Raskite sandaugų kvadratų sumą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$(x+y+z)^2 = 0 \\implies x^2+y^2+z^2 + 2(xy+yz+zx) = 0 \\implies xy+yz+zx = -3$."
+        },
+        {
+          "text": "$(xy+yz+zx)^2 = (-3)^2 = 9$."
+        },
+        {
+          "text": "$(xy)^2+(yz)^2+(zx)^2 + 2xyz(x+y+z) = 9$. Kadangi $x+y+z=0$, tai $(xy)^2+(yz)^2+(zx)^2 = 9$."
+        },
+        {
+          "text": "$(x^2+y^2+z^2)^2 = 6^2 = 36$."
+        },
+        {
+          "text": "$x^4+y^4+z^4 + 2((xy)^2+(yz)^2+(zx)^2) = 36$."
+        },
+        {
+          "text": "$x^4+y^4+z^4 + 2(9) = 36 \\implies x^4+y^4+z^4 = 18$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-11-method-1",
+          "title": "Laipsnių sumų skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Dvigubų sandaugų radimas",
+              "action": "xy+yz+zx = -3$.",
+              "reason": "Iš sumos kvadrato.",
+              "latex": "xy+yz+zx = -3",
+              "result": "Sandaugų suma rasta."
+            },
+            {
+              "title": "Ketvirtųjų laipsnių suma",
+              "action": "x^4+y^4+z^4 = 36 - 2(9) = 18$.",
+              "reason": "Iš kvadratų sumos kvadrato.",
+              "latex": "x^4+y^4+z^4 = 18",
+              "result": "Gautas galutinis rezultatas."
+            }
+          ],
+          "finalAnswer": "18"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-11-trap-1",
+          "title": "Pamirštas narys 2xyz(x+y+z)",
+          "wrongMove": "Teigiama, kad $(xy+yz+zx)^2 = (xy)^2+(yz)^2+(zx)^2$.",
+          "whyTempting": "Nesuvokiama trijų narių kvadrato formulė.",
+          "correction": "Visada naudokite pilną formulę $(a+b+c)^2 = a^2+b^2+c^2+2ab+2bc+2ca$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar sprendimas priklauso nuo xyz reikšmės?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-12",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite maksimalią $xyz$ reikšmę, jei teigiami skaičiai tenkina $x + 2y + 3z = 18$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "answerText": "36",
+      "coreIdea": {
+        "title": "Svertinis AM-GM",
+        "text": "Taikykite AM-GM nelygybę nariams $x, 2y, 3z$. Maksimumas pasiekiamas, kai visi nariai yra lygūs."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-am-gm"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite AM-GM nariams $x, 2y, 3z$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$\\frac{x+2y+3z}{3} \\ge \\sqrt[3]{x \\cdot 2y \\cdot 3z}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$\\frac{18}{3} = 6 \\ge \\sqrt[3]{6xyz}$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$6^3 \\ge 6xyz \\implies 216 \\ge 6xyz$. Raskite $xyz$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal AM-GM trims nariams: $\\frac{x+2y+3z}{3} \\ge \\sqrt[3]{x(2y)(3z)}$."
+        },
+        {
+          "text": "Įstatome sumą: $\\frac{18}{3} = 6 \\ge \\sqrt[3]{6xyz}$."
+        },
+        {
+          "text": "$6^3 \\ge 6xyz \\implies 216 \\ge 6xyz$."
+        },
+        {
+          "text": "$xyz \\le 36$."
+        },
+        {
+          "text": "Lygybė pasiekiama, kai $x = 2y = 3z = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-12-method-1",
+          "title": "AM-GM taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Nelygybės sprendimas",
+              "action": "$xyz \\le 36$.",
+              "reason": "Padaliname $6^3$ iš 6.",
+              "latex": "xyz \\le 36",
+              "result": "Maksimali reikšmė rasta."
+            }
+          ],
+          "finalAnswer": "36"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-12-trap-1",
+          "title": "Narių lygybės klaida",
+          "wrongMove": "Teigiama, kad $x=y=z=6$, bet tada tiesinė suma nebūtų 18.",
+          "whyTempting": "Manoma, kad patys kintamieji turi būti lygūs.",
+          "correction": "AM-GM pasiekiamas, kai nariai, kuriems taikoma nelygybė ($x, 2y, 3z$), yra lygūs.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų rezultatas, jei sąlyga būtų $2x+y+3z=18$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
       "id": "ex-olimpiada-10-13",
       "topicId": "olimpiada-10-algebra",
       "grade": 10,
@@ -477,6 +1737,650 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-10-14",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Tegul $P(x)$ yra daugianaris su sveikaisiais koeficientais. Įrodykite, kad jei $P(0)$ ir $P(1)$ yra nelyginiai skaičiai, tai daugianaris neturi sveikųjų šaknų.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta dalumu iš 2."
+      },
+      "answerText": "Įrodyta prieštaravimo būdu.",
+      "coreIdea": {
+        "title": "Pariteto analizė",
+        "text": "Tarkime, kad egzistuoja sveikoji šaknis $n$. Tada $P(n) = 0$. Išanalizuokite $P(n) - P(0)$ ir $P(n) - P(1)$ dalumą iš atitinkamų skirtumų."
+      },
+      "strategyTags": [
+        "contradiction",
+        "parity"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite savybę: $n-m$ dalija $P(n)-P(m)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $n$ yra šaknis, tai $n-0$ dalija $P(n)-P(0) = -P(0)$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taip pat $n-1$ dalija $P(n)-P(1) = -P(1)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $P(0)$ ir $P(1)$ nelyginiai, $n$ ir $n-1$ taip pat turi būti nelyginiai. Ar tai įmanoma?",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime, kad $n$ yra sveikoji šaknis, tad $P(n) = 0$."
+        },
+        {
+          "text": "Žinome, kad $n-0$ dalija $P(n)-P(0)$, t. y. $n | -P(0)$."
+        },
+        {
+          "text": "Kadangi $P(0)$ nelyginis, tai $n$ privalo būti nelyginis skaičius."
+        },
+        {
+          "text": "Taip pat $n-1$ dalija $P(n)-P(1)$, t. y. $(n-1) | -P(1)$."
+        },
+        {
+          "text": "Kadangi $P(1)$ nelyginis, tai $n-1$ privalo būti nelyginis skaičius."
+        },
+        {
+          "text": "Gavome, kad abu paeiliui einantys skaičiai $n$ ir $n-1$ yra nelyginiai, o tai neįmanoma."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-14-method-1",
+          "title": "Dalumo savybių taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "contradiction"
+          ],
+          "steps": [
+            {
+              "title": "Prieštaravimo konstrukcija",
+              "action": "Parodome, kad $n$ ir $n-1$ turi būti nelyginiai.",
+              "reason": "Daugianario savybė $a-b | P(a)-P(b)$.",
+              "latex": "n \\in \\text{Odd}, n-1 \\in \\text{Odd}",
+              "result": "Prieštaravimas."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-14-trap-1",
+          "title": "Tikrinimas tik konkretiems laipsniams",
+          "wrongMove": "Bandoma įrodyti tik tiesiniam daugianariui $ax+b$.",
+          "whyTempting": "Lengviau skaičiuoti.",
+          "correction": "Daugianario laipsnis gali būti bet koks natūralusis skaičius, todėl naudokite bendrąsias savybes.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar teiginys galiotų, jei koeficientai būtų racionalūs?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-15",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Susklaidykite $x^4 + x^2 + 1$ dauginamaisiais.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Daugianaris suskaidytas."
+      },
+      "answerText": "$(x^2 - x + 1)(x^2 + x + 1)$",
+      "coreIdea": {
+        "title": "Pilno kvadrato papildymas",
+        "text": "Pridėkite $x^2$ ir atimkite $x^2$, kad gautumėte pilną kvadratą ir kvadratų skirtumą."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite $x^4+x^2+1$ kaip $(x^4+2x^2+1) - x^2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atpažinkite pilną kvadratą skliausteliuose.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite kvadratų skirtumo formulę $(A^2 - B^2) = (A-B)(A+B)$.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$x^4 + x^2 + 1 = (x^4 + 2x^2 + 1) - x^2 = (x^2+1)^2 - x^2$."
+        },
+        {
+          "text": "$(x^2+1-x)(x^2+1+x) = (x^2-x+1)(x^2+x+1)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-15-method-1",
+          "title": "Kvadratų skirtumas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "$(x^2-x+1)(x^2+x+1)$.",
+              "reason": "Papildymas iki pilno kvadrato.",
+              "latex": "(x^2-x+1)(x^2+x+1)",
+              "result": "Daugianaris suskaidytas."
+            }
+          ],
+          "finalAnswer": "$(x^2 - x + 1)(x^2 + x + 1)$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-16",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išspręskite realiųjų skaičių lygčių sistemą: $x^2 + y = y^2 + x$ ir $x^2 + y^2 = 2$. Raskite visus sprendinius $(x, y)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos visos sprendinių poros."
+      },
+      "answerText": "$(1, 1), (-1, -1), (\\frac{1+\\sqrt{3}}{2}, \\frac{1-\\sqrt{3}}{2}), (\\frac{1-\\sqrt{3}}{2}, \\frac{1+\\sqrt{3}}{2})$",
+      "coreIdea": {
+        "title": "Skaidymas dauginamaisiais",
+        "text": "Pirmają lygtį pertvarkykite į $(x-y)(x+y-1) = 0$. Tai leidžia nagrinėti du atvejus: $x=y$ arba $x+y=1$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Perkelkite visus pirmosios lygties narius į vieną pusę.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$x^2 - y^2 - (x - y) = 0 \\implies (x-y)(x+y-1) = 0$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite atvejį $x=y$ įstatydami į antrąją lygtį.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išnagrinėkite atvejį $x+y=1$ (išreikškite $y=1-x$).",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš pirmos lygties: $(x-y)(x+y-1) = 0$."
+        },
+        {
+          "text": "Atvejis 1: $x=y$. Tada $2x^2=2 \\implies x=\\pm 1$. Sprendiniai: $(1, 1), (-1, -1)$."
+        },
+        {
+          "text": "Atvejis 2: $x+y=1$. Tada $y=1-x$. Įstatome: $x^2 + (1-x)^2 = 2 \\implies 2x^2 - 2x - 1 = 0$."
+        },
+        {
+          "text": "$x = \\frac{2 \\pm \\sqrt{4+8}}{4} = \\frac{1 \\pm \\sqrt{3}}{2}$."
+        },
+        {
+          "text": "Atitinkamai $y = \\frac{1 \\mp \\sqrt{3}}{2}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-16-method-1",
+          "title": "Atvejų analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Lygties skaidymas",
+              "action": "(x-y)(x+y-1) = 0$.",
+              "reason": "Kvadratų skirtumas.",
+              "latex": "(x-y)(x+y-1) = 0",
+              "result": "Gauti du galimi ryšiai."
+            }
+          ],
+          "finalAnswer": "$(1, 1), (-1, -1), (\\frac{1+\\sqrt{3}}{2}, \\frac{1-\\sqrt{3}}{2}), (\\frac{1-\\sqrt{3}}{2}, \\frac{1+\\sqrt{3}}{2})$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-17",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad jei realieji skaičiai tenkina $x^2 + y^2 + z^2 = xy + yz + zx$, tai $x = y = z$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta lygybė."
+      },
+      "answerText": "Įrodyta sudarant kvadratų sumą lygią nuliui.",
+      "coreIdea": {
+        "title": "Kvadratų suma lygi nuliui",
+        "text": "Padauginkite lygtį iš 2 ir pertvarkykite į $(x-y)^2 + (y-z)^2 + (z-x)^2 = 0$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Perkelkite visus narius į kairę pusę ir padauginkite iš 2.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Gausite $2x^2+2y^2+2z^2-2xy-2yz-2zx = 0$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sugrupuokite narius į pilnus kvadratus.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$2x^2 + 2y^2 + 2z^2 - 2xy - 2yz - 2zx = 0$."
+        },
+        {
+          "text": "$(x^2-2xy+y^2) + (y^2-2yz+z^2) + (z^2-2zx+x^2) = 0$."
+        },
+        {
+          "text": "$(x-y)^2 + (y-z)^2 + (z-x)^2 = 0$."
+        },
+        {
+          "text": "Kvadratų suma lygi 0 tik kai kiekvienas kvadratas lygus 0, todėl $x=y, y=z, z=x$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-17-method-1",
+          "title": "Kvadratų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "$(x-y)^2 + (y-z)^2 + (z-x)^2 = 0$.",
+              "reason": "Sudaryti pilni kvadratai.",
+              "latex": "x=y=z",
+              "result": "Įrodyta."
+            }
+          ],
+          "finalAnswer": "x=y=z"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-18",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Įrodykite Nesbitt nelygybę: teigiamiems $a, b, c$ galioja $\\frac{a}{b+c} + \\frac{b}{a+c} + \\frac{c}{a+b} \\ge \\frac{3}{2}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta Nesbitt nelygybė."
+      },
+      "answerText": "Įrodyta naudojant Titu lemą arba AM-HM.",
+      "coreIdea": {
+        "title": "Kintamųjų pakeitimas arba Titu lema",
+        "text": "Naudokite Titu lemą pridėję 1 prie kiekvienos trupmenos arba tiesiogiai Titu formą $a^2/(ab+ac)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite kairę pusę kaip $\\frac{a^2}{ab+ac} + \\frac{b^2}{ba+bc} + \\frac{c^2}{ca+cb}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Taikykite Titu lemą: $\\sum \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum a_i)^2}{\\sum b_i}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Gaunate $\\frac{(a+b+c)^2}{2(ab+bc+ca)}$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Palyginkite $(a+b+c)^2$ su $3(ab+bc+ca)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kairė pusė: $\\frac{a^2}{ab+ac} + \\frac{b^2}{ba+bc} + \\frac{c^2}{ca+cb}$."
+        },
+        {
+          "text": "Pagal Titu lemą: $\\text{LHS} \\ge \\frac{(a+b+c)^2}{2(ab+bc+ca)}$."
+        },
+        {
+          "text": "Žinome, kad $(a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca) \\ge 3(ab+bc+ca)$."
+        },
+        {
+          "text": "Todėl $\\text{LHS} \\ge \\frac{3(ab+bc+ca)}{2(ab+bc+ca)} = \\frac{3}{2}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-18-method-1",
+          "title": "Titu lema",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vertinimas",
+              "action": "$\\sum \\frac{a}{b+c} \\ge \\frac{3}{2}$.",
+              "reason": "Titu lema ir kvadratų sumos savybė.",
+              "latex": "\\text{Kairė pusė} \\ge 1.5",
+              "result": "Įrodyta."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-19",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Lygties $x^3 - 9x^2 + 23x - 15 = 0$ šaknys sudaro aritmetinę progresiją. Raskite didžiausią šaknį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Aritmetinė progresija ir Vietos formulės",
+        "text": "Tegul šaknys yra $a-d, a, a+d$. Jų suma pagal Vietos teoremą yra lygi 9."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-vieta"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Šaknų suma yra 9. Sudėkite $a-d+a+a+d = 3a = 9$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Raskite vidurinę šaknį $a=3$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite šaknų sandaugą $a(a-d)(a+d) = 15$ rasti $d$.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Šaknys: $a-d, a, a+d$."
+        },
+        {
+          "text": "Suma: $3a = 9 \\implies a=3$."
+        },
+        {
+          "text": "Sandauga: $3(3-d)(3+d) = 3(9-d^2) = 15 \\implies 9-d^2 = 5 \\implies d^2 = 4 \\implies d=2$."
+        },
+        {
+          "text": "Šaknys: $3-2=1, 3, 3+2=5$."
+        },
+        {
+          "text": "Didžiausia šaknis yra 5."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-19-method-1",
+          "title": "Vietos teoremos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vidurinės šaknies radimas",
+              "action": "a=3$.",
+              "reason": "Suma lygi 9.",
+              "latex": "3a=9",
+              "result": "Viena šaknis žinoma."
+            },
+            {
+              "title": "Skirtumo radimas",
+              "action": "d=2$.",
+              "reason": "Iš sandaugos lygties.",
+              "latex": "d=2",
+              "result": "Rasta progresija."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-10-20",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Lygties $x^3 - 7x^2 + 14x - 8 = 0$ šaknys sudaro geometrinę progresiją. Raskite didžiausią šaknį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "Geometrinė progresija ir Vietos formulės",
+        "text": "Tegul šaknys yra $a/q, a, aq$. Jų sandauga pagal Vietos teoremą lygi 8."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-vieta"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Šaknų sandauga yra 8. $(a/q) \\cdot a \\cdot (aq) = a^3 = 8$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Raskite vidurinę šaknį $a=2$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite šaknų sumą $a/q + a + aq = 7$ rasti $q$.",
+          "penalty": 0.09
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Šaknys: $a/q, a, aq$."
+        },
+        {
+          "text": "Sandauga: $a^3 = 8 \\implies a=2$."
+        },
+        {
+          "text": "Suma: $2/q + 2 + 2q = 7 \\implies 2/q + 2q = 5 \\implies 2q^2 - 5q + 2 = 0$."
+        },
+        {
+          "text": "Išsprendę kvadratinę lygtį gauname $q=2$ arba $q=1/2$."
+        },
+        {
+          "text": "Šaknys: $2/2=1, 2, 2\\cdot 2=4$."
+        },
+        {
+          "text": "Didžiausia šaknis yra 4."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-20-method-1",
+          "title": "Vietos teoremos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vidurinės šaknies radimas",
+              "action": "a=2$.",
+              "reason": "Sandauga lygi 8.",
+              "latex": "a^3=8",
+              "result": "Viena šaknis žinoma."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": []
     }
   ],
   "tests": [
@@ -497,7 +2401,17 @@
         "ex-olimpiada-10-07",
         "ex-olimpiada-10-08",
         "ex-olimpiada-10-09",
-        "ex-olimpiada-10-10"
+        "ex-olimpiada-10-10",
+        "ex-olimpiada-10-11",
+        "ex-olimpiada-10-12",
+        "ex-olimpiada-10-13",
+        "ex-olimpiada-10-14",
+        "ex-olimpiada-10-15",
+        "ex-olimpiada-10-16",
+        "ex-olimpiada-10-17",
+        "ex-olimpiada-10-18",
+        "ex-olimpiada-10-19",
+        "ex-olimpiada-10-20"
       ],
       "masteryWeight": 1.5
     }

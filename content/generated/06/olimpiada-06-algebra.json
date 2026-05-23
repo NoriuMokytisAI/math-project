@@ -17,7 +17,10 @@
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-06-concept-logic",
-      "olimpiada-06-concept-method"
+      "olimpiada-06-concept-method",
+      "olimpiada-06-concept-absolute-value",
+      "olimpiada-06-concept-sequence",
+      "olimpiada-06-concept-invariant"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -31,10 +34,68 @@
       "ex-olimpiada-06-8e4f7634",
       "ex-olimpiada-06-5a19da69",
       "ex-olimpiada-06-b7ce0257",
-      "ex-olimpiada-06-14ea85c7"
+      "ex-olimpiada-06-14ea85c7",
+      "ex-olimpiada-06-alg-11",
+      "ex-olimpiada-06-alg-12",
+      "ex-olimpiada-06-alg-13",
+      "ex-olimpiada-06-alg-14",
+      "ex-olimpiada-06-alg-15",
+      "ex-olimpiada-06-alg-16",
+      "ex-olimpiada-06-alg-17",
+      "ex-olimpiada-06-alg-18",
+      "ex-olimpiada-06-alg-19",
+      "ex-olimpiada-06-alg-20"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "olimpiada-06-alg-theory-1",
+      "title": "Modulis ir jo savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skaičiaus modulis (absoliučioji vertė) parodo atstumą nuo skaičių tiesės pradžios taško $0$ iki taško, atitinkančio tą skaičių."
+        },
+        {
+          "type": "definition",
+          "conceptId": "olimpiada-06-concept-absolute-value",
+          "text": "Teigiamo skaičiaus ir nulio modulis yra pats tas skaičius, o neigiamo skaičiaus modulis yra jam priešingas teigiamas skaičius."
+        },
+        {
+          "type": "formula",
+          "latex": "|x| = \\begin{cases} x, & \\text{jei } x \\ge 0 \\\\ -x, & \\text{jei } x < 0 \\end{cases}"
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-alg-theory-2",
+      "title": "Sekos ir dėsningumai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikoje seka yra skaičių rinkinys, išdėstytas tam tikra tvarka. Kiekvienas sekos narys gaunamas pagal tam tikrą taisyklę."
+        },
+        {
+          "type": "method",
+          "text": "Norint rasti kitą sekos narį, reikia nustatyti ryšį tarp gretimų narių (pvz., pridedamas pastovus skaičius arba dauginama iš tam tikro koeficiento)."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-alg-theory-3",
+      "title": "Invariantas olimpiadose",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Invariantas yra dydis arba savybė, kuri nekinta atliekant tam tikrus veiksmus ar operacijas."
+        },
+        {
+          "type": "note",
+          "text": "Dažniausi invariantai yra lygumas (paritetas), liekana dalijant iš tam tikro skaičiaus arba visų skaičių suma."
+        }
+      ]
+    }
+  ],
   "concepts": [
     {
       "id": "olimpiada-06-concept-logic",
@@ -53,11 +114,133 @@
       "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
       "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-absolute-value",
+      "title": "Absoliučioji vertė (modulis)",
+      "type": "concept",
+      "shortDefinition": "Skaičiaus atstumas nuo nulio skaičių tiesėje.",
+      "intuition": "Modulis tiesiog 'panaikina' minuso ženklą, jei jis yra.",
+      "formal": "$|a| = \\sqrt{a^2}$",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-sequence",
+      "title": "Skaičių seka",
+      "type": "concept",
+      "shortDefinition": "Skaičių rinkinys, išdėstytas tam tikra tvarka.",
+      "intuition": "Tai tarsi eilė, kurioje kiekvienas skaičius žino savo vietą ir kaimyną.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-invariant",
+      "title": "Invariantas",
+      "type": "concept",
+      "shortDefinition": "Savybė, kuri nekinta atliekant leidžiamus veiksmus.",
+      "intuition": "Nesvarbu, ką darysi, šis dalykas liks toks pat.",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
   "mistakes": [],
-  "workedExamples": [],
+  "workedExamples": [
+    {
+      "id": "olimpiada-06-alg-ex-1",
+      "title": "Lygtis su moduliu",
+      "level": "medium",
+      "problem": "Išspręskite lygtį: $|x - 2| = 5$.",
+      "steps": [
+        {
+          "text": "Pagal modulio apibrėžimą, skaičius skliausteliuose gali būti lygus $5$ arba $-5$.",
+          "latex": "x - 2 = 5 \\quad \\text{arba} \\quad x - 2 = -5"
+        },
+        {
+          "text": "Išsprendžiame pirmąją lygtį.",
+          "latex": "x = 5 + 2 = 7"
+        },
+        {
+          "text": "Išsprendžiame antrąją lygtį.",
+          "latex": "x = -5 + 2 = -3"
+        }
+      ],
+      "answer": "x = 7, x = -3"
+    },
+    {
+      "id": "olimpiada-06-alg-ex-2",
+      "title": "Sekos dėsningumas",
+      "level": "easy",
+      "problem": "Raskite kitą sekos narį: $1, 4, 9, 16, \\dots$",
+      "steps": [
+        {
+          "text": "Pastebime, kad kiekvienas sekos narys yra natūraliojo skaičiaus kvadratas.",
+          "latex": "1^2, 2^2, 3^2, 4^2"
+        },
+        {
+          "text": "Kitas narys turi būti $5^2$.",
+          "latex": "5^2 = 25"
+        }
+      ],
+      "answer": "25"
+    },
+    {
+      "id": "olimpiada-06-alg-ex-3",
+      "title": "Santykinis greitis",
+      "level": "medium",
+      "problem": "Dviratininkas važiuoja $15$ km/h greičiu. Po $2$ valandų iš to paties taško ta pačia kryptimi išvažiavo motociklininkas $45$ km/h greičiu. Po kiek laiko motociklininkas pasivys dviratininką?",
+      "steps": [
+        {
+          "text": "Apskaičiuojame, kokį atstumą nuvažiavo dviratininkas per $2$ valandas.",
+          "latex": "15 \\times 2 = 30 \\text{ km}"
+        },
+        {
+          "text": "Apskaičiuojame motociklininko vijimosi greitį (greičių skirtumą).",
+          "latex": "45 - 15 = 30 \\text{ km/h}"
+        },
+        {
+          "text": "Apskaičiuojame laiką, per kurį bus įveiktas $30$ km atstumas.",
+          "latex": "30 / 30 = 1 \\text{ valanda}"
+        }
+      ],
+      "answer": "Po 1 valandos"
+    },
+    {
+      "id": "olimpiada-06-alg-ex-4",
+      "title": "Loginis uždavinys: Melagiai ir tiesakalbiai",
+      "level": "medium",
+      "problem": "Saloje gyvena tik tiesakalbiai (visada sako tiesą) ir melagiai (visada meluoja). Sutinkate gyventoją A, kuris sako: 'Aš esu melagis'. Kas jis – tiesakalbis ar melagis?",
+      "steps": [
+        {
+          "text": "Tarkime, kad A yra tiesakalbis. Tada jo teiginys turi būti tiesa, vadinasi, jis yra melagis. Prieštaravimas."
+        },
+        {
+          "text": "Tarkime, kad A yra melagis. Tada jo teiginys turi būti melas. Kadangi jis sako 'Aš esu melagis', tai tiesa būtų 'Aš nesu melagis'. Vėl prieštaravimas."
+        },
+        {
+          "text": "Išvada: Tokia situacija matematiškai neįmanoma."
+        }
+      ],
+      "answer": "Tokia situacija neįmanoma"
+    },
+    {
+      "id": "olimpiada-06-alg-ex-5",
+      "title": "Algebra ir skaičių savybės",
+      "level": "hard",
+      "problem": "Įrodyk, kad trijų iš eilės einančių sveikųjų skaičių suma visada dalijasi iš 3.",
+      "steps": [
+        {
+          "text": "Pažymėkime vidurinį skaičių raide $n$. Tada trys iš eilės einantys skaičiai yra $n-1, n, n+1$."
+        },
+        {
+          "text": "Sudedame šiuos skaičius.",
+          "latex": "(n-1) + n + (n+1) = 3n"
+        },
+        {
+          "text": "Kadangi rezultatas yra $3n$, jis visada dalijasi iš $3$ bet kuriam sveikam $n$."
+        }
+      ],
+      "answer": "Įrodyta"
+    }
+  ],
   "exercises": [
     {
       "id": "ex-olimpiada-06-b4e7dd8a",
@@ -1507,6 +1690,468 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-06-alg-11",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "medium",
+      "statement": "Išspręskite lygtį: $|x - 3| = 5$. Raskite visus galimus $x$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x = 8 arba x = -2"
+      },
+      "coreIdea": {
+        "title": "Atstumas nuo taško 3",
+        "text": "Lygtis sako, kad atstumas nuo x iki 3 yra lygus 5."
+      },
+      "strategyTags": [
+        "absolute-value"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Modulis parodo atstumą. $x-3$ gali būti 5 arba -5.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Sudarykite dvi paprastas lygtis: $x-3=5$ ir $x-3=-5$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Išspręskite jas abi.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome dvi lygtis: $x-3=5$ ir $x-3=-5$."
+        },
+        {
+          "text": "Iš pirmosios: $x = 5 + 3 = 8$."
+        },
+        {
+          "text": "Iš antrosios: $x = -5 + 3 = -2$."
+        }
+      ],
+      "answerText": "x = 8 arba x = -2"
+    },
+    {
+      "id": "ex-olimpiada-06-alg-12",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Raskite kitą sekos narį: $1, 3, 6, 10, 15, \\dots$",
+      "answer": {
+        "kind": "numeric",
+        "value": 21
+      },
+      "coreIdea": {
+        "title": "Trikampiai skaičiai",
+        "text": "Kiekvienas narys gaunamas pridedant vis didesnį natūralųjį skaičių."
+      },
+      "strategyTags": [
+        "sequences"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažiūrėkite, kiek pridedama prie kiekvieno nario: $+2, +3, +4, +5$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Kitas narys turėtų būti gaunamas pridedant 6.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skirtumai tarp narių: $3-1=2, 6-3=3, 10-6=4, 15-10=5$."
+        },
+        {
+          "text": "Kitas skirtumas turi būti 6."
+        },
+        {
+          "text": "Skaičiuojame: $15 + 6 = 21$."
+        }
+      ],
+      "answerText": "21"
+    },
+    {
+      "id": "ex-olimpiada-06-alg-13",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Suma dviejų skaičių lygi 10, o jų skirtumas lygus 2. Raskite šiuos skaičius.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaičiai yra 6 ir 4."
+      },
+      "coreIdea": {
+        "title": "Sudeidami lygtis",
+        "text": "Jei sudėsite abi sąlygas, vienas kintamasis susiprastins."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažymėkite skaičius $x$ ir $y$. $x+y=10$ ir $x-y=2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite šias lygtis: $(x+y) + (x-y) = 10 + 2$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome sistemą: $x+y=10, x-y=2$."
+        },
+        {
+          "text": "Sudėję gauname $2x = 12$, iš kur $x=6$."
+        },
+        {
+          "text": "Tada $y = 10 - 6 = 4$."
+        }
+      ],
+      "answerText": "Skaičiai yra 6 ir 4."
+    },
+    {
+      "id": "ex-olimpiada-06-alg-14",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "hard",
+      "statement": "Sumaišyta 200 g 10% druskos tirpalo ir 300 g 20% druskos tirpalo. Kokia bus gauto tirpalo koncentracija?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Koncentracija bus 16%."
+      },
+      "coreIdea": {
+        "title": "Druskos kiekio išsaugojimas",
+        "text": "Bendra druska lygi druskų sumai atskiruose tirpaluose."
+      },
+      "strategyTags": [
+        "mixtures"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Raskite druskos kiekį pirmame tirpale ($10\\%$ iš 200 g).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Raskite druskos kiekį antrame tirpale ($20\\%$ iš 300 g).",
+          "penalty": 0.05
+        },
+        {
+          "order": 3,
+          "text": "Padalykite bendrą druską iš bendros masės (500 g).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmame tirpale druskos: $200 \\times 0.1 = 20$ g."
+        },
+        {
+          "text": "Antrame tirpale druskos: $300 \\times 0.2 = 60$ g."
+        },
+        {
+          "text": "Iš viso druskos: $20 + 60 = 80$ g."
+        },
+        {
+          "text": "Koncentracija: $80 / 500 = 0.16$ arba $16\\%$."
+        }
+      ],
+      "answerText": "Koncentracija bus 16%."
+    },
+    {
+      "id": "ex-olimpiada-06-alg-15",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "numericInput",
+      "statement": "Kiškis bėga 12 m/s greičiu, o vilkas jį veja 15 m/s greičiu. Pradinis atstumas tarp jų yra 60 metrų. Po kiek sekundžių vilkas pasivys kiškį?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20
+      },
+      "coreIdea": {
+        "title": "Artėjimo greitis",
+        "text": "Vilkas kiekvieną sekundę priartėja per greičių skirtumą."
+      },
+      "strategyTags": [
+        "relative-speed"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Raskite, kiek metrų vilkas priartėja per 1 sekundę.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Padalykite pradinį atstumą iš šio skirtumo.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Artėjimo greitis: $15 - 12 = 3$ m/s."
+        },
+        {
+          "text": "Laikas: $60 / 3 = 20$ s."
+        }
+      ],
+      "answerText": "20"
+    },
+    {
+      "id": "ex-olimpiada-06-alg-16",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "statement": "Palyginkite $5^{44}$ ir $4^{55}$. Kuris didesnis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "5^44"
+          },
+          {
+            "id": "b",
+            "text": "4^55"
+          },
+          {
+            "id": "c",
+            "text": "Jie lygūs"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "coreIdea": {
+        "title": "Rodiklių suvienodinimas",
+        "text": "Abu rodikliai dalijasi iš 11."
+      },
+      "strategyTags": [
+        "exponentiation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Užrašykite: $5^{44} = (5^4)^{11}$ ir $4^{55} = (4^5)^{11}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Palyginkite $5^4$ ir $4^5$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$5^4 = 625$."
+        },
+        {
+          "text": "$4^5 = 1024$."
+        },
+        {
+          "text": "Kadangi $1024 > 625$, tai $4^{55} > 5^{44}$."
+        }
+      ],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-06-alg-17",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "statement": "Sugalvokite skaičių, pridėkite 5, rezultatą padvigubinkite, atimkite 10. Kodėl visada gaunamas dvigubas sugalvotas skaičius?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nes $(x+5) \\times 2 - 10 = 2x$."
+      },
+      "coreIdea": {
+        "title": "Algebrinis užrašymas",
+        "text": "Veiksmų seką užrašykite viena formule."
+      },
+      "strategyTags": [
+        "algebraic-representation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pažymėkite sugalvotą skaičių $x$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite veiksmus: $(x+5) \\times 2 - 10$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skliaustų atidarymas: $2x + 10 - 10$."
+        },
+        {
+          "text": "Suprastinus lieka $2x$."
+        }
+      ],
+      "answerText": "Nes $(x+5) \\times 2 - 10 = 2x$."
+    },
+    {
+      "id": "ex-olimpiada-06-alg-18",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Ant lentos užrašyti skaičiai nuo 1 iki 10. Galima nutrynti bet kuriuos du skaičius $a$ ir $b$ ir užrašyti jų sumą $a+b$. Koks bus paskutinis likęs skaičius po 9 tokių veiksmų?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Paskutinis skaičius bus 55."
+      },
+      "coreIdea": {
+        "title": "Sumos invariantas",
+        "text": "Nesvarbu, kokia tvarka sudedame, bendra visų skaičių suma nesikeičia."
+      },
+      "strategyTags": [
+        "invariant"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar bendra visų užrašytų skaičių suma pasikeičia po vieno veiksmo?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuokite sumą $1+2+3+...+10$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pradinė suma: $1+2+3+4+5+6+7+8+9+10 = 55$."
+        },
+        {
+          "text": "Kiekvienas veiksmas nekeičia bendros sumos."
+        },
+        {
+          "text": "Pabaigoje liks vienas skaičius, kuris ir bus lygus 55."
+        }
+      ],
+      "answerText": "Paskutinis skaičius bus 55."
+    },
+    {
+      "id": "ex-olimpiada-06-alg-19",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "medium",
+      "statement": "Suprastinkite reiškinį: $\\frac{12a^2b}{4ab}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3a"
+      },
+      "coreIdea": {
+        "title": "Daugiklių prastinimas",
+        "text": "Padalykite koeficientus ir raides atskirai."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Padalykite 12 iš 4.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "text": "Suprastinkite $a^2$ iš $a$ ir $b$ iš $b$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$12 / 4 = 3$."
+        },
+        {
+          "text": "$a^2 / a = a$."
+        },
+        {
+          "text": "$b / b = 1$."
+        },
+        {
+          "text": "Rezultatas: $3a$."
+        }
+      ],
+      "answerText": "3a"
+    },
+    {
+      "id": "ex-olimpiada-06-alg-20",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "statement": "Prieš jus stovi du žmonės. Vienas visada sako tiesą, kitas visada meluoja. Jūs nežinote, kuris yra kuris. Kokį VIENĄ klausimą užduoti vienam iš jų, kad sužinotumėte, kurios durys veda į laisvę?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Klausti: 'Ką pasakytų tavo draugas, jei paklausčiau jo, kurios durys teisingos?'"
+      },
+      "coreIdea": {
+        "title": "Dvigubas neigimas",
+        "text": "Melagis sumeluos apie tiesą, o tiesakalbis pasakys melagio melą. Abu nurodys neteisingas duris."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Klausimas turi priversti abu duoti tą patį atsakymą (arba priešingą).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Uždavus minėtą klausimą, abu nurodys NETEISINGAS duris."
+        },
+        {
+          "text": "Tada jūs turite eiti pro Kitas duris."
+        }
+      ],
+      "answerText": "Klausti: 'Ką pasakytų tavo draugas, jei paklausčiau jo, kurios durys teisingos?'"
     }
   ],
   "tests": [
@@ -1518,14 +2163,6 @@
         "olimpiada-06-algebra"
       ],
       "exerciseIds": [
-        "ex-olimpiada-06-9af12ecd",
-        "ex-olimpiada-06-3e3ce5c2",
-        "ex-olimpiada-06-15b5cb2b",
-        "ex-olimpiada-06-72644951",
-        "ex-olimpiada-06-95300ab8",
-        "ex-olimpiada-06-2eaeade9",
-        "ex-olimpiada-06-f2a0c71a",
-        "ex-olimpiada-06-69e93b63",
         "ex-olimpiada-06-b4e7dd8a",
         "ex-olimpiada-06-bdd1881c"
       ],

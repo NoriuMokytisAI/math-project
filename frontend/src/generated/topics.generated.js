@@ -1,5 +1,105 @@
 // Generated split content chunk. Source: scripts/build_frontend_content.py
 export const topics = {
+  "desimtaines-trupmenos": {
+    "id": "desimtaines-trupmenos",
+    "grade": 5,
+    "title": "Dešimtainės trupmenos",
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai",
+      "trupmenos-procentai-santykiai"
+    ],
+    "prerequisiteTopicIds": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai",
+      "trupmenos-procentai-santykiai"
+    ],
+    "nextTopicIds": [
+      "sveikieji-racionalieji-skaiciai"
+    ],
+    "concepts": [
+      "desimtaine-trupmena",
+      "kablelis",
+      "desimtosios-dalys",
+      "simtosios-dalys",
+      "tukstantosios-dalys",
+      "skaiciu-sulyginimas",
+      "desimtainiu-lyginimas",
+      "desimtainiu-apvalinimas",
+      "sudetis-stulpeliu-desimtainiu",
+      "atimtis-stulpeliu-desimtainiu"
+    ],
+    "sections": [
+      {
+        "title": "Kas yra dešimtainė trupmena?",
+        "body": [
+          "Dešimtainės trupmenos – tai skaičiai, kurių vardikliai yra 10, 100, 1000 ir t. t., bet užrašomi jie ne trupmena, o naudojant [[kablelis|kablelį]].",
+          "Dešimtainė trupmena – tai skaičiaus užrašas, kuriame sveikoji dalis nuo trupmeninės atskiriama kableliu.",
+          "Paprastoji trupmena 5/10 dešimtainiu būdu rašoma 0,5. Skaitome: 'nulis sveikų, penkios dešimtosios'."
+        ]
+      },
+      {
+        "title": "Skyriai po kablelio",
+        "body": [
+          "Kiekviena skaitmens vieta po kablelio turi savo pavadinimą:",
+          "Skyrių pavadinimai (pvz., 12,345):",
+          "Pastaba. Pirmas skaitmuo po kablelio visada rodo dešimtąsias dalis."
+        ]
+      },
+      {
+        "title": "Kaip lyginti ir sulyginti?",
+        "body": [
+          "Metodas. [[skaiciu-sulyginimas|Sulyginimas]]: dešimtainės trupmenos gale galima prirašyti nulių, skaičiaus reikšmė nuo to nesikeičia (pvz., 0,5 = 0,50).",
+          "Savybė. [[desimtainiu-lyginimas|Lyginimas]]: pirmiausia lyginame sveikąsias dalis. Jei jos lygios, lyginame dešimtąsias, tada šimtąsias ir t. t."
+        ]
+      },
+      {
+        "title": "Sudėtis ir atimtis",
+        "body": [
+          "Metodas. [[sudetis-stulpeliu-desimtainiu|Sudėtis stulpeliu]]: rašome skaičius taip, kad kablelis būtų po kableliu. Jei skaitmenų skaičius skiriasi, prirašome nulių.",
+          "Įspėjimas. Svarbiausia taisyklė: kablelis po kableliu!",
+          "2,5 + 0,14 = 2,50 + 0,14 = 2,64."
+        ]
+      }
+    ],
+    "formulas": [],
+    "mistakes": [
+      "Kablelio ignoravimas — Sveikasis skaičius turi kablelį gale (3 = 3,0). Lygiuok kablelį po kablelio.",
+      "Nulių 'pametimas' — Sulygink skaitmenų skaičių: 0,5 = 0,50. 50 > 12, tad 0,5 > 0,12."
+    ],
+    "examples": [
+      {
+        "title": "Paprastosios trupmenos keitimas dešimtaine",
+        "text": "Užrašyk 3/100 dešimtainiu skaičiumi.",
+        "solution": "Vardiklyje yra 100, todėl po kablelio turi būti du skaitmenys. 3/100 Sveikųjų dalių nėra, todėl rašome 0. 0,03",
+        "answer": "0,03"
+      },
+      {
+        "title": "Lyginimas",
+        "text": "Palygink 0,7 ir 0,65.",
+        "solution": "Sulyginame skaitmenis po kablelio. 0,7 = 0,70 Lyginame 0,70 ir 0,65. 0,70 > 0,65",
+        "answer": "0,7 > 0,65"
+      },
+      {
+        "title": "Sudėtis",
+        "text": "Apskaičiuok 12,4 + 3,85.",
+        "solution": "Sulyginame: 12,40 + 3,85. 12,40 + 3,85 Sudedame skyriais: 40 + 85 = 125 (perkeliame 1 į sveikuosius). 16,25",
+        "answer": "16,25"
+      },
+      {
+        "title": "Apvalinimas",
+        "text": "Suapvalink 4,567 iki dešimtųjų.",
+        "solution": "Dešimtųjų skyriuje yra 5. Žiūrime į kitą skaitmenį – 6. 4,5|67 Kadangi 6 >= 5, dešimtųjų skyrių didiname vienetu. 4,6",
+        "answer": "4,6"
+      },
+      {
+        "title": "Atimtis iš sveikojo skaičiaus",
+        "text": "Apskaičiuok 10 - 2,34.",
+        "solution": "Užrašome 10 su kableliu. 10,00 - 2,34 Atimame stulpeliu. 7,66",
+        "answer": "7,66"
+      }
+    ]
+  },
   "desningumai-ir-lenteles-5": {
     "id": "desningumai-ir-lenteles-5",
     "grade": 5,
@@ -704,7 +804,7 @@ export const topics = {
       {
         "title": "4 Pavyzdys: Kvadrato dalijimas",
         "text": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
-        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą. Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\implies 3 \\times 8$ arba $4 \\times 6$. Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka! Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$.",
+        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $8$ cm. Kiekvieno stačiakampio plotas $S = a \\times b$. Ieškome daliklių, kurie tilptų į $8 \\times 8$ kvadratą. Pabandykime: 1x8 (plotas 8) ir 3x8 (plotas 24). Jie užima 4x8 plotą. Lieka kita kvadrato dalis 4x8. Ją padaliname į 3x4 (plotas 12) ir 5x4 (plotas 20). 3+5=8. Viskas tinka.",
         "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
       }
     ]
@@ -765,44 +865,11 @@ export const topics = {
           "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$",
           "Metodas. Jei uždavinyje kalbama apie objektų mainus, lentelės spalvinimą ar operacijas su skaičiais, stebėkite, kaip keičiasi lyginių arba nelyginių skaičių kiekis. Šis savybės nekintamumas vadinamas **invariantu**."
         ]
-      },
-      {
-        "title": "Sistemingas sąrašų sudarymas ir skaičiavimas",
-        "body": [
-          "Kombinatorikos uždaviniuose dažnai reikia rasti galimų derinių skaičių. Pagrindinis pradedančiojo priešas – netvarkingas skaičiavimas, kai kai kurie variantai praleidžiami, o kiti suskaičiuojami du kartus.",
-          "Įspėjimas. Visada sudarykite sąrašus sistemiškai! Pavyzdžiui, jei ieškote triženklių skaičių, rašykite juos didėjimo tvarka (nuo mažiausio iki didžiausio).",
-          "Metodas. **Daugybos taisyklė**: Jeigu pirmąjį objektą galime pasirinkti $a$ būdais, o antrąjį – $b$ būdais, tai abiejų objektų poros pasirinkimo būdų skaičius yra $a \\times b$."
-        ]
       }
     ],
     "formulas": [],
     "mistakes": [],
-    "examples": [
-      {
-        "title": "1 Pavyzdys: Skaitmenų eilė",
-        "text": "Triženklio skaičiaus pirmasis skaitmuo yra $3$. Jei šį skaitmenį perkeltume į skaičiaus galą, gautasis skaičius būtų $9$ vienetais didesnis už pradinį. Raskite pradinį skaičių.",
-        "solution": "Pažymėkime pradinį skaičių kaip $\\overline{3ab}$, kurį galima užrašyti: $300 + 10a + b$. Perkėlus skaitmenį $3$ į galą, gauname skaičių $\\overline{ab3}$, kurio vertė yra $100a + 10b + 3$. Pagal sąlygą, naujasis skaičius yra $9$ vienetais didesnis: $\\overline{ab3} - \\overline{3ab} = 9$. Užrašome lygtį: $(100a + 10b + 3) - (300 + 10a + b) = 9$. Supaprastiname: $90a + 9b - 297 = 9 \\implies 90a + 9b = 306$. Padalijame abi puses iš $9$: $10a + b = 34$. Kadangi $a$ ir $b$ yra skaitmenys, tai reiškia, kad skaičius $\\overline{ab}$ yra lygus $34$ (t. y. $a=3$, $b=4$). Pradinis skaičius buvo $334$. Patikriname: $343 - 334 = 9$. Viskas tinka!",
-        "answer": "$334$"
-      },
-      {
-        "title": "2 Pavyzdys: Monetų paritetas",
-        "text": "Ant stalo padėta $11$ monetų, visos atvirstos skaičiumi aukštyn. Vienu ėjimu leidžiama apversti bet kurias dvi monetas. Ar įmanoma po kelių ėjimų pasiekti, kad visos monetos būtų atvirstos herbu aukštyn?",
-        "solution": "Kiekviena moneta gali būti būsenos 'Skaičius' (S) arba 'Herbas' (H). Mums reikia, kad pradžioje buvo $11$ S monetų (ir $0$ H monetų), o pabaigoje būtų $11$ H monetų. Stebėkime nelyginių monetų (H) skaičiaus paritetą. Kai apverčiame dvi monetas, galimi trys atvejai:\n1. Apverčiame dvi S monetos $\\implies$ jos tampa H monetomis. H monetų skaičius padidėja $2$.\n2. Apverčiame dvi H monetos $\\implies$ jos tampa S monetomis. H monetų skaičius sumažėja $2$.\n3. Apverčiame vieną S ir vieną H monetą $\\implies$ S tampa H, o H tampa S. H monetų skaičius nepasikeičia. Pastebime, kad visais atvejais H monetų skaičius pakinta lyginiu skaičiumi ($+2$, $-2$ arba $0$). Kadangi pradžioje H monetų skaičius buvo $0$ (lyginis skaičius), tai po bet kokio ėjimų skaičiaus H monetų skaičius visada išliks lyginis. Mums reikia gauti $11$ H monetų. Kadangi $11$ yra nelyginis skaičius, o H monetų skaičius visada turi būti lyginis, pasiekti šį tikslą neįmanoma.",
-        "answer": "Ne, neįmanoma."
-      },
-      {
-        "title": "4 Pavyzdys: Kvadrato dalijimas",
-        "text": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
-        "solution": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą. Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\implies 3 \\times 8$ arba $4 \\times 6$. Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka! Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$.",
-        "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
-      },
-      {
-        "title": "5 Pavyzdys: Kelių skaičiavimas",
-        "text": "Kvadratinėje lentelėje $3 \\times 3$ norime nukeliauti iš viršutinio kairiojo langelio į apatinį dešinįjį langelį. Galima judėti tik po vieną langelį į dešinę arba žemyn. Keliais skirtingais būdais galima tai padaryti?",
-        "solution": "Pažymėkime lentelės langelius koordinatėmis $(row, col)$ nuo $(1,1)$ iki $(3,3)$. Kiekviename žingsnyje, norint patekti į langelį $(r, c)$, galime ateiti tik iš kairės $(r, c-1)$ arba iš viršaus $(r-1, c)$. Todėl būdų skaičius pasiekti langelį yra lygus būdų sumai pasiekti jo kaimynus iš kairės ir viršaus. Užrašome būdų skaičių kiekviename langelyje:\n- Viršutinėje eilutėje judėti galima tik į dešinę, todėl visur yra po $1$ būdą: $(1,1)=1$, $(1,2)=1$, $(1,3)=1$.\n- Kairiajame stulpelyje judėti galima tik žemyn, todėl visur po $1$ būdą: $(2,1)=1$, $(3,1)=1$.\n- Skaičiuojame vidinius langelius:\n  - $(2,2) = (1,2) + (2,1) = 1 + 1 = 2$ būdai.\n  - $(2,3) = (1,3) + (2,2) = 1 + 2 = 3$ būdai.\n  - $(3,2) = (2,2) + (3,1) = 2 + 1 = 3$ būdai.\n  - Galutinis langelis: $(3,3) = (2,3) + (3,2) = 3 + 3 = 6$ būdų. Iš viso yra $6$ skirtingi būdai nukeliauti.",
-        "answer": "$6$ būdais"
-      }
-    ]
+    "examples": []
   },
   "olimpiada-05-strategijos-ir-irodymai": {
     "id": "olimpiada-05-strategijos-ir-irodymai",
@@ -810,54 +877,155 @@ export const topics = {
     "title": "Strategijos ir įrodymai",
     "strand": "Strategijos ir įrodymai",
     "level": "olympiad",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
+    "prerequisites": [
+      "Natūralieji skaičiai, dalikliai ir kartotiniai"
+    ],
+    "prerequisiteTopicIds": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai"
+    ],
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-05-concept-logic",
-      "olimpiada-05-concept-method"
+      "olimpiada-05-concept-method",
+      "olimpiada-05-concept-parity",
+      "olimpiada-05-concept-invariant",
+      "olimpiada-05-concept-dirichlet",
+      "olimpiada-05-concept-coloring",
+      "olimpiada-05-concept-backwards"
     ],
     "sections": [
       {
-        "title": "Paritetas: lyginių ir nelyginių skaičių magija",
+        "title": "Kas yra olimpiadinė strategija?",
         "body": [
-          "Vienas galingiausių ir paprasčiausių įrankių pradinėse olimpiadose yra skaičių lyginumas (paritetas).",
-          "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$",
-          "Metodas. Jei uždavinyje kalbama apie objektų mainus, lentelės spalvinimą ar operacijas su skaičiais, stebėkite, kaip keičiasi lyginių arba nelyginių skaičių kiekis. Šis savybės nekintamumas vadinamas **invariantu**."
+          "Olimpiadiniai uždaviniai dažnai atrodo sudėtingi ne dėl didelių skaičių, o dėl to, kad jiems išspręsti reikia ne tik formulių, bet ir specialių mąstymo metodų – **strategijų**.",
+          "Šioje temoje susipažinsime su pagrindiniais įrankiais, kurie padeda rasti sprendimą net tada, kai iš pradžių neaišku, nuo ko pradėti."
+        ]
+      },
+      {
+        "title": "Paritetas: Lyginumas kaip įrankis",
+        "body": [
+          "Skaičiaus lyginumas (ar jis dalijasi iš 2) vadinamas **paritetu**. Svarbu žinoti, kaip paritetas kinta atliekant veiksmus:",
+          "- Lyginis + Lyginis = Lyginis\n- Nelyginis + Nelyginis = Lyginis\n- Lyginis + Nelyginis = Nelyginis\n- Nelyginis × Nelyginis = Nelyginis\n- Lyginis × bet koks = Lyginis",
+          "Pastaba. Daugelis uždavinių apie „ar galima“ išsprendžiami parodant, kad pradinės ir galutinės būsenos paritetai nesutampa."
+        ]
+      },
+      {
+        "title": "Dirichlė principas (Balandžių narveliai)",
+        "body": [
+          "Tai vienas paprasčiausių, bet galingiausių metodų. Jis sako: „Jei turime $n$ narvelių ir daugiau nei $n$ balandžių, tai bent viename narvelyje turės nutūpti bent du balandžiai“.",
+          "Pavyzdžiui, jei turite 3 kojines, o spalvų yra tik 2 (juoda ir balta), tai bent dvi kojinės tikrai bus vienodos spalvos."
+        ]
+      },
+      {
+        "title": "Ėjimas nuo galo",
+        "body": [
+          "Kai žinome operacijų seką ir galutinį rezultatą, bet nežinome pradinio skaičiaus, patogiausia spręsti einant nuo pabaigos į pradžią ir atliekant atvirkštinius veiksmus."
         ]
       }
     ],
     "formulas": [],
-    "mistakes": [],
-    "examples": []
+    "mistakes": [
+      "Tikrinami tik keli pavyzdžiai — Olimpiadose reikia bendro paaiškinimo (įrodymo), kodėl tai galioja visiems atvejams.",
+      "Spėjimas pagal dėsningumą — Būtina rasti invariantą arba loginį ryšį, kuris garantuoja dėsningumą."
+    ],
+    "examples": [
+      {
+        "title": "Paslaptingas skaičius",
+        "text": "Sugalvojau skaičių, prie jo pridėjau 10, tada padauginau iš 2 ir gavau 40. Kokį skaičių sugalvojau?",
+        "solution": "Pradedame nuo galo: gautas rezultatas yra 40. 40 Paskutinis veiksmas buvo daugyba iš 2. Atliekame dalybą iš 2. 40 : 2 = 20 Prieš tai buvo pridėta 10. Atliekame atimtį. 20 - 10 = 10",
+        "answer": "Sugalvotas skaičius yra 10."
+      }
+    ]
   },
-  "olimpiada-05": {
-    "id": "olimpiada-05",
+  "romeniski-skaiciai": {
+    "id": "romeniski-skaiciai",
     "grade": 5,
-    "title": "Olimpiadinė matematika (5 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-05-skaiciu-teorija",
-      "olimpiada-05-strategijos-ir-irodymai",
-      "olimpiada-05-algebra",
-      "olimpiada-05-geometrija",
-      "olimpiada-05-kombinatorika"
+    "title": "Romėniškieji skaičiai",
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Natūralieji skaičiai, dalikliai ir kartotiniai"
     ],
-    "concepts": [],
+    "prerequisiteTopicIds": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai"
+    ],
+    "nextTopicIds": [
+      "desimtaines-trupmenos"
+    ],
+    "concepts": [
+      "romeniskas-skaitmuo",
+      "sudeties-taisykle-romeniskiems",
+      "atimties-taisykle-romeniskiems",
+      "kartojimo-taisykle",
+      "simboliu-reiksmes",
+      "dideli-skaiciai-romeniski",
+      "skaiciu-konvertavimas",
+      "istorinis-kontekstas"
+    ],
     "sections": [
       {
-        "title": "Pasirinkite olimpiadinę temą",
+        "title": "Kas yra romėniškieji skaičiai?",
         "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Strategijos ir įrodymai, Algebra, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
+          "Romėniškieji skaičiai – tai senovės Romoje sukurta skaičiavimo sistema, kurią naudojame iki šiol: laikrodžių ciferblatuose, knygų skyriams žymėti ar istoriniams metams nurodyti.",
+          "Romėniškasis skaitmuo – tai lotynų abėcėlės raidė, turinti tam tikrą skaitinę reikšmę.",
+          "Pagrindiniai romėniški simboliai:"
+        ]
+      },
+      {
+        "title": "Pagrindinės rašymo taisyklės",
+        "body": [
+          "Savybė. [[sudeties-taisykle-romeniskiems|Sudėties taisyklė]]: jei mažesnis skaitmuo rašomas po didesnio, jų reikšmės sudedamos (pvz., VI = 5 + 1 = 6).",
+          "Savybė. [[atimties-taisykle-romeniskiems|Atimties taisyklė]]: jei mažesnis skaitmuo rašomas prieš didesnį, jis atimamas iš didesnio (pvz., IV = 5 - 1 = 4).",
+          "Įspėjimas. [[kartojimo-taisykle|Kartojimo taisyklė]]: tas pats skaitmuo (I, X, C, M) negali būti rašomas iš eilės daugiau nei tris kartus. Skaitmenys V, L, D niekada nekartojami."
+        ]
+      },
+      {
+        "title": "Kaip užrašyti didelius skaičius?",
+        "body": [
+          "Norint užrašyti skaičių, jis skaidomas skyriais: tūkstančiais, šimtais, dešimtimis ir vienetais. Kiekviena dalis užrašoma atskirai.",
+          "Užrašykime 2024: 2000 = MM, 20 = XX, 4 = IV. Tad 2024 = MMXXIV.",
+          "Pastaba. Atimties taisyklė galioja tik tam tikroms poroms: I prieš V arba X; X prieš L arba C; C prieš D arba M."
         ]
       }
     ],
     "formulas": [],
-    "mistakes": [],
-    "examples": []
+    "mistakes": [
+      "Per daug kartojimų — Po trijų vienodų skaitmenų naudok kitą didesnį simbolį su atimties taisykle.",
+      "Neteisinga atimties tvarka — Atimti galima tik tam tikrus simbolius: I iš V/X, X iš L/C, C iš D/M.",
+      "Painioja L ir C — L yra 50 (kaip 'Lpus' šimto), C yra 100 (kaip 'Centum')."
+    ],
+    "examples": [
+      {
+        "title": "Mažo skaičiaus konvertavimas",
+        "text": "Užrašyk skaičių 9 romėniškai.",
+        "solution": "9 yra 10 minus 1. 10 - 1 = 9 Pagal atimties taisyklę, mažesnį skaitmenį rašome prieš didesnį. IX",
+        "answer": "IX"
+      },
+      {
+        "title": "Skaičiaus skaitymas",
+        "text": "Koks dešimtainis skaičius yra XIV?",
+        "solution": "Išskiriame simbolius: X (10) ir IV (4). 10 + (5 - 1) Sudedame dalis. 10 + 4 = 14",
+        "answer": "14"
+      },
+      {
+        "title": "Metų užrašymas",
+        "text": "Užrašyk metus 1999 romėniškai.",
+        "solution": "Skaidome: 1000 + 900 + 90 + 9. 1000=M, 900=CM, 90=XC, 9=IX Sujungiame dalis. MCMXCIX",
+        "answer": "MCMXCIX"
+      },
+      {
+        "title": "Didelis skaičius",
+        "text": "Koks skaičius yra MMDCCXLVI?",
+        "solution": "Skaidome dalimis: MM, DCC, XL, VI. 2000 + 700 + 40 + 6 Sudedame. 2746",
+        "answer": "2746"
+      },
+      {
+        "title": "Sudėtingas atvejis",
+        "text": "Paversk 2444 į romėnišką užrašą.",
+        "solution": "Skaidome: 2000 (MM), 400 (CD), 40 (XL), 4 (IV). MM + CD + XL + IV Sujungiame. MMCDXLIV",
+        "answer": "MMCDXLIV"
+      }
+    ]
   },
   "transformacijos-5": {
     "id": "transformacijos-5",
@@ -1537,12 +1705,69 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-06-concept-logic",
-      "olimpiada-06-concept-method"
+      "olimpiada-06-concept-method",
+      "olimpiada-06-concept-absolute-value",
+      "olimpiada-06-concept-sequence",
+      "olimpiada-06-concept-invariant"
     ],
-    "sections": [],
+    "sections": [
+      {
+        "title": "Modulis ir jo savybės",
+        "body": [
+          "Skaičiaus modulis (absoliučioji vertė) parodo atstumą nuo skaičių tiesės pradžios taško $0$ iki taško, atitinkančio tą skaičių.",
+          "Teigiamo skaičiaus ir nulio modulis yra pats tas skaičius, o neigiamo skaičiaus modulis yra jam priešingas teigiamas skaičius.",
+          "Formulė: |x| = \\begin{cases} x, & \\text{jei } x \\ge 0 \\\\ -x, & \\text{jei } x < 0 \\end{cases}"
+        ]
+      },
+      {
+        "title": "Sekos ir dėsningumai",
+        "body": [
+          "Matematikoje seka yra skaičių rinkinys, išdėstytas tam tikra tvarka. Kiekvienas sekos narys gaunamas pagal tam tikrą taisyklę.",
+          "Metodas. Norint rasti kitą sekos narį, reikia nustatyti ryšį tarp gretimų narių (pvz., pridedamas pastovus skaičius arba dauginama iš tam tikro koeficiento)."
+        ]
+      },
+      {
+        "title": "Invariantas olimpiadose",
+        "body": [
+          "Invariantas yra dydis arba savybė, kuri nekinta atliekant tam tikrus veiksmus ar operacijas.",
+          "Pastaba. Dažniausi invariantai yra lygumas (paritetas), liekana dalijant iš tam tikro skaičiaus arba visų skaičių suma."
+        ]
+      }
+    ],
     "formulas": [],
     "mistakes": [],
-    "examples": []
+    "examples": [
+      {
+        "title": "Lygtis su moduliu",
+        "text": "Išspręskite lygtį: $|x - 2| = 5$.",
+        "solution": "Pagal modulio apibrėžimą, skaičius skliausteliuose gali būti lygus $5$ arba $-5$. x - 2 = 5 \\quad \\text{arba} \\quad x - 2 = -5 Išsprendžiame pirmąją lygtį. x = 5 + 2 = 7 Išsprendžiame antrąją lygtį. x = -5 + 2 = -3",
+        "answer": "x = 7, x = -3"
+      },
+      {
+        "title": "Sekos dėsningumas",
+        "text": "Raskite kitą sekos narį: $1, 4, 9, 16, \\dots$",
+        "solution": "Pastebime, kad kiekvienas sekos narys yra natūraliojo skaičiaus kvadratas. 1^2, 2^2, 3^2, 4^2 Kitas narys turi būti $5^2$. 5^2 = 25",
+        "answer": "25"
+      },
+      {
+        "title": "Santykinis greitis",
+        "text": "Dviratininkas važiuoja $15$ km/h greičiu. Po $2$ valandų iš to paties taško ta pačia kryptimi išvažiavo motociklininkas $45$ km/h greičiu. Po kiek laiko motociklininkas pasivys dviratininką?",
+        "solution": "Apskaičiuojame, kokį atstumą nuvažiavo dviratininkas per $2$ valandas. 15 \\times 2 = 30 \\text{ km} Apskaičiuojame motociklininko vijimosi greitį (greičių skirtumą). 45 - 15 = 30 \\text{ km/h} Apskaičiuojame laiką, per kurį bus įveiktas $30$ km atstumas. 30 / 30 = 1 \\text{ valanda}",
+        "answer": "Po 1 valandos"
+      },
+      {
+        "title": "Loginis uždavinys: Melagiai ir tiesakalbiai",
+        "text": "Saloje gyvena tik tiesakalbiai (visada sako tiesą) ir melagiai (visada meluoja). Sutinkate gyventoją A, kuris sako: 'Aš esu melagis'. Kas jis – tiesakalbis ar melagis?",
+        "solution": "Tarkime, kad A yra tiesakalbis. Tada jo teiginys turi būti tiesa, vadinasi, jis yra melagis. Prieštaravimas. Tarkime, kad A yra melagis. Tada jo teiginys turi būti melas. Kadangi jis sako 'Aš esu melagis', tai tiesa būtų 'Aš nesu melagis'. Vėl prieštaravimas. Išvada: Tokia situacija matematiškai neįmanoma.",
+        "answer": "Tokia situacija neįmanoma"
+      },
+      {
+        "title": "Algebra ir skaičių savybės",
+        "text": "Įrodyk, kad trijų iš eilės einančių sveikųjų skaičių suma visada dalijasi iš 3.",
+        "solution": "Pažymėkime vidurinį skaičių raide $n$. Tada trys iš eilės einantys skaičiai yra $n-1, n, n+1$. Sudedame šiuos skaičius. (n-1) + n + (n+1) = 3n Kadangi rezultatas yra $3n$, jis visada dalijasi iš $3$ bet kuriam sveikam $n$.",
+        "answer": "Įrodyta"
+      }
+    ]
   },
   "olimpiada-06-geometrija": {
     "id": "olimpiada-06-geometrija",
@@ -1555,7 +1780,10 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-06-concept-logic",
-      "olimpiada-06-concept-method"
+      "olimpiada-06-concept-method",
+      "olimpiada-06-geo-concept-angles",
+      "olimpiada-06-geo-concept-triangle-inequality",
+      "olimpiada-06-geo-concept-symmetry"
     ],
     "sections": [
       {
@@ -1564,16 +1792,54 @@ export const topics = {
           "Geometrijos olimpiadose statusis trikampis yra viena dažniausių figūrų. Pitagoro teorema leidžia rasti kraštinių ilgius.",
           "Metodas. Pitagoro teorema teigia: $\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
         ]
+      },
+      {
+        "title": "Kampai ir jų savybės",
+        "body": [
+          "Kampai yra pagrindinis geometrijos elementas. Olimpiadose dažnai naudojami kryžminiai, gretiniai kampai bei kampai, susidarantys kertant lygiagrečias tieses.",
+          "Savybė. Kryžminiai kampai yra lygūs. Gretinių kampų suma lygi $180^\\circ$."
+        ]
+      },
+      {
+        "title": "Trikampio nelygybė",
+        "body": [
+          "Ne iš bet kokių trijų atkarpų galima sudėti trikampį.",
+          "Teorema. Trikampio bet kurių dviejų kraštinių ilgių suma visada yra didesnė už trečiosios kraštinės ilgį."
+        ]
       }
     ],
     "formulas": [],
     "mistakes": [],
     "examples": [
       {
-        "title": "3 Pavyzdys: Įbrėžtinis plotas",
+        "title": "Įbrėžtinis plotas",
         "text": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\pi$).",
         "solution": "Kadangi kvadrato plotas yra $36\\text{ cm}^2$, jo kraštinės ilgis yra $a = \\sqrt{36} = 6$ cm. Įbrėžto apskritimo skersmuo yra lygus kvadrato kraštinei, todėl $d = 6$ cm, o spindulys $r = d / 2 = 3$ cm. Apskaičiuojame apskritimo plotą: $S_{apskr} = \\pi r^2 = \\pi \\times 3^2 = 9\\pi\\text{ cm}^2$. Dalis už apskritimo ribų gaunama iš kvadrato ploto atėmus apskritimo plotą: $S = 36 - 9\\pi\\text{ cm}^2$.",
         "answer": "$36 - 9\\pi\\text{ cm}^2$"
+      },
+      {
+        "title": "Kampų radimas",
+        "text": "Duoti du gretiniai kampai. Vieno jų dydis yra $40^\\circ$. Koks kito kampo dydis?",
+        "solution": "Gretinių kampų suma visada lygi $180^\\circ$. Atimame žinomą kampą iš sumos: $180^\\circ - 40^\\circ = 140^\\circ$.",
+        "answer": "140°"
+      },
+      {
+        "title": "Trikampio egzistavimas",
+        "text": "Ar egzistuoja trikampis, kurio kraštinės yra 5 cm, 8 cm ir 15 cm?",
+        "solution": "Tikriname trikampio nelygybę: ar dviejų trumpesnių kraštinių suma didesnė už ilgiausiąją? Sudedame 5 ir 8: $5 + 8 = 13$. Lyginame su 15: $13 < 15$. Kadangi suma mažesnė, toks trikampis neegzistuoja.",
+        "answer": "Neegzistuoja"
+      },
+      {
+        "title": "Sudėtinės figūros plotas",
+        "text": "Figūra sudaryta iš kvadrato (kraštinė 4 cm) ir ant jo viršaus nubrėžto lygiakraščio trikampio (kraštinė 4 cm). Koks figūros perimetras?",
+        "solution": "Figūros perimetrą sudaro išorinės linijos. Iš kvadrato lieka 3 kraštinės (apačia ir šonai). Iš trikampio lieka 2 viršutinės kraštinės. Iš viso yra 5 kraštinės po 4 cm: $5 \\times 4 = 20$ cm.",
+        "answer": "20 cm"
+      },
+      {
+        "title": "Paviršiaus plotas",
+        "text": "Kubo briauna yra 3 cm. Iš jo kampo išpjautas mažas kubelis, kurio briauna 1 cm. Kaip pasikeitė didžiojo kubo paviršiaus plotas?",
+        "solution": "Išpjovus kampinį kubelį, pašalinamos 3 išorinės sienelės. Tačiau atsiranda 3 naujos vidinės sienelės (duobės viduje). Kadangi pašalintų ir naujų sienelių plotai lygūs, bendras paviršiaus plotas nepasikeičia.",
+        "answer": "Nepasikeitė"
       }
     ]
   },
@@ -1668,33 +1934,6 @@ export const topics = {
         "answer": "$3$ kojines"
       }
     ]
-  },
-  "olimpiada-06": {
-    "id": "olimpiada-06",
-    "grade": 6,
-    "title": "Olimpiadinė matematika (6 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-06-skaiciu-teorija",
-      "olimpiada-06-algebra",
-      "olimpiada-06-geometrija",
-      "olimpiada-06-kombinatorika"
-    ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Algebra, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
   },
   "sveikieji-racionalieji-skaiciai": {
     "id": "sveikieji-racionalieji-skaiciai",
@@ -1914,6 +2153,206 @@ export const topics = {
         "text": "Jei s = vt, rask t, kai s=96 ir v=12.",
         "solution": "Išreiškiame t. t=\\frac{s}{v} Įstatome duomenis. t=\\frac{96}{12}=8",
         "answer": "t=8"
+      }
+    ]
+  },
+  "trikampiu-lygumas-ir-braizymas": {
+    "id": "trikampiu-lygumas-ir-braizymas",
+    "grade": 6,
+    "title": "Trikampių braižymas ir lygumas",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Geometrijos ir matavimų pradmenys"
+    ],
+    "prerequisiteTopicIds": [
+      "geometrijos-ir-matavimu-pradmenys"
+    ],
+    "nextTopicIds": [
+      "lygios-ir-panasios-figuros"
+    ],
+    "concepts": [
+      "lygus-trikampiai",
+      "atitinkami-elementai",
+      "trikampio-nelygybe",
+      "kkk-pozymis",
+      "kkp-pozymis",
+      "kpk-pozymis",
+      "braizymas-skriestuvu",
+      "braizymas-matlankiu"
+    ],
+    "sections": [
+      {
+        "title": "Kada trikampiai yra lygūs?",
+        "body": [
+          "Geometrijoje dvi figūros vadinamos lygiomis, jei uždėtos viena ant kitos jos visiškai sutampa.",
+          "Trikampiai yra lygūs, jei jų [[atitinkami-elementai|atitinkamos kraštinės]] ir atitinkami kampai yra lygūs.",
+          "Pastaba. Jei trikampis ABC lygus trikampiui A'B'C', tai rašoma ∆ABC = ∆A'B'C'."
+        ]
+      },
+      {
+        "title": "Ar trikampis visada egzistuoja?",
+        "body": [
+          "Savybė. [[trikampio-nelygybe|Trikampio nelygybė]]: bet kurių dviejų trikampio kraštinių suma visada turi būti didesnė už trečiąją kraštinę.",
+          "Iš atkarpų 2 cm, 3 cm ir 10 cm trikampio nubraižyti nepavyks, nes 2 + 3 < 10 (jos tiesiog nesusisieks)."
+        ]
+      },
+      {
+        "title": "Trikampių lygumo požymiai",
+        "body": [
+          "Nebūtina matuoti visų 6 elementų, kad įsitikintume lygumu. Pakanka žinoti 3 tam tikrus elementus:",
+          "Metodas. 1. [[kkk-pozymis|KKK (Kraštinė-Kraštinė-Kraštinė)]]: jei vieno trikampio trys kraštinės lygios kito trikampio trims kraštinėms.",
+          "Metodas. 2. [[kkp-pozymis|KKP (Kraštinė-Kampas-Kraštinė)]]: jei du trikampiai turi po dvi lygias kraštines ir lygų kampą tarp jų.",
+          "Metodas. 3. [[kpk-pozymis|KPK (Kampas-Kraštinė-Kampas)]]: jei du trikampiai turi po lygią kraštinę ir po du lygius prie jos esančius kampus."
+        ]
+      },
+      {
+        "title": "Kaip nubraižyti trikampį?",
+        "body": [
+          "Braižymui naudojame liniuotę, [[braizymas-matlankiu|matlankį]] (kampams) ir [[braizymas-skriestuvu|skriestuvą]] (kraštinėms pernešti).",
+          "Metodas. Braižymas pagal 3 kraštines: 1. Nubrėžiame pagrindą. 2. Skriestuvu iš galų brėžiame lankus, kurių spinduliai lygūs kitoms kraštinėms. 3. Lankų susikirtimo taškas yra trečioji viršūnė."
+        ]
+      }
+    ],
+    "formulas": [],
+    "mistakes": [
+      "Bando braižyti neįmanomą trikampį — Visada patikrink: a + b > c.",
+      "Kampas ne tarp kraštinių — KKP požymiui kampas PRIVALO būti tarp duotų kraštinių."
+    ],
+    "examples": [
+      {
+        "title": "Trikampio egzistavimo tikrinimas",
+        "text": "Ar egzistuoja trikampis, kurio kraštinės yra 5 cm, 7 cm ir 10 cm?",
+        "solution": "Tikriname sumą: 5 + 7 = 12. 12 > 10 Tikriname kitas poras: 5 + 10 = 15 (> 7) ir 7 + 10 = 17 (> 5). 15 > 7, 17 > 5 Kadangi visos sąlygos tenkinamos, trikampis egzistuoja.",
+        "answer": "Taip, egzistuoja."
+      },
+      {
+        "title": "Lygumo įrodymas",
+        "text": "Trikampio ABC kraštinės lygios 3, 4, 5. Trikampio DEF kraštinės taip pat lygios 3, 4, 5. Ar jie lygūs?",
+        "solution": "Matome, kad visos trys kraštinės yra atitinkamai lygios. AB=DE=3, BC=EF=4, AC=DF=5 Taikome KKK požymį. KKK",
+        "answer": "Taip, pagal KKK požymį."
+      },
+      {
+        "title": "Braižymo eiga (SSS)",
+        "text": "Aprašyk, kaip nubraižyti trikampį su kraštinėmis 6, 6, 6.",
+        "solution": "Nubrėžk 6 cm atkarpą AB. Skriestuvu išmatuok 6 cm, įsmeik į A ir nubrėžk lanką. Tą patį padaryk iš taško B. Sujunk A ir B su lankų susikirtimo tašku C.",
+        "answer": "Gaunamas lygiakraštis trikampis."
+      },
+      {
+        "title": "Nežinomo kampo radimas",
+        "text": "Trikampiai ABC ir KMN yra lygūs. Kampas A lygus 40°. Kokį kampą atitinka kampas K?",
+        "solution": "Užraše ∆ABC = ∆KMN raidžių eilės tvarka rodo atitiktį. A \\leftrightarrow K, B \\leftrightarrow M, C \\leftrightarrow N Kampas A atitinka kampą K. \\angle A = \\angle K = 40^{\\circ}",
+        "answer": "40°"
+      },
+      {
+        "title": "Sudėtingas atvejis: nelygybė su x",
+        "text": "Trikampio dvi kraštinės yra 4 cm ir 9 cm. Kokia gali būti trečioji kraštinė (sveikasis skaičius), kad ji būtų kuo didesnė?",
+        "solution": "Turi galioti: 4 + 9 > x. 13 > x Didžiausias sveikasis skaičius, mažesnis už 13, yra 12. x = 12 Tikriname kitą pusę: 4 + x > 9 -> x > 5. 12 tinka. 4 + 12 = 16 > 9",
+        "answer": "12 cm"
+      }
+    ]
+  },
+  "apskritimas-ir-skritulys": {
+    "id": "apskritimas-ir-skritulys",
+    "grade": 7,
+    "title": "Apskritimas ir skritulys",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Geometrijos ir matavimų pradmenys"
+    ],
+    "prerequisiteTopicIds": [
+      "geometrijos-ir-matavimu-pradmenys"
+    ],
+    "nextTopicIds": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ],
+    "concepts": [
+      "apskritimas",
+      "skritulys",
+      "spindulys",
+      "skersmuo",
+      "pi-skaicius",
+      "apskritimo-ilgis",
+      "skritulio-plotas",
+      "lankas",
+      "ispjova"
+    ],
+    "sections": [
+      {
+        "title": "Apskritimas ir skritulys: pagrindinės sąvokos",
+        "body": [
+          "[[apskritimas|Apskritimas]] – tai visų plokštumos taškų, nutolusių nuo vieno taško (centro) tuo pačiu atstumu, aibė. Šis atstumas vadinamas [[spindulys|spinduliu]] (r).",
+          "[[skritulys|Skritulys]] – tai plokštumos dalis, kurią riboja apskritimas. Skritulys apima ir patį apskritimą, ir visus jo viduje esančius taškus.",
+          "[[skersmuo|Skersmuo]] (d) yra atkarpa, jungianti du apskritimo taškus ir einanti per jo centrą. Skersmuo yra dvigubai ilgesnis už spindulį: d = 2r."
+        ]
+      },
+      {
+        "title": "Skaičius Pi ir apskritimo ilgis",
+        "body": [
+          "Visų apskritimų ilgio ir jų skersmens santykis yra pastovus skaičius, žymimas graikiška raide [[pi-skaicius|π (pi)]].",
+          "Formulė: C = 2\\pi r \\quad \\text{arba} \\quad C = \\pi d",
+          "Pastaba. Skaičius π yra iracionalusis, jo apytikslė reikšmė yra 3,14."
+        ]
+      },
+      {
+        "title": "Skritulio plotas",
+        "body": [
+          "[[skritulio-plotas|Skritulio plotas]] parodo, kokį paviršiaus dydį užima figūra. Jis apskaičiuojamas pagal formulę:",
+          "Formulė: S = \\pi r^2",
+          "Įspėjimas. Nepamirškite, kad keliamas kvadratu tik spindulys, o ne visa sandauga πr."
+        ]
+      },
+      {
+        "title": "Apskritimo lankas ir skritulio išpjova",
+        "body": [
+          "[[lankas|Lankas]] yra apskritimo dalis tarp dviejų jo taškų. [[ispjova|Išpjova]] yra skritulio dalis, apribota dviem spinduliais ir lanku.",
+          "Jei lanką atitinkantis centrinis kampas yra α laipsnių, tai lanko ilgį l ir išpjovos plotą S_ispj apskaičiuojame taip:",
+          "Formulė: l = \\frac{2\\pi r \\alpha}{360} = \\frac{\\pi r \\alpha}{180}",
+          "Formulė: S_{\\text{išpj}} = \\frac{\\pi r^2 \\alpha}{360}"
+        ]
+      }
+    ],
+    "formulas": [
+      "C = 2\\pi r",
+      "S = \\pi r^2",
+      "l = \\frac{\\pi r \\alpha}{180}",
+      "S_{\\text{išpj}} = \\frac{\\pi r^2 \\alpha}{360}"
+    ],
+    "mistakes": [
+      "Painioja spindulį su skersmeniu — Jei duotas skersmuo d, spindulį r raskite padaliję d iš 2.",
+      "Painioja ilgio ir ploto formules — Plotas visada susijęs su kvadratu (r²), ilgis - su linijiniu matavimu (2r)."
+    ],
+    "examples": [
+      {
+        "title": "Apskritimo ilgio radimas",
+        "text": "Apskaičiuok apskritimo ilgį, kai spindulys r = 5 cm. (Atsakymą pateik su π).",
+        "solution": "Naudojame apskritimo ilgio formulę. C = 2\\pi r Įrašome r = 5. C = 2\\pi \\cdot 5 = 10\\pi",
+        "answer": "10π cm"
+      },
+      {
+        "title": "Skritulio ploto radimas",
+        "text": "Apskaičiuok skritulio plotą, kai skersmuo d = 8 m. (Naudok π ≈ 3,14).",
+        "solution": "Pirmiausia randame spindulį. r = d/2 = 8/2 = 4 \\text{ m} Taikome ploto formulę. S = \\pi r^2 = \\pi \\cdot 4^2 = 16\\pi Apskaičiuojame apytiksliai. S \\approx 16 \\cdot 3,14 = 50,24 \\text{ m}^2",
+        "answer": "50,24 m²"
+      },
+      {
+        "title": "Lanko ilgio radimas",
+        "text": "Apskaičiuok lanko ilgį, kai spindulys r = 6 cm, o centrinis kampas α = 60°.",
+        "solution": "Naudojame lanko ilgio formulę. l = \\frac{2\\pi r \\alpha}{360} Įrašome žinomas reikšmes. l = \\frac{2\\pi \\cdot 6 \\cdot 60}{360} Suprastiname trupmeną (60/360 = 1/6). l = \\frac{12\\pi}{6} = 2\\pi \\text{ cm}",
+        "answer": "2π cm"
+      },
+      {
+        "title": "Spindulio radimas iš ploto",
+        "text": "Skritulio plotas yra 25π cm². Rask jo apskritimo ilgį.",
+        "solution": "Iš ploto formulės randame spindulį r. 25\\pi = \\pi r^2 \\implies r^2 = 25 \\implies r = 5 \\text{ cm} Dabar apskaičiuojame ilgį. C = 2\\pi r = 2\\pi \\cdot 5 = 10\\pi \\text{ cm}",
+        "answer": "10π cm"
+      },
+      {
+        "title": "Išpjovos plotas",
+        "text": "Rask išpjovos plotą, jei jos lanko ilgis yra 4π cm, o spindulys r = 10 cm.",
+        "solution": "Galima pastebėti ryšį tarp lanko ilgio ir išpjovos ploto: S = (l * r) / 2. S_{\\text{išpj}} = \\frac{4\\pi \\cdot 10}{2} Apskaičiuojame. S_{\\text{išpj}} = 20\\pi \\text{ cm}^2",
+        "answer": "20π cm²"
       }
     ]
   },
@@ -2482,6 +2921,93 @@ export const topics = {
       }
     ]
   },
+  "matematiniai-teiginiai-ir-irodymai": {
+    "id": "matematiniai-teiginiai-ir-irodymai",
+    "grade": 7,
+    "title": "Matematiniai teiginiai ir įrodymai",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Geometrijos ir matavimų pradmenys"
+    ],
+    "prerequisiteTopicIds": [
+      "geometrijos-ir-matavimu-pradmenys"
+    ],
+    "nextTopicIds": [
+      "trikampiai-ir-pitagoro-teorema"
+    ],
+    "concepts": [
+      "apibreztis",
+      "teorema",
+      "aksioma",
+      "salyginis-teiginys",
+      "isvada",
+      "atvirkstinis-teiginys",
+      "hipoteze",
+      "irodymas"
+    ],
+    "sections": [
+      {
+        "title": "Kas yra matematiniai teiginiai?",
+        "body": [
+          "Matematikoje visi teiginiai turi būti aiškūs ir pagrįsti. Mes skiriame kelias svarbias rūšis:",
+          "[[apibreztis|Apibrėžtis]] – tai susitarimas, nurodantis, ką reiškia tam tikra sąvoka (pvz., 'Keturkampis yra figūra, turinti 4 kraštines').",
+          "[[teorema|Teorema]] – tai teiginys, kurio teisingumas yra įrodytas remiantis kitais žinomais faktais.",
+          "[[aksioma|Aksioma]] – tai pradinis teiginys, kuris priimamas be įrodymų (pvz., 'Per du taškus galima nubrėžti tik vieną tiesę')."
+        ]
+      },
+      {
+        "title": "Sąlyginiai teiginiai „jei, tai“",
+        "body": [
+          "Daugelis matematinių taisyklių yra [[salyginis-teiginys|sąlyginiai teiginiai]]. Jie turi dvi dalis:",
+          "1. **Sąlyga** (prielaida) – tai, kas žinoma (po žodžio „Jei“).",
+          "2. **Išvada** – tai, ką reikia gauti ar įrodyti (po žodžio „Tai“).",
+          "Pastaba. Pavyzdys: „Jei trikampis yra lygiašonis, tai jo kampai prie pagrindo yra lygūs“. Čia sąlyga – trikampis lygiašonis, išvada – kampai lygūs."
+        ]
+      },
+      {
+        "title": "Atvirkštinis teiginys",
+        "body": [
+          "Sukeitę teiginio sąlygą su išvada vietomis, gauname [[atvirkstinis-teiginys|atvirkštinį teiginį]].",
+          "Įspėjimas. Svarbu: ne visada atvirkštinis teiginys yra teisingas, net jei pradinis teiginys yra tiesa!",
+          "Pavyzdys: Teiginys „Jei skaičius dalijasi iš 10, tai jis dalijasi iš 5“ yra teisingas. Atvirkštinis: „Jei skaičius dalijasi iš 5, tai jis dalijasi iš 10“ yra **klaidingas** (pvz., skaičius 15)."
+        ]
+      },
+      {
+        "title": "Hipotezės ir įrodymai",
+        "body": [
+          "[[hipoteze|Hipotezė]] – tai spėjimas, kuris atrodo teisingas, bet dar nėra įrodytas.",
+          "[[irodymas|Įrodymas]] – tai loginė samprotavimų seka, kuri parodo, kad teorema yra visada teisinga.",
+          "Metodas. Norint paneigti bendrą teiginį, pakanka rasti bent vieną **priešpriešinį pavyzdį**."
+        ]
+      }
+    ],
+    "formulas": [],
+    "mistakes": [
+      "Manymas, kad atvirkštinis teiginys visada teisingas — Atvirkštinį teiginį reikia tikrinti iš naujo arba įrodyti atskirai.",
+      "Sąlygos ir išvados painiojimas — Sąlyga yra tai, kuo remiamės, išvada - tai, kas seka iš sąlygos."
+    ],
+    "examples": [
+      {
+        "title": "Sąlygos ir išvados atpažinimas",
+        "text": "Nurodyk teiginio „Jei kampas status, tai jo didumas 90°“ sąlygą ir išvadą.",
+        "solution": "Sąlyga yra po žodžio 'Jei'. \\text{Sąlyga: kampas yra status.} Išvada yra po žodžio 'tai'. \\text{Išvada: kampo didumas yra } 90^\\circ.",
+        "answer": "Sąlyga: kampas status; Išvada: didumas 90°"
+      },
+      {
+        "title": "Atvirkštinio teiginio sudarymas",
+        "text": "Suformuluok atvirkštinį teiginį teiginiui: „Jei skaičius baigiasi nuliu, tai jis dalijasi iš 5“.",
+        "solution": "Sukeičiame sąlygą (baigiasi nuliu) su išvada (dalijasi iš 5). \\text{Nauja sąlyga: dalijasi iš 5. Nauja išvada: baigiasi nuliu.} Suformuluojame sakinį. \\text{Jei skaičius dalijasi iš 5, tai jis baigiasi nuliu.}",
+        "answer": "Jei skaičius dalijasi iš 5, tai jis baigiasi nuliu."
+      },
+      {
+        "title": "Teiginio teisingumo vertinimas",
+        "text": "Ar teisingas teiginys: „Jei keturkampis turi 4 lygias kraštines, tai jis yra kvadratas“?",
+        "solution": "Pagalvojame apie figūras su 4 lygiomis kraštinėmis. \\text{Yra kvadratai ir rombai.} Ar kiekviena tokia figūra būtinai yra kvadratas? Ne, gali būti rombas be stačių kampų. \\text{Radome priešpriešinį pavyzdį - rombą.} Vadinasi, teiginys yra klaidingas. \\text{Klaidingas.}",
+        "answer": "Klaidingas (priešpriešinis pavyzdys – rombas)"
+      }
+    ]
+  },
   "nelygybes-ir-intervalai": {
     "id": "nelygybes-ir-intervalai",
     "grade": 7,
@@ -2602,20 +3128,59 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method"
+      "olimpiada-07-concept-method",
+      "olimpiada-07-concept-divisibility",
+      "olimpiada-07-concept-proportion"
     ],
     "sections": [
       {
         "title": "Euklido algoritmas ir tarpusavyje pirminiai skaičiai",
         "body": [
           "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\pmod b$).",
-          "Metodas. Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais (arba pirminiais vienas kitam). Tai svarbu dirbant su trupmenomis ir lygtimis."
+          "Metodas. Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais."
+        ]
+      },
+      {
+        "title": "Algebrinės transformacijos",
+        "body": [
+          "Olimpiadinėje algebroje svarbu ne tik spręsti lygtis, bet ir sumaniai keisti jų pavidalą naudojant sutrumpintos daugybos formules."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [],
-    "examples": []
+    "examples": [
+      {
+        "title": "Lygčių sistemos sudėjimo metodas",
+        "text": "Išspręskite sistemą: $x + y = 10, x - y = 4$.",
+        "solution": "Sudėjus lygtis: $2x = 14 \\implies x = 7$. 2x=14 Įstačius $x=7$ į $x+y=10$: $y = 3$. 7+y=10",
+        "answer": "x=7, y=3"
+      },
+      {
+        "title": "Skaitmenų sukeitimas",
+        "text": "Dviženklio skaičiaus skaitmenų suma 12. Sukeitus juos, skaičius padidėja 18. Raskite skaičių.",
+        "solution": "Lygtys: $x+y=12$ ir $(10y+x) - (10x+y) = 18 \\implies 9(y-x) = 18 \\implies y-x=2$. y-x=2 Iš $y+x=12$ ir $y-x=2$ gauname $y=7, x=5$. x=5, y=7",
+        "answer": "57"
+      },
+      {
+        "title": "Procentų taikymas",
+        "text": "Prekė kainavo 100 eurų. Kaina padidėjo 10%, o tada sumažėjo 10%. Kokia galutinė kaina?",
+        "solution": "Po padidėjimo: $100 \\cdot 1.1 = 110$. 100 \\cdot 1.1 = 110 Po sumažėjimo: $110 \\cdot 0.9 = 99$. 110 \\cdot 0.9 = 99",
+        "answer": "99"
+      },
+      {
+        "title": "Daugianarių skaidymas",
+        "text": "Išskaidykite $a^2 - b^2 + a - b$.",
+        "solution": "Sugrupuokite: $(a^2 - b^2) + (a - b)$. (a-b)(a+b) + (a-b) Iškelkite $(a-b)$ prieš skliaustus: $(a-b)(a+b+1)$. (a-b)(a+b+1)",
+        "answer": "(a-b)(a+b+1)"
+      },
+      {
+        "title": "Aritmetinė seka",
+        "text": "Raskite dešimtąjį sekos 2, 5, 8, ... narį.",
+        "solution": "Skirtumas $d = 3, a_1 = 2$. d=3 $a_{10} = 2 + 9 \\cdot 3 = 29$. a_{10} = 2 + 27 = 29",
+        "answer": "29"
+      }
+    ]
   },
   "olimpiada-07-geometrija": {
     "id": "olimpiada-07-geometrija",
@@ -2628,12 +3193,53 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method"
+      "olimpiada-07-concept-triangle-sum",
+      "olimpiada-07-concept-method",
+      "olimpiada-07-concept-area"
     ],
-    "sections": [],
+    "sections": [
+      {
+        "title": "Trikampio nelygybė",
+        "body": [
+          "Trikampį galima sudaryti tik tada, kai bet kurių dviejų kraštinių suma yra didesnė už trečiąją kraštinę.",
+          "Teorema. Jei kraštinės yra a, b ir c, tai: $a+b > c$, $a+c > b$, $b+c > a$."
+        ]
+      }
+    ],
     "formulas": [],
     "mistakes": [],
-    "examples": []
+    "examples": [
+      {
+        "title": "Kampų radimas lygiašoniame trikampyje",
+        "text": "Lygiašonio trikampio viršūnės kampas lygus $40^\\circ$. Raskite kampus prie pagrindo.",
+        "solution": "Visų kampų suma lygi $180^\\circ$. Kampų prie pagrindo suma: $180 - 40 = 140$. Kadangi kampai prie pagrindo lygūs: $140 / 2 = 70$.",
+        "answer": "70"
+      },
+      {
+        "title": "Trikampio priekampio taikymas",
+        "text": "Trikampio du vidiniai kampai lygūs $30^\\circ$ ir $80^\\circ$. Raskite priekampį prie trečiosios viršūnės.",
+        "solution": "Priekampis lygus jam neprišlietų vidinių kampų sumai. $30 + 80 = 110$.",
+        "answer": "110"
+      },
+      {
+        "title": "Pitagoro teorema koordinačių plokštumoje",
+        "text": "Raskite atstumą tarp taškų (0,0) ir (6,8).",
+        "solution": "Naudokite atstumo formulę: $\\sqrt{(6-0)^2 + (8-0)^2}$. $\\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+        "answer": "10"
+      },
+      {
+        "title": "Daugiakampio kampų suma",
+        "text": "Kokia yra šešiakampio vidinių kampų suma?",
+        "solution": "Formulė: $(n-2) \\cdot 180$. $(6-2) \\cdot 180 = 4 \\cdot 180 = 720$.",
+        "answer": "720"
+      },
+      {
+        "title": "Apskritimo kampai",
+        "text": "Centrinis kampas lygus $100^\\circ$. Raskite įbrėžtinį kampą, besiremiantį į tą patį lanką.",
+        "solution": "Įbrėžtinis kampas yra pusė centrinio kampo. $100 / 2 = 50$.",
+        "answer": "50"
+      }
+    ]
   },
   "olimpiada-07-kombinatorika": {
     "id": "olimpiada-07-kombinatorika",
@@ -2645,19 +3251,35 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method"
+      "sudeties-taisykle",
+      "daugybos-taisykle",
+      "dirichle-principas",
+      "keliniai-savoka",
+      "deriniai-savoka",
+      "gretiniai-savoka",
+      "invariantas-savoka"
     ],
     "sections": [
       {
+        "title": "Sudėties ir daugybos taisyklės",
+        "body": [
+          "Kombinatorika padeda suskaičiuoti, kiek yra galimybių parinkti objektus ar sudaryti jų junginius.",
+          "Jei objektą A galime parinkti $n$ būdais, o objektą B – $m$ būdais (ir pasirinkimai nesusikerta), tai pasirinkti „A arba B“ galime $n + m$ būdais.",
+          "Jei objektą A galime parinkti $n$ būdais, o po kiekvieno tokio pasirinkimo objektą B galime parinkti $m$ būdais, tai porą (A, B) galime parinkti $n \\cdot m$ būdais."
+        ]
+      },
+      {
         "title": "Dirichlė principas (narvelių principas)",
         "body": [
-          "Dirichlė principas yra galinga kombinatorikos strategija: jeigu turime $n$ narvelių ir daugiau negu $n$ balandžių, tai bent viename narvelyje turi nutūpti bent du balandžiai.",
-          "Metodas. Sprendžiant uždavinius, svarbu teisingai nustatyti, kas yra „balandžiai“ (elementai) ir kas yra „narveliai“ (savybės ar sritys). Pavyzdžiui, jei stalčiuje yra dviejų spalvų kojinės, traukiant 3 kojines bent dvi bus tos pačios spalvos."
+          "Šis principas yra vienas galingiausių įrodymo įrankių kombinatorikoje.",
+          "Teorema. Jei $n+1$ balandį sutalpiname į $n$ narvelių, tai bent viename narvelyje bus bent du balandžiai."
         ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n",
+      "C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}"
+    ],
     "mistakes": [],
     "examples": []
   },
@@ -2665,78 +3287,37 @@ export const topics = {
     "id": "olimpiada-07-skaiciu-teorija",
     "grade": 7,
     "title": "Skaičių teorija",
-    "strand": "Skaičių teorija",
+    "strand": "Skaičiai ir skaičiavimai",
     "level": "olympiad",
     "prerequisites": [],
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method"
+      "dalumas",
+      "pirminis-skaicius",
+      "dbd-savoka",
+      "mbk-savoka",
+      "skaitmenu-suma-savoka",
+      "paritetas-savoka",
+      "modulinė-aritmetika-savoka"
     ],
     "sections": [
       {
-        "title": "Kongruencijos ir liekanos (Modulinė aritmetika)",
+        "title": "Dalumo savybės",
         "body": [
-          "Spęsdami uždavinius apie skaičių dalumą, dažnai susiduriame su labai dideliais laipsniais arba sudėtingomis sandaugomis. Čia mums padeda kongruencijos (lyginiai pagal modulį). Sakome, kad skaičius $a$ yra kongruentus skaičiui $b$ moduliu $m$ (rašome $a \\equiv b \\pmod m$), jeigu skirtumas $a - b$ dalijasi iš $m$. Tai reiškia, kad abu skaičiai dalijami iš $m$ duoda tą pačią liekaną.",
-          "Metodas. Kongruencijos leidžia lengvai atlikti sudėtį, atimtį ir daugybą: jei $a \\equiv b \\pmod m$ ir $c \\equiv d \\pmod m$, tai $a + c \\equiv b + d \\pmod m$ bei $a \\cdot c \\equiv b \\cdot d \\pmod m$. Tai padeda rasti labai didelių skaičių dalybos liekanas (pavyzdžiui, paskutinį skaitmenį)."
+          "Skaičių teorija nagrinėja sveikųjų skaičių savybes, ypač jų dalumą."
         ]
       },
       {
-        "title": "Euklido algoritmas ir tarpusavyje pirminiai skaičiai",
+        "title": "Modulinė aritmetika",
         "body": [
-          "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\pmod b$).",
-          "Metodas. Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais (arba pirminiais vienas kitam). Tai svarbu dirbant su trupmenomis ir lygtimis."
+          "Darbas su liekanomis leidžia supaprastinti uždavinius apie didelius skaičius."
         ]
       }
     ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": [
-      {
-        "title": "Laipsnio paskutinis skaitmuo",
-        "text": "Raskite skaičiaus $3^{100}$ paskutinį skaitmenį.",
-        "solution": "Paskutinis skaitmuo sutampa su dalybos iš 10 liekana: $3^{100} \\pmod{10}$. Nagrinėjame 3 laipsnių liekanas moduliu 10: $3^1 \\equiv 3$, $3^2 \\equiv 9$, $3^3 \\equiv 7$, $3^4 \\equiv 1 \\pmod{10}$. Kadangi $3^4 \\equiv 1 \\pmod{10}$, liekanos kartojasi periodiškai kas 4 žingsnius. Kadangi rodiklis 100 dalijasi iš 4 be liekanos ($100 = 4 \\times 25$), tai $3^{100} = (3^4)^{25} \\equiv 1^{25} \\equiv 1 \\pmod{10}$.",
-        "answer": "Paskutinis skaitmuo yra 1."
-      },
-      {
-        "title": "Lyginumo savybių įrodymas",
-        "text": "Įrodykite, kad dviejų nelyginių skaičių suma yra lyginis skaičius.",
-        "solution": "Užrašome du nelyginius skaičius bendru pavidalu: $x = 2a + 1$ ir $y = 2b + 1$, kur $a, b \\in \\mathbb{Z}$. Sudedame juos: $x + y = (2a + 1) + (2b + 1) = 2a + 2b + 2$. Iškeliame 2 prieš skliaustus: $x + y = 2(a + b + 1)$. Kadangi gautas reiškinys turi bendrą daugiklį 2, suma dalijasi iš 2, todėl ji yra lyginis skaičius.",
-        "answer": "Teiginys įrodytas."
-      },
-      {
-        "title": "Euklido algoritmo taikymas",
-        "text": "Raskite skaičių 123 ir 36 didžiausią bendrąjį daliklį $\\text{dbd}(123, 36)$ naudodami Euklido algoritmą.",
-        "solution": "Dalijame didesnį skaičių iš mažesnio su liekana: $123 = 3 \\times 36 + 15$. Toliau dalijame daliklį iš gautos liekanos: $36 = 2 \\times 15 + 6$. Toliau dalijame prieš tai buvusią liekaną iš naujos liekanos: $15 = 2 \\times 6 + 3$. Galiausiai dalijame: $6 = 2 \\times 3 + 0$. Paskutinė nulinė liekana rodo, kad bendrasis daliklis yra 3.",
-        "answer": "Didžiausias bendrasis daliklis yra 3."
-      }
-    ]
-  },
-  "olimpiada-07": {
-    "id": "olimpiada-07",
-    "grade": 7,
-    "title": "Olimpiadinė matematika (7 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-07-skaiciu-teorija",
-      "olimpiada-07-algebra",
-      "olimpiada-07-geometrija",
-      "olimpiada-07-kombinatorika"
+    "formulas": [
+      "n \\equiv S(n) \\pmod 9"
     ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Algebra, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
     "mistakes": [],
     "examples": []
   },
@@ -2959,6 +3540,100 @@ export const topics = {
         "text": "Jei s = vt, rask t, kai s=96 ir v=12.",
         "solution": "Išreiškiame t. t=\\frac{s}{v} Įstatome duomenis. t=\\frac{96}{12}=8",
         "answer": "t=8"
+      }
+    ]
+  },
+  "erdves-figuru-pavirsiai-ir-turiai": {
+    "id": "erdves-figuru-pavirsiai-ir-turiai",
+    "grade": 8,
+    "title": "Erdvės figūrų paviršiaus plotai ir tūriai",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "pitagoro-teorema-ir-vidurio-linijos",
+      "Apskritimas ir skritulys"
+    ],
+    "prerequisiteTopicIds": [
+      "pitagoro-teorema-ir-vidurio-linijos",
+      "apskritimas-ir-skritulys"
+    ],
+    "nextTopicIds": [],
+    "concepts": [
+      "stacioji-prizme",
+      "taisyklingoji-piramide",
+      "ritinys",
+      "kugis",
+      "sfera",
+      "turis",
+      "apotema",
+      "sudaromoji",
+      "pavirsiaus-plotas",
+      "aukstine"
+    ],
+    "sections": [
+      {
+        "title": "Erdvės figūros ir tūrio samprata",
+        "body": [
+          "Erdvės figūros (kūnai) turi ne tik paviršiaus plotą, bet ir [[turis|tūrį]] – erdvės dalį, kurią jos užima. Tūris matuojamas kubiniais vienetais (cm³, m³).",
+          "[[stacioji-prizme|Stačioji prizmė]] – tai kūnas, kurio šoninės briaunos yra statmenos pagrindams. Jos tūris lygus pagrindo ploto ir aukštinės sandaugai.",
+          "Formulė: V = S_{\\text{pagr}} \\cdot H"
+        ]
+      },
+      {
+        "title": "Taisyklingoji piramidė",
+        "body": [
+          "[[taisyklingoji-piramide|Taisyklingoji piramidė]] turi pagrindą (taisyklingąjį daugiakampį) ir viršūnę. Svarbu skirti piramidės [[aukstine|aukštinę]] H ir šoninės sienos aukštinę – [[apotema|apotemą]] h_a.",
+          "Pastaba. Piramidės tūris yra tris kartus mažesnis už tokio pat pagrindo ir aukštinės prizmės tūrį.",
+          "Formulė: V = \\frac{1}{3} S_{\\text{pagr}} \\cdot H"
+        ]
+      },
+      {
+        "title": "Ritinys ir kūgis",
+        "body": [
+          "[[ritinys|Ritinio]] pagrindas yra skritulys. [[kugis|Kūgio]] pagrindas taip pat skritulys, bet jis baigiasi viršūne.",
+          "Formulė: V_{\\text{rit}} = \\pi r^2 H",
+          "Formulė: V_{\\text{kūg}} = \\frac{1}{3} \\pi r^2 H",
+          "Kūgio šoninė atkarpa, jungianti viršūnę su apskritimo tašku, vadinama [[sudaromoji|sudaromąja]] (l)."
+        ]
+      },
+      {
+        "title": "Sfera ir rutulys",
+        "body": [
+          "[[sfera|Sfera]] yra rutulio paviršius (tarsi krepšinio kamuolio oda), o rutulys apima ir vidų.",
+          "Formulė: S = 4\\pi r^2",
+          "Formulė: V = \\frac{4}{3} \\pi r^3"
+        ]
+      },
+      {
+        "title": "Pitagoro teoremos taikymas erdvėje",
+        "body": [
+          "Metodas. Erdvės figūrose dažnai reikia rasti aukštinę arba sudaromąją naudojant Pitagoro teoremą. Pvz., kūgyje: r² + H² = l²."
+        ]
+      }
+    ],
+    "formulas": [
+      "V = S_{\\text{pagr}} \\cdot H",
+      "V = \\frac{1}{3} S_{\\text{pagr}} \\cdot H",
+      "V = \\pi r^2 H",
+      "V = \\frac{1}{3} \\pi r^2 H",
+      "S = 4\\pi r^2"
+    ],
+    "mistakes": [
+      "Painioja aukštinę su apotema — Tūriui visada reikia statmenos kūno aukštinės H, einančios į pagrindo centrą.",
+      "Pamiršta du pagrindus prizmėje — Prizmė visada turi du lygius pagrindus: S_visas = S_šon + 2 * S_pagr."
+    ],
+    "examples": [
+      {
+        "title": "Ritinio tūris",
+        "text": "Ritinio pagrindo spindulys r = 3 cm, o aukštinė H = 10 cm. Rask tūrį. (π ≈ 3,14).",
+        "solution": "Apskaičiuojame pagrindo plotą. S_{\\text{pagr}} = \\pi r^2 = 3,14 \\cdot 3^2 = 3,14 \\cdot 9 = 28,26 \\text{ cm}^2 Dauginame iš aukštinės. V = 28,26 \\cdot 10 = 282,6 \\text{ cm}^3",
+        "answer": "282,6 cm³"
+      },
+      {
+        "title": "Kūgio sudaromoji",
+        "text": "Kūgio aukštinė H = 4 cm, o spindulys r = 3 cm. Rask sudaromąją l.",
+        "solution": "Taikome Pitagoro teoremą trikampiui, kurį sudaro r, H ir l. l^2 = r^2 + H^2 Įrašome reikšmes. l^2 = 3^2 + 4^2 = 9 + 16 = 25 Traukiame šaknį. l = \\sqrt{25} = 5 \\text{ cm}",
+        "answer": "5 cm"
       }
     ]
   },
@@ -3188,12 +3863,19 @@ export const topics = {
     "title": "Algebra",
     "strand": "Algebra",
     "level": "olympiad",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
+    "prerequisites": [
+      "Laipsniai ir šaknys"
+    ],
+    "prerequisiteTopicIds": [
+      "laipsniai-ir-saknys"
+    ],
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method"
+      "olimpiada-08-concept-method",
+      "am-gm-nelygybe",
+      "pilnojo-kvadrato-isskyrimas",
+      "diofanto-lygtys"
     ],
     "sections": [
       {
@@ -3202,16 +3884,60 @@ export const topics = {
           "Sveikųjų skaičių lygtys, vadinamos Diofantinėmis lygtimis, turi ilgą istoriją. Tiesinė Diofantinė lygtis su dviem kintamaisiais turi pavidalą $ax + by = c$, kur $a, b, c$ yra sveikieji skaičiai. Ji turi sveikųjų skaičių sprendinių tada ir tik tada, kai skaičių $a$ ir $b$ didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ dalija laisvąjį narį $c$.",
           "Metodas. Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\in \\mathbb{Z}$."
         ]
+      },
+      {
+        "title": "Vijeto teorema ir simetriniai reiškiniai",
+        "body": [
+          "Vijeto teorema sieja lygties koeficientus su jos šaknų suma ir sandauga. Kvadratinei lygčiai $ax^2 + bx + c = 0$ galioja: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$.",
+          "Pastaba. Simetriniai reiškiniai, tokie kaip $x_1^2 + x_2^2$ arba $\\frac{1}{x_1} + \\frac{1}{x_2}$, gali būti išreikšti per šaknų sumą ir sandaugą, net nežinant pačių šaknų reikšmių."
+        ]
+      },
+      {
+        "title": "Nelygybės: AM-GM principas",
+        "body": [
+          "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) teigia, kad neneigiamiems skaičiams jų aritmetinis vidurkis yra ne mažesnis už geometrinį vidurkį.",
+          "Formulė: \\frac{a+b}{2} \\ge \\sqrt{ab}",
+          "Pastaba. Lygybė galioja tada ir tik tada, kai $a = b$. Ši nelygybė yra galingas įrankis įrodant kitas nelygybes ir ieškant funkcijų ekstremumų."
+        ]
       }
     ],
-    "formulas": [],
-    "mistakes": [],
+    "formulas": [
+      "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 x_2 = \\frac{c}{a}",
+      "\\frac{a+b}{2} \\ge \\sqrt{ab}"
+    ],
+    "mistakes": [
+      "AM-GM taikymas neigiamiems skaičiams — AM-GM galioja tik neneigiamiems skaičiams. Jei skaičiai neigiami, reikia dirbti su jų moduliais arba keisti ženklus."
+    ],
     "examples": [
       {
         "title": "Tiesinės diofantinės lygties sprendimas",
         "text": "Išspręskite sveikaisiais skaičiais lygtį $3x - 5y = 1$.",
-        "solution": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\implies y = 1$. Sprendinys yra $(2, 1)$. Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$.",
-        "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
+        "solution": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių. Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1$. Sprendinys $(2, 1)$. Bendrasis sprendinys: $x = 2 + 5t, y = 1 + 3t, t \\in \\mathbb{Z}$.",
+        "answer": "x = 2+5t, y = 1+3t"
+      },
+      {
+        "title": "Skaičių palyginimas laipsniais",
+        "text": "Kuris skaičius didesnis: $2^{300}$ ar $3^{200}$?",
+        "solution": "$2^{300} = (2^3)^{100} = 8^{100}$. $3^{200} = (3^2)^{100} = 9^{100}$. $9 > 8$, todėl $3^{200}$ yra didesnis.",
+        "answer": "3^200"
+      },
+      {
+        "title": "Lygtis su moduliais",
+        "text": "Išspręskite lygtį $|x-1| + |x-3| = 2$.",
+        "solution": "Nagrinėjame intervalus: $x < 1$, $1 \\le x \\le 3$, $x > 3$. Intervale $[1, 3]$ lygtis tampa $x-1 + 3-x = 2$, t.y. $2=2$. Visi taškai tinka.",
+        "answer": "x ∈ [1, 3]"
+      },
+      {
+        "title": "Simetrinio reiškinio reikšmė",
+        "text": "Jei $a+b=5$ ir $ab=6$, raskite $a^2+b^2$.",
+        "solution": "$(a+b)^2 = a^2+2ab+b^2$. $5^2 = a^2+b^2 + 2(6) \\implies 25 = a^2+b^2+12$. $a^2+b^2 = 13$.",
+        "answer": "13"
+      },
+      {
+        "title": "Diofantinė lygtis su dauginimu",
+        "text": "Raskite sveikus sprendinius: $(x-1)(y+2) = 3$.",
+        "solution": "Skaičiaus 3 dalikliai yra: 1, 3, -1, -3. 1 atvejis: $x-1=1, y+2=3 \\implies x=2, y=1$. 2 atvejis: $x-1=3, y+2=1 \\implies x=4, y=-1$. 3 atvejis: $x-1=-1, y+2=-3 \\implies x=0, y=-5$. 4 atvejis: $x-1=-3, y+2=-1 \\implies x=-2, y=-3$.",
+        "answer": "(2,1), (4,-1), (0,-5), (-2,-3)"
       }
     ]
   },
@@ -3226,6 +3952,9 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-08-concept-logic",
+      "cevos-teorema",
+      "menelajo-teorema",
+      "ptolemejo-teorema",
       "olimpiada-08-concept-method"
     ],
     "sections": [
@@ -3233,24 +3962,56 @@ export const topics = {
         "title": "Apskritimo geometrija ir taško galia",
         "body": [
           "Geometrijoje ryšiai tarp kampų ir atkarpų apskritime leidžia įrodyti daugelį teoremų. Kampas tarp stygų arba liestinių yra susijęs su atitinkamų lankų dydžiais, o stygų susikirtimo taškas turi pastovią sandaugą.",
-          "Metodas. Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$. Jei taškas $P$ yra apskritimo išorėje, ir iš jo nubrėžta liestinė $PT$ bei kirstinė $PAB$, tai galioja $PT^2 = PA \\cdot PB$. Tai leidžia rasti atkarpų ilgius ir įrodyti panašumus."
+          "Metodas. Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$."
+        ]
+      },
+      {
+        "title": "Trikampio čevianės",
+        "body": [
+          "Čevos teorema: Trys čevianės $AD, BE, CF$ susikerta viename taške tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        ]
+      },
+      {
+        "title": "Įbrėžtiniai keturkampiai",
+        "body": [
+          "Teorema. Ptolemėjo teorema: Į apskritimą įbrėžto keturkampio priešingų kraštinių sandaugų suma lygi jo įstrižainių sandaugai."
         ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "S = \\sqrt{p(p-a)(p-b)(p-c)}"
+    ],
     "mistakes": [],
     "examples": [
       {
-        "title": "Herono formulės taikymas trikampio plotui",
-        "text": "Raskite trikampio su kraštinėmis 13, 14, 15 plotą.",
-        "solution": "Pirmiausia apskaičiuojame pusperimetrį $p = \\frac{13 + 14 + 15}{2} = 21$. Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome vertes: $S = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6}$. Apskaičiuojame daugindami pirminiais: $S = \\sqrt{3 \\times 7 \\times 2^3 \\times 7 \\times 2 \\times 3} = \\sqrt{3^2 \\times 7^2 \\times 2^4} = 3 \\times 7 \\times 4 = 84$.",
-        "answer": "Trikampio plotas lygus 84."
+        "title": "Herono formulės taikymas",
+        "text": "Kraštinės 13, 14, 15. Raskite plotą.",
+        "solution": "p=21. S=84.",
+        "answer": "84"
       },
       {
-        "title": "Taško galios teorema apskritime",
-        "text": "Apskritime susikerta dvi stygos $AB$ ir $CD$ taške $P$. Žinoma, kad $AP = 4$ cm, $PB = 6$ cm, o $CP = 3$ cm. Raskite atkarpos $PD$ ilgį.",
-        "solution": "Pagal stygų susikirtimo savybę (Taško galios teoremą), gautų atkarpų sandaugos yra lygios: $AP \\times PB = CP \\times PD$. Įstatome žinomas vertes: $4 \\times 6 = 3 \\times PD \\implies 24 = 3 \\times PD$. Išreiškiame atkarpos ilgį: $PD = 24 / 3 = 8$ cm.",
-        "answer": "Atkarpos $PD$ ilgis lygus 8 cm."
+        "title": "Panašumas",
+        "text": "k=3, Sb=5. Raskite Sa.",
+        "solution": "Sa = 3^2 * 5 = 45.",
+        "answer": "45"
+      },
+      {
+        "title": "Įbrėžtinis keturkampis",
+        "text": "A=80. Raskite C.",
+        "solution": "C = 180-80 = 100.",
+        "answer": "100"
+      },
+      {
+        "title": "Čevos teoremos taikymas",
+        "text": "AF/FB=1, BD/DC=2. Raskite CE/EA.",
+        "solution": "1 * 2 * CE/EA = 1 \\implies CE/EA = 0.5.",
+        "answer": "0.5"
+      },
+      {
+        "title": "Liestinė ir kirstinė",
+        "text": "PT=4, PA=2. Raskite kirstinę PB.",
+        "solution": "4^2 = 2 * PB \\implies 16 = 2 * PB \\implies PB = 8.",
+        "answer": "8"
       }
     ]
   },
@@ -3265,9 +4026,36 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method"
+      "olimpiada-08-concept-method",
+      "concept-pigeonhole",
+      "concept-induction",
+      "concept-geom-prob"
     ],
-    "sections": [],
+    "sections": [
+      {
+        "title": "Įtraukimo ir išskyrimo principas (PIE)",
+        "body": [
+          "Sprendžiant uždavinius, kuriuose reikia suskaičiuoti elementus, priklausančius bent vienai iš kelių aibių, naudojamas įtraukimo ir išskyrimo principas. Jei tiesiog sudėsime aibių elementus, tuos, kurie priklauso kelioms aibėms, suskaičiuosime per daug kartų.",
+          "Formulė: |A \\cup B| = |A| + |B| - |A \\cap B|",
+          "Trims aibėms formulė tampa sudėtingesnė: reikia sudėti visas aibes, atimti visas porines sankirtas ir vėl pridėti trijų aibių sankirtą.",
+          "Formulė: |A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|"
+        ]
+      },
+      {
+        "title": "„Žvaigždutės ir brūkšneliai“ metodas",
+        "body": [
+          "Šis metodas naudojamas skaičiuojant, kiek yra būdų išskirstyti $n$ vienodų objektų $k$ skirtingų dėžučių (arba gavėjų). Objektus vaizduojame žvaigždutėmis, o pertvaras tarp dėžučių – brūkšneliais.",
+          "Pastaba. Jei kiekviena dėžutė turi gauti bent po vieną objektą, būdų skaičius yra $\\binom{n-1}{k-1}$. Jei dėžutės gali būti ir tuščios, naudojame formulę $\\binom{n+k-1}{k-1}$."
+        ]
+      },
+      {
+        "title": "Grafų teorijos pagrindai",
+        "body": [
+          "Grafas susideda iš viršūnių ir jas jungiančių briaunų. Viršūnės laipsnis yra briaunų, išeinančių iš tos viršūnės, skaičius.",
+          "Teorema. Visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui. Iš to išplaukia, kad kiekviename grafe viršūnių su nelyginiu laipsniu skaičius yra lyginis."
+        ]
+      }
+    ],
     "formulas": [],
     "mistakes": [],
     "examples": [
@@ -3276,6 +4064,30 @@ export const topics = {
         "text": "Grafas turi 5 viršūnes, kurių laipsniai yra $2, 3, 3, 4, 4$. Kiek briaunų turi šis grafas?",
         "solution": "Pagal Rankų paspaudimo lemą, visų grafo viršūnių laipsnių suma lygi dvigubam briaunų skaičiui: $\\sum \\text{deg}(v) = 2E$. Apskaičiuojame laipsnių sumą: $S = 2 + 3 + 3 + 4 + 4 = 16$. Sudarome lygtį: $2E = 16 \\implies E = 8$.",
         "answer": "Grafas turi 8 briaunas."
+      },
+      {
+        "title": "Įtraukimo ir išskyrimo principas 3 aibėms",
+        "text": "Iš 100 mokinių 50 mokosi anglų kalbos, 40 – vokiečių, 30 – prancūzų. 20 mokosi anglų ir vokiečių, 15 – anglų ir prancūzų, 10 – vokiečių ir prancūzų, o 5 mokosi visas tris kalbas. Kiek mokinių mokosi bent vieną užsienio kalbą?",
+        "solution": "Naudojame PIE formulę 3 aibėms: $|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |A \\cap P| + |V \\cap P|) + |A \\cap V \\cap P|$. Įstatome skaičius: $50 + 40 + 30 - (20 + 15 + 10) + 5$. Skaičiuojame: $120 - 45 + 5 = 80$.",
+        "answer": "80 mokinių mokosi bent vieną užsienio kalbą."
+      },
+      {
+        "title": "Matematinė indukcija: sumos formulė",
+        "text": "Įrodykite, kad $1 + 2 + 3 + ... + n = \\frac{n(n+1)}{2}$ visiems natūraliesiems $n$.",
+        "solution": "Bazė: kai $n=1$, $1 = \\frac{1(1+1)}{2} = 1$. Teisinga. Prielaida: tarkime, kad teiginys teisingas kai $n=k$, t. y. $1 + 2 + ... + k = \\frac{k(k+1)}{2}$. Žingsnis: nagrinėjame sumą iki $k+1$: $(1 + 2 + ... + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$. Bendravardikliname: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Tai atitinka formulę su $n=k+1$. Įrodyta.",
+        "answer": "Formulė įrodyta matematinės indukcijos metodu."
+      },
+      {
+        "title": "Stars and Bars: nuliniai variantai",
+        "text": "Kiek yra būdų padalinti 10 vienodų obuolių 4 vaikams? (Vaikas gali negauti nė vieno obuolio).",
+        "solution": "Naudojame „žvaigždučių ir brūkšnelių“ formulę, kai dėžutės gali būti tuščios: $\\binom{n+k-1}{k-1}$. Čia $n=10$ (obuoliai), $k=4$ (vaikai). Pertvarų skaičius yra $k-1 = 3$. Būdų skaičius: $\\binom{10+3}{3} = \\binom{13}{3}$. Skaičiuojame: $\\frac{13 \\cdot 12 \\cdot 11}{3 \\cdot 2 \\cdot 1} = 13 \\cdot 2 \\cdot 11 = 286$.",
+        "answer": "Yra 286 būdai."
+      },
+      {
+        "title": "Grebėsto principas",
+        "text": "Dėžėje yra 10 porų juodų kojinių ir 10 porų mėlynų kojinių. Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad būtume tikri, jog turime bent vieną spalviškai suderintą porą?",
+        "solution": "Blogiausias atvejis: ištraukiame po vieną skirtingos spalvos kojinę. Turime 2 spalvas (dėžutes). Pagal Grebėsto principą, ištraukus $2+1=3$ kojines, bent dvi iš jų bus tos pačios spalvos.",
+        "answer": "Mažiausiai reikia ištraukti 3 kojines."
       }
     ]
   },
@@ -3290,7 +4102,10 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method"
+      "olimpiada-08-concept-method",
+      "concept-divisors",
+      "concept-bases",
+      "concept-perfect-numbers"
     ],
     "sections": [
       {
@@ -3305,6 +4120,16 @@ export const topics = {
         "body": [
           "Ferma mažoji teorema teigia, kad jei $p$ yra pirminis skaičius, tai bet kuriam sveikajam skaičiui $a$ galioja kongruencija $a^p \\equiv a \\pmod p$. Jeigu $a$ nesidalija iš $p$, galime užrašyti patogesne forma: $a^{p-1} \\equiv 1 \\pmod p$.",
           "Metodas. Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\equiv 1 \\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\cdot 2^2 \\equiv 1^8 \\cdot 4 \\equiv 4 \\pmod 7$."
+        ]
+      },
+      {
+        "title": "Modulinės aritmetikos savybės",
+        "body": [
+          "Modulinė aritmetika leidžia atlikti veiksmus su liekanomis. Svarbiausios savybės:",
+          "Savybė. 1. $(a+b) \\pmod m = ((a \\pmod m) + (b \\pmod m)) \\pmod m$",
+          "Savybė. 2. $(a-b) \\pmod m = ((a \\pmod m) - (b \\pmod m) + m) \\pmod m$",
+          "Savybė. 3. $(a \\cdot b) \\pmod m = ((a \\pmod m) \\cdot (b \\pmod m)) \\pmod m$",
+          "Savybė. 4. $a^n \\pmod m = (a \\pmod m)^n \\pmod m$"
         ]
       }
     ],
@@ -3322,35 +4147,26 @@ export const topics = {
         "text": "Raskite skaičiaus $2^{50}$ dalybos iš 7 liekaną.",
         "solution": "Skaičius 7 yra pirminis. Pagal Ferma mažąją teoremą, kadangi 2 nesidalija iš 7, turime $2^6 \\equiv 1 \\pmod 7$. Daliname rodiklį 50 iš 6 su liekana: $50 = 6 \\times 8 + 2$. Pertvarkome: $2^{50} = (2^6)^8 \\times 2^2 \\equiv 1^8 \\times 4 \\equiv 4 \\pmod 7$.",
         "answer": "Liekana lygi 4."
+      },
+      {
+        "title": "Daliklių skaičiaus radimas",
+        "text": "Kiek daliklių turi skaičius 120?",
+        "solution": "Skaidome skaičių pirminiais daugikliais: $120 = 12 \\cdot 10 = 2^2 \\cdot 3 \\cdot 2 \\cdot 5 = 2^3 \\cdot 3^1 \\cdot 5^1$. Naudojame formulę $\\tau(n) = (a_1+1)(a_2+1)(a_3+1)$. Skaičiuojame: $(3+1)(1+1)(1+1) = 4 \\cdot 2 \\cdot 2 = 16$.",
+        "answer": "Skaičius 120 turi 16 daliklių."
+      },
+      {
+        "title": "Skaičiavimo sistemos keitimas",
+        "text": "Paverskite skaičių $10110_2$ į dešimtainę sistemą.",
+        "solution": "Užrašome skaičių pagal skaitmenų svorius: $1 \\cdot 2^4 + 0 \\cdot 2^3 + 1 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0$. Apskaičiuojame: $16 + 0 + 4 + 2 + 0 = 22$.",
+        "answer": "Atsakymas: $22_{10}$."
+      },
+      {
+        "title": "Netiesinė Diofantinė lygtis",
+        "text": "Raskite visus natūraliuosius sprendinius lygčiai $xy + 2x = 7$.",
+        "solution": "Iškeliame $x$ prieš skliaustus: $x(y+2) = 7$. Kadangi 7 yra pirminis skaičius, o $x, y$ yra natūralieji, turime tik du atvejus sandaugai: $1 \\cdot 7$ arba $7 \\cdot 1$. Atvejis 1: $x=1, y+2=7 \\implies y=5$. Sprendinys $(1, 5)$. Atvejis 2: $x=7, y+2=1 \\implies y=-1$ (netinka, nes ieškome natūraliųjų).",
+        "answer": "Vienintelis natūralusis sprendinys yra $(1, 5)$."
       }
     ]
-  },
-  "olimpiada-08": {
-    "id": "olimpiada-08",
-    "grade": 8,
-    "title": "Olimpiadinė matematika (8 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-08-skaiciu-teorija",
-      "olimpiada-08-algebra",
-      "olimpiada-08-geometrija",
-      "olimpiada-08-kombinatorika"
-    ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Algebra, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
   },
   "panasus-trikampiai-ir-talio-teorema": {
     "id": "panasus-trikampiai-ir-talio-teorema",
@@ -4708,51 +5524,61 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-09-concept-am-gm"
+      "olimpiada-09-concept-am-gm",
+      "olimpiada-09-concept-cauchy-schwarz",
+      "olimpiada-09-concept-polynomial-roots",
+      "olimpiada-09-concept-complex-intro"
     ],
     "sections": [
       {
-        "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
+        "title": "Daugianariai ir jų savybės",
         "body": [
-          "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis.",
-          "Metodas. Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
+          "Olimpiadinėje algebroje daugianariai vaidina pagrindinį vaidmenį. Svarbu mokėti taikyti Bezu (Bézout) teoremą, liekanų teoremą bei Vietos formules ne tik kvadratinėms, bet ir aukštesnio laipsnio lygtims.",
+          "Teorema. Daugianaris $P(x)$ dalijasi iš $(x-a)$ tada ir tik tada, kai $P(a) = 0$."
+        ]
+      },
+      {
+        "title": "Svarbiausios nelygybės",
+        "body": [
+          "Nelygybių įrodymas dažnai remiasi aritmetinio ir geometrinio vidurkių (AM-GM) nelygybe bei Cauchy-Schwarz nelygybe.",
+          "Formulė: \\frac{a_1 + a_2 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}"
         ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "a^4 + 4b^4 = (a^2 + 2b^2 + 2ab)(a^2 + 2b^2 - 2ab)",
+      "a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)"
+    ],
     "mistakes": [],
-    "examples": [
-      {
-        "title": "Nelygybės įrodymas naudojant AM-GM",
-        "text": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
-        "solution": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$. Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}}$. Kadangi $\\frac{a}{b} \\cdot \\frac{b}{a} = 1$, tai $\\sqrt{1} = 1$. Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
-        "answer": "Įrodyta."
-      }
-    ]
+    "examples": []
   },
   "olimpiada-09-funkcijos": {
     "id": "olimpiada-09-funkcijos",
     "grade": 9,
     "title": "Funkcijos",
-    "strand": "Funkcijos",
+    "strand": "Modeliai ir sąryšiai",
     "level": "olympiad",
     "prerequisites": [],
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "concepts": [],
+    "concepts": [
+      "concept-function-domain",
+      "concept-function-range",
+      "concept-functional-equations",
+      "concept-function-periodicity"
+    ],
     "sections": [
       {
-        "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
+        "title": "Funkcijų savybės olimpiadose",
         "body": [
-          "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis.",
-          "Metodas. Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
+          "Olimpiadiniai uždaviniai apie funkcijas dažnai reikalauja ne tik standartinių skaičiavimų, bet ir gilaus savybių supratimo: tolydumo, monotoniškumo, periodiškumo bei simetrijos.",
+          "Metodas. Sprendžiant funkcines lygtis, naudinga įstatyti specialias kintamųjų reikšmes (pvz., $x=0$, $y=0$, $x=1$) arba bandyti rasti funkcijos reikšmes konkrečiuose taškuose."
         ]
       },
       {
-        "title": "Kombinatoriniai metodai ir invariantai",
+        "title": "Funkcinės lygtys",
         "body": [
-          "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus).",
-          "Metodas. Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
+          "Funkcinė lygtis – tai lygtis, kurioje nežinomasis yra pati funkcija. Klasikinis pavyzdys yra Košy lygtis $f(x+y) = f(x) + f(y)$."
         ]
       }
     ],
@@ -4764,13 +5590,22 @@ export const topics = {
     "id": "olimpiada-09-geometrija",
     "grade": 9,
     "title": "Geometrija",
-    "strand": "Geometrija",
+    "strand": "Geometrija ir matavimai",
     "level": "olympiad",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
+    "prerequisites": [
+      "Apskritimo geometrija ir stačiojo trikampio trigonometrija"
+    ],
+    "prerequisiteTopicIds": [
+      "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"
+    ],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-09-concept-ceva"
+      "olimpiada-09-concept-ceva",
+      "olimpiada-09-concept-menelaus",
+      "olimpiada-09-concept-panasumas",
+      "olimpiada-09-concept-apskritimo-galia",
+      "olimpiada-09-concept-ibreztinis-keturkampis",
+      "olimpiada-09-concept-ptolemy"
     ],
     "sections": [
       {
@@ -4779,9 +5614,26 @@ export const topics = {
           "Geometrijos uždaviniuose svarbu ne tik apskaičiuoti dydžius, bet ir įrodyti taškų kolinearumą, tiesių susikirtimą ar atkarpų lygybę.",
           "Metodas. Taikykite Čevos ir Menelajaus teoremas, kai reikia rasti santykius trikampio kraštinėse arba įrodyti, kad trys tiesės kertasi viename taške."
         ]
+      },
+      {
+        "title": "Trikampių panašumas ir plotai",
+        "body": [
+          "Du trikampiai yra panašūs, jei jų kampai atitinkamai lygūs, o kraštinės proporcingos. Svarbu atsiminti, kad panašiųjų trikampių plotų santykis lygus panašumo koeficiento kvadratui.",
+          "Savybė. Jei trikampis $ABC$ panašus į trikampį $DEF$ su koeficientu $k$, tai $S_{ABC} / S_{DEF} = k^2$."
+        ]
+      },
+      {
+        "title": "Apskritimo savybės ir galia",
+        "body": [
+          "Apskritimo geometrijoje dažnai naudojamos kampų savybės (įbrėžtiniai, centriniai kampai) ir taško galios teorema.",
+          "Teorema. Taško galia apskritimo atžvilgiu yra nekintantis dydis, lygus atkarpų sandaugai bet kuriai per tą tašką einančiai kertamajai."
+        ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "S = \\sqrt{p(p-a)(p-b)(p-c)}",
+      "S = \\sqrt{(p-a)(p-b)(p-c)(p-d)}"
+    ],
     "mistakes": [],
     "examples": [
       {
@@ -4789,6 +5641,30 @@ export const topics = {
         "text": "Trikampio $ABC$ kraštinėse parinkti taškai $D$, $E$, $F$ taip, kad $AD$, $BE$, $CF$ kertasi taške $P$. Žinoma, kad $BD = DC$ ir $AE = 2EC$. Raskite santykį $AF/FB$.",
         "solution": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$. Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$. Įrašome šias vertes į lygtį: $1 \\cdot \\frac{1}{2} \\cdot \\frac{AF}{FB} = 1$. Iš čia gauname $\\frac{AF}{FB} = 2$.",
         "answer": "$2$"
+      },
+      {
+        "title": "Panašių trikampių plotų santykis",
+        "text": "Trikampiai $ABC$ ir $DEF$ yra panašūs. $AB = 4$ cm, $DE = 6$ cm. Trikampio $ABC$ plotas lygus 16 $\\text{cm}^2$. Raskite trikampio $DEF$ plotą.",
+        "solution": "Randame panašumo koeficientą $k = DE / AB = 6 / 4 = 1,5$. Panašių trikampių plotų santykis lygus $k^2$. Vadinasi, $S_{DEF} = S_{ABC} \\cdot k^2 = 16 \\cdot (1,5)^2$. Apskaičiuojame: $16 \\cdot 2,25 = 36$ $\\text{cm}^2$.",
+        "answer": "36 $\\text{cm}^2$"
+      },
+      {
+        "title": "Taško galios taikymas",
+        "text": "Iš taško $P$, esančio už apskritimo, nubrėžta liestinė $PT$ ir kertamoji $PAB$, einanti per apskritimo centrą. $PT = 12$, $PA = 8$. Raskite apskritimo spindulį $R$.",
+        "solution": "Pagal taško galios teoremą, $PT^2 = PA \\cdot PB$. Žinome $PT = 12$ ir $PA = 8$. Apskaičiuojame $PB$: $144 = 8 \\cdot PB \\implies PB = 18$. Atkarpa $AB$ yra apskritimo skersmuo, todėl $AB = PB - PA = 18 - 8 = 10$. Spindulys $R = AB / 2 = 10 / 2 = 5$.",
+        "answer": "$R = 5$"
+      },
+      {
+        "title": "Įbrėžtinio keturkampio kampai",
+        "text": "Keturkampis $ABCD$ įbrėžtas į apskritimą. Kampas $A$ lygus $85^\\circ$, o kampas $B$ lygus $110^\\circ$. Raskite kampų $C$ ir $D$ didumą.",
+        "solution": "Įbrėžtinio keturkampio priešingų kampų suma lygi $180^\\circ$. Apskaičiuojame kampą $C$: $\\angle C = 180^\\circ - \\angle A = 180^\\circ - 85^\\circ = 95^\\circ$. Apskaičiuojame kampą $D$: $\\angle D = 180^\\circ - \\angle B = 180^\\circ - 110^\\circ = 70^\\circ$.",
+        "answer": "$\\angle C = 95^\\circ, \\angle D = 70^\\circ$"
+      },
+      {
+        "title": "Trikampio ploto skaičiavimas su sinusu",
+        "text": "Trikampio dvi kraštinės yra 5 cm ir 8 cm, o kampas tarp jų - $45^\\circ$. Raskite trikampio plotą.",
+        "solution": "Naudojame formulę $S = \\frac{1}{2} ab \\sin C$. Įstatome reikšmes: $S = \\frac{1}{2} \\cdot 5 \\cdot 8 \\cdot \\sin 45^\\circ$. Apskaičiuojame: $S = 20 \\cdot \\frac{\\sqrt{2}}{2} = 10\\sqrt{2} \\approx 14,14$ $\\text{cm}^2$.",
+        "answer": "$10\\sqrt{2} \\approx 14,14$ $\\text{cm}^2$"
       }
     ]
   },
@@ -4796,24 +5672,79 @@ export const topics = {
     "id": "olimpiada-09-kombinatorika",
     "grade": 9,
     "title": "Kombinatorika",
-    "strand": "Kombinatorika",
+    "strand": "Duomenys ir tikimybės",
     "level": "olympiad",
     "prerequisites": [],
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "concepts": [],
+    "concepts": [
+      "ol-09-comb-concept-daugyba",
+      "ol-09-comb-concept-keliniai",
+      "ol-09-comb-concept-gretiniai",
+      "ol-09-comb-concept-deriniai",
+      "ol-09-comb-concept-dirichle",
+      "ol-09-comb-concept-inkliuzija"
+    ],
     "sections": [
       {
-        "title": "Kombinatoriniai metodai ir invariantai",
+        "title": "Pagrindinės skaičiavimo taisyklės",
         "body": [
-          "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus).",
-          "Metodas. Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
+          "Kombinatorikoje viskas prasideda nuo dviejų pagrindinių taisyklių: sudėties ir daugybos.",
+          "Daugybos taisyklė: jei pirmą objektą galime pasirinkti $n$ būdų, o antrą - $m$ būdų, tai abu kartu galime pasirinkti $n \\cdot m$ būdų."
+        ]
+      },
+      {
+        "title": "Rinkiniai: Kėliniai, gretiniai ir deriniai",
+        "body": [
+          "Svarbu atskirti, kada tvarka yra svarbi (gretiniai), o kada - ne (deriniai).",
+          "Metodas. Naudokite derinius $C_n^k$, kai renkatės grupę elementų, kur jų eiliškumas neturi reikšmės."
+        ]
+      },
+      {
+        "title": "Dirichlė principas ir Invariantai",
+        "body": [
+          "Sunkesniems uždaviniams spręsti naudojami loginiai principai, tokie kaip Dirichlė (triušių ir narvelių) principas.",
+          "Pastaba. Dirichlė principas sako: jei $n+1$ objektą dedame į $n$ dėžučių, tai bent vienoje dėžutėje bus bent du objektai."
         ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "n! = n \\cdot (n-1) \\dots 1",
+      "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}"
+    ],
     "mistakes": [],
-    "examples": []
+    "examples": [
+      {
+        "title": "Rankų paspaudimai",
+        "text": "Susitikime dalyvauja 10 žmonių. Kiekvienas paspaudžia ranką kiekvienam po vieną kartą. Kiek iš viso buvo rankų paspaudimų?",
+        "solution": "Tai yra derinys, nes paspaudimas tarp A ir B yra tas pats, kas tarp B ir A. Mums reikia pasirinkti 2 žmones iš 10. Naudojame formulę $C_{10}^2 = \\frac{10 \\cdot 9}{2 \\cdot 1} = 45$.",
+        "answer": "45"
+      },
+      {
+        "title": "Žodžio kėliniai",
+        "text": "Kiek skirtingų „žodžių“ (nebūtinai prasmingų) galima sudaryti sukeičiant žodžio MATEMATIKA raides?",
+        "solution": "Iš viso yra 10 raidžių. Raidės kartojasi: M (2 kartus), A (3 kartus), T (2 kartus). Naudojame kėlinių su pasikartojimais formulę: $\\frac{10!}{2! \\cdot 3! \\cdot 2!}$. Apskaičiuojame: $\\frac{3628800}{2 \\cdot 6 \\cdot 2} = 151200$.",
+        "answer": "151200"
+      },
+      {
+        "title": "Dirichlė principas: kojinės",
+        "text": "Stalčiuje yra 10 juodų ir 10 mėlynų kojinių. Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad būtume tikri, jog turime porą tos pačios spalvos?",
+        "solution": "Turime 2 spalvas (dėžutės). Pagal Dirichlė principą, norint gauti bent 2 vienos spalvos objektus, reikia ištraukti $2+1=3$ kojines.",
+        "answer": "3"
+      },
+      {
+        "title": "Keliavimas tinkleliu",
+        "text": "Kiek yra būdų nukeliauti iš taško (0,0) į tašką (4,4) judant tik į dešinę arba į viršų?",
+        "solution": "Iš viso reikia atlikti 8 žingsnius (4 į dešinę ir 4 į viršų). Turime pasirinkti, kuriuos 4 žingsnius iš 8 darysime į viršų. Tai yra $C_8^4 = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 70$.",
+        "answer": "70"
+      },
+      {
+        "title": "Aibių sankirta",
+        "text": "Klasėje yra 30 mokinių. 20 iš jų lanko krepšinį, 15 - futbolą. 10 lanko abi sporto šakas. Kiek mokinių nelanko nei vienos?",
+        "solution": "Randame lankančių bent vieną šaką skaičių: $20 + 15 - 10 = 25$. Atimame iš bendro skaičiaus: $30 - 25 = 5$.",
+        "answer": "5"
+      }
+    ]
   },
   "olimpiada-09-skaiciu-teorija": {
     "id": "olimpiada-09-skaiciu-teorija",
@@ -4826,7 +5757,10 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-09-concept-euler-totient",
-      "olimpiada-09-concept-euler-theorem"
+      "olimpiada-09-concept-euler-theorem",
+      "olimpiada-09-concept-legendre",
+      "olimpiada-09-concept-chinese-remainder",
+      "olimpiada-09-concept-divisibility-rules"
     ],
     "sections": [
       {
@@ -4867,46 +5801,12 @@ export const topics = {
         "answer": "$1$"
       },
       {
-        "title": "Nelygybės įrodymas naudojant AM-GM",
-        "text": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
-        "solution": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$. Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}}$. Kadangi $\\frac{a}{b} \\cdot \\frac{b}{a} = 1$, tai $\\sqrt{1} = 1$. Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Teisingų skliaustų sekų skaičius",
-        "text": "Kiek yra taisyklingų skliaustų sekų, sudarytų iš 2 atidarančių ir 2 uždarančių skliaustų?",
-        "solution": "Tokių sekų skaičių nurodo Katalano skaičius $C_2$. Apskaičiuojame pagal formulę: $C_2 = \\frac{1}{3} \\binom{4}{2}$. Kadangi $\\binom{4}{2} = 6$, tai $C_2 = \\frac{6}{3} = 2$. Šios sekos yra: `(())` ir `()()`.",
-        "answer": "$2$"
+        "title": "GCD apskaičiavimas",
+        "text": "Raskite $\\gcd(2n+1, 3n+2)$ bet kuriam natūraliajam $n$.",
+        "solution": "Taikome Euklido algoritmą: $\\gcd(3n+2, 2n+1) = \\gcd(2n+1, (3n+2) - (2n+1)) = \\gcd(2n+1, n+1)$. Tęsiame: $\\gcd(2n+1, n+1) = \\gcd(n+1, (2n+1) - (n+1)) = \\gcd(n+1, n)$. Galiausiai: $\\gcd(n+1, n) = \\gcd(n, (n+1) - n) = \\gcd(n, 1) = 1$.",
+        "answer": "$1$"
       }
     ]
-  },
-  "olimpiada-09": {
-    "id": "olimpiada-09",
-    "grade": 9,
-    "title": "Olimpiadinė matematika (9 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-09-skaiciu-teorija",
-      "olimpiada-09-algebra",
-      "olimpiada-09-funkcijos",
-      "olimpiada-09-geometrija",
-      "olimpiada-09-kombinatorika"
-    ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Algebra, Funkcijos, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
   },
   "skaiciu-sekos-9": {
     "id": "skaiciu-sekos-9",
@@ -5136,6 +6036,105 @@ export const topics = {
       }
     ]
   },
+  "desningumai-fibonacio-seka-ir-aukso-pjuvis": {
+    "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
+    "grade": 10,
+    "title": "Dėsningumai: Fibonačio seka ir Aukso pjūvis",
+    "strand": "Modeliai ir sąryšiai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Skaičių sekos ir rekurentiniai aprašai"
+    ],
+    "prerequisiteTopicIds": [
+      "skaiciu-sekos-9"
+    ],
+    "nextTopicIds": [
+      "sudetiniai-procentai-misiniai-ir-proporcingoji-dalyba"
+    ],
+    "concepts": [
+      "fibonacio-seka",
+      "aukso-pjuvis",
+      "aukso-pjuvio-skaicius",
+      "proporcingoji-dalyba",
+      "rekurentine-formule",
+      "sekos-desningumas",
+      "aukso-pjuvio-seka",
+      "skaiciaus-skaidymas-proporcingai"
+    ],
+    "sections": [
+      {
+        "title": "Fibonačio seka",
+        "body": [
+          "Fibonačio seka yra viena garsiausių matematinių sekų, kurioje kiekvienas narys (nuo trečiojo) yra lygus dviejų prieš jį einančių narių sumai.",
+          "Seka $1, 1, 2, 3, 5, 8, 13, 21, ...$, kurioje $F_1=1$, $F_2=1$ ir $F_n = F_{n-1} + F_{n-2}$.",
+          "Pastaba. Kartais seka pradedama nuo 0, bet mokyklinėje programoje dažniausiai nuo 1."
+        ]
+      },
+      {
+        "title": "Aukso pjūvis",
+        "body": [
+          "Aukso pjūvis (arba dieviškoji proporcija) yra toks atkarpos padalijimas į dvi dalis, kai ilgesnės dalies santykis su trumpesne yra lygus visos atkarpos santykiui su ilgesne dalimi.",
+          "Formulė: \\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1,618",
+          "Šis skaičius žymimas graikiška raide $\\phi$ (fi)."
+        ]
+      },
+      {
+        "title": "Fibonačio sekos ir Aukso pjūvio ryšys",
+        "body": [
+          "Didėjant narių skaičiui, dviejų gretimų Fibonačio sekos narių santykis $\\frac{F_{n+1}}{F_n}$ artėja prie aukso pjūvio reikšmės $\\phi$.",
+          "Metodas. Aukso pjūvio seką sudaro laipsniai: $\\phi, \\phi^2, \\phi^3, ...$, kur kiekvienas narys taip pat tenkina sąryšį $\\phi^n = \\phi^{n-1} + \\phi^{n-2}$."
+        ]
+      },
+      {
+        "title": "Proporcingoji dalyba",
+        "body": [
+          "Dažnai uždaviniuose reikia padalinti skaičių ar dydį į dalis, kurios būtų proporcingos tam tikriems skaičiams.",
+          "Dydžio padalijimas į dalis pagal santykį $a:b:c$."
+        ]
+      }
+    ],
+    "formulas": [
+      "F_n = F_{n-1} + F_{n-2}",
+      "\\phi = \\frac{1 + \\sqrt{5}}{2}",
+      "\\phi^2 = \\phi + 1"
+    ],
+    "mistakes": [
+      "Painioja aukso pjūvį su vidurkiu — Aukso pjūvis yra apytiksliai santykiu 1,618:1, o ne 1:1.",
+      "Neteisingas rekurentinis skaičiavimas — Visada pasitikrinkite paskutines dvi sumas."
+    ],
+    "examples": [
+      {
+        "title": "Fibonačio sekos nario radimas",
+        "text": "Raskite 7-ąjį Fibonačio sekos narį, jei seka prasideda 1, 1.",
+        "solution": "Užrašome pirmuosius du narius. F_1=1, F_2=1 Skaičiuojame toliau: $F_3 = 1+1=2$. $F_4 = 1+2=3$. $F_5 = 2+3=5$. $F_6 = 3+5=8$. $F_7 = 5+8=13$.",
+        "answer": "13"
+      },
+      {
+        "title": "Skaičiaus padalinimas santykiu",
+        "text": "Padalinkite skaičių 60 santykiu 2:3.",
+        "solution": "Randame bendrą dalių skaičių. 2+3=5 Randame vienos dalies vertę. 60 : 5 = 12 Randame abi dalis. 2 \\cdot 12 = 24, \\quad 3 \\cdot 12 = 36",
+        "answer": "24 ir 36"
+      },
+      {
+        "title": "Atkarpos dalijimas aukso pjūviu",
+        "text": "Atkarpos ilgis yra 10 cm. Raskite ilgesnę jos dalį, jei ji padalinta aukso pjūviu (naudokite $\\phi \\approx 1,618$).",
+        "solution": "Visos atkarpos santykis su ilgesne dalimi $x$ yra $\\phi$. \\frac{10}{x} = 1,618 Išreiškiame $x$. x = \\frac{10}{1,618} Apskaičiuojame. x \\approx 6,18 \\text{ cm}",
+        "answer": "6,18 cm"
+      },
+      {
+        "title": "Atvirkštinis Fibonačio uždavinys",
+        "text": "Duoti du gretimi Fibonačio sekos nariai: 34 ir 55. Koks bus kitas narys ir koks buvo prieš juos?",
+        "solution": "Kitas narys yra jų suma. 34 + 55 = 89 Ankstesnis narys $x$ tenkina lygybę $x + 34 = 55$. x = 55 - 34 = 21",
+        "answer": "Prieš tai: 21, po to: 89"
+      },
+      {
+        "title": "Aukso pjūvio savybės įrodymas",
+        "text": "Įrodykite, kad $\\phi^2 = \\phi + 1$ tiesiogiai iš apibrėžimo $\\frac{a+b}{a} = \\frac{a}{b} = \\phi$.",
+        "solution": "Iš $\\frac{a+b}{a} = \\phi$ turime $1 + \\frac{b}{a} = \\phi$. 1 + \\frac{b}{a} = \\phi Iš $\\frac{a}{b} = \\phi$ turime $\\frac{b}{a} = \\frac{1}{\\phi}$. Įrašome: $1 + \\frac{1}{\\phi} = \\phi$. Padauginame abi puses iš $\\phi$. \\phi + 1 = \\phi^2",
+        "answer": "Įrodyta"
+      }
+    ]
+  },
   "duomenu-sklaida-skirstiniai-ir-patikimumas": {
     "id": "duomenu-sklaida-skirstiniai-ir-patikimumas",
     "grade": 10,
@@ -5241,6 +6240,196 @@ export const topics = {
         "text": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
         "solution": "Abi turi tą patį vidurkį, bet B labiau išsibarstę. B turi didesnę sklaidą",
         "answer": "B turi didesnę sklaidą"
+      }
+    ]
+  },
+  "figuru-panasumas-ir-trikampio-elementai": {
+    "id": "figuru-panasumas-ir-trikampio-elementai",
+    "grade": 10,
+    "title": "Figūrų panašumas ir trikampio elementai",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "trikampiu-trigonometrija-ir-apskritimai"
+    ],
+    "prerequisiteTopicIds": [
+      "trikampiu-trigonometrija-ir-apskritimai"
+    ],
+    "nextTopicIds": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ],
+    "concepts": [
+      "panasios-figuros",
+      "panasumo-koeficientas",
+      "pusiaukrastine",
+      "pusiaukampine",
+      "pusiaukrastiniu-sankirta",
+      "pusiaukampiniu-savybe",
+      "perimetru-santykis",
+      "plotu-santykis"
+    ],
+    "sections": [
+      {
+        "title": "Figūrų panašumas",
+        "body": [
+          "Dvi figūros vadinamos panašiosiomis, jei jų atitinkami kampai yra lygūs, o atitinkamos kraštinės yra proporcingos.",
+          "Skaičius $k$, rodantis, kiek kartų viena figūra yra didesnė už kitą.",
+          "Savybė. Jei figūrų panašumo koeficientas yra $k$, tai jų perimetrų santykis lygus $k$, o plotų santykis lygus $k^2$."
+        ]
+      },
+      {
+        "title": "Trikampio pusiaukraštinės",
+        "body": [
+          "Trikampio [[pusiaukrastine|pusiaukraštinė]] yra atkarpa, jungianti trikampio viršūnę su prieš ją esančios kraštinės viduriu.",
+          "Teorema. Visos trys trikampio pusiaukraštinės kertasi viename taške, kuris kiekvieną jų dalija santykiu 2:1, skaičiuojant nuo viršūnės."
+        ]
+      },
+      {
+        "title": "Trikampio pusiaukampinės",
+        "body": [
+          "Trikampio [[pusiaukampine|pusiaukampinė]] yra atkarpa, kuri dalija trikampio kampą pusiau.",
+          "Savybė. Trikampio pusiaukampinė prieš ją esančią kraštinę dalija į atkarpas, proporcingas kitoms dviem trikampio kraštinėms."
+        ]
+      }
+    ],
+    "formulas": [
+      "\\frac{P_1}{P_2} = k",
+      "\\frac{S_1}{S_2} = k^2",
+      "\\frac{a}{b} = \\frac{c}{d}",
+      "2:1"
+    ],
+    "mistakes": [
+      "Pamiršta pakelti k kvadratu skaičiuojant plotą — Plotas kinta kvadratu: $S_{naujas} = k^2 \\cdot S_{senas}$.",
+      "Painioja pusiaukraštinę su aukštine — Pusiaukraštinė tik dalija kraštinę pusiau, bet nebūtinai yra statmena."
+    ],
+    "examples": [
+      {
+        "title": "Plotų santykio radimas",
+        "text": "Dviejų panašių trikampių kraštinių santykis yra 2:5. Koks bus jų plotų santykis?",
+        "solution": "Randame panašumo koeficientą k. k = \\frac{2}{5} Plotų santykis lygus $k^2$. \\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}",
+        "answer": "4:25"
+      },
+      {
+        "title": "Pusiaukraštinių dalių radimas",
+        "text": "Trikampio pusiaukraštinės ilgis yra 12 cm. Raskite jos dalių ilgius iki sankirtos taško.",
+        "solution": "Pusiaukraštinė dalijama santykiu 2:1. Iš viso yra 3 dalys. 12 : 3 = 4 \\text{ cm} Ilgesnė dalis (prie viršūnės) yra 2 dalys. 2 \\cdot 4 = 8 \\text{ cm} Trumpesnė dalis yra 1 dalis. 1 \\cdot 4 = 4 \\text{ cm}",
+        "answer": "8 cm ir 4 cm"
+      },
+      {
+        "title": "Kraštinės atkarpų radimas",
+        "text": "Trikampio kraštinės yra 6 cm ir 8 cm. Pusiaukampinė iš viršūnės tarp šių kraštinių dalija priešingą kraštinę, kurios ilgis 7 cm, į dvi dalis. Raskite tų dalių ilgius.",
+        "solution": "Tarkime dalys yra x ir 7-x. Pagal savybę: \\frac{6}{8} = \\frac{x}{7-x} Supaprastiname santykį: $\\frac{3}{4} = \\frac{x}{7-x}$. Dauginame kryžmai: $3(7-x) = 4x$. 21 - 3x = 4x \\implies 7x = 21 \\implies x = 3 Kita dalis: $7 - 3 = 4$.",
+        "answer": "3 cm ir 4 cm"
+      },
+      {
+        "title": "Nežinomos kraštinės radimas per plotą",
+        "text": "Panašių daugiakampių plotai yra $20\\text{ cm}^2$ ir $80\\text{ cm}^2$. Jei mažesniojo daugiakampio perimetras yra 15 cm, koks yra didesniojo perimetras?",
+        "solution": "Randame plotų santykį, kuris lygus $k^2$. k^2 = \\frac{80}{20} = 4 Randame panašumo koeficientą k. k = \\sqrt{4} = 2 Didesniojo perimetras bus k kartų didesnis. P = 15 \\cdot 2 = 30 \\text{ cm}",
+        "answer": "30 cm"
+      },
+      {
+        "title": "Pusiaukraštinės savybė su kintamaisiais",
+        "text": "Trikampio pusiaukraštinių sankirtos taško atstumas iki viršūnės yra 6 cm didesnis už atstumą iki kraštinės. Koks yra visos pusiaukraštinės ilgis?",
+        "solution": "Tarkime trumpesnė dalis yra x, tada ilgesnė yra 2x. 2x - x = 6 \\implies x = 6 Ilgesnė dalis: $2 \\cdot 6 = 12$. Visa pusiaukraštinė: $12 + 6 = 18$.",
+        "answer": "18 cm"
+      }
+    ]
+  },
+  "ibreztiniai-ir-apibreztiniai-daugiakampiai": {
+    "id": "ibreztiniai-ir-apibreztiniai-daugiakampiai",
+    "grade": 10,
+    "title": "Įbrėžtiniai ir apibrėžtiniai daugiakampiai",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Figūrų panašumas ir trikampio elementai"
+    ],
+    "prerequisiteTopicIds": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ],
+    "nextTopicIds": [
+      "stereometrija-tieses-plokstumos-ir-kampai"
+    ],
+    "concepts": [
+      "ibreztinis-daugiakampis",
+      "apibreztinis-daugiakampis",
+      "ibreztinis-apskritimas",
+      "apibreztinis-apskritimas",
+      "ibreztinio-apskritimo-centras",
+      "apibreztinio-apskritimo-centras",
+      "ibreztinis-keturkampis",
+      "apibreztinis-keturkampis"
+    ],
+    "sections": [
+      {
+        "title": "Įbrėžtiniai ir apibrėžtiniai daugiakampiai",
+        "body": [
+          "Daugiakampis vadinamas [[ibreztinis-daugiakampis|įbrėžtiniu]] į apskritimą, jei visos jo viršūnės priklauso apskritimui. Daugiakampis vadinamas [[apibreztinis-daugiakampis|apibrėžtiniu]] apie apskritimą, jei visos jo kraštinės liečia apskritimą.",
+          "Pastaba. Apie kiekvieną trikampį galima apibrėžti apskritimą ir į kiekvieną trikampį galima įbrėžti apskritimą."
+        ]
+      },
+      {
+        "title": "Apskritimų centrai",
+        "body": [
+          "Į trikampį įbrėžto apskritimo centras yra jo [[pusiaukampine|pusiaukampinių]] susikirtimo taškas.",
+          "Apie trikampį apibrėžto apskritimo centras yra jo kraštinių vidurio statmenų susikirtimo taškas."
+        ]
+      },
+      {
+        "title": "Įbrėžtiniai ir apibrėžtiniai keturkampiai",
+        "body": [
+          "Savybė. Keturkampį galima įbrėžti į apskritimą tada ir tik tada, kai jo priešingų kampų suma lygi $180^\\circ$.",
+          "Savybė. Keturkampį galima apibrėžti apie apskritimą tada ir tik tada, kai jo priešingų kraštinių ilgių sumos yra lygios."
+        ]
+      },
+      {
+        "title": "Ploto formulės su spinduliais",
+        "body": [
+          "Formulė: S = p \\cdot r",
+          "Formulė: S = \\frac{abc}{4R}"
+        ]
+      }
+    ],
+    "formulas": [
+      "S = p \\cdot r",
+      "S = \\frac{abc}{4R}",
+      "\\angle A + \\angle C = 180^\\circ",
+      "a + c = b + d"
+    ],
+    "mistakes": [
+      "Painioja apskritimų centrų apibrėžimus — Įbrėžtinis (r) - pusiaukampinės (kampas liečia kraštines). Apibrėžtinis (R) - vidurio statmenys.",
+      "Sumažo keturkampių savybes — Įbrėžtas (viduj) - kampai. Apibrėžtas (išorėj) - kraštinės."
+    ],
+    "examples": [
+      {
+        "title": "Įbrėžtinio spindulio radimas",
+        "text": "Trikampio kraštinės yra 3, 4, 5. Raskite įbrėžtinio apskritimo spindulį.",
+        "solution": "Trikampis yra status, nes $3^2 + 4^2 = 5^2$. S = \\frac{3 \\cdot 4}{2} = 6 Randame pusperimetrį p. p = \\frac{3+4+5}{2} = 6 Naudojame formulę S = p * r. 6 = 6 \\cdot r \\implies r = 1",
+        "answer": "1"
+      },
+      {
+        "title": "Įbrėžtinio keturkampio kampas",
+        "text": "Įbrėžtinio keturkampio trys kampai yra $80^\\circ, 100^\\circ, 100^\\circ$. Raskite ketvirtąjį kampą.",
+        "solution": "Priešingų kampų suma lygi 180 laipsnių. Jei vienas kampas 80, tai priešingas jam 180-80 = 100. Jei kitas 100, tai jam priešingas 180-100 = 80.",
+        "answer": "80"
+      },
+      {
+        "title": "Apibrėžtinio keturkampio kraštinė",
+        "text": "Apibrėžtinio keturkampio kraštinės iš eilės yra 5, 8, 10. Raskite ketvirtąją kraštinę.",
+        "solution": "Priešingų kraštinių sumos lygios. 5 + 10 = 8 + x 15 = 8 + x. x = 7",
+        "answer": "7"
+      },
+      {
+        "title": "Apibrėžtinio spindulio radimas",
+        "text": "Raskite apie trikampį su kraštinėmis 13, 14, 15 apibrėžto apskritimo spindulį (trikampio plotas 84).",
+        "solution": "Naudojame formulę $S = abc / 4R$. 84 = \\frac{13 \\cdot 14 \\cdot 15}{4R} Išreiškiame R. R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84} = \\frac{2730}{336} = 8,125",
+        "answer": "8,125"
+      },
+      {
+        "title": "Stačiojo trikampio apibrėžtinis spindulys",
+        "text": "Įrodykite, kad apie statųjį trikampį apibrėžto apskritimo spindulys lygus pusei įžambinės.",
+        "solution": "Stačiojo trikampio įbrėžtinis kampas, remiantis į skersmenį, yra status. Vadinasi, įžambinė yra apskritimo skersmuo d = 2R. R = c / 2.",
+        "answer": "Įrodyta"
       }
     ]
   },
@@ -5582,13 +6771,33 @@ export const topics = {
     "prerequisites": [],
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "concepts": [],
+    "concepts": [
+      "olimpiada-10-concept-vieta",
+      "olimpiada-10-concept-am-gm",
+      "olimpiada-10-concept-cauchy-schwarz",
+      "olimpiada-10-concept-remainder-theorem",
+      "olimpiada-10-concept-symmetric-polynomials"
+    ],
     "sections": [
       {
         "title": "Algebrinės nelygybės ir simetriniai daugianariai",
         "body": [
           "Sudėtingesnėse algebros temose naudojamos tokios nelygybės kaip Jenseno, Šūro, ir Cauchy-Schwarz Engel formos (Titu lema).",
           "Metodas. Trupmeninėms nelygybėms taikykite Titu lemą, kad sujungtumėte vardiklius ir supaprastintumėte skaitiklį."
+        ]
+      },
+      {
+        "title": "Vietos formulės aukštesnio laipsnio lygtims",
+        "body": [
+          "Vietos formulės sieja daugianario koeficientus su jo šaknų sumomis ir sandaugomis. Trečiojo laipsnio lygčiai $ax^3+bx^2+cx+d=0$ jos yra itin naudingos.",
+          "Formulė: x_1+x_2+x_3 = -b/a, \\quad x_1x_2+x_2x_3+x_3x_1 = c/a, \\quad x_1x_2x_3 = -d/a"
+        ]
+      },
+      {
+        "title": "Klasikinės nelygybės: AM-GM",
+        "body": [
+          "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) teigia, kad teigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį.",
+          "Teorema. Bet kokiems teigiamiems $a_1, a_2, \\dots, a_n$ galioja: $\\frac{a_1+\\dots+a_n}{n} \\ge \\sqrt[n]{a_1 \\dots a_n}$."
         ]
       }
     ],
@@ -5600,6 +6809,30 @@ export const topics = {
         "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
         "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
         "answer": "Įrodyta."
+      },
+      {
+        "title": "Vietos formulės kubinei lygčiai",
+        "text": "Raskite lygties $x^3 - 6x^2 + 11x - 6 = 0$ šaknų sumą ir sandaugą.",
+        "solution": "Identifikuojame koeficientus: $a=1, b=-6, c=11, d=-6$. Šaknų suma yra $-b/a = -(-6)/1 = 6$. Šaknų sandauga yra $-d/a = -(-6)/1 = 6$.",
+        "answer": "Suma: 6, Sandauga: 6"
+      },
+      {
+        "title": "AM-GM taikymas",
+        "text": "Teigiamiems $a, b, c$ įrodykite $a^3+b^3+c^3 \\ge 3abc$.",
+        "solution": "Taikome AM-GM nelygybę trims nariams: $a^3, b^3, c^3$. $\\frac{a^3+b^3+c^3}{3} \\ge \\sqrt[3]{a^3 b^3 c^3}$. Kadangi $\\sqrt[3]{a^3 b^3 c^3} = abc$, padauginę iš 3 gauname ieškomą nelygybę.",
+        "answer": "Įrodyta."
+      },
+      {
+        "title": "Daugianario liekanos radimas",
+        "text": "Daugianarį $P(x)$ dalijant iš $x-1$ gaunama liekana 3. Raskite $P(1)$.",
+        "solution": "Pagal liekanų teoremą (Bezu teoremą), $P(x)$ liekana dalijant iš $x-a$ lygi $P(a)$. Čia $a=1$ ir liekana yra 3. Vadinasi, $P(1) = 3$.",
+        "answer": "3"
+      },
+      {
+        "title": "Daugianario skaidymas",
+        "text": "Susklaidykite $x^4 + x^2 + 1$ dauginamaisiais.",
+        "solution": "Pridedame ir atimame $x^2$: $(x^4 + 2x^2 + 1) - x^2$. Pirma dalis yra pilnas kvadratas: $(x^2+1)^2 - x^2$. Taikome kvadratų skirtumo formulę: $(x^2+1-x)(x^2+1+x)$.",
+        "answer": "$(x^2-x+1)(x^2+x+1)$"
       }
     ]
   },
@@ -5613,7 +6846,11 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-10-concept-inversion"
+      "olimpiada-10-concept-inversion",
+      "concept-ceva-teorema",
+      "concept-menelajaus-teorema",
+      "concept-tasko-galia",
+      "concept-spiralinis-panasumas"
     ],
     "sections": [
       {
@@ -5621,6 +6858,20 @@ export const topics = {
         "body": [
           "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius.",
           "Metodas. Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
+        ]
+      },
+      {
+        "title": "Panašumas ir spiralinis panašumas",
+        "body": [
+          "Spiralinis panašumas yra transformacija, kuri apjungia posūkį apie tašką ir homotetiją (mastelio keitimą) tuo pačiu centru.",
+          "Metodas. Jei du trikampiai yra tiesiogiai panašūs, tai egzistuoja spiralinis panašumas, kuris vieną perveda į kitą."
+        ]
+      },
+      {
+        "title": "Baricentrinės koordinatės",
+        "body": [
+          "Baricentrinės koordinatės aprašo taško padėtį trikampio atžvilgiu per trijų svorių santykį (x:y:z), kurie proporcingi atitinkamų trikampių plotams.",
+          "Formulė: P = \\frac{x A + y B + z C}{x + y + z}"
         ]
       }
     ],
@@ -5645,7 +6896,11 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-10-concept-euler-formula-planar"
+      "olimpiada-10-concept-euler-formula-planar",
+      "concept-deriniai",
+      "concept-keliniai-su-pasikartojimais",
+      "concept-ijungimo-isjungimo-principas",
+      "concept-katalano-skaiciai"
     ],
     "sections": [
       {
@@ -5653,6 +6908,20 @@ export const topics = {
         "body": [
           "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius.",
           "Metodas. Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
+        ]
+      },
+      {
+        "title": "Dirichlė principas (Pigeonhole Principle)",
+        "body": [
+          "Jei n+1 objektą dedame į n dėžučių, tai bent vienoje dėžutėje bus bent du objektai.",
+          "Pastaba. Šis principas dažnai naudojamas įrodant egzistavimą neieškant konkretaus pavyzdžio."
+        ]
+      },
+      {
+        "title": "Grafų teorijos pagrindai",
+        "body": [
+          "Grafas susideda iš viršūnių ir jas jungiančių briaunų. Rankų paspaudimo lema teigia, kad visų viršūnių laipsnių suma lygi dvigubam briaunų skaičiui.",
+          "Formulė: \\sum deg(v) = 2|E|"
         ]
       }
     ],
@@ -5677,14 +6946,29 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-10-concept-titus-lemma"
+      "olimpiada-10-concept-am-gm",
+      "olimpiada-10-concept-cauchy-schwarz",
+      "olimpiada-10-concept-titus-lemma",
+      "olimpiada-10-concept-jensen",
+      "olimpiada-10-concept-schur",
+      "olimpiada-10-concept-rearrangement",
+      "olimpiada-10-concept-chebyshev",
+      "olimpiada-10-concept-muirhead"
     ],
     "sections": [
       {
-        "title": "Algebrinės nelygybės ir simetriniai daugianariai",
+        "title": "Klasikinės nelygybės",
         "body": [
-          "Sudėtingesnėse algebros temose naudojamos tokios nelygybės kaip Jenseno, Šūro, ir Cauchy-Schwarz Engel formos (Titu lema).",
-          "Metodas. Trupmeninėms nelygybėms taikykite Titu lemą, kad sujungtumėte vardiklius ir supaprastintumėte skaitiklį."
+          "Olimpiadinėje matematikoje nelygybių įrodymas remiasi keliomis pagrindinėmis nelygybėmis: AM-GM, Koši-Švarco (Cauchy-Schwarz), Jenseno ir kitomis.",
+          "Metodas. AM-GM nelygybė: neneigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį.",
+          "Metodas. Koši-Švarco nelygybė: vektorių skaliarinės sandaugos kvadratas neviršija jų ilgių kvadratų sandaugos."
+        ]
+      },
+      {
+        "title": "Titu lema ir Jenseno nelygybė",
+        "body": [
+          "Trupmeninėms nelygybėms spręsti dažnai naudojama Titu lema (Sedrakiano nelygybė), kuri yra Koši-Švarco nelygybės išvada.",
+          "Jenseno nelygybė susieja išgaubtosios funkcijos reikšmių vidurkį su vidurkio reikšme."
         ]
       }
     ],
@@ -5692,9 +6976,9 @@ export const topics = {
     "mistakes": [],
     "examples": [
       {
-        "title": "Titu lemos taikymas nelygybės įrodyme",
-        "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
-        "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
+        "title": "AM-GM taikymas",
+        "text": "Teigiamiems skaičiams $a, b$ įrodykite: $a+b \\ge 2\\sqrt{ab}$.",
+        "solution": "Užrašome AM-GM nelygybę dviem nariams. Aritmetinis vidurkis yra $(a+b)/2$, geometrinis vidurkis yra $\\sqrt{ab}$. Gauname $(a+b)/2 \\ge \\sqrt{ab}$. Padauginame iš 2.",
         "answer": "Įrodyta."
       }
     ]
@@ -5710,39 +6994,35 @@ export const topics = {
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-10-concept-quad-reciprocity",
-      "olimpiada-10-concept-gaussian-integers"
+      "olimpiada-10-concept-gaussian-integers",
+      "olimpiada-10-concept-fermat-little",
+      "olimpiada-10-concept-euler-theorem",
+      "olimpiada-10-concept-crt",
+      "olimpiada-10-concept-diophantine",
+      "olimpiada-10-concept-pell",
+      "olimpiada-10-concept-arithmetic-functions",
+      "olimpiada-10-concept-continued-fractions",
+      "olimpiada-10-concept-lte"
     ],
     "sections": [
       {
-        "title": "Aukštesnioji skaičių teorija ir Gauso sveikieji skaičiai",
+        "title": "Aukštesnioji liekanų teorija",
         "body": [
-          "10 klasėje skaičių teorija plečiasi už paprastų sveikųjų skaičių ribų. Susipažįstame su Gauso sveikaisiais skaičiais $\\mathbb{Z}[i]$ ir jų dalumo savybėmis.",
-          "Metodas. Naudokite Gauso skaičių normą $N(a+bi) = a^2+b^2$ norėdami įvertinti pirminių skaičių skaidymą."
+          "Skaičių teorijoje 10 klasėje gilinamės į liekanų savybes, naudodami Mažąją Fermo teoremą ir Oilerio teoremą. Jos leidžia efektyviai skaičiuoti didelių laipsnių liekanas.",
+          "Metodas. Naudokite Kinų liekanų teoremą (CRT), kai reikia rasti skaičių, tenkinantį kelis palyginimus skirtingais moduliais."
+        ]
+      },
+      {
+        "title": "Diofanto lygtys ir specialios struktūros",
+        "body": [
+          "Diofanto lygtys yra lygtys, kurių sprendinių ieškome sveikųjų skaičių aibėje. Klasikinis pavyzdys yra Pelio lygtis $x^2 - Dy^2 = 1$.",
+          "Gauso sveikieji skaičiai $\\mathbb{Z}[i]$ leidžia spręsti uždavinius apie kvadratų sumas naudojant faktoriavimo metodus."
         ]
       }
     ],
     "formulas": [],
     "mistakes": [],
-    "examples": [
-      {
-        "title": "Gauso sveikojo skaičiaus skaidymas",
-        "text": "Susklaidykite skaičių 5 pirminiais daugtuviais Gauso sveikųjų skaičių aibėje $\\mathbb{Z}[i]$.",
-        "solution": "Ieškome skaidinio pavidalu $5 = (a + bi)(a - bi) = a^2 + b^2$. Žinome, kad $5 = 2^2 + 1^2$, todėl galime pasirinkti $a = 2, b = 1$. Gausime skaidinį: $5 = (2 + i)(2 - i)$. Patikriname normą $N(2+i) = 2^2 + 1^2 = 5$, kuri yra pirminis skaičius, todėl $2+i$ ir $2-i$ yra pirminiai Gauso skaičiai.",
-        "answer": "$(2+i)(2-i)$"
-      },
-      {
-        "title": "Titu lemos taikymas nelygybės įrodyme",
-        "text": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
-        "solution": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$. Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$. Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$. Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta.",
-        "answer": "Įrodyta."
-      },
-      {
-        "title": "Oilerio formulės taikymas grafui",
-        "text": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
-        "solution": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$. Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$. Gauname lygtį: $8 - E + 5 = 2 \\implies 13 - E = 2$. Išsprendžiame briaunų skaičių: $E = 11$.",
-        "answer": "$11$"
-      }
-    ]
+    "examples": []
   },
   "olimpiada-10-strategijos-ir-irodymai": {
     "id": "olimpiada-10-strategijos-ir-irodymai",
@@ -5753,40 +7033,45 @@ export const topics = {
     "prerequisites": [],
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "concepts": [],
-    "sections": [],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
-  },
-  "olimpiada-10": {
-    "id": "olimpiada-10",
-    "grade": 10,
-    "title": "Olimpiadinė matematika (10 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-10-skaiciu-teorija",
-      "olimpiada-10-strategijos-ir-irodymai",
-      "olimpiada-10-algebra",
-      "olimpiada-10-nelygybes",
-      "olimpiada-10-geometrija",
-      "olimpiada-10-kombinatorika"
+    "concepts": [
+      "dirichle-principas",
+      "invariantas",
+      "ekstremumo-principas"
     ],
-    "concepts": [],
     "sections": [
       {
-        "title": "Pasirinkite olimpiadinę temą",
+        "title": "Dirichlė principas (Balandžių būdos)",
         "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Strategijos ir įrodymai, Algebra, Nelygybės, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
+          "[[dirichle-principas|Dirichlė principas]] teigia: jei $n+1$ objektą dedame į $n$ dėžučių, tai bent vienoje dėžutėje bus bent du objektai.",
+          "Pastaba. Svarbiausia užduotis taikant šį principą – teisingai parinkti „objektus“ ir „dėžutes“."
+        ]
+      },
+      {
+        "title": "Invariantas",
+        "body": [
+          "[[invariantas|Invariantas]] – tai dydis arba savybė, kuri nekinta atliekant tam tikras operacijas.",
+          "Metodas. Dažnai naudojami invariantai: skaičių suma, sandauga, paritetas (lyginumas) arba liekana dalijant iš tam tikro skaičiaus."
+        ]
+      },
+      {
+        "title": "Ekstremumo principas",
+        "body": [
+          "[[ekstremumo-principas|Ekstremumo principas]] siūlo nagrinėti objektą, turintį mažiausią arba didžiausią tam tikros savybės reikšmę (pvz., trumpiausią atkarpą, mažiausią skaičių, didžiausią kampą)."
         ]
       }
     ],
     "formulas": [],
-    "mistakes": [],
-    "examples": []
+    "mistakes": [
+      "Netinkamas objektų parinkimas Dirichlė principui — Visada patikrinkite, ar objektų (balandžių) skaičius $N$ yra griežtai didesnis už dėžučių (narvelių) skaičių $k$."
+    ],
+    "examples": [
+      {
+        "title": "Gimtadieniai",
+        "text": "Įrodykite, kad grupėje iš 13 žmonių bent du gimė tą patį mėnesį.",
+        "solution": "Identifikuojame objektus: 13 žmonių. n = 13 Identifikuojame dėžutes: 12 mėnesių. k = 12 Taikome Dirichlė principą: kadangi $13 > 12$, bent du žmonės (objektai) pateks į tą patį mėnesį (dėžutę).",
+        "answer": "Teiginys įrodytas."
+      }
+    ]
   },
   "racionaliosios-lygtys": {
     "id": "racionaliosios-lygtys",
@@ -6230,6 +7515,112 @@ export const topics = {
       }
     ]
   },
+  "aibes-ir-veiksmai": {
+    "id": "aibes-ir-veiksmai",
+    "grade": 11,
+    "title": "Aibės ir veiksmai su jomis",
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "realieji-skaiciai-modulis-saknys-laipsniai"
+    ],
+    "prerequisiteTopicIds": [
+      "realieji-skaiciai-modulis-saknys-laipsniai"
+    ],
+    "nextTopicIds": [
+      "kombinatorika-ir-binomas"
+    ],
+    "concepts": [
+      "aibe",
+      "elementas",
+      "tuscia-aibe",
+      "poaibis",
+      "aibiu-sajunga",
+      "aibiu-sankirta",
+      "aibiu-skirtumas",
+      "veno-diagrama",
+      "realiuju-skaiciu-aibe",
+      "baigtine-aibe"
+    ],
+    "sections": [
+      {
+        "title": "Aibės sąvoka ir žymėjimas",
+        "body": [
+          "[[aibe|Aibė]] yra tam tikrų objektų, vadinamų [[elementas|elementais]], rinkinys. Aibės dažniausiai žymimos didžiosiomis raidėmis (A, B, C...), o jų elementai išvardijami riestiniuose skliaustuose.",
+          "Aibė – tai visuma objektų, kurie turi bendrą požymį arba yra tiesiog sujungti į vieną rinkinį.",
+          "Jei objektas x priklauso aibei A, rašome x ∈ A. Jei nepriklauso – x ∉ A. Aibė, neturinti nei vieno elemento, vadinama [[tuscia-aibe|tuščiąja aibe]] ir žymima ∅."
+        ]
+      },
+      {
+        "title": "Aibių sąjunga ir sankirta",
+        "body": [
+          "Pagrindiniai veiksmai su aibėmis yra [[aibiu-sajunga|sąjunga]] ir [[aibiu-sankirta|sankirta]].",
+          "Savybė. Aibių A ir B sąjunga (A ∪ B) yra aibė, kurią sudaro visi elementai, priklausantys bent vienai iš tų aibių.",
+          "Formulė: A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}",
+          "Savybė. Aibių A ir B sankirta (A ∩ B) yra aibė, kurią sudaro tik tie elementai, kurie priklauso ir aibei A, ir aibei B tuo pačiu metu.",
+          "Formulė: A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}"
+        ]
+      },
+      {
+        "title": "Aibių skirtumas ir poaibis",
+        "body": [
+          "[[aibiu-skirtumas|Aibių skirtumas]] (A \\ B) yra aibė, kurią sudaro elementai, priklausantys aibei A, bet nepriklausantys aibei B.",
+          "Formulė: A \\setminus B = \\{x \\mid x \\in A \\text{ ir } x \\notin B\\}",
+          "Jei kiekvienas aibės B elementas priklauso ir aibei A, sakome, kad B yra aibės A [[poaibis|poaibis]] (B ⊆ A)."
+        ]
+      },
+      {
+        "title": "Veno diagramos",
+        "body": [
+          "[[veno-diagrama|Veno diagramos]] yra vaizdus būdas aibėms ir veiksmams su jomis pavaizduoti plokštumoje (dažniausiai apskritimais).",
+          "Pastaba. Veno diagramos padeda spręsti uždavinius, kuriuose reikia rasti elementų skaičių susikertančiose grupėse."
+        ]
+      }
+    ],
+    "formulas": [
+      "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}",
+      "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}",
+      "A \\setminus B = \\{x \\mid x \\in A \\text{ ir } x \\notin B\\}"
+    ],
+    "mistakes": [
+      "Painioja sąjungą (∪) su sankirta (∩) — Atsiminkite: ∪ – kaip puodelis (supilame viską), ∩ – kaip kalnas (tik tai, kas viršūnėje/bendra).",
+      "Neteisinga aibių skirtumo tvarka — A \\ B reiškia elementus iš A, kurių nėra B.",
+      "Tuščiosios aibės žymėjimas skliaustuose — Rašykite tiesiog ∅ arba {}. Žymėjimas {∅} reiškia aibę, kurios vienintelis elementas yra tuščioji aibė.",
+      "Painioja elementą su poaibiu — Naudokite ∈ elementui, ⊆ – aibei (poaibiui)."
+    ],
+    "examples": [
+      {
+        "title": "Sąjungos ir sankirtos radimas",
+        "text": "Duotos aibės A = {1, 2, 3, 4} ir B = {3, 4, 5, 6}. Raskite A ∪ B ir A ∩ B.",
+        "solution": "Sąjungai surašome visus elementus iš abiejų aibių, nepasikartodami. A \\cup B = \\{1, 2, 3, 4, 5, 6\\} Sankirtai surašome tik tuos elementus, kurie yra ir A, ir B. A \\cap B = \\{3, 4\\}",
+        "answer": "A ∪ B = {1, 2, 3, 4, 5, 6}, A ∩ B = {3, 4}"
+      },
+      {
+        "title": "Aibių skirtumo skaičiavimas",
+        "text": "Duotos aibės A = {a, b, c, d} ir B = {c, d, e}. Raskite A \\ B ir B \\ A.",
+        "solution": "Iš aibės A išmetame elementus, kurie yra aibėje B (tai c ir d). A \\setminus B = \\{a, b\\} Iš aibės B išmetame elementus, kurie yra aibėje A (tai c ir d). B \\setminus A = \\{e\\}",
+        "answer": "A \\ B = {a, b}, B \\ A = {e}"
+      },
+      {
+        "title": "Uždavinys su Veno diagrama",
+        "text": "Klasėje yra 30 mokinių. 20 mokinių lanko krepšinį, 15 – futbolą, o 10 lanko abu. Kiek mokinių nelanko nei vieno iš šių būrelių?",
+        "solution": "Apskaičiuojame, kiek mokinių lanko bent vieną būrelį (sąjunga). Naudojame formulę |A ∪ B| = |A| + |B| - |A ∩ B|. 20 + 15 - 10 = 25 Iš bendro mokinių skaičiaus atimame tuos, kurie lanko bent vieną būrelį. 30 - 25 = 5",
+        "answer": "5 mokiniai"
+      },
+      {
+        "title": "Poaibių radimas",
+        "text": "Raskite visus aibės A = {1, 2} poaibius.",
+        "solution": "Prisiminkite, kad tuščioji aibė yra kiekvienos aibės poaibis. \\emptyset Surašome poaibius su vienu elementu. \\{1\\}, \\{2\\} Surašome pačią aibę (kiekviena aibė yra savo pačios poaibis). \\{1, 2\\}",
+        "answer": "∅, {1}, {2}, {1, 2}"
+      },
+      {
+        "title": "Kelių veiksmų derinimas",
+        "text": "A = {1, 2, 3}, B = {2, 3, 4}, C = {3, 4, 5}. Raskite (A ∩ B) ∪ (B \\ C).",
+        "solution": "Pirmiausia randame A ∩ B. A \\cap B = \\{2, 3\\} Tada randame B \\ C. B \\setminus C = \\{2\\} Galiausiai randame gautų aibių sąjungą. \\{2, 3\\} \\cup \\{2\\} = \\{2, 3\\}",
+        "answer": "{2, 3}"
+      }
+    ]
+  },
   "funkciju-ribos-ir-tolydumas": {
     "id": "funkciju-ribos-ir-tolydumas",
     "grade": 11,
@@ -6428,10 +7819,10 @@ export const topics = {
       "a_n=a_1+(n-1)d",
       "a_n=a_1q^{n-1}",
       "a^m a^n=a^{m+n}",
-      "\\log_a b=c \\Leftrightarrow a^c=b",
-      "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
+      "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
       "\\frac{d}{dx}x^n = nx^{n-1}",
-      "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
+      "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
     ],
     "mistakes": [
       "Rodiklių taisyklę užrašo neteisingai — Naudok a^{m+n}.",
@@ -6662,10 +8053,10 @@ export const topics = {
       "a_n=a_1+(n-1)d",
       "a_n=a_1q^{n-1}",
       "a^m a^n=a^{m+n}",
-      "\\log_a b=c \\Leftrightarrow a^c=b",
-      "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
+      "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
       "\\frac{d}{dx}x^n = nx^{n-1}",
-      "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
+      "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
     ],
     "mistakes": [
       "Rodiklių taisyklę užrašo neteisingai — Naudok a^{m+n}.",
@@ -6675,19 +8066,19 @@ export const topics = {
       {
         "title": "Sinusas",
         "text": "Jei priešpriešinė 5, įžambinė 13, rask sinusą.",
-        "solution": "5/13. \\sin\\alpha=5/13",
+        "solution": "5/13. \\\\sin\\\\alpha=5/13",
         "answer": "5/13"
       },
       {
         "title": "Kosinusas",
         "text": "Jei gretimoji 12, įžambinė 13, rask kosinusą.",
-        "solution": "12/13. \\cos\\alpha=12/13",
+        "solution": "12/13. \\\\cos\\\\alpha=12/13",
         "answer": "12/13"
       },
       {
         "title": "Tangentas",
         "text": "Jei priešpriešinė 3, gretimoji 4, rask tangento reikšmę.",
-        "solution": "3/4. \\tan\\alpha=3/4",
+        "solution": "3/4. \\tan\\\\alpha=3/4",
         "answer": "3/4"
       },
       {
@@ -6699,7 +8090,7 @@ export const topics = {
       {
         "title": "Kampas",
         "text": "Jei sin α = 1/2, koks dažnai naudojamas kampo pavyzdys?",
-        "solution": "30°. 30^\\circ",
+        "solution": "30°. 30^\\\\circ",
         "answer": "30°"
       }
     ]
@@ -6711,20 +8102,45 @@ export const topics = {
     "strand": "Algebra",
     "level": "olympiad",
     "prerequisites": [
-      "Olimpiadinė matematika (10 klasė) - Apžvalga",
       "Lygtys, nelygybės ir raidiniai reiškiniai"
     ],
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-11-concept-cyclotomic",
-      "olimpiada-11-concept-chebyshev"
+      "olimpiada-11-concept-chebyshev",
+      "olimpiada-11-concept-vieta",
+      "olimpiada-11-concept-cauchy-schwarz",
+      "olimpiada-11-concept-am-gm"
     ],
-    "sections": [],
-    "formulas": [],
+    "sections": [
+      {
+        "title": "Daugianarių šaknys ir Vieta",
+        "body": [
+          "Daugianarių šaknų ir koeficientų ryšys yra vienas iš pagrindinių įrankių olimpiadinėje algebroje. Vieta teoremos leidžia rasti šaknų sumas, sandaugas ir kitas simetrines išraiškas tiesiogiai iš daugianario koeficientų.",
+          "Formulė: x_1+x_2+x_3 = -\\frac{b}{a}, \\quad x_1x_2+x_2x_3+x_3x_1 = \\frac{c}{a}, \\quad x_1x_2x_3 = -\\frac{d}{a}"
+        ]
+      },
+      {
+        "title": "Pagrindinės nelygybės: AM-GM ir Cauchy-Schwarz",
+        "body": [
+          "Nelygybės yra dažna olimpiadų tema. Svarbiausia suprasti, kada galioja lygybė – dažniausiai tai nutinka, kai visi kintamieji yra lygūs arba proporcingi.",
+          "Vidurkių nelygybė (AM-GM): aritmetinis vidurkis visada yra ne mažesnis už geometrinį vidurkį teigiamiems skaičiams."
+        ]
+      },
+      {
+        "title": "Funkcinės lygtys ir jų sprendimo būdai",
+        "body": [
+          "Sprendžiant funkcines lygtis, pagrindinės strategijos yra: kintamųjų fiksavimas (pvz., x=0, y=0), injektyvumo ir surjektyvumo tikrinimas, bei sprendinio pavidalo spėjimas (dažniausiai f(x)=cx)."
+        ]
+      }
+    ],
+    "formulas": [
+      "x_1+x_2+x_3 = -b/a, \\quad x_1x_2+x_2x_3+x_3x_1 = c/a, \\quad x_1x_2x_3 = -d/a",
+      "(\\sum_{i=1}^n a_i b_i)^2 \\le (\\sum_{i=1}^n a_i^2)(\\sum_{i=1}^n b_i^2)"
+    ],
     "mistakes": [],
     "examples": [
       {
@@ -6738,6 +8154,24 @@ export const topics = {
         "text": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias $f(x+y) = f(x) + f(y)$ visiems $x, y \\in \\mathbb{R}$.",
         "solution": "Pirmiausia nustatome $f(0)$: $f(0+0) = f(0) + f(0) \\implies f(0) = 0$. Indukcija parodome, kad $f(nx) = nf(x)$ visiems natūraliesiems $n$. Tegu $f(1) = c$. Tada $f(n) = cn$ visiems natūraliesiems $n$. Išplėčiame racionaliesiems skaičiams: $f(p/q \\cdot q) = f(p) \\implies qf(p/q) = cp \\implies f(p/q) = c(p/q)$. Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$.",
         "answer": "f(x) = cx"
+      },
+      {
+        "title": "AM-GM taikymas nelygybei",
+        "text": "Įrodykite, kad teigiamiems $a, b, c$, kurių sandauga $abc=1$, galioja $a+b+c \\ge 3$.",
+        "solution": "Taikome AM-GM nelygybę trims skaičiams $a, b, c$. $\\frac{a+b+c}{3} \\ge \\sqrt[3]{abc}$. Kadangi $abc=1$, tai $\\sqrt[3]{1} = 1$. Dauginame abi puses iš 3: $a+b+c \\ge 3$.",
+        "answer": "Įrodyta"
+      },
+      {
+        "title": "Vieta teoremos kubinei lygčiai",
+        "text": "Raskite lygties $x^3 - 3x^2 + 4 = 0$ šaknų sumą.",
+        "solution": "Pagal Vieta teoremą, trečiojo laipsnio daugianario $ax^3+bx^2+cx+d=0$ šaknų suma lygi $-b/a$. Čia $a=1, b=-3$. Suma: $-(-3)/1 = 3$.",
+        "answer": "3"
+      },
+      {
+        "title": "Koši-Švarco nelygybės panaudojimas",
+        "text": "Jei $x^2+y^2=1$, raskite didžiausią $3x+4y$ reikšmę.",
+        "solution": "Taikome Koši-Švarco nelygybę vektoriams $(3, 4)$ ir $(x, y)$. $(3x+4y)^2 \\le (3^2+4^2)(x^2+y^2)$. $(3x+4y)^2 \\le (9+16) \\cdot 1 = 25$. $|3x+4y| \\le 5$.",
+        "answer": "5"
       }
     ]
   },
@@ -6748,17 +8182,18 @@ export const topics = {
     "strand": "Geometrija",
     "level": "olympiad",
     "prerequisites": [
-      "Olimpiadinė matematika (10 klasė) - Apžvalga",
       "Lygtys, nelygybės ir raidiniai reiškiniai"
     ],
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-11-concept-inversion",
-      "olimpiada-11-concept-projective"
+      "olimpiada-11-concept-projective",
+      "olimpiada-11-concept-menelaus",
+      "olimpiada-11-concept-power-of-point",
+      "olimpiada-11-concept-stewart"
     ],
     "sections": [
       {
@@ -6767,16 +8202,57 @@ export const topics = {
           "Inversija apskritimo atžvilgiu yra transformacija, kuri „išverčia“ plokštumą: taškai arti centro nukeliauja toli, o apskritimai, einantys per centrą, tampa tiesėmis.",
           "Metodas. Sunkūs uždaviniai su besiliečiančiais apskritimais dažnai tampa paprasti, jei pasirenkate tinkamą inversijos centrą (paprastai lietimosi tašką). Tada besiliečiantys apskritimai tampa lygiagrečiomis tiesėmis."
         ]
+      },
+      {
+        "title": "Taško galia ir radikalinė ašis",
+        "body": [
+          "Taško $P$ galia apskritimo $\\omega(O, R)$ atžvilgiu apibrėžiama kaip $h = d^2 - R^2$, kur $d$ yra atstumas $PO$. Jei $P$ yra išorėje, tai lygu liestinės ilgio kvadratui.",
+          "Teorema. Radikalinė ašis yra visų taškų, turinčių vienodą galią dviejų apskritimų atžvilgiu, aibė. Tai visada yra tiesė, statmena apskritimų centrus jungiančiai atkarpai."
+        ]
+      },
+      {
+        "title": "Čevos ir Menelajo teoremos",
+        "body": [
+          "Šios dvi teoremos yra pagrindiniai įrankiai nustatant taškų kolinearumą (Menelajas) arba tiesių susikirtimą viename taške (Čeva).",
+          "Formulė: \\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1"
+        ]
       }
     ],
-    "formulas": [],
+    "formulas": [
+      "h = d^2 - R^2 = PA \\cdot PB",
+      "b^2 m + c^2 n = a(d^2 + mn)"
+    ],
     "mistakes": [],
     "examples": [
       {
         "title": "Inversijos taikymas besiliečiantiems apskritimams",
         "text": "Du apskritimai $\\omega_1$ ir $\\omega_2$ liečiasi taške $P$. Tiesi per $P$ kerta $\\omega_1$ taške $A$ ir $\\omega_2$ taške $B$. Įrodykite, kad liestinės taškuose $A$ ir $B$ yra lygiagrečios.",
-        "solution": "Taikome inversiją su centru taške $P$. Po inversijos abu apskritimai $\\omega_1$ ir $\\omega_2$, einantys per centrą $P$, virsta lygiagrečiomis tiesėmis $L_1$ ir $L_2$. Tiesė $PAB$, einanti per inversijos centrą, virsta ta pačia tiese $PAB$. Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$. Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Tačiau savybė, kad liestinė statmena spinduliui, po inversijos virsta kampų išsaugojimo savybe. Inversija išsaugo lygiagretumą tarp liestinių besiliečiančiuose taškuose, nes jos tampa simetriškos lygiagrečių tiesių atžvilgiu.",
+        "solution": "Taikome inversiją su centru taške $P$. Po inversijos abu apskritimai $\\omega_1$ ir $\\omega_2$, einantys per centrą $P$, virsta lygiagrečiomis tiesėmis $L_1$ ir $L_2$. Tiesė $PAB$, einanti per inversijos centrą, virsta ta pačia tiese $PAB$. Taškai $A$ ir $B$ atvaizduojami į $A'$ ir $B'$ tiesėse $L_1$ ir $L_2$. Liestinė apskritimui taške $A$ po inversijos virsta apskritimu, einančiu per $A'$ ir $P$. Kampų išsaugojimo savybė užtikrina, kad liestinės virsta objektais, kurie išlaiko pradinį lygiagretumą vaizdų erdvėje.",
         "answer": "Įrodyta"
+      },
+      {
+        "title": "Menelajo teoremos taikymas",
+        "text": "Trikampyje ABC taškas D yra kraštinėje BC taip, kad BD:DC = 2:1. Taškas E yra kraštinėje AC taip, kad AE:EC = 3:1. Tiesė DE kerta AB tęsinį taške F. Raskite AF:FB.",
+        "solution": "Taikome Menelajo teoremą trikampiui ABC ir tiesei F-E-D. $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Įstatome žinomus santykius: $\\frac{AF}{FB} \\cdot \\frac{2}{1} \\cdot \\frac{1}{3} = 1$. $\\frac{AF}{FB} \\cdot \\frac{2}{3} = 1 \\implies \\frac{AF}{FB} = \\frac{3}{2}$.",
+        "answer": "3:2"
+      },
+      {
+        "title": "Taško galios skaičiavimas",
+        "text": "Taškas P yra 5 cm atstumu nuo apskritimo centro. Apskritimo spindulys yra 3 cm. Raskite taško P galią.",
+        "solution": "Naudojame taško galios formulę $h = d^2 - R^2$. $d = 5, R = 3$. $h = 5^2 - 3^2 = 25 - 9 = 16$.",
+        "answer": "16"
+      },
+      {
+        "title": "Ptolemėjo teorema",
+        "text": "Įbrėžtinio keturkampio kraštinės yra 1, 2, 3, 4 (tokia tvarka). Raskite įstrižainių sandaugą.",
+        "solution": "Pagal Ptolemėjo teoremą, įbrėžtinio keturkampio įstrižainių sandauga lygi priešingų kraštinių sandaugų sumai. $d_1 d_2 = 1 \\cdot 3 + 2 \\cdot 4$. $d_1 d_2 = 3 + 8 = 11$.",
+        "answer": "11"
+      },
+      {
+        "title": "Stiuarto teorema pusiaukraštinei",
+        "text": "Trikampio kraštinės yra 5, 6, 7. Raskite pusiaukraštinės į kraštinę 7 ilgį.",
+        "solution": "Taikome Stiuarto teoremą $b^2 m + c^2 n = a(d^2 + mn)$. $a=7, b=5, c=6, m=3.5, n=3.5$. $5^2 \\cdot 3.5 + 6^2 \\cdot 3.5 = 7(d^2 + 3.5^2)$. $3.5(25+36) = 7(d^2 + 12.25) \\implies 61/2 = d^2 + 12.25$. $30.5 - 12.25 = d^2 \\implies d^2 = 18.25$.",
+        "answer": "\\sqrt{18.25}"
       }
     ]
   },
@@ -6787,18 +8263,17 @@ export const topics = {
     "strand": "Kombinatorika",
     "level": "olympiad",
     "prerequisites": [
-      "Olimpiadinė matematika (10 klasė) - Apžvalga",
       "Lygtys, nelygybės ir raidiniai reiškiniai"
     ],
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
     "concepts": [
       "olimpiada-11-concept-nullstellensatz",
       "olimpiada-11-concept-lovasz",
-      "olimpiada-11-concept-turan"
+      "olimpiada-11-concept-turan",
+      "olimpiada-11-concept-dirichlet-pigeonhole"
     ],
     "sections": [],
     "formulas": [],
@@ -6819,11 +8294,9 @@ export const topics = {
     "strand": "Skaičių teorija",
     "level": "olympiad",
     "prerequisites": [
-      "Olimpiadinė matematika (10 klasė) - Apžvalga",
       "Lygtys, nelygybės ir raidiniai reiškiniai"
     ],
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
@@ -6831,7 +8304,9 @@ export const topics = {
       "olimpiada-11-concept-crt",
       "olimpiada-11-concept-order",
       "olimpiada-11-concept-reciprocity",
-      "olimpiada-11-concept-jacobi"
+      "olimpiada-11-concept-jacobi",
+      "olimpiada-11-concept-wilson",
+      "olimpiada-11-concept-lte"
     ],
     "sections": [
       {
@@ -6846,6 +8321,13 @@ export const topics = {
         "body": [
           "Kvadratinis savitarpiškumas leidžia atsakyti į klausimą: „Ar skaičius yra kvadratinė liekana moduliu $p$?“. Tai viena svarbiausių Gauso teoremų, siejanti dviejų skirtingų pirminių skaičių savybes.",
           "Metodas. Naudokite Legendro simbolį $\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
+        ]
+      },
+      {
+        "title": "Wilsono teorema ir LTE lema",
+        "body": [
+          "Wilsono teorema suteikia būtiną ir pakankamą sąlygą skaičiui būti pirminiu, susiejant faktorialus su modulinėmis liekanomis. Lifting The Exponent (LTE) lema yra specializuotas įrankis, leidžiantis apskaičiuoti pirminio skaičiaus laipsnį $v_p(a^n \\pm b^n)$.",
+          "Metodas. LTE lemą taikykite, kai $p | (a-b)$, bet $p \\nmid a, p \\nmid b$. Jei $p > 2$ yra pirminis, tai $v_p(a^n - b^n) = v_p(a-b) + v_p(n)$."
         ]
       }
     ],
@@ -6863,41 +8345,26 @@ export const topics = {
         "text": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
         "solution": "Ciklotoninis daugianaris $\\Phi_n(x)$ apibrėžiamas kaip $\\prod (x - \\zeta)$, kur $\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys. Kiekviena šaknis $\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\bar{\\zeta}$ (jei ji nėra reali). Sandauga $(x - \\zeta)(x - \\bar{\\zeta}) = x^2 - (2 \\text{Re} \\zeta)x + 1$. Kadangi $|\\zeta| = 1$, tai $2 \\text{Re} \\zeta \\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\text{Re} \\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\text{Re} \\zeta)^2 - 4 \\le 0$. Jei $n=2$, $\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$. Kadangi visi sandaugos nariai yra teigiami, tai ir $\\Phi_n(x) > 0$.",
         "answer": "Įrodyta"
+      },
+      {
+        "title": "Wilsono teoremos taikymas",
+        "text": "Raskite $15! \\pmod{17}$.",
+        "solution": "Pagal Wilsono teoremą, kadangi 17 yra pirminis skaičius, tai $16! \\equiv -1 \\pmod{17}$. $16!$ galime užrašyti kaip $15! \\cdot 16$. Todėl $15! \\cdot 16 \\equiv -1 \\pmod{17}$. Kadangi $16 \\equiv -1 \\pmod{17}$, lygtis tampa $15! \\cdot (-1) \\equiv -1 \\pmod{17}$. Padauginę iš $-1$, gauname $15! \\equiv 1 \\pmod{17}$.",
+        "answer": "1"
+      },
+      {
+        "title": "Paskutinių skaitmenų radimas",
+        "text": "Raskite paskutinius du skaičiaus $7^{402}$ skaitmenis.",
+        "solution": "Reikia rasti $7^{402} \\pmod{100}$. Apskaičiuojame $\\varphi(100) = 40$. Pagal Oilerio teoremą $7^{40} \\equiv 1 \\pmod{100}$, nes $\\text{gcd}(7, 100) = 1$. Redukuojame laipsnį: $402 = 40 \\cdot 10 + 2$. $7^{402} = (7^{40})^{10} \\cdot 7^2 \\equiv 1^{10} \\cdot 49 \\equiv 49 \\pmod{100}$.",
+        "answer": "49"
+      },
+      {
+        "title": "Ležandro formulė faktorialams",
+        "text": "Kiek nulių yra skaičiaus $100!$ pabaigoje?",
+        "solution": "Nulių skaičius lygus $v_{10}(100!) = \\min(v_2(100!), v_5(100!))$. Kadangi $v_5(100!) < v_2(100!)$, skaičiuojame tik $v_5(100!)$. Pagal Ležandro formulę: $v_5(100!) = \\lfloor 100/5 \\rfloor + \\lfloor 100/25 \\rfloor + \\lfloor 100/125 \\rfloor + \\dots$ $v_5(100!) = 20 + 4 + 0 = 24$.",
+        "answer": "24"
       }
     ]
-  },
-  "olimpiada-11": {
-    "id": "olimpiada-11",
-    "grade": 11,
-    "title": "Olimpiadinė matematika (11 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [
-      "Olimpiadinė matematika (10 klasė) - Apžvalga",
-      "Lygtys, nelygybės ir raidiniai reiškiniai"
-    ],
-    "prerequisiteTopicIds": [
-      "olimpiada-10",
-      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
-    ],
-    "nextTopicIds": [
-      "olimpiada-11-skaiciu-teorija",
-      "olimpiada-11-algebra",
-      "olimpiada-11-geometrija",
-      "olimpiada-11-kombinatorika"
-    ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Algebra, Geometrija, Kombinatorika. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
   },
   "racionaliosios-rodiklines-ir-logaritmines-lygtys": {
     "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys",
@@ -7481,6 +8948,248 @@ export const topics = {
       }
     ]
   },
+  "vektoriai-plokstumoje": {
+    "id": "vektoriai-plokstumoje",
+    "grade": 11,
+    "title": "Vektoriai plokštumoje",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Geometrijos ir matavimų pradmenys",
+      "Transformacijos ir koordinatės"
+    ],
+    "prerequisiteTopicIds": [
+      "geometrijos-ir-matavimu-pradmenys",
+      "transformacijos-ir-koordinates"
+    ],
+    "nextTopicIds": [
+      "vektoriai-erdveje"
+    ],
+    "concepts": [
+      "vektorius",
+      "vektoriaus-modulis",
+      "skaliarine-sandauga",
+      "kolinearus-vektoriai",
+      "statmeni-vektoriai",
+      "vienetinis-vektorius",
+      "nulio-vektorius",
+      "kryptis",
+      "vektoriu-suma",
+      "vektoriu-skirtumas",
+      "vektoriaus-daugyba-is-skaiciaus",
+      "kampas-tarp-vektoriu"
+    ],
+    "sections": [
+      {
+        "title": "Vektoriaus sąvoka",
+        "body": [
+          "[[vektorius|Vektorius]] – tai kryptinė atkarpa. Jis apibūdinamas dviem pagrindinėmis savybėmis: ilgiu (moduliu) ir kryptimi.",
+          "Vektorius yra dydis, turintis skaitinę reikšmę (ilgį) ir kryptį erdvėje ar plokštumoje.",
+          "Savybė. Vektorius žymimas mažąja raide su rodykle (pvz., $\\vec{a}$) arba nurodant pradžios ir pabaigos taškus (pvz., $\\vec{AB}$, kur A – pradžia, B – pabaiga).",
+          "Vektoriaus modulis (ilgis) yra atkarpos, vaizduojančios vektorių, ilgis. Žymimas $|\\vec{a}|$ arba $|\\vec{AB}|$.",
+          "Pastaba. Vektorius, kurio pradžia ir pabaiga sutampa, vadinamas [[nulio-vektorius|nuliniu vektoriumi]] $\\vec{0}$. Jo ilgis lygus 0, o kryptis neapibrėžta."
+        ]
+      },
+      {
+        "title": "Vektorių sudėtis ir atimtis",
+        "body": [
+          "Sudėti du vektorius galima naudojant dvi pagrindines taisykles: trikampio ir lygiagretainio.",
+          "Metodas. **Trikampio taisyklė**: norint sudėti $\\vec{a}$ ir $\\vec{b}$, vektoriaus $\\vec{b}$ pradžią reikia sutapdinti su vektoriaus $\\vec{a}$ pabaiga. Sumos vektorius $\\vec{a}+\\vec{b}$ jungia pirmojo vektoriaus pradžią su antrojo pabaiga.",
+          "Metodas. **Lygiagretainio taisyklė**: norint sudėti $\\vec{a}$ ir $\\vec{b}$, abu vektorius reikia atidėti iš to paties taško. Sumos vektorius yra lygiagretainio, sudaryto iš šių vektorių, įstrižainė, išeinanti iš to paties taško.",
+          "Vektorių $\\vec{a}$ ir $\\vec{b}$ skirtumu $\\vec{a}-\\vec{b}$ vadiname tokį vektorių, kurį pridėjus prie $\\vec{b}$, gaunamas vektorius $\\vec{a}$.",
+          "Pastaba. Praktiškai $\\vec{a}-\\vec{b}$ randamas atidedant abu vektorius iš vieno taško ir jungiant $\\vec{b}$ pabaigą su $\\vec{a}$ pabaiga."
+        ]
+      },
+      {
+        "title": "Vektoriaus daugyba iš skaičiaus",
+        "body": [
+          "Vektoriaus $\\vec{a}$ ir skaičiaus $k$ sandauga yra vektorius $\\vec{b} = k\\vec{a}$.",
+          "Savybė. Naujo vektoriaus savybės:\n1. Ilgis: $|k\\vec{a}| = |k| \\cdot |\\vec{a}|$.\n2. Kryptis: jei $k > 0$, kryptis sutampa su $\\vec{a}$; jei $k < 0$, kryptis yra priešinga $\\vec{a}$; jei $k=0$, gaunamas $\\vec{0}$.",
+          "Vektoriai vadinami kolineariais, jei jie yra vienoje tiesėje arba lygiagrečiose tiesėse.",
+          "Teorema. Nenuliniai vektoriai $\\vec{a}$ ir $\\vec{b}$ yra kolinearūs tada ir tik tada, kai egzistuoja toks skaičius $k$, kad $\\vec{b} = k\\vec{a}$."
+        ]
+      },
+      {
+        "title": "Vektoriaus koordinatės plokštumoje",
+        "body": [
+          "Jei turime taškus $A(x_1, y_1)$ ir $B(x_2, y_2)$, tai vektoriaus $\\vec{AB}$ koordinatės yra:",
+          "Formulė: \\vec{AB} = (x_2 - x_1; y_2 - y_1)",
+          "Savybė. Atliekant veiksmus su vektoriais, duotais koordinatėmis:\n- Suma: $(x_1, y_1) + (x_2, y_2) = (x_1 + x_2; y_1 + y_2)$\n- Skirtumas: $(x_1, y_1) - (x_2, y_2) = (x_1 - x_2; y_1 - y_2)$\n- Daugyba iš $k$: $k \\cdot (x, y) = (kx; ky)$",
+          "Formulė: |\\vec{a}| = \\sqrt{x^2 + y^2}"
+        ]
+      },
+      {
+        "title": "Skaliarinė vektorių sandauga",
+        "body": [
+          "[[skaliarine-sandauga|Skaliarinė sandauga]] yra operacija, kurios rezultatas yra skaičius (skaliaras).",
+          "Dviejų vektorių skaliarinė sandauga lygi jų modulių sandaugai iš kampo tarp jų kosinuso.",
+          "Formulė: \\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\phi",
+          "Jei vektoriai duoti koordinatėmis $\\vec{a}(x_1, y_1)$ ir $\\vec{b}(x_2, y_2)$, jų skaliarinė sandauga apskaičiuojama taip:",
+          "Formulė: \\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
+          "Pastaba. Vektoriaus skaliarinis kvadratas lygus jo modulio kvadratui: $\\vec{a}^2 = |\\vec{a}|^2$."
+        ]
+      },
+      {
+        "title": "Kampas tarp vektorių ir jų ryšiai",
+        "body": [
+          "Naudojant skaliarinės sandaugos apibrėžimą, galima rasti kampo tarp vektorių kosinusą:",
+          "Formulė: \\cos \\phi = \\frac{x_1 x_2 + y_1 y_2}{\\sqrt{x_1^2 + y_1^2} \\cdot \\sqrt{x_2^2 + y_2^2}}",
+          "Savybė. **Statmenumo sąlyga**: vektoriai yra statmeni tada ir tik tada, kai jų skaliarinė sandauga lygi nuliui.",
+          "Formulė: \\vec{a} \\perp \\vec{b} \\iff x_1 x_2 + y_1 y_2 = 0",
+          "Savybė. **Kolinearumo sąlyga**: vektoriai yra kolinearūs, kai jų atitinkamos koordinatės yra proporcingos.",
+          "Formulė: \\frac{x_1}{x_2} = \\frac{y_1}{y_2} = k"
+        ]
+      }
+    ],
+    "formulas": [
+      "|\\vec{a}| = \\sqrt{x^2 + y^2}",
+      "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
+      "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}"
+    ],
+    "mistakes": [
+      "Skaliarinę sandaugą laiko vektoriumi — Skaliarinė sandauga visada yra skaičius (skaliaras), o ne vektorius.",
+      "Neteisinga vektorių skirtumo kryptis — Skirtumo $\\vec{a}-\\vec{b}$ rodyklė visada turi būti nukreipta į tą vektorių, iš kurio atimame (į $\\vec{a}$).",
+      "Klaida skaičiuojant modulį su neigiamomis koordinatėmis — Koordinatę $x$ keliant kvadratu, net jei ji neigiama, rezultatas $x^2$ yra $\\ge 0$."
+    ],
+    "examples": [
+      {
+        "title": "Vektoriaus koordinačių ir modulio radimas",
+        "text": "Raskite vektoriaus $\\vec{AB}$ koordinates ir ilgį, jei $A(2, -1)$ ir $B(5, 3)$.",
+        "solution": "Apskaičiuojame koordinates atimdami pradžios taško koordinates iš pabaigos taško koordinačių. \\vec{AB} = (5 - 2; 3 - (-1)) = (3; 4) Apskaičiuojame vektoriaus ilgį (modulį) pagal formulę $|\\vec{a}| = \\sqrt{x^2 + y^2}$. |\\vec{AB}| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5",
+        "answer": "\\vec{AB}=(3; 4), |\\vec{AB}|=5"
+      },
+      {
+        "title": "Vektorių sudėtis ir skaliarinė daugyba",
+        "text": "Duoti vektoriai $\\vec{a}(2, -3)$ ir $\\vec{b}(1, 4)$. Raskite vektoriaus $\\vec{c} = 2\\vec{a} + 3\\vec{b}$ koordinates.",
+        "solution": "Padauginame vektorių $\\vec{a}$ iš 2. 2\\vec{a} = (2 \\cdot 2; 2 \\cdot (-3)) = (4; -6) Padauginame vektorių $\\vec{b}$ iš 3. 3\\vec{b} = (3 \\cdot 1; 3 \\cdot 4) = (3; 12) Sudedame gautus vektorius. \\vec{c} = (4 + 3; -6 + 12) = (7; 6)",
+        "answer": "\\vec{c}=(7; 6)"
+      },
+      {
+        "title": "Skaliarinė sandauga ir kampas",
+        "text": "Apskaičiuokite skaliarinę sandaugą $\\vec{a} \\cdot \\vec{b}$, jei $|\\vec{a}|=4$, $|\\vec{b}|=5$ ir kampas tarp jų $\\alpha = 60^\\circ$.",
+        "solution": "Naudojame geometrinį skaliarinės sandaugos apibrėžimą. \\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos 60^\\circ Įrašome reikšmes (žinome, kad $\\cos 60^\\circ = 0,5$). \\vec{a} \\cdot \\vec{b} = 4 \\cdot 5 \\cdot 0,5 = 10",
+        "answer": "10"
+      },
+      {
+        "title": "Statmenumo sąlygos taikymas",
+        "text": "Su kuria m reikšme vektoriai $\\vec{a}(m, 4)$ ir $\\vec{b}(3, -6)$ yra statmeni?",
+        "solution": "Vektoriai are statmeni, kai jų skaliarinė sandauga lygi nuliui. \\vec{a} \\cdot \\vec{b} = m \\cdot 3 + 4 \\cdot (-6) = 0 Sudarome ir išsprendžiame lygtį. 3m - 24 = 0 \\implies 3m = 24 \\implies m = 8",
+        "answer": "m=8"
+      },
+      {
+        "title": "Kolinearumo sąlyga",
+        "text": "Ar vektoriai $\\vec{a}(2, -3)$ ir $\\vec{b}(-4, 6)$ yra kolinearūs? Jei taip, kaip jie nukreipti?",
+        "solution": "Tikriname koordinačių proporcingumą. \\frac{-4}{2} = -2; \\quad \\frac{6}{-3} = -2 Kadangi $k < 0$, vektoriai yra nukreipti priešingomis kryptimis.",
+        "answer": "Taip, kolinearūs ir priešpriešiai."
+      }
+    ]
+  },
+  "atsitiktiniai-dydziai": {
+    "id": "atsitiktiniai-dydziai",
+    "grade": 12,
+    "title": "Atsitiktiniai dydžiai ir jų skirstiniai",
+    "strand": "Duomenys ir tikimybės",
+    "level": "curriculum",
+    "prerequisites": [
+      "kombinatorika-ir-binomas"
+    ],
+    "prerequisiteTopicIds": [
+      "kombinatorika-ir-binomas"
+    ],
+    "nextTopicIds": [],
+    "concepts": [
+      "atsitiktinis-dydis",
+      "diskretusis-atsitiktinis-dydis",
+      "skirstinio-lentele",
+      "matematine-viltis",
+      "dispersija",
+      "standartinis-nuokrypis",
+      "normalusis-skirstinys",
+      "bernulio-bandymai",
+      "gauso-kreive",
+      "tikimybinis-skirstinys"
+    ],
+    "sections": [
+      {
+        "title": "Atsitiktinis dydis ir jo skirstinys",
+        "body": [
+          "[[atsitiktinis-dydis|Atsitiktinis dydis]] yra dydis, kuris bandymo metu įgyja vieną (iš anksto nežinomą) reikšmę priklausomai nuo atsitiktinumo.",
+          "Diskretusis atsitiktinis dydis – tai dydis, kurio galimų reikšmių aibė yra baigtinė arba suskaičiuojama (pavyzdžiui, iškritusių akučių skaičius).",
+          "Ryšys tarp atsitiktinio dydžio reikšmių ir jų tikimybių vadinamas [[tikimybinis-skirstinys|tikimybiniu skirstiniu]]. Jis dažnai pateikiamas kaip [[skirstinio-lentele|skirstinio lentelė]].",
+          "Pastaba. Svarbiausia taisyklė: visų skirstinio lentelės tikimybių suma visada turi būti lygi 1."
+        ]
+      },
+      {
+        "title": "Matematinė viltis ir dispersija",
+        "body": [
+          "Norėdami apibūdinti atsitiktinį dydį vienu skaičiumi, naudojame [[matematine-viltis|matematinę viltį]] (vidutinę reikšmę).",
+          "Formulė: E(X) = \\sum x_i p_i = x_1 p_1 + x_2 p_2 + \\dots + x_n p_n",
+          "[[dispersija|Dispersija]] ir [[standartinis-nuokrypis|standartinis nuokrypis]] rodo, kaip stipriai reikšmės yra nutolusios nuo vidurkio (sklaidą).",
+          "Formulė: Var(X) = E(X^2) - (E(X))^2",
+          "Formulė: \\sigma = \\sqrt{Var(X)}"
+        ]
+      },
+      {
+        "title": "Bernulio bandymai",
+        "body": [
+          "[[bernulio-bandymai|Bernulio bandymai]] – tai seka nepriklausomų bandymų, kurių kiekvienas turi tik dvi galimas baigtis: 'sėkmę' (su tikimybe p) arba 'nesėkmę' (su tikimybe q = 1 - p).",
+          "Formulė: P_n(k) = C_n^k p^k q^{n-k}",
+          "Ši formulė skaičiuoja tikimybę, kad atlikus n bandymų, sėkmė pasikartos lygiai k kartų."
+        ]
+      },
+      {
+        "title": "Normalusis skirstinys",
+        "body": [
+          "[[normalusis-skirstinys|Normalusis skirstinys]] yra dažniausiai gamtoje pasitaikantis tolydusis skirstinys, kurio grafikas yra varpo formos [[gauso-kreive|Gauso kreivė]].",
+          "Savybė. Normalusis skirstinys yra simetriškas savo vidurkio atžvilgiu. Plotas po visa kreive lygus 1.",
+          "Pastaba. Dauguma reikšmių (apie 68%) normaliajame skirstinyje patenka į vieno standartinio nuokrypio intervalą aplink vidurkį."
+        ]
+      }
+    ],
+    "formulas": [
+      "E(X) = x_1 p_1 + x_2 p_2 + \\dots + x_n p_n",
+      "Var(X) = E(X^2) - (E(X))^2",
+      "\\sigma = \\sqrt{Var(X)}",
+      "P_n(k) = C_n^k p^k (1-p)^{n-k}"
+    ],
+    "mistakes": [
+      "Tikimybių suma lentelėje nelygi 1 — Visada patikrinkite: p1 + p2 + ... + pn = 1. Jei ne 1, vadinasi skirstinys neteisingas.",
+      "Gaunama neigiama dispersija — Dispersija yra kvadratų vidurkis, ji NIEKADA negali būti neigiama.",
+      "Matematinė viltis nesutampa su vidurkiu — Reikia kiekvieną reikšmę padauginti iš jos tikimybės, o NE tiesiog sudėti."
+    ],
+    "examples": [
+      {
+        "title": "Skirstinio lentelės sudarymas",
+        "text": "Metame monetą 2 kartus. Atsitiktinis dydis X – atsivertusių herbų skaičius. Sudarykite skirstinio lentelę.",
+        "solution": "Galimos baigtys: SS, SH, HS, HH (S-skaičius, H-herbas). n=4 X gali įgyti reikšmes 0, 1, 2. x \\in \\{0, 1, 2\\} P(X=0) (tik SS) = 1/4. 0.25 P(X=1) (SH ir HS) = 2/4 = 0.5. 0.5 P(X=2) (tik HH) = 1/4. 0.25",
+        "answer": "X: 0(0.25), 1(0.5), 2(0.25)"
+      },
+      {
+        "title": "Matematinės vilties skaičiavimas",
+        "text": "Duotas skirstinys: X įgyja 2 su p=0.3 ir 5 su p=0.7. Raskite E(X).",
+        "solution": "Naudojame formulę E(X) = x1*p1 + x2*p2. E(X) = 2 \\cdot 0.3 + 5 \\cdot 0.7 Apskaičiuojame. 0.6 + 3.5 = 4.1",
+        "answer": "E(X) = 4.1"
+      },
+      {
+        "title": "Dispersijos radimas",
+        "text": "Atsitiktinio dydžio E(X)=3, o E(X^2)=13. Raskite Var(X) ir standartinį nuokrypį.",
+        "solution": "Var(X) = E(X^2) - (E(X))^2. 13 - 3^2 = 13 - 9 = 4 Standartinis nuokrypis yra šaknis iš dispersijos. \\sigma = \\sqrt{4} = 2",
+        "answer": "Var(X)=4, σ=2"
+      },
+      {
+        "title": "Bernulio formulės taikymas",
+        "text": "Šaulys pataiko į taikinį su tikimybe 0.8. Jis šauna 3 kartus. Kokia tikimybė, kad jis pataikys lygiai 2 kartus?",
+        "solution": "Naudojame Bernulio formulę su n=3, k=2, p=0.8, q=0.2. P_3(2) = C_3^2 \\cdot (0.8)^2 \\cdot (0.2)^1 C(3, 2) = 3. 3 \\cdot 0.64 \\cdot 0.2 = 3 \\cdot 0.128 = 0.384",
+        "answer": "0.384"
+      },
+      {
+        "title": "Normalusis skirstinys (68-95-99.7 taisyklė)",
+        "text": "Ūgis pasiskirstęs normaliai su vidurkiu μ=170 cm ir σ=10 cm. Kiek procentų žmonių ūgis yra tarp 160 ir 180 cm?",
+        "solution": "Intervalas [160, 180] yra lygiai [μ - σ, μ + σ]. 170-10, 170+10 Pagal normaliojo skirstinio savybę, šiame intervale yra apie 68% reikšmių. 68\\%",
+        "answer": "Apie 68%"
+      }
+    ]
+  },
   "briaunainiai-sukiniai-ir-pjuviai": {
     "id": "briaunainiai-sukiniai-ir-pjuviai",
     "grade": 12,
@@ -7670,10 +9379,10 @@ export const topics = {
       "a_n=a_1+(n-1)d",
       "a_n=a_1q^{n-1}",
       "a^m a^n=a^{m+n}",
-      "\\log_a b=c \\Leftrightarrow a^c=b",
-      "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
+      "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
       "\\frac{d}{dx}x^n = nx^{n-1}",
-      "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
+      "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
     ],
     "mistakes": [
       "Rodiklių taisyklę užrašo neteisingai — Naudok a^{m+n}.",
@@ -7709,6 +9418,114 @@ export const topics = {
         "text": "Rask ∫2x dx.",
         "solution": "x² + C. x^2 + C",
         "answer": "x² + C"
+      }
+    ]
+  },
+  "kombinatorika-ir-binomas": {
+    "id": "kombinatorika-ir-binomas",
+    "grade": 12,
+    "title": "Kombinatorika ir Niutono binomas",
+    "strand": "Duomenys ir tikimybės",
+    "level": "curriculum",
+    "prerequisites": [
+      "Aibės ir veiksmai su jomis"
+    ],
+    "prerequisiteTopicIds": [
+      "aibes-ir-veiksmai"
+    ],
+    "nextTopicIds": [
+      "atsitiktiniai-dydziai"
+    ],
+    "concepts": [
+      "kombinatorika",
+      "faktorialas",
+      "keliniai",
+      "gretiniai",
+      "deriniai",
+      "niutono-binomas",
+      "paskalio-trikampis",
+      "binominis-koeficientas",
+      "daugybos-taisykle",
+      "sudeties-taisykle"
+    ],
+    "sections": [
+      {
+        "title": "Pagrindinės kombinatorikos taisyklės",
+        "body": [
+          "[[kombinatorika|Kombinatorika]] tiria, kiek įvairių rinkinių galima sudaryti iš duotų elementų. Viskas prasideda nuo dviejų pagrindinių taisyklių.",
+          "Savybė. [[daugybos-taisykle|Daugybos taisyklė]]: Jei elementą A galima pasirinkti n būdais, o elementą B – m būdais, tai porą (A, B) galima pasirinkti n · m būdais.",
+          "Savybė. [[sudeties-taisykle|Sudėties taisyklė]]: Jei elementą A galima pasirinkti n būdais, o elementą B – m būdais (ir pasirinkimai nesikerta), tai A arba B galima pasirinkti n + m būdais."
+        ]
+      },
+      {
+        "title": "Kėliniai ir gretiniai",
+        "body": [
+          "Kai elementų tvarka rinkinyje yra svarbi, naudojame [[keliniai|kėlinius]] arba [[gretiniai|gretinius]].",
+          "Kėliniai – tai rinkiniai, sudaryti iš visų n duotų elementų, keičiant tik jų tvarką.",
+          "Formulė: P_n = n!",
+          "Gretiniai – tai rinkiniai, sudaryti iš k elementų, paimtų iš n elementų aibės, kai tvarka yra svarbi.",
+          "Formulė: A_n^k = \\frac{n!}{(n-k)!}"
+        ]
+      },
+      {
+        "title": "Deriniai",
+        "body": [
+          "Jei elementų tvarka rinkinyje nėra svarbi (pavyzdžiui, renkama komanda), naudojami [[deriniai|deriniai]].",
+          "Formulė: C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+          "Pastaba. Derinių skaičius visada yra mažesnis arba lygus gretinių skaičiui tam pačiam n ir k."
+        ]
+      },
+      {
+        "title": "Niutono binomas",
+        "body": [
+          "[[niutono-binomas|Niutono binomo]] formulė leidžia pakelti dvinarį (a + b) bet kokiu natūraliuoju laipsniu n.",
+          "Formulė: (a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k",
+          "Koeficientai prie narių yra [[binominis-koeficientas|binominiai koeficientai]], kuriuos taip pat galima rasti naudojant [[paskalio-trikampis|Paskalio trikampį]]."
+        ]
+      }
+    ],
+    "formulas": [
+      "n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n",
+      "P_n = n!",
+      "A_n^k = \\frac{n!}{(n-k)!}",
+      "C_n^k = \\frac{n!}{k!(n-k)!}",
+      "(a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + \\dots + C_n^n b^n"
+    ],
+    "mistakes": [
+      "Painioja gretinius su deriniais — Paklauskite savęs: 'Ar sukeitus du pasirinktus elementus vietomis, rinkinys pasikeis?'. Jei taip – gretiniai, jei ne – deriniai.",
+      "Mano, kad 0! = 0 — Pagal apibrėžimą 0! = 1. Tai užtikrina formulių nuoseklumą.",
+      "Painioja sudėties ir daugybos taisykles — Jungtukas 'ir' (reikia abiejų) -> DAUGYBA. Jungtukas 'arba' (reikia vieno iš jų) -> SUDĖTIS."
+    ],
+    "examples": [
+      {
+        "title": "Daugybos taisyklės taikymas",
+        "text": "Kiek skirtingų triženklių skaičių galima sudaryti iš skaitmenų 1, 2, 3, jei skaitmenys gali kartotis?",
+        "solution": "Pirmą skaitmenį galime rinktis 3 būdais (1, 2 arba 3). 3 Antrą skaitmenį taip pat 3 būdais (nes gali kartotis). 3 Trečią skaitmenį taip pat 3 būdais. 3 Pagal daugybos taisyklę padauginame būdus. 3 \\cdot 3 \\cdot 3 = 27",
+        "answer": "27 skaičiai"
+      },
+      {
+        "title": "Kėlinių skaičiavimas",
+        "text": "Kiek būdų yra surikiuoti 5 skirtingas knygas lentynoje?",
+        "solution": "Tai yra kėliniai iš 5 elementų. P_5 = 5! Apskaičiuojame faktorialą. 1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 120",
+        "answer": "120 būdų"
+      },
+      {
+        "title": "Derinių skaičiavimas",
+        "text": "Iš 10 mokinių reikia išrinkti 3 mokinių grupę dalyvauti viktorinoje. Kiek yra būdų?",
+        "solution": "Kadangi tvarka grupėje nesvarbi, naudojame derinius. C_{10}^3 = \\binom{10}{3} Taikome formulę. \\frac{10!}{3! \\cdot 7!} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120",
+        "answer": "120 būdų"
+      },
+      {
+        "title": "Gretinių skaičiavimas",
+        "text": "Bėgime dalyvauja 8 sportininkai. Kiek yra būdų paskirstyti pirmas tris vietas (aukso, sidabro, bronzos)?",
+        "solution": "Kadangi vietos skiriasi, tvarka yra svarbi. Naudojame gretinius. A_8^3 Taikome formulę. \\frac{8!}{(8-3)!} = \\frac{8!}{5!} = 8 \\cdot 7 \\cdot 6 = 336",
+        "answer": "336 būdai"
+      },
+      {
+        "title": "Niutono binomo taikymas",
+        "text": "Išskleiskite (x + 2)^4.",
+        "solution": "Naudojame binomo formulę su n=4. C_4^0 x^4 + C_4^1 x^3 \\cdot 2 + C_4^2 x^2 \\cdot 2^2 + C_4^3 x \\cdot 2^3 + C_4^4 \\cdot 2^4 Randame koeficientus: 1, 4, 6, 4, 1. 1x^4 + 4 \\cdot x^3 \\cdot 2 + 6 \\cdot x^2 \\cdot 4 + 4 \\cdot x \\cdot 8 + 1 \\cdot 16 Supaprastiname. x^4 + 8x^3 + 24x^2 + 32x + 16",
+        "answer": "x^4 + 8x^3 + 24x^2 + 32x + 16"
       }
     ]
   },
@@ -7915,7 +9732,10 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-12-concept-probabilistic-second-moment"
+      "olimpiada-12-concept-probabilistic-second-moment",
+      "olimpiada-12-concept-generating-functions",
+      "olimpiada-12-concept-burnside-lemma",
+      "olimpiada-12-concept-inclusion-exclusion-derangements"
     ],
     "sections": [
       {
@@ -7923,6 +9743,14 @@ export const topics = {
         "body": [
           "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai.",
           "Metodas. Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+        ]
+      },
+      {
+        "title": "Generuojančios funkcijos ir skaidiniai",
+        "body": [
+          "Generuojančios funkcijos leidžia kombinatorinius objektus koduoti kaip laipsninių eilučių koeficientus.",
+          "Formulė: P(x) = \\prod_{k=1}^{\\infty} \\frac{1}{1-x^k}",
+          "Pastaba. Ši funkcija generuoja skaičiaus $n$ skaidinių (partitions) skaičių kaip koeficientą prie $x^n$."
         ]
       }
     ],
@@ -7947,21 +9775,24 @@ export const topics = {
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "concepts": [
-      "olimpiada-12-concept-vietas-jumping"
+      "olimpiada-12-concept-vietas-jumping",
+      "olimpiada-12-concept-lte-lemma",
+      "olimpiada-12-concept-quadratic-reciprocity",
+      "olimpiada-12-concept-pell-equation"
     ],
     "sections": [
       {
-        "title": "Šiuolaikiniai geometrijos metodai: baricentrinės koordinatės ir judantys taškai",
+        "title": "Kvadratinio apverčiamumo dėsnis",
         "body": [
-          "Geometrijos uždaviniuose, kur sunku rasti sintetinį įrodymą, baricentrinės koordinatės leidžia atlikti tikslų algebrinį skaičiavimą.",
-          "Metodas. Kiekvieną tašką išreikškite svoriais $(x:y:z)$ trikampio viršūnėse. Tiesės lygtis tampa tiesine lygtimi, o collinearity (taškų gulėjimas vienoje tiesėje) tikrinamas matricų determinantais."
+          "Ležandro simbolis $(a/p)$ nurodo, ar skaičius $a$ yra kvadratinė liekana moduliu pirminis $p$.",
+          "Teorema. Kvadratinio apverčiamumo dėsnis: $(p/q)(q/p) = (-1)^{\\frac{p-1}{2} \\frac{q-1}{2}}$ nelyginiams pirminiams $p, q$."
         ]
       },
       {
-        "title": "Ekstremalioji ir adityvioji kombinatorika",
+        "title": "Pellio lygtis",
         "body": [
-          "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai.",
-          "Metodas. Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+          "Lygtis $x^2 - Dy^2 = 1$ vadinama Pellio lygtimi. Jei $D$ nėra pilnas kvadratas, lygtis turi be galo daug sprendinių.",
+          "Metodas. Sprendiniai randami nagrinėjant skaičiaus $\\sqrt{D}$ grandininę trupmeną."
         ]
       }
     ],
@@ -7971,37 +9802,10 @@ export const topics = {
       {
         "title": "Vieneto šaknų filtras",
         "text": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
-        "solution": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$. Kadangi $1+\\omega = e^{i\\pi/3}$ ir $1+\\omega^2 = e^{-i\\pi/3}$. Sudedame reikšmes: $S = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3} = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$.",
+        "solution": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$. Sudedame reikšmes: $S = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$.",
         "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
       }
     ]
-  },
-  "olimpiada-12": {
-    "id": "olimpiada-12",
-    "grade": 12,
-    "title": "Olimpiadinė matematika (12 klasė) - Apžvalga",
-    "strand": "Olimpiada",
-    "level": "overview",
-    "prerequisites": [],
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [
-      "olimpiada-12-skaiciu-teorija",
-      "olimpiada-12-kombinatorika",
-      "olimpiada-12-algebra",
-      "olimpiada-12-geometrija"
-    ],
-    "concepts": [],
-    "sections": [
-      {
-        "title": "Pasirinkite olimpiadinę temą",
-        "body": [
-          "Šioje pakopoje galite mokytis šias olimpiadinės matematikos temas: Skaičių teorija, Kombinatorika, Algebra, Geometrija. Pasirinkite konkrečią temą iš sąrašo žemiau arba per pagrindinį meniu."
-        ]
-      }
-    ],
-    "formulas": [],
-    "mistakes": [],
-    "examples": []
   },
   "pirmykste-funkcija-ir-integralas": {
     "id": "pirmykste-funkcija-ir-integralas",
@@ -8081,10 +9885,10 @@ export const topics = {
       "a_n=a_1+(n-1)d",
       "a_n=a_1q^{n-1}",
       "a^m a^n=a^{m+n}",
-      "\\log_a b=c \\Leftrightarrow a^c=b",
-      "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
+      "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
       "\\frac{d}{dx}x^n = nx^{n-1}",
-      "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
+      "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
     ],
     "mistakes": [
       "Rodiklių taisyklę užrašo neteisingai — Naudok a^{m+n}.",
@@ -8632,10 +10436,10 @@ export const topics = {
       "a_n=a_1+(n-1)d",
       "a_n=a_1q^{n-1}",
       "a^m a^n=a^{m+n}",
-      "\\log_a b=c \\Leftrightarrow a^c=b",
-      "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
+      "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
       "\\frac{d}{dx}x^n = nx^{n-1}",
-      "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
+      "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C"
     ],
     "mistakes": [
       "Rodiklių taisyklę užrašo neteisingai — Naudok a^{m+n}.",
@@ -8645,19 +10449,19 @@ export const topics = {
       {
         "title": "Sinusas",
         "text": "Jei priešpriešinė 5, įžambinė 13, rask sinusą.",
-        "solution": "5/13. \\sin\\alpha=5/13",
+        "solution": "5/13. \\\\sin\\\\alpha=5/13",
         "answer": "5/13"
       },
       {
         "title": "Kosinusas",
         "text": "Jei gretimoji 12, įžambinė 13, rask kosinusą.",
-        "solution": "12/13. \\cos\\alpha=12/13",
+        "solution": "12/13. \\\\cos\\\\alpha=12/13",
         "answer": "12/13"
       },
       {
         "title": "Tangentas",
         "text": "Jei priešpriešinė 3, gretimoji 4, rask tangento reikšmę.",
-        "solution": "3/4. \\tan\\alpha=3/4",
+        "solution": "3/4. \\tan\\\\alpha=3/4",
         "answer": "3/4"
       },
       {
@@ -8669,7 +10473,7 @@ export const topics = {
       {
         "title": "Kampas",
         "text": "Jei sin α = 1/2, koks dažnai naudojamas kampo pavyzdys?",
-        "solution": "30°. 30^\\circ",
+        "solution": "30°. 30^\\\\circ",
         "answer": "30°"
       }
     ]
@@ -8791,6 +10595,124 @@ export const topics = {
         "text": "Jei sin α = 1/2, koks dažnai naudojamas kampo pavyzdys?",
         "solution": "30°. 30^\\circ",
         "answer": "30°"
+      }
+    ]
+  },
+  "vektoriai-erdveje": {
+    "id": "vektoriai-erdveje",
+    "grade": 12,
+    "title": "Vektoriai erdvėje",
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "prerequisites": [
+      "Vektoriai plokštumoje",
+      "Stereometrija: tiesės, plokštumos, kampai ir atstumai"
+    ],
+    "prerequisiteTopicIds": [
+      "vektoriai-plokstumoje",
+      "stereometrija-tieses-plokstumos-ir-kampai"
+    ],
+    "nextTopicIds": [],
+    "concepts": [
+      "staciakampe-koordinaciu-sistema-erdveje",
+      "vektoriaus-koordinates-erdveje",
+      "vektoriaus-modulis-erdveje",
+      "skaliarine-vektoriu-sandauga-erdveje",
+      "kolinearieji-vektoriai-erdveje",
+      "kampas-tarp-vektoriu-erdveje",
+      "atstumas-tarp-tasku-erdveje",
+      "vektoriu-sudetis-erdveje",
+      "vektoriu-atimtis-erdveje",
+      "vektoriaus-daugyba-is-skaiciaus-erdveje",
+      "komplanarūs-vektoriai"
+    ],
+    "sections": [
+      {
+        "title": "Stačiakampė koordinačių sistema erdvėje",
+        "body": [
+          "Erdvėje stačiakampę koordinačių sistemą sudaro trys tarpusavyje statmenos tiesės (ašys), kertančios viena kitą taške $O(0;0;0)$, vadinamame koordinačių pradžios tašku.",
+          "Ašys vadinamos: $Ox$ – abscisių ašis, $Oy$ – ordinačių ašis, $Oz$ – aplikatų ašis. Bet kurio taško padėtis erdvėje nurodoma trimis koordinatėmis: $(x; y; z)$.",
+          "Stačiakampė koordinačių sistema erdvėje – tai sistema, kurioje kiekvienam taškui priskiriamas vienintelis skaičių trejetas $(x; y; z)$."
+        ]
+      },
+      {
+        "title": "Vektoriaus koordinatės ir modulis",
+        "body": [
+          "Jei taškas $A$ turi koordinates $(x_1; y_1; z_1)$, o taškas $B$ – $(x_2; y_2; z_2)$, tai vektoriaus $\\vec{AB}$ koordinatės randamos iš galo taško koordinačių atimant pradžios taško koordinates.",
+          "Formulė: \\vec{AB} = (x_2 - x_1; y_2 - y_1; z_2 - z_1)",
+          "Vektoriaus $\\vec{a}(x; y; z)$ modulis (ilgis) lygus kvadratinei šakniai iš jo koordinačių kvadratų sumos.",
+          "Formulė: |\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}"
+        ]
+      },
+      {
+        "title": "Veiksmai su vektoriais erdvėje",
+        "body": [
+          "Vektorių sudėtis, atimtis ir daugyba iš skaičiaus erdvėje atliekama taip pat, kaip ir plokštumoje, tik pridedama trečioji koordinatė (aplikatė).",
+          "Savybė. Jei $\\vec{a}(x_1; y_1; z_1)$ ir $\\vec{b}(x_2; y_2; z_2)$, tai:\n1) $\\vec{a} \\pm \\vec{b} = (x_1 \\pm x_2; y_1 \\pm y_2; z_1 \\pm z_2)$\n2) $k\\vec{a} = (kx_1; ky_1; kz_1)$",
+          "Pastaba. Vektoriai yra kolinearūs tada ir tik tada, kai jų atitinkamos koordinatės yra proporcingos: $\\frac{x_1}{x_2} = \\frac{y_1}{y_2} = \\frac{z_1}{z_2} = k$."
+        ]
+      },
+      {
+        "title": "Skaliarinė vektorių sandauga",
+        "body": [
+          "Dviejų vektorių [[skaliarine-vektoriu-sandauga-erdveje|skaliarinė sandauga]] yra skaičius, lygus tų vektorių modulių ir kampo tarp jų kosinuso sandaugai.",
+          "Formulė: \\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(\\phi)",
+          "Naudojant koordinates, skaliarinė sandauga apskaičiuojama sudedant atitinkamų koordinačių sandaugas.",
+          "Formulė: \\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+          "Įspėjimas. Jei skaliarinė sandauga lygi 0, tai vektoriai yra statmeni (ortogonalūs), su sąlyga, kad nė vienas iš jų nėra nulinis."
+        ]
+      },
+      {
+        "title": "Kampas tarp vektorių ir atstumas tarp taškų",
+        "body": [
+          "Kosinusas kampo tarp vektorių $\\vec{a}$ ir $\\vec{b}$ randamas padalinus jų skaliarinę sandaugą iš modulių sandaugos.",
+          "Formulė: \\cos \\phi = \\frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\\sqrt{x_1^2 + y_1^2 + z_1^2} \\cdot \\sqrt{x_2^2 + y_2^2 + z_2^2}}",
+          "Atstumas tarp taškų $A(x_1; y_1; z_1)$ ir $B(x_2; y_2; z_2)$ randamas pagal formulę:",
+          "Formulė: d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}"
+        ]
+      }
+    ],
+    "formulas": [
+      "|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}",
+      "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+      "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}",
+      "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}"
+    ],
+    "mistakes": [
+      "Vektoriaus ir taško koordinačių painiojimas — Vektoriaus koordinatės yra galo ir pradžios taškų koordinačių skirtumai.",
+      "Skaliarinės sandaugos ženklo ignoravimas — Teigiama sandauga – smailus kampas, neigiama – bukasis, nulis – statusis.",
+      "Klaida sumuojant koordinačių kvadratus — Pirmiausia pakelkite kiekvieną koordinatę kvadratu, tada sudėkite, tada traukite šaknį."
+    ],
+    "examples": [
+      {
+        "title": "Vektoriaus koordinačių ir modulio radimas",
+        "text": "Duoti taškai $A(1; -2; 3)$ ir $B(4; 2; 3)$. Raskite vektoriaus $\\vec{AB}$ koordinates ir jo modulį.",
+        "solution": "Apskaičiuojame vektoriaus koordinates atimdami A koordinates iš B koordinačių. \\vec{AB} = (4 - 1; 2 - (-2); 3 - 3) = (3; 4; 0) Apskaičiuojame vektoriaus modulį. |\\vec{AB}| = \\sqrt{3^2 + 4^2 + 0^2} = \\sqrt{9 + 16 + 0} = \\sqrt{25} = 5",
+        "answer": "\\vec{AB} = (3; 4; 0), |\\vec{AB}| = 5"
+      },
+      {
+        "title": "Skaliarinė sandauga ir statmenumas",
+        "text": "Ar vektoriai $\\vec{a}(2; -3; 1)$ ir $\\vec{b}(4; 2; -2)$ yra statmeni?",
+        "solution": "Apskaičiuojame vektorių skaliarinę sandaugą pagal koordinates. \\vec{a} \\cdot \\vec{b} = 2 \\cdot 4 + (-3) \\cdot 2 + 1 \\cdot (-2) Atliekame veiksmus. 8 - 6 - 2 = 0 Kadangi skaliarinė sandauga lygi 0, vektoriai yra statmeni. \\vec{a} \\perp \\vec{b}",
+        "answer": "Taip, vektoriai yra statmeni."
+      },
+      {
+        "title": "Kampo tarp vektorių radimas",
+        "text": "Raskite kampą tarp vektorių $\\vec{a}(1; 1; 0)$ ir $\\vec{b}(0; 1; 1)$.",
+        "solution": "Apskaičiuojame skaliarinę sandaugą. \\vec{a} \\cdot \\vec{b} = 1 \\cdot 0 + 1 \\cdot 1 + 0 \\cdot 1 = 1 Apskaičiuojame vektorių modulius. |\\vec{a}| = \\sqrt{1^2+1^2+0^2} = \\sqrt{2}, |\\vec{b}| = \\sqrt{0^2+1^2+1^2} = \\sqrt{2} Apskaičiuojame kampo kosinusą. \\cos \\phi = \\frac{1}{\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{1}{2} Randame kampą $\\phi$. \\phi = \\arccos(0,5) = 60^\\circ",
+        "answer": "60^\\circ"
+      },
+      {
+        "title": "Vektorių kolinearumas",
+        "text": "Su kuria $m$ reikšme vektoriai $\\vec{a}(m; -2; 3)$ ir $\\vec{b}(4; -8; 12)$ yra kolinearūs?",
+        "solution": "Kolinearių vektorių atitinkamos koordinatės yra proporcingos. \\frac{m}{4} = \\frac{-2}{-8} = \\frac{3}{12} Apskaičiuojame proporcijos koeficientą. \\frac{-2}{-8} = \\frac{1}{4}, \\frac{3}{12} = \\frac{1}{4} Sudarome lygtį m rasti. \\frac{m}{4} = \\frac{1}{4} Išsprendžiame lygtį. m = 1",
+        "answer": "m = 1"
+      },
+      {
+        "title": "Atstumas nuo taško iki koordinačių pradžios",
+        "text": "Raskite tašką ašyje $Oz$, kuris būtų vienodai nutolęs nuo taškų $A(2; 4; 1)$ ir $B(-3; 2; 5)$.",
+        "solution": "Ieškomas taškas $M$ yra ašyje $Oz$, todėl jo koordinatės yra $(0; 0; z)$. M(0; 0; z) Užrašome atstumus $AM$ ir $BM$ ir juos sulyginame. \\sqrt{(0-2)^2 + (0-4)^2 + (z-1)^2} = \\sqrt{(0-(-3))^2 + (0-2)^2 + (z-5)^2} Pakeliame kvadratu ir supaprastiname. 4 + 16 + (z-1)^2 = 9 + 4 + (z-5)^2 Atskliaudžiame. 20 + z^2 - 2z + 1 = 13 + z^2 - 10z + 25 Sutvarkome lygtį. 21 - 2z = 38 - 10z \\implies 8z = 17 Randame z. z = 2,125",
+        "answer": "M(0; 0; 2,125)"
       }
     ]
   }

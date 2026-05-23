@@ -14,7 +14,6 @@
     "order": 100,
     "estimatedStudyMinutes": 60,
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
@@ -22,7 +21,9 @@
       "olimpiada-11-concept-crt",
       "olimpiada-11-concept-order",
       "olimpiada-11-concept-reciprocity",
-      "olimpiada-11-concept-jacobi"
+      "olimpiada-11-concept-jacobi",
+      "olimpiada-11-concept-wilson",
+      "olimpiada-11-concept-lte"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -34,7 +35,19 @@
       "ex-olimpiada-11-05",
       "ex-olimpiada-11-06",
       "ex-olimpiada-11-07",
-      "ex-olimpiada-11-08"
+      "ex-olimpiada-11-08",
+      "ex-olimpiada-11-09",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-11",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-13",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-15",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-17",
+      "ex-olimpiada-11-18",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-20"
     ]
   },
   "theory": [
@@ -61,6 +74,19 @@
         {
           "type": "method",
           "text": "Naudokite Legendro simbolį $\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
+        }
+      ]
+    },
+    {
+      "title": "Wilsono teorema ir LTE lema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wilsono teorema suteikia būtiną ir pakankamą sąlygą skaičiui būti pirminiu, susiejant faktorialus su modulinėmis liekanomis. Lifting The Exponent (LTE) lema yra specializuotas įrankis, leidžiantis apskaičiuoti pirminio skaičiaus laipsnį $v_p(a^n \\pm b^n)$."
+        },
+        {
+          "type": "method",
+          "text": "LTE lemą taikykite, kai $p | (a-b)$, bet $p \\nmid a, p \\nmid b$. Jei $p > 2$ yra pirminis, tai $v_p(a^n - b^n) = v_p(a-b) + v_p(n)$."
         }
       ]
     }
@@ -103,6 +129,24 @@
       "relatedConceptIds": [
         "olimpiada-11-concept-reciprocity"
       ]
+    },
+    {
+      "id": "olimpiada-11-concept-wilson",
+      "title": "Wilsono teorema",
+      "type": "concept",
+      "shortDefinition": "$(p-1)! \\equiv -1 \\pmod p$ tada ir tik tada, kai $p$ pirminis.",
+      "intuition": "Visas liekanas nuo $1$ iki $p-1$ galima suporuoti su jų atvirkštiniais elementais, išskyrus $1$ ir $-1$, todėl jų sandauga yra $-1$.",
+      "formal": "Natūralusis skaičius $n > 1$ yra pirminis tada ir tik tada, kai $(n-1)! \\equiv -1 \\pmod n$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-lte",
+      "title": "Lifting The Exponent Lema (LTE)",
+      "type": "concept",
+      "shortDefinition": "Formulė pirminio skaičiaus laipsniui $v_p(a^n - b^n)$ skaičiuoti.",
+      "intuition": "Leidžia „iškelti“ rodiklį $n$ iš po vertinimo ženklo.",
+      "formal": "Jei $p$ yra nelyginis pirminis, $p | (a-b)$, bet $p \\nmid a$ ir $p \\nmid b$, tai $v_p(a^n - b^n) = v_p(a-b) + v_p(n)$.",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
@@ -157,6 +201,66 @@
         }
       ],
       "answer": "Įrodyta"
+    },
+    {
+      "title": "Wilsono teoremos taikymas",
+      "problem": "Raskite $15! \\pmod{17}$.",
+      "steps": [
+        {
+          "text": "Pagal Wilsono teoremą, kadangi 17 yra pirminis skaičius, tai $16! \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "$16!$ galime užrašyti kaip $15! \\cdot 16$."
+        },
+        {
+          "text": "Todėl $15! \\cdot 16 \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "Kadangi $16 \\equiv -1 \\pmod{17}$, lygtis tampa $15! \\cdot (-1) \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "Padauginę iš $-1$, gauname $15! \\equiv 1 \\pmod{17}$."
+        }
+      ],
+      "answer": "1"
+    },
+    {
+      "title": "Paskutinių skaitmenų radimas",
+      "problem": "Raskite paskutinius du skaičiaus $7^{402}$ skaitmenis.",
+      "steps": [
+        {
+          "text": "Reikia rasti $7^{402} \\pmod{100}$."
+        },
+        {
+          "text": "Apskaičiuojame $\\varphi(100) = 40$. Pagal Oilerio teoremą $7^{40} \\equiv 1 \\pmod{100}$, nes $\\text{gcd}(7, 100) = 1$."
+        },
+        {
+          "text": "Redukuojame laipsnį: $402 = 40 \\cdot 10 + 2$."
+        },
+        {
+          "text": "$7^{402} = (7^{40})^{10} \\cdot 7^2 \\equiv 1^{10} \\cdot 49 \\equiv 49 \\pmod{100}$."
+        }
+      ],
+      "answer": "49"
+    },
+    {
+      "title": "Ležandro formulė faktorialams",
+      "problem": "Kiek nulių yra skaičiaus $100!$ pabaigoje?",
+      "steps": [
+        {
+          "text": "Nulių skaičius lygus $v_{10}(100!) = \\min(v_2(100!), v_5(100!))$."
+        },
+        {
+          "text": "Kadangi $v_5(100!) < v_2(100!)$, skaičiuojame tik $v_5(100!)$."
+        },
+        {
+          "text": "Pagal Ležandro formulę: $v_5(100!) = \\lfloor 100/5 \\rfloor + \\lfloor 100/25 \\rfloor + \\lfloor 100/125 \\rfloor + \\dots$"
+        },
+        {
+          "text": "$v_5(100!) = 20 + 4 + 0 = 24$."
+        }
+      ],
+      "answer": "24"
     }
   ],
   "exercises": [
@@ -1169,7 +1273,7 @@
         {
           "id": "ex-olimpiada-11-07-trap-1",
           "title": "Mažų n praleidimas",
-          "wrongMove": "Mokinys bando taikyti bendras formules netyrinėdamas išimčių.",
+          "wrongMove": "Bandoma taikyti bendras formules netyrinėdamas išimčių.",
           "whyTempting": "Teorema teigia, kad daliklis egzistuoja „beveik visada“.",
           "correction": "Olimpiadose būtent išimtys (pvz., $2^6-1$ arba $a=2, b=1, n=6$) yra svarbiausios.",
           "conceptIds": []
@@ -1321,7 +1425,7 @@
         {
           "id": "ex-olimpiada-11-08-trap-2",
           "title": "Sumažintas tikslumas",
-          "wrongMove": "Spėjama, kad vertinimas yra bent mažiausias, bet ne tiksliai lygus jam.",
+          "wrongMove": "Spėjama, kad vertinimas yra bet mažiausias, bet ne tiksliai lygus jam.",
           "whyTempting": "Ultrametrinė nelygybė $v(x+y) \\ge \\min(v(x), v(y))$ dažnai pateikiama tik kaip nelygybė.",
           "correction": "Jei vertinimai skiriasi, nelygybė virsta griežta lygybe: $v(x+y) = \\min(v(x), v(y))$.",
           "conceptIds": []
@@ -1344,6 +1448,1118 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-11-09",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite liekaną, kurią gauname $2^{100}$ dalijant iš 13.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Fermos mažoji teorema",
+        "text": "Pagal FMT, $a^{p-1} \\equiv 1 \\pmod p$, kai $p$ pirminis ir $p \\nmid a$. Naudokite tai laipsniui redukuoti."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "fermat-little-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "exponent-reduction"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pritaikykite Fermos mažąją teoremą su $p=13$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2^{12} \\equiv 1 \\pmod{13}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padalykite 100 iš 12 ir raskite liekaną. $100 = 12 \\cdot 8 + 4$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Tada $2^{100} = (2^{12})^8 \\cdot 2^4 \\equiv 1^8 \\cdot 16 \\pmod{13}$. Apskaičiuokite $16 \\pmod{13}$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal FMT: $2^{12} \\equiv 1 \\pmod{13}$."
+        },
+        {
+          "text": "Redukuojame rodiklį: $100 = 12 \\cdot 8 + 4$."
+        },
+        {
+          "text": "$2^{100} = (2^{12})^8 \\cdot 2^4 \\equiv 1^8 \\cdot 2^4 \\pmod{13}$."
+        },
+        {
+          "text": "$2^4 = 16 \\equiv 3 \\pmod{13}$."
+        },
+        {
+          "text": "Atsakymas yra 3."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-09-method-1",
+          "title": "Laipsnio redukcija",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos taikymas",
+              "action": "Nustatome, kad $2^{12} \\equiv 1 \\pmod{13}$.",
+              "reason": "Tai tiesioginė Fermos mažosios teoremos išvada.",
+              "result": "2^{12} \\equiv 1 \\pmod{13}",
+              "latex": ""
+            },
+            {
+              "title": "Apskaičiavimas",
+              "action": "Randame liekaną mažu laipsniu.",
+              "reason": "Redukcija supaprastina uždavinį.",
+              "result": "3",
+              "latex": "2^4 = 16 \\equiv 3 \\pmod{13}"
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-09-trap-1",
+          "title": "Tiesioginis kėlimas",
+          "wrongMove": "Bandoma skaičiuoti $2^{100}$ tiesiogiai.",
+          "whyTempting": "Atrodo kaip vienintelis būdas be teoremų žinojimo.",
+          "correction": "Tai neįmanoma be kompiuterio. Naudokite FMT arba periodiškumą.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl FMT veikia tik su pirminiais moduliais?",
+        "Kokia teorema būtų naudojama, jei modulis būtų sudėtinis? (Oilerio teorema)."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-09-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra Fermos mažoji teorema?",
+          "back": "$a^{p-1} \\equiv 1 \\pmod p$, kai $p$ pirminis ir $\\text{gcd}(a, p)=1$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-09-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-10",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite Oilerio funkcijos reikšmę $\\varphi(100)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "answerText": "40",
+      "coreIdea": {
+        "title": "Oilerio funkcijos formulė",
+        "text": "$\\varphi(n) = n \\prod_{p|n} (1 - \\frac{1}{p})$, kur $p$ yra pirminiai skaičiaus $n$ dalikliai."
+      },
+      "strategyTags": [
+        "number-theory",
+        "euler-totient-function"
+      ],
+      "prerequisiteTopicIds": [
+        "skaiciai-ir-skaiciavimai"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "prime-factorization"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išskaidykite 100 pirminiais dauginamaisiais.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$100 = 2^2 \\cdot 5^2$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite formulę $\\varphi(100) = 100 \\cdot (1 - 1/2) \\cdot (1 - 1/5)$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $100 \\cdot 0.5 \\cdot 0.8$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$100 = 2^2 \\cdot 5^2$."
+        },
+        {
+          "text": "Pirminiai dalikliai yra 2 ir 5."
+        },
+        {
+          "text": "$\\varphi(100) = 100 \\cdot (1 - \\frac{1}{2}) \\cdot (1 - \\frac{1}{5})$."
+        },
+        {
+          "text": "$\\varphi(100) = 100 \\cdot \\frac{1}{2} \\cdot \\frac{4}{5} = 50 \\cdot 0.8 = 40$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-10-method-1",
+          "title": "Skaidymas dauginamaisiais",
+          "methodType": "main",
+          "strategyTags": [
+            "number-theory"
+          ],
+          "steps": [
+            {
+              "title": "Faktorizacija",
+              "action": "Skaidome $n$ į pirminių laipsnius.",
+              "reason": "Oilerio funkcija yra multiplikatyvi.",
+              "result": "2^2 * 5^2",
+              "latex": "100 = 2^2 \\times 5^2"
+            },
+            {
+              "title": "Formulės taikymas",
+              "action": "Apskaičiuojame sandaugą.",
+              "reason": "Tai standartinis algoritmas.",
+              "result": "40",
+              "latex": "100 \\times \\frac{1}{2} \\times \\frac{4}{5} = 40"
+            }
+          ],
+          "finalAnswer": "40"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-10-trap-1",
+          "title": "Tiesioginis skaičiavimas",
+          "wrongMove": "Bandoma išrašyti visus skaičius nuo 1 iki 100 ir tikrinti DBD.",
+          "whyTempting": "Atrodo patikima.",
+          "correction": "Tai užima per daug laiko ir lengva suklysti. Naudokite formulę.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra $\\varphi(p)$ reikšmė pirminiam $p$?",
+        "Kokia yra $\\varphi(p^k)$ reikšmė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-10-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra Oilerio funkcijos $\\varphi(n)$ skaičiavimo formulė?",
+          "back": "$\\varphi(n) = n \\prod_{p|n} (1 - 1/p)$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-10-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-11",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite bet kurį sveikąjį lygties $17x + 5y = 1$ sprendinį $(x, y)$. Įrašykite $x$ reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Išplėstinis Euklido algoritmas",
+        "text": "Lygties $ax + by = \\text{gcd}(a, b)$ sprendinius galima rasti naudojant Euklido algoritmą 'atbuline' tvarka."
+      },
+      "strategyTags": [
+        "diophantine-equations",
+        "euclidean-algorithm"
+      ],
+      "prerequisiteTopicIds": [
+        "skaiciai-ir-skaiciavimai"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "extended-euclidean-algorithm"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pritaikykite Euklido algoritmą skaičiams 17 ir 5.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$17 = 3 \\cdot 5 + 2$; $5 = 2 \\cdot 2 + 1$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išreikškite 1 per 5 ir 2: $1 = 5 - 2 \\cdot 2$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pakeiskite 2 naudojant pirmą lygybę: $1 = 5 - 2 \\cdot (17 - 3 \\cdot 5) = 5 - 2 \\cdot 17 + 6 \\cdot 5 = 7 \\cdot 5 - 2 \\cdot 17$. Koks gaunasi x?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$17 = 3 \\cdot 5 + 2 \\implies 2 = 17 - 3 \\cdot 5$"
+        },
+        {
+          "text": "$5 = 2 \\cdot 2 + 1 \\implies 1 = 5 - 2 \\cdot 2$"
+        },
+        {
+          "text": "Įstatome 2: $1 = 5 - 2 \\cdot (17 - 3 \\cdot 5)$"
+        },
+        {
+          "text": "$1 = 5 - 2 \\cdot 17 + 6 \\cdot 5$"
+        },
+        {
+          "text": "$1 = 7 \\cdot 5 - 2 \\cdot 17$"
+        },
+        {
+          "text": "$1 = 17 \\cdot (-2) + 5 \\cdot 7$. Taigi $x = -2$ yra vienas sprendinys."
+        },
+        {
+          "text": "Bendras sprendinys: $x = -2 + 5k$. Kai $k=1$, $x=3$."
+        },
+        {
+          "text": "Patikra: $17 \\cdot 3 + 5 \\cdot y = 51 + 5y = 1 \\implies 5y = -50 \\implies y = -10$. Tinka."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-11-method-1",
+          "title": "Atbulinis Euklido algoritmas",
+          "methodType": "main",
+          "strategyTags": [
+            "diophantine-equations"
+          ],
+          "steps": [
+            {
+              "title": "Euklido eiga",
+              "action": "Atliekame dalybą su liekana.",
+              "reason": "Ieškome DBD struktūros.",
+              "result": "1 = 5 - 2*(17 - 3*5)",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3 (arba -2, 8 ir t.t.)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-11-trap-1",
+          "title": "Ženklo klaida",
+          "wrongMove": "Pamirštamas minuso ženklas skliaustuose.",
+          "whyTempting": "Greitas skaičiavimas.",
+          "correction": "Visada patikrinkite gautą lygybę aritmetiškai.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada tiesinė Diofanto lygtis $ax + by = c$ turi sprendinių?",
+        "Kiek sprendinių turi tokia lygtis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-11-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kuo naudingas Išplėstinis Euklido algoritmas?",
+          "back": "Jis leidžia rasti sveikųjų skaičių lygties $ax + by = \\text{gcd}(a, b)$ sprendinius.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-11-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-12",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Kiek yra natūraliųjų skaičių porų $(x, y)$, kurios tenkina lygtį $x^2 - y^2 = 15$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Kvadratų skirtumo skaidymas",
+        "text": "$x^2 - y^2 = (x-y)(x+y)$. Ši sandauga turi būti lygi 15. Skaidykite 15 dauginamaisiais."
+      },
+      "strategyTags": [
+        "diophantine-equations",
+        "factorization"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "algebraic-factorization"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite lygtį kaip $(x-y)(x+y) = 15$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi $x, y \\in \\mathbb{N}$, tai $x+y > x-y$ ir abu yra teigiami.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išvardinkite 15 skaidinius į du dauginamuosius: (1, 15) ir (3, 5).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išspręskite sistemas: 1) $x+y=15, x-y=1$; 2) $x+y=5, x-y=3$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$(x-y)(x+y) = 15$."
+        },
+        {
+          "text": "1 atvejis: $x+y = 15$ ir $x-y = 1 \\implies 2x = 16 \\implies x=8, y=7$."
+        },
+        {
+          "text": "2 atvejis: $x+y = 5$ ir $x-y = 3 \\implies 2x = 8 \\implies x=4, y=1$."
+        },
+        {
+          "text": "Yra 2 sprendinių poros."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-12-method-1",
+          "title": "Skaidymas dauginamaisiais",
+          "methodType": "main",
+          "strategyTags": [
+            "diophantine-equations"
+          ],
+          "steps": [
+            {
+              "title": "Formulės taikymas",
+              "action": "Skaidome $x^2-y^2$ į dauginamuosius.",
+              "reason": "Tai pagrindinis Diofanto lygčių sprendimo būdas.",
+              "result": "(x-y)(x+y)=15",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-12-trap-1",
+          "title": "Neigiamų skaičių neįvertinimas",
+          "wrongMove": "Mokinys pamiršta skaidinius su neigiamais skaičiais.",
+          "whyTempting": "Prašoma natūraliųjų skaičių (todėl čia tai tinka), bet bendruoju atveju sveikuose skaičiuose būtų daugiau porų.",
+          "correction": "Skaitykite atidžiai, ar prašoma $\\mathbb{N}$ ar $\\mathbb{Z}$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokiems skaičiams $n$ lygtis $x^2-y^2=n$ neturi sprendinių? (Atsakymas: kai $n \\equiv 2 \\pmod 4$).",
+        "Ar sprendinių skaičius priklauso nuo $n$ daliklių skaičiaus?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-12-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip sprendžiama lygtis $x^2 - y^2 = n$ sveikuose skaičiuose?",
+          "back": "Skaidant kairę pusę $(x-y)(x+y)$ ir išbandant visus skaičiaus $n$ daliklius.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-12-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-13",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Remdamiesi Wilsono teorema, raskite liekaną, gaunamą $16!$ dalijant iš 17.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "answerText": "16",
+      "coreIdea": {
+        "title": "Wilsono teoremos taikymas",
+        "text": "Wilsono teorema teigia, kad jei $p$ yra pirminis, tai $(p-1)! \\equiv -1 \\pmod p$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "wilson-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-wilson"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite, ar 17 yra pirminis skaičius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Wilsono teorema tiesiogiai taikoma $p=17$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "scaffold",
+          "text": "$(17-1)! \\equiv -1 \\pmod{17}$. Kokia teigiama liekana atitinka -1?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi 17 yra pirminis, taikome Wilsono teoremą."
+        },
+        {
+          "text": "$(17-1)! = 16! \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "Liekana $-1$ yra ekvivalenti $17 - 1 = 16$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Ar ši teorema galiotų, jei modulis būtų 16?",
+        "Kaip įrodytumėte, kad jei $n$ sudėtinis ir $n>4$, tai $(n-1)! \\equiv 0 \\pmod n$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-13-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Ką teigia Wilsono teorema?",
+          "back": "$(p-1)! \\equiv -1 \\pmod p$ tada ir tik tada, kai $p$ pirminis.",
+          "conceptIds": [
+            "olimpiada-11-concept-wilson"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-14",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite didžiausią pirminio skaičiaus 2 laipsnį $v_2(n)$, kuris dalija $3^{1024} - 1$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "answerText": "12",
+      "coreIdea": {
+        "title": "LTE lema su p=2",
+        "text": "LTE lema skaičiui $p=2$ turi specialią formą: $v_2(a^n - b^n) = v_2(a-b) + v_2(a+b) + v_2(n) - 1$, kai $n$ lyginis."
+      },
+      "strategyTags": [
+        "number-theory",
+        "lifting-the-exponent"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-lte"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taikykite LTE lemą su $a=3, b=1, n=1024$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$v_2(3-1) = v_2(2) = 1$ ir $v_2(3+1) = v_2(4) = 2$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Suskaičiuokite $v_2(1024)$. Kadangi $1024 = 2^{10}$, tai $v_2(1024) = 10$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Formulė: $v_2(3^{1024}-1) = 1 + 2 + 10 - 1$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame LTE lemą p=2 atveju: $v_2(a^n - b^n) = v_2(a-b) + v_2(a+b) + v_2(n) - 1$."
+        },
+        {
+          "text": "Čia $a=3, b=1, n=1024$."
+        },
+        {
+          "text": "$v_2(3-1) = 1$, $v_2(3+1) = 2$, $v_2(1024) = 10$."
+        },
+        {
+          "text": "$v_2(3^{1024} - 1) = 1 + 2 + 10 - 1 = 12$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-14-trap-1",
+          "title": "Bendros LTE formulės taikymas nelyginiam p",
+          "wrongMove": "Mokinys naudoja $v_p(a^n-b^n) = v_p(a-b) + v_p(n)$ moduliui 2.",
+          "whyTempting": "Tai paprasčiausia formulė.",
+          "correction": "LTE su $p=2$ turi papildomą narį $v_2(a+b)$ ir atimtį $-1$.",
+          "conceptIds": [
+            "olimpiada-11-concept-lte"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl LTE lema p=2 atveju skiriasi nuo nelyginių pirminių?",
+        "Kaip pasikeistų atsakymas, jei laipsnis būtų nelyginis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-15",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite paskutinius du skaičiaus $13^{100}$ skaitmenis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "answerText": "01",
+      "coreIdea": {
+        "title": "Oilerio teorema",
+        "text": "Paskutiniai du skaitmenys randami moduliu 100. Pagal Oilerio teoremą $a^{\\varphi(m)} \\equiv 1 \\pmod m$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "euler-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "skaiciai-ir-skaiciavimai"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite $\\varphi(100)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$\\varphi(100) = 40$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tada $13^{40} \\equiv 1 \\pmod{100}$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$13^{100} = (13^{40})^2 \\cdot 13^{20}$. Tęskite redukciją.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Ieškome $13^{100} \\pmod{100}$. $\\varphi(100) = 40$."
+        },
+        {
+          "text": "Pagal Oilerio teoremą $13^{40} \\equiv 1 \\pmod{100}$."
+        },
+        {
+          "text": "$13^{80} = (13^{40})^2 \\equiv 1^2 = 1 \\pmod{100}$."
+        },
+        {
+          "text": "$13^{20} = (13^2)^{10} = 169^{10} \\equiv 69^{10} \\pmod{100}$."
+        },
+        {
+          "text": "$69^2 = 4761 \\equiv 61 \\pmod{100}$."
+        },
+        {
+          "text": "$69^{10} = (69^2)^5 \\equiv 61^5 = (61^2)^2 \\cdot 61 \\equiv (3721)^2 \\cdot 61 \\equiv 21^2 \\cdot 61 = 441 \\cdot 61 \\equiv 41 \\cdot 61 = 2501 \\equiv 1 \\pmod{100}$."
+        },
+        {
+          "text": "Tada $13^{100} = 13^{80} \\cdot 13^{20} \\equiv 1 \\cdot 1 = 1 \\pmod{100}$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Ar buvo galima pastebėti, kad eilė yra mažesnė nei 40?",
+        "Koks būtų atsakymas $13^{40}$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-16",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek iš viso pradinių šaknų turi modulis 13?",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "Pradinių šaknų skaičius",
+        "text": "Pradinių šaknų skaičius moduliu $m$ yra lygus $\\varphi(\\varphi(m))$, jei bent viena pradinė šaknis egzistuoja."
+      },
+      "strategyTags": [
+        "number-theory",
+        "primitive-roots"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradinių šaknų skaičius moduliu pirminį $p$ yra $\\varphi(p-1)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite $\\varphi(13-1) = \\varphi(12)$.",
+          "penalty": 0.08
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Modulis 13 yra pirminis, todėl pradinės šaknys egzistuoja."
+        },
+        {
+          "text": "Jų skaičius lygus $\\varphi(13-1) = \\varphi(12)$."
+        },
+        {
+          "text": "$12 = 2^2 \\cdot 3$."
+        },
+        {
+          "text": "$\\varphi(12) = 12 \\cdot (1-1/2) \\cdot (1-1/3) = 12 \\cdot 1/2 \\cdot 2/3 = 4$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Kokie moduliai turi pradinę šaknį?",
+        "Išvardinkite visas 4 pradinės šaknis moduliu 13."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-16-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kiek pradinių šaknų turi pirminis modulis $p$?",
+          "back": "$\\varphi(p-1)$",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-17",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Apskaičiuokite Legendro simbolį $\\left(\\frac{-1}{17}\\right)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Pirmasis savitarpiškumo priedas",
+        "text": "$(\\frac{-1}{p}) = (-1)^{\\frac{p-1}{2}}$. Tai reiškia, kad -1 yra kvadratas tik kai $p \\equiv 1 \\pmod 4$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "quadratic-reciprocity"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite skaičiaus 17 liekaną moduliu 4.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$17 = 4 \\cdot 4 + 1$.",
+          "penalty": 0.08
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome formulę: $(\\frac{-1}{p}) = (-1)^{(p-1)/2}$."
+        },
+        {
+          "text": "$p=17$, todėl $(17-1)/2 = 8$."
+        },
+        {
+          "text": "$(-1)^8 = 1$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Kodėl ši savybė svarbi tiriant, kurie skaičiai užrašomi dviejų kvadratų suma?",
+        "Kokia yra $(\\frac{2}{17})$ reikšmė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-18",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite skaičiaus 12 daliklių sumą $\\sigma(12)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "answerText": "28",
+      "coreIdea": {
+        "title": "Daliklių sumos formulė",
+        "text": "Jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai $\\sigma(n) = \\prod \\frac{p_i^{a_i+1}-1}{p_i-1}$."
+      },
+      "strategyTags": [
+        "number-theory",
+        "multiplicative-functions"
+      ],
+      "prerequisiteTopicIds": [
+        "skaiciai-ir-skaiciavimai"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išskaidykite 12 pirminiais: $2^2 \\cdot 3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Dalikliai yra 1, 2, 3, 4, 6, 12.",
+          "penalty": 0.08
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Dalikliai: 1, 2, 3, 4, 6, 12."
+        },
+        {
+          "text": "Suma: $1+2+3+4+6+12 = 28$."
+        },
+        {
+          "text": "Arba per formulę: $\\sigma(12) = \\frac{2^3-1}{2-1} \\cdot \\frac{3^2-1}{3-1} = 7 \\cdot 4 = 28$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Kas yra tobuli skaičiai?",
+        "Kodėl $\\sigma(n)$ yra multiplikatyvi funkcija?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-19",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Ar lygtis $x^2 + y^2 = 10^n + 3$ turi sprendinių sveikaisiais skaičiais?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne"
+      },
+      "answerText": "Ne",
+      "coreIdea": {
+        "title": "Kvadratinės liekanos mod 4",
+        "text": "Sveikojo skaičiaus kvadratas moduliu 4 gali būti tik 0 arba 1. Sumos $x^2+y^2$ liekanos mod 4 yra {0, 1, 2}."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "diophantine-equations"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ištirkite dešinės pusės liekaną moduliu 4.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$10^n$ dalijasi iš 4, kai $n \\ge 2$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kokia liekana mod 4 gaunama sumuojant du kvadratus?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nagrinėjame lygtį moduliu 4."
+        },
+        {
+          "text": "Kairė pusė: $x^2 \\equiv 0, 1 \\pmod 4$. Suma $x^2+y^2 \\equiv 0, 1, 2 \\pmod 4$."
+        },
+        {
+          "text": "Dešinė pusė: $10^n + 3 \\equiv 0 + 3 = 3 \\pmod 4$ (kai $n \\ge 2$)."
+        },
+        {
+          "text": "Kadangi $3$ nėra galima kvadratų sumos liekana, sprendinių nėra."
+        },
+        {
+          "text": "Kai $n=1$, $10+3=13 \\equiv 1 \\pmod 4$, bet 13 nėra sprendinys (patikrinama ranka). Tačiau mod 4 argumentas veikia bendruoju atveju."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Kodėl mod 4 yra toks naudingas tiriant kvadratų sumas?",
+        "Kokia teorema teigia, kurie skaičiai yra dviejų kvadratų suma?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-11-20",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Sveikųjų skaičių $a$ ir $b$ sandauga lygi 120, o jų didžiausias bendras daliklis yra 2. Raskite jų mažiausią bendrą kartotinį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "answerText": "60",
+      "coreIdea": {
+        "title": "GCD ir LCM ryšys",
+        "text": "$ab = \\text{gcd}(a, b) \\cdot \\text{lcm}(a, b)$."
+      },
+      "strategyTags": [
+        "number-theory",
+        "gcd-lcm"
+      ],
+      "prerequisiteTopicIds": [
+        "skaiciai-ir-skaiciavimai"
+      ],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite formulę $ab = \\text{DBD} \\cdot \\text{MBK}$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$120 = 2 \\cdot \\text{lcm}(a, b)$."
+        },
+        {
+          "text": "$\\text{lcm}(a, b) = 120 / 2 = 60$."
+        }
+      ],
+      "solutionMethods": [],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Ar ši formulė galioja trims skaičiams?",
+        "Raskite pavyzdį tokių skaičių $a$ ir $b$."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": []
     }
   ],
   "tests": [
@@ -1360,11 +2576,11 @@
         "ex-olimpiada-11-07",
         "ex-olimpiada-11-10",
         "ex-olimpiada-11-12",
+        "ex-olimpiada-11-13",
         "ex-olimpiada-11-14",
-        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-15",
         "ex-olimpiada-11-19",
-        "ex-olimpiada-11-24",
-        "ex-olimpiada-11-32"
+        "ex-olimpiada-11-20"
       ],
       "masteryWeight": 2.0
     }

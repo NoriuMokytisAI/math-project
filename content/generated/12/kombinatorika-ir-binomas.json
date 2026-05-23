@@ -1,0 +1,1444 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Kombinatorikos pagrindai, rinkiniai ir Niutono binomo formulė."
+  },
+  "topic": {
+    "id": "kombinatorika-ir-binomas",
+    "title": "Kombinatorika ir Niutono binomas",
+    "grade": 12,
+    "strand": "Duomenys ir tikimybės",
+    "level": "curriculum",
+    "order": 2,
+    "estimatedStudyMinutes": 150,
+    "prerequisiteTopicIds": [
+      "aibes-ir-veiksmai"
+    ],
+    "nextTopicIds": [
+      "atsitiktiniai-dydziai"
+    ],
+    "conceptIds": [
+      "kombinatorika",
+      "daugybos-taisykle",
+      "sudeties-taisykle",
+      "faktorialas",
+      "keliniai",
+      "gretiniai",
+      "deriniai",
+      "niutono-binomas",
+      "paskalio-trikampis",
+      "binominis-koeficientas"
+    ],
+    "formulaIds": [
+      "faktorialo-formule",
+      "keliniu-formule",
+      "gretiniu-formule",
+      "deriniu-formule",
+      "binomo-formule"
+    ],
+    "mistakeIds": [
+      "painioja-gretinius-ir-derinius",
+      "faktorialo-nulis",
+      "daugybos-vs-sudeties-taisykle",
+      "binomo-koeficientu-skaicius"
+    ],
+    "exerciseIds": [
+      "kombi-ex-001",
+      "kombi-ex-002",
+      "kombi-ex-003",
+      "kombi-ex-004",
+      "kombi-ex-005",
+      "kombi-ex-006",
+      "kombi-ex-007",
+      "kombi-ex-008",
+      "kombi-ex-009",
+      "kombi-ex-010",
+      "kombi-ex-011",
+      "kombi-ex-012",
+      "kombi-ex-013",
+      "kombi-ex-014",
+      "kombi-ex-015",
+      "kombi-ex-016",
+      "kombi-ex-017",
+      "kombi-ex-018",
+      "kombi-ex-019",
+      "kombi-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "kombinatorikos-pradmenys",
+      "title": "Pagrindinės kombinatorikos taisyklės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[kombinatorika|Kombinatorika]] tiria, kiek įvairių rinkinių galima sudaryti iš duotų elementų. Viskas prasideda nuo dviejų pagrindinių taisyklių."
+        },
+        {
+          "type": "property",
+          "text": "[[daugybos-taisykle|Daugybos taisyklė]]: Jei elementą A galima pasirinkti n būdais, o elementą B – m būdais, tai porą (A, B) galima pasirinkti n · m būdais."
+        },
+        {
+          "type": "property",
+          "text": "[[sudeties-taisykle|Sudėties taisyklė]]: Jei elementą A galima pasirinkti n būdais, o elementą B – m būdais (ir pasirinkimai nesikerta), tai A arba B galima pasirinkti n + m būdais."
+        }
+      ]
+    },
+    {
+      "id": "keliniai-ir-gretiniai",
+      "title": "Kėliniai ir gretiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai elementų tvarka rinkinyje yra svarbi, naudojame [[keliniai|kėlinius]] arba [[gretiniai|gretinius]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "keliniai",
+          "text": "Kėliniai – tai rinkiniai, sudaryti iš visų n duotų elementų, keičiant tik jų tvarką."
+        },
+        {
+          "type": "formula",
+          "formulaId": "keliniu-formule",
+          "latex": "P_n = n!"
+        },
+        {
+          "type": "definition",
+          "conceptId": "gretiniai",
+          "text": "Gretiniai – tai rinkiniai, sudaryti iš k elementų, paimtų iš n elementų aibės, kai tvarka yra svarbi."
+        },
+        {
+          "type": "formula",
+          "formulaId": "gretiniu-formule",
+          "latex": "A_n^k = \\frac{n!}{(n-k)!}"
+        }
+      ]
+    },
+    {
+      "id": "deriniu-teorija",
+      "title": "Deriniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei elementų tvarka rinkinyje nėra svarbi (pavyzdžiui, renkama komanda), naudojami [[deriniai|deriniai]]."
+        },
+        {
+          "type": "formula",
+          "formulaId": "deriniu-formule",
+          "latex": "C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}"
+        },
+        {
+          "type": "note",
+          "text": "Derinių skaičius visada yra mažesnis arba lygus gretinių skaičiui tam pačiam n ir k."
+        }
+      ]
+    },
+    {
+      "id": "niutono-binomo-teorija",
+      "title": "Niutono binomas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[niutono-binomas|Niutono binomo]] formulė leidžia pakelti dvinarį (a + b) bet kokiu natūraliuoju laipsniu n."
+        },
+        {
+          "type": "formula",
+          "formulaId": "binomo-formule",
+          "latex": "(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k"
+        },
+        {
+          "type": "paragraph",
+          "text": "Koeficientai prie narių yra [[binominis-koeficientas|binominiai koeficientai]], kuriuos taip pat galima rasti naudojant [[paskalio-trikampis|Paskalio trikampį]]."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "kombinatorika",
+      "title": "Kombinatorika",
+      "type": "concept",
+      "shortDefinition": "Matematikos šaka, tirianti junginių sudarymo būdus.",
+      "intuition": "Mokslas apie tai, kiek yra galimybių ką nors pasirinkti ar sudėlioti.",
+      "formal": "Diskretinės matematikos dalis, tirianti baigtinių aibių elementų junginių savybes.",
+      "relatedConceptIds": [
+        "keliniai",
+        "gretiniai",
+        "deriniai"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "faktorialas",
+      "title": "Faktorialas",
+      "type": "concept",
+      "shortDefinition": "Visų natūraliųjų skaičių nuo 1 iki n sandauga.",
+      "intuition": "Skaičius, rodantis kiek būdų galima surikiuoti n daiktų į eilę.",
+      "formal": "n! = 1 · 2 · 3 · ... · n. Apibrėžiama, kad 0! = 1.",
+      "notation": [
+        "n!"
+      ],
+      "relatedConceptIds": [
+        "keliniai"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "keliniai",
+      "title": "Kėliniai",
+      "type": "concept",
+      "shortDefinition": "Visi galimi n elementų išdėstymai tam tikra tvarka.",
+      "intuition": "Kiek būdų galima susodinti n žmonių į n kėdžių.",
+      "formal": "Junginiai iš n elementų, kurie skiriasi tik elementų tvarka.",
+      "notation": [
+        "Pn"
+      ],
+      "relatedConceptIds": [
+        "faktorialas",
+        "gretiniai"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "gretiniai",
+      "title": "Gretiniai",
+      "type": "concept",
+      "shortDefinition": "Rinkiniai iš n elementų po k, kai tvarka svarbi.",
+      "intuition": "Iš 10 žmonių renkame pirmininką ir pavaduotoją (pareigos skirtingos).",
+      "formal": "Junginiai iš n elementų po k (k ≤ n), kurie skiriasi elementais arba jų tvarka.",
+      "notation": [
+        "Ank"
+      ],
+      "relatedConceptIds": [
+        "keliniai",
+        "deriniai"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "deriniai",
+      "title": "Deriniai",
+      "type": "concept",
+      "shortDefinition": "Rinkiniai iš n elementų po k, kai tvarka nesvarbi.",
+      "intuition": "Iš 10 žmonių renkame 2 delegatus į konferenciją (pareigos vienodos).",
+      "formal": "Junginiai iš n elementų po k (k ≤ n), kurie skiriasi bent vienu elementu.",
+      "notation": [
+        "Cnk",
+        "binom(n,k)"
+      ],
+      "relatedConceptIds": [
+        "gretiniai",
+        "niutono-binomas"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "niutono-binomas",
+      "title": "Niutono binomas",
+      "type": "concept",
+      "shortDefinition": "Formulė dvinario laipsniui išskleisti.",
+      "intuition": "Tai (a+b)^n formulės apibendrinimas dideliems n.",
+      "formal": "Teorema apie dvinario sumos n-tojo laipsnio skleidinį.",
+      "relatedConceptIds": [
+        "binominis-koeficientas",
+        "paskalio-trikampis"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "paskalio-trikampis",
+      "title": "Paskalio trikampis",
+      "type": "concept",
+      "shortDefinition": "Skaičių trikampis, kurio kraštuose vienetai, o viduryje – viršutinių kaimynų suma.",
+      "intuition": "Geometrinė schema derinių skaičiams greitai rasti.",
+      "formal": "Trikampė matrica, sudaryta iš binominių koeficientų.",
+      "relatedConceptIds": [
+        "niutono-binomas"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "binominis-koeficientas",
+      "title": "Binominis koeficientas",
+      "type": "concept",
+      "shortDefinition": "Skaičius prie nario Niutono binomo skleidinyje.",
+      "intuition": "Tai tiesiog derinių skaičius C(n, k).",
+      "formal": "Skaičius, lygus C(n, k), esantis (a+b)^n skleidinyje.",
+      "relatedConceptIds": [
+        "deriniai",
+        "niutono-binomas"
+      ],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "daugybos-taisykle",
+      "title": "Daugybos taisykle",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sudeties-taisykle",
+      "title": "Sudeties taisykle",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "faktorialo-formule",
+      "title": "Faktorialo formulė",
+      "latex": "n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n",
+      "conditions": [
+        "n yra natūralusis skaičius arba 0"
+      ],
+      "variables": {
+        "n": "elementų skaičius"
+      },
+      "explanation": "Skaičiuoja, kiek yra būdų išrikiuoti elementus.",
+      "relatedConceptIds": [
+        "faktorialas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "keliniu-formule",
+      "title": "Kėlinių formulė",
+      "latex": "P_n = n!",
+      "conditions": [
+        "Naudojami visi n elementai"
+      ],
+      "variables": {
+        "P_n": "kėlinių skaičius"
+      },
+      "explanation": "Nurodo visų įmanomų tvarkų skaičių n elementų aibei.",
+      "relatedConceptIds": [
+        "keliniai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "gretiniu-formule",
+      "title": "Gretinių formulė",
+      "latex": "A_n^k = \\frac{n!}{(n-k)!}",
+      "conditions": [
+        "k <= n",
+        "tvarka svarbi"
+      ],
+      "variables": {
+        "n": "visų elementų kiekis",
+        "k": "renkamų elementų kiekis"
+      },
+      "explanation": "Naudojama, kai iš didesnės grupės renkame mažesnę ir tvarka yra reikšminga.",
+      "relatedConceptIds": [
+        "gretiniai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "deriniu-formule",
+      "title": "Derinių formulė",
+      "latex": "C_n^k = \\frac{n!}{k!(n-k)!}",
+      "conditions": [
+        "k <= n",
+        "tvarka nesvarbi"
+      ],
+      "variables": {
+        "n": "visų elementų kiekis",
+        "k": "renkamų elementų kiekis"
+      },
+      "explanation": "Naudojama, kai tvarka nėra svarbi, tik pats elementų rinkinys.",
+      "relatedConceptIds": [
+        "deriniai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "binomo-formule",
+      "title": "Niutono binomo formulė",
+      "latex": "(a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + \\dots + C_n^n b^n",
+      "conditions": [
+        "n yra natūralusis skaičius"
+      ],
+      "variables": {
+        "n": "laipsnis",
+        "a, b": "dvinario nariai"
+      },
+      "explanation": "Leidžia apskaičiuoti dvinario sumos laipsnį be nuoseklaus daugybos veiksmo.",
+      "relatedConceptIds": [
+        "niutono-binomas"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "painioja-gretinius-ir-derinius",
+      "title": "Painioja gretinius su deriniais",
+      "conceptIds": [
+        "gretiniai",
+        "deriniai"
+      ],
+      "wrongPattern": "Naudoja derinių formulę, kai tvarka yra svarbi.",
+      "whyItHappens": "Mokinys neįsigilina į uždavinio sąlygą (ar pareigos/vietos skiriasi).",
+      "correction": "Paklauskite savęs: 'Ar sukeitus du pasirinktus elementus vietomis, rinkinys pasikeis?'. Jei taip – gretiniai, jei ne – deriniai.",
+      "wrongExample": "Rinkti klasės seniūną ir pavaduotoją naudojant C(n, k).",
+      "correctExample": "Rinkti klasės seniūną ir pavaduotoją naudojant A(n, k).",
+      "defaultSrs": true
+    },
+    {
+      "id": "faktorialo-nulis",
+      "title": "Mano, kad 0! = 0",
+      "conceptIds": [
+        "faktorialas"
+      ],
+      "wrongPattern": "Skaičiavimuose 0! keičia į 0.",
+      "whyItHappens": "Intuicija sako, kad nulio daugyba turi būti nulis.",
+      "correction": "Pagal apibrėžimą 0! = 1. Tai užtikrina formulių nuoseklumą.",
+      "wrongExample": "C(5, 5) = 5! / (5! * 0!) = 120 / (120 * 0) = klaida.",
+      "correctExample": "C(5, 5) = 5! / (5! * 1) = 1.",
+      "defaultSrs": true
+    },
+    {
+      "id": "daugybos-vs-sudeties-taisykle",
+      "title": "Painioja sudėties ir daugybos taisykles",
+      "conceptIds": [
+        "daugybos-taisykle",
+        "sudeties-taisykle"
+      ],
+      "wrongPattern": "Sudedami būdai, kai juos reikia dauginti.",
+      "whyItHappens": "Painiojami jungtukai 'ir' bei 'arba'.",
+      "correction": "Jungtukas 'ir' (reikia abiejų) -> DAUGYBA. Jungtukas 'arba' (reikia vieno iš jų) -> SUDĖTIS.",
+      "wrongExample": "Turiu 3 kelnes ir 2 marškinius, galiu apsirengti 3 + 2 = 5 būdais.",
+      "correctExample": "Turiu 3 kelnes ir 2 marškinius, galiu apsirengti 3 * 2 = 6 būdais.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "kombi-worked-1",
+      "title": "Daugybos taisyklės taikymas",
+      "level": "easy",
+      "problem": "Kiek skirtingų triženklių skaičių galima sudaryti iš skaitmenų 1, 2, 3, jei skaitmenys gali kartotis?",
+      "conceptIds": [
+        "daugybos-taisykle"
+      ],
+      "steps": [
+        {
+          "text": "Pirmą skaitmenį galime rinktis 3 būdais (1, 2 arba 3).",
+          "latex": "3"
+        },
+        {
+          "text": "Antrą skaitmenį taip pat 3 būdais (nes gali kartotis).",
+          "latex": "3"
+        },
+        {
+          "text": "Trečią skaitmenį taip pat 3 būdais.",
+          "latex": "3"
+        },
+        {
+          "text": "Pagal daugybos taisyklę padauginame būdus.",
+          "latex": "3 \\cdot 3 \\cdot 3 = 27"
+        }
+      ],
+      "answer": "27 skaičiai"
+    },
+    {
+      "id": "kombi-worked-2",
+      "title": "Kėlinių skaičiavimas",
+      "level": "easy",
+      "problem": "Kiek būdų yra surikiuoti 5 skirtingas knygas lentynoje?",
+      "conceptIds": [
+        "keliniai",
+        "faktorialas"
+      ],
+      "steps": [
+        {
+          "text": "Tai yra kėliniai iš 5 elementų.",
+          "latex": "P_5 = 5!"
+        },
+        {
+          "text": "Apskaičiuojame faktorialą.",
+          "latex": "1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 120"
+        }
+      ],
+      "answer": "120 būdų"
+    },
+    {
+      "id": "kombi-worked-3",
+      "title": "Derinių skaičiavimas",
+      "level": "medium",
+      "problem": "Iš 10 mokinių reikia išrinkti 3 mokinių grupę dalyvauti viktorinoje. Kiek yra būdų?",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "steps": [
+        {
+          "text": "Kadangi tvarka grupėje nesvarbi, naudojame derinius.",
+          "latex": "C_{10}^3 = \\binom{10}{3}"
+        },
+        {
+          "text": "Taikome formulę.",
+          "latex": "\\frac{10!}{3! \\cdot 7!} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120"
+        }
+      ],
+      "answer": "120 būdų"
+    },
+    {
+      "id": "kombi-worked-4",
+      "title": "Gretinių skaičiavimas",
+      "level": "medium",
+      "problem": "Bėgime dalyvauja 8 sportininkai. Kiek yra būdų paskirstyti pirmas tris vietas (aukso, sidabro, bronzos)?",
+      "conceptIds": [
+        "gretiniai"
+      ],
+      "steps": [
+        {
+          "text": "Kadangi vietos skiriasi, tvarka yra svarbi. Naudojame gretinius.",
+          "latex": "A_8^3"
+        },
+        {
+          "text": "Taikome formulę.",
+          "latex": "\\frac{8!}{(8-3)!} = \\frac{8!}{5!} = 8 \\cdot 7 \\cdot 6 = 336"
+        }
+      ],
+      "answer": "336 būdai"
+    },
+    {
+      "id": "kombi-worked-5",
+      "title": "Niutono binomo taikymas",
+      "level": "hard",
+      "problem": "Išskleiskite (x + 2)^4.",
+      "conceptIds": [
+        "niutono-binomas",
+        "binominis-koeficientas"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame binomo formulę su n=4.",
+          "latex": "C_4^0 x^4 + C_4^1 x^3 \\cdot 2 + C_4^2 x^2 \\cdot 2^2 + C_4^3 x \\cdot 2^3 + C_4^4 \\cdot 2^4"
+        },
+        {
+          "text": "Randame koeficientus: 1, 4, 6, 4, 1.",
+          "latex": "1x^4 + 4 \\cdot x^3 \\cdot 2 + 6 \\cdot x^2 \\cdot 4 + 4 \\cdot x \\cdot 8 + 1 \\cdot 16"
+        },
+        {
+          "text": "Supaprastiname.",
+          "latex": "x^4 + 8x^3 + 24x^2 + 32x + 16"
+        }
+      ],
+      "answer": "x^4 + 8x^3 + 24x^2 + 32x + 16"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "kombi-ex-001",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite 4!.",
+      "answer": {
+        "kind": "numeric",
+        "value": 24
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Faktorialas yra sandauga nuo 1 iki n.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Sudauginkite 1 * 2 * 3 * 4.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "4! = 1 * 2 * 3 * 4 = 24.",
+          "latex": "24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "faktorialas"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "kombi-ex-002",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kiek skirtingų būdų yra sudėlioti žodžio 'MAMA' raides? (Tarkime, kad visos raidės yra skirtingos: M1, A1, M2, A2).",
+      "answer": {
+        "kind": "numeric",
+        "value": 24
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tai yra kėliniai iš 4 elementų.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "P_4 = 4! = 24.",
+          "latex": "24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "keliniai"
+      ],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "kombi-ex-003",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Parduotuvėje yra 5 rūšių obuoliai ir 3 rūšių kriaušės. Kiek yra būdų pasirinkti vieną vaisių (obuolį arba kriaušę)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite sudėties taisyklę.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "5 + 3 = 8.",
+          "latex": "8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "sudeties-taisykle"
+      ],
+      "estimatedSeconds": 15
+    },
+    {
+      "id": "kombi-ex-004",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite derinių skaičių C(5, 2).",
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite formulę n! / (k! * (n-k)!).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "5! / (2! * 3!) = (5 * 4) / 2 = 10.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "kombi-ex-005",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite gretinių skaičių A(4, 2).",
+      "answer": {
+        "kind": "numeric",
+        "value": 12
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Gretinių formulė n! / (n-k)!.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "4! / (4-2)! = 4! / 2! = 4 * 3 = 12.",
+          "latex": "12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "gretiniai"
+      ],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "kombi-ex-006",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek galima sudaryti keturženklių skaičių, naudojant tik skaitmenis 1, 2, 3, 4, kai skaitmenys negali kartotis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 24
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tai yra visų 4 skaitmenų sukeitimas vietomis (kėliniai).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "P_4 = 4! = 24.",
+          "latex": "24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "keliniai"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "kombi-ex-007",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Krepšinio komandoje yra 12 žaidėjų. Kiek būdų yra išrinkti startinį penketuką (5 žaidėjus)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 792
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ar svarbi žaidėjų eilė juos išrenkant? Ne.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Naudokite C(12, 5).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "C(12, 5) = 12! / (5! * 7!) = (12 * 11 * 10 * 9 * 8) / (5 * 4 * 3 * 2 * 1) = 792.",
+          "latex": "792"
+        }
+      ],
+      "answerText": "792",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "kombi-ex-008",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite (10! + 9!) / 9!.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Iškelkite 9! prieš skliaustus skaitiklyje.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "(9!(10 + 1)) / 9! = 11.",
+          "latex": "11"
+        }
+      ],
+      "answerText": "11",
+      "conceptIds": [
+        "faktorialas"
+      ],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kombi-ex-009",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Niutono binomo (a + b)^5 skleidinyje raskite nario a^3 * b^2 koeficientą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Koeficientas yra derinių skaičius C(n, k), kur k yra b laipsnis.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuokite C(5, 2).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Koeficientas yra C(5, 2) = 10.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "binominis-koeficientas",
+        "niutono-binomas"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "kombi-ex-010",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek yra triženklių skaičių, kurių visi skaitmenys skirtingi, sudarytų iš {1, 2, 3, 4, 5}?",
+      "answer": {
+        "kind": "numeric",
+        "value": 60
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite gretinių formulę A(5, 3).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "A(5, 3) = 5 * 4 * 3 = 60.",
+          "latex": "60"
+        }
+      ],
+      "answerText": "60",
+      "conceptIds": [
+        "gretiniai"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "kombi-ex-011",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite laisvąjį narį (be x) skleidinyje (x + 1/x)^4.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Narys be x yra tas, kur x ir 1/x laipsniai susiprastina.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Tai nutinka viduriniajam nariui, kai x^2 * (1/x)^2.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Raskite C(4, 2).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Laisvasis narys yra C(4, 2) * x^2 * (1/x)^2 = 6 * 1 = 6.",
+          "latex": "6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "niutono-binomas",
+        "binominis-koeficientas"
+      ],
+      "estimatedSeconds": 90
+    },
+    {
+      "id": "kombi-ex-012",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Apskaičiuokite sumą C(5, 0) + C(5, 1) + C(5, 2) + C(5, 3) + C(5, 4) + C(5, 5).",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "16"
+          },
+          {
+            "id": "b",
+            "text": "32"
+          },
+          {
+            "id": "c",
+            "text": "25"
+          },
+          {
+            "id": "d",
+            "text": "64"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Visų n-tosios eilės derinių suma lygi 2^n.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma lygi 2^5 = 32.",
+          "latex": "32"
+        }
+      ],
+      "answerText": "32",
+      "conceptIds": [
+        "niutono-binomas"
+      ],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kombi-ex-013",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Iš 5 vyrų ir 4 moterų reikia sudaryti komisiją iš 3 žmonių, kurioje būtų bent 2 moterys. Kiek yra būdų?",
+      "answer": {
+        "kind": "numeric",
+        "value": 34
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Suskaidykite į atvejus: 2 moterys + 1 vyras ARBA 3 moterys.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "2 moterys ir 1 vyras: C(4, 2) * C(5, 1).",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "3 moterys: C(4, 3).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atvejis 1: C(4, 2) * C(5, 1) = 6 * 5 = 30. Atvejis 2: C(4, 3) = 4. Iš viso 30 + 4 = 34.",
+          "latex": "34"
+        }
+      ],
+      "answerText": "34",
+      "conceptIds": [
+        "deriniai",
+        "sudeties-taisykle",
+        "daugybos-taisykle"
+      ],
+      "estimatedSeconds": 100
+    },
+    {
+      "id": "kombi-ex-014",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kiek yra būdų surikiuoti 6 žmones į eilę, jei du draugai būtinai nori stovėti greta?",
+      "answer": {
+        "kind": "numeric",
+        "value": 240
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Suriškite draugus į vieną 'bloką'. Dabar turite 5 elementus.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuokite 5!.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Bloko viduje draugai gali stovėti 2 būdais. Padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "5! * 2! = 120 * 2 = 240.",
+          "latex": "240"
+        }
+      ],
+      "answerText": "240",
+      "conceptIds": [
+        "keliniai"
+      ],
+      "estimatedSeconds": 80
+    },
+    {
+      "id": "kombi-ex-015",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Apskaičiuokite C(100, 98).",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "4950"
+          },
+          {
+            "id": "b",
+            "text": "9900"
+          },
+          {
+            "id": "c",
+            "text": "100"
+          },
+          {
+            "id": "d",
+            "text": "5050"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite savybę C(n, k) = C(n, n-k).",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuokite C(100, 2).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "C(100, 2) = (100 * 99) / 2 = 4950.",
+          "latex": "4950"
+        }
+      ],
+      "answerText": "4950",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "kombi-ex-016",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kiek skirtingų variantų gali iškristi metant du standartinius lošimo kauliukus?",
+      "answer": {
+        "kind": "numeric",
+        "value": 36
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kiekvienas kauliukas turi 6 puses.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 * 6 = 36.",
+          "latex": "36"
+        }
+      ],
+      "answerText": "36",
+      "conceptIds": [
+        "daugybos-taisykle"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "kombi-ex-017",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite n, jei P(n) = 120.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "n! = 120. Koks tai skaičius?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1*2*3*4*5 = 120.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "faktorialas",
+        "keliniai"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "kombi-ex-018",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek Niutono binomo (x + y)^10 skleidinyje yra narių?",
+      "answer": {
+        "kind": "numeric",
+        "value": 11
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Narių skaičius skleidinyje yra n + 1.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 + 1 = 11.",
+          "latex": "11"
+        }
+      ],
+      "answerText": "11",
+      "conceptIds": [
+        "niutono-binomas"
+      ],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "kombi-ex-019",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite A(n, 2) = 20 sprendinį n.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "A(n, 2) = n * (n - 1).",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Išspręskite lygtį n^2 - n - 20 = 0.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "n(n-1) = 20. Skaičiai 5 ir 4 tinka. Kadangi n turi būti teigiamas, n=5.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "gretiniai"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "kombi-ex-020",
+      "topicId": "kombinatorika-ir-binomas",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Iš 10 skirtingų gėlių reikia sudaryti puokštę. Kiek galima sudaryti skirtingų puokščių, kuriose būtų bent viena gėlė?",
+      "answer": {
+        "kind": "numeric",
+        "value": 1023
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Kiekviena gėlė gali būti arba paimta, arba ne (2 galimybės).",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Iš viso 2^10 galimybių.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Atimkite variantą, kai neimama nei viena gėlė.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2^10 - 1 = 1024 - 1 = 1023.",
+          "latex": "1023"
+        }
+      ],
+      "answerText": "1023",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "estimatedSeconds": 70
+    }
+  ],
+  "tests": [
+    {
+      "id": "kombi-test-1",
+      "title": "Kombinatorikos pagrindai",
+      "scope": "topic",
+      "topicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "exerciseIds": [
+        "kombi-ex-001",
+        "kombi-ex-003",
+        "kombi-ex-004",
+        "kombi-ex-005",
+        "kombi-ex-006",
+        "kombi-ex-008",
+        "kombi-ex-010",
+        "kombi-ex-016"
+      ],
+      "timeLimitSeconds": 1500,
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.75
+    },
+    {
+      "id": "kombi-test-2",
+      "title": "Deriniai ir Niutono binomas",
+      "scope": "topic",
+      "topicIds": [
+        "kombinatorika-ir-binomas"
+      ],
+      "exerciseIds": [
+        "kombi-ex-007",
+        "kombi-ex-009",
+        "kombi-ex-011",
+        "kombi-ex-012",
+        "kombi-ex-013",
+        "kombi-ex-014",
+        "kombi-ex-018",
+        "kombi-ex-020"
+      ],
+      "timeLimitSeconds": 2400,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.65
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "srs-faktorialas-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra n faktorialas (n!)?",
+      "back": "Skaičių nuo 1 iki n sandauga. 0! = 1.",
+      "conceptIds": [
+        "faktorialas"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-keliniai-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada naudojami kėliniai?",
+      "back": "Kai naudojami visi elementai ir svarbi tik jų tvarka. P_n = n!.",
+      "conceptIds": [
+        "keliniai"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-gretiniai-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada naudojami gretiniai (A_n^k)?",
+      "back": "Kai renkame dalį elementų ir jų tvarka yra svarbi.",
+      "conceptIds": [
+        "gretiniai"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-deriniai-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada naudojami deriniai (C_n^k)?",
+      "back": "Kai renkame dalį elementų ir jų tvarka nėra svarbi.",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-daugybos-taisykle-hint",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kada kombinatorikoje būdai dauginami?",
+      "back": "Kai reikia atlikti ir pirmą pasirinkimą, IR antrą (jungtukas 'ir').",
+      "conceptIds": [
+        "daugybos-taisykle"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-sudeties-taisykle-hint",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kada kombinatorikoje būdai sudedami?",
+      "back": "Kai reikia atlikti arba vieną pasirinkimą, ARBA kitą (jungtukas 'arba').",
+      "conceptIds": [
+        "sudeties-taisykle"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-c-n-k-n-minus-k",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Kam lygus C(n, k)?",
+      "back": "C(n, n-k)",
+      "conceptIds": [
+        "deriniai"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-binomo-nariai",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kiek narių turi (a+b)^n skleidinys?",
+      "back": "n + 1 narį.",
+      "conceptIds": [
+        "niutono-binomas"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-paskalio-trikampis-purpose",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kam naudojamas Paskalio trikampis?",
+      "back": "Derinių skaičiams (binominiams koeficientams) greitai surasti.",
+      "conceptIds": [
+        "paskalio-trikampis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-zero-factorial",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kiek yra 0!?",
+      "back": "1",
+      "conceptIds": [
+        "faktorialas"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

@@ -1,5 +1,162 @@
 // Generated split content chunk. Source: scripts/build_frontend_content.py
 export const concepts = {
+  "desimtaine-trupmena": {
+    "title": "Dešimtainė trupmena",
+    "type": "concept",
+    "definition": "Skaičius, užrašytas naudojant kablelį.",
+    "intuition": "Tai būdas užrašyti dalis nenaudojant brūkšnio, kaip piniguose (pvz., 1,50 Eur).",
+    "formal": "Racionalusis skaičius, kurio vardiklis yra 10 laipsnis, užrašytas pozicine sistema.",
+    "related": [
+      "kablelis",
+      "desimtosios-dalys"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "kablelis": {
+    "title": "Kablelis",
+    "type": "notation",
+    "definition": "Ženklas, skiriantis sveikąją dalį nuo trupmeninės.",
+    "intuition": "Sienelė tarp pilnų daiktų ir jų gabaliukų.",
+    "formal": "Skyriklis, naudojamas dešimtainėje skaičiavimo sistemoje.",
+    "related": [
+      "desimtaine-trupmena"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "desimtosios-dalys": {
+    "title": "Dešimtosios dalys",
+    "type": "concept",
+    "definition": "Pirmas skyrius po kablelio.",
+    "intuition": "Vienas daiktas padalintas į 10 lygų dalių.",
+    "formal": "Vienetų skaičius lygus 10^-1.",
+    "related": [
+      "simtosios-dalys"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "simtosios-dalys": {
+    "title": "Šimtosios dalys",
+    "type": "concept",
+    "definition": "Antras skyrius po kablelio.",
+    "intuition": "Vienas daiktas padalintas į 100 lygų dalių (kaip centai eurų sistemoje).",
+    "formal": "Vienetų skaičius lygus 10^-2.",
+    "related": [
+      "desimtosios-dalys",
+      "tukstantosios-dalys"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "tukstantosios-dalys": {
+    "title": "Tūkstantosios dalys",
+    "type": "concept",
+    "definition": "Trečias skyrius po kablelio.",
+    "intuition": "Vienas daiktas padalintas į 1000 dalių (labai smulkios dalys).",
+    "formal": "Vienetų skaičius lygus 10^-3.",
+    "related": [
+      "simtosios-dalys"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "skaiciu-sulyginimas": {
+    "title": "Skaičių sulyginimas",
+    "type": "method",
+    "definition": "Nulių prirašymas gale, kad skaičiai turėtų tiek pat skaitmenų po kablelio.",
+    "intuition": "Pridėjus nulį gale, skaičiaus vertė nesikeičia, bet pasidaro lengviau lyginti.",
+    "formal": "Dešimtainės trupmenos išraiškos keitimas ekvivalenčia forma prirašant nulinę vertę turinčius skaitmenis.",
+    "related": [
+      "desimtainiu-lyginimas"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "desimtainiu-lyginimas": {
+    "title": "Dešimtainių trupmenų lyginimas",
+    "type": "method",
+    "definition": "Procesas nustatyti, kuris skaičius didesnis.",
+    "intuition": "Žiūri skyrių po skyriaus iš kairės į dešinę.",
+    "formal": "Algoritmas, lyginantis dešimtainius skaičius pagal pozicinę vertę pradedant aukščiausiu skyriumi.",
+    "related": [
+      "skaiciu-sulyginimas"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "desimtainiu-apvalinimas": {
+    "title": "Dešimtainių trupmenų apvalinimas",
+    "type": "method",
+    "definition": "Skaičiaus supaprastinimas iki tam tikro skyriaus.",
+    "intuition": "Jei kitas skaičius 5 ar didesnis – kelk į viršų, jei mažesnis – palik.",
+    "formal": "Skaičiaus keitimas artimiausiu skaičiumi nurodytu tikslumu.",
+    "related": [],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "sudetis-stulpeliu-desimtainiu": {
+    "title": "Sudėtis stulpeliu",
+    "type": "method",
+    "definition": "Dešimtainių skaičių sudėjimas rašant juos vieną po kitu.",
+    "intuition": "Svarbiausia, kad kableliai būtų vienoje tiesėje.",
+    "formal": "Aritmetinis veiksmas su dešimtainiais skaičiais, derinant atitinkamus skyrius.",
+    "related": [
+      "atimtis-stulpeliu-desimtainiu"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "atimtis-stulpeliu-desimtainiu": {
+    "title": "Atimtis stulpeliu",
+    "type": "method",
+    "definition": "Dešimtainių skaičių atėmimas rašant juos vieną po kitu.",
+    "intuition": "Jei trūksta skaitmens – 'pasiskolink' iš nulio gale.",
+    "formal": "Aritmetinis veiksmas su dešimtainiais skaičiais, derinant atitinkamus skyrius.",
+    "related": [
+      "sudetis-stulpeliu-desimtainiu"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "netinkamas-kablelio-dejimas": {
+    "title": "Kablelio ignoravimas",
+    "type": "mistake",
+    "definition": "Mokinys taiko natūraliųjų skaičių lygiuotes taisykles.",
+    "intuition": "Sudedant 2,5 + 3 rašo 2,8 (lygiuoja pagal dešinį kraštą).",
+    "formal": "Sveikasis skaičius turi kablelį gale (3 = 3,0). Lygiuok kablelį po kablelio.",
+    "related": [
+      "kablelis",
+      "sudetis-stulpeliu-desimtainiu"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
+  "nuliu-ignoravimas": {
+    "title": "Nulių 'pametimas'",
+    "type": "mistake",
+    "definition": "Mokinys lygina visą trupmeninę dalį kaip vieną skaičių.",
+    "intuition": "Mano, kad 0,5 yra mažiau už 0,12, nes 5 < 12.",
+    "formal": "Sulygink skaitmenų skaičių: 0,5 = 0,50. 50 > 12, tad 0,5 > 0,12.",
+    "related": [
+      "skaiciu-sulyginimas"
+    ],
+    "topics": [
+      "desimtaines-trupmenos"
+    ]
+  },
   "kintamasis": {
     "title": "Kintamasis",
     "type": "concept",
@@ -571,6 +728,7 @@ export const concepts = {
       "duomenys-ir-tikimybe",
       "histogramos-kvartiliai-ir-sukauptasis-daznis",
       "imtys-ir-diagramos-7",
+      "kombinatorika-ir-binomas",
       "kombinatorika-ir-ilgalaike-tikimybe",
       "priklausomi-ir-nepriklausomi-ivykiai",
       "sklaidos-diagramos-ir-koreliacija",
@@ -906,6 +1064,7 @@ export const concepts = {
       "finansiniai-skaiciavimai-7",
       "finansiniai-skaiciavimai-8",
       "naturalieji-skaiciai-dalikliai-kartotiniai",
+      "olimpiada-07-skaiciu-teorija",
       "sudetiniai-procentai-misiniai-ir-proporcingoji-dalyba",
       "sveikieji-racionalieji-skaiciai",
       "trupmenos-procentai-santykiai"
@@ -1167,6 +1326,7 @@ export const concepts = {
       "kampas"
     ],
     "topics": [
+      "apskritimas-ir-skritulys",
       "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "briaunainiai-sukiniai-ir-pjuviai",
       "geometrijos-ir-matavimu-pradmenys",
@@ -1194,6 +1354,7 @@ export const concepts = {
       "plotas"
     ],
     "topics": [
+      "apskritimas-ir-skritulys",
       "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "briaunainiai-sukiniai-ir-pjuviai",
       "geometrijos-ir-matavimu-pradmenys",
@@ -1397,6 +1558,7 @@ export const concepts = {
       "transformacijos-ir-koordinates",
       "trikampiai-ir-pitagoro-teorema",
       "trikampiu-trigonometrija-ir-apskritimai",
+      "vektoriai-plokstumoje",
       "vektoriai-projekcijos-ir-breziniai"
     ]
   },
@@ -1513,6 +1675,230 @@ export const concepts = {
       "olimpiada-05-strategijos-ir-irodymai"
     ]
   },
+  "olimpiada-05-concept-parity": {
+    "title": "Lyginumas (Paritetas)",
+    "type": "concept",
+    "definition": "Savybė, rodanti, ar skaičius dalijasi iš 2 be liekanos.",
+    "intuition": "Skaičius yra lyginis, jei jį galima padalinti į dvi lygias dalis.",
+    "formal": "",
+    "related": [
+      "olimpiada-05-concept-invariant"
+    ],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "olimpiada-05-concept-invariant": {
+    "title": "Invariantas",
+    "type": "concept",
+    "definition": "Dydis arba savybė, kuri nekinta atliekant tam tikras operacijas.",
+    "intuition": "Tai, kas išlieka „taip pat“, net kai viskas aplink keičiasi.",
+    "formal": "",
+    "related": [
+      "olimpiada-05-concept-parity"
+    ],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "olimpiada-05-concept-dirichlet": {
+    "title": "Dirichlė principas",
+    "type": "concept",
+    "definition": "Principas, teigiantis, kad paskirsčius daugiau objektų nei yra vietų, bent viena vieta gaus bent du objektus.",
+    "intuition": "Jei turite 5 vaikus ir 4 kėdes, vienas vaikas neturės kur atsisėsti arba ant vienos kėdės sėdės du.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "olimpiada-05-concept-coloring": {
+    "title": "Spalvinimo metodas",
+    "type": "concept",
+    "definition": "Lentelės ar kitų objektų suskirstymas spalvomis, siekiant rasti nekintančias savybes.",
+    "intuition": "Šachmatų lentos spalvinimas padeda suprasti, kaip juda figūros.",
+    "formal": "",
+    "related": [
+      "olimpiada-05-concept-invariant"
+    ],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "olimpiada-05-concept-backwards": {
+    "title": "Ėjimas nuo galo",
+    "type": "concept",
+    "definition": "Strategija, kai sprendimas pradedamas nuo žinomo galutinio rezultato.",
+    "intuition": "Kaip siūlą vynioti atgal, kad rastum pradinį galą.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "trap-checking-examples-only": {
+    "title": "Tikrinami tik keli pavyzdžiai",
+    "type": "mistake",
+    "definition": "Pavyzdžiai sukuria klaidingą užtikrintumo jausmą.",
+    "intuition": "Mokinys patikrina 2-3 pavyzdžius ir daro išvadą, kad teiginys teisingas.",
+    "formal": "Olimpiadose reikia bendro paaiškinimo (įrodymo), kodėl tai galioja visiems atvejams.",
+    "related": [],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "trap-guessing-patterns": {
+    "title": "Spėjimas pagal dėsningumą",
+    "type": "mistake",
+    "definition": "Nenoras gilintis į mechanizmą, kodėl dėsningumas veikia.",
+    "intuition": "Mokinys pastebi dėsningumą pirmose keliose būsenose ir spėja atsakymą nepagrįsdamas.",
+    "formal": "Būtina rasti invariantą arba loginį ryšį, kuris garantuoja dėsningumą.",
+    "related": [],
+    "topics": [
+      "olimpiada-05-strategijos-ir-irodymai"
+    ]
+  },
+  "romeniskas-skaitmuo": {
+    "title": "Romėniškasis skaitmuo",
+    "type": "concept",
+    "definition": "Simbolis, naudojamas romėniškoje skaičiavimo sistemoje.",
+    "intuition": "Tai raidė, kurią romėnai naudojo vietoj mūsų įprastų skaitmenų.",
+    "formal": "Vienas iš septynių lotyniškų simbolių (I, V, X, L, C, D, M), sudarančių romėnišką skaičių sistemą.",
+    "related": [
+      "sudeties-taisykle-romeniskiems",
+      "atimties-taisykle-romeniskiems"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "sudeties-taisykle-romeniskiems": {
+    "title": "Sudėties taisyklė",
+    "type": "method",
+    "definition": "Mažesnio skaičiaus rašymas po didesnio reiškia sudėtį.",
+    "intuition": "Jei eini nuo didesnio prie mažesnio, viską tiesiog sudedi.",
+    "formal": "Jei skaitmuo su mažesne arba lygia reikšme stovi dešinėje nuo didesnės reikšmės skaitmens, šios reikšmės sumuojamos.",
+    "related": [
+      "atimties-taisykle-romeniskiems"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "atimties-taisykle-romeniskiems": {
+    "title": "Atimties taisyklė",
+    "type": "method",
+    "definition": "Mažesnio skaičiaus rašymas prieš didesnį reiškia atimtį.",
+    "intuition": "Jei matai mažą skaičių prieš didelį, tai yra 'viena iki' arba 'dešimt iki'.",
+    "formal": "Jei mažesnis skaitmuo stovi kairėje nuo didesnio, jis atimamas iš dešinėje esančio skaitmens.",
+    "related": [
+      "sudeties-taisykle-romeniskiems"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "kartojimo-taisykle": {
+    "title": "Kartojimo taisyklė",
+    "type": "method",
+    "definition": "Draudimas rašyti daugiau nei 3 vienodus skaitmenis iš eilės.",
+    "intuition": "Negalima rašyti IIII, reikia rašyti IV.",
+    "formal": "Simboliai I, X, C, M gali būti kartojami iki trijų kartų iš eilės. Simboliai V, L, D niekada nekartojami.",
+    "related": [],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "simboliu-reiksmes": {
+    "title": "Simbolių reikšmės",
+    "type": "concept",
+    "definition": "Fiksuotos septynių pagrindinių simbolių vertės.",
+    "intuition": "Kiekviena raidė turi savo kainą.",
+    "formal": "I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+    "related": [
+      "romeniskas-skaitmuo"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "dideli-skaiciai-romeniski": {
+    "title": "Dideli romėniški skaičiai",
+    "type": "concept",
+    "definition": "Skaičiai iki 3000 sudaryti naudojant M ir kitus simbolius.",
+    "intuition": "Tūkstančiai žymimi raide M.",
+    "formal": "Skaičiavimas virš 1000 atliekamas kartojant M simbolį (pvz., MMM = 3000).",
+    "related": [
+      "simboliu-reiksmes"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "skaiciu-konvertavimas": {
+    "title": "Skaičių konvertavimas",
+    "type": "method",
+    "definition": "Dešimtainių skaičių pavertimas romėniškais ir atvirkščiai.",
+    "intuition": "Tai tarsi vertimas iš vienos kalbos į kitą.",
+    "formal": "Pozicinio dešimtainio skaičiaus skaidymas skyriais ir jų keitimas atitinkamomis romėniškomis kombinacijomis.",
+    "related": [
+      "sudeties-taisykle-romeniskiems",
+      "atimties-taisykle-romeniskiems"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "istorinis-kontekstas": {
+    "title": "Istorinis kontekstas",
+    "type": "concept",
+    "definition": "Romėniškų skaičių kilmė ir naudojimas.",
+    "intuition": "Kodėl mes vis dar mokomės šių senovinių skaičių?",
+    "formal": "Informacija apie sistemos naudojimą Viduramžiais, ciferblatuose ir oficialiuose dokumentuose.",
+    "related": [],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "netinkamas-kartojimas": {
+    "title": "Per daug kartojimų",
+    "type": "mistake",
+    "definition": "Mokinys pamiršta atimties taisyklę ir tiesiog sudeda vienetus.",
+    "intuition": "Rašo IIII vietoj IV.",
+    "formal": "Po trijų vienodų skaitmenų naudok kitą didesnį simbolį su atimties taisykle.",
+    "related": [
+      "kartojimo-taisykle"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "netinkama-atimtis": {
+    "title": "Neteisinga atimties tvarka",
+    "type": "mistake",
+    "definition": "Bando atimti 5 iš 10, nors atimti galima tik I, X arba C.",
+    "intuition": "Rašo VX vietoj V.",
+    "formal": "Atimti galima tik tam tikrus simbolius: I iš V/X, X iš L/C, C iš D/M.",
+    "related": [
+      "atimties-taisykle-romeniskiems"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
+  "maisesi-simboliai": {
+    "title": "Painioja L ir C",
+    "type": "mistake",
+    "definition": "Simboliai atrodo panašiai arba tiesiog pamirštamos vertės.",
+    "intuition": "Mano, kad L yra 100, o C yra 50.",
+    "formal": "L yra 50 (kaip 'Lpus' šimto), C yra 100 (kaip 'Centum').",
+    "related": [
+      "simboliu-reiksmes"
+    ],
+    "topics": [
+      "romeniski-skaiciai"
+    ]
+  },
   "olimpiada-06-concept-logic": {
     "title": "Matematinė dedukcija ir prieštaravimas",
     "type": "concept",
@@ -1539,6 +1925,360 @@ export const concepts = {
       "olimpiada-06-geometrija",
       "olimpiada-06-kombinatorika",
       "olimpiada-06-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-06-concept-absolute-value": {
+    "title": "Absoliučioji vertė (modulis)",
+    "type": "concept",
+    "definition": "Skaičiaus atstumas nuo nulio skaičių tiesėje.",
+    "intuition": "Modulis tiesiog 'panaikina' minuso ženklą, jei jis yra.",
+    "formal": "$|a| = \\sqrt{a^2}$",
+    "related": [],
+    "topics": [
+      "olimpiada-06-algebra"
+    ]
+  },
+  "olimpiada-06-concept-sequence": {
+    "title": "Skaičių seka",
+    "type": "concept",
+    "definition": "Skaičių rinkinys, išdėstytas tam tikra tvarka.",
+    "intuition": "Tai tarsi eilė, kurioje kiekvienas skaičius žino savo vietą ir kaimyną.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-06-algebra"
+    ]
+  },
+  "olimpiada-06-concept-invariant": {
+    "title": "Invariantas",
+    "type": "concept",
+    "definition": "Savybė, kuri nekinta atliekant leidžiamus veiksmus.",
+    "intuition": "Nesvarbu, ką darysi, šis dalykas liks toks pat.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-06-algebra"
+    ]
+  },
+  "olimpiada-06-geo-concept-angles": {
+    "title": "Kryžminiai ir gretiniai kampai",
+    "type": "concept",
+    "definition": "Kampų poros, turinčios bendras kraštines ar viršūnes.",
+    "intuition": "Gretiniai kampai kartu sudaro tiesę.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-06-geometrija"
+    ]
+  },
+  "olimpiada-06-geo-concept-triangle-inequality": {
+    "title": "Trikampio nelygybė",
+    "type": "concept",
+    "definition": "Taisyklė, nurodanti, kada trikampis egzistuoja.",
+    "intuition": "Trumpiausias kelias tarp dviejų taškų yra tiesė, o ne lankstas per trečią tašką.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-06-geometrija"
+    ]
+  },
+  "olimpiada-06-geo-concept-symmetry": {
+    "title": "Simetrijos ašis",
+    "type": "concept",
+    "definition": "Tiesė, kuri dalija figūrą į dvi lygias, veidrodines dalis.",
+    "intuition": "Jei figūrą perlenktume per šią tiesę, abi pusės sutaptų.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-06-geometrija"
+    ]
+  },
+  "lygus-trikampiai": {
+    "title": "Lygūs trikampiai",
+    "type": "concept",
+    "definition": "Trikampiai, kurie visiškai sutampa juos uždėjus vieną ant kito.",
+    "intuition": "Tai tarsi du identiški blynai.",
+    "formal": "Du trikampiai vadinami lygiais, jei egzistuoja atitiktis tarp jų viršūnių tokia, kad visos atitinkamos kraštinės ir kampai būtų lygūs.",
+    "related": [
+      "atitinkami-elementai"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "atitinkami-elementai": {
+    "title": "Atitinkami elementai",
+    "type": "concept",
+    "definition": "Kraštinės arba kampai, esantys tose pačiose vietose lyginamuose trikampiuose.",
+    "intuition": "Tai elementai-dvyniai.",
+    "formal": "Elementai, kurie sutampa trikampius uždėjus vieną ant kito.",
+    "related": [
+      "lygus-trikampiai"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "trikampio-nelygybe": {
+    "title": "Trikampio nelygybė",
+    "type": "theorem",
+    "definition": "Taisyklė: a + b > c.",
+    "intuition": "Kelias aplinkui (per dvi kraštines) visada turi būti ilgesnis už tiesų kelią.",
+    "formal": "Bet kurio trikampio bet kurių dviejų kraštinių ilgių suma yra didesnė už trečiosios kraštinės ilgį.",
+    "related": [],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "kkk-pozymis": {
+    "title": "KKK požymis",
+    "type": "theorem",
+    "definition": "Lygumas pagal tris kraštines.",
+    "intuition": "Jei visos lazdelės vienodos, trikampis susidės tik vienu būdu.",
+    "formal": "Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms, tai tokie trikampiai yra lygūs.",
+    "related": [
+      "lygus-trikampiai"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "kkp-pozymis": {
+    "title": "KKP požymis",
+    "type": "theorem",
+    "definition": "Lygumas pagal dvi kraštines ir kampą tarp jų.",
+    "intuition": "Jei žinai dvi kraštines ir kaip stipriai jos 'išskėstos', trečia kraštinė užsidarys pati.",
+    "formal": "Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra atitinkamai lygūs kito trikampio dviem kraštinėms ir kampui tarp jų, tai tokie trikampiai yra lygūs.",
+    "related": [
+      "lygus-trikampiai"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "kpk-pozymis": {
+    "title": "KPK požymis",
+    "type": "theorem",
+    "definition": "Lygumas pagal kraštinę ir du kampus prie jos.",
+    "intuition": "Jei turi pagrindą ir žinai, kokiu kampu kyla sienos, viršūnė susitiks tik viename taške.",
+    "formal": "Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem prie jos esantiems kampams, tai tokie trikampiai yra lygūs.",
+    "related": [
+      "lygus-trikampiai"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "braizymas-skriestuvu": {
+    "title": "Braižymas skriestuvu",
+    "type": "method",
+    "definition": "Skriestuvo naudojimas kraštinių ilgiams atidėti.",
+    "intuition": "Skriestuvas padeda 'nukopijuoti' ilgį.",
+    "formal": "Apskritimo lanko braižymas nurodytu spinduliu siekiant rasti geometrinę vietą taškų, nutolusių nuo centro nurodytu atstumu.",
+    "related": [],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "braizymas-matlankiu": {
+    "title": "Braižymas matlankiu",
+    "type": "method",
+    "definition": "Kampų matavimas ir braižymas.",
+    "intuition": "Matlankis padeda tiksliai pasukti kraštinę.",
+    "formal": "Kampo didumo laipsniais nustatymas arba nurodyto didumo kampo atidėjimas brėžinyje.",
+    "related": [],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "nelygybes-ignoravimas": {
+    "title": "Bando braižyti neįmanomą trikampį",
+    "type": "mistake",
+    "definition": "Pamirštama patikrinti, ar suma viršija trečią kraštinę.",
+    "intuition": "Mano, kad trikampis su kraštinėmis 1, 1, 5 egzistuoja.",
+    "formal": "Visada patikrink: a + b > c.",
+    "related": [
+      "trikampio-nelygybe"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "neteisingas-pozymio-taikymas": {
+    "title": "Kampas ne tarp kraštinių",
+    "type": "mistake",
+    "definition": "Mokinys tiesiog ieško bet kokių 2 kraštinių ir bet kokio kampo.",
+    "intuition": "Taikomas KKP požymis, kai kampas yra ne tarp lygių kraštinių.",
+    "formal": "KKP požymiui kampas PRIVALO būti tarp duotų kraštinių.",
+    "related": [
+      "kkp-pozymis"
+    ],
+    "topics": [
+      "trikampiu-lygumas-ir-braizymas"
+    ]
+  },
+  "spindulys": {
+    "title": "Spindulys",
+    "type": "concept",
+    "definition": "Atstumas nuo centro iki bet kurio apskritimo taško.",
+    "intuition": "Dviračio rato stipinas.",
+    "formal": "Atkarpa, jungianti apskritimo centrą su bet kuriuo jo tašku.",
+    "related": [
+      "skersmuo",
+      "centras"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "skersmuo": {
+    "title": "Skersmuo",
+    "type": "concept",
+    "definition": "Atkarpa, jungianti du taškus ir einanti per centrą.",
+    "intuition": "Ilgiausia galima atkarpa apskritimo viduje.",
+    "formal": "Atkarpa, jungianti du apskritimo taškus ir einanti per jo centrą; d = 2r.",
+    "related": [
+      "spindulys"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "pi-skaicius": {
+    "title": "Skaičius Pi",
+    "type": "concept",
+    "definition": "Apskritimo ilgio ir skersmens santykis.",
+    "intuition": "Maždaug 3,14.",
+    "formal": "Matematinė konstanta π, lygi apskritimo ilgio ir jo skersmens santykiui.",
+    "related": [
+      "apskritimo-ilgis"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "skritulio-plotas": {
+    "title": "Skritulio plotas",
+    "type": "concept",
+    "definition": "Paviršiaus, apriboto apskritimu, dydis.",
+    "intuition": "Kiek dažų reikėtų skrituliui nudažyti.",
+    "formal": "Skritulio užimamas plotas S = πr².",
+    "related": [
+      "skritulys",
+      "spindulys"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "lankas": {
+    "title": "Lankas",
+    "type": "concept",
+    "definition": "Apskritimo dalis.",
+    "intuition": "Išpjauta picos krašto dalis.",
+    "formal": "Apskritimo dalis tarp dviejų jo taškų.",
+    "related": [
+      "apskritimas",
+      "centrinis-kampas"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "ispjova": {
+    "title": "Skritulio išpjova",
+    "type": "concept",
+    "definition": "Skritulio dalis tarp dviejų spindulių.",
+    "intuition": "Picos gabalėlis.",
+    "formal": "Skritulio dalis, apribota lanko ir dviejų spindulių, jungiančių lanko galus su centru.",
+    "related": [
+      "skritulys",
+      "lankas"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "apskritimo-ilgio-formule": {
+    "title": "Apskritimo ilgis",
+    "type": "formula",
+    "definition": "Apskaičiuoja atstumą aplink apskritimą.",
+    "intuition": "Apskaičiuoja atstumą aplink apskritimą.",
+    "formal": "C = 2\\pi r",
+    "related": [
+      "apskritimo-ilgis",
+      "spindulys"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "skritulio-ploto-formule": {
+    "title": "Skritulio plotas",
+    "type": "formula",
+    "definition": "Apskaičiuoja skritulio paviršiaus plotą.",
+    "intuition": "Apskaičiuoja skritulio paviršiaus plotą.",
+    "formal": "S = \\pi r^2",
+    "related": [
+      "skritulio-plotas",
+      "spindulys"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "lanko-ilgio-formule": {
+    "title": "Lanko ilgis",
+    "type": "formula",
+    "definition": "Apskaičiuoja apskritimo dalies (lanko) ilgį.",
+    "intuition": "Apskaičiuoja apskritimo dalies (lanko) ilgį.",
+    "formal": "l = \\frac{\\pi r \\alpha}{180}",
+    "related": [
+      "lankas"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "ispjovos-ploto-formule": {
+    "title": "Išpjovos plotas",
+    "type": "formula",
+    "definition": "Apskaičiuoja skritulio dalies (picos gabalėlio) plotą.",
+    "intuition": "Apskaičiuoja skritulio dalies (picos gabalėlio) plotą.",
+    "formal": "S_{\\text{išpj}} = \\frac{\\pi r^2 \\alpha}{360}",
+    "related": [
+      "ispjova"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "painioja-spinduli-su-skersmeniu": {
+    "title": "Painioja spindulį su skersmeniu",
+    "type": "mistake",
+    "definition": "Užduotyje duotas skersmuo, bet mokinys automatiškai naudoja jį formulėje 2πr.",
+    "intuition": "Į formulę vietoj spindulio įrašo skersmenį.",
+    "formal": "Jei duotas skersmuo d, spindulį r raskite padaliję d iš 2.",
+    "related": [
+      "spindulys",
+      "skersmuo"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
+    ]
+  },
+  "painioja-ilgio-ir-ploto-formules": {
+    "title": "Painioja ilgio ir ploto formules",
+    "type": "mistake",
+    "definition": "Abi formulės turi tuos pačius elementus (2, π, r).",
+    "intuition": "Naudoja πr² ilgiui arba 2πr plotui.",
+    "formal": "Plotas visada susijęs su kvadratu (r²), ilgis - su linijiniu matavimu (2r).",
+    "related": [
+      "apskritimo-ilgis",
+      "skritulio-plotas"
+    ],
+    "topics": [
+      "apskritimas-ir-skritulys"
     ]
   },
   "funkcija": {
@@ -2322,6 +3062,7 @@ export const concepts = {
       "duomenys"
     ],
     "topics": [
+      "atsitiktiniai-dydziai",
       "funkciju-ribos-ir-tolydumas",
       "isvestine-ir-diferencijavimas",
       "isvestines-taisykles-ir-optimizavimas",
@@ -2470,32 +3211,631 @@ export const concepts = {
       "trigonometrines-lygtys"
     ]
   },
+  "apibreztis": {
+    "title": "Apibrėžtis",
+    "type": "concept",
+    "definition": "Sąvokos prasmės paaiškinimas.",
+    "intuition": "Žodyno paaiškinimas matematikoje.",
+    "formal": "Teiginys, nurodantis esminius objekto požymius, pagal kuriuos jis išskiriamas iš kitų.",
+    "related": [
+      "teorema"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "teorema": {
+    "title": "Teorema",
+    "type": "concept",
+    "definition": "Įrodytas matematinis teiginys.",
+    "intuition": "Taisyklė, kurią kažkas jau patikrino ir įrodė.",
+    "formal": "Matematinis teiginys, kurio teisingumas nustatomas įrodymu.",
+    "related": [
+      "irodymas",
+      "salyga",
+      "isvada"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "aksioma": {
+    "title": "Aksioma",
+    "type": "concept",
+    "definition": "Teiginys, priimamas be įrodymų.",
+    "intuition": "Akivaizdi tiesa, nuo kurios viskas prasideda.",
+    "formal": "Pradinis teorijos teiginys, kurio teisingumu neabejojama ir kuris naudojamas kitoms teoremoms įrodyti.",
+    "related": [
+      "teorema"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "salyginis-teiginys": {
+    "title": "Sąlyginis teiginys",
+    "type": "concept",
+    "definition": "Teiginys, turintis formą 'Jei A, tai B'.",
+    "intuition": "Loginė grandinė: priežastis ir pasekmė.",
+    "formal": "Teiginys, sudarytas iš prielaidos (sąlygos) ir išvados.",
+    "related": [
+      "isvada",
+      "atvirkstinis-teiginys"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "isvada": {
+    "title": "Išvada",
+    "type": "concept",
+    "definition": "Teiginio dalis, nusakanti rezultatą.",
+    "intuition": "Tai, kas gaunasi pabaigoje.",
+    "formal": "Sąlyginio teiginio dalis, einanti po žodžio 'tai'.",
+    "related": [
+      "salyginis-teiginys"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "atvirkstinis-teiginys": {
+    "title": "Atvirkštinis teiginys",
+    "type": "concept",
+    "definition": "Teiginys, gautas sukeitus pradinio teiginio sąlygą su išvada.",
+    "intuition": "Pradinis: Jei šlapia, tai lijo. Atvirkštinis: Jei lijo, tai šlapia.",
+    "formal": "Jei turime teiginį A ⇒ B, tai jam atvirkštinis yra B ⇒ A.",
+    "related": [
+      "salyginis-teiginys"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "hipoteze": {
+    "title": "Hipotezė",
+    "type": "concept",
+    "definition": "Moksliškai pagrįstas spėjimas.",
+    "intuition": "Idėja, kurią dar reikia patikrinti.",
+    "formal": "Mokslinė prielaida, kurios teisingumas dar nėra įrodytas faktais ar loginiais argumentais.",
+    "related": [
+      "teorema",
+      "irodymas"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "irodymas": {
+    "title": "Įrodymas",
+    "type": "concept",
+    "definition": "Loginis teiginio pagrindimas.",
+    "intuition": "Kelias nuo to, ką žinome, iki naujos tiesos.",
+    "formal": "Nuosekli teisingų teiginių seka, rodanti įrodomojo teiginio teisingumą.",
+    "related": [
+      "teorema",
+      "aksioma"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "manymas-kad-atvirkstinis-visada-teisingas": {
+    "title": "Manymas, kad atvirkštinis teiginys visada teisingas",
+    "type": "mistake",
+    "definition": "Mokiniai painioja loginę priklausomybę su abipusiu ryšiu.",
+    "intuition": "Teigiama, kad jei pradinis teiginys teisingas, tai ir atvirkštinis privalo būti teisingas.",
+    "formal": "Atvirkštinį teiginį reikia tikrinti iš naujo arba įrodyti atskirai.",
+    "related": [
+      "atvirkstinis-teiginys"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
+  "painioja-salyga-su-isvada": {
+    "title": "Sąlygos ir išvados painiojimas",
+    "type": "mistake",
+    "definition": "Sakinių struktūra gali būti sudėtinga, ne visada naudojamas žodis 'Jei'.",
+    "intuition": "Neteisingai nurodoma, kas yra duota ir ką reikia rasti.",
+    "formal": "Sąlyga yra tai, kuo remiamės, išvada - tai, kas seka iš sąlygos.",
+    "related": [
+      "salyginis-teiginys",
+      "isvada"
+    ],
+    "topics": [
+      "matematiniai-teiginiai-ir-irodymai"
+    ]
+  },
   "olimpiada-07-concept-logic": {
     "title": "Olimpiadinė logika",
     "type": "concept",
-    "definition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
-    "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
-    "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
+    "definition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
+    "intuition": "",
+    "formal": "",
     "related": [],
     "topics": [
       "olimpiada-07-algebra",
-      "olimpiada-07-geometrija",
-      "olimpiada-07-kombinatorika",
-      "olimpiada-07-skaiciu-teorija"
+      "olimpiada-07-geometrija"
     ]
   },
   "olimpiada-07-concept-method": {
-    "title": "Įrodymo metodas",
+    "title": "Olimpiada 07 concept method",
     "type": "concept",
-    "definition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
-    "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
-    "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
     "related": [],
     "topics": [
       "olimpiada-07-algebra",
-      "olimpiada-07-geometrija",
+      "olimpiada-07-geometrija"
+    ]
+  },
+  "olimpiada-07-concept-divisibility": {
+    "title": "Dalumas",
+    "type": "concept",
+    "definition": "Savybė, kai skaičius dalijasi be liekanos.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-algebra"
+    ]
+  },
+  "olimpiada-07-concept-proportion": {
+    "title": "Olimpiada 07 concept proportion",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-algebra"
+    ]
+  },
+  "olimpiada-07-concept-triangle-sum": {
+    "title": "Kampų suma",
+    "type": "concept",
+    "definition": "Trikampio vidinių kampų suma lygi 180 laipsnių.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-geometrija"
+    ]
+  },
+  "olimpiada-07-concept-area": {
+    "title": "Olimpiada 07 concept area",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-geometrija"
+    ]
+  },
+  "sudeties-taisykle": {
+    "title": "Sudeties taisykle",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "kombinatorika-ir-binomas",
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "daugybos-taisykle": {
+    "title": "Daugybos taisykle",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "kombinatorika-ir-binomas",
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "dirichle-principas": {
+    "title": "Dirichlė principas",
+    "type": "concept",
+    "definition": "Principas, teigiantis, kad jei objektų daugiau nei vietų jiems, bent vienoje vietoje bus daugiau nei vienas objektas.",
+    "intuition": "Jei turime daugiau balandžių nei narvelių, bent viename narvelyje turės nutūpti bent du balandžiai.",
+    "formal": "",
+    "related": [
+      "irodymas"
+    ],
+    "topics": [
       "olimpiada-07-kombinatorika",
+      "olimpiada-10-strategijos-ir-irodymai"
+    ]
+  },
+  "keliniai-savoka": {
+    "title": "Kėliniai",
+    "type": "concept",
+    "definition": "Visi galimi $n$ elementų išrikiavimai.",
+    "intuition": "Knygų lentynoje perstūmimas.",
+    "formal": "$P_n = n!$.",
+    "related": [
+      "deriniai-savoka"
+    ],
+    "topics": [
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "deriniai-savoka": {
+    "title": "Deriniai",
+    "type": "concept",
+    "definition": "Pasirinkimas $k$ elementų iš $n$, kai tvarka nesvarbi.",
+    "intuition": "Grupės rinkimas.",
+    "formal": "$\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.",
+    "related": [
+      "gretiniai-savoka"
+    ],
+    "topics": [
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "gretiniai-savoka": {
+    "title": "Gretiniai",
+    "type": "concept",
+    "definition": "Pasirinkimas $k$ elementų iš $n$, kai tvarka svarbi.",
+    "intuition": "Prizininkų eilė.",
+    "formal": "$A_n^k = \\frac{n!}{(n-k)!}$.",
+    "related": [
+      "deriniai-savoka"
+    ],
+    "topics": [
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "invariantas-savoka": {
+    "title": "Invariantas",
+    "type": "concept",
+    "definition": "Dydis ar savybė, kuri nekinta atliekant tam tikrus veiksmus.",
+    "intuition": "Kas uždavinyje nesikeičia?",
+    "formal": "Savybė $I(S)$, kur $I(S_{t}) = I(S_{t+1})$ visiems pokyčiams.",
+    "related": [],
+    "topics": [
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "n-faktorialas": {
+    "title": "Faktorialas",
+    "type": "formula",
+    "definition": "Pirmųjų n natūraliųjų skaičių sandauga.",
+    "intuition": "Pirmųjų n natūraliųjų skaičių sandauga.",
+    "formal": "n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n",
+    "related": [
+      "keliniai-savoka"
+    ],
+    "topics": [
+      "olimpiada-07-kombinatorika"
+    ]
+  },
+  "deriniu-formule": {
+    "title": "Derinių formulė",
+    "type": "formula",
+    "definition": "Naudojama, kai tvarka nėra svarbi, tik pats elementų rinkinys.",
+    "intuition": "Naudojama, kai tvarka nėra svarbi, tik pats elementų rinkinys.",
+    "formal": "C_n^k = \\frac{n!}{k!(n-k)!}",
+    "related": [
+      "deriniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "dalumas": {
+    "title": "Dalumas",
+    "type": "concept",
+    "definition": "Sveikojo skaičiaus savybė dalytis iš kito skaičiaus be liekanos.",
+    "intuition": "",
+    "formal": "a dalijasi iš b, jei egzistuoja k, kad a = bk.",
+    "related": [
+      "pirminis-skaicius"
+    ],
+    "topics": [
       "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "dbd-savoka": {
+    "title": "Dbd savoka",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "mbk-savoka": {
+    "title": "Mbk savoka",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "skaitmenu-suma-savoka": {
+    "title": "Skaitmenu suma savoka",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "paritetas-savoka": {
+    "title": "Paritetas savoka",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "modulinė-aritmetika-savoka": {
+    "title": "Modulinė aritmetika savoka",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "dalumo-is-9-pozymis": {
+    "title": "Dalumo iš 9 požymis",
+    "type": "formula",
+    "definition": "Skaičius ir jo skaitmenų suma duoda tą pačią liekaną dalijant iš 9.",
+    "intuition": "Skaičius ir jo skaitmenų suma duoda tą pačią liekaną dalijant iš 9.",
+    "formal": "n \\equiv S(n) \\pmod 9",
+    "related": [],
+    "topics": [
+      "olimpiada-07-skaiciu-teorija"
+    ]
+  },
+  "stacioji-prizme": {
+    "title": "Stačioji prizmė",
+    "type": "concept",
+    "definition": "Kūnas su dviem lygiais pagrindais ir statmenomis šoninėmis sienomis.",
+    "intuition": "Dėžutė arba plyta.",
+    "formal": "Daugiasienis, kurio du pagrindai yra lygūs daugiakampiai, o šoninės briaunos statmenos pagrindams.",
+    "related": [
+      "turis",
+      "aukstine"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "taisyklingoji-piramide": {
+    "title": "Taisyklingoji piramidė",
+    "type": "concept",
+    "definition": "Piramidė, kurios pagrindas – taisyklingasis daugiakampis, o viršūnė projektuojasi į jo centrą.",
+    "intuition": "Egipto piramidė.",
+    "formal": "Piramidė, kurios pagrindas yra taisyklingasis daugiakampis, o visos šoninės briaunos lygios.",
+    "related": [
+      "apotema",
+      "aukstine"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "ritinys": {
+    "title": "Ritinys",
+    "type": "concept",
+    "definition": "Kūnas, kurio pagrindai yra skrituliai.",
+    "intuition": "Konservų dėžutė ar klijų tūbelė.",
+    "formal": "Sukinys, gautas sukant stačiakampį aplink vieną jo kraštinę.",
+    "related": [
+      "turis",
+      "apskritimas"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "kugis": {
+    "title": "Kūgis",
+    "type": "concept",
+    "definition": "Kūnas, turintis skritulio formos pagrindą ir viršūnę.",
+    "intuition": "Ledų vafliukas ar eismo kūgis.",
+    "formal": "Sukinys, gautas sukant statųjį trikampį aplink vieną jo statinį.",
+    "related": [
+      "sudaromoji",
+      "aukstine"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "sfera": {
+    "title": "Sfera",
+    "type": "concept",
+    "definition": "Visi erdvės taškai, nutolę nuo centro vienodu atstumu.",
+    "intuition": "Burbulo paviršius.",
+    "formal": "Paviršius, sudarytas iš visų erdvės taškų, nutolusių nuo taško O atstumu r.",
+    "related": [
+      "turis",
+      "spindulys"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "turis": {
+    "title": "Tūris",
+    "type": "concept",
+    "definition": "Dydis, nusakantis kūno užimamą erdvę.",
+    "intuition": "Kiek vandens telpa viduje.",
+    "formal": "Erdvės dalies, kurią užima kūnas, skaitinė charakteristika.",
+    "related": [
+      "pavirsiaus-plotas"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "apotema": {
+    "title": "Apotema",
+    "type": "concept",
+    "definition": "Taisyklingosios piramidės šoninės sienos aukštinė.",
+    "intuition": "Atstumas nuo viršūnės iki pagrindo kraštinės vidurio.",
+    "formal": "Taisyklingosios piramidės šoninės sienos (trikampio) aukštinė, nuleista iš viršūnės.",
+    "related": [
+      "taisyklingoji-piramide",
+      "aukstine"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "sudaromoji": {
+    "title": "Sudaromoji",
+    "type": "concept",
+    "definition": "Atkarpa, jungianti kūgio viršūnę su pagrindo apskritimo tašku.",
+    "intuition": "Kūgio 'šonas'.",
+    "formal": "Atkarpa, kuri sukdamasi aplink ašį sudaro kūgio šoninį paviršių.",
+    "related": [
+      "kugis",
+      "aukstine"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "pavirsiaus-plotas": {
+    "title": "Pavirsiaus plotas",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "aukstine": {
+    "title": "Aukstine",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "prizmes-turio-formule": {
+    "title": "Prizmės tūris",
+    "type": "formula",
+    "definition": "Tinka visoms stačiosioms prizmėms.",
+    "intuition": "Tinka visoms stačiosioms prizmėms.",
+    "formal": "V = S_{\\text{pagr}} \\cdot H",
+    "related": [
+      "stacioji-prizme",
+      "turis"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "piramides-turio-formule": {
+    "title": "Piramidės tūris",
+    "type": "formula",
+    "definition": "Piramidės tūris yra 1/3 prizmės tūrio.",
+    "intuition": "Piramidės tūris yra 1/3 prizmės tūrio.",
+    "formal": "V = \\frac{1}{3} S_{\\text{pagr}} \\cdot H",
+    "related": [
+      "taisyklingoji-piramide",
+      "turis"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "ritinio-turio-formule": {
+    "title": "Ritinio tūris",
+    "type": "formula",
+    "definition": "Skritulio plotas padaugintas iš aukščio.",
+    "intuition": "Skritulio plotas padaugintas iš aukščio.",
+    "formal": "V = \\pi r^2 H",
+    "related": [
+      "ritinys",
+      "turis"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "kugio-turio-formule": {
+    "title": "Kūgio tūris",
+    "type": "formula",
+    "definition": "Kūgio tūris yra 1/3 ritinio tūrio.",
+    "intuition": "Kūgio tūris yra 1/3 ritinio tūrio.",
+    "formal": "V = \\frac{1}{3} \\pi r^2 H",
+    "related": [
+      "kugis",
+      "turis"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "sferos-ploto-formule": {
+    "title": "Sferos paviršiaus plotas",
+    "type": "formula",
+    "definition": "Apskaičiuoja rutulio išorės plotą.",
+    "intuition": "Apskaičiuoja rutulio išorės plotą.",
+    "formal": "S = 4\\pi r^2",
+    "related": [
+      "sfera"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "painioja-aukstine-su-apotema": {
+    "title": "Painioja aukštinę su apotema",
+    "type": "mistake",
+    "definition": "Abi yra 'aukštinės', bet viena - kūno, kita - sienos.",
+    "intuition": "Tūrio formulėje naudoja apotemą h_a vietoj aukštinės H.",
+    "formal": "Tūriui visada reikia statmenos kūno aukštinės H, einančios į pagrindo centrą.",
+    "related": [
+      "aukstine",
+      "apotema"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
+    ]
+  },
+  "pamirsta-du-pagrindus-prizmeje": {
+    "title": "Pamiršta du pagrindus prizmėje",
+    "type": "mistake",
+    "definition": "Piramidė turi vieną pagrindą, todėl mokiniai susipainioja.",
+    "intuition": "Skaičiuodamas visą paviršiaus plotą prideda tik vieną pagrindą.",
+    "formal": "Prizmė visada turi du lygius pagrindus: S_visas = S_šon + 2 * S_pagr.",
+    "related": [
+      "stacioji-prizme",
+      "pavirsiaus-plotas"
+    ],
+    "topics": [
+      "erdves-figuru-pavirsiai-ir-turiai"
     ]
   },
   "olimpiada-08-concept-logic": {
@@ -2523,6 +3863,182 @@ export const concepts = {
       "olimpiada-08-algebra",
       "olimpiada-08-geometrija",
       "olimpiada-08-kombinatorika",
+      "olimpiada-08-skaiciu-teorija"
+    ]
+  },
+  "am-gm-nelygybe": {
+    "title": "AM-GM nelygybė",
+    "type": "method",
+    "definition": "Aritmetinio ir geometrinio vidurkių sąryšis.",
+    "intuition": "Skaičių vidurkis visada didesnis arba lygus jų geometriniam vidurkiui.",
+    "formal": "Neneigiamiems $a_1, a_2, \\dots, a_n$: $\\frac{a_1 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 \\dots a_n}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "pilnojo-kvadrato-isskyrimas": {
+    "title": "Pilnojo kvadrato išskyrimas",
+    "type": "method",
+    "definition": "Kvadratinio trynio pertvarkymas į binomo kvadratą ir konstantą.",
+    "intuition": "Užrašome $x^2 + bx + c$ kaip $(x+k)^2 + m$.",
+    "formal": "$ax^2 + bx + c = a(x + \\frac{b}{2a})^2 + (c - \\frac{b^2}{4a})$.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "diofanto-lygtys": {
+    "title": "Diofanto lygtys",
+    "type": "concept",
+    "definition": "Lygtys, kurių sprendinių ieškoma tik sveikųjų skaičių aibėje.",
+    "intuition": "Uždaviniai, kur atsakymai privalo būti sveiki skaičiai.",
+    "formal": "Lygtis $f(x_1, \\dots, x_n) = 0$, kur $x_i \\in \\mathbb{Z}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "vijeto-teorema-kvadratine": {
+    "title": "Vijeto teorema kvadratinei lygčiai",
+    "type": "formula",
+    "definition": "Sieja kvadratinės lygties šaknis su koeficientais.",
+    "intuition": "Sieja kvadratinės lygties šaknis su koeficientais.",
+    "formal": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 x_2 = \\frac{c}{a}",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "am-gm-formule": {
+    "title": "AM-GM nelygybė dviems skaičiams",
+    "type": "formula",
+    "definition": "Galioja neneigiamiems a ir b.",
+    "intuition": "Galioja neneigiamiems a ir b.",
+    "formal": "\\frac{a+b}{2} \\ge \\sqrt{ab}",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "am-gm-neigiami-skaiciai": {
+    "title": "AM-GM taikymas neigiamiems skaičiams",
+    "type": "mistake",
+    "definition": "Pamirštama esminė nelygybės galiojimo sąlyga.",
+    "intuition": "Taikyti AM-GM, kai skaičiai gali būti neigiami.",
+    "formal": "AM-GM galioja tik neneigiamiems skaičiams. Jei skaičiai neigiami, reikia dirbti su jų moduliais arba keisti ženklus.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-algebra"
+    ]
+  },
+  "cevos-teorema": {
+    "title": "Čevos teorema",
+    "type": "theorem",
+    "definition": "Sąlyga čevianėms susikirsti.",
+    "intuition": "Proporcijų lygybė 1.",
+    "formal": "Atkarpų santykių sandauga.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-geometrija"
+    ]
+  },
+  "menelajo-teorema": {
+    "title": "Menelajo teorema",
+    "type": "theorem",
+    "definition": "Sąlyga taškams būti vienoje tiesėje.",
+    "intuition": "Tiesė kerta trikampį.",
+    "formal": "Atkarpų santykių sandauga lygi 1.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-geometrija"
+    ]
+  },
+  "ptolemejo-teorema": {
+    "title": "Ptolemėjo teorema",
+    "type": "theorem",
+    "definition": "Įbrėžtinio keturkampio savybė.",
+    "intuition": "Kraštinių sandaugos lygi įstrižainių sandaugai.",
+    "formal": "AC*BD = AB*CD + BC*AD.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-geometrija"
+    ]
+  },
+  "herono-formule": {
+    "title": "Herono formulė",
+    "type": "formula",
+    "definition": "Plotas per kraštines.",
+    "intuition": "Plotas per kraštines.",
+    "formal": "S = \\sqrt{p(p-a)(p-b)(p-c)}",
+    "related": [],
+    "topics": [
+      "olimpiada-08-geometrija"
+    ]
+  },
+  "concept-pigeonhole": {
+    "title": "Grebėsto (Dirichlė) principas",
+    "type": "concept",
+    "definition": "Jei $n$ objektų dedami į $m$ dėžučių ir $n > m$, tai bent vienoje dėžutėje bus bent du objektai.",
+    "intuition": "Jei turite daugiau kojinių nei stalčių, bent viename stalčiuje turės būti daugiau nei viena kojinė.",
+    "formal": "Funkcija iš aibės $A$ į aibę $B$, kur $|A| > |B|$, negali būti injektyvi.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-kombinatorika"
+    ]
+  },
+  "concept-induction": {
+    "title": "Matematinė indukcija",
+    "type": "concept",
+    "definition": "Įrodymo būdas, susidedantis iš bazės patikrinimo ir indukcinio žingsnio.",
+    "intuition": "Jei nuvirsta pirma domino kaladėlė ir kiekviena griūdama nuverčia kitą, tai nuvirs visos.",
+    "formal": "Teiginys $P(n)$ teisingas visiems $n$, jei $P(1)$ teisingas ir iš $P(k)$ teisingumo seka $P(k+1)$ teisingumas.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-kombinatorika"
+    ]
+  },
+  "concept-geom-prob": {
+    "title": "Geometrinė tikimybė",
+    "type": "concept",
+    "definition": "Tikimybė, skaičiuojama kaip geometrinių sričių (ilgių, plotų) santykis.",
+    "intuition": "Tikimybė pataikyti į tam tikrą sritį priklauso nuo tos srities dydžio, palyginus su visa galima sritimi.",
+    "formal": "P(A) = m(A) / m(Ω), kur m yra geometrinis matas.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-kombinatorika"
+    ]
+  },
+  "concept-divisors": {
+    "title": "Daliklių skaičius ir suma",
+    "type": "concept",
+    "definition": "Formulės, leidžiančios rasti skaičiaus daliklių kiekį ir jų sumą naudojant pirminį skaidymą.",
+    "intuition": "Žinodami, iš kokių „plytų“ (pirminių skaičių) sudarytas skaičius, galime pasakyti viską apie jo daliklius.",
+    "formal": "Jei $n = p_1^{a_1} \\cdot p_2^{a_2} \\dots$, tai daliklių skaičius $\\tau(n) = (a_1+1)(a_2+1)\\dots$.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-skaiciu-teorija"
+    ]
+  },
+  "concept-bases": {
+    "title": "Skaičiavimo sistemos",
+    "type": "concept",
+    "definition": "Būdai užrašyti skaičius naudojant skirtingus pagrindus (pvz., dvejetainė, aštuntainė).",
+    "intuition": "Mes įpratę skaičiuoti dešimtimis, bet galime skaičiuoti ir dvejetais ar šešioliktukais.",
+    "formal": "Skaičiaus užrašas pagrindu $b$ yra $d_k b^k + \\dots + d_1 b^1 + d_0 b^0$, kur $0 \\le d_i < b$.",
+    "related": [],
+    "topics": [
+      "olimpiada-08-skaiciu-teorija"
+    ]
+  },
+  "concept-perfect-numbers": {
+    "title": "Tobulieji ir draugiškieji skaičiai",
+    "type": "concept",
+    "definition": "Skaičiai, pasižymintys ypatingomis daliklių sumos savybėmis.",
+    "intuition": "Tobulasis skaičius yra „lygus pats sau“ per savo daliklius.",
+    "formal": "Skaičius $n$ yra tobulas, jei $\\sigma(n) = 2n$. Skaičiai $n, m$ yra draugiški, jei $\\sigma(n)-n = m$ ir $\\sigma(m)-m = n$.",
+    "related": [],
+    "topics": [
       "olimpiada-08-skaiciu-teorija"
     ]
   },
@@ -2695,15 +4211,291 @@ export const concepts = {
       "olimpiada-09-algebra"
     ]
   },
+  "olimpiada-09-concept-cauchy-schwarz": {
+    "title": "Cauchy-Schwarz nelygybė",
+    "type": "concept",
+    "definition": "Dviejų skaičių rinkinių sandaugų sumos kvadratas neviršija tų rinkinių kvadratų sumų sandaugos.",
+    "intuition": "",
+    "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$",
+    "related": [],
+    "topics": [
+      "olimpiada-09-algebra"
+    ]
+  },
+  "olimpiada-09-concept-polynomial-roots": {
+    "title": "Daugianario šaknys",
+    "type": "concept",
+    "definition": "Reikšmės, kuriose daugianaris lygus nuliui.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-algebra"
+    ]
+  },
+  "olimpiada-09-concept-complex-intro": {
+    "title": "Kompleksiniai skaičiai",
+    "type": "concept",
+    "definition": "Skaičiai pavidalo $a + bi$, kur $i^2 = -1$.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-algebra"
+    ]
+  },
+  "formula-sophie-germain": {
+    "title": "Sophie Germain tapatybė",
+    "type": "formula",
+    "definition": "Naudinga skaidant daugianarius arba įrodant sudėtinių skaičių savybes.",
+    "intuition": "Naudinga skaidant daugianarius arba įrodant sudėtinių skaičių savybes.",
+    "formal": "a^4 + 4b^4 = (a^2 + 2b^2 + 2ab)(a^2 + 2b^2 - 2ab)",
+    "related": [],
+    "topics": [
+      "olimpiada-09-algebra"
+    ]
+  },
+  "formula-sum-cubes-id": {
+    "title": "Trijų kubų sumos tapatybė",
+    "type": "formula",
+    "definition": "Viena svarbiausių olimpiadinės algebros tapatybių.",
+    "intuition": "Viena svarbiausių olimpiadinės algebros tapatybių.",
+    "formal": "a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)",
+    "related": [],
+    "topics": [
+      "olimpiada-09-algebra"
+    ]
+  },
+  "concept-function-domain": {
+    "title": "Apibrėžimo sritis",
+    "type": "concept",
+    "definition": "Visų leistinų argumento reikšmių aibė.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-funkcijos"
+    ]
+  },
+  "concept-function-range": {
+    "title": "Reikšmių sritis",
+    "type": "concept",
+    "definition": "Visų galimų funkcijos reikšmių aibė.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-funkcijos"
+    ]
+  },
+  "concept-functional-equations": {
+    "title": "Funkcinės lygtys",
+    "type": "concept",
+    "definition": "Lygtys, kurių sprendiniai yra funkcijos.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-funkcijos"
+    ]
+  },
+  "concept-function-periodicity": {
+    "title": "Periodiškumas",
+    "type": "concept",
+    "definition": "Savybė, kai $f(x+T) = f(x)$ tam tikram $T \\neq 0$.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-09-funkcijos"
+    ]
+  },
   "olimpiada-09-concept-ceva": {
     "title": "Čevos teorema",
     "type": "concept",
     "definition": "Trikampio kraštinių atkarpų santykių sandauga, kai trys tiesės kertasi viename taške.",
     "intuition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, kertasi viename taške.",
     "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+    "related": [
+      "olimpiada-09-concept-menelaus"
+    ],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-concept-menelaus": {
+    "title": "Menelajaus teorema",
+    "type": "concept",
+    "definition": "Sąlyga, kada trys taškai ant trikampio kraštinių (ar jų tęsinių) yra vienoje tiesėje.",
+    "intuition": "Jei tiesė kerta trikampį, ji padalija kraštines taip, kad jų santykių sandauga lygi 1.",
+    "formal": "Taškai $F \\in AB$, $E \\in AC$ ir $D \\in BC$ (tęsinyje) yra vienoje tiesėje tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+    "related": [
+      "olimpiada-09-concept-ceva"
+    ],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-concept-panasumas": {
+    "title": "Trikampių panašumas",
+    "type": "concept",
+    "definition": "Trikampių savybė, kai jų kampai lygūs, o kraštinės proporcingos.",
+    "intuition": "Vienas trikampis yra kito trikampio padidinta arba sumažinta kopija.",
+    "formal": "Trikampiai $ABC$ ir $A'B'C'$ yra panašūs ($ABC \\sim A'B'C'$), jei $\\angle A = \\angle A'$, $\\angle B = \\angle B'$, $\\angle C = \\angle C'$ ir $AB/A'B' = BC/B'C' = AC/A'C' = k$.",
     "related": [],
     "topics": [
       "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-concept-apskritimo-galia": {
+    "title": "Taško galia apskritimo atžvilgiu",
+    "type": "concept",
+    "definition": "Dydis $PA \\cdot PB$, kuris nekinta visoms kertamosioms per tašką $P$.",
+    "intuition": "Jei iš taško $P$ nubrėšime dvi kertamąsias, kertančias apskritimą taškuose $A, B$ ir $C, D$, tai $PA \\cdot PB = PC \\cdot PD$.",
+    "formal": "Taško $P$ galia apskritimo, kurio spindulys $R$ ir centras $O$, atžvilgiu yra $d^2 - R^2$, kur $d = OP$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-concept-ibreztinis-keturkampis": {
+    "title": "Įbrėžtinis keturkampis",
+    "type": "concept",
+    "definition": "Keturkampis, kurio visos viršūnės priklauso vienam apskritimui.",
+    "intuition": "Keturkampį galima įbrėžti į apskritimą tada ir tik tada, kai jo priešingų kampų suma lygi $180^\\circ$.",
+    "formal": "Keturkampis $ABCD$ yra įbrėžtinis tada ir tik tada, kai $\\angle A + \\angle C = \\angle B + \\angle D = 180^\\circ$.",
+    "related": [
+      "olimpiada-09-concept-ptolemy"
+    ],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-concept-ptolemy": {
+    "title": "Ptolemėjo teorema",
+    "type": "concept",
+    "definition": "Ryšys tarp įbrėžtinio keturkampio kraštinių ir įstrižainių.",
+    "intuition": "Įstrižainių sandauga lygi priešingų kraštinių sandaugų sumai.",
+    "formal": "Įbrėžtiniam keturkampiui $ABCD$ galioja: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
+    "related": [
+      "olimpiada-09-concept-ibreztinis-keturkampis"
+    ],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-formula-heron": {
+    "title": "Herono formulė",
+    "type": "formula",
+    "definition": "Leidžia apskaičiuoti trikampio plotą žinant tik jo kraštinių ilgius.",
+    "intuition": "Leidžia apskaičiuoti trikampio plotą žinant tik jo kraštinių ilgius.",
+    "formal": "S = \\sqrt{p(p-a)(p-b)(p-c)}",
+    "related": [],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "olimpiada-09-formula-brahmagupta": {
+    "title": "Brahmaguptos formulė",
+    "type": "formula",
+    "definition": "Herono formulės apibendrinimas įbrėžtiniams keturkampiams.",
+    "intuition": "Herono formulės apibendrinimas įbrėžtiniams keturkampiams.",
+    "formal": "S = \\sqrt{(p-a)(p-b)(p-c)(p-d)}",
+    "related": [],
+    "topics": [
+      "olimpiada-09-geometrija"
+    ]
+  },
+  "ol-09-comb-concept-daugyba": {
+    "title": "Daugybos taisyklė",
+    "type": "concept",
+    "definition": "Pasirinkimų būdų dauginimas, kai atliekami nepriklausomi veiksmai.",
+    "intuition": "Jei turiu 3 marškinius ir 2 kelnes, iš viso turiu 3x2=6 aprangos derinius.",
+    "formal": "Jei aibė $A$ turi $n$ elementų, o aibė $B$ turi $m$ elementų, tai porų $(a,b)$ skaičius yra $n \\cdot m$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-concept-keliniai": {
+    "title": "Kėliniai",
+    "type": "concept",
+    "definition": "$n$ elementų sudėliojimo į eilę būdų skaičius.",
+    "intuition": "Kiek yra būdų surikiuoti $n$ žmonių į eilę?",
+    "formal": "$P_n = n! = 1 \\cdot 2 \\cdot 3 \\dots n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-concept-gretiniai": {
+    "title": "Gretiniai",
+    "type": "concept",
+    "definition": "Pasirinkimas $k$ elementų iš $n$ ir jų surikiavimas.",
+    "intuition": "Svarbu ir KĄ pasirenkame, ir KOKIA TVARKA surikiuojame.",
+    "formal": "$A_n^k = \\frac{n!}{(n-k)!}$.",
+    "related": [
+      "ol-09-comb-concept-deriniai"
+    ],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-concept-deriniai": {
+    "title": "Deriniai",
+    "type": "concept",
+    "definition": "Pasirinkimas $k$ elementų iš $n$, kai tvarka nesvarbi.",
+    "intuition": "Svarbu tik KĄ pasirenkame (pavyzdžiui, krepšinio komandą).",
+    "formal": "$C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.",
+    "related": [
+      "ol-09-comb-concept-gretiniai"
+    ],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-concept-dirichle": {
+    "title": "Dirichlė principas",
+    "type": "concept",
+    "definition": "Teiginys apie objektų paskirstymą dėžutėse.",
+    "intuition": "Jei triušių daugiau nei narvelių, bent viename narvelyje gyvena bent du triušiai.",
+    "formal": "Jei $m$ objektų suskirstomi į $n$ aibių ir $m > n$, tai bent viena aibė turi bent du elementus.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-concept-inkliuzija": {
+    "title": "Inkliuzijos-ekskliuzijos principas",
+    "type": "concept",
+    "definition": "Aibių sąjungos elementų skaičiavimo taisyklė.",
+    "intuition": "Skaičiuodami elementus dviejose aibėse, turime atimti jų sankirtą, kad jos neįskaitytume du kartus.",
+    "formal": "$|A \\cup B| = |A| + |B| - |A \\cap B|$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-formula-keliniai": {
+    "title": "Faktorialas (Kėliniai)",
+    "type": "formula",
+    "definition": "Naudojama skaičiuojant visų $n$ elementų perstatymus.",
+    "intuition": "Naudojama skaičiuojant visų $n$ elementų perstatymus.",
+    "formal": "n! = n \\cdot (n-1) \\dots 1",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
+    ]
+  },
+  "ol-09-comb-formula-deriniai": {
+    "title": "Derinių skaičius (Niutono binomas)",
+    "type": "formula",
+    "definition": "Naudojama, kai reikia pasirinkti $k$ elementų iš $n$ be tvarkos.",
+    "intuition": "Naudojama, kai reikia pasirinkti $k$ elementų iš $n$ be tvarkos.",
+    "formal": "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+    "related": [],
+    "topics": [
+      "olimpiada-09-kombinatorika"
     ]
   },
   "olimpiada-09-concept-euler-totient": {
@@ -2730,12 +4522,671 @@ export const concepts = {
       "olimpiada-09-skaiciu-teorija"
     ]
   },
+  "olimpiada-09-concept-legendre": {
+    "title": "Legendre formulė",
+    "type": "concept",
+    "definition": "Formulė, nurodanti pirminio skaičiaus $p$ laipsnį skaičiaus $n!$ skaidinyje.",
+    "intuition": "Suskaičiuoja, kiek kartų $p$ pasirodo kaip faktorius visuose skaičiuose nuo 1 iki $n$.",
+    "formal": "$v_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-09-concept-chinese-remainder": {
+    "title": "Kinų liekanų teorema",
+    "type": "concept",
+    "definition": "Teorema apie tiesinių palyginimų sistemų sprendinių egzistavimą.",
+    "intuition": "Leidžia rasti skaičių, kuris duoda nurodytas liekanas dalijant iš tarpusavyje pirminių modulių.",
+    "formal": "Jei $m_1, m_2, \\dots, m_n$ yra poromis tarpusavyje pirminiai, tai sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-09-concept-divisibility-rules": {
+    "title": "Dalumo požymiai",
+    "type": "concept",
+    "definition": "Taisyklės, leidžiančios greitai nustatyti, ar skaičius dalijasi iš kito skaičiaus.",
+    "intuition": "Naudoja skaitmenų savybes (sumą, alternuojančią sumą ir kt.).",
+    "formal": "Pavyzdžiui, skaičius dalijasi iš 11 tada ir tik tada, kai jo skaitmenų alternuojanti suma dalijasi iš 11.",
+    "related": [],
+    "topics": [
+      "olimpiada-09-skaiciu-teorija"
+    ]
+  },
+  "fibonacio-seka": {
+    "title": "Fibonačio seka",
+    "type": "concept",
+    "definition": "Seka, kurios kiekvienas narys lygus dviejų prieš jį einančių narių sumai.",
+    "intuition": "Pradedame nuo 1 ir 1, tada sudedame paskutinius du: 1+1=2, 1+2=3, 2+3=5...",
+    "formal": "$F_1=1, F_2=1, F_n = F_{n-1} + F_{n-2}$, kai $n \\in \\mathbb{N}, n > 2$.",
+    "related": [
+      "rekurentine-formule",
+      "aukso-pjuvis"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "aukso-pjuvis": {
+    "title": "Aukso pjūvis",
+    "type": "concept",
+    "definition": "Proporcija, kai didesnės dalies santykis su mažesne lygus visumos santykiui su didesne.",
+    "intuition": "Tai pati estetiškiausia proporcija gamtoje ir mene.",
+    "formal": "",
+    "related": [
+      "aukso-pjuvio-skaicius",
+      "fibonacio-seka"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "aukso-pjuvio-skaicius": {
+    "title": "Aukso pjūvio skaičius",
+    "type": "concept",
+    "definition": "Iracionalusis skaičius $\\phi = \\frac{1+\\sqrt{5}}{2}$.",
+    "intuition": "Maždaug 1,618.",
+    "formal": "Lygties $x^2 - x - 1 = 0$ teigiamas sprendinys.",
+    "related": [
+      "aukso-pjuvis"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "proporcingoji-dalyba": {
+    "title": "Proporcingoji dalyba",
+    "type": "method",
+    "definition": "Dydžio skirstymas dalimis, kurios proporcingos nurodytiems skaičiams.",
+    "intuition": "Jei daliname santykiu 2:3, tai viena dalis gaus 2 'porcijas', kita 3.",
+    "formal": "",
+    "related": [
+      "aukso-pjuvis"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "rekurentine-formule": {
+    "title": "Rekurentinė formulė",
+    "type": "notation",
+    "definition": "Taisyklė, apibrėžianti sekos narį per prieš jį einančius narius.",
+    "intuition": "Žingsnis po žingsnio taisyklė.",
+    "formal": "",
+    "related": [
+      "fibonacio-seka"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "sekos-desningumas": {
+    "title": "Sekos dėsningumas",
+    "type": "concept",
+    "definition": "Taisyklė, pagal kurią sudaromi sekos nariai.",
+    "intuition": "Logika, jungianti skaičius į eilę.",
+    "formal": "",
+    "related": [
+      "fibonacio-seka"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "aukso-pjuvio-seka": {
+    "title": "Aukso pjūvio seka",
+    "type": "concept",
+    "definition": "Seka, sudaryta iš aukso pjūvio skaičiaus $\\phi$ laipsnių.",
+    "intuition": "Seka $\\phi^1, \\phi^2, \\phi^3, ...$, kurios nariai turi panašias savybes kaip Fibonačio seka.",
+    "formal": "$a_n = \\phi^n$.",
+    "related": [
+      "aukso-pjuvis",
+      "fibonacio-seka"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "skaiciaus-skaidymas-proporcingai": {
+    "title": "Skaičiaus skaidymas proporcingai",
+    "type": "method",
+    "definition": "Skaičiaus padalinimas į dalis pagal nurodytą santykį.",
+    "intuition": "Sudedame dalis, randame vienos dalies vertę.",
+    "formal": "",
+    "related": [
+      "proporcingoji-dalyba"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "fibonacio-formule": {
+    "title": "Fibonačio sekos rekurentinė formulė",
+    "type": "formula",
+    "definition": "Kiekvienas narys yra dviejų ankstesnių narių suma.",
+    "intuition": "Kiekvienas narys yra dviejų ankstesnių narių suma.",
+    "formal": "F_n = F_{n-1} + F_{n-2}",
+    "related": [
+      "fibonacio-seka"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "aukso-pjuvio-reiksme": {
+    "title": "Aukso pjūvio reikšmė",
+    "type": "formula",
+    "definition": "Tikslioji aukso pjūvio skaičiaus reikšmė.",
+    "intuition": "Tikslioji aukso pjūvio skaičiaus reikšmė.",
+    "formal": "\\phi = \\frac{1 + \\sqrt{5}}{2}",
+    "related": [
+      "aukso-pjuvio-skaicius"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "aukso-pjuvio-sarysis": {
+    "title": "Aukso pjūvio pagrindinis sąryšis",
+    "type": "formula",
+    "definition": "Ši lygybė parodo, kad aukso pjūvio kvadratas yra lygus pačiam skaičiui plius vienetas.",
+    "intuition": "Ši lygybė parodo, kad aukso pjūvio kvadratas yra lygus pačiam skaičiui plius vienetas.",
+    "formal": "\\phi^2 = \\phi + 1",
+    "related": [
+      "aukso-pjuvis"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "painioja-aukso-pjuvi-su-vidurkiu": {
+    "title": "Painioja aukso pjūvį su vidurkiu",
+    "type": "mistake",
+    "definition": "Žodis 'pjūvis' gali asocijuotis su pusiau dalijimu.",
+    "intuition": "Mokinys mano, kad aukso pjūvis reiškia padalijimą pusiau.",
+    "formal": "Aukso pjūvis yra apytiksliai santykiu 1,618:1, o ne 1:1.",
+    "related": [
+      "aukso-pjuvis"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "neteisingas-rekurentinis-skaiciavimas": {
+    "title": "Neteisingas rekurentinis skaičiavimas",
+    "type": "mistake",
+    "definition": "Dėmesio klaida skaičiuojant ilgą seką.",
+    "intuition": "Praleidžiamas narys arba neteisingai sudedama sekoje.",
+    "formal": "Visada pasitikrinkite paskutines dvi sumas.",
+    "related": [
+      "rekurentine-formule"
+    ],
+    "topics": [
+      "desningumai-fibonacio-seka-ir-aukso-pjuvis"
+    ]
+  },
+  "panasios-figuros": {
+    "title": "Panašios figūros",
+    "type": "concept",
+    "definition": "Figūros, turinčios tą pačią formą, bet nebūtinai tą patį dydį.",
+    "intuition": "Tai tarsi mastelio pakeitimas – didinimas arba mažinimas.",
+    "formal": "",
+    "related": [
+      "panasumo-koeficientas"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "panasumo-koeficientas": {
+    "title": "Panašumo koeficientas",
+    "type": "concept",
+    "definition": "Atitinkamų kraštinių ilgių santykis.",
+    "intuition": "",
+    "formal": "",
+    "related": [
+      "perimetru-santykis",
+      "plotu-santykis"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukrastine": {
+    "title": "Pusiaukraštinė",
+    "type": "concept",
+    "definition": "Atkarpa nuo viršūnės iki kraštinės vidurio.",
+    "intuition": "Ji 'perpjauna' kraštinę per pusę.",
+    "formal": "",
+    "related": [
+      "pusiaukrastiniu-sankirta"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukampine": {
+    "title": "Pusiaukampinė",
+    "type": "concept",
+    "definition": "Atkarpa, dalijanti kampą į dvi lygias dalis.",
+    "intuition": "Ji 'perpjauna' kampą per pusę.",
+    "formal": "",
+    "related": [
+      "pusiaukampiniu-savybe"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukrastiniu-sankirta": {
+    "title": "Pusiaukrašinių sankirtos taškas",
+    "type": "concept",
+    "definition": "Taškas, kuriame kertasi visos pusiaukraštinės (svorio centras).",
+    "intuition": "Šiame taške trikampis išlaiko pusiausvyrą.",
+    "formal": "",
+    "related": [
+      "pusiaukrastine"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukampiniu-savybe": {
+    "title": "Pusiaukampinės savybė",
+    "type": "theorem",
+    "definition": "Santykyje esančių atkarpų lygybė trikampyje.",
+    "intuition": "",
+    "formal": "$\\frac{x}{y} = \\frac{a}{b}$, kur x ir y yra atkarpas, į kurias pusiaukampinė padalijo kraštinę.",
+    "related": [
+      "pusiaukampine"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "perimetru-santykis": {
+    "title": "Perimetrų santykis",
+    "type": "property",
+    "definition": "Panašių figūrų perimetrų santykis lygus k.",
+    "intuition": "",
+    "formal": "",
+    "related": [
+      "panasumo-koeficientas"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "plotu-santykis": {
+    "title": "Plotų santykis",
+    "type": "property",
+    "definition": "Panašių figūrų plotų santykis lygus k^2.",
+    "intuition": "",
+    "formal": "",
+    "related": [
+      "panasumo-koeficientas"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "perimetru-panasumo-formule": {
+    "title": "Perimetrų santykio formulė",
+    "type": "formula",
+    "definition": "Panašių figūrų perimetrai sutinka kaip jų kraštinės.",
+    "intuition": "Panašių figūrų perimetrai sutinka kaip jų kraštinės.",
+    "formal": "\\frac{P_1}{P_2} = k",
+    "related": [],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "plotu-panasumo-formule": {
+    "title": "Plotų santykio formulė",
+    "type": "formula",
+    "definition": "Panašių figūrų plotai sutinka kaip kraštinių kvadratai.",
+    "intuition": "Panašių figūrų plotai sutinka kaip kraštinių kvadratai.",
+    "formal": "\\frac{S_1}{S_2} = k^2",
+    "related": [],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukampines-savybe-formule": {
+    "title": "Trikampio pusiaukampinės savybė",
+    "type": "formula",
+    "definition": "Pusiaukampinė dalija kraštinę į atkarpas c ir d, proporcingas prie jų esančioms kraštinėms a ir b.",
+    "intuition": "Pusiaukampinė dalija kraštinę į atkarpas c ir d, proporcingas prie jų esančioms kraštinėms a ir b.",
+    "formal": "\\frac{a}{b} = \\frac{c}{d}",
+    "related": [],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "pusiaukrastiniu-savybe-formule": {
+    "title": "Pusiaukraštinių dalijimo savybė",
+    "type": "formula",
+    "definition": "Sankirtos taškas dalija pusiaukraštinę į dvi dalis, kurių viena dvigubai ilgesnė už kitą (ilgesnė dalis prie viršūnės).",
+    "intuition": "Sankirtos taškas dalija pusiaukraštinę į dvi dalis, kurių viena dvigubai ilgesnė už kitą (ilgesnė dalis prie viršūnės).",
+    "formal": "2:1",
+    "related": [],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "plotu-santykis-be-kvadrato": {
+    "title": "Pamiršta pakelti k kvadratu skaičiuojant plotą",
+    "type": "mistake",
+    "definition": "Intuicija klaidina, nes perimetras kinta tiesiškai.",
+    "intuition": "Sako, kad jei kraštinė 2 kartus didesnė, tai ir plotas 2 kartus didesnis.",
+    "formal": "Plotas kinta kvadratu: $S_{naujas} = k^2 \\cdot S_{senas}$.",
+    "related": [
+      "plotu-santykis"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "painioja-pusiaukrastine-su-aukstine": {
+    "title": "Painioja pusiaukraštinę su aukštine",
+    "type": "mistake",
+    "definition": "Lygiašoniame trikampyje jos sutampa, todėl mokiniai apibendrina visais atvejais.",
+    "intuition": "Mano, kad pusiaukraštinė visada statmena kraštinei.",
+    "formal": "Pusiaukraštinė tik dalija kraštinę pusiau, bet nebūtinai yra statmena.",
+    "related": [
+      "pusiaukrastine"
+    ],
+    "topics": [
+      "figuru-panasumas-ir-trikampio-elementai"
+    ]
+  },
+  "ibreztinis-daugiakampis": {
+    "title": "Įbrėžtinis daugiakampis",
+    "type": "concept",
+    "definition": "Daugiakampis, kurio visos viršūnės yra ant apskritimo.",
+    "intuition": "Daugiakampis yra apskritimo 'viduje'.",
+    "formal": "",
+    "related": [
+      "apibreztinis-apskritimas"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "apibreztinis-daugiakampis": {
+    "title": "Apibrėžtinis daugiakampis",
+    "type": "concept",
+    "definition": "Daugiakampis, kurio visos kraštinės liečia apskritimą.",
+    "intuition": "Apskritimas yra daugiakampio 'viduje'.",
+    "formal": "",
+    "related": [
+      "ibreztinis-apskritimas"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "ibreztinis-apskritimas": {
+    "title": "Įbrėžtinis apskritimas",
+    "type": "concept",
+    "definition": "Apskritimas, liečiantis visas daugiakampio kraštines.",
+    "intuition": "",
+    "formal": "",
+    "related": [
+      "ibreztinio-apskritimo-centras"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "apibreztinis-apskritimas": {
+    "title": "Apibrėžtinis apskritimas",
+    "type": "concept",
+    "definition": "Apskritimas, einantis per visas daugiakampio viršūnes.",
+    "intuition": "",
+    "formal": "",
+    "related": [
+      "apibreztinio-apskritimo-centras"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "ibreztinio-apskritimo-centras": {
+    "title": "Įbrėžtinio apskritimo centras",
+    "type": "concept",
+    "definition": "Pusiaukampinių susikirtimo taškas.",
+    "intuition": "Taškas, vienodai nutolęs nuo visų kraštinių.",
+    "formal": "",
+    "related": [
+      "pusiaukampine"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "apibreztinio-apskritimo-centras": {
+    "title": "Apibrėžtinio apskritimo centras",
+    "type": "concept",
+    "definition": "Vidurio statmenų susikirtimo taškas.",
+    "intuition": "Taškas, vienodai nutolęs nuo visų viršūnių.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "ibreztinis-keturkampis": {
+    "title": "Įbrėžtinis keturkampis",
+    "type": "concept",
+    "definition": "Keturkampis, kurio priešingų kampų suma lygi 180 laipsnių.",
+    "intuition": "",
+    "formal": "$\\alpha + \\gamma = \\beta + \\delta = 180^\\circ$.",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "apibreztinis-keturkampis": {
+    "title": "Apibrėžtinis keturkampis",
+    "type": "concept",
+    "definition": "Keturkampis, kurio priešingų kraštinių sumos lygios.",
+    "intuition": "",
+    "formal": "$a + c = b + d$.",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "trikampio-ploto-r-formule": {
+    "title": "Trikampio ploto formulė per įbrėžtinį spindulį",
+    "type": "formula",
+    "definition": "Ši formulė sieja plotą, perimetrą ir įbrėžtinį spindulį.",
+    "intuition": "Ši formulė sieja plotą, perimetrą ir įbrėžtinį spindulį.",
+    "formal": "S = p \\cdot r",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "trikampio-ploto-R-formule": {
+    "title": "Trikampio ploto formulė per apibrėžtinį spindulį",
+    "type": "formula",
+    "definition": "Ši formulė sieja plotą, kraštines ir apibrėžtinį spindulį.",
+    "intuition": "Ši formulė sieja plotą, kraštines ir apibrėžtinį spindulį.",
+    "formal": "S = \\frac{abc}{4R}",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "ibreztinio-keturkampio-savybe": {
+    "title": "Įbrėžtinio keturkampio kampų savybė",
+    "type": "formula",
+    "definition": "Priešingų kampų suma įbrėžtiniame keturkampyje visada lygi 180 laipsnių.",
+    "intuition": "Priešingų kampų suma įbrėžtiniame keturkampyje visada lygi 180 laipsnių.",
+    "formal": "\\angle A + \\angle C = 180^\\circ",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "apibreztinio-keturkampio-savybe": {
+    "title": "Apibrėžtinio keturkampio kraštinių savybė",
+    "type": "formula",
+    "definition": "Priešingų kraštinių ilgių sumos apibrėžtiniame keturkampyje yra lygios.",
+    "intuition": "Priešingų kraštinių ilgių sumos apibrėžtiniame keturkampyje yra lygios.",
+    "formal": "a + c = b + d",
+    "related": [],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "painioja-centrus-pusiaukrastines-ir-pusiaukampines": {
+    "title": "Painioja apskritimų centrų apibrėžimus",
+    "type": "mistake",
+    "definition": "Abi sąvokos panašios, abi susijusios su sankirtos taškais.",
+    "intuition": "Mano, kad įbrėžtinio apskritimo centras yra vidurio statmenų sankirta.",
+    "formal": "Įbrėžtinis (r) - pusiaukampinės (kampas liečia kraštines). Apibrėžtinis (R) - vidurio statmenys.",
+    "related": [
+      "ibreztinio-apskritimo-centras",
+      "apibreztinio-apskritimo-centras"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "keturkampio-savybiu-sumaisymas": {
+    "title": "Sumažo keturkampių savybes",
+    "type": "mistake",
+    "definition": "Abi taisyklės teigia kažką apie priešingus elementus.",
+    "intuition": "Taikomą kampų taisyklę kraštinėms arba atvirkščiai.",
+    "formal": "Įbrėžtas (viduj) - kampai. Apibrėžtas (išorėj) - kraštinės.",
+    "related": [
+      "ibreztinis-keturkampis",
+      "apibreztinis-keturkampis"
+    ],
+    "topics": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ]
+  },
+  "olimpiada-10-concept-vieta": {
+    "title": "Vietos formulės",
+    "type": "concept",
+    "definition": "Sąryšiai tarp daugianario šaknų ir jo koeficientų.",
+    "intuition": "Leidžia rasti šaknų sumas ir sandaugas neišsprendus pačios lygties.",
+    "formal": "Daugianariui $P(x) = a_n x^n + \\dots + a_0$ šaknų suma yra $-a_{n-1}/a_n$, o sandauga $(-1)^n a_0/a_n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-algebra"
+    ]
+  },
+  "olimpiada-10-concept-am-gm": {
+    "title": "AM-GM nelygybė",
+    "type": "concept",
+    "definition": "Aritmetinio ir geometrinio vidurkių nelygybė.",
+    "intuition": "Skaičių vidurkis visada yra ne mažesnis už jų 'geometrinį vidurkį' (šaknį iš sandaugos).",
+    "formal": "Neneigiamiems skaičiams $a_1, a_2, \\dots, a_n$: $\frac{a_1+a_2+\\dots+a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-algebra",
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-cauchy-schwarz": {
+    "title": "Koši-Švarco nelygybė",
+    "type": "concept",
+    "definition": "Nelygybė, susiejanti sumas ir kvadratų sumas.",
+    "intuition": "Skaliarinė sandauga yra ne didesnė už ilgių sandaugą.",
+    "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$.",
+    "related": [
+      "olimpiada-10-concept-titus-lemma"
+    ],
+    "topics": [
+      "olimpiada-10-algebra",
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-remainder-theorem": {
+    "title": "Bezu teorema (Liekanų teorema)",
+    "type": "concept",
+    "definition": "Daugianario $P(x)$ liekana dalijant iš $x-a$ yra lygi $P(a)$.",
+    "intuition": "Leidžia rasti liekaną tiesiog įstačius skaičių į daugianarį.",
+    "formal": "$P(x) = (x-a)Q(x) + P(a)$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-algebra"
+    ]
+  },
+  "olimpiada-10-concept-symmetric-polynomials": {
+    "title": "Simetriniai daugianariai",
+    "type": "concept",
+    "definition": "Daugianariai, kurie nekinta sukeitus bet kuriuos du kintamuosius vietomis.",
+    "intuition": "Visas simetrines išraiškas galima užrašyti per pagrindinius simetrinius daugianarius (šaknų sumas ir sandaugas).",
+    "formal": "",
+    "related": [
+      "olimpiada-10-concept-vieta"
+    ],
+    "topics": [
+      "olimpiada-10-algebra"
+    ]
+  },
   "olimpiada-10-concept-inversion": {
     "title": "Inversija apskritimo atžvilgiu",
     "type": "concept",
     "definition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\cdot OP' = R^2$.",
     "intuition": "Erdvės transformacija, kuri tieses ir apskritimus paverčia kitais apskritimais ar tiesėmis.",
     "formal": "Atvaizdis $\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\in OP$ ir $OP \\cdot OP' = R^2$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-geometrija"
+    ]
+  },
+  "concept-ceva-teorema": {
+    "title": "Čevos teorema",
+    "type": "theorem",
+    "definition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, susikerta viename taške.",
+    "intuition": "",
+    "formal": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$",
+    "related": [
+      "concept-menelajaus-teorema"
+    ],
+    "topics": [
+      "olimpiada-10-geometrija"
+    ]
+  },
+  "concept-menelajaus-teorema": {
+    "title": "Menelajaus teorema",
+    "type": "theorem",
+    "definition": "Sąlyga, kada trys taškai ant trikampio kraštinių (ar jų tęsinių) yra vienoje tiesėje.",
+    "intuition": "",
+    "formal": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$",
+    "related": [
+      "concept-ceva-teorema"
+    ],
+    "topics": [
+      "olimpiada-10-geometrija"
+    ]
+  },
+  "concept-tasko-galia": {
+    "title": "Taško galia apskritimo atžvilgiu",
+    "type": "concept",
+    "definition": "Pastovus dydis ^2 - R^2$, būdingas taškui ir apskritimui.",
+    "intuition": "Bet kuriai kirtei per tašką P, atkarpų nuo P iki susikirtimo su apskritimu sandauga yra pastovi.",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-10-geometrija"
+    ]
+  },
+  "concept-spiralinis-panasumas": {
+    "title": "Spiralinis panašumas",
+    "type": "concept",
+    "definition": "Posūkio ir homotetijos kompozicija turinti bendrą centrą.",
+    "intuition": "Transformacija, kuri ne tik didina/mažina objektą, bet ir jį pasuka.",
+    "formal": "",
     "related": [],
     "topics": [
       "olimpiada-10-geometrija"
@@ -2752,12 +5203,115 @@ export const concepts = {
       "olimpiada-10-kombinatorika"
     ]
   },
+  "concept-deriniai": {
+    "title": "Deriniai",
+    "type": "concept",
+    "definition": "Pasirinkimai iš n elementų po k, kai tvarka nesvarbi.",
+    "intuition": "",
+    "formal": "^k = \\frac{n!}{k!(n-k)!}$",
+    "related": [],
+    "topics": [
+      "olimpiada-10-kombinatorika"
+    ]
+  },
+  "concept-keliniai-su-pasikartojimais": {
+    "title": "Kėliniai su pasikartojimais",
+    "type": "concept",
+    "definition": "Objektų išdėstymas eilėje, kai kai kurie objektai yra identiški.",
+    "intuition": "",
+    "formal": "$\\frac{n!}{n_1! n_2! \\dots n_k!}$",
+    "related": [],
+    "topics": [
+      "olimpiada-10-kombinatorika"
+    ]
+  },
+  "concept-ijungimo-isjungimo-principas": {
+    "title": "Įjungimo-išjungimo principas",
+    "type": "method",
+    "definition": "Metodas aibių sąjungos elementų skaičiui rasti atimant perteklines sankirtas.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-10-kombinatorika"
+    ]
+  },
+  "concept-katalano-skaiciai": {
+    "title": "Katalano skaičiai",
+    "type": "concept",
+    "definition": "Skaičių seka, aprašanti taisyklingas skliaustelių sekas, trikampių trianguliacijas ir kt.",
+    "intuition": "",
+    "formal": " = \\frac{1}{n+1} \\binom{2n}{n}$",
+    "related": [],
+    "topics": [
+      "olimpiada-10-kombinatorika"
+    ]
+  },
   "olimpiada-10-concept-titus-lemma": {
     "title": "Titu lema (Sedrakiano nelygybė)",
     "type": "concept",
-    "definition": "Cauchy-Schwarz nelygybės trupmeninė forma.",
-    "intuition": "Patogi nelygybių su trupmenomis įrodymo forma, leidžianti sudėti vardiklius.",
-    "formal": "Realiems skaičiams $a_1, a_2, \\dots, a_n$ ir teigiamiems skaičiams $b_1, b_2, \\dots, b_n$ galioja: $\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum_{i=1}^n a_i)^2}{\\sum_{i=1}^n b_i}$.",
+    "definition": "Koši-Švarco nelygybės trupmeninė forma.",
+    "intuition": "Leidžia 'sujungti' vardiklius nelygybėse su kvadratų trupmenomis.",
+    "formal": "$\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum a_i)^2}{\\sum b_i}$ kai $b_i > 0$.",
+    "related": [
+      "olimpiada-10-concept-cauchy-schwarz"
+    ],
+    "topics": [
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-jensen": {
+    "title": "Jenseno nelygybė",
+    "type": "concept",
+    "definition": "Nelygybė išgaubtosioms funkcijoms.",
+    "intuition": "Išgaubtos funkcijos (convex) vidurkis yra didesnis už reikšmę vidurkio taške.",
+    "formal": "Išgaubtai funkcijai $f$: $f(\frac{x_1+\\dots+x_n}{n}) \\le \frac{f(x_1)+\\dots+f(x_n)}{n}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-schur": {
+    "title": "Šūro nelygybė",
+    "type": "concept",
+    "definition": "Simetrinė nelygybė trims kintamiesiems.",
+    "intuition": "Susieja laipsnių sumas su mišriomis sandaugomis.",
+    "formal": "$\\sum a^r(a-b)(a-c) \\ge 0$ neneigiamiems $a, b, c$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-rearrangement": {
+    "title": "Pertvarkymo nelygybė",
+    "type": "concept",
+    "definition": "Nelygybė apie dvejopai surikiuotas sumas.",
+    "intuition": "Sandaugų suma yra didžiausia, kai abi sekos surikiuotos vienoda tvarka.",
+    "formal": "Jei $a_1 \\le \\dots \\le a_n$ ir $b_1 \\le \\dots \\le b_n$, tai $\\sum a_i b_{n-i+1} \\le \\sum a_i b_{\\sigma(i)} \\le \\sum a_i b_i$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-chebyshev": {
+    "title": "Čebyšovo nelygybė",
+    "type": "concept",
+    "definition": "Santykinė nelygybė tarp sumų ir sandaugų.",
+    "intuition": "Susieja sekų vidurkių sandaugą su sandaugų vidurkiu.",
+    "formal": "Jei $a_i$ ir $b_i$ vienodai surikiuotos, tai $n \\sum a_i b_i \\ge (\\sum a_i)(\\sum b_i)$.",
+    "related": [
+      "olimpiada-10-concept-rearrangement"
+    ],
+    "topics": [
+      "olimpiada-10-nelygybes"
+    ]
+  },
+  "olimpiada-10-concept-muirhead": {
+    "title": "Muirhead nelygybė",
+    "type": "concept",
+    "definition": "Simetrinių sumų palyginimas naudojant mažoravimą.",
+    "intuition": "Labiau 'išsklaidyti' laipsniai duoda didesnę sumą.",
+    "formal": "Jei vektorius $a$ mažoruoja $b$, tai $[a] \\ge [b]$.",
     "related": [],
     "topics": [
       "olimpiada-10-nelygybes"
@@ -2785,6 +5339,363 @@ export const concepts = {
       "olimpiada-10-skaiciu-teorija"
     ]
   },
+  "olimpiada-10-concept-fermat-little": {
+    "title": "Mažoji Fermo teorema",
+    "type": "concept",
+    "definition": "Nurodo pirminio skaičiaus laipsnio liekaną.",
+    "intuition": "Jei $p$ yra pirminis, tai $a^p$ turi tą pačią liekaną kaip $a$ moduliu $p$.",
+    "formal": "$a^p \\equiv a \\pmod p$ bet kuriam sveikajam $a$ ir pirminiam $p$.",
+    "related": [
+      "olimpiada-10-concept-euler-theorem"
+    ],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-euler-theorem": {
+    "title": "Oilerio teorema",
+    "type": "concept",
+    "definition": "Mažosios Fermo teoremos apibendrinimas bet kuriam moduliui.",
+    "intuition": "Laipsnis, keliamas funkcijos $\\phi(n)$ reikšme, duoda 1 moduliu $n$.",
+    "formal": "Jei $\\text{gcd}(a, n) = 1$, tai $a^{\\phi(n)} \\equiv 1 \\pmod n$.",
+    "related": [
+      "olimpiada-10-concept-fermat-little"
+    ],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-crt": {
+    "title": "Kinų liekanų teorema",
+    "type": "concept",
+    "definition": "Sprendinių egzistavimo sąlyga palyginimų sistemoms.",
+    "intuition": "Jei turime liekanas pagal tarpusavyje pirminius modulius, galime vienareikšmiškai rasti skaičių.",
+    "formal": "Sistemai $x \\equiv a_i \\pmod{m_i}$ egzistuoja vienintelis sprendinys moduliu $M = \\prod m_i$, jei visi $m_i$ yra poromis pirminiai.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-diophantine": {
+    "title": "Diofanto lygtys",
+    "type": "concept",
+    "definition": "Lygtys su sveikaisiais kintamaisiais.",
+    "intuition": "Lygtys, kurių sprendiniai turi būti sveikieji skaičiai.",
+    "formal": "Lygtis $f(x_1, \\dots, x_n) = 0$, kur $x_i \\in \\mathbb{Z}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-pell": {
+    "title": "Pelio lygtis",
+    "type": "concept",
+    "definition": "Kvadratinė Diofanto lygtis $x^2 - Dy^2 = 1$.",
+    "intuition": "Susijusi su $\\sqrt{D}$ artiniais.",
+    "formal": "$x^2 - Dy^2 = 1$, kur $D$ nėra tikslusis kvadratas.",
+    "related": [
+      "olimpiada-10-concept-continued-fractions"
+    ],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-arithmetic-functions": {
+    "title": "Aritmetinės funkcijos",
+    "type": "concept",
+    "definition": "Funkcijos apibrėžtos natūraliuose skaičiuose.",
+    "intuition": "Savybės kaip daliklių skaičius $\\tau(n)$ arba daliklių suma $\\sigma(n)$.",
+    "formal": "Funkcija $f: \\mathbb{N} \\to \\mathbb{C}$. Dažnai multiplikatyvi.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-continued-fractions": {
+    "title": "Grandininės trupmenos",
+    "type": "concept",
+    "definition": "Skaičiaus išraiška per sveikųjų dalių seką.",
+    "intuition": "Būdas gauti geriausius racionaliuosius artinius realiam skaičiui.",
+    "formal": "$a_0 + 1/(a_1 + 1/(a_2 + \\dots))$.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-10-concept-lte": {
+    "title": "Lifting the Exponent (LTE) lema",
+    "type": "concept",
+    "definition": "Pirminio skaičiaus laipsnio radimas reiškiniuose $a^n - b^n$.",
+    "intuition": "Leidžia tiksliai pasakyti, kiek kartu pirminis $p$ įeina į $a^n - b^n$ skaidinį.",
+    "formal": "$v_p(a^n - b^n) = v_p(a-b) + v_p(n)$ tam tikromis sąlygomis.",
+    "related": [],
+    "topics": [
+      "olimpiada-10-skaiciu-teorija"
+    ]
+  },
+  "invariantas": {
+    "title": "Invariantas",
+    "type": "concept",
+    "definition": "Dydis ar savybė, kuri nekinta atliekant leistinus veiksmus.",
+    "intuition": "Tai, kas lieka nepakitę, net kai viskas aplink keičiasi.",
+    "formal": "",
+    "related": [
+      "paritetas"
+    ],
+    "topics": [
+      "olimpiada-10-strategijos-ir-irodymai"
+    ]
+  },
+  "ekstremumo-principas": {
+    "title": "Ekstremumo principas",
+    "type": "concept",
+    "definition": "Strategija nagrinėti ribines (didžiausias arba mažiausias) reikšmes.",
+    "intuition": "Pradėkime nuo mažiausio arba didžiausio elemento, kad pamatytume apribojimus.",
+    "formal": "",
+    "related": [
+      "irodymas"
+    ],
+    "topics": [
+      "olimpiada-10-strategijos-ir-irodymai"
+    ]
+  },
+  "klaida-netinkami-objektai": {
+    "title": "Netinkamas objektų parinkimas Dirichlė principui",
+    "type": "mistake",
+    "definition": "Neteisingai suprasta uždavinio sąlyga arba klaidingai suskaičiuoti atvejai.",
+    "intuition": "Mokinys bando taikyti Dirichlė principą, bet objektų skaičius nėra didesnis už dėžučių skaičių.",
+    "formal": "Visada patikrinkite, ar objektų (balandžių) skaičius $N$ yra griežtai didesnis už dėžučių (narvelių) skaičių $k$.",
+    "related": [
+      "dirichle-principas"
+    ],
+    "topics": [
+      "olimpiada-10-strategijos-ir-irodymai"
+    ]
+  },
+  "aibe": {
+    "title": "Aibė",
+    "type": "concept",
+    "definition": "Objektų rinkinys, traktuojamas kaip visuma.",
+    "intuition": "Tai krepšys, į kurį sumesti tam tikri daiktai (skaičiai, raidės).",
+    "formal": "Aibė – matematikos pirminė sąvoka, reiškianti objektų rinkinį.",
+    "related": [
+      "elementas",
+      "tuscia-aibe"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "elementas": {
+    "title": "Elementas",
+    "type": "concept",
+    "definition": "Objektas, priklausantis aibei.",
+    "intuition": "Tai vienas iš krepšyje esančių daiktų.",
+    "formal": "Aibę sudarantis objektas.",
+    "related": [
+      "aibe"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "tuscia-aibe": {
+    "title": "Tuščioji aibė",
+    "type": "concept",
+    "definition": "Aibė, neturinti nei vieno elemento.",
+    "intuition": "Tuščias krepšys.",
+    "formal": "Aibė A, kuriai su kiekvienu x galioja x ∉ A.",
+    "related": [
+      "aibe"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "poaibis": {
+    "title": "Poaibis",
+    "type": "concept",
+    "definition": "Aibė, kurios visi elementai priklauso kitai aibei.",
+    "intuition": "Mažesnis krepšys, kurio visas turinys yra didesniame krepšyje.",
+    "formal": "B ⊆ A, jei ∀x (x ∈ B ⇒ x ∈ A).",
+    "related": [
+      "aibe"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "aibiu-sajunga": {
+    "title": "Aibių sąjunga",
+    "type": "concept",
+    "definition": "Elementų, priklausančių bent vienai aibei, rinkinys.",
+    "intuition": "Visų daiktų iš abiejų krepšių supylimas į vieną.",
+    "formal": "A ∪ B = {x | x ∈ A ∨ x ∈ B}.",
+    "related": [
+      "aibiu-sankirta",
+      "aibiu-skirtumas"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "aibiu-sankirta": {
+    "title": "Aibių sankirta",
+    "type": "concept",
+    "definition": "Elementų, priklausančių abiem aibėms, rinkinys.",
+    "intuition": "Tik tie daiktai, kurie yra abiejuose krepšiuose vienu metu.",
+    "formal": "A ∩ B = {x | x ∈ A ∧ x ∈ B}.",
+    "related": [
+      "aibiu-sajunga",
+      "aibiu-skirtumas"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "aibiu-skirtumas": {
+    "title": "Aibių skirtumas",
+    "type": "concept",
+    "definition": "Aibės A elementai, kurie nepriklauso aibei B.",
+    "intuition": "Iš krepšio A išmetame visus daiktus, kurie yra ir krepšyje B.",
+    "formal": "A \\ B = {x | x ∈ A ∧ x ∉ B}.",
+    "related": [
+      "aibiu-sajunga",
+      "aibiu-sankirta"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "veno-diagrama": {
+    "title": "Veno diagrama",
+    "type": "concept",
+    "definition": "Geometrinis aibių vaizdavimo būdas.",
+    "intuition": "Apskritimų brėžiniai, rodantys, kaip aibės persidengia.",
+    "formal": "Aibių tarpusavio santykių vizualizacija plokštumoje.",
+    "related": [
+      "aibe",
+      "aibiu-sankirta"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "realiuju-skaiciu-aibe": {
+    "title": "Realiuju skaiciu aibe",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "baigtine-aibe": {
+    "title": "Baigtine aibe",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "sajungos-apibrezimas": {
+    "title": "Aibių sąjungos apibrėžimas",
+    "type": "formula",
+    "definition": "Sąjunga apima visus elementus, esančius bent vienoje iš aibių.",
+    "intuition": "Sąjunga apima visus elementus, esančius bent vienoje iš aibių.",
+    "formal": "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}",
+    "related": [
+      "aibiu-sajunga"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "sankirtos-apibrezimas": {
+    "title": "Aibių sankirtos apibrėžimas",
+    "type": "formula",
+    "definition": "Sankirta apima tik bendrus aibių elementus.",
+    "intuition": "Sankirta apima tik bendrus aibių elementus.",
+    "formal": "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}",
+    "related": [
+      "aibiu-sankirta"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "skirtumo-apibrezimas": {
+    "title": "Aibių skirtumo apibrėžimas",
+    "type": "formula",
+    "definition": "Skirtumas palieka tik tuos A elementus, kurių nėra aibėje B.",
+    "intuition": "Skirtumas palieka tik tuos A elementus, kurių nėra aibėje B.",
+    "formal": "A \\setminus B = \\{x \\mid x \\in A \\text{ ir } x \\notin B\\}",
+    "related": [
+      "aibiu-skirtumas"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "painioja-sajunga-ir-sankirta": {
+    "title": "Painioja sąjungą (∪) su sankirta (∩)",
+    "type": "mistake",
+    "definition": "Ženklai vizualiai panašūs (apversti).",
+    "intuition": "Naudoja sankirtą, kai reikia apjungti visus elementus.",
+    "formal": "Atsiminkite: ∪ – kaip puodelis (supilame viską), ∩ – kaip kalnas (tik tai, kas viršūnėje/bendra).",
+    "related": [
+      "aibiu-sajunga",
+      "aibiu-sankirta"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "skirtumo-tvarka": {
+    "title": "Neteisinga aibių skirtumo tvarka",
+    "type": "mistake",
+    "definition": "Sąjunga ir sankirta yra komutatyvios, o skirtumas – ne.",
+    "intuition": "Mano, kad A \\ B yra tas pats, kas B \\ A.",
+    "formal": "A \\ B reiškia elementus iš A, kurių nėra B.",
+    "related": [
+      "aibiu-skirtumas"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "tuscios-aibes-zymejimas": {
+    "title": "Tuščiosios aibės žymėjimas skliaustuose",
+    "type": "mistake",
+    "definition": "Mano, kad visos aibės turi būti skliaustuose.",
+    "intuition": "Rašo {∅} tuščiajai aibei pažymėti.",
+    "formal": "Rašykite tiesiog ∅ arba {}. Žymėjimas {∅} reiškia aibę, kurios vienintelis elementas yra tuščioji aibė.",
+    "related": [
+      "tuscia-aibe"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
+  "elementas-vs-poaibis": {
+    "title": "Painioja elementą su poaibiu",
+    "type": "mistake",
+    "definition": "Mano, kad bet koks objektas su skliaustais yra elementas.",
+    "intuition": "Rašo {1} ∈ A vietoj {1} ⊆ A.",
+    "formal": "Naudokite ∈ elementui, ⊆ – aibei (poaibiui).",
+    "related": [
+      "elementas",
+      "poaibis"
+    ],
+    "topics": [
+      "aibes-ir-veiksmai"
+    ]
+  },
   "olimpiada-11-concept-cyclotomic": {
     "title": "Ciklotoniniai daugianariai",
     "type": "concept",
@@ -2807,6 +5718,61 @@ export const concepts = {
       "olimpiada-11-algebra"
     ]
   },
+  "olimpiada-11-concept-vieta": {
+    "title": "Vieta teoremos",
+    "type": "concept",
+    "definition": "Sąryšiai tarp daugianario koeficientų ir jo šaknų.",
+    "intuition": "Leidžia rasti šaknų sumas ir sandaugas jų pačių neieškant.",
+    "formal": "Daugianariui $P(x) = a_n x^n + \\dots + a_0$, šaknų suma yra $-a_{n-1}/a_n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-algebra"
+    ]
+  },
+  "olimpiada-11-concept-cauchy-schwarz": {
+    "title": "Koši-Švarco nelygybė",
+    "type": "concept",
+    "definition": "Nelygybė, siejanti dviejų skaičių rinkinių sandaugų sumą su jų kvadratų sumomis.",
+    "intuition": "Vektorių skaliarinė sandauga yra ne didesnė už jų ilgių sandaugą.",
+    "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-algebra"
+    ]
+  },
+  "olimpiada-11-concept-am-gm": {
+    "title": "AM-GM nelygybė",
+    "type": "concept",
+    "definition": "Aritmetinio ir geometrinio vidurkio nelygybė.",
+    "intuition": "Sumos minimumas pasiekiamas, kai nariai lygūs, esant fiksuotai sandaugai.",
+    "formal": "$\\frac{x_1 + \\dots + x_n}{n} \\ge \\sqrt[n]{x_1 \\dots x_n}$ teigiamiems $x_i$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-algebra"
+    ]
+  },
+  "olimpiada-11-formula-vieta-cubic": {
+    "title": "Vieta formulės kubinei lygčiai",
+    "type": "formula",
+    "definition": "Taikoma lygčiai $ax^3+bx^2+cx+d=0$.",
+    "intuition": "Taikoma lygčiai $ax^3+bx^2+cx+d=0$.",
+    "formal": "x_1+x_2+x_3 = -b/a, \\quad x_1x_2+x_2x_3+x_3x_1 = c/a, \\quad x_1x_2x_3 = -d/a",
+    "related": [],
+    "topics": [
+      "olimpiada-11-algebra"
+    ]
+  },
+  "olimpiada-11-formula-cauchy-schwarz": {
+    "title": "Koši-Švarco nelygybė",
+    "type": "formula",
+    "definition": "Lygybė galioja, kai $a_i$ ir $b_i$ yra proporcingi.",
+    "intuition": "Lygybė galioja, kai $a_i$ ir $b_i$ yra proporcingi.",
+    "formal": "(\\sum_{i=1}^n a_i b_i)^2 \\le (\\sum_{i=1}^n a_i^2)(\\sum_{i=1}^n b_i^2)",
+    "related": [],
+    "topics": [
+      "olimpiada-11-algebra"
+    ]
+  },
   "olimpiada-11-concept-inversion": {
     "title": "Inversija",
     "type": "concept",
@@ -2824,6 +5790,61 @@ export const concepts = {
     "definition": "Projekcinės geometrijos invariantas keturiems taškams.",
     "intuition": "Nors projekcija keičia atstumus, ji išsaugo šį specifinį keturių taškų santykį.",
     "formal": "$(A,B;C,D) = \\frac{AC}{BC} / \\frac{AD}{BD}$ (naudojant orientuotas atkarpas).",
+    "related": [],
+    "topics": [
+      "olimpiada-11-geometrija"
+    ]
+  },
+  "olimpiada-11-concept-menelaus": {
+    "title": "Menelajo teorema",
+    "type": "concept",
+    "definition": "Sąlyga, kad trys taškai ant trikampio kraštinių (ar jų tęsinių) būtų vienoje tiesėje.",
+    "intuition": "Jei tiesė kerta trikampį, atkarpų santykių sandauga yra 1.",
+    "formal": "Taškai D, E, F yra vienoje tiesėje tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-geometrija"
+    ]
+  },
+  "olimpiada-11-concept-power-of-point": {
+    "title": "Taško galia",
+    "type": "concept",
+    "definition": "Dydis $d^2 - R^2$, charakterizuojantis taško padėtį apskritimo atžvilgiu.",
+    "intuition": "Tai matas, rodantis 'atstumą' iki apskritimo, išreikštą per sandaugas.",
+    "formal": "Bet kuriai tiesei per P, kertančiai apskritimą taškuose A ir B, galia yra $PA \\cdot PB$ (su ženklu).",
+    "related": [],
+    "topics": [
+      "olimpiada-11-geometrija"
+    ]
+  },
+  "olimpiada-11-concept-stewart": {
+    "title": "Stiuarto teorema",
+    "type": "concept",
+    "definition": "Sąryšis tarp trikampio kraštinių ir čevianos ilgio.",
+    "intuition": "Leidžia apskaičiuoti bet kokios atkarpos iš viršūnės į pagrindą ilgį.",
+    "formal": "$man + d^2n = b^2m + c^2n$ (kur n, m dalija pagrindą a).",
+    "related": [],
+    "topics": [
+      "olimpiada-11-geometrija"
+    ]
+  },
+  "olimpiada-11-formula-power-of-point": {
+    "title": "Taško galios formulė",
+    "type": "formula",
+    "definition": "Galioja bet kuriai tiesei per P, kertančiai apskritimą taškuose A ir B.",
+    "intuition": "Galioja bet kuriai tiesei per P, kertančiai apskritimą taškuose A ir B.",
+    "formal": "h = d^2 - R^2 = PA \\cdot PB",
+    "related": [],
+    "topics": [
+      "olimpiada-11-geometrija"
+    ]
+  },
+  "olimpiada-11-formula-stewart": {
+    "title": "Stiuarto teorema",
+    "type": "formula",
+    "definition": "Čia d yra čevianos ilgis, m ir n - pagrindo a dalys.",
+    "intuition": "Čia d yra čevianos ilgis, m ir n - pagrindo a dalys.",
+    "formal": "b^2 m + c^2 n = a(d^2 + mn)",
     "related": [],
     "topics": [
       "olimpiada-11-geometrija"
@@ -2857,6 +5878,17 @@ export const concepts = {
     "definition": "Ekstremaliosios grafų teorijos rezultatas apie maksimalų briaunų skaičių.",
     "intuition": "Nurodo, kiek briaunų gali turėti grafas, kol jame būtinai atsiras $k$-viršūnių pilnasis pakgrafis (klikė).",
     "formal": "Grafas su $n$ viršūnių, neturintis $K_{r+1}$ kaip pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$ (beveik lygių dalių pilnasis $r$-dalis grafas).",
+    "related": [],
+    "topics": [
+      "olimpiada-11-kombinatorika"
+    ]
+  },
+  "olimpiada-11-concept-dirichlet-pigeonhole": {
+    "title": "Dirichlė principas (Balandžių narvelių principas)",
+    "type": "concept",
+    "definition": "Jei $n$ narvelių yra $n+1$ balandis, tai bent viename narvelyje yra bent du balandžiai.",
+    "intuition": "Jei turime daugiau objektų nei vietų jiems padėti, bent vienoje vietoje bus daugiau nei vienas objektas.",
+    "formal": "Jei $A$ ir $B$ yra baigtinės aibės ir $|A| > |B|$, tai jokiai funkcijai $f: A \to B$ neegzistuoja injekcija.",
     "related": [],
     "topics": [
       "olimpiada-11-kombinatorika"
@@ -2906,6 +5938,654 @@ export const concepts = {
     ],
     "topics": [
       "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-11-concept-wilson": {
+    "title": "Wilsono teorema",
+    "type": "concept",
+    "definition": "$(p-1)! \\equiv -1 \\pmod p$ tada ir tik tada, kai $p$ pirminis.",
+    "intuition": "Visas liekanas nuo $1$ iki $p-1$ galima suporuoti su jų atvirkštiniais elementais, išskyrus $1$ ir $-1$, todėl jų sandauga yra $-1$.",
+    "formal": "Natūralusis skaičius $n > 1$ yra pirminis tada ir tik tada, kai $(n-1)! \\equiv -1 \\pmod n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-11-concept-lte": {
+    "title": "Lifting The Exponent Lema (LTE)",
+    "type": "concept",
+    "definition": "Formulė pirminio skaičiaus laipsniui $v_p(a^n - b^n)$ skaičiuoti.",
+    "intuition": "Leidžia „iškelti“ rodiklį $n$ iš po vertinimo ženklo.",
+    "formal": "Jei $p$ yra nelyginis pirminis, $p | (a-b)$, bet $p \\nmid a$ ir $p \\nmid b$, tai $v_p(a^n - b^n) = v_p(a-b) + v_p(n)$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "vektoriaus-modulis": {
+    "title": "Vektoriaus modulis",
+    "type": "concept",
+    "definition": "Vektoriaus ilgis.",
+    "intuition": "Atstumas nuo vektoriaus pradžios iki pabaigos.",
+    "formal": "Vektoriaus $\\vec{a}(x, y)$ modulis plokštumoje yra $|\\vec{a}| = \\sqrt{x^2 + y^2}$.",
+    "related": [
+      "vektorius",
+      "skaliarine-sandauga"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "skaliarine-sandauga": {
+    "title": "Skaliarinė sandauga",
+    "type": "operation",
+    "definition": "Dviejų vektorių daugyba, kurios rezultatas yra skaičius.",
+    "intuition": "Parodo, kiek vienas vektorius 'eina' kito vektoriaus kryptimi.",
+    "formal": "Skaliarinė sandauga $\\vec{a} \\cdot \\vec{b}$ apibrėžiama kaip $|\\vec{a}||\\vec{b}|\\cos \\theta$.",
+    "related": [
+      "statmeni-vektoriai",
+      "kampas-tarp-vektoriu"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "kolinearus-vektoriai": {
+    "title": "Kolinearūs vektoriai",
+    "type": "concept",
+    "definition": "Vektoriai, esantys lygiagrečiose tiesėse arba vienoje tiesėje.",
+    "intuition": "Vektoriai, kurie rodo ta pačia arba tiksliai priešinga kryptimi.",
+    "formal": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra kolinearūs, jei $\\vec{a} = k\\vec{b}$, kur $k$ yra skaliaras.",
+    "related": [
+      "vektorius",
+      "kryptis"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "statmeni-vektoriai": {
+    "title": "Statmeni vektoriai",
+    "type": "concept",
+    "definition": "Vektoriai, tarp kurių kampas yra 90 laipsnių.",
+    "intuition": "Vektoriai, kurie sudaro statų kampą.",
+    "formal": "Nenuliniai vektoriai $\\vec{a}$ ir $\\vec{b}$ yra statmeni tada ir tik tada, kai $\\vec{a} \\cdot \\vec{b} = 0$.",
+    "related": [
+      "skaliarine-sandauga",
+      "kampas-tarp-vektoriu"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vienetinis-vektorius": {
+    "title": "Vienetinis vektorius",
+    "type": "concept",
+    "definition": "Vektorius, kurio ilgis lygus 1.",
+    "intuition": "Vektorius, rodantis tik kryptį be 'svorio'.",
+    "formal": "Vektorius $\\vec{e}$ yra vienetinis, jei $|\\vec{e}| = 1$. Koordinačių ašių vienetiniai vektoriai žymimi $\\vec{i}(1, 0)$ ir $\\vec{j}(0, 1)$.",
+    "related": [
+      "vektoriaus-modulis"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "nulio-vektorius": {
+    "title": "Nulio vektorius",
+    "type": "concept",
+    "definition": "Vektorius, kurio pradžia ir pabaiga sutampa.",
+    "intuition": "Vektorius, kuris niekur 'nejuda'.",
+    "formal": "Vektorius, kurio visos koordinatės yra 0, žymimas $\\vec{0}$. Jo modulis yra 0.",
+    "related": [
+      "vektorius"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "kryptis": {
+    "title": "Vektoriaus kryptis",
+    "type": "concept",
+    "definition": "Vektoriaus orientacija erdvėje.",
+    "intuition": "Kur vektorius 'žiūri'.",
+    "formal": "",
+    "related": [
+      "vektorius",
+      "kolinearus-vektoriai"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vektoriu-suma": {
+    "title": "Vektorių suma",
+    "type": "operation",
+    "definition": "Vektorių sudėjimo operacija.",
+    "intuition": "Bendras poslinkis atlikus du judesius iš eilės.",
+    "formal": "Jei $\\vec{a}(x_1, y_1)$ ir $\\vec{b}(x_2, y_2)$, tai $\\vec{a}+\\vec{b} = (x_1+x_2, y_1+y_2)$.",
+    "related": [
+      "vektorius",
+      "vektoriu-skirtumas"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vektoriu-skirtumas": {
+    "title": "Vektorių skirtumas",
+    "type": "operation",
+    "definition": "Vektorių atimties operacija.",
+    "intuition": "Poslinkis, kurį pridėjus prie antrojo vektoriaus, gaunamas pirmasis.",
+    "formal": "Jei $\\vec{a}(x_1, y_1)$ ir $\\vec{b}(x_2, y_2)$, tai $\\vec{a}-\\vec{b} = (x_1-x_2, y_1-y_2)$.",
+    "related": [
+      "vektorius",
+      "vektoriu-suma"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vektoriaus-daugyba-is-skaiciaus": {
+    "title": "Vektoriaus daugyba iš skaičiaus",
+    "type": "operation",
+    "definition": "Vektoriaus ilgio keitimas išlaikant arba pakeičiant kryptį priešinga.",
+    "intuition": "Vektoriaus 'ištęsimas' arba 'suglaudimas'.",
+    "formal": "Jei $\\vec{a}(x, y)$, tai $k\\vec{a} = (kx, ky)$.",
+    "related": [
+      "vektorius",
+      "kolinearus-vektoriai"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "kampas-tarp-vektoriu": {
+    "title": "Kampas tarp vektorių",
+    "type": "concept",
+    "definition": "Kampas tarp dviejų iš vieno taško atidėtų vektorių.",
+    "intuition": "Posūkio kampas nuo vienos krypties iki kitos.",
+    "formal": "Kampas $\\phi \\in [0^\\circ; 180^\\circ]$.",
+    "related": [
+      "skaliarine-sandauga",
+      "statmeni-vektoriai"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vektoriaus-modulis-formule": {
+    "title": "Vektoriaus modulio formulė",
+    "type": "formula",
+    "definition": "Apskaičiuoja atstumą nuo vektoriaus pradžios iki pabaigos pagal Pitagoro teoremą.",
+    "intuition": "Apskaičiuoja atstumą nuo vektoriaus pradžios iki pabaigos pagal Pitagoro teoremą.",
+    "formal": "|\\vec{a}| = \\sqrt{x^2 + y^2}",
+    "related": [],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "skaliarine-sandauga-koord": {
+    "title": "Skaliarinė sandauga koordinatėmis",
+    "type": "formula",
+    "definition": "Leidžia apskaičiuoti skaliarinę sandaugą nežinant kampo tarp vektorių.",
+    "intuition": "Leidžia apskaičiuoti skaliarinę sandaugą nežinant kampo tarp vektorių.",
+    "formal": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
+    "related": [],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "kampas-tarp-vektoriu-formule": {
+    "title": "Kampas tarp vektorių",
+    "type": "formula",
+    "definition": "Ši formulė naudojama rasti kampą tarp vektorių, kai žinomos jų koordinatės.",
+    "intuition": "Ši formulė naudojama rasti kampą tarp vektorių, kai žinomos jų koordinatės.",
+    "formal": "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}",
+    "related": [],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "skaliarine-sandauga-kaip-vektorius": {
+    "title": "Skaliarinę sandaugą laiko vektoriumi",
+    "type": "mistake",
+    "definition": "Painioja su vektorių sudėtimi ar daugyba iš skaičiaus.",
+    "intuition": "Mokinys bando rašyti skaliarinės sandaugos rezultatą su koordinatėmis.",
+    "formal": "Skaliarinė sandauga visada yra skaičius (skaliaras), o ne vektorius.",
+    "related": [
+      "skaliarine-sandauga"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "vektoriu-atimties-kryptis": {
+    "title": "Neteisinga vektorių skirtumo kryptis",
+    "type": "mistake",
+    "definition": "Nesuvokiama, kuris vektorius yra 'sumažinamas', o kuris 'atimančias'.",
+    "intuition": "Brėžiant $\\vec{a}-\\vec{b}$, rodyklė nukreipiama į $\\vec{b}$.",
+    "formal": "Skirtumo $\\vec{a}-\\vec{b}$ rodyklė visada turi būti nukreipta į tą vektorių, iš kurio atimame (į $\\vec{a}$).",
+    "related": [
+      "vektoriu-skirtumas"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "modulio-skaiciavimo-klaida": {
+    "title": "Klaida skaičiuojant modulį su neigiamomis koordinatėmis",
+    "type": "mistake",
+    "definition": "Pamirštama, kad keliant neigiamą skaičių kvadratu, gaunamas teigiamas skaičius.",
+    "intuition": "$|\\vec{a}| = \\sqrt{-2^2 + 3^2} = \\sqrt{-4 + 9}$",
+    "formal": "Koordinatę $x$ keliant kvadratu, net jei ji neigiama, rezultatas $x^2$ yra $\\ge 0$.",
+    "related": [
+      "vektoriaus-modulis"
+    ],
+    "topics": [
+      "vektoriai-plokstumoje"
+    ]
+  },
+  "atsitiktinis-dydis": {
+    "title": "Atsitiktinis dydis",
+    "type": "concept",
+    "definition": "Kintamasis, kurio reikšmės priklauso nuo atsitiktinio bandymo baigties.",
+    "intuition": "Tai tarsi žaidimo rezultatas – kol nemetei kauliuko, nežinai, koks bus skaičius.",
+    "formal": "Funkcija, apibrėžta elementariųjų baigčių aibėje.",
+    "related": [
+      "diskretusis-atsitiktinis-dydis",
+      "tikimybinis-skirstinys"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "diskretusis-atsitiktinis-dydis": {
+    "title": "Diskretusis atsitiktinis dydis",
+    "type": "concept",
+    "definition": "Atsitiktinis dydis, įgyjantis atskiras, izoliuotas reikšmes.",
+    "intuition": "Dydžiai, kuriuos galima suskaičiuoti: 1, 2, 3...",
+    "formal": "Atsitiktinis dydis, kurio galimų reikšmių aibė yra baigtinė arba suskaičiuojama.",
+    "related": [
+      "atsitiktinis-dydis",
+      "skirstinio-lentele"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "skirstinio-lentele": {
+    "title": "Skirstinio lentelė",
+    "type": "concept",
+    "definition": "Lentelė, kurioje surašytos atsitiktinio dydžio reikšmės ir jų tikimybės.",
+    "intuition": "Sąrašas: koks rezultatas ir kaip dažnai jis pasitaiko.",
+    "formal": "Atsitiktinio dydžio X galimų reikšmių xi ir jas atitinkančių tikimybių pi rinkinys.",
+    "related": [
+      "diskretusis-atsitiktinis-dydis",
+      "matematine-viltis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "matematine-viltis": {
+    "title": "Matematinė viltis",
+    "type": "concept",
+    "definition": "Vidutinė atsitiktinio dydžio reikšmė.",
+    "intuition": "Tai skaičius, kurį tikėtumėmės gauti vidutiniškai, jei bandymą kartotume begalę kartų.",
+    "formal": "Svertinis atsitiktinio dydžio reikšmių vidurkis, kur svoriai yra tikimybės.",
+    "related": [
+      "dispersija",
+      "skirstinio-lentele"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "dispersija": {
+    "title": "Dispersija",
+    "type": "concept",
+    "definition": "Reikšmių sklaidos aplink vidurkį matas.",
+    "intuition": "Rodo, kaip toli nuo vidurkio vidutiniškai yra nutolusios reikšmės.",
+    "formal": "Atsitiktinio dydžio nuokrypio nuo matematinės vilties kvadrato matematinė viltis.",
+    "related": [
+      "matematine-viltis",
+      "standartinis-nuokrypis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "standartinis-nuokrypis": {
+    "title": "Standartinis nuokrypis",
+    "type": "concept",
+    "definition": "Sklaidos matas, išreiškiamas tomis pačiomis vienetais kaip ir dydis.",
+    "intuition": "Tai tiesiog kvadratinė šaknis iš dispersijos.",
+    "formal": "Teigiamas kvadratinės šaknies iš dispersijos rezultatas.",
+    "related": [
+      "dispersija"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "normalusis-skirstinys": {
+    "title": "Normalusis skirstinys",
+    "type": "concept",
+    "definition": "Tolydusis tikimybinis skirstinys, aprašomas Gauso kreive.",
+    "intuition": "Dauguma žmonių yra vidutinio ūgio, labai mažai itin aukštų ar žemų – tai normalusis skirstinys.",
+    "formal": "Skirstinys, kurio tankio funkcija f(x) = (1/σ√(2π)) * exp(-(x-μ)²/2σ²).",
+    "related": [
+      "gauso-kreive",
+      "matematine-viltis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "bernulio-bandymai": {
+    "title": "Bernulio bandymai",
+    "type": "concept",
+    "definition": "Nepriklausomų bandymų seka su dviem baigtimis.",
+    "intuition": "Monetos metimas 10 kartų: kiekvieną kartą tik 'herbas' arba 'skaičius'.",
+    "formal": "Bandymų seka, kurioje kiekvieno bandymo 'sėkmės' tikimybė p yra pastovi.",
+    "related": [
+      "kombinatorika-ir-binomas",
+      "tikimybinis-skirstinys"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "gauso-kreive": {
+    "title": "Gauso kreive",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "matematines-vilties-formule": {
+    "title": "Matematinės vilties formulė",
+    "type": "formula",
+    "definition": "Sudauginame kiekvieną reikšmę su jos tikimybe ir viską sudedame.",
+    "intuition": "Sudauginame kiekvieną reikšmę su jos tikimybe ir viską sudedame.",
+    "formal": "E(X) = x_1 p_1 + x_2 p_2 + \\dots + x_n p_n",
+    "related": [
+      "matematine-viltis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "dispersijos-formule": {
+    "title": "Dispersijos formulė",
+    "type": "formula",
+    "definition": "Patogiausia formulė dispersijai skaičiuoti praktikoje.",
+    "intuition": "Patogiausia formulė dispersijai skaičiuoti praktikoje.",
+    "formal": "Var(X) = E(X^2) - (E(X))^2",
+    "related": [
+      "dispersija"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "standartinio-nuokrypio-formule": {
+    "title": "Standartinio nuokrypio formulė",
+    "type": "formula",
+    "definition": "Paverčia dispersiją į pradinį matavimo vienetą.",
+    "intuition": "Paverčia dispersiją į pradinį matavimo vienetą.",
+    "formal": "\\sigma = \\sqrt{Var(X)}",
+    "related": [
+      "standartinis-nuokrypis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "bernulio-formule": {
+    "title": "Bernulio formulė",
+    "type": "formula",
+    "definition": "Skaičiuoja tikimybę gauti k sėkmių per n bandymų.",
+    "intuition": "Skaičiuoja tikimybę gauti k sėkmių per n bandymų.",
+    "formal": "P_n(k) = C_n^k p^k (1-p)^{n-k}",
+    "related": [
+      "bernulio-bandymai"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "tikimybiu-suma-ne-vienetas": {
+    "title": "Tikimybių suma lentelėje nelygi 1",
+    "type": "mistake",
+    "definition": "Netikslus skaičiavimas arba pamiršta viena iš baigčių.",
+    "intuition": "Užpildoma lentelė, kurios tikimybių suma yra 0.9 arba 1.1.",
+    "formal": "Visada patikrinkite: p1 + p2 + ... + pn = 1. Jei ne 1, vadinasi skirstinys neteisingas.",
+    "related": [
+      "skirstinio-lentele"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "dispersija-neigiama": {
+    "title": "Gaunama neigiama dispersija",
+    "type": "mistake",
+    "definition": "Supainiojama E(X^2) su (E(X))^2 arba padaroma aritmetinė klaida.",
+    "intuition": "Var(X) = -2.5.",
+    "formal": "Dispersija yra kvadratų vidurkis, ji NIEKADA negali būti neigiama.",
+    "related": [
+      "dispersija"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "vilties-skaiciavimo-klaida": {
+    "title": "Matematinė viltis nesutampa su vidurkiu",
+    "type": "mistake",
+    "definition": "Painiojamas paprastas aritmetinis vidurkis su svertiniu (tikimybiniu) vidurkiu.",
+    "intuition": "Mokinys tiesiog sudeda reikšmes xi ir dalija iš n.",
+    "formal": "Reikia kiekvieną reikšmę padauginti iš jos tikimybės, o NE tiesiog sudėti.",
+    "related": [
+      "matematine-viltis"
+    ],
+    "topics": [
+      "atsitiktiniai-dydziai"
+    ]
+  },
+  "faktorialas": {
+    "title": "Faktorialas",
+    "type": "concept",
+    "definition": "Visų natūraliųjų skaičių nuo 1 iki n sandauga.",
+    "intuition": "Skaičius, rodantis kiek būdų galima surikiuoti n daiktų į eilę.",
+    "formal": "n! = 1 · 2 · 3 · ... · n. Apibrėžiama, kad 0! = 1.",
+    "related": [
+      "keliniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "keliniai": {
+    "title": "Kėliniai",
+    "type": "concept",
+    "definition": "Visi galimi n elementų išdėstymai tam tikra tvarka.",
+    "intuition": "Kiek būdų galima susodinti n žmonių į n kėdžių.",
+    "formal": "Junginiai iš n elementų, kurie skiriasi tik elementų tvarka.",
+    "related": [
+      "faktorialas",
+      "gretiniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "gretiniai": {
+    "title": "Gretiniai",
+    "type": "concept",
+    "definition": "Rinkiniai iš n elementų po k, kai tvarka svarbi.",
+    "intuition": "Iš 10 žmonių renkame pirmininką ir pavaduotoją (pareigos skirtingos).",
+    "formal": "Junginiai iš n elementų po k (k ≤ n), kurie skiriasi elementais arba jų tvarka.",
+    "related": [
+      "keliniai",
+      "deriniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "deriniai": {
+    "title": "Deriniai",
+    "type": "concept",
+    "definition": "Rinkiniai iš n elementų po k, kai tvarka nesvarbi.",
+    "intuition": "Iš 10 žmonių renkame 2 delegatus į konferenciją (pareigos vienodos).",
+    "formal": "Junginiai iš n elementų po k (k ≤ n), kurie skiriasi bent vienu elementu.",
+    "related": [
+      "gretiniai",
+      "niutono-binomas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "niutono-binomas": {
+    "title": "Niutono binomas",
+    "type": "concept",
+    "definition": "Formulė dvinario laipsniui išskleisti.",
+    "intuition": "Tai (a+b)^n formulės apibendrinimas dideliems n.",
+    "formal": "Teorema apie dvinario sumos n-tojo laipsnio skleidinį.",
+    "related": [
+      "binominis-koeficientas",
+      "paskalio-trikampis"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "paskalio-trikampis": {
+    "title": "Paskalio trikampis",
+    "type": "concept",
+    "definition": "Skaičių trikampis, kurio kraštuose vienetai, o viduryje – viršutinių kaimynų suma.",
+    "intuition": "Geometrinė schema derinių skaičiams greitai rasti.",
+    "formal": "Trikampė matrica, sudaryta iš binominių koeficientų.",
+    "related": [
+      "niutono-binomas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "binominis-koeficientas": {
+    "title": "Binominis koeficientas",
+    "type": "concept",
+    "definition": "Skaičius prie nario Niutono binomo skleidinyje.",
+    "intuition": "Tai tiesiog derinių skaičius C(n, k).",
+    "formal": "Skaičius, lygus C(n, k), esantis (a+b)^n skleidinyje.",
+    "related": [
+      "deriniai",
+      "niutono-binomas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "faktorialo-formule": {
+    "title": "Faktorialo formulė",
+    "type": "formula",
+    "definition": "Skaičiuoja, kiek yra būdų išrikiuoti elementus.",
+    "intuition": "Skaičiuoja, kiek yra būdų išrikiuoti elementus.",
+    "formal": "n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n",
+    "related": [
+      "faktorialas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "keliniu-formule": {
+    "title": "Kėlinių formulė",
+    "type": "formula",
+    "definition": "Nurodo visų įmanomų tvarkų skaičių n elementų aibei.",
+    "intuition": "Nurodo visų įmanomų tvarkų skaičių n elementų aibei.",
+    "formal": "P_n = n!",
+    "related": [
+      "keliniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "gretiniu-formule": {
+    "title": "Gretinių formulė",
+    "type": "formula",
+    "definition": "Naudojama, kai iš didesnės grupės renkame mažesnę ir tvarka yra reikšminga.",
+    "intuition": "Naudojama, kai iš didesnės grupės renkame mažesnę ir tvarka yra reikšminga.",
+    "formal": "A_n^k = \\frac{n!}{(n-k)!}",
+    "related": [
+      "gretiniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "binomo-formule": {
+    "title": "Niutono binomo formulė",
+    "type": "formula",
+    "definition": "Leidžia apskaičiuoti dvinario sumos laipsnį be nuoseklaus daugybos veiksmo.",
+    "intuition": "Leidžia apskaičiuoti dvinario sumos laipsnį be nuoseklaus daugybos veiksmo.",
+    "formal": "(a+b)^n = C_n^0 a^n + C_n^1 a^{n-1}b + \\dots + C_n^n b^n",
+    "related": [
+      "niutono-binomas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "painioja-gretinius-ir-derinius": {
+    "title": "Painioja gretinius su deriniais",
+    "type": "mistake",
+    "definition": "Mokinys neįsigilina į uždavinio sąlygą (ar pareigos/vietos skiriasi).",
+    "intuition": "Naudoja derinių formulę, kai tvarka yra svarbi.",
+    "formal": "Paklauskite savęs: 'Ar sukeitus du pasirinktus elementus vietomis, rinkinys pasikeis?'. Jei taip – gretiniai, jei ne – deriniai.",
+    "related": [
+      "gretiniai",
+      "deriniai"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "faktorialo-nulis": {
+    "title": "Mano, kad 0! = 0",
+    "type": "mistake",
+    "definition": "Intuicija sako, kad nulio daugyba turi būti nulis.",
+    "intuition": "Skaičiavimuose 0! keičia į 0.",
+    "formal": "Pagal apibrėžimą 0! = 1. Tai užtikrina formulių nuoseklumą.",
+    "related": [
+      "faktorialas"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
+    ]
+  },
+  "daugybos-vs-sudeties-taisykle": {
+    "title": "Painioja sudėties ir daugybos taisykles",
+    "type": "mistake",
+    "definition": "Painiojami jungtukai 'ir' bei 'arba'.",
+    "intuition": "Sudedami būdai, kai juos reikia dauginti.",
+    "formal": "Jungtukas 'ir' (reikia abiejų) -> DAUGYBA. Jungtukas 'arba' (reikia vieno iš jų) -> SUDĖTIS.",
+    "related": [
+      "daugybos-taisykle",
+      "sudeties-taisykle"
+    ],
+    "topics": [
+      "kombinatorika-ir-binomas"
     ]
   },
   "olimpiada-12-concept-tangent-trick": {
@@ -2963,15 +6643,317 @@ export const concepts = {
       "olimpiada-12-kombinatorika"
     ]
   },
+  "olimpiada-12-concept-generating-functions": {
+    "title": "Generuojančios funkcijos",
+    "type": "concept",
+    "definition": "Algebrinis metodas kombinatorinėms sekoms nagrinėti naudojant formaliosios eilutės koeficientus.",
+    "intuition": "Vietoj to, kad skaičiuotume objektus tiesiogiai, mes juos 'sukabiname' prie kintamojo $x$ laipsnių ir atliekame algebrinius veiksmus su visa eilute.",
+    "formal": "Sekos $(a_n)$ generuojanti funkcija yra $f(x) = \\sum_{n=0}^{\\infty} a_n x^n$.",
+    "related": [],
+    "topics": [
+      "olimpiada-12-kombinatorika"
+    ]
+  },
+  "olimpiada-12-concept-burnside-lemma": {
+    "title": "Olimpiada 12 concept burnside lemma",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-12-kombinatorika"
+    ]
+  },
+  "olimpiada-12-concept-inclusion-exclusion-derangements": {
+    "title": "Olimpiada 12 concept inclusion exclusion derangements",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-12-kombinatorika"
+    ]
+  },
   "olimpiada-12-concept-vietas-jumping": {
     "title": "Vijetos šuolis",
     "type": "concept",
     "definition": "Įrodymo metodas skaičių teorijoje, kai turint sprendinį konstruojamas kitas, mažesnis sprendinys.",
-    "intuition": "Jei darome prielaidą, kad egzistuoja minimalus sprendinys pagal tam tikrą matą, ir pritaikę Vijetos formules gauname dar mažesnį sprendinį, gauname prieštarą.",
-    "formal": "Jei lygtis $x^2 - Ax + B = 0$ turi sveikąjį sprendinį $x_1$, tai antrasis sprendinys $x_2 = A - x_1 = B/x_1$ taip pat yra racionalusis (ir dažnai sveikasis), kurį galime naudoti begalinio nusileidimo arba prieštaros argumentuose.",
+    "intuition": "Jei darome prielaidą, kad egzistuoja minimalus sprendinys ir pritaikę Vijetos formules gauname dar mažesnį, gauname prieštarą.",
+    "formal": "Jei lygtis $x^2 - Ax + B = 0$ turi sveikąjį sprendinį $x_1$, tai antrasis sprendinys $x_2 = A - x_1 = B/x_1$ taip pat yra racionalusis.",
     "related": [],
     "topics": [
       "olimpiada-12-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-12-concept-lte-lemma": {
+    "title": "LTE (Lifting The Exponent) lema",
+    "type": "concept",
+    "definition": "Formulė pirminio skaičiaus laipsniui, dalijančiam $a^n \\pm b^n$, rasti.",
+    "intuition": "Tai leidžia tiesiogiai suskaičiuoti, kiek kartų pirminis skaičius $p$ įeina į reiškinio $a^n - b^n$ skaidinį pirminiais daugikliais.",
+    "formal": "Nelyginiam $p$, jei $p | a-b$, tai $v_p(a^n - b^n) = v_p(a-b) + v_p(n)$.",
+    "related": [],
+    "topics": [
+      "olimpiada-12-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-12-concept-quadratic-reciprocity": {
+    "title": "Olimpiada 12 concept quadratic reciprocity",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-12-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-12-concept-pell-equation": {
+    "title": "Olimpiada 12 concept pell equation",
+    "type": "concept",
+    "definition": "Definicija.",
+    "intuition": "",
+    "formal": "",
+    "related": [],
+    "topics": [
+      "olimpiada-12-skaiciu-teorija"
+    ]
+  },
+  "staciakampe-koordinaciu-sistema-erdveje": {
+    "title": "Stačiakampė koordinačių sistema erdvėje",
+    "type": "concept",
+    "definition": "Tarpusavyje statmenų ašių sistema erdvėje.",
+    "intuition": "Tai būdas nurodyti bet kurio taško vietą erdvėje naudojant tris skaičius.",
+    "formal": "Sistemą sudaro trys tarpusavyje statmenos skaičių tiesės (Ox, Oy, Oz), kertančios viena kitą taške O.",
+    "related": [
+      "atstumas-tarp-tasku-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-koordinates-erdveje": {
+    "title": "Vektoriaus koordinatės erdvėje",
+    "type": "concept",
+    "definition": "Skaičių trejetas, nurodantis vektoriaus kryptį ir ilgį erdvėje.",
+    "intuition": "Tai poslinkis x, y ir z ašių kryptimis.",
+    "formal": "Vektoriaus $\\vec{a} = (x; y; z)$ koordinatės yra jo projekcijos į koordinačių ašis.",
+    "related": [
+      "vektoriaus-modulis-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-modulis-erdveje": {
+    "title": "Vektoriaus modulis erdvėje",
+    "type": "concept",
+    "definition": "Vektoriaus ilgis erdvėje.",
+    "intuition": "Atstumas nuo vektoriaus pradžios iki jo galo.",
+    "formal": "Vektoriaus $\\vec{a}(x; y; z)$ modulis yra $|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}$.",
+    "related": [
+      "vektoriaus-koordinates-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "skaliarine-vektoriu-sandauga-erdveje": {
+    "title": "Skaliarinė vektorių sandauga",
+    "type": "concept",
+    "definition": "Vektorių modulių ir kampo tarp jų kosinuso sandauga.",
+    "intuition": "Operacija, kuri iš dviejų vektorių sukuria skaičių.",
+    "formal": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}| |\\vec{b}| \\cos \\phi = x_1 x_2 + y_1 y_2 + z_1 z_2$.",
+    "related": [
+      "kampas-tarp-vektoriu-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "kolinearieji-vektoriai-erdveje": {
+    "title": "Kolinearieji vektoriai",
+    "type": "concept",
+    "definition": "Vektoriai, esantys vienoje tiesėje arba lygiagrečiose tiesėse.",
+    "intuition": "Vektoriai, kurie turi tą pačią arba priešingas kryptis.",
+    "formal": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra kolinearieji, jei egzistuoja skaičius $k$ toks, kad $\\vec{a} = k\\vec{b}$.",
+    "related": [
+      "vektoriaus-daugyba-is-skaiciaus-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "kampas-tarp-vektoriu-erdveje": {
+    "title": "Kampas tarp vektorių",
+    "type": "concept",
+    "definition": "Kampas $\\phi \\in [0; \\pi]$ tarp dviejų vektorių.",
+    "intuition": "Matas, rodantis, kiek vektoriai nukrypę vienas nuo kito.",
+    "formal": "Kampas tarp vektorių, atidėtų nuo to paties taško.",
+    "related": [
+      "skaliarine-vektoriu-sandauga-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "atstumas-tarp-tasku-erdveje": {
+    "title": "Atstumas tarp taškų",
+    "type": "concept",
+    "definition": "Atkarpos, jungiančios du taškus erdvėje, ilgis.",
+    "intuition": "Trumpiausias kelias tarp dviejų vietų erdvėje.",
+    "formal": "$AB = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$.",
+    "related": [
+      "staciakampe-koordinaciu-sistema-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriu-sudetis-erdveje": {
+    "title": "Vektorių sudėtis erdvėje",
+    "type": "method",
+    "definition": "Vektorių sudėjimas pagal trikampio arba lygiagretainio taisyklę.",
+    "intuition": "Dviejų poslinkių sujungimas į vieną.",
+    "formal": "Jei $\\vec{a}=(x_1, y_1, z_1)$ ir $\\vec{b}=(x_2, y_2, z_2)$, tai $\\vec{a}+\\vec{b}=(x_1+x_2, y_1+y_2, z_1+z_2)$.",
+    "related": [
+      "vektoriu-atimtis-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriu-atimtis-erdveje": {
+    "title": "Vektorių atimtis erdvėje",
+    "type": "method",
+    "definition": "Vektorių atimtis atimant atitinkamas koordinates.",
+    "intuition": "Skirtumo vektorius jungia atimamojo pabaigą su turinio pabaiga.",
+    "formal": "$\\vec{a} - \\vec{b} = (x_1 - x_2; y_1 - y_2; z_1 - z_2)$.",
+    "related": [
+      "vektoriu-sudetis-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-daugyba-is-skaiciaus-erdveje": {
+    "title": "Vektoriaus daugyba iš skaičiaus",
+    "type": "method",
+    "definition": "Vektoriaus ilgio keitimas išlaikant kryptį.",
+    "intuition": "Vektoriaus 'ištęsimas' arba 'suglaudimas'.",
+    "formal": "$k(x; y; z) = (kx; ky; kz)$.",
+    "related": [
+      "kolinearieji-vektoriai-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "komplanarūs-vektoriai": {
+    "title": "Komplanarūs vektoriai",
+    "type": "concept",
+    "definition": "Vektoriai, esantys vienoje plokštumoje arba lygiagretūs tai pačiai plokštumai.",
+    "intuition": "Vektoriai, kuriuos galima 'paguldyti' ant to paties stalo.",
+    "formal": "Trys vektoriai erdvėje yra komplanarūs, jei vienas iš jų yra kitų dviejų tiesinė kombinacija.",
+    "related": [
+      "kolinearieji-vektoriai-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-modulio-formule-erdveje": {
+    "title": "Vektoriaus modulio formulė",
+    "type": "formula",
+    "definition": "Apskaičiuoja vektoriaus ilgį pagal jo koordinates erdvėje.",
+    "intuition": "Apskaičiuoja vektoriaus ilgį pagal jo koordinates erdvėje.",
+    "formal": "|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}",
+    "related": [
+      "vektoriaus-modulis-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "skaliarines-sandaugos-formule-koordinatemis": {
+    "title": "Skaliarinė sandauga (koordinatėmis)",
+    "type": "formula",
+    "definition": "Leidžia apskaičiuoti skaliarinę sandaugą, kai žinomos vektorių koordinatės.",
+    "intuition": "Leidžia apskaičiuoti skaliarinę sandaugą, kai žinomos vektorių koordinatės.",
+    "formal": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+    "related": [
+      "skaliarine-vektoriu-sandauga-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "kampo-tarp-vektoriu-kosinuso-formule": {
+    "title": "Kampo tarp vektorių kosinusas",
+    "type": "formula",
+    "definition": "Naudojama kampui tarp vektorių erdvėje rasti.",
+    "intuition": "Naudojama kampui tarp vektorių erdvėje rasti.",
+    "formal": "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}",
+    "related": [
+      "kampas-tarp-vektoriu-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "atstumo-tarp-tasku-formule-erdveje": {
+    "title": "Atstumas tarp taškų erdvėje",
+    "type": "formula",
+    "definition": "Pitagoro teoremos apibendrinimas trims dimensijoms.",
+    "intuition": "Pitagoro teoremos apibendrinimas trims dimensijoms.",
+    "formal": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}",
+    "related": [
+      "atstumas-tarp-tasku-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-koordinasciu-ir-tasko-koordinasciu-painiojimas": {
+    "title": "Vektoriaus ir taško koordinačių painiojimas",
+    "type": "mistake",
+    "definition": "Pamirštama, kad vektoriaus koordinatės rodo pokytį (skirtumą), o ne absoliučią padėtį.",
+    "intuition": "Vektoriaus $\\vec{AB}$ koordinatės laikomos lygios taško $B$ koordinatėms.",
+    "formal": "Vektoriaus koordinatės yra galo ir pradžios taškų koordinačių skirtumai.",
+    "related": [
+      "vektoriaus-koordinates-erdveje",
+      "staciakampe-koordinaciu-sistema-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "skaliarines-sandaugos-zenklo-klaida": {
+    "title": "Skaliarinės sandaugos ženklo ignoravimas",
+    "type": "mistake",
+    "definition": "Sumaišomos kosinuso savybės: $\\cos \\phi < 0$ reiškia, kad kampas yra bukasis (nuo $90^\\circ$ iki $180^\\circ$).",
+    "intuition": "Manoma, kad jei skaliarinė sandauga neigiama, tai kampas smailus.",
+    "formal": "Teigiama sandauga – smailus kampas, neigiama – bukasis, nulis – statusis.",
+    "related": [
+      "skaliarine-vektoriu-sandauga-erdveje",
+      "kampas-tarp-vektoriu-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
+    ]
+  },
+  "vektoriaus-ilgio-skaiciavimo-klaida": {
+    "title": "Klaida sumuojant koordinačių kvadratus",
+    "type": "mistake",
+    "definition": "Netinkamas Pitagoro teoremos taikymas.",
+    "intuition": "Sudėjus koordinates ir ištraukus šaknį (arba pamiršus pakelti kvadratu).",
+    "formal": "Pirmiausia pakelkite kiekvieną koordinatę kvadratu, tada sudėkite, tada traukite šaknį.",
+    "related": [
+      "vektoriaus-modulis-erdveje"
+    ],
+    "topics": [
+      "vektoriai-erdveje"
     ]
   }
 };

@@ -1,0 +1,1140 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "12_klase_teorija.pdf",
+    "notes": "10 klasės programa nagrinėja figūrų panašumą, jų plotų santykį bei trikampio pusiaukampinių ir pusiaukraštinių savybes."
+  },
+  "topic": {
+    "id": "figuru-panasumas-ir-trikampio-elementai",
+    "title": "Figūrų panašumas ir trikampio elementai",
+    "grade": 10,
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "order": 9,
+    "estimatedStudyMinutes": 150,
+    "prerequisiteTopicIds": [
+      "trikampiu-trigonometrija-ir-apskritimai"
+    ],
+    "nextTopicIds": [
+      "ibreztiniai-ir-apibreztiniai-daugiakampiai"
+    ],
+    "conceptIds": [
+      "panasios-figuros",
+      "panasumo-koeficientas",
+      "pusiaukrastine",
+      "pusiaukampine",
+      "pusiaukrastiniu-sankirta",
+      "pusiaukampiniu-savybe",
+      "perimetru-santykis",
+      "plotu-santykis"
+    ],
+    "formulaIds": [
+      "perimetru-panasumo-formule",
+      "plotu-panasumo-formule",
+      "pusiaukampines-savybe-formule",
+      "pusiaukrastiniu-savybe-formule"
+    ],
+    "mistakeIds": [
+      "plotu-santykis-be-kvadrato",
+      "painioja-pusiaukrastine-su-aukstine"
+    ],
+    "exerciseIds": [
+      "panasumas-ex-001",
+      "panasumas-ex-002",
+      "panasumas-ex-003",
+      "panasumas-ex-004",
+      "panasumas-ex-005",
+      "panasumas-ex-006",
+      "panasumas-ex-007",
+      "panasumas-ex-008",
+      "panasumas-ex-009",
+      "panasumas-ex-010",
+      "panasumas-ex-011",
+      "panasumas-ex-012",
+      "panasumas-ex-013",
+      "panasumas-ex-014",
+      "panasumas-ex-015",
+      "panasumas-ex-016",
+      "panasumas-ex-017",
+      "panasumas-ex-018",
+      "panasumas-ex-019",
+      "panasumas-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "figuru-panasumas-ivadas",
+      "title": "Figūrų panašumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dvi figūros vadinamos panašiosiomis, jei jų atitinkami kampai yra lygūs, o atitinkamos kraštinės yra proporcingos."
+        },
+        {
+          "type": "definition",
+          "conceptId": "panasumo-koeficientas",
+          "text": "Skaičius $k$, rodantis, kiek kartų viena figūra yra didesnė už kitą."
+        },
+        {
+          "type": "property",
+          "text": "Jei figūrų panašumo koeficientas yra $k$, tai jų perimetrų santykis lygus $k$, o plotų santykis lygus $k^2$."
+        }
+      ]
+    },
+    {
+      "id": "trikampio-pusiaukrastines",
+      "title": "Trikampio pusiaukraštinės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampio [[pusiaukrastine|pusiaukraštinė]] yra atkarpa, jungianti trikampio viršūnę su prieš ją esančios kraštinės viduriu."
+        },
+        {
+          "type": "theorem",
+          "text": "Visos trys trikampio pusiaukraštinės kertasi viename taške, kuris kiekvieną jų dalija santykiu 2:1, skaičiuojant nuo viršūnės."
+        }
+      ]
+    },
+    {
+      "id": "trikampio-pusiaukampines",
+      "title": "Trikampio pusiaukampinės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampio [[pusiaukampine|pusiaukampinė]] yra atkarpa, kuri dalija trikampio kampą pusiau."
+        },
+        {
+          "type": "property",
+          "conceptId": "pusiaukampiniu-savybe",
+          "text": "Trikampio pusiaukampinė prieš ją esančią kraštinę dalija į atkarpas, proporcingas kitoms dviem trikampio kraštinėms."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "panasios-figuros",
+      "title": "Panašios figūros",
+      "type": "concept",
+      "shortDefinition": "Figūros, turinčios tą pačią formą, bet nebūtinai tą patį dydį.",
+      "intuition": "Tai tarsi mastelio pakeitimas – didinimas arba mažinimas.",
+      "relatedConceptIds": [
+        "panasumo-koeficientas"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "panasumo-koeficientas",
+      "title": "Panašumo koeficientas",
+      "type": "concept",
+      "shortDefinition": "Atitinkamų kraštinių ilgių santykis.",
+      "notation": [
+        "k"
+      ],
+      "relatedConceptIds": [
+        "perimetru-santykis",
+        "plotu-santykis"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukrastine",
+      "title": "Pusiaukraštinė",
+      "type": "concept",
+      "shortDefinition": "Atkarpa nuo viršūnės iki kraštinės vidurio.",
+      "intuition": "Ji 'perpjauna' kraštinę per pusę.",
+      "relatedConceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukampine",
+      "title": "Pusiaukampinė",
+      "type": "concept",
+      "shortDefinition": "Atkarpa, dalijanti kampą į dvi lygias dalis.",
+      "intuition": "Ji 'perpjauna' kampą per pusę.",
+      "relatedConceptIds": [
+        "pusiaukampiniu-savybe"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukrastiniu-sankirta",
+      "title": "Pusiaukrašinių sankirtos taškas",
+      "type": "concept",
+      "shortDefinition": "Taškas, kuriame kertasi visos pusiaukraštinės (svorio centras).",
+      "intuition": "Šiame taške trikampis išlaiko pusiausvyrą.",
+      "relatedConceptIds": [
+        "pusiaukrastine"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukampiniu-savybe",
+      "title": "Pusiaukampinės savybė",
+      "type": "theorem",
+      "shortDefinition": "Santykyje esančių atkarpų lygybė trikampyje.",
+      "formal": "$\\frac{x}{y} = \\frac{a}{b}$, kur x ir y yra atkarpas, į kurias pusiaukampinė padalijo kraštinę.",
+      "relatedConceptIds": [
+        "pusiaukampine"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "perimetru-santykis",
+      "title": "Perimetrų santykis",
+      "type": "property",
+      "shortDefinition": "Panašių figūrų perimetrų santykis lygus k.",
+      "relatedConceptIds": [
+        "panasumo-koeficientas"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "plotu-santykis",
+      "title": "Plotų santykis",
+      "type": "property",
+      "shortDefinition": "Panašių figūrų plotų santykis lygus k^2.",
+      "relatedConceptIds": [
+        "panasumo-koeficientas"
+      ],
+      "appearsInTopicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "perimetru-panasumo-formule",
+      "title": "Perimetrų santykio formulė",
+      "latex": "\\frac{P_1}{P_2} = k",
+      "variables": {
+        "P_1": "pirmos figūros perimetras",
+        "P_2": "antros figūros perimetras",
+        "k": "panašumo koeficientas"
+      },
+      "explanation": "Panašių figūrų perimetrai sutinka kaip jų kraštinės.",
+      "defaultSrs": true
+    },
+    {
+      "id": "plotu-panasumo-formule",
+      "title": "Plotų santykio formulė",
+      "latex": "\\frac{S_1}{S_2} = k^2",
+      "variables": {
+        "S_1": "pirmos figūros plotas",
+        "S_2": "antros figūros plotas",
+        "k": "panašumo koeficientas"
+      },
+      "explanation": "Panašių figūrų plotai sutinka kaip kraštinių kvadratai.",
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukampines-savybe-formule",
+      "title": "Trikampio pusiaukampinės savybė",
+      "latex": "\\frac{a}{b} = \\frac{c}{d}",
+      "explanation": "Pusiaukampinė dalija kraštinę į atkarpas c ir d, proporcingas prie jų esančioms kraštinėms a ir b.",
+      "defaultSrs": true
+    },
+    {
+      "id": "pusiaukrastiniu-savybe-formule",
+      "title": "Pusiaukraštinių dalijimo savybė",
+      "latex": "2:1",
+      "explanation": "Sankirtos taškas dalija pusiaukraštinę į dvi dalis, kurių viena dvigubai ilgesnė už kitą (ilgesnė dalis prie viršūnės).",
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "plotu-santykis-be-kvadrato",
+      "title": "Pamiršta pakelti k kvadratu skaičiuojant plotą",
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "wrongPattern": "Sako, kad jei kraštinė 2 kartus didesnė, tai ir plotas 2 kartus didesnis.",
+      "whyItHappens": "Intuicija klaidina, nes perimetras kinta tiesiškai.",
+      "correction": "Plotas kinta kvadratu: $S_{naujas} = k^2 \\cdot S_{senas}$.",
+      "wrongExample": "k=3, S1=10, tada S2=30.",
+      "correctExample": "k=3, S1=10, tada S2=90 (nes $3^2=9$).",
+      "defaultSrs": true
+    },
+    {
+      "id": "painioja-pusiaukrastine-su-aukstine",
+      "title": "Painioja pusiaukraštinę su aukštine",
+      "conceptIds": [
+        "pusiaukrastine"
+      ],
+      "wrongPattern": "Mano, kad pusiaukraštinė visada statmena kraštinei.",
+      "whyItHappens": "Lygiašoniame trikampyje jos sutampa, todėl mokiniai apibendrina visais atvejais.",
+      "correction": "Pusiaukraštinė tik dalija kraštinę pusiau, bet nebūtinai yra statmena.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "panasumas-example-1",
+      "title": "Plotų santykio radimas",
+      "level": "easy",
+      "problem": "Dviejų panašių trikampių kraštinių santykis yra 2:5. Koks bus jų plotų santykis?",
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "steps": [
+        {
+          "text": "Randame panašumo koeficientą k.",
+          "latex": "k = \\frac{2}{5}"
+        },
+        {
+          "text": "Plotų santykis lygus $k^2$.",
+          "latex": "\\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}"
+        }
+      ],
+      "answer": "4:25"
+    },
+    {
+      "id": "pusiaukrastine-example-1",
+      "title": "Pusiaukraštinių dalių radimas",
+      "level": "easy",
+      "problem": "Trikampio pusiaukraštinės ilgis yra 12 cm. Raskite jos dalių ilgius iki sankirtos taško.",
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "steps": [
+        {
+          "text": "Pusiaukraštinė dalijama santykiu 2:1. Iš viso yra 3 dalys.",
+          "latex": "12 : 3 = 4 \\text{ cm}"
+        },
+        {
+          "text": "Ilgesnė dalis (prie viršūnės) yra 2 dalys.",
+          "latex": "2 \\cdot 4 = 8 \\text{ cm}"
+        },
+        {
+          "text": "Trumpesnė dalis yra 1 dalis.",
+          "latex": "1 \\cdot 4 = 4 \\text{ cm}"
+        }
+      ],
+      "answer": "8 cm ir 4 cm"
+    },
+    {
+      "id": "pusiaukampine-example-1",
+      "title": "Kraštinės atkarpų radimas",
+      "level": "medium",
+      "problem": "Trikampio kraštinės yra 6 cm ir 8 cm. Pusiaukampinė iš viršūnės tarp šių kraštinių dalija priešingą kraštinę, kurios ilgis 7 cm, į dvi dalis. Raskite tų dalių ilgius.",
+      "conceptIds": [
+        "pusiaukampiniu-savybe"
+      ],
+      "steps": [
+        {
+          "text": "Tarkime dalys yra x ir 7-x. Pagal savybę:",
+          "latex": "\\frac{6}{8} = \\frac{x}{7-x}"
+        },
+        {
+          "text": "Supaprastiname santykį: $\\frac{3}{4} = \\frac{x}{7-x}$."
+        },
+        {
+          "text": "Dauginame kryžmai: $3(7-x) = 4x$.",
+          "latex": "21 - 3x = 4x \\implies 7x = 21 \\implies x = 3"
+        },
+        {
+          "text": "Kita dalis: $7 - 3 = 4$."
+        }
+      ],
+      "answer": "3 cm ir 4 cm"
+    },
+    {
+      "id": "panasumas-example-2",
+      "title": "Nežinomos kraštinės radimas per plotą",
+      "level": "medium",
+      "problem": "Panašių daugiakampių plotai yra $20\\text{ cm}^2$ ir $80\\text{ cm}^2$. Jei mažesniojo daugiakampio perimetras yra 15 cm, koks yra didesniojo perimetras?",
+      "conceptIds": [
+        "plotu-santykis",
+        "perimetru-santykis"
+      ],
+      "steps": [
+        {
+          "text": "Randame plotų santykį, kuris lygus $k^2$.",
+          "latex": "k^2 = \\frac{80}{20} = 4"
+        },
+        {
+          "text": "Randame panašumo koeficientą k.",
+          "latex": "k = \\sqrt{4} = 2"
+        },
+        {
+          "text": "Didesniojo perimetras bus k kartų didesnis.",
+          "latex": "P = 15 \\cdot 2 = 30 \\text{ cm}"
+        }
+      ],
+      "answer": "30 cm"
+    },
+    {
+      "id": "pusiaukrastine-hard-1",
+      "title": "Pusiaukraštinės savybė su kintamaisiais",
+      "level": "hard",
+      "problem": "Trikampio pusiaukraštinių sankirtos taško atstumas iki viršūnės yra 6 cm didesnis už atstumą iki kraštinės. Koks yra visos pusiaukraštinės ilgis?",
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "steps": [
+        {
+          "text": "Tarkime trumpesnė dalis yra x, tada ilgesnė yra 2x.",
+          "latex": "2x - x = 6 \\implies x = 6"
+        },
+        {
+          "text": "Ilgesnė dalis: $2 \\cdot 6 = 12$."
+        },
+        {
+          "text": "Visa pusiaukraštinė: $12 + 6 = 18$."
+        }
+      ],
+      "answer": "18 cm"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "panasumas-ex-001",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Trikampių panašumo koeficientas k = 3. Mažesniojo trikampio kraštinė yra 4. Kokia atitinkama didesniojo trikampio kraštinė?",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Padauginkite kraštinę iš k.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "4 * 3 = 12."
+        }
+      ],
+      "conceptIds": [
+        "panasumo-koeficientas"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "12"
+    },
+    {
+      "id": "panasumas-ex-002",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei panašių figūrų kraštinių santykis yra 1:2, koks yra jų perimetrų santykis (įrašykite tik antrąjį skaičių, kai pirmas yra 1)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Perimetrų santykis sutampa su kraštinių santykiu.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "k = 2, todėl santykis 1:2."
+        }
+      ],
+      "conceptIds": [
+        "perimetru-santykis"
+      ],
+      "estimatedSeconds": 15,
+      "answerText": "2"
+    },
+    {
+      "id": "panasumas-ex-003",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Jei k = 2, kiek kartų didesnis bus figūros plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Plotų santykis yra k kvadratu.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2^2 = 4."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "4"
+    },
+    {
+      "id": "panasumas-ex-004",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Trikampio pusiaukraštinė lygi 15. Kokia yra ilgesnė jos dalis nuo viršūnės iki sankirtos taško?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pusiaukraštinė dalijama santykiu 2:1. Iš viso 3 dalys.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "15 / 3 * 2 = 10."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "10"
+    },
+    {
+      "id": "panasumas-ex-005",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Trikampio pusiaukraštinės dalis nuo sankirtos taško iki kraštinės yra 3. Koks visos pusiaukraštinės ilgis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Dalis nuo sankirtos iki kraštinės yra 1 dalis, o nuo viršūnės iki sankirtos yra 2 dalys.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Dalis prie viršūnės: 2 * 3 = 6. Visa: 6 + 3 = 9."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "9"
+    },
+    {
+      "id": "panasumas-ex-006",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Trikampio pusiaukampinė dalija kampą:",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Į dvi lygias dalis"
+          },
+          {
+            "id": "b",
+            "text": "Santykiu 2:1"
+          },
+          {
+            "id": "c",
+            "text": "Tik lygiašoniame trikampyje pusiau"
+          },
+          {
+            "id": "d",
+            "text": "Statmenai"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tai kyla iš pačio pavadinimo - pusiau kampą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pusiaukampinė visada dalija kampą pusiau."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukampine"
+      ],
+      "estimatedSeconds": 15,
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "panasumas-ex-007",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Dvieju panašių trikampių plotai yra 25 ir 49. Koks yra jų kraštinių santykis (įrašykite k kaip santykį x:y, pavyzdžiui, 5/7, bet čia prašoma tik skaitiklio, kai vardiklis 7)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Santykis $k^2 = 25/49$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "k = sqrt(25/49) = 5/7."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "5"
+    },
+    {
+      "id": "panasumas-ex-008",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės yra 5, 6, 7. Panašaus trikampio perimetras lygus 36. Koks k?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Randame pirmo trikampio perimetrą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "P1 = 5+6+7 = 18. k = 36 / 18 = 2."
+        }
+      ],
+      "conceptIds": [
+        "perimetru-santykis"
+      ],
+      "estimatedSeconds": 40,
+      "answerText": "2"
+    },
+    {
+      "id": "panasumas-ex-009",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės yra 10 ir 15. Pusiaukampinė tarp jų dalija trečią kraštinę į atkarpas, iš kurių viena lygi 4. Koks gali būti trečios kraštinės ilgis (raskite mažesnį galimą variantą)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagal pusiaukampinės savybę: 10/15 = 4/x arba 10/15 = x/4.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Jei 4 atitinka 10, tai 10/15 = 4/x -> x = 6. Tada visa kraštinė 4+6=10. Jei 4 atitinka 15, tai 10/15 = x/4 -> x = 2.66. Mažesnis sveikas variantas yra 10."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukampiniu-savybe"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "10"
+    },
+    {
+      "id": "panasumas-ex-010",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio pusiaukraštinės kertasi taške M. Jei AM = 8 (A yra viršūnė), koks yra visos pusiaukraštinės ilgis?",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "AM yra 2 dalys iš 3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Viena dalis 8 / 2 = 4. Visa seka 8 + 4 = 12."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "12"
+    },
+    {
+      "id": "panasumas-ex-011",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Daugianampio plotas padidėjo 16 kartų. Kiek kartų padidėjo jo perimetras?",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "k^2 = 16.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "k = sqrt(16) = 4."
+        }
+      ],
+      "conceptIds": [
+        "perimetru-santykis",
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "4"
+    },
+    {
+      "id": "panasumas-ex-012",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės yra 3, 4, 5. Panašaus trikampio didžiausia kraštinė yra 15. Koks jo plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 54,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmas trikampis yra status (3, 4, 5). Jo plotas 3*4/2 = 6.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "k = 15 / 5 = 3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "S1 = 6. S2 = S1 * k^2 = 6 * 9 = 54."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis",
+        "panasumo-koeficientas"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "54"
+    },
+    {
+      "id": "panasumas-ex-013",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiekviena kvadrato kraštinė pailginta 20%. Kiek procentų padidėjo jo plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 44,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "k = 1,2.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Naujas plotas S * k^2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1,2^2 = 1,44. Padidėjimas 0,44 arba 44%."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 50,
+      "answerText": "44"
+    },
+    {
+      "id": "panasumas-ex-014",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio pusiaukraštinės AM, BN, CK kertasi taške G. Jei trikampio ABC plotas lygus 60, koks yra trikampio GAB plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pusiaukraštinės dalija trikampį į 6 lygiapločius trikampius.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trikampis GAB susideda iš dviejų tokių mažų trikampių (arba tiesiog pusiaukraštinės dalija į 3 dalis pagal plotą link centro). 60 / 3 = 20."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "20"
+    },
+    {
+      "id": "panasumas-ex-015",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinės 8, 10, 12. Kokia bus panašaus trikampio vidurinė kraštinė, jei k = 0,5?",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Padauginkite vidurinę kraštinę iš k.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 * 0,5 = 5."
+        }
+      ],
+      "conceptIds": [
+        "panasumo-koeficientas"
+      ],
+      "estimatedSeconds": 20,
+      "answerText": "5"
+    },
+    {
+      "id": "panasumas-ex-016",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Dvieju panašių daugiakampių perimetrų suma lygi 100. Jų plotų santykis yra 4:9. Raskite didesniojo daugiakampio perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "k = sqrt(4/9) = 2/3.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "P1 + P2 = 100, P1/P2 = 2/3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2x + 3x = 100 -> 5x = 100 -> x = 20. P2 = 3 * 20 = 60."
+        }
+      ],
+      "conceptIds": [
+        "perimetru-santykis",
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 60,
+      "answerText": "60"
+    },
+    {
+      "id": "panasumas-ex-017",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Trikampio kraštinė padalinta į 3 lygias dalis taškais, per kuriuos išvestos tiesės, lygiagrečios kitai kraštinei. Jei trikampio plotas 90, koks yra gautos vidurinės trapecijos plotas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 30,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Turime 3 panašius trikampius su koeficientais 1/3, 2/3 ir 1.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Jų plotai: 90*(1/9)=10, 90*(4/9)=40, 90*(1)=90.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trapecijos plotas yra S(vidurinis trik.) - S(mažas trik.) = 40 - 10 = 30."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 80,
+      "answerText": "30"
+    },
+    {
+      "id": "panasumas-ex-018",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Stačiojo trikampio statiniai 6 ir 8. Raskite atstumą nuo pusiaukraštinių sankirtos taško iki statinio, kurio ilgis 8.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Atstumas iki statinio yra x koordinatė (jei statiniai ašyse).",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Svorio centro koordinatės yra (x1+x2+x3)/3.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Viršūnės (0,0), (6,0), (0,8). Centro x = (0+6+0)/3 = 2."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "estimatedSeconds": 90,
+      "answerText": "2"
+    },
+    {
+      "id": "panasumas-ex-019",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Trikampio ABC pusiaukampinė AD dalija BC į atkarpas BD=3 ir DC=5. Jei AB=6, raskite AC.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "6 / AC = 3 / 5.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6 / 3 = 2. AC = 5 * 2 = 10."
+        }
+      ],
+      "conceptIds": [
+        "pusiaukampiniu-savybe"
+      ],
+      "estimatedSeconds": 30,
+      "answerText": "10"
+    },
+    {
+      "id": "panasumas-ex-020",
+      "topicId": "figuru-panasumas-ir-trikampio-elementai",
+      "grade": 10,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Dviejų panašių daugiakampių plotų skirtumas yra 75. k = 2. Raskite mažesniojo plotą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "S2 = k^2 * S1 = 4 * S1.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "4*S1 - S1 = 75.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3*S1 = 75 -> S1 = 25."
+        }
+      ],
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "estimatedSeconds": 50,
+      "answerText": "25"
+    }
+  ],
+  "tests": [
+    {
+      "id": "panasumas-test-1",
+      "title": "Figūrų panašumas ir trikampio elementai: testas",
+      "scope": "topic",
+      "topicIds": [
+        "figuru-panasumas-ir-trikampio-elementai"
+      ],
+      "exerciseIds": [
+        "panasumas-ex-003",
+        "panasumas-ex-004",
+        "panasumas-ex-007",
+        "panasumas-ex-009",
+        "panasumas-ex-011",
+        "panasumas-ex-013",
+        "panasumas-ex-016",
+        "panasumas-ex-017",
+        "panasumas-ex-018",
+        "panasumas-ex-020"
+      ],
+      "timeLimitSeconds": 1500,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.75
+    }
+  ],
+  "srsSeeds": [
+    {
+      "id": "srs-panasumas-k",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Koks yra panašių figūrų perimetrų santykis?",
+      "back": "Lygus panašumo koeficientui k.",
+      "conceptIds": [
+        "perimetru-santykis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-panasumas-k2",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Koks yra panašių figūrų plotų santykis?",
+      "back": "Lygus panašumo koeficiento kvadratui k^2.",
+      "conceptIds": [
+        "plotu-santykis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-pusiaukrastines-sankirta",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Kokiu santykiu pusiaukraštinės dalija viena kitą?",
+      "back": "2:1, skaičiuojant nuo viršūnės.",
+      "conceptIds": [
+        "pusiaukrastiniu-sankirta"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-pusiaukampines-savybe",
+      "deck": "theory",
+      "cardType": "theorem",
+      "front": "Kokia yra trikampio pusiaukampinės savybė?",
+      "back": "Ji dalija priešingą kraštinę į atkarpas, proporcingas prie jų esančioms kraštinėms.",
+      "conceptIds": [
+        "pusiaukampiniu-savybe"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

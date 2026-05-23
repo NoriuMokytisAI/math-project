@@ -469,6 +469,475 @@ export const exercises_08 = [
     "estimatedSeconds": 45
   },
   {
+    "id": "3d-ex-001",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "easy",
+    "statement": "Stačiakampio gretasienio kraštinės 2, 3 ir 5. Rask jo tūrį.",
+    "answer": "30",
+    "acceptedAnswers": [
+      "30"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "stacioji-prizme",
+      "turis"
+    ],
+    "hints": [
+      "V = a * b * c."
+    ],
+    "solution": "2 * 3 * 5 = 30.",
+    "alternate": "",
+    "estimatedSeconds": 30
+  },
+  {
+    "id": "3d-ex-002",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "easy",
+    "statement": "Kubo kraštinė yra 4. Rask jo tūrį.",
+    "answer": "64",
+    "acceptedAnswers": [
+      "64"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "stacioji-prizme",
+      "turis"
+    ],
+    "hints": [
+      "V = a³."
+    ],
+    "solution": "4 * 4 * 4 = 64.",
+    "alternate": "",
+    "estimatedSeconds": 20
+  },
+  {
+    "id": "3d-ex-003",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "easy",
+    "statement": "Ritinio S_pagr = 20, H = 5. Rask tūrį.",
+    "answer": "100",
+    "acceptedAnswers": [
+      "100"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "ritinys",
+      "turis"
+    ],
+    "hints": [
+      "V = S_pagr * H."
+    ],
+    "solution": "20 * 5 = 100.",
+    "alternate": "",
+    "estimatedSeconds": 20
+  },
+  {
+    "id": "3d-ex-004",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "easy",
+    "statement": "Kūgio S_pagr = 30, H = 6. Rask tūrį.",
+    "answer": "60",
+    "acceptedAnswers": [
+      "60"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kugis",
+      "turis"
+    ],
+    "hints": [
+      "V = 1/3 * S_pagr * H."
+    ],
+    "solution": "1/3 * 30 * 6 = 10 * 6 = 60.",
+    "alternate": "",
+    "estimatedSeconds": 30
+  },
+  {
+    "id": "3d-ex-005",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "easy",
+    "statement": "Rutulio spindulys r = 1. Rask sferos plotą. (Atsakymą pateik su π).",
+    "answer": "4",
+    "acceptedAnswers": [
+      "4"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "sfera",
+      "pavirsiaus-plotas"
+    ],
+    "hints": [
+      "S = 4πr²."
+    ],
+    "solution": "4 * π * 1² = 4π.",
+    "alternate": "",
+    "estimatedSeconds": 30
+  },
+  {
+    "id": "3d-ex-006",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Prizmės pagrindas yra statusis trikampis, kurio statiniai 3 ir 4. Prizmės aukštinė H = 10. Rask tūrį.",
+    "answer": "60",
+    "acceptedAnswers": [
+      "60"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "stacioji-prizme",
+      "turis"
+    ],
+    "hints": [
+      "Pirmiausia rask trikampio plotą S = (3*4)/2.",
+      "Tada V = S * H."
+    ],
+    "solution": "S_p = 6. V = 6 * 10 = 60.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
+    "id": "3d-ex-007",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Piramidės pagrindas yra kvadratas, kurio kraštinė 6. Piramidės aukštinė H = 5. Rask tūrį.",
+    "answer": "60",
+    "acceptedAnswers": [
+      "60"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "taisyklingoji-piramide",
+      "turis"
+    ],
+    "hints": [
+      "S_pagr = 6 * 6 = 36.",
+      "V = 1/3 * 36 * 5."
+    ],
+    "solution": "1/3 * 36 * 5 = 12 * 5 = 60.",
+    "alternate": "",
+    "estimatedSeconds": 50
+  },
+  {
+    "id": "3d-ex-008",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Kūgio sudaromoji l = 13, o spindulys r = 5. Rask kūgio aukštinę H.",
+    "answer": "12",
+    "acceptedAnswers": [
+      "12"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kugis",
+      "aukstine"
+    ],
+    "hints": [
+      "Taikyk Pitagorą: H² + r² = l²."
+    ],
+    "solution": "H² = 13² - 5² = 169 - 25 = 144. H = 12.",
+    "alternate": "",
+    "estimatedSeconds": 70
+  },
+  {
+    "id": "3d-ex-009",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Taisyklingosios keturkampės piramidės aukštinė H = 4, o apotema h_a = 5. Kokia yra pagrindo kraštinė?",
+    "answer": "6",
+    "acceptedAnswers": [
+      "6"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "taisyklingoji-piramide",
+      "apotema"
+    ],
+    "hints": [
+      "Stačiajame trikampyje statiniai yra H ir pusė pagrindo kraštinės (a/2), o įžambinė h_a.",
+      "(a/2)² = 5² - 4² = 9."
+    ],
+    "solution": "a/2 = 3, vadinasi a = 6.",
+    "alternate": "",
+    "estimatedSeconds": 90
+  },
+  {
+    "id": "3d-ex-010",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Rutulio tūris yra 36π. Rask jo spindulį r.",
+    "answer": "3",
+    "acceptedAnswers": [
+      "3"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "sfera",
+      "turis"
+    ],
+    "hints": [
+      "36π = 4/3 * π * r³.",
+      "r³ = 36 * 3 / 4 = 27."
+    ],
+    "solution": "r = 3, nes 3³ = 27.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
+    "id": "3d-ex-011",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Ritinio tūris 200 cm³. Koks bus tūris kito ritinio, kurio spindulys toks pat, o aukštinė 2 kartus didesnė?",
+    "answer": "400",
+    "acceptedAnswers": [
+      "400"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "ritinys",
+      "turis"
+    ],
+    "hints": [
+      "Tūris tiesiogiai priklauso nuo aukštinės."
+    ],
+    "solution": "V2 = 2 * V1 = 400.",
+    "alternate": "",
+    "estimatedSeconds": 30
+  },
+  {
+    "id": "3d-ex-012",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Kūgio tūris 100. Koks bus tūris, jei spindulį padidinsime 2 kartus, o aukštinę paliksime tą pačią?",
+    "answer": "400",
+    "acceptedAnswers": [
+      "400"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kugis",
+      "turis"
+    ],
+    "hints": [
+      "Tūris priklauso nuo spindulio kvadrato (r²)."
+    ],
+    "solution": "V2 = V1 * 2² = 400.",
+    "alternate": "",
+    "estimatedSeconds": 45
+  },
+  {
+    "id": "3d-ex-013",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Taisyklingosios keturkampės piramidės pagrindo kraštinė 10, o šoninė briauna 13. Rask piramidės aukštinę H.",
+    "answer": "11.09",
+    "acceptedAnswers": [
+      "11.09"
+    ],
+    "answerTolerance": 0.1,
+    "choices": [],
+    "concepts": [
+      "taisyklingoji-piramide",
+      "aukstine"
+    ],
+    "hints": [
+      "Pirmiausia rask pagrindo įstrižainę d = 10√2.",
+      "Aukštinė, pusė įstrižainės (5√2) ir šoninė briauna sudaro statųjį trikampį.",
+      "H² = 13² - (5√2)² = 169 - 50 = 119."
+    ],
+    "solution": "H = √119 ≈ 11,09.",
+    "alternate": "",
+    "estimatedSeconds": 150
+  },
+  {
+    "id": "3d-ex-014",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Kiek kg dažų reikia nudažyti 2 m spindulio sferą, jei 1 m² sunaudojama 0,2 kg? (π ≈ 3,14).",
+    "answer": "10.05",
+    "acceptedAnswers": [
+      "10.05"
+    ],
+    "answerTolerance": 0.1,
+    "choices": [],
+    "concepts": [
+      "sfera",
+      "pavirsiaus-plotas"
+    ],
+    "hints": [
+      "S = 4πr².",
+      "S = 4 * 3,14 * 4 = 50,24 m²."
+    ],
+    "solution": "Masė = 50,24 * 0,2 = 10,048.",
+    "alternate": "",
+    "estimatedSeconds": 100
+  },
+  {
+    "id": "3d-ex-015",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "medium",
+    "statement": "Ritinio ašinis pjūvis yra kvadratas, kurio plotas 100. Rask ritinio spindulį.",
+    "answer": "5",
+    "acceptedAnswers": [
+      "5"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "ritinys"
+    ],
+    "hints": [
+      "Kvadrato kraštinė lygi ritinio aukštinei H ir skersmeniui d.",
+      "d² = 100 => d = 10."
+    ],
+    "solution": "r = d/2 = 5.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
+    "id": "3d-ex-016",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Kūgio tūris 12π, o aukštinė 9. Rask spindulį r.",
+    "answer": "2",
+    "acceptedAnswers": [
+      "2"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "kugis",
+      "turis"
+    ],
+    "hints": [
+      "12π = 1/3 * π * r² * 9.",
+      "12 = 3 * r² => r² = 4."
+    ],
+    "solution": "r = 2.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
+    "id": "3d-ex-017",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Prizmės aukštinė 8. Pagrindas - rombas su įstrižainėmis 6 ir 10. Rask tūrį.",
+    "answer": "240",
+    "acceptedAnswers": [
+      "240"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "stacioji-prizme",
+      "turis"
+    ],
+    "hints": [
+      "Rombo plotas S = (d1 * d2) / 2."
+    ],
+    "solution": "S = (6*10)/2 = 30. V = 30 * 8 = 240.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
+    "id": "3d-ex-018",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Kubo tūris skaitine reikšme lygus jo visam paviršiaus plotui. Kokia kubo kraštinė?",
+    "answer": "6",
+    "acceptedAnswers": [
+      "6"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "stacioji-prizme",
+      "pavirsiaus-plotas"
+    ],
+    "hints": [
+      "V = a³. S_v = 6a².",
+      "Sulygink a³ = 6a²."
+    ],
+    "solution": "a = 6.",
+    "alternate": "",
+    "estimatedSeconds": 70
+  },
+  {
+    "id": "3d-ex-019",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Sferos spindulį padidinus 2 kartus, kiek kartų padidės jos tūris?",
+    "answer": "8",
+    "acceptedAnswers": [
+      "8"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "sfera",
+      "turis"
+    ],
+    "hints": [
+      "V priklauso nuo r³."
+    ],
+    "solution": "2³ = 8.",
+    "alternate": "",
+    "estimatedSeconds": 30
+  },
+  {
+    "id": "3d-ex-020",
+    "topicId": "erdves-figuru-pavirsiai-ir-turiai",
+    "type": "numericInput",
+    "level": "hard",
+    "statement": "Ritinio spindulį padvigubinus, o aukštinę sumažinus 4 kartus, kaip pasikeis tūris?",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "ritinys",
+      "turis"
+    ],
+    "hints": [
+      "V = π * r² * H. Naujas V = π * (2r)² * (H/4)."
+    ],
+    "solution": "4r² * 1/4 = 1. Tūris nepasikeis.",
+    "alternate": "",
+    "estimatedSeconds": 60
+  },
+  {
     "id": "finansiniai-skaiciavimai-8-ex-001",
     "topicId": "finansiniai-skaiciavimai-8",
     "type": "multipleChoice",
@@ -1431,12 +1900,10 @@ export const exercises_08 = [
       "olimpiada-08-concept-logic"
     ],
     "hints": [
-      "Nustatykite koeficientus: $a=1$, $b=-6$, $c=9$.",
-      "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.",
-      "Kadangi $D=0$, lygtis turi vieną kartotinę (dvigubą) šaknį.",
-      "Šaknis randama pagal formulę $x = -b / (2a)$. Apskaičiuokite jos vertę."
+      "Nustatykite koeficientus: $a=1, b=-6, c=9$.",
+      "D = 0."
     ],
-    "solution": "Nustatome koeficientus: $a=1, b=-6, c=9$. Apskaičiuojame diskriminantą: $D = (-6)^2 - 4 \\times 1 \\times 9 = 36 - 36 = 0$. Kadangi $D = 0$, lygtis turi tik vieną sprendinį (dvigubą šaknį). Randame šaknį: $x = \\frac{6}{2 \\times 1} = 3$. (Taip pat galima pastebėti, kad $x^2 - 6x + 9 = (x-3)^2 = 0$).",
+    "solution": "$D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 0$. Viena šaknis $x = 6/2 = 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
@@ -1447,133 +1914,46 @@ export const exercises_08 = [
       "text": "Apskaičiuokite diskriminantą $D = b^2 - 4ac$. Jo ženklas nurodo šaknų skaičių."
     },
     "strategyTags": [
-      "introductory",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
     "expectedMethodIds": [
       "olimpiada-08-concept-method"
     ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-fe7262fc-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Nustatome koeficientus: $a=1, b=-6, c=9$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame diskriminantą: $D = (-6)^2 - 4 \\times 1 \\times 9 = 36 - 36 = 0$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $D = 0$, lygtis turi tik vieną sprendinį (dvigubą šaknį).",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Randame šaknį: $x = \\frac{6}{2 \\times 1} = 3$. (Taip pat galima pastebėti, kad $x^2 - 6x + 9 = (x-3)^2 = 0$).",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Viena šaknis $x = 3$."
-      }
-    ],
+    "solutionMethods": [],
     "commonTraps": [
       {
         "id": "ex-olimpiada-08-fe7262fc-trap-1",
-        "title": "Diskriminanto nulio interpretacija",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad jei $D=0$, tai lygtis neturi šaknų.",
-        "whyTempting": "Supainiojama su sąlyga $D < 0$.",
-        "whyItHappens": "Supainiojama su sąlyga $D < 0$.",
-        "wrongPattern": "Manyti, kad jei $D=0$, tai lygtis neturi šaknų.",
-        "correction": "Kai $D > 0$, lygtis turi 2 skirtingas šaknis, kai $D = 0$ – 1 dvigubą šaknį, o kai $D < 0$ – realiųjų šaknų neturi.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-fe7262fc-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
+        "title": "D=0 interpretacija",
+        "wrongMove": "Manyti, kad nėra šaknų.",
+        "correction": "Yra viena kartotinė šaknis."
       }
     ],
     "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      "Ar galima spręsti be D?"
     ],
     "extensionQuestions": [],
     "srsSeeds": [
       {
         "id": "ex-olimpiada-08-fe7262fc-srs-1",
-        "deck": "practice",
+        "deck": "theory",
         "cardType": "method",
-        "front": "Ką parodo diskriminanto reikšmė kvadratinėje lygtyje?",
-        "back": "$D > 0$: dvi realios šaknys; $D = 0$: viena dviguba reali šaknis; $D < 0$: realių šaknų nėra.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
+        "front": "Ką sako D=0?",
+        "back": "Viena dviguba šaknis.",
         "defaultEnabled": true
       }
     ],
     "hintsRaw": [
       {
         "order": 1,
-        "kind": "orientation",
-        "text": "Nustatykite koeficientus: $a=1$, $b=-6$, $c=9$.",
-        "revealsConceptIds": [],
+        "text": "Nustatykite koeficientus: $a=1, b=-6, c=9$.",
         "penalty": 0.05
       },
       {
         "order": 2,
-        "kind": "observation",
-        "text": "Apskaičiuokite diskriminantą: $D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$.",
-        "revealsConceptIds": [],
+        "text": "D = 0.",
         "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kadangi $D=0$, lygtis turi vieną kartotinę (dvigubą) šaknį.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Šaknis randama pagal formulę $x = -b / (2a)$. Apskaičiuokite jos vertę.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
       }
     ]
   },
@@ -1582,3367 +1962,1453 @@ export const exercises_08 = [
     "topicId": "olimpiada-08-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Jei $x_1$ ir $x_2$ yra lygties $2x^2 - 8x + 5 = 0$ šaknys, raskite $\\frac{1}{x_1} + \\frac{1}{x_2}$ reikšmę.",
-    "answer": "Reikšmė lygi 8/5 (arba 1.6).",
+    "statement": "Raskite $1/x_1 + 1/x_2$, jei $2x^2 - 8x + 5 = 0$.",
+    "answer": "1.6",
     "acceptedAnswers": [
-      "Reikšmė lygi 8/5 (arba 1.6)."
+      "1.6"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Suveskite ieškomą reiškinį prie bendro vardiklio.",
-      "Reiškinys tampa $\\frac{x_1 + x_2}{x_1 x_2}$.",
-      "Pagal Vijeto teoremą: $x_1 + x_2 = -b/a = 8/2 = 4$ ir $x_1 x_2 = c/a = 5/2$.",
-      "Įstatykite šias reikšmes į suvestą trupmeną: $\\frac{4}{5/2}$."
-    ],
-    "solution": "Suvedame trupmenas prie bendro vardiklio: $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2}$. Pagal Vijeto teoremą kvadratinei lygtyje $ax^2 + bx + c = 0$: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$. Mūsų lygtyje $a=2, b=-8, c=5$, todėl $x_1 + x_2 = 4$ ir $x_1 x_2 = \\frac{5}{2}$. Įstatome: $\\frac{4}{5/2} = 4 \\times \\frac{2}{5} = \\frac{8}{5} = 1.6$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "$1/x_1 + 1/x_2 = (x_1+x_2)/(x_1x_2)$. $x_1+x_2 = 4, x_1x_2 = 2.5$. $4 / 2.5 = 1.6$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Vijeto teoremos taikymas",
-      "text": "Bendra vardikliu suvestas reiškinys išreiškiamas šaknų suma ir sandauga, kurias nustato Vijeto teorema."
+      "title": "Vijetas",
+      "text": "Trupmenų suma per šaknų sumą ir sandaugą."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-56d15a87-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suvedame trupmenas prie bendro vardiklio: $\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1 + x_2}{x_1 x_2}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Vijeto teoremą kvadratinei lygtyje $ax^2 + bx + c = 0$: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Mūsų lygtyje $a=2, b=-8, c=5$, todėl $x_1 + x_2 = 4$ ir $x_1 x_2 = \\frac{5}{2}$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome: $\\frac{4}{5/2} = 4 \\times \\frac{2}{5} = \\frac{8}{5} = 1.6$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Reikšmė lygi 8/5 (arba 1.6)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-56d15a87-trap-1",
-        "title": "Sprendimas be Vijeto teoremos",
-        "type": "mistake",
-        "wrongMove": "Pirmiausia spręsti lygtį ir gauti iracionalias šaknis.",
-        "whyTempting": "Norisi dirbti su konkrečiais skaičiais.",
-        "whyItHappens": "Norisi dirbti su konkrečiais skaičiais.",
-        "wrongPattern": "Pirmiausia spręsti lygtį ir gauti iracionalias šaknis.",
-        "correction": "Šaknys yra iracionalios ($x = 2 \\pm \\frac{\\sqrt{6}}{2}$), todėl jas sudėti ir dalinti tiesiogiai yra labai sudėtinga. Vijeto teorema leidžia rasti atsakymą be šaknų skaičiavimo.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-56d15a87-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-56d15a87-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokios yra Vijeto formulės kvadratinei lygtyje $ax^2 + bx + c = 0$?",
-        "back": "$x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Suveskite ieškomą reiškinį prie bendro vardiklio.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Reiškinys tampa $\\frac{x_1 + x_2}{x_1 x_2}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pagal Vijeto teoremą: $x_1 + x_2 = -b/a = 8/2 = 4$ ir $x_1 x_2 = c/a = 5/2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Įstatykite šias reikšmes į suvestą trupmeną: $\\frac{4}{5/2}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-50649dd3",
     "topicId": "olimpiada-08-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išskaidykite daugikliais reiškinį $x^3 + x^2 - 4x - 4$.",
-    "answer": "$(x+1)(x-2)(x+2)$.",
+    "statement": "Išskaidykite $x^3 + x^2 - 4x - 4$.",
+    "answer": "(x+1)(x-2)(x+2)",
     "acceptedAnswers": [
-      "$(x+1)(x-2)(x+2)$."
+      "(x+1)(x-2)(x+2)"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Sugrupuokite pirmus du narius ir paskutinius du narius.",
-      "Sustatykite: $(x^3 + x^2) - (4x + 4)$. Iškelkite $x^2$ iš pirmosios grupės ir 4 iš antrosios.",
-      "Gausite: $x^2(x + 1) - 4(x + 1)$. Dabar iškelkite bendrą skliaustą $(x + 1)$.",
-      "Reiškinys tampa $(x+1)(x^2 - 4)$. Išskaidykite antrąjį skliaustą pagal kvadratų skirtumo formulę."
-    ],
-    "solution": "Sugrupuojame narius: $(x^3 + x^2) - (4x + 4)$. Iškeliame bendrus daugiklius: $x^2(x + 1) - 4(x + 1)$. Iškeliame bendrą skliaustą $(x+1)$: $(x+1)(x^2 - 4)$. Taikome kvadratų skirtumo formulę $x^2 - 4 = (x-2)(x+2)$, gauname: $(x+1)(x-2)(x+2)$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "$x^2(x+1) - 4(x+1) = (x+1)(x^2-4) = (x+1)(x-2)(x+2)$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Grupavimo metodas",
-      "text": "Sugrupuokite narius poromis, iškelkite bendrus daugiklius ir pritaikykite kvadratų skirtumo formulę."
+      "title": "Grupavimas",
+      "text": "Sugrupuokite narius poromis."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "casework"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-50649dd3-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sugrupuojame narius: $(x^3 + x^2) - (4x + 4)$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Iškeliame bendrus daugiklius: $x^2(x + 1) - 4(x + 1)$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Iškeliame bendrą skliaustą $(x+1)$: $(x+1)(x^2 - 4)$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome kvadratų skirtumo formulę $x^2 - 4 = (x-2)(x+2)$, gauname: $(x+1)(x-2)(x+2)$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$(x+1)(x-2)(x+2)$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-50649dd3-trap-1",
-        "title": "Nebaigtas skaidymas daugikliais",
-        "type": "mistake",
-        "wrongMove": "Palikti atsakymą pavidalu $(x+1)(x^2-4)$ kaip pilnai išskaidytą.",
-        "whyTempting": "Manoma, kad darbas baigtas radus pirmąjį bendrąjį daugiklį.",
-        "whyItHappens": "Manoma, kad darbas baigtas radus pirmąjį bendrąjį daugiklį.",
-        "wrongPattern": "Palikti atsakymą pavidalu $(x+1)(x^2-4)$ kaip pilnai išskaidytą.",
-        "correction": "Skliaustas $(x^2 - 4)$ vis dar gali būti išskaidytas žemesnio laipsnio daugikliais, todėl skaidymą būtina tęsti iki galo.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-50649dd3-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-50649dd3-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip taikomas grupavimo metodas daugianariams?",
-        "back": "Nariai suskirstomi į grupes, iš kurių iškeliami bendri daugikliai, siekiant rasti bendrą skliaustą visam reiškiniui.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Sugrupuokite pirmus du narius ir paskutinius du narius.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Sustatykite: $(x^3 + x^2) - (4x + 4)$. Iškelkite $x^2$ iš pirmosios grupės ir 4 iš antrosios.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Gausite: $x^2(x + 1) - 4(x + 1)$. Dabar iškelkite bendrą skliaustą $(x + 1)$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Reiškinys tampa $(x+1)(x^2 - 4)$. Išskaidykite antrąjį skliaustą pagal kvadratų skirtumo formulę.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-f6fadbfd",
     "topicId": "olimpiada-08-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Padalykite daugianarį $x^3 - 3x^2 + 5x - 3$ iš $x - 1$ kampu (daugianarių dalyba).",
-    "answer": "$x^2 - 2x + 3$.",
+    "statement": "Padalykite $x^3 - 3x^2 + 5x - 3$ iš $x - 1$ kampu.",
+    "answer": "x^2 - 2x + 3",
     "acceptedAnswers": [
-      "$x^2 - 2x + 3$."
+      "x^2 - 2x + 3"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Pirmasis žingsnis: padalinkite $x^3$ iš $x$, gaunate $x^2$.",
-      "Padauginkite $x^2(x-1) = x^3 - x^2$. Atimkite tai iš pradinio reiškinio: lieka $-2x^2 + 5x - 3$.",
-      "Dabar padalinkite $-2x^2$ iš $x$, gausite $-2x$. Padauginkite ir atimkite.",
-      "Liekantis narys bus $3x - 3$. Padalinkite jį iš $x-1$, gausite 3. Užrašykite pilną dalmenį."
-    ],
-    "solution": "Dalijame $x^3$ iš $x$, gauname $x^2$. Padauginame $x^2(x-1) = x^3 - x^2$. Atimame: $(x^3 - 3x^2 + 5x - 3) - (x^3 - x^2) = -2x^2 + 5x - 3$. Dalijame $-2x^2$ iš $x$, gauname $-2x$. Padauginame $-2x(x-1) = -2x^2 + 2x$. Atimame: $(-2x^2 + 5x - 3) - (-2x^2 + 2x) = 3x - 3$. Dalijame $3x$ iš $x$, gauname $3$. Padauginame $3(x-1) = 3x - 3$. Atimame: $(3x - 3) - (3x - 3) = 0$. Gautas dalmuo yra $x^2 - 2x + 3$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "Dalijant gaunama $x^2 - 2x + 3$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Daugianarių dalyba kampu",
-      "text": "Atlikite dalybą analogiškai paprastų skaičių dalybai, laipsniškai naikindami aukščiausiojo laipsnio narius."
+      "title": "Dalyba",
+      "text": "Dalyba kampu."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-f6fadbfd-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Dalijame $x^3$ iš $x$, gauname $x^2$. Padauginame $x^2(x-1) = x^3 - x^2$. Atimame: $(x^3 - 3x^2 + 5x - 3) - (x^3 - x^2) = -2x^2 + 5x - 3$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Dalijame $-2x^2$ iš $x$, gauname $-2x$. Padauginame $-2x(x-1) = -2x^2 + 2x$. Atimame: $(-2x^2 + 5x - 3) - (-2x^2 + 2x) = 3x - 3$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Dalijame $3x$ iš $x$, gauname $3$. Padauginame $3(x-1) = 3x - 3$. Atimame: $(3x - 3) - (3x - 3) = 0$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Gautas dalmuo yra $x^2 - 2x + 3$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$x^2 - 2x + 3$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-f6fadbfd-trap-1",
-        "title": "Strateginė klaida",
-        "type": "mistake",
-        "wrongMove": "Padaryti ženklo klaidą atimties žingsnyje, pvz. $-3x^2 - (-x^2) = -4x^2$ vietoje $-2x^2$.",
-        "whyTempting": "Atimant neigiamus narius dažnai prarandamas minuso ženklas.",
-        "whyItHappens": "Atimant neigiamus narius dažnai prarandamas minuso ženklas.",
-        "wrongPattern": "Padaryti ženklo klaidą atimties žingsnyje, pvz. $-3x^2 - (-x^2) = -4x^2$ vietoje $-2x^2$.",
-        "correction": "Būkite labai atidūs su ženklais: atimant neigiamą narį jo ženklas pasikeičia į teigiamą.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-f6fadbfd-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-f6fadbfd-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Koks yra pagrindinis daugianarių dalybos kampu principas?",
-        "back": "Dalijame aukščiausiąjį dalinio narį iš aukščiausiojo daliklio nario, gautą rezultatą dauginame iš daliklio ir atimame iš dalinio.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pirmasis žingsnis: padalinkite $x^3$ iš $x$, gaunate $x^2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Padauginkite $x^2(x-1) = x^3 - x^2$. Atimkite tai iš pradinio reiškinio: lieka $-2x^2 + 5x - 3$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Dabar padalinkite $-2x^2$ iš $x$, gausite $-2x$. Padauginkite ir atimkite.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Liekantis narys bus $3x - 3$. Padalinkite jį iš $x-1$, gausite 3. Užrašykite pilną dalmenį.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-7f2e3b87",
     "topicId": "olimpiada-08-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Suprastinkite reiškinį $\\frac{x^2 - 9}{x^2 + 3x} \\div \\frac{x - 3}{x^2}$.",
-    "answer": "Reiškinys lygus $x$.",
+    "statement": "Suprastinkite $(x^2-9)/(x^2+3x) : (x-3)/x^2$.",
+    "answer": "x",
     "acceptedAnswers": [
-      "Reiškinys lygus $x$."
+      "x"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Išskaidykite $x^2-9$ ir $x^2+3x$ daugikliais.",
-      "$x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-      "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\cdot \\frac{x^2}{x-3}$.",
-      "Suprastinkite vienodus skliaustus $(x-3)$, $(x+3)$ bei kintamąjį $x$."
-    ],
-    "solution": "Išskaidome daugikliais pirmosios trupmenos dalis: $x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$. Dalybos veiksmą pakeičiame daugyba iš apverstos trupmenos: $\\frac{(x-3)(x+3)}{x(x+3)} \\times \\frac{x^2}{x-3}$. Suprastiname bendrus daugiklius $(x+3)$ ir $(x-3)$ skaitiklyje ir vardiklyje: $\\frac{1}{x} \\times x^2$. Supaprastiname $x^2 / x = x$ (kai $x \\neq 0, 3, -3$).",
+    "concepts": [],
+    "hints": [],
+    "solution": "$(x-3)(x+3)/(x(x+3)) * x^2/(x-3) = x$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Racionaliųjų reiškinių suprastinimas",
-      "text": "Išskaidykite daugikliais skaitiklius ir vardiklius, o dalybą pakeiskite daugyba iš apverstos trupmenos."
+      "title": "Skaidymas",
+      "text": "Daugiklių iškėlimas."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-7f2e3b87-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Išskaidome daugikliais pirmosios trupmenos dalis: $x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Dalybos veiksmą pakeičiame daugyba iš apverstos trupmenos: $\\frac{(x-3)(x+3)}{x(x+3)} \\times \\frac{x^2}{x-3}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suprastiname bendrus daugiklius $(x+3)$ ir $(x-3)$ skaitiklyje ir vardiklyje: $\\frac{1}{x} \\times x^2$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Supaprastiname $x^2 / x = x$ (kai $x \\neq 0, 3, -3$).",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Reiškinys lygus $x$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-7f2e3b87-trap-1",
-        "title": "Neteisingas prastinimas",
-        "type": "mistake",
-        "wrongMove": "Tiesiog braukti $x^2$ narius skaitiklyje ir vardiklyje prieš išskaidant daugikliais.",
-        "whyTempting": "Skubėjimas ir neteisingas algebrinių taisyklių taikymas.",
-        "whyItHappens": "Skubėjimas ir neteisingas algebrinių taisyklių taikymas.",
-        "wrongPattern": "Tiesiog braukti $x^2$ narius skaitiklyje ir vardiklyje prieš išskaidant daugikliais.",
-        "correction": "Suprastinti galima tik tuos narius, kurie yra visos išraiškos sandaugos daugikliai, o ne atskiri dėmenys sumoje.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-7f2e3b87-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-7f2e3b87-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip atliekama racionaliųjų trupmenų dalyba?",
-        "back": "Pirmąją trupmeną padauginame iš antrosios trupmenos apversto pavidalo.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Išskaidykite $x^2-9$ ir $x^2+3x$ daugikliais.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$x^2 - 9 = (x-3)(x+3)$ ir $x^2 + 3x = x(x+3)$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Apverskite antrąją trupmeną ir užrašykite bendrą sandaugą: $\\frac{(x-3)(x+3)}{x(x+3)} \\cdot \\frac{x^2}{x-3}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Suprastinkite vienodus skliaustus $(x-3)$, $(x+3)$ bei kintamąjį $x$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-d16de0a6",
     "topicId": "olimpiada-08-algebra",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Apskaičiuokite reiškinio reikšmę: $\\log_2(24) - \\log_2(3)$.",
-    "answer": "Reikšmė lygi 3.",
+    "statement": "Apskaičiuokite log2(24) - log2(3).",
+    "answer": "3",
     "acceptedAnswers": [
-      "Reikšmė lygi 3."
+      "3"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Prisiminkite, kaip sujungti du logaritmus su vienodais pagrindais, kai jie yra atimami.",
-      "Skirtumas virsta dalmens logaritmu: $\\log_2(\\frac{24}{3})$.",
-      "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\log_2(8)$.",
-      "Išreikškite 8 kaip 2 laipsnį ir raskite galutinę vertę."
-    ],
-    "solution": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$. Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$. Įstatome: $\\log_2(8)$. Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "log2(24/3) = log2(8) = 3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Logaritmų skirtumo savybė",
-      "text": "Pritaikykite logaritmų skirtumo formulę $\\log_a(x) - \\log_a(y) = \\log_a(\\frac{x}{y})$."
+      "title": "Logaritmų savybė",
+      "text": "Logaritmas dalmens."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-d16de0a6-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome logaritmų savybę: $\\log_2(24) - \\log_2(3) = \\log_2(\\frac{24}{3})$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame dalmenį: $\\frac{24}{3} = 8$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome: $\\log_2(8)$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $8 = 2^3$, tai $\\log_2(2^3) = 3$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Reikšmė lygi 3."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-d16de0a6-trap-1",
-        "title": "Logaritmų savybių painiojimas",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
-        "whyTempting": "Neteisingai suformuluota analogija su skliaustais.",
-        "whyItHappens": "Neteisingai suformuluota analogija su skliaustais.",
-        "wrongPattern": "Manyti, kad logaritmų skirtumas yra lygus logaritmo skirtumui: $\\log_2(24 - 3) = \\log_2(21)$.",
-        "correction": "Logaritmų skirtumas yra lygus dalmens logaritmui: $\\log_a x - \\log_a y = \\log_a (x/y)$ (o ne $\\log(x-y)$).",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-d16de0a6-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-d16de0a6-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra logaritmų skirtumo formulė?",
-        "back": "$\\log_a x - \\log_a y = \\log_a \\left(\\frac{x}{y}\\right)$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Prisiminkite, kaip sujungti du logaritmus su vienodais pagrindais, kai jie yra atimami.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Skirtumas virsta dalmens logaritmu: $\\log_2(\\frac{24}{3})$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Apskaičiuokite dalmenį: $24 / 3 = 8$. Gausite $\\log_2(8)$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Išreikškite 8 kaip 2 laipsnį ir raskite galutinę vertę.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-3fa10af9",
     "topicId": "olimpiada-08-algebra",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Išspręskite lygtį $9^{x - 1} = 27^x$.",
-    "answer": "$x = -2$.",
+    "statement": "Išspręskite 9^(x-1) = 27^x.",
+    "answer": "-2",
     "acceptedAnswers": [
-      "$x = -2$."
+      "-2"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Koks yra bendras pagrindas skaičiams 9 ir 27?",
-      "$9 = 3^2$ ir $27 = 3^3$. Lygtis tampa $(3^2)^{x-1} = (3^3)^x$.",
-      "Pritaikykite laipsnio kėlimo laipsniu taisyklę: $3^{2(x-1)} = 3^{3x}$.",
-      "Sulyginkite rodiklius: $2x - 2 = 3x$ ir išspręskite lygtį."
-    ],
-    "solution": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$. Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$. Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$. Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "3^(2x-2) = 3^(3x) \\implies 2x-2=3x \\implies x=-2$.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Rodiklinių lygčių pagrindų suvienodinimas",
-      "text": "Išreikškite abu pagrindus 9 ir 27 kaip skaičiaus 3 laipsnius ir sulyginkite laipsnio rodiklius."
+      "title": "Laipsnių pagrindai",
+      "text": "Suvienodinkite pagrindus."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-3fa10af9-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suvienodiname laipsnių pagrindus: $9 = 3^2$ ir $27 = 3^3$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome į lygtį: $(3^2)^{x-1} = (3^3)^x$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suskleidžiame rodiklius: $3^{2x - 2} = 3^{3x}$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi pagrindai vienodi, sulyginame rodiklius: $2x - 2 = 3x \\implies x = -2$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$x = -2$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-3fa10af9-trap-1",
-        "title": "Skliaustų ignoravimas rodiklyje",
-        "type": "mistake",
-        "wrongMove": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
-        "whyTempting": "Skubėjimas atskleidžiant skliaustus.",
-        "whyItHappens": "Skubėjimas atskleidžiant skliaustus.",
-        "wrongPattern": "Dauginti pagrindą tiesiogiai, pvz., užrašyti $2 \\cdot (x-1) = 3 \\cdot x$ be skliaustų koeficientui 2 (gaunant $2x - 1 = 3x$).",
-        "correction": "Keliant laipsnį laipsniu, padauginamas visas rodiklis: $2(x-1) = 2x - 2$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-3fa10af9-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-3fa10af9-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip sprendžiama paprasta rodiklinė lygtis $a^{f(x)} = a^{g(x)}$?",
-        "back": "Jei $a > 0$ ir $a \\neq 1$, tai prilyginame rodiklius: $f(x) = g(x)$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Koks yra bendras pagrindas skaičiams 9 ir 27?",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$9 = 3^2$ ir $27 = 3^3$. Lygtis tampa $(3^2)^{x-1} = (3^3)^x$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pritaikykite laipsnio kėlimo laipsniu taisyklę: $3^{2(x-1)} = 3^{3x}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Sulyginkite rodiklius: $2x - 2 = 3x$ ir išspręskite lygtį.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-ec7e6993",
     "topicId": "olimpiada-08-algebra",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Raskite funkcijos $f(x) = x^2 - 4x + 7$ mažiausią reikšmę realiesiems skaičiams.",
-    "answer": "Mažiausia reikšmė lygi 3.",
+    "statement": "Raskite x^2 - 4x + 7 mažiausią reikšmę.",
+    "answer": "3",
     "acceptedAnswers": [
-      "Mažiausia reikšmė lygi 3."
+      "3"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Pabandykite išskirti kvadratą iš narių $x^2 - 4x$.",
-      "Prisiminkite, kad $(x-2)^2 = x^2 - 4x + 4$.",
-      "Užrašykite: $x^2 - 4x + 7 = (x^2 - 4x + 4) + 3 = (x-2)^2 + 3$.",
-      "Kadangi $(x-2)^2 \\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?"
-    ],
-    "solution": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$. Užrašome kaip sumą: $x^2 - 4x + 4 + 3$. Suskleidžiame kvadratą: $(x-2)^2 + 3$. Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
+    "concepts": [],
+    "hints": [],
+    "solution": "Mažiausia reikšmė 3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Pilnojo kvadrato išskyrimas",
-      "text": "Išskirkite pilnąjį kvadratą kvadratiniame trinaryje, kad pamatytumėte jo minimalią vertę."
+      "title": "Pilnas kvadratas",
+      "text": "(x-2)^2 + 3."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-ec7e6993-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinė analizė",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pertvarkome reiškinį išskirdami pilnąjį kvadratą: $x^2 - 4x + 7$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Užrašome kaip sumą: $x^2 - 4x + 4 + 3$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suskleidžiame kvadratą: $(x-2)^2 + 3$.",
-            "latex": ""
-          },
-          {
-            "title": "Apibendrinimas",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi kvadratas $(x-2)^2$ visada yra neneigiamas ($\\ge 0$), tai mažiausia reiškinio reikšmė pasiekiama kai $x=2$, ir ji lygi 3.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Mažiausia reikšmė lygi 3."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-ec7e6993-trap-1",
-        "title": "Strateginė klaida",
-        "type": "mistake",
-        "wrongMove": "Teigti, kad mažiausia reikšmė pasiekiama prie $x=0$, t. y. lygi 7.",
-        "whyTempting": "Manoma, kad nulis yra mažiausias galimas kintamasis.",
-        "whyItHappens": "Manoma, kad nulis yra mažiausias galimas kintamasis.",
-        "wrongPattern": "Teigti, kad mažiausia reikšmė pasiekiama prie $x=0$, t. y. lygi 7.",
-        "correction": "Kvadratinė funkcija savo minimumą (jei $a > 0$) pasiekia viršūnėje, kurios koordinatė $x_0 = -b/2a = 2$, o ne taške 0.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-ec7e6993-trap-2",
-        "title": "Apibrėžimo srities nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Nenustatyti kintamųjų apribojimų (pvz., logaritmo pagrindas).",
-        "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
-        "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
-        "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
-        "correction": "Visada nustatykite leistinąsias kintamųjų reikšmes prieš spręsdami lygtį.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-ec7e6993-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip išskiriamas pilnasis kvadratas trinaryje $x^2 + bx + c$?",
-        "back": "Pridedame ir atimame laisvąjį narį $\\left(\\frac{b}{2}\\right)^2$, kad gautume $\\left(x + \\frac{b}{2}\\right)^2 + \\left(c - \\frac{b^2}{4}\\right)$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pabandykite išskirti kvadratą iš narių $x^2 - 4x$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Prisiminkite, kad $(x-2)^2 = x^2 - 4x + 4$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Užrašykite: $x^2 - 4x + 7 = (x^2 - 4x + 4) + 3 = (x-2)^2 + 3$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kadangi $(x-2)^2 \\ge 0$, mažiausia vertė pasiekiama, kai kvadratas lygus 0. Kokia tai vertė?",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-c4bc99e0",
     "topicId": "olimpiada-08-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Išspręskite trijų kintamųjų lygčių sistemą:\n$x + y + z = 6$\n$2x - y + z = 3$\n$x + 2y - z = 2$\nRaskite $x$, $y$, $z$.",
-    "answer": "$x=1, y=2, z=3$.",
+    "statement": "Išspręskite sistemą: x+y+z=6, 2x-y+z=3, x+2y-z=2.",
+    "answer": "x=1, y=2, z=3",
     "acceptedAnswers": [
-      "$x=1, y=2, z=3$."
+      "x=1, y=2, z=3"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Kurį kintamąjį lengviausia pašalinti sudedant lygtis?",
-      "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\implies 2x + 3y = 8$.",
-      "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\implies 3x + y = 5$.",
-      "Išspręskite gautą sistemą iš $2x+3y=8$ ir $3x+y=5$, o tada suraskite $z$."
-    ],
-    "solution": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$. Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$. Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$. Randame $y = 5 - 3(1) = 2$. Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "x=1, y=2, z=3.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Gauso eliminavimo metodas",
-      "text": "Eliminuokite vieną iš kintamųjų (pvz. $z$) sudedami lygtis poromis, kad gautumėte dviejų kintamųjų sistemą."
+      "title": "Eliminacija",
+      "text": "Sudėties metodas."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-c4bc99e0-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudedame 1-ąją ir 3-ąją lygtis: $(x+y+z) + (x+2y-z) = 6+2 \\implies 2x + 3y = 8$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Sudedame 2-ąją ir 3-ąją lygtis: $(2x-y+z) + (x+2y-z) = 3+2 \\implies 3x + y = 5$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Iš gautos antrosios lygties išreiškiame $y = 5 - 3x$. Įstatome į pirmąją: $2x + 3(5-3x) = 8 \\implies 2x + 15 - 9x = 8 \\implies -7x = -7 \\implies x = 1$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Randame $y = 5 - 3(1) = 2$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 5",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome $x=1, y=2$ į 1-ąją pradinę lygtį: $1 + 2 + z = 6 \\implies z = 3$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$x=1, y=2, z=3$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-c4bc99e0-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Bandyti spręsti išreiškiant sudėtingus kintamuosius iškart, kas veda prie painių trupmenų.",
-        "whyTempting": "Spontaniškas kintamojo pakeitimas.",
-        "whyItHappens": "Spontaniškas kintamojo pakeitimas.",
-        "wrongPattern": "Bandyti spręsti išreiškiant sudėtingus kintamuosius iškart, kas veda prie painių trupmenų.",
-        "correction": "Sisteminė eliminacija (sudėties metodas) leidžia greičiau ir švariau išspręsti trijų kintamųjų sistemas.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-c4bc99e0-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-c4bc99e0-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Koks yra Gauso eliminavimo metodo principas?",
-        "back": "Sistemingas kintamųjų skaičiaus mažinimas tiesinėmis lygčių kombinacijomis (sudėtimi), kol gaunama viena lygtis su vienu kintamuoju.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Kurį kintamąjį lengviausia pašalinti sudedant lygtis?",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Sudėję pirmąją ir trečiąją lygtis, pašalinsite $z$: $(x+y+z) + (x+2y-z) = 6 + 2 \\implies 2x + 3y = 8$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taip pat sudėkite antrąją ir trečiąją lygtis: $(2x-y+z) + (x+2y-z) = 3 + 2 \\implies 3x + y = 5$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Išspręskite gautą sistemą iš $2x+3y=8$ ir $3x+y=5$, o tada suraskite $z$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-811014ef",
     "topicId": "olimpiada-08-algebra",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Raskite begalinės nykstamosios geometrinės progresijos $4 + 2 + 1 + \\frac{1}{2} + \\dots$ sumą.",
-    "answer": "Suma lygi 8.",
+    "statement": "Suma: 4 + 2 + 1 + 1/2 + ...",
+    "answer": "8",
     "acceptedAnswers": [
-      "Suma lygi 8."
+      "8"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Nustatykite progresijos pirmąjį narį $a_1$ ir vardiklį $r$.",
-      "$a_1 = 4$, o vardiklis $r = 2 / 4 = 1/2$. Kadangi $|1/2| < 1$, eilutė yra nykstamoji.",
-      "Pritaikykite sumos formulę: $S = \\frac{4}{1 - 1/2}$.",
-      "Apskaičiuokite dalmenį $4$ iš $1/2$."
-    ],
-    "solution": "Nustatome parametrus: $a_1 = 4$, $r = 1/2$. Kadangi $|r| < 1$, taikome begalinės geometrinės progresijos sumos formulę: $S = \\frac{a_1}{1-r}$. Įstatome reikšmes: $S = \\frac{4}{1 - 1/2} = \\frac{4}{1/2} = 8$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "4 / (1 - 0.5) = 8.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Begalinės geometrinės eilutės suma",
-      "text": "Kai geometrinės progresijos vardiklio modulis $|r| < 1$, jos narių suma apskaičiuojama pagal formulę $S = \\frac{a_1}{1-r}$."
+      "title": "Nykstamoji seka",
+      "text": "S = a1 / (1-q)."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-811014ef-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Nustatome parametrus: $a_1 = 4$, $r = 1/2$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $|r| < 1$, taikome begalinės geometrinės progresijos sumos formulę: $S = \\frac{a_1}{1-r}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome reikšmes: $S = \\frac{4}{1 - 1/2} = \\frac{4}{1/2} = 8$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Suma lygi 8."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-811014ef-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Naudoti baigtinės progresijos sumos formulę su nežinomu $n$.",
-        "whyTempting": "Supainiojamos dvi skirtingos sumų formulės.",
-        "whyItHappens": "Supainiojamos dvi skirtingos sumų formulės.",
-        "wrongPattern": "Naudoti baigtinės progresijos sumos formulę su nežinomu $n$.",
-        "correction": "Begaliniam narių skaičiui taikoma speciali formulė $S = \\frac{a_1}{1-r}$, kuri yra baigtinės formulės riba, kai $n \\to \\infty$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-811014ef-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-811014ef-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra begalinės nykstamosios geometrinės progresijos sumos formulė?",
-        "back": "$S = \\frac{a_1}{1 - r}$ kai $|r| < 1$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Nustatykite progresijos pirmąjį narį $a_1$ ir vardiklį $r$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$a_1 = 4$, o vardiklis $r = 2 / 4 = 1/2$. Kadangi $|1/2| < 1$, eilutė yra nykstamoji.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pritaikykite sumos formulę: $S = \\frac{4}{1 - 1/2}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Apskaičiuokite dalmenį $4$ iš $1/2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-5225d7a2",
     "topicId": "olimpiada-08-algebra",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Seka apibrėžiama rekurentiniu sąryšiu: $a_1 = 2$, $a_{n+1} = 3a_n - 1$ visiems $n \\ge 1$. Raskite ketvirtąjį sekos narį $a_4$.",
-    "answer": "$a_4 = 41$.",
+    "statement": "a1=2, a(n+1)=3an-1. Raskite a4.",
+    "answer": "41",
     "acceptedAnswers": [
-      "$a_4 = 41$."
+      "41"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Apskaičiuokite antrąjį narį $a_2$ įstatydami $n=1$.",
-      "$a_2 = 3(2) - 1 = 5$.",
-      "Dabar apskaičiuokite $a_3$ pagal formulę $a_3 = 3a_2 - 1$.",
-      "Gausite $a_3 = 14$. Analogiškai apskaičiuokite $a_4$."
-    ],
-    "solution": "Apskaičiuojame antrąjį sekos narį: $a_2 = 3a_1 - 1 = 3(2) - 1 = 5$. Apskaičiuojame trečiąjį sekos narį: $a_3 = 3a_2 - 1 = 3(5) - 1 = 14$. Apskaičiuojame ketvirtąjį sekos narį: $a_4 = 3a_3 - 1 = 3(14) - 1 = 41$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "a2=5, a3=14, a4=41.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Algebra",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Nuoseklus rekurentinis skaičiavimas",
-      "text": "Sprendžiame nuosekliai skaičiuodami kiekvieną sekos narį pagal prieš tai gautą reikšmę."
+      "title": "Rekurencija",
+      "text": "Skaičiuojame nuosekliai."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "algebra"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-5225d7a2-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame antrąjį sekos narį: $a_2 = 3a_1 - 1 = 3(2) - 1 = 5$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame trečiąjį sekos narį: $a_3 = 3a_2 - 1 = 3(5) - 1 = 14$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame ketvirtąjį sekos narį: $a_4 = 3a_3 - 1 = 3(14) - 1 = 41$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$a_4 = 41$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-5225d7a2-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Bandyti iškart gauti $a_4$ nenaudojant $a_2$ ir $a_3$ reikšmių.",
-        "whyTempting": "Norisi rasti bendrąją formulę prieš skaičiavimą.",
-        "whyItHappens": "Norisi rasti bendrąją formulę prieš skaičiavimą.",
-        "wrongPattern": "Bandyti iškart gauti $a_4$ nenaudojant $a_2$ ir $a_3$ reikšmių.",
-        "correction": "Kadangi prašomas tik ketvirtasis narys, nuoseklus skaičiavimas yra kur kas greitesnis nei bendrosios sekos formulės išvedimas.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-5225d7a2-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-5225d7a2-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kas yra rekurentiniu būdu apibrėžta seka?",
-        "back": "Tai seka, kurios kiekvienas narys apibrėžiamas per vieną ar kelis prieš tai einančius sekos narius.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-efad3e02",
+    "topicId": "olimpiada-08-algebra",
+    "type": "multipleChoice",
+    "level": "olympiad",
+    "statement": "Kuris didžiausias: 2^300, 3^200, 4^150, 5^100?",
+    "answer": "3^200",
+    "acceptedAnswers": [
+      "3^200"
     ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Apskaičiuokite antrąjį narį $a_2$ įstatydami $n=1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$a_2 = 3(2) - 1 = 5$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Dabar apskaičiuokite $a_3$ pagal formulę $a_3 = 3a_2 - 1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Gausite $a_3 = 14$. Analogiškai apskaičiuokite $a_4$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "answerTolerance": 0,
+    "choices": [
+      "2^300",
+      "3^200",
+      "4^150",
+      "5^100"
+    ],
+    "concepts": [],
+    "hints": [],
+    "solution": "8^100, 9^100, 8^100, 5^100. Didžiausias 9^100.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Rodikliai",
+      "text": "Suvienodinkite rodiklius į 100."
+    },
+    "strategyTags": [
+      "bounding"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-9c8a454f",
+    "topicId": "olimpiada-08-algebra",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Išspręskite |x-1| + |x-3| = 2.",
+    "answer": "x ∈ [1, 3]",
+    "acceptedAnswers": [
+      "x ∈ [1, 3]"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "Viduriniame intervale [1, 3] tapatybė 2=2.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Intervalai",
+      "text": "Nagrinėjame 3 intervalus."
+    },
+    "strategyTags": [
+      "casework"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-b19cc2f8",
+    "topicId": "olimpiada-08-algebra",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Įrodykite a/b + b/a >= 2 teigiamiems skaičiams.",
+    "answer": "Įrodyta",
+    "acceptedAnswers": [
+      "Įrodyta"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "(a/b + b/a)/2 >= sqrt(a/b * b/a) = 1.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "AM-GM",
+      "text": "Taikykite vidurkių nelygybę."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-4670481e",
+    "topicId": "olimpiada-08-algebra",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite sveikus (x,y): xy + 3x - 2y = 10.",
+    "answer": "Sprendiniai: (3, 1), (1, -7), (6, -2), (-2, 4), (0, -5)",
+    "acceptedAnswers": [
+      "Sprendiniai: (3, 1), (1, -7), (6, -2), (-2, 4), (0, -5)"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "Išnagrinėjus 4 daliklius gauname sprendinius.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Faktorius",
+      "text": "(x-2)(y+3) = 4."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-8a5b6d7c",
+    "topicId": "olimpiada-08-algebra",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Suprastinkite sqrt(7 + 4*sqrt(3)).",
+    "answer": "2 + sqrt(3)",
+    "acceptedAnswers": [
+      "2 + sqrt(3)"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "sqrt((2+sqrt(3))^2) = 2 + sqrt(3).",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Kvadratas saknyje",
+      "text": "(2 + sqrt(3))^2 = 7 + 4sqrt(3)."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-371ff322",
+    "topicId": "olimpiada-08-algebra",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "x + 1/x = 5. Raskite x^2 + 1/x^2.",
+    "answer": "23",
+    "acceptedAnswers": [
+      "23"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "25 - 2 = 23.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Kvadratas",
+      "text": "(x+1/x)^2 - 2."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-8f8af17c",
+    "topicId": "olimpiada-08-algebra",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite f(x): f(x) + 2f(1-x) = x.",
+    "answer": "f(x) = (2-3x)/3",
+    "acceptedAnswers": [
+      "f(x) = (2-3x)/3"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "f(x) = (2-3x)/3.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Keitimas",
+      "text": "Pakeiskite x į 1-x."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-ef659ec4",
+    "topicId": "olimpiada-08-algebra",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Du darbininkai per 12 val. Pirmas 10 val. ilgiau. Raskite antrą.",
+    "answer": "20",
+    "acceptedAnswers": [
+      "20"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "x^2 - 14x - 120 = 0 \\implies x=20.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Sparta",
+      "text": "1/(x+10) + 1/x = 1/12."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-alg-020",
+    "topicId": "olimpiada-08-algebra",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "x^3 - 6x^2 + 11x - 6 = 0. Raskite a^2 + b^2 + c^2.",
+    "answer": "14",
+    "acceptedAnswers": [
+      "14"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "36 - 22 = 14.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Algebra",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Suma kvadratų",
+      "text": "(a+b+c)^2 - 2(ab+bc+ca)."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-b12edc64",
     "topicId": "olimpiada-08-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskritimo skersmens galai yra taškuose $A(1, 2)$ ir $B(7, 10)$. Raskite šio apskritimo lygtį.",
-    "answer": "Apskritimo lygtis: $(x-4)^2 + (y-6)^2 = 25$.",
+    "statement": "Skersmens galai A(1, 2), B(7, 10). Raskite apskritimo lygtį.",
+    "answer": "(x-4)^2 + (y-6)^2 = 25",
     "acceptedAnswers": [
-      "Apskritimo lygtis: $(x-4)^2 + (y-6)^2 = 25$."
+      "(x-4)^2 + (y-6)^2 = 25"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite apskritimo centro tašką $(h, k)$ naudodami vidurio taško formulę.",
-      "Centro koordinatės: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$. Centras yra $C(4, 6)$.",
-      "Apskaičiuokite skersmens ilgį $AB$ arba tiesiogiai spindulio kvadratą $r^2 = (x_c - x_a)^2 + (y_c - y_a)^2$.",
-      "Gausite $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 25$. Užrašykite apskritimo lygtį $(x-h)^2 + (y-k)^2 = r^2$."
-    ],
-    "solution": "Apskaičiuojame apskritimo centrą $C(h, k)$ kaip atkarpos $AB$ vidurio tašką: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$. Centro koordinatės yra $C(4, 6)$. Apskaičiuojame spindulio kvadratą $r^2$ kaip atstumą nuo centro $C$ iki taško $A$: $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 9 + 16 = 25$. Užrašome apskritimo lygtį: $(x-4)^2 + (y-6)^2 = 25$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "C(4,6), r^2=25.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Apskritimo lygtis iš skersmens taškų",
-      "text": "Apskritimo centras yra skersmens vidurio taškas, o spindulys yra atstumo tarp centro ir bet kurio taško ilgis (arba pusė skersmens)."
+      "title": "Centras",
+      "text": "Vidurio taškas."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "geometric-auxiliary-line"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-b12edc64-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame apskritimo centrą $C(h, k)$ kaip atkarpos $AB$ vidurio tašką: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Centro koordinatės yra $C(4, 6)$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame spindulio kvadratą $r^2$ kaip atstumą nuo centro $C$ iki taško $A$: $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 9 + 16 = 25$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Užrašome apskritimo lygtį: $(x-4)^2 + (y-6)^2 = 25$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Apskritimo lygtis: $(x-4)^2 + (y-6)^2 = 25$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-b12edc64-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Užrašyti apskritimo lygtį pavidalu $(x+4)^2 + (y+6)^2 = 25$.",
-        "whyTempting": "Supainiojami ženklai lygties šablone.",
-        "whyItHappens": "Supainiojami ženklai lygties šablone.",
-        "wrongPattern": "Užrašyti apskritimo lygtį pavidalu $(x+4)^2 + (y+6)^2 = 25$.",
-        "correction": "Apskritimo lygtis turi minuso ženklus prieš centro koordinates: $(x-h)^2 + (y-k)^2 = r^2$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-b12edc64-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-b12edc64-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra apskritimo, kurio centras $(h,k)$ ir spindulys $r$, lygtis?",
-        "back": "$(x-h)^2 + (y-k)^2 = r^2$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite apskritimo centro tašką $(h, k)$ naudodami vidurio taško formulę.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Centro koordinatės: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$. Centras yra $C(4, 6)$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Apskaičiuokite skersmens ilgį $AB$ arba tiesiogiai spindulio kvadratą $r^2 = (x_c - x_a)^2 + (y_c - y_a)^2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Gausite $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 25$. Užrašykite apskritimo lygtį $(x-h)^2 + (y-k)^2 = r^2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-8f2f8e36",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Rombo įstrižainių ilgiai yra 12 cm ir 16 cm. Raskite šio rombo perimetrą.",
-    "answer": "Rombo perimetras yra 40 cm.",
+    "statement": "Rombo įstrižainės 12 ir 16. Raskite perimetrą.",
+    "answer": "40",
     "acceptedAnswers": [
-      "Rombo perimetras yra 40 cm."
+      "40"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Nubraižykite rombą su įstrižainėmis. Jos susikirtimo taške dalijasi pusiau.",
-      "Pusės įstrižainių yra 6 cm ir 8 cm. Jos sudaro stačiojo trikampio statinius.",
-      "Pritaikykite Pitagoro teoremą rombo kraštinei $a$ rasti: $a^2 = 6^2 + 8^2$.",
-      "Gausite $a = 10$ cm. Apskaičiuokite perimetrą $P = 4a$."
-    ],
-    "solution": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai. Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm. Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm. Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "a=10, P=40.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Rombo įstrižainių savybės",
-      "text": "Rombo įstrižainės yra statmenos viena kitai ir susikirtimo taške dalijasi pusiau. Tai leidžia taikyti Pitagoro teoremą rombo kraštinei rasti."
+      "title": "Pitagoras",
+      "text": "a^2 = 6^2+8^2."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-8f2f8e36-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Rombo perimetras yra 40 cm."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-8f2f8e36-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Skaičiuoti rombo kraštinę naudojant pačius įstrižainių ilgius: $a^2 = 12^2 + 16^2$.",
-        "whyTempting": "Pamirštama, kad Pitagoro trikampį sudaro įstrižainių pusės, o ne ištisos įstrižainės.",
-        "whyItHappens": "Pamirštama, kad Pitagoro trikampį sudaro įstrižainių pusės, o ne ištisos įstrižainės.",
-        "wrongPattern": "Skaičiuoti rombo kraštinę naudojant pačius įstrižainių ilgius: $a^2 = 12^2 + 16^2$.",
-        "correction": "Įstrižainės susikirsdamos dalijasi pusiau, todėl skaičiavimams būtina naudoti pusinius ilgius.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-8f2f8e36-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-8f2f8e36-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokie yra rombo įstrižainių geometriniai ypatumai?",
-        "back": "Įstrižainės yra statmenos (kertasi $90^\\circ$ kampu) ir susikirtimo taške dalijasi pusiau.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Nubraižykite rombą su įstrižainėmis. Jos susikirtimo taške dalijasi pusiau.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pusės įstrižainių yra 6 cm ir 8 cm. Jos sudaro stačiojo trikampio statinius.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pritaikykite Pitagoro teoremą rombo kraštinei $a$ rasti: $a^2 = 6^2 + 8^2$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Gausite $a = 10$ cm. Apskaičiuokite perimetrą $P = 4a$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-22b2c6e7",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Stačiajame trikampyje statinis prieš smailųjį kampą $\\alpha$ lygus $3$ cm, o įžambinė lygi $5$ cm. Raskite $\\cos \\alpha$.",
-    "answer": "$\\cos \\alpha = 4/5$ (arba 0.8).",
+    "statement": "Statinis 3, įžambinė 5. Raskite kosinusą kampo prieš tą statinį.",
+    "answer": "0.8",
     "acceptedAnswers": [
-      "$\\cos \\alpha = 4/5$ (arba 0.8)."
+      "0.8"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite priglaustinį statinį $b$ naudodami Pitagoro teoremą.",
-      "$b = \\sqrt{5^2 - 3^2} = 4$ cm.",
-      "Pagal apibrėžimą, $\\cos \\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
-      "Santykis: $b / c = 4 / 5$."
-    ],
-    "solution": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm. Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$. Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "4/5 = 0.8.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Trigonometrinis santykis stačiajame trikampyje",
-      "text": "Kosinusas yra priglaustinio statinio ir įžambinės santykis. Pirmiausia raskite antrąjį statinį."
+      "title": "Kosinusas",
+      "text": "4/5."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-22b2c6e7-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$\\cos \\alpha = 4/5$ (arba 0.8)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-22b2c6e7-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
-        "whyTempting": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
-        "whyItHappens": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
-        "wrongPattern": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
-        "correction": "Sinusas yra priešpriešinio statinio santykis, o kosinusas – priglaustinio statinio santykis su įžambine.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-22b2c6e7-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-22b2c6e7-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kas yra kosinusas stačiajame trikampyje?",
-        "back": "Tai priglaustinio statinio ir įžambinės ilgių santykis: $\\cos \\alpha = \\frac{adjacent}{hypotenuse}$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite priglaustinį statinį $b$ naudodami Pitagoro teoremą.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$b = \\sqrt{5^2 - 3^2} = 4$ cm.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pagal apibrėžimą, $\\cos \\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Santykis: $b / c = 4 / 5$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-cc8ac0d9",
     "topicId": "olimpiada-08-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
-    "statement": "Apskaičiuokite trikampio, kurio kraštinės yra 5 cm, 6 cm ir 9 cm, plotą naudodami Herono formulę.",
-    "answer": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$.",
+    "statement": "Kraštinės 5, 6, 9. Raskite plotą.",
+    "answer": "10√2",
     "acceptedAnswers": [
-      "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
+      "10√2"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite trikampio pusperimetrį $p$.",
-      "$p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
-      "Taikykite formulę: $S = \\sqrt{10(10-5)(10-6)(10-9)}$.",
-      "Apskaičiuokite: $S = \\sqrt{10 \\cdot 5 \\cdot 4 \\cdot 1} = \\sqrt{200}$. Supaprastinkite šaknį."
-    ],
-    "solution": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm. Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$. Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$. $S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "S=sqrt(10*5*4*1)=10sqrt(2).",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Herono formulės taikymas",
-      "text": "Apskaičiuokite pusperimetrį $p$ ir pritaikykite plotui formulę $S = \\sqrt{p(p-a)(p-b)(p-c)}$."
+      "title": "Heronas",
+      "text": "p=10."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-cc8ac0d9-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "$S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-cc8ac0d9-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Naudoti perimetrą $P=20$ vietoje pusperimetrio $p=10$ formulėje.",
-        "whyTempting": "Sumaišomi perimetras ir pusperimetris.",
-        "whyItHappens": "Sumaišomi perimetras ir pusperimetris.",
-        "wrongPattern": "Naudoti perimetrą $P=20$ vietoje pusperimetrio $p=10$ formulėje.",
-        "correction": "Herono formulėje $p$ visada žymi pusperimetrį, todėl perimetrą būtina padalinti iš 2.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-cc8ac0d9-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-cc8ac0d9-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra Herono trikampio ploto formulė?",
-        "back": "$S = \\sqrt{p(p-a)(p-b)(p-c)}$, kur $p = \\frac{a+b+c}{2}$ yra pusperimetris.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite trikampio pusperimetrį $p$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite formulę: $S = \\sqrt{10(10-5)(10-6)(10-9)}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Apskaičiuokite: $S = \\sqrt{10 \\cdot 5 \\cdot 4 \\cdot 1} = \\sqrt{200}$. Supaprastinkite šaknį.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-ca242a96",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Trikampio kraštinės yra $13$ cm, $14$ cm ir $15$ cm. Jo plotas lygus $84$ $\\text{cm}^2$. Raskite apie šį trikampį apibrėžto apskritimo spindulį $R$.",
-    "answer": "Spindulys lygus 65/8 cm (arba 8.125 cm).",
+    "statement": "13, 14, 15, S=84. Raskite R.",
+    "answer": "8.125",
     "acceptedAnswers": [
-      "Spindulys lygus 65/8 cm (arba 8.125 cm)."
+      "8.125"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Užrašykite formulę, jungiančią kraštines, plotą ir apibrėžtinį spindulį.",
-      "Formulė yra $R = \\frac{abc}{4S}$. Mums duota $a=13$, $b=14$, $c=15$ ir $S=84$.",
-      "Įstatykite vertes: $R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84}$.",
-      "Suprastinkite trupmeną dalindami bendrus daliklius (14 ir 84 dalijasi iš 14, lieka 6; 15 ir 6 dalijasi iš 3)."
-    ],
-    "solution": "Naudojame apibrėžto apskritimo spindulio formulę $R = \\frac{abc}{4S}$. Įstatome žinomus skaičius: $R = \\frac{13 \\times 14 \\times 15}{4 \\times 84}$. Suprastiname skaitiklį ir vardiklį: $\\frac{14}{84} = \\frac{1}{6}$. Gauname $R = \\frac{13 \\times 15}{4 \\times 6} = \\frac{13 \\times 5}{4 \\times 2} = \\frac{65}{8} = 8.125$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "R=8.125.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Apibrėžtinio apskritimo spindulio formulė",
-      "text": "Pritaikykite formulę $R = \\frac{abc}{4S}$, kur $S$ – trikampio plotas, o $a, b, c$ – kraštinės."
+      "title": "R formulė",
+      "text": "abc/4S."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-ca242a96-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Naudojame apibrėžto apskritimo spindulio formulę $R = \\frac{abc}{4S}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome žinomus skaičius: $R = \\frac{13 \\times 14 \\times 15}{4 \\times 84}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Suprastiname skaitiklį ir vardiklį: $\\frac{14}{84} = \\frac{1}{6}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Gauname $R = \\frac{13 \\times 15}{4 \\times 6} = \\frac{13 \\times 5}{4 \\times 2} = \\frac{65}{8} = 8.125$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Spindulys lygus 65/8 cm (arba 8.125 cm)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-ca242a96-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Supainioti formulę su įbrėžtinio apskritimo formule $r = S/p$.",
-        "whyTempting": "Spinduliai $R$ (apibrėžtinis) ir $r$ (įbrėžtinis) dažnai sumaišomi.",
-        "whyItHappens": "Spinduliai $R$ (apibrėžtinis) ir $r$ (įbrėžtinis) dažnai sumaišomi.",
-        "wrongPattern": "Supainioti formulę su įbrėžtinio apskritimo formule $r = S/p$.",
-        "correction": "Apibrėžtiniam spinduliui visada naudojama formulė $abc/(4S)$, o įbrėžtiniam – $S/p$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-ca242a96-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-ca242a96-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia formulė sieja trikampio kraštines, plotą ir apibrėžto apskritimo spindulį?",
-        "back": "$R = \\frac{abc}{4S}$, kur $S$ yra plotas, o $a,b,c$ yra kraštinės.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Užrašykite formulę, jungiančią kraštines, plotą ir apibrėžtinį spindulį.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Formulė yra $R = \\frac{abc}{4S}$. Mums duota $a=13$, $b=14$, $c=15$ ir $S=84$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Įstatykite vertes: $R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Suprastinkite trupmeną dalindami bendrus daliklius (14 ir 84 dalijasi iš 14, lieka 6; 15 ir 6 dalijasi iš 3).",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-ed9ada96",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Apskritimo stygos $AB$ ir $CD$ susikerta taške $P$. Žinoma, kad lankas $AC = 40^\\circ$, o lankas $BD = 60^\\circ$. Raskite kampą $\\angle APD$.",
-    "answer": "Kampas $\\angle APD = 130^\\circ$.",
+    "statement": "AC=40, BD=60. Raskite APD.",
+    "answer": "130",
     "acceptedAnswers": [
-      "Kampas $\\angle APD = 130^\\circ$."
+      "130"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite kampą $\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
-      "Pagal apskritimo kampų savybes, $\\angle APC = \\frac{\\cup AC + \\cup BD}{2}$.",
-      "Apskaičiuokite: $\\angle APC = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
-      "Kampas $\\angle APD$ yra gretutinis kampui $\\angle APC$, todėl jų suma lygi $180^\\circ$. Raskite $\\angle APD$."
-    ],
-    "solution": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$. Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$). Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "180-50=130.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Kampas tarp susikertančių stygų",
-      "text": "Kampas tarp dviejų apskritimo stygų yra lygus lankų, kuriuos jos atkerta, sumos pusei. Kampas $\\angle APD$ yra gretutinis šiam kampui."
+      "title": "Lankai",
+      "text": "180 - (40+60)/2."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "geometric-auxiliary-line"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-ed9ada96-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$).",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Kampas $\\angle APD = 130^\\circ$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-ed9ada96-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
-        "whyTempting": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
-        "whyItHappens": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
-        "wrongPattern": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
-        "correction": "Formulė duoda kampą, nukreiptą tiesiai į nurodytus lankus (t. y. smailųjį kampą tarp stygų). Šoninis kampas yra gretutinis.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-ed9ada96-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-ed9ada96-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip randamas kampas tarp susikertančių stygų apskritimo viduje?",
-        "back": "Jis lygus lankų, į kuriuos remiasi šis kampas ir jam priešpriešinis kampas, sumos pusei: $\\theta = \\frac{\\cup_1 + \\cup_2}{2}$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite kampą $\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pagal apskritimo kampų savybes, $\\angle APC = \\frac{\\cup AC + \\cup BD}{2}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Apskaičiuokite: $\\angle APC = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kampas $\\angle APD$ yra gretutinis kampui $\\angle APC$, todėl jų suma lygi $180^\\circ$. Raskite $\\angle APD$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-c034e9e3",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Iš taško $P$, esančio apskritimo išorėje, nubrėžta liestinė $PT$ ir kirstinė, kertanti apskritimą taškuose $A$ ir $B$. Jei $PT = 6$ cm ir $PA = 4$ cm, raskite atkarpos $AB$ ilgį.",
-    "answer": "Atkarpos $AB$ ilgis yra 5 cm.",
+    "statement": "PT=6, PA=4. Raskite AB.",
+    "answer": "5",
     "acceptedAnswers": [
-      "Atkarpos $AB$ ilgis yra 5 cm."
+      "5"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Užrašykite liestinės ir kirstinės teoremos lygtį.",
-      "$PT^2 = PA \\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
-      "Įstatykite vertes: $6^2 = 4 \\cdot PB \\implies 36 = 4 \\cdot PB \\implies PB = 9$ cm.",
-      "Kadangi $PB$ susideda iš $PA$ ir $AB$, tai $AB = PB - PA$. Apskaičiuokite $AB$."
-    ],
-    "solution": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$. Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$. Randame visos kirstinės ilgį: $PB = 9$ cm. Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "PB=9, AB=5.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Liestinės ir kirstinės teorema",
-      "text": "Pagal taško galios teoremą, iš to paties taško išvestos liestinės kvadratas yra lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$."
+      "title": "Galia",
+      "text": "36=4*PB."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-c034e9e3-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Randame visos kirstinės ilgį: $PB = 9$ cm.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Atkarpos $AB$ ilgis yra 5 cm."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-c034e9e3-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
-        "whyTempting": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
-        "whyItHappens": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
-        "wrongPattern": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
-        "correction": "Teoremoje reikalaujama dauginti išorinė dalis $PA$ iš VISOS kirstinės $PB$, t. y. $PT^2 = PA(PA + AB)$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-c034e9e3-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-c034e9e3-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra apskritimo liestinės ir kirstinės teorema (taško galia)?",
-        "back": "Liestinės atkarpos kvadratas lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Užrašykite liestinės ir kirstinės teoremos lygtį.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$PT^2 = PA \\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Įstatykite vertes: $6^2 = 4 \\cdot PB \\implies 36 = 4 \\cdot PB \\implies PB = 9$ cm.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kadangi $PB$ susideda iš $PA$ ir $AB$, tai $AB = PB - PA$. Apskaičiuokite $AB$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-35696f22",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Dviejų panašių trikampių plotų santykis lygus $9:16$. Didesniojo trikampio perimetras lygus $24$ cm. Raskite mažesniojo trikampio perimetrą.",
-    "answer": "Mažesniojo trikampio perimetras lygus 18 cm.",
+    "statement": "S_santykis 9:16, P_large=24. Raskite P_small.",
+    "answer": "18",
     "acceptedAnswers": [
-      "Mažesniojo trikampio perimetras lygus 18 cm."
+      "18"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite trikampių panašumo koeficientą $k$ iš plotų santykio.",
-      "$k^2 = 9/16 \\implies k = 3/4$.",
-      "Perimetrų santykis atitinka panašumo koeficientą: $\\frac{P_{small}}{P_{large}} = k$.",
-      "Įstatykite žinomas reikšmes: $P_{small} = 24 \\cdot \\frac{3}{4}$."
-    ],
-    "solution": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$. Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$. Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$. Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "24 * 3/4 = 18.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Panašumo koeficientas ir plotų santykis",
-      "text": "Panašių figūrų plotų santykis yra lygus panašumo koeficiento kvadratui $k^2$, o perimetrų santykis lygus pačiam koeficientui $k$."
+      "title": "Panašumas",
+      "text": "k=3/4."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-35696f22-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Mažesniojo trikampio perimetras lygus 18 cm."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-35696f22-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Naudoti plotų santykį tiesiogiai perimetrui, t. y. $P_{small} = 24 \\times \\frac{9}{16} = 13.5$ cm.",
-        "whyTempting": "Pamirštama, kad plotai priklauso nuo koeficiento kvadrato, o perimetras yra tiesinis matmuo.",
-        "whyItHappens": "Pamirštama, kad plotai priklauso nuo koeficiento kvadrato, o perimetras yra tiesinis matmuo.",
-        "wrongPattern": "Naudoti plotų santykį tiesiogiai perimetrui, t. y. $P_{small} = 24 \\times \\frac{9}{16} = 13.5$ cm.",
-        "correction": "Tiesiniai matmenys (perimetras, kraštinės, aukštinės) visada santykiuoja kaip $k$, o plotas – kaip $k^2$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-35696f22-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-35696f22-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kuo skiriasi panašių figūrų plotų santykis nuo perimetrų santykio?",
-        "back": "Perimetrų santykis lygus $k$, o plotų santykis lygus $k^2$ (panašumo koeficiento kvadratui).",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite trikampių panašumo koeficientą $k$ iš plotų santykio.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "$k^2 = 9/16 \\implies k = 3/4$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Perimetrų santykis atitinka panašumo koeficientą: $\\frac{P_{small}}{P_{large}} = k$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Įstatykite žinomas reikšmes: $P_{small} = 24 \\cdot \\frac{3}{4}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-9a9234f7",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Trikampyje centroidas žymimas $G$, apibrėžto apskritimo centras $O$, o ortocentras $H$. Šie trys taškai guli Oilerio tiesėje. Jei atstumas $OG = 4$ cm, raskite atkarpos $GH$ ilgį.",
-    "answer": "Atkarpos $GH$ ilgis lygus 8 cm.",
+    "statement": "OG=4. Raskite GH.",
+    "answer": "8",
     "acceptedAnswers": [
-      "Atkarpos $GH$ ilgis lygus 8 cm."
+      "8"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Koks yra taškų $O$, $G$, $H$ išsidėstymo eiliškumas ir proporcijos tiesėje?",
-      "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\cdot OG$.",
-      "Žinome, kad atstumas $OG = 4$ cm.",
-      "Padauginkite atstumą $OG$ iš 2, kad gautumėte $GH$."
-    ],
-    "solution": "Pagal Oilerio tiesės teoremą, trikampio centroidas $G$, apibrėžtinio centro taškas $O$ ir ortocentras $H$ yra vienoje tiesėje. Centroidas $G$ visada dalija atkarpą $OH$ taip, kad $GH = 2 \\times OG$. Kadangi $OG = 4$ cm, tai $GH = 2 \\times 4 = 8$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "GH=8.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "advanced",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Oilerio tiesės taškų proporcija",
-      "text": "Centroidas $G$ dalija atkarpą tarp ortocentro $H$ ir apibrėžto apskritimo centro $O$ santykiu $2:1$, skaičiuojant nuo ortocentro."
+      "title": "Oileris",
+      "text": "GH=2*OG."
     },
     "strategyTags": [
-      "advanced",
-      "proof",
-      "geometrija"
+      "geometric-auxiliary-line"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-9a9234f7-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pagal Oilerio tiesės teoremą, trikampio centroidas $G$, apibrėžtinio centro taškas $O$ ir ortocentras $H$ yra vienoje tiesėje.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Centroidas $G$ visada dalija atkarpą $OH$ taip, kad $GH = 2 \\times OG$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $OG = 4$ cm, tai $GH = 2 \\times 4 = 8$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Atkarpos $GH$ ilgis lygus 8 cm."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-9a9234f7-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad $G$ yra vidurio taškas, todėl $GH = OG = 4$ cm.",
-        "whyTempting": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
-        "whyItHappens": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
-        "wrongPattern": "Manyti, kad $G$ yra vidurio taškas, todėl $GH = OG = 4$ cm.",
-        "correction": "Centroidas dalija atkarpą būtent santykiu $2:1$ (ortocentro pusėje atkarpa dvigubai ilgesnė), todėl $GH = 2 \\cdot OG$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-9a9234f7-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-9a9234f7-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Koks yra Oilerio tiesės taškų $O$ (apibrėžtinio centras), $G$ (centroidas) ir $H$ (ortocentras) santykis?",
-        "back": "Taškai yra vienoje tiesėje tvarka $O-G-H$, o atkarpa $GH = 2 \\cdot OG$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Koks yra taškų $O$, $G$, $H$ išsidėstymo eiliškumas ir proporcijos tiesėje?",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\cdot OG$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Žinome, kad atstumas $OG = 4$ cm.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Padauginkite atstumą $OG$ iš 2, kad gautumėte $GH$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-d789b136",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Trikampio apibrėžtinio apskritimo spindulys lygus $10$ cm. Raskite šio trikampio devynių taškų apskritimo spindulį.",
-    "answer": "Devynių taškų apskritimo spindulys yra 5 cm.",
+    "statement": "R=10. Raskite R9.",
+    "answer": "5",
     "acceptedAnswers": [
-      "Devynių taškų apskritimo spindulys yra 5 cm."
+      "5"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Koks ryšys sieja devynių taškų apskritimo spindulį su pradinio trikampio apibrėžtiniu spinduliu?",
-      "Šis spindulys visada lygus $R / 2$, kur $R$ yra apibrėžto apskritimo spindulys.",
-      "Mums duotas $R = 10$ cm.",
-      "Padalykite 10 iš 2."
-    ],
-    "solution": "Devynių taškų apskritimas (Oilerio apskritimas) turi daug geometrinių savybių. Viena iš pagrindinių savybių yra ta, kad jo spindulys $R_9$ visada lygus pusei apie trikampį apibrėžto apskritimo spindulio $R$. Kadangi $R = 10$ cm, tai $R_9 = R / 2 = 10 / 2 = 5$ cm.",
+    "concepts": [],
+    "hints": [],
+    "solution": "5.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "advanced",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Devynių taškų apskritimo spindulio savybė",
-      "text": "Devynių taškų apskritimo spindulys yra lygus pusei apibrėžtinio apskritimo spindulio."
+      "title": "Oileris R",
+      "text": "R/2."
     },
     "strategyTags": [
-      "advanced",
-      "proof",
-      "geometrija"
+      "geometric-auxiliary-line"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-d789b136-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Devynių taškų apskritimas (Oilerio apskritimas) turi daug geometrinių savybių.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Viena iš pagrindinių savybių yra ta, kad jo spindulys $R_9$ visada lygus pusei apie trikampį apibrėžto apskritimo spindulio $R$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $R = 10$ cm, tai $R_9 = R / 2 = 10 / 2 = 5$ cm.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "Devynių taškų apskritimo spindulys yra 5 cm."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-d789b136-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad spindulys priklauso nuo trikampio tipo (pvz., statusis ar smailusis).",
-        "whyTempting": "Pradeda ieškoti papildomų sąlygų.",
-        "whyItHappens": "Pradeda ieškoti papildomų sąlygų.",
-        "wrongPattern": "Manyti, kad spindulys priklauso nuo trikampio tipo (pvz., statusis ar smailusis).",
-        "correction": "Savybė $R_9 = R/2$ galioja absoliučiai bet kokiam trikampiui plokštumoje.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-d789b136-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-d789b136-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Koks yra devynių taškų apskritimo spindulio santykis su apibrėžtiniu spinduliu?",
-        "back": "Devynių taškų apskritimo spindulys visada lygus pusei apibrėžtinio apskritimo spindulio ($R_9 = R/2$).",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Koks ryšys sieja devynių taškų apskritimo spindulį su pradinio trikampio apibrėžtiniu spinduliu?",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Šis spindulys visada lygus $R / 2$, kur $R$ yra apibrėžto apskritimo spindulys.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Mums duotas $R = 10$ cm.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Padalykite 10 iš 2.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-ce546a26",
     "topicId": "olimpiada-08-geometrija",
-    "type": "structuredReasoning",
+    "type": "numericInput",
     "level": "olympiad",
-    "statement": "Žinoma, kad $\\sin \\theta = \\frac{3}{5}$ ir $\\theta$ yra smailusis kampas. Apskaičiuokite $\\sin 2\\theta$ reikšmę.",
-    "answer": "$\\sin 2\\theta = 24/25$ (arba 0.96).",
+    "statement": "sin x = 0.6. Raskite sin 2x.",
+    "answer": "0.96",
     "acceptedAnswers": [
-      "$\\sin 2\\theta = 24/25$ (arba 0.96)."
+      "0.96"
     ],
     "answerTolerance": 0,
     "choices": [],
-    "concepts": [
-      "olimpiada-08-concept-logic"
-    ],
-    "hints": [
-      "Raskite $\\cos \\theta$ naudodami formulę $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
-      "Kadangi kampas smailusis, kosinusas teigiamas: $\\cos \\theta = \\sqrt{1 - (3/5)^2} = 4/5$.",
-      "Užrašykite dvigubo kampo formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
-      "Apskaičiuokite: $2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5}$."
-    ],
-    "solution": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$. Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$. Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
+    "concepts": [],
+    "hints": [],
+    "solution": "2*0.6*0.8=0.96.",
     "alternate": "",
     "estimatedSeconds": 60,
     "olympiadTrack": "Geometrija",
     "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
+    "requiredPrerequisiteMastery": null,
     "coreIdea": {
-      "title": "Dvigubo kampo sinuso formulė",
-      "text": "Taikykite formulę $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. Kosinusą raskite pagal pagrindinę tapatybę."
+      "title": "Dvigubas",
+      "text": "2*sin*cos."
     },
     "strategyTags": [
-      "standard",
-      "proof",
-      "geometrija"
+      "algebraic-transformation"
     ],
     "prerequisiteTopicIds": [],
     "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-08-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-08-ce546a26-method-1",
-        "title": "Griežtas įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Žingsnis 1",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 2",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 3",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
-            "latex": ""
-          },
-          {
-            "title": "Žingsnis 4",
-            "action": "Atliekame loginį žingsnį.",
-            "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
-            "result": "Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
-            "latex": ""
-          }
-        ],
-        "finalAnswer": "$\\sin 2\\theta = 24/25$ (arba 0.96)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-08-ce546a26-trap-1",
-        "title": "Dažna klaida",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
-        "whyTempting": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
-        "whyItHappens": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
-        "wrongPattern": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
-        "correction": "Sinuso reikšmė negali viršyti 1, todėl $6/5$ yra matematiškai neįmanoma. Būtina taikyti sandaugos formulę su kosinusu.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-08-ce546a26-trap-2",
-        "title": "Sąlygos interpretacija",
-        "type": "mistake",
-        "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
-        "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
-        "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
-        "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
-        "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
     "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-08-ce546a26-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra dvigubo kampo sinuso formulė?",
-        "back": "$\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
-        "conceptIds": [
-          "olimpiada-08-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-08-concept-method"
-        ],
-        "defaultEnabled": true
-      }
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-012",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "multipleChoice",
+    "level": "olympiad",
+    "statement": "5, 8, 15 - trikampis?",
+    "answer": "Ne",
+    "acceptedAnswers": [
+      "Ne"
     ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Raskite $\\cos \\theta$ naudodami formulę $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Kadangi kampas smailusis, kosinusas teigiamas: $\\cos \\theta = \\sqrt{1 - (3/5)^2} = 4/5$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Užrašykite dvigubo kampo formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Apskaičiuokite: $2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
+    "answerTolerance": 0,
+    "choices": [
+      "Taip",
+      "Ne"
+    ],
+    "concepts": [],
+    "hints": [],
+    "solution": "Ne.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Nelygybė",
+      "text": "5+8 < 15."
+    },
+    "strategyTags": [
+      "bounding"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-013",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Įbrėžtinis, A=70. Raskite C.",
+    "answer": "110",
+    "acceptedAnswers": [
+      "110"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "110.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Kampai",
+      "text": "180 - 70."
+    },
+    "strategyTags": [
+      "geometric-auxiliary-line"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-014",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Čeva: 2/3, 4/5. Raskite CE/EA.",
+    "answer": "1.875",
+    "acceptedAnswers": [
+      "1.875"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "1.875.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Čeva",
+      "text": "1/(8/15)."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-015",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Ptolemėjas: 3, 4, 5, 6. Raskite sandaugą.",
+    "answer": "39",
+    "acceptedAnswers": [
+      "39"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "39.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Ptolemėjas",
+      "text": "3*5+4*6."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-016",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "BD:DC=2:3, S=50. Raskite ABD.",
+    "answer": "20",
+    "acceptedAnswers": [
+      "20"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "20.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Plotas",
+      "text": "50 * 2/5."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-017",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Menelajas: 1, 2. Raskite BC:CF.",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "1.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Menelajas",
+      "text": "1 * (BC+CF)/CF * 1/2 = 1."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-018",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "60 deg, r=5. Raskite PA.",
+    "answer": "8.66",
+    "acceptedAnswers": [
+      "8.66"
+    ],
+    "answerTolerance": 0.01,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "8.66.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Liestinė",
+      "text": "5 * sqrt(3)."
+    },
+    "strategyTags": [
+      "geometric-auxiliary-line"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-019",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "6, 8 statiniai. Raskite r.",
+    "answer": "2",
+    "acceptedAnswers": [
+      "2"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "2.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "r",
+      "text": "(6+8-10)/2."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-geo-020",
+    "topicId": "olimpiada-08-geometrija",
+    "type": "multipleChoice",
+    "level": "olympiad",
+    "statement": "Vidurio taškų jungimas?",
+    "answer": "Lygiagretainis",
+    "acceptedAnswers": [
+      "Lygiagretainis"
+    ],
+    "answerTolerance": 0,
+    "choices": [
+      "Lygiagretainis"
+    ],
+    "concepts": [],
+    "hints": [],
+    "solution": "Lygiagretainis.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Geometrija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": null,
+    "coreIdea": {
+      "title": "Varignonas",
+      "text": "Lygiagretumas įstrižainėms."
+    },
+    "strategyTags": [
+      "geometric-auxiliary-line"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "ex-olimpiada-08-ee85013b",
@@ -6269,6 +4735,655 @@ export const exercises_08 = [
     ]
   },
   {
+    "id": "ex-olimpiada-08-comb-009",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Grupėje yra 100 žmonių. 45 iš jų moka groti pianinu, 40 – gitara, 35 – smuiku. 20 moka groti pianinu ir gitara, 15 – pianinu ir smuiku, 10 – gitara ir smuiku. 5 žmonės moka groti visais trimis instrumentais. Kiek žmonių moka groti bent vienu instrumentu?",
+    "answer": "80 žmonių.",
+    "acceptedAnswers": [
+      "80 žmonių."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Užrašykite PIE formulę trims aibėms: $A \\cup B \\cup C$.",
+      "Formulė: $|A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|$.",
+      "Įstatykite vertes: $45 + 40 + 35 - (20 + 15 + 10) + 5$."
+    ],
+    "solution": "Sudedame atskiras aibes: $45 + 40 + 35 = 120$. Atimame porines sankirtas: $120 - (20 + 15 + 10) = 120 - 45 = 75$. Pridedame trijų aibių sankirtą: $75 + 5 = 80$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "PIE 3 aibėms",
+      "text": "Naudokite bendrąją įtraukimo ir išskyrimo principo formulę trims aibėms."
+    },
+    "strategyTags": [
+      "standard",
+      "kombinatorika",
+      "PIE"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [
+      "Kodėl formulėje reikia vėl pridėti trijų aibių sankirtą?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Užrašykite PIE formulę trims aibėms: $A \\cup B \\cup C$."
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Formulė: $|A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|$."
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Įstatykite vertes: $45 + 40 + 35 - (20 + 15 + 10) + 5$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-010",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Kiek yra būdų padalinti 8 vienodus saldainius 3 vaikams? (Vaikas gali negauti nė vieno saldainio).",
+    "answer": "45",
+    "acceptedAnswers": [
+      "45"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Čia $n=8$ saldainiai ir $k=3$ vaikai.",
+      "Suskaičiuokite $\binom{8+3-1}{3-1} = \binom{10}{2}$."
+    ],
+    "solution": "Formulė $\binom{10}{2} = \frac{10 \\cdot 9}{2 \\cdot 1} = 45$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Stars and Bars (nuliniai)",
+      "text": "Kai leidžiama gauti 0 objektų, naudojame formulę $\binom{n+k-1}{k-1}$."
+    },
+    "strategyTags": [
+      "stars-and-bars",
+      "kombinatorika"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Čia $n=8$ saldainiai ir $k=3$ vaikai."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Suskaičiuokite $\binom{8+3-1}{3-1} = \binom{10}{2}$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-011",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Kiek yra būdų padalinti 10 vienodų saldainių 3 vaikams taip, kad nė vienas vaikas negautų daugiau nei 5 saldainių?",
+    "answer": "21 būdas.",
+    "acceptedAnswers": [
+      "21 būdas."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Visas būdų skaičius yra $\binom{10+3-1}{3-1} = \binom{12}{2} = 66$.",
+      "Tarkime, vaikas A gauna bent 6 saldainius. Tada likusius 4 daliname 3 vaikams: $\binom{4+3-1}{3-1} = \binom{6}{2} = 15$.",
+      "Kadangi vaikų yra 3, atimkite $3 \\cdot 15$ iš 66. Ar gali du vaikai gauti po 6 ar daugiau?"
+    ],
+    "solution": "Visi būdai: $\binom{12}{2} = 66$. Būdai, kur konkretus vaikas turi $\\ge 6$: $\binom{4+3-1}{2} = 15$. Tokių vaikų gali būti bet kuris iš 3, tad $3 \\cdot 15 = 45$. Ar gali du vaikai turėti po $\\ge 6$? Ne, nes $6+6=12 > 10$. Tad sankirtų nėra. Atsakymas: $66 - 45 = 21$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "hard",
+    "requiredPrerequisiteMastery": 80,
+    "coreIdea": {
+      "title": "Papildomas skaičiavimas su PIE",
+      "text": "Suskaičiuokite visus būdus ir atimkite tuos, kur bent vienas vaikas gauna daugiau nei 5 saldainius."
+    },
+    "strategyTags": [
+      "PIE",
+      "stars-and-bars",
+      "kombinatorika"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Visas būdų skaičius yra $\binom{10+3-1}{3-1} = \binom{12}{2} = 66$."
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Tarkime, vaikas A gauna bent 6 saldainius. Tada likusius 4 daliname 3 vaikams: $\binom{4+3-1}{3-1} = \binom{6}{2} = 15$."
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kadangi vaikų yra 3, atimkite $3 \\cdot 15$ iš 66. Ar gali du vaikai gauti po 6 ar daugiau?"
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-012",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Matematinės indukcijos metodu įrodykite, kad pirmųjų $n$ nelyginių natūraliųjų skaičių suma lygi $n^2$.",
+    "answer": "Teiginys įrodytas.",
+    "acceptedAnswers": [
+      "Teiginys įrodytas."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Patikrinkite bazę $n=1$: $1 = 1^2$.",
+      "Žingsnis: prie $k^2$ pridėkite sekantį nelyginį skaičių $2k+1$."
+    ],
+    "solution": "Bazė: $n=1$, $1=1^2$. Teisinga. Prielaida: $1 + 3 + ... + (2k-1) = k^2$. Žingsnis: $1 + 3 + ... + (2k-1) + (2k+1) = k^2 + 2k + 1 = (k+1)^2$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Nelyginių skaičių suma",
+      "text": "$1 + 3 + 5 + ... + (2n-1) = n^2$."
+    },
+    "strategyTags": [
+      "induction",
+      "kombinatorika"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Patikrinkite bazę $n=1$: $1 = 1^2$."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Žingsnis: prie $k^2$ pridėkite sekantį nelyginį skaičių $2k+1$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-013",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Įrodykite, kad $2^n > n$ visiems natūraliesiems $n$.",
+    "answer": "Teiginys įrodytas.",
+    "acceptedAnswers": [
+      "Teiginys įrodytas."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Bazė $n=1$: $2^1 = 2 > 1$.",
+      "Žingsnis: $2^{k+1} = 2 \\cdot 2^k$. Naudokite prielaidą $2^k > k$."
+    ],
+    "solution": "Bazė $n=1$: $2 > 1$. Teisinga. Prielaida: $2^k > k$. Žingsnis: $2^{k+1} = 2 \\cdot 2^k > 2k$. Kadangi $2k \\ge k+1$ visiems $k \\ge 1$, teiginys įrodytas.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Eksponentinis augimas",
+      "text": "Indukcinis žingsnis parodo, kad dvigubėjimas visada viršija pradinio rodiklio padidėjimą vienetu."
+    },
+    "strategyTags": [
+      "induction",
+      "inequality"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Bazė $n=1$: $2^1 = 2 > 1$."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Žingsnis: $2^{k+1} = 2 \\cdot 2^k$. Naudokite prielaidą $2^k > k$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-014",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "multipleChoice",
+    "level": "olympiad",
+    "statement": "Ar egzistuoja grafas, kurio viršūnių laipsniai yra: 3, 3, 3, 2, 2, 1?",
+    "answer": "Taip",
+    "acceptedAnswers": [
+      "Taip"
+    ],
+    "answerTolerance": 0,
+    "choices": [
+      "Taip",
+      "Ne"
+    ],
+    "concepts": [],
+    "hints": [
+      "Suskaičiuokite viršūnes su nelyginiais laipsniais.",
+      "Nelyginiai laipsniai yra 3, 3, 3 ir 1. Jų yra 4. 4 yra lyginis skaičius."
+    ],
+    "solution": "Laipsnių suma: $3+3+3+2+2+1 = 14$. Suma yra lyginė, nelyginių laipsnių skaičius (4) yra lyginis. Toks grafas gali egzistuoti.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Nelyginių laipsnių skaičius",
+      "text": "Pagal Rankų paspaudimo lemą, viršūnių su nelyginiu laipsniu turi būti lyginis skaičius."
+    },
+    "strategyTags": [
+      "graphs",
+      "handshake-lemma"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Suskaičiuokite viršūnes su nelyginiais laipsniais."
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Nelyginiai laipsniai yra 3, 3, 3 ir 1. Jų yra 4. 4 yra lyginis skaičius."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-015",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Plokščiasis (planarusis) grafas turi 7 viršūnes ir dalija plokštumą į 6 sritis (įskaitant išorinę). Kiek briaunų turi šis grafas?",
+    "answer": "11",
+    "acceptedAnswers": [
+      "11"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "$V$ – viršūnės, $E$ – briaunos, $F$ – sritys (veidai).",
+      "Įstatykite $V=7$ ir $F=6$ į formulę $7 - E + 6 = 2$."
+    ],
+    "solution": "$13 - E = 2 \\implies E = 11$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Oilerio formulė plokštiesiems grafams",
+      "text": "Naudokite formulę $V - E + F = 2$."
+    },
+    "strategyTags": [
+      "graphs",
+      "euler-formula"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "$V$ – viršūnės, $E$ – briaunos, $F$ – sritys (veidai)."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Įstatykite $V=7$ ir $F=6$ į formulę $7 - E + 6 = 2$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-016",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Seka apibrėžiama: $f_1=1, f_2=1, f_n = f_{n-1} + f_{n-2}$. Įrodykite indukcija, kad $f_1 + f_2 + ... + f_n = f_{n+2} - 1$.",
+    "answer": "Teiginys įrodytas.",
+    "acceptedAnswers": [
+      "Teiginys įrodytas."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Bazė $n=1$: $f_1 = 1$, $f_3 - 1 = 2 - 1 = 1$.",
+      "Žingsnis: prie $f_{k+2} - 1$ pridėkite $f_{k+1}$."
+    ],
+    "solution": "Bazė teisinga. Prielaida: Suma iki $k$ yra $f_{k+2} - 1$. Žingsnis: $(f_{k+2} - 1) + f_{k+1} = (f_{k+2} + f_{k+1}) - 1 = f_{k+3} - 1$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Fibonačio sekos sumos savybė",
+      "text": "Naudokite sekos apibrėžimą $f_{n+2} = f_{n+1} + f_n$."
+    },
+    "strategyTags": [
+      "induction",
+      "recursion"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Bazė $n=1$: $f_1 = 1$, $f_3 - 1 = 2 - 1 = 1$."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Žingsnis: prie $f_{k+2} - 1$ pridėkite $f_{k+1}$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-017",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Metami 10 lošimo kauliukų. Koks yra iškritusių akučių sumos matematinis viltingumas?",
+    "answer": "35",
+    "acceptedAnswers": [
+      "35"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Vieno kauliuko viltingumas yra $(1+2+3+4+5+6)/6 = 3.5$.",
+      "Sudauginkite vieno kauliuko viltingumą iš kauliukų skaičiaus."
+    ],
+    "solution": "$E(X_1) = 3.5$. $E(X_1 + ... + X_{10}) = 10 \\cdot 3.5 = 35$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Viltingumo tiesiškumas",
+      "text": "Sumos viltingumas lygus viltingumų sumai, net jei įvykiai priklausomi (čia jie nepriklausomi)."
+    },
+    "strategyTags": [
+      "probability",
+      "expected-value"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Vieno kauliuko viltingumas yra $(1+2+3+4+5+6)/6 = 3.5$."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Sudauginkite vieno kauliuko viltingumą iš kauliukų skaičiaus."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-018",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Atsitiktinis taškas padedamas skritulio viduje. Kokia tikimybė, kad jis bus arčiau centro nei skritulio krašto?",
+    "answer": "0.25",
+    "acceptedAnswers": [
+      "0.25"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Tegul skritulio spindulys yra $R$. Taškas turi būti nutolęs nuo centro mažiau nei $R/2$.",
+      "Tikimybė yra mažesnio skritulio ploto ir didelio skritulio ploto santykis."
+    ],
+    "solution": "$P = \frac{\\pi (R/2)^2}{\\pi R^2} = \frac{R^2/4}{R^2} = 1/4 = 0.25$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Geometrinė tikimybė skritulyje",
+      "text": "Atstumas iki centro mažesnis už atstumą iki krašto reiškia, kad taškas yra mažesnio skritulio su spinduliu $R/2$ viduje."
+    },
+    "strategyTags": [
+      "probability",
+      "geometric-probability"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Tegul skritulio spindulys yra $R$. Taškas turi būti nutolęs nuo centro mažiau nei $R/2$."
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "Tikimybė yra mažesnio skritulio ploto ir didelio skritulio ploto santykis."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-019",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Kvadrate, kurio kraštinė yra 2, atsitiktinai padedami 5 taškai. Įrodykite, kad bent du taškai yra nutolę vienas nuo kito ne daugiau kaip per $\\sqrt{2}$.",
+    "answer": "Teiginys įrodytas.",
+    "acceptedAnswers": [
+      "Teiginys įrodytas."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Padalinkite kvadratą $2 \times 2$ į 4 mažus kvadratus $1 \times 1$.",
+      "Turime 5 taškus ir 4 kvadratus. Bent viename kvadrate bus 2 taškai.",
+      "Koks yra didžiausias įmanomas atstumas tarp dviejų taškų $1 \times 1$ kvadrate?"
+    ],
+    "solution": "Padaliname į 4 kvadratus $1 \times 1$. Pagal Grebėsto principą, bent viename kvadrate bus bent 2 taškai. Didžiausias atstumas $1 \times 1$ kvadrate yra įstrižainė $\\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Grebėsto principas plote",
+      "text": "Padalinkite kvadratą į mažesnes dalis (dėžutes) taip, kad atstumas tarp taškų vienoje dalyje būtų ribotas."
+    },
+    "strategyTags": [
+      "pigeonhole-principle",
+      "kombinatorika"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Padalinkite kvadratą $2 \times 2$ į 4 mažus kvadratus $1 \times 1$."
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Turime 5 taškus ir 4 kvadratus. Bent viename kvadrate bus 2 taškai."
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Koks yra didžiausias įmanomas atstumas tarp dviejų taškų $1 \times 1$ kvadrate?"
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-comb-020",
+    "topicId": "olimpiada-08-kombinatorika",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Kiek yra būdų išdalyti 12 vienodų pieštukų 3 vaikams taip, kad kiekvienas vaikas gautų bent po 2 pieštukus?",
+    "answer": "28",
+    "acceptedAnswers": [
+      "28"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Iš viso yra 12 pieštukų. Kiek pieštukų liks išdalinus po 2?",
+      "$12 - (3 \\cdot 2) = 6$. Dabar 6 pieštukus dalinkite 3 vaikams be jokių apribojimų."
+    ],
+    "solution": "Liko 6 pieštukai, 3 vaikai. Formulė: $\binom{6+3-1}{3-1} = \binom{8}{2} = \frac{8 \\cdot 7}{2 \\cdot 1} = 28$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Kombinatorika",
+    "olympiadTier": "hard",
+    "requiredPrerequisiteMastery": 80,
+    "coreIdea": {
+      "title": "Stars and Bars su minimaliu kiekiu",
+      "text": "Pirmiausia duokite kiekvienam vaikui po 2 pieštukus, tada likusius dalinkite be apribojimų."
+    },
+    "strategyTags": [
+      "stars-and-bars",
+      "kombinatorika"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Iš viso yra 12 pieštukų. Kiek pieštukų liks išdalinus po 2?"
+      },
+      {
+        "order": 2,
+        "kind": "method",
+        "text": "$12 - (3 \\cdot 2) = 6$. Dabar 6 pieštukus dalinkite 3 vaikams be jokių apribojimų."
+      }
+    ]
+  },
+  {
     "id": "ex-olimpiada-08-efad3e02",
     "topicId": "olimpiada-08-skaiciu-teorija",
     "type": "structuredReasoning",
@@ -7591,6 +6706,515 @@ export const exercises_08 = [
         "penalty": 0.12
       }
     ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-009",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Raskite DBD(n, n+1) bet kuriam natūraliajam n.",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Tarkime, d yra bendras daliklis.",
+      "Jei d dalija n ir n+1, tai d dalija ir jų skirtumą (n+1) - n."
+    ],
+    "solution": "Skirtumas: (n+1) - n = 1. Bendras daliklis turi dalinti 1, tad d=1.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Gretimų skaičių tarpusavio pirminumas",
+      "text": "Bet kurie du gretimi sveikieji skaičiai yra tarpusavyje pirminiai."
+    },
+    "strategyTags": [
+      "standard",
+      "divisibility"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Tarkime, d yra bendras daliklis."
+      },
+      {
+        "order": 2,
+        "text": "Jei d dalija n ir n+1, tai d dalija ir jų skirtumą (n+1) - n."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-010",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Raskite skaitmenį X, kad skaičius 123X45 dalintųsi iš 11.",
+    "answer": "8",
+    "acceptedAnswers": [
+      "8"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Suskaičiuokite: (1+3+4) - (2+X+5).",
+      "8 - (7+X) = 1 - X."
+    ],
+    "solution": "1-X turi būti 0 arba dalus iš 11. X=1 arba X=... (tik X=1 tinka, nes skaitmuo). Pala, (1+3+4) - (2+X+5) = 8 - (7+X) = 1-X. Jei X=1, skaičius 123145. Tikriname: (1+3+4)=8, (2+1+5)=8. 8-8=0. Teisinga. X=1.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Dalumo iš 11 požymis",
+      "text": "Skaitmenų nelyginėse ir lyginėse vietose sumų skirtumas turi dalintis iš 11."
+    },
+    "strategyTags": [
+      "divisibility-rules"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Suskaičiuokite: (1+3+4) - (2+X+5)."
+      },
+      {
+        "order": 2,
+        "text": "8 - (7+X) = 1 - X."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-011",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Išreikškite DBD(17, 5) kaip tiesinę 17 ir 5 kombinaciją (Bezout tapatybė).",
+    "answer": "1 = 3*17 - 10*5 (pavyzdžiui).",
+    "acceptedAnswers": [
+      "1 = 3*17 - 10*5 (pavyzdžiui)."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "17 = 3*5 + 2",
+      "5 = 2*2 + 1"
+    ],
+    "solution": "1 = 5 - 2*2 1 = 5 - 2*(17 - 3*5) = 5 - 2*17 + 6*5 = 7*5 - 2*17.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Euklido algoritmas atgal",
+      "text": "Naudokite Euklido algoritmą DBD rasti, tada išreiškite skirtumus atgaline tvarka."
+    },
+    "strategyTags": [
+      "euclidean-algorithm",
+      "bezout-identity"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "17 = 3*5 + 2"
+      },
+      {
+        "order": 2,
+        "text": "5 = 2*2 + 1"
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-012",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Raskite $3^{100} \\pmod{10}$.",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "3^1=3, 3^2=9, 3^3=27 (7), 3^4=81 (1).",
+      "Ciklo ilgis 4. Padalykite 100 iš 4."
+    ],
+    "solution": "3^4 \\equiv 1 (mod 10). (3^4)^{25} \\equiv 1^{25} \\equiv 1 (mod 10).",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Laipsnių cikliškumas",
+      "text": "Liekanos moduliu 10 kartojasi cikliškai."
+    },
+    "strategyTags": [
+      "modular-arithmetic"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "3^1=3, 3^2=9, 3^3=27 (7), 3^4=81 (1)."
+      },
+      {
+        "order": 2,
+        "text": "Ciklo ilgis 4. Padalykite 100 iš 4."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-013",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Apskaičiuokite Oilerio funkciją $\\phi(12)$.",
+    "answer": "4",
+    "acceptedAnswers": [
+      "4"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Skaidymas: 12 = 2^2 * 3.",
+      "Formulė: $\\phi(n) = n(1-1/p_1)(1-1/p_2)$."
+    ],
+    "solution": "12 * (1 - 1/2) * (1 - 1/3) = 12 * 1/2 * 2/3 = 4.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Oilerio funkcijos skaičiavimas",
+      "text": "$\\phi(n)$ parodo, kiek yra skaičių iki n, tarpusavyje pirminių su n."
+    },
+    "strategyTags": [
+      "euler-totient"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "text": "Skaidymas: 12 = 2^2 * 3."
+      },
+      {
+        "order": 2,
+        "text": "Formulė: $\\phi(n) = n(1-1/p_1)(1-1/p_2)$."
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-08-nt-014",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Kiek daliklių turi skaičius 100?",
+    "answer": "9",
+    "acceptedAnswers": [
+      "9"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "(2+1)*(2+1) = 9.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Daliklių skaičiaus formulė",
+      "text": "Naudokite pirminį skaidymą $2^2 \\cdot 5^2$."
+    },
+    "strategyTags": [
+      "divisors"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-015",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Raskite visų skaičiaus 12 daliklių sumą.",
+    "answer": "28",
+    "acceptedAnswers": [
+      "28"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "Dalikliai: 1, 2, 3, 4, 6, 12. Suma: 1+2+3+4+6+12 = 28.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Daliklių sumos formulė",
+      "text": "$\\sigma(12) = (1+2+2^2)(1+3)$."
+    },
+    "strategyTags": [
+      "divisors"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-016",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Paverskite $121_3$ į dešimtainę sistemą.",
+    "answer": "16",
+    "acceptedAnswers": [
+      "16"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "1*3^2 + 2*3^1 + 1*3^0 = 9 + 6 + 1 = 16.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Pozicinė sistema",
+      "text": "Dauginkite skaitmenis iš pagrindo laipsnių."
+    },
+    "strategyTags": [
+      "number-bases"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-017",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Išspręskite sveikaisiais skaičiais: $x^2 - y^2 = 7$.",
+    "answer": "Sprendiniai: (4, 3), (4, -3), (-4, 3), (-4, -3).",
+    "acceptedAnswers": [
+      "Sprendiniai: (4, 3), (4, -3), (-4, 3), (-4, -3)."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "Sistemos: x-y=1, x+y=7 => x=4, y=3; x-y=7, x+y=1 => x=4, y=-3; ir t.t.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "hard",
+    "requiredPrerequisiteMastery": 80,
+    "coreIdea": {
+      "title": "Kvadratų skirtumo skaidymas",
+      "text": "(x-y)(x+y) = 7. Nagrinėkite 7 daliklius."
+    },
+    "strategyTags": [
+      "diophantine-equations"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-018",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Raskite x, jei $x \\equiv 1 \\pmod 2$, $x \\equiv 1 \\pmod 3$, $x \\equiv 1 \\pmod 5$. (Mažiausias teigiamas).",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "Mažiausias natūralusis yra 1. Sekantis būtų 1 + 2*3*5 = 31.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "hard",
+    "requiredPrerequisiteMastery": 80,
+    "coreIdea": {
+      "title": "CRT specialus atvejis",
+      "text": "Jei visos liekanos vienodos, tai skaičius 1 visada tinka."
+    },
+    "strategyTags": [
+      "chinese-remainder-theorem"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-019",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "multipleChoice",
+    "level": "olympiad",
+    "statement": "Ar skaičiai 220 ir 284 yra draugiškieji?",
+    "answer": "Taip",
+    "acceptedAnswers": [
+      "Taip"
+    ],
+    "answerTolerance": 0,
+    "choices": [
+      "Taip",
+      "Ne"
+    ],
+    "concepts": [],
+    "hints": [],
+    "solution": "Tai garsiausia draugiškųjų skaičių pora.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "easy",
+    "requiredPrerequisiteMastery": 50,
+    "coreIdea": {
+      "title": "Draugiškųjų skaičių patikra",
+      "text": "Sutikrinkite tikrųjų daliklių sumas."
+    },
+    "strategyTags": [
+      "perfect-numbers"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
+  },
+  {
+    "id": "ex-olimpiada-08-nt-020",
+    "topicId": "olimpiada-08-skaiciu-teorija",
+    "type": "numericInput",
+    "level": "olympiad",
+    "statement": "Koks yra paskutinis skaičiaus $7^{2024}$ skaitmuo?",
+    "answer": "1",
+    "acceptedAnswers": [
+      "1"
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [],
+    "solution": "7^1=7, 7^2=9, 7^3=3, 7^4=1. Ciklas 4. 2024 dalijasi iš 4, tad liekana tokia pat kaip 7^4.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "medium",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Paskutinis skaitmuo",
+      "text": "Raskite liekaną moduliu 10."
+    },
+    "strategyTags": [
+      "modular-arithmetic"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [],
+    "commonTraps": [],
+    "reflectionPrompts": [],
+    "extensionQuestions": [],
+    "srsSeeds": [],
+    "hintsRaw": []
   },
   {
     "id": "panasus-trikampiai-ir-talio-teorema-ex-001",

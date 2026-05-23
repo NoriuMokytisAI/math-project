@@ -27,7 +27,21 @@
       "ex-olimpiada-06-8b52c9fe",
       "ex-olimpiada-06-1ad3676c",
       "ex-olimpiada-06-e897fd75",
-      "ex-olimpiada-06-8de3fc6a"
+      "ex-olimpiada-06-8de3fc6a",
+      "ex-olimpiada-06-k1",
+      "ex-olimpiada-06-k2",
+      "ex-olimpiada-06-k3",
+      "ex-olimpiada-06-k4",
+      "ex-olimpiada-06-k5",
+      "ex-olimpiada-06-k6",
+      "ex-olimpiada-06-k7",
+      "ex-olimpiada-06-k8",
+      "ex-olimpiada-06-k9",
+      "ex-olimpiada-06-k10",
+      "ex-olimpiada-06-k11",
+      "ex-olimpiada-06-k12",
+      "ex-olimpiada-06-k13",
+      "ex-olimpiada-06-k14"
     ]
   },
   "theory": [
@@ -971,7 +985,523 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-06-k1",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "statement": "Lentynoje reikia išrikiuoti 4 skirtingas knygas. Keliais skirtingais būdais tai galima padaryti?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Knygas galima išrikiuoti 24 būdais." },
+      "answerText": "24",
+      "coreIdea": { "title": "Naudokite faktorialą", "text": "Objektų išrikiavimo tvarka yra svarbi, todėl naudojame kėlinius (faktorialą)." },
+      "strategyTags": ["kėliniai"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Pagalvokite, kiek knygų galite padėti į pirmąją vietą.", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Padėjus vieną knygą, antrai vietai lieka 3 pasirinkimai.", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Taikykite daugybos taisyklę: $4 \\times 3 \\times 2 \\times 1$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Į pirmąją vietą galime padėti bet kurią iš 4 knygų." },
+        { "text": "Į antrąją vietą galime padėti bet kurią iš 3 likusių knygų." },
+        { "text": "Į trečiąją vietą lieka 2 pasirinkimai, o į paskutinę – 1." },
+        { "text": "Iš viso būdų: $4 \\times 3 \\times 2 \\times 1 = 24$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k1-m1",
+          "title": "Faktorialo taisyklė",
+          "methodType": "main",
+          "steps": [
+            { "title": "Skaičiavimas", "action": "Apskaičiuokite $4!$.", "reason": "Turime $4$ skirtingus objektus.", "result": "24" }
+          ],
+          "finalAnswer": "24"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k2",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Kiek yra triženklių skaičių, kurių visi skaitmenys yra nelyginiai?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 125 tokie skaičiai." },
+      "answerText": "125",
+      "coreIdea": { "title": "Daugybos taisyklė su pasikartojimais", "text": "Kiekvienai skaičiaus pozicijai turime po 5 pasirinkimus (1, 3, 5, 7, 9)." },
+      "strategyTags": ["kombinatorinė-daugyba"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Išrašykite visus nelyginius skaitmenis.", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Triženklis skaičius turi 3 pozicijas. Kiek pasirinkimų turime kiekvienai?", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Kadangi skaitmenys gali kartotis, dauginame: $5 \\times 5 \\times 5$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Nelyginiai skaitmenys yra {1, 3, 5, 7, 9} – iš viso 5." },
+        { "text": "Pirmam skaitmeniui turime 5 variantus." },
+        { "text": "Antram skaitmeniui turime 5 variantus (nes gali kartotis)." },
+        { "text": "Trečiam skaitmeniui turime 5 variantus." },
+        { "text": "Iš viso: $5 \\times 5 \\times 5 = 125$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k2-m1",
+          "title": "Pozicinis skaičiavimas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Daugyba", "action": "Apskaičiuojame $5^3$.", "reason": "3 pozicijos po 5 pasirinkimus.", "result": "125" }
+          ],
+          "finalAnswer": "125"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k3",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "statement": "Krepšyje yra 7 skirtingi vaisiai. Keliais būdais galima pasirinkti 3 vaisius pavakariams?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Vaisius galima pasirinkti 35 būdais." },
+      "answerText": "35",
+      "coreIdea": { "title": "Derinių formulė", "text": "Vaisių pasirinkimo tvarka nesvarbi, todėl naudojame derinius." },
+      "strategyTags": ["deriniai"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Ar svarbu, kurį vaisių paimsite pirmą?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Naudokite formulę $C_n^k$, kur $n=7$ ir $k=3$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Pasirinkimo tvarka nesvarbi, todėl skaičiuojame derinius iš 7 po 3." },
+        { "text": "Skaičiuojame: $C_7^3 = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1}$." },
+        { "text": "Atliekame veiksmus: $\\frac{210}{6} = 35$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k3-m1",
+          "title": "Derinių formulės taikymas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Skaičiavimas", "action": "Apskaičiuojame $7 \\cdot 6 \\cdot 5 / 6$.", "reason": "Deriniai neatsižvelgiant į tvarką.", "result": "35" }
+          ],
+          "finalAnswer": "35"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k4",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Įrodykite, kad jei 7 mokiniai pasidalino 8 saldainius, tai bent vienas mokinys gavo daugiau nei vieną saldainį.",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Pagal Dirichlė principą bent vienas mokinys turi gauti 2 ar daugiau saldainių." },
+      "answerText": "Įrodyta",
+      "coreIdea": { "title": "Dirichlė (balandžių) principas", "text": "Jei objektų daugiau nei vietų, bent vienoje vietoje bus daugiau nei vienas objektas." },
+      "strategyTags": ["pigeonhole-principle", "proof"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Kas šiame uždavinyje yra 'balandžiai', o kas 'narveliai'?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Mokiniai yra narveliai, o saldainiai yra balandžiai.", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Tarkime priešingai: kiekvienas gavo ne daugiau kaip po 1 saldainį. Kiek tada saldainių būtų iš viso?", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Tarkime priešingai: kiekvienas iš 7 mokinių gavo ne daugiau kaip po 1 saldainį." },
+        { "text": "Tada didžiausias įmanomas saldainių skaičius būtų $7 \\times 1 = 7$." },
+        { "text": "Kadangi saldainių yra 8, o vietų tik 7, tai bent vienam mokiniui turėjo atitekti bent 2 saldainiai." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k4-m1",
+          "title": "Prieštaravimo metodas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Prielaida", "action": "Tarkime, kad kiekvienas gavo po 1 saldainį.", "reason": "Kad pritaikytume Dirichlė principą.", "result": "Suma būtų 7." },
+            { "title": "Išvada", "action": "8 > 7, todėl prielaida klaidinga.", "reason": "Objektų skaičius viršija vietų skaičių.", "result": "Bent vienas gavo 2." }
+          ],
+          "finalAnswer": "Įrodyta"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k5",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Grupėje yra 20 vaikų. 12 iš jų mėgsta krepšinį, 10 mėgsta futbolą, o 5 mėgsta abi sporto šakas. Kiek vaikų nemėgsta nei krepšinio, nei futbolo?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "3 vaikai nemėgsta nei vienos sporto šakos." },
+      "answerText": "3",
+      "coreIdea": { "title": "Aibių sankirta", "text": "Sudėjus abiejų grupių vaikus, tie, kurie mėgsta abu, yra suskaičiuoti du kartus." },
+      "strategyTags": ["įtrauktis-išskirtis"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Nupieškite Venno diagramą.", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Kiek vaikų mėgsta BENT VIENĄ sporto šaką?", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Naudokite formulę: $N(A \\cup B) = N(A) + N(B) - N(A \\cap B)$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Apskaičiuojame vaikus, kurie mėgsta bent vieną sportą: $12 + 10 - 5 = 17$." },
+        { "text": "Iš viso grupėje yra 20 vaikų." },
+        { "text": "Vaikai, kurie nemėgsta nei vieno: $20 - 17 = 3$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k5-m1",
+          "title": "Įtraukties-išskirties principas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Sąjungos radimas", "action": "Apskaičiuojame $12+10-5$.", "reason": "Atskaičiuojame dubliuotus narius.", "result": "17" },
+            { "title": "Atimtis", "action": "Apskaičiuojame $20-17$.", "reason": "Randame papildomąją aibę.", "result": "3" }
+          ],
+          "finalAnswer": "3"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k6",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Vakarėlyje susitiko 6 draugai. Kiekvienas su kiekvienu pasisveikino paspausdamas ranką. Kiek iš viso buvo rankos paspaudimų?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Iš viso buvo 15 rankos paspaudimų." },
+      "answerText": "15",
+      "coreIdea": { "title": "Deriniai be tvarkos", "text": "Rankos paspaudimui reikia 2 žmonių, o tvarka tarp jų nesvarbi." },
+      "strategyTags": ["deriniai", "combinatorial-counting"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Pirmas žmogus paspaudžia rankas 5 kitiems.", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Antras žmogus jau pasisveikino su pirmuoju, tad jam lieka 4 nauji paspaudimai.", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Sudėkite: $5 + 4 + 3 + 2 + 1$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Kiekvienas iš 6 žmonių galėtų paspausti ranką 5 kitiems: $6 \\times 5 = 30$." },
+        { "text": "Bet kiekvienas paspaudimas suskaičiuotas du kartus (A su B ir B su A)." },
+        { "text": "Tikrasis skaičius: $30 / 2 = 15$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k6-m1",
+          "title": "Pilnojo grafo briaunų skaičiavimas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Skaičiavimas", "action": "Apskaičiuojame $C_6^2$.", "reason": "Pora be tvarkos iš 6 narių.", "result": "15" }
+          ],
+          "finalAnswer": "15"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k7",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Kiek yra triženklių skaičių, kurių visi skaitmenys skirtingi?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 648 tokie skaičiai." },
+      "answerText": "648",
+      "coreIdea": { "title": "Daugybos taisyklė su apribojimais", "text": "Pirmas skaitmuo negali būti 0, o kiti negali sutapti su jau parinktais." },
+      "strategyTags": ["kombinatorinė-daugyba"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Kiek variantų turime pirmam skaitmeniui (šimtų vietai)?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Antram skaitmeniui turime 9 variantus (visi skaitmenys minus pirmasis).", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Trečiam skaitmeniui lieka 8 variantai. Padauginkite rezultatus.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Pirmas skaitmuo gali būti nuo 1 iki 9 (9 variantai)." },
+        { "text": "Antras skaitmuo gali būti bet koks nuo 0 iki 9, išskyrus pirmąjį (9 variantai)." },
+        { "text": "Trečias skaitmuo gali būti bet koks, išskyrus pirmąjį ir antrąjį (8 variantai)." },
+        { "text": "Iš viso: $9 \\times 9 \\times 8 = 648$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k7-m1",
+          "title": "Nuoseklus pozicijų pildymas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Daugyba", "action": "Apskaičiuojame $9 \\cdot 9 \\cdot 8$.", "reason": "Pirma pozicija be 0, kitos be pasikartojimų.", "result": "648" }
+          ],
+          "finalAnswer": "648"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k8",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Metami du lošimo kauliukai. Kokia tikimybė, kad iškritusių akučių suma bus lygi 7?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Tikimybė lygi 1/6." },
+      "answerText": "1/6",
+      "coreIdea": { "title": "Palankios baigtys", "text": "Išrašykite visas galimas baigtis ir suraskite tas, kurių suma lygi 7." },
+      "strategyTags": ["tikimybė", "casework"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Kiek iš viso yra galimų baigčių metant du kauliukus?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Išrašykite poras (x, y), kur x + y = 7.", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Tikimybė = palankios baigtys / visos baigtys.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Visos galimos baigtys: $6 \\times 6 = 36$." },
+        { "text": "Palankios poros (suma 7): (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). Iš viso 6 poros." },
+        { "text": "Tikimybė: $6 / 36 = 1 / 6$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k8-m1",
+          "title": "Klasikinis tikimybės apibrėžimas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Baigčių erdvė", "action": "Nustatome 36 baigtis.", "reason": "Kiekvienas kauliukas turi 6 sieneles.", "result": "36" },
+            { "title": "Tikimybė", "action": "Apskaičiuojame $6/36$.", "reason": "Santykyje su visomis baigtimis.", "result": "1/6" }
+          ],
+          "finalAnswer": "1/6"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k9",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "statement": "Kiek yra būdų nukeliauti iš taško A į tašką C per tašką B, jei iš A į B veda 3 keliai, o iš B į C veda 4 keliai?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 12 skirtingų būdų." },
+      "answerText": "12",
+      "coreIdea": { "title": "Daugybos taisyklė", "text": "Kiekvienas kelias iš A į B gali būti sujungtas su bet kuriuo keliu iš B į C." },
+      "strategyTags": ["kombinatorinė-daugyba"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Pabandykite nupiešti kelius kaip linijas tarp taškų.", "penalty": 0.05 },
+        { "order": 2, "kind": "method", "text": "Padauginkite pasirinkimų skaičių kiekviename etape.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Iš A į B galime rinktis 1 iš 3 kelių." },
+        { "text": "Iš B į C galime rinktis 1 iš 4 kelių." },
+        { "text": "Bendra galimybių suma: $3 \\times 4 = 12$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k9-m1",
+          "title": "Nuoseklus pasirinkimas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Daugyba", "action": "Apskaičiuojame $3 \\cdot 4$.", "reason": "Nepriklausomi pasirinkimai.", "result": "12" }
+          ],
+          "finalAnswer": "12"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k10",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Kiek skirtingų žodžių (nebūtinai turinčių prasmę) galima sudaryti sukeitus žodžio 'LIETUVA' raides?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Galima sudaryti 5040 skirtingų žodžių." },
+      "answerText": "5040",
+      "coreIdea": { "title": "Kėliniai be pasikartojimų", "text": "Žodyje 'LIETUVA' visos raidės yra skirtingos, todėl skaičiuojame faktorialą." },
+      "strategyTags": ["kėliniai"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Suskaičiuokite, kiek raidžių yra žodyje.", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Ar yra pasikartojančių raidžių?", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Apskaičiuokite $7!$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Žodyje 'LIETUVA' yra 7 raidės: L, I, E, T, U, V, A." },
+        { "text": "Visos raidės yra skirtingos." },
+        { "text": "Būdų skaičius jas surikiuoti: $7! = 7 \\times 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = 5040$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k10-m1",
+          "title": "Faktorialo taikymas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Skaičiavimas", "action": "Apskaičiuojame $7!$.", "reason": "Visos raidės skirtingos.", "result": "5040" }
+          ],
+          "finalAnswer": "5040"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k11",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "statement": "Teste yra 5 klausimai, į kuriuos reikia atsakyti 'Taip' arba 'Ne'. Kiek yra skirtingų būdų užpildyti testą?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 32 būdai." },
+      "answerText": "32",
+      "coreIdea": { "title": "Laipsnio taisyklė", "text": "Kiekvienas klausimas turi po 2 pasirinkimus." },
+      "strategyTags": ["kombinatorinė-daugyba"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Pirmam klausimui turime 2 variantus.", "penalty": 0.05 },
+        { "order": 2, "kind": "method", "text": "Kadangi pasirinkimai nepriklausomi, dauginame: $2 \\times 2 \\times 2 \\times 2 \\times 2$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Kiekvienam iš 5 klausimų yra po 2 variantus." },
+        { "text": "Iš viso būdų: $2^5 = 32$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k11-m1",
+          "title": "Dvejetainis skaičiavimas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Daugyba", "action": "Apskaičiuojame $2^5$.", "reason": "5 nepriklausomi pasirinkimai.", "result": "32" }
+          ],
+          "finalAnswer": "32"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k12",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Kiek yra keturženklių skaičių, kurie dalijasi iš 5?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 1800 tokie skaičiai." },
+      "answerText": "1800",
+      "coreIdea": { "title": "Dalumo požymiai kombinatorikoje", "text": "Skaičius dalijasi iš 5, jei jo paskutinis skaitmuo yra 0 arba 5." },
+      "strategyTags": ["kombinatorinė-daugyba"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Kiek pasirinkimų turime pirmam skaitmeniui?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Kiek pasirinkimų turime paskutiniam skaitmeniui, kad skaičius dalytųsi iš 5?", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Padauginkite variantus kiekvienai pozicijai.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Pirmas skaitmuo: 9 variantai (nuo 1 iki 9)." },
+        { "text": "Antras skaitmuo: 10 variantų (nuo 0 iki 9)." },
+        { "text": "Trečias skaitmuo: 10 variantų (nuo 0 iki 9)." },
+        { "text": "Ketvirtas skaitmuo: 2 variantai (0 arba 5)." },
+        { "text": "Iš viso: $9 \\times 10 \\times 10 \\times 2 = 1800$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k12-m1",
+          "title": "Apribojimų taikymas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Daugyba", "action": "Apskaičiuojame $9 \\cdot 10 \\cdot 10 \\cdot 2$.", "reason": "Paskutinė pozicija apribota dalumu.", "result": "1800" }
+          ],
+          "finalAnswer": "1800"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k13",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Keliais būdais 5 žmonės gali atsisėsti į eilę iš 5 kėdžių, jei du draugai nori būtinai sėdėti šalia vienas kito?",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 48 būdai." },
+      "answerText": "48",
+      "coreIdea": { "title": "Bloko metodas", "text": "Suriškite du draugus į vieną 'bloką'. Tada rikiuokite 4 objektus, o po to sukeiskite draugus bloko viduje." },
+      "strategyTags": ["kėliniai", "proof"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Tarkime, kad draugai A ir B yra vienas objektas (AB). Kiek tada turime objektų iš viso?", "penalty": 0.05 },
+        { "order": 2, "kind": "observation", "text": "Turime 4 objektus: (AB), C, D, E. Keliais būdais juos galime išrikiuoti?", "penalty": 0.08 },
+        { "order": 3, "kind": "method", "text": "Nepamirškite, kad bloko viduje gali būti (AB) arba (BA).", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Sujungiame 2 žmones į vieną grupę. Dabar turime 4 objektus rikiavimui." },
+        { "text": "4 objektus galima išrikiuoti $4! = 24$ būdais." },
+        { "text": "Grupės viduje tie 2 žmonės gali apsikeisti vietomis $2! = 2$ būdais." },
+        { "text": "Iš viso būdų: $24 \\times 2 = 48$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k13-m1",
+          "title": "Grupavimo principas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Išorinis rikiavimas", "action": "Apskaičiuokite $4!$.", "reason": "4 objektai aibėje.", "result": "24" },
+            { "title": "Vidinis rikiavimas", "action": "Padauginame iš 2.", "reason": "Draugų tarpusavio tvarka.", "result": "48" }
+          ],
+          "finalAnswer": "48"
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-k14",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "statement": "Keliais būdais 4 žmonės gali atsisėsti prie apskrito stalo? (Būdai laikomi vienodais, jei juos galima gauti pasukus stalą).",
+      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 6 būdai." },
+      "answerText": "6",
+      "coreIdea": { "title": "Cikliniai kėliniai", "text": "Prie apskrito stalo svarbu tik kaimynystė, o ne konkreti vieta. Fiksuokite vieną žmogų." },
+      "strategyTags": ["kėliniai", "symmetry"],
+      "hints": [
+        { "order": 1, "kind": "orientation", "text": "Jei pasodiname vieną žmogų į bet kurią vietą, likusius 3 galime sodinti kaip į eilę.", "penalty": 0.05 },
+        { "order": 2, "kind": "method", "text": "Naudokite formulę $(n-1)!$.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Fiksuojame vieną žmogų bet kurioje vietoje." },
+        { "text": "Likusius 3 žmones galima susodinti $3!$ būdais." },
+        { "text": "Iš viso: $3 \\times 2 \\times 1 = 6$." }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-k14-m1",
+          "title": "Fiksavimo metodas",
+          "methodType": "main",
+          "steps": [
+            { "title": "Skaičiavimas", "action": "Apskaičiuokite $(4-1)!$.", "reason": "Panaikiname sukimo simetriją.", "result": "6" }
+          ],
+          "finalAnswer": "6"
+        }
+      ]
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-06-kombinatorika-test-1",
+      "title": "Kombinatorikos iššūkis (6 klasė)",
+      "scope": "topic",
+      "topicIds": ["olimpiada-06-kombinatorika"],
+      "exerciseIds": [
+        "ex-olimpiada-06-ea3fd188",
+        "ex-olimpiada-06-1d7db94c",
+        "ex-olimpiada-06-8b52c9fe",
+        "ex-olimpiada-06-1ad3676c",
+        "ex-olimpiada-06-e897fd75",
+        "ex-olimpiada-06-k1",
+        "ex-olimpiada-06-k2",
+        "ex-olimpiada-06-k5",
+        "ex-olimpiada-06-k6",
+        "ex-olimpiada-06-k13"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
 }

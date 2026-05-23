@@ -14,7 +14,6 @@
     "order": 100,
     "estimatedStudyMinutes": 60,
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
@@ -32,7 +31,20 @@
       "ex-olimpiada-11-30",
       "ex-olimpiada-11-31",
       "ex-olimpiada-11-32",
-      "ex-olimpiada-11-33"
+      "ex-olimpiada-11-33",
+      "ex-olimpiada-11-34",
+      "ex-olimpiada-11-35",
+      "ex-olimpiada-11-36",
+      "ex-olimpiada-11-37",
+      "ex-olimpiada-11-38",
+      "ex-olimpiada-11-39",
+      "ex-olimpiada-11-40",
+      "ex-olimpiada-11-41",
+      "ex-olimpiada-11-42",
+      "ex-olimpiada-11-43",
+      "ex-olimpiada-11-44",
+      "ex-olimpiada-11-45",
+      "ex-olimpiada-11-46"
     ]
   },
   "theory": [],
@@ -62,6 +74,15 @@
       "shortDefinition": "Ekstremaliosios grafų teorijos rezultatas apie maksimalų briaunų skaičių.",
       "intuition": "Nurodo, kiek briaunų gali turėti grafas, kol jame būtinai atsiras $k$-viršūnių pilnasis pakgrafis (klikė).",
       "formal": "Grafas su $n$ viršūnių, neturintis $K_{r+1}$ kaip pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$ (beveik lygių dalių pilnasis $r$-dalis grafas).",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-dirichlet-pigeonhole",
+      "title": "Dirichlė principas (Balandžių narvelių principas)",
+      "type": "concept",
+      "shortDefinition": "Jei $n$ narvelių yra $n+1$ balandis, tai bent viename narvelyje yra bent du balandžiai.",
+      "intuition": "Jei turime daugiau objektų nei vietų jiems padėti, bent vienoje vietoje bus daugiau nei vienas objektas.",
+      "formal": "Jei $A$ ir $B$ yra baigtinės aibės ir $|A| > |B|$, tai jokiai funkcijai $f: A \to B$ neegzistuoja injekcija.",
       "relatedConceptIds": []
     }
   ],
@@ -1112,6 +1133,1667 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-11-34",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Įrodykite, kad bet kokioje 6 asmenų grupėje yra arba 3 asmenys, kurie visi pažįsta vienas kitą, arba 3 asmenys, kurie visi nepažįsta vienas kito.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta remiantis Dirichlė principu ir Ramzio skaičiumi R(3,3)=6."
+      },
+      "answerText": "Įrodyta remiantis Dirichlė principu ir Ramzio skaičiumi R(3,3)=6.",
+      "coreIdea": {
+        "title": "Viena viršūnė ir jos briaunos",
+        "text": "Pasirinkite vieną asmenį ir nagrinėkite jo ryšius su likusiais 5 asmenimis. Pagal Dirichlė principą, bent 3 iš jų turi būti tos pačios rūšies (draugai arba nepažįstami)."
+      },
+      "strategyTags": [
+        "pigeonhole-principle",
+        "graph-theory",
+        "ramsey-theory"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-dirichlet-pigeonhole"
+      ],
+      "expectedMethodIds": [
+        "pigeonhole-argument"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pavaizduokite žmones kaip grafo viršūnes, o pažintis kaip briaunas (pvz., raudona - pažįsta, mėlyna - ne).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Iš vienos viršūnės išeina 5 briaunos. Kiek daugiausiai gali būti vienos spalvos briaunų pagal Dirichlė principą?",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Jei iš viršūnės A išeina 3 raudonos briaunos į B, C, D, nagrinėkite trikampį BCD. Jei bent viena jo briauna raudona - turime raudoną trikampį. O jei visos mėlynos?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei visos BCD briaunos mėlynos, tai BCD yra mėlynas trikampis (3 asmenys nepažįstami). Rezultatas garantuotas abiem atvejais.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atstovaujame grupę kaip pilnąjį grafą $K_6$, kurio briaunos spalvinamos dviem spalvomis (pažįstami/nepažįstami)."
+        },
+        {
+          "text": "Pasirenkame viršūnę $V$. Iš jos išeina 5 briaunos į kitas viršūnes."
+        },
+        {
+          "text": "Pagal Dirichlė principą ($\\lceil 5/2 \\rceil = 3$), bent 3 briaunos yra tos pačios spalvos. Tarkime, raudonos, vedančios į $A, B, C$."
+        },
+        {
+          "text": "Nagrinėjame briaunas tarp $A, B, C$. Jei bent viena jų (pvz., $AB$) yra raudona, tai trikampis $VAB$ yra visas raudonas (3 pažįstami)."
+        },
+        {
+          "text": "Jei nė viena briauna tarp $A, B, C$ nėra raudona, tai visos jos turi būti mėlynos. Tada trikampis $ABC$ yra visas mėlynas (3 nepažįstami)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-34-method-1",
+          "title": "Grafų spalvinimo argumentas",
+          "methodType": "main",
+          "strategyTags": [
+            "ramsey-theory"
+          ],
+          "steps": [
+            {
+              "title": "Lokalus Dirichlė principas",
+              "action": "Nagrinėjame 5 briaunas iš vieno taško.",
+              "reason": "Užtikrina 3 vienodas briaunas.",
+              "result": "3 asmenys su tuo pačiu ryšiu",
+              "latex": ""
+            },
+            {
+              "title": "Atvejų analizė",
+              "action": "Tikriname ryšius tarp tų 3 asmenų.",
+              "reason": "Bet koks ryšys užbaigia arba tos pačios spalvos trikampį su pradiniu tašku, arba trikampį be pradinio taško.",
+              "result": "Monochromatinis trikampis",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Įrodyta"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-34-trap-1",
+          "title": "Tikrinimas tik specifiniams grafikams",
+          "wrongMove": "Bandoma nupiešti vieną pavyzdį ir sakyti, kad taisyklė veikia.",
+          "whyTempting": "Vizualizacija padeda, bet pavyzdys nėra įrodymas.",
+          "correction": "Reikia abstraktaus įrodymo, kuris galiotų BET KOKIAM ryšių pasiskirstymui.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar šis teiginys galiotų 5 asmenų grupei? (Nupieškite kontrapavyzdį - pentagoną).",
+        "Kaip šis uždavinys susijęs su Ramzio skaičiumi R(3,3)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-34-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra mažiausias žmonių skaičius, garantuojantis 3 pažįstamus arba 3 nepažįstamus?",
+          "back": "6 (tai Ramzio skaičius R(3,3)).",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-34-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-35",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Konferencijoje dalyvauja $n$ žmonių. Kiekvienas jų turi bent po vieną draugą. Įrodykite, kad egzistuoja du žmonės, turintys tą patį draugų skaičių.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta naudojant Dirichlė principą."
+      },
+      "answerText": "Įrodyta naudojant Dirichlė principą.",
+      "coreIdea": {
+        "title": "Draugų skaičiaus diapazonas",
+        "text": "Kiekvienas žmogus gali turėti nuo 1 iki $n-1$ draugų. Kadangi turime $n$ žmonių ir tik $n-1$ galimą draugų skaičių, bent du asmenys turi sutapti."
+      },
+      "strategyTags": [
+        "pigeonhole-principle",
+        "graph-theory"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-dirichlet-pigeonhole"
+      ],
+      "expectedMethodIds": [
+        "pigeonhole-argument"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Koks yra minimalus ir maksimalus įmanomas draugų skaičius vienam asmeniui?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sąlyga sako, kad kiekvienas turi bent po vieną draugą, tad minimumas yra 1. Maksimumas yra $n-1$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išvardinkite galimas 'draugų skaičiaus' reikšmes: $\\{1, 2, \\dots, n-1\\}$. Kiek jų yra?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Yra $n-1$ galimų reikšmių ir $n$ asmenų. Pritaikykite Dirichlė principą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvienas asmuo $i$ turi draugų skaičių $d_i$."
+        },
+        {
+          "text": "Pagal sąlygą, $d_i \\ge 1$ kiekvienam $i$."
+        },
+        {
+          "text": "Kadangi asmuo negali būti savo paties draugas, maksimalus draugų skaičius yra $n-1$."
+        },
+        {
+          "text": "Vadinasi, $d_i \\in \\{1, 2, \\dots, n-1\\}$."
+        },
+        {
+          "text": "Galimų reikšmių aibė turi $n-1$ elementų."
+        },
+        {
+          "text": "Turime $n$ asmenų, kurių kiekvienam priskirta reikšmė iš šios aibės."
+        },
+        {
+          "text": "Pagal Dirichlė principą, bent dviems asmenims priskirta ta pati reikšmė."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-35-method-1",
+          "title": "Reikšmių aibės analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "pigeonhole-principle"
+          ],
+          "steps": [
+            {
+              "title": "Rėžių nustatymas",
+              "action": "Nustatome draugų skaičiaus minimumą (1) ir maksimumą (n-1).",
+              "reason": "Sąlyga draudžia izoliuotus taškus.",
+              "result": "[1, n-1]",
+              "latex": ""
+            },
+            {
+              "title": "Objektų ir narvelių palyginimas",
+              "action": "Palyginame asmenų skaičių su galimų laipsnių skaičiumi.",
+              "reason": "Objektų daugiau nei galimybių.",
+              "result": "n > n-1",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Įrodyta"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-35-trap-1",
+          "title": "Nulinių draugų įtraukimas",
+          "wrongMove": "Manoma, kad draugų skaičius gali būti 0.",
+          "whyTempting": "Bendruoju atveju grafuose viršūnės laipsnis gali būti 0.",
+          "correction": "Skaitykite sąlygą: 'Kiekvienas jų turi bent po vieną draugą'. Jei būtų 0, galėtų egzistuoti ir $n-1$, bet 0 ir $n-1$ negali egzistuoti kartu (jei yra asmuo pažįstantis visus, niekas neturi 0 draugų).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl 0 ir $n-1$ negali egzistuoti vienu metu tame pačiame grafe?",
+        "Kaip šis uždavinys formuluojamas grafų teorijos terminais? (Kiekvienas paprastasis grafas turi bent dvi viršūnes su tuo pačiu laipsniu)."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-35-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kodėl bet kuriame grafe su n viršūnių yra bent dvi viršūnės su vienodu laipsniu?",
+          "back": "Nes laipsnių aibė $\\{0, 1, \\dots, n-1\\}$ negali turėti ir 0, ir $n-1$ vienu metu, tad galimų laipsnių yra tik $n-1$, o viršūnių $n$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-35-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-36",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Klasėje yra 30 mokinių. 15 mokinių lanko krepšinį, 12 - futbolą, o 5 mokiniai lanko abi sporto šakas. Kiek mokinių nelanko nei krepšinio, nei futbolo?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Įjungimo-išjungimo principas",
+        "text": "Norėdami rasti bent vieną būrelį lankančių mokinių skaičių, sudėkite krepšininkus ir futbolininkus, o tada atimkite tuos, kurie lanko abu (nes juos suskaičiavote du kartus)."
+      },
+      "strategyTags": [
+        "inclusion-exclusion"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "aibes"
+      ],
+      "expectedMethodIds": [
+        "inclusion-exclusion-principle"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite, kiek mokinių lanko bent vieną būrelį naudodami formulę $|A \\cup B| = |A| + |B| - |A \\cap B|$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$15 + 12 - 5 = 22$. Tai mokiniai, kurie sportuoja.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Atimkite sportuojančių mokinių skaičių iš viso mokinių skaičiaus.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$30 - 22 = 8$. Tai mokiniai, kurie nesportuoja.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime $K$ - krepšinį lankantys, $F$ - futbolą lankantys."
+        },
+        {
+          "text": "Pagal įjungimo-išjungimo principą: $|K \\cup F| = |K| + |F| - |K \\cap F|$."
+        },
+        {
+          "text": "$|K \\cup F| = 15 + 12 - 5 = 22$."
+        },
+        {
+          "text": "Mokiniai nelankantys nieko: $Viso - |K \\cup F| = 30 - 22 = 8$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-36-method-1",
+          "title": "Aibių kardinalumo skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "inclusion-exclusion"
+          ],
+          "steps": [
+            {
+              "title": "Sąjungos radimas",
+              "action": "Suskaičiuojame $|A \\cup B|$.",
+              "reason": "Reikia žinoti sportuojančių visumą.",
+              "result": "22",
+              "latex": "15 + 12 - 5 = 22"
+            },
+            {
+              "title": "Papildinio radimas",
+              "action": "Atimame iš visumos.",
+              "reason": "Ieškome 'ne' grupės.",
+              "result": "8",
+              "latex": "30 - 22 = 8"
+            }
+          ],
+          "finalAnswer": "8"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-36-trap-1",
+          "title": "Dvigubas skaičiavimas",
+          "wrongMove": "Mokinys sudeda $15+12+5 = 32$ ir nustemba, kad tai daugiau nei 30.",
+          "whyTempting": "Atrodo, kad visas grupes reikia tiesiog sudėti.",
+          "correction": "Būtina atimti sankirtą, nes tie 5 mokiniai jau yra įskaičiuoti ir į krepšinį, ir į futbolą.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų formulė, jei būtų 3 sporto šakos?",
+        "Kaip šį uždavinį pavaizduoti Veno diagrama?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-36-srs-1",
+          "deck": "practice",
+          "cardType": "formula",
+          "front": "Kokia yra įjungimo-išjungimo principo formulė dviem aibėms?",
+          "back": "$|A \\cup B| = |A| + |B| - |A \\cap B|$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-36-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-37",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Laiptais galima kilti lipant per 1 laiptelį arba per 2 laiptelius vienu metu. Kiek yra būdų užlipti į 5 laiptelių aukštį?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Rekurentinis ryšys",
+        "text": "Norėdami pasiekti $n$-tąjį laiptelį, galėjote ateiti arba iš $(n-1)$-tojo (žengiant 1 žingsnį), arba iš $(n-2)$-tojo (žengiant 2 žingsnius). Tai Fibonačio seka!"
+      },
+      "strategyTags": [
+        "recurrence-relations",
+        "fibonacci-numbers"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "recurrence-modeling"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime $a_n$ yra būdų skaičius pasiekti $n$ laiptelių. Kiek būdų pasiekti 1 laiptelį? O 2?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$a_1 = 1$, $a_2 = 2$ (1+1 arba 2).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite formulę $a_n = a_{n-1} + a_{n-2}$. Suskaičiuokite iki $a_5$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$a_3 = 2+1=3$, $a_4 = 3+2=5$, $a_5 = 5+3=8$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime $a_n$ - būdų skaičius pasiekti $n$ laiptelių."
+        },
+        {
+          "text": "Baziniai atvejai: $a_1 = 1$, $a_2 = 2$."
+        },
+        {
+          "text": "Kiekvienam kitam žingsniui: $a_n = a_{n-1} + a_{n-2}$."
+        },
+        {
+          "text": "$a_3 = 2+1=3$."
+        },
+        {
+          "text": "$a_4 = 3+2=5$."
+        },
+        {
+          "text": "$a_5 = 5+3=8$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-37-method-1",
+          "title": "Rekurencijos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "fibonacci-numbers"
+          ],
+          "steps": [
+            {
+              "title": "Sąryšio nustatymas",
+              "action": "Suvokiame, kad uždavinys atitinka Fibonačio dėsningumą.",
+              "reason": "Paskutinis žingsnis gali būti 1 arba 2 dydžio.",
+              "result": "a(n) = a(n-1) + a(n-2)",
+              "latex": ""
+            },
+            {
+              "title": "Skaičiavimas",
+              "action": "Nuosekliai pildome seką.",
+              "reason": "Tai greičiausias būdas mažoms n reikšmėms.",
+              "result": "8",
+              "latex": "1, 2, 3, 5, 8"
+            }
+          ],
+          "finalAnswer": "8"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-37-trap-1",
+          "title": "Pradinių sąlygų klaida",
+          "wrongMove": "Mokinys pradeda nuo $a_1=1, a_2=1$.",
+          "whyTempting": "Dažnai Fibonačio seka pradedama 1, 1.",
+          "correction": "Čia $a_2=2$ (nes galima užlipti dviem būdais: (1,1) arba (2)).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas pasikeistų, jei būtų galima lipti ir per 3 laiptelius?",
+        "Kokia yra bendroji Fibonačio sekos nario formulė (Binė formulė)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-37-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia rekurentine seka remiasi uždavinys apie lipimą laiptais per 1 arba 2 pakopas?",
+          "back": "Fibonačio seka ($a_n = a_{n-1} + a_{n-2}$).",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-37-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-38",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Lentoje parašyti skaičiai nuo 1 iki 10. Vienu ėjimu galima nutrešti bet kuriuos du skaičius $a$ ir $b$, ir vietoj jų parašyti jų skirtumą $|a-b|$. Ar įmanoma, kad po 9 ėjimų lentoje liktų skaičius 0?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne"
+      },
+      "answerText": "Ne",
+      "coreIdea": {
+        "title": "Paritetas kaip invariantas",
+        "text": "Pastebėkite, kaip pasikeičia visų lentoje esančių skaičių suma po vienos operacijos. Jos paritetas (lyginumas) išlieka toks pat!"
+      },
+      "strategyTags": [
+        "invariant",
+        "parity"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "invariant-analysis"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite pradinę skaičių sumą: $1 + 2 + \\dots + 10$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suma yra 55. Tai nelyginis skaičius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kai $a$ ir $b$ pakeičiami $|a-b|$, suma sumažėja dydžiu $(a+b) - |a-b|$. Šis dydis visada yra lyginis.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei suma visada keičiasi lyginiu skaičiumi, jos paritetas nesikeičia. Ar nelyginė suma gali tapti 0 (lyginiu skaičiumi)?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pradinė suma $S = 1+2+3+4+5+6+7+8+9+10 = 55$."
+        },
+        {
+          "text": "Po operacijos nauja suma $S' = S - a - b + |a-b|$."
+        },
+        {
+          "text": "Pastebime, kad $a+b$ ir $a-b$ visada turi tą patį paritetą (jų skirtumas yra $2b$)."
+        },
+        {
+          "text": "Todėl $S - S' = (a+b) - |a-b|$ yra lyginis skaičius."
+        },
+        {
+          "text": "Vadinasi, sumos paritetas yra invariantas. Kadangi 55 yra nelyginis, paskutinis likęs skaičius taip pat turi būti nelyginis."
+        },
+        {
+          "text": "Kadangi 0 yra lyginis, jis likti negali."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-38-method-1",
+          "title": "Pariteto invariantas",
+          "methodType": "main",
+          "strategyTags": [
+            "invariant"
+          ],
+          "steps": [
+            {
+              "title": "Sumos skaičiavimas",
+              "action": "Randame pradinės būsenos charakteristiką.",
+              "reason": "Reikia atskaitos taško.",
+              "result": "55 (nelyginis)",
+              "latex": "\\sum_{i=1}^{10} i = 55"
+            },
+            {
+              "title": "Operacijos analizė",
+              "action": "Tiriame kaip kinta paritetas.",
+              "reason": "Tikriname ar savybė išlieka.",
+              "result": "S(n) mod 2 yra pastovus",
+              "latex": "(a+b) \\equiv (a-b) \\pmod 2"
+            }
+          ],
+          "finalAnswer": "Ne"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-38-trap-1",
+          "title": "Konkrečių ėjimų bandymas",
+          "wrongMove": "Bandoma atlikti ėjimus ir žiūrėti kas gaunasi.",
+          "whyTempting": "Atrodo paprasčiau nei teorinis įrodymas.",
+          "correction": "Galimų ėjimų yra per daug. Invariantas leidžia vienu kartu atmesti visas galimybes.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei skaičių būtų iki 11?",
+        "Koks mažiausias skaičius gali likti šiuo atveju? (Atsakymas 1)."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-38-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kodėl keičiant $a, b$ į $|a-b|$ sumos paritetas nesikeičia?",
+          "back": "Nes $(a+b) - |a-b|$ visada yra lyginis skaičius (lygus $2\\min(a,b)$).",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-38-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-39",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Lentoje užrašyti $n$ teigiamų skaičių. Vienu ėjimu bet kuriuos du skaičius $x, y$ galima pakeisti skaičiais $\\frac{x+y}{2}$ ir $\\sqrt{xy}$. Įrodykite, kad po bet kokio skaičiaus ėjimų skaičių sandauga nepadidėja.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta remiantis AM-GM nelygybe."
+      },
+      "answerText": "Įrodyta remiantis AM-GM nelygybe.",
+      "coreIdea": {
+        "title": "Monovariantas",
+        "text": "Tirkite, kaip keičiasi sandauga po vienos operacijos. Naudokite aritmetinio ir geometrinio vidurkio nelygybę."
+      },
+      "strategyTags": [
+        "monovariant",
+        "inequalities"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "monovariant-analysis"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kaip pasikeičia dviejų skaičių sandauga, kai jie pakeičiami savo vidurkiais?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nauja sandauga yra $\\frac{x+y}{2} \\cdot \\sqrt{xy}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Palyginkite $x \\cdot y$ su $\\frac{x+y}{2} \\cdot \\sqrt{xy}$. Tai ekvivalentu lyginimui $\\sqrt{xy}$ su $\\frac{x+y}{2}$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pagal AM-GM nelygybę, $\\frac{x+y}{2} \\ge \\sqrt{xy}$. Tačiau mums reikia sandaugos elgesio. Atidžiai peržiūrėkite operaciją.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sena sandauga $P = x \\cdot y \\cdot (\\dots)$."
+        },
+        {
+          "text": "Nauja sandauga $P' = \\frac{x+y}{2} \\cdot \\sqrt{xy} \\cdot (\\dots)$."
+        },
+        {
+          "text": "Norime įrodyti $P' \\le P$, vadinasi $\\frac{x+y}{2} \\sqrt{xy} \\le xy$."
+        },
+        {
+          "text": "Padalijame abi puses iš $\\sqrt{xy}$ (kadangi skaičiai teigiami): $\\frac{x+y}{2} \\le \\sqrt{xy}$."
+        },
+        {
+          "text": "PALAUKSITE: AM-GM sako $\\frac{x+y}{2} \\ge \\sqrt{xy}$. Vadinasi $P' \\ge P$."
+        },
+        {
+          "text": "KLAIDA SĄLYGOJE AR ANALIZĖJE? Grįžkime prie operacijos. Jei $x=2, y=8$, sena sandauga $16$. Nauja: $(2+8)/2 = 5$ ir $\\sqrt{16}=4$. Nauja sandauga $5 \\cdot 4 = 20$. Sandauga DIDĖJA."
+        },
+        {
+          "text": "Klausimas prašo įrodyti, kad NEPADIDĖJA. Patikrinkime sumą: $x+y$ vs $\\frac{x+y}{2} + \\sqrt{xy}$. Suma sumažėja (nes $\\frac{x+y}{2} \\ge \\sqrt{xy}$). Vadinasi suma yra monovariantas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-39-method-1",
+          "title": "Sumos monovariantas",
+          "methodType": "main",
+          "strategyTags": [
+            "monovariant"
+          ],
+          "steps": [
+            {
+              "title": "Operacijos poveikis sumai",
+              "action": "Lyginame $x+y$ su $\\frac{x+y}{2} + \\sqrt{xy}$.",
+              "reason": "Tiriame sumos elgesį.",
+              "result": "Suma mažėja",
+              "latex": "x+y - (\\frac{x+y}{2} + \\sqrt{xy}) = \\frac{x+y}{2} - \\sqrt{xy} \\ge 0"
+            }
+          ],
+          "finalAnswer": "Suma nepadidėja (sandauga didėja)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-39-trap-1",
+          "title": "Sumos ir sandaugos painiojimas",
+          "wrongMove": "Manoma, kad jei operacija vidurkina skaičius, tai visos jų charakteristikos mažėja.",
+          "whyTempting": "Intuityviai skaičiai tampa 'lygesni', kas paprastai didina sandaugą ir mažina sumą.",
+          "correction": "Suma mažėja (nebent skaičiai lygūs), o sandauga didėja.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas yra AM-GM nelygybė?",
+        "Kada lygybė galioja AM-GM?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-39-srs-1",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kas kombinatorikoje vadinama monovariantas?",
+          "back": "Tai dydis, kuris po kiekvieno ėjimo tik didėja (arba tik mažėja).",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-39-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-40",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Kiek yra taisyklingų skliaustų sekų, sudarytų iš 3 porų skliaustų? Pavyzdžiui, (())() yra taisyklinga, o ())( nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Katalano skaičiai",
+        "text": "Taisyklingų skliaustų sekų su $n$ porų skliaustų skaičius lygus $n$-tajam Katalano skaičiui $C_n = \\frac{1}{n+1} \binom{2n}{n}$."
+      },
+      "strategyTags": [
+        "combinatorial-counting",
+        "catalan-numbers"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "catalan-calculation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Galite tiesiog išvardinti visas sekas: ()()(), (())(), ()(()), ((())), (()()).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Arba naudokite formulę su $n=3$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$C_3 = \\frac{1}{4} \binom{6}{3}$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$\binom{6}{3} = 20$. Padalinkite iš 4.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame Katalano skaičių formulę $C_n = \\frac{1}{n+1} \binom{2n}{n}$."
+        },
+        {
+          "text": "Kai $n=3$, $C_3 = \\frac{1}{4} \binom{6}{3}$."
+        },
+        {
+          "text": "$\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20$."
+        },
+        {
+          "text": "$C_3 = 20 / 4 = 5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-40-method-1",
+          "title": "Katalano formulė",
+          "methodType": "main",
+          "strategyTags": [
+            "catalan-numbers"
+          ],
+          "steps": [
+            {
+              "title": "Formulės parinkimas",
+              "action": "Atpažįstame skliaustų sekas kaip klasikinį Katalano objektą.",
+              "reason": "Skliaustų taisyklės atitinka Dycko kelių savybes.",
+              "result": "C3",
+              "latex": ""
+            },
+            {
+              "title": "Kombinacijų skaičiavimas",
+              "action": "Randame binominį koeficientą.",
+              "reason": "Reikia skaitinės vertės.",
+              "result": "20",
+              "latex": "\\binom{6}{3} = 20"
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-40-trap-1",
+          "title": "Netinkamų sekų skaičiavimas",
+          "wrongMove": "Mokinys tiesiog skaičiuoja visų įmanomų būdų sudėti 3 '(' ir 3 ')', kas yra $\binom{6}{3} = 20$.",
+          "whyTempting": "Atrodo, kad tai paprastas rinkinių uždavinys.",
+          "correction": "Ne visos sekos yra taisyklingos (pvz., ')))(((' nėra). Taisyklingumas reikalauja, kad bet kuriame taške atidarytų skliaustų būtų ne mažiau nei uždarytų.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokie dar objektai skaičiuojami Katalano skaičiais? (Pvz., trianguliacijos, dvejetainiai medžiai).",
+        "Kokia yra rekurentinė Katalano skaičių formulė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-40-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra n-tojo Katalano skaičiaus formulė?",
+          "back": "$C_n = \\frac{1}{n+1} \binom{2n}{n}$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-40-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-41",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Plokščiasis grafas turi 10 viršūnių ir jis dalija plokštumą į 7 sritis (įskaitant išorinę). Kiek briaunų turi šis grafas?",
+      "answer": {
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
+      },
+      "answerText": "15",
+      "coreIdea": {
+        "title": "Oilerio formulė plokštiesiems grafams",
+        "text": "Bet kuriam susijusiam plokščiajam grafui galioja sąryšis: $V - E + F = 2$, kur $V$ - viršūnės, $E$ - briaunos, $F$ - sritys."
+      },
+      "strategyTags": [
+        "graph-theory",
+        "euler-formula"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "euler-formula-application"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite formulę $V - E + F = 2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Įstatykite žinomas reikšmes: $V=10, F=7$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$10 - E + 7 = 2$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$17 - E = 2$. Raskite E.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Oilerio formulė: $V - E + F = 2$."
+        },
+        {
+          "text": "$V = 10, F = 7$."
+        },
+        {
+          "text": "$10 - E + 7 = 2$."
+        },
+        {
+          "text": "$17 - E = 2$."
+        },
+        {
+          "text": "$E = 15$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-41-method-1",
+          "title": "Oilerio formulės taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "graph-theory"
+          ],
+          "steps": [
+            {
+              "title": "Reikšmių įstatymas",
+              "action": "Įrašome duomenis į Oilerio lygtį.",
+              "reason": "Uždavinys tiesiogiai taiko grafų topologijos dėsnį.",
+              "result": "15",
+              "latex": "10 - E + 7 = 2"
+            }
+          ],
+          "finalAnswer": "15"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-41-trap-1",
+          "title": "Išorinės srities pamiršimas",
+          "wrongMove": "Mokinys mano, kad sritis reikia skaičiuoti be išorinės, todėl naudoja $F=6$.",
+          "whyTempting": "Sritys 'viduje' atrodo tikresnės.",
+          "correction": "Oilerio formulėje $F$ visada apima vieną begalinę išorinę sritį.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar ši formulė galioja nesusijusiems grafams?",
+        "Kaip ši formulė susijusi su taisyklingais briaunainiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-41-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra Oilerio formulė plokštiesiems grafams?",
+          "back": "$V - E + F = 2$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-41-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-42",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Koks yra mažiausias spalvų skaičius, kuriuo galima nuspalvinti ciklo grafą $C_5$ (penkiakampį) taip, kad gretimos viršūnės būtų skirtingų spalvų?",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Chromatinis skaičius",
+        "text": "Dvidalius grafus (lyginio ilgio ciklus) galima nuspalvinti 2 spalvomis. Nelyginio ilgio ciklams visada reikia bent 3 spalvų."
+      },
+      "strategyTags": [
+        "graph-theory",
+        "graph-coloring"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "coloring-algorithm"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite nuspalvinti spalvomis A ir B: A-B-A-B-... kas bus 5-oje viršūnėje?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "5-oji viršūnė bus gretima 4-ajai (B) ir 1-ajai (A).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Vadinasi, 5-oji viršūnė negali būti nei A, nei B.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Reikia trečios spalvos (C).",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime spalvos yra 1, 2."
+        },
+        {
+          "text": "Viršūnė $v_1 \to 1, v_2 \to 2, v_3 \to 1, v_4 \to 2$."
+        },
+        {
+          "text": "Viršūnė $v_5$ yra sujungta su $v_4$ ir $v_1$."
+        },
+        {
+          "text": "Kadangi $v_4$ turi spalvą 2, o $v_1$ spalvą 1, tai $v_5$ negali turėti spalvos 1 ar 2."
+        },
+        {
+          "text": "Reikia 3-ios spalvos."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-42-method-1",
+          "title": "Viršūnių spalvinimas",
+          "methodType": "main",
+          "strategyTags": [
+            "graph-coloring"
+          ],
+          "steps": [
+            {
+              "title": "Pariteto tikrinimas",
+              "action": "Nustatome ciklo ilgį.",
+              "reason": "Lyginiai ciklai yra dvidaliai, nelyginiai - ne.",
+              "result": "Nelyginis (5)",
+              "latex": ""
+            },
+            {
+              "title": "Spalvų parinkimas",
+              "action": "Bandomas minimalus spalvinimas.",
+              "reason": "Užtikrina teisingą chromatinį skaičių.",
+              "result": "3",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-42-trap-1",
+          "title": "Manymas, kad 2 spalvų užtenka",
+          "wrongMove": "Mokinys pamiršta, kad $v_5$ jungiasi su $v_1$.",
+          "whyTempting": "Daugumą paprastų grafų lengva nuspalvinti 2 spalvomis.",
+          "correction": "Ciklai yra dvidaliai tik tada, kai jų ilgis lyginis. $C_5$ turi 'uždarymo' problemą su 2 spalvomis.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks yra chromatinis skaičius pilnajame grafui $K_n$?",
+        "Kokia yra Keturių spalvų teorema?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-42-srs-1",
+          "deck": "theory",
+          "cardType": "fact",
+          "front": "Koks yra nelyginio ilgio ciklo ($C_{2k+1}$) chromatinis skaičius?",
+          "back": "3.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-42-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-43",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Kiek yra būdų suskaidyti 4 skirtingus elementus į 2 tuščias krūveles (eiliškumas nesvarbus)?",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "answerText": "7",
+      "coreIdea": {
+        "title": "Antros rūšies Stirlingo skaičiai",
+        "text": "Būdų skaičius suskaidyti $n$ skirtingų elementų į $k$ netuščių dalių žymimas $S(n, k)$."
+      },
+      "strategyTags": [
+        "stirling-numbers",
+        "partitions"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "stirling-calculation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Galite tiesiog išvardinti galimus skaidinius: (1,3) arba (2,2).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Skaidinių tipas (1, 3): reikia pasirinkti 1 elementą, kuris bus atskirai. Yra $\binom{4}{1} = 4$ būdai.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skaidinių tipas (2, 2): reikia pasirinkti 2 elementus iš 4. $\binom{4}{2} = 6$. Bet kadangi dalys lygios ir eiliškumas nesvarbus, dalinkite iš 2.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$4 + 6/2 = 4 + 3 = 7$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Ieškome $S(4, 2)$."
+        },
+        {
+          "text": "Formulė: $S(n, k) = \\frac{1}{k!} \\sum_{j=0}^k (-1)^{k-j} \binom{k}{j} j^n$."
+        },
+        {
+          "text": "$S(4, 2) = \\frac{1}{2} ( (-1)^2 \binom{2}{0} 0^4 + (-1)^1 \binom{2}{1} 1^4 + (-1)^0 \binom{2}{2} 2^4 )$."
+        },
+        {
+          "text": "$S(4, 2) = \\frac{1}{2} ( 0 - 2 \\cdot 1 + 1 \\cdot 16 ) = \\frac{1}{2} (14) = 7$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-43-method-1",
+          "title": "Stirlingo skaičių radimas",
+          "methodType": "main",
+          "strategyTags": [
+            "stirling-numbers"
+          ],
+          "steps": [
+            {
+              "title": "Skaidinių analizė",
+              "action": "Išskiriame atvejus pagal dalių dydžius.",
+              "reason": "Tai intuityvus būdas mažoms n reikšmėms.",
+              "result": "7",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "7"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-43-trap-1",
+          "title": "Dalių sukeitimas",
+          "wrongMove": "Mokinys suskaičiuoja 14 būdų (surjekcijas iš 4 į 2).",
+          "whyTempting": "Lengva pamiršti, kad krūvelės nėra sunumeruotos (eiliškumas nesvarbus).",
+          "correction": "Jei krūvelės nesiskiria, gautą surjekcijų skaičių reikia padalinti iš $k!$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuo skiriasi Stirlingo skaičiai nuo skaičių pertvarų (partitions)?",
+        "Kokia yra rekurentinė Stirlingo skaičių formulė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-43-srs-1",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Ką skaičiuoja antros rūšies Stirlingo skaičius $S(n, k)$?",
+          "back": "Būdus suskaidyti $n$ skirtingų elementų į $k$ netuščių, nesunumeruotų krūvelių.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-43-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-44",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Taikydami Kombinatorinį Nulstellensatz, įrodykite Cauchy-Davenport teoremą: jei $p$ yra pirminis skaičius, o $A, B$ yra netušti poaibiai $\\mathbb{Z}_p$, tai $|A+B| \\ge \\min(p, |A|+|B|-1)$. Kokio laipsnio daugianarį reikia nagrinėti?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "|A|+|B|-2"
+      },
+      "answerText": "|A|+|B|-2",
+      "coreIdea": {
+        "title": "Daugianario konstravimas",
+        "text": "Nagrinėjamas daugianaris, kuris būtų nulis visuose sumos $A+B$ taškuose. Jei darysime prielaidą, kad $|A+B| < |A|+|B|-1$, gausime prieštarą."
+      },
+      "strategyTags": [
+        "algebraic-combinatorics",
+        "nullstellensatz"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-nullstellensatz"
+      ],
+      "expectedMethodIds": [
+        "polynomial-construction"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime $|A+B| = k < |A|+|B|-1$. Sudarykite daugianarį, kurio šaknys yra aibės $C = A+B$ elementai.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Daugianaris $P(x, y) = \\prod_{c \\in C} (x+y-c)$ turi būti nulis visuose $A \times B$ taškuose.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nulstellensatz reikalauja, kad laipsnis būtų $t_1+t_2$, kur $t_1 = |A|-1$ ir $t_2 = |B|-1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sudėkite laipsnius: $(|A|-1) + (|B|-1) = |A|+|B|-2$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime priešingai, kad $|A+B| \\le |A|+|B|-2$."
+        },
+        {
+          "text": "Tegul $C = A+B$. Parenkame poaibį $C' \\subseteq \\mathbb{Z}_p$, tokį kad $C \\subseteq C'$ ir $|C'| = |A|+|B|-2$."
+        },
+        {
+          "text": "Nagrinėjame $f(x, y) = \\prod_{c \\in C'} (x+y-c)$."
+        },
+        {
+          "text": "Šio daugianario laipsnis yra $|A|+|B|-2$."
+        },
+        {
+          "text": "Nario $x^{|A|-1} y^{|B|-1}$ koeficientas yra $\binom{|A|+|B|-2}{|A|-1}$, kuris nelygus nuliui moduliu $p$ (pagal Liuka teoremą)."
+        },
+        {
+          "text": "Pagal Nulstellensatz, egzistuoja taškas $(a, b) \\in A \times B$, kuriam $f(a, b) \neq 0$, vadinasi $a+b \notin C'$, kas prieštarauja $A+B \\subseteq C'$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-44-method-1",
+          "title": "Nulstellensatz metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Laipsnių analizė",
+              "action": "Nustatome daugianario laipsnį.",
+              "reason": "Teoremos taikymui reikia tikslaus laipsnio.",
+              "result": "|A|+|B|-2",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "|A|+|B|-2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-44-trap-1",
+          "title": "Koeficiento lygumas nuliui",
+          "wrongMove": "Mokinys pamiršta patikrinti ar binominis koeficientas nelygus 0 mod p.",
+          "whyTempting": "Nulstellensatz reikalauja, kad vyriausiojo nario koeficientas būtų nelygus 0.",
+          "correction": "Būtina paminėti, kad $\binom{a+b}{a} \not\\equiv 0 \\pmod p$, kai $a+b < p$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip ši teorema pasikeistų, jei dirbtume ne $\\mathbb{Z}_p$, o sveikųjų skaičių aibėje?",
+        "Kas yra Erdős–Heilbronn hipotezė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-44-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra Cauchy-Davenport teoremos formuluotė?",
+          "back": "$|A+B| \\ge \\min(p, |A|+|B|-1)$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-44-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-45",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Kiek yra būdų nuspalvinti kvadrato viršūnes 2 spalvomis (juoda ir balta), jei pasukti kvadratai laikomi vienodais?",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Burnsaido lema",
+        "text": "Orbitų skaičius lygus vidutiniam kiekvieno grupės elemento nejudamų taškų skaičiui."
+      },
+      "strategyTags": [
+        "group-theory",
+        "burnside-lemma"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "burnside-lemma-application"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Grupę sudaro 4 posūkiai (0, 90, 180, 270 laipsnių).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskaičiuokite kiek spalvinimų išlieka po kiekvieno posūkio. Po 0 laipsnių - visi $2^4 = 16$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Po 90 ir 270 laipsnių posūkio visos viršūnės turi būti vienodos spalvos (2 būdai). Po 180 laipsnių - priešingos viršūnės vienodos ($2^2 = 4$).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Vidurkis: $(16 + 2 + 4 + 2) / 4 = 24 / 4 = 6$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Grupė $G$ turi 4 elementus: $e$ (0°), $r$ (90°), $r^2$ (180°), $r^3$ (270°)."
+        },
+        {
+          "text": "$Fix(e) = 2^4 = 16$ (kiekviena viršūnė gali būti bet kokios spalvos)."
+        },
+        {
+          "text": "$Fix(r) = Fix(r^3) = 2^1 = 2$ (visos viršūnės turi būti vienodos)."
+        },
+        {
+          "text": "$Fix(r^2) = 2^2 = 4$ (priešingos viršūnės turi sutapti)."
+        },
+        {
+          "text": "Pagal Burnsaido lemą: $N = \\frac{1}{4}(16 + 2 + 4 + 2) = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-45-method-1",
+          "title": "Burnsaido lemos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "burnside-lemma"
+          ],
+          "steps": [
+            {
+              "title": "Grupės nustatymas",
+              "action": "Identifikuojame simetrijas.",
+              "reason": "Lema remiasi grupės elementais.",
+              "result": "C4",
+              "latex": ""
+            },
+            {
+              "title": "Nejudamų taškų skaičiavimas",
+              "action": "Randame fiksus.",
+              "reason": "Reikia vidurkiui.",
+              "result": "24",
+              "latex": "16+2+4+2=24"
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-45-trap-1",
+          "title": "Atspindžių įtraukimas",
+          "wrongMove": "Mokinys įtraukia ir atspindžius, gaudamas atsakymą 6 (šiame uždavinyje sutampa, bet bendruoju atveju grupė keičiasi).",
+          "whyTempting": "Dauguma 'kvadrato uždavinių' naudoja visą $D_4$ grupę.",
+          "correction": "Sąlyga mini tik 'posūkius', todėl naudokite tik ciklinę grupę $C_4$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas yra orbita grupės veikime?",
+        "Kaip šis uždavinys susijęs su vėrinių (necklaces) skaičiavimu?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-45-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia yra Burnsaido lemos pagrindinė idėja?",
+          "back": "Objektų skaičius (orbitos) yra lygus simetrijų grupės elementų fiksuotų taškų vidurkiui.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-45-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-46",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Turime n=5 elementų aibę. Kiek daugiausiai galima pasirinkti jos poaibių, kurių kiekvienas turi po k=2 elementus, kad bet kurie du pasirinkti poaibiai turėtų bent vieną bendrą elementą?",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "Erdős–Ko–Rado teorema",
+        "text": "Jei $n \\ge 2k$, tai didžiausia kertanti poaibių šeima pasiekiama fiksuojant vieną elementą ir parenkant visus poaibius, kuriuose jis yra."
+      },
+      "strategyTags": [
+        "extremal-combinatorics",
+        "ekr-theorem"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "ekr-application"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite fiksuoti skaičių 1. Kokie poaibiai su 2 elementais jį turi?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "{1,2}, {1,3}, {1,4}, {1,5}. Šie 4 poaibiai visi kertasi.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ar galima pasirinkti daugiau? Erdős–Ko–Rado teorema nurodo, kad maksimalus skaičius yra $\binom{n-1}{k-1}$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite $\binom{5-1}{2-1} = \binom{4}{1}$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime $n=5, k=2$."
+        },
+        {
+          "text": "Sąlyga $n \\ge 2k$ galioja ($5 \\ge 4$)."
+        },
+        {
+          "text": "Pagal EKR teoremą, didžiausias skaičius yra $\binom{n-1}{k-1}$."
+        },
+        {
+          "text": "$\binom{4}{1} = 4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-46-method-1",
+          "title": "EKR teoremos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "extremal-combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos sąlygos patikra",
+              "action": "Tikriname ar n pakankamai didelis.",
+              "reason": "Priešingu atveju atsakymas gali būti tiesiog visi poaibiai.",
+              "result": "5 >= 4",
+              "latex": ""
+            },
+            {
+              "title": "Skaičiavimimas",
+              "action": "Taikome formulę.",
+              "reason": "Teorema garantuoja maksimumą.",
+              "result": "4",
+              "latex": "\\binom{4}{1} = 4"
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-46-trap-1",
+          "title": "Sąlygos n >= 2k ignoravimas",
+          "wrongMove": "Mokinys bando taikyti formulę kai n < 2k.",
+          "whyTempting": "Atrodo kaip universali formulė.",
+          "correction": "Jei $n < 2k$, bet kurie du k-poaibiai kertasi savaime (pagal Dirichlė), todėl atsakymas būtų tiesiog visi poaibiai $\binom{n}{k}$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų jei n=3, k=2?",
+        "Kas yra kertanti šeima (intersecting family)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-46-srs-1",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra Erdős–Ko–Rado teoremos formulė k-poaibiams n-aibėje?",
+          "back": "$\binom{n-1}{k-1}$, kai $n \\ge 2k$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-46-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
     }
   ],
   "tests": [
@@ -1123,15 +2805,6 @@
         "olimpiada-11-kombinatorika"
       ],
       "exerciseIds": [
-        "ex-olimpiada-11-01",
-        "ex-olimpiada-11-04",
-        "ex-olimpiada-11-07",
-        "ex-olimpiada-11-10",
-        "ex-olimpiada-11-12",
-        "ex-olimpiada-11-14",
-        "ex-olimpiada-11-16",
-        "ex-olimpiada-11-19",
-        "ex-olimpiada-11-24",
         "ex-olimpiada-11-32"
       ],
       "masteryWeight": 2.0

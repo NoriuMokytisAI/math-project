@@ -1,0 +1,1267 @@
+{
+  "contentVersion": "0.1.1",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Turinys parengtas pagal 12 klasės išplėstinio kurso programą, apimančią vektorius erdvėje."
+  },
+  "topic": {
+    "id": "vektoriai-erdveje",
+    "title": "Vektoriai erdvėje",
+    "grade": 12,
+    "strand": "Geometrija ir matavimai",
+    "level": "curriculum",
+    "order": 5,
+    "estimatedStudyMinutes": 180,
+    "prerequisiteTopicIds": ["vektoriai-plokstumoje", "stereometrija-tieses-plokstumos-ir-kampai"],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "staciakampe-koordinaciu-sistema-erdveje",
+      "vektoriaus-koordinates-erdveje",
+      "vektoriaus-modulis-erdveje",
+      "vektoriu-sudetis-erdveje",
+      "vektoriu-atimtis-erdveje",
+      "vektoriaus-daugyba-is-skaiciaus-erdveje",
+      "skaliarine-vektoriu-sandauga-erdveje",
+      "kampas-tarp-vektoriu-erdveje",
+      "atstumas-tarp-tasku-erdveje",
+      "kolinearieji-vektoriai-erdveje",
+      "komplanarūs-vektoriai"
+    ],
+    "formulaIds": [
+      "vektoriaus-modulio-formule-erdveje",
+      "skaliarines-sandaugos-formule-koordinatemis",
+      "skaliarines-sandaugos-formule-geometrine",
+      "kampo-tarp-vektoriu-kosinuso-formule",
+      "atstumo-tarp-tasku-formule-erdveje"
+    ],
+    "mistakeIds": [
+      "vektoriaus-koordinasciu-ir-tasko-koordinasciu-painiojimas",
+      "skaliarines-sandaugos-zenklo-klaida",
+      "vektoriaus-ilgio-skaiciavimo-klaida"
+    ],
+    "exerciseIds": [
+      "vektoriai-erdveje-ex-001",
+      "vektoriai-erdveje-ex-002",
+      "vektoriai-erdveje-ex-003",
+      "vektoriai-erdveje-ex-004",
+      "vektoriai-erdveje-ex-005",
+      "vektoriai-erdveje-ex-006",
+      "vektoriai-erdveje-ex-007",
+      "vektoriai-erdveje-ex-008",
+      "vektoriai-erdveje-ex-009",
+      "vektoriai-erdveje-ex-010",
+      "vektoriai-erdveje-ex-011",
+      "vektoriai-erdveje-ex-012",
+      "vektoriai-erdveje-ex-013",
+      "vektoriai-erdveje-ex-014",
+      "vektoriai-erdveje-ex-015",
+      "vektoriai-erdveje-ex-016",
+      "vektoriai-erdveje-ex-017",
+      "vektoriai-erdveje-ex-018",
+      "vektoriai-erdveje-ex-019",
+      "vektoriai-erdveje-ex-020",
+      "vektoriai-erdveje-ex-021",
+      "vektoriai-erdveje-ex-022",
+      "vektoriai-erdveje-ex-023",
+      "vektoriai-erdveje-ex-024",
+      "vektoriai-erdveje-ex-025",
+      "vektoriai-erdveje-ex-026",
+      "vektoriai-erdveje-ex-027",
+      "vektoriai-erdveje-ex-028",
+      "vektoriai-erdveje-ex-029",
+      "vektoriai-erdveje-ex-030"
+    ]
+  },
+  "theory": [
+    {
+      "id": "vektoriai-erdveje-koordinaciu-sistema",
+      "title": "Stačiakampė koordinačių sistema erdvėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erdvėje stačiakampę koordinačių sistemą sudaro trys tarpusavyje statmenos tiesės (ašys), kertančios viena kitą taške $O(0;0;0)$, vadinamame koordinačių pradžios tašku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ašys vadinamos: $Ox$ – abscisių ašis, $Oy$ – ordinačių ašis, $Oz$ – aplikatų ašis. Bet kurio taško padėtis erdvėje nurodoma trimis koordinatėmis: $(x; y; z)$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "staciakampe-koordinaciu-sistema-erdveje",
+          "text": "Stačiakampė koordinačių sistema erdvėje – tai sistema, kurioje kiekvienam taškui priskiriamas vienintelis skaičių trejetas $(x; y; z)$."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-koordinates",
+      "title": "Vektoriaus koordinatės ir modulis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei taškas $A$ turi koordinates $(x_1; y_1; z_1)$, o taškas $B$ – $(x_2; y_2; z_2)$, tai vektoriaus $\\vec{AB}$ koordinatės randamos iš galo taško koordinačių atimant pradžios taško koordinates."
+        },
+        {
+          "type": "formula",
+          "latex": "\\vec{AB} = (x_2 - x_1; y_2 - y_1; z_2 - z_1)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Vektoriaus $\\vec{a}(x; y; z)$ modulis (ilgis) lygus kvadratinei šakniai iš jo koordinačių kvadratų sumos."
+        },
+        {
+          "type": "formula",
+          "formulaId": "vektoriaus-modulio-formule-erdveje",
+          "latex": "|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}"
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-veiksmai",
+      "title": "Veiksmai su vektoriais erdvėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vektorių sudėtis, atimtis ir daugyba iš skaičiaus erdvėje atliekama taip pat, kaip ir plokštumoje, tik pridedama trečioji koordinatė (aplikatė)."
+        },
+        {
+          "type": "property",
+          "text": "Jei $\\vec{a}(x_1; y_1; z_1)$ ir $\\vec{b}(x_2; y_2; z_2)$, tai:\n1) $\\vec{a} \\pm \\vec{b} = (x_1 \\pm x_2; y_1 \\pm y_2; z_1 \\pm z_2)$\n2) $k\\vec{a} = (kx_1; ky_1; kz_1)$"
+        },
+        {
+          "type": "note",
+          "text": "Vektoriai yra kolinearūs tada ir tik tada, kai jų atitinkamos koordinatės yra proporcingos: $\\frac{x_1}{x_2} = \\frac{y_1}{y_2} = \\frac{z_1}{z_2} = k$."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-skaliarine-sandauga",
+      "title": "Skaliarinė vektorių sandauga",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dviejų vektorių [[skaliarine-vektoriu-sandauga-erdveje|skaliarinė sandauga]] yra skaičius, lygus tų vektorių modulių ir kampo tarp jų kosinuso sandaugai."
+        },
+        {
+          "type": "formula",
+          "formulaId": "skaliarines-sandaugos-formule-geometrine",
+          "latex": "\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos(\\phi)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Naudojant koordinates, skaliarinė sandauga apskaičiuojama sudedant atitinkamų koordinačių sandaugas."
+        },
+        {
+          "type": "formula",
+          "formulaId": "skaliarines-sandaugos-formule-koordinatemis",
+          "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2"
+        },
+        {
+          "type": "warning",
+          "text": "Jei skaliarinė sandauga lygi 0, tai vektoriai yra statmeni (ortogonalūs), su sąlyga, kad nė vienas iš jų nėra nulinis."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-kampas-atstumas",
+      "title": "Kampas tarp vektorių ir atstumas tarp taškų",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kosinusas kampo tarp vektorių $\\vec{a}$ ir $\\vec{b}$ randamas padalinus jų skaliarinę sandaugą iš modulių sandaugos."
+        },
+        {
+          "type": "formula",
+          "formulaId": "kampo-tarp-vektoriu-kosinuso-formule",
+          "latex": "\\cos \\phi = \\frac{x_1 x_2 + y_1 y_2 + z_1 z_2}{\\sqrt{x_1^2 + y_1^2 + z_1^2} \\cdot \\sqrt{x_2^2 + y_2^2 + z_2^2}}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Atstumas tarp taškų $A(x_1; y_1; z_1)$ ir $B(x_2; y_2; z_2)$ randamas pagal formulę:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "atstumo-tarp-tasku-formule-erdveje",
+          "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "staciakampe-koordinaciu-sistema-erdveje",
+      "title": "Stačiakampė koordinačių sistema erdvėje",
+      "type": "concept",
+      "shortDefinition": "Tarpusavyje statmenų ašių sistema erdvėje.",
+      "intuition": "Tai būdas nurodyti bet kurio taško vietą erdvėje naudojant tris skaičius.",
+      "formal": "Sistemą sudaro trys tarpusavyje statmenos skaičių tiesės (Ox, Oy, Oz), kertančios viena kitą taške O.",
+      "notation": ["Ox, Oy, Oz"],
+      "relatedConceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriaus-koordinates-erdveje",
+      "title": "Vektoriaus koordinatės erdvėje",
+      "type": "concept",
+      "shortDefinition": "Skaičių trejetas, nurodantis vektoriaus kryptį ir ilgį erdvėje.",
+      "intuition": "Tai poslinkis x, y ir z ašių kryptimis.",
+      "formal": "Vektoriaus $\\vec{a} = (x; y; z)$ koordinatės yra jo projekcijos į koordinačių ašis.",
+      "notation": ["\\vec{a}(x; y; z)"],
+      "relatedConceptIds": ["vektoriaus-modulis-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriaus-modulis-erdveje",
+      "title": "Vektoriaus modulis erdvėje",
+      "type": "concept",
+      "shortDefinition": "Vektoriaus ilgis erdvėje.",
+      "intuition": "Atstumas nuo vektoriaus pradžios iki jo galo.",
+      "formal": "Vektoriaus $\\vec{a}(x; y; z)$ modulis yra $|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}$.",
+      "notation": ["|\\vec{a}|"],
+      "relatedConceptIds": ["vektoriaus-koordinates-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "skaliarine-vektoriu-sandauga-erdveje",
+      "title": "Skaliarinė vektorių sandauga",
+      "type": "concept",
+      "shortDefinition": "Vektorių modulių ir kampo tarp jų kosinuso sandauga.",
+      "intuition": "Operacija, kuri iš dviejų vektorių sukuria skaičių.",
+      "formal": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}| |\\vec{b}| \\cos \\phi = x_1 x_2 + y_1 y_2 + z_1 z_2$.",
+      "notation": ["\\vec{a} \\cdot \\vec{b}"],
+      "relatedConceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "kolinearieji-vektoriai-erdveje",
+      "title": "Kolinearieji vektoriai",
+      "type": "concept",
+      "shortDefinition": "Vektoriai, esantys vienoje tiesėje arba lygiagrečiose tiesėse.",
+      "intuition": "Vektoriai, kurie turi tą pačią arba priešingas kryptis.",
+      "formal": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra kolinearieji, jei egzistuoja skaičius $k$ toks, kad $\\vec{a} = k\\vec{b}$.",
+      "notation": ["\\vec{a} \\parallel \\vec{b}"],
+      "relatedConceptIds": ["vektoriaus-daugyba-is-skaiciaus-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "kampas-tarp-vektoriu-erdveje",
+      "title": "Kampas tarp vektorių",
+      "type": "concept",
+      "shortDefinition": "Kampas $\\phi \\in [0; \\pi]$ tarp dviejų vektorių.",
+      "intuition": "Matas, rodantis, kiek vektoriai nukrypę vienas nuo kito.",
+      "formal": "Kampas tarp vektorių, atidėtų nuo to paties taško.",
+      "relatedConceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "atstumas-tarp-tasku-erdveje",
+      "title": "Atstumas tarp taškų",
+      "type": "concept",
+      "shortDefinition": "Atkarpos, jungiančios du taškus erdvėje, ilgis.",
+      "intuition": "Trumpiausias kelias tarp dviejų vietų erdvėje.",
+      "formal": "$AB = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$.",
+      "relatedConceptIds": ["staciakampe-koordinaciu-sistema-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriu-sudetis-erdveje",
+      "title": "Vektorių sudėtis erdvėje",
+      "type": "method",
+      "shortDefinition": "Vektorių sudėjimas pagal trikampio arba lygiagretainio taisyklę.",
+      "intuition": "Dviejų poslinkių sujungimas į vieną.",
+      "formal": "Jei $\\vec{a}=(x_1, y_1, z_1)$ ir $\\vec{b}=(x_2, y_2, z_2)$, tai $\\vec{a}+\\vec{b}=(x_1+x_2, y_1+y_2, z_1+z_2)$.",
+      "relatedConceptIds": ["vektoriu-atimtis-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriu-atimtis-erdveje",
+      "title": "Vektorių atimtis erdvėje",
+      "type": "method",
+      "shortDefinition": "Vektorių atimtis atimant atitinkamas koordinates.",
+      "intuition": "Skirtumo vektorius jungia atimamojo pabaigą su turinio pabaiga.",
+      "formal": "$\\vec{a} - \\vec{b} = (x_1 - x_2; y_1 - y_2; z_1 - z_2)$.",
+      "relatedConceptIds": ["vektoriu-sudetis-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriaus-daugyba-is-skaiciaus-erdveje",
+      "title": "Vektoriaus daugyba iš skaičiaus",
+      "type": "method",
+      "shortDefinition": "Vektoriaus ilgio keitimas išlaikant kryptį.",
+      "intuition": "Vektoriaus 'ištęsimas' arba 'suglaudimas'.",
+      "formal": "$k(x; y; z) = (kx; ky; kz)$.",
+      "relatedConceptIds": ["kolinearieji-vektoriai-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "komplanarūs-vektoriai",
+      "title": "Komplanarūs vektoriai",
+      "type": "concept",
+      "shortDefinition": "Vektoriai, esantys vienoje plokštumoje arba lygiagretūs tai pačiai plokštumai.",
+      "intuition": "Vektoriai, kuriuos galima 'paguldyti' ant to paties stalo.",
+      "formal": "Trys vektoriai erdvėje yra komplanarūs, jei vienas iš jų yra kitų dviejų tiesinė kombinacija.",
+      "relatedConceptIds": ["kolinearieji-vektoriai-erdveje"],
+      "appearsInTopicIds": ["vektoriai-erdveje"],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "vektoriaus-modulio-formule-erdveje",
+      "title": "Vektoriaus modulio formulė",
+      "latex": "|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}",
+      "conditions": ["\\vec{a} = (x; y; z)"],
+      "variables": {
+        "x": "pirmoji koordinatė (abscisė)",
+        "y": "antroji koordinatė (ordinatė)",
+        "z": "trečioji koordinatė (aplikatė)"
+      },
+      "explanation": "Apskaičiuoja vektoriaus ilgį pagal jo koordinates erdvėje.",
+      "relatedConceptIds": ["vektoriaus-modulis-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "skaliarines-sandaugos-formule-koordinatemis",
+      "title": "Skaliarinė sandauga (koordinatėmis)",
+      "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2",
+      "conditions": ["\\vec{a} = (x_1; y_1; z_1)", "\\vec{b} = (x_2; y_2; z_2)"],
+      "variables": {
+        "x_1, y_1, z_1": "pirmojo vektoriaus koordinatės",
+        "x_2, y_2, z_2": "antrojo vektoriaus koordinatės"
+      },
+      "explanation": "Leidžia apskaičiuoti skaliarinę sandaugą, kai žinomos vektorių koordinatės.",
+      "relatedConceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "kampo-tarp-vektoriu-kosinuso-formule",
+      "title": "Kampo tarp vektorių kosinusas",
+      "latex": "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}",
+      "conditions": ["|\\vec{a}| \\neq 0", "|\\vec{b}| \\neq 0"],
+      "variables": {
+        "\\phi": "kampas tarp vektorių",
+        "\\vec{a} \\cdot \\vec{b}": "skaliarinė sandauga",
+        "|\\vec{a}|, |\\vec{b}|": "vektorių moduliai"
+      },
+      "explanation": "Naudojama kampui tarp vektorių erdvėje rasti.",
+      "relatedConceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "defaultSrs": true
+    },
+    {
+      "id": "atstumo-tarp-tasku-formule-erdveje",
+      "title": "Atstumas tarp taškų erdvėje",
+      "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}",
+      "conditions": ["$A(x_1; y_1; z_1)$", "$B(x_2; y_2; z_2)$"],
+      "variables": {
+        "x_i, y_i, z_i": "taškų koordinatės",
+        "d": "atstumas tarp taškų"
+      },
+      "explanation": "Pitagoro teoremos apibendrinimas trims dimensijoms.",
+      "relatedConceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "vektoriaus-koordinasciu-ir-tasko-koordinasciu-painiojimas",
+      "title": "Vektoriaus ir taško koordinačių painiojimas",
+      "conceptIds": ["vektoriaus-koordinates-erdveje", "staciakampe-koordinaciu-sistema-erdveje"],
+      "wrongPattern": "Vektoriaus $\\vec{AB}$ koordinatės laikomos lygios taško $B$ koordinatėms.",
+      "whyItHappens": "Pamirštama, kad vektoriaus koordinatės rodo pokytį (skirtumą), o ne absoliučią padėtį.",
+      "correction": "Vektoriaus koordinatės yra galo ir pradžios taškų koordinačių skirtumai.",
+      "wrongExample": "Jei $A(1;2;3)$ ir $B(4;5;6)$, tai $\\vec{AB} = (4;5;6)$.",
+      "correctExample": "$\\vec{AB} = (4-1; 5-2; 6-3) = (3;3;3)$.",
+      "defaultSrs": true
+    },
+    {
+      "id": "skaliarines-sandaugos-zenklo-klaida",
+      "title": "Skaliarinės sandaugos ženklo ignoravimas",
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje", "kampas-tarp-vektoriu-erdveje"],
+      "wrongPattern": "Manoma, kad jei skaliarinė sandauga neigiama, tai kampas smailus.",
+      "whyItHappens": "Sumaišomos kosinuso savybės: $\\cos \\phi < 0$ reiškia, kad kampas yra bukasis (nuo $90^\\circ$ iki $180^\\circ$).",
+      "correction": "Teigiama sandauga – smailus kampas, neigiama – bukasis, nulis – statusis.",
+      "wrongExample": "$\\vec{a} \\cdot \\vec{b} = -5 \\implies$ kampas smailus.",
+      "correctExample": "$\\vec{a} \\cdot \\vec{b} = -5 \\implies \\cos \\phi < 0 \\implies$ kampas bukasis.",
+      "defaultSrs": true
+    },
+    {
+      "id": "vektoriaus-ilgio-skaiciavimo-klaida",
+      "title": "Klaida sumuojant koordinačių kvadratus",
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "wrongPattern": "Sudėjus koordinates ir ištraukus šaknį (arba pamiršus pakelti kvadratu).",
+      "whyItHappens": "Netinkamas Pitagoro teoremos taikymas.",
+      "correction": "Pirmiausia pakelkite kiekvieną koordinatę kvadratu, tada sudėkite, tada traukite šaknį.",
+      "wrongExample": "$\\sqrt{3^2 + 4^2 + 12^2} = 3+4+12=19$.",
+      "correctExample": "$\\sqrt{9+16+144} = \\sqrt{169} = 13$.",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "vektoriai-erdveje-example-1",
+      "title": "Vektoriaus koordinačių ir modulio radimas",
+      "level": "easy",
+      "problem": "Duoti taškai $A(1; -2; 3)$ ir $B(4; 2; 3)$. Raskite vektoriaus $\\vec{AB}$ koordinates ir jo modulį.",
+      "conceptIds": ["vektoriaus-koordinates-erdveje", "vektoriaus-modulis-erdveje"],
+      "steps": [
+        {
+          "text": "Apskaičiuojame vektoriaus koordinates atimdami A koordinates iš B koordinačių.",
+          "latex": "\\vec{AB} = (4 - 1; 2 - (-2); 3 - 3) = (3; 4; 0)"
+        },
+        {
+          "text": "Apskaičiuojame vektoriaus modulį.",
+          "latex": "|\\vec{AB}| = \\sqrt{3^2 + 4^2 + 0^2} = \\sqrt{9 + 16 + 0} = \\sqrt{25} = 5"
+        }
+      ],
+      "answer": "\\vec{AB} = (3; 4; 0), |\\vec{AB}| = 5"
+    },
+    {
+      "id": "vektoriai-erdveje-example-2",
+      "title": "Skaliarinė sandauga ir statmenumas",
+      "level": "easy",
+      "problem": "Ar vektoriai $\\vec{a}(2; -3; 1)$ ir $\\vec{b}(4; 2; -2)$ yra statmeni?",
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "steps": [
+        {
+          "text": "Apskaičiuojame vektorių skaliarinę sandaugą pagal koordinates.",
+          "latex": "\\vec{a} \\cdot \\vec{b} = 2 \\cdot 4 + (-3) \\cdot 2 + 1 \\cdot (-2)"
+        },
+        {
+          "text": "Atliekame veiksmus.",
+          "latex": "8 - 6 - 2 = 0"
+        },
+        {
+          "text": "Kadangi skaliarinė sandauga lygi 0, vektoriai yra statmeni.",
+          "latex": "\\vec{a} \\perp \\vec{b}"
+        }
+      ],
+      "answer": "Taip, vektoriai yra statmeni."
+    },
+    {
+      "id": "vektoriai-erdveje-example-3",
+      "title": "Kampo tarp vektorių radimas",
+      "level": "medium",
+      "problem": "Raskite kampą tarp vektorių $\\vec{a}(1; 1; 0)$ ir $\\vec{b}(0; 1; 1)$.",
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje", "skaliarine-vektoriu-sandauga-erdveje"],
+      "steps": [
+        {
+          "text": "Apskaičiuojame skaliarinę sandaugą.",
+          "latex": "\\vec{a} \\cdot \\vec{b} = 1 \\cdot 0 + 1 \\cdot 1 + 0 \\cdot 1 = 1"
+        },
+        {
+          "text": "Apskaičiuojame vektorių modulius.",
+          "latex": "|\\vec{a}| = \\sqrt{1^2+1^2+0^2} = \\sqrt{2}, |\\vec{b}| = \\sqrt{0^2+1^2+1^2} = \\sqrt{2}"
+        },
+        {
+          "text": "Apskaičiuojame kampo kosinusą.",
+          "latex": "\\cos \\phi = \\frac{1}{\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{1}{2}"
+        },
+        {
+          "text": "Randame kampą $\\phi$.",
+          "latex": "\\phi = \\arccos(0,5) = 60^\\circ"
+        }
+      ],
+      "answer": "60^\\circ"
+    },
+    {
+      "id": "vektoriai-erdveje-example-4",
+      "title": "Vektorių kolinearumas",
+      "level": "medium",
+      "problem": "Su kuria $m$ reikšme vektoriai $\\vec{a}(m; -2; 3)$ ir $\\vec{b}(4; -8; 12)$ yra kolinearūs?",
+      "conceptIds": ["kolinearieji-vektoriai-erdveje"],
+      "steps": [
+        {
+          "text": "Kolinearių vektorių atitinkamos koordinatės yra proporcingos.",
+          "latex": "\\frac{m}{4} = \\frac{-2}{-8} = \\frac{3}{12}"
+        },
+        {
+          "text": "Apskaičiuojame proporcijos koeficientą.",
+          "latex": "\\frac{-2}{-8} = \\frac{1}{4}, \\frac{3}{12} = \\frac{1}{4}"
+        },
+        {
+          "text": "Sudarome lygtį m rasti.",
+          "latex": "\\frac{m}{4} = \\frac{1}{4}"
+        },
+        {
+          "text": "Išsprendžiame lygtį.",
+          "latex": "m = 1"
+        }
+      ],
+      "answer": "m = 1"
+    },
+    {
+      "id": "vektoriai-erdveje-example-5",
+      "title": "Atstumas nuo taško iki koordinačių pradžios",
+      "level": "hard",
+      "problem": "Raskite tašką ašyje $Oz$, kuris būtų vienodai nutolęs nuo taškų $A(2; 4; 1)$ ir $B(-3; 2; 5)$.",
+      "conceptIds": ["atstumas-tarp-tasku-erdveje", "staciakampe-koordinaciu-sistema-erdveje"],
+      "steps": [
+        {
+          "text": "Ieškomas taškas $M$ yra ašyje $Oz$, todėl jo koordinatės yra $(0; 0; z)$.",
+          "latex": "M(0; 0; z)"
+        },
+        {
+          "text": "Užrašome atstumus $AM$ ir $BM$ ir juos sulyginame.",
+          "latex": "\\sqrt{(0-2)^2 + (0-4)^2 + (z-1)^2} = \\sqrt{(0-(-3))^2 + (0-2)^2 + (z-5)^2}"
+        },
+        {
+          "text": "Pakeliame kvadratu ir supaprastiname.",
+          "latex": "4 + 16 + (z-1)^2 = 9 + 4 + (z-5)^2"
+        },
+        {
+          "text": "Atskliaudžiame.",
+          "latex": "20 + z^2 - 2z + 1 = 13 + z^2 - 10z + 25"
+        },
+        {
+          "text": "Sutvarkome lygtį.",
+          "latex": "21 - 2z = 38 - 10z \\implies 8z = 17"
+        },
+        {
+          "text": "Randame z.",
+          "latex": "z = 2,125"
+        }
+      ],
+      "answer": "M(0; 0; 2,125)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "vektoriai-erdveje-ex-001",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Raskite vektoriaus $\\vec{a}(6; -8; 0)$ modulį.",
+      "answer": { "kind": "numeric", "value": 10 },
+      "answerText": "10",
+      "hints": [
+        { "order": 1, "text": "Naudokite modulio formulę $|\\vec{a}| = \\sqrt{x^2+y^2+z^2}$." },
+        { "order": 2, "text": "Apskaičiuokite $\\sqrt{6^2 + (-8)^2 + 0^2}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Pakeliame koordinates kvadratu.", "latex": "6^2=36, (-8)^2=64, 0^2=0" },
+        { "text": "Sudedame ir traukiame šaknį.", "latex": "\\sqrt{36+64+0} = \\sqrt{100} = 10" }
+      ],
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "vektoriai-erdveje-ex-002",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kokia yra taško $A(3; -5; 2)$ aplikatė?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "3" },
+          { "id": "b", "text": "-5" },
+          { "id": "c", "text": "2" },
+          { "id": "d", "text": "0" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "answerText": "2",
+      "hints": [
+        { "order": 1, "text": "Koordinatės užrašomos tvarka (abscisė; ordinatė; aplikatė)." },
+        { "order": 2, "text": "Aplikatė yra trečioji koordinatė (z)." }
+      ],
+      "solutionSteps": [
+        { "text": "Taško koordinatės yra (x; y; z). Čia x=3, y=-5, z=2." }
+      ],
+      "conceptIds": ["staciakampe-koordinaciu-sistema-erdveje"],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "vektoriai-erdveje-ex-003",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Apskaičiuokite vektorių sumą $\\vec{a} + \\vec{b}$, jei $\\vec{a}(2; -1; 4)$ ir $\\vec{b}(-3; 5; 0)$. Atsakymą pateikite koordinačių pavidalu (x;y;z).",
+      "answer": { "kind": "expression", "canonical": "(-1; 4; 4)" },
+      "answerText": "(-1; 4; 4)",
+      "hints": [
+        { "order": 1, "text": "Sudėkite atitinkamas vektorių koordinates." }
+      ],
+      "solutionSteps": [
+        { "text": "Sudedame koordinates.", "latex": "(2 + (-3); -1 + 5; 4 + 0) = (-1; 4; 4)" }
+      ],
+      "conceptIds": ["vektoriu-sudetis-erdveje"],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "vektoriai-erdveje-ex-004",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Raskite skaliarinę sandaugą $\\vec{a} \\cdot \\vec{b}$, jei $\\vec{a}(1; 2; 3)$ ir $\\vec{b}(4; 0; -1)$.",
+      "answer": { "kind": "numeric", "value": 1 },
+      "answerText": "1",
+      "hints": [
+        { "order": 1, "text": "Dauginkite atitinkamas koordinates ir jas sudėkite." }
+      ],
+      "solutionSteps": [
+        { "text": "Skaičiuojame sandaugą.", "latex": "1\\cdot 4 + 2\\cdot 0 + 3\\cdot (-1) = 4 + 0 - 3 = 1" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "vektoriai-erdveje-ex-005",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite atstumą tarp taškų $O(0;0;0)$ ir $A(2;3;6)$.",
+      "answer": { "kind": "numeric", "value": 7 },
+      "answerText": "7",
+      "hints": [
+        { "order": 1, "text": "Naudokite atstumo formulę (arba tiesiog apskaičiuokite taško A padėties vektoriaus modulį)." }
+      ],
+      "solutionSteps": [
+        { "text": "Skaičiuojame.", "latex": "\\sqrt{2^2 + 3^2 + 6^2} = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7" }
+      ],
+      "conceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "vektoriai-erdveje-ex-006",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris iš šių vektorių yra vienetinis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "(1; 1; 1)" },
+          { "id": "b", "text": "(1; 0; 1)" },
+          { "id": "c", "text": "(0,6; 0,8; 0)" },
+          { "id": "d", "text": "(1; 2; 0)" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "answerText": "(0,6; 0,8; 0)",
+      "hints": [
+        { "order": 1, "text": "Vienetinio vektoriaus modulis lygus 1." },
+        { "order": 2, "text": "Patikrinkite, kurio vektoriaus koordinačių kvadratų suma lygi 1." }
+      ],
+      "solutionSteps": [
+        { "text": "Skaičiuojame c variantą.", "latex": "\\sqrt{0,6^2 + 0,8^2 + 0} = \\sqrt{0,36 + 0,64} = \\sqrt{1} = 1" }
+      ],
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "vektoriai-erdveje-ex-007",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Vektoriaus $\\vec{a}(x; 4; 3)$ modulis lygus $\\sqrt{41}$. Raskite teigiamą $x$ reikšmę.",
+      "answer": { "kind": "numeric", "value": 4 },
+      "answerText": "4",
+      "hints": [
+        { "order": 1, "text": "Surašykite lygtį: $x^2 + 4^2 + 3^2 = 41$." }
+      ],
+      "solutionSteps": [
+        { "text": "Sudarome lygtį.", "latex": "x^2 + 16 + 9 = 41 \\implies x^2 = 16 \\implies x = 4" }
+      ],
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "vektoriai-erdveje-ex-008",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "expressionInput",
+      "statement": "Duotas vektorius $\\vec{a}(2; -4; 6)$. Raskite vektoriaus $0,5\\vec{a}$ koordinates.",
+      "answer": { "kind": "expression", "canonical": "(1; -2; 3)" },
+      "answerText": "(1; -2; 3)",
+      "hints": [
+        { "order": 1, "text": "Kiekvieną koordinatę padauginkite iš 0,5." }
+      ],
+      "solutionSteps": [
+        { "text": "Dauginame.", "latex": "0,5 \\cdot (2; -4; 6) = (1; -2; 3)" }
+      ],
+      "conceptIds": ["vektoriaus-daugyba-is-skaiciaus-erdveje"],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "vektoriai-erdveje-ex-009",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Raskite taško $A(2; 3; 4)$ atstumą iki plokštumos $Oxy$.",
+      "answer": { "kind": "numeric", "value": 4 },
+      "answerText": "4",
+      "hints": [
+        { "order": 1, "text": "Atstumas iki Oxy plokštumos yra z koordinatės modulis." }
+      ],
+      "solutionSteps": [
+        { "text": "Taško projekcija į Oxy plokštumą yra (2; 3; 0). Atstumas tarp (2; 3; 4) ir (2; 3; 0) lygus 4." }
+      ],
+      "conceptIds": ["staciakampe-koordinaciu-sistema-erdveje"],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "vektoriai-erdveje-ex-010",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuriame koordinačių ketvirtyje (tiksliau, oktante, bet pakaks nurodyti koordinates) yra taškas, kurio visos koordinatės neigiamos?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "(+, +, +)" },
+          { "id": "b", "text": "(-, -, -)" },
+          { "id": "c", "text": "(-, +, -)" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "answerText": "(-, -, -)",
+      "hints": [
+        { "order": 1, "text": "Klausimas tiesiog prašo identifikuoti neigiamas koordinates." }
+      ],
+      "solutionSteps": [
+        { "text": "Taškas su neigiamomis koordinatėmis žymimas (-, -, -)." }
+      ],
+      "conceptIds": ["staciakampe-koordinaciu-sistema-erdveje"],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "vektoriai-erdveje-ex-011",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite kampo kosinusą tarp vektorių $\\vec{a}(2; 2; 1)$ ir $\\vec{b}(1; 2; 2)$.",
+      "answer": { "kind": "numeric", "value": 0.8889, "tolerance": 0.0001 },
+      "answerText": "0.8889",
+      "hints": [
+        { "order": 1, "text": "Naudokite formulę $\\cos \\phi = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{a}||\\vec{b}|}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Sandauga: $2\\cdot 1 + 2\\cdot 2 + 1\\cdot 2 = 8$.", "latex": "\\vec{a} \\cdot \\vec{b} = 8" },
+        { "text": "Moduliai: $\\sqrt{4+4+1}=3$ ir $\\sqrt{1+4+4}=3$.", "latex": "|\\vec{a}|=3, |\\vec{b}|=3" },
+        { "text": "Kosinusas: $8/9 \\approx 0,8889$.", "latex": "\\cos \\phi = \\frac{8}{9}" }
+      ],
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "estimatedSeconds": 90
+    },
+    {
+      "id": "vektoriai-erdveje-ex-012",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Su kuria $x$ reikšme vektoriai $\\vec{a}(x; 2; -1)$ ir $\\vec{b}(3; -6; 3)$ yra kolinearūs?",
+      "answer": { "kind": "numeric", "value": -1 },
+      "answerText": "-1",
+      "hints": [
+        { "order": 1, "text": "Turi galioti $\\frac{x}{3} = \\frac{2}{-6} = \\frac{-1}{3}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Randame santykį.", "latex": "\\frac{2}{-6} = -\\frac{1}{3}" },
+        { "text": "Sudarome lygtį.", "latex": "\\frac{x}{3} = -\\frac{1}{3} \\implies x = -1" }
+      ],
+      "conceptIds": ["kolinearieji-vektoriai-erdveje"],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "vektoriai-erdveje-ex-013",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite skaliarinę sandaugą $(\\vec{a} + \\vec{b}) \\cdot \\vec{a}$, jei $\\vec{a}(1; 0; 2)$ ir $\\vec{b}(2; 1; -1)$.",
+      "answer": { "kind": "numeric", "value": 5 },
+      "answerText": "5",
+      "hints": [
+        { "order": 1, "text": "Pirmiausia raskite $\\vec{a}+\\vec{b}$, tada dauginkite skaliariškai iš $\\vec{a}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Suma: $(1+2; 0+1; 2-1) = (3; 1; 1)$.", "latex": "\\vec{a} + \\vec{b} = (3; 1; 1)" },
+        { "text": "Sandauga: $3\\cdot 1 + 1\\cdot 0 + 1\\cdot 2 = 5$.", "latex": "(3; 1; 1) \\cdot (1; 0; 2) = 5" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 80
+    },
+    {
+      "id": "vektoriai-erdveje-ex-014",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite taško $A(1; 2; 3)$ atstumą iki koordinačių pradžios taško $O(0; 0; 0)$. Atsakymą suapvalinkite iki šimtųjų.",
+      "answer": { "kind": "numeric", "value": 3.74, "tolerance": 0.01 },
+      "answerText": "3.74",
+      "hints": [
+        { "order": 1, "text": "Skaičiuokite $\\sqrt{1^2 + 2^2 + 3^2}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Suma: $1+4+9 = 14$.", "latex": "1^2+2^2+3^2=14" },
+        { "text": "Šaknis: $\\sqrt{14} \\approx 3,7416$.", "latex": "\\sqrt{14} \\approx 3,74" }
+      ],
+      "conceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "vektoriai-erdveje-ex-015",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Duota, kad $|\\vec{a}|=3, |\\vec{b}|=4$, o kampas tarp jų lygus $120^\\circ$. Apskaičiuokite $\\vec{a} \\cdot \\vec{b}$.",
+      "answer": { "kind": "numeric", "value": -6 },
+      "answerText": "-6",
+      "hints": [
+        { "order": 1, "text": "Naudokite geometrinę formulę $\\vec{a}\\cdot\\vec{b} = |\\vec{a}||\\vec{b}|\\cos \\phi$." },
+        { "order": 2, "text": "Atminkite, kad $\\cos 120^\\circ = -0,5$." }
+      ],
+      "solutionSteps": [
+        { "text": "Dauginame.", "latex": "3 \\cdot 4 \\cdot \\cos 120^\\circ = 12 \\cdot (-0,5) = -6" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "vektoriai-erdveje-ex-016",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite vektoriaus $\\vec{a}(2; -1; 2)$ projekciją į vektorių $\\vec{b}(3; 0; 4)$. (Pastaba: ieškomas skaliarinis dydis $pr_{\\vec{b}} \\vec{a} = \\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|}$)",
+      "answer": { "kind": "numeric", "value": 2.8 },
+      "answerText": "2.8",
+      "hints": [
+        { "order": 1, "text": "Apskaičiuokite skaliarinę sandaugą ir padalinkite iš b modulio." }
+      ],
+      "solutionSteps": [
+        { "text": "Sandauga: $2\\cdot 3 + (-1)\\cdot 0 + 2\\cdot 4 = 14$.", "latex": "\\vec{a} \\cdot \\vec{b} = 14" },
+        { "text": "Modulis b: $\\sqrt{3^2+0^2+4^2}=5$.", "latex": "|\\vec{b}|=5" },
+        { "text": "Projekcija: $14/5 = 2,8$.", "latex": "14/5 = 2,8" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 100
+    },
+    {
+      "id": "vektoriai-erdveje-ex-017",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Raskite tašką $C$, kuris dalina atkarpą $AB$ santykiu $1:1$ (vidurio tašką), jei $A(2; 4; 6)$ ir $B(4; 8; 10)$. Pateikite taško C koordinačių sumą.",
+      "answer": { "kind": "numeric", "value": 17 },
+      "answerText": "17",
+      "hints": [
+        { "order": 1, "text": "Vidurio taško koordinatės yra galų koordinačių vidurkiai." }
+      ],
+      "solutionSteps": [
+        { "text": "Koordinatės: $(2+4)/2=3, (4+8)/2=6, (6+10)/2=8$.", "latex": "C(3; 6; 8)" },
+        { "text": "Suma: $3+6+8 = 17$." }
+      ],
+      "conceptIds": ["staciakampe-koordinaciu-sistema-erdveje"],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "vektoriai-erdveje-ex-018",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite $(\\vec{a}-\\vec{b})^2$, jei $|\\vec{a}|=5, |\\vec{b}|=2$ ir $\\vec{a} \\cdot \\vec{b} = 4$.",
+      "answer": { "kind": "numeric", "value": 21 },
+      "answerText": "21",
+      "hints": [
+        { "order": 1, "text": "Naudokite formulę $(\\vec{a}-\\vec{b})^2 = \\vec{a}^2 - 2\\vec{a}\\cdot\\vec{b} + \\vec{b}^2$." },
+        { "order": 2, "text": "Atminkite, kad $\\vec{a}^2 = |\\vec{a}|^2$." }
+      ],
+      "solutionSteps": [
+        { "text": "Skaičiuojame.", "latex": "5^2 - 2 \\cdot 4 + 2^2 = 25 - 8 + 4 = 21" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 80
+    },
+    {
+      "id": "vektoriai-erdveje-ex-019",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Jei $\\vec{a} \\cdot \\vec{b} = -10$, koks kampas yra tarp šių vektorių?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "Smailusis" },
+          { "id": "b", "text": "Statusis" },
+          { "id": "c", "text": "Bukasis" },
+          { "id": "d", "text": "Ištiestinis" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "answerText": "Bukasis",
+      "hints": [
+        { "order": 1, "text": "Skaliarinės sandaugos ženklas priklauso nuo kosinuso." }
+      ],
+      "solutionSteps": [
+        { "text": "Kadangi sandauga neigiama ir moduliai teigiami, kosinusas neigiamas. Tai reiškia, kad kampas yra bukasis." }
+      ],
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "vektoriai-erdveje-ex-020",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite trikampio, kurio viršūnės yra $A(1;0;0), B(0;1;0), C(0;0;0)$, plotą.",
+      "answer": { "kind": "numeric", "value": 0.5 },
+      "answerText": "0.5",
+      "hints": [
+        { "order": 1, "text": "Tai statusis trikampis Oxy plokštumoje." }
+      ],
+      "solutionSteps": [
+        { "text": "Kraštinės $CA$ ir $CB$ yra koordinačių ašyse, jų ilgiai lygūs 1. Kampas tarp jų $90^\\circ$." },
+        { "text": "Plotas: $0,5 \\cdot 1 \\cdot 1 = 0,5$." }
+      ],
+      "conceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "vektoriai-erdveje-ex-021",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite kampą laipsniais tarp vektoriaus $\\vec{a}(1; 1; \\sqrt{2})$ ir ašies $Oz$.",
+      "answer": { "kind": "numeric", "value": 45 },
+      "answerText": "45",
+      "hints": [
+        { "order": 1, "text": "Oz ašies krypties vektorius yra $\\vec{k}(0; 0; 1)$." },
+        { "order": 2, "text": "Apskaičiuokite kampą tarp $\\vec{a}$ ir $\\vec{k}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Sandauga: $1\\cdot 0 + 1\\cdot 0 + \\sqrt{2}\\cdot 1 = \\sqrt{2}$.", "latex": "\\vec{a} \\cdot \\vec{k} = \\sqrt{2}" },
+        { "text": "Moduliai: $|\\vec{a}| = \\sqrt{1+1+2}=2, |\\vec{k}|=1$.", "latex": "|\\vec{a}|=2" },
+        { "text": "Kosinusas: $\\sqrt{2}/2$.", "latex": "\\cos \\phi = \\frac{\\sqrt{2}}{2}" },
+        { "text": "Kampas: $45^\\circ$." }
+      ],
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "estimatedSeconds": 120
+    },
+    {
+      "id": "vektoriai-erdveje-ex-022",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ sudaro $60^\\circ$ kampą, $|\\vec{a}|=1, |\\vec{b}|=2$. Apskaičiuokite vektoriaus $\\vec{p} = 3\\vec{a} - \\vec{b}$ modulį.",
+      "answer": { "kind": "numeric", "value": 2.6458, "tolerance": 0.001 },
+      "answerText": "2.6458",
+      "hints": [
+        { "order": 1, "text": "Naudokite savybę $|\\vec{p}| = \\sqrt{\\vec{p}^2}$." },
+        { "order": 2, "text": "$\\vec{p}^2 = (3\\vec{a}-\\vec{b})^2 = 9\\vec{a}^2 - 6\\vec{a}\\cdot\\vec{b} + \\vec{b}^2$." }
+      ],
+      "solutionSteps": [
+        { "text": "Skaliarinė sandauga: $1\\cdot 2\\cdot \\cos 60^\\circ = 1$.", "latex": "\\vec{a}\\cdot\\vec{b}=1" },
+        { "text": "Kvadrato skaičiavimas: $9(1)^2 - 6(1) + (2)^2 = 9-6+4=7$.", "latex": "\\vec{p}^2=7" },
+        { "text": "Modulis: $\\sqrt{7} \\approx 2,646$.", "latex": "|\\vec{p}| = \\sqrt{7}" }
+      ],
+      "conceptIds": ["vektoriaus-modulis-erdveje", "skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 150
+    },
+    {
+      "id": "vektoriai-erdveje-ex-023",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Duotas kubas $ABCDA_1B_1C_1D_1$, kurio briauna lygi 1. Raskite skaliarinę sandaugą $\\vec{AB} \\cdot \\vec{AC_1}$.",
+      "answer": { "kind": "numeric", "value": 1 },
+      "answerText": "1",
+      "hints": [
+        { "order": 1, "text": "Įveskite koordinačių sistemą: $A(0;0;0), B(1;0;0), C(1;1;0), C_1(1;1;1)$." }
+      ],
+      "solutionSteps": [
+        { "text": "Vektoriai: $\\vec{AB}(1;0;0), \\vec{AC_1}(1;1;1)$.", "latex": "\\vec{AB}=(1,0,0), \\vec{AC_1}=(1,1,1)" },
+        { "text": "Sandauga: $1\\cdot 1 + 0\\cdot 1 + 0\\cdot 1 = 1$." }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 120
+    },
+    {
+      "id": "vektoriai-erdveje-ex-024",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite $z$ reikšmę, su kuria vektorius $\\vec{a}(1; 2; z)$ būtų statmenas vektoriui $\\vec{b}(z; -3; 1)$.",
+      "answer": { "kind": "numeric", "value": 3 },
+      "answerText": "3",
+      "hints": [
+        { "order": 1, "text": "Sudarome lygtį $\\vec{a} \\cdot \\vec{b} = 0$." }
+      ],
+      "solutionSteps": [
+        { "text": "Sandauga: $1\\cdot z + 2\\cdot (-3) + z\\cdot 1 = 0$.", "latex": "z - 6 + z = 0" },
+        { "text": "Sprendžiame: $2z = 6 \\implies z = 3$." }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 90
+    },
+    {
+      "id": "vektoriai-erdveje-ex-025",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Taškai $A(1;0;0), B(0;1;0), C(0;0;1)$ yra piramidės viršūnės. Raskite kampą tarp vektorių $\\vec{AB}$ ir $\\vec{AC}$ laipsniais.",
+      "answer": { "kind": "numeric", "value": 60 },
+      "answerText": "60",
+      "hints": [
+        { "order": 1, "text": "Raskite vektorių koordinates, tada kampą." }
+      ],
+      "solutionSteps": [
+        { "text": "$\\vec{AB} = (-1; 1; 0), \\vec{AC} = (-1; 0; 1)$.", "latex": "\\vec{AB}=(-1,1,0), \\vec{AC}=(-1,0,1)" },
+        { "text": "Sandauga: $(-1)(-1) + 1\\cdot 0 + 0\\cdot 1 = 1$.", "latex": "\\vec{AB}\\cdot\\vec{AC}=1" },
+        { "text": "Moduliai: $\\sqrt{2}$ ir $\\sqrt{2}$.", "latex": "|\\vec{AB}|=\\sqrt{2}, |\\vec{AC}|=\\sqrt{2}" },
+        { "text": "Kosinusas: $1/2$. Kampas $60^\\circ$." }
+      ],
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "estimatedSeconds": 140
+    },
+    {
+      "id": "vektoriai-erdveje-ex-026",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite vektoriaus $\\vec{a}$ koordinates, jei žinoma, kad jis kolinearus vektoriui $\\vec{b}(2; 1; -1)$ ir $\\vec{a} \\cdot \\vec{b} = 3$. Atsakymui pateikite koordinačių sumą.",
+      "answer": { "kind": "numeric", "value": 1 },
+      "answerText": "1",
+      "hints": [
+        { "order": 1, "text": "$\\vec{a} = k\\vec{b} = (2k; k; -k)$." },
+        { "order": 2, "text": "Įstatykite į skaliarinę sandaugą ir raskite k." }
+      ],
+      "solutionSteps": [
+        { "text": "Sandauga: $(2k)(2) + (k)(1) + (-k)(-1) = 3 \\implies 4k + k + k = 3$.", "latex": "6k = 3 \\implies k = 0,5" },
+        { "text": "Vektorius $\\vec{a} = (1; 0,5; -0,5)$.", "latex": "\\vec{a}=(1; 0,5; -0,5)" },
+        { "text": "Suma: $1 + 0,5 - 0,5 = 1$." }
+      ],
+      "conceptIds": ["kolinearieji-vektoriai-erdveje", "skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 130
+    },
+    {
+      "id": "vektoriai-erdveje-ex-027",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuokite atstumą nuo koordinačių pradžios taško iki plokštumos, einančios per taškus $A(2;0;0), B(0;2;0), C(0;0;2)$. (Patarimas: naudokite piramidės tūrio formulę dviem būdais arba normalės vektorių).",
+      "answer": { "kind": "numeric", "value": 1.1547, "tolerance": 0.001 },
+      "answerText": "1.1547",
+      "hints": [
+        { "order": 1, "text": "Piramidės OABC tūris $V = 1/6 \\cdot 2 \\cdot 2 \\cdot 2 = 4/3$." },
+        { "order": 2, "text": "$V = 1/3 \\cdot S_{ABC} \\cdot h$. Raskite $S_{ABC}$ ir tada h." }
+      ],
+      "solutionSteps": [
+        { "text": "ABC yra lygiakraštis trikampis, kraštinė $a = \\sqrt{2^2+2^2} = \\sqrt{8}$.", "latex": "a = 2\\sqrt{2}" },
+        { "text": "Plotas $S_{ABC} = \\frac{a^2\\sqrt{3}}{4} = \\frac{8\\sqrt{3}}{4} = 2\\sqrt{3}$.", "latex": "S = 2\\sqrt{3}" },
+        { "text": "Aukštinė $h = 3V / S = (3 \\cdot 4/3) / (2\\sqrt{3}) = 2/\\sqrt{3} \\approx 1,1547$.", "latex": "h = 2/\\sqrt{3}" }
+      ],
+      "conceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "estimatedSeconds": 200
+    },
+    {
+      "id": "vektoriai-erdveje-ex-028",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Raskite $x$, jei kampas tarp vektorių $\\vec{a}(x; 1; -1)$ ir $\\vec{b}(1; 0; 1)$ lygus $60^\\circ$.",
+      "answer": { "kind": "numeric", "value": 4 },
+      "answerText": "4",
+      "hints": [
+        { "order": 1, "text": "Naudokite kosinuso formulę: $0,5 = \\frac{x - 1}{\\sqrt{x^2+2}\\sqrt{2}}$." }
+      ],
+      "solutionSteps": [
+        { "text": "Lygtis: $\\sqrt{2(x^2+2)} = 2(x-1)$." },
+        { "text": "Kvadratu: $2x^2 + 4 = 4(x^2 - 2x + 1) \\implies 2x^2 + 4 = 4x^2 - 8x + 4$." },
+        { "text": "Sutvarkome: $2x^2 - 8x = 0 \\implies 2x(x-4) = 0$." },
+        { "text": "Patikriname reikšmes: x=0 netinka (sandauga būtų neigiama), x=4 tinka." }
+      ],
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "estimatedSeconds": 180
+    },
+    {
+      "id": "vektoriai-erdveje-ex-029",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Vektoriaus $\\vec{a}$ modulis lygus 2, o jo krypties kampai su ašimis $Ox$ ir $Oy$ yra lygūs $60^\\circ$. Raskite šio vektoriaus z koordinatės modulį.",
+      "answer": { "kind": "numeric", "value": 1.4142, "tolerance": 0.001 },
+      "answerText": "1.4142",
+      "hints": [
+        { "order": 1, "text": "Krypties kosinusų savybė: $\\cos^2 \\alpha + \\cos^2 \\beta + \\cos^2 \\gamma = 1$." }
+      ],
+      "solutionSteps": [
+        { "text": "Kosinusai: $\\cos^2 60 + \\cos^2 60 + \\cos^2 \\gamma = 1 \\implies 0,25 + 0,25 + \\cos^2 \\gamma = 1 \\implies \\cos^2 \\gamma = 0,5$.", "latex": "\\cos^2 \\gamma = 0,5" },
+        { "text": "Vektoriaus z koordinatė: $z = |\\vec{a}| \\cos \\gamma$." },
+        { "text": "$z^2 = |\\vec{a}|^2 \\cos^2 \\gamma = 4 \\cdot 0,5 = 2$." },
+        { "text": "Modulis $|z| = \\sqrt{2} \\approx 1,4142$." }
+      ],
+      "conceptIds": ["vektoriaus-koordinates-erdveje"],
+      "estimatedSeconds": 150
+    },
+    {
+      "id": "vektoriai-erdveje-ex-030",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Duotas reguliarus tetraedras (visos briaunos lygios 1). Apskaičiuokite skaliarinę sandaugą dviejų briaunų vektorių, išeinančių iš tos pačios viršūnės.",
+      "answer": { "kind": "numeric", "value": 0.5 },
+      "answerText": "0.5",
+      "hints": [
+        { "order": 1, "text": "Reguliaraus tetraedro visos sienos yra lygiakraščiai trikampiai." },
+        { "order": 2, "text": "Kampas tarp briaunų iš tos pačios viršūnės yra $60^\\circ$." }
+      ],
+      "solutionSteps": [
+        { "text": "Naudojame geometrinę formulę.", "latex": "1 \\cdot 1 \\cdot \\cos 60^\\circ = 0,5" }
+      ],
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "estimatedSeconds": 80
+    }
+  ],
+  "tests": [
+    {
+      "id": "vektoriai-erdveje-topic-test",
+      "title": "Vektoriai erdvėje: Temos testas",
+      "scope": "topic",
+      "topicIds": ["vektoriai-erdveje"],
+      "exerciseIds": [
+        "vektoriai-erdveje-ex-001",
+        "vektoriai-erdveje-ex-004",
+        "vektoriai-erdveje-ex-011",
+        "vektoriai-erdveje-ex-012",
+        "vektoriai-erdveje-ex-015",
+        "vektoriai-erdveje-ex-018",
+        "vektoriai-erdveje-ex-021",
+        "vektoriai-erdveje-ex-024"
+      ],
+      "timeLimitSeconds": 1800,
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.7
+    },
+    {
+      "id": "vektoriai-erdveje-challenge-test",
+      "title": "Vektoriai erdvėje: Iššūkio testas",
+      "scope": "topic",
+      "topicIds": ["vektoriai-erdveje"],
+      "exerciseIds": [
+        "vektoriai-erdveje-ex-022",
+        "vektoriai-erdveje-ex-023",
+        "vektoriai-erdveje-ex-025",
+        "vektoriai-erdveje-ex-026",
+        "vektoriai-erdveje-ex-027",
+        "vektoriai-erdveje-ex-029",
+        "vektoriai-erdveje-ex-030"
+      ],
+      "timeLimitSeconds": 2400,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.6
+    }
+  ],
+  "srsSeeds": [
+    {
+      "id": "srs-vektoriaus-modulis-erdveje-def",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Kokia yra vektoriaus $\\vec{a}(x; y; z)$ modulio (ilgio) formulė?",
+      "back": "$|\\vec{a}| = \\sqrt{x^2 + y^2 + z^2}$",
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-skaliarine-sandauga-koordinatemis-def",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Kaip apskaičiuojama vektorių $\\vec{a}(x_1; y_1; z_1)$ ir $\\vec{b}(x_2; y_2; z_2)$ skaliarinė sandauga per koordinates?",
+      "back": "$\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2 + z_1 z_2$",
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-vektoriu-statmenumas-salyga",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia yra vektorių statmenumo sąlyga naudojant skaliarinę sandaugą?",
+      "back": "Vektoriai yra statmeni tada ir tik tada, kai jų skaliarinė sandauga lygi 0.",
+      "conceptIds": ["skaliarine-vektoriu-sandauga-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-vektoriu-kolinearumas-salyga",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia yra vektorių kolinearumo sąlyga naudojant koordinates?",
+      "back": "Vektoriai yra kolinearūs, jei jų atitinkamos koordinatės yra proporcingos.",
+      "conceptIds": ["kolinearieji-vektoriai-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-atstumas-tarp-tasku-erdveje-def",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Užrašykite atstumo tarp taškų $A(x_1; y_1; z_1)$ ir $B(x_2; y_2; z_2)$ formulę.",
+      "back": "$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$",
+      "conceptIds": ["atstumas-tarp-tasku-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-kampas-tarp-vektoriu-kosinusas",
+      "deck": "theory",
+      "cardType": "formula",
+      "front": "Kaip randamas kampo tarp vektorių kosinusas?",
+      "back": "$\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}$",
+      "conceptIds": ["kampas-tarp-vektoriu-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-vektoriu-atimtis-erdveje-method",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Kaip atimami vektoriai $\\vec{a} - \\vec{b}$ erdvėje?",
+      "back": "Atimant atitinkamas jų koordinates: $(x_1 - x_2; y_1 - y_2; z_1 - z_2)$",
+      "conceptIds": ["vektoriu-atimtis-erdveje"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-vienetinis-vektorius-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra vienetinis vektorius?",
+      "back": "Tai vektorius, kurio modulis (ilgis) lygas 1.",
+      "conceptIds": ["vektoriaus-modulis-erdveje"],
+      "defaultEnabled": true
+    }
+  ]
+}

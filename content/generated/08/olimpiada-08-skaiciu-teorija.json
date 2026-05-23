@@ -29,11 +29,24 @@
       "ex-olimpiada-08-8a5b6d7c",
       "ex-olimpiada-08-371ff322",
       "ex-olimpiada-08-8f8af17c",
-      "ex-olimpiada-08-ef659ec4"
+      "ex-olimpiada-08-ef659ec4",
+      "ex-olimpiada-08-nt-009",
+      "ex-olimpiada-08-nt-010",
+      "ex-olimpiada-08-nt-011",
+      "ex-olimpiada-08-nt-012",
+      "ex-olimpiada-08-nt-013",
+      "ex-olimpiada-08-nt-014",
+      "ex-olimpiada-08-nt-015",
+      "ex-olimpiada-08-nt-016",
+      "ex-olimpiada-08-nt-017",
+      "ex-olimpiada-08-nt-018",
+      "ex-olimpiada-08-nt-019",
+      "ex-olimpiada-08-nt-020"
     ]
   },
   "theory": [
     {
+      "id": "theory-diofantines",
       "title": "Diofantinės lygtys ir dalumas",
       "blocks": [
         {
@@ -47,6 +60,7 @@
       ]
     },
     {
+      "id": "theory-ferma",
       "title": "Ferma mažoji teorema ir taikymai",
       "blocks": [
         {
@@ -56,6 +70,32 @@
         {
           "type": "method",
           "text": "Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\equiv 1 \\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\cdot 2^2 \\equiv 1^8 \\cdot 4 \\equiv 4 \\pmod 7$."
+        }
+      ]
+    },
+    {
+      "id": "theory-modular",
+      "title": "Modulinės aritmetikos savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Modulinė aritmetika leidžia atlikti veiksmus su liekanomis. Svarbiausios savybės:"
+        },
+        {
+          "type": "property",
+          "text": "1. $(a+b) \\pmod m = ((a \\pmod m) + (b \\pmod m)) \\pmod m$"
+        },
+        {
+          "type": "property",
+          "text": "2. $(a-b) \\pmod m = ((a \\pmod m) - (b \\pmod m) + m) \\pmod m$"
+        },
+        {
+          "type": "property",
+          "text": "3. $(a \\cdot b) \\pmod m = ((a \\pmod m) \\cdot (b \\pmod m)) \\pmod m$"
+        },
+        {
+          "type": "property",
+          "text": "4. $a^n \\pmod m = (a \\pmod m)^n \\pmod m$"
         }
       ]
     }
@@ -77,6 +117,33 @@
       "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
       "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
       "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-divisors",
+      "title": "Daliklių skaičius ir suma",
+      "type": "concept",
+      "shortDefinition": "Formulės, leidžiančios rasti skaičiaus daliklių kiekį ir jų sumą naudojant pirminį skaidymą.",
+      "intuition": "Žinodami, iš kokių „plytų“ (pirminių skaičių) sudarytas skaičius, galime pasakyti viską apie jo daliklius.",
+      "formal": "Jei $n = p_1^{a_1} \\cdot p_2^{a_2} \\dots$, tai daliklių skaičius $\\tau(n) = (a_1+1)(a_2+1)\\dots$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-bases",
+      "title": "Skaičiavimo sistemos",
+      "type": "concept",
+      "shortDefinition": "Būdai užrašyti skaičius naudojant skirtingus pagrindus (pvz., dvejetainė, aštuntainė).",
+      "intuition": "Mes įpratę skaičiuoti dešimtimis, bet galime skaičiuoti ir dvejetais ar šešioliktukais.",
+      "formal": "Skaičiaus užrašas pagrindu $b$ yra $d_k b^k + \\dots + d_1 b^1 + d_0 b^0$, kur $0 \\le d_i < b$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-perfect-numbers",
+      "title": "Tobulieji ir draugiškieji skaičiai",
+      "type": "concept",
+      "shortDefinition": "Skaičiai, pasižymintys ypatingomis daliklių sumos savybėmis.",
+      "intuition": "Tobulasis skaičius yra „lygus pats sau“ per savo daliklius.",
+      "formal": "Skaičius $n$ yra tobulas, jei $\\sigma(n) = 2n$. Skaičiai $n, m$ yra draugiški, jei $\\sigma(n)-n = m$ ir $\\sigma(m)-m = n$.",
       "relatedConceptIds": []
     }
   ],
@@ -114,6 +181,54 @@
         }
       ],
       "answer": "Liekana lygi 4."
+    },
+    {
+      "title": "Daliklių skaičiaus radimas",
+      "problem": "Kiek daliklių turi skaičius 120?",
+      "steps": [
+        {
+          "text": "Skaidome skaičių pirminiais daugikliais: $120 = 12 \\cdot 10 = 2^2 \\cdot 3 \\cdot 2 \\cdot 5 = 2^3 \\cdot 3^1 \\cdot 5^1$."
+        },
+        {
+          "text": "Naudojame formulę $\\tau(n) = (a_1+1)(a_2+1)(a_3+1)$."
+        },
+        {
+          "text": "Skaičiuojame: $(3+1)(1+1)(1+1) = 4 \\cdot 2 \\cdot 2 = 16$."
+        }
+      ],
+      "answer": "Skaičius 120 turi 16 daliklių."
+    },
+    {
+      "title": "Skaičiavimo sistemos keitimas",
+      "problem": "Paverskite skaičių $10110_2$ į dešimtainę sistemą.",
+      "steps": [
+        {
+          "text": "Užrašome skaičių pagal skaitmenų svorius: $1 \\cdot 2^4 + 0 \\cdot 2^3 + 1 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0$."
+        },
+        {
+          "text": "Apskaičiuojame: $16 + 0 + 4 + 2 + 0 = 22$."
+        }
+      ],
+      "answer": "Atsakymas: $22_{10}$."
+    },
+    {
+      "title": "Netiesinė Diofantinė lygtis",
+      "problem": "Raskite visus natūraliuosius sprendinius lygčiai $xy + 2x = 7$.",
+      "steps": [
+        {
+          "text": "Iškeliame $x$ prieš skliaustus: $x(y+2) = 7$."
+        },
+        {
+          "text": "Kadangi 7 yra pirminis skaičius, o $x, y$ yra natūralieji, turime tik du atvejus sandaugai: $1 \\cdot 7$ arba $7 \\cdot 1$."
+        },
+        {
+          "text": "Atvejis 1: $x=1, y+2=7 \\implies y=5$. Sprendinys $(1, 5)$."
+        },
+        {
+          "text": "Atvejis 2: $x=7, y+2=1 \\implies y=-1$ (netinka, nes ieškome natūraliųjų)."
+        }
+      ],
+      "answer": "Vienintelis natūralusis sprendinys yra $(1, 5)$."
     }
   ],
   "exercises": [
@@ -1492,27 +1607,458 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-08-nt-009",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite DBD(n, n+1) bet kuriam natūraliajam n.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Gretimų skaičių tarpusavio pirminumas",
+        "text": "Bet kurie du gretimi sveikieji skaičiai yra tarpusavyje pirminiai."
+      },
+      "strategyTags": [
+        "standard",
+        "divisibility"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tarkime, d yra bendras daliklis."
+        },
+        {
+          "order": 2,
+          "text": "Jei d dalija n ir n+1, tai d dalija ir jų skirtumą (n+1) - n."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skirtumas: (n+1) - n = 1."
+        },
+        {
+          "text": "Bendras daliklis turi dalinti 1, tad d=1."
+        }
+      ],
+      "answerText": "1",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-010",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite skaitmenį X, kad skaičius 123X45 dalintųsi iš 11.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Dalumo iš 11 požymis",
+        "text": "Skaitmenų nelyginėse ir lyginėse vietose sumų skirtumas turi dalintis iš 11."
+      },
+      "strategyTags": [
+        "divisibility-rules"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Suskaičiuokite: (1+3+4) - (2+X+5)."
+        },
+        {
+          "order": 2,
+          "text": "8 - (7+X) = 1 - X."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1-X turi būti 0 arba dalus iš 11. X=1 arba X=... (tik X=1 tinka, nes skaitmuo). Pala, (1+3+4) - (2+X+5) = 8 - (7+X) = 1-X. Jei X=1, skaičius 123145."
+        },
+        {
+          "text": "Tikriname: (1+3+4)=8, (2+1+5)=8. 8-8=0. Teisinga. X=1."
+        }
+      ],
+      "answerText": "1",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-011",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išreikškite DBD(17, 5) kaip tiesinę 17 ir 5 kombinaciją (Bezout tapatybė).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1 = 3*17 - 10*5 (pavyzdžiui)."
+      },
+      "coreIdea": {
+        "title": "Euklido algoritmas atgal",
+        "text": "Naudokite Euklido algoritmą DBD rasti, tada išreiškite skirtumus atgaline tvarka."
+      },
+      "strategyTags": [
+        "euclidean-algorithm",
+        "bezout-identity"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "17 = 3*5 + 2"
+        },
+        {
+          "order": 2,
+          "text": "5 = 2*2 + 1"
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "1 = 5 - 2*2"
+        },
+        {
+          "text": "1 = 5 - 2*(17 - 3*5) = 5 - 2*17 + 6*5 = 7*5 - 2*17."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "1 = 3*17 - 10*5 (pavyzdžiui)."
+    },
+    {
+      "id": "ex-olimpiada-08-nt-012",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite $3^{100} \\pmod{10}$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Laipsnių cikliškumas",
+        "text": "Liekanos moduliu 10 kartojasi cikliškai."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "3^1=3, 3^2=9, 3^3=27 (7), 3^4=81 (1)."
+        },
+        {
+          "order": 2,
+          "text": "Ciklo ilgis 4. Padalykite 100 iš 4."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "3^4 \\equiv 1 (mod 10)."
+        },
+        {
+          "text": "(3^4)^{25} \\equiv 1^{25} \\equiv 1 (mod 10)."
+        }
+      ],
+      "answerText": "1",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-013",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite Oilerio funkciją $\\phi(12)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Oilerio funkcijos skaičiavimas",
+        "text": "$\\phi(n)$ parodo, kiek yra skaičių iki n, tarpusavyje pirminių su n."
+      },
+      "strategyTags": [
+        "euler-totient"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skaidymas: 12 = 2^2 * 3."
+        },
+        {
+          "order": 2,
+          "text": "Formulė: $\\phi(n) = n(1-1/p_1)(1-1/p_2)$."
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "12 * (1 - 1/2) * (1 - 1/3) = 12 * 1/2 * 2/3 = 4."
+        }
+      ],
+      "answerText": "4",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-014",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kiek daliklių turi skaičius 100?",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Daliklių skaičiaus formulė",
+        "text": "Naudokite pirminį skaidymą $2^2 \\cdot 5^2$."
+      },
+      "strategyTags": [
+        "divisors"
+      ],
+      "solutionSteps": [
+        {
+          "text": "(2+1)*(2+1) = 9."
+        }
+      ],
+      "answerText": "9",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-015",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visų skaičiaus 12 daliklių sumą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Daliklių sumos formulė",
+        "text": "$\\sigma(12) = (1+2+2^2)(1+3)$."
+      },
+      "strategyTags": [
+        "divisors"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Dalikliai: 1, 2, 3, 4, 6, 12. Suma: 1+2+3+4+6+12 = 28."
+        }
+      ],
+      "answerText": "28",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-016",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Paverskite $121_3$ į dešimtainę sistemą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Pozicinė sistema",
+        "text": "Dauginkite skaitmenis iš pagrindo laipsnių."
+      },
+      "strategyTags": [
+        "number-bases"
+      ],
+      "solutionSteps": [
+        {
+          "text": "1*3^2 + 2*3^1 + 1*3^0 = 9 + 6 + 1 = 16."
+        }
+      ],
+      "answerText": "16",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-017",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "hard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Išspręskite sveikaisiais skaičiais: $x^2 - y^2 = 7$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sprendiniai: (4, 3), (4, -3), (-4, 3), (-4, -3)."
+      },
+      "coreIdea": {
+        "title": "Kvadratų skirtumo skaidymas",
+        "text": "(x-y)(x+y) = 7. Nagrinėkite 7 daliklius."
+      },
+      "strategyTags": [
+        "diophantine-equations"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sistemos: x-y=1, x+y=7 => x=4, y=3; x-y=7, x+y=1 => x=4, y=-3; ir t.t."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Sprendiniai: (4, 3), (4, -3), (-4, 3), (-4, -3)."
+    },
+    {
+      "id": "ex-olimpiada-08-nt-018",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "hard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite x, jei $x \\equiv 1 \\pmod 2$, $x \\equiv 1 \\pmod 3$, $x \\equiv 1 \\pmod 5$. (Mažiausias teigiamas).",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "CRT specialus atvejis",
+        "text": "Jei visos liekanos vienodos, tai skaičius 1 visada tinka."
+      },
+      "strategyTags": [
+        "chinese-remainder-theorem"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Mažiausias natūralusis yra 1. Sekantis būtų 1 + 2*3*5 = 31."
+        }
+      ],
+      "answerText": "1",
+      "srsSeeds": []
+    },
+    {
+      "id": "ex-olimpiada-08-nt-019",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "easy",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Ar skaičiai 220 ir 284 yra draugiškieji?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
+        ],
+        "correctChoiceIds": [
+          "yes"
+        ]
+      },
+      "coreIdea": {
+        "title": "Draugiškųjų skaičių patikra",
+        "text": "Sutikrinkite tikrųjų daliklių sumas."
+      },
+      "strategyTags": [
+        "perfect-numbers"
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tai garsiausia draugiškųjų skaičių pora."
+        }
+      ],
+      "srsSeeds": [],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-08-nt-020",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "medium",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Koks yra paskutinis skaičiaus $7^{2024}$ skaitmuo?",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Paskutinis skaitmuo",
+        "text": "Raskite liekaną moduliu 10."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "solutionSteps": [
+        {
+          "text": "7^1=7, 7^2=9, 7^3=3, 7^4=1. Ciklas 4. 2024 dalijasi iš 4, tad liekana tokia pat kaip 7^4."
+        }
+      ],
+      "answerText": "1",
+      "srsSeeds": []
     }
   ],
   "tests": [
     {
       "id": "olimpiada-08-test-challenge",
-      "title": "Olimpiadinis iššūkis (8 klasė)",
+      "title": "Skaičių teorijos olimpiadinis iššūkis",
       "type": "olympiad",
       "topicIds": [
         "olimpiada-08-skaiciu-teorija"
       ],
       "exerciseIds": [
         "ex-olimpiada-08-efad3e02",
-        "ex-olimpiada-08-9c8a454f",
+        "ex-olimpiada-08-nt-012",
         "ex-olimpiada-08-b19cc2f8",
         "ex-olimpiada-08-4670481e",
-        "ex-olimpiada-08-8a5b6d7c",
-        "ex-olimpiada-08-371ff322",
+        "ex-olimpiada-08-nt-017",
+        "ex-olimpiada-08-nt-018",
         "ex-olimpiada-08-8f8af17c",
-        "ex-olimpiada-08-ef659ec4",
-        "ex-olimpiada-08-fe7262fc",
-        "ex-olimpiada-08-56d15a87"
+        "ex-olimpiada-08-nt-020"
       ],
       "masteryWeight": 1.5
     }

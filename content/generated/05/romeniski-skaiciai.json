@@ -1,0 +1,973 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Parengta pagal 5 klasės programą, kurioje nurodyta mokėti romėniškuosius skaičius iki 3000."
+  },
+  "topic": {
+    "id": "romeniski-skaiciai",
+    "title": "Romėniškieji skaičiai",
+    "grade": 5,
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "order": 1,
+    "estimatedStudyMinutes": 90,
+    "prerequisiteTopicIds": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai"
+    ],
+    "nextTopicIds": [
+      "desimtaines-trupmenos"
+    ],
+    "conceptIds": [
+      "romeniskas-skaitmuo",
+      "sudeties-taisykle-romeniskiems",
+      "atimties-taisykle-romeniskiems",
+      "kartojimo-taisykle",
+      "simboliu-reiksmes",
+      "dideli-skaiciai-romeniski",
+      "skaiciu-konvertavimas",
+      "istorinis-kontekstas"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [
+      "netinkamas-kartojimas",
+      "netinkama-atimtis",
+      "maisesi-simboliai"
+    ],
+    "exerciseIds": [
+      "rom-ex-1", "rom-ex-2", "rom-ex-3", "rom-ex-4", "rom-ex-5", "rom-ex-6",
+      "rom-ex-7", "rom-ex-8", "rom-ex-9", "rom-ex-10", "rom-ex-11", "rom-ex-12",
+      "rom-ex-13", "rom-ex-14", "rom-ex-15", "rom-ex-16", "rom-ex-17", "rom-ex-18",
+      "rom-ex-19", "rom-ex-20"
+    ]
+  },
+  "theory": [
+    {
+      "id": "rom-ivadas",
+      "title": "Kas yra romėniškieji skaičiai?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romėniškieji skaičiai – tai senovės Romoje sukurta skaičiavimo sistema, kurią naudojame iki šiol: laikrodžių ciferblatuose, knygų skyriams žymėti ar istoriniams metams nurodyti."
+        },
+        {
+          "type": "definition",
+          "conceptId": "romeniskas-skaitmuo",
+          "text": "Romėniškasis skaitmuo – tai lotynų abėcėlės raidė, turinti tam tikrą skaitinę reikšmę."
+        },
+        {
+          "type": "table",
+          "text": "Pagrindiniai romėniški simboliai:",
+          "data": [
+            ["I", "1"],
+            ["V", "5"],
+            ["X", "10"],
+            ["L", "50"],
+            ["C", "100"],
+            ["D", "500"],
+            ["M", "1000"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rom-taisykles",
+      "title": "Pagrindinės rašymo taisyklės",
+      "blocks": [
+        {
+          "type": "property",
+          "text": "[[sudeties-taisykle-romeniskiems|Sudėties taisyklė]]: jei mažesnis skaitmuo rašomas po didesnio, jų reikšmės sudedamos (pvz., VI = 5 + 1 = 6)."
+        },
+        {
+          "type": "property",
+          "text": "[[atimties-taisykle-romeniskiems|Atimties taisyklė]]: jei mažesnis skaitmuo rašomas prieš didesnį, jis atimamas iš didesnio (pvz., IV = 5 - 1 = 4)."
+        },
+        {
+          "type": "warning",
+          "text": "[[kartojimo-taisykle|Kartojimo taisyklė]]: tas pats skaitmuo (I, X, C, M) negali būti rašomas iš eilės daugiau nei tris kartus. Skaitmenys V, L, D niekada nekartojami."
+        }
+      ]
+    },
+    {
+      "id": "rom-konvertavimas",
+      "title": "Kaip užrašyti didelius skaičius?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Norint užrašyti skaičių, jis skaidomas skyriais: tūkstančiais, šimtais, dešimtimis ir vienetais. Kiekviena dalis užrašoma atskirai."
+        },
+        {
+          "type": "example",
+          "text": "Užrašykime 2024: 2000 = MM, 20 = XX, 4 = IV. Tad 2024 = MMXXIV."
+        },
+        {
+          "type": "note",
+          "text": "Atimties taisyklė galioja tik tam tikroms poroms: I prieš V arba X; X prieš L arba C; C prieš D arba M."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "romeniskas-skaitmuo",
+      "title": "Romėniškasis skaitmuo",
+      "type": "concept",
+      "shortDefinition": "Simbolis, naudojamas romėniškoje skaičiavimo sistemoje.",
+      "intuition": "Tai raidė, kurią romėnai naudojo vietoj mūsų įprastų skaitmenų.",
+      "formal": "Vienas iš septynių lotyniškų simbolių (I, V, X, L, C, D, M), sudarančių romėnišką skaičių sistemą.",
+      "notation": ["I, V, X, L, C, D, M"],
+      "relatedConceptIds": ["sudeties-taisykle-romeniskiems", "atimties-taisykle-romeniskiems"],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "sudeties-taisykle-romeniskiems",
+      "title": "Sudėties taisyklė",
+      "type": "method",
+      "shortDefinition": "Mažesnio skaičiaus rašymas po didesnio reiškia sudėtį.",
+      "intuition": "Jei eini nuo didesnio prie mažesnio, viską tiesiog sudedi.",
+      "formal": "Jei skaitmuo su mažesne arba lygia reikšme stovi dešinėje nuo didesnės reikšmės skaitmens, šios reikšmės sumuojamos.",
+      "notation": [],
+      "relatedConceptIds": ["atimties-taisykle-romeniskiems"],
+      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "atimties-taisykle-romeniskiems",
+      "title": "Atimties taisyklė",
+      "type": "method",
+      "shortDefinition": "Mažesnio skaičiaus rašymas prieš didesnį reiškia atimtį.",
+      "intuition": "Jei matai mažą skaičių prieš didelį, tai yra 'viena iki' arba 'dešimt iki'.",
+      "formal": "Jei mažesnis skaitmuo stovi kairėje nuo didesnio, jis atimamas iš dešinėje esančio skaitmens.",
+      "notation": [],
+      "relatedConceptIds": ["sudeties-taisykle-romeniskiems"],
+      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "kartojimo-taisykle",
+      "title": "Kartojimo taisyklė",
+      "type": "method",
+      "shortDefinition": "Draudimas rašyti daugiau nei 3 vienodus skaitmenis iš eilės.",
+      "intuition": "Negalima rašyti IIII, reikia rašyti IV.",
+      "formal": "Simboliai I, X, C, M gali būti kartojami iki trijų kartų iš eilės. Simboliai V, L, D niekada nekartojami.",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "simboliu-reiksmes",
+      "title": "Simbolių reikšmės",
+      "type": "concept",
+      "shortDefinition": "Fiksuotos septynių pagrindinių simbolių vertės.",
+      "intuition": "Kiekviena raidė turi savo kainą.",
+      "formal": "I=1, V=5, X=10, L=50, C=100, D=500, M=1000.",
+      "notation": [],
+      "relatedConceptIds": ["romeniskas-skaitmuo"],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "dideli-skaiciai-romeniski",
+      "title": "Dideli romėniški skaičiai",
+      "type": "concept",
+      "shortDefinition": "Skaičiai iki 3000 sudaryti naudojant M ir kitus simbolius.",
+      "intuition": "Tūkstančiai žymimi raide M.",
+      "formal": "Skaičiavimas virš 1000 atliekamas kartojant M simbolį (pvz., MMM = 3000).",
+      "notation": [],
+      "relatedConceptIds": ["simboliu-reiksmes"],
+      "prerequisiteConceptIds": ["simboliu-reiksmes"],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "skaiciu-konvertavimas",
+      "title": "Skaičių konvertavimas",
+      "type": "method",
+      "shortDefinition": "Dešimtainių skaičių pavertimas romėniškais ir atvirkščiai.",
+      "intuition": "Tai tarsi vertimas iš vienos kalbos į kitą.",
+      "formal": "Pozicinio dešimtainio skaičiaus skaidymas skyriais ir jų keitimas atitinkamomis romėniškomis kombinacijomis.",
+      "notation": [],
+      "relatedConceptIds": ["sudeties-taisykle-romeniskiems", "atimties-taisykle-romeniskiems"],
+      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": true
+    },
+    {
+      "id": "istorinis-kontekstas",
+      "title": "Istorinis kontekstas",
+      "type": "concept",
+      "shortDefinition": "Romėniškų skaičių kilmė ir naudojimas.",
+      "intuition": "Kodėl mes vis dar mokomės šių senovinių skaičių?",
+      "formal": "Informacija apie sistemos naudojimą Viduramžiais, ciferblatuose ir oficialiuose dokumentuose.",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "defaultSrs": false
+    }
+  ],
+  "formulas": [],
+  "mistakes": [
+    {
+      "id": "netinkamas-kartojimas",
+      "title": "Per daug kartojimų",
+      "topicId": "romeniski-skaiciai",
+      "conceptIds": ["kartojimo-taisykle"],
+      "wrongPattern": "Rašo IIII vietoj IV.",
+      "whyItHappens": "Mokinys pamiršta atimties taisyklę ir tiesiog sudeda vienetus.",
+      "correction": "Po trijų vienodų skaitmenų naudok kitą didesnį simbolį su atimties taisykle.",
+      "exampleWrong": "80 = LXXXX",
+      "exampleCorrect": "80 = LXXX (čia 3 'X' yra gerai, bet 90 būtų XC, ne LXXXX)",
+      "defaultSrs": true
+    },
+    {
+      "id": "netinkama-atimtis",
+      "title": "Neteisinga atimties tvarka",
+      "topicId": "romeniski-skaiciai",
+      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "wrongPattern": "Rašo VX vietoj V.",
+      "whyItHappens": "Bando atimti 5 iš 10, nors atimti galima tik I, X arba C.",
+      "correction": "Atimti galima tik tam tikrus simbolius: I iš V/X, X iš L/C, C iš D/M.",
+      "exampleWrong": "95 = VC",
+      "exampleCorrect": "95 = XCV",
+      "defaultSrs": true
+    },
+    {
+      "id": "maisesi-simboliai",
+      "title": "Painioja L ir C",
+      "topicId": "romeniski-skaiciai",
+      "conceptIds": ["simboliu-reiksmes"],
+      "wrongPattern": "Mano, kad L yra 100, o C yra 50.",
+      "whyItHappens": "Simboliai atrodo panašiai arba tiesiog pamirštamos vertės.",
+      "correction": "L yra 50 (kaip 'Lpus' šimto), C yra 100 (kaip 'Centum').",
+      "exampleWrong": "150 = CL",
+      "exampleCorrect": "150 = CL (o 60 = LX)",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "rom-exmp-1",
+      "title": "Mažo skaičiaus konvertavimas",
+      "level": "easy",
+      "problem": "Užrašyk skaičių 9 romėniškai.",
+      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "steps": [
+        {
+          "text": "9 yra 10 minus 1.",
+          "latex": "10 - 1 = 9"
+        },
+        {
+          "text": "Pagal atimties taisyklę, mažesnį skaitmenį rašome prieš didesnį.",
+          "latex": "IX"
+        }
+      ],
+      "answer": "IX"
+    },
+    {
+      "id": "rom-exmp-2",
+      "title": "Skaičiaus skaitymas",
+      "level": "easy",
+      "problem": "Koks dešimtainis skaičius yra XIV?",
+      "conceptIds": ["sudeties-taisykle-romeniskiems", "atimties-taisykle-romeniskiems"],
+      "steps": [
+        {
+          "text": "Išskiriame simbolius: X (10) ir IV (4).",
+          "latex": "10 + (5 - 1)"
+        },
+        {
+          "text": "Sudedame dalis.",
+          "latex": "10 + 4 = 14"
+        }
+      ],
+      "answer": "14"
+    },
+    {
+      "id": "rom-exmp-3",
+      "title": "Metų užrašymas",
+      "level": "medium",
+      "problem": "Užrašyk metus 1999 romėniškai.",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "steps": [
+        {
+          "text": "Skaidome: 1000 + 900 + 90 + 9.",
+          "latex": "1000=M, 900=CM, 90=XC, 9=IX"
+        },
+        {
+          "text": "Sujungiame dalis.",
+          "latex": "MCMXCIX"
+        }
+      ],
+      "answer": "MCMXCIX"
+    },
+    {
+      "id": "rom-exmp-4",
+      "title": "Didelis skaičius",
+      "level": "medium",
+      "problem": "Koks skaičius yra MMDCCXLVI?",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "steps": [
+        {
+          "text": "Skaidome dalimis: MM, DCC, XL, VI.",
+          "latex": "2000 + 700 + 40 + 6"
+        },
+        {
+          "text": "Sudedame.",
+          "latex": "2746"
+        }
+      ],
+      "answer": "2746"
+    },
+    {
+      "id": "rom-exmp-5",
+      "title": "Sudėtingas atvejis",
+      "level": "hard",
+      "problem": "Paversk 2444 į romėnišką užrašą.",
+      "conceptIds": ["skaiciu-konvertavimas", "kartojimo-taisykle"],
+      "steps": [
+        {
+          "text": "Skaidome: 2000 (MM), 400 (CD), 40 (XL), 4 (IV).",
+          "latex": "MM + CD + XL + IV"
+        },
+        {
+          "text": "Sujungiame.",
+          "latex": "MMCDXLIV"
+        }
+      ],
+      "answer": "MMCDXLIV"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "rom-ex-1",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Ką reiškia simbolis L?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "10" },
+          { "id": "b", "text": "50" },
+          { "id": "c", "text": "100" },
+          { "id": "d", "text": "500" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "L yra tarp X (10) ir C (100).", "penalty": 0.1 },
+        { "order": 2, "text": "Tai pusė šimto.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Romėniškas simbolis L atitinka skaičių 50.", "latex": "L = 50" }
+      ],
+      "answerText": "50",
+      "conceptIds": ["simboliu-reiksmes"],
+      "formulaIds": [],
+      "mistakeIds": ["maisesi-simboliai"],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "rom-ex-2",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Koks dešimtainis skaičius yra VIII?",
+      "answer": { "kind": "numeric", "value": 8, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "V yra 5, o I yra 1.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame: 5 + 1 + 1 + 1.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "V + I + I + I = 5 + 3 = 8.", "latex": "5+3=8" }
+      ],
+      "answerText": "8",
+      "conceptIds": ["sudeties-taisykle-romeniskiems"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "rom-ex-3",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kaip užrašomas skaičius 4?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "IIII" },
+          { "id": "b", "text": "IV" },
+          { "id": "c", "text": "VI" },
+          { "id": "d", "text": "II" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "Negalima kartoti I keturis kartus.", "penalty": 0.1 },
+        { "order": 2, "text": "Naudok atimtį: 5 - 1.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "4 = 5 - 1. Rašome I prieš V.", "latex": "IV" }
+      ],
+      "answerText": "IV",
+      "conceptIds": ["atimties-taisykle-romeniskiems", "kartojimo-taisykle"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kartojimas"],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "rom-ex-4",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Koks dešimtainis skaičius yra XIX?",
+      "answer": { "kind": "numeric", "value": 19, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "X yra 10, IX yra 9.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame 10 ir 9.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "X + (X - I) = 10 + 9 = 19.", "latex": "10+9=19" }
+      ],
+      "answerText": "19",
+      "conceptIds": ["sudeties-taisykle-romeniskiems", "atimties-taisykle-romeniskiems"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "rom-ex-5",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris skaičius didesnis: XL ar LX?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "XL" },
+          { "id": "b", "text": "LX" },
+          { "id": "c", "text": "Jie lygūs" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "XL = 50 - 10, LX = 50 + 10.", "penalty": 0.1 },
+        { "order": 2, "text": "Apskaičiuok abiejų vertes.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "XL = 40, LX = 60. 60 yra daugiau už 40.", "latex": "60 > 40" }
+      ],
+      "answerText": "LX",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "rom-ex-6",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Koks dešimtainis skaičius yra LXXIV?",
+      "answer": { "kind": "numeric", "value": 74, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "LXX yra 50 + 10 + 10 = 70.", "penalty": 0.1 },
+        { "order": 2, "text": "IV yra 4.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "70 + 4 = 74.", "latex": "70+4=74" }
+      ],
+      "answerText": "74",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "rom-ex-7",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kaip užrašyti 90 romėniškai?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "LXXXX" },
+          { "id": "b", "text": "XC" },
+          { "id": "c", "text": "CX" },
+          { "id": "d", "text": "LXXXXX" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "90 yra 10 iki 100.", "penalty": 0.1 },
+        { "order": 2, "text": "C yra 100.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "100 - 10 = 90. Rašome X prieš C.", "latex": "XC" }
+      ],
+      "answerText": "XC",
+      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kartojimas"],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "rom-ex-8",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Koks dešimtainis skaičius yra CDXLIX?",
+      "answer": { "kind": "numeric", "value": 449, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "CD = 400, XL = 40, IX = 9.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame visas dalis.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "400 + 40 + 9 = 449.", "latex": "400+40+9=449" }
+      ],
+      "answerText": "449",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "rom-ex-9",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kuris skaičius užrašytas neteisingai?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "XXXIX" },
+          { "id": "b", "text": "VV" },
+          { "id": "c", "text": "MCC" },
+          { "id": "d", "text": "DLI" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "Prisimink, kurių simbolių negalima kartoti.", "penalty": 0.1 },
+        { "order": 2, "text": "V niekada nekartojamas, nes 5+5 = 10 (X).", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Simboliai V, L, D negali būti kartojami. Vietoj VV turėtų būti X.", "latex": "VV \\rightarrow X" }
+      ],
+      "answerText": "VV",
+      "conceptIds": ["kartojimo-taisykle"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kartojimas"],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "rom-ex-10",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Užrašyk 1550 dešimtainiu skaičiumi, jei romėniškai tai MDL.",
+      "answer": { "kind": "numeric", "value": 1550, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "M=1000, D=500, L=50.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame dalis.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1000 + 500 + 50 = 1550.", "latex": "1550" }
+      ],
+      "answerText": "1550",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "rom-ex-11",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kaip užrašyti 444 romėniškai?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "CDXLIV" },
+          { "id": "b", "text": "CCCCXXXXIIII" },
+          { "id": "c", "text": "DCXLIV" },
+          { "id": "d", "text": "CDLIV" }
+        ],
+        "correctChoiceIds": ["a"]
+      },
+      "hints": [
+        { "order": 1, "text": "400 = CD, 40 = XL, 4 = IV.", "penalty": 0.1 },
+        { "order": 2, "text": "Sujunk šias dalis.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "400(CD) + 40(XL) + 4(IV) = CDXLIV.", "latex": "CDXLIV" }
+      ],
+      "answerText": "CDXLIV",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kartojimas"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "rom-ex-12",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Koks dešimtainis skaičius yra MMXXV?",
+      "answer": { "kind": "numeric", "value": 2025, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "MM = 2000, XXV = 25.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame 2000 ir 25.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "2000 + 20 + 5 = 2025.", "latex": "2025" }
+      ],
+      "answerText": "2025",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "rom-ex-13",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kokia yra MCMXCIX skaitinė reikšmė?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "1999" },
+          { "id": "b", "text": "2109" },
+          { "id": "c", "text": "1909" },
+          { "id": "d", "text": "1119" }
+        ],
+        "correctChoiceIds": ["a"]
+      },
+      "hints": [
+        { "order": 1, "text": "M=1000, CM=900, XC=90, IX=9.", "penalty": 0.1 },
+        { "order": 2, "text": "Skaidymas padės nesuklysti.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1000 + 900 + 90 + 9 = 1999.", "latex": "1999" }
+      ],
+      "answerText": "1999",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "rom-ex-14",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: X + XV + IX. Atsakymą pateik dešimtainiu skaičiumi.",
+      "answer": { "kind": "numeric", "value": 34, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "X=10, XV=15, IX=9.", "penalty": 0.1 },
+        { "order": 2, "text": "Sudedame šiuos skaičius.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "10 + 15 + 9 = 34.", "latex": "10+15+9=34" }
+      ],
+      "answerText": "34",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "rom-ex-15",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kaip užrašyti 2888 romėniškai?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "MMDCCCLXXXVIII" },
+          { "id": "b", "text": "MMDCCCIIII" },
+          { "id": "c", "text": "MMDCCCLXXXV" },
+          { "id": "d", "text": "MMDCCCVIII" }
+        ],
+        "correctChoiceIds": ["a"]
+      },
+      "hints": [
+        { "order": 1, "text": "2000(MM), 800(DCCC), 80(LXXX), 8(VIII).", "penalty": 0.1 },
+        { "order": 2, "text": "Skaidymas pagal skyrius yra geriausia strategija.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "MM + DCCC + LXXX + VIII = MMDCCCLXXXVIII.", "latex": "MMDCCCLXXXVIII" }
+      ],
+      "answerText": "MMDCCCLXXXVIII",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kartojimas"],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "rom-ex-16",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Koks skaičius slepiasi po MMM? (Didžiausias 5 klasės programos skaičius)",
+      "answer": { "kind": "numeric", "value": 3000, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "M reiškia 1000.", "penalty": 0.1 },
+        { "order": 2, "text": "M kartojama 3 kartus.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1000 + 1000 + 1000 = 3000.", "latex": "3000" }
+      ],
+      "answerText": "3000",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "rom-ex-17",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Atimk: C - XL. Atsakymą užrašyk romėniškai.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "LX" },
+          { "id": "b", "text": "XL" },
+          { "id": "c", "text": "L" },
+          { "id": "d", "text": "XX" }
+        ],
+        "correctChoiceIds": ["a"]
+      },
+      "hints": [
+        { "order": 1, "text": "C=100, XL=40.", "penalty": 0.1 },
+        { "order": 2, "text": "100 - 40 = 60. Paversk 60 atgal į romėnišką.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "100 - 40 = 60. 60 romėniškai yra LX.", "latex": "LX" }
+      ],
+      "answerText": "LX",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "rom-ex-18",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Paversk MCDXLIV į dešimtainį skaičių.",
+      "answer": { "kind": "numeric", "value": 1444, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "M=1000, CD=400, XL=40, IV=4.", "penalty": 0.1 },
+        { "order": 2, "text": "Skaidymas padės.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1000 + 400 + 40 + 4 = 1444.", "latex": "1444" }
+      ],
+      "answerText": "1444",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "rom-ex-19",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kuris skaičius yra tarp MDCC ir MDCCC?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "MDCL" },
+          { "id": "b", "text": "MDCCL" },
+          { "id": "c", "text": "MDCCCL" },
+          { "id": "d", "text": "MDC" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "MDCC=1700, MDCCC=1800.", "penalty": 0.1 },
+        { "order": 2, "text": "Ieškok skaičiaus tarp 1700 ir 1800.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "MDCCL yra 1750, kas yra tarp 1700 ir 1800.", "latex": "1700 < 1750 < 1800" }
+      ],
+      "answerText": "MDCCL",
+      "conceptIds": ["dideli-skaiciai-romeniski"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "rom-ex-20",
+      "topicId": "romeniski-skaiciai",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Užrašyk dešimtainiu būdu: MMCMXCI.",
+      "answer": { "kind": "numeric", "value": 2991, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "MM=2000, CM=900, XC=90, I=1.", "penalty": 0.1 },
+        { "order": 2, "text": "Skaidymas pagal skyrius.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "2000 + 900 + 90 + 1 = 2991.", "latex": "2991" }
+      ],
+      "answerText": "2991",
+      "conceptIds": ["skaiciu-konvertavimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 60
+    }
+  ],
+  "tests": [
+    {
+      "id": "rom-test-1",
+      "title": "Romėniškieji skaičiai: Bazinis testas",
+      "scope": "topic",
+      "topicIds": ["romeniski-skaiciai"],
+      "exerciseIds": ["rom-ex-1", "rom-ex-2", "rom-ex-3", "rom-ex-4", "rom-ex-5", "rom-ex-6", "rom-ex-7", "rom-ex-8", "rom-ex-9", "rom-ex-10"],
+      "timeLimitSeconds": 1200,
+      "masteryWeight": 1.0,
+      "passingThreshold": 0.7
+    },
+    {
+      "id": "rom-test-2",
+      "title": "Romėniškieji skaičiai: Pažengusių testas",
+      "scope": "topic",
+      "topicIds": ["romeniski-skaiciai"],
+      "exerciseIds": ["rom-ex-11", "rom-ex-12", "rom-ex-13", "rom-ex-14", "rom-ex-15", "rom-ex-16", "rom-ex-17", "rom-ex-18", "rom-ex-19", "rom-ex-20"],
+      "timeLimitSeconds": 1800,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.7
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "srs-rom-I",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio I reikšmė?",
+      "back": "1",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-V",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio V reikšmė?",
+      "back": "5",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-X",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio X reikšmė?",
+      "back": "10",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-L",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio L reikšmė?",
+      "back": "50",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-C",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio C reikšmė?",
+      "back": "100",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-D",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio D reikšmė?",
+      "back": "500",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-M",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia simbolio M reikšmė?",
+      "back": "1000",
+      "conceptIds": ["simboliu-reiksmes"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-rule-sub",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Ką reiškia mažesnis skaitmuo prieš didesnį (pvz., IV)?",
+      "back": "Atimtį (5 - 1 = 4).",
+      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-rule-add",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Ką reiškia mažesnis skaitmuo po didesnio (pvz., VI)?",
+      "back": "Sudėtį (5 + 1 = 6).",
+      "conceptIds": ["sudeties-taisykle-romeniskiems"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-rom-limit",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Kiek daugiausiai kartų galima kartoti simbolius I, X, C, M?",
+      "back": "3 kartus.",
+      "conceptIds": ["kartojimo-taisykle"],
+      "defaultEnabled": true
+    }
+  ]
+}

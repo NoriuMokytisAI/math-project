@@ -1,0 +1,902 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Išsamus 5 klasės dešimtainių trupmenų kursas: sąvokos, lyginimas, apvalinimas ir veiksmai."
+  },
+  "topic": {
+    "id": "desimtaines-trupmenos",
+    "title": "Dešimtainės trupmenos",
+    "grade": 5,
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "order": 2,
+    "estimatedStudyMinutes": 180,
+    "prerequisiteTopicIds": [
+      "naturalieji-skaiciai-dalikliai-kartotiniai",
+      "trupmenos-procentai-santykiai"
+    ],
+    "nextTopicIds": [
+      "sveikieji-racionalieji-skaiciai"
+    ],
+    "conceptIds": [
+      "desimtaine-trupmena",
+      "kablelis",
+      "desimtosios-dalys",
+      "simtosios-dalys",
+      "tukstantosios-dalys",
+      "skaiciu-sulyginimas",
+      "desimtainiu-lyginimas",
+      "desimtainiu-apvalinimas",
+      "sudetis-stulpeliu-desimtainiu",
+      "atimtis-stulpeliu-desimtainiu"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [
+      "netinkamas-kablelio-dejimas",
+      "nuliu-ignoravimas",
+      "neteisingas-skyriu-sulyginimas"
+    ],
+    "exerciseIds": [
+      "dt-ex-1", "dt-ex-2", "dt-ex-3", "dt-ex-4", "dt-ex-5", "dt-ex-6",
+      "dt-ex-7", "dt-ex-8", "dt-ex-9", "dt-ex-10", "dt-ex-11", "dt-ex-12",
+      "dt-ex-13", "dt-ex-14", "dt-ex-15", "dt-ex-16", "dt-ex-17", "dt-ex-18",
+      "dt-ex-19", "dt-ex-20"
+    ]
+  },
+  "theory": [
+    {
+      "id": "dt-ivadas",
+      "title": "Kas yra dešimtainė trupmena?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dešimtainės trupmenos – tai skaičiai, kurių vardikliai yra 10, 100, 1000 ir t. t., bet užrašomi jie ne trupmena, o naudojant [[kablelis|kablelį]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "desimtaine-trupmena",
+          "text": "Dešimtainė trupmena – tai skaičiaus užrašas, kuriame sveikoji dalis nuo trupmeninės atskiriama kableliu."
+        },
+        {
+          "type": "example",
+          "text": "Paprastoji trupmena 5/10 dešimtainiu būdu rašoma 0,5. Skaitome: 'nulis sveikų, penkios dešimtosios'."
+        }
+      ]
+    },
+    {
+      "id": "dt-skyriai",
+      "title": "Skyriai po kablelio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiekviena skaitmens vieta po kablelio turi savo pavadinimą:"
+        },
+        {
+          "type": "table",
+          "text": "Skyrių pavadinimai (pvz., 12,345):",
+          "data": [
+            ["3", "[[desimtosios-dalys|dešimtosios]]"],
+            ["4", "[[simtosios-dalys|šimtosios]]"],
+            ["5", "[[tukstantosios-dalys|tūkstantosios]]"]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "Pirmas skaitmuo po kablelio visada rodo dešimtąsias dalis."
+        }
+      ]
+    },
+    {
+      "id": "dt-lyginimas",
+      "title": "Kaip lyginti ir sulyginti?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "[[skaiciu-sulyginimas|Sulyginimas]]: dešimtainės trupmenos gale galima prirašyti nulių, skaičiaus reikšmė nuo to nesikeičia (pvz., 0,5 = 0,50)."
+        },
+        {
+          "type": "property",
+          "text": "[[desimtainiu-lyginimas|Lyginimas]]: pirmiausia lyginame sveikąsias dalis. Jei jos lygios, lyginame dešimtąsias, tada šimtąsias ir t. t."
+        }
+      ]
+    },
+    {
+      "id": "dt-veiksmai",
+      "title": "Sudėtis ir atimtis",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "[[sudetis-stulpeliu-desimtainiu|Sudėtis stulpeliu]]: rašome skaičius taip, kad kablelis būtų po kableliu. Jei skaitmenų skaičius skiriasi, prirašome nulių."
+        },
+        {
+          "type": "warning",
+          "text": "Svarbiausia taisyklė: kablelis po kableliu!"
+        },
+        {
+          "type": "example",
+          "text": "2,5 + 0,14 = 2,50 + 0,14 = 2,64."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "desimtaine-trupmena",
+      "title": "Dešimtainė trupmena",
+      "type": "concept",
+      "shortDefinition": "Skaičius, užrašytas naudojant kablelį.",
+      "intuition": "Tai būdas užrašyti dalis nenaudojant brūkšnio, kaip piniguose (pvz., 1,50 Eur).",
+      "formal": "Racionalusis skaičius, kurio vardiklis yra 10 laipsnis, užrašytas pozicine sistema.",
+      "notation": ["x,y"],
+      "relatedConceptIds": ["kablelis", "desimtosios-dalys"],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "kablelis",
+      "title": "Kablelis",
+      "type": "notation",
+      "shortDefinition": "Ženklas, skiriantis sveikąją dalį nuo trupmeninės.",
+      "intuition": "Sienelė tarp pilnų daiktų ir jų gabaliukų.",
+      "formal": "Skyriklis, naudojamas dešimtainėje skaičiavimo sistemoje.",
+      "notation": [","],
+      "relatedConceptIds": ["desimtaine-trupmena"],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "desimtosios-dalys",
+      "title": "Dešimtosios dalys",
+      "type": "concept",
+      "shortDefinition": "Pirmas skyrius po kablelio.",
+      "intuition": "Vienas daiktas padalintas į 10 lygų dalių.",
+      "formal": "Vienetų skaičius lygus 10^-1.",
+      "notation": ["0,x"],
+      "relatedConceptIds": ["simtosios-dalys"],
+      "prerequisiteConceptIds": ["kablelis"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "simtosios-dalys",
+      "title": "Šimtosios dalys",
+      "type": "concept",
+      "shortDefinition": "Antras skyrius po kablelio.",
+      "intuition": "Vienas daiktas padalintas į 100 lygų dalių (kaip centai eurų sistemoje).",
+      "formal": "Vienetų skaičius lygus 10^-2.",
+      "notation": ["0,0x"],
+      "relatedConceptIds": ["desimtosios-dalys", "tukstantosios-dalys"],
+      "prerequisiteConceptIds": ["kablelis"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "tukstantosios-dalys",
+      "title": "Tūkstantosios dalys",
+      "type": "concept",
+      "shortDefinition": "Trečias skyrius po kablelio.",
+      "intuition": "Vienas daiktas padalintas į 1000 dalių (labai smulkios dalys).",
+      "formal": "Vienetų skaičius lygus 10^-3.",
+      "notation": ["0,00x"],
+      "relatedConceptIds": ["simtosios-dalys"],
+      "prerequisiteConceptIds": ["kablelis"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "skaiciu-sulyginimas",
+      "title": "Skaičių sulyginimas",
+      "type": "method",
+      "shortDefinition": "Nulių prirašymas gale, kad skaičiai turėtų tiek pat skaitmenų po kablelio.",
+      "intuition": "Pridėjus nulį gale, skaičiaus vertė nesikeičia, bet pasidaro lengviau lyginti.",
+      "formal": "Dešimtainės trupmenos išraiškos keitimas ekvivalenčia forma prirašant nulinę vertę turinčius skaitmenis.",
+      "notation": [],
+      "relatedConceptIds": ["desimtainiu-lyginimas"],
+      "prerequisiteConceptIds": ["desimtaine-trupmena"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "desimtainiu-lyginimas",
+      "title": "Dešimtainių trupmenų lyginimas",
+      "type": "method",
+      "shortDefinition": "Procesas nustatyti, kuris skaičius didesnis.",
+      "intuition": "Žiūri skyrių po skyriaus iš kairės į dešinę.",
+      "formal": "Algoritmas, lyginantis dešimtainius skaičius pagal pozicinę vertę pradedant aukščiausiu skyriumi.",
+      "notation": ["<, >, ="],
+      "relatedConceptIds": ["skaiciu-sulyginimas"],
+      "prerequisiteConceptIds": ["skaiciu-sulyginimas"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "desimtainiu-apvalinimas",
+      "title": "Dešimtainių trupmenų apvalinimas",
+      "type": "method",
+      "shortDefinition": "Skaičiaus supaprastinimas iki tam tikro skyriaus.",
+      "intuition": "Jei kitas skaičius 5 ar didesnis – kelk į viršų, jei mažesnis – palik.",
+      "formal": "Skaičiaus keitimas artimiausiu skaičiumi nurodytu tikslumu.",
+      "notation": ["≈"],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": ["desimtaine-trupmena"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "sudetis-stulpeliu-desimtainiu",
+      "title": "Sudėtis stulpeliu",
+      "type": "method",
+      "shortDefinition": "Dešimtainių skaičių sudėjimas rašant juos vieną po kitu.",
+      "intuition": "Svarbiausia, kad kableliai būtų vienoje tiesėje.",
+      "formal": "Aritmetinis veiksmas su dešimtainiais skaičiais, derinant atitinkamus skyrius.",
+      "notation": ["+"],
+      "relatedConceptIds": ["atimtis-stulpeliu-desimtainiu"],
+      "prerequisiteConceptIds": ["kablelis", "skaiciu-sulyginimas"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    },
+    {
+      "id": "atimtis-stulpeliu-desimtainiu",
+      "title": "Atimtis stulpeliu",
+      "type": "method",
+      "shortDefinition": "Dešimtainių skaičių atėmimas rašant juos vieną po kitu.",
+      "intuition": "Jei trūksta skaitmens – 'pasiskolink' iš nulio gale.",
+      "formal": "Aritmetinis veiksmas su dešimtainiais skaičiais, derinant atitinkamus skyrius.",
+      "notation": ["-"],
+      "relatedConceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "prerequisiteConceptIds": ["kablelis", "skaiciu-sulyginimas"],
+      "appearsInTopicIds": ["desimtaines-trupmenos"],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [],
+  "mistakes": [
+    {
+      "id": "netinkamas-kablelio-dejimas",
+      "title": "Kablelio ignoravimas",
+      "topicId": "desimtaines-trupmenos",
+      "conceptIds": ["kablelis", "sudetis-stulpeliu-desimtainiu"],
+      "wrongPattern": "Sudedant 2,5 + 3 rašo 2,8 (lygiuoja pagal dešinį kraštą).",
+      "whyItHappens": "Mokinys taiko natūraliųjų skaičių lygiuotes taisykles.",
+      "correction": "Sveikasis skaičius turi kablelį gale (3 = 3,0). Lygiuok kablelį po kablelio.",
+      "exampleWrong": "2,5 + 3 = 2,8",
+      "exampleCorrect": "2,5 + 3,0 = 5,5",
+      "defaultSrs": true
+    },
+    {
+      "id": "nuliu-ignoravimas",
+      "title": "Nulių 'pametimas'",
+      "topicId": "desimtaines-trupmenos",
+      "conceptIds": ["skaiciu-sulyginimas"],
+      "wrongPattern": "Mano, kad 0,5 yra mažiau už 0,12, nes 5 < 12.",
+      "whyItHappens": "Mokinys lygina visą trupmeninę dalį kaip vieną skaičių.",
+      "correction": "Sulygink skaitmenų skaičių: 0,5 = 0,50. 50 > 12, tad 0,5 > 0,12.",
+      "exampleWrong": "0,5 < 0,12",
+      "exampleCorrect": "0,5 > 0,12",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "dt-exmp-1",
+      "title": "Paprastosios trupmenos keitimas dešimtaine",
+      "level": "easy",
+      "problem": "Užrašyk 3/100 dešimtainiu skaičiumi.",
+      "conceptIds": ["desimtaine-trupmena", "simtosios-dalys"],
+      "steps": [
+        {
+          "text": "Vardiklyje yra 100, todėl po kablelio turi būti du skaitmenys.",
+          "latex": "3/100"
+        },
+        {
+          "text": "Sveikųjų dalių nėra, todėl rašome 0.",
+          "latex": "0,03"
+        }
+      ],
+      "answer": "0,03"
+    },
+    {
+      "id": "dt-exmp-2",
+      "title": "Lyginimas",
+      "level": "easy",
+      "problem": "Palygink 0,7 ir 0,65.",
+      "conceptIds": ["desimtainiu-lyginimas", "skaiciu-sulyginimas"],
+      "steps": [
+        {
+          "text": "Sulyginame skaitmenis po kablelio.",
+          "latex": "0,7 = 0,70"
+        },
+        {
+          "text": "Lyginame 0,70 ir 0,65.",
+          "latex": "0,70 > 0,65"
+        }
+      ],
+      "answer": "0,7 > 0,65"
+    },
+    {
+      "id": "dt-exmp-3",
+      "title": "Sudėtis",
+      "level": "medium",
+      "problem": "Apskaičiuok 12,4 + 3,85.",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "steps": [
+        {
+          "text": "Sulyginame: 12,40 + 3,85.",
+          "latex": "12,40 + 3,85"
+        },
+        {
+          "text": "Sudedame skyriais: 40 + 85 = 125 (perkeliame 1 į sveikuosius).",
+          "latex": "16,25"
+        }
+      ],
+      "answer": "16,25"
+    },
+    {
+      "id": "dt-exmp-4",
+      "title": "Apvalinimas",
+      "level": "medium",
+      "problem": "Suapvalink 4,567 iki dešimtųjų.",
+      "conceptIds": ["desimtainiu-apvalinimas"],
+      "steps": [
+        {
+          "text": "Dešimtųjų skyriuje yra 5. Žiūrime į kitą skaitmenį – 6.",
+          "latex": "4,5|67"
+        },
+        {
+          "text": "Kadangi 6 >= 5, dešimtųjų skyrių didiname vienetu.",
+          "latex": "4,6"
+        }
+      ],
+      "answer": "4,6"
+    },
+    {
+      "id": "dt-exmp-5",
+      "title": "Atimtis iš sveikojo skaičiaus",
+      "level": "hard",
+      "problem": "Apskaičiuok 10 - 2,34.",
+      "conceptIds": ["atimtis-stulpeliu-desimtainiu", "skaiciu-sulyginimas"],
+      "steps": [
+        {
+          "text": "Užrašome 10 su kableliu.",
+          "latex": "10,00 - 2,34"
+        },
+        {
+          "text": "Atimame stulpeliu.",
+          "latex": "7,66"
+        }
+      ],
+      "answer": "7,66"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "dt-ex-1",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kiek dešimtųjų dalių turi skaičius 0,8?",
+      "answer": { "kind": "numeric", "value": 8, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Pirmas skaitmuo po kablelio rodo dešimtąsias.", "penalty": 0.1 },
+        { "order": 2, "text": "Skaičiuje 0,8 tai yra 8.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "0,8 reiškia 8/10, t.y. 8 dešimtąsias.", "latex": "0,8 = 8/10" }
+      ],
+      "answerText": "8",
+      "conceptIds": ["desimtosios-dalys"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "dt-ex-2",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris skaičius atitinka tris šimtąsias dalis?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "0,3" },
+          { "id": "b", "text": "0,03" },
+          { "id": "c", "text": "3,0" },
+          { "id": "d", "text": "0,003" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "Šimtosios dalys yra antrame skyriuje po kablelio.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Trys šimtosios rašomos 0,03.", "latex": "3/100 = 0,03" }
+      ],
+      "answerText": "0,03",
+      "conceptIds": ["simtosios-dalys"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 25
+    },
+    {
+      "id": "dt-ex-3",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris ženklas tinka tarp 0,4 ir 0,40?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "<" },
+          { "id": "b", "text": ">" },
+          { "id": "c", "text": "=" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "hints": [
+        { "order": 1, "text": "Nuliai skaičiaus gale po kablelio nieko nekeičia.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "0,4 yra tas pats, kas 0,40.", "latex": "0,4 = 0,40" }
+      ],
+      "answerText": "=",
+      "conceptIds": ["skaiciu-sulyginimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "dt-ex-4",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 0,5 + 0,2.",
+      "answer": { "kind": "numeric", "value": 0.7, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Sudedame 5 dešimtąsias ir 2 dešimtąsias.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "5 + 2 = 7. Rezultatas - 0,7.", "latex": "0,5 + 0,2 = 0,7" }
+      ],
+      "answerText": "0,7",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "dt-ex-5",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 1,5 - 0,5.",
+      "answer": { "kind": "numeric", "value": 1, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Iš 15 dešimtųjų atimk 5 dešimtąsias.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1,5 - 0,5 = 1,0.", "latex": "1,0" }
+      ],
+      "answerText": "1",
+      "conceptIds": ["atimtis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "dt-ex-6",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Palygink: 0,25 ir 0,3.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "0,25 > 0,3" },
+          { "id": "b", "text": "0,25 < 0,3" },
+          { "id": "c", "text": "0,25 = 0,3" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "Sulygink skaitmenų skaičių po kablelio.", "penalty": 0.1 },
+        { "order": 2, "text": "0,3 yra 0,30.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "0,25 lyginame su 0,30. 25 < 30.", "latex": "0,25 < 0,30" }
+      ],
+      "answerText": "0,25 < 0,3",
+      "conceptIds": ["desimtainiu-lyginimas"],
+      "formulaIds": [],
+      "mistakeIds": ["nuliu-ignoravimas"],
+      "estimatedSeconds": 35
+    },
+    {
+      "id": "dt-ex-7",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Suapvalink 12,38 iki dešimtųjų.",
+      "answer": { "kind": "numeric", "value": 12.4, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Dešimtosios yra 3. Žiūrėk į kitą skaitmenį - 8.", "penalty": 0.1 },
+        { "order": 2, "text": "Kadangi 8 >= 5, apvaliname į viršų.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "12,38 suapvalinus iki dešimtųjų gauname 12,4.", "latex": "12,4" }
+      ],
+      "answerText": "12,4",
+      "conceptIds": ["desimtainiu-apvalinimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "dt-ex-8",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 2,45 + 1,2.",
+      "answer": { "kind": "numeric", "value": 3.65, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Prirašyk nulį: 2,45 + 1,20.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "2,45 + 1,20 = 3,65.", "latex": "3,65" }
+      ],
+      "answerText": "3,65",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kablelio-dejimas"],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "dt-ex-9",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 5,8 - 2,15.",
+      "answer": { "kind": "numeric", "value": 3.65, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Prirašyk nulį: 5,80 - 2,15.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "5,80 - 2,15 = 3,65.", "latex": "3,65" }
+      ],
+      "answerText": "3,65",
+      "conceptIds": ["atimtis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "dt-ex-10",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek bus 0,5 padauginus iš 2?",
+      "answer": { "kind": "numeric", "value": 1, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Pusė padauginta iš dviejų.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "0,5 + 0,5 = 1,0.", "latex": "1" }
+      ],
+      "answerText": "1",
+      "conceptIds": ["desimtaine-trupmena"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "dt-ex-11",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Užrašyk kaip dešimtainę trupmeną: 2 sveikieji ir 5 tūkstantosios.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "2,5" },
+          { "id": "b", "text": "2,05" },
+          { "id": "c", "text": "2,005" },
+          { "id": "d", "text": "0,2005" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "hints": [
+        { "order": 1, "text": "Tūkstantosios yra trečiame skyriuje.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "2 sveikieji, tada kablelis, tada 0 dešimtųjų, 0 šimtųjų ir 5 tūkstantosios.", "latex": "2,005" }
+      ],
+      "answerText": "2,005",
+      "conceptIds": ["tukstantosios-dalys"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "dt-ex-12",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Koks skaičius yra per vidurį tarp 0,1 ir 0,2?",
+      "answer": { "kind": "numeric", "value": 0.15, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Sulygink: 0,10 ir 0,20.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Tarp 10 šimtųjų ir 20 šimtųjų yra 15 šimtųjų.", "latex": "0,15" }
+      ],
+      "answerText": "0,15",
+      "conceptIds": ["skaiciu-sulyginimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "dt-ex-13",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 20 - 4,55.",
+      "answer": { "kind": "numeric", "value": 15.45, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Užrašyk 20 kaip 20,00.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "20,00 - 4,55 = 15,45.", "latex": "15,45" }
+      ],
+      "answerText": "15,45",
+      "conceptIds": ["atimtis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": ["neteisingas-skyriu-sulyginimas"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "dt-ex-14",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Išrikiuok didėjimo tvarka: 0,3; 0,03; 0,33; 0,033.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "0,3; 0,03; 0,33; 0,033" },
+          { "id": "b", "text": "0,03; 0,033; 0,3; 0,33" },
+          { "id": "c", "text": "0,033; 0,03; 0,3; 0,33" },
+          { "id": "d", "text": "0,03; 0,3; 0,033; 0,33" }
+        ],
+        "correctChoiceIds": ["b"]
+      },
+      "hints": [
+        { "order": 1, "text": "Sulygink visus iki tūkstantųjų: 0,300; 0,030; 0,330; 0,033.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Lyginame: 30 < 33 < 300 < 330 (tūkstantųjų).", "latex": "0,030 < 0,033 < 0,300 < 0,330" }
+      ],
+      "answerText": "0,03; 0,033; 0,3; 0,33",
+      "conceptIds": ["desimtainiu-lyginimas"],
+      "formulaIds": [],
+      "mistakeIds": ["nuliu-ignoravimas"],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "dt-ex-15",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Sudėk tris skaičius: 1,2 + 0,34 + 5.",
+      "answer": { "kind": "numeric", "value": 6.54, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Sulygink: 1,20 + 0,34 + 5,00.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1,20 + 0,34 + 5,00 = 6,54.", "latex": "6,54" }
+      ],
+      "answerText": "6,54",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": ["netinkamas-kablelio-dejimas"],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "dt-ex-16",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kiek bus 1,25 padauginus iš 4?",
+      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Sudėk 1,25 keturis kartus arba mąstyk apie pinigus.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "1,25 + 1,25 = 2,5. 2,5 + 2,5 = 5.", "latex": "5" }
+      ],
+      "answerText": "5",
+      "conceptIds": ["desimtaine-trupmena"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "dt-ex-17",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: (4,5 + 1,5) - 0,75.",
+      "answer": { "kind": "numeric", "value": 5.25, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Pirmiausia veiksmas skliaustuose.", "penalty": 0.1 },
+        { "order": 2, "text": "6,00 - 0,75.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "4,5 + 1,5 = 6,0. 6,00 - 0,75 = 5,25.", "latex": "5,25" }
+      ],
+      "answerText": "5,25",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu", "atimtis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "dt-ex-18",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Kuris skaičius suapvalintas iki dešimtųjų duoda 5,0?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          { "id": "a", "text": "4,94" },
+          { "id": "b", "text": "5,06" },
+          { "id": "c", "text": "4,96" },
+          { "id": "d", "text": "5,11" }
+        ],
+        "correctChoiceIds": ["c"]
+      },
+      "hints": [
+        { "order": 1, "text": "Reikia, kad po 9 būtų 5 arba daugiau.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "4,96 -> dešimtosios 9, šimtosios 6. Pridedame 1 prie 9 -> gauname 10 (perkeliame į sveikuosius).", "latex": "5,0" }
+      ],
+      "answerText": "4,96",
+      "conceptIds": ["desimtainiu-apvalinimas"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "dt-ex-19",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Rask skirtumą tarp 1 ir 0,001.",
+      "answer": { "kind": "numeric", "value": 0.999, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "1,000 - 0,001.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Iš tūkstančio tūkstantųjų atimame vieną.", "latex": "0,999" }
+      ],
+      "answerText": "0,999",
+      "conceptIds": ["atimtis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "dt-ex-20",
+      "topicId": "desimtaines-trupmenos",
+      "grade": 5,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Apskaičiuok: 0,1 + 0,01 + 0,001.",
+      "answer": { "kind": "numeric", "value": 0.111, "tolerance": 0 },
+      "hints": [
+        { "order": 1, "text": "Sulygink: 0,100 + 0,010 + 0,001.", "penalty": 0.1 }
+      ],
+      "solutionSteps": [
+        { "text": "Sudėjus gauname po vienetą kiekviename skyriuje.", "latex": "0,111" }
+      ],
+      "answerText": "0,111",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 30
+    }
+  ],
+  "tests": [
+    {
+      "id": "dt-test-1",
+      "title": "Dešimtainės trupmenos: Pagrindai",
+      "scope": "topic",
+      "topicIds": ["desimtaines-trupmenos"],
+      "exerciseIds": ["dt-ex-1", "dt-ex-2", "dt-ex-3", "dt-ex-4", "dt-ex-5", "dt-ex-6", "dt-ex-7", "dt-ex-8"],
+      "timeLimitSeconds": 1500,
+      "masteryWeight": 1.0,
+      "passingThreshold": 0.75
+    },
+    {
+      "id": "dt-test-2",
+      "title": "Dešimtainės trupmenos: Veiksmai ir uždaviniai",
+      "scope": "topic",
+      "topicIds": ["desimtaines-trupmenos"],
+      "exerciseIds": ["dt-ex-9", "dt-ex-10", "dt-ex-11", "dt-ex-12", "dt-ex-13", "dt-ex-14", "dt-ex-15", "dt-ex-16", "dt-ex-17", "dt-ex-18"],
+      "timeLimitSeconds": 2400,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.7
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "srs-dt-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra dešimtainė trupmena?",
+      "back": "Skaičius, užrašytas naudojant kablelį, kurio vardiklis yra 10, 100, 1000...",
+      "conceptIds": ["desimtaine-trupmena"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dt-pos1",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kaip vadinamas pirmas skyrius po kablelio?",
+      "back": "Dešimtosios dalys.",
+      "conceptIds": ["desimtosios-dalys"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dt-pos2",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kaip vadinamas antras skyrius po kablelio?",
+      "back": "Šimtosios dalys.",
+      "conceptIds": ["simtosios-dalys"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dt-rule-align",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kokia pagrindinė taisyklė sudedant dešimtaines trupmenas stulpeliu?",
+      "back": "Kablelis turi būti po kableliu.",
+      "conceptIds": ["sudetis-stulpeliu-desimtainiu"],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-dt-zero-rule",
+      "deck": "theory",
+      "cardType": "method",
+      "front": "Ar pasikeičia skaičius prirašius nulį jo gale po kablelio (pvz., 0,5 -> 0,50)?",
+      "back": "Ne, reikšmė išlieka tokia pati.",
+      "conceptIds": ["skaiciu-sulyginimas"],
+      "defaultEnabled": true
+    }
+  ]
+}

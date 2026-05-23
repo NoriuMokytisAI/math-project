@@ -3,54 +3,105 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+    "notes": "Expanded Grade 9 Olympiad Functions content with SRS seeds"
   },
   "topic": {
     "id": "olimpiada-09-funkcijos",
     "title": "Funkcijos",
     "grade": 9,
-    "strand": "Funkcijos",
+    "strand": "Modeliai ir sąryšiai",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "conceptIds": [],
+    "conceptIds": [
+      "concept-function-domain",
+      "concept-function-range",
+      "concept-functional-equations",
+      "concept-function-periodicity"
+    ],
     "formulaIds": [],
     "mistakeIds": [],
     "exerciseIds": [
-      "ex-olimpiada-09-12"
+      "ex-olimpiada-09-12",
+      "ex-olimpiada-09-f01",
+      "ex-olimpiada-09-f02",
+      "ex-olimpiada-09-f03",
+      "ex-olimpiada-09-f04",
+      "ex-olimpiada-09-f05",
+      "ex-olimpiada-09-f06",
+      "ex-olimpiada-09-f07",
+      "ex-olimpiada-09-f08",
+      "ex-olimpiada-09-f09",
+      "ex-olimpiada-09-f10",
+      "ex-olimpiada-09-f11",
+      "ex-olimpiada-09-f12",
+      "ex-olimpiada-09-f13",
+      "ex-olimpiada-09-f14",
+      "ex-olimpiada-09-f15",
+      "ex-olimpiada-09-f16",
+      "ex-olimpiada-09-f17",
+      "ex-olimpiada-09-f18",
+      "ex-olimpiada-09-f19"
     ]
   },
   "theory": [
     {
-      "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
+      "id": "theory-functions-intro",
+      "title": "Funkcijų savybės olimpiadose",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis."
+          "text": "Olimpiadiniai uždaviniai apie funkcijas dažnai reikalauja ne tik standartinių skaičiavimų, bet ir gilaus savybių supratimo: tolydumo, monotoniškumo, periodiškumo bei simetrijos."
         },
         {
           "type": "method",
-          "text": "Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
+          "text": "Sprendžiant funkcines lygtis, naudinga įstatyti specialias kintamųjų reikšmes (pvz., $x=0$, $y=0$, $x=1$) arba bandyti rasti funkcijos reikšmes konkrečiuose taškuose."
         }
       ]
     },
     {
-      "title": "Kombinatoriniai metodai ir invariantai",
+      "id": "theory-functional-eq",
+      "title": "Funkcinės lygtys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus)."
-        },
-        {
-          "type": "method",
-          "text": "Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
+          "text": "Funkcinė lygtis – tai lygtis, kurioje nežinomasis yra pati funkcija. Klasikinis pavyzdys yra Košy lygtis $f(x+y) = f(x) + f(y)$."
         }
       ]
     }
   ],
-  "concepts": [],
+  "concepts": [
+    {
+      "id": "concept-function-domain",
+      "title": "Apibrėžimo sritis",
+      "type": "concept",
+      "shortDefinition": "Visų leistinų argumento reikšmių aibė.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-function-range",
+      "title": "Reikšmių sritis",
+      "type": "concept",
+      "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-functional-equations",
+      "title": "Funkcinės lygtys",
+      "type": "concept",
+      "shortDefinition": "Lygtys, kurių sprendiniai yra funkcijos.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-function-periodicity",
+      "title": "Periodiškumas",
+      "type": "concept",
+      "shortDefinition": "Savybė, kai $f(x+T) = f(x)$ tam tikram $T \\neq 0$.",
+      "relatedConceptIds": []
+    }
+  ],
   "formulas": [],
   "mistakes": [],
   "workedExamples": [],
@@ -67,16 +118,14 @@
       "statement": "Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, kurios visiems realiesiems skaičiams $x, y$ tenkina lygtį $f(x+y) = f(x) + f(y)$.",
       "answer": {
         "kind": "structuredReasoning",
-        "expectedConclusion": "Rastos visos lygties funkcija."
+        "expectedConclusion": "Rastos visos lygties funkcijos."
       },
       "answerText": "$f(x) = cx$, kur $c$ – bet kokia reali konstanta",
       "coreIdea": {
         "title": "Košy funkcinė lygtis",
         "text": "Tai yra klasikinė Košy funkcinė lygtis. Naudodami indukciją įrodome, kad $f(x) = cx$ visiems racionaliesiems skaičiams, o tolydumas leidžia išplėsti šią savybę visiems realiesiems skaičiams."
       },
-      "strategyTags": [
-        "induction"
-      ],
+      "strategyTags": ["induction"],
       "prerequisiteTopicIds": [],
       "prerequisiteConceptIds": [],
       "expectedMethodIds": [],
@@ -126,9 +175,7 @@
           "id": "ex-olimpiada-09-12-method-1",
           "title": "Pagrindinis įrodymas",
           "methodType": "main",
-          "strategyTags": [
-            "induction"
-          ],
+          "strategyTags": ["induction"],
           "steps": [
             {
               "title": "Racionalusis taškas",
@@ -150,15 +197,6 @@
       ],
       "commonTraps": [
         {
-          "id": "ex-olimpiada-09-12-trap-1",
-          "title": "Neišnagrinėti visi atvejai",
-          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
-          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
-          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        },
-        {
           "id": "ex-olimpiada-09-12-trap-2",
           "title": "Tolydumo sąlygos praleidimas",
           "wrongMove": "Teigiama, kad $f(x)=cx$ galioja visiems realiesiems skaičiams tik įrodžius tai racionaliesiems.",
@@ -169,23 +207,1252 @@
         }
       ],
       "reflectionPrompts": [
-        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-        "Kokie buvo kritiniai sprendimo žingsniai?"
+        "Kas nutiktų, jei funkcija nebūtų tolydi?",
+        "Kokias kitas funkcijas galima rasti įstačius $x+y$?"
       ],
-      "extensionQuestions": [],
       "srsSeeds": [
         {
-          "id": "ex-olimpiada-09-12-srs-1",
+          "id": "srs-functions-cauchy-eq",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Koks yra pagrindinis Košy funkcinės lygties $f(x+y)=f(x)+f(y)$ sprendinys tolydžiosioms funkcijoms?",
+          "back": "$f(x) = cx$",
+          "conceptIds": ["concept-functional-equations"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f01",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite funkcijos $f(x) = \\sqrt{x - \\sqrt{x+1}}$ apibrėžimo sritį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta apibrėžimo sritis."
+      },
+      "answerText": "$x \\ge \\frac{1 + \\sqrt{5}}{2}$",
+      "coreIdea": {
+        "title": "Pošaknio nelygybės",
+        "text": "Visi reiškiniai po kvadratine šaknimi turi būti neneigiami. Reikia spręsti nelygybių sistemą."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-function-domain"],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia turi galioti $x+1 \\ge 0$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$x+1 \\ge 0 \\implies x \\ge -1$."
+        },
+        {
+          "text": "$x \\ge \\sqrt{x+1} \\implies x^2 \\ge x+1$ (kadangi $x \\ge 0$)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f01-method-1",
+          "title": "Nelygybių sistemos sprendimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sąlygos",
+              "action": "Sprendžiame $x+1 \\ge 0$ ir $x^2 \\ge x+1$.",
+              "reason": "Šaknies apibrėžimas.",
+              "latex": "x \\ge \\frac{1+\\sqrt{5}}{2}",
+              "result": "Sritis rasta."
+            }
+          ],
+          "finalAnswer": "$x \\ge \\frac{1 + \\sqrt{5}}{2}$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-domain-sqrt",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kokia yra pagrindinė taisyklė nustatant apibrėžimo sritį su kvadratinėmis šaknimis?",
+          "back": "Reiškinys po kvadratine šaknimi turi būti neneigiamas ($\\ge 0$).",
+          "conceptIds": ["concept-function-domain"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f02",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite funkcijos $f(x) = \\frac{x^2+1}{x^2+2}$ reikšmių sritį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta reikšmių sritis."
+      },
+      "answerText": "$[0.5, 1)$",
+      "coreIdea": {
+        "title": "Reiškinio pertvarkymas",
+        "text": "Užrašykite funkciją pavidalu $1 - \\frac{1}{x^2+2}$ ir stebėkite trupmenos kitimą."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-function-range"],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Padalykite skaitiklį iš vardiklio: $(x^2+2-1)/(x^2+2)$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(x) = 1 - \\frac{1}{x^2+2}$."
+        },
+        {
+          "text": "Mažiausia vardiklio reikšmė yra 2 (kai $x=0$), tada $f(0) = 1 - 1/2 = 0.5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f02-method-1",
+          "title": "Analitinis vertinimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Rėžiai",
+              "action": "Nustatome, kad $x^2+2 \\in [2, \\infty)$.",
+              "reason": "Kvadrato savybė.",
+              "latex": "1 - 1/2 \\le f(x) < 1",
+              "result": "$[0.5, 1)$"
+            }
+          ],
+          "finalAnswer": "$[0.5, 1)$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-range-fraction",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mat...?$",
-          "back": "Tai yra klasikinė Košy funkcinė lygtis. Naudodami indukciją įrodome, kad $f(x) = cx$ visiems racionaliesiems skaičiams, o tolydumas leidžia išplėsti šią savybę visiems realiesiems skaičiams.",
-          "conceptIds": [],
-          "methodIds": [],
+          "front": "Kaip patogiausia rasti trupmeninės funkcijos $\\frac{x^2+a}{x^2+b}$ reikšmių sritį?",
+          "back": "Išskiriant sveikąją dalį, pvz., $1 + \\frac{a-b}{x^2+b}$.",
+          "conceptIds": ["concept-function-range"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f03",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Nustatykite funkcijos $f(x) = x \\cdot \\frac{2^x+1}{2^x-1}$ lyginumą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nustatyta, ar funkcija lyginė, ar nelyginė."
+      },
+      "answerText": "Lyginė",
+      "coreIdea": {
+        "title": "Lyginumo apibrėžimas",
+        "text": "Apskaičiuokite $f(-x)$ ir palyginkite su $f(x)$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įstatykite $-x$ vietoje $x$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(-x) = (-x) \\cdot \\frac{2^{-x}+1}{2^{-x}-1}$."
+        },
+        {
+          "text": "$f(-x) = x \\cdot \\frac{2^x+1}{2^x-1} = f(x)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f03-method-1",
+          "title": "Tiesioginis patikrinimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Skaičiavimas",
+              "action": "Parodome, kad $f(-x) = f(x)$.",
+              "reason": "Algebriniai pertvarkiai.",
+              "latex": "f(-x) = f(x)",
+              "result": "Lyginė"
+            }
+          ],
+          "finalAnswer": "Lyginė"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-parity-def",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kada funkcija vadinama lygine?",
+          "back": "Kai visiems $x$ iš apibrėžimo srities galioja $f(-x) = f(x)$.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f04",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Jei funkcija tenkina sąlygą $f(x+1) = -f(x)$ visiems $x$, raskite jos periodą $T$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Periodiškumo radimas",
+        "text": "Taikykite sąlygą du kartus, kad grįžtumėte prie pradinės funkcijos $f(x)$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-function-periodicity"],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite $f(x+2)$ per $f(x+1)$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(x+2) = -f(x+1) = -(-f(x)) = f(x)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f04-method-1",
+          "title": "Iteracija",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Išvedimas",
+              "action": "Parodome $f(x+2) = f(x)$.",
+              "reason": "Dvigubas neigimas.",
+              "latex": "f(x+2) = f(x)",
+              "result": "2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-antiperiodic",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Jei $f(x+a) = -f(x)$, koks yra mažiausias funkcijos periodas?",
+          "back": "$T = 2a$",
+          "conceptIds": ["concept-function-periodicity"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f05",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite parabolės $y = 2x^2 - 4x + 7$ viršūnės koordinates $(x_v, y_v)$.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "(1, 5)",
+        "acceptedEquivalentForms": ["x=1, y=5"]
+      },
+      "answerText": "(1, 5)",
+      "coreIdea": {
+        "title": "Parabolės viršūnė",
+        "text": "Naudokite formulę $x_v = -b/(2a)$ arba išskirkite pilną kvadratą."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$x_v = -(-4)/(2 \\cdot 2) = 1$."
+        },
+        {
+          "text": "$y_v = 2(1)^2 - 4(1) + 7 = 5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f05-method-1",
+          "title": "Formulė",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Skaičiavimas",
+              "action": "Taikome viršūnės formulę.",
+              "reason": "Simetrijos ašis.",
+              "latex": "x=1, y=5",
+              "result": "(1, 5)"
+            }
+          ],
+          "finalAnswer": "(1, 5)"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-parabola-vertex",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kokia yra kvadratinės funkcijos $ax^2+bx+c$ viršūnės $x$ koordinatės formulė?",
+          "back": "$x_v = -\\frac{b}{2a}$",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f06",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite tiesinę funkciją $f(x)$, jei $f(x+1) = f(x) + 2$ ir $f(0) = 3$.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "2*x+3",
+        "acceptedEquivalentForms": ["3+2x"]
+      },
+      "answerText": "2x + 3",
+      "coreIdea": {
+        "title": "Tiesinės funkcijos koeficientai",
+        "text": "Tiesinė funkcija yra pavidalo $f(x) = ax + b$. Įstatykite sąlygas koeficientams rasti."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$f(x) = ax + 3$."
+        },
+        {
+          "text": "$a(x+1) + 3 = ax + 3 + 2 \\implies a = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f06-method-1",
+          "title": "Koeficientų metodas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Nustatymas",
+              "action": "Randame a ir b.",
+              "reason": "Tiesinės funkcijos savybės.",
+              "latex": "f(x) = 2x + 3",
+              "result": "2x + 3"
+            }
+          ],
+          "finalAnswer": "2x + 3"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-linear-slope",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Ką tiesinėje funkcijoje $f(x)=ax+b$ parodo koeficientas $a$?",
+          "back": "Funkcijos kilimo spartą (nuolydį); $a = f(x+1) - f(x)$.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f07",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Ar egzistuoja tiesinė funkcija $f(x) = ax+b$, tenkinanti sąlygą $f(f(x)) = x+1$?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atsakyta, ar egzistuoja tokia funkcija."
+      },
+      "answerText": "Taip, $f(x) = x + 0.5$",
+      "coreIdea": {
+        "title": "Kompozicijos laipsnis",
+        "text": "Apskaičiuokite $f(f(x))$ per koeficientus $a, b$ ir palyginkite su $x+1$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "$f(f(x)) = a(ax+b) + b = a^2x + ab + b$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$a^2 = 1 \\implies a = 1$ arba $a = -1$."
+        },
+        {
+          "text": "Jei $a=1$, tai $1b + b = 1 \\implies 2b = 1 \\implies b = 0.5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f07-method-1",
+          "title": "Koeficientų sulyginimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sprendimas",
+              "action": "Sulyginame $a^2=1$ ir $ab+b=1$.",
+              "reason": "Lygčių sistemos sprendimas.",
+              "latex": "f(x) = x + 0.5",
+              "result": "Taip, egzistuoja."
+            }
+          ],
+          "finalAnswer": "Taip, $f(x) = x + 0.5$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-composition-linear",
+          "deck": "practice",
+          "cardType": "exercisePattern",
+          "front": "Kokia yra dviejų tiesinių funkcijų kompozicijos $f(f(x))$ forma?",
+          "back": "Tiesinė funkcija pavidalo $a^2x + ab + b$.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f08",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad jei funkcijos grafikas simetriškas taško $(a, 0)$ atžvilgiu, tai $f(a+x) = -f(a-x)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Simetrija įrodyta."
+      },
+      "answerText": "Įrodyta pagal simetrijos apibrėžimą.",
+      "coreIdea": {
+        "title": "Simetrijos centras",
+        "text": "Taškas $(x, y)$ ir jo simetriškas taškas taško $(a, 0)$ atžvilgiu yra $(2a-x, -y)$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Simetrija taško $(a, 0)$ atžvilgiu reiškia, kad $(f(a+x) + f(a-x))/2 = 0$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f08-method-1",
+          "title": "Geometrinė interpretacija",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Įrodymas",
+              "action": "Naudojame taško simetrijos formulę.",
+              "reason": "Vidurio taško koordinatės.",
+              "latex": "f(a+x) = -f(a-x)",
+              "result": "Įrodyta."
+            }
+          ],
+          "finalAnswer": "Įrodyta."
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-point-symmetry",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kokia lygybė aprašo funkcijos simetriją taško $(a, b)$ atžvilgiu?",
+          "back": "$\\frac{f(a+x) + f(a-x)}{2} = b$",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f09",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Nustatykite funkcijos $f(x) = x^3 + x$ monotoniškumą visoje realiųjų skaičių tiesėje.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nustatytas monotoniškumas."
+      },
+      "answerText": "Didėjanti",
+      "coreIdea": {
+        "title": "Didėjimo apibrėžimas",
+        "text": "Patikrinkite skirtumą $f(x_1) - f(x_2)$, kai $x_1 > x_2$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$f(x_1) - f(x_2) = (x_1-x_2)(1 + x_1^2 + x_1x_2 + x_2^2) > 0$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f09-method-1",
+          "title": "Skaidymas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Išvada",
+              "action": "Parodome, kad $f(x_1) > f(x_2)$.",
+              "reason": "Teigiamų narių suma.",
+              "latex": "f(x_1) - f(x_2) > 0",
+              "result": "Didėjanti"
+            }
+          ],
+          "finalAnswer": "Didėjanti"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-monotonic-sum",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kas nutinka sudėjus dvi didėjančias funkcijas?",
+          "back": "Gauta suma taip pat yra didėjanti funkcija.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f10",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visas tolydžiąsias funkcijas $f: (0, \\infty) \\to \\mathbb{R}$, tenkinančias $f(xy) = f(x) + f(y)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos visos funkcijos."
+      },
+      "answerText": "$f(x) = c \\ln x$",
+      "coreIdea": {
+        "title": "Logaritminė lygtis",
+        "text": "Pakeiskite kintamąjį $x = e^u$, $y = e^v$, kad gautumėte Košy lygtį."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-functional-equations"],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$g(u+v) = g(u) + g(v) \\implies g(u) = cu$."
+        },
+        {
+          "text": "$f(x) = c \\ln x$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f10-method-1",
+          "title": "Kintamojo pakeitimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sumažinimas",
+              "action": "Suvedame į Košy lygtį.",
+              "reason": "Eksponentės savybė.",
+              "latex": "f(x) = c \\ln x",
+              "result": "Sprendinys rastas."
+            }
+          ],
+          "finalAnswer": "$f(x) = c \\ln x$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-log-eq",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia funkcija tenkina $f(xy) = f(x) + f(y)$?",
+          "back": "Logaritminė funkcija $f(x) = c \\log_a x$.",
+          "conceptIds": ["concept-functional-equations"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f11",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite funkcijų $f(x) = x^2$ ir $g(x) = 2x + 3$ susikirtimo taškus.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "(-1, 1), (3, 9)",
+        "acceptedEquivalentForms": ["x=-1, x=3"]
+      },
+      "answerText": "(-1, 1) ir (3, 9)",
+      "coreIdea": {
+        "title": "Lygčių sistemos sprendimas",
+        "text": "Sulyginkite funkcijų išraiškas: $x^2 = 2x + 3$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$x^2 - 2x - 3 = 0 \\implies x_1 = -1, x_2 = 3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f11-method-1",
+          "title": "Algebra",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sprendimas",
+              "action": "Randame x ir y.",
+              "reason": "Sankirta reiškia lygias y reikšmes.",
+              "latex": "x=-1, 3",
+              "result": "Taškai rasti."
+            }
+          ],
+          "finalAnswer": "(-1, 1) ir (3, 9)"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-intersection",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti dviejų grafikų $y=f(x)$ ir $y=g(x)$ susikirtimo taškus?",
+          "back": "Sprendžiame lygtį $f(x) = g(x)$, o tada gautas $x$ reikšmes įstatome į bet kurią funkciją $y$ rasti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f12",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite funkcijos $f(x) = \\frac{2x+1}{x-3}$ atvirkštinę funkciją $f^{-1}(x)$.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "(3*x+1)/(x-2)",
+        "acceptedEquivalentForms": ["y = (3x+1)/(x-2)"]
+      },
+      "answerText": "$(3x+1)/(x-2)$",
+      "coreIdea": {
+        "title": "Atvirkštinė funkcija",
+        "text": "Sukeiskite $x$ ir $y$ vietomis ir išreikškite naująjį $y$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$x = (2y+1)/(y-3) \\implies xy - 3x = 2y+1 \\implies y(x-2) = 3x+1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f12-method-1",
+          "title": "Kintamųjų sukeitimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sprendimas",
+              "action": "Išreiškiame y per x.",
+              "reason": "Atvirkštinės funkcijos taisyklė.",
+              "latex": "f^{-1}(x) = \\frac{3x+1}{x-2}",
+              "result": "Atvirkštinė rasta."
+            }
+          ],
+          "finalAnswer": "$(3x+1)/(x-2)$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-inverse-step",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra pirmas žingsnis ieškant atvirkštinės funkcijos?",
+          "back": "Sukeisti vietomis argumentą $x$ ir funkcijos reikšmę $y$.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f13",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite didžiausią funkcijos $f(x) = \\sin x \\cos x$ reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.5,
+        "tolerance": 0
+      },
+      "answerText": "0.5",
+      "coreIdea": {
+        "title": "Dvigubo kampo formulė",
+        "text": "Naudokite tapatybę $\\sin(2x) = 2 \\sin x \\cos x$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$f(x) = 0.5 \\sin(2x)$. Didžiausia reikšmė yra 0.5."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f13-method-1",
+          "title": "Trigonometrija",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Supaprastinimas",
+              "action": "Pertvarkome į sin.",
+              "reason": "Dvigubas kampas.",
+              "latex": "0.5 \\sin(2x)",
+              "result": "0.5"
+            }
+          ],
+          "finalAnswer": "0.5"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-sin-cos-max",
+          "deck": "practice",
+          "cardType": "exercisePattern",
+          "front": "Kokia yra didžiausia reiškinio $\\sin x \\cos x$ reikšmė?",
+          "back": "0.5 (nes tai lygu $0.5 \\sin 2x$).",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f14",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite $f(x)$, jei $f(x) + 2f(1-x) = x^2$ visiems realiesiems $x$.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "(2*(1-x)^2 - x^2)/3",
+        "acceptedEquivalentForms": ["(x^2 - 4x + 2)/3"]
+      },
+      "answerText": "$(x^2 - 4x + 2)/3$",
+      "coreIdea": {
+        "title": "Sistemos sudarymas",
+        "text": "Įstatykite $1-x$ vietoje $x$, kad gautumėte antrą lygtį su tais pačiais nežinomaisiais $f(x)$ ir $f(1-x)$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-functional-equations"],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pakeiskite $x \\to 1-x$: $f(1-x) + 2f(x) = (1-x)^2$.",
+          "penalty": 0.10
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime sistemą: (1) $f(x) + 2f(1-x) = x^2$, (2) $2f(x) + f(1-x) = (1-x)^2$."
+        },
+        {
+          "text": "Išsprendę gauname $f(x) = (2(1-x)^2 - x^2)/3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f14-method-1",
+          "title": "Substitucija",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sistemos sprendimas",
+              "action": "Išsprendžiame tiesinę sistemą funkcijoms.",
+              "reason": "Dviejų lygčių metodas.",
+              "latex": "f(x) = \\frac{x^2-4x+2}{3}",
+              "result": "Sprendinys rastas."
+            }
+          ],
+          "finalAnswer": "$(x^2 - 4x + 2)/3$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-fe-linear-sys",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip spręsti funkcinę lygtį pavidalo $af(x) + bf(g(x)) = h(x)$?",
+          "back": "Sudarome lygčių sistemą įstatydami $x \\to g(x)$, jei $g(g(x)) = x$.",
+          "conceptIds": ["concept-functional-equations"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f15",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite funkcijos $f(x) = \\sin^2 x - 4 \\sin x + 5$ reikšmių sritį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta reikšmių sritis."
+      },
+      "answerText": "$[2, 10]$",
+      "coreIdea": {
+        "title": "Kvadratinė funkcija nuo kito kintamojo",
+        "text": "Tegul $t = \\sin x$, kur $t \\in [-1, 1]$. Sprendžiame kvadratinės funkcijos $g(t) = t^2 - 4t + 5$ reikšmių paiešką intervale $[-1, 1]$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-function-range"],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Funkcija $g(t) = t^2-4t+5$ intervale $[-1, 1]$ yra mažėjanti. $g(1)=2, g(-1)=10$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f15-method-1",
+          "title": "Kintamojo keitimas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Analizė",
+              "action": "Tiriame $t^2-4t+5$ intervale $[-1, 1]$.",
+              "reason": "Sinuso ribos.",
+              "latex": "y \\in [2, 10]",
+              "result": "$[2, 10]$"
+            }
+          ],
+          "finalAnswer": "$[2, 10]$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-range-substitution",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti reiškinio su $\\sin x$ reikšmių sritį?",
+          "back": "Pažymėti $t = \\sin x$ ir ieškoti funkcijos $f(t)$ reikšmių intervale $[-1, 1]$.",
+          "conceptIds": ["concept-function-range"],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f16",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite funkcijos $f(x) = \\sqrt{x+2}$ fiksuotąjį tašką (reikšmę, kuriai $f(x) = x$).",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Fiksuotas taškas",
+        "text": "Sprendžiame lygtį $x = \\sqrt{x+2}$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$x^2 - x - 2 = 0 \\implies x_1 = 2, x_2 = -1$. Tinka tik 2."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f16-method-1",
+          "title": "Lygtis",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Sprendimas",
+              "action": "x=2.",
+              "reason": "Tikriname pašalines šaknis.",
+              "latex": "x^2-x-2=0",
+              "result": "2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-fixed-point-def",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kas yra funkcijos 'fiksuotasis taškas'?",
+          "back": "Argumento reikšmė $x$, kuriai galioja $f(x) = x$.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f17",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Ar funkcija $f(x) = x^2$ yra išgaubta (konveksiška) visoje tiesėje?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atsakyta į klausimą apie išgaubtumą."
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Vidurio taško nelygybė",
+        "text": "Išgaubtai funkcijai galioja $f((x+y)/2) \\le (f(x)+f(y))/2$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$(x-y)^2 \\ge 0$ užtikrina nelygybės teisingumą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f17-method-1",
+          "title": "Nelygybė",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Įrodymas",
+              "action": "Naudojame pilną kvadratą.",
+              "reason": "Kvadrato savybė.",
+              "latex": "(x-y)^2 \\ge 0",
+              "result": "Taip"
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-convex-def",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kokia nelygybė apibrėžia išgaubtąją (konveksišką) funkciją?",
+          "back": "$f(\\frac{x+y}{2}) \\le \\frac{f(x)+f(y)}{2}$",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f18",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "expressionInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite kompoziciją $f(g(x))$, jei $f(x) = 1/x$ ir $g(x) = x^2 + 1$.",
+      "answer": {
+        "kind": "expression",
+        "canonical": "1/(x^2+1)",
+        "acceptedEquivalentForms": ["(x^2+1)^-1"]
+      },
+      "answerText": "$1/(x^2+1)$",
+      "coreIdea": {
+        "title": "Funkcijų kompozicija",
+        "text": "Vietoje $f$ argumento įrašykite visą funkcijos $g$ išraišką."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "$f(g(x)) = 1 / (x^2 + 1)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f18-method-1",
+          "title": "Įstatymas",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Rezultatas",
+              "action": "1/(x^2+1).",
+              "reason": "Apibrėžimas.",
+              "latex": "1/(x^2+1)",
+              "result": "1/(x^2+1)"
+            }
+          ],
+          "finalAnswer": "$1/(x^2+1)$"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-composition-def",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Ką reiškia užrašas $f(g(x))$?",
+          "back": "Funkcijų kompoziciją: funkcijos $f$ argumentas yra kitos funkcijos $g$ reikšmė.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-f19",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Funkcija yra periodinė su periodu $T=2$ ir $f(x) = |x|$, kai $x \\in [-1, 1]$. Raskite $f(5.5)$ reikšmę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.5,
+        "tolerance": 0
+      },
+      "answerText": "0.5",
+      "coreIdea": {
+        "title": "Periodiškumo taikymas",
+        "text": "Naudokite savybę $f(x+kT) = f(x)$, kad argumentą $5.5$ grąžintumėte į žinomą intervalą $[-1, 1]$."
+      },
+      "strategyTags": ["algebraic-transformation"],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": ["concept-function-periodicity"],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atimkite periodo $T=2$ kartotinius iš 5.5.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(5.5) = f(5.5 - 6) = f(-0.5) = |-0.5| = 0.5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-f19-method-1",
+          "title": "Periodo atimtis",
+          "methodType": "main",
+          "strategyTags": ["algebraic-transformation"],
+          "steps": [
+            {
+              "title": "Redukcija",
+              "action": "Grąžiname argumentą į intervalą.",
+              "reason": "Periodiškumas.",
+              "latex": "f(5.5) = f(-0.5) = 0.5",
+              "result": "0.5"
+            }
+          ],
+          "finalAnswer": "0.5"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "srsSeeds": [
+        {
+          "id": "srs-functions-period-reduction",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip apskaičiuoti periodinės funkcijos $f(x)$ reikšmę dideliam $x$?",
+          "back": "Atimant periodo $T$ kartotinius, kol argumentas pateks į bazinį intervalą.",
+          "conceptIds": ["concept-function-periodicity"],
           "defaultEnabled": true
         }
       ]
     }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-09-test-functions",
+      "title": "Funkcijos: Olimpiadinis iššūkis (9 klasė)",
+      "type": "olympiad",
+      "topicIds": ["olimpiada-09-funkcijos"],
+      "exerciseIds": [
+        "ex-olimpiada-09-12",
+        "ex-olimpiada-09-f01",
+        "ex-olimpiada-09-f02",
+        "ex-olimpiada-09-f03",
+        "ex-olimpiada-09-f04",
+        "ex-olimpiada-09-f07",
+        "ex-olimpiada-09-f10",
+        "ex-olimpiada-09-f14",
+        "ex-olimpiada-09-f15",
+        "ex-olimpiada-09-f19"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
 }

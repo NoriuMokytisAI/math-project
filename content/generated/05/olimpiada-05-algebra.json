@@ -29,7 +29,19 @@
       "ex-olimpiada-05-866100dc",
       "ex-olimpiada-05-6622d1e0",
       "ex-olimpiada-05-b53ec404",
-      "ex-olimpiada-05-af96bd64"
+      "ex-olimpiada-05-af96bd64",
+      "ex-olimpiada-05-alg-001",
+      "ex-olimpiada-05-alg-002",
+      "ex-olimpiada-05-alg-003",
+      "ex-olimpiada-05-alg-004",
+      "ex-olimpiada-05-alg-005",
+      "ex-olimpiada-05-alg-006",
+      "ex-olimpiada-05-alg-007",
+      "ex-olimpiada-05-alg-008",
+      "ex-olimpiada-05-alg-009",
+      "ex-olimpiada-05-alg-010",
+      "ex-olimpiada-05-alg-011",
+      "ex-olimpiada-05-alg-012"
     ]
   },
   "theory": [],
@@ -137,13 +149,13 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pažymėkime praėjusių metų skaičių kaip $x$. Tėvo amžius po $x$ metų bus $36+x$, o sūnaus – $8+x$. Pa...",
+          "text": "Atlikite konkretų žingsnį: Pažymėkime praėjusių metų skaičių kaip $x$. Tėvo amžius po $x$ metų bus $36+x$, o sūnaus – $8+x$.",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Po $x$ metų tėvui bus $36+x$, o sūnui $8+x$."
+          "text": "Po $x$ metų tėvui bude $36+x$, o sūnui $8+x$."
         },
         {
           "text": "Sudarome lygtį: $36+x = 3(8+x)$."
@@ -212,8 +224,8 @@
           "id": "ex-olimpiada-05-b95502c0-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Šiuo metu tėvui yra $36$ metai, o jo sūnui – $8$ metai. Po k...",
-          "back": "Taikome šį metodą: Tarkime, kad praėjo $x$ metų. Tuomet tėvui bus $36 + x$ metų, o sūnui $8 + x$ metų. Sudarykite santykio lygtį.",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie amžių pokytį?",
+          "back": "Taikome šį metodą: Tarkime, kad praėjo x metų. Pridėkite x prie kiekvieno asmens dabartinio amžiaus ir sudarykite lygtį pagal sąlygą.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -284,7 +296,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...$",
+          "text": "Išbandome įvairias skliaustų dėjimo vietas. Be skliaustų vertė yra 59. Su (5+7) vertė yra 93.",
           "penalty": 0.12
         }
       ],
@@ -359,8 +371,8 @@
           "id": "ex-olimpiada-05-cbff97d9-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Įrašykite skliaustus reiškiniui $5 + 7 \\times 8 - 6 / 2$ tai...",
-          "back": "Taikome šį metodą: Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti $5+7$ skliaustuose prieš dauginant iš $8$.",
+          "front": "Kaip gauti didžiausią reiškinio vertę pridedant skliaustus?",
+          "back": "Taikykite šį metodą: Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti sudėtį skliaustuose prieš daugybą.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -406,7 +418,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Nereikia skaičiuoti bendrojo vardiklio visoms trupmenoms – tai užimtų per daug laiko. Pastebėkite dėsningumą: $\\frac{1}{2} = 1 - \\frac{1}{2}$, $\\frac{1}{6} = \\frac{1}{2} - \\frac{1}{3}$.",
+          "text": "Nereikia skaičiuoti bendrojo vardiklio visoms trupmenoms – tai užimtų per daug laiko. Pastebėkite dėsningumą: $1/2 = 1 - 1/2$.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -415,14 +427,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Pabandykite kiekvieną dėmenį $\\frac{1}{n(n+1)}$ užrašyti kaip skirtumą $\\frac{1}{n} - \\frac{1}{n+1}$.",
+          "text": "Pabandykite kiekvieną dėmenį užrašyti kaip skirtumą.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+          "text": "Taikykite metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -431,7 +443,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...$",
+          "text": "Pritaikome teleskopinį skaidymą: 1/2 = 1 - 1/2, 1/6 = 1/2 - 1/3, ir t.t. Dauguma narių susinaikins.",
           "penalty": 0.12
         }
       ],
@@ -476,9 +488,9 @@
         {
           "id": "ex-olimpiada-05-eb7e344a-trap-1",
           "title": "Bandymas rasti bendrą vardiklį",
-          "wrongMove": "Mokinys bando sudauginti $1 \\times 2 \\times 3 \\times ... \\times 10$ vardiklyje.",
+          "wrongMove": "Mokinys bando sudauginti visus vardiklius.",
           "whyTempting": "Tai standartinis mokyklinis būdas sudėti trupmenas.",
-          "correction": "Pamatę ilgą trupmenų seką, visada ieškokite gudrybės ar dėsningumo (skaidymo), o ne skaičiuokite tiesiogiai.",
+          "correction": "Pamatę ilgą trupmenų seką, visada ieškokite gudrybės ar dėsningumo (skaidymo).",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -487,9 +499,9 @@
         {
           "id": "ex-olimpiada-05-eb7e344a-trap-2",
           "title": "Netinkamas narių kiekio suskaičiavimas",
-          "wrongMove": "Manoma, kad paskutinis narys yra $\\frac{1}{9}$ arba $\\frac{1}{11}$.",
-          "whyTempting": "Sąlygos užrašas '...+ 1/(9*10)' gali būti klaidingai interpretuojamas.",
-          "correction": "Atidžiai pažiūrėkite į paskutinį sandaugos narį vardiklyje – jis nurodo, kur baigiasi seka.",
+          "wrongMove": "Manoma, kad paskutinis narys yra 1/9.",
+          "whyTempting": "Sąlygos užrašas gali būti klaidingai interpretuojamas.",
+          "correction": "Atidžiai pažiūrėkite į paskutinį sandaugos narį vardiklyje.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -506,8 +518,8 @@
           "id": "ex-olimpiada-05-eb7e344a-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...$",
-          "back": "Taikome šį metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+          "front": "Kas yra teleskopinė suma trupmenose?",
+          "back": "Tai suma, kurioje kiekvienas narys užrašomas kaip skirtumas, todėl dauguma vidinių narių susinaikina.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -562,7 +574,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\%$?",
+          "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs?",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
@@ -578,7 +590,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...$",
+          "text": "Naujas taiklumas yra (pataikymai + 8) / (bandymai + 10) = 0.65.",
           "penalty": 0.12
         }
       ],
@@ -639,7 +651,7 @@
           "title": "Netvarkingas procentų skaičiavimas",
           "wrongMove": "Manoma, kad $60\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
           "whyTempting": "Klaidingas supratimas apie procentų prigimtį.",
-          "correction": "Procentai visada skaičiuojami nuo kintančios visumos, todėl juos visada paverskite skaičiais arba trupmenomis.",
+          "correction": "Procentai visada skaičiuojami nuo kintančios visumos.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -656,8 +668,8 @@
           "id": "ex-olimpiada-05-1fc20a2a-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs...",
-          "back": "Taikome šį metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
+          "front": "Kaip skaičiuojamas taiklumo procentas po papildomų metimų?",
+          "back": "Sudaroma lygtis: (Esami pataikymai + nauji pataikymai) / (Esami bandymai + nauji bandymai) = Naujas procentas.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -703,7 +715,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
+          "text": "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis'. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -712,14 +724,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Pagalvokite: jei mastelio vardiklis didėja, tai atstumas brėžinyje turi mažėti. Kiek kartų padidėjo vardiklis?",
+          "text": "Pagalvokite: kiek kartų padidėjo mastelio vardiklis?",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
+          "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -728,7 +740,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\ 000$, o naujasis mastelis – $1 : 200\\ 000$. Naujasis mastelis yra $20...$",
+          "text": "Mastelis padidėjo 4 kartus, todėl atstumas brėžinyje turi sumažėti 4 kartus. 8 / 4 = 2.",
           "penalty": 0.12
         }
       ],
@@ -755,7 +767,7 @@
             {
               "title": "Mastelių palyginimas",
               "action": "Nustatome, kiek kartų pasikeitė mastelio koeficientas.",
-              "reason": "Mastelis yra tiesioginis mažinimo koeficientas, todėl jo pokytis tiesiogiai veikia brėžinio matmenis.",
+              "reason": "Mastelis yra tiesioginis mažinimo koeficientas.",
               "result": "Koeficientas $4$."
             },
             {
@@ -773,9 +785,9 @@
         {
           "id": "ex-olimpiada-05-866100dc-trap-1",
           "title": "Daugyba vietoje dalybos",
-          "wrongMove": "Mokinys $8$ padaugina iš $4$ ir gauna $32$ cm.",
-          "whyTempting": "Matomas skaičių didėjimas ($200k > 50k$) klaidingai susiejamas su atstumo didėjimu.",
-          "correction": "Įsivaizduokite realybę: kuo 'stambesnis' mastelis, tuo daugiau detalių (ir centimetrų) telpa, o 'smulkesniame' (pvz., pasaulio žemėlapyje) viskas yra maža.",
+          "wrongMove": "Mokinys $8$ padaugina iš $4$.",
+          "whyTempting": "Matomas skaičių didėjimas klaidingai susiejamas su atstumo didėjimu.",
+          "correction": "Įsivaizduokite realybę: didesnis mastelio skaičius reiškia mažesnį vaizdą.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -785,8 +797,8 @@
           "id": "ex-olimpiada-05-866100dc-trap-2",
           "title": "Vienetų supainiojimas",
           "wrongMove": "Bandoma paversti mastelį į kilometrus ir pametami nuliai.",
-          "whyTempting": "Dažnai mokiniai bando atlikti per daug nereikalingų skaičiavimų.",
-          "correction": "Jei klausia centimetrų kitame žemėlapyje, geriausia naudoti tiesioginį mastelių santykį be vertimo į kilometrus.",
+          "whyTempting": "Nereikalingas sudėtingumas.",
+          "correction": "Geriausia naudoti tiesioginį mastelių santykį.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -803,8 +815,8 @@
           "id": "ex-olimpiada-05-866100dc-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dvie...",
-          "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
+          "front": "Kaip keičiasi atstumas brėžinyje, kai mastelio vardiklis padidėja?",
+          "back": "Atstumas brėžinyje sumažėja tiek pat kartų, kiek kartų padidėjo mastelio vardiklis.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -850,7 +862,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Pažiūrėkite į skirtumus tarp gretimų narių: $3, 6, 12, 24...$ Ką pastebite apie šiuos skirtumus?",
+          "text": "Pažiūrėkite į skirtumus tarp gretimų narių: $3, 6, 12, 24...$",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -859,14 +871,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Kiekvienas narys yra gautas padauginus prieš tai buvusį iš $2$ ir kažką pridėjus. Pabandykite rasti šį skaičių.",
+          "text": "Kiekvienas narys yra gautas padauginus prieš tai buvusį iš $2$ ir pridėjus $1$.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
+          "text": "Taikykite taisyklę paskutiniam nariui.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -875,7 +887,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Išnagrinėkime sekos narių skirtumus ir dėsningumus:\n- $2 \\times 2 + 1 = 5$\n- $5 \\times 2 + 1 = 11$\n-...",
+          "text": "47 * 2 + 1 = 95.",
           "penalty": 0.12
         }
       ],
@@ -901,14 +913,14 @@
           "steps": [
             {
               "title": "Dėsningumo nustatymas",
-              "action": "Lyginame gretimų narių santykius ir skirtumus, ieškodami pasikartojančio veiksmo.",
-              "reason": "Sekos olimpiadose dažnai remiasi tiesinėmis rekurentinėmis formulėmis.",
+              "action": "Lyginame gretimų narių santykius ir skirtumus.",
+              "reason": "Sekos olimpiadose dažnai remiasi taisyklėmis.",
               "result": "Formulė $2n+1$."
             },
             {
               "title": "Ekstrapoliacija",
               "action": "Taikome rastą taisyklę paskutiniam žinomam nariui.",
-              "reason": "Jei dėsningumas pasitvirtina bent keturis kartus, juo galima remtis tolimesniam nariui nustatyti.",
+              "reason": "Dėsningumas pasitvirtino.",
               "result": "Rastas skaičius $95$."
             }
           ],
@@ -920,9 +932,9 @@
         {
           "id": "ex-olimpiada-05-6622d1e0-trap-1",
           "title": "Tik vieno skirtumo patikrinimas",
-          "wrongMove": "Pastebėjus, kad $5-2=3$, manoma, kad seka yra aritmetinė (pridedama po 3).",
-          "whyTempting": "Per didelis skubėjimas ir paprasčiausio modelio ieškojimas.",
-          "correction": "Visada patikrinkite dėsningumą bent tarp trijų ar keturių narių porų.",
+          "wrongMove": "Manoma, kad seka yra aritmetinė.",
+          "whyTempting": "Per didelis skubėjimas.",
+          "correction": "Visada patikrinkite dėsningumą tarp visų narių porų.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -930,10 +942,10 @@
         },
         {
           "id": "ex-olimpiada-05-6622d1e0-trap-2",
-          "title": "Skaičiavimo klaida dauginant",
-          "wrongMove": "Apskaičiuojama $47 \\times 2 = 84$ arba panašiai.",
-          "whyTempting": "Stresas arba neatidumas atliekant elementarius veiksmus.",
-          "correction": "Atlikite svarbius skaičiavimus raštu arba patikrinkite juos du kartus.",
+          "title": "Skaičiavimo klaida",
+          "wrongMove": "Apskaičiuojama 47 * 2 = 84.",
+          "whyTempting": "Neatidumas.",
+          "correction": "Atlikite svarbius skaičiavimus raštu.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -950,8 +962,8 @@
           "id": "ex-olimpiada-05-6622d1e0-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...$",
-          "back": "Taikome šį metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
+          "front": "Ką pirmiausia tikrinti pamačius skaičių seką?",
+          "back": "Skirtumus tarp gretimų narių ir jų santykius (daugybą).",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -997,7 +1009,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Įsivaizduokite, kad einate atgal nuo galutinio rezultato $9$. Jei paskutinis veiksmas buvo dalyba iš $5$, koks skaičius buvo prieš tai?",
+          "text": "Įsivaizduokite, kad einate atgal nuo galutinio rezultato $9$.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1006,14 +1018,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Kiekvieną atliktą veiksmą pakeiskite priešingu veiksmu: dalybą – daugyba, atimtį – sudėtimi.",
+          "text": "Kiekvieną atliktą veiksmą pakeiskite priešingu veiksmu.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą.",
+          "text": "Dalybą keiskite daugyba, atimtį – sudėtimi.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -1022,7 +1034,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...$",
+          "text": "9 * 5 = 45, 45 + 7 = 52, 52 / 4 = 13.",
           "penalty": 0.12
         }
       ],
@@ -1049,13 +1061,13 @@
             {
               "title": "Atbulinės eigos metodas",
               "action": "Vykdome visus uždavinyje aprašytus veiksmus priešinga tvarka.",
-              "reason": "Tai paprasčiausias būdas rasti pradinį skaičių lygčių sistemose su viena grandine.",
+              "reason": "Tai paprasčiausias būdas rasti pradinį skaičių.",
               "result": "Grandinė: $9 \\to 45 \\to 52 \\to 13$."
             },
             {
               "title": "Patikra",
-              "action": "Įstatome gautą skaičių į pradinę sąlygą ir atliekame veiksmus tiesiogine tvarka.",
-              "reason": "Tai leidžia išvengti aritmetinių klaidų sprendžiant atbulai.",
+              "action": "Įstatome gautą skaičių į pradinę sąlygą.",
+              "reason": "Išvengiame klaidų.",
               "result": "Patvirtinta $13$."
             }
           ],
@@ -1067,9 +1079,9 @@
         {
           "id": "ex-olimpiada-05-b53ec404-trap-1",
           "title": "Veiksmų tvarkos sumaišymas",
-          "wrongMove": "Bandoma pirma pridėti $7$, o tada dauginti iš $5$ (neteisinga eiga).",
-          "whyTempting": "Nesilaikoma loginės sekos 'nuo galo'.",
-          "correction": "Užsirašykite veiksmus tiesiogine tvarka ir tada skaitykite juos iš dešinės į kairę.",
+          "wrongMove": "Bandoma pirma pridėti 7, o tada dauginti iš 5.",
+          "whyTempting": "Nesilaikoma sekos.",
+          "correction": "Užsirašykite veiksmus tiesiogine tvarka ir tada skaitykite juos atgal.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -1078,9 +1090,9 @@
         {
           "id": "ex-olimpiada-05-b53ec404-trap-2",
           "title": "Klaida dalinant 52 iš 4",
-          "wrongMove": "Gaunamas rezultatas $12$ arba $14$.",
-          "whyTempting": "Skaičiavimas mintyse be pasitikrinimo.",
-          "correction": "Skaidykite $52$ į $40 + 12$, tada dalinti iš $4$ bus daug paprasčiau.",
+          "wrongMove": "Gaunamas neteisingas rezultatas.",
+          "whyTempting": "Skaičiavimas mintyse.",
+          "correction": "Skaidykite 52 į 40 + 12.",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1097,8 +1109,8 @@
           "id": "ex-olimpiada-05-b53ec404-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Jeigu tam tikrą sugalvotą skaičių padaugintume iš $4$, iš ga...",
-          "back": "Taikome šį metodą: Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą.",
+          "front": "Kada taikomas 'atbulinės eigos' metodas?",
+          "back": "Kai duotas galutinis rezultatas ir veiksmų grandinė, o reikia rasti pradinį skaičių.",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1144,7 +1156,7 @@
         {
           "order": 1,
           "kind": "orientation",
-          "text": "Pirmiausia sužinokite, kiek kilometrų keleivinis traukinys nuvažiavo per tas $2$ valandas, kol greitasis dar stovėjo stotyje.",
+          "text": "Pirmiausia sužinokite, kiek kilometrų keleivinis traukinys nuvažiavo per tas $2$ valandas.",
           "revealsConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1153,14 +1165,14 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Greitasis traukinys yra $20$ km/h greitesnis. Tai reiškia, kad kiekvieną valandą jis sumažina atstumą iki keleivinio traukinio $20$ kilometrų.",
+          "text": "Greitasis traukinys yra $20$ km/h greitesnis. Tai yra artėjimo greitis.",
           "revealsConceptIds": [],
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Taikykite metodą: Per $2$ valandas keleivinis traukinys jau nuvažiavo tam tikrą atstumą. Greitasis traukinys jį vejasi greičiu, kuris lygus greičių skirtumui.",
+          "text": "Padalykite nuvažiuotą atstumą iš artėjimo greičio.",
           "revealsConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -1169,7 +1181,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Atlikite konkretų žingsnį: Keleivinis traukinys per $2$ valandas nuvažiavo $s = 60 \\text{ km/h} \\times 2 \\text{ h} = 120$ km. G...",
+          "text": "120 km / 20 km/h = 6 val.",
           "penalty": 0.12
         }
       ],
@@ -1195,14 +1207,14 @@
           "steps": [
             {
               "title": "Pradinio atotrūkio nustatymas",
-              "action": "Apskaičiuojame atstumą, kurį nuvažiavo pirmas objektas iki antrojo starto.",
-              "reason": "Tai yra 'vymos' distancija, kurią turi įveikti greitesnis objektas.",
+              "action": "Apskaičiuojame atstumą, kurį nuvažiavo pirmas objektas.",
+              "reason": "Tai yra distancija, kurią reikia įveikti.",
               "result": "$120$ km."
             },
             {
               "title": "Artėjimo greičio skaičiavimas",
-              "action": "Randame greičių skirtumą ir padalijame atstumą iš šio skirtumo.",
-              "reason": "Santykinis greitis parodo, kaip greitai mažėja tarpas tarp objektų.",
+              "action": "Randame greičių skirtumą.",
+              "reason": "Santykinis greitis parodo artėjimą.",
               "result": "Susitikimo laikas $6$ val."
             }
           ],
@@ -1214,9 +1226,9 @@
         {
           "id": "ex-olimpiada-05-af96bd64-trap-1",
           "title": "Bendraujantis laiko skaičiavimas",
-          "wrongMove": "Bandoma dalinti $120$ iš $80$ (greitojo traukinio greičio).",
-          "whyTempting": "Mokinys pamiršta, kad pirmasis traukinys taip pat juda į priekį.",
-          "correction": "Visada naudokite santykinį (artėjimo) greitį, kai abu objektai juda ta pačia kryptimi.",
+          "wrongMove": "Bandoma dalinti 120 iš 80.",
+          "whyTempting": "Mokinys pamiršta, kad pirmasis traukinys taip pat juda.",
+          "correction": "Naudokite santykinį greitį.",
           "reviewConceptIds": [
             "olimpiada-05-concept-method"
           ],
@@ -1224,10 +1236,10 @@
         },
         {
           "id": "ex-olimpiada-05-af96bd64-trap-2",
-          "title": "Laiko pridėjimas prie pradinio vėlavimo",
-          "wrongMove": "Manoma, kad atsakymas yra $6+2=8$ valandos.",
-          "whyTempting": "Sumišimas dėl to, nuo kurio momento skaičiuojamas laikas.",
-          "correction": "Atidžiai skaitykite klausimą: ar prašoma laiko nuo greitojo traukinio išvykimo, ar nuo keleivinio?",
+          "title": "Laiko pridėjimas",
+          "wrongMove": "Atsakoma 8 valandos.",
+          "whyTempting": "Sumišimas dėl laiko atskaitos.",
+          "correction": "Skaitykite klausimą: nuo kurio traukinio išvykimo?",
           "reviewConceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1244,8 +1256,8 @@
           "id": "ex-olimpiada-05-af96bd64-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Keleivinis traukinys išvyko iš stoties $60$ km/h greičiu. Po...",
-          "back": "Taikome šį metodą: Per $2$ valandas keleivinis traukinys jau nuvažiavo tam tikrą atstumą. Greitasis traukinys jį vejasi greičiu, kuris lygus greičių skirtumui.",
+          "front": "Koks yra artėjimo greitis, kai vienas objektas vejasi kitą?",
+          "back": "Objektų greičių skirtumas (v_greitesnis - v_letenis).",
           "conceptIds": [
             "olimpiada-05-concept-logic"
           ],
@@ -1255,6 +1267,1131 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-05-alg-001",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Trys draugai – Jonas, Petras ir Andrius – stovi eilėje. Jonas sako: 'Aš nesu viduryje'. Petras sako: 'Aš esu dešinėje'. Andrius sako: 'Jonas yra viduryje'. Žinoma, kad tik vienas iš jų sako tiesą. Kas stovi viduryje?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Jonas"
+          },
+          {
+            "id": "b",
+            "text": "Petras"
+          },
+          {
+            "id": "c",
+            "text": "Andrius"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "coreIdea": {
+        "title": "Prieštaravimų paieška",
+        "text": "Pastebėkite, kad Jono ir Andriaus teiginiai yra priešingi. Vienas iš jų būtinai sako tiesą."
+      },
+      "strategyTags": [
+        "logic",
+        "contradiction"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi tik vienas sako tiesą, o Jonas ir Andrius teigia priešingus dalykus, tiesą sako arba Jonas, arba Andrius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei vienas iš jų sako tiesą, tai Petras būtinai meluoja.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite atvejį, kai Jonas sako tiesą. Tada Petras ir Andrius turi meluoti.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Atvejų analizė",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Teiginių analizė",
+              "action": "Jonas sako 'Ne viduryje', Andrius sako 'Jonas viduryje'. Tai priešingi teiginiai.",
+              "reason": "Vienas iš jų būtinai tiesa, kitas melas.",
+              "result": "Tiesa pasakyta vieno iš jų."
+            },
+            {
+              "title": "Išvada apie Petrą",
+              "action": "Kadangi tiesa jau panaudota, Petras meluoja.",
+              "reason": "Sąlyga sako, kad tik viena tiesa.",
+              "result": "Petras nėra dešinėje."
+            },
+            {
+              "title": "Varianto patikra",
+              "action": "Jei Andrius sako tiesą, Jonas yra viduryje. Tada Jonas meluoja (jis viduryje), Petras meluoja (nėra dešinėje). Viskas tinka.",
+              "reason": "Tikriname ar tenkinamos visos sąlygos.",
+              "result": "Viduryje yra Jonas."
+            }
+          ],
+          "finalAnswer": "Jonas"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Manymas, kad visi sako tiesą",
+          "wrongMove": "Bandoma rasti vietą, kuri tiktų visiems teiginiams.",
+          "whyTempting": "Įprasta pasitikėti tuo, kas sakoma.",
+          "correction": "Atidžiai perskaitykite sąlygą: tik vienas sako tiesą."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl svarbu rasti priešingus teiginius?",
+        "Ar rezultatas pasikeistų, jei tiesą sakytų du žmonės?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-logic-contradiction",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką daryti loginiame uždavinyje, kai du žmonės teigia priešingus dalykus?",
+          "back": "Vienas iš jų būtinai sako tiesą, o kitas meluoja. Tai padeda apriboti galimus variantus.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-002",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Raskite kitą sekos narį: $1, 4, 9, 16, 25, \\dots$",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Kvadratų seka",
+        "text": "Pastebėkite, kad kiekvienas skaičius yra natūraliojo skaičiaus kvadratas: $1^2, 2^2, 3^2, \\dots$"
+      },
+      "strategyTags": [
+        "sequences",
+        "pattern-recognition"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pažiūrėkite į skirtumus tarp gretimų narių: $3, 5, 7, 9, \\dots$",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Skirtumai yra nelyginiai skaičiai. Koks bus kitas skirtumas?",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sekantis skirtumas po $9$ yra $11$. Pridėkite jį prie $25$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Kvadratų metodas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Dėsningumo radimas",
+              "action": "Pastebime, kad $1=1\\times 1, 4=2\\times 2, 9=3\\times 3, 16=4\\times 4, 25=5\\times 5$.",
+              "reason": "Skaičiai auga kaip natūraliųjų skaičių kvadratai.",
+              "result": "Sekantis turi būti $6\\times 6$."
+            },
+            {
+              "title": "Skaičiavimas",
+              "action": "$6 \\times 6 = 36$.",
+              "reason": "Daugybos veiksmas.",
+              "result": "36"
+            }
+          ],
+          "finalAnswer": "36"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Aritmetinė seka",
+          "wrongMove": "Manoma, kad visada pridedamas tas pats skaičius.",
+          "whyTempting": "Paprasčiausias sekos tipas.",
+          "correction": "Visada patikrinkite skirtumus tarp visų pateiktų narių."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip dar galima užrašyti šią seką?",
+        "Koks būtų 10-asis šios sekos narys?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-square-numbers",
+          "deck": "theory",
+          "cardType": "concept",
+          "front": "Kokie yra pirmieji 6 kvadratiniai skaičiai?",
+          "back": "1, 4, 9, 16, 25, 36.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "36"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-003",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Sekos nariai gaunami sudėjus du prieš tai einančius narius (kaip Fibonačio sekoje). Pirmas narys yra $2$, trečias narys yra $7$. Raskite penktąjį sekos narį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Atstatykite praleistą narį",
+        "text": "Jei pirmas narys $a_1=2$, o trečias $a_3=7$, tai antrasis narys $x$ turi tenkinti $2+x=7$."
+      },
+      "strategyTags": [
+        "sequences",
+        "algebraic-representation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pavadinkime antrąjį narį $x$. Tada trečias narys yra $2+x$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Iš lygties $2+x=7$ raskite $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Žinodami pirmą, antrą ir trečią narius, apskaičiuokite ketvirtą ir penktą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Nuoseklus skaičiavimas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Antro nario radimas",
+              "action": "$7 - 2 = 5$.",
+              "reason": "Pirmas + Antras = Trečias.",
+              "result": "Antras narys yra 5."
+            },
+            {
+              "title": "Ketvirto nario radimas",
+              "action": "$5 + 7 = 12$.",
+              "reason": "Antras + Trečias = Ketvirtas.",
+              "result": "Ketvirtas narys yra 12."
+            },
+            {
+              "title": "Penkto nario radimas",
+              "action": "$7 + 12 = 19$.",
+              "reason": "Trečias + Ketvirtas = Penktas.",
+              "result": "Penktas narys yra 19."
+            }
+          ],
+          "finalAnswer": "19"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Narių eilės sumaišymas",
+          "wrongMove": "Manoma, kad 7 yra antras narys.",
+          "whyTempting": "Neatidus sąlygos skaitymas.",
+          "correction": "Visada pasižymėkite narių numerius: $a_1, a_2, a_3...$"
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks būtų nulisasis narys šioje sekoje?",
+        "Kaip greitai auga Fibonačio tipo sekos?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-fibonacci-rule",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia yra Fibonačio sekos taisyklė?",
+          "back": "Kiekvienas narys (nuo trečiojo) yra lygus dviejų prieš jį einančių narių sumai.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "19"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-004",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 65,
+      "statement": "Parduotuvėje $3$ obuoliai ir $2$ kriušės kainuoja $1.10$ Eur, o $2$ obuoliai ir $3$ kriušės kainuoja $1.15$ Eur. Kiek kainuoja vienas obuolys centais?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Sudėkite pirkinius",
+        "text": "Sudėję abu pirkinių rinkinius, sužinosite, kiek kainuoja $5$ obuoliai ir $5$ kriušės kartu."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "word-problems"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sudėkite abi kainas: $1.10 + 1.15 = 2.25$ Eur.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Padalykite iš $5$, kad sužinotumėte $1$ obuolio ir $1$ kriušės kainą.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Palyginkite $3$ obuolius + $2$ kriušes su $2$ obuoliais + $2$ kriušėmis.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Grupavimo metodas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Bendra kaina",
+              "action": "$110 + 115 = 225$ ct.",
+              "reason": "Sudedame abu pirkinių rinkinius.",
+              "result": "5 obuoliai + 5 kriušės = 225 ct."
+            },
+            {
+              "title": "Vieno rinkinio kaina",
+              "action": "$225 / 5 = 45$ ct.",
+              "reason": "Sužinome 1 obuolio ir 1 kriušės kainą.",
+              "result": "1 obuolys + 1 kriušė = 45 ct."
+            },
+            {
+              "title": "Dvieju rinkinių kaina",
+              "action": "$45 \\times 2 = 90$ ct.",
+              "reason": "Mums reikia 2 obuolių ir 2 kriušių kainos palyginimui.",
+              "result": "2 obuoliai + 2 kriušės = 90 ct."
+            },
+            {
+              "title": "Obuolio kaina",
+              "action": "$110 - 90 = 20$ ct.",
+              "reason": "Iš pirmo rinkinio atimame antrą nustatytą vertę.",
+              "result": "20 ct."
+            }
+          ],
+          "finalAnswer": "20"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Kriušės kainos radimas vietoje obuolio",
+          "wrongMove": "Atsakoma 25 ct.",
+          "whyTempting": "Užmirštama, ko tiksliai klausia uždavinys.",
+          "correction": "Visada perskaitykite klausimą prieš rašydami atsakymą."
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar galima šį uždavinį išspręsti atimant pirkinius?",
+        "Kaip pasikeistų sprendimas, jei obuolių skaičius būtų vienodas?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-shopping-logic",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia strategija padeda, kai duoti dviejų skirtingų pirkinių rinkinių kainos?",
+          "back": "Sudėti abu rinkinius ir rasti vienos poros (A+B) kainą.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "20"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-005",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Koks yra mažiausias penkiaženklis skaičius, kuris dalijasi iš $9$ ir visi jo skaitmenys yra skirtingi?",
+      "answer": {
+        "kind": "numeric",
+        "value": 10260,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Mažiausi skaitmenys",
+        "text": "Norint gauti mažiausią skaičių, pirmuose skaitmenyse turi būti kuo mažesni skaičiai: $1, 0, 2, \\dots$"
+      },
+      "strategyTags": [
+        "divisibility",
+        "construction"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite skaičių $1, 0, 2, 3...$",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskaičiuokite keturių pirmų skaitmenų sumą.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skaitmenų suma turi dalintis iš 9.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Sistemingas parinkimas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Pradžia",
+              "action": "Fiksuojame $102...$",
+              "reason": "Mažiausias penkiaženklis prasideda 1, po to 0, po to 2.",
+              "result": "102xx"
+            },
+            {
+              "title": "Tikrinimas",
+              "action": "Suma $1+0+2+6+0=9$. Visi skaitmenys skirtingi.",
+              "reason": "Mažiausia įmanoma suma dalijantis iš 9.",
+              "result": "10260."
+            }
+          ],
+          "finalAnswer": "10260"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Pasikartojantys skaitmenys",
+          "wrongMove": "Atsakoma 10008.",
+          "whyTempting": "Pamirštama sąlyga.",
+          "correction": "Visada pasitikrinkite visas sąlygas."
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar skaičius gali baigtis nuliu?",
+        "Koks būtų didžiausias toks skaičius?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-divisibility-9-def",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Kada skaičius dalijasi iš 9?",
+          "back": "Kai jo skaitmenų suma dalijasi iš 9.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "10260"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-006",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Ar įmanoma $10$ nelyginių skaičių sudėti taip, kad jų suma būtų $101$? Atsakymą pagrįskite.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne, neįmanoma."
+      },
+      "coreIdea": {
+        "title": "Paritetas (lyginumas)",
+        "text": "Dviejų nelyginių skaičių suma visada yra lyginė."
+      },
+      "strategyTags": [
+        "parity",
+        "logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite, kas nutinka sudėjus du nelyginius skaičius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskirstykite $10$ skaičių į poras.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kokia bus penkių lyginių skaičių suma?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Pariteto įrodymas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Savybės taikymas",
+              "action": "Nelyginis + Nelyginis = Lyginis.",
+              "reason": "Pagrindinė lyginumo savybė.",
+              "result": "Kiekviena pora yra lyginė."
+            },
+            {
+              "title": "Suminė savybė",
+              "action": "Penkių lyginių skaičių suma yra lyginė.",
+              "reason": "Lyginių skaičių suma visada lyginė.",
+              "result": "Bendra suma privalo būti lyginė."
+            },
+            {
+              "title": "Prieštaravimas",
+              "action": "101 yra nelyginis.",
+              "reason": "Palyginimas.",
+              "result": "Neįmanoma."
+            }
+          ],
+          "finalAnswer": "Ne, neįmanoma."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Bandymas rasti pavyzdį",
+          "wrongMove": "Mokinys gaišta laiką skaičiuodamas.",
+          "whyTempting": "Tikimasi, kad sprendimas yra skaičiavimas.",
+          "correction": "Naudokite paritetą."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas pasikeistų, jei skaičių būtų 11?",
+        "Ar 10 lyginių skaičių suma gali būti nelyginė?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-odd-sum-rule",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia yra lyginių skaičių kiekio nelyginių skaičių suma?",
+          "back": "Lyginė.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "Ne, neįmanoma."
+    },
+    {
+      "id": "ex-olimpiada-05-alg-007",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Melagių saloje riteriai visada sako tiesą, melagiai visada meluoja. A sako: 'Mes abu esame melagiai'. Kas yra A ir B?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "A – melagis, B – riteris"
+          },
+          {
+            "id": "b",
+            "text": "Abu melagiai"
+          },
+          {
+            "id": "c",
+            "text": "A – riteris, B – melagis"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "coreIdea": {
+        "title": "Riterio taisyklė",
+        "text": "Riteris niekada negali pasakyti 'Aš esu melagis', nes tai būtų melas."
+      },
+      "strategyTags": [
+        "logic",
+        "truth-tellers-liars"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ar riteris gali pasakyti, kad jis yra melagis?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei A būtų riteris, jo sakinys turėtų būti tiesa.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Vadinasi, A yra melagis.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Loginė dedukcija",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "A analizė",
+              "action": "Darome prielaidą, kad A yra riteris. Prieštaravimas.",
+              "reason": "Riteris negali meluoti.",
+              "result": "A yra melagis."
+            },
+            {
+              "title": "B analizė",
+              "action": "Jei teiginys 'Mes abu melagiai' yra melas, tai B nėra melagis.",
+              "reason": "Loginė taisyklė.",
+              "result": "B yra riteris."
+            }
+          ],
+          "finalAnswer": "A – melagis, B – riteris"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Manymas, kad abu melagiai",
+          "wrongMove": "Pasirenkamas variantas 'abu melagiai'.",
+          "whyTempting": "A sakinys atrodo tiesus.",
+          "correction": "Melagis negali pasakyti tiesos."
+        }
+      ],
+      "reflectionPrompts": [
+        "Ką A pasakytų, jei jie abu būtų riteriai?",
+        "Ar įmanoma situacija, kurioje abu sako 'Aš esu melagis'?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-liar-rule",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką riteris niekada negali pasakyti apie save?",
+          "back": "Kad jis yra melagis.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "Correct choice"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-008",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Skaičiai A, B ir C pasižymi šiomis savybėmis: $A+B=10$, $B+C=12$, $A+C=14$. Raskite sumą $A+B+C$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Skaidymas ir sumavimas",
+        "text": "Sudėję visas tris lygtis, kiekvieną raidę gausite po du kartus."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "equations"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sudėkite visas lygtis.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Gausite: $2A + 2B + 2C = 36$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padalykite gautą sumą iš $2$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Bendros sumos metodas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Sudėtis",
+              "action": "Sumuojame: 10 + 12 + 14 = 36.",
+              "reason": "Sudedame visas lygtis.",
+              "result": "2 * Suma = 36."
+            },
+            {
+              "title": "Galutinis veiksmas",
+              "action": "36 / 2 = 18.",
+              "reason": "Padalijame iš 2.",
+              "result": "18"
+            }
+          ],
+          "finalAnswer": "18"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Konkrečių skaičių ieškojimas",
+          "wrongMove": "Mokinys spėlioja skaičius.",
+          "whyTempting": "Atrodo saugiau.",
+          "correction": "Olimpiadose ieškokite greitesnių būdų."
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks yra skaičius A?",
+        "Kas būtų, jei viena suma būtų neigiama?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-cyclic-sum-rule",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti A+B+C, jei duotos porų sumos?",
+          "back": "Sudėti visas sumas ir padalinti iš 2.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "18"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-009",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Du bėgikai startuoja atstumu $400$ m ir bėga vienas priešais kitą. Vieno greitis $5$ m/s, kito – $3$ m/s. Po kiek sekundžių jie susitiks?",
+      "answer": {
+        "kind": "numeric",
+        "value": 50,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Artėjimo greitis",
+        "text": "Bėgant vienas priešais kitą, atstumas tarp jų mažėja greičių suma."
+      },
+      "strategyTags": [
+        "movement",
+        "relative-speed"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek metrų bėgikai nubėga kartu per sekundę?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Greičių suma yra $8$ m/s.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Atstumą dalinkite iš greičio.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Santykinio greičio metodas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Sumavimas",
+              "action": "5 + 3 = 8.",
+              "reason": "Bėga vienas prieš kitą.",
+              "result": "8 m/s."
+            },
+            {
+              "title": "Dalyba",
+              "action": "400 / 8 = 50.",
+              "reason": "Laikas = Atstumas / Greitis.",
+              "result": "50 s."
+            }
+          ],
+          "finalAnswer": "50"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Greičių atimtis",
+          "wrongMove": "Apskaičiuojama 5 - 3.",
+          "whyTempting": "Painiojama su kitais uždaviniais.",
+          "correction": "Judant priešpriešiais, greičiai sumuojami."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kiek metrų kiekvienas nubėgo?",
+        "Kas pasikeistų bėgant ta pačia kryptimi?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-rel-speed-def",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Artėjimo greitis bėgant priešpriešiais?",
+          "back": "v1 + v2.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "50"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-010",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Meistras darbą atlieka per $6$ valandas, o mokinys – per $12$ valandų. Per kiek valandų jie atliks darbą kartu?",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Darbo našumas",
+        "text": "Apskaičiuokite, kokią dalį darbo kiekvienas atlieka per $1$ valandą."
+      },
+      "strategyTags": [
+        "work-problems",
+        "fractions"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Per valandą meistras padaro 1/6 darbo.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sudėkite dalis: 1/6 + 1/12.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Rezultatas parodys bendrą našumą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Našumo metodas",
+          "methodType": "main",
+          "steps": [
+            {
+              "title": "Dalių nustatymas",
+              "action": "1/6 ir 1/12.",
+              "reason": "Dalis per valandą.",
+              "result": "Našumai."
+            },
+            {
+              "title": "Sumavimas",
+              "action": "1/6 + 1/12 = 3/12 = 1/4.",
+              "reason": "Sudėtis.",
+              "result": "1/4 per valandą."
+            },
+            {
+              "title": "Laiko radimas",
+              "action": "1 / (1/4) = 4.",
+              "reason": "Visas darbas dalinamas iš našumo.",
+              "result": "4 valandos."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Vidurkio skaičiavimas",
+          "wrongMove": "Atsakoma 9.",
+          "whyTempting": "Paprasta.",
+          "correction": "Laikas turi būti mažesnis už abiejų atskirus laikus."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl negalima sudėti valandų?",
+        "Kiek laiko užtruktų trys meistrai?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-work-rule",
+          "deck": "theory",
+          "cardType": "formula",
+          "front": "Darbo formulė?",
+          "back": "1/T = 1/t1 + 1/t2.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "4"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-011",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Dėžėje yra $10$ raudonų ir $10$ mėlynų kojinių. Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad būtume tikri, jog turime bent vieną porą tos pačios spalvos?",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Dirichlė principas",
+        "text": "Jei turime tik dvi spalvas, bet traukiame tris daiktus, bent du sutaps."
+      },
+      "strategyTags": [
+        "pigeonhole-principle",
+        "logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Blogiausias atvejis: viena raudona, viena mėlyna.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Trečia kojinė būtinai sudarys porą.",
+          "penalty": 0.08
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Analizė",
+          "steps": [
+            {
+              "title": "Atvejų analizė",
+              "action": "Ištraukus 3 kojines, jos negali būti visos skirtingos.",
+              "reason": "Spalvų tik 2.",
+              "result": "3"
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Visų kojinių skaičiavimas",
+          "wrongMove": "Atsakoma 11.",
+          "whyTempting": "Painiojama sąlyga.",
+          "correction": "Reikia BENT VIENOS poros."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kiek reikėtų kojinių, jei spalvų būtų 3?",
+        "Kiek reikėtų raudonai porai?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-pigeon-basic",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Dirichlė principas 2 spalvoms?",
+          "back": "Reikia 3 daiktų porai garantuoti.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "3"
+    },
+    {
+      "id": "ex-olimpiada-05-alg-012",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Magiškajame kvadrate $3\\times 3$ visų sumos lygios. Viršutinėje eilutėje yra $8, 1, 6$. Koks skaičius apatinės eilutės viduryje?",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "coreIdea": {
+        "title": "Centrinio skaičiaus savybė",
+        "text": "Centrinis skaičius yra sumos trečdalis."
+      },
+      "strategyTags": [
+        "logic",
+        "magic-squares"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suma yra 15.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Centras yra 5.",
+          "penalty": 0.08
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "method-1",
+          "title": "Užpildymas",
+          "steps": [
+            {
+              "title": "Suma",
+              "action": "8+1+6=15.",
+              "reason": "Duota.",
+              "result": "15."
+            },
+            {
+              "title": "Skaičiavimas",
+              "action": "1+5+x=15.",
+              "reason": "Vidurinis stulpelis.",
+              "result": "9."
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "trap-1",
+          "title": "Spėliojimas",
+          "wrongMove": "Neteisingas užpildymas.",
+          "whyTempting": "Greitis.",
+          "correction": "Raskite sumą."
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokie kiti skaičiai?",
+        "Ar sumos gali skirtis?"
+      ],
+      "srsSeeds": [
+        {
+          "id": "srs-magic-3x3",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "3x3 magiško kvadrato suma per centrą C?",
+          "back": "3 * C.",
+          "defaultEnabled": true
+        }
+      ],
+      "answerText": "9"
     }
   ],
   "tests": [
@@ -1266,16 +2403,16 @@
         "olimpiada-05-algebra"
       ],
       "exerciseIds": [
-        "ex-olimpiada-05-031859fd",
-        "ex-olimpiada-05-45f96440",
-        "ex-olimpiada-05-cb54fdbc",
-        "ex-olimpiada-05-a3f215fa",
-        "ex-olimpiada-05-f5a521c1",
-        "ex-olimpiada-05-ee0b640b",
-        "ex-olimpiada-05-b95502c0",
-        "ex-olimpiada-05-cbff97d9",
-        "ex-olimpiada-05-eb7e344a",
-        "ex-olimpiada-05-1fc20a2a"
+        "ex-olimpiada-05-alg-001",
+        "ex-olimpiada-05-alg-002",
+        "ex-olimpiada-05-alg-003",
+        "ex-olimpiada-05-alg-004",
+        "ex-olimpiada-05-alg-005",
+        "ex-olimpiada-05-alg-006",
+        "ex-olimpiada-05-alg-007",
+        "ex-olimpiada-05-alg-008",
+        "ex-olimpiada-05-alg-009",
+        "ex-olimpiada-05-alg-010"
       ],
       "masteryWeight": 1.5
     }

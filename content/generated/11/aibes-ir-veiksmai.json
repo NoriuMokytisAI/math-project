@@ -1,0 +1,1586 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "matematikaPrograma.txt",
+    "textbook": "matematika_k12.pdf",
+    "notes": "Aibių teorijos pagrindai, veiksmai su aibėmis ir Veno diagramos."
+  },
+  "topic": {
+    "id": "aibes-ir-veiksmai",
+    "title": "Aibės ir veiksmai su jomis",
+    "grade": 11,
+    "strand": "Skaičiai ir skaičiavimai",
+    "level": "curriculum",
+    "order": 1,
+    "estimatedStudyMinutes": 120,
+    "prerequisiteTopicIds": [
+      "realieji-skaiciai-modulis-saknys-laipsniai"
+    ],
+    "nextTopicIds": [
+      "kombinatorika-ir-binomas"
+    ],
+    "conceptIds": [
+      "aibe",
+      "elementas",
+      "tuscia-aibe",
+      "poaibis",
+      "aibiu-sajunga",
+      "aibiu-sankirta",
+      "aibiu-skirtumas",
+      "veno-diagrama",
+      "realiuju-skaiciu-aibe",
+      "baigtine-aibe"
+    ],
+    "formulaIds": [
+      "sajungos-apibrezimas",
+      "sankirtos-apibrezimas",
+      "skirtumo-apibrezimas"
+    ],
+    "mistakeIds": [
+      "painioja-sajunga-ir-sankirta",
+      "skirtumo-tvarka",
+      "tuscios-aibes-zymejimas",
+      "elementas-vs-poaibis"
+    ],
+    "exerciseIds": [
+      "aibes-ex-001",
+      "aibes-ex-002",
+      "aibes-ex-003",
+      "aibes-ex-004",
+      "aibes-ex-005",
+      "aibes-ex-006",
+      "aibes-ex-007",
+      "aibes-ex-008",
+      "aibes-ex-009",
+      "aibes-ex-010",
+      "aibes-ex-011",
+      "aibes-ex-012",
+      "aibes-ex-013",
+      "aibes-ex-014",
+      "aibes-ex-015",
+      "aibes-ex-016",
+      "aibes-ex-017",
+      "aibes-ex-018",
+      "aibes-ex-019",
+      "aibes-ex-020"
+    ]
+  },
+  "theory": [
+    {
+      "id": "aibes-savoka",
+      "title": "Aibės sąvoka ir žymėjimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[aibe|Aibė]] yra tam tikrų objektų, vadinamų [[elementas|elementais]], rinkinys. Aibės dažniausiai žymimos didžiosiomis raidėmis (A, B, C...), o jų elementai išvardijami riestiniuose skliaustuose."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aibe",
+          "text": "Aibė – tai visuma objektų, kurie turi bendrą požymį arba yra tiesiog sujungti į vieną rinkinį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei objektas x priklauso aibei A, rašome x ∈ A. Jei nepriklauso – x ∉ A. Aibė, neturinti nei vieno elemento, vadinama [[tuscia-aibe|tuščiąja aibe]] ir žymima ∅."
+        }
+      ]
+    },
+    {
+      "id": "aibiu-sajunga-ir-sankirta",
+      "title": "Aibių sąjunga ir sankirta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pagrindiniai veiksmai su aibėmis yra [[aibiu-sajunga|sąjunga]] ir [[aibiu-sankirta|sankirta]]."
+        },
+        {
+          "type": "property",
+          "text": "Aibių A ir B sąjunga (A ∪ B) yra aibė, kurią sudaro visi elementai, priklausantys bent vienai iš tų aibių."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sajungos-apibrezimas",
+          "latex": "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}"
+        },
+        {
+          "type": "property",
+          "text": "Aibių A ir B sankirta (A ∩ B) yra aibė, kurią sudaro tik tie elementai, kurie priklauso ir aibei A, ir aibei B tuo pačiu metu."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sankirtos-apibrezimas",
+          "latex": "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}"
+        }
+      ]
+    },
+    {
+      "id": "aibiu-skirtumas-ir-poaibis",
+      "title": "Aibių skirtumas ir poaibis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[aibiu-skirtumas|Aibių skirtumas]] (A \\ B) yra aibė, kurią sudaro elementai, priklausantys aibei A, bet nepriklausantys aibei B."
+        },
+        {
+          "type": "formula",
+          "formulaId": "skirtumo-apibrezimas",
+          "latex": "A \\setminus B = \\{x \\mid x \\in A \\text{ ir } x \\notin B\\}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei kiekvienas aibės B elementas priklauso ir aibei A, sakome, kad B yra aibės A [[poaibis|poaibis]] (B ⊆ A)."
+        }
+      ]
+    },
+    {
+      "id": "veno-diagramos-teorija",
+      "title": "Veno diagramos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[veno-diagrama|Veno diagramos]] yra vaizdus būdas aibėms ir veiksmams su jomis pavaizduoti plokštumoje (dažniausiai apskritimais)."
+        },
+        {
+          "type": "note",
+          "text": "Veno diagramos padeda spręsti uždavinius, kuriuose reikia rasti elementų skaičių susikertančiose grupėse."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "aibe",
+      "title": "Aibė",
+      "type": "concept",
+      "shortDefinition": "Objektų rinkinys, traktuojamas kaip visuma.",
+      "intuition": "Tai krepšys, į kurį sumesti tam tikri daiktai (skaičiai, raidės).",
+      "formal": "Aibė – matematikos pirminė sąvoka, reiškianti objektų rinkinį.",
+      "relatedConceptIds": [
+        "elementas",
+        "tuscia-aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "elementas",
+      "title": "Elementas",
+      "type": "concept",
+      "shortDefinition": "Objektas, priklausantis aibei.",
+      "intuition": "Tai vienas iš krepšyje esančių daiktų.",
+      "formal": "Aibę sudarantis objektas.",
+      "notation": [
+        "∈"
+      ],
+      "relatedConceptIds": [
+        "aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "tuscia-aibe",
+      "title": "Tuščioji aibė",
+      "type": "concept",
+      "shortDefinition": "Aibė, neturinti nei vieno elemento.",
+      "intuition": "Tuščias krepšys.",
+      "formal": "Aibė A, kuriai su kiekvienu x galioja x ∉ A.",
+      "notation": [
+        "∅",
+        "{}"
+      ],
+      "relatedConceptIds": [
+        "aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "poaibis",
+      "title": "Poaibis",
+      "type": "concept",
+      "shortDefinition": "Aibė, kurios visi elementai priklauso kitai aibei.",
+      "intuition": "Mažesnis krepšys, kurio visas turinys yra didesniame krepšyje.",
+      "formal": "B ⊆ A, jei ∀x (x ∈ B ⇒ x ∈ A).",
+      "notation": [
+        "⊆"
+      ],
+      "relatedConceptIds": [
+        "aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aibiu-sajunga",
+      "title": "Aibių sąjunga",
+      "type": "concept",
+      "shortDefinition": "Elementų, priklausančių bent vienai aibei, rinkinys.",
+      "intuition": "Visų daiktų iš abiejų krepšių supylimas į vieną.",
+      "formal": "A ∪ B = {x | x ∈ A ∨ x ∈ B}.",
+      "notation": [
+        "∪"
+      ],
+      "relatedConceptIds": [
+        "aibiu-sankirta",
+        "aibiu-skirtumas"
+      ],
+      "prerequisiteConceptIds": [
+        "aibe"
+      ],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aibiu-sankirta",
+      "title": "Aibių sankirta",
+      "type": "concept",
+      "shortDefinition": "Elementų, priklausančių abiem aibėms, rinkinys.",
+      "intuition": "Tik tie daiktai, kurie yra abiejuose krepšiuose vienu metu.",
+      "formal": "A ∩ B = {x | x ∈ A ∧ x ∈ B}.",
+      "notation": [
+        "∩"
+      ],
+      "relatedConceptIds": [
+        "aibiu-sajunga",
+        "aibiu-skirtumas"
+      ],
+      "prerequisiteConceptIds": [
+        "aibe"
+      ],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "aibiu-skirtumas",
+      "title": "Aibių skirtumas",
+      "type": "concept",
+      "shortDefinition": "Aibės A elementai, kurie nepriklauso aibei B.",
+      "intuition": "Iš krepšio A išmetame visus daiktus, kurie yra ir krepšyje B.",
+      "formal": "A \\ B = {x | x ∈ A ∧ x ∉ B}.",
+      "notation": [
+        "\\",
+        "−"
+      ],
+      "relatedConceptIds": [
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "prerequisiteConceptIds": [
+        "aibe"
+      ],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "veno-diagrama",
+      "title": "Veno diagrama",
+      "type": "concept",
+      "shortDefinition": "Geometrinis aibių vaizdavimo būdas.",
+      "intuition": "Apskritimų brėžiniai, rodantys, kaip aibės persidengia.",
+      "formal": "Aibių tarpusavio santykių vizualizacija plokštumoje.",
+      "relatedConceptIds": [
+        "aibe",
+        "aibiu-sankirta"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "realiuju-skaiciu-aibe",
+      "title": "Realiuju skaiciu aibe",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "baigtine-aibe",
+      "title": "Baigtine aibe",
+      "type": "concept",
+      "shortDefinition": "Definicija.",
+      "intuition": "",
+      "formal": "",
+      "notation": [],
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "formulas": [
+    {
+      "id": "sajungos-apibrezimas",
+      "title": "Aibių sąjungos apibrėžimas",
+      "latex": "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}",
+      "conditions": [
+        "A ir B yra aibės"
+      ],
+      "variables": {
+        "A": "pirmoji aibė",
+        "B": "antroji aibė",
+        "\\cup": "sąjungos ženklas"
+      },
+      "explanation": "Sąjunga apima visus elementus, esančius bent vienoje iš aibių.",
+      "relatedConceptIds": [
+        "aibiu-sajunga"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sankirtos-apibrezimas",
+      "title": "Aibių sankirtos apibrėžimas",
+      "latex": "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}",
+      "conditions": [
+        "A ir B yra aibės"
+      ],
+      "variables": {
+        "A": "pirmoji aibė",
+        "B": "antroji aibė",
+        "\\cap": "sankirtos ženklas"
+      },
+      "explanation": "Sankirta apima tik bendrus aibių elementus.",
+      "relatedConceptIds": [
+        "aibiu-sankirta"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "skirtumo-apibrezimas",
+      "title": "Aibių skirtumo apibrėžimas",
+      "latex": "A \\setminus B = \\{x \\mid x \\in A \\text{ ir } x \\notin B\\}",
+      "conditions": [
+        "A ir B yra aibės"
+      ],
+      "variables": {
+        "A": "aibė, iš kurios atimame",
+        "B": "atimančioji aibė",
+        "\\setminus": "skirtumo ženklas"
+      },
+      "explanation": "Skirtumas palieka tik tuos A elementus, kurių nėra aibėje B.",
+      "relatedConceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "defaultSrs": true
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "painioja-sajunga-ir-sankirta",
+      "title": "Painioja sąjungą (∪) su sankirta (∩)",
+      "conceptIds": [
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "wrongPattern": "Naudoja sankirtą, kai reikia apjungti visus elementus.",
+      "whyItHappens": "Ženklai vizualiai panašūs (apversti).",
+      "correction": "Atsiminkite: ∪ – kaip puodelis (supilame viską), ∩ – kaip kalnas (tik tai, kas viršūnėje/bendra).",
+      "wrongExample": "{1, 2} ∩ {2, 3} = {1, 2, 3}",
+      "correctExample": "{1, 2} ∩ {2, 3} = {2}",
+      "defaultSrs": true
+    },
+    {
+      "id": "skirtumo-tvarka",
+      "title": "Neteisinga aibių skirtumo tvarka",
+      "conceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "wrongPattern": "Mano, kad A \\ B yra tas pats, kas B \\ A.",
+      "whyItHappens": "Sąjunga ir sankirta yra komutatyvios, o skirtumas – ne.",
+      "correction": "A \\ B reiškia elementus iš A, kurių nėra B.",
+      "wrongExample": "{1, 2} \\ {2, 3} = {3}",
+      "correctExample": "{1, 2} \\ {2, 3} = {1}",
+      "defaultSrs": true
+    },
+    {
+      "id": "tuscios-aibes-zymejimas",
+      "title": "Tuščiosios aibės žymėjimas skliaustuose",
+      "conceptIds": [
+        "tuscia-aibe"
+      ],
+      "wrongPattern": "Rašo {∅} tuščiajai aibei pažymėti.",
+      "whyItHappens": "Mano, kad visos aibės turi būti skliaustuose.",
+      "correction": "Rašykite tiesiog ∅ arba {}. Žymėjimas {∅} reiškia aibę, kurios vienintelis elementas yra tuščioji aibė.",
+      "wrongExample": "{∅}",
+      "correctExample": "∅",
+      "defaultSrs": true
+    },
+    {
+      "id": "elementas-vs-poaibis",
+      "title": "Painioja elementą su poaibiu",
+      "conceptIds": [
+        "elementas",
+        "poaibis"
+      ],
+      "wrongPattern": "Rašo {1} ∈ A vietoj {1} ⊆ A.",
+      "whyItHappens": "Mano, kad bet koks objektas su skliaustais yra elementas.",
+      "correction": "Naudokite ∈ elementui, ⊆ – aibei (poaibiui).",
+      "wrongExample": "{1} ∈ {1, 2}",
+      "correctExample": "{1} ⊆ {1, 2}",
+      "defaultSrs": true
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "aibiu-veiksmai-1",
+      "title": "Sąjungos ir sankirtos radimas",
+      "level": "easy",
+      "problem": "Duotos aibės A = {1, 2, 3, 4} ir B = {3, 4, 5, 6}. Raskite A ∪ B ir A ∩ B.",
+      "conceptIds": [
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sąjungai surašome visus elementus iš abiejų aibių, nepasikartodami.",
+          "latex": "A \\cup B = \\{1, 2, 3, 4, 5, 6\\}"
+        },
+        {
+          "text": "Sankirtai surašome tik tuos elementus, kurie yra ir A, ir B.",
+          "latex": "A \\cap B = \\{3, 4\\}"
+        }
+      ],
+      "answer": "A ∪ B = {1, 2, 3, 4, 5, 6}, A ∩ B = {3, 4}"
+    },
+    {
+      "id": "aibiu-skirtumas-exmp",
+      "title": "Aibių skirtumo skaičiavimas",
+      "level": "easy",
+      "problem": "Duotos aibės A = {a, b, c, d} ir B = {c, d, e}. Raskite A \\ B ir B \\ A.",
+      "conceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Iš aibės A išmetame elementus, kurie yra aibėje B (tai c ir d).",
+          "latex": "A \\setminus B = \\{a, b\\}"
+        },
+        {
+          "text": "Iš aibės B išmetame elementus, kurie yra aibėje A (tai c ir d).",
+          "latex": "B \\setminus A = \\{e\\}"
+        }
+      ],
+      "answer": "A \\ B = {a, b}, B \\ A = {e}"
+    },
+    {
+      "id": "veno-diagrama-problem",
+      "title": "Uždavinys su Veno diagrama",
+      "level": "medium",
+      "problem": "Klasėje yra 30 mokinių. 20 mokinių lanko krepšinį, 15 – futbolą, o 10 lanko abu. Kiek mokinių nelanko nei vieno iš šių būrelių?",
+      "conceptIds": [
+        "veno-diagrama",
+        "aibiu-sajunga"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Apskaičiuojame, kiek mokinių lanko bent vieną būrelį (sąjunga). Naudojame formulę |A ∪ B| = |A| + |B| - |A ∩ B|.",
+          "latex": "20 + 15 - 10 = 25"
+        },
+        {
+          "text": "Iš bendro mokinių skaičiaus atimame tuos, kurie lanko bent vieną būrelį.",
+          "latex": "30 - 25 = 5"
+        }
+      ],
+      "answer": "5 mokiniai"
+    },
+    {
+      "id": "poaibis-nustatymas",
+      "title": "Poaibių radimas",
+      "level": "medium",
+      "problem": "Raskite visus aibės A = {1, 2} poaibius.",
+      "conceptIds": [
+        "poaibis",
+        "tuscia-aibe"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Prisiminkite, kad tuščioji aibė yra kiekvienos aibės poaibis.",
+          "latex": "\\emptyset"
+        },
+        {
+          "text": "Surašome poaibius su vienu elementu.",
+          "latex": "\\{1\\}, \\{2\\}"
+        },
+        {
+          "text": "Surašome pačią aibę (kiekviena aibė yra savo pačios poaibis).",
+          "latex": "\\{1, 2\\}"
+        }
+      ],
+      "answer": "∅, {1}, {2}, {1, 2}"
+    },
+    {
+      "id": "sudetingas-veiksmas",
+      "title": "Kelių veiksmų derinimas",
+      "level": "hard",
+      "problem": "A = {1, 2, 3}, B = {2, 3, 4}, C = {3, 4, 5}. Raskite (A ∩ B) ∪ (B \\ C).",
+      "conceptIds": [
+        "aibiu-sankirta",
+        "aibiu-skirtumas",
+        "aibiu-sajunga"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pirmiausia randame A ∩ B.",
+          "latex": "A \\cap B = \\{2, 3\\}"
+        },
+        {
+          "text": "Tada randame B \\ C.",
+          "latex": "B \\setminus C = \\{2\\}"
+        },
+        {
+          "text": "Galiausiai randame gautų aibių sąjungą.",
+          "latex": "\\{2, 3\\} \\cup \\{2\\} = \\{2, 3\\}"
+        }
+      ],
+      "answer": "{2, 3}"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "aibes-ex-001",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "numericInput",
+      "statement": "Kiek elementų turi aibė A = {2, 4, 6, 8, 10}?",
+      "answer": {
+        "kind": "numeric",
+        "value": 5
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Suskaičiuokite, kiek skaičių yra riestiniuose skliaustuose.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Elementai: 2, 4, 6, 8, 10. Iš viso yra 5 elementai.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "elementas"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "aibes-ex-002",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Kuris simbolis reiškia tuščiąją aibę?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "∞"
+          },
+          {
+            "id": "b",
+            "text": "∅"
+          },
+          {
+            "id": "c",
+            "text": "∑"
+          },
+          {
+            "id": "d",
+            "text": "Δ"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tuščioji aibė žymima perbrauktu nuliu.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Standartinis tuščiosios aibės žymėjimas yra ∅.",
+          "latex": "\\emptyset"
+        }
+      ],
+      "answerText": "∅",
+      "conceptIds": [
+        "tuscia-aibe"
+      ],
+      "estimatedSeconds": 15
+    },
+    {
+      "id": "aibes-ex-003",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "A = {1, 3}, B = {3, 5}. Raskite A ∩ B.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "{1, 3, 5}"
+          },
+          {
+            "id": "b",
+            "text": "{3}"
+          },
+          {
+            "id": "c",
+            "text": "{1, 5}"
+          },
+          {
+            "id": "d",
+            "text": "∅"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ieškokite bendro elemento abiejose aibėse.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičius 3 yra ir aibėje A, ir aibėje B.",
+          "latex": "\\{3\\}"
+        }
+      ],
+      "answerText": "{3}",
+      "conceptIds": [
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "aibes-ex-004",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "A = {1, 2}, B = {3, 4}. Raskite A ∪ B.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "{1, 2, 3, 4}"
+          },
+          {
+            "id": "b",
+            "text": "{1, 2}"
+          },
+          {
+            "id": "c",
+            "text": "∅"
+          },
+          {
+            "id": "d",
+            "text": "{1, 3}"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sujunkite visus elementus į vieną aibę.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sąjunga apima visus elementus: 1, 2, 3, 4.",
+          "latex": "\\{1, 2, 3, 4\\}"
+        }
+      ],
+      "answerText": "{1, 2, 3, 4}",
+      "conceptIds": [
+        "aibiu-sajunga"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "aibes-ex-005",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "A = {1, 2, 3}, B = {2}. Raskite A \\ B.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "{1, 2}"
+          },
+          {
+            "id": "b",
+            "text": "{1, 3}"
+          },
+          {
+            "id": "c",
+            "text": "{3}"
+          },
+          {
+            "id": "d",
+            "text": "{2}"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Išmeskite skaičių 2 iš pirmosios aibės.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pašalinus 2 iš {1, 2, 3}, lieka {1, 3}.",
+          "latex": "\\{1, 3\\}"
+        }
+      ],
+      "answerText": "{1, 3}",
+      "conceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "aibes-ex-006",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Ar tiesa, kad {1} ⊆ {1, 2, 3}?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Taip"
+          },
+          {
+            "id": "b",
+            "text": "Ne"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Patikrinkite, ar visi kairiosios aibės elementai yra dešiniojoje.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Elementas 1 yra aibėje {1, 2, 3}, todėl tai poaibis.",
+          "latex": "\\text{Taip}"
+        }
+      ],
+      "answerText": "Taip",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "estimatedSeconds": 20
+    },
+    {
+      "id": "aibes-ex-007",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Aibė A turi 10 elementų, B turi 8 elementus, o jų sankirta A ∩ B turi 3 elementus. Kiek elementų turi sąjunga A ∪ B?",
+      "answer": {
+        "kind": "numeric",
+        "value": 15
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite formulę: |A ∪ B| = |A| + |B| - |A ∩ B|.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 + 8 - 3 = 15.",
+          "latex": "15"
+        }
+      ],
+      "answerText": "15",
+      "conceptIds": [
+        "aibiu-sajunga"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "aibes-ex-008",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Raskite aibės A = {x | x yra lyginis skaičius} ir B = {x | x yra pirminis skaičius} sankirtą A ∩ B.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "∅"
+          },
+          {
+            "id": "b",
+            "text": "{2}"
+          },
+          {
+            "id": "c",
+            "text": "{2, 4, 6}"
+          },
+          {
+            "id": "d",
+            "text": "Visi lyginiai skaičiai"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Koks skaičius yra ir lyginis, ir pirminis?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Vienintelis lyginis pirminis skaičius yra 2.",
+          "latex": "\\{2\\}"
+        }
+      ],
+      "answerText": "{2}",
+      "conceptIds": [
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "aibes-ex-009",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Kiek iš viso poaibių turi aibė A = {a, b, c}?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Aibės su n elementų poaibių skaičius lygus 2^n.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2^3 = 8.",
+          "latex": "8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "aibes-ex-010",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "A = {1, 2, 3, 4, 5}, B = {2, 4, 6}. Raskite (A \\ B) ∩ {1, 2}.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "{1}"
+          },
+          {
+            "id": "b",
+            "text": "{1, 2}"
+          },
+          {
+            "id": "c",
+            "text": "{1, 3, 5}"
+          },
+          {
+            "id": "d",
+            "text": "{2}"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite A \\ B.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Tada raskite gautos aibės ir {1, 2} sankirtą.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "A \\ B = {1, 3, 5}. {1, 3, 5} ∩ {1, 2} = {1}.",
+          "latex": "\\{1\\}"
+        }
+      ],
+      "answerText": "{1}",
+      "conceptIds": [
+        "aibiu-skirtumas",
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "aibes-ex-011",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "numericInput",
+      "statement": "Iš 100 žmonių 70 kalba lietuviškai, 50 – angliškai. Kiek žmonių kalba abiem kalbomis, jei visi kalba bent viena?",
+      "answer": {
+        "kind": "numeric",
+        "value": 20
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite formulę n(A ∪ B) = n(A) + n(B) - n(A ∩ B).",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "100 = 70 + 50 - x => x = 20.",
+          "latex": "20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "aibes-ex-012",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kuri iš šių aibių yra begalinė?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Lietuvos miestų aibė"
+          },
+          {
+            "id": "b",
+            "text": "Sveikųjų skaičių aibė Z"
+          },
+          {
+            "id": "c",
+            "text": "{1, 2, 3, ..., 1000000}"
+          },
+          {
+            "id": "d",
+            "text": "∅"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Begalinė aibė turi galą?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičių aibės kaip Z, N, R yra begalinės.",
+          "latex": "\\mathbb{Z}"
+        }
+      ],
+      "answerText": "Sveikųjų skaičių aibė Z",
+      "conceptIds": [
+        "baigtine-aibe"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "aibes-ex-013",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "A yra B poaibis, o B yra C poaibis. Kuri išvada teisinga?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "C yra A poaibis"
+          },
+          {
+            "id": "b",
+            "text": "A yra C poaibis"
+          },
+          {
+            "id": "c",
+            "text": "A ir C neturi bendrų elementų"
+          },
+          {
+            "id": "d",
+            "text": "A ∪ C = B"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pabandykite nupiešti tris apskritimus vieną kitame.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Jei A ⊆ B ir B ⊆ C, tai A ⊆ C (tranzityvumas).",
+          "latex": "A \\subseteq C"
+        }
+      ],
+      "answerText": "A yra C poaibis",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "aibes-ex-014",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Grupėje yra 10 žmonių. 5 mėgsta obuolius, 4 mėgsta kriaušes, 2 mėgsta ir obuolius, ir kriaušes. Kiek žmonių nemėgsta nei obuolių, nei kriaušių?",
+      "answer": {
+        "kind": "numeric",
+        "value": 3
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Raskite mėgstančių bent vieną vaisių skaičių.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "5 + 4 - 2 = 7. 10 - 7 = 3.",
+          "latex": "3"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "aibiu-sajunga"
+      ],
+      "estimatedSeconds": 60
+    },
+    {
+      "id": "aibes-ex-015",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "hard",
+      "type": "multipleChoice",
+      "statement": "Raskite (A \\ B) ∪ (B \\ A), kai A = {1, 2, 3}, B = {3, 4, 5}.",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "{1, 2, 4, 5}"
+          },
+          {
+            "id": "b",
+            "text": "{3}"
+          },
+          {
+            "id": "c",
+            "text": "{1, 2, 3, 4, 5}"
+          },
+          {
+            "id": "d",
+            "text": "∅"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Apskaičiuokite abu skirtumus atskirai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "A \\ B = {1, 2}. B \\ A = {4, 5}. Jų sąjunga {1, 2, 4, 5}.",
+          "latex": "\\{1, 2, 4, 5\\}"
+        }
+      ],
+      "answerText": "{1, 2, 4, 5}",
+      "conceptIds": [
+        "aibiu-skirtumas",
+        "aibiu-sajunga"
+      ],
+      "estimatedSeconds": 70
+    },
+    {
+      "id": "aibes-ex-016",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Kiek elementų turi aibė P(A), jei A = {1, 2, 3, 4}? (P(A) yra visų aibės A poaibių aibė).",
+      "answer": {
+        "kind": "numeric",
+        "value": 16
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Poaibių skaičius yra 2^n.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2^4 = 16.",
+          "latex": "16"
+        }
+      ],
+      "answerText": "16",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "estimatedSeconds": 40
+    },
+    {
+      "id": "aibes-ex-017",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Kokia aibė yra (-∞; 2] ∩ [0; 5)?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "[0; 2]"
+          },
+          {
+            "id": "b",
+            "text": "(0; 2)"
+          },
+          {
+            "id": "c",
+            "text": "(-∞; 5)"
+          },
+          {
+            "id": "d",
+            "text": "[0; 5]"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pavaizduokite abu intervalus skaičių tiesėje.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Persidengimas yra nuo 0 iki 2 įskaitytinai.",
+          "latex": "[0; 2]"
+        }
+      ],
+      "answerText": "[0; 2]",
+      "conceptIds": [
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "aibes-ex-018",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "medium",
+      "type": "multipleChoice",
+      "statement": "Jei A ∩ B = A, tai kas yra tiesa?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "B yra A poaibis"
+          },
+          {
+            "id": "b",
+            "text": "A yra B poaibis"
+          },
+          {
+            "id": "c",
+            "text": "A ir B neturi bendrų elementų"
+          },
+          {
+            "id": "d",
+            "text": "A = ∅"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Jei sankirta lygi vienai iš aibių, reiškia ta aibė visa telpa kitoje.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "A ∩ B = A reiškia, kad visi A elementai yra ir B aibėje.",
+          "latex": "A \\subseteq B"
+        }
+      ],
+      "answerText": "A yra B poaibis",
+      "conceptIds": [
+        "poaibis",
+        "aibiu-sankirta"
+      ],
+      "estimatedSeconds": 50
+    },
+    {
+      "id": "aibes-ex-019",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "hard",
+      "type": "numericInput",
+      "statement": "Aibės A, B, C turi po 10 elementų. Kiekvienos dvi aibės turi po 4 bendrus elementus. Visos trys aibės turi 1 bendrą elementą. Kiek elementų turi jų sąjunga?",
+      "answer": {
+        "kind": "numeric",
+        "value": 19
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite trijų aibių sąjungos formulę: |A∪B∪C| = |A|+|B|+|C| - (|A∩B|+|A∩C|+|B∩C|) + |A∩B∩C|.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "10 + 10 + 10 - (4 + 4 + 4) + 1 = 30 - 12 + 1 = 19.",
+          "latex": "19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "aibiu-sajunga",
+        "veno-diagrama"
+      ],
+      "estimatedSeconds": 90
+    },
+    {
+      "id": "aibes-ex-020",
+      "topicId": "aibes-ir-veiksmai",
+      "grade": 11,
+      "level": "easy",
+      "type": "multipleChoice",
+      "statement": "Ar aibė {x | x² < 0, x ∈ R} yra tuščia?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "Taip"
+          },
+          {
+            "id": "b",
+            "text": "Ne"
+          }
+        ],
+        "correctChoiceIds": [
+          "a"
+        ]
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Ar realaus skaičiaus kvadratas gali būti neigiamas?",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiųjų skaičių kvadratas visada x² ≥ 0.",
+          "latex": "\\text{Taip}"
+        }
+      ],
+      "answerText": "Taip",
+      "conceptIds": [
+        "tuscia-aibe",
+        "realiuju-skaiciu-aibe"
+      ],
+      "estimatedSeconds": 30
+    }
+  ],
+  "tests": [
+    {
+      "id": "aibes-test-1",
+      "title": "Aibės ir veiksmai: Pagrindų testas",
+      "scope": "topic",
+      "topicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "exerciseIds": [
+        "aibes-ex-001",
+        "aibes-ex-003",
+        "aibes-ex-004",
+        "aibes-ex-005",
+        "aibes-ex-007",
+        "aibes-ex-008",
+        "aibes-ex-009",
+        "aibes-ex-011"
+      ],
+      "timeLimitSeconds": 1200,
+      "masteryWeight": 1.2,
+      "passingThreshold": 0.7
+    },
+    {
+      "id": "aibes-test-2",
+      "title": "Aibės ir veiksmai: Sudėtingas testas",
+      "scope": "topic",
+      "topicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "exerciseIds": [
+        "aibes-ex-010",
+        "aibes-ex-013",
+        "aibes-ex-014",
+        "aibes-ex-015",
+        "aibes-ex-016",
+        "aibes-ex-017",
+        "aibes-ex-018",
+        "aibes-ex-019"
+      ],
+      "timeLimitSeconds": 1800,
+      "masteryWeight": 1.5,
+      "passingThreshold": 0.6
+    }
+  ],
+  "srsCards": [
+    {
+      "id": "srs-aibes-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra aibė?",
+      "back": "Objektų rinkinys, traktuojamas kaip visuma.",
+      "conceptIds": [
+        "aibe"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-sajunga-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra aibių sąjunga (A ∪ B)?",
+      "back": "Aibė, susidedanti iš elementų, priklausančių bent vienai iš aibių A arba B.",
+      "conceptIds": [
+        "aibiu-sajunga"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-sankirta-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra aibių sankirta (A ∩ B)?",
+      "back": "Aibė, susidedanti iš elementų, priklausančių ir A, ir B aibei.",
+      "conceptIds": [
+        "aibiu-sankirta"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-skirtumas-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra aibių skirtumas (A \\ B)?",
+      "back": "Aibė, susidedanti iš A elementų, kurie nepriklauso aibei B.",
+      "conceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-poaibis-def",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kada aibė B vadinama aibės A poaibiu?",
+      "back": "Kai kiekvienas aibės B elementas priklauso ir aibei A.",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-sajunga-formule",
+      "deck": "practice",
+      "cardType": "formula",
+      "front": "Aibių sąjungos (|A ∪ B|) elementų skaičiaus formulė?",
+      "back": "|A ∪ B| = |A| + |B| - |A ∩ B|",
+      "conceptIds": [
+        "aibiu-sajunga"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-tuscia-aibe-sym",
+      "deck": "theory",
+      "cardType": "notation",
+      "front": "Kaip žymima tuščioji aibė?",
+      "back": "∅ arba {}",
+      "conceptIds": [
+        "tuscia-aibe"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-mistake-sajunga",
+      "deck": "practice",
+      "cardType": "mistake",
+      "front": "Kuo skiriasi ∪ ir ∩?",
+      "back": "∪ – sąjunga (viskas), ∩ – sankirta (tik bendra).",
+      "conceptIds": [
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-a-minus-b-not-b-minus-a",
+      "deck": "practice",
+      "cardType": "concept",
+      "front": "Ar A \\ B = B \\ A?",
+      "back": "Ne, aibių skirtumas nėra komutatyvus.",
+      "conceptIds": [
+        "aibiu-skirtumas"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-poaibiu-skaicius",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kaip apskaičiuoti aibės su n elementų poaibių skaičių?",
+      "back": "2^n",
+      "conceptIds": [
+        "poaibis"
+      ],
+      "defaultEnabled": true
+    }
+  ]
+}

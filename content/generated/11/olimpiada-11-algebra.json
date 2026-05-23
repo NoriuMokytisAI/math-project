@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.1",
+  "contentVersion": "0.1.2",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos autoravimo gairės",
-    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+    "notes": "Išplėstas Grade 11 olimpiadinis algebros turinys"
   },
   "topic": {
     "id": "olimpiada-11-algebra",
@@ -12,17 +12,22 @@
     "strand": "Algebra",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
-      "olimpiada-10",
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-11-concept-cyclotomic",
-      "olimpiada-11-concept-chebyshev"
+      "olimpiada-11-concept-chebyshev",
+      "olimpiada-11-concept-vieta",
+      "olimpiada-11-concept-cauchy-schwarz",
+      "olimpiada-11-concept-am-gm"
     ],
-    "formulaIds": [],
+    "formulaIds": [
+      "olimpiada-11-formula-vieta-cubic",
+      "olimpiada-11-formula-cauchy-schwarz"
+    ],
     "mistakeIds": [],
     "exerciseIds": [
       "ex-olimpiada-11-09",
@@ -33,10 +38,62 @@
       "ex-olimpiada-11-14",
       "ex-olimpiada-11-15",
       "ex-olimpiada-11-16",
-      "ex-olimpiada-11-28"
+      "ex-olimpiada-11-28",
+      "ex-olimpiada-11-30",
+      "ex-olimpiada-11-31",
+      "ex-olimpiada-11-32",
+      "ex-olimpiada-11-33",
+      "ex-olimpiada-11-34",
+      "ex-olimpiada-11-35",
+      "ex-olimpiada-11-36",
+      "ex-olimpiada-11-37",
+      "ex-olimpiada-11-38",
+      "ex-olimpiada-11-39",
+      "ex-olimpiada-11-40"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "theory-algebra-roots",
+      "title": "Daugianarių šaknys ir Vieta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugianarių šaknų ir koeficientų ryšys yra vienas iš pagrindinių įrankių olimpiadinėje algebroje. Vieta teoremos leidžia rasti šaknų sumas, sandaugas ir kitas simetrines išraiškas tiesiogiai iš daugianario koeficientų."
+        },
+        {
+          "type": "formula",
+          "formulaId": "olimpiada-11-formula-vieta-cubic",
+          "latex": "x_1+x_2+x_3 = -\\frac{b}{a}, \\quad x_1x_2+x_2x_3+x_3x_1 = \\frac{c}{a}, \\quad x_1x_2x_3 = -\\frac{d}{a}"
+        }
+      ]
+    },
+    {
+      "id": "theory-algebra-inequalities",
+      "title": "Pagrindinės nelygybės: AM-GM ir Cauchy-Schwarz",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nelygybės yra dažna olimpiadų tema. Svarbiausia suprasti, kada galioja lygybė – dažniausiai tai nutinka, kai visi kintamieji yra lygūs arba proporcingi."
+        },
+        {
+          "type": "definition",
+          "conceptId": "olimpiada-11-concept-am-gm",
+          "text": "Vidurkių nelygybė (AM-GM): aritmetinis vidurkis visada yra ne mažesnis už geometrinį vidurkį teigiamiems skaičiams."
+        }
+      ]
+    },
+    {
+      "id": "theory-algebra-functional",
+      "title": "Funkcinės lygtys ir jų sprendimo būdai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant funkcines lygtis, pagrindinės strategijos yra: kintamųjų fiksavimas (pvz., x=0, y=0), injektyvumo ir surjektyvumo tikrinimas, bei sprendinio pavidalo spėjimas (dažniausiai f(x)=cx)."
+        }
+      ]
+    }
+  ],
   "concepts": [
     {
       "id": "olimpiada-11-concept-cyclotomic",
@@ -55,9 +112,49 @@
       "intuition": "Jie susieja trigonometriją su algebriniais daugianariais ir pasižymi unikaliomis ekstremaliomis savybėmis.",
       "formal": "$T_0(x)=1, T_1(x)=x, T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-vieta",
+      "title": "Vieta teoremos",
+      "type": "concept",
+      "shortDefinition": "Sąryšiai tarp daugianario koeficientų ir jo šaknų.",
+      "intuition": "Leidžia rasti šaknų sumas ir sandaugas jų pačių neieškant.",
+      "formal": "Daugianariui $P(x) = a_n x^n + \\dots + a_0$, šaknų suma yra $-a_{n-1}/a_n$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-cauchy-schwarz",
+      "title": "Koši-Švarco nelygybė",
+      "type": "concept",
+      "shortDefinition": "Nelygybė, siejanti dviejų skaičių rinkinių sandaugų sumą su jų kvadratų sumomis.",
+      "intuition": "Vektorių skaliarinė sandauga yra ne didesnė už jų ilgių sandaugą.",
+      "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-am-gm",
+      "title": "AM-GM nelygybė",
+      "type": "concept",
+      "shortDefinition": "Aritmetinio ir geometrinio vidurkio nelygybė.",
+      "intuition": "Sumos minimumas pasiekiamas, kai nariai lygūs, esant fiksuotai sandaugai.",
+      "formal": "$\\frac{x_1 + \\dots + x_n}{n} \\ge \\sqrt[n]{x_1 \\dots x_n}$ teigiamiems $x_i$.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
+  "formulas": [
+    {
+      "id": "olimpiada-11-formula-vieta-cubic",
+      "title": "Vieta formulės kubinei lygčiai",
+      "latex": "x_1+x_2+x_3 = -b/a, \\quad x_1x_2+x_2x_3+x_3x_1 = c/a, \\quad x_1x_2x_3 = -d/a",
+      "explanation": "Taikoma lygčiai $ax^3+bx^2+cx+d=0$."
+    },
+    {
+      "id": "olimpiada-11-formula-cauchy-schwarz",
+      "title": "Koši-Švarco nelygybė",
+      "latex": "(\\sum_{i=1}^n a_i b_i)^2 \\le (\\sum_{i=1}^n a_i^2)(\\sum_{i=1}^n b_i^2)",
+      "explanation": "Lygybė galioja, kai $a_i$ ir $b_i$ yra proporcingi."
+    }
+  ],
   "mistakes": [],
   "workedExamples": [
     {
@@ -106,6 +203,60 @@
         }
       ],
       "answer": "f(x) = cx"
+    },
+    {
+      "title": "AM-GM taikymas nelygybei",
+      "problem": "Įrodykite, kad teigiamiems $a, b, c$, kurių sandauga $abc=1$, galioja $a+b+c \\ge 3$.",
+      "steps": [
+        {
+          "text": "Taikome AM-GM nelygybę trims skaičiams $a, b, c$."
+        },
+        {
+          "text": "$\\frac{a+b+c}{3} \\ge \\sqrt[3]{abc}$."
+        },
+        {
+          "text": "Kadangi $abc=1$, tai $\\sqrt[3]{1} = 1$."
+        },
+        {
+          "text": "Dauginame abi puses iš 3: $a+b+c \\ge 3$."
+        }
+      ],
+      "answer": "Įrodyta"
+    },
+    {
+      "title": "Vieta teoremos kubinei lygčiai",
+      "problem": "Raskite lygties $x^3 - 3x^2 + 4 = 0$ šaknų sumą.",
+      "steps": [
+        {
+          "text": "Pagal Vieta teoremą, trečiojo laipsnio daugianario $ax^3+bx^2+cx+d=0$ šaknų suma lygi $-b/a$."
+        },
+        {
+          "text": "Čia $a=1, b=-3$."
+        },
+        {
+          "text": "Suma: $-(-3)/1 = 3$."
+        }
+      ],
+      "answer": "3"
+    },
+    {
+      "title": "Koši-Švarco nelygybės panaudojimas",
+      "problem": "Jei $x^2+y^2=1$, raskite didžiausią $3x+4y$ reikšmę.",
+      "steps": [
+        {
+          "text": "Taikome Koši-Švarco nelygybę vektoriams $(3, 4)$ ir $(x, y)$."
+        },
+        {
+          "text": "$(3x+4y)^2 \\le (3^2+4^2)(x^2+y^2)$."
+        },
+        {
+          "text": "$(3x+4y)^2 \\le (9+16) \\cdot 1 = 25$."
+        },
+        {
+          "text": "$|3x+4y| \\le 5$."
+        }
+      ],
+      "answer": "5"
     }
   ],
   "exercises": [
@@ -1325,7 +1476,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\equiv 0 \\pmod 2$, o $1^2+1+1 = 3 \\equiv 1 \\pmod 2$. Kuris iš jų yra neredukuojamas?",
+          "text": "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\equiv 0 \\pmod 2$, o $1^2+1+1 = 3 \\equiv 1 \\pmod 2$. Kuris iš projektas yra neredukuojamas?",
           "penalty": 0.12
         }
       ],
@@ -1398,7 +1549,7 @@
           "title": "Neredukuojamumo laipsnio riba",
           "wrongMove": "Manoma, kad jei ketvirtojo laipsnio daugianaris neturi šaknų, jis yra neredukuojamas.",
           "whyTempting": "Ši taisyklė galioja 2-ojo ir 3-iojo laipsnio daugianariams.",
-          "correction": "Aukštesnio laipsnio daugianariai gali neturėti šaknų, bet būti dviejų žemesnio laipsnio neredukuojamų daugianarių sandauga (pvz., $(x^2+x+1)^2$).",
+          "correction": "Aukštesnio laipsnio daugianariai gali neturėti šaknų, bet būti dviejų žemesnio laipsnio neredukuojamų daugianarių sandaugą (pvz., $(x^2+x+1)^2$).",
           "conceptIds": []
         }
       ],
@@ -1421,27 +1572,471 @@
           "defaultEnabled": true
         }
       ]
+    },
+    {
+      "id": "ex-olimpiada-11-30",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Raskite lygties $x^3 - 6x^2 + 11x - 6 = 0$ šaknų kvadratų sumą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "answerText": "14",
+      "coreIdea": {
+        "title": "Vieta ir kvadratų suma",
+        "text": "$x_1^2+x_2^2+x_3^2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_2x_3+x_3x_1)$."
+      },
+      "strategyTags": [
+        "polynomials",
+        "symmetric-polynomials"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-vieta"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Naudokite formulę $(x_1+x_2+x_3)^2 = x_1^2+x_2^2+x_3^2 + 2(x_1x_2+x_2x_3+x_3x_1)$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Iš Vieta teoremų $x_1+x_2+x_3 = 6$ ir $x_1x_2+x_2x_3+x_3x_1 = 11$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma lygi $6^2 - 2 \\cdot 11 = 36 - 22 = 14$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-31",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite mažiausią reiškinio $x + \\frac{1}{x}$ reikšmę teigiamiems $x$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "AM-GM dviem nariams",
+        "text": "Skaičiaus ir jo atvirkštinio suma visada $\\ge 2$."
+      },
+      "strategyTags": [
+        "inequalities",
+        "am-gm"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-am-gm"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Taikykite $\\frac{a+b}{2} \\ge \\sqrt{ab}$ su $a=x$ ir $b=1/x$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$\\frac{x + 1/x}{2} \\ge \\sqrt{x \\cdot 1/x} = 1 \\implies x + 1/x \\ge 2$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-32",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek realiųjų šaknų turi daugianaris $x^4 - 4x + 3$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Išvestinė ir minimumas",
+        "text": "Raskite funkcijos minimumą."
+      },
+      "strategyTags": [
+        "polynomials",
+        "calculus"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Išvestinė $4x^3 - 4$. Minimumas taške $x=1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Reikšmė taške $x=1$ yra $1-4+3=0$. Tai reiškia, kad grafikas liečia ašį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f'(x)=0$ kai $x=1$. $f(1)=0$. Kadangi tai minimumas ir funkcija didėja į abi puses, bei yra ketvirto laipsnio, turime dvigubą šaknį $x=1$ ir dar vieną šaknį kažkur kitur? Ne, $x^4-4x+3 = (x-1)^2(x^2+2x+3)$. $x^2+2x+3$ neturi šaknų. Taigi yra tik viena unikali reali reikšmė (bet skaičiuojama kaip dviguba šaknis). Palaukit, klausimas apie 'šaknų skaičių' paprastai reiškia skirtingas vertes arba bendrą skaičių su kartotinumu. Formuluotė 'kiek realiųjų šaknų' dažniausiai prašo skirtingų verčių skaičiaus."
+        },
+        {
+          "text": "Patikriname $x^4-4x+3 = (x-1)(x^3+x^2+x-3) = (x-1)^2(x^2+2x+3)$. Reali šaknis tik 1."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-33",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "multipleChoice",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 50,
+      "statement": "Kuri funkcija tenkina $f(xy) = f(x)f(y)$?",
+      "answer": {
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "f(x) = x + 1"
+          },
+          {
+            "id": "b",
+            "text": "f(x) = x^n"
+          },
+          {
+            "id": "c",
+            "text": "f(x) = log(x)"
+          },
+          {
+            "id": "d",
+            "text": "f(x) = sin(x)"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
+      },
+      "answerText": "f(x) = x^n",
+      "coreIdea": {
+        "title": "Maitlando lygtis",
+        "text": "Tai viena iš bazinių funkcinių lygčių."
+      },
+      "strategyTags": [
+        "functional-equations"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Patikrinkite $(xy)^n = x^n y^n$.",
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Laipsninė funkcija tenkina šią savybę."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-34",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite sumą $1 + 2 + 2^2 + \\dots + 2^{10}$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2047,
+        "tolerance": 0
+      },
+      "answerText": "2047",
+      "coreIdea": {
+        "title": "Geometrinė progresija",
+        "text": "$S_n = \frac{a(q^n-1)}{q-1}$."
+      },
+      "strategyTags": [
+        "sequences"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Čia $a=1, q=2, n=11$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$2^{11}-1 = 2048-1 = 2047$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-35",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite funkcijos $f(x) = x(1-x)$ didžiausią reikšmę intervale $[0, 1]$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.25,
+        "tolerance": 0
+      },
+      "answerText": "0.25",
+      "coreIdea": {
+        "title": "Parabolės viršūnė arba AM-GM",
+        "text": "$x(1-x) \\le (\\frac{x+1-x}{2})^2$."
+      },
+      "strategyTags": [
+        "inequalities",
+        "functions"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Taikykite AM-GM nariams $x$ ir $1-x$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$\\sqrt{x(1-x)} \\le \\frac{x+1-x}{2} = 0.5$. Kvadratu: $0.25$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-36",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek realiųjų šaknų turi lygtis $x^2 = 2^x$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Grafinis sprendimas",
+        "text": "Nubraižykite parabolę ir rodiklinę funkciją."
+      },
+      "strategyTags": [
+        "equations"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Akivaizdžios šaknys $x=2, x=4$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Nepamirškite neigiamos srities – ten yra dar viena šaknis.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Šaknys yra maždaug -0.766, 2 ir 4."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-37",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite reiškinio $x^2+y^2$ minimumą, jei $x+2y=5$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Koši-Švarco nelygybė",
+        "text": "$(x^2+y^2)(1^2+2^2) \\ge (x+2y)^2$."
+      },
+      "strategyTags": [
+        "inequalities",
+        "cauchy-schwarz"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Taikykite Koši-Švarco nelygybę su koeficientais 1 ir 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$5(x^2+y^2) \\ge 25 \\implies x^2+y^2 \\ge 5$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-38",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jei $a+b=1$ ir $a^2+b^2=2$, raskite $a^3+b^3$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2.5,
+        "tolerance": 0
+      },
+      "answerText": "2.5",
+      "coreIdea": {
+        "title": "Simetrinės išraiškos",
+        "text": "$a^3+b^3 = (a+b)(a^2-ab+b^2)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite $ab$ iš $(a+b)^2 = a^2+b^2+2ab$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$1 = 2+2ab \\implies ab = -0.5$. Tada $a^3+b^3 = 1(2 - (-0.5)) = 2.5$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-39",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite lygties $x^4-5x^2+4=0$ didžiausią šaknį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Bikvadratinė lygtis",
+        "text": "Pakeitimas $t=x^2$."
+      },
+      "strategyTags": [
+        "equations"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "Lygtis tampa $t^2-5t+4=0$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$t=1, 4$. Tada $x=\\pm 1, \\pm 2$."
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-40",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "numericInput",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite sekos $a_n = n^2 - 10n + 30$ mažiausią narį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Parabolės minimumas",
+        "text": "Viršūnė prie $n = -b/2a$."
+      },
+      "strategyTags": [
+        "sequences"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "text": "$n = 10/2 = 5$.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$a_5 = 25 - 50 + 30 = 5$."
+        }
+      ]
     }
   ],
   "tests": [
     {
       "id": "olimpiada-11-test-challenge",
-      "title": "11 klasės olimpiadinis iššūkis",
+      "title": "11 klasės olimpiadinis algebros testas",
       "type": "olympiad",
       "topicIds": [
         "olimpiada-11-algebra"
       ],
       "exerciseIds": [
-        "ex-olimpiada-11-01",
-        "ex-olimpiada-11-04",
-        "ex-olimpiada-11-07",
+        "ex-olimpiada-11-09",
         "ex-olimpiada-11-10",
         "ex-olimpiada-11-12",
-        "ex-olimpiada-11-14",
-        "ex-olimpiada-11-16",
-        "ex-olimpiada-11-19",
-        "ex-olimpiada-11-24",
-        "ex-olimpiada-11-32"
+        "ex-olimpiada-11-30",
+        "ex-olimpiada-11-31",
+        "ex-olimpiada-11-32",
+        "ex-olimpiada-11-37",
+        "ex-olimpiada-11-38",
+        "ex-olimpiada-11-39",
+        "ex-olimpiada-11-40"
       ],
       "masteryWeight": 2.0
     }

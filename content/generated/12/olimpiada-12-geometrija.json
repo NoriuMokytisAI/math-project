@@ -27,7 +27,21 @@
       "ex-olimpiada-12-14",
       "ex-olimpiada-12-15",
       "ex-olimpiada-12-16",
-      "ex-olimpiada-12-17"
+      "ex-olimpiada-12-17",
+      "ex-olimpiada-12-18",
+      "ex-olimpiada-12-19",
+      "ex-olimpiada-12-20",
+      "ex-olimpiada-12-21",
+      "ex-olimpiada-12-22",
+      "ex-olimpiada-12-23",
+      "ex-olimpiada-12-24",
+      "ex-olimpiada-12-25",
+      "ex-olimpiada-12-26",
+      "ex-olimpiada-12-27",
+      "ex-olimpiada-12-28",
+      "ex-olimpiada-12-29",
+      "ex-olimpiada-12-30",
+      "ex-olimpiada-12-31"
     ]
   },
   "theory": [
@@ -818,7 +832,1105 @@
           "defaultEnabled": true
         }
       ]
-    }
+    },
+    {
+      "id": "ex-olimpiada-12-18",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Menelajo teorema teigia, kad taškai $D, E, F$ ant trikampio $ABC$ kraštinių (arba jų tęsinių) yra kolinearūs tada ir tik tada, kai tam tikras santykių sandaugos modulis lygus 1. Užrašykite šią sandaugą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1"
+      },
+      "answerText": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
+      "coreIdea": {
+        "title": "Kraštinių santykiai",
+        "text": "Menelajo teorema yra viena pagrindinių kolinearumo tikrinimo priemonių. Ji susieja taškų padėtį ant tiesių su trikampio viršūnėmis."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime, kad taškai $F \\in AB$, $D \\in BC$, $E \\in CA$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sekite trikampio apėjimo ratu taisyklę: viršūnė-taškas, taškas-viršūnė.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sandauga turi apimti visas tris kraštines ir visus tris kolinearius taškus.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pasirenkame taškus ant kraštinių: $F$ ant $AB$, $D$ ant $BC$, $E$ ant $CA$."
+        },
+        {
+          "text": "Užrašome santykius: $AF/FB$, $BD/DC$, $CE/EA$."
+        },
+        {
+          "text": "Pagal teoremą, jei taškai vienoje tiesėje, tai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-18-method-1",
+          "title": "Santykių analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Sandaugos sudarymas",
+              "action": "Nuosekliai užrašome visus segmentus.",
+              "reason": "Tai leidžia formaliai patikrinti kolinearumą.",
+              "result": "Gauta Menelajo lygtis.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-18-trap-1",
+          "title": "Santykių sumaišymas",
+          "wrongMove": "Mokinys rašo $AF/FB \\cdot CD/DB \\dots$",
+          "whyTempting": "Lengva supainioti atkarpų eiliškumą.",
+          "correction": "Visada judėkite viena kryptimi aplink trikampį, kad nepasimestumėte tarp viršūnių.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuo skiriasi Menelajo teorema nuo Čevos teoremos?",
+        "Kada sandaugos reikšmė laikoma -1?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-18-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Užrašykite Menelajo teoremą trikampiui ABC.",
+          "back": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-19",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Čevos teorema teigia, kad trys tiesės, jungiančios trikampio viršūnes su taškais $D, E, F$ priešpriešinėse kraštinėse, kertasi viename taške tada ir tik tada, kai $\frac{AF}{FB} \\cdot \frac{BD}{DC} \\cdot \frac{CE}{EA} = 1$. Koks taškas gaunamas, kai visi santykiai lygūs 1?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Centroidas"
+      },
+      "answerText": "Centroidas",
+      "coreIdea": {
+        "title": "Konkurencija (Concurrence)",
+        "text": "Čevos teorema nustato sąlygą, kada trys tiesės susitinka viename taške. Jei taškai yra kraštinių viduriai, čevianės yra pusiaukraštinės."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Jei santykis $AF/FB = 1$, tai taškas $F$ yra kraštinės $AB$ vidurio taškas.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kas nutinka, kai visos tiesės yra pusiaukraštinės?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sąlyga $AF/FB = 1 \\implies AF = FB$, t.y. $F$ yra vidurio taškas."
+        },
+        {
+          "text": "Tiesės $AD, BE, CF$ yra trikampio pusiaukraštinės."
+        },
+        {
+          "text": "Pusiaukraštinių susikirtimo taškas vadinamas centroidu."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-19-method-1",
+          "title": "Geometrinė dedukcija",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Vidurio taškų nustatymas",
+              "action": "Interpretuojame santykių lygybę.",
+              "reason": "Vienetas reiškia atkarpų lygybę.",
+              "result": "Gautos pusiaukraštinės.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Centroidas"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-19-trap-1",
+          "title": "Painiojimas su ortocentru",
+          "wrongMove": "Mokinys sako, kad tai ortocentras.",
+          "whyTempting": "Abu yra trikampio centrai.",
+          "correction": "Ortocentrui reikia statmenų tiesių, o čia turime atkarpų lygybę.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokie taškai gaunami, kai santykiai susiję su kampų pusiaukampinėmis?",
+        "Ar Čevos teorema galioja, kai sankirtos taškas yra trikampio išorėje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-19-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia teorema tikrina, ar trys tiesės trikampyje kertasi viename taške?",
+          "back": "Čevos teorema.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-20",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "statement": "Oilerio tiesė jungia kelis svarbius trikampio taškus. Kurie iš išvardintų taškų guli šioje tiesėje: centroidas (G), ortocentras (H), apibrėžtinio apskritimo centras (O)?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Visi trys (G, H, O)"
+      },
+      "answerText": "Visi trys (G, H, O)",
+      "coreIdea": {
+        "title": "Oilerio tiesė",
+        "text": "Bet kuriame netaisyklingame trikampyje ortocentras, centroidas ir apibrėžtinio apskritimo centras visada yra vienoje tiesėje."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite Oilerio tiesės apibrėžimą.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Oilerio tiesė apibrėžiama kaip tiesė einanti per H, G ir O."
+        },
+        {
+          "text": "Centroidas (G) visada dalija atkarpą HO santykiu 2:1."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-20-method-1",
+          "title": "Taškų identifikavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos citavimas",
+              "action": "Išvardiname kolinearius taškus.",
+              "reason": "Tai bazinė trikampio geometrijos savybė.",
+              "result": "Nustatyta aibė {G, H, O}.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Visi trys (G, H, O)"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [
+        "Koks dar taškas guli šioje tiesėje?",
+        "Kada Oilerio tiesė virsta tašku?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-20-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokie trys pagrindiniai trikampio taškai sudaro Oilerio tiesę?",
+          "back": "Ortocentras (H), Centroidas (G) ir Apibrėžtinio apskritimo centras (O).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-21",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Koks yra devynių taškų apskritimo spindulys, palyginti su apibrėžtinio apskritimo spinduliu R?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "R/2"
+      },
+      "answerText": "R/2",
+      "coreIdea": {
+        "title": "Homotetija geometrijoje",
+        "text": "Devynių taškų apskritimas yra apibrėžtinio apskritimo vaizdas per homotetiją su koeficientu 1/2."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apsvarstykite trikampį, sudarytą iš kraštinių vidurio taškų.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kraštinių vidurio taškai sudaro medialinį trikampį, kurio apibrėžtinio apskritimo spindulys yra $R/2$."
+        },
+        {
+          "text": "Šis apskritimas ir yra devynių taškų apskritimas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-21-method-1",
+          "title": "Panašumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Trikampių sulyginimas",
+              "action": "Susiejame medialinį trikampį su pradiniu.",
+              "reason": "Vidurio linijos visada perpus trumpesnės.",
+              "result": "Gautas spindulys R/2.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "R/2"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-21-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra devynių taškų apskritimo spindulys?",
+          "back": "R/2.",
+          "conceptIds": [
+            "olimpiada-12-concept-feuerbach"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-22",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Simsono tiesė gaunama nuleidus statmenis iš taško P į trikampio kraštines. Kur privalo būti taškas P, kad šie statmenų pagrindai būtų kolinearūs?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ant apibrėžtinio apskritimo"
+      },
+      "answerText": "Ant apibrėžtinio apskritimo",
+      "coreIdea": {
+        "title": "Simsono tiesė",
+        "text": "Tai specifinė kolinearumo savybė, galiojanti tik taškams ant apibrėžtinio apskritimo."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ištirkite kampų lygybes įbrėžtiniuose keturkampuose.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Statmenų pagrindai yra kolinearūs tada ir tik tada, kai P guli ant apibrėžtinio apskritimo."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-22-method-1",
+          "title": "Kampų analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Sąlygos radimas",
+              "action": "Nustatome P padėtį.",
+              "reason": "Tai klasikinė teorema.",
+              "result": "P guli ant apskritimo.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Ant apibrėžtinio apskritimo"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-22-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kada statmenų pagrindai iš taško P yra kolinearūs?",
+          "back": "Kai P guli ant apibrėžtinio apskritimo.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-23",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Užrašykite Ptolemėjo teoremą įbrėžtiniam keturkampiui ABCD.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "AB \\cdot CD + BC \\cdot DA = AC \\cdot BD"
+      },
+      "answerText": "AB \\cdot CD + BC \\cdot DA = AC \\cdot BD",
+      "coreIdea": {
+        "title": "Ptolemėjo teorema",
+        "text": "Kraštinių sandaugų suma lygi įstrižainių sandaugai."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Įbrėžtiniam keturkampiui galioja: $AB \\cdot CD + BC \\cdot DA = AC \\cdot BD$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-23-method-1",
+          "title": "Tiesioginis užrašymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Formulė",
+              "action": "Pateikiame tapatybę.",
+              "reason": "Tai metrinis ryšys.",
+              "result": "Gauta lygtis.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "AB \\cdot CD + BC \\cdot DA = AC \\cdot BD"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-23-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Užrašykite Ptolemėjo teoremą.",
+          "back": "$AB \\cdot CD + BC \\cdot DA = AC \\cdot BD$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-24",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Kokia tiesė jungia priešingų įbrėžtinio šešiakampio kraštinių sankirtas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Paskalio tiesė"
+      },
+      "answerText": "Paskalio tiesė",
+      "coreIdea": {
+        "title": "Paskalio teorema",
+        "text": "Priešingų kraštinių sankirtos taškai visada yra kolinearūs."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Tai Paskalio teoremos rezultatas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-24-method-1",
+          "title": "Identifikavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos pavadinimas",
+              "action": "Nurodome autorių.",
+              "reason": "Tai fundamentalus rezultatas.",
+              "result": "Paskalio tiesė.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Paskalio tiesė"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-24-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip vadinama tiesė iš Paskalio teoremos?",
+          "back": "Paskalio tiesė.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-25",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Inversija apskritimo $C(O, r)$ atžvilgiu tašką P atvaizduoja į P'. Koks yra ryšys tarp atstumų $OP$ ir $OP'$?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "OP \\cdot OP' = r^2"
+      },
+      "answerText": "OP \\cdot OP' = r^2",
+      "coreIdea": {
+        "title": "Inversijos principas",
+        "text": "Inversija 'išverčia' plokštumą apskritimo atžvilgiu: taškai viduje keliauja į išorę ir atvirkščiai."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Pagal apibrėžimą $OP \\cdot OP' = r^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-25-method-1",
+          "title": "Apibrėžimo taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Formulė",
+              "action": "Užrašome inversijos ryšį.",
+              "reason": "Tai geometrinės transformacijos pagrindas.",
+              "result": "OP * OP' = r^2.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "OP \\cdot OP' = r^2"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-25-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia lygybė apibrėžia inversiją spindulio r apskritime?",
+          "back": "$OP \\cdot OP' = r^2$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-26",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Steinerio teorema teigia, kad bet kuriai Simsono tiesei simetriška tiesė trikampio kraštinių atžvilgiu eina per tam tikrą tašką. Koks tai taškas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ortocentras (H)"
+      },
+      "answerText": "Ortocentras (H)",
+      "coreIdea": {
+        "title": "Simsono ir Steinerio ryšys",
+        "text": "Simsono tiesė yra pusiaukelėje tarp taško P ir ortocentro H."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Steinerio tiesė (Simsono tiesės homotetija) visada eina per ortocentrą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-26-method-1",
+          "title": "Identifikavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Taškas H",
+              "action": "Nurodome ortocentrą.",
+              "reason": "Tai klasikinė Steinerio savybė.",
+              "result": "H.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Ortocentras (H)"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-26-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Per kokį tašką eina Steinerio tiesė?",
+          "back": "Ortocentrą (H).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-27",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Monžo (Monge) teorema teigia, kad trijų apskritimų išorinių liestinių porų susikirtimo taškai yra kolinearūs. Kokia yra šios tiesės savybė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Jie guli vienoje tiesėje"
+      },
+      "answerText": "Jie guli vienoje tiesėje",
+      "coreIdea": {
+        "title": "Monžo teorema",
+        "text": "Trijų apskritimų bendrų išorinių liestinių sankirtos taškai yra kolinearūs."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Tai trimatės erdvės (kūgių) projekcija į plokštumą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-27-method-1",
+          "title": "Geometrinė savybė",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Kolinearumas",
+              "action": "Nurodome išsidėstymą.",
+              "reason": "Monžo teoremos esmė.",
+              "result": "Viena tiesė.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Jie guli vienoje tiesėje"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-27-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką sako Monžo teorema apie trijų apskritimų liestines?",
+          "back": "Išorinių liestinių sankirtos taškai yra kolinearūs.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-28",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Desargo teorema teigia, kad jei du trikampiai yra perspektyvūs iš taško, tai jie yra perspektyvūs ir iš tam tikro kito objekto. Koks tai objektas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tiesės (ašies)"
+      },
+      "answerText": "Tiesės (ašies)",
+      "coreIdea": {
+        "title": "Desargo teorema",
+        "text": "Perspektyvumas iš taško (centrinė projekcija) implikuoja perspektyvumą iš tiesės (atitinkamų kraštinių sankirtos yra kolinearios)."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Atitinkamų kraštinių sankirtos taškai guli vienoje tiesėje (Desargo ašyje)."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-28-method-1",
+          "title": "Dualumo principas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Ašis",
+              "action": "Identifikuojame objektą.",
+              "reason": "Tai projektinės geometrijos pamatas.",
+              "result": "Tiesė.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Tiesės (ašies)"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-28-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką jungia Desargo ašis?",
+          "back": "Perspektyvių trikampių atitinkamų kraštinių sankirtas.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-29",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Kokia yra harmoninio ketverto (A, B; C, D) dvigubo santykio vertė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "-1"
+      },
+      "answerText": "-1",
+      "coreIdea": {
+        "title": "Harmoninis santykis",
+        "text": "Harmoninis ketvertas yra keturių kolinearių taškų konfigūracija, kurios dvigubas santykis lygus -1."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Dvigubas santykis $(AC/CB) / (AD/DB) = -1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-29-method-1",
+          "title": "Skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vertė",
+              "action": "Nurodome konstantą.",
+              "reason": "Tai apibrėžimas.",
+              "result": "-1.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "-1"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-29-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra harmoninio santykio reikšmė?",
+          "back": "-1.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-30",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Izogonalinės konjugacijos metu spindulys iš viršūnės atvaizduojamas į kitą spindulį, simetrišką tam tikros tiesės atžvilgiu. Kas tai per tiesė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kampo pusiaukampinė"
+      },
+      "answerText": "Kampo pusiaukampinė",
+      "coreIdea": {
+        "title": "Izogonalinės konjugatės",
+        "text": "Dvi tiesės per viršūnę yra izogonalinės, jei jos sudaro vienodus kampus su kampo pusiaukampine."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Simetrija atliekama vidaus kampo pusiaukampinės atžvilgiu."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-30-method-1",
+          "title": "Simetrijos ašis",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Pusiaukampinė",
+              "action": "Nurodome tiesę.",
+              "reason": "Tai izogonalumo apibrėžimas.",
+              "result": "Kampo pusiaukampinė.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Kampo pusiaukampinė"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-30-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokios tiesės atžvilgiu simetriškos izogonalinės tiesės?",
+          "back": "Kampo pusiaukampinės.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      },
+      {
+      "id": "ex-olimpiada-12-31",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Simediana yra tiesė, izogonaliai konjuguota kuriam kitam trikampio elementui?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Pusiaukraštinei"
+      },
+      "answerText": "Pusiaukraštinei",
+      "coreIdea": {
+        "title": "Simedianos",
+        "text": "Simediana yra pusiaukraštinės atspindys pusiaukampinės atžvilgiu."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [],
+      "solutionSteps": [
+        {
+          "text": "Simediana yra pusiaukraštinės (medianos) izogonalė."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-31-method-1",
+          "title": "Identifikavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "logic"
+          ],
+          "steps": [
+            {
+              "title": "Mediana",
+              "action": "Nurodome originalų spindulį.",
+              "reason": "Tai simedianos apibrėžimas.",
+              "result": "Pusiaukraštinė.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Pusiaukraštinei"
+        }
+      ],
+      "commonTraps": [],
+      "reflectionPrompts": [],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-31-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia tiesė yra simediana?",
+          "back": "Pusiaukraštinės (medianos) izogonalė.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+      }
   ],
-  "tests": []
+  "tests": [
+    {
+      "id": "olimpiada-12-geometrija-test-1",
+      "title": "Olimpiadinis geometrijos iššūkis (12 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-12-geometrija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-12-12",
+        "ex-olimpiada-12-13",
+        "ex-olimpiada-12-14",
+        "ex-olimpiada-12-15",
+        "ex-olimpiada-12-16",
+        "ex-olimpiada-12-17",
+        "ex-olimpiada-12-18",
+        "ex-olimpiada-12-19",
+        "ex-olimpiada-12-20",
+        "ex-olimpiada-12-21",
+        "ex-olimpiada-12-22",
+        "ex-olimpiada-12-23",
+        "ex-olimpiada-12-24",
+        "ex-olimpiada-12-25",
+        "ex-olimpiada-12-26",
+        "ex-olimpiada-12-27",
+        "ex-olimpiada-12-28",
+        "ex-olimpiada-12-29",
+        "ex-olimpiada-12-30",
+        "ex-olimpiada-12-31"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
 }
