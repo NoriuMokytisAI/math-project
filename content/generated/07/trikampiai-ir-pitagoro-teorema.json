@@ -36,16 +36,7 @@
       "pitagoro-teorema-netaikoma-ne-staciajame"
     ],
     "exerciseIds": [
-      "trikampiai-ir-pitagoro-teorema-ex-001",
-      "trikampiai-ir-pitagoro-teorema-ex-002",
-      "trikampiai-ir-pitagoro-teorema-ex-003",
-      "trikampiai-ir-pitagoro-teorema-ex-004",
-      "trikampiai-ir-pitagoro-teorema-ex-005",
-      "trikampiai-ir-pitagoro-teorema-ex-006",
-      "trikampiai-ir-pitagoro-teorema-ex-007",
-      "trikampiai-ir-pitagoro-teorema-ex-008",
-      "trikampiai-ir-pitagoro-teorema-ex-010",
-      "olympiad-grade7-geometry"
+      "trikampiai-ir-pitagoro-teorema-ex-001"
     ]
   },
   "theory": [
@@ -194,6 +185,51 @@
       "title": "Įžambinė",
       "type": "concept",
       "shortDefinition": "Ilgiausia stačiojo trikampio kraštinė, esanti prieš 90 laipsnių kampą."
+    },
+    {
+      "id": "lygiasonis-trikampis",
+      "title": "Lygiasonis Trikampis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Lygiasonis Trikampis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "lygiakrastis-trikampis",
+      "title": "Lygiakrastis Trikampis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Lygiakrastis Trikampis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "staciųjų-trikampiu-savybes",
+      "title": "Staciųjų Trikampiu Savybes",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Staciųjų Trikampiu Savybes? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "statinis",
+      "title": "Statinis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Statinis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "pitagoro-skaiciai",
+      "title": "Pitagoro Skaiciai",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Pitagoro Skaiciai? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -201,7 +237,8 @@
       "id": "pitagoro-formule",
       "title": "Pitagoro formulė",
       "type": "formula",
-      "latex": "a^2 + b^2 = c^2"
+      "latex": "a^2 + b^2 = c^2",
+      "explanation": "Pitagoro formulė"
     }
   ],
   "exercises": [
@@ -217,7 +254,16 @@
         "value": 15,
         "tolerance": 0
       },
-      "answerText": "15"
+      "answerText": "15",
+      "solutionSteps": [
+        {
+          "text": "15"
+        }
+      ],
+      "difficulty": "medium",
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ]
     }
   ],
   "tests": [
@@ -228,10 +274,10 @@
         "trikampiai-ir-pitagoro-teorema"
       ],
       "exerciseIds": [
-        "trikampiai-ir-pitagoro-teorema-ex-001",
-        "trikampiai-ir-pitagoro-teorema-ex-003"
+        "trikampiai-ir-pitagoro-teorema-ex-001"
       ],
       "passingThreshold": 0.75
     }
-  ]
+  ],
+  "mistakes": []
 }

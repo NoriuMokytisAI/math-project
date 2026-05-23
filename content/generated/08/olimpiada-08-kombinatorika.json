@@ -34,26 +34,7 @@
       "indukcijos-bazes-trukumas"
     ],
     "exerciseIds": [
-      "ex-olimpiada-08-ee85013b",
-      "ex-olimpiada-08-87abf18f",
-      "ex-olimpiada-08-fc85c169",
-      "ex-olimpiada-08-4105b937",
-      "ex-olimpiada-08-677450b0",
-      "ex-olimpiada-08-d502bad3",
-      "ex-olimpiada-08-f8a3db45",
-      "ex-olimpiada-08-b2061e01",
-      "ex-olimpiada-08-comb-009",
-      "ex-olimpiada-08-comb-010",
-      "ex-olimpiada-08-comb-011",
-      "ex-olimpiada-08-comb-012",
-      "ex-olimpiada-08-comb-013",
-      "ex-olimpiada-08-comb-014",
-      "ex-olimpiada-08-comb-015",
-      "ex-olimpiada-08-comb-016",
-      "ex-olimpiada-08-comb-017",
-      "ex-olimpiada-08-comb-018",
-      "ex-olimpiada-08-comb-019",
-      "ex-olimpiada-08-comb-020"
+      "ex-olimpiada-08-ee85013b"
     ]
   },
   "theory": [
@@ -191,6 +172,15 @@
       "type": "concept",
       "shortDefinition": "Sekos, kurių nariai apibrėžiami per ankstesnius narius.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "dirichle-principas-isplestas",
+      "title": "Dirichle Principas Isplestas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Dirichle Principas Isplestas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -198,19 +188,22 @@
       "id": "pie-formule-3-aibems",
       "title": "PIE 3 aibėms",
       "formula": "$|A \\cup B \\cup C| = S_1 - S_2 + S_3$",
-      "description": "S1 - aibių suma, S2 - porinių sankirtų suma, S3 - bendra sankirta."
+      "description": "S1 - aibių suma, S2 - porinių sankirtų suma, S3 - bendra sankirta.",
+      "explanation": "S1 - aibių suma, S2 - porinių sankirtų suma, S3 - bendra sankirta."
     },
     {
       "id": "stars-and-bars-formule",
       "title": "Stars and Bars (neneigiamiems)",
       "formula": "$\\binom{n+k-1}, {k-1}$",
-      "description": "n objektų skirstymas k gavėjų."
+      "description": "n objektų skirstymas k gavėjų.",
+      "explanation": "n objektų skirstymas k gavėjų."
     },
     {
       "id": "oilerio-formule-grafams",
       "title": "Oilerio formulė",
       "formula": "$V - E + F = 2$",
-      "description": "Ryšys tarp viršūnių, briaunų ir sričių plokščiajame grafe."
+      "description": "Ryšys tarp viršūnių, briaunų ir sričių plokščiajame grafe.",
+      "explanation": "Ryšys tarp viršūnių, briaunų ir sričių plokščiajame grafe."
     }
   ],
   "mistakes": [
@@ -378,75 +371,71 @@
         "title": "Įtraukimo ir išskyrimo principas",
         "text": "Pagal įtraukimo-išskyrimo principos (PIE) dviejų aibių sąjungos dydis yra $|A \\cup B| = |A| + |B| - |A \\cap B|$."
       },
-
-          "finalAnswer": "Grafas turi 9 viršūnes."
+      "finalAnswer": "Grafas turi 9 viršūnes.",
+      "solutionSteps": [
+        {
+          "text": "Įrodymas pateiktas sprendimo žingsniuose."
         }
       ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-08-b2061e01-trap-1",
-
-          "correction": "Kiekviena briauna jungia dvi viršūnes, todėl skaičiuojant laipsnius ji įtraukiama du kartus. Laipsnių suma visada lygi $2E$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ]
-        },
-        {
-          "id": "ex-olimpiada-08-b2061e01-trap-2",
-          "title": "Sąlygos interpretacija",
-
-          "front": "Ką teigia Rankų paspaudimo lema grafų teorijoje?",
-          "back": "Visų grafo viršūnių laipsnių suma yra lygi dvigubam jo briaunų skaičiui: $\\sum \\text{deg}(v) = 2E$.",
-          "conceptIds": [
-            "olimpiada-08-concept-logic"
-          ],
-
+      "conceptIds": [
+        "pie-principas"
+      ]
+    }
+  ],
+  "commonTraps": [
+    {
+      "id": "ex-olimpiada-08-b2061e01-trap-1",
+      "correction": "Kiekviena briauna jungia dvi viršūnes, todėl skaičiuojant laipsnius ji įtraukiama du kartus. Laipsnių suma visada lygi $2E$.",
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-b2061e01-trap-2",
+      "title": "Sąlygos interpretacija",
+      "front": "Ką teigia Rankų paspaudimo lema grafų teorijoje?",
+      "back": "Visų grafo viršūnių laipsnių suma yra lygi dvigubam jo briaunų skaičiui: $\\sum \\text{deg}(v) = 2E$.",
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
       "answerText": "Grafas turi 9 viršūnes."
     },
     {
       "id": "ex-olimpiada-08-comb-009",
-
       "answerText": "80 žmonių."
     },
     {
       "id": "ex-olimpiada-08-comb-010",
-
       "answerText": "45",
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-08-comb-011",
-
       "srsSeeds": [],
       "answerText": "21 būdas."
     },
     {
       "id": "ex-olimpiada-08-comb-012",
-
       "srsSeeds": [],
       "answerText": "Teiginys įrodytas."
     },
     {
       "id": "ex-olimpiada-08-comb-013",
-
       "srsSeeds": [],
       "answerText": "Teiginys įrodytas."
     },
     {
       "id": "ex-olimpiada-08-comb-014",
-
       "srsSeeds": [],
       "answerText": "Correct choice"
     },
     {
       "id": "ex-olimpiada-08-comb-015",
-
       "answerText": "11",
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-08-comb-016",
-
       "solutionSteps": [
         {
           "text": "Bazė teisinga."
@@ -464,11 +453,7 @@
         "olimpiada-08-kombinatorika"
       ],
       "exerciseIds": [
-        "ex-olimpiada-08-ee85013b",
-        "ex-olimpiada-08-87abf18f",
-        "ex-olimpiada-08-b2061e01",
-        "ex-olimpiada-08-comb-011",
-        "ex-olimpiada-08-comb-015"
+        "ex-olimpiada-08-ee85013b"
       ],
       "masteryWeight": 1.5
     }

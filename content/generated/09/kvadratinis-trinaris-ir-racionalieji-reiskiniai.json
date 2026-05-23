@@ -44,14 +44,7 @@
       "vietos-teoremos-zenklai"
     ],
     "exerciseIds": [
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-002",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-003",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-004",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-005",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-006",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-007",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-008"
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001"
     ]
   },
   "theory": [
@@ -295,7 +288,7 @@
           "latex": "x \\neq 5, \\quad x \\neq -5"
         }
       ],
-      "answer": "x \u2208 R, išskyrus 5 ir -5"
+      "answer": "x ∈ R, išskyrus 5 ir -5"
     },
     {
       "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-4",
@@ -426,7 +419,10 @@
       "intuition": "Daugianaris, kurio didžiausias laipsnis yra 2. Tai algebros „darbinis arkliukas“.",
       "formal": "ax² + bx + c, kur a, b, c priklauso R ir a ≠ 0.",
       "notation": [],
-      "relatedConceptIds": ["trinario-saknys", "skaidymas-dauginamaisiais"],
+      "relatedConceptIds": [
+        "trinario-saknys",
+        "skaidymas-dauginamaisiais"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -438,8 +434,12 @@
       "shortDefinition": "x reikšmės, su kuriomis trinaris lygus 0.",
       "intuition": "Vietos, kur parabolė kirstų horizontalę, jei ją nupieštume.",
       "formal": "Lygties ax² + bx + c = 0 sprendiniai.",
-      "notation": ["x1, x2"],
-      "relatedConceptIds": ["diskriminantas"],
+      "notation": [
+        "x1, x2"
+      ],
+      "relatedConceptIds": [
+        "diskriminantas"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -452,7 +452,9 @@
       "intuition": "Sudėtingo daikto išardymas į paprastas detales, kurias lengviau valdyti.",
       "formal": "ax² + bx + c = a(x - x1)(x - x2).",
       "notation": [],
-      "relatedConceptIds": ["prastinimas"],
+      "relatedConceptIds": [
+        "prastinimas"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -465,10 +467,57 @@
       "intuition": "Algebrinė trupmena, kurios „apačia“ gali keistis.",
       "formal": "P(x) / Q(x), kur Q(x) ≠ 0.",
       "notation": [],
-      "relatedConceptIds": ["apibrezimo-sritis-trr"],
+      "relatedConceptIds": [
+        "apibrezimo-sritis-trr"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
+    },
+    {
+      "id": "apibrezimo-sritis-trr",
+      "title": "Apibrezimo Sritis Trr",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Apibrezimo Sritis Trr? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "prastinimas",
+      "title": "Prastinimas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Prastinimas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "bendravardiklinimas",
+      "title": "Bendravardiklinimas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Bendravardiklinimas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "vietos-teorema",
+      "title": "Vietos Teorema",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Vietos Teorema? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "diskriminantas",
+      "title": "Diskriminantas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Diskriminantas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -485,7 +534,9 @@
         "a": "koeficientas prie x²"
       },
       "explanation": "Leidžia užrašyti sumą kaip sandaugą, naudojant jos šaknis.",
-      "relatedConceptIds": ["skaidymas-dauginamaisiais"],
+      "relatedConceptIds": [
+        "skaidymas-dauginamaisiais"
+      ],
       "defaultSrs": true
     },
     {
@@ -498,7 +549,9 @@
         "a, b, c": "koeficientai"
       },
       "explanation": "Nurodo šaknų skaičių ir padeda jas rasti.",
-      "relatedConceptIds": ["trinario-saknys"],
+      "relatedConceptIds": [
+        "trinario-saknys"
+      ],
       "defaultSrs": true
     }
   ],
@@ -507,7 +560,9 @@
       "id": "zenklo-klaida-skaidant",
       "title": "Ženklo klaida skaidant dauginamaisiais",
       "type": "mistake",
-      "conceptIds": ["skaidymas-dauginamaisiais"],
+      "conceptIds": [
+        "skaidymas-dauginamaisiais"
+      ],
       "wrongPattern": "x² - 5x + 6 turi šaknis 2 ir 3, rašo (x+2)(x+3).",
       "whyItHappens": "Pamirštama, kad formulėje yra minusas: (x - x1).",
       "correction": "Visada rašykite (x - [šaknis]). Jei šaknis neigiama, gausis (x + skaičius).",
@@ -552,7 +607,8 @@
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 45,
+      "difficulty": "medium"
     }
   ],
   "tests": [],

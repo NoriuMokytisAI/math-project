@@ -35,15 +35,7 @@
       "vidurio-linijos-ilgio-klaida"
     ],
     "exerciseIds": [
-      "pitagoro-teorema-ir-vidurio-linijos-ex-001",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-002",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-003",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-004",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-005",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-006",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-007",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-008",
-      "pitagoro-teorema-ir-vidurio-linijos-ex-010"
+      "pitagoro-teorema-ir-vidurio-linijos-ex-001"
     ]
   },
   "theory": [
@@ -216,6 +208,33 @@
       "title": "Trapecijos vidurio linija",
       "type": "concept",
       "shortDefinition": "Atkarpa, jungianti trapecijos šoninių kraštinių vidurio taškus."
+    },
+    {
+      "id": "izambines-pusiaukrastine",
+      "title": "Izambines Pusiaukrastine",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Izambines Pusiaukrastine? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "staciojo-trikampio-savybes",
+      "title": "Staciojo Trikampio Savybes",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Staciojo Trikampio Savybes? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "geometrinis-vidurkis",
+      "title": "Geometrinis Vidurkis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Geometrinis Vidurkis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -223,13 +242,15 @@
       "id": "trikampio-vidurio-linijos-formule",
       "title": "Trikampio vidurio linijos formulė",
       "type": "formula",
-      "latex": "m = \\frac{1}{2} a"
+      "latex": "m = \\frac{1}{2} a",
+      "explanation": "Trikampio vidurio linijos formulė"
     },
     {
       "id": "trapecijos-vidurio-linijos-formule",
       "title": "Trapecijos vidurio linijos formulė",
       "type": "formula",
-      "latex": "m = \\frac{a+b}{2}"
+      "latex": "m = \\frac{a+b}{2}",
+      "explanation": "Trapecijos vidurio linijos formulė"
     }
   ],
   "exercises": [
@@ -245,7 +266,16 @@
         "value": 7,
         "tolerance": 0
       },
-      "answerText": "7"
+      "answerText": "7",
+      "solutionSteps": [
+        {
+          "text": "7"
+        }
+      ],
+      "difficulty": "medium",
+      "conceptIds": [
+        "vidurio-linija"
+      ]
     }
   ],
   "tests": [
@@ -256,10 +286,10 @@
         "pitagoro-teorema-ir-vidurio-linijos"
       ],
       "exerciseIds": [
-        "pitagoro-teorema-ir-vidurio-linijos-ex-001",
-        "pitagoro-teorema-ir-vidurio-linijos-ex-002"
+        "pitagoro-teorema-ir-vidurio-linijos-ex-001"
       ],
       "passingThreshold": 0.8
     }
-  ]
+  ],
+  "mistakes": []
 }

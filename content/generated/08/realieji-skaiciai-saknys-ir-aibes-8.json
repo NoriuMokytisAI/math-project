@@ -43,15 +43,7 @@
     ],
     "exerciseIds": [
       "realieji-skaiciai-saknys-ir-aibes-8-ex-001",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-002",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-003",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-004",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-005",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-006",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-007",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-008",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-009",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-010"
+      "realieji-skaiciai-saknys-ir-aibes-8-ex-002"
     ]
   },
   "theory": [
@@ -382,6 +374,24 @@
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
+    },
+    {
+      "id": "skaiciu-aibiu-sankirta",
+      "title": "Skaiciu Aibiu Sankirta",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Skaiciu Aibiu Sankirta? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "skaiciu-aibiu-sajunga",
+      "title": "Skaiciu Aibiu Sajunga",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Skaiciu Aibiu Sajunga? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -757,7 +767,13 @@
         "√5",
         "-4"
       ],
-      "answer": "√5",
+      "answer": {
+        "kind": "expression",
+        "canonical": "√5",
+        "acceptedEquivalentForms": [
+          "√5"
+        ]
+      },
       "hints": [
         {
           "order": 1,
@@ -781,7 +797,8 @@
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 40
+      "estimatedSeconds": 40,
+      "difficulty": "medium"
     },
     {
       "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-002",
@@ -818,7 +835,8 @@
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 30
+      "estimatedSeconds": 30,
+      "difficulty": "medium"
     }
   ],
   "tests": [

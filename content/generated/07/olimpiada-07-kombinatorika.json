@@ -233,6 +233,24 @@
       "shortDefinition": "Skaičiavimas atimant nepageidaujamus variantus iš visumos.",
       "intuition": "Viskas minus tai, ko nereikia.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "gretiniai-savoka",
+      "title": "Gretiniai Savoka",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Gretiniai Savoka? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "invariantas-savoka",
+      "title": "Invariantas Savoka",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Invariantas Savoka? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -240,19 +258,22 @@
       "id": "n-faktorialas",
       "title": "Faktorialas",
       "formula": "$n! = 1 \\cdot 2 \\cdot 3 \\cdot \\dots \\cdot n$",
-      "description": "Pirmųjų n natūraliųjų skaičių sandauga."
+      "description": "Pirmųjų n natūraliųjų skaičių sandauga.",
+      "explanation": "Pirmųjų n natūraliųjų skaičių sandauga."
     },
     {
       "id": "deriniu-formule",
       "title": "Derinių skaičius",
       "formula": "$C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}$",
-      "description": "Būdų pasirinkti k elementų iš n, kai eilės tvarka nėra svarbi."
+      "description": "Būdų pasirinkti k elementų iš n, kai eilės tvarka nėra svarbi.",
+      "explanation": "Būdų pasirinkti k elementų iš n, kai eilės tvarka nėra svarbi."
     },
     {
       "id": "gretiniu-formule",
       "title": "Gretinių skaičius",
       "formula": "$A_n^k = \\frac{n!}{(n-k)!}$",
-      "description": "Būdų pasirinkti k elementų iš n ir juos surikiuoti."
+      "description": "Būdų pasirinkti k elementų iš n ir juos surikiuoti.",
+      "explanation": "Būdų pasirinkti k elementų iš n ir juos surikiuoti."
     }
   ],
   "mistakes": [
@@ -489,7 +510,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "389188800 žodžių."
+      "answerText": "389188800 žodžių.",
+      "solutionSteps": [
+        {
+          "text": "389188800 žodžių."
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-002",
@@ -590,7 +619,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "Teiginys įrodytas."
+      "answerText": "Teiginys įrodytas.",
+      "solutionSteps": [
+        {
+          "text": "Teiginys įrodytas."
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-003",
@@ -679,7 +716,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "45"
+      "answerText": "45",
+      "solutionSteps": [
+        {
+          "text": "45"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-004",
@@ -773,7 +818,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "Ne, negalima."
+      "answerText": "Ne, negalima.",
+      "solutionSteps": [
+        {
+          "text": "Ne, negalima."
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-005",
@@ -886,7 +939,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "20"
+      "answerText": "20",
+      "solutionSteps": [
+        {
+          "text": "20"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-006",
@@ -981,7 +1042,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "252"
+      "answerText": "252",
+      "solutionSteps": [
+        {
+          "text": "252"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-007",
@@ -1070,7 +1139,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "24"
+      "answerText": "24",
+      "solutionSteps": [
+        {
+          "text": "24"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-008",
@@ -1165,7 +1242,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "648"
+      "answerText": "648",
+      "solutionSteps": [
+        {
+          "text": "648"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-009",
@@ -1242,7 +1327,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "495"
+      "answerText": "495",
+      "solutionSteps": [
+        {
+          "text": "495"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-010",
@@ -1343,7 +1436,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "Ne, negalima."
+      "answerText": "Ne, negalima.",
+      "solutionSteps": [
+        {
+          "text": "Ne, negalima."
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-011",
@@ -1432,7 +1533,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "10080"
+      "answerText": "10080",
+      "solutionSteps": [
+        {
+          "text": "10080"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-012",
@@ -1515,7 +1624,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "10"
+      "answerText": "10",
+      "solutionSteps": [
+        {
+          "text": "10"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-013",
@@ -1604,7 +1721,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "35"
+      "answerText": "35",
+      "solutionSteps": [
+        {
+          "text": "35"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-014",
@@ -1693,7 +1818,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "15840"
+      "answerText": "15840",
+      "solutionSteps": [
+        {
+          "text": "15840"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-015",
@@ -1776,7 +1909,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "5"
+      "answerText": "5",
+      "solutionSteps": [
+        {
+          "text": "5"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-016",
@@ -1871,7 +2012,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "210"
+      "answerText": "210",
+      "solutionSteps": [
+        {
+          "text": "210"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-017",
@@ -1954,7 +2103,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "36"
+      "answerText": "36",
+      "solutionSteps": [
+        {
+          "text": "36"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-018",
@@ -2049,7 +2206,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "50050"
+      "answerText": "50050",
+      "solutionSteps": [
+        {
+          "text": "50050"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-019",
@@ -2126,7 +2291,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "120"
+      "answerText": "120",
+      "solutionSteps": [
+        {
+          "text": "120"
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     },
     {
       "id": "ex-kom-07-020",
@@ -2220,7 +2393,15 @@
           "defaultEnabled": true
         }
       ],
-      "answerText": "Teiginys įrodytas."
+      "answerText": "Teiginys įrodytas.",
+      "solutionSteps": [
+        {
+          "text": "Teiginys įrodytas."
+        }
+      ],
+      "conceptIds": [
+        "sudeties-taisykle"
+      ]
     }
   ],
   "tests": [

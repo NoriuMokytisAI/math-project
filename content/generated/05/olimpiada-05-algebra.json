@@ -39,23 +39,7 @@
     ],
     "exerciseIds": [
       "ex-olimpiada-05-b95502c0",
-      "ex-olimpiada-05-cbff97d9",
-      "ex-olimpiada-05-eb7e344a",
-      "ex-olimpiada-05-1fc20a2a",
-      "ex-olimpiada-05-866100dc",
-      "ex-olimpiada-05-6622d1e0",
-      "ex-olimpiada-05-b53ec404",
-      "ex-olimpiada-05-af96bd64",
-      "ex-olimpiada-05-alg-001",
-      "ex-olimpiada-05-alg-002",
-      "ex-olimpiada-05-alg-003",
-      "ex-olimpiada-05-alg-004",
-      "ex-olimpiada-05-alg-005",
-      "ex-olimpiada-05-alg-006",
-      "ex-olimpiada-05-alg-007",
-      "ex-olimpiada-05-alg-008",
-      "ex-olimpiada-05-alg-009",
-      "ex-olimpiada-05-alg-010"
+      "ex-olimpiada-05-b53ec404"
     ]
   },
   "theory": [
@@ -126,6 +110,24 @@
       "intuition": "Tai parodo, kaip greitai kažkas dirba. Jei per valandą nudažai 2 metrus tvoros, tavo našumas yra 2m/h.",
       "formal": "Našumas $P$ yra lygus viso darbo $W$ ir sugaišto laiko $t$ santykiui: $P = W/t$.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "aritmetine-progresija-pradmenys",
+      "title": "Aritmetine Progresija Pradmenys",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Aritmetine Progresija Pradmenys? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "santykinis-greitis",
+      "title": "Santykinis Greitis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Santykinis Greitis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -134,14 +136,18 @@
       "title": "Aritmetinės sekos sumos formulė",
       "equation": "S = \\frac{(a_1 + a_n) \\times n}{2}",
       "description": "Čia $a_1$ - pirmas narys, $a_n$ - paskutinis narys, $n$ - narių kiekis.",
-      "conceptualContext": "Naudojama sudėti skaičius, kurie didėja vienodais tarpais."
+      "conceptualContext": "Naudojama sudėti skaičius, kurie didėja vienodais tarpais.",
+      "latex": "S = \\frac{(a_1 + a_n) \\times n}{2}",
+      "explanation": "Čia $a_1$ - pirmas narys, $a_n$ - paskutinis narys, $n$ - narių kiekis."
     },
     {
       "id": "f-relative-speed",
       "title": "Santykinis greitis (viena kryptimi)",
       "equation": "v_{art} = v_{greitas} - v_{letas}",
       "description": "Greitis, kuriuo vienas objektas vejasi kitą.",
-      "conceptualContext": "Naudojama judėjimo uždaviniuose nustatyti, per kiek laiko vienas objektas pasivys kitą."
+      "conceptualContext": "Naudojama judėjimo uždaviniuose nustatyti, per kiek laiko vienas objektas pasivys kitą.",
+      "latex": "v_{art} = v_{greitas} - v_{letas}",
+      "explanation": "Greitis, kuriuo vienas objektas vejasi kitą."
     }
   ],
   "mistakes": [
@@ -339,7 +345,9 @@
         "kintamasis-kaip-deze"
       ],
       "expectedMethodIds": [],
-      "conceptIds": [],
+      "conceptIds": [
+        "kintamasis-kaip-deze"
+      ],
       "hints": [
         {
           "order": 1,
@@ -406,6 +414,11 @@
           "front": "Kokia pagrindinė taisyklė sprendžiant amžiaus uždavinius algebriškai?",
           "back": "Prie kiekvieno asmens dabartinio amžiaus reikia pridėti tą patį kintamąjį x (metų skaičių).",
           "defaultEnabled": true
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "6"
         }
       ]
     },
@@ -505,6 +518,14 @@
           "back": "Kai žinome galutinį rezultatą ir visą veiksmų seką, bet nežinome pradžios.",
           "defaultEnabled": true
         }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atsakymas gaunamas taikant temos metodus: 13."
+        }
+      ],
+      "conceptIds": [
+        "kintamasis-kaip-deze"
       ]
     }
   ]

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { State, Exercise } from '../types';
 import { exercises as allExercises, topics, concepts } from '../content';
 import { recordAttempt, ensureSrsCard } from '../systems';
@@ -26,9 +26,17 @@ export const Practice: React.FC<PracticeProps> = ({
     ex.topicId === activeTopicId && 
     (isOlympiad ? ex.level === 'olympiad' : ex.level !== 'olympiad')
   );
+  const solvedIds = useMemo(
+    () => new Set(state.attempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)),
+    [state.attempts]
+  );
 
   // Practice session state
   const [currentExercise, setCurrentExercise] = useState<Exercise | null>(null);
+  const [showExercisePicker, setShowExercisePicker] = useState(true);
+  const [selectedDifficulty, setSelectedDifficulty] = useState("all");
+  const [selectedStatus, setSelectedStatus] = useState("all");
+  const [exerciseSearch, setExerciseSearch] = useState("");
   const [visibleHints, setVisibleHints] = useState<string[]>([]);
   const [activeHintTab, setActiveHintTab] = useState<number>(0);
   const [attemptsCount, setAttemptsCount] = useState(0);
@@ -44,17 +52,9 @@ export const Practice: React.FC<PracticeProps> = ({
   const [openSolutionMethods, setOpenSolutionMethods] = useState<Set<string>>(new Set());
   const [selfCheckDraft, setSelfCheckDraft] = useState("");
 
-  // Pick next exercise
-  const loadNextExercise = (newPool = currentPool) => {
-    if (!newPool.length) {
-      setCurrentExercise(null);
-      return;
-    }
-    const solved = new Set(state.attempts.filter((a) => a.correct).map((a) => a.exerciseId));
-    // Prefer unsolved, or pick random
-    const next = newPool.find((ex) => !solved.has(ex.id)) || newPool[Math.floor(Math.random() * newPool.length)];
-
-    setCurrentExercise(next);
+  const resetExerciseSession = (exercise: Exercise) => {
+    setCurrentExercise(exercise);
+    setShowExercisePicker(false);
     setVisibleHints([]);
     setActiveHintTab(0);
     setAttemptsCount(0);
@@ -71,9 +71,24 @@ export const Practice: React.FC<PracticeProps> = ({
     setSelfCheckDraft("");
   };
 
+  // Pick next exercise
+  const loadNextExercise = (newPool = currentPool) => {
+    if (!newPool.length) {
+      setCurrentExercise(null);
+      setShowExercisePicker(true);
+      return;
+    }
+    const next = newPool.find((ex) => !solvedIds.has(ex.id)) || newPool[Math.floor(Math.random() * newPool.length)];
+    resetExerciseSession(next);
+  };
+
   // Run when activeTopicId changes
   useEffect(() => {
-    loadNextExercise(currentPool);
+    setCurrentExercise(null);
+    setShowExercisePicker(true);
+    setSelectedDifficulty("all");
+    setSelectedStatus("all");
+    setExerciseSearch("");
   }, [activeTopicId]);
 
   if (!topic) {
@@ -84,6 +99,72 @@ export const Practice: React.FC<PracticeProps> = ({
       </section>
     );
   }
+
+  const getDifficultyKey = (exercise: Exercise) =>
+    exercise.level === 'olympiad'
+      ? (exercise.olympiadTier || exercise.difficulty || "standard")
+      : (exercise.difficulty || "bendras");
+
+  const getDifficultyLabel = (value?: string) => {
+    switch (value) {
+      case 'introductory': return 'Įvadinis';
+      case 'standard': return 'Standartinis';
+      case 'advanced': return 'Pažengęs';
+      case 'selection': return 'Atrankinis';
+      case 'easy': return 'Lengvas';
+      case 'medium': return 'Vidutinis';
+      case 'hard': return 'Sunkus';
+      case 'bendras': return 'Bendras';
+      default: return value || 'Bendras';
+    }
+  };
+
+  const getExerciseTitle = (exercise: Exercise, index: number) =>
+    exercise.selectableTitle || (exercise as any).title || `Uždavinys ${index + 1}`;
+
+  const getExercisePreview = (exercise: Exercise) =>
+    exercise.statementPreview || exercise.statement.replace(/\s+/g, " ").slice(0, 180);
+
+  const difficultyOptions = Array.from(new Set(currentPool.map(getDifficultyKey)));
+  const filteredPool = currentPool.filter((exercise) => {
+    const query = exerciseSearch.trim().toLowerCase();
+    const searchable = [
+      exercise.statement,
+      exercise.statementPreview,
+      exercise.selectableTitle,
+      exercise.strand,
+      exercise.difficulty,
+      exercise.olympiadTier,
+      exercise.olympiadTrack,
+      ...(exercise.concepts || []),
+      ...(exercise.strategyTags || [])
+    ].filter(Boolean).join(" ").toLowerCase();
+    const statusMatch =
+      selectedStatus === "all" ||
+      (selectedStatus === "unsolved" && !solvedIds.has(exercise.id)) ||
+      (selectedStatus === "solved" && solvedIds.has(exercise.id));
+    return (
+      (selectedDifficulty === "all" || getDifficultyKey(exercise) === selectedDifficulty) &&
+      statusMatch &&
+      (!query || searchable.includes(query))
+    );
+  });
+
+  const findNearbyExercise = (direction: 'easier' | 'same' | 'harder') => {
+    if (!currentExercise) return null;
+    const order = isOlympiad
+      ? ['introductory', 'standard', 'advanced', 'selection']
+      : ['easy', 'medium', 'hard'];
+    const currentKey = getDifficultyKey(currentExercise);
+    const currentIdx = Math.max(0, order.indexOf(currentKey));
+    return currentPool.find((exercise) => {
+      if (exercise.id === currentExercise.id) return false;
+      const idx = Math.max(0, order.indexOf(getDifficultyKey(exercise)));
+      if (direction === 'same') return idx === currentIdx && !solvedIds.has(exercise.id);
+      if (direction === 'easier') return idx < currentIdx;
+      return idx > currentIdx;
+    }) || null;
+  };
 
   // Handle hint reveal
   const handleHint = () => {
@@ -194,28 +275,6 @@ export const Practice: React.FC<PracticeProps> = ({
 
   const lowPrereqs = getLowPrerequisites();
 
-  // Return empty container if no exercises in selected tab
-  if (!currentExercise) {
-    return (
-      <section className="view">
-        <div className="section-head">
-          <div>
-            <span className="eyebrow">Praktika</span>
-            <h1>{topic.title}</h1>
-          </div>
-          <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
-        </div>
-
-        <div className="panel practice-empty-state">
-          <h3>Nėra uždavinių</h3>
-          <p>
-            Šiai temai šiuo metu nėra jokių uždavinių.
-          </p>
-        </div>
-      </section>
-    );
-  }
-
   // Map tier name to lithuanian label
   const getTierLabel = (tier?: string) => {
     switch (tier) {
@@ -251,6 +310,103 @@ export const Practice: React.FC<PracticeProps> = ({
     });
   };
 
+  if (showExercisePicker || !currentExercise) {
+    return (
+      <section className="view">
+        <div className="section-head practice-selection-head">
+          <div>
+            <span className="eyebrow">Praktika • {isOlympiad ? "olimpiadinis turinys" : "mokyklinis turinys"}</span>
+            <h1>{topic.title}</h1>
+            <p className="lead">
+              Pasirink konkretų uždavinį pagal lygį, būseną arba raktinius žodžius. Rekomenduojama pradėti nuo neišspręstų uždavinių.
+            </p>
+          </div>
+          <div className="actions actions-stack-mobile">
+            <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
+            <button
+              className="primary"
+              onClick={() => loadNextExercise(filteredPool.length ? filteredPool : currentPool)}
+              disabled={!currentPool.length}
+            >
+              Pradėti rekomenduojamą
+            </button>
+          </div>
+        </div>
+
+        <section className="panel practice-picker-toolbar">
+          <label>
+            Paieška
+            <input
+              value={exerciseSearch}
+              onChange={(event) => setExerciseSearch(event.target.value)}
+              placeholder="Ieškok pagal tekstą, metodą ar sąvoką"
+            />
+          </label>
+          <label>
+            Sudėtingumas
+            <select value={selectedDifficulty} onChange={(event) => setSelectedDifficulty(event.target.value)}>
+              <option value="all">Visi lygiai</option>
+              {difficultyOptions.map((difficulty) => (
+                <option key={difficulty} value={difficulty}>{getDifficultyLabel(difficulty)}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Būsena
+            <select value={selectedStatus} onChange={(event) => setSelectedStatus(event.target.value)}>
+              <option value="all">Visi uždaviniai</option>
+              <option value="unsolved">Dar neišspręsti</option>
+              <option value="solved">Išspręsti</option>
+            </select>
+          </label>
+        </section>
+
+        {!currentPool.length ? (
+          <div className="panel practice-empty-state">
+            <h3>Nėra uždavinių</h3>
+            <p>Šiai temai šiuo metu nėra paruoštų uždavinių.</p>
+          </div>
+        ) : filteredPool.length === 0 ? (
+          <div className="panel practice-empty-state">
+            <h3>Nerasta pagal pasirinktus filtrus</h3>
+            <p>Pabandyk pakeisti sudėtingumą, būseną arba paieškos tekstą.</p>
+            <button onClick={() => {
+              setSelectedDifficulty("all");
+              setSelectedStatus("all");
+              setExerciseSearch("");
+            }}>
+              Išvalyti filtrus
+            </button>
+          </div>
+        ) : (
+          <section className="practice-exercise-grid">
+            {filteredPool.map((exercise) => {
+              const solved = solvedIds.has(exercise.id);
+              const indexInTopic = Math.max(0, currentPool.findIndex((item) => item.id === exercise.id));
+              return (
+                <button
+                  key={exercise.id}
+                  type="button"
+                  className={`exercise-selection-card ${solved ? "solved" : ""}`}
+                  onClick={() => resetExerciseSession(exercise)}
+                >
+                  <span className="eyebrow">{exercise.strand} • {getDifficultyLabel(getDifficultyKey(exercise))}</span>
+                  <strong>{getExerciseTitle(exercise, indexInTopic)}</strong>
+                  <span className="exercise-selection-preview">{getExercisePreview(exercise)}</span>
+                  <span className="exercise-selection-meta">
+                    <span>{solved ? "Išspręsta" : "Dar neišspręsta"}</span>
+                    {exercise.estimatedSeconds && <span>~{Math.max(1, Math.round(exercise.estimatedSeconds / 60))} min.</span>}
+                    {exercise.hints?.length ? <span>{exercise.hints.length} užuom.</span> : null}
+                  </span>
+                </button>
+              );
+            })}
+          </section>
+        )}
+      </section>
+    );
+  }
+
   const similarExercises = getSimilarExercises();
   const harderEx = getHarderExercise();
   const currentExerciseIndex = Math.max(0, currentPool.findIndex((exercise) => exercise.id === currentExercise.id));
@@ -264,6 +420,30 @@ export const Practice: React.FC<PracticeProps> = ({
           <h1>{topic.title}</h1>
         </div>
         <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
+      </div>
+
+      <div className="exercise-session-nav">
+        <button type="button" onClick={() => setShowExercisePicker(true)}>
+          Pasirinkti kitą uždavinį
+        </button>
+        <button type="button" onClick={() => {
+          const next = findNearbyExercise('easier');
+          if (next) resetExerciseSession(next);
+        }} disabled={!findNearbyExercise('easier')}>
+          Lengvesnis
+        </button>
+        <button type="button" onClick={() => {
+          const next = findNearbyExercise('same');
+          if (next) resetExerciseSession(next);
+        }} disabled={!findNearbyExercise('same')}>
+          Panašaus lygio
+        </button>
+        <button type="button" onClick={() => {
+          const next = findNearbyExercise('harder');
+          if (next) resetExerciseSession(next);
+        }} disabled={!findNearbyExercise('harder')}>
+          Sunkesnis
+        </button>
       </div>
 
       {/* ──── OLYMPIAD LAYOUT ──── */}

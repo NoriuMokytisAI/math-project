@@ -34,28 +34,7 @@
       "posukio-centro-nepaisymas",
       "simetrijos-asies-skaiciavimas"
     ],
-    "exerciseIds": [
-      "transformacijos-5-ex-001",
-      "transformacijos-5-ex-002",
-      "transformacijos-5-ex-003",
-      "transformacijos-5-ex-004",
-      "transformacijos-5-ex-005",
-      "transformacijos-5-ex-006",
-      "transformacijos-5-ex-007",
-      "transformacijos-5-ex-008",
-      "transformacijos-5-ex-009",
-      "transformacijos-5-ex-010",
-      "transformacijos-5-ex-011",
-      "transformacijos-5-ex-012",
-      "transformacijos-5-ex-013",
-      "transformacijos-5-ex-014",
-      "transformacijos-5-ex-015",
-      "transformacijos-5-ex-016",
-      "transformacijos-5-ex-017",
-      "transformacijos-5-ex-018",
-      "transformacijos-5-ex-019",
-      "transformacijos-5-ex-020"
-    ]
+    "exerciseIds": []
   },
   "theory": [
     {
@@ -174,9 +153,13 @@
       "intuition": "Tai figūros atvaizdas veidrodyje.",
       "formal": "Transformacija, kurios metu kiekvienas taškas $P$ perkeliamas į tašką $P'$ taip, kad simetrijos ašis būtų atkarpos $PP'$ vidurio statmuo.",
       "notation": [],
-      "relatedConceptIds": ["simetrijos-asis"],
+      "relatedConceptIds": [
+        "simetrijos-asis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["transformacijos-5"],
+      "appearsInTopicIds": [
+        "transformacijos-5"
+      ],
       "defaultSrs": true
     },
     {
@@ -187,9 +170,13 @@
       "intuition": "Tarsi figūros čiuožimas ledu be jokio sukimo.",
       "formal": "Plokštumos transformacija, kurios metu visi taškai pasislenka per tą patį vektorių.",
       "notation": [],
-      "relatedConceptIds": ["geometrine-transformacija"],
+      "relatedConceptIds": [
+        "geometrine-transformacija"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["transformacijos-5"],
+      "appearsInTopicIds": [
+        "transformacijos-5"
+      ],
       "defaultSrs": true
     },
     {
@@ -200,9 +187,13 @@
       "intuition": "Kaip laikrodžio rodyklės judėjimas arba sukimasis ratu.",
       "formal": "Transformacija, fiksuojanti vieną tašką (centrą) ir visus kitus taškus pasukanti pastoviu kampu.",
       "notation": [],
-      "relatedConceptIds": ["geometrine-transformacija"],
+      "relatedConceptIds": [
+        "geometrine-transformacija"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["transformacijos-5"],
+      "appearsInTopicIds": [
+        "transformacijos-5"
+      ],
       "defaultSrs": true
     },
     {
@@ -213,10 +204,41 @@
       "intuition": "Tai 'veidrodžio' linija.",
       "formal": "Tiesė, dalijanti figūrą į dvi dalis, kurios po atspindžio sutampa.",
       "notation": [],
-      "relatedConceptIds": ["atspindys-asine-simetrija"],
+      "relatedConceptIds": [
+        "atspindys-asine-simetrija"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["transformacijos-5"],
+      "appearsInTopicIds": [
+        "transformacijos-5"
+      ],
       "defaultSrs": true
+    },
+    {
+      "id": "figuru-lygumas",
+      "title": "Figuru Lygumas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Figuru Lygumas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "geometrine-transformacija",
+      "title": "Geometrine Transformacija",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Geometrine Transformacija? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "simetrija-gamtoje",
+      "title": "Simetrija Gamtoje",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Simetrija Gamtoje? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
@@ -225,7 +247,10 @@
       "id": "atspindzio-krypties-klaida",
       "title": "Atspindžio supainiojimas su postūmiu",
       "type": "mistake",
-      "conceptIds": ["atspindys-asine-simetrija", "postumis"],
+      "conceptIds": [
+        "atspindys-asine-simetrija",
+        "postumis"
+      ],
       "wrongPattern": "Mokinys nupiešia tokią pačią figūrą kitoje ašies pusėje, bet jos neapverčia.",
       "whyItHappens": "Pamirštama, kad veidrodis apverčia kairę ir dešinę puses.",
       "correction": "Visada matuokite atstumą nuo kiekvieno taško iki ašies atskirai.",
@@ -240,7 +265,10 @@
       "title": "Taško atspindys",
       "level": "easy",
       "problem": "Taškas A yra nutolęs nuo vertikalios simetrijos ašies per 4 langelius į kairę. Kur bus jo atspindys A'?",
-      "conceptIds": ["atspindys-asine-simetrija", "simetrijos-asis"],
+      "conceptIds": [
+        "atspindys-asine-simetrija",
+        "simetrijos-asis"
+      ],
       "steps": [
         {
           "text": "Pagal atspindžio savybę, atvaizdas turi būti tokio pat atstumo kitoje ašies pusėje.",
@@ -258,7 +286,9 @@
       "title": "Postūmis langeliais",
       "level": "easy",
       "problem": "Pastumkite tašką B per 5 langelius į dešinę ir 2 langelius žemyn.",
-      "conceptIds": ["postumis"],
+      "conceptIds": [
+        "postumis"
+      ],
       "steps": [
         {
           "text": "Nuo pradinio taško B skaičiuojame 5 žingsnius horizontaliai į dešinę.",
@@ -276,7 +306,9 @@
       "title": "Simetrijos ašių paieška",
       "level": "medium",
       "problem": "Kiek simetrijos ašių turi kvadratas?",
-      "conceptIds": ["simetrijos-asis"],
+      "conceptIds": [
+        "simetrijos-asis"
+      ],
       "steps": [
         {
           "text": "Kvadratą galima perlenkti per pusę vertikaliai ir horizontaliai (2 ašys).",
@@ -294,7 +326,9 @@
       "title": "Posūkis 90 laipsnių kampu",
       "level": "medium",
       "problem": "Atkarpa AB yra horizontali. Ją pasukame 90 laipsnių kampu apie tašką A pagal laikrodžio rodyklę. Kokia taps atkarpa?",
-      "conceptIds": ["posukis"],
+      "conceptIds": [
+        "posukis"
+      ],
       "steps": [
         {
           "text": "Taškas A lieka vietoje, nes jis yra posūkio centras.",
@@ -316,7 +350,9 @@
       "title": "Trikampio atspindys",
       "level": "medium",
       "problem": "Nubraižykite trikampio ABC atspindį tiesės l atžvilgiu.",
-      "conceptIds": ["atspindys-asine-simetrija"],
+      "conceptIds": [
+        "atspindys-asine-simetrija"
+      ],
       "steps": [
         {
           "text": "Kiekvienai viršūnei A, B, C surandame atitinkamus taškus A', B', C' kitoje tiesės pusėje tokiu pat atstumu.",
@@ -334,7 +370,9 @@
       "title": "Transformacijos atpažinimas",
       "level": "easy",
       "problem": "Kokia transformacija pavaizduota, jei figūra tik pasislinko į šoną?",
-      "conceptIds": ["postumis"],
+      "conceptIds": [
+        "postumis"
+      ],
       "steps": [
         {
           "text": "Jei figūra nepasikeitė, neapsivertė ir nepasuko, tai yra postūmis.",
@@ -348,7 +386,9 @@
       "title": "Apskritimo simetrija",
       "level": "hard",
       "problem": "Kiek simetrijos ašių turi apskritimas?",
-      "conceptIds": ["simetrijos-asis"],
+      "conceptIds": [
+        "simetrijos-asis"
+      ],
       "steps": [
         {
           "text": "Apskritimą galima perlenkti per bet kurią tiesę, einančią per jo centrą (diametrą).",
@@ -366,7 +406,9 @@
       "title": "Centrinė simetrija (180 laipsnių posūkis)",
       "level": "hard",
       "problem": "Kaip pasikeičia skaičius 6 po 180 laipsnių posūkio?",
-      "conceptIds": ["posukis"],
+      "conceptIds": [
+        "posukis"
+      ],
       "steps": [
         {
           "text": "180 laipsnių posūkis apverčia figūrą aukštyn kojom ir kartu kairę su dešine.",
@@ -379,5 +421,6 @@
       ],
       "answer": "Jis tampa skaičiumi 9 (jei šriftas standartinis)."
     }
-  ]
+  ],
+  "exercises": []
 }

@@ -43,15 +43,7 @@
     ],
     "exerciseIds": [
       "tiesinis-sarysis-ex-001",
-      "tiesinis-sarysis-ex-002",
-      "tiesinis-sarysis-ex-003",
-      "tiesinis-sarysis-ex-004",
-      "tiesinis-sarysis-ex-005",
-      "tiesinis-sarysis-ex-006",
-      "tiesinis-sarysis-ex-007",
-      "tiesinis-sarysis-ex-008",
-      "tiesinis-sarysis-ex-009",
-      "tiesinis-sarysis-ex-010"
+      "tiesinis-sarysis-ex-002"
     ]
   },
   "theory": [
@@ -311,6 +303,33 @@
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
+    },
+    {
+      "id": "tiesinis-sarysis",
+      "title": "Tiesinis Sarysis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Tiesinis Sarysis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "funkcijos-reiksme",
+      "title": "Funkcijos Reiksme",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Funkcijos Reiksme? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "funkcijos-nulis",
+      "title": "Funkcijos Nulis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Funkcijos Nulis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -637,7 +656,8 @@
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 45,
+      "difficulty": "medium"
     },
     {
       "id": "tiesinis-sarysis-ex-002",
@@ -652,7 +672,13 @@
         "Horizontali",
         "Vertikali"
       ],
-      "answer": "Mažėjanti",
+      "answer": {
+        "kind": "expression",
+        "canonical": "Mažėjanti",
+        "acceptedEquivalentForms": [
+          "Mažėjanti"
+        ]
+      },
       "hints": [
         {
           "order": 1,
@@ -676,7 +702,8 @@
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 30
+      "estimatedSeconds": 30,
+      "difficulty": "medium"
     }
   ],
   "tests": [],

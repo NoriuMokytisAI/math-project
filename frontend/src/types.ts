@@ -194,6 +194,7 @@ export interface Topic {
   concepts: string[];
   formulas: string[];
   mistakes: string[];
+  exerciseIds?: string[];
   sections: Array<{
     title: string;
     body: string[];
@@ -213,6 +214,10 @@ export interface Exercise {
   level?: string;
   grade: number;
   type?: string;
+  difficulty?: string;
+  statementPreview?: string;
+  selectableTitle?: string;
+  mistakeTags?: string[];
   statement: string;
   estimatedSeconds?: number;
   hints: string[];

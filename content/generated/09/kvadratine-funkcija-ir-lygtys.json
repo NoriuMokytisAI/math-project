@@ -145,11 +145,27 @@
         },
         {
           "type": "table",
-          "headers": ["Diskriminanto reikšmė", "Sprendinių skaičius", "Grafinė interpretacija"],
+          "headers": [
+            "Diskriminanto reikšmė",
+            "Sprendinių skaičius",
+            "Grafinė interpretacija"
+          ],
           "rows": [
-            ["D > 0", "Dvi skirtingos šaknys x_1 ir x_2", "Parabolė kerta x ašį dviejuose taškuose"],
-            ["D = 0", "Viena šaknis (du sutampantys sprendiniai)", "Parabolė liečia x ašį viršūne"],
-            ["D < 0", "Realiųjų sprendinių nėra", "Parabolė nekerta x ašies (yra virš jos arba po ja)"]
+            [
+              "D > 0",
+              "Dvi skirtingos šaknys x_1 ir x_2",
+              "Parabolė kerta x ašį dviejuose taškuose"
+            ],
+            [
+              "D = 0",
+              "Viena šaknis (du sutampantys sprendiniai)",
+              "Parabolė liečia x ašį viršūne"
+            ],
+            [
+              "D < 0",
+              "Realiųjų sprendinių nėra",
+              "Parabolė nekerta x ašies (yra virš jos arba po ja)"
+            ]
           ]
         },
         {
@@ -222,10 +238,20 @@
       "shortDefinition": "Funkcija f(x)=ax²+bx+c, kur a≠0.",
       "intuition": "Tai funkcija, kurios augimo greitis pats nuolat kinta, todėl jos grafikas yra kreivė.",
       "formal": "Kvadratinė funkcija yra polinominė antrojo laipsnio funkcija.",
-      "notation": ["f(x)=ax^2+bx+c"],
-      "relatedConceptIds": ["parabole", "virsune", "diskriminantas"],
-      "prerequisiteConceptIds": ["funkcija"],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "notation": [
+        "f(x)=ax^2+bx+c"
+      ],
+      "relatedConceptIds": [
+        "parabole",
+        "virsune",
+        "diskriminantas"
+      ],
+      "prerequisiteConceptIds": [
+        "funkcija"
+      ],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -236,9 +262,17 @@
       "intuition": "Simetriška lanko formos kreivė.",
       "formal": "Plokštumos taškų aibė, kurių atstumai iki duoto taško (židinio) ir iki duotos tiesės (direktrisės) yra lygūs.",
       "notation": [],
-      "relatedConceptIds": ["kvadratine-funkcija", "virsune", "simetrijos-asis"],
-      "prerequisiteConceptIds": ["grafikas"],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "relatedConceptIds": [
+        "kvadratine-funkcija",
+        "virsune",
+        "simetrijos-asis"
+      ],
+      "prerequisiteConceptIds": [
+        "grafikas"
+      ],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -248,10 +282,17 @@
       "shortDefinition": "Parabolės lūžio taškas, ekstremumas.",
       "intuition": "Vieta, kur parabolė nustoja leistis ir pradeda kilti (arba atvirkščiai).",
       "formal": "Taškas (x_v; y_v), kuriame kvadratinė funkcija įgyja didžiausią arba mažiausią reikšmę.",
-      "notation": ["V(x_v; y_v)"],
-      "relatedConceptIds": ["simetrijos-asis", "reiksmiu-sritis"],
+      "notation": [
+        "V(x_v; y_v)"
+      ],
+      "relatedConceptIds": [
+        "simetrijos-asis",
+        "reiksmiu-sritis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -261,10 +302,17 @@
       "shortDefinition": "Dydis D = b² - 4ac, nusakantis lygties sprendinių prigimtį.",
       "intuition": "Matematinis „indikatorius“, parodantis, kiek kartų grafikas kerta horizontalią ašį.",
       "formal": "Kvadratinio trinario invariantas, lemiantis šaknų pobūdį.",
-      "notation": ["D"],
-      "relatedConceptIds": ["saknys", "kvadratines-lygties-formule"],
+      "notation": [
+        "D"
+      ],
+      "relatedConceptIds": [
+        "saknys",
+        "kvadratines-lygties-formule"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -275,9 +323,14 @@
       "intuition": "Būdas patikrinti šaknis jas sudedant ir padauginant.",
       "formal": "Kvadratinės lygties šaknų suma lygi -b/a, o sandauga c/a.",
       "notation": [],
-      "relatedConceptIds": ["saknys", "kvadratinis-trinaris"],
+      "relatedConceptIds": [
+        "saknys",
+        "kvadratinis-trinaris"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -288,9 +341,14 @@
       "intuition": "Tiesiog kvadratinės funkcijos „kūnas“ be f(x) ženklo.",
       "formal": "Antrojo laipsnio polinomas su vienu kintamuoju.",
       "notation": [],
-      "relatedConceptIds": ["vijeto-teorema", "trinario-skaidymas"],
+      "relatedConceptIds": [
+        "vijeto-teorema",
+        "trinario-skaidymas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -301,9 +359,16 @@
       "intuition": "Klausimas: kuriems x grafikas yra virš arba po tam tikra riba?",
       "formal": "Nelygybė pavidalo ax² + bx + c > 0 (arba <, ≤, ≥).",
       "notation": [],
-      "relatedConceptIds": ["parabole", "saknys"],
-      "prerequisiteConceptIds": ["nelygybe"],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "relatedConceptIds": [
+        "parabole",
+        "saknys"
+      ],
+      "prerequisiteConceptIds": [
+        "nelygybe"
+      ],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
     },
     {
@@ -314,10 +379,42 @@
       "intuition": "Atsakymas į klausimą: kaip gauti „daugiausia“ arba sunaudoti „mažiausia“?",
       "formal": "Funkcijos ekstremumo (maksimumo arba minimumo) radimas nustatytoje srityje.",
       "notation": [],
-      "relatedConceptIds": ["virsune", "reiksmiu-sritis"],
+      "relatedConceptIds": [
+        "virsune",
+        "reiksmiu-sritis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "appearsInTopicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "defaultSrs": true
+    },
+    {
+      "id": "simetrijos-asis",
+      "title": "Simetrijos Asis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Simetrijos Asis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "saknys",
+      "title": "Saknys",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Saknys? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "trinario-skaidymas",
+      "title": "Trinario Skaidymas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Trinario Skaidymas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda spr?sti susijusius u?davinius.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -326,7 +423,9 @@
       "title": "Parabolės viršūnės koordinatės",
       "type": "formula",
       "latex": "x_v = -\\frac{b}{2a}, \\quad y_v = f(x_v)",
-      "conditions": ["a \\neq 0"],
+      "conditions": [
+        "a \\neq 0"
+      ],
       "variables": {
         "x_v": "viršūnės abscisė",
         "y_v": "viršūnės ordinatė",
@@ -334,7 +433,10 @@
         "b": "koeficientas prie x"
       },
       "explanation": "Ši formulė leidžia rasti tašką, kuriame funkcija keičia kryptį.",
-      "relatedConceptIds": ["virsune", "simetrijos-asis"],
+      "relatedConceptIds": [
+        "virsune",
+        "simetrijos-asis"
+      ],
       "defaultSrs": true
     },
     {
@@ -350,7 +452,10 @@
         "c": "laisvasis narys"
       },
       "explanation": "Nusako, kiek realiųjų sprendinių turi kvadratinė lygtis.",
-      "relatedConceptIds": ["diskriminantas", "saknys"],
+      "relatedConceptIds": [
+        "diskriminantas",
+        "saknys"
+      ],
       "defaultSrs": true
     },
     {
@@ -358,13 +463,19 @@
       "title": "Kvadratinės lygties sprendiniai",
       "type": "formula",
       "latex": "x_{1,2} = \\frac{-b \\pm \\sqrt{D}}{2a}",
-      "conditions": ["D \\geq 0", "a \\neq 0"],
+      "conditions": [
+        "D \\geq 0",
+        "a \\neq 0"
+      ],
       "variables": {
         "x": "lygties šaknys",
         "D": "diskriminantas"
       },
       "explanation": "Universali formulė bet kuriai pilnai kvadratinei lygčiai spręsti.",
-      "relatedConceptIds": ["saknys", "diskriminantas"],
+      "relatedConceptIds": [
+        "saknys",
+        "diskriminantas"
+      ],
       "defaultSrs": true
     },
     {
@@ -372,12 +483,16 @@
       "title": "Vijeto formulės",
       "type": "formula",
       "latex": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 \\cdot x_2 = \\frac{c}{a}",
-      "conditions": ["D \\geq 0"],
+      "conditions": [
+        "D \\geq 0"
+      ],
       "variables": {
         "x_1, x_2": "lygties šaknys"
       },
       "explanation": "Sieja šaknis su lygties koeficientais nenaudojant diskriminanto.",
-      "relatedConceptIds": ["vijeto-teorema"],
+      "relatedConceptIds": [
+        "vijeto-teorema"
+      ],
       "defaultSrs": true
     },
     {
@@ -385,12 +500,17 @@
       "title": "Kvadratinio trinarinio skaidymas",
       "type": "formula",
       "latex": "ax^2 + bx + c = a(x - x_1)(x - x_2)",
-      "conditions": ["D \\geq 0"],
+      "conditions": [
+        "D \\geq 0"
+      ],
       "variables": {
         "x_1, x_2": "kvadratinio trinarinio nuliai"
       },
       "explanation": "Leidžia užrašyti trinarį kaip dviejų tiesinių reiškinių sandaugą.",
-      "relatedConceptIds": ["kvadratinis-trinaris", "saknys"],
+      "relatedConceptIds": [
+        "kvadratinis-trinaris",
+        "saknys"
+      ],
       "defaultSrs": true
     }
   ],
@@ -399,7 +519,9 @@
       "id": "diskriminanta-supainioja",
       "title": "Diskriminanto ženklo klaida",
       "type": "mistake",
-      "conceptIds": ["diskriminantas"],
+      "conceptIds": [
+        "diskriminantas"
+      ],
       "wrongPattern": "Apskaičiuojant D, kai c yra neigiamas, rašoma b² - 4ac netaikant minusų taisyklės.",
       "whyItHappens": "Mokiniai pamiršta, kad „minusas iš minuso duoda pliusą“.",
       "correction": "Jei c < 0, tai -4ac taps teigiamu skaičiumi.",
@@ -411,7 +533,9 @@
       "id": "zenklu-klaida-vijeto",
       "title": "Vijeto teoremos ženklų sumaišymas",
       "type": "mistake",
-      "conceptIds": ["vijeto-teorema"],
+      "conceptIds": [
+        "vijeto-teorema"
+      ],
       "wrongPattern": "Teigiama, kad šaknų suma lygi koeficientui b (o ne -b).",
       "whyItHappens": "Pamirštamas minuso ženklas sumos formulėje.",
       "correction": "Šaknų suma visada lygi koeficientui b su priešingu ženklu (padalintam iš a).",
@@ -423,7 +547,9 @@
       "id": "virsunes-formule-netiksli",
       "title": "Dalijimas tik iš a (vietoj 2a)",
       "type": "mistake",
-      "conceptIds": ["virsune"],
+      "conceptIds": [
+        "virsune"
+      ],
       "wrongPattern": "x_v = -b / a",
       "whyItHappens": "Viršūnės formulė painiojama su tiesinės lygties sprendiniu arba tiesiog neįsimenamas dvejetas vardiklyje.",
       "correction": "Visada vardiklyje turi būti 2a.",
@@ -438,7 +564,10 @@
       "title": "Parabolės viršūnė ir braižymas",
       "level": "easy",
       "problem": "Raskite funkcijos f(x) = x^2 - 4x + 3 parabolės viršūnę ir tašką, kuriame grafikas kerta y ašį.",
-      "conceptIds": ["virsune", "parabole"],
+      "conceptIds": [
+        "virsune",
+        "parabole"
+      ],
       "steps": [
         {
           "text": "Nustatome koeficientus: a = 1, b = -4, c = 3.",
@@ -464,7 +593,10 @@
       "title": "Kvadratinės lygties sprendimas",
       "level": "easy",
       "problem": "Išspręskite lygtį: 2x^2 + 5x - 3 = 0.",
-      "conceptIds": ["diskriminantas", "saknys"],
+      "conceptIds": [
+        "diskriminantas",
+        "saknys"
+      ],
       "steps": [
         {
           "text": "Apskaičiuojame diskriminantą D = b^2 - 4ac.",
@@ -486,7 +618,10 @@
       "title": "Standartinės formos keitimas į viršūnės formą",
       "level": "medium",
       "problem": "Užrašykite funkciją f(x) = x^2 + 6x + 5 pavidalu f(x) = (x-m)^2 + k.",
-      "conceptIds": ["virsune", "kvadratine-funkcija"],
+      "conceptIds": [
+        "virsune",
+        "kvadratine-funkcija"
+      ],
       "steps": [
         {
           "text": "Būdas 1: Pilno kvadrato išskyrimas. Pridedame ir atimame (b/2)^2.",
@@ -508,7 +643,10 @@
       "title": "Vijeto teoremos taikymas",
       "level": "medium",
       "problem": "Žinoma, kad lygties x^2 - 8x + k = 0 vienas sprendinys yra 3. Raskite k ir antrąjį sprendinį.",
-      "conceptIds": ["vijeto-teorema", "saknys"],
+      "conceptIds": [
+        "vijeto-teorema",
+        "saknys"
+      ],
       "steps": [
         {
           "text": "Pagal Vijeto teoremą, šaknų suma x_1 + x_2 = -p. Čia p = -8, taigi suma yra 8.",
@@ -530,7 +668,10 @@
       "title": "Trinarinio skaidymas dauginamaisiais",
       "level": "medium",
       "problem": "Suprastinkite reiškinį: \\frac{3x^2 - 10x + 3}{x - 3}.",
-      "conceptIds": ["kvadratinis-trinaris", "trinario-skaidymas"],
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-skaidymas"
+      ],
       "steps": [
         {
           "text": "Pirmiausia randame skaitiklio 3x^2 - 10x + 3 nulius spręsdami lygtį.",
@@ -556,7 +697,10 @@
       "title": "Kvadratinės nelygybės sprendimas",
       "level": "hard",
       "problem": "Išspręskite nelygybę: -x^2 + 2x + 8 > 0.",
-      "conceptIds": ["kvadratine-nelygybe", "parabole"],
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "parabole"
+      ],
       "steps": [
         {
           "text": "Raskime lygties -x^2 + 2x + 8 = 0 šaknis (galima padauginti iš -1: x^2 - 2x - 8 = 0).",
@@ -578,7 +722,10 @@
       "title": "Didžiausio ploto radimas",
       "level": "hard",
       "problem": "Tvirta viela, kurios ilgis 20 cm, sulenkiama į stačiakampį. Kokio ilgio turi būti stačiakampio kraštinės, kad jo plotas būtų didžiausias?",
-      "conceptIds": ["optimizavimas", "virsune"],
+      "conceptIds": [
+        "optimizavimas",
+        "virsune"
+      ],
       "steps": [
         {
           "text": "Pažymėkime vieną kraštinę x. Kadangi perimetras 20, tai pusperimetris (dviejų gretimų kraštinių suma) yra 10. Kita kraštinė bus 10 - x.",
@@ -604,7 +751,10 @@
       "title": "Parabolės ir tiesės sankirta",
       "level": "hard",
       "problem": "Raskite parabolės y = x^2 - 2x ir tiesės y = x + 4 bendrus taškus.",
-      "conceptIds": ["saknys", "grafikas"],
+      "conceptIds": [
+        "saknys",
+        "grafikas"
+      ],
       "steps": [
         {
           "text": "Sulyginame abi funkcijas, kad rastume x koordinates.",
@@ -644,7 +794,9 @@
           "order": 1,
           "text": "Naudokite formulę x_v = -b / (2a).",
           "penalty": 0.1,
-          "revealsConceptIds": ["virsune"]
+          "revealsConceptIds": [
+            "virsune"
+          ]
         },
         {
           "order": 2,
@@ -664,10 +816,17 @@
       ],
       "answerText": "2",
       "alternateMethods": [],
-      "conceptIds": ["virsune"],
-      "formulaIds": ["virsunes-formule"],
-      "mistakeIds": ["virsunes-formule-netiksli"],
-      "estimatedSeconds": 45
+      "conceptIds": [
+        "virsune"
+      ],
+      "formulaIds": [
+        "virsunes-formule"
+      ],
+      "mistakeIds": [
+        "virsunes-formule-netiksli"
+      ],
+      "estimatedSeconds": 45,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-002",
@@ -686,7 +845,9 @@
           "order": 1,
           "text": "Apskaičiuokite diskriminantą D = b^2 - 4ac.",
           "penalty": 0.1,
-          "revealsConceptIds": ["diskriminantas"]
+          "revealsConceptIds": [
+            "diskriminantas"
+          ]
         },
         {
           "order": 2,
@@ -706,10 +867,16 @@
       ],
       "answerText": "1",
       "alternateMethods": [],
-      "conceptIds": ["diskriminantas", "saknys"],
-      "formulaIds": ["diskriminanto-formule"],
+      "conceptIds": [
+        "diskriminantas",
+        "saknys"
+      ],
+      "formulaIds": [
+        "diskriminanto-formule"
+      ],
       "mistakeIds": [],
-      "estimatedSeconds": 40
+      "estimatedSeconds": 40,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-003",
@@ -728,7 +895,9 @@
           "order": 1,
           "text": "Pagal Vijetą: x1 + x2 = 12 ir x1 * x2 = 35.",
           "penalty": 0.1,
-          "revealsConceptIds": ["vijeto-teorema"]
+          "revealsConceptIds": [
+            "vijeto-teorema"
+          ]
         },
         {
           "order": 2,
@@ -748,10 +917,18 @@
       ],
       "answerText": "7",
       "alternateMethods": [],
-      "conceptIds": ["vijeto-teorema", "saknys"],
-      "formulaIds": ["vijeto-formules"],
-      "mistakeIds": ["zenklu-klaida-vijeto"],
-      "estimatedSeconds": 50
+      "conceptIds": [
+        "vijeto-teorema",
+        "saknys"
+      ],
+      "formulaIds": [
+        "vijeto-formules"
+      ],
+      "mistakeIds": [
+        "zenklu-klaida-vijeto"
+      ],
+      "estimatedSeconds": 50,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-004",
@@ -785,10 +962,13 @@
       ],
       "answerText": "-10",
       "alternateMethods": [],
-      "conceptIds": ["kvadratine-funkcija"],
+      "conceptIds": [
+        "kvadratine-funkcija"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 30
+      "estimatedSeconds": 30,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-005",
@@ -807,7 +987,9 @@
           "order": 1,
           "text": "Skaidymas yra a(x-x1)(x-x2). Reikia rasti trinario šaknis.",
           "penalty": 0.1,
-          "revealsConceptIds": ["trinario-skaidymas"]
+          "revealsConceptIds": [
+            "trinario-skaidymas"
+          ]
         },
         {
           "order": 2,
@@ -827,10 +1009,16 @@
       ],
       "answerText": "3",
       "alternateMethods": [],
-      "conceptIds": ["kvadratinis-trinaris", "trinario-skaidymas"],
-      "formulaIds": ["trinario-skaidymas"],
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-skaidymas"
+      ],
+      "formulaIds": [
+        "trinario-skaidymas"
+      ],
       "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 45,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-006",
@@ -842,12 +1030,26 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "(-inf; -1)" },
-          { "id": "b", "text": "(-1; 1)" },
-          { "id": "c", "text": "(1; +inf)" },
-          { "id": "d", "text": "(-inf; 1)" }
+          {
+            "id": "a",
+            "text": "(-inf; -1)"
+          },
+          {
+            "id": "b",
+            "text": "(-1; 1)"
+          },
+          {
+            "id": "c",
+            "text": "(1; +inf)"
+          },
+          {
+            "id": "d",
+            "text": "(-inf; 1)"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
         {
@@ -859,7 +1061,9 @@
           "order": 2,
           "text": "Nubraižykite parabolės eskizą. Kur ji yra po x ašimi?",
           "penalty": 0.1,
-          "revealsConceptIds": ["kvadratine-nelygybe"]
+          "revealsConceptIds": [
+            "kvadratine-nelygybe"
+          ]
         }
       ],
       "solutionSteps": [
@@ -874,10 +1078,14 @@
       ],
       "answerText": "(-1; 1)",
       "alternateMethods": [],
-      "conceptIds": ["kvadratine-nelygybe", "parabole"],
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "parabole"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 60
+      "estimatedSeconds": 60,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-007",
@@ -896,7 +1104,10 @@
           "order": 1,
           "text": "Mažiausia reikšmė yra parabolės viršūnės y koordinatė.",
           "penalty": 0.1,
-          "revealsConceptIds": ["virsune", "optimizavimas"]
+          "revealsConceptIds": [
+            "virsune",
+            "optimizavimas"
+          ]
         },
         {
           "order": 2,
@@ -916,10 +1127,16 @@
       ],
       "answerText": "4",
       "alternateMethods": [],
-      "conceptIds": ["virsune", "optimizavimas"],
-      "formulaIds": ["virsunes-formule"],
+      "conceptIds": [
+        "virsune",
+        "optimizavimas"
+      ],
+      "formulaIds": [
+        "virsunes-formule"
+      ],
       "mistakeIds": [],
-      "estimatedSeconds": 70
+      "estimatedSeconds": 70,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-008",
@@ -938,7 +1155,9 @@
           "order": 1,
           "text": "Lygtis turi vieną sprendinį, kai diskriminantas lygus nuliui.",
           "penalty": 0.1,
-          "revealsConceptIds": ["diskriminantas"]
+          "revealsConceptIds": [
+            "diskriminantas"
+          ]
         },
         {
           "order": 2,
@@ -958,10 +1177,16 @@
       ],
       "answerText": "6",
       "alternateMethods": [],
-      "conceptIds": ["diskriminantas", "saknys"],
-      "formulaIds": ["diskriminanto-formule"],
+      "conceptIds": [
+        "diskriminantas",
+        "saknys"
+      ],
+      "formulaIds": [
+        "diskriminanto-formule"
+      ],
       "mistakeIds": [],
-      "estimatedSeconds": 60
+      "estimatedSeconds": 60,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-009",
@@ -995,10 +1220,13 @@
       ],
       "answerText": "4",
       "alternateMethods": [],
-      "conceptIds": ["virsune"],
+      "conceptIds": [
+        "virsune"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 30
+      "estimatedSeconds": 30,
+      "difficulty": "medium"
     },
     {
       "id": "kvadratine-funkcija-ir-lygtys-ex-010",
@@ -1036,10 +1264,18 @@
       ],
       "answerText": "5",
       "alternateMethods": [],
-      "conceptIds": ["kvadratine-funkcija", "saknys"],
-      "formulaIds": ["kvadratines-lygties-formule"],
-      "mistakeIds": ["diskriminanta-supainioja"],
-      "estimatedSeconds": 90
+      "conceptIds": [
+        "kvadratine-funkcija",
+        "saknys"
+      ],
+      "formulaIds": [
+        "kvadratines-lygties-formule"
+      ],
+      "mistakeIds": [
+        "diskriminanta-supainioja"
+      ],
+      "estimatedSeconds": 90,
+      "difficulty": "medium"
     }
   ],
   "tests": [
@@ -1047,7 +1283,9 @@
       "id": "kvadratine-funkcija-ir-lygtys-test-topic",
       "title": "Kvadratinė funkcija ir lygtys: Temos testas",
       "scope": "topic",
-      "topicIds": ["kvadratine-funkcija-ir-lygtys"],
+      "topicIds": [
+        "kvadratine-funkcija-ir-lygtys"
+      ],
       "exerciseIds": [
         "kvadratine-funkcija-ir-lygtys-ex-001",
         "kvadratine-funkcija-ir-lygtys-ex-002",
@@ -1070,8 +1308,12 @@
       "cardType": "formula",
       "front": "Kokia yra parabolės f(x)=ax²+bx+c viršūnės x koordinatės formulė?",
       "back": "x_v = -b / (2a)",
-      "conceptIds": ["virsune"],
-      "formulaIds": ["virsunes-formule"],
+      "conceptIds": [
+        "virsune"
+      ],
+      "formulaIds": [
+        "virsunes-formule"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1080,7 +1322,9 @@
       "cardType": "concept",
       "front": "Ką apie lygties sprendinius sako diskriminantas D < 0?",
       "back": "Lygtis neturi realiųjų sprendinių (parabolė nekerta x ašies).",
-      "conceptIds": ["diskriminantas"],
+      "conceptIds": [
+        "diskriminantas"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1089,8 +1333,12 @@
       "cardType": "formula",
       "front": "Kam lygi redukuotosios kvadratinės lygties x²+px+q=0 šaknų suma pagal Vijeto teoremą?",
       "back": "x1 + x2 = -p",
-      "conceptIds": ["vijeto-teorema"],
-      "formulaIds": ["vijeto-formules"],
+      "conceptIds": [
+        "vijeto-teorema"
+      ],
+      "formulaIds": [
+        "vijeto-formules"
+      ],
       "defaultEnabled": true
     }
   ]

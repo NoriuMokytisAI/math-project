@@ -34,7 +34,9 @@
       "liekanu-daugybos-klaida",
       "pirminio-skaiciaus-prielaida"
     ],
-    "exerciseIds": ["ex-olimpiada-08-nt-020"]
+    "exerciseIds": [
+      "ex-olimpiada-08-nt-020"
+    ]
   },
   "theory": [
     {
@@ -171,6 +173,24 @@
       "type": "theorem",
       "shortDefinition": "Faktorialo liekana moduliu pirminis p.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "skaiciavimo-sistemos",
+      "title": "Skaiciavimo Sistemos",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Skaiciavimo Sistemos? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "diofanto-lygtys-nt",
+      "title": "Diofanto Lygtys Nt",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Diofanto Lygtys Nt? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -178,25 +198,29 @@
       "id": "bezout-tapatybe",
       "title": "Bezout tapatybė",
       "formula": "$ax + by = \\text{dbd}(a, b)$",
-      "description": "Tiesinė kombinacija sveikaisiais skaičiais."
+      "description": "Tiesinė kombinacija sveikaisiais skaičiais.",
+      "explanation": "Tiesinė kombinacija sveikaisiais skaičiais."
     },
     {
       "id": "oilerio-formule-nt",
       "title": "Oilerio funkcija",
       "formula": "$\\phi(n) = n \\prod_{p|n} (1 - \\frac{1}{p})$",
-      "description": "Skaičiuoja skaičius iki n, neturinčius bendrų daliklių su n."
+      "description": "Skaičiuoja skaičius iki n, neturinčius bendrų daliklių su n.",
+      "explanation": "Skaičiuoja skaičius iki n, neturinčius bendrų daliklių su n."
     },
     {
       "id": "vilsono-formule",
       "title": "Vilsono formulė",
       "formula": "$(p-1)! \\equiv -1 \\pmod p$",
-      "description": "Galioja tik pirminiams skaičiams p."
+      "description": "Galioja tik pirminiams skaičiams p.",
+      "explanation": "Galioja tik pirminiams skaičiams p."
     },
     {
       "id": "dalikliu-skaicius-formule",
       "title": "Daliklių skaičiaus formulė",
       "formula": "$\\tau(n) = \\prod (e_i + 1)$",
-      "description": "Suskaičiuoja visus natūraliuosius daliklius."
+      "description": "Suskaičiuoja visus natūraliuosius daliklius.",
+      "explanation": "Suskaičiuoja visus natūraliuosius daliklius."
     }
   ],
   "mistakes": [
@@ -367,9 +391,12 @@
         }
       ],
       "answerText": "4",
-      "srsSeeds": []
+      "srsSeeds": [],
+      "conceptIds": [
+        "euklido-algoritmas"
+      ]
     }
-],
+  ],
   "tests": [
     {
       "id": "olimpiada-08-nt-test",
@@ -378,7 +405,9 @@
       "topicIds": [
         "olimpiada-08-skaiciu-teorija"
       ],
-      "exerciseIds": ["ex-olimpiada-08-nt-020"],
+      "exerciseIds": [
+        "ex-olimpiada-08-nt-020"
+      ],
       "masteryWeight": 2.0
     }
   ]

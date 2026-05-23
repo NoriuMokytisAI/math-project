@@ -10,7 +10,7 @@ interface MathTextProps {
 export const MathText: React.FC<MathTextProps> = ({ text, onConceptClick, className }) => {
   if (!text) return null;
 
-  const regex = /(?:\$\$(.*?)\$\$)|(?:\$(.*?)\$)|(?:\[\[([^|\]]+)\|([^\]]+)\]\])/gs;
+  const regex = /(?:\$\$(.*?)\$\$)|(?:\$(.*?)\$)|(?:\[\[([^|\]]+)\|([^\]]+)\]\])|(?:\*\*([\s\S]+?)\*\*)/gs;
   const elements: React.ReactNode[] = [];
   let lastIndex = 0;
   let match;
@@ -23,7 +23,7 @@ export const MathText: React.FC<MathTextProps> = ({ text, onConceptClick, classN
       elements.push(text.slice(lastIndex, matchIndex));
     }
 
-    const [fullMatch, blockMath, inlineMath, conceptId, conceptName] = match;
+    const [fullMatch, blockMath, inlineMath, conceptId, conceptName, boldText] = match;
 
     if (blockMath !== undefined) {
       try {
@@ -53,6 +53,8 @@ export const MathText: React.FC<MathTextProps> = ({ text, onConceptClick, classN
           {conceptName}
         </button>
       );
+    } else if (boldText !== undefined) {
+      elements.push(<strong key={matchIndex}>{boldText}</strong>);
     }
 
     lastIndex = regex.lastIndex;

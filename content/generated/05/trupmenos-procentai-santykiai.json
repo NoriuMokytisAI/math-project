@@ -39,28 +39,7 @@
       "santykiu-nesupratimas",
       "vardiklio-reiksme"
     ],
-    "exerciseIds": [
-      "trupmenos-procentai-santykiai-ex-001",
-      "trupmenos-procentai-santykiai-ex-002",
-      "trupmenos-procentai-santykiai-ex-003",
-      "trupmenos-procentai-santykiai-ex-004",
-      "trupmenos-procentai-santykiai-ex-005",
-      "trupmenos-procentai-santykiai-ex-006",
-      "trupmenos-procentai-santykiai-ex-007",
-      "trupmenos-procentai-santykiai-ex-008",
-      "trupmenos-procentai-santykiai-ex-009",
-      "trupmenos-procentai-santykiai-ex-010",
-      "trupmenos-procentai-santykiai-ex-011",
-      "trupmenos-procentai-santykiai-ex-012",
-      "trupmenos-procentai-santykiai-ex-013",
-      "trupmenos-procentai-santykiai-ex-014",
-      "trupmenos-procentai-santykiai-ex-015",
-      "trupmenos-procentai-santykiai-ex-016",
-      "trupmenos-procentai-santykiai-ex-017",
-      "trupmenos-procentai-santykiai-ex-018",
-      "trupmenos-procentai-santykiai-ex-019",
-      "trupmenos-procentai-santykiai-ex-020"
-    ]
+    "exerciseIds": []
   },
   "theory": [
     {
@@ -143,11 +122,31 @@
           "type": "table",
           "text": "Dažniausiai naudojamos poros",
           "data": [
-            ["$\\frac{1}{2}$", "50%", "0,5"],
-            ["$\\frac{1}{4}$", "25%", "0,25"],
-            ["$\\frac{3}{4}$", "75%", "0,75"],
-            ["$\\frac{1}{5}$", "20%", "0,2"],
-            ["$\\frac{1}{10}$", "10%", "0,1"]
+            [
+              "$\\frac{1}{2}$",
+              "50%",
+              "0,5"
+            ],
+            [
+              "$\\frac{1}{4}$",
+              "25%",
+              "0,25"
+            ],
+            [
+              "$\\frac{3}{4}$",
+              "75%",
+              "0,75"
+            ],
+            [
+              "$\\frac{1}{5}$",
+              "20%",
+              "0,2"
+            ],
+            [
+              "$\\frac{1}{10}$",
+              "10%",
+              "0,1"
+            ]
           ]
         }
       ]
@@ -199,10 +198,17 @@
       "shortDefinition": "Visumos dalies užrašas.",
       "intuition": "Trupmena sako, kaip mes pasidalinome pyragą.",
       "formal": "Skaičius, užrašomas p/q pavidalu, kur p - skaitiklis, q - vardiklis.",
-      "notation": ["p/q"],
-      "relatedConceptIds": ["procentas", "santykis"],
+      "notation": [
+        "p/q"
+      ],
+      "relatedConceptIds": [
+        "procentas",
+        "santykis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trupmenos-procentai-santykiai"],
+      "appearsInTopicIds": [
+        "trupmenos-procentai-santykiai"
+      ],
       "defaultSrs": true
     },
     {
@@ -212,10 +218,16 @@
       "shortDefinition": "Viena šimtoji dalis.",
       "intuition": "Tai trupmena, kurios vardiklis visada yra 100.",
       "formal": "Vienetas, lygus 0,01 visumos daliai.",
-      "notation": ["%"],
-      "relatedConceptIds": ["trupmena"],
+      "notation": [
+        "%"
+      ],
+      "relatedConceptIds": [
+        "trupmena"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trupmenos-procentai-santykiai"],
+      "appearsInTopicIds": [
+        "trupmenos-procentai-santykiai"
+      ],
       "defaultSrs": true
     },
     {
@@ -225,10 +237,17 @@
       "shortDefinition": "Dviejų dydžių lyginimas dalyba.",
       "intuition": "Kiek vieno daikto tenka kitam (pvz., uogienės recepte).",
       "formal": "Dviejų skaičių a ir b dalmuo a:b.",
-      "notation": ["a:b"],
-      "relatedConceptIds": ["proporcija", "mastelis"],
+      "notation": [
+        "a:b"
+      ],
+      "relatedConceptIds": [
+        "proporcija",
+        "mastelis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trupmenos-procentai-santykiai"],
+      "appearsInTopicIds": [
+        "trupmenos-procentai-santykiai"
+      ],
       "defaultSrs": true
     },
     {
@@ -238,11 +257,55 @@
       "shortDefinition": "Atstumo žemėlapyje ir tikrovėje santykis.",
       "intuition": "Kiek kartų tikras pasaulis buvo suspaustas, kad tilptų į lapą.",
       "formal": "Atkarpos ilgio brėžinyje ir jos tikrojo ilgio santykis.",
-      "notation": ["1:M"],
-      "relatedConceptIds": ["santykis"],
-      "prerequisiteConceptIds": ["santykis"],
-      "appearsInTopicIds": ["trupmenos-procentai-santykiai"],
+      "notation": [
+        "1:M"
+      ],
+      "relatedConceptIds": [
+        "santykis"
+      ],
+      "prerequisiteConceptIds": [
+        "santykis"
+      ],
+      "appearsInTopicIds": [
+        "trupmenos-procentai-santykiai"
+      ],
       "defaultSrs": true
+    },
+    {
+      "id": "skaitiklis-vardiklis",
+      "title": "Skaitiklis Vardiklis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Skaitiklis Vardiklis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "proporcija",
+      "title": "Proporcija",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Proporcija? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "dalies-radimas",
+      "title": "Dalies Radimas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Dalies Radimas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "konvertavimas-skaiciu",
+      "title": "Konvertavimas Skaiciu",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Konvertavimas Skaiciu? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -251,13 +314,17 @@
       "title": "Procento radimas",
       "type": "formula",
       "latex": "\\text{Dalis} = \\frac{\\text{Visuma} \\cdot p}{100}",
-      "conditions": ["Kai žinome procentą p"],
+      "conditions": [
+        "Kai žinome procentą p"
+      ],
       "variables": {
         "Visuma": "pradinis kiekis",
         "p": "procentų skaičius"
       },
       "explanation": "Padeda apskaičiuoti konkrečią dalį, kai žinome procentinę reikšmę.",
-      "relatedConceptIds": ["procentas"],
+      "relatedConceptIds": [
+        "procentas"
+      ],
       "defaultSrs": true
     }
   ],
@@ -266,7 +333,9 @@
       "id": "painioja-procenta-su-daiktu",
       "title": "Painioja procentą su kiekiu",
       "type": "mistake",
-      "conceptIds": ["procentas"],
+      "conceptIds": [
+        "procentas"
+      ],
       "wrongPattern": "Mano, kad 'nuimti 10%' visada reiškia 'atimti 10 eurų'.",
       "whyItHappens": "Nesuprantama, kad procentas yra santykinis dydis, priklausantis nuo pradinio skaičiaus.",
       "correction": "Visada pirmiausia paskaičiuok, kiek yra 1% būtent nuo to skaičiaus.",
@@ -281,7 +350,10 @@
       "title": "Trupmena ir dalijimas",
       "level": "easy",
       "problem": "Pica padalinta į 8 lygias dalis. Tu suvalgei 3 dalis. Kokia picos dalis liko?",
-      "conceptIds": ["trupmena", "skaitiklis-vardiklis"],
+      "conceptIds": [
+        "trupmena",
+        "skaitiklis-vardiklis"
+      ],
       "steps": [
         {
           "text": "Visą picą užrašome kaip 8/8.",
@@ -299,7 +371,10 @@
       "title": "Procentų pavertimas trupmena",
       "level": "easy",
       "problem": "Paverskite 40% paprastąja trupmena.",
-      "conceptIds": ["procentas", "konvertavimas-skaiciu"],
+      "conceptIds": [
+        "procentas",
+        "konvertavimas-skaiciu"
+      ],
       "steps": [
         {
           "text": "Procentą užrašome kaip trupmeną su vardikliu 100.",
@@ -317,7 +392,10 @@
       "title": "Dalies radimas (pinigai)",
       "level": "medium",
       "problem": "Striukė kainuoja 80 eurų. Jai taikoma 15% nuolaida. Kokia nuolaida eurais?",
-      "conceptIds": ["procentas", "dalies-radimas"],
+      "conceptIds": [
+        "procentas",
+        "dalies-radimas"
+      ],
       "steps": [
         {
           "text": "Randame 1% nuo 80 eurų.",
@@ -335,7 +413,9 @@
       "title": "Santykis receptuose",
       "level": "medium",
       "problem": "Uogienei reikia maišyti uogas ir cukrų santykiu 3:2. Kiek reikės cukraus, jei turime 9 kg uogų?",
-      "conceptIds": ["santykis"],
+      "conceptIds": [
+        "santykis"
+      ],
       "steps": [
         {
           "text": "Sužinome, kiek uogų tenka vienai santykio 'daliai'.",
@@ -353,7 +433,10 @@
       "title": "Trupmenos vertimas procentais",
       "level": "medium",
       "problem": "Klasėje 1/5 mokinių gavo dešimtukus. Kiek tai procentų?",
-      "conceptIds": ["konvertavimas-skaiciu", "procentas"],
+      "conceptIds": [
+        "konvertavimas-skaiciu",
+        "procentas"
+      ],
       "steps": [
         {
           "text": "Trupmeną dauginame iš 100%.",
@@ -371,7 +454,10 @@
       "title": "Atstumas žemėlapyje",
       "level": "medium",
       "problem": "Žemėlapio mastelis 1:200 000. Atstumas tarp miestų žemėlapyje yra 5 cm. Koks tikrasis atstumas kilometrais?",
-      "conceptIds": ["mastelis", "santykis"],
+      "conceptIds": [
+        "mastelis",
+        "santykis"
+      ],
       "steps": [
         {
           "text": "Dauginame žemėlapio atstumą iš mastelio skaičiaus.",
@@ -393,7 +479,9 @@
       "title": "Proporcija (Kryžminė taisyklė)",
       "level": "hard",
       "problem": "Išspręskite proporciją: x/12 = 3/4.",
-      "conceptIds": ["proporcija"],
+      "conceptIds": [
+        "proporcija"
+      ],
       "steps": [
         {
           "text": "Taikome kryžminę daugybą ('drugelio' metodą).",
@@ -415,7 +503,10 @@
       "title": "Procentai nuo likučio",
       "level": "hard",
       "problem": "Knygoje yra 200 puslapių. Pirmą dieną perskaitei 20%, antrą dieną - 10% likusių puslapių. Kiek liko skaityti?",
-      "conceptIds": ["procentas", "dalies-radimas"],
+      "conceptIds": [
+        "procentas",
+        "dalies-radimas"
+      ],
       "steps": [
         {
           "text": "Randame pirmos dienos puslapius.",
@@ -436,5 +527,6 @@
       ],
       "answer": "Liko 144 puslapiai."
     }
-  ]
+  ],
+  "exercises": []
 }

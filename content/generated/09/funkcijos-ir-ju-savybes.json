@@ -40,29 +40,7 @@
       "apibrezimo-srities-neziuri",
       "intervalai-su-y"
     ],
-    "exerciseIds": [
-      "funkcijos-ir-ju-savybes-ex-001",
-      "funkcijos-ir-ju-savybes-ex-002",
-      "funkcijos-ir-ju-savybes-ex-003",
-      "funkcijos-ir-ju-savybes-ex-004",
-      "funkcijos-ir-ju-savybes-ex-005",
-      "funkcijos-ir-ju-savybes-ex-006",
-      "funkcijos-ir-ju-savybes-ex-007",
-      "funkcijos-ir-ju-savybes-ex-008",
-      "funkcijos-ir-ju-savybes-ex-009",
-      "funkcijos-ir-ju-savybes-ex-010",
-      "funkcijos-ir-ju-savybes-ex-011",
-      "funkcijos-ir-ju-savybes-ex-012",
-      "funkcijos-ir-ju-savybes-ex-013",
-      "funkcijos-ir-ju-savybes-ex-014",
-      "funkcijos-ir-ju-savybes-ex-015",
-      "funkcijos-ir-ju-savybes-ex-016",
-      "funkcijos-ir-ju-savybes-ex-017",
-      "funkcijos-ir-ju-savybes-ex-018",
-      "funkcijos-ir-ju-savybes-ex-019",
-      "funkcijos-ir-ju-savybes-ex-020",
-      "olympiad-grade9-functions"
-    ]
+    "exerciseIds": []
   },
   "theory": [
     {
@@ -461,7 +439,10 @@
       "shortDefinition": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
       "intuition": "Tai kaip receptas: įdedi ingredientus (x), gauni patiekalą (y). Vienas receptas visada duoda tą patį rezultatą.",
       "formal": "Funkcija f iš aibės X į aibę Y yra taisyklė, pagal kurią kiekvienas x iš X yra susietas su vieninteliu y iš Y.",
-      "notation": ["y = f(x)", "f: X -> Y"],
+      "notation": [
+        "y = f(x)",
+        "f: X -> Y"
+      ],
       "relatedConceptIds": [
         "argumentas",
         "grafikas",
@@ -478,7 +459,9 @@
       "shortDefinition": "Nepriklausomas kintamasis.",
       "intuition": "Tai, ką tu kontroliuoji arba pasirenki įvesti į funkciją.",
       "formal": "Kintamasis, kurio reikšmės sudaro funkcijos apibrėžimo sritį.",
-      "notation": ["x"],
+      "notation": [
+        "x"
+      ],
       "relatedConceptIds": [
         "funkcija",
         "reiksmiu-sritis"
@@ -494,7 +477,10 @@
       "shortDefinition": "Visų leistinų argumentų aibė.",
       "intuition": "Visi skaičiai, kuriuos „leidžiama“ įstatyti į funkciją, kad gautume prasmingą atsakymą.",
       "formal": "Aibė D(f) = {x | f(x) yra apibrėžtas}.",
-      "notation": ["D(f)", "D_f"],
+      "notation": [
+        "D(f)",
+        "D_f"
+      ],
       "relatedConceptIds": [
         "funkcija",
         "grafikas"
@@ -510,7 +496,10 @@
       "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
       "intuition": "Visi galimi rezultatai, kuriuos funkcija gali pasiekti.",
       "formal": "Aibė E(f) = {f(x) | x priklauso D(f)}.",
-      "notation": ["E(f)", "E_f"],
+      "notation": [
+        "E(f)",
+        "E_f"
+      ],
       "relatedConceptIds": [
         "funkcija",
         "grafikas"
@@ -592,8 +581,13 @@
       "shortDefinition": "Intervalai, kuriuose funkcija yra tik teigiama arba tik neigiama.",
       "intuition": "Grafiko dalys, kurios yra virš x ašies arba po ja.",
       "formal": "Intervalai, kuriuose f(x) > 0 arba f(x) < 0 visiems x iš to intervalo.",
-      "notation": ["f(x) > 0", "f(x) < 0"],
-      "relatedConceptIds": ["funkcijos-nulis"],
+      "notation": [
+        "f(x) > 0",
+        "f(x) < 0"
+      ],
+      "relatedConceptIds": [
+        "funkcijos-nulis"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -606,7 +600,9 @@
       "intuition": "Lyginė funkcija simetriška y ašies atžvilgiu (veidrodis), nelyginė – koordinačių pradžios taško atžvilgiu.",
       "formal": "Lyginė: f(-x) = f(x). Nelyginė: f(-x) = -f(x).",
       "notation": [],
-      "relatedConceptIds": ["grafikas"],
+      "relatedConceptIds": [
+        "grafikas"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true

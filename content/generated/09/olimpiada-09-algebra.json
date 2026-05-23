@@ -34,26 +34,7 @@
       "daugianario-laipsnio-klaida"
     ],
     "exerciseIds": [
-      "ex-olimpiada-09-01",
-      "ex-olimpiada-09-02",
-      "ex-olimpiada-09-03",
-      "ex-olimpiada-09-04",
-      "ex-olimpiada-09-05",
-      "ex-olimpiada-09-06",
-      "ex-olimpiada-09-07",
-      "ex-olimpiada-09-08",
-      "ex-olimpiada-09-09",
-      "ex-olimpiada-09-10",
-      "ex-olimpiada-09-11",
-      "ex-olimpiada-09-13",
-      "ex-olimpiada-09-14",
-      "ex-olimpiada-09-15",
-      "ex-olimpiada-09-16",
-      "ex-olimpiada-09-17",
-      "ex-olimpiada-09-18",
-      "ex-olimpiada-09-19",
-      "ex-olimpiada-09-20",
-      "ex-olimpiada-09-21"
+      "ex-olimpiada-09-01"
     ]
   },
   "theory": [
@@ -188,6 +169,15 @@
       "type": "method",
       "shortDefinition": "Sumų skaičiavimo būdas per narių susiprastinimą.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "funkcines-lygtys-pagrindai",
+      "title": "Funkcines Lygtys Pagrindai",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Funkcines Lygtys Pagrindai? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -195,19 +185,22 @@
       "id": "formula-sophie-germain",
       "title": "Sophie Germain tapatybė",
       "formula": "$a^4 + 4b^4 = (a^2 + 2b^2 + 2ab)(a^2 + 2b^2 - 2ab)$",
-      "description": "Metodas skaidyti sumą į sandaugą."
+      "description": "Metodas skaidyti sumą į sandaugą.",
+      "explanation": "Metodas skaidyti sumą į sandaugą."
     },
     {
       "id": "vijeto-formules-n",
       "title": "Vietos formulės",
       "formula": "$\\sum x_i = -a_{n-1}/a_n, \\quad \\prod x_i = (-1)^n a_0/a_n$",
-      "description": "Ryšys tarp šaknų ir koeficientų."
+      "description": "Ryšys tarp šaknų ir koeficientų.",
+      "explanation": "Ryšys tarp šaknų ir koeficientų."
     },
     {
       "id": "bernoulli-nelygybe",
       "title": "Bernoulli nelygybė",
       "formula": "$(1+x)^n \\ge 1 + nx$",
-      "description": "Galioja $x > -1$ ir $n \\in \\mathbb{N}$."
+      "description": "Galioja $x > -1$ ir $n \\in \\mathbb{N}$.",
+      "explanation": "Galioja $x > -1$ ir $n \\in \\mathbb{N}$."
     }
   ],
   "mistakes": [
@@ -368,6 +361,14 @@
           "text": "Taikome žinomą tapatybę.",
           "finalAnswer": "$(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$"
         }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$"
+        }
+      ],
+      "conceptIds": [
+        "daugianariu-teorema"
       ]
     }
   ],
@@ -380,16 +381,7 @@
         "olimpiada-09-algebra"
       ],
       "exerciseIds": [
-        "ex-olimpiada-09-01",
-        "ex-olimpiada-09-02",
-        "ex-olimpiada-09-03",
-        "ex-olimpiada-09-06",
-        "ex-olimpiada-09-07",
-        "ex-olimpiada-09-08",
-        "ex-olimpiada-09-09",
-        "ex-olimpiada-09-10",
-        "ex-olimpiada-09-13",
-        "ex-olimpiada-09-21"
+        "ex-olimpiada-09-01"
       ],
       "masteryWeight": 1.5
     }

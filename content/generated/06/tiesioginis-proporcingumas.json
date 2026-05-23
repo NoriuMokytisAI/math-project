@@ -38,28 +38,7 @@
       "grafiko-pradzios-taskas",
       "sumaisytas-proporcingumas"
     ],
-    "exerciseIds": [
-      "tiesioginis-proporcingumas-ex-001",
-      "tiesioginis-proporcingumas-ex-002",
-      "tiesioginis-proporcingumas-ex-003",
-      "tiesioginis-proporcingumas-ex-004",
-      "tiesioginis-proporcingumas-ex-005",
-      "tiesioginis-proporcingumas-ex-006",
-      "tiesioginis-proporcingumas-ex-007",
-      "tiesioginis-proporcingumas-ex-008",
-      "tiesioginis-proporcingumas-ex-009",
-      "tiesioginis-proporcingumas-ex-010",
-      "tiesioginis-proporcingumas-ex-011",
-      "tiesioginis-proporcingumas-ex-012",
-      "tiesioginis-proporcingumas-ex-013",
-      "tiesioginis-proporcingumas-ex-014",
-      "tiesioginis-proporcingumas-ex-015",
-      "tiesioginis-proporcingumas-ex-016",
-      "tiesioginis-proporcingumas-ex-017",
-      "tiesioginis-proporcingumas-ex-018",
-      "tiesioginis-proporcingumas-ex-019",
-      "tiesioginis-proporcingumas-ex-020"
-    ]
+    "exerciseIds": []
   },
   "theory": [
     {
@@ -102,8 +81,20 @@
           "type": "table",
           "text": "Pavyzdys: Obuolių kaina",
           "data": [
-            ["Svoris x (kg)", "1", "2", "3", "5"],
-            ["Kaina y (Eur)", "1,5", "3", "4,5", "7,5"]
+            [
+              "Svoris x (kg)",
+              "1",
+              "2",
+              "3",
+              "5"
+            ],
+            [
+              "Kaina y (Eur)",
+              "1,5",
+              "3",
+              "4,5",
+              "7,5"
+            ]
           ]
         },
         {
@@ -189,10 +180,19 @@
       "shortDefinition": "Dydžių ryšys, kai jų santykis yra pastovus.",
       "intuition": "Dvigubai daugiau darbo - dvigubai didesnis atlygis.",
       "formal": "Funkcija $y = kx$, kur $k$ yra konstanta.",
-      "notation": ["y = kx"],
-      "relatedConceptIds": ["proporcingumo-koeficientas", "tiesinis-grafikas"],
-      "prerequisiteConceptIds": ["santykis"],
-      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
+      "notation": [
+        "y = kx"
+      ],
+      "relatedConceptIds": [
+        "proporcingumo-koeficientas",
+        "tiesinis-grafikas"
+      ],
+      "prerequisiteConceptIds": [
+        "santykis"
+      ],
+      "appearsInTopicIds": [
+        "tiesioginis-proporcingumas"
+      ],
       "defaultSrs": true
     },
     {
@@ -202,10 +202,16 @@
       "shortDefinition": "Daugiklis, rodantis ryšį tarp proporcingų dydžių.",
       "intuition": "Tai 'vieno vieneto kaina' arba pastovus daugiklis.",
       "formal": "Skaičius $k = y/x$.",
-      "notation": ["k"],
-      "relatedConceptIds": ["tiesioginis-proporcingumas"],
+      "notation": [
+        "k"
+      ],
+      "relatedConceptIds": [
+        "tiesioginis-proporcingumas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
+      "appearsInTopicIds": [
+        "tiesioginis-proporcingumas"
+      ],
       "defaultSrs": true
     },
     {
@@ -215,11 +221,55 @@
       "shortDefinition": "Dviejų santykių lygybė.",
       "intuition": "Jei 2 kainuoja 4, tai 4 kainuoja 8.",
       "formal": "Lygybė a:b = c:d.",
-      "notation": ["a/b = c/d"],
-      "relatedConceptIds": ["tiesioginis-proporcingumas"],
-      "prerequisiteConceptIds": ["santykis"],
-      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
+      "notation": [
+        "a/b = c/d"
+      ],
+      "relatedConceptIds": [
+        "tiesioginis-proporcingumas"
+      ],
+      "prerequisiteConceptIds": [
+        "santykis"
+      ],
+      "appearsInTopicIds": [
+        "tiesioginis-proporcingumas"
+      ],
       "defaultSrs": true
+    },
+    {
+      "id": "tiesinis-grafikas",
+      "title": "Tiesinis Grafikas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Tiesinis Grafikas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "priklausomas-kintamasis",
+      "title": "Priklausomas Kintamasis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Priklausomas Kintamasis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "nepriklausomas-kintamasis",
+      "title": "Nepriklausomas Kintamasis",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Nepriklausomas Kintamasis? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "koordinaciu-plokstuma",
+      "title": "Koordinaciu Plokstuma",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Koordinaciu Plokstuma? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [
@@ -228,14 +278,18 @@
       "title": "Tiesioginio proporcingumo formulė",
       "type": "formula",
       "latex": "y = kx",
-      "conditions": ["k != 0"],
+      "conditions": [
+        "k != 0"
+      ],
       "variables": {
         "y": "priklausomas kintamasis",
         "x": "nepriklausomas kintamasis",
         "k": "proporcingumo koeficientas"
       },
       "explanation": "Pagrindinis algebrinis modelis tiesioginiam ryšiui.",
-      "relatedConceptIds": ["tiesioginis-proporcingumas"],
+      "relatedConceptIds": [
+        "tiesioginis-proporcingumas"
+      ],
       "defaultSrs": true
     },
     {
@@ -243,12 +297,16 @@
       "title": "Pagrindinė proporcijos savybė",
       "type": "formula",
       "latex": "a \\cdot d = b \\cdot c",
-      "conditions": ["Kai a/b = c/d"],
+      "conditions": [
+        "Kai a/b = c/d"
+      ],
       "variables": {
         "a, b, c, d": "proporcijos nariai"
       },
       "explanation": "Leidžia spręsti proporcijas dauginant narius kryžmai.",
-      "relatedConceptIds": ["proporcija"],
+      "relatedConceptIds": [
+        "proporcija"
+      ],
       "defaultSrs": true
     }
   ],
@@ -257,7 +315,9 @@
       "id": "k-skaiciavimo-klaida",
       "title": "Neteisingas koeficiento skaičiavimas",
       "type": "mistake",
-      "conceptIds": ["proporcingumo-koeficientas"],
+      "conceptIds": [
+        "proporcingumo-koeficientas"
+      ],
       "wrongPattern": "Skaičiuoja k = x/y vietoj k = y/x.",
       "whyItHappens": "Supainiojami priklausomas ir nepriklausomas kintamieji.",
       "correction": "Visada dalinkite funkcijos reikšmę (y) iš argumentą (x).",
@@ -272,7 +332,10 @@
       "title": "Koeficiento radimas iš taško",
       "level": "easy",
       "problem": "Tiesioginio proporcingumo grafikas eina per tašką (4; 12). Raskite koeficientą k.",
-      "conceptIds": ["proporcingumo-koeficientas", "tiesioginis-proporcingumas"],
+      "conceptIds": [
+        "proporcingumo-koeficientas",
+        "tiesioginis-proporcingumas"
+      ],
       "steps": [
         {
           "text": "Žinome taško koordinates x = 4 ir y = 12.",
@@ -290,7 +353,9 @@
       "title": "Proporcijos su nežinomuoju sprendimas",
       "level": "easy",
       "problem": "Išspręskite proporciją: x/5 = 10/2.",
-      "conceptIds": ["proporcija"],
+      "conceptIds": [
+        "proporcija"
+      ],
       "steps": [
         {
           "text": "Taikome pagrindinę proporcijos savybę (dauginame kryžmai).",
@@ -312,7 +377,9 @@
       "title": "Reikšmės radimas pagal formulę",
       "level": "medium",
       "problem": "Dydis y yra tiesiogiai proporcingas x su koeficientu k=0,5. Raskite y, kai x=14.",
-      "conceptIds": ["tiesioginio-proporcingumo-formule"],
+      "conceptIds": [
+        "tiesioginio-proporcingumo-formule"
+      ],
       "steps": [
         {
           "text": "Užrašome formulę.",
@@ -330,7 +397,10 @@
       "title": "Proporcingumo lentelės pildymas",
       "level": "medium",
       "problem": "Užpildykite tuščią vietą, jei y proporcingas x: x=2 -> y=6; x=5 -> y=?",
-      "conceptIds": ["tiesioginis-proporcingumas", "proporcingumo-koeficientas"],
+      "conceptIds": [
+        "tiesioginis-proporcingumas",
+        "proporcingumo-koeficientas"
+      ],
       "steps": [
         {
           "text": "Pirmiausia raskime koeficientą k iš pirmosios poros.",
@@ -348,7 +418,9 @@
       "title": "Kuro sąnaudos (Tekstinis uždavinys)",
       "level": "medium",
       "problem": "Automobilis nuvažiavo 120 km ir sunaudojo 9 litrus kuro. Kiek litrų kuro reikės 200 km kelionei?",
-      "conceptIds": ["proporcija"],
+      "conceptIds": [
+        "proporcija"
+      ],
       "steps": [
         {
           "text": "Susidarome proporciją (kilometrai prie kilometrų, litrai prie litrų).",
@@ -374,7 +446,10 @@
       "title": "Grafiko atpažinimas",
       "level": "easy",
       "problem": "Ar funkcija y = 2x + 1 yra tiesioginis proporcingumas?",
-      "conceptIds": ["tiesioginis-proporcingumas", "tiesinis-grafikas"],
+      "conceptIds": [
+        "tiesioginis-proporcingumas",
+        "tiesinis-grafikas"
+      ],
       "steps": [
         {
           "text": "Patikriname, ar grafikas eina per (0;0). Įstatome x=0.",
@@ -392,7 +467,10 @@
       "title": "Judėjimo uždavinys",
       "level": "hard",
       "problem": "Dviratininkas važiuoja pastoviu greičiu. Per 1,5 valandos jis nuvažiuoja 27 km. Kiek kilometrų jis nuvažiuos per 40 minučių?",
-      "conceptIds": ["proporcija", "skaiciu-konvertavimas"],
+      "conceptIds": [
+        "proporcija",
+        "skaiciu-konvertavimas"
+      ],
       "steps": [
         {
           "text": "Paverčiame laiką į tas pačias vienetas (minutes). 1,5 val = 90 min.",
@@ -418,7 +496,9 @@
       "title": "Koeficientas su trupmenomis",
       "level": "hard",
       "problem": "Jei y tiesiogiai proporcingas x, ir žinoma, kad y=3/4 kai x=2/3, raskite koeficientą k.",
-      "conceptIds": ["proporcingumo-koeficientas"],
+      "conceptIds": [
+        "proporcingumo-koeficientas"
+      ],
       "steps": [
         {
           "text": "Naudojame formulę k = y : x.",
@@ -435,5 +515,6 @@
       ],
       "answer": "1,125"
     }
-  ]
+  ],
+  "exercises": []
 }

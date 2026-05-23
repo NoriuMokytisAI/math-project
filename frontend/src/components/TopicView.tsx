@@ -1,6 +1,6 @@
 import React from 'react';
 import { State } from '../types';
-import { topics, concepts } from '../content';
+import { topics, concepts, exercises } from '../content';
 import { getTestsForTopic, ensureTopicSrsCards } from '../systems';
 import { MathText } from './MathText';
 
@@ -33,6 +33,19 @@ export const TopicView: React.FC<TopicViewProps> = ({
 
   const topicTests = getTestsForTopic(topic.id);
   const isRelevant = (state.profile.relevantTopicIds || []).includes(topic.id);
+  const topicExercises = exercises.filter((exercise) => exercise.topicId === topic.id);
+  const theoryWordCount = topic.sections.reduce((total, section) => (
+    total + section.body.join(" ").trim().split(/\s+/).filter(Boolean).length
+  ), 0);
+  const isThinTheory = theoryWordCount > 0 && theoryWordCount < (topic.level === "olympiad" ? 1000 : 800);
+  const navItems = [
+    { id: "topic-theory", label: "Teorija", visible: topic.sections.length > 0 },
+    { id: "topic-concepts", label: "Sąvokos", visible: topic.concepts.length > 0 },
+    { id: "topic-formulas", label: "Formulės", visible: topic.formulas.length > 0 },
+    { id: "topic-mistakes", label: "Klaidos", visible: topic.mistakes.length > 0 },
+    { id: "topic-examples", label: "Pavyzdžiai", visible: topic.examples.length > 0 },
+    { id: "topic-next", label: "Toliau", visible: true }
+  ].filter((item) => item.visible);
 
   const handleToggleRelevant = () => {
     updateState((prev) => {
@@ -104,8 +117,33 @@ export const TopicView: React.FC<TopicViewProps> = ({
         </div>
       </section>
 
+      <section className="panel wide topic-learning-map">
+        <div>
+          <span className="eyebrow">Temos struktūra</span>
+          <h3>Mokykis dalimis, ne vienu ilgu puslapiu</h3>
+          <p>
+            Pirmiausia perskaityk teoriją, tada pasitikrink sąvokas, peržiūrėk formules ir pavyzdžius, o pabaigoje pereik į praktiką.
+          </p>
+        </div>
+        <nav className="topic-anchor-list" aria-label="Temos dalys">
+          {navItems.map((item) => (
+            <a key={item.id} href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </section>
+
+      {isThinTheory && (
+        <section className="panel wide topic-depth-warning">
+          <span className="eyebrow">Turinio gylis</span>
+          <h3>Ši tema dar turi būti plečiama</h3>
+          <p>
+            Puslapis jau veikia mokymuisi, bet teorijos gylis dar nesiekia galutinio standarto. Turinys turėtų būti pildomas papildomais paaiškinimais, pavyzdžiais ir uždavinių variacijomis.
+          </p>
+        </section>
+      )}
+
       {topic.concepts && topic.concepts.length > 0 && (
-        <section className="panel wide concepts-panel">
+        <section id="topic-concepts" className="panel wide concepts-panel">
           <span className="eyebrow">Sąvokos šioje temoje</span>
           <div className="chips">
             {topic.concepts.map((id) => {
@@ -125,7 +163,7 @@ export const TopicView: React.FC<TopicViewProps> = ({
         </section>
       )}
 
-      <section className="panel wide theory-content">
+      <section id="topic-theory" className="panel wide theory-content">
         <span className="eyebrow">Teorinė dalis</span>
         <div className="sections-container">
           {topic.sections.map((section, idx) => (
@@ -142,12 +180,15 @@ export const TopicView: React.FC<TopicViewProps> = ({
       </section>
 
       {topic.formulas && topic.formulas.length > 0 && (
-        <section className="panel formulas-panel">
+        <section id="topic-formulas" className="panel formulas-panel">
           <span className="eyebrow">Formulės</span>
           <div className="formula-list">
             {topic.formulas.map((formula, idx) => (
               <div key={idx} className="formula-item">
-                <MathText text={formula} onConceptClick={handleConceptClick} />
+                <MathText
+                  text={formula.includes("$") ? formula : `$${formula}$`}
+                  onConceptClick={handleConceptClick}
+                />
               </div>
             ))}
           </div>
@@ -155,7 +196,7 @@ export const TopicView: React.FC<TopicViewProps> = ({
       )}
 
       {topic.mistakes && topic.mistakes.length > 0 && (
-        <section className="panel mistakes-panel">
+        <section id="topic-mistakes" className="panel mistakes-panel">
           <span className="eyebrow">Dažnos klaidos</span>
           <ul className="mistake-list">
             {topic.mistakes.map((mistake, idx) => (
@@ -168,7 +209,7 @@ export const TopicView: React.FC<TopicViewProps> = ({
       )}
 
       {topic.examples && topic.examples.length > 0 && (
-        <section className="panel wide examples-panel">
+        <section id="topic-examples" className="panel wide examples-panel">
           <span className="eyebrow">Uždavinių pavyzdžiai su sprendimais</span>
           <div className="examples-container">
             {topic.examples.map((example, idx) => (
@@ -191,6 +232,24 @@ export const TopicView: React.FC<TopicViewProps> = ({
           </div>
         </section>
       )}
+
+      <section id="topic-next" className="panel wide topic-next-actions">
+        <div>
+          <span className="eyebrow">Kitas žingsnis</span>
+          <h3>Įtvirtink temą aktyviai</h3>
+          <p>
+            Šioje temoje paruošta {topicExercises.length} uždavinių ir {topicTests.length} testų. Uždavinius gali rinktis pagal sudėtingumą, o testai padeda pakelti meistriškumą.
+          </p>
+        </div>
+        <div className="topic-next-card-row">
+          <button className="primary" onClick={() => navigate("practice", topic.id)}>
+            Rinktis uždavinius
+          </button>
+          <button onClick={() => navigate("tests", topic.id)}>
+            Atidaryti testus
+          </button>
+        </div>
+      </section>
     </div>
   );
 };

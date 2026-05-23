@@ -35,28 +35,7 @@
       "netinkama-atimtis",
       "maisesi-simboliai"
     ],
-    "exerciseIds": [
-      "rom-ex-1",
-      "rom-ex-2",
-      "rom-ex-3",
-      "rom-ex-4",
-      "rom-ex-5",
-      "rom-ex-6",
-      "rom-ex-7",
-      "rom-ex-8",
-      "rom-ex-9",
-      "rom-ex-10",
-      "rom-ex-11",
-      "rom-ex-12",
-      "rom-ex-13",
-      "rom-ex-14",
-      "rom-ex-15",
-      "rom-ex-16",
-      "rom-ex-17",
-      "rom-ex-18",
-      "rom-ex-19",
-      "rom-ex-20"
-    ]
+    "exerciseIds": []
   },
   "theory": [
     {
@@ -85,13 +64,34 @@
           "type": "table",
           "text": "Simboliai ir jų vertės",
           "data": [
-            ["I", "1"],
-            ["V", "5"],
-            ["X", "10"],
-            ["L", "50"],
-            ["C", "100"],
-            ["D", "500"],
-            ["M", "1000"]
+            [
+              "I",
+              "1"
+            ],
+            [
+              "V",
+              "5"
+            ],
+            [
+              "X",
+              "10"
+            ],
+            [
+              "L",
+              "50"
+            ],
+            [
+              "C",
+              "100"
+            ],
+            [
+              "D",
+              "500"
+            ],
+            [
+              "M",
+              "1000"
+            ]
           ]
         },
         {
@@ -203,10 +203,17 @@
       "shortDefinition": "Simbolis, naudojamas romėniškoje skaičiavimo sistemoje.",
       "intuition": "Tai raidė, kurią romėnai naudojo vietoj mūsų įprastų skaitmenų.",
       "formal": "Vienas iš septynių lotyniškų simbolių (I, V, X, L, C, D, M), sudarančių romėnišką skaičių sistemą.",
-      "notation": ["I, V, X, L, C, D, M"],
-      "relatedConceptIds": ["sudeties-taisykle-romeniskiems", "atimties-taisykle-romeniskiems"],
+      "notation": [
+        "I, V, X, L, C, D, M"
+      ],
+      "relatedConceptIds": [
+        "sudeties-taisykle-romeniskiems",
+        "atimties-taisykle-romeniskiems"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "appearsInTopicIds": [
+        "romeniski-skaiciai"
+      ],
       "defaultSrs": true
     },
     {
@@ -217,9 +224,15 @@
       "intuition": "Jei eini nuo didesnio prie mažesnio, viską tiesiog sudedi.",
       "formal": "Jei skaitmuo su mažesne arba lygia reikšme stovi dešinėje nuo didesnės reikšmės skaitmens, šios reikšmės sumuojamos.",
       "notation": [],
-      "relatedConceptIds": ["atimties-taisykle-romeniskiems"],
-      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
-      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "relatedConceptIds": [
+        "atimties-taisykle-romeniskiems"
+      ],
+      "prerequisiteConceptIds": [
+        "romeniskas-skaitmuo"
+      ],
+      "appearsInTopicIds": [
+        "romeniski-skaiciai"
+      ],
       "defaultSrs": true
     },
     {
@@ -230,9 +243,15 @@
       "intuition": "Jei matai mažą skaičių prieš didelį, tai yra 'viena iki' arba 'dešimt iki'.",
       "formal": "Jei mažesnis skaitmuo stovi kairėje nuo didesnio, jis atimamas iš dešinėje esančio skaitmens.",
       "notation": [],
-      "relatedConceptIds": ["sudeties-taisykle-romeniskiems"],
-      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
-      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "relatedConceptIds": [
+        "sudeties-taisykle-romeniskiems"
+      ],
+      "prerequisiteConceptIds": [
+        "romeniskas-skaitmuo"
+      ],
+      "appearsInTopicIds": [
+        "romeniski-skaiciai"
+      ],
       "defaultSrs": true
     },
     {
@@ -244,8 +263,12 @@
       "formal": "Simboliai I, X, C, M gali būti kartojami iki trijų kartų iš eilės. Simboliai V, L, D niekada nekartojami.",
       "notation": [],
       "relatedConceptIds": [],
-      "prerequisiteConceptIds": ["romeniskas-skaitmuo"],
-      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "prerequisiteConceptIds": [
+        "romeniskas-skaitmuo"
+      ],
+      "appearsInTopicIds": [
+        "romeniski-skaiciai"
+      ],
       "defaultSrs": true
     },
     {
@@ -256,10 +279,41 @@
       "intuition": "Romėnai skaičiavo tik tai, ką mato, o 'nieko' neturėjo savo simbolio.",
       "formal": "Senovės Romos skaičiavimo sistema buvo adityvi ir neturėjo pozicinio nulio koncepcijos.",
       "notation": [],
-      "relatedConceptIds": ["skaiciu-konvertavimas"],
+      "relatedConceptIds": [
+        "skaiciu-konvertavimas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["romeniski-skaiciai"],
+      "appearsInTopicIds": [
+        "romeniski-skaiciai"
+      ],
       "defaultSrs": false
+    },
+    {
+      "id": "simboliu-reiksmes",
+      "title": "Simboliu Reiksmes",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Simboliu Reiksmes? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "dideli-skaiciai-romeniski",
+      "title": "Dideli Skaiciai Romeniski",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Dideli Skaiciai Romeniski? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "skaiciu-konvertavimas",
+      "title": "Skaiciu Konvertavimas",
+      "type": "concept",
+      "shortDefinition": "S?voka ?Skaiciu Konvertavimas? naudojama ?ioje temoje.",
+      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "formal": "",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
@@ -268,7 +322,9 @@
       "id": "netinkamas-kartojimas",
       "title": "Per daug kartojimų",
       "topicId": "romeniski-skaiciai",
-      "conceptIds": ["kartojimo-taisykle"],
+      "conceptIds": [
+        "kartojimo-taisykle"
+      ],
       "wrongPattern": "Rašo IIII vietoj IV.",
       "whyItHappens": "Mokinys pamiršta atimties taisyklę ir tiesiog sudeda vienetus.",
       "correction": "Po trijų vienodų skaitmenų naudok kitą didesnį simbolį su atimties taisykle.",
@@ -280,7 +336,9 @@
       "id": "netinkama-atimtis",
       "title": "Neteisinga atimties tvarka",
       "topicId": "romeniski-skaiciai",
-      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "conceptIds": [
+        "atimties-taisykle-romeniskiems"
+      ],
       "wrongPattern": "Rašo VX vietoj V.",
       "whyItHappens": "Bando atimti 5 iš 10, nors atimti galima tik I, X arba C.",
       "correction": "Atimti galima tik tam tikrus simbolius: I iš V/X, X iš L/C, C iš D/M.",
@@ -295,7 +353,9 @@
       "title": "Paprastas skaičiaus užrašymas",
       "level": "easy",
       "problem": "Užrašykite skaičių 7 romėniškai.",
-      "conceptIds": ["sudeties-taisykle-romeniskiems"],
+      "conceptIds": [
+        "sudeties-taisykle-romeniskiems"
+      ],
       "steps": [
         {
           "text": "Skaidome 7 į 5 ir 2.",
@@ -313,7 +373,9 @@
       "title": "Atimties taisyklės taikymas (4)",
       "level": "easy",
       "problem": "Užrašykite skaičių 4 romėniškai.",
-      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "conceptIds": [
+        "atimties-taisykle-romeniskiems"
+      ],
       "steps": [
         {
           "text": "Kadangi negalime rašyti IIII, naudojame 5 minus 1.",
@@ -331,7 +393,9 @@
       "title": "Atimties taisyklės taikymas (9)",
       "level": "easy",
       "problem": "Užrašykite skaičių 9 romėniškai.",
-      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "conceptIds": [
+        "atimties-taisykle-romeniskiems"
+      ],
       "steps": [
         {
           "text": "9 yra viena vienetė iki dešimties.",
@@ -349,7 +413,9 @@
       "title": "Dešimčių ir vienetų derinimas",
       "level": "medium",
       "problem": "Paverskite dešimtainį skaičių 34 į romėnišką.",
-      "conceptIds": ["skaiciu-konvertavimas"],
+      "conceptIds": [
+        "skaiciu-konvertavimas"
+      ],
       "steps": [
         {
           "text": "Skaidome: 30 ir 4.",
@@ -367,7 +433,9 @@
       "title": "Šimtų užrašymas",
       "level": "medium",
       "problem": "Užrašykite skaičių 444 romėniškai.",
-      "conceptIds": ["skaiciu-konvertavimas"],
+      "conceptIds": [
+        "skaiciu-konvertavimas"
+      ],
       "steps": [
         {
           "text": "Skaidome skyriais: 400, 40 ir 4.",
@@ -385,7 +453,9 @@
       "title": "Didelio skaičiaus skaitymas",
       "level": "medium",
       "problem": "Koks dešimtainis skaičius yra MCMLXXXVII?",
-      "conceptIds": ["skaiciu-konvertavimas"],
+      "conceptIds": [
+        "skaiciu-konvertavimas"
+      ],
       "steps": [
         {
           "text": "Skaidome simbolių grupes: M, CM, LXXX, VII.",
@@ -403,7 +473,9 @@
       "title": "Klaidingų užrašų atpažinimas",
       "level": "hard",
       "problem": "Ar užrašas IC yra teisingas skaičiui 99? Jei ne, parašykite teisingą.",
-      "conceptIds": ["atimties-taisykle-romeniskiems"],
+      "conceptIds": [
+        "atimties-taisykle-romeniskiems"
+      ],
       "steps": [
         {
           "text": "Tikriname taisyklę: I galima atimti tik iš V arba X.",
@@ -425,7 +497,10 @@
       "title": "Maksimalus programos skaičius",
       "level": "hard",
       "problem": "Užrašykite skaičių 3000 romėniškai.",
-      "conceptIds": ["dideli-skaiciai-romeniski", "kartojimo-taisykle"],
+      "conceptIds": [
+        "dideli-skaiciai-romeniski",
+        "kartojimo-taisykle"
+      ],
       "steps": [
         {
           "text": "3000 yra trys tūkstančiai.",
@@ -438,5 +513,6 @@
       ],
       "answer": "MMM"
     }
-  ]
+  ],
+  "exercises": []
 }
