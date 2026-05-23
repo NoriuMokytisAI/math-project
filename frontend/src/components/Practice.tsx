@@ -21,8 +21,11 @@ export const Practice: React.FC<PracticeProps> = ({
 }) => {
   const activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
   const topic = topics[activeTopicId];
-  const isOlympiad = topic?.level === 'olympiad';
-  const currentPool = allExercises.filter((ex) => ex.topicId === activeTopicId);
+  const isOlympiad = topic?.level === 'olympiad' || state.profile.libraryToggle === 'olympiad';
+  const currentPool = allExercises.filter((ex) => 
+    ex.topicId === activeTopicId && 
+    (isOlympiad ? ex.level === 'olympiad' : ex.level !== 'olympiad')
+  );
 
   // Practice session state
   const [currentExercise, setCurrentExercise] = useState<Exercise | null>(null);

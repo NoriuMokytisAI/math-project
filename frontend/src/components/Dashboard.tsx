@@ -226,6 +226,21 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate, updateSta
                         updateState(prev => ({ ...prev, profile: { ...prev.profile, libraryToggle: isOlympiadTopic ? 'olympiad' : 'school' } }));
                         navigate("practice", topicId);
                       }}>Praktika</button>
+                      <button 
+                        className="danger-outline"
+                        style={{ marginLeft: 'auto' }}
+                        onClick={() => {
+                          updateState(prev => ({
+                            ...prev,
+                            profile: {
+                              ...prev.profile,
+                              relevantTopicIds: prev.profile.relevantTopicIds.filter(id => id !== topicId)
+                            }
+                          }));
+                        }}
+                      >
+                        Pašalinti
+                      </button>
                     </div>
                   </div>
                 </article>

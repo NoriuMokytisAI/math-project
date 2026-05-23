@@ -136,6 +136,16 @@ button:disabled {
   color: var(--red);
 }
 
+.danger-outline {
+  background: transparent;
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.danger-outline:hover {
+  background: rgba(177, 72, 64, 0.08);
+}
+
 .accent {
   background: #e2f2f5;
   color: var(--primary);
@@ -606,7 +616,7 @@ p {
   color: var(--muted);
 }
 
-.dashboard-grid .panel:not(.wide):not(.metric) {
+.dashboard-grid .panel:not(.wide):not(.metric):not(.dashboard-hero-panel):not(.dashboard-relevant-topics):not(.dashboard-grade-mastery):not(.achievements-panel) {
   grid-column: span 4;
 }
 

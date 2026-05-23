@@ -79,8 +79,19 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
 
   const filteredTopics = useMemo(() => {
     return allTopics.filter((topic) => {
-      const isOlympiad = topic.level === 'olympiad';
-      const matchesToggle = contentToggle === 'olympiad' ? isOlympiad : !isOlympiad;
+      const isOlympiadTopic = topic.level === 'olympiad';
+      
+      let matchesToggle = false;
+      if (contentToggle === 'olympiad') {
+        if (mode === 'practice') {
+          const hasOlympiadExercises = exercises.some(ex => ex.topicId === topic.id && ex.level === 'olympiad');
+          matchesToggle = isOlympiadTopic || hasOlympiadExercises;
+        } else {
+          matchesToggle = isOlympiadTopic;
+        }
+      } else {
+        matchesToggle = !isOlympiadTopic;
+      }
       if (!matchesToggle) return false;
 
       const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -98,7 +109,7 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
 
       return true;
     });
-  }, [allTopics, contentToggle, searchTerm, gradeFilter, disciplineFilter, difficultyFilter]);
+  }, [allTopics, contentToggle, mode, searchTerm, gradeFilter, disciplineFilter, difficultyFilter]);
 
   const recommendations = useMemo(() => {
     const diagnosticRecs = (state.diagnosticState?.recommendedLearningPath || [])
@@ -269,6 +280,7 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
                   topic={topic} 
                   state={state} 
                   mode={mode} 
+                  contentToggle={contentToggle}
                   navigate={navigate} 
                   updateState={updateState}
                 />
@@ -287,6 +299,7 @@ export const TopicLibrary: React.FC<TopicLibraryProps> = ({ state, mode, navigat
                   topic={topic} 
                   state={state} 
                   mode={mode} 
+                  contentToggle={contentToggle}
                   navigate={navigate} 
                   updateState={updateState}
                 />
@@ -310,13 +323,14 @@ const TopicCard: React.FC<{
   topic: Topic; 
   state: State; 
   mode: 'theory' | 'practice'; 
+  contentToggle: 'school' | 'olympiad';
   navigate: (page: string, id?: string) => void;
   updateState: (updater: (prev: State) => State) => void;
-}> = ({ topic, state, mode, navigate, updateState }) => {
+}> = ({ topic, state, mode, contentToggle, navigate, updateState }) => {
   const mastery = state.mastery[topic.id];
-  const isOlympiad = topic.level === 'olympiad';
-  const val = isOlympiad ? (mastery?.olympiadValue ?? 0) : (mastery?.value || 0);
-  const label = isOlympiad 
+  const isOlympiadMode = contentToggle === 'olympiad';
+  const val = isOlympiadMode ? (mastery?.olympiadValue ?? 0) : (mastery?.value || 0);
+  const label = isOlympiadMode 
     ? (val < 25 ? "Pradžia" : val < 50 ? "Įsibėgėja" : val < 75 ? "Stipru" : "Meistras") 
     : (mastery?.label || "Pradžia");
   
@@ -326,7 +340,7 @@ const TopicCard: React.FC<{
     <article className="topic-card library-card" onClick={() => {
       updateState(prev => ({
         ...prev,
-        profile: { ...prev.profile, libraryToggle: topic.level === 'olympiad' ? 'olympiad' : 'school' }
+        profile: { ...prev.profile, libraryToggle: contentToggle }
       }));
       navigate(mode === 'theory' ? 'topic' : 'practice', topic.id);
     }}>
