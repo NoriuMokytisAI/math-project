@@ -41,12 +41,14 @@ export function createInitialState(): State {
       preparationType: undefined,
       targetedStartChoice: "diagnostic",
       targetTopicId: "",
+      relevantTopicIds: [],
       grade: 9,
       gradeBand: "9-10",
       confidence: "",
       dailyMinutes: 20,
       olympiad: false,
-      diagnostic: true
+      diagnostic: true,
+      libraryToggle: undefined
     },
     preferences: {
       srs: normalizeSrsSettings()
@@ -162,11 +164,17 @@ function normalizeProfile(profile: any) {
     ? profile.targetedStartChoice
     : (startMode === "targeted" && preparationType === "control" ? "topic" : "diagnostic");
 
+  const relevantTopicIds = Array.isArray(profile.relevantTopicIds)
+    ? profile.relevantTopicIds.filter((id: any) => topics[id])
+    : [];
+
   return {
     ...profile,
     startMode,
     preparationType,
     targetedStartChoice,
+    relevantTopicIds,
+    libraryToggle: ["school", "olympiad"].includes(profile.libraryToggle) ? profile.libraryToggle : undefined,
     targetTopicId: topics[profile.targetTopicId] ? profile.targetTopicId : ""
   };
 }

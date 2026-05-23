@@ -1,0 +1,193 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-10-strategijos-ir-irodymai",
+    "title": "Strategijos ir įrodymai",
+    "grade": 10,
+    "strand": "Strategijos ir įrodymai",
+    "level": "olympiad",
+    "order": 110,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-10-06"
+    ]
+  },
+  "theory": [],
+  "concepts": [],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-10-06",
+      "topicId": "olimpiada-10-strategijos-ir-irodymai",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Strategijos ir įrodymai",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvienas natūralusis skaičius $n > 1$ gali būti suskaidytas į pirminių skaičių sandaugą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas pilnąja indukcija."
+      },
+      "answerText": "Teiginys įrodytas pilnąja indukcija.",
+      "coreIdea": {
+        "title": "Pilnoji indukcija",
+        "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
+      },
+      "strategyTags": [
+        "induction"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas."
+        },
+        {
+          "text": "Indukcijos prielaida: tarkime, kad bet kuris $2 \\le k < n$ gali būti suskaidytas pirminiais daugtuviais."
+        },
+        {
+          "text": "Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\cdot b$, kur $2 \\le a, b < n$."
+        },
+        {
+          "text": "Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\dots p_r$, $b = q_1 \\dots q_s$. Tada $n = p_1 \\dots p_r q_1 \\dots q_s$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-06-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "induction"
+          ],
+          "steps": [
+            {
+              "title": "Indukcijos bazė",
+              "action": "Įrodome bazę $n=2$. Kadangi 2 yra pirminis skaičius, teiginys teisingas.",
+              "reason": "Skaidymas pirminiais taikomas ir pačiam pirminiam skaičiui.",
+              "latex": "n = 2",
+              "result": "Bazė patikrinta."
+            },
+            {
+              "title": "Indukcijos žingsnis",
+              "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\cdot b$, kur $a, b < n$.",
+              "reason": "Taikome stipriąją indukciją, kur prielaida galioja visiems mažesniems nariams.",
+              "latex": "n = ab",
+              "result": "Sudėtinis skaičius išreikštas sandauga."
+            },
+            {
+              "title": "Skaidinių sujungimas",
+              "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\prod p_i$, $b = \\prod q_j \\implies n = \\prod p_i \\prod q_j$.",
+              "reason": "Įstatome mažesnių skaičių skaidinius į sandaugą.",
+              "latex": "n = p_1 \\dots p_r q_1 \\dots q_s",
+              "result": "Teiginys įrodytas."
+            }
+          ],
+          "finalAnswer": "Teiginys įrodytas pilnąja indukcija."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-06-trap-1",
+          "title": "Silpnosios indukcijos taikymas",
+          "wrongMove": "Bandoma įrodyti teiginį darant prielaidą tik skaičiui $n-1$.",
+          "whyTempting": "Mokiniai yra labiau įpratę prie paprastosios (silpnosios) indukcijos.",
+          "correction": "Šiam uždaviniui būtina stiprioji (pilnoji) indukcija, nes sudėtinio skaičiaus dalikliai gali būti bet kokie skaičiai tarp 2 ir $n-1$, nebūtinai $n-1$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-06-trap-2",
+          "title": "Indukcijos bazės praleidimas",
+          "wrongMove": "Pradedama įrodinėti nuo bendro atvejo nepatikrinus mažiausios reikšmės $n=2$.",
+          "whyTempting": "Teiginys atrodo savaime suprantamas.",
+          "correction": "Indukcijos įrodymas yra nepilnas be bazės, kuri užtikrina pradinį grandinės narį.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-06-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvi...?",
+          "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-10-test-challenge",
+      "title": "Olimpiadinis iššūkis (10 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-10-strategijos-ir-irodymai"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-10-01",
+        "ex-olimpiada-10-02",
+        "ex-olimpiada-10-03",
+        "ex-olimpiada-10-04",
+        "ex-olimpiada-10-05",
+        "ex-olimpiada-10-06",
+        "ex-olimpiada-10-07",
+        "ex-olimpiada-10-08",
+        "ex-olimpiada-10-09",
+        "ex-olimpiada-10-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

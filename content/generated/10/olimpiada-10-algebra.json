@@ -1,0 +1,505 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-10-algebra",
+    "title": "Algebra",
+    "grade": 10,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 110,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-10-07",
+      "ex-olimpiada-10-08",
+      "ex-olimpiada-10-13"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Algebrinės nelygybės ir simetriniai daugianariai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sudėtingesnėse algebros temose naudojamos tokios nelygybės kaip Jenseno, Šūro, ir Cauchy-Schwarz Engel formos (Titu lema)."
+        },
+        {
+          "type": "method",
+          "text": "Trupmeninėms nelygybėms taikykite Titu lemą, kad sujungtumėte vardiklius ir supaprastintumėte skaitiklį."
+        }
+      ]
+    }
+  ],
+  "concepts": [],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Titu lemos taikymas nelygybės įrodyme",
+      "problem": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
+      "steps": [
+        {
+          "text": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$."
+        },
+        {
+          "text": "Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$."
+        },
+        {
+          "text": "Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$."
+        },
+        {
+          "text": "Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta."
+        }
+      ],
+      "answer": "Įrodyta."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-10-07",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul $x, y, z$ yra realieji skaičiai, tenkinantys sąlygas: $x+y+z = 3$, $xy+yz+zx = 2$ ir $xyz = 1$. Apskaičiuokite sumą $x^3+y^3+z^3$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskaičiuota simetrinių kintamųjų kubų suma."
+      },
+      "answerText": "$x^3+y^3+z^3 = 12$",
+      "coreIdea": {
+        "title": "Kubų sumos tapatybė",
+        "text": "Naudojame algebrinę tapatybę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$. Čia $x^2+y^2+z^2$ apskaičiuojama per $(x+y+z)^2 - 2(xy+yz+zx)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite trijų kintamųjų kubų sumos formulę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - xy - yz - zx)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pirmiausia apskaičiuokite kvadratų sumą $x^2+y^2+z^2 = (x+y+z)^2 - 2(xy+yz+zx)$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite vertes: $x^2+y^2+z^2 = 3^2 - 2 \\cdot 2 = 5$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Įstatykite visas gautas vertes į pagrindinę formulę: $x^3+y^3+z^3 - 3(1) = 3(5 - 2)$. Išspręskite kubų sumą.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame kvadratų sumą: $x^2+y^2+z^2 = (x+y+z)^2 - 2(xy+yz+zx) = 3^2 - 2(2) = 5$."
+        },
+        {
+          "text": "Užrašome tapatybę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$."
+        },
+        {
+          "text": "Įstatome reikšmes: $x^3+y^3+z^3 - 3(1) = 3 \\cdot (5 - 2)$."
+        },
+        {
+          "text": "Atliekame veiksmus: $x^3+y^3+z^3 - 3 = 9$, todėl $x^3+y^3+z^3 = 12$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-07-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Kvadratų sumos skaičiavimas",
+              "action": "Apskaičiuojame $x^2+y^2+z^2 = 3^2 - 2(2) = 5$.",
+              "reason": "Sąryšis tarp pirmo ir antro laipsnio simetrinių daugianarių.",
+              "latex": "x^2+y^2+z^2 = 5",
+              "result": "Rasta kvadratų suma."
+            },
+            {
+              "title": "Kubų sumos tapatybė",
+              "action": "Naudojame $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$.",
+              "reason": "Klasikinė algebrinė tapatybė trims kintamiesiems.",
+              "latex": "x^3+y^3+z^3 - 3 = 3(5 - 2)",
+              "result": "Gauta lygtis kubų sumai."
+            },
+            {
+              "title": "Galutinis skaičiavimas",
+              "action": "$x^3+y^3+z^3 = 9 + 3 = 12$.",
+              "reason": "Pridedame 3 prie abiejų lygties pusių.",
+              "latex": "x^3+y^3+z^3 = 12",
+              "result": "Apskaičiuota kubų suma."
+            }
+          ],
+          "finalAnswer": "$x^3+y^3+z^3 = 12$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-07-trap-1",
+          "title": "Ženklo klaida kvadratų sumoje",
+          "wrongMove": "Naudojama formulė $x^2+y^2+z^2 = (x+y+z)^2 + 2(xy+yz+zx)$.",
+          "whyTempting": "Painiojama su dvinarės sumos kvadratu arba tiesiog neapsižiūrėjimas.",
+          "correction": "Sumažinkite $(x+y+z)^2$ atimdami dvigubas sandaugas: $e_1^2 - 2e_2$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-07-trap-2",
+          "title": "3xyz nario ignoravimas",
+          "wrongMove": "Teigiama, kad $x^3+y^3+z^3 = (x+y+z)(x^2+y^2+z^2 - xy-yz-zx)$.",
+          "whyTempting": "Ši formulė panaši į paprastą kubų sumos skaidinį.",
+          "correction": "Nepamirškite kairėje pusėje pridėti $3xyz$: $p_3 = (e_1)(p_2 - e_2) + 3e_3$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-07-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul $x, y, z$ yra realieji skaičiai, tenkinantys sąlygas: ...?",
+          "back": "Naudojame algebrinę tapatybę: $x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx))$. Čia $x^2+y^2+z^2$ išreiškiama kaip $(x+y+z)^2 - 2(xy+yz+zx)$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-08",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul $x_1, x_2, x_3$ yra lygties $x^3 - x - 1 = 0$ šaknys. Apskaičiuokite jų ketvirtųjų laipsnių sumą $p_4 = x_1^4 + x_2^4 + x_3^4$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta ketvirtųjų laipsnių suma."
+      },
+      "answerText": "$p_4 = 2$",
+      "coreIdea": {
+        "title": "Niutono tapatybių taikymas",
+        "text": "Lygties $x^3 - x - 1 = 0$ koeficientai yra $e_1 = 0$, $e_2 = -1$, $e_3 = 1$. Pagal Niutono formules: $p_1 = 0$, $p_2 = 2$, $p_3 = 3$, $p_4 = p_2 + p_1 = 2$ (arba tiesiogiai pastebėjus, kad $x^4 = x^2 + x$)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi $x_i$ yra šaknys, kiekvienai iš jų galioja $x_i^3 - x_i - 1 = 0$, t. y. $x_i^3 = x_i + 1$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Padauginę abi puses iš $x_i$, gauname $x_i^4 = x_i^2 + x_i$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sumuojame šią lygybę visoms trims šaknims: $p_4 = p_2 + p_1$, kur $p_k = x_1^k + x_2^k + x_3^k$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Raskite $p_1 = x_1+x_2+x_3 = 0$ ir $p_2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_2x_3+x_3x_1) = 0 - 2(-1) = 2$. Tada $p_4 = 2$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi $x_i$ yra lygties šaknys, galioja $x_i^3 = x_i + 1$."
+        },
+        {
+          "text": "Padauginame iš $x_i$ ir gauname $x_i^4 = x_i^2 + x_i$."
+        },
+        {
+          "text": "Sumuojame visiems $i=1,2,3$: $p_4 = p_2 + p_1$."
+        },
+        {
+          "text": "Iš lygties koeficientų turime $p_1 = 0$ ir $p_2 = 0^2 - 2(-1) = 2$. Todėl $p_4 = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-08-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Šaknų pakeitimas laipsniais",
+              "action": "Užrašome $x_i^4 = x_i^2 + x_i$ kiekvienam $i$.",
+              "reason": "Kadangi $x_i^3 - x_i - 1 = 0 \\implies x_i^3 = x_i+1$, padauginame iš $x_i$.",
+              "latex": "x_i^4 = x_i^2 + x_i",
+              "result": "Sumažintas laipsnis nuo 4 iki 2."
+            },
+            {
+              "title": "Sumavimas",
+              "action": "Sumuojame lygtis: $p_4 = p_2 + p_1$.",
+              "reason": "Sudedame atitinkamas lygybes trims šaknims.",
+              "latex": "p_4 = p_2 + p_1",
+              "result": "Laipsnių sumos išreikštos žemesniais laipsniais."
+            },
+            {
+              "title": "Verčių skaičiavimas",
+              "action": "Kadangi $p_1 = 0$ (lygtyje nėra $x^2$ nario) ir $p_2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_2x_3+x_3x_1) = 2$, gauname $p_4 = 2$.",
+              "reason": "Vietos formulės ir paprasta kvadratų suma.",
+              "latex": "p_4 = 2",
+              "result": "Rasta ketvirtųjų laipsnių suma."
+            }
+          ],
+          "finalAnswer": "$p_4 = 2$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-08-trap-1",
+          "title": "Koeficiento e_1 ignoravimas",
+          "wrongMove": "Neteisingai nurodoma šaknų suma, pvz., $x_1+x_2+x_3 = 1$.",
+          "whyTempting": "Mokiniai dažnai mato pirmąjį koeficientą po aukščiausio laipsnio ir laiko jį $e_1$.",
+          "correction": "Lygtyje $x^3 - x - 1 = 0$ trūksta $x^2$ nario, todėl jo koeficientas (šaknų suma $e_1$) yra 0.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-08-trap-2",
+          "title": "Ženklų klaidos Niutono sumose",
+          "wrongMove": "Taikant $p_2 = e_1 p_1 - 2e_2$, gaunama $p_2 = -2$ vietoje $2$.",
+          "whyTempting": "Koeficientai $e_2$ ir $e_3$ yra neigiami, todėl lengva suklysti su dvigubais minusais.",
+          "correction": "Griežtai sekite formules: $e_2 = -1$, todėl $-2e_2 = -2(-1) = +2$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-08-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul $x_1, x_2, x_3$ yra lygties $x^3 - x - 1 = 0$ šaknys. ...?",
+          "back": "Lygties $x^3 - x - 1 = 0$ koeficientai yra $e_1 = 0$, $e_2 = -1$, $e_3 = 1$. Pagal Niutono formules: $p_1 = 0$, $p_2 = 2$, $p_3 = 3$, $p_4 = p_2 + p_1 = 2$ (arba tiesiogiai pastebėjus, kad $x^4 = x^2 + x$).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-13",
+      "topicId": "olimpiada-10-algebra",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Susklaidykite daugianarį $n^4 + 4$ į dviejų antrojo laipsnio daugianarių su sveikaisiais koeficientais sandaugą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Daugianaris suskaidytas dauginamaisiais."
+      },
+      "answerText": "$n^4 + 4 = (n^2 - 2n + 2)(n^2 + 2n + 2)$",
+      "coreIdea": {
+        "title": "Sofijos Žermen tapatybė",
+        "text": "Pridedame ir atimame $4n^2$, kad gautume kvadratų skirtumą: $n^4 + 4 = (n^4 + 4n^2 + 4) - 4n^2 = (n^2+2)^2 - (2n)^2$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Daugianaris neturi realiųjų šaknų, tačiau jį galima išskaidyti pridedant ir atimant tą patį narį, kad susidarytų pilnas kvadratas.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pridėkite ir atimkite $4n^2$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sugrupuokite pirmuosius tris narius į pilną kvadratą: $(n^2 + 2)^2 - 4n^2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pritaikykite kvadratų skirtumo formulę $A^2 - B^2 = (A-B)(A+B)$ su $A=n^2+2$ ir $B=2n$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pridedame ir atimame $4n^2$: $n^4 + 4n^2 + 4 - 4n^2$."
+        },
+        {
+          "text": "Pirmus tris narius sujungiame į pilną kvadratą: $(n^2 + 2)^2 - (2n)^2$."
+        },
+        {
+          "text": "Taikome kvadratų skirtumo formulę: $((n^2+2) - 2n)((n^2+2) + 2n)$."
+        },
+        {
+          "text": "Užrašome galutinį atsakymą: $(n^2 - 2n + 2)(n^2 + 2n + 2)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-13-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Pilno kvadrato sudarymas",
+              "action": "Užrašome $n^4 + 4 = (n^4 + 4n^2 + 4) - 4n^2$.",
+              "reason": "Siekdami pritaikyti kvadratų skirtumo tapatybę.",
+              "latex": "n^4 + 4 = (n^2 + 2)^2 - 4n^2",
+              "result": "Gauta dviejų kvadratų skirtumo forma."
+            },
+            {
+              "title": "Kvadratų skirtumo taikymas",
+              "action": "Užrašome $(n^2 + 2)^2 - (2n)^2 = (n^2 + 2 - 2n)(n^2 + 2 + 2n)$.",
+              "reason": "Pagal formulę $x^2 - y^2 = (x-y)(x+y)$.",
+              "latex": "(n^2 + 2 - 2n)(n^2 + 2 + 2n)",
+              "result": "Daugianaris išskaidytas dauginamaisiais."
+            },
+            {
+              "title": "Galutinis užrašymas",
+              "action": "Sutvarkome narius pagal laipsnius: $(n^2 - 2n + 2)(n^2 + 2n + 2)$.",
+              "reason": "Standartinė daugianarių užrašymo forma.",
+              "latex": "(n^2 - 2n + 2)(n^2 + 2n + 2)",
+              "result": "Gautas galutinis daugianario skaidinys."
+            }
+          ],
+          "finalAnswer": "$n^4 + 4 = (n^2 - 2n + 2)(n^2 + 2n + 2)$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-13-trap-1",
+          "title": "Klaidinga prielaida apie neredukuojamumą",
+          "wrongMove": "Nusprendžiama, kad daugianaris yra neredukuojamas (neskaidomas), nes jis neturi realiųjų šaknų.",
+          "whyTempting": "Mokiniai dažnai mano, kad jei daugianaris neturi nulių, jo negalima užrašyti sandauga.",
+          "correction": "Daugianaris gali būti skaidomas į mažesnio laipsnio daugianarius net jei neturi realiųjų šaknų (pvz., ketvirto laipsnio į du kvadratinius).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-13-trap-2",
+          "title": "Ženklų klaidos skaidinyje",
+          "wrongMove": "Neteisingai nurodomi viduriniai nariai, pvz., $(n^2 - 2n - 2)(n^2 + 2n - 2)$.",
+          "whyTempting": "Taikant kvadratų skirtumą, lengva supainioti laisvųjų narių ir kintamųjų ženklus.",
+          "correction": "Pagal formulę $(A-B)(A+B)$, kur $A=n^2+2$ ir $B=2n$, gauname $(n^2+2-2n)(n^2+2+2n)$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-13-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Susklaidykite daugianarį $n^4 + 4$ į dviejų antrojo laipsnio...?",
+          "back": "Pridedame ir atimame $4n^2$, kad gautume kvadratų skirtumą: $n^4 + 4 = (n^4 + 4n^2 + 4) - 4n^2 = (n^2+2)^2 - (2n)^2$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-10-test-challenge",
+      "title": "Olimpiadinis iššūkis (10 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-10-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-10-01",
+        "ex-olimpiada-10-02",
+        "ex-olimpiada-10-03",
+        "ex-olimpiada-10-04",
+        "ex-olimpiada-10-05",
+        "ex-olimpiada-10-06",
+        "ex-olimpiada-10-07",
+        "ex-olimpiada-10-08",
+        "ex-olimpiada-10-09",
+        "ex-olimpiada-10-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

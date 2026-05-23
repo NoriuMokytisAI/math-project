@@ -1,0 +1,622 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus for Grade 12"
+  },
+  "topic": {
+    "id": "olimpiada-12-algebra",
+    "title": "Algebra",
+    "grade": 12,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-12-concept-tangent-trick",
+      "olimpiada-12-concept-unity-filter"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-12-07",
+      "ex-olimpiada-12-08",
+      "ex-olimpiada-12-09",
+      "ex-olimpiada-12-10"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Diofantinių lygčių sprendimas: Vijetos šuolis ir nusileidimo metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diofantinės lygtys 12 klasėje reikalauja pažangių technikų. Vijetos šuolis yra metodas, leidžiantis iš esamo sprendinio sukonstruoti mažesnį sprendinį kvadratinės lygties šaknų savybių dėka."
+        },
+        {
+          "type": "method",
+          "text": "Jei turite lygtį, kurią galima suvesti į kvadratinę vieno iš kintamųjų atžvilgiu, pritaikykite Vijetos formules kitoje šaknyje ir įrodykite prieštarą dėl minimalumo."
+        }
+      ]
+    },
+    {
+      "title": "Šiuolaikiniai geometrijos metodai: baricentrinės koordinatės ir judantys taškai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijos uždaviniuose, kur sunku rasti sintetinį įrodymą, baricentrinės koordinatės leidžia atlikti tikslų algebrinį skaičiavimą."
+        },
+        {
+          "type": "method",
+          "text": "Kiekvieną tašką išreikškite svoriais $(x:y:z)$ trikampio viršūnėse. Tiesės lygtis tampa tiesine lygtimi, o collinearity (taškų gulėjimas vienoje tiesėje) tikrinamas matricų determinantais."
+        }
+      ]
+    },
+    {
+      "title": "Ekstremalioji ir adityvioji kombinatorika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-12-concept-tangent-trick",
+      "title": "Liestinės triukas",
+      "type": "concept",
+      "shortDefinition": "Nelygybių įrodymo metodas, kai kiekvienam nariui pritaikoma tiesinė funkcija, liestinė tam tikrame taške.",
+      "intuition": "Jei funkcija yra išgaubta aplink vidurkį, jos grafikas yra virš liestinės, todėl galime kiekvieną nelygybės narį įvertinti tiesine išraiška, kurias sudėjus gauname bendrą nelygybę.",
+      "formal": "Jei norime įrodyti $\\sum_{i=1}^n f(x_i) \\ge C$ su sąlyga $\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\sum f(x_i) \\ge m \\sum x_i + n \\cdot n$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-12-concept-unity-filter",
+      "title": "Vieneto šaknų filtras",
+      "type": "concept",
+      "shortDefinition": "Metodas skaičiuoti koeficientų sumas su tam tikru žingsniu naudojant kompleksines vieneto šaknis.",
+      "intuition": "Naudojant faktą, kad $\\sum_{j=0}^{m-1} \\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
+      "formal": "Sveikajam $k$ ir $\\omega = e^{2\\pi i / m}$ galioja $\\frac{1}{m} \\sum_{j=0}^{m-1} \\omega^{j k} = 1$, kai $m \\mid k$, ir $0$, kai $m \\nmid k$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-12-07",
+      "topicId": "olimpiada-12-algebra",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias Koši lygtį $f(x+y) = f(x) + f(y)$. Užrašykite bendrąją formą per kintamąjį c.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "f(x) = cx"
+      },
+      "answerText": "f(x) = cx",
+      "coreIdea": {
+        "title": "Koši funkcinė lygtis",
+        "text": "Tai bazinė funkcinė lygtis. Nors ji turi be galo daug sprendinių virš racionaliųjų skaičių, bet koks papildomas apribojimas (tolydumas, monotoniškumas arba ribotumas) susiaurina sprendinius iki tiesinių funkcijų."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-tangent-trick"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia nustatykite $f(0)$ ir parodykite, kad $f(nx) = nf(x)$ natūraliesiems $n$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Išplėskite savybę iki racionaliųjų skaičių $q$: $f(qx) = qf(x)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite tolydumo sąlygą, kad 'užpildytumėte' tarpus tarp racionaliųjų skaičių bet kokiam realiam skaičiui.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$f(0+0) = f(0)+f(0) \\implies f(0) = 0$."
+        },
+        {
+          "text": "Indukcija: $f(nx) = nf(x)$ visiems $n \\in \\mathbb{N}$."
+        },
+        {
+          "text": "Tegu $n/m = q \\in \\mathbb{Q}$. Tada $mf(qx) = f(mqx) = f(nx) = nf(x) \\implies f(qx) = qf(x)$."
+        },
+        {
+          "text": "Tegu $x = 1$. Tada $f(q) = f(1) \\cdot q = cq$, kur $c = f(1)$."
+        },
+        {
+          "text": "Kadangi $f$ tolydi, o racionalieji skaičiai yra tiršti $\\mathbb{R}$, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-07-method-1",
+          "title": "Tankumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Racionalusis pagrindimas",
+              "action": "Įrodome tiesiškumą virš $\\mathbb{Q}$.",
+              "reason": "Tai visų Koši lygčių sprendimo pagrindas.",
+              "result": "Gauta $f(q) = cq$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "f(x) = cx"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-07-trap-1",
+          "title": "Tolydumo ignoravimas",
+          "wrongMove": "Sakoma, kad tiesinė forma yra vienintelė be jokių papildomų sąlygų.",
+          "whyTempting": "Mokyklos matematikoje funkcija dažniausiai suprantama kaip 'graži'.",
+          "correction": "Be papildomų sąlygų (pvz., naudojant Hamelio bazę), egzistuoja patologiniai netiesiniai sprendiniai.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-07-trap-2",
+          "title": "Laisvojo nario pridėjimas",
+          "wrongMove": "Rašoma $f(x) = cx + d$.",
+          "whyTempting": "Įprasta tiesinės funkcijos forma.",
+          "correction": "Įstačius į lygtį $c(x+y)+d = cx+d+cy+d \\implies d=0$. Funkcija privalo eiti per koordinačių pradžią.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei $f$ būtų ribota tik viename intervale?",
+        "Kaip pasikeistų lygtis, jei sąlyga būtų $f(xy) = f(x)f(y)$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-07-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra tolydus sprendinys $f(x+y) = f(x) + f(y)$?",
+          "back": "$f(x) = cx$, kur $c$ yra konstanta.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-08",
+      "topicId": "olimpiada-12-algebra",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu $a, b, c > 0$ ir $a+b+c=3$. Įrodykite, kad $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$. Kokia minimali reikšmė pasiekiama, kai kintamieji lygūs?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Vidurkių nelygybės (AM-HM)",
+        "text": "Aritmetinio ir harmoninio vidurkių nelygybė teigia, kad teigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų harmoninį vidurkį."
+      },
+      "strategyTags": [
+        "proof",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-tangent-trick"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pritaikykite AM-HM nelygybę trims kintamiesiems $a, b, c$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kairėje AM-HM pusėje turite $(a+b+c)/3$, dešinėje – $3/(1/a+1/b+1/c)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomą sumą $a+b+c=3$ ir išreikškite apverstų narių sumą.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame AM-HM nelygybę: $\\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$."
+        },
+        {
+          "text": "Kadangi $a+b+c=3$, tai $\\frac{3}{3} = 1$."
+        },
+        {
+          "text": "$1 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\implies \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3$."
+        },
+        {
+          "text": "Lygybė pasiekiama tik tada, kai $a=b=c=1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-08-method-1",
+          "title": "AM-HM taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Vidurkių sulyginimas",
+              "action": "Susiejame sumą su reciprokiniais nariais.",
+              "reason": "Vidurkių nelygybės yra standartinis įrankis simetriškoms nelygybėms.",
+              "result": "Įrodyta.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-08-trap-1",
+          "title": "Nelygybės ženklo supainiojimas",
+          "wrongMove": "Rašoma $1/a + 1/b + 1/c \\le 3$.",
+          "whyTempting": "Klaidingas AM-HM interpretavimas.",
+          "correction": "Harmoninis vidurkis yra mažiausias, todėl jo vardiklyje esanti suma turi būti didelė, kad bendra vertė būtų maža.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-08-trap-2",
+          "title": "Netinkamo taško spėjimas",
+          "wrongMove": "Bandoma minimizuoti ties $a=3, b=0, c=0$.",
+          "whyTempting": "Ribinių taškų tikrinimas.",
+          "correction": "Funkcija $1/x$ neapibrėžta ties 0, o artėjant prie 0 ji neapribotai didėja, todėl minimumas yra simetriniame taške.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų rezultatas, jei sąlyga būtų $abc=1$?",
+        "Ar galėtume pritaikyti Jeneseno nelygybę šiam uždaviniui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-08-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra $\\sum 1/a$ minimumo reikšmė, jei $\\sum a = 3$ ($a,b,c>0$)?",
+          "back": "3 (pasiekiama, kai $a=b=c=1$).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-09",
+      "topicId": "olimpiada-12-algebra",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ išreikštą per n naudojant kompleksines vieneto šaknis.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
+      },
+      "answerText": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}",
+      "coreIdea": {
+        "title": "Vieneto šaknų filtras",
+        "text": "Norint susumuoti kas $k$-tą binominį koeficientą, naudojama $k$-tojo laipsnio vieneto šaknų savybė: jų laipsnių suma lygi $k$, jei laipsnis dalijasi iš $k$, ir 0 kitais atvejais."
+      },
+      "strategyTags": [
+        "proof",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-unity-filter"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-unity-filter"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite tris eilutes: $(1+1)^n$, $(1+\\omega)^n$ ir $(1+\\omega^2)^n$ skleidinius.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudedant šiuos skleidinius, koeficientai prie $\\binom{n}{k}$ bus $1^k + \\omega^k + \\omega^{2k}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal filtrą: $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$."
+        },
+        {
+          "text": "Pastebime: $1+\\omega = 1 + \\cos(2\\pi/3) + i\\sin(2\\pi/3) = 1/2 + i\\sqrt{3}/2 = e^{i\\pi/3}$."
+        },
+        {
+          "text": "$1+\\omega^2 = e^{-i\\pi/3}$."
+        },
+        {
+          "text": "$S = \\frac{2^n + (e^{i\\pi/3})^n + (e^{-i\\pi/3})^n}{3} = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3}$."
+        },
+        {
+          "text": "Naudojant Eulerio formulę: $e^{i\\theta} + e^{-i\\theta} = 2\\cos(\\theta)$."
+        },
+        {
+          "text": "$S = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-09-method-1",
+          "title": "Generuojančių funkcijų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Filtravimas",
+              "action": "Pritaikome vieneto šaknų savybę sumai išgryninti.",
+              "reason": "Tai galingas būdas spręsti kombinatorikos sumas su cikliškais apribojimais.",
+              "result": "Gauta uždara forma.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-09-trap-1",
+          "title": "Klaidingas nario 1+omega skaičiavimas",
+          "wrongMove": "Manoma, kad $|1+\\omega| = 1$.",
+          "whyTempting": "Nes $|\\omega| = 1$.",
+          "correction": "Brėžkite vektorius: $1$ ir $\\omega$ sudaro $120$ laipsnių kampą, jų suma yra rombo įstrižainė lygi 1 (bet kryptis pasikeičia).",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-09-trap-2",
+          "title": "Dalybos iš 3 pamiršimas",
+          "wrongMove": "Sudedamos trys reikšmės ir paliekamas bendras rezultatas.",
+          "whyTempting": "Dėmesys sutelkiamas į kompleksinius skaičiavimus.",
+          "correction": "Kadangi filtras $1+\\omega^k + \\omega^{2k}$ duoda reikšmę 3 (o ne 1), būtina padalyti iš m=3.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų suma, jei reikėtų $\\binom{n}{1} + \\binom{n}{4} + \\dots$?",
+        "Ar šis metodas tinka bet kokiam žingsniui $k$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-09-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra binominių koeficientų suma kas 3 žingsnius?",
+          "back": "$(2^n + 2\\cos(n\\pi/3))/3$ (naudojant vieneto šaknų filtrą).",
+          "conceptIds": [
+            "olimpiada-12-concept-unity-filter"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-10",
+      "topicId": "olimpiada-12-algebra",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Pagal Gauso-Luko teoremą kompleksinėje plokštumoje, kuriame objekte guli daugianario išvestinės $P'(z)$ šaknys, palyginti su paties daugianario $P(z)$ šaknimis?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Iškiliame kevale"
+      },
+      "answerText": "Iškiliame kevale",
+      "coreIdea": {
+        "title": "Gauso-Luko teorema",
+        "text": "Ši teorema susieja daugianario ir jo išvestinės šaknų geometrinį išsidėstymą. Ji teigia, kad visos $P'(z)$ šaknys priklauso mažiausiai iškiliai aibei (kevalui), kurioje yra visos $P(z)$ šaknys."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Daugianarį užrašykite kaip $P(z) = a \\prod (z-z_k)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite logaritminę išvestinę $P'(z)/P(z)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite lygtį $\\sum \\frac{1}{w-z_k} = 0$, kur $w$ yra išvestinės šaknis.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegu $z_1, \\dots, z_n$ yra $P(z)$ šaknys."
+        },
+        {
+          "text": "Išvestinės šaknis $w$ tenkina $\\sum \\frac{1}{w-z_k} = 0$."
+        },
+        {
+          "text": "Jungtinių skaičių suma $\\sum \\frac{\\bar{w}-\\bar{z}_k}{|w-z_k|^2} = 0$."
+        },
+        {
+          "text": "Tai parodo, kad $w$ yra $z_k$ svertinis vidurkis su teigiamais svoriais."
+        },
+        {
+          "text": "Bet koks svertinis vidurkis su teigiamais svoriais privalo gulėti taškų iškiliame kevale."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-10-method-1",
+          "title": "Geometrinė interpretacija",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Logaritminis išvedimas",
+              "action": "Parodome, kad išvestinės šaknys yra 'pritraukiamos' prie daugianario šaknų.",
+              "reason": "Vektorių suma lygi nuliui reiškia pusiausvyros tašką sistemoje.",
+              "result": "Gauta priklausomybė nuo iškilaus kevalo.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Iškiliame kevale"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-10-trap-1",
+          "title": "Tapatinimas su vidurkiu",
+          "wrongMove": "Manoma, kad šaknys guli svorio centre.",
+          "whyTempting": "Supaprastinta vidurkio samprata.",
+          "correction": "Jos guli bet kurioje kevalo vietoje, nebūtinai centre, priklausomai nuo šaknų kartotinumo.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-10-trap-2",
+          "title": "Iškilias aibės nesupratimas",
+          "wrongMove": "Teigiama, kad šaknys guli ant apskritimo.",
+          "whyTempting": "Daugianariai su $z^n-1$ turi šaknis ant apskritimo.",
+          "correction": "Iškili aibė yra 'įtempta gumelė' aplink taškus, nebūtinai apskritimas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutinka, jei visos $P(z)$ šaknys guli realiojoje tiesėje (Rolio teorema)?",
+        "Ar ši teorema galioja visoms išvestinėms $P^{(k)}(z)$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-10-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kur guli daugianario išvestinės šaknys pagal Gauso-Luko teoremą?",
+          "back": "Originalaus daugianario šaknų iškiliame kevale.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-12-test-challenge",
+      "title": "Olimpiadinis iššūkis (12 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-12-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-12-01",
+        "ex-olimpiada-12-02",
+        "ex-olimpiada-12-03",
+        "ex-olimpiada-12-04",
+        "ex-olimpiada-12-05",
+        "ex-olimpiada-12-06",
+        "ex-olimpiada-12-07",
+        "ex-olimpiada-12-08",
+        "ex-olimpiada-12-09",
+        "ex-olimpiada-12-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-09-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 9,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-09-20"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Kombinatoriniai metodai ir invariantai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus)."
+        },
+        {
+          "type": "method",
+          "text": "Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
+        }
+      ]
+    }
+  ],
+  "concepts": [],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-09-20",
+      "topicId": "olimpiada-09-kombinatorika",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutinti ir vietoj jų užrašyti skaičių $a+b-1$. Žingsnis kartojamas tol, kol lieka vienas skaičius. Raskite šį skaičių.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas galutinis vienintelis skaičius."
+      },
+      "answerText": "$191$",
+      "coreIdea": {
+        "title": "Invariantas $S - n$",
+        "text": "Tegul $S$ yra skaičių suma ant lentos, o $n$ yra jų skaičius. Kiekviename žingsnyje nauja suma yra $S' = S - a - b + (a+b-1) = S - 1$, o skaičių kiekis sumažėja vienetu $n' = n - 1$. Vadinasi, skirtumas $S - n$ yra invariantas."
+      },
+      "strategyTags": [
+        "invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiekviename žingsnyje skaičių kiekis sumažėja vienetu. Kadangi iš pradžių yra 20 skaičių, bus atlikta 19 žingsnių.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pabandyk ištirti, kaip kinta skaičių suma po kiekvieno žingsnio. Ji visada sumažėja vienetu.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Jei suma po kiekvieno žingsnio sumažėja 1, o pradinė suma yra $1+2+\\dots+20$, kokia bus suma pabaigoje?",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite pradinę sumą: $S_0 = 210$. Po 19 žingsnių suma sumažės 19. Raskite paskutinį skaičių.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pradinė skaičių suma yra $S_0 = 1 + 2 + \\dots + 20 = 210$."
+        },
+        {
+          "text": "Skaičių kiekis $n_0 = 20$."
+        },
+        {
+          "text": "Kiekviename žingsnyje nutriname du skaičius ir pridedame vieną, todėl skaičių kiekis sumažėja viena vienetu, o suma sumažėja vienetu."
+        },
+        {
+          "text": "Po 19 žingsnių liks 1 skaičius, o jo suma bus $210 - 19 = 191$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-20-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "invariant"
+          ],
+          "steps": [
+            {
+              "title": "Invarianto nustatymas",
+              "action": "Pastebime, kad skirtumas $I = S - n$ nekinta.",
+              "reason": "Nauja suma $S' = S - 1$, o naujas skaičių kiekis $n' = n - 1$, todėl $S' - n' = S - n$.",
+              "latex": "I = S - n",
+              "result": "Rastas nekintantis dydis (invariantas)."
+            },
+            {
+              "title": "Pradinio invarianto skaičiavimas",
+              "action": "Apskaičiuojame pradinį invariantą: $I_0 = 210 - 20 = 190$.",
+              "reason": "Suma $S_0 = 210$ ir kiekis $n_0 = 20$.",
+              "latex": "I_0 = 190",
+              "result": "Nustatyta invarianto vertė."
+            },
+            {
+              "title": "Galutinio skaičiaus radimas",
+              "action": "Pabaigoje $n_f = 1$, todėl $S_f - 1 = 190 \\implies S_f = 191$.",
+              "reason": "Kadangi invariantas nekinta, galutinio skaičiaus suma turi tenkinti $S_f - n_f = I_0$.",
+              "latex": "S_f = 191",
+              "result": "Rastas galutinis skaičius."
+            }
+          ],
+          "finalAnswer": "$191$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-20-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-20-trap-2",
+          "title": "Klaidingas sumos pokyčio vertinimas",
+          "wrongMove": "Manoma, kad po kiekvieno žingsnio suma nesikeičia arba mažėja pačiais skaičiais $a+b$.",
+          "whyTempting": "Nepastebimas „-1“ narys naujajame skaičiuje $a+b-1$.",
+          "correction": "Atidžiai palyginkite sumą prieš ir po: $(S - a - b) + (a + b - 1) = S - 1$. Suma visada mažėja 1.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-20-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu ...?",
+          "back": "Tegul $S$ yra skaičių suma ant lentos, o $n$ yra jų skaičius. Kiekviename žingsnyje nauja suma yra $S' = S - a - b + (a+b-1) = S - 1$, o skaičių kiekis sumažėja vienetu $n' = n - 1$. Vadinasi, skirtumas $S - n$ yra invariantas.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-09-20-srs-2",
+          "deck": "practice",
+          "cardType": "concept",
+          "front": "Kas yra invariantas olimpiadinėje matematikoje?",
+          "back": "Tai dydis arba savybė, kuri nekinta atliekant tam tikras leistinas operacijas (ėjimus). Invariantas padeda nustatyti galutinę būseną arba įrodyti, kad tam tikra būsena nepasiekiama.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

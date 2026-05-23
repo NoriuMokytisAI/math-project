@@ -19,17 +19,29 @@ export const Topbar: React.FC<TopbarProps> = ({ state, currentPage, currentId, n
   const activeTopic = topics[targetTopicId] || topics[state.activeTopicId] || Object.values(topics)[0];
 
   const getPageTitle = () => {
-    if (currentPage === 'topic') {
+    if (currentPage === 'topic' || (currentPage === 'theory' && currentId)) {
       const topicId = currentId || state.activeTopicId;
       return topics[topicId]?.title || 'Teorija';
     }
     if (currentPage === 'practice') {
       const topicId = currentId || state.activeTopicId;
-      return `Praktika: ${topics[topicId]?.title || 'Uždaviniai'}`;
+      if (currentId) {
+        return topics[topicId]?.title || 'Praktika';
+      }
+      return 'Praktika';
     }
     if (currentPage === 'tests') {
       const topicId = currentId || state.activeTopicId;
-      return `Testai: ${topics[topicId]?.title || 'Žinių patikrinimas'}`;
+      if (currentId) {
+        return topics[topicId]?.title || 'Testai';
+      }
+      return 'Testai';
+    }
+    if (currentPage === 'glossary') {
+      if (currentId) {
+        return 'Sąvoka';
+      }
+      return 'Sąvokų žodynas';
     }
 
     const titles: Record<string, string> = {
@@ -37,17 +49,43 @@ export const Topbar: React.FC<TopbarProps> = ({ state, currentPage, currentId, n
       diagnostic: 'Diagnostika',
       grade: 'Tavo programos pakopa',
       srs: 'Atminties kartojimas (SRS)',
-      glossary: 'Sąvokų žodynas',
       settings: 'Nustatymai',
     };
     return titles[currentPage] || 'Matematika';
   };
 
+  const getBackTarget = (): { page: string; id?: string } | null => {
+    if (currentPage === 'topic' || (currentPage === 'theory' && currentId)) {
+      return { page: 'theory' };
+    }
+    if (currentPage === 'practice' && currentId) {
+      return { page: 'practice' };
+    }
+    if (currentPage === 'glossary' && currentId) {
+      return { page: 'glossary' };
+    }
+    return null;
+  };
+
+  const backTarget = getBackTarget();
+
   return (
     <header className="topbar">
-      <div>
-        <span className="eyebrow">Mokymosi kelias</span>
-        <h1>{getPageTitle()}</h1>
+      <div className="topbar-title-section" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        {backTarget && (
+          <button
+            type="button"
+            className="topbar-back-btn"
+            onClick={() => navigate(backTarget.page, backTarget.id)}
+            aria-label="Atgal"
+          >
+            ←
+          </button>
+        )}
+        <div>
+          <span className="eyebrow topbar-eyebrow">Mokymosi kelias</span>
+          <h1 className="topbar-title">{getPageTitle()}</h1>
+        </div>
       </div>
       <div className="top-actions">
         <button

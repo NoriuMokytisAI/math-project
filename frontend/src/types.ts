@@ -9,12 +9,14 @@ export interface Profile {
   preparationType?: PreparationType;
   targetedStartChoice?: TargetedStartChoice;
   targetTopicId?: string;
+  relevantTopicIds: string[];
   grade: number;
   gradeBand: string;
   confidence: string;
   dailyMinutes: number;
   olympiad: boolean;
   diagnostic: boolean;
+  libraryToggle?: 'school' | 'olympiad';
 }
 
 export type DiagnosticStatus = 'not_started' | 'in_progress' | 'paused' | 'complete';

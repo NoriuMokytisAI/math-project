@@ -13,6 +13,13 @@ export const PREPARATION_LABELS: Record<PreparationType, string> = {
   vbe: "VBE"
 };
 
+export const DISCIPLINES = [
+  "Skaičiai ir skaičiavimai",
+  "Modeliai ir sąryšiai",
+  "Geometrija ir matavimai",
+  "Duomenys ir tikimybės"
+];
+
 export const GRADE_BANDS: GradeBand[] = [
   { label: "5-6 klasės", value: "5-6", grades: [5, 6] },
   { label: "7-8 klasės", value: "7-8", grades: [7, 8] },
@@ -20,6 +27,10 @@ export const GRADE_BANDS: GradeBand[] = [
   { label: "11 klasė", value: "11", grades: [11] },
   { label: "12 klasė", value: "12", grades: [12] }
 ];
+
+export const GRADE_BAND_LABELS: Record<string, string> = Object.fromEntries(
+  GRADE_BANDS.map(b => [b.value, b.label])
+);
 
 export function bandForGrade(grade: number): string {
   return GRADE_BANDS.find((band) => band.grades.includes(grade))?.value || "9-10";

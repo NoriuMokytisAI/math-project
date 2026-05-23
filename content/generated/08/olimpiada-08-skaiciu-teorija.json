@@ -1,0 +1,1520 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus"
+  },
+  "topic": {
+    "id": "olimpiada-08-skaiciu-teorija",
+    "title": "Skaičių teorija",
+    "grade": 8,
+    "strand": "Skaičių teorija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-08-concept-logic",
+      "olimpiada-08-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-08-efad3e02",
+      "ex-olimpiada-08-9c8a454f",
+      "ex-olimpiada-08-b19cc2f8",
+      "ex-olimpiada-08-4670481e",
+      "ex-olimpiada-08-8a5b6d7c",
+      "ex-olimpiada-08-371ff322",
+      "ex-olimpiada-08-8f8af17c",
+      "ex-olimpiada-08-ef659ec4"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Diofantinės lygtys ir dalumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sveikųjų skaičių lygtys, vadinamos Diofantinėmis lygtimis, turi ilgą istoriją. Tiesinė Diofantinė lygtis su dviem kintamaisiais turi pavidalą $ax + by = c$, kur $a, b, c$ yra sveikieji skaičiai. Ji turi sveikųjų skaičių sprendinių tada ir tik tada, kai skaičių $a$ ir $b$ didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ dalija laisvąjį narį $c$."
+        },
+        {
+          "type": "method",
+          "text": "Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\in \\mathbb{Z}$."
+        }
+      ]
+    },
+    {
+      "title": "Ferma mažoji teorema ir taikymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ferma mažoji teorema teigia, kad jei $p$ yra pirminis skaičius, tai bet kuriam sveikajam skaičiui $a$ galioja kongruencija $a^p \\equiv a \\pmod p$. Jeigu $a$ nesidalija iš $p$, galime užrašyti patogesne forma: $a^{p-1} \\equiv 1 \\pmod p$."
+        },
+        {
+          "type": "method",
+          "text": "Ši teorema padeda rasti labai didelių laipsnių liekanas. Pavyzdžiui, norint rasti $2^{50} \\pmod 7$, kadangi 7 yra pirminis skaičius, turime $2^6 \\equiv 1 \\pmod 7$. Kadangi $50 = 6 \\times 8 + 2$, tai $2^{50} = (2^6)^8 \\cdot 2^2 \\equiv 1^8 \\cdot 4 \\equiv 4 \\pmod 7$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-08-concept-logic",
+      "title": "Olimpiadinė logika",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
+      "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
+      "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-08-concept-method",
+      "title": "Įrodymo metodas",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
+      "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
+      "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Tiesinės diofantinės lygties sprendimas",
+      "problem": "Išspręskite sveikaisiais skaičiais lygtį $3x - 5y = 1$.",
+      "steps": [
+        {
+          "text": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių."
+        },
+        {
+          "text": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1 \\implies y = 1$. Sprendinys yra $(2, 1)$."
+        },
+        {
+          "text": "Visi kiti sprendiniai užrašomi pridedant koeficientus: $x = 2 + 5t$ ir $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
+        }
+      ],
+      "answer": "Bendrasis sprendinys yra $x = 2 + 5t$, $y = 1 + 3t$, kur $t \\in \\mathbb{Z}$."
+    },
+    {
+      "title": "Ferma mažosios teoremos taikymas",
+      "problem": "Raskite skaičiaus $2^{50}$ dalybos iš 7 liekaną.",
+      "steps": [
+        {
+          "text": "Skaičius 7 yra pirminis. Pagal Ferma mažąją teoremą, kadangi 2 nesidalija iš 7, turime $2^6 \\equiv 1 \\pmod 7$."
+        },
+        {
+          "text": "Daliname rodiklį 50 iš 6 su liekana: $50 = 6 \\times 8 + 2$."
+        },
+        {
+          "text": "Pertvarkome: $2^{50} = (2^6)^8 \\times 2^2 \\equiv 1^8 \\times 4 \\equiv 4 \\pmod 7$."
+        }
+      ],
+      "answer": "Liekana lygi 4."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-08-efad3e02",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išspręskite sveikaisiais skaičiais lygtį $15x + 6y = 9$. Raskite bendrąjį sprendinį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\in \\mathbb{Z}$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Diofantinės lygties bendrojo sprendinio radimas",
+        "text": "Padalykite lygtį iš bendrojo daliklio, raskite atskirąjį sprendinį spėliojimo būdu ir užrašykite bendrąją formą."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite didžiausią bendrą daliklį tarp 15 ir 6 ir patikrinkite dalumą.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi $\\text{dbd}(15, 6) = 3$, o 9 dalijasi iš 3, supaprastinkite lygtį padalindami iš 3: $5x + 2y = 3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Raskite sveikųjų skaičių porą $(x, y)$, tenkinančią $5x + 2y = 3$. Pavyzdžiui, pabandykite $x=1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei $x_0 = 1$, tai $2y = 3 - 5 = -2 \\implies y_0 = -1$. Bendrasis sprendinys yra $x = 1 + 2t$, $y = -1 - 5t$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Surandame $\\text{dbd}(15, 6) = 3$. Kadangi 9 dalijasi iš 3, lygtis turi sveikųjų sprendinių."
+        },
+        {
+          "text": "Padalijame abi lygties puses iš 3, gauname: $5x + 2y = 3$."
+        },
+        {
+          "text": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\implies y = -1$. Sprendinys $(1, -1)$."
+        },
+        {
+          "text": "Užrašome bendrąjį sprendinį su parametru $t \\in \\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-efad3e02-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "DBD radimas",
+              "reason": "Sprendinių egzistavimo sąlyga.",
+              "result": "Surandame $\\text{dbd}(15, 6) = 3$. Kadangi 9 dalijasi iš 3, lygtis turi sveikųjų sprendinių.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Lygties prastinimas",
+              "reason": "Skaičiavimų supaprastinimas.",
+              "result": "Padalijame abi lygties puses iš 3, gauname: $5x + 2y = 3$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atskirojo sprendinio radimas",
+              "reason": "Būtinas bendrajam sprendiniui.",
+              "result": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 1$, tai $2y = 3 - 5 = -2 \\implies y = -1$. Sprendinys $(1, -1)$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Užrašome bendrąjį sprendinį su parametru $t \\in \\mathbb{Z}$: $x = 1 + 2t$ ir $y = -1 - 5t$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Bendrasis sprendinys: $x = 1 + 2t$, $y = -1 - 5t$, kur $t \\in \\mathbb{Z}$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-efad3e02-trap-1",
+          "title": "Sprendimas be suprastinimo",
+          "type": "mistake",
+          "wrongMove": "Bandyti spręsti tiesiogiai nesuprastinus koeficientų.",
+          "whyTempting": "Atrodo, kad papildomi veiksmai tik apsunkins sprendimą.",
+          "whyItHappens": "Atrodo, kad papildomi veiksmai tik apsunkins sprendimą.",
+          "wrongPattern": "Bandyti spręsti tiesiogiai nesuprastinus koeficientų.",
+          "correction": "Sutrumpinus lygtį koeficientai tampa mažesni, todėl daug lengviau rasti atskirąjį sprendinį ir išvengti klaidų.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-efad3e02-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-efad3e02-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia sąlyga turi būti tenkinama, kad tiesinė diofantinė lygtis $ax + by = c$ turėtų sprendinių?",
+          "back": "Sąlyga, kad didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ turi dalyti laisvąjį narį $c$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-9c8a454f",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite skaičiaus $2027 \\times 2028 \\times 2029$ dalybos iš 11 liekaną.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Liekana lygi 5."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Daugyba moduliu m",
+        "text": "Vietoje to, kad skaičiuotumėte visą sandaugą, raskite kiekvieno nario liekaną moduliu 11 ir jas sudauginkite."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite 2027 dalybos iš 11 liekaną.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2027 = 11 \\times 184 + 3 \\implies 2027 \\equiv 3 \\pmod{11}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taip pat nustatykite kitų skaičių liekanas: $2028 \\equiv 4$ ir $2029 \\equiv 5$. Sudauginkite jas: $3 \\times 4 \\times 5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite sandaugą $60 \\pmod{11}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\equiv 3 \\pmod{11}$."
+        },
+        {
+          "text": "Tada $2028 \\equiv 4 \\pmod{11}$ ir $2029 \\equiv 5 \\pmod{11}$."
+        },
+        {
+          "text": "Sudauginame gautas liekanas: $3 \\times 4 \\times 5 = 60$."
+        },
+        {
+          "text": "Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\implies 60 \\equiv 5 \\pmod{11}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-9c8a454f-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Liekanų radimas",
+              "reason": "Daugybos savybė moduliu m.",
+              "result": "Apskaičiuojame kiekvieno daugiklio liekaną moduliu 11: $2027 \\equiv 3 \\pmod{11}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Tada $2028 \\equiv 4 \\pmod{11}$ ir $2029 \\equiv 5 \\pmod{11}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Sudauginame gautas liekanas: $3 \\times 4 \\times 5 = 60$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame 60 dalybos iš 11 liekaną: $60 = 5 \\times 11 + 5 \\implies 60 \\equiv 5 \\pmod{11}$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Liekana lygi 5."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-9c8a454f-trap-1",
+          "title": "Tiesioginis skaičiavimas vietoje liekanų",
+          "type": "mistake",
+          "wrongMove": "Dauginti didžiulius skaičius rankiniu būdu.",
+          "whyTempting": "Manoma, kad tiesioginis skaičiavimas yra saugesnis.",
+          "whyItHappens": "Manoma, kad tiesioginis skaičiavimas yra saugesnis.",
+          "wrongPattern": "Dauginti didžiulius skaičius rankiniu būdu.",
+          "correction": "Didelių skaičių daugyba ranka užima daug laiko ir veda prie skaičiavimo klaidų. Liekanų daugybos savybė leidžia dirbti su mažais skaičiais.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-9c8a454f-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-9c8a454f-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra sandaugos liekanos savybė moduliu m?",
+          "back": "$(a \\cdot b) \\pmod m = ((a \\pmod m) \\cdot (b \\pmod m)) \\pmod m$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-b19cc2f8",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad bet kuriam sveikajam skaičiui $n$, skaičius $n^5 - n$ visada dalijasi iš $5$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Ferma mažosios teoremos pritaikymas",
+        "text": "Pritaikykite Ferma mažąją teoremą pirminiam skaičiui $p=5$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ką teigia Ferma mažoji teorema apie sveikojo skaičiaus $a^p$ liekaną moduliu $p$?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagal teoremą, jei $p$ yra pirminis, tai $a^p \\equiv a \\pmod p$ bet kuriam sveikajam $a$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pasirinkite $p=5$ ir $a=n$. Užrašykite gaunamą kongruenciją.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Iš $n^5 \\equiv n \\pmod 5$ atimkite $n$ iš abiejų pusių, kad gautumėte dalumo iš 5 įrodymą.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi skaičius 5 yra pirminis, galime taikyti Ferma mažąją teoremą."
+        },
+        {
+          "text": "Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\equiv n \\pmod 5$."
+        },
+        {
+          "text": "Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\equiv 0 \\pmod 5$."
+        },
+        {
+          "text": "Tai reiškia, kad skirtumas $n^5 - n$ dalijasi iš 5 be liekanos."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-b19cc2f8-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi skaičius 5 yra pirminis, galime taikyti Ferma mažąją teoremą.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Pagal teoremą, bet kuriam sveikajam skaičiui $n$ galioja: $n^5 \\equiv n \\pmod 5$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Atėmę $n$ iš abiejų pusių, gauname: $n^5 - n \\equiv 0 \\pmod 5$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Tai reiškia, kad skirtumas $n^5 - n$ dalijasi iš 5 be liekanos.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Teiginys įrodytas."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-b19cc2f8-trap-1",
+          "title": "Atvejų nagrinėjimas vietoje teoremos",
+          "type": "mistake",
+          "wrongMove": "Bandyti skaidyti daugianarį ir nagrinėti penkis atvejus rankiniu būdu.",
+          "whyTempting": "Tai įprastas sprendimo būdas be teoremų žinojimo.",
+          "whyItHappens": "Tai įprastas sprendimo būdas be teoremų žinojimo.",
+          "wrongPattern": "Bandyti skaidyti daugianarį ir nagrinėti penkis atvejus rankiniu būdu.",
+          "correction": "Ferma mažoji teorema leidžia atlikti įrodymą vienu žingsniu.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-b19cc2f8-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-b19cc2f8-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra Ferma mažosios teoremos bendroji forma?",
+          "back": "$a^p \\equiv a \\pmod p$, kur $p$ yra pirminis skaičius, o $a$ yra bet koks sveikasis skaičius.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-4670481e",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite liekaną, gautą dalijant $10!$ iš $11$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Liekana lygi 10."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Vilsono teoremos pritaikymas",
+        "text": "Pritaikykite Vilsono teoremą, kuri tiesiogiai nurodo faktorialo liekaną pirminiu moduliu."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ar skaičius 11 yra pirminis?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi 11 yra pirminis, galime naudoti Vilsono teoremą, kuri teigia $(p-1)! \\equiv -1 \\pmod p$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite $p=11$, gausite: $10! \\equiv -1 \\pmod{11}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi liekana turi būti teigiama ir mažesnė už 11, pakeiskite $-1$ ekvivalenčiu skaičiumi.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Skaičius 11 yra pirminis, todėl galime taikyti Vilsono teoremą."
+        },
+        {
+          "text": "Pagal Vilsono teoremą: $(p-1)! \\equiv -1 \\pmod p$."
+        },
+        {
+          "text": "Įstatome $p=11$: $(11-1)! = 10! \\equiv -1 \\pmod{11}$."
+        },
+        {
+          "text": "Kadangi $-1 \\equiv 10 \\pmod{11}$, tai dalybos liekana yra 10."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-4670481e-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Skaičius 11 yra pirminis, todėl galime taikyti Vilsono teoremą.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Pagal Vilsono teoremą: $(p-1)! \\equiv -1 \\pmod p$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome $p=11$: $(11-1)! = 10! \\equiv -1 \\pmod{11}$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi $-1 \\equiv 10 \\pmod{11}$, tai dalybos liekana yra 10.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Liekana lygi 10."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-4670481e-trap-1",
+          "title": "Faktorialo skaičiavimas tiesiogiai",
+          "type": "mistake",
+          "wrongMove": "Skaičiuoti sandaugą $10! = 3628800$ ir atlikti ilgąją dalybą iš 11.",
+          "whyTempting": "Atrodo patikima, nes nenaudoja teoremų, kurias galima pamiršti.",
+          "whyItHappens": "Atrodo patikima, nes nenaudoja teoremų, kurias galima pamiršti.",
+          "wrongPattern": "Skaičiuoti sandaugą $10! = 3628800$ ir atlikti ilgąją dalybą iš 11.",
+          "correction": "Skaičiavimai yra per dideli ir atima per daug laiko. Vilsono teorema išsprendžia uždavinį akimirksniu.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-4670481e-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-4670481e-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką teigia Vilsono teorema?",
+          "back": "Jei $p$ yra pirminis skaičius, tai $(p-1)! \\equiv -1 \\pmod p$ (arba $\\equiv p-1 \\pmod p$).",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-8a5b6d7c",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris dalijamas iš 3 duoda liekaną 2, o dalijamas iš 5 duoda liekaną 3.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Mažiausias teigiamas skaičius yra 8."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Kinų liekanų teoremos taikymas",
+        "text": "Sudarome dviejų lygčių sistemą moduliu 3 ir 5 bei pritaikome pakeitimo metodą."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite sąlygas kaip kongruencijų sistemą.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sustatykite: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iš pirmos lygties $x = 3k + 2$. Įstatykite šią išraišką į antrąją: $3k + 2 \\equiv 3 \\pmod 5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite: $3k \\equiv 1 \\pmod 5$. Raskite mažiausią teigiamą $k$, o tada apskaičiuokite $x$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome sistemą: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$."
+        },
+        {
+          "text": "Iš pirmos lygties turime $x = 3k + 2$, kur $k \\in \\mathbb{Z}$."
+        },
+        {
+          "text": "Įstatome į antrąją: $3k + 2 \\equiv 3 \\pmod 5 \\implies 3k \\equiv 1 \\pmod 5$."
+        },
+        {
+          "text": "Dauginame abi puses iš 2, kad gautume $k$: $6k \\equiv 2 \\pmod 5 \\implies k \\equiv 2 \\pmod 5$."
+        },
+        {
+          "text": "Mažiausias teigiamas $k$ yra 2. Įstatome: $x = 3(2) + 2 = 8$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-8a5b6d7c-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Sudarome sistemą: $x \\equiv 2 \\pmod 3$ ir $x \\equiv 3 \\pmod 5$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Iš pirmos lygties turime $x = 3k + 2$, kur $k \\in \\mathbb{Z}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome į antrąją: $3k + 2 \\equiv 3 \\pmod 5 \\implies 3k \\equiv 1 \\pmod 5$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Dauginame abi puses iš 2, kad gautume $k$: $6k \\equiv 2 \\pmod 5 \\implies k \\equiv 2 \\pmod 5$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Mažiausias teigiamas $k$ yra 2. Įstatome: $x = 3(2) + 2 = 8$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Mažiausias teigiamas skaičius yra 8."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-8a5b6d7c-trap-1",
+          "title": "Neteisingas liekanų apjungimas",
+          "type": "mistake",
+          "wrongMove": "Tiesiog sudėti liekanas $2+3=5$ ir manyti, kad tai atsakymas.",
+          "whyTempting": "Spėliojimas be pagrindo.",
+          "whyItHappens": "Spėliojimas be pagrindo.",
+          "wrongPattern": "Tiesiog sudėti liekanas $2+3=5$ ir manyti, kad tai atsakymas.",
+          "correction": "Būtina tikrinti, kad skaičius atitiktų abi sąlygas. Skaičius 5 dalijamas iš 3 duoda liekaną 2, bet dalijamas iš 5 duoda liekaną 0, todėl netinka.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-8a5b6d7c-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-8a5b6d7c-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip sprendžiama kongruencijų sistema moduliu tarpusavyje pirminių skaičių $m_1$ ir $m_2$?",
+          "back": "Išreiškiame vieną kintamąjį iš pirmos lygties ir įstatome į antrąją, spręsdami moduliu $m_2$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-371ff322",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad skaičius $28$ yra tobulasis skaičius.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta, kad 28 yra tobulasis skaičius."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Tobulojo skaičiaus apibrėžimas",
+        "text": "Tobulasis skaičius yra lygus visų savo tikrųjų daliklių sumai."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite visus skaičiaus 28 daliklius.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Dalikliai yra $1, 2, 4, 7, 14, 28$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tikrieji dalikliai yra visi dalikliai, išskyrus patį skaičių: $1, 2, 4, 7, 14$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sudėkite šiuos skaičius ir patikrinkite, ar gausite 28.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Surandame visus skaičiaus 28 daliklius: $1, 2, 4, 7, 14, 28$."
+        },
+        {
+          "text": "Atskiriame tikruosius daliklius (mažesnius už 28): $1, 2, 4, 7, 14$."
+        },
+        {
+          "text": "Apskaičiuojame tikrųjų daliklių sumą: $1 + 2 + 4 + 7 + 14 = 28$."
+        },
+        {
+          "text": "Kadangi daliklių suma lygi pačiam skaičiui, pagal apibrėžimą 28 yra tobulasis skaičius."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-371ff322-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Surandame visus skaičiaus 28 daliklius: $1, 2, 4, 7, 14, 28$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Atskiriame tikruosius daliklius (mažesnius už 28): $1, 2, 4, 7, 14$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame tikrųjų daliklių sumą: $1 + 2 + 4 + 7 + 14 = 28$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi daliklių suma lygi pačiam skaičiui, pagal apibrėžimą 28 yra tobulasis skaičius.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Įrodyta, kad 28 yra tobulasis skaičius."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-371ff322-trap-1",
+          "title": "Netinkamas daliklių aibės parinkimas",
+          "type": "mistake",
+          "wrongMove": "Įskaičiuoti patį skaičių 28 į tikrųjų daliklių sumą.",
+          "whyTempting": "Sumaišomi visi dalikliai su tikraisiais dalikliais.",
+          "whyItHappens": "Sumaišomi visi dalikliai su tikraisiais dalikliais.",
+          "wrongPattern": "Įskaičiuoti patį skaičių 28 į tikrųjų daliklių sumą.",
+          "correction": "Tikrieji dalikliai visada neapima paties skaičiaus. Jei įskaičiuotume patį skaičių, tobulojo skaičiaus daliklių suma būtų lygi $2N$ (šiuo atveju 56).",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-371ff322-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-371ff322-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kas yra tobulasis skaičius?",
+          "back": "Tai natūralusis skaičius, kuris lygus visų savo tikrųjų daliklių (mažesnių už jį patį) sumai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-8f8af17c",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite skaičiaus $n = 360$ p-adinį vertinimą pirminio skaičiaus 2 atžvilgiu, t. y. $v_2(360)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "$v_2(360) = 3$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Pirminis skaidymas ir p-adinis vertinimas",
+        "text": "Susklaidykite skaičių pirminiais daugikliais ir nustatykite, kokiu laipsniu įeina pirminis skaičius 2."
+      },
+      "strategyTags": [
+        "advanced",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Susklaidykite skaičių 360 pirminiais daugikliais.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$360 = 36 \\times 10 = (2^2 \\times 3^2) \\times (2 \\times 5) = 2^3 \\times 3^2 \\times 5^1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "p-adinis vertinimas $v_p(n)$ yra pirminio daugiklio laipsnis jo skaidyme.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Nustatykite skaičiaus 2 laipsnį gautame skaidyme.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome skaičiaus 360 pirminį skaidymą: $360 = 2 \\times 180 = 2^2 \\times 90 = 2^3 \\times 45 = 2^3 \\times 3^2 \\times 5^1$."
+        },
+        {
+          "text": "p-adinis vertinimas $v_2(360)$ parodo pirminio skaičiaus 2 laipsnio rodiklį šio skaičiaus skaidyme daugikliais."
+        },
+        {
+          "text": "Skaidyme turime $2^3$, todėl $v_2(360) = 3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-8f8af17c-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Užrašome skaičiaus 360 pirminį skaidymą: $360 = 2 \\times 180 = 2^2 \\times 90 = 2^3 \\times 45 = 2^3 \\times 3^2 \\times 5^1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "p-adinis vertinimas $v_2(360)$ parodo pirminio skaičiaus 2 laipsnio rodiklį šio skaičiaus skaidyme daugikliais.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Skaidyme turime $2^3$, todėl $v_2(360) = 3$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "$v_2(360) = 3$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-8f8af17c-trap-1",
+          "title": "Sąvokos supainiojimas",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad $v_2(360)$ yra tiesiog daliklis 2.",
+          "whyTempting": "Neteisingas p-adinio vertinimo sąvokos supratimas.",
+          "whyItHappens": "Neteisingas p-adinio vertinimo sąvokos supratimas.",
+          "wrongPattern": "Manyti, kad $v_2(360)$ yra tiesiog daliklis 2.",
+          "correction": "p-adinis vertinimas yra laipsnis, o ne pats daliklis ar jo sandauga.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-8f8af17c-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-8f8af17c-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kas yra skaičiaus n p-adinis vertinimas $v_p(n)$?",
+          "back": "Tai didžiausias rodiklis $k$, kuriam esant $p^k$ dalija $n$, t. y. pirminio skaičiaus $p$ laipsnis skaičiaus $n$ kanoniniame skaidyme.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-ef659ec4",
+      "topicId": "olimpiada-08-skaiciu-teorija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Paverskite skaičių $109_{10}$ iš dešimtainės sistemos į dvejetainę (2) sistemą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "$1101101_2$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Dalybos iš pagrindo metodas",
+        "text": "Kartotinai dalinkite skaičių iš 2 ir fiksuokite liekanas iš dešinės į kairę (arba atvirkštine gavimo tvarka)."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "skaičiu-teorija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite dalinti 109 iš 2 su liekana.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$109 = 54 \\cdot 2 + 1$, liekana 1. Dabar dalinkite 54.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tęskite: $54 = 27 \\cdot 2 + 0$, $27 = 13 \\cdot 2 + 1$, $13 = 6 \\cdot 2 + 1$, $6 = 3 \\cdot 2 + 0$, $3 = 1 \\cdot 2 + 1$, $1 = 0 \\cdot 2 + 1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Užrašykite gautas liekanas atbuline tvarka nuo paskutinės iki pirmosios.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$109 / 2 = 54$ liekana $1$."
+        },
+        {
+          "text": "$54 / 2 = 27$ liekana $0$."
+        },
+        {
+          "text": "$27 / 2 = 13$ liekana $1$."
+        },
+        {
+          "text": "$13 / 2 = 6$ liekana $1$."
+        },
+        {
+          "text": "$6 / 2 = 3$ liekana $0$."
+        },
+        {
+          "text": "$3 / 2 = 1$ liekana $1$."
+        },
+        {
+          "text": "$1 / 2 = 0$ liekana $1$."
+        },
+        {
+          "text": "Užrašome liekanas nuo galo: $1101101_2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-ef659ec4-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pradinė analizė",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$109 / 2 = 54$ liekana $1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$54 / 2 = 27$ liekana $0$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$27 / 2 = 13$ liekana $1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$13 / 2 = 6$ liekana $1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 5",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$6 / 2 = 3$ liekana $0$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 6",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$3 / 2 = 1$ liekana $1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 7",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$1 / 2 = 0$ liekana $1$.",
+              "latex": ""
+            },
+            {
+              "title": "Apibendrinimas",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Užrašome liekanas nuo galo: $1101101_2$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "$1101101_2$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-ef659ec4-trap-1",
+          "title": "Atbulinės tvarkos ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Užrašyti liekanas tiesiogine gavimo tvarka, gaunant $1011011_2$.",
+          "whyTempting": "Natūralus noras rašyti iš kairės į dešinę gavimo tvarka.",
+          "whyItHappens": "Natūralus noras rašyti iš kairės į dešinę gavimo tvarka.",
+          "wrongPattern": "Užrašyti liekanas tiesiogine gavimo tvarka, gaunant $1011011_2$.",
+          "correction": "Pirmiausia gauta liekana atitinka mažiausios vertės (vienetų) skaitmenį, todėl liekanos turi būti skaitomos atbuline tvarka.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-ef659ec4-trap-2",
+          "title": "Dalumo požymių ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Nepatikrinti, ar skaičiai yra tarpusavyje pirminiai.",
+          "whyTempting": "Noras greičiau gauti galutinį rezultatą.",
+          "whyItHappens": "Nepakankamas dėmesys formaliam įrodymui.",
+          "wrongPattern": "Užrašyti atsakymą be pilno pagrindimo.",
+          "correction": "Prieš taikydami teoremas (pvz., Kinų liekanų), visada įsitikinkite, kad moduliai yra tarpusavyje pirminiai.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-ef659ec4-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip sveikasis skaičius paverčiamas į kitą skaičiavimo sistemą su pagrindu b?",
+          "back": "Kartotinai dalijame skaičių iš $b$ su liekana, kol dalmuo tampa 0. Liekanos, užrašytos atbuline tvarka, sudaro naująjį skaičių.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-08-test-challenge",
+      "title": "Olimpiadinis iššūkis (8 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-08-skaiciu-teorija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-08-efad3e02",
+        "ex-olimpiada-08-9c8a454f",
+        "ex-olimpiada-08-b19cc2f8",
+        "ex-olimpiada-08-4670481e",
+        "ex-olimpiada-08-8a5b6d7c",
+        "ex-olimpiada-08-371ff322",
+        "ex-olimpiada-08-8f8af17c",
+        "ex-olimpiada-08-ef659ec4",
+        "ex-olimpiada-08-fe7262fc",
+        "ex-olimpiada-08-56d15a87"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

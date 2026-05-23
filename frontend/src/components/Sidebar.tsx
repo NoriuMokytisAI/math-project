@@ -56,7 +56,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ state, currentPage, currentId,
 
       <nav>
         {navItems.map(({ page, label, icon }) => {
-          const active = currentPage === page || (page === 'dashboard' && currentPage === 'grade');
+          const isTheoryActive = page === 'theory' && (currentPage === 'theory' || currentPage === 'topic');
+          const isPracticeActive = page === 'practice' && currentPage === 'practice';
+          const active = currentPage === page || (page === 'dashboard' && currentPage === 'grade') || isTheoryActive || isPracticeActive;
           return (
             <button
               key={page}

@@ -43,6 +43,8 @@ This mode has a second choice:
 - `PUPP`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
 - `VBE`: diagnostic is the primary recommended route, with topic selection available as a secondary route.
 
+When the student chooses a concrete topic during onboarding, that topic is added to `Aktualios temos`.
+
 Primary recommendation order:
 
 1. selected topic due SRS,
@@ -54,6 +56,23 @@ Primary recommendation order:
 7. topic or exam-style test.
 
 The student must choose the target topic or exam area during onboarding. The diagnostic is optional unless the student switches to full-course mode.
+
+## Aktualios Temos
+
+`Aktualios temos` is the student's focused working list on the dashboard. It replaces broad dashboard browsing such as `Temos pagal ugdymo sritis`.
+
+Rules:
+
+- store it as stable topic ids in local progress,
+- add the selected onboarding topic in topic/exam preparation mode,
+- allow the student to add a topic from the individual theory topic page,
+- do not add the same topic twice,
+- do not automatically add diagnostic recommendations,
+- show diagnostic recommendations separately as recommendations, not as saved relevant topics.
+
+If the list is empty, the dashboard should explain that topics can be added from `Teorija` after opening a topic page.
+
+Recommendation order can use `Aktualios temos` as a strong signal, but it should not replace diagnostic evidence or prerequisite safety.
 
 ### Full Course With Diagnostic Mode
 

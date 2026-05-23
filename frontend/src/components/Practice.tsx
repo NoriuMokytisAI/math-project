@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { State, Exercise } from '../types';
 import { exercises as allExercises, topics, concepts } from '../content';
 import { recordAttempt, ensureSrsCard } from '../systems';
-import { inferStartMode } from '../startModes';
 import { MathText } from './MathText';
 
 interface PracticeProps {
@@ -20,29 +19,9 @@ export const Practice: React.FC<PracticeProps> = ({
   updateState,
   showToast
 }) => {
-  const [selectedTrack, setSelectedTrack] = useState<'curriculum' | 'olympiad' | null>(() => {
-    if (topicId) {
-      return topics[topicId]?.level === 'olympiad' ? 'olympiad' : 'curriculum';
-    }
-    const mode = inferStartMode(state.profile);
-    if (mode === 'olympiad') return 'olympiad';
-    if (mode === 'targeted') return 'curriculum';
-    return null;
-  });
-
-  let activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
-  if (!topicId && selectedTrack === 'olympiad') {
-     const grade = state.profile.grade || 9;
-     const oId = `olimpiada-${String(grade).padStart(2, '0')}`;
-     if (topics[oId]) activeTopicId = oId;
-  } else if (!topicId && selectedTrack === 'curriculum') {
-     if (topics[activeTopicId]?.level === 'olympiad') {
-        const fallback = Object.keys(topics).find(k => topics[k].level !== 'olympiad' && topics[k].grade === (state.profile.grade || 9));
-        if (fallback) activeTopicId = fallback;
-     }
-  }
-
+  const activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
   const topic = topics[activeTopicId];
+  const isOlympiad = topic?.level === 'olympiad';
   const currentPool = allExercises.filter((ex) => ex.topicId === activeTopicId);
 
   // Practice session state
@@ -89,33 +68,16 @@ export const Practice: React.FC<PracticeProps> = ({
     setSelfCheckDraft("");
   };
 
-  // Run when track or activeTopicId changes
+  // Run when activeTopicId changes
   useEffect(() => {
     loadNextExercise(currentPool);
-  }, [selectedTrack, activeTopicId]);
-
-  if (selectedTrack === null) {
-    return (
-      <div className="track-selection">
-        <h2>Ką nori mokytis šiandien?</h2>
-        <div className="track-cards">
-          <div className="track-card" onClick={() => setSelectedTrack('curriculum')}>
-            <h3>Mokyklinis turinys</h3>
-            <p>Pasiruošimas pamokoms, kontroliniams ir egzaminams. Oficiali mokyklos programa.</p>
-          </div>
-          <div className="track-card" onClick={() => setSelectedTrack('olympiad')}>
-            <h3>Olimpiadinis turinys</h3>
-            <p>Sunkesni uždaviniai, nestandartinis mąstymas ir olimpiados lygio iššūkiai.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  }, [activeTopicId]);
 
   if (!topic) {
     return (
       <section className="panel">
         <p>Pasirinkta tema nerasta.</p>
+        <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
       </section>
     );
   }
@@ -238,24 +200,14 @@ export const Practice: React.FC<PracticeProps> = ({
             <span className="eyebrow">Praktika</span>
             <h1>{topic.title}</h1>
           </div>
-          <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
+          <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
         </div>
-
-        <div className="track-toggle-bar">
-        <button className={selectedTrack === 'curriculum' ? 'active' : ''} onClick={() => setSelectedTrack('curriculum')}>Mokyklinis turinys</button>
-        <button className={selectedTrack === 'olympiad' ? 'active' : ''} onClick={() => setSelectedTrack('olympiad')}>Olimpiadinis turinys</button>
-      </div>
 
         <div className="panel practice-empty-state">
           <h3>Nėra uždavinių</h3>
           <p>
-            Šiame režime šiuo metu nėra jokių uždavinių šiai temai.
+            Šiai temai šiuo metu nėra jokių uždavinių.
           </p>
-          {selectedTrack === 'olympiad' && (
-            <button onClick={() => setSelectedTrack('curriculum')} className="primary">
-              Spręsti bendrąją programą
-            </button>
-          )}
         </div>
       </section>
     );
@@ -303,21 +255,16 @@ export const Practice: React.FC<PracticeProps> = ({
 
   return (
     <section className="view">
-      <div className="section-head">
+      <div className="section-head" style={{ marginBottom: '24px' }}>
         <div>
           <span className="eyebrow">Praktinis mokymasis</span>
           <h1>{topic.title}</h1>
         </div>
-        <button onClick={() => navigate("dashboard")}>Grįžti į skydelį</button>
-      </div>
-
-      <div className="track-toggle-bar">
-        <button className={selectedTrack === 'curriculum' ? 'active' : ''} onClick={() => setSelectedTrack('curriculum')}>Mokyklinis turinys</button>
-        <button className={selectedTrack === 'olympiad' ? 'active' : ''} onClick={() => setSelectedTrack('olympiad')}>Olimpiadinis turinys</button>
+        <button onClick={() => navigate("practice")}>Grįžti į sąrašą</button>
       </div>
 
       {/* ──── OLYMPIAD LAYOUT ──── */}
-      {selectedTrack === 'olympiad' ? (
+      {isOlympiad ? (
         <div className="olympiad-workspace">
           {/* Top Info Area */}
           <div className="panel olympiad-info-panel">
@@ -400,7 +347,7 @@ export const Practice: React.FC<PracticeProps> = ({
                   const conceptObj = concepts[cid];
                   return (
                     <label key={cid} className="prerequisite-checklist-item">
-                      <input type="checkbox" style={{ cursor: 'pointer' }} />
+                      <input id={`prereq-concept-${cid}`} name={`prereq-concept-${cid}`} type="checkbox" style={{ cursor: 'pointer' }} />
                       <span>
                         Sąvoka:{" "}
                         <span
@@ -419,8 +366,8 @@ export const Practice: React.FC<PracticeProps> = ({
                 {(currentExercise.prerequisiteTopicIds || []).map((tId) => {
                   const topicObj = topics[tId];
                   return (
-                    <label key={tId} className="prerequisite-checklist-item">
-                      <input type="checkbox" style={{ cursor: 'pointer' }} />
+                    <label key={tId} className="prerequisite-checklist-item" htmlFor={`prereq-topic-${tId}`}>
+                      <input id={`prereq-topic-${tId}`} name={`prereq-topic-${tId}`} type="checkbox" style={{ cursor: 'pointer' }} />
                       <span>
                         Tema:{" "}
                         <span
@@ -439,8 +386,8 @@ export const Practice: React.FC<PracticeProps> = ({
                 {(currentExercise.expectedMethodIds || []).map((mId) => {
                   const conceptObj = concepts[mId];
                   return (
-                    <label key={mId} className="prerequisite-checklist-item">
-                      <input type="checkbox" style={{ cursor: 'pointer' }} />
+                    <label key={mId} className="prerequisite-checklist-item" htmlFor={`prereq-method-${mId}`}>
+                      <input id={`prereq-method-${mId}`} name={`prereq-method-${mId}`} type="checkbox" style={{ cursor: 'pointer' }} />
                       <span>
                         Metodas:{" "}
                         <span
@@ -489,6 +436,7 @@ export const Practice: React.FC<PracticeProps> = ({
               <label htmlFor="scratchpad">Juodraštis / Sprendimo eiga</label>
               <textarea
                 id="scratchpad"
+                name="scratchpad"
                 className="scratchpad-textarea"
                 placeholder="Rašyk formules, pastebėjimus ar skaičiavimus čia..."
                 value={scratchpadText}
@@ -504,6 +452,8 @@ export const Practice: React.FC<PracticeProps> = ({
                     Šis uždavinys reikalauja įrodymo arba struktūrizuoto sprendimo. Užrašyk savo atsakymo santrauką ir palygink su oficialiu sprendimu:
                   </p>
                   <textarea
+                    id="self-check-answer"
+                    name="self-check-answer"
                     placeholder="Įvesk savo atsakymą ar sprendimo išvadą..."
                     value={selfCheckDraft}
                     onChange={(e) => setSelfCheckDraft(e.target.value)}
@@ -512,13 +462,15 @@ export const Practice: React.FC<PracticeProps> = ({
                 </div>
               ) : hasChoices(currentExercise) ? (
                 <div className="choice-list">
-                  {currentExercise.choices?.map((choice) => {
+                  {currentExercise.choices?.map((choice, cIdx) => {
                     const active = selectedChoice === choice;
+                    const choiceId = `choice-${cIdx}`;
                     return (
-                      <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+                      <label key={choice} className={`choice-option ${active ? "active" : ""}`} htmlFor={choiceId}>
                         <input
+                          id={choiceId}
                           type="radio"
-                          name="answer"
+                          name="olympiad-answer-choice"
                           value={choice}
                           checked={active}
                           onChange={(e) => setSelectedChoice(e.target.value)}
@@ -534,8 +486,9 @@ export const Practice: React.FC<PracticeProps> = ({
               ) : (
                 <div className="text-answer-wrapper">
                   <input
+                    id="olympiad-answer-text"
                     className="answer-input"
-                    name="answer"
+                    name="olympiad-answer-text"
                     value={textAnswer}
                     onChange={(e) => setTextAnswer(e.target.value)}
                     placeholder="Įrašyk galutinį skaitinį atsakymą"
@@ -581,7 +534,7 @@ export const Practice: React.FC<PracticeProps> = ({
               )}
 
               {/* Actions row */}
-              <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+              <div className="actions practice-actions actions-stack-mobile" style={{ marginTop: '20px' }}>
                 <button
                   type="button"
                   onClick={handleHint}
@@ -806,7 +759,7 @@ export const Practice: React.FC<PracticeProps> = ({
                             Spręsti →
                           </span>
                         </div>
-                        <p style={{ margin: 0, fontSize: '13.5px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+                        <p style={{ margin: 0, fontSize: '13.5px', overflowWrap: 'anywhere' }}>
                           {ex.statement}
                         </p>
                       </div>
@@ -864,8 +817,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="primary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                        className="primary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                         onClick={() => {
                           const nextEx = similarExercises[0];
                           setCurrentExercise(nextEx);
@@ -896,8 +849,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="secondary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content', background: 'var(--gold)', color: 'white', border: 'none' }}
+                        className="secondary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', background: 'var(--gold)', color: 'white', border: 'none' }}
                         onClick={() => navigate("topic", lowPrereqs[0])}
                       >
                         Kartoti prielaidas
@@ -913,8 +866,8 @@ export const Practice: React.FC<PracticeProps> = ({
                       </div>
                       <button
                         type="button"
-                        className="primary"
-                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                        className="primary recommendation-btn"
+                        style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                         onClick={() => {
                           setCurrentExercise(harderEx);
                           setVisibleHints([]);
@@ -943,8 +896,8 @@ export const Practice: React.FC<PracticeProps> = ({
                     </div>
                     <button
                       type="button"
-                      className="secondary-outline"
-                      style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px', width: 'fit-content' }}
+                      className="secondary-outline recommendation-btn"
+                      style={{ marginTop: '12px', padding: '6px 12px', fontSize: '12.5px' }}
                       onClick={() => navigate("topic", activeTopicId)}
                     >
                       Skaityti teoriją
@@ -968,13 +921,15 @@ export const Practice: React.FC<PracticeProps> = ({
           <form onSubmit={handleSubmit} className="practice-form" style={{ marginTop: '20px' }}>
             {hasChoices(currentExercise) ? (
               <div className="choice-list">
-                {currentExercise.choices?.map((choice) => {
+                {currentExercise.choices?.map((choice, cIdx) => {
                   const active = selectedChoice === choice;
+                  const choiceId = `std-choice-${cIdx}`;
                   return (
-                    <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+                    <label key={choice} className={`choice-option ${active ? "active" : ""}`} htmlFor={choiceId}>
                       <input
+                        id={choiceId}
                         type="radio"
-                        name="answer"
+                        name="standard-answer-choice"
                         value={choice}
                         checked={active}
                         onChange={(e) => setSelectedChoice(e.target.value)}
@@ -990,8 +945,9 @@ export const Practice: React.FC<PracticeProps> = ({
             ) : (
               <div className="text-answer-wrapper">
                 <input
+                  id="standard-answer-text"
                   className="answer-input"
-                  name="answer"
+                  name="standard-answer-text"
                   value={textAnswer}
                   onChange={(e) => setTextAnswer(e.target.value)}
                   placeholder="Įrašyk atsakymą"
@@ -1011,7 +967,7 @@ export const Practice: React.FC<PracticeProps> = ({
               </div>
             )}
 
-            <div className="actions practice-actions" style={{ marginTop: '20px' }}>
+            <div className="actions practice-actions actions-stack-mobile" style={{ marginTop: '20px' }}>
               <button
                 type="button"
                 onClick={handleHint}

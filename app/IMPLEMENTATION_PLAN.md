@@ -34,6 +34,7 @@ Deliverables:
 - Vite React app.
 - Routes.
 - Responsive layout for desktop, tablet, and phone.
+- phone web accessibility pass following `WEB_PHONE_ACCESSIBILITY.md`.
 - Lithuanian UI.
 - PWA manifest.
 - Service worker.
@@ -49,6 +50,8 @@ Routes:
 - `/dashboard/olympiad`
 - `/dashboard/topic`
 - `/dashboard/course`
+- `/theory`
+- `/theory/:topicId`
 - `/onboarding`
 - `/onboarding/goal`
 - `/onboarding/grade-band`
@@ -59,6 +62,7 @@ Routes:
 - `/glossary`
 - `/glossary/:conceptId`
 - `/srs`
+- `/practice`
 - `/practice/:practiceSetId`
 - `/test/:testId`
 - `/settings`
@@ -122,6 +126,8 @@ For other modes:
 Deliverables:
 
 - shared dashboard shell with mode-specific main content,
+- `Aktualios temos` dashboard section replacing broad dashboard curriculum browsing,
+- phone-safe dashboard metrics and `Aktualios temos` cards with no clipped text or thin vertical cards,
 - olympiad strengthening home page,
 - topic or exam preparation home page,
 - full-course diagnostic home page,
@@ -140,13 +146,18 @@ The home page must differ by mode:
 - topic or exam preparation: selected topic for kontrolinis, or PUPP/VBE diagnostic recommendation with topic fallback,
 - full course with diagnostic: diagnostic status, generated course path, prerequisite repair, full-course progress.
 
-The dashboard may show curriculum browsing as a secondary option, but the primary action must come from the selected mode.
+The dashboard should not be the full curriculum browser. The broad topic library belongs in `Teorija` and `Praktika`. The dashboard topic area should show `Aktualios temos`, using local topic ids added from onboarding topic selection or from individual theory pages.
 
 ## Phase 5: Theory, Glossary, and Concept Graph
 
 Deliverables:
 
+- card-library `Teorija` index page with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters,
+- olympiad `Teorija` cards split by specific topic inside the selected grade, not by one whole-grade bundle,
+- phone-safe `Teorija` and `Praktika` library controls with collapsed filters and one-column topic cards,
+- recommended topic cards above all other matching topic cards,
 - theory reader for all curriculum topics,
+- `Pridėti prie aktualių temų` action on individual theory topic pages,
 - clickable concept links,
 - glossary page/drawer,
 - concept pages with definitions, examples, related theory, exercises, mistakes, formulas, and SRS controls,
@@ -169,9 +180,17 @@ Deliverables:
 
 ## Phase 7: Practice Engine
 
+Additional entry behavior:
+
+- `/practice` should open a card-library practice index, not a random/default exercise.
+- The practice index uses the same `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, difficulty filters, and recommended-first card ordering as `Teorija`.
+- In olympiad mode, practice cards must represent specific olympiad topics within a grade, for example `Skaičių teorija`, `Algebra`, `Geometrija`, or `Kombinatorika`; a whole-grade olympiad card may be an overview only.
+- Practice topic cards open `/practice/:practiceSetId` or the equivalent topic practice route.
+
 Deliverables:
 
 - exercise renderer,
+- phone-safe standard and olympiad practice layouts,
 - multiple choice,
 - numeric input,
 - algebraic expression input,
@@ -272,6 +291,7 @@ Deliverables:
 - same content version shipped on all platforms,
 - same progress code format on all platforms,
 - web-to-Android-to-desktop transfer test,
+- phone web accessibility verification at the viewport matrix in `WEB_PHONE_ACCESSIBILITY.md`,
 - all release gates passed,
 - documentation updated with release commands and troubleshooting.
 

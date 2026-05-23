@@ -1,0 +1,916 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-09-algebra",
+    "title": "Algebra",
+    "grade": 9,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-09-concept-am-gm"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-09-07",
+      "ex-olimpiada-09-08",
+      "ex-olimpiada-09-09",
+      "ex-olimpiada-09-10",
+      "ex-olimpiada-09-11",
+      "ex-olimpiada-09-13"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis."
+        },
+        {
+          "type": "method",
+          "text": "Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-09-concept-am-gm",
+      "title": "AM-GM nelygybė",
+      "type": "concept",
+      "shortDefinition": "Neneigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį.",
+      "intuition": "Aritmetinis vidurkis visada yra didesnis arba lygus geometriniam vidurkiui, o lygybė galioja tik kai visi skaičiai lygūs.",
+      "formal": "Neneigiamiems realiesiems skaičiams $a_1, a_2, \\dots, a_n$ galioja: $\\frac{a_1 + a_2 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Nelygybės įrodymas naudojant AM-GM",
+      "problem": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja: $\\frac{a}{b} + \\frac{b}{a} \\ge 2$.",
+      "steps": [
+        {
+          "text": "Taikome AM-GM nelygybę dviem teigiamiems nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$."
+        },
+        {
+          "text": "Gauname: $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}}$."
+        },
+        {
+          "text": "Kadangi $\\frac{a}{b} \\cdot \\frac{b}{a} = 1$, tai $\\sqrt{1} = 1$."
+        },
+        {
+          "text": "Padauginę abi puses iš 2, gauname $\\frac{a}{b} + \\frac{b}{a} \\ge 2$."
+        }
+      ],
+      "answer": "Įrodyta."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-09-07",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite liekaną, gautą dalijant daugianarį $P(x) = x^{100} - 2x^{51} + 1$ iš $x^2 - 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta liekana dalijant daugianarius."
+      },
+      "answerText": "$R(x) = -2x + 2$",
+      "coreIdea": {
+        "title": "Liekana ir daliklio šaknys",
+        "text": "Liekana dalijant iš antrojo laipsnio daugianario $x^2-1$ yra pirmojo laipsnio daugianaris $R(x) = ax + b$. Naudojame lygybę $P(x) = (x^2-1)Q(x) + ax+b$ ir įstatome daliklio šaknis $x = 1$ ir $x = -1$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi daliklis yra $x^2 - 1$, liekana turi būti pavidalo $R(x) = ax + b$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite pagrindinę tapatybę: $P(x) = (x^2 - 1)Q(x) + ax + b$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite taškus $x = 1$ ir $x = -1$, kuriuose daliklis $x^2 - 1$ virsta nuliu.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išspręskite gautą tiesinių lygčių sistemą: $a+b = P(1)$ ir $-a+b = P(-1)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome $P(x) = (x^2-1)Q(x) + ax+b$."
+        },
+        {
+          "text": "Įstatome $x=1$: $P(1) = 1^{100} - 2(1)^{51} + 1 = 0 \\implies a+b = 0$."
+        },
+        {
+          "text": "Įstatome $x=-1$: $P(-1) = (-1)^{100} - 2(-1)^{51} + 1 = 4 \\implies -a+b = 4$."
+        },
+        {
+          "text": "Išsprendžiame sistemą: $b=2, a=-2$. Liekana yra $-2x+2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-07-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Dalybos lygties užrašymas",
+              "action": "Užrašome $P(x) = (x^2 - 1)Q(x) + ax + b$.",
+              "reason": "Liekana dalijant iš antrojo laipsnio polinomo negali viršyti pirmojo laipsnio.",
+              "latex": "P(x) = (x^2 - 1)Q(x) + ax + b",
+              "result": "Sukurta tiesinė liekanos forma."
+            },
+            {
+              "title": "Šaknų įstatymas",
+              "action": "Skaičiuojame $P(1) = 0$ ir $P(-1) = 4$. Gauname sistemą: $a+b=0$ ir $-a+b=4$.",
+              "reason": "Įstatome $x=\\pm 1$, nes šiose reikšmėse $x^2-1=0$.",
+              "latex": "\\begin{cases} a+b = 0 \\\\ -a+b = 4 \\end{cases}",
+              "result": "Gauta dviejų kintamųjų tiesinė sistema."
+            },
+            {
+              "title": "Sistemos sprendimas",
+              "action": "Sudedame lygtis: $2b = 4 \\implies b = 2$. Tada $a = -2$. Liekana yra $-2x + 2$.",
+              "reason": "Išsprendžiame sistemą sudėties būdu.",
+              "latex": "R(x) = -2x+2",
+              "result": "Rasta ieškoma liekana."
+            }
+          ],
+          "finalAnswer": "$R(x) = -2x + 2$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-07-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-07-trap-2",
+          "title": "Liekamosios formos klaida",
+          "wrongMove": "Darant prielaidą, kad liekana dalijant iš $x^2-1$ yra konstanta $R$, o ne $ax+b$.",
+          "whyTempting": "Dažnas pratimas dalijant iš $(x-c)$ visada duoda konstantą.",
+          "correction": "Liekana dalijant iš $n$-tojo laipsnio daugianario yra daugiausia $(n-1)$-tojo laipsnio.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-07-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite liekaną, gautą dalijant daugianarį $P(x) = x^{100} -...?$",
+          "back": "Liekana dalijant iš antrojo laipsnio daugianario $x^2-1$ yra pirmojo laipsnio daugianaris $R(x) = ax + b$. Naudojame lygybę $P(x) = (x^2-1)Q(x) + ax+b$ ir įstatome daliklio šaknis $x = 1$ ir $x = -1$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-08",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul $x_1, x_2, x_3$ yra lygties $x^3 - 3x^2 + 2x - 5 = 0$ realiosios arba kompleksinės šaknys. Apskaičiuokite $x_1^2 + x_2^2 + x_3^2$ vertę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskaičiuota šaknų kvadratų suma."
+      },
+      "answerText": "$5$",
+      "coreIdea": {
+        "title": "Šaknų kvadratų suma",
+        "text": "Naudojame tapatybę $x_1^2 + x_2^2 + x_3^2 = (x_1 + x_2 + x_3)^2 - 2(x_1 x_2 + x_2 x_3 + x_3 x_1)$. Koeficientus išreiškiame naudodami Vietos formules trečiojo laipsnio daugianariui."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite Vietos formules trečiojo laipsnio lygčiai $x^3 + bx^2 + cx + d = 0$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nustatykite sumą $x_1+x_2+x_3$ ir dvigubų sandaugų sumą $x_1x_2+x_2x_3+x_3x_1$ iš lygties koeficientų.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Šios vertės yra: $x_1+x_2+x_3 = 3$ ir $x_1x_2+x_2x_3+x_3x_1 = 2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pritaikykite kvadratų sumos formulę: $(x_1+x_2+x_3)^2 - 2(x_1x_2+x_2x_3+x_3x_1)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Vietos formules, $x_1+x_2+x_3 = 3$."
+        },
+        {
+          "text": "Pagal Vietos formules, $x_1x_2+x_2x_3+x_3x_1 = 2$."
+        },
+        {
+          "text": "Naudojame formulę: $x_1^2+x_2^2+x_3^2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_2x_3+x_3x_1)$."
+        },
+        {
+          "text": "Įstatome vertes: $3^2 - 2(2) = 9 - 4 = 5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-08-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vietos formulių taikymas",
+              "action": "Užrašome $e_1 = x_1+x_2+x_3 = 3$ ir $e_2 = x_1x_2+x_2x_3+x_3x_1 = 2$.",
+              "reason": "Pagal Vietos formules polinomo koeficientai yra susiję su šaknų simetriniais daugianariais.",
+              "latex": "\\sum x_i = 3, \\quad \\sum x_i x_j = 2",
+              "result": "Gautos reikšmės pirminėms simetrinėms formoms."
+            },
+            {
+              "title": "Kvadratų sumos skaičiavimas",
+              "action": "Apskaičiuojame $x_1^2+x_2^2+x_3^2 = e_1^2 - 2e_2 = 3^2 - 2(2) = 5$.",
+              "reason": "Simetrinio polinomo išraiška per elementarius simetrinius daugianarius.",
+              "latex": "p_2 = e_1^2 - 2e_2 = 5",
+              "result": "Rasta kvadratų suma."
+            }
+          ],
+          "finalAnswer": "$5$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-08-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-08-trap-2",
+          "title": "Ženklų klaidos Vietos formulėse",
+          "wrongMove": "Neteisingai paimami koeficientų ženklai: pvz., suma $x_1+x_2+x_3$ paimama lygi -3 vietoj 3.",
+          "whyTempting": "Sumaišoma bendroji formulė $x^3 + bx^2 + cx + d = 0$ su kintančiais ženklais.",
+          "correction": "Prisiminkite: suma yra $-b/a$, dvigubų sandaugų suma yra $c/a$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-08-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul $x_1, x_2, x_3$ yra lygties $x^3 - 3x^2 + 2x - 5 = 0$ ...?",
+          "back": "Naudojame tapatybę $x_1^2 + x_2^2 + x_3^2 = (x_1 + x_2 + x_3)^2 - 2(x_1 x_2 + x_2 x_3 + x_3 x_1)$. Koeficientus išreiškiame naudodami Vietos formules trečiojo laipsnio daugianariui.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-09",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad teigiamiems realiesiems skaičiams $a, b, c$ galioja nelygybė: $(a+b)(b+c)(c+a) \\ge 8abc$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta $(a+b)(b+c)(c+a) \\ge 8abc$."
+      },
+      "answerText": "Nelygybė įrodyta taikant AM-GM trims skliaustams.",
+      "coreIdea": {
+        "title": "AM-GM taikymas atskiriems skliaustams",
+        "text": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$, o tada jas sudauginkite."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-09-concept-am-gm"
+      ],
+      "conceptIds": [
+        "olimpiada-09-concept-am-gm"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite pritaikyti AM-GM nelygybę kiekvienam skliaustui atskirai.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite: $a+b \\ge 2\\sqrt{ab}$ ir t. t. Kodėl galime tai daryti?",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudauginkite tris gautas nelygybes. Kadangi visi nariai yra teigiami, nelygybės ženklas išlieka.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite dešinę pusę: $2\\sqrt{ab} \\cdot 2\\sqrt{bc} \\cdot 2\\sqrt{ca} = 8abc$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi $a, b, c > 0$, taikome AM-GM: $a+b \\ge 2\\sqrt{ab}$."
+        },
+        {
+          "text": "Taip pat gauname $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$."
+        },
+        {
+          "text": "Kadangi visi nariai teigiami, sudauginame nelygybes."
+        },
+        {
+          "text": "Gauname $(a+b)(b+c)(c+a) \\ge 8\\sqrt{a^2 b^2 c^2} = 8abc$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-09-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Dinaris AM-GM",
+              "action": "Apskaičiuojame $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$, $c+a \\ge 2\\sqrt{ca}$.",
+              "reason": "Taikome aritmetinio ir geometrinio vidurkių nelygybę dviem teigiamiems realiesiems skaičiams.",
+              "latex": "x+y \\ge 2\\sqrt{xy}",
+              "result": "Gautos trys atskiros nelygybės."
+            },
+            {
+              "title": "Sudauginimas",
+              "action": "Sudauginame nelygybes: $(a+b)(b+c)(c+a) \\ge 8\\sqrt{ab \\cdot bc \\cdot ca} = 8abc$.",
+              "reason": "Kadangi visos pusės teigiamos, galime sudauginti išlaikydami ženklą.",
+              "latex": "(a+b)(b+c)(c+a) \\ge 8abc",
+              "result": "Uždavinys sėkmingai įrodytas."
+            }
+          ],
+          "finalAnswer": "Nelygybė įrodyta taikant AM-GM trims skliaustams."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-09-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-09-trap-2",
+          "title": "AM-GM taikymas nežinant ženklų",
+          "wrongMove": "Mokinys taiko AM-GM nelygybę neįsitikinęs, kad skaičiai $a, b, c$ yra teigiami.",
+          "whyTempting": "Nelygybė atrodo universali bet kokiems realiesiems skaičiams.",
+          "correction": "AM-GM galioja tik neneigiamiems realiesiems skaičiams; visada patikrinkite sąlygą.",
+          "reviewConceptIds": [
+            "olimpiada-09-concept-am-gm"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-09-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad teigiamiems realiesiems skaičiams $a, b, c$ g...?",
+          "back": "Taikykite AM-GM nelygybę kiekvienam iš trijų sumų narių atskirai: $a+b \\ge 2\\sqrt{ab}$, $b+c \\ge 2\\sqrt{bc}$ ir $c+a \\ge 2\\sqrt{ca}$, o tada jas sudauginkite.",
+          "conceptIds": [
+            "olimpiada-09-concept-am-gm"
+          ],
+          "methodIds": [
+            "olimpiada-09-concept-am-gm"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-10",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jei realieji skaičiai $a, b, c$ tenkina lygtį $a^2 + b^2 + c^2 = 1$, raskite didžiausią galimą reiškinio $a + 2b + 3c$ reikšmę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta didžiausia reiškinio vertė."
+      },
+      "answerText": "$\\sqrt{14}$",
+      "coreIdea": {
+        "title": "Cauchy-Schwarz su konstantų vektoriais",
+        "text": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Norint rasti tiesinės kombinacijos maksimumą esant kvadratų ribojimui, idealiai tinka Cauchy-Schwarz nelygybė.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite Cauchy-Schwarz formą: $(ax+by+cz)^2 \\le (a^2+b^2+c^2)(x^2+y^2+z^2)$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Parinkite tinkamus $x, y, z$ koeficientus, kad gautumėte ieškomą reiškinį $a + 2b + 3c$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Įstatykite $x=1, y=2, z=3$ ir $a^2+b^2+c^2=1$. Maksimali vertė bus $\\sqrt{14}$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome Cauchy-Schwarz nelygybę dviem rinkiniams $(a,b,c)$ ir $(1,2,3)$."
+        },
+        {
+          "text": "Gauname $(a+2b+3c)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$."
+        },
+        {
+          "text": "Įstatome žinomas vertes: $(a+2b+3c)^2 \\le 1 \\cdot (1+4+9) = 14$."
+        },
+        {
+          "text": "Iš čia $a+2b+3c \\le \\sqrt{14}$. Maksimali reikšmė pasiekiama, kai koeficientai yra proporcingi."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-10-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Nelygybės formulavimas",
+              "action": "Užrašome $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
+              "reason": "Pagal Cauchy-Schwarz nelygybę dviem vektoriams realiųjų skaičių erdvėje.",
+              "latex": "(a+2b+3c)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)",
+              "result": "Apribojamas ieškomas reiškinys kvadratu."
+            },
+            {
+              "title": "Verčių įstatymas",
+              "action": "Kadangi $a^2+b^2+c^2=1$, gauname $(a+2b+3c)^2 \\le 14 \\implies a+2b+3c \\le \\sqrt{14}$.",
+              "reason": "Paprasti aritmetiniai veiksmai ir kvadratinės šaknies traukimas.",
+              "latex": "a+2b+3c \\le \\sqrt{14}",
+              "result": "Maksimali vertė yra $\\sqrt{14}$."
+            }
+          ],
+          "finalAnswer": "$\\sqrt{14}$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-10-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-10-trap-2",
+          "title": "Netinkamas vektorių pasirinkimas",
+          "wrongMove": "Cauchy-Schwarz nelygybėje naudojami vektoriai $(1,1,1)$ tikintis gauti sumą $a+2b+3c$.",
+          "whyTempting": "Supaprastinamas uždavinys iki paprastos sumos nelygybės.",
+          "correction": "Vektoriaus komponentės turi sutapti su ieškomo reiškinio koeficientais.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-10-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Jei realieji skaičiai $a, b, c$ tenkina lygtį $a^2 + b^2 + c...?$",
+          "back": "Taikome Cauchy-Schwarz nelygybę vektoriams $(a, b, c)$ ir $(1, 2, 3)$. Gauname $(a \\cdot 1 + b \\cdot 2 + c \\cdot 3)^2 \\le (a^2+b^2+c^2)(1^2+2^2+3^2)$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-11",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išspręskite nelygybę: $|x - 1| + |x - 3| \\ge 4$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta nelygybės sprendinių aibė."
+      },
+      "answerText": "$x \\in (-\\infty, 0] \\cup [4, \\infty)$",
+      "coreIdea": {
+        "title": "Intervalų metodas moduliams",
+        "text": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\le x < 3$ ir $x \\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus."
+      },
+      "strategyTags": [
+        "casework"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Modulio reiškiniai keičia ženklus taškuose $x=1$ ir $x=3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Išnagrinėkite tris atvejus: 1) $x < 1$, 2) $1 \\le x < 3$, 3) $x \\ge 3$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kiekviename intervale atskleiskite modulius ir išspręskite paprastas tiesines nelygybes.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apjunkite gautus sprendinius iš visų trijų intervalų.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Jei $x < 1$, turime $-(x-1) - (x-3) \\ge 4 \\implies -2x + 4 \\ge 4 \\implies x \\le 0$. Vadinasi, $x \\in (-\\infty, 0]$."
+        },
+        {
+          "text": "Jei $1 \\le x < 3$, turime $(x-1) - (x-3) \\ge 4 \\implies 2 \\ge 4$ (sprendinių nėra)."
+        },
+        {
+          "text": "Jei $x \\ge 3$, turime $(x-1) + (x-3) \\ge 4 \\implies 2x - 4 \\ge 4 \\implies x \\ge 4$. Vadinasi, $x \\in [4, \\infty)$."
+        },
+        {
+          "text": "Sujungiame gautus intervalus: $x \\in (-\\infty, 0] \\cup [4, \\infty)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-11-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "casework"
+          ],
+          "steps": [
+            {
+              "title": "Intervalų išskyrimas",
+              "action": "Padalijame $\\mathbb{R}$ į intervalus $(-\\infty, 1)$, $[1, 3)$ ir $[3, \\infty)$.",
+              "reason": "Modulio pošakniai lygūs nuliui taškuose 1 ir 3.",
+              "latex": "\\text{Intervalai: } x < 1, \\ 1 \\le x < 3, \\ x \\ge 3",
+              "result": "Uždavinys išskaidytas į tris paprastesnius atvejus."
+            },
+            {
+              "title": "Atvejų sprendimas",
+              "action": "1) $x < 1 \\implies 1-x+3-x \\ge 4 \\implies x \\le 0$. 2) $1 \\le x < 3 \\implies x-1+3-x \\ge 4 \\implies 2 \\ge 4$ (neįmanoma). 3) $x \\ge 3 \\implies x-1+x-3 \\ge 4 \\implies x \\ge 4$.",
+              "reason": "Atskleidžiame modulius pagal jų apibrėžimą kiekviename intervale.",
+              "latex": "\\begin{cases} x \\le 0 & \\text{kai } x < 1 \\\\ \\emptyset & \\text{kai } 1 \\le x < 3 \\\\ x \\ge 4 & \\text{kai } x \\ge 3 \\end{cases}",
+              "result": "Gauti sprendiniai atskiriems intervalams."
+            },
+            {
+              "title": "Sujungimas",
+              "action": "Sujungę gauname $x \\in (-\\infty, 0] \\cup [4, \\infty)$.",
+              "reason": "Sujungiame visų intervalų sprendinius.",
+              "latex": "x \\in (-\\infty, 0] \\cup [4, \\infty)",
+              "result": "Gautas galutinis atsakymas."
+            }
+          ],
+          "finalAnswer": "$x \\in (-\\infty, 0] \\cup [4, \\infty)$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-11-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-11-trap-2",
+          "title": "Intervalų ribų ignoravimas",
+          "wrongMove": "Nelygybė išsprendžiama teisingai intervalų viduje, bet pamirštama patikrinti pačius taškus 1 ir 3.",
+          "whyTempting": "Manoma, kad ribiniai taškai visada įeina į sprendinį savaime.",
+          "correction": "Visada patikrinkite, ar nelygybė griežta, ir ar ribiniai taškai tenkina pradinę sąlygą.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-11-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Išspręskite nelygybę: $|x - 1| + |x - 3| \\ge 4$....?",
+          "back": "Padalykite skaičių tiesę į tris intervalus pagal modulių nulius: $x < 1$, $1 \\le x < 3$ ir $x \\ge 3$. Kiekviename intervale atskleiskite modulius pagal jų ženklus.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-13",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite sumą: $\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskaičiuota teleskopinė suma."
+      },
+      "answerText": "$\\frac{99}{100}$",
+      "coreIdea": {
+        "title": "Skaidymas elementariosiomis trupmenomis",
+        "text": "Kiekvieną sumos narį galime užrašyti kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Užrašius visą sumą, viduriniai nariai susiprastina."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite nario trupmeną užrašyti dviejų paprastesnių trupmenų skirtumu.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pasinaudokite tapatybe: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite pirmuosius kelis sumos narius: $(1 - 1/2) + (1/2 - 1/3) + (1/3 - 1/4) + \\dots$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pastebėkite, kad visi nariai, išskyrus pirmąjį ir paskutinįjį, susiprastina. Apskaičiuokite likutį.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome bendrąjį narį kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$."
+        },
+        {
+          "text": "Suma išsiplečia į: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\dots + (\\frac{1}{99} - \\frac{1}{100})$."
+        },
+        {
+          "text": "Visi tarpiniai nariai susiprastina."
+        },
+        {
+          "text": "Liekantis rezultatas yra $1 - \\frac{1}{100} = \\frac{99}{100}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-13-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Trupmenų skaidymas",
+              "action": "Užrašome $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+              "reason": "Algebraiškai bendras vardiklis duoda: $\\frac{(n+1)-n}{n(n+1)} = \\frac{1}{n(n+1)}$.",
+              "latex": "\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}",
+              "result": "Sukurta skirtumų seka."
+            },
+            {
+              "title": "Sumos supaprastinimas",
+              "action": "Suma lygi $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + \\dots + (\\frac{1}{99} - \\frac{1}{100}) = 1 - \\frac{1}{100}$.",
+              "reason": "Visi nariai pavidalu $-1/k$ ir $+1/k$ susiprastina (teleskopinis efektas).",
+              "latex": "S = 1 - \\frac{1}{100} = \\frac{99}{100}",
+              "result": "Rastas galutinis sumos dydis."
+            }
+          ],
+          "finalAnswer": "$\\frac{99}{100}$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-13-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-13-trap-2",
+          "title": "Neteisingas trupmenos išskaidymas",
+          "wrongMove": "Bandoma skaidyti kaip $\\frac{1}{n(n+1)} = \\frac{1}{n} + \\frac{1}{n+1}$ (su pliuso ženklu).",
+          "whyTempting": "Sumažinamas dėmesys ženklams tikintis, kad nariai vis tiek susiprastins.",
+          "correction": "Patikrinkite bendrą vardiklį: $(n+1) - n = 1$, todėl viduryje turi būti minusas.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-13-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Apskaičiuokite sumą: $\\sum_{n=1}^{99} \\frac{1}{n(n+1)}$....?",
+          "back": "Kiekvieną sumos narį galime užrašyti kaip skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$. Užrašius visą sumą, viduriniai nariai susiprastina.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-09-test-challenge",
+      "title": "Olimpiadinis iššūkis (9 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-09-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-09-01",
+        "ex-olimpiada-09-02",
+        "ex-olimpiada-09-03",
+        "ex-olimpiada-09-04",
+        "ex-olimpiada-09-05",
+        "ex-olimpiada-09-06",
+        "ex-olimpiada-09-07",
+        "ex-olimpiada-09-08",
+        "ex-olimpiada-09-09",
+        "ex-olimpiada-09-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

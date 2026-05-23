@@ -1491,7 +1491,11 @@ export const concepts = {
     "formal": "Teiginių logikos dėsnių taikymas, siekiant nustatyti pradinių sąlygų suderinamumą ir gauti logiškai būtinus sekmenis.",
     "related": [],
     "topics": [
-      "olimpiada-05"
+      "olimpiada-05-algebra",
+      "olimpiada-05-geometrija",
+      "olimpiada-05-kombinatorika",
+      "olimpiada-05-skaiciu-teorija",
+      "olimpiada-05-strategijos-ir-irodymai"
     ]
   },
   "olimpiada-05-concept-method": {
@@ -1502,66 +1506,11 @@ export const concepts = {
     "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
     "related": [],
     "topics": [
-      "olimpiada-05"
-    ]
-  },
-  "olimpiada-05-concept-invariant": {
-    "title": "Invarianto metodas",
-    "type": "concept",
-    "definition": "Dydis arba savybė, kuri išlieka visiškai nepakitusi atliekant bet kokias leistinas uždavinio operacijas.",
-    "intuition": "Jei atliekant veiksmus skaičių lyginumas ar suma nesikeičia, galime lengvai įrodyti, kad tam tikra būsena nepasiekiama.",
-    "formal": "Funkcija $I(S)$, apibrėžta būsenų erdvėje, kuriai galioja $I(S) = I(T(S))$ bet kokiai leistinai transformacijai $T$.",
-    "related": [],
-    "topics": [
-      "olimpiada-05"
-    ]
-  },
-  "olimpiada-05-concept-parity": {
-    "title": "Skaičių lyginumas ir paritetas",
-    "type": "concept",
-    "definition": "Sveikųjų skaičių savybė dalytis iš dviejų be liekanos arba turėti liekaną vienas.",
-    "intuition": "Skaičių skirstymas į lyginius ir nelyginius. Sandauga lyginė, jei bent vienas daugiklis lyginis; suma lyginė, jei abu dėmenys vienodo lyginumo.",
-    "formal": "Skaičiaus $n \\\\in \\\\mathbb{Z}$ klasifikacija pagal $n \\\\equiv 0 \\\\pmod 2$ (lyginis) arba $n \\\\equiv 1 \\\\pmod 2$ (nelyginis).",
-    "related": [],
-    "topics": [
-      "olimpiada-05"
-    ]
-  },
-  "olimpiada-05-concept-extremal": {
-    "title": "Ekstremaliojo elemento principas",
-    "type": "concept",
-    "definition": "Strategija pradėti uždavinio nagrinėjimą nuo objekto, turinčio didžiausią arba mažiausią tam tikros charakteristikos reikšmę.",
-    "intuition": "Žiūrėkite į patį mažiausią skaičių, ilgiausią atkarpą ar kraštutinį tašką – tai dažnai apriboja kitų objektų elgseną.",
-    "formal": "Bet kuri netuščia baigtinė aibė $\\\\mathcal{S} \\\\subset \\\\mathbb{R}$ turi maksimalų elementą $\\\\max \\\\mathcal{S}$ ir minimalų elementą $\\\\min \\\\mathcal{S}$.",
-    "related": [],
-    "topics": [
-      "olimpiada-05"
-    ]
-  },
-  "olimpiada-05-trap-1": {
-    "title": "Dalinis atvejų tikrinimas vietoje įrodymo",
-    "type": "mistake",
-    "definition": "Mokiniai klaidingai mano, kad jei teiginys teisingas su trimis ar keturiais pavyzdžiais, jis galioja visiems skaičiams.",
-    "intuition": "Užduotyje prašoma įrodyti lyginumą. Mokinys patikrina $3+5=8$ ir sako: 'Teiginys teisingas'.",
-    "formal": "Būtina pateikti bendrą įrodymą (pvz., naudojant kintamuosius arba pariteto dėsnius), kuris apimtų visas įmanomas reikšmes.",
-    "related": [
-      "olimpiada-05-concept-method"
-    ],
-    "topics": [
-      "olimpiada-05"
-    ]
-  },
-  "olimpiada-05-trap-2": {
-    "title": "Nulinių ar kraštutinių reikšmių nepaisymas",
-    "type": "mistake",
-    "definition": "Spręsdami lygčių ar tekstinius uždavinius, mokiniai pamiršta patikrinti ekstremalius arba ribinius atvejus (pvz., $0$ arba $1$).",
-    "intuition": "Sprendžiant dalumo uždavinį, pamirštama, kad nulis dalijasi iš visų skaičių.",
-    "formal": "Visada atskirai išnagrinėkite mažiausias leistinas kintamųjų reikšmes ir patikrinkite, ar jos nepažeidžia uždavinio sąlygos.",
-    "related": [
-      "olimpiada-05-concept-extremal"
-    ],
-    "topics": [
-      "olimpiada-05"
+      "olimpiada-05-algebra",
+      "olimpiada-05-geometrija",
+      "olimpiada-05-kombinatorika",
+      "olimpiada-05-skaiciu-teorija",
+      "olimpiada-05-strategijos-ir-irodymai"
     ]
   },
   "olimpiada-06-concept-logic": {
@@ -1569,10 +1518,13 @@ export const concepts = {
     "type": "concept",
     "definition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
     "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
-    "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\\\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+    "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
     "related": [],
     "topics": [
-      "olimpiada-06"
+      "olimpiada-06-algebra",
+      "olimpiada-06-geometrija",
+      "olimpiada-06-kombinatorika",
+      "olimpiada-06-skaiciu-teorija"
     ]
   },
   "olimpiada-06-concept-method": {
@@ -1580,69 +1532,13 @@ export const concepts = {
     "type": "concept",
     "definition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
     "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
-    "formal": "$n = p_1^{a_1} p_2^{a_2} \\\\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+    "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
     "related": [],
     "topics": [
-      "olimpiada-06"
-    ]
-  },
-  "olimpiada-06-concept-invariant": {
-    "title": "Kombinatorinė sandauga",
-    "type": "concept",
-    "definition": "Taisyklė, nusakanti, kaip apskaičiuoti nepriklausomų pasirinkimų rinkinių skaičių sudauginant kiekvieno pasirinkimo galimybes.",
-    "intuition": "Jei turiu $N$ kelių ir $M$ tiltų, tai iš viso turiu $N \\times M$ būdų nukeliauti.",
-    "formal": "Aibių $A$ ir $B$ Dekarto sandaugos galingumas: $|A \\times B| = |A| \\times |B|$.",
-    "related": [],
-    "topics": [
-      "olimpiada-06"
-    ]
-  },
-  "olimpiada-06-concept-parity": {
-    "title": "Dirichlė (stalčių) principas",
-    "type": "concept",
-    "definition": "Jeigu $n$ objektų patalpinami į $m$ stalčių, ir $n > m$, tai bent viename stalčiuje bus bent du objektai.",
-    "intuition": "Jei turiu $3$ pirštines, o stalčių tik $2$, tai bent viename stalčiuje bus bent $2$ pirštinės.",
-    "formal": "Funkcija $f: A \\to B$, kai $|A| > |B|$, negali būti injektyvi.",
-    "related": [],
-    "topics": [
-      "olimpiada-06"
-    ]
-  },
-  "olimpiada-06-concept-extremal": {
-    "title": "Pitagoro sąryšis",
-    "type": "concept",
-    "definition": "Sąryšis tarp stačiojo trikampio statinių ir įžambinės kvadratų.",
-    "intuition": "Jei žinome dvi stačiojo trikampio kraštines, trečiąją galime rasti pagal lygybę $a^2 + b^2 = c^2$.",
-    "formal": "Euklidinėje geometrijoje stačiojo trikampio statinių ilgių kvadratų suma lygi įžambinės ilgio kvadratui.",
-    "related": [],
-    "topics": [
-      "olimpiada-06"
-    ]
-  },
-  "olimpiada-06-trap-1": {
-    "title": "Daugiklių dubliavimas MBK skaičiavime",
-    "type": "mistake",
-    "definition": "Skaičiuodami mažiausią bendrą kartotinį, mokiniai dažnai tiesiog sudaugina abu skaičius, pamiršdami padalinti iš jų DBD.",
-    "intuition": "Užduotyje prašoma rasti $MBK(12, 18)$. Mokinys parašo: $12 \\times 18 = 216$.",
-    "formal": "Būtina naudoti pirminį išskaidymą arba formulę $MBK(a, b) = \\frac{a \\times b}{DBD(a, b)}$. Tikrasis $MBK(12, 18) = 36$.",
-    "related": [
-      "olimpiada-06-concept-method"
-    ],
-    "topics": [
-      "olimpiada-06"
-    ]
-  },
-  "olimpiada-06-trap-2": {
-    "title": "Priklausomų įvykių tikimybių dauginimas",
-    "type": "mistake",
-    "definition": "Taikydami tikimybių daugybos taisyklę $P(A \\\\cap B) = P(A) \\times P(B)$, mokiniai pamiršta patikrinti, ar įvykiai yra nepriklausomi.",
-    "intuition": "Traukiami du rutuliai be grąžinimo iš dėžės, kurioje yra 5 raudoni ir 5 mėlyni rutuliai. Tikimybė ištraukti abu raudonus užrašoma kaip $0.5 \\times 0.5 = 0.25$.",
-    "formal": "Kadangi rutulys negrąžinamas, antrojo traukimo tikimybė keičiasi: $P(A \\\\cap B) = \\frac{5}{10} \\times \\frac{4}{9} = \\frac{2}{9}$.",
-    "related": [
-      "olimpiada-06-concept-logic"
-    ],
-    "topics": [
-      "olimpiada-06"
+      "olimpiada-06-algebra",
+      "olimpiada-06-geometrija",
+      "olimpiada-06-kombinatorika",
+      "olimpiada-06-skaiciu-teorija"
     ]
   },
   "funkcija": {
@@ -2582,7 +2478,10 @@ export const concepts = {
     "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
     "related": [],
     "topics": [
-      "olimpiada-07"
+      "olimpiada-07-algebra",
+      "olimpiada-07-geometrija",
+      "olimpiada-07-kombinatorika",
+      "olimpiada-07-skaiciu-teorija"
     ]
   },
   "olimpiada-07-concept-method": {
@@ -2593,66 +2492,10 @@ export const concepts = {
     "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
     "related": [],
     "topics": [
-      "olimpiada-07"
-    ]
-  },
-  "olimpiada-07-concept-invariant": {
-    "title": "Invariantas",
-    "type": "concept",
-    "definition": "Dydis arba savybė, kuri nekinta atliekant tam tikrus leistinus veiksmus.",
-    "intuition": "Jei sistemoje vyksta pokyčiai, ieškokime to, kas lieka nepakitę (paritetas, suma, liekana).",
-    "formal": "Funkcija $I(S)$, kuriai galioja $I(S) = I(T(S))$ bet kokiai leistinai transformacijai $T$.",
-    "related": [],
-    "topics": [
-      "olimpiada-07"
-    ]
-  },
-  "olimpiada-07-concept-parity": {
-    "title": "Paritetas",
-    "type": "concept",
-    "definition": "Skaičiaus lyginumas arba nelyginumas, padedantis nustatyti būsenų pasiekiamumą.",
-    "intuition": "Lyginių ir nelyginių skaičių elgesys atliekant sudėtį ir daugybą.",
-    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\\\pmod 2 \\\\in \\\\{0, 1\\\\}$).",
-    "related": [],
-    "topics": [
-      "olimpiada-07"
-    ]
-  },
-  "olimpiada-07-concept-extremal": {
-    "title": "Ekstremalus principas",
-    "type": "concept",
-    "definition": "Didžiausio arba mažiausio elemento nagrinėjimas kaip atskaitos taško.",
-    "intuition": "Sprendžiant uždavinį verta pradėti nuo kraštutinių atvejų (mažiausio skaičiaus, trumpiausios kraštinės).",
-    "formal": "Tvarkiosios baigtinės aibės maksimalaus arba minimalaus elemento egzistavimo taikymas įrodymuose.",
-    "related": [],
-    "topics": [
-      "olimpiada-07"
-    ]
-  },
-  "olimpiada-07-trap-1": {
-    "title": "Liekanos prilyginimas neigiamam skaičiui",
-    "type": "mistake",
-    "definition": "Dalijant neigiamą skaičių, liekana parašoma neigiama.",
-    "intuition": "Teigiama, kad $-5 \\\\pmod 3 = -2$.",
-    "formal": "Liekana visada turi būti neneigiama: $0 \\\\le r < m$. Kadangi $-5 = -2 \\\\cdot 3 + 1$, tai liekana yra 1.",
-    "related": [
-      "olimpiada-07-concept-logic"
-    ],
-    "topics": [
-      "olimpiada-07"
-    ]
-  },
-  "olimpiada-07-trap-2": {
-    "title": "Klaidingas įrodymas pavyzdžiais",
-    "type": "mistake",
-    "definition": "Patikrinus kelis skaičius daroma išvada, kad teiginys galioja visada.",
-    "intuition": "Parodoma, kad $1+3=4$ (lyginis) ir teigiama, kad visų nelyginių suma lyginė.",
-    "formal": "Būtina įrodyti bendruoju atveju naudojant kintamuosius (pvz., $(2a+1) + (2b+1) = 2(a+b+1)$).",
-    "related": [
-      "olimpiada-07-concept-method"
-    ],
-    "topics": [
-      "olimpiada-07"
+      "olimpiada-07-algebra",
+      "olimpiada-07-geometrija",
+      "olimpiada-07-kombinatorika",
+      "olimpiada-07-skaiciu-teorija"
     ]
   },
   "olimpiada-08-concept-logic": {
@@ -2663,7 +2506,10 @@ export const concepts = {
     "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
     "related": [],
     "topics": [
-      "olimpiada-08"
+      "olimpiada-08-algebra",
+      "olimpiada-08-geometrija",
+      "olimpiada-08-kombinatorika",
+      "olimpiada-08-skaiciu-teorija"
     ]
   },
   "olimpiada-08-concept-method": {
@@ -2674,66 +2520,10 @@ export const concepts = {
     "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
     "related": [],
     "topics": [
-      "olimpiada-08"
-    ]
-  },
-  "olimpiada-08-concept-invariant": {
-    "title": "Invariantas",
-    "type": "concept",
-    "definition": "Dydis arba savybė, kuri nekinta atliekant tam tikrus leistinus veiksmus.",
-    "intuition": "Jei sistemoje vyksta pokyčiai, ieškokime to, kas lieka nepakitę (paritetas, suma, liekana).",
-    "formal": "Funkcija $I(S)$, kuriai galioja $I(S) = I(T(S))$ bet kokiai leistinai transformacijai $T$.",
-    "related": [],
-    "topics": [
-      "olimpiada-08"
-    ]
-  },
-  "olimpiada-08-concept-parity": {
-    "title": "Paritetas",
-    "type": "concept",
-    "definition": "Skaičiaus lyginumas arba nelyginumas, padedantis nustatyti būsenų pasiekiamumą.",
-    "intuition": "Lyginių ir nelyginių skaičių elgesys atliekant sudėtį ir daugybą.",
-    "formal": "Sveikojo skaičiaus liekana dalijant iš 2 ($x \\\\pmod 2 \\\\in \\\\{0, 1\\\\}$).",
-    "related": [],
-    "topics": [
-      "olimpiada-08"
-    ]
-  },
-  "olimpiada-08-concept-extremal": {
-    "title": "Ekstremalus principas",
-    "type": "concept",
-    "definition": "Didžiausio arba mažiausio elemento nagrinėjimas kaip atskaitos taško.",
-    "intuition": "Sprendžiant uždavinį verta pradėti nuo kraštutinių atvejų (mažiausio skaičiaus, trumpiausios kraštinės).",
-    "formal": "Tvarkiosios baigtinės aibės maksimalaus arba minimalaus elemento egzistavimo taikymas įrodymuose.",
-    "related": [],
-    "topics": [
-      "olimpiada-08"
-    ]
-  },
-  "olimpiada-08-trap-1": {
-    "title": "Diofantinės lygties sprendimas nesuprastinus koeficientų",
-    "type": "mistake",
-    "definition": "Bandoma spręsti lygtį sveikaisiais skaičiais nepatikrinus DBD dalumo sąlygos.",
-    "intuition": "Teigiama, kad lygtis $6x + 9y = 4$ turi sveikųjų sprendinių.",
-    "formal": "Visada patikrinkite, ar laisvasis narys dalijasi iš DBD: kadangi $\\text{dbd}(6, 9) = 3$, o 4 nesidalija iš 3, lygtis sprendinių neturi.",
-    "related": [
-      "olimpiada-08-concept-logic"
-    ],
-    "topics": [
-      "olimpiada-08"
-    ]
-  },
-  "olimpiada-08-trap-2": {
-    "title": "Laipsnio rodiklio pakeitimas liekana moduliu m",
-    "type": "mistake",
-    "definition": "Rodiklis klaidingai redukuojamas tuo pačiu moduliu.",
-    "intuition": "Teigiama, kad $2^{50} \\\\equiv 2^1 \\\\pmod 7$, nes $50 \\\\equiv 1 \\\\pmod 7$.",
-    "formal": "Laipsnio rodiklis pagal Ferma mažąją teoremą moduliu $p$ yra redukuojamas moduliu $p-1$: kadangi $50 \\\\equiv 2 \\\\pmod 6$, tai $2^{50} \\\\equiv 2^2 \\\\equiv 4 \\\\pmod 7$.",
-    "related": [
-      "olimpiada-08-concept-method"
-    ],
-    "topics": [
-      "olimpiada-08"
+      "olimpiada-08-algebra",
+      "olimpiada-08-geometrija",
+      "olimpiada-08-kombinatorika",
+      "olimpiada-08-skaiciu-teorija"
     ]
   },
   "veiksmai-su-lygtimis": {
@@ -2894,39 +2684,15 @@ export const concepts = {
       "kvadratines-nelygybes"
     ]
   },
-  "olimpiada-09-concept-euler-totient": {
-    "title": "Oilerio totiento funkcija $\\\\varphi(n)$",
-    "type": "concept",
-    "definition": "Natūraliųjų skaičių, neviršijančių $n$ ir pirminių su $n$, skaičius.",
-    "intuition": "Parodo, kiek skaičių nuo $1$ iki $n$ neturi bendrų daliklių su $n$ (išskyrus 1).",
-    "formal": "$\\\\varphi(n) = n \\\\prod_{p|n} \\\\left(1 - \\frac{1}{p}\\right)$, kur $p$ yra skirtingi pirminiai skaičiaus $n$ dalikliai.",
-    "related": [],
-    "topics": [
-      "olimpiada-09"
-    ]
-  },
-  "olimpiada-09-concept-euler-theorem": {
-    "title": "Oilerio teorema",
-    "type": "concept",
-    "definition": "Teiginys, kad $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$, kai $\\\\gcd(a, n) = 1$.",
-    "intuition": "Apibendrina Mažąją Fermo teoremą bet kuriam moduliui $n$.",
-    "formal": "Jei $a$ ir $n$ yra tarpusavyje pirminiai natūralieji skaičiai, tai $a^{\\\\varphi(n)} - 1$ dalijasi iš $n$ be liekanos.",
-    "related": [
-      "olimpiada-09-concept-euler-totient"
-    ],
-    "topics": [
-      "olimpiada-09"
-    ]
-  },
   "olimpiada-09-concept-am-gm": {
     "title": "AM-GM nelygybė",
     "type": "concept",
     "definition": "Neneigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį.",
     "intuition": "Aritmetinis vidurkis visada yra didesnis arba lygus geometriniam vidurkiui, o lygybė galioja tik kai visi skaičiai lygūs.",
-    "formal": "Neneigiamiems realiesiems skaičiams $a_1, a_2, \\\\dots, a_n$ galioja: $\\frac{a_1 + a_2 + \\\\dots + a_n}{n} \\\\ge \\\\sqrt[n]{a_1 a_2 \\\\dots a_n}$.",
+    "formal": "Neneigiamiems realiesiems skaičiams $a_1, a_2, \\dots, a_n$ galioja: $\\frac{a_1 + a_2 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}$.",
     "related": [],
     "topics": [
-      "olimpiada-09"
+      "olimpiada-09-algebra"
     ]
   },
   "olimpiada-09-concept-ceva": {
@@ -2934,89 +2700,45 @@ export const concepts = {
     "type": "concept",
     "definition": "Trikampio kraštinių atkarpų santykių sandauga, kai trys tiesės kertasi viename taške.",
     "intuition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, kertasi viename taške.",
-    "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\\\cdot \\frac{CE}{EA} \\\\cdot \\frac{AF}{FB} = 1$.",
+    "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
     "related": [],
     "topics": [
-      "olimpiada-09"
+      "olimpiada-09-geometrija"
     ]
   },
-  "olimpiada-09-concept-catalan": {
-    "title": "Katalano skaičiai",
+  "olimpiada-09-concept-euler-totient": {
+    "title": "Oilerio totiento funkcija $\\varphi(n)$",
     "type": "concept",
-    "definition": "Skaičių seka $C_n = \\frac{1}{n+1}\\binom{2n}{n}$, naudojama kombinatorikoje.",
-    "intuition": "Šie skaičiai parodo teisingų skliaustų sekų, medžių ir kitų struktūrų skaičių.",
-    "formal": "Seka apibrėžiama formule $C_n = \\frac{(2n)!}{(n+1)!n!}$ su $n \\\\ge 0$.",
+    "definition": "Natūraliųjų skaičių, neviršijančių $n$ ir pirminių su $n$, skaičius.",
+    "intuition": "Parodo, kiek skaičių nuo $1$ iki $n$ neturi bendrų daliklių su $n$ (išskyrus 1).",
+    "formal": "$\\varphi(n) = n \\prod_{p|n} \\left(1 - \\frac{1}{p}\\right)$, kur $p$ yra skirtingi pirminiai skaičiaus $n$ dalikliai.",
     "related": [],
     "topics": [
-      "olimpiada-09"
+      "olimpiada-09-skaiciu-teorija"
     ]
   },
-  "olimpiada-09-trap-examples-as-proof": {
-    "title": "Įrodymas tik keliais pavyzdžiais",
-    "type": "mistake",
-    "definition": "Mokiniai dažnai mano, kad patikrinus teiginį su keliais skaičiais, jis yra visiškai įrodytas.",
-    "intuition": "Teiginys teisingas, nes $7^{1003}$ paskutiniai skaitmenys sutampa su pavyzdžiais.",
-    "formal": "Reikia pateikti bendrą įrodymą visiems atvejams naudojant algebrinius metodus arba teoremas.",
-    "related": [],
-    "topics": [
-      "olimpiada-09"
-    ]
-  },
-  "olimpiada-09-trap-boundary-cases": {
-    "title": "Kraštutinių atvejų ignoravimas",
-    "type": "mistake",
-    "definition": "Teoremos ar nelygybės taikomos neatsižvelgiant į ribines sąlygas (pvz., $\\\\gcd(a, n) = 1$).",
-    "intuition": "Oilerio teoremos taikymas $a^{\\\\varphi(n)} \\\\equiv 1 \\\\pmod n$, kai $a$ ir $n$ turi bendrų daliklių.",
-    "formal": "Visada patikrinkite, ar tenkinamos teoremos sąlygos, prieš ją taikydami.",
+  "olimpiada-09-concept-euler-theorem": {
+    "title": "Oilerio teorema",
+    "type": "concept",
+    "definition": "Teiginys, kad $a^{\\varphi(n)} \\equiv 1 \\pmod n$, kai $\\gcd(a, n) = 1$.",
+    "intuition": "Apibendrina Mažąją Fermo teoremą bet kuriam moduliui $n$.",
+    "formal": "Jei $a$ ir $n$ yra tarpusavyje pirminiai natūralieji skaičiai, tai $a^{\\varphi(n)} - 1$ dalijasi iš $n$ be liekanos.",
     "related": [
-      "olimpiada-09-concept-euler-theorem"
+      "olimpiada-09-concept-euler-totient"
     ],
     "topics": [
-      "olimpiada-09"
-    ]
-  },
-  "olimpiada-10-concept-quad-reciprocity": {
-    "title": "Kvadratinio abipusiškumo dėsnis",
-    "type": "concept",
-    "definition": "Ryšys tarp dviejų skirtingų nelyginių pirminių skaičių kvadratinių liekanų savybių.",
-    "intuition": "Parodo, ar skaičius yra kvadratinė liekana moduliu $p$ per ryšį su kitu pirminiu skaičiumi $q$.",
-    "formal": "Jei $p$ ir $q$ yra skirtingi nelyginiai pirminiai skaičiai, tai $\\\\left(\\frac{p}{q}\\right)\\\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
-    "related": [],
-    "topics": [
-      "olimpiada-10"
-    ]
-  },
-  "olimpiada-10-concept-gaussian-integers": {
-    "title": "Gauso sveikieji skaičiai",
-    "type": "concept",
-    "definition": "Kompleksiniai skaičiai, kurių realioji ir tariamoji dalys yra sveikieji skaičiai.",
-    "intuition": "Kompleksinių skaičių aibė $\\\\mathbb{Z}[i]$, kurioje galima atlikti dalybą su liekana ir skaidyti pirminiais daugtuviais.",
-    "formal": "Aibė $\\\\mathbb{Z}[i] = \\\\{a + bi \\\\mid a, b \\\\in \\\\mathbb{Z}\\\\}$, kur $i^2 = -1$.",
-    "related": [],
-    "topics": [
-      "olimpiada-10"
-    ]
-  },
-  "olimpiada-10-concept-titus-lemma": {
-    "title": "Titu lema (Sedrakiano nelygybė)",
-    "type": "concept",
-    "definition": "Cauchy-Schwarz nelygybės trupmeninė forma.",
-    "intuition": "Patogi nelygybių su trupmenomis įrodymo forma, leidžianti sudėti vardiklius.",
-    "formal": "Realiems skaičiams $a_1, a_2, \\\\dots, a_n$ ir teigiamiems skaičiams $b_1, b_2, \\\\dots, b_n$ galioja: $\\\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\\\ge \\frac{(\\\\sum_{i=1}^n a_i)^2}{\\\\sum_{i=1}^n b_i}$.",
-    "related": [],
-    "topics": [
-      "olimpiada-10"
+      "olimpiada-09-skaiciu-teorija"
     ]
   },
   "olimpiada-10-concept-inversion": {
     "title": "Inversija apskritimo atžvilgiu",
     "type": "concept",
-    "definition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\\\cdot OP' = R^2$.",
+    "definition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\cdot OP' = R^2$.",
     "intuition": "Erdvės transformacija, kuri tieses ir apskritimus paverčia kitais apskritimais ar tiesėmis.",
-    "formal": "Atvaizdis $\\\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\\\in OP$ ir $OP \\\\cdot OP' = R^2$.",
+    "formal": "Atvaizdis $\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\in OP$ ir $OP \\cdot OP' = R^2$.",
     "related": [],
     "topics": [
-      "olimpiada-10"
+      "olimpiada-10-geometrija"
     ]
   },
   "olimpiada-10-concept-euler-formula-planar": {
@@ -3027,79 +2749,40 @@ export const concepts = {
     "formal": "Bet kuriam susietam plokščiajam grafui su $V$ viršūnėmis, $E$ briaunomis ir $F$ sritimis (įskaitant išorinę) galioja $V - E + F = 2$.",
     "related": [],
     "topics": [
-      "olimpiada-10"
+      "olimpiada-10-kombinatorika"
     ]
   },
-  "olimpiada-10-trap-sign-error-symmetric": {
-    "title": "Ženklų klaidos simetriniuose daugianariuose",
-    "type": "mistake",
-    "definition": "Taikant Niutono tapatybes arba pertvarkant simetrinius daugianarius, lengva suklysti su neigiamais ženklais.",
-    "intuition": "Teigiama, kad $x^2 + y^2 + z^2 = (x+y+z)^2 - xy - yz - zx$ vietoje $- 2(xy+yz+zx)$.",
-    "formal": "Griežtai taikykite formules: $p_2 = e_1 p_1 - 2e_2$, kur $e_2 = xy+yz+zx$.",
-    "related": [
-      "olimpiada-10-concept-gaussian-integers"
-    ],
-    "topics": [
-      "olimpiada-10"
-    ]
-  },
-  "olimpiada-10-trap-nonplanar-euler": {
-    "title": "Oilerio formulės taikymas neplokštiems grafams",
-    "type": "mistake",
-    "definition": "Mokiniai bando taikyti $V - E + F = 2$ grafams, kurie nėra plokštieji (pvz., pilnasis grafas $K_5$).",
-    "intuition": "Skaičiuojamos $K_5$ sritys naudojant Oilerio formulę.",
-    "formal": "Prieš taikydami Oilerio formulę, įsitikinkite, kad grafas yra susietas ir plokščias (jį galima nupiešti plokštumoje be susikertančių briaunų).",
-    "related": [
-      "olimpiada-10-concept-euler-formula-planar"
-    ],
-    "topics": [
-      "olimpiada-10"
-    ]
-  },
-  "olimpiada-11-concept-crt": {
-    "title": "Kiniškoji liekanų teorema (KLT)",
+  "olimpiada-10-concept-titus-lemma": {
+    "title": "Titu lema (Sedrakiano nelygybė)",
     "type": "concept",
-    "definition": "Jei moduliai yra poromis tarpusavyje pirminiai, tai liekanų sistema turi vienintelį sprendinį jungtiniu moduliu.",
-    "intuition": "Tai tarsi koordinačių sistema skaičiams: žinodami skaičiaus „projekcijas“ (liekanas) įvairiomis kryptimis (moduliais), galime tiksliai nustatyti jo padėtį.",
-    "formal": "Tegu $m_1, m_2, \\\\dots, m_k$ yra natūralieji skaičiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygčių sistema $x \\\\equiv a_i \\\\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\\\dots m_k$.",
+    "definition": "Cauchy-Schwarz nelygybės trupmeninė forma.",
+    "intuition": "Patogi nelygybių su trupmenomis įrodymo forma, leidžianti sudėti vardiklius.",
+    "formal": "Realiems skaičiams $a_1, a_2, \\dots, a_n$ ir teigiamiems skaičiams $b_1, b_2, \\dots, b_n$ galioja: $\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum_{i=1}^n a_i)^2}{\\sum_{i=1}^n b_i}$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-10-nelygybes"
     ]
   },
-  "olimpiada-11-concept-order": {
-    "title": "Eilė ir pradinės šaknys",
+  "olimpiada-10-concept-quad-reciprocity": {
+    "title": "Kvadratinio abipusiškumo dėsnis",
     "type": "concept",
-    "definition": "Mažiausias teigiamas laipsnis $d$, kuriam $a^d \\\\equiv 1 \\\\pmod m$.",
-    "intuition": "Skaičiaus laipsniai moduliu $m$ sukasi ratu; eilė nurodo šio rato ilgį.",
-    "formal": "Sveikojo skaičiaus $a$ eilė moduliu $m$ (žymima $\\text{ord}_m a$) yra mažiausias $d > 0$, tenkinantis $a^d \\\\equiv 1 \\\\pmod m$. Jei $\\text{ord}_m g = \\\\varphi(m)$, tai $g$ vadinama pradine šaknimi.",
+    "definition": "Ryšys tarp dviejų skirtingų nelyginių pirminių skaičių kvadratinių liekanų savybių.",
+    "intuition": "Parodo, ar skaičius yra kvadratinė liekana moduliu $p$ per ryšį su kitu pirminiu skaičiumi $q$.",
+    "formal": "Jei $p$ ir $q$ yra skirtingi nelyginiai pirminiai skaičiai, tai $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-10-skaiciu-teorija"
     ]
   },
-  "olimpiada-11-concept-reciprocity": {
-    "title": "Kvadratinis savitarpiškumas",
+  "olimpiada-10-concept-gaussian-integers": {
+    "title": "Gauso sveikieji skaičiai",
     "type": "concept",
-    "definition": "Dėsnis, siejantis Legendro simbolius $(\\frac{p}{q})$ ir $(\\frac{q}{p})$.",
-    "intuition": "Leidžia apversti „trupmeną“ Legendro simbolyje, palengvinant kvadratinių liekanų skaičiavimą.",
-    "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\\\left(\\frac{p}{q}\\right)\\\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+    "definition": "Kompleksiniai skaičiai, kurių realioji ir tariamoji dalys yra sveikieji skaičiai.",
+    "intuition": "Kompleksinių skaičių aibė $\\mathbb{Z}[i]$, kurioje galima atlikti dalybą su liekana ir skaidyti pirminiais daugtuviais.",
+    "formal": "Aibė $\\mathbb{Z}[i] = \\{a + bi \\mid a, b \\in \\mathbb{Z}\\}$, kur $i^2 = -1$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
-    ]
-  },
-  "olimpiada-11-concept-jacobi": {
-    "title": "Jakobio simbolis",
-    "type": "concept",
-    "definition": "Legendro simbolio apibendrinimas sudėtiniams moduliams.",
-    "intuition": "Leidžia naudoti savitarpiškumo savybes net kai modulis nėra pirminis, nors simbolio reikšmė tiesiogiai negarantuoja lygties sprendžiamumo.",
-    "formal": "Jei $n = p_1 p_2 \\\\dots p_k$ (nelyginis), tai $\\\\left(\\frac{a}{n}\\right) = \\\\prod_{i=1}^k \\\\left(\\frac{a}{p_i}\\right)$.",
-    "related": [
-      "olimpiada-11-concept-reciprocity"
-    ],
-    "topics": [
-      "olimpiada-11"
+      "olimpiada-10-skaiciu-teorija"
     ]
   },
   "olimpiada-11-concept-cyclotomic": {
@@ -3107,32 +2790,32 @@ export const concepts = {
     "type": "concept",
     "definition": "Daugianariai, kurių šaknys yra pirmykštės $n$-tojo laipsnio vieneto šaknys.",
     "intuition": "Tai elementariausios „plytelės“, iš kurių susideda daugianaris $x^n - 1$ virš racionalųjų skaičių lauko.",
-    "formal": "$\\\\Phi_n(x) = \\\\prod_{\\text{gcd}(k,n)=1, 1 \\\\le k \\\\le n} (x - e^{2\\\\pi i k / n})$. Galioja savybė: $x^n - 1 = \\\\prod_{d|n} \\\\Phi_d(x)$.",
+    "formal": "$\\Phi_n(x) = \\prod_{\\text{gcd}(k,n)=1, 1 \\le k \\le n} (x - e^{2\\pi i k / n})$. Galioja savybė: $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-algebra"
     ]
   },
   "olimpiada-11-concept-chebyshev": {
     "title": "Čebyševo daugianariai",
     "type": "concept",
-    "definition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\\\cos \\theta) = \\\\cos(n\\theta)$.",
+    "definition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\cos \\theta) = \\cos(n\\theta)$.",
     "intuition": "Jie susieja trigonometriją su algebriniais daugianariais ir pasižymi unikaliomis ekstremaliomis savybėmis.",
     "formal": "$T_0(x)=1, T_1(x)=x, T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-algebra"
     ]
   },
   "olimpiada-11-concept-inversion": {
     "title": "Inversija",
     "type": "concept",
-    "definition": "Transformacija, kuri tašką $P$ atvaizduoja į $P'$ taip, kad $OP \\\\cdot OP' = R^2$.",
+    "definition": "Transformacija, kuri tašką $P$ atvaizduoja į $P'$ taip, kad $OP \\cdot OP' = R^2$.",
     "intuition": "Tai tarsi atspindys apskritime: tai, kas buvo viduje, atsiduria išorėje, ir atvirkščiai.",
     "formal": "Inversija centro $O$ ir spindulio $R$ atžvilgiu: $f(P) = P'$, kur $P'$ yra spindulyje $OP$ ir $|OP'| = R^2/|OP|$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-geometrija"
     ]
   },
   "olimpiada-11-concept-projective": {
@@ -3143,7 +2826,7 @@ export const concepts = {
     "formal": "$(A,B;C,D) = \\frac{AC}{BC} / \\frac{AD}{BD}$ (naudojant orientuotas atkarpas).",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-geometrija"
     ]
   },
   "olimpiada-11-concept-nullstellensatz": {
@@ -3151,10 +2834,10 @@ export const concepts = {
     "type": "concept",
     "definition": "Teorema apie daugianario nelygumą nuliui gardelės taškuose.",
     "intuition": "Jei daugianaris turi pakankamai aukštą laipsnį, jis negali „išvengti“ visų taškų tam tikroje aibių sandaugoje.",
-    "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\\\sum t_i$ ir nario $x_1^{t_1} \\\\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\\\dots, s_n) \\\\in S_1 \\times \\\\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
+    "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\sum t_i$ ir nario $x_1^{t_1} \\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\dots, s_n) \\in S_1 \\times \\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-kombinatorika"
     ]
   },
   "olimpiada-11-concept-lovasz": {
@@ -3162,10 +2845,10 @@ export const concepts = {
     "type": "concept",
     "definition": "Tikimybinio metodo įrankis, garantuojantis įvykių išvengimą.",
     "intuition": "Jei „blogi“ įvykiai yra reti ir mažai susiję tarpusavyje, tai su teigiama tikimybe nė vienas jų neįvyks.",
-    "formal": "Jei $P(A_i) \\\\le p$ ir kiekvienas įvykis priklauso nuo daugiausiai $d$ kitų įvykių, tai jei $ep(d+1) \\\\le 1$, $P(\\\\cap A_i^c) > 0$.",
+    "formal": "Jei $P(A_i) \\le p$ ir kiekvienas įvykis priklauso nuo daugiausiai $d$ kitų įvykių, tai jei $ep(d+1) \\le 1$, $P(\\cap A_i^c) > 0$.",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-kombinatorika"
     ]
   },
   "olimpiada-11-concept-turan": {
@@ -3176,57 +2859,53 @@ export const concepts = {
     "formal": "Grafas su $n$ viršūnių, neturintis $K_{r+1}$ kaip pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$ (beveik lygių dalių pilnasis $r$-dalis grafas).",
     "related": [],
     "topics": [
-      "olimpiada-11"
+      "olimpiada-11-kombinatorika"
     ]
   },
-  "olimpiada-11-trap-1": {
-    "title": "Bendrų daliklių ignoravimas KLT",
-    "type": "mistake",
-    "definition": "Mokiniai pamiršta patikrinti, ar moduliai yra tarpusavyje pirminiai.",
-    "intuition": "Sprendžiama sistema $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 6$ tiesiogiai dauginant modulius.",
-    "formal": "Skaidykite modulius į pirminių laipsnius: $x \\\\equiv 1 \\\\pmod 4$ ir $x \\\\equiv 2 \\\\pmod 2$, $x \\\\equiv 2 \\\\pmod 3$. Patikrinkite suderinamumą ($1 \\\\equiv 2 \\\\pmod 2$ – neteisinga, sprendinių nėra).",
-    "related": [
-      "olimpiada-11-concept-crt"
-    ],
-    "topics": [
-      "olimpiada-11"
-    ]
-  },
-  "olimpiada-11-trap-2": {
-    "title": "Inversija ne per centrą",
-    "type": "mistake",
-    "definition": "Manoma, kad bet koks apskritimas po inversijos tampa tiese.",
-    "intuition": "Apskritimas, kuris neina per inversijos centrą $O$, po transformacijos vaizduojamas kaip tiesė.",
-    "formal": "Tik apskritimai, einantys per $O$, tampa tiesėmis. Kiti apskritimai virsta apskritimais.",
-    "related": [
-      "olimpiada-11-concept-inversion"
-    ],
-    "topics": [
-      "olimpiada-11"
-    ]
-  },
-  "olimpiada-11-trap-3": {
-    "title": "Netinkamas n-tojo laipsnio vieneto šaknų parinkimas",
-    "type": "mistake",
-    "definition": "Painiojamos visos $n$-tojo laipsnio šaknys su pirmykštėmis (primityviosiomis) šaknimis.",
-    "intuition": "Naudojamos visos šaknys, kurioms $z^n=1$, skaičiuojant ciklotoninį daugianarį.",
-    "formal": "Pirmykštės šaknys yra tos, kurių eilė yra lygiai $n$. Jas nurodo rodikliai $k$, tarpusavyje pirminiai su $n$.",
-    "related": [
-      "olimpiada-11-concept-cyclotomic"
-    ],
-    "topics": [
-      "olimpiada-11"
-    ]
-  },
-  "olimpiada-12-concept-vietas-jumping": {
-    "title": "Vijetos šuolis",
+  "olimpiada-11-concept-crt": {
+    "title": "Kiniškoji liekanų teorema (KLT)",
     "type": "concept",
-    "definition": "Įrodymo metodas skaičių teorijoje, kai turint sprendinį konstruojamas kitas, mažesnis sprendinys.",
-    "intuition": "Jei darome prielaidą, kad egzistuoja minimalus sprendinys pagal tam tikrą matą, ir pritaikę Vijetos formules gauname dar mažesnį sprendinį, gauname prieštarą.",
-    "formal": "Jei lygtis $x^2 - Ax + B = 0$ turi sveikąjį sprendinį $x_1$, tai antrasis sprendinys $x_2 = A - x_1 = B/x_1$ taip pat yra racionalusis (ir dažnai sveikasis), kurį galime naudoti begalinio nusileidimo arba prieštaros argumentuose.",
+    "definition": "Jei moduliai yra poromis tarpusavyje pirminiai, tai liekanų sistema turi vienintelį sprendinį jungtiniu moduliu.",
+    "intuition": "Tai tarsi koordinačių sistema skaičiams: žinodami skaičiaus „projekcijas“ (liekanas) įvairiomis kryptimis (moduliais), galime tiksliai nustatyti jo padėtį.",
+    "formal": "Tegu $m_1, m_2, \\dots, m_k$ yra natūralieji skaičiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygčių sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-11-concept-order": {
+    "title": "Eilė ir pradinės šaknys",
+    "type": "concept",
+    "definition": "Mažiausias teigiamas laipsnis $d$, kuriam $a^d \\equiv 1 \\pmod m$.",
+    "intuition": "Skaičiaus laipsniai moduliu $m$ sukasi ratu; eilė nurodo šio rato ilgį.",
+    "formal": "Sveikojo skaičiaus $a$ eilė moduliu $m$ (žymima $\\text{ord}_m a$) yra mažiausias $d > 0$, tenkinantis $a^d \\equiv 1 \\pmod m$. Jei $\\text{ord}_m g = \\varphi(m)$, tai $g$ vadinama pradine šaknimi.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-11-concept-reciprocity": {
+    "title": "Kvadratinis savitarpiškumas",
+    "type": "concept",
+    "definition": "Dėsnis, siejantis Legendro simbolius $(\\frac{p}{q})$ ir $(\\frac{q}{p})$.",
+    "intuition": "Leidžia apversti „trupmeną“ Legendro simbolyje, palengvinant kvadratinių liekanų skaičiavimą.",
+    "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+    "related": [],
+    "topics": [
+      "olimpiada-11-skaiciu-teorija"
+    ]
+  },
+  "olimpiada-11-concept-jacobi": {
+    "title": "Jakobio simbolis",
+    "type": "concept",
+    "definition": "Legendro simbolio apibendrinimas sudėtiniams moduliams.",
+    "intuition": "Leidžia naudoti savitarpiškumo savybes net kai modulis nėra pirminis, nors simbolio reikšmė tiesiogiai negarantuoja lygties sprendžiamumo.",
+    "formal": "Jei $n = p_1 p_2 \\dots p_k$ (nelyginis), tai $\\left(\\frac{a}{n}\\right) = \\prod_{i=1}^k \\left(\\frac{a}{p_i}\\right)$.",
+    "related": [
+      "olimpiada-11-concept-reciprocity"
+    ],
+    "topics": [
+      "olimpiada-11-skaiciu-teorija"
     ]
   },
   "olimpiada-12-concept-tangent-trick": {
@@ -3234,21 +2913,21 @@ export const concepts = {
     "type": "concept",
     "definition": "Nelygybių įrodymo metodas, kai kiekvienam nariui pritaikoma tiesinė funkcija, liestinė tam tikrame taške.",
     "intuition": "Jei funkcija yra išgaubta aplink vidurkį, jos grafikas yra virš liestinės, todėl galime kiekvieną nelygybės narį įvertinti tiesine išraiška, kurias sudėjus gauname bendrą nelygybę.",
-    "formal": "Jei norime įrodyti $\\\\sum_{i=1}^n f(x_i) \\\\ge C$ su sąlyga $\\\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\\\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\\\sum f(x_i) \\\\ge m \\\\sum x_i + n \\\\cdot n$.",
+    "formal": "Jei norime įrodyti $\\sum_{i=1}^n f(x_i) \\ge C$ su sąlyga $\\sum x_i = S$, ieškome tiesės $y = mx + n$, tokios, kad $f(x) \\ge mx + n$ visiems leistiniems $x$ ir $f(x_0) = mx_0 + n$ taške $x_0 = S/n$. Tuomet $\\sum f(x_i) \\ge m \\sum x_i + n \\cdot n$.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-12-algebra"
     ]
   },
   "olimpiada-12-concept-unity-filter": {
     "title": "Vieneto šaknų filtras",
     "type": "concept",
     "definition": "Metodas skaičiuoti koeficientų sumas su tam tikru žingsniu naudojant kompleksines vieneto šaknis.",
-    "intuition": "Naudojant faktą, kad $\\\\sum_{j=0}^{m-1} \\\\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
-    "formal": "Sveikajam $k$ ir $\\\\omega = e^{2\\\\pi i / m}$ galioja $\\frac{1}{m} \\\\sum_{j=0}^{m-1} \\\\omega^{j k} = 1$, kai $m \\\\mid k$, ir $0$, kai $m \\nmid k$.",
+    "intuition": "Naudojant faktą, kad $\\sum_{j=0}^{m-1} \\omega^{j k}$ yra lygi $m$, kai $k$ dalijasi iš $m$, ir 0 kitais atvejais, galime išfiltruoti reikiamus sumos narius.",
+    "formal": "Sveikajam $k$ ir $\\omega = e^{2\\pi i / m}$ galioja $\\frac{1}{m} \\sum_{j=0}^{m-1} \\omega^{j k} = 1$, kai $m \\mid k$, ir $0$, kai $m \\nmid k$.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-12-algebra"
     ]
   },
   "olimpiada-12-concept-barycentric": {
@@ -3256,10 +2935,10 @@ export const concepts = {
     "type": "concept",
     "definition": "Koordinačių sistema geometrijoje, kurioje taško padėtis apibrėžiama trikampio viršūnių masėmis.",
     "intuition": "Bet kurį plokštumos tašką galime išreikšti trikampio viršūnių tiesine kombinacija su svoriais, kurių suma lygi 1. Tai leidžia algebriškai spręsti geometrijos uždavinius.",
-    "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\\\vec{A} + y \\\\vec{B} + z \\\\vec{C} = (x+y+z) \\\\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
+    "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\vec{A} + y \\vec{B} + z \\vec{C} = (x+y+z) \\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-12-geometrija"
     ]
   },
   "olimpiada-12-concept-feuerbach": {
@@ -3270,7 +2949,7 @@ export const concepts = {
     "formal": "Devynių taškų apskritimas yra liestinis įbrėžtiniam apskritimui taške $F$ (Feuerbacho taškas) ir priabrėžtiniams apskritimams taškuose $F_A, F_B, F_C$.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-12-geometrija"
     ]
   },
   "olimpiada-12-concept-probabilistic-second-moment": {
@@ -3278,36 +2957,21 @@ export const concepts = {
     "type": "concept",
     "definition": "Tikimybinis metodas įrodyti, kad atsitiktinis dydis yra teigiamas su didele tikimybe, naudojant dispersiją.",
     "intuition": "Jei dydžio dispersija yra maža, palyginti su jo vidurkiu, tai dydis labai retai nukrypsta nuo vidurkio ir beveik niekada nebūna lygus nuliui.",
-    "formal": "Atsitiktiniam dydžiui $X \\\\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\\\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
+    "formal": "Atsitiktiniam dydžiui $X \\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
     "related": [],
     "topics": [
-      "olimpiada-12"
+      "olimpiada-12-kombinatorika"
     ]
   },
-  "olimpiada-12-trap-1": {
-    "title": "Simetrijos praradimas taikant Vijetos šuolį",
-    "type": "mistake",
-    "definition": "Pamirštama, kad kintamieji $a$ ir $b$ pradinėje sąlygoje yra simetriški, todėl daroma klaidinga prielaida apie nevienodas jų ribas.",
-    "intuition": "Priimama, kad $a > b$ be galimybės $a = b$, o tai lemia dalijimą iš nulio arba neteisingą nelygybę.",
-    "formal": "Visada atskirai išnagrinėkite atvejį $a = b$ prieš darydami prielaidą $a > b$.",
-    "related": [
-      "olimpiada-12-concept-vietas-jumping"
-    ],
+  "olimpiada-12-concept-vietas-jumping": {
+    "title": "Vijetos šuolis",
+    "type": "concept",
+    "definition": "Įrodymo metodas skaičių teorijoje, kai turint sprendinį konstruojamas kitas, mažesnis sprendinys.",
+    "intuition": "Jei darome prielaidą, kad egzistuoja minimalus sprendinys pagal tam tikrą matą, ir pritaikę Vijetos formules gauname dar mažesnį sprendinį, gauname prieštarą.",
+    "formal": "Jei lygtis $x^2 - Ax + B = 0$ turi sveikąjį sprendinį $x_1$, tai antrasis sprendinys $x_2 = A - x_1 = B/x_1$ taip pat yra racionalusis (ir dažnai sveikasis), kurį galime naudoti begalinio nusileidimo arba prieštaros argumentuose.",
+    "related": [],
     "topics": [
-      "olimpiada-12"
-    ]
-  },
-  "olimpiada-12-trap-2": {
-    "title": "Netinkamas išgaubtumo taikymas liestinės triuke",
-    "type": "mistake",
-    "definition": "Taikomas liestinės triukas funkcijai, kuri nėra išgaubta visame nagrinėjamame intervale.",
-    "intuition": "Manoma, kad $f(x) \\\\ge mx + n$ galioja visiems $x$, nors tam tikrame intervale funkcija guli po liestine.",
-    "formal": "Griežtai įrodykite nelygybę $f(x) \\\\ge mx + n$ visiems galimiems $x$ arba naudokite papildomus apribojimus.",
-    "related": [
-      "olimpiada-12-concept-tangent-trick"
-    ],
-    "topics": [
-      "olimpiada-12"
+      "olimpiada-12-skaiciu-teorija"
     ]
   }
 };

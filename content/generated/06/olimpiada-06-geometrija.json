@@ -1,0 +1,1305 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-06-geometrija",
+    "title": "Geometrija",
+    "grade": 6,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-06-concept-logic",
+      "olimpiada-06-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-06-bfec6fed",
+      "ex-olimpiada-06-507d1998",
+      "ex-olimpiada-06-885cff7f",
+      "ex-olimpiada-06-f12aaebb",
+      "ex-olimpiada-06-70725241",
+      "ex-olimpiada-06-806b3717",
+      "ex-olimpiada-06-5dc5710d",
+      "ex-olimpiada-06-7a255d9b"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Pitagoro teorema ir geometrinės figūros",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijos olimpiadose statusis trikampis yra viena dažniausių figūrų. Pitagoro teorema leidžia rasti kraštinių ilgius."
+        },
+        {
+          "type": "method",
+          "text": "Pitagoro teorema teigia: $\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-06-concept-logic",
+      "title": "Matematinė dedukcija ir prieštaravimas",
+      "type": "concept",
+      "shortDefinition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
+      "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
+      "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-method",
+      "title": "Aritmetikos pagrindinė teorema",
+      "type": "concept",
+      "shortDefinition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
+      "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
+      "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "3 Pavyzdys: Įbrėžtinis plotas",
+      "problem": "Į kvadratą įbrėžtas apskritimas. Kvadrato plotas lygus $36\\text{ cm}^2$. Raskite plotą tos kvadrato dalies, kuri yra už apskritimo ribų (atsakymą užrašykite su $\\pi$).",
+      "steps": [
+        {
+          "text": "Kadangi kvadrato plotas yra $36\\text{ cm}^2$, jo kraštinės ilgis yra $a = \\sqrt{36} = 6$ cm."
+        },
+        {
+          "text": "Įbrėžto apskritimo skersmuo yra lygus kvadrato kraštinei, todėl $d = 6$ cm, o spindulys $r = d / 2 = 3$ cm."
+        },
+        {
+          "text": "Apskaičiuojame apskritimo plotą: $S_{apskr} = \\pi r^2 = \\pi \\times 3^2 = 9\\pi\\text{ cm}^2$."
+        },
+        {
+          "text": "Dalis už apskritimo ribų gaunama iš kvadrato ploto atėmus apskritimo plotą: $S = 36 - 9\\pi\\text{ cm}^2$."
+        }
+      ],
+      "answer": "$36 - 9\\pi\\text{ cm}^2$"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-06-bfec6fed",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Plotas lygus $100 - 25\\pi$ cm$^2$."
+      },
+      "answerText": "100 - 25π",
+      "coreIdea": {
+        "title": "Raskite apskritimo spindulį",
+        "text": "Apskritimo skersmuo sutampa su kvadrato kraštine. Raskite kvadrato plotą ir apskritimo plotą, o tada atimkite apskritimo plotą iš kvadrato ploto."
+      },
+      "strategyTags": [
+        "apskritimo-plotas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nupieškite kvadratą ir į jį įbrėžtą apskritimą. Pastebėkite, kad apskritimo skersmuo yra lygus kvadrato kraštinei ($10$ cm).",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite kvadrato plotą ($10^2$) ir apskritimo plotą. Prisiminkite, kad apskritimo spindulys yra pusė skersmens, t. y. $5$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ieškomas plotas yra skirtumas tarp kvadrato ploto ir apskritimo ploto. Atsakymą palikite su $\\pi$, neatlikdami apytikslių skaičiavimų.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame kvadrato plotą: $S_{kv} = 10^2 = 100\\text{ cm}^2$."
+        },
+        {
+          "text": "Nustatome apskritimo spindulį: $r = 10 / 2 = 5$ cm."
+        },
+        {
+          "text": "Apskaičiuojame apskritimo plotą: $S_{ap} = \\pi \\times r^2 = 25\\pi\\text{ cm}^2$."
+        },
+        {
+          "text": "Randame ieškomą plotą atimdami apskritimo plotą iš kvadrato ploto: $S = 100 - 25\\pi\\text{ cm}^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-bfec6fed-method-1",
+          "title": "Plotų skirtumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "apskritimo-plotas"
+          ],
+          "steps": [
+            {
+              "title": "Figūros parametrų nustatymas",
+              "action": "Nustatykite $a = 10$ ir $r = 5$.",
+              "reason": "Įbrėžtinio apskritimo spindulys lygus pusei kraštinės.",
+              "result": "Gauti baziniai matmenys."
+            },
+            {
+              "title": "Plotų radimas ir atimtis",
+              "action": "Apskaičiuokite $10^2 - \\pi \\cdot 5^2$.",
+              "reason": "Likusios dalies plotas gaunamas iš visumos atimant vidinę figūrą.",
+              "result": "$100 - 25\\pi$."
+            }
+          ],
+          "finalAnswer": "Plotas lygus $100 - 25\\pi$ cm$^2$."
+        }
+      ],
+      "alternateMethodNote": "Apytikslis atsakymas būtų apie $21.5$ cm$^2$ (naudojant $\\pi \\approx 3.14$), tačiau olimpiadose reikalaujama tikslaus pavidalo.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-bfec6fed-trap-1",
+          "title": "Skersmens ir spindulio painiojimas",
+          "wrongMove": "Apskritimo ploto skaičiavimas su spinduliu $10$ cm ($S = 100\\pi$).",
+          "whyTempting": "Skaičius $10$ yra duotas sąlygoje, todėl mokiniai jį naudoja formulėse nepagalvoję.",
+          "correction": "Visada patikrinkite, ar sąlygoje duota kraštinė atitinka spindulį, ar skersmenį. Čia spindulys yra $5$ cm.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-bfec6fed-trap-2",
+          "title": "Formulės užrašymo klaida",
+          "wrongMove": "Manymas, kad apskritimo plotas yra $2\\pi r$ (perimetras) vietoj $\\pi r^2$.",
+          "whyTempting": "Dvi panašios apskritimo formulės dažnai painiojamos tarpusavyje.",
+          "correction": "Plotas matuojamas kvadratiniais vienetais, todėl formulėje spindulys privalo būti keliamas kvadratu.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia dalis kvadrato ploto (procentais) lieka už apskritimo ribų?",
+        "Kaip pasikeistų rezultatas, jei apskritimas būtų apibrėžtas apie kvadratą?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-bfec6fed-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra ryšys tarp kvadrato kraštinės $a$ ir į jį įbrėžto apskritimo spindulio $r$?",
+          "back": "Įbrėžto apskritimo spindulys yra lygus pusei kvadrato kraštinės: $r = a/2$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-507d1998",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\pi$).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Perimetras lygus $14\\pi$ cm."
+      },
+      "answerText": "14π",
+      "coreIdea": {
+        "title": "Suskaičiuokite lankų ilgius",
+        "text": "Figūros perimetrą sudaro $4$ pusapskritimių lankai. Pusapskritimo lanko ilgis yra $\\frac{\\pi d}{2}$. Sudėkite visus keturis ilgius."
+      },
+      "strategyTags": [
+        "figūrų-perimetrai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įsivaizduokite figūrą: stačiakampis išnyksta, o jo vietą užima keturi lankai. Jums reikia apskaičiuoti tik šių išorinių lankų ilgių sumą.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Turite dvi poras pusapskritimių. Viena pora pusapskritimių su skersmeniu $8$ cm sudaro vieną pilną apskritimą. Kita pora su skersmeniu $6$ cm – taip pat.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite dviejų apskritimų ilgių sumą naudodami formulę $C = \\pi d$. Sudėkite $8\\pi$ ir $6\\pi$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome, kad figūros perimetrą sudaro du pusapskritimiai, kurių skersmuo $d_1 = 8$ cm, ir du pusapskritimiai, kurių skersmuo $d_2 = 6$ cm."
+        },
+        {
+          "text": "Pusapskritimo lanko ilgio formulė yra $L = \\pi d / 2$."
+        },
+        {
+          "text": "Apskaičiuojame pirmosios poros lankų sumą: $2 \\times (8\\pi / 2) = 8\\pi$ cm."
+        },
+        {
+          "text": "Apskaičiuojame antrosios poros lankų sumą: $2 \\times (6\\pi / 2) = 6\\pi$ cm."
+        },
+        {
+          "text": "Sudedame visus ilgius: $8\\pi + 6\\pi = 14\\pi$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-507d1998-method-1",
+          "title": "Lankų sumavimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "figūrų-perimetrai"
+          ],
+          "steps": [
+            {
+              "title": "Dalių identifikavimas",
+              "action": "Išskirkite keturis pusapskritimius kaip išorines ribas.",
+              "reason": "Stačiakampio vidinės kraštinės į perimetrą neįeina.",
+              "result": "Gauti keturi pusapskritimių skersmenys: $8, 8, 6, 6$."
+            },
+            {
+              "title": "Ilgio apskaičiavimas",
+              "action": "Sudėkite $\\pi \\cdot 8 + \\pi \\cdot 6$.",
+              "reason": "Du pusapskritimiai sudaro pilną apskritimą.",
+              "result": "$14\\pi$."
+            }
+          ],
+          "finalAnswer": "Perimetras lygus $14\\pi$ cm."
+        }
+      ],
+      "alternateMethodNote": "Galima skaičiuoti kiekvieną lanką atskirai: $4\\pi, 4\\pi, 3\\pi, 3\\pi$, rezultatas išlieka tas pats.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-507d1998-trap-1",
+          "title": "Stačiakampio kraštinių įtraukimas",
+          "wrongMove": "Prie lankų ilgių sumos pridedamas ir stačiakampio perimetras ($28$ cm).",
+          "whyTempting": "Mokiniai galvoja, kad pradinės figūros kraštinės vis dar yra dalis bendro kontūro.",
+          "correction": "Perimetras yra tik IŠORINĖ figūros riba. Šiuo atveju stačiakampio kraštinės atsiduria figūros viduje.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-507d1998-trap-2",
+          "title": "Pusapskritimo ilgio formulės klaida",
+          "wrongMove": "Dauginimas $\\pi r^2 / 2$ (ploto formulė) vietoj lanko ilgio skaičiavimo.",
+          "whyTempting": "Painiojamos perimetro ir ploto sąvokos bei jų formulės.",
+          "correction": "Ilgis (perimetras) matuojamas tiesiniais vienetais, todėl naudojama formulė su skersmeniu arba spinduliu pirmuoju laipsniu.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar figūros perimetras pasikeistų, jei pusapskritimiai būtų nubrėžti į vidų?",
+        "Kaip šios figūros perimetras susijęs su pradinio stačiakampio perimetru?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-507d1998-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra pusapskritimo lanko ilgis, jei jo skersmuo yra $d$?",
+          "back": "$L = \\pi d / 2$ arba $L = \\pi r$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-885cff7f",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stačiakampis gretasienis suformuotas iš vienodų kubelių, kurių briaunos ilgis yra $2$ cm. Gretasienio matmenys yra $3 \\times 4 \\times 5$ kubeliai. Kiek iš viso kubelių sudaro šį gretasienį ir koks yra jo tūris?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Iš viso yra $60$ kubelių, tūris lygus $480$ cm$^3$."
+      },
+      "answerText": "60 kubelių, tūris 480 cm^3",
+      "coreIdea": {
+        "title": "Dauginkite tūrio vienetus",
+        "text": "Pirmiausia raskite bendrą kubelių skaičių sudaugindami gretasienio matmenis. Tada apskaičiuokite vieno kubelio tūrį ($2^3$) ir padauginkite iš kubelių skaičiaus."
+      },
+      "strategyTags": [
+        "erdvės-figūros",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: dauginkite tūrio vienetus. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Pirmiausia raskite bendrą kubelių skaičių sudaugindami gretasienio matmenis. Tada apskaičiuokite vieno kubelio tūrį ($2^3$) ir padauginkite iš kubelių skaičiaus.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Bendras kubelių skaičius gretasienyje yra $N = 3 \\times 4 \\times 5 = 60$ kubelių. Vieno kubelio tūris lygus $V_k = b^3 = 2^3 = 8\\text{ cm}^3$. Bendras tūris lygus $V = N \\times V_k = 60 \\times 8 = 480\\text{ cm}^3$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia apskaičiuojame bendrą kubelių skaičių gretasienyje padaugindami jo matmenis: $3 \\times 4 \\times 5 = 60$ kubelių."
+        },
+        {
+          "text": "Tada apskaičiuojame vieno kubelio tūrį žinodami, kad jo briauna $b = 2$ cm: $V_{kub} = b^3 = 2^3 = 8\\text{ cm}^3$."
+        },
+        {
+          "text": "Galiausiai bendrą gretasienio tūrį gauname sudauginę kubelių skaičių iš vieno kubelio tūrio: $V = 60 \\times 8 = 480\\text{ cm}^3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-885cff7f-method-1",
+          "title": "Diskretaus tūrio sumavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "erdvės-figūros"
+          ],
+          "steps": [
+            {
+              "title": "Vienetų kiekio nustatymas",
+              "action": "Sudauginkite gretasienį sudarančių kubelių kiekius pagal visas tris ašis.",
+              "reason": "Gretasienio tūris diskrečiais vienetais lygus matmenų sandaugai.",
+              "result": "Rasta $60$ kubelių."
+            },
+            {
+              "title": "Metrinio tūrio apskaičiavimas",
+              "action": "Apskaičiuokite vieno kubelio tūrį ($2^3$) ir padauginkite iš bendro kiekio.",
+              "reason": "Bendras tūris lygus sudėtinių dalių tūrių sumai.",
+              "result": "Gauta $480\\text{ cm}^3$."
+            }
+          ],
+          "finalAnswer": "Iš viso yra $60$ kubelių, tūris lygus $480$ cm$^3$."
+        }
+      ],
+      "alternateMethodNote": "Galima rasti gretasienio kraštinių ilgius centimetrais ($3 \\times 2 = 6$, $4 \\times 2 = 8$, $5 \\times 2 = 10$) ir juos sudauginti: $6 \\times 8 \\times 10 = 480$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-885cff7f-trap-1",
+          "title": "Tūrio ir briaunos ilgio painiojimas",
+          "wrongMove": "Atsakymas, kad tūris yra $60$ cm$^3$.",
+          "whyTempting": "Mokiniai dažnai pamiršta, kad kubelio briauna nėra $1$ cm.",
+          "correction": "Visada patikrinkite vieno vienetinio kubelio briaunos ilgį ir apskaičiuokite jo tūrį.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-885cff7f-trap-2",
+          "title": "Kėlimas kvadratu vietoje kubo",
+          "wrongMove": "Skaičiavimas $2^2 = 4$, tada $60 \\times 4 = 240$.",
+          "whyTempting": "Painiojamos ploto ir tūrio formulės.",
+          "correction": "Tūris yra trimatis matas, todėl briauną reikia kelti trečiuoju laipsniu.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-885cff7f-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampis gretasienis suformuotas iš vienodų kubelių, kur...",
+          "back": "Taikome šį metodą: Pirmiausia raskite bendrą kubelių skaičių sudaugindami gretasienio matmenis. Tada apskaičiuokite vieno kubelio tūrį ($2^3$) ir padauginkite iš kubelių skaičiaus.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-f12aaebb",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jei kubo paviršiaus plotas lygus $150$ cm$^2$, raskite šio kubo tūrį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kubo tūris lygus $125$ cm$^3$."
+      },
+      "answerText": "125",
+      "coreIdea": {
+        "title": "Raskite vienos sienos plotą",
+        "text": "Kubas turi $6$ lygias kvadratines sienas. Padalykite bendrą plotą iš $6$, kad sužinotumėte sienos plotą, tada raskite briaunos ilgį ir apskaičiuokite tūrį."
+      },
+      "strategyTags": [
+        "kubo-tūris",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: raskite vienos sienos plotą. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Kubas turi $6$ lygias kvadratines sienas. Padalykite bendrą plotą iš $6$, kad sužinotumėte sienos plotą, tada raskite briaunos ilgį ir apskaičiuokite tūrį.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Kubo paviršiaus plotas susideda iš $6$ kvadratinių sienų: $6a^2 = 150 \\implies a^2 = 25$. Kubo briau...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kubas turi $6$ lygias kvadratines sienas. Pirmiausia randame vienos sienos plotą: $S_{siena} = 150 / 6 = 25\\text{ cm}^2$."
+        },
+        {
+          "text": "Kadangi siena yra kvadratas, jo briaunos ilgį $a$ randame ištraukę kvadratinę šaknį iš ploto: $a = \\sqrt{25} = 5$ cm."
+        },
+        {
+          "text": "Galiausiai apskaičiuojame kubo tūrį pagal formulę $V = a^3$: $V = 5^3 = 125\\text{ cm}^3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-f12aaebb-method-1",
+          "title": "Atvirkštinis parametrų radimas",
+          "methodType": "main",
+          "strategyTags": [
+            "kubo-tūris"
+          ],
+          "steps": [
+            {
+              "title": "Sienos ploto nustatymas",
+              "action": "Padalykite duotą paviršiaus plotą iš $6$.",
+              "reason": "Kubą sudaro šeši identiški kvadratai.",
+              "result": "Sienos plotas lygus $25\\text{ cm}^2$."
+            },
+            {
+              "title": "Briaunos ilgio radimas",
+              "action": "Ištraukite kvadratinę šaknį iš sienos ploto.",
+              "reason": "Kvadrato kraštinė lygi jo ploto kvadratinei šakniai.",
+              "result": "Briauna $a = 5$ cm."
+            },
+            {
+              "title": "Tūrio apskaičiavimas",
+              "action": "Pakelkite briauną kubu ($a^3$).",
+              "reason": "Tūris parodo erdvės užpildymą visomis trimis kryptimis.",
+              "result": "Gauta $125\\text{ cm}^3$."
+            }
+          ],
+          "finalAnswer": "Kubo tūris lygus $125$ cm$^3$."
+        }
+      ],
+      "alternateMethodNote": "Galima sudaryti lygtį $6a^2 = 150$, ją išspręsti ir tada skaičiuoti $a^3$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-f12aaebb-trap-1",
+          "title": "Sienų skaičiaus klaida",
+          "wrongMove": "Dalinimas iš $4$ vietoj $6$.",
+          "whyTempting": "Mokiniai kartais galvoja tik apie šonines sienas, pamiršdami pagrindus.",
+          "correction": "Visas kubo paviršiaus plotas visada apima $6$ sienas.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-f12aaebb-trap-2",
+          "title": "Tūrio ir ploto formulių painiojimas",
+          "wrongMove": "Apskaičiavus briauną $5$, rašoma $V = 5^2 = 25$.",
+          "whyTempting": "Painiojamas dvimatis matas (plotas) su trimačiu (tūris).",
+          "correction": "Tūrio formulė kubui yra briauna pakelta trečiuoju laipsniu ($a^3$).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-f12aaebb-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Jei kubo paviršiaus plotas lygus $150$ cm$^2$, raskite šio k...",
+          "back": "Taikome šį metodą: Kubas turi $6$ lygias kvadratines sienas. Padalykite bendrą plotą iš $6$, kad sužinotumėte sienos plotą, tada raskite briaunos ilgį ir apskaičiuokite tūrį.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-70725241",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Taškai $A(-3, 2)$ ir $B(5, 2)$ yra stačiakampio viršūnės. Raskite atstumą tarp šių taškų. Jei stačiakampio plotas lygus $48$, raskite kitų dviejų viršūnių $C$ ir $D$ y-koordinates, jei žinoma, kad jos yra teigiamos.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atstumas $AB = 8$ vienetų, kitų dviejų viršūnių y-koordinatė yra $8$."
+      },
+      "answerText": "AB = 8, y = 8",
+      "coreIdea": {
+        "title": "Nustatykite stačiakampio aukštį",
+        "text": "Atstumas tarp $A$ ir $B$ yra horizontalios kraštinės ilgis. Kadangi plotas lygus $48$, vertikalios kraštinės ilgis (aukštis) bus $48 / AB$. Kadangi $y$ koordinatė turi būti teigiama, pridėkite šį aukštį prie $y=2$."
+      },
+      "strategyTags": [
+        "koordinatinė-geometrija",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: nustatykite stačiakampio aukštį. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Atstumas tarp $A$ ir $B$ yra horizontalios kraštinės ilgis. Kadangi plotas lygus $48$, vertikalios kraštinės ilgis (aukštis) bus $48 / AB$. Kadangi $y$ koordinatė turi būti teigiama, pridėkite šį aukštį prie $y=2$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Atstumas tarp taškų $A(-3, 2)$ ir $B(5, 2)$ horizontalėje yra $d = 5 - (-3) = 8$ vienetai. Kadangi t...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taškai $A(-3, 2)$ ir $B(5, 2)$ turi tą pačią $y$ koordinatę, todėl atstumas tarp jų yra horizontalus: $AB = |5 - (-3)| = 8$ vienetų."
+        },
+        {
+          "text": "Žinome, kad stačiakampio plotas $S = 48$. Kadangi viena kraštinė $AB = 8$, kita kraštinė (aukštis $h$) turi būti: $h = 48 / 8 = 6$ vienetai."
+        },
+        {
+          "text": "Kitų dviejų viršūnių $C$ ir $D$ $y$ koordinatės turi būti nutolusios per $6$ vienetus nuo $A$ ir $B$ $y$ koordinatės ($2$). Galimi du variantai: $2 + 6 = 8$ arba $2 - 6 = -4$."
+        },
+        {
+          "text": "Sąlyga nurodo, kad koordinačių reikšmės turi būti teigiamos, todėl tinkama $y$ koordinatė yra $8$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-70725241-method-1",
+          "title": "Kraštinių analizė koordinačių plokštumoje",
+          "methodType": "main",
+          "strategyTags": [
+            "koordinatinė-geometrija"
+          ],
+          "steps": [
+            {
+              "title": "Horizontalios kraštinės radimas",
+              "action": "Atimkite taškų x-koordinates.",
+              "reason": "Atstumas tarp taškų su vienoda y-koordinate lygus x-koordinačių skirtumo moduliui.",
+              "result": "Ilgis $8$."
+            },
+            {
+              "title": "Vertikalios kraštinės nustatymas",
+              "action": "Padalykite plotą iš rasto ilgio ($48 / 8$).",
+              "reason": "Stačiakampio plotas yra ilgio ir pločio sandauga.",
+              "result": "Aukštis $6$."
+            },
+            {
+              "title": "Koordinatės parinkimas",
+              "action": "Pridėkite aukštį prie bazinės y-koordinatės ir patikrinkite ženklą.",
+              "reason": "Reikia rasti taškus, kurie formuoja stačiakampį teigiamoje y-ašies dalyje.",
+              "result": "y-koordinatė $8$."
+            }
+          ],
+          "finalAnswer": "Atstumas $AB = 8$ vienetų, kitų dviejų viršūnių y-koordinatė yra $8$."
+        }
+      ],
+      "alternateMethodNote": "Galima nubraižyti stačiakampį koordinačių plokštumoje ir vizualiai nustatyti kraštinių ilgius.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-70725241-trap-1",
+          "title": "Atimties klaida su neigiamais skaičiais",
+          "wrongMove": "Skaičiavimas $5 - 3 = 2$ vienetai.",
+          "whyTempting": "Mokiniai dažnai ignoruoja minuso ženklą koordinatėje.",
+          "correction": "Būtina naudoti formulę $|x_2 - x_1|$, todėl $5 - (-3) = 8$.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-70725241-trap-2",
+          "title": "Abiejų galimų koordinačių ignoravimas",
+          "wrongMove": "Manymas, kad aukštis $6$ jau yra pati koordinatė.",
+          "whyTempting": "Supainiojamas atstumas (ilgis) su padėtimi (koordinate).",
+          "correction": "Aukštis nurodo pokytį nuo esamo taško ($y=2$), o ne atstumą nuo nulio.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-70725241-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Taškai $A(-3, 2)$ ir $B(5, 2)$ yra stačiakampio viršūnės. Ra...",
+          "back": "Taikome šį metodą: Atstumas tarp $A$ ir $B$ yra horizontalios kraštinės ilgis. Kadangi plotas lygus $48$, vertikalios kraštinės ilgis (aukštis) bus $48 / AB$. Kadangi $y$ koordinatė turi būti teigiama, pridėkite šį aukštį prie $y=2$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-806b3717",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Taškas $A(2, -3)$ yra atspindimas x ašies atžvilgiu į tašką $B$, o tada taškas $B$ pastumiamas per $4$ vienetus į kairę ir $2$ vienetus į viršų, gaunant tašką $C$. Raskite taško $C$ koordinates.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taško $C$ koordinatės yra $(-2, 5)$."
+      },
+      "answerText": "(-2, 5)",
+      "coreIdea": {
+        "title": "Atlikite transformacijas žingsnis po žingsnio",
+        "text": "Atspindint tašką x ašies atžvilgiu, jo $x$ koordinatė lieka tokia pati, o $y$ keičia ženklą. Pastūmimas į kairę atima iš $x$, o į viršų – prideda prie $y$."
+      },
+      "strategyTags": [
+        "transformacijos",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: atlikite transformacijas žingsnis po žingsnio. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Atspindint tašką x ašies atžvilgiu, jo $x$ koordinatė lieka tokia pati, o $y$ keičia ženklą. Pastūmimas į kairę atima iš $x$, o į viršų – prideda prie $y$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: 1. Atspindime $A(2, -3)$ x ašies atžvilgiu: gauname tašką $B(2, 3)$.\n2. Atliekame postūmį taškui $B$...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atspindint tašką $A(2, -3)$ x ašies atžvilgiu, jo $x$ koordinatė išlieka tokia pati, o $y$ koordinatė keičia ženklą į priešingą. Taip gauname tašką $B(2, 3)$."
+        },
+        {
+          "text": "Atliekame lygiagretųjį poslinkį taškui $B$ per $4$ vienetus į kairę. Tai reiškia, kad iš $x$ koordinatės turime atimti $4$: $x_C = 2 - 4 = -2$."
+        },
+        {
+          "text": "Atliekame poslinkį per $2$ vienetus į viršų. Tai reiškia, kad prie $y$ koordinatės turime pridėti $2$: $y_C = 3 + 2 = 5$."
+        },
+        {
+          "text": "Gauto taško $C$ koordinatės yra $(-2, 5)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-806b3717-method-1",
+          "title": "Nuoseklus transformacijų taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "transformacijos"
+          ],
+          "steps": [
+            {
+              "title": "Atspindėjimas per ašį",
+              "action": "Pakeiskite $y$ koordinatės ženklą (iš $-3$ į $3$).",
+              "reason": "Atspindys x ašies atžvilgiu keičia tik vertikalią padėtį.",
+              "result": "Taškas $B(2, 3)$."
+            },
+            {
+              "title": "Horizontalus poslinkis",
+              "action": "Atimkite $4$ iš x koordinatės.",
+              "reason": "Judėjimas į kairę mažina x koordinatės vertę.",
+              "result": "x koordinatė lygi $-2$."
+            },
+            {
+              "title": "Vertikalus poslinkis",
+              "action": "Pridėkite $2$ prie y koordinatės.",
+              "reason": "Judėjimas į viršų didina y koordinatės vertę.",
+              "result": "y koordinatė lygi $5$."
+            }
+          ],
+          "finalAnswer": "Taško $C$ koordinatės yra $(-2, 5)$."
+        }
+      ],
+      "alternateMethodNote": "Galima transformacijas atlikti bet kokia tvarka, jei jos nepriklauso viena nuo kitos (šiuo atveju poslinkis ir atspindys atliekami nuosekliai, todėl tvarka svarbi).",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-806b3717-trap-1",
+          "title": "Atspindžio krypties supainiojimas",
+          "wrongMove": "Pakeičiamas x koordinatės ženklas (gaunant $-2, -3$).",
+          "whyTempting": "Mokiniai dažnai painioja atspindį 'x ašies atžvilgiu' su x koordinatės keitimu.",
+          "correction": "Atspindys x ašies atžvilgiu reiškia 'peršokimą' per horizontalią liniją, todėl keičiasi y (aukštis).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-806b3717-trap-2",
+          "title": "Poslinkio ženklo klaida",
+          "wrongMove": "Pridedama $4$ prie x koordinatės (judėjimas į dešinę).",
+          "whyTempting": "Žodžiai 'į kairę' ir 'į dešinę' kartais klaidingai susiejami su teigiamomis/neigiamomis operacijomis.",
+          "correction": "Kairė kryptis skaičių ašyje visada atitinka atimtį, dešinė – sudėtį.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-806b3717-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Taškas $A(2, -3)$ yra atspindimas x ašies atžvilgiu į tašką ...",
+          "back": "Taikome šį metodą: Atspindint tašką x ašies atžvilgiu, jo $x$ koordinatė lieka tokia pati, o $y$ keičia ženklą. Pastūmimas į kairę atima iš $x$, o į viršų – prideda prie $y$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-5dc5710d",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Statusis trikampis turi įžambinę, kurios ilgis $10$ cm, ir vieną statinį, kurio ilgis $6$ cm. Raskite kito statinio ilgį ir trikampio plotą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kito statinio ilgis yra $8$ cm, trikampio plotas lygus $24$ cm$^2$."
+      },
+      "answerText": "8 cm statinis, 24 cm^2 plotas",
+      "coreIdea": {
+        "title": "Taikykite Pitagoro teoremą",
+        "text": "Statusis trikampis tenkina sąryšį $a^2 + b^2 = c^2$. Žinodami įžambinę $c=10$ ir statinį $a=6$, raskite $b$. Trikampio plotas lygus $\\frac{1}{2} a b$."
+      },
+      "strategyTags": [
+        "pitagoro-teorema",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: taikykite pitagoro teoremą. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Statusis trikampis tenkina sąryšį $a^2 + b^2 = c^2$. Žinodami įžambinę $c=10$ ir statinį $a=6$, raskite $b$. Trikampio plotas lygus $\\frac{1}{2} a b$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Pagal Pitagoro teoremą: $6^2 + b^2 = 10^2 \\implies 36 + b^2 = 100 \\implies b^2 = 64 \\implies b = 8$ cm. Trikampio plotas lygus $S = \\frac{1}{2} \\times 6 \\times 8 = 24\\text{ cm}^2$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome Pitagoro teoremą $a^2 + b^2 = c^2$, kur $c$ yra įžambinė ($10$ cm), o $a$ – žinomas statinis ($6$ cm)."
+        },
+        {
+          "text": "Apskaičiuojame nežinomo statinio kvadratą: $b^2 = 10^2 - 6^2 = 100 - 36 = 64$."
+        },
+        {
+          "text": "Ištraukiame kvadratinę šaknį ir randame statinio ilgį: $b = \\sqrt{64} = 8$ cm."
+        },
+        {
+          "text": "Apskaičiuojame stačiojo trikampio plotą sudaugindami statinius ir padalindami iš dviejų: $S = (6 \\times 8) / 2 = 24\\text{ cm}^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-5dc5710d-method-1",
+          "title": "Pitagoro teoremos ir ploto sintezė",
+          "methodType": "main",
+          "strategyTags": [
+            "pitagoro-teorema"
+          ],
+          "steps": [
+            {
+              "title": "Nežinomos kraštinės radimas",
+              "action": "Atlikite skaičiavimą $\\sqrt{c^2 - a^2}$.",
+              "reason": "Stačiajame trikampyje statinių kvadratų suma lygi įžambinės kvadratui.",
+              "result": "Statinis lygus $8$ cm."
+            },
+            {
+              "title": "Ploto skaičiavimas",
+              "action": "Pritaikykite formulę $S = (a \\cdot b) / 2$.",
+              "reason": "Stačiojo trikampio plotas yra lygus pusei stačiakampio, sudaryto iš jo statinių, ploto.",
+              "result": "Plotas $24\\text{ cm}^2$."
+            }
+          ],
+          "finalAnswer": "Kito statinio ilgis yra $8$ cm, trikampio plotas lygus $24$ cm$^2$."
+        }
+      ],
+      "alternateMethodNote": "Galima pastebėti, kad tai yra padidintas egiptietiškasis trikampis $(3, 4, 5)$ su koeficientu $2$: $(6, 8, 10)$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-5dc5710d-trap-1",
+          "title": "Pitagoro formulės taikymas ne tai kraštinei",
+          "wrongMove": "Skaičiavimas $b^2 = 10^2 + 6^2 = 136$.",
+          "whyTempting": "Mokiniai dažnai automatiškai sudeda kvadratus, neatsižvelgdami į tai, ar ieško statinio, ar įžambinės.",
+          "correction": "Ieškant statinio, iš įžambinės kvadrato reikia ATIMTI žinomo statinio kvadratą.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-5dc5710d-trap-2",
+          "title": "Neteisingas ploto skaičiavimas",
+          "wrongMove": "Dauginimas $6 \\times 10 / 2 = 30$.",
+          "whyTempting": "Naudojami bet kokie du duoti skaičiai formulėje.",
+          "correction": "Ploto formulėje privalo būti naudojami du statiniai (statmenos kraštinės), o ne įžambinė.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-5dc5710d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Statusis trikampis turi įžambinę, kurios ilgis $10$ cm, ir v...",
+          "back": "Taikome šį metodą: Statusis trikampis tenkina sąryšį $a^2 + b^2 = c^2$. Žinodami įžambinę $c=10$ ir statinį $a=6$, raskite $b$. Trikampio plotas lygus $\\frac{1}{2} a b$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-7a255d9b",
+      "topicId": "olimpiada-06-geometrija",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Du trikampiai $ABC$ ir $DEF$ yra lygūs. Žinoma, kad $AB = 5$ cm, $BC = 7$ cm, o trikampio $DEF$ perimetras lygus $18$ cm. Raskite kraštinės $DF$ ilgį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kraštinės $DF$ ilgis yra $6$ cm."
+      },
+      "answerText": "6 cm",
+      "coreIdea": {
+        "title": "Naudokite lygių trikampių savybes",
+        "text": "Kadangi trikampiai yra lygūs, jų perimetrai ir atitinkamos kraštinės yra lygios. Raskite trečiąją trikampio $ABC$ kraštinę."
+      },
+      "strategyTags": [
+        "lygumas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: naudokite lygių trikampių savybes. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Kadangi trikampiai yra lygūs, jų perimetrai ir atitinkamos kraštinės yra lygios. Raskite trečiąją trikampio $ABC$ kraštinę.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Kadangi trikampiai $ABC$ ir $DEF$ yra lygūs, tai jų perimetrai taip pat lygūs: $P_{ABC} = P_{DEF} = 18$ cm. Trikampio $ABC$ perimetras lygus $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm. Kadangi $DF$ atitinka $AC$, tai $DF = 6$ cm.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Lygūs trikampiai turi vienodus perimetrus, todėl trikampio $ABC$ perimetras taip pat lygus $18$ cm."
+        },
+        {
+          "text": "Trikampio $ABC$ perimetras lygus jo kraštinių sumai: $P = AB + BC + AC = 18$."
+        },
+        {
+          "text": "Įstatome žinomas reikšmes ($AB = 5$, $BC = 7$): $5 + 7 + AC = 18 \\implies 12 + AC = 18 \\implies AC = 6$ cm."
+        },
+        {
+          "text": "Kadangi trikampiai $ABC$ ir $DEF$ lygūs, jų atitinkamos kraštinės yra lygios. Kraštinė $AC$ atitinka kraštinę $DF$, todėl $DF = 6$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-7a255d9b-method-1",
+          "title": "Perimetro ir lygumo ryšio taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "lygumas"
+          ],
+          "steps": [
+            {
+              "title": "Bazinės savybės identifikavimas",
+              "action": "Prisilyginkite $P_{ABC} = 18$ cm.",
+              "reason": "Lygios figūros turi identiškus visus matmenis, įskaitant perimetrą.",
+              "result": "Žinomas $ABC$ perimetras."
+            },
+            {
+              "title": "Aritmetinis kraštinės radimas",
+              "action": "Atimkite $18 - (5 + 7)$.",
+              "reason": "Perimetras yra trijų kraštinių suma, tad nežinomą kraštinę randame atimdami žinomas dalis.",
+              "result": "Rasta kraštinė $AC = 6$ cm."
+            },
+            {
+              "title": "Atitinkamų dalių susiejimas",
+              "action": "Nurodykite, kad $DF = AC$ dėl trikampių lygumo.",
+              "reason": "Lygių trikampių atitinkami elementai sutampa.",
+              "result": "Gautas atsakymas $6$ cm."
+            }
+          ],
+          "finalAnswer": "Kraštinės $DF$ ilgis yra $6$ cm."
+        }
+      ],
+      "alternateMethodNote": "Galima iškart užrašyti lygybę $DE + EF + DF = 18$ ir žinant, kad $DE=AB=5$ bei $EF=BC=7$, rasti $DF$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-7a255d9b-trap-1",
+          "title": "Atsitiktinis kraštinės pasirinkimas",
+          "wrongMove": "Teigimas, kad $DF = 5$ cm (nes $AB=5$).",
+          "whyTempting": "Mokiniai dažnai spėja, kad ieškoma kraštinė turi būti lygi kuriai nors iš jau duotų skaičių.",
+          "correction": "Būtina panaudoti perimetro informaciją trečiajai kraštinei rasti, o ne spėti iš turimų duomenų.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-7a255d9b-trap-2",
+          "title": "Perimetro formulės klaida",
+          "wrongMove": "Dauginimas $5 \\times 7$ bandant rasti plotą vietoj perimetro.",
+          "whyTempting": "Painiojamos perimetro ir ploto sąvokos sprendžiant geometrijos uždavinius.",
+          "correction": "Perimetras yra kraštinių ILGIŲ SUMA, o ne sandauga.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-7a255d9b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Du trikampiai $ABC$ ir $DEF$ yra lygūs. Žinoma, kad $AB = 5$...",
+          "back": "Taikome šį metodą: Kadangi trikampiai yra lygūs, jų perimetrai ir atitinkamos kraštinės yra lygios. Raskite trečiąją trikampio $ABC$ kraštinę.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

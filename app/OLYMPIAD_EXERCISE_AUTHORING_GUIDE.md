@@ -22,20 +22,23 @@ When assigned olympiad content generation, create or edit the actual Lithuanian 
 
 Use `OLYMPIAD_MATH_SYLLABUS.md` to decide what olympiad mathematics belongs in each grade. Use this guide to decide how each olympiad exercise must be structured. Use `CONTENT_AUTHORING_GUIDE.md` for the base topic JSON schema.
 
-Canonical olympiad output files:
+Canonical olympiad output files are topic-specific, not whole-grade packs. Use this pattern:
 
 ```txt
-content/generated/05/olimpiada-05.json
-content/generated/06/olimpiada-06.json
-content/generated/07/olimpiada-07.json
-content/generated/08/olimpiada-08.json
-content/generated/09/olimpiada-09.json
-content/generated/10/olimpiada-10.json
-content/generated/11/olimpiada-11.json
-content/generated/12/olimpiada-12.json
+content/generated/{grade}/olimpiada-{grade}-{track_slug}.json
 ```
 
-Each file must be a complete UTF-8 JSON topic file containing the topic metadata, theory, concepts, formulas, mistakes, worked examples, exercises, tests, and SRS seeds needed by the app. If a content agent cannot finish all grades in one run, it should still write completed JSON content for the grades it can finish and stop after a valid complete file. It must not leave behind a script that is meant to generate the content later.
+Examples:
+
+```txt
+content/generated/09/olimpiada-09-skaiciu-teorija.json
+content/generated/09/olimpiada-09-algebra.json
+content/generated/09/olimpiada-09-funkcijos.json
+content/generated/09/olimpiada-09-geometrija.json
+content/generated/09/olimpiada-09-kombinatorika.json
+```
+
+Each file must be a complete UTF-8 JSON topic file containing the topic metadata, theory, concepts, formulas, mistakes, worked examples, exercises, tests, and SRS seeds needed by that specific olympiad topic. Do not put all grade-level olympiad theory and exercises into one visible primary topic such as `olimpiada-09`. If a content agent cannot finish all grades in one run, it should still write completed JSON content for the topic files it can finish and stop after a valid complete file. It must not leave behind a script that is meant to generate the content later.
 
 ## Product Role
 
@@ -52,6 +55,22 @@ They must:
 - remain accessible from other modes when the student chooses extension content.
 
 Olympiad content should feel serious, challenging, and teachable. It should not feel like a random hard problem dump.
+
+## Topic Layout In The App
+
+Olympiad content is presented like school content: a student first chooses a specific topic, then studies theory or practice for that topic.
+
+The main `Teorija` and `Praktika` olympiad screens may group cards by grade, but the clickable cards must be topic-level cards such as:
+
+- `Skaičių teorija`
+- `Algebra`
+- `Funkcijos`
+- `Nelygybės`
+- `Geometrija`
+- `Kombinatorika`
+- `Strategijos ir įrodymai`
+
+A whole-grade olympiad overview is optional, but it must not be the default destination after selecting a grade. The student should not be sent to one page containing all olympiad content for that grade.
 
 ## Required Learner-Facing Labels
 

@@ -201,13 +201,15 @@ export const Tests: React.FC<TestsProps> = ({
 
         {hasChoices(currentExercise) ? (
           <div className="choice-list">
-            {currentExercise.choices.map((choice) => {
+            {currentExercise.choices.map((choice, cIdx) => {
               const active = selectedChoice === choice;
+              const choiceId = `test-choice-${cIdx}`;
               return (
-                <label key={choice} className={`choice-option ${active ? "active" : ""}`}>
+                <label key={choice} className={`choice-option ${active ? "active" : ""}`} htmlFor={choiceId}>
                   <input
+                    id={choiceId}
                     type="radio"
-                    name="answer"
+                    name="test-answer-choice"
                     value={choice}
                     checked={active}
                     onChange={(e) => setSelectedChoice(e.target.value)}
@@ -222,8 +224,9 @@ export const Tests: React.FC<TestsProps> = ({
         ) : (
           <div className="text-answer-wrapper">
             <input
+              id="test-answer-text"
+              name="test-answer-text"
               className="answer-input"
-              name="answer"
               value={textAnswer}
               onChange={(e) => setTextAnswer(e.target.value)}
               placeholder="Įrašyk atsakymą"
@@ -232,7 +235,7 @@ export const Tests: React.FC<TestsProps> = ({
           </div>
         )}
 
-        <div className="actions test-actions">
+        <div className="actions test-actions actions-stack-mobile">
           <button
             onClick={handlePrev}
             disabled={session.index === 0}

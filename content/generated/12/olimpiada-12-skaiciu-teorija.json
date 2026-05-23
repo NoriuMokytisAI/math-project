@@ -1,0 +1,735 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus for Grade 12"
+  },
+  "topic": {
+    "id": "olimpiada-12-skaiciu-teorija",
+    "title": "Skaičių teorija",
+    "grade": 12,
+    "strand": "Skaičių teorija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-12-concept-vietas-jumping"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-12-01",
+      "ex-olimpiada-12-02",
+      "ex-olimpiada-12-03",
+      "ex-olimpiada-12-04",
+      "ex-olimpiada-12-06"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Šiuolaikiniai geometrijos metodai: baricentrinės koordinatės ir judantys taškai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijos uždaviniuose, kur sunku rasti sintetinį įrodymą, baricentrinės koordinatės leidžia atlikti tikslų algebrinį skaičiavimą."
+        },
+        {
+          "type": "method",
+          "text": "Kiekvieną tašką išreikškite svoriais $(x:y:z)$ trikampio viršūnėse. Tiesės lygtis tampa tiesine lygtimi, o collinearity (taškų gulėjimas vienoje tiesėje) tikrinamas matricų determinantais."
+        }
+      ]
+    },
+    {
+      "title": "Ekstremalioji ir adityvioji kombinatorika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-12-concept-vietas-jumping",
+      "title": "Vijetos šuolis",
+      "type": "concept",
+      "shortDefinition": "Įrodymo metodas skaičių teorijoje, kai turint sprendinį konstruojamas kitas, mažesnis sprendinys.",
+      "intuition": "Jei darome prielaidą, kad egzistuoja minimalus sprendinys pagal tam tikrą matą, ir pritaikę Vijetos formules gauname dar mažesnį sprendinį, gauname prieštarą.",
+      "formal": "Jei lygtis $x^2 - Ax + B = 0$ turi sveikąjį sprendinį $x_1$, tai antrasis sprendinys $x_2 = A - x_1 = B/x_1$ taip pat yra racionalusis (ir dažnai sveikasis), kurį galime naudoti begalinio nusileidimo arba prieštaros argumentuose.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Vieneto šaknų filtras",
+      "problem": "Apskaičiuokite sumą $S = \\binom{n}{0} + \\binom{n}{3} + \\binom{n}{6} + \\dots$ naudodami trečiojo laipsnio vieneto šaknį $\\omega = e^{2\\pi i / 3}$.",
+      "steps": [
+        {
+          "text": "Pagal vieneto šaknų filtrą, $S = \\frac{1}{3} ((1+1)^n + (1+\\omega)^n + (1+\\omega^2)^n)$."
+        },
+        {
+          "text": "Kadangi $1+\\omega = e^{i\\pi/3}$ ir $1+\\omega^2 = e^{-i\\pi/3}$."
+        },
+        {
+          "text": "Sudedame reikšmes: $S = \\frac{2^n + e^{in\\pi/3} + e^{-in\\pi/3}}{3} = \\frac{2^n + 2\\cos(n\\pi/3)}{3}$."
+        }
+      ],
+      "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-12-01",
+      "topicId": "olimpiada-12-skaiciu-teorija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "\\mathbb{Z}[\\sqrt{2}]"
+      },
+      "answerText": "\\mathbb{Z}[\\sqrt{2}]",
+      "coreIdea": {
+        "title": "Kvadratinių laukų struktūra",
+        "text": "Kvadratiniam laukui $\\mathbb{Q}(\\sqrt{d})$ sveikųjų skaičių žiedas priklauso nuo $d$ liekanos moduliu 4. Jei $d \\equiv 2, 3 \\pmod 4$, tai $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{d}]$."
+      },
+      "strategyTags": [
+        "proof",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-vietas-jumping"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite bendrąją taisyklę kvadratiniams laukams $\\mathbb{Q}(\\sqrt{d})$, kai $d$ yra bekvadratis sveikasis skaičius.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Patikrinkite skaičiaus $d=2$ liekaną moduliu 4.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi $2 \\equiv 2 \\pmod 4$, sveikasis skaičius $\\alpha = a + b\\sqrt{2}$ tenkina minimalųjį polinomą su sveikaisiais koeficientais tik tada, kai $a, b \\in \\mathbb{Z}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome, kad laukas $K$ yra suformuotas iš $d=2$."
+        },
+        {
+          "text": "Tikriname sąlygą: $2 \\equiv 2 \\pmod 4$."
+        },
+        {
+          "text": "Pagal bendrąją algebrinės skaičių teorijos teoremą, šiuo atveju bazė yra $\\{1, \\sqrt{2}\\}$."
+        },
+        {
+          "text": "Išvada: $\\mathcal{O}_K = \\mathbb{Z}[\\sqrt{2}]$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-01-method-1",
+          "title": "Teorinis nustatymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Minimaliojo polinomo analizė",
+              "action": "Tiriame skaičių $\\alpha = frac{a+b\\sqrt{2}}{c}$ tenkinantį lygtį su sveikaisiais koeficientais.",
+              "reason": "Sveikasis algebrinis skaičius apibrėžiamas per jo minimalųjį polinomą.",
+              "result": "Nustatyta, kad vardiklis gali būti tik 1.",
+              "latex": "x^2 - \\text{Tr}(\\alpha)x + \\text{N}(\\alpha) = 0"
+            }
+          ],
+          "finalAnswer": "\\mathbb{Z}[\\sqrt{2}]"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-01-trap-1",
+          "title": "Maišymas su d=1 mod 4",
+          "wrongMove": "Manoma, kad visada reikia pridėti narius su vardikliu 2, kaip pavyzdžiui $\\mathbb{Q}(\\sqrt{5})$ atveju.",
+          "whyTempting": "Auksinis pjūvis ir panašios struktūros dažnai pasitaiko olimpiadose.",
+          "correction": "Visada tikrinkite liekaną moduliu 4; tik esant liekanai 1 atsiranda papildomi elementai.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-01-trap-2",
+          "title": "Netinkamas d pasirinkimas",
+          "wrongMove": "Bandoma taikyti metodą skaičiui, kuris nėra bekvadratis.",
+          "whyTempting": "Skubėjimas spręsti neanalizuojant pradinio lauko.",
+          "correction": "Pirmiausia redukuokite šaknį iki bekvadračio pagrindo.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl liekana moduliu 4 yra tokia svarbi kvadratiniams laukams?",
+        "Kaip pasikeistų atsakymas, jei nagrinėtume $\\mathbb{Q}(\\sqrt{5})$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-01-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra $\\mathcal{O}_K$ laukui $K = \\mathbb{Q}(\\sqrt{2})$?",
+          "back": "$\\mathbb{Z}[\\sqrt{2}]$, nes $2 \\equiv 2 \\pmod 4$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-02",
+      "topicId": "olimpiada-12-skaiciu-teorija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\mathbb{F}_3$ (įskaitant begalybės tašką).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4"
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "Taškų skaičiavimas virš baigtinio lauko",
+        "text": "Eliptinės kreivės taškų skaičius randamas perrenkant visas galimas $x$ reikšmes lauke ir tikrinant, ar egzistuoja atitinkamos $y$ reikšmės, pridedant begalybės tašką."
+      },
+      "strategyTags": [
+        "logic",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Surašykite visas $x$ reikšmes lauke $\\mathbb{F}_3$: 0, 1 ir 2.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvienam $x$ apskaičiuokite $x^3 + x + 1 \\pmod 3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nustatykite, kurie rezultatai yra kvadratai lauke $\\mathbb{F}_3$ (kvadratai yra 0 ir 1).",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kai $x=0$, $y^2 = 1 \\implies y=1, 2$ (2 taškai)."
+        },
+        {
+          "text": "Kai $x=1$, $y^2 = 1^3 + 1 + 1 = 3 \\equiv 0 \\implies y=0$ (1 taškas)."
+        },
+        {
+          "text": "Kai $x=2$, $y^2 = 2^3 + 2 + 1 = 11 \\equiv 2 \\pmod 3$. Skaičius 2 nėra kvadratas $\\mathbb{F}_3$ (0 taškų)."
+        },
+        {
+          "text": "Pridedame begalybės tašką $\\mathcal{O}$."
+        },
+        {
+          "text": "Suma: $2 + 1 + 0 + 1 = 4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-02-method-1",
+          "title": "Tiesioginis perrinkimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Reikšmių lentelė",
+              "action": "Sudarykite $x$ ir $y^2$ reikšmių atitikmenis.",
+              "reason": "Tai patikimiausias būdas mažiems laukams.",
+              "result": "Rasti visi afininiai taškai.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-02-trap-1",
+          "title": "Pamirštas begalybės taškas",
+          "wrongMove": "Suskaičiuojami tik taškai plokštumoje (3) ir pamirštama pridėti $\\mathcal{O}$.",
+          "whyTempting": "Begalybės taškas yra abstrakti sąvoka, nepastebima lygtyje.",
+          "correction": "Eliptinė kreivė visada apibrėžiama projektinėje plokštumoje.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-02-trap-2",
+          "title": "Klaidingas kvadratų nustatymas",
+          "wrongMove": "Manoma, kad 2 yra kvadratas $\\mathbb{F}_3$.",
+          "whyTempting": "Sumišimas su kitais baigtiniais laukais.",
+          "correction": "Tikrinkite: $0^2=0, 1^2=1, 2^2=4 \\equiv 1$. Kvadratai yra tik {0, 1}.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų taškų skaičius, jei kreivė būtų singuliari?",
+        "Koks maksimalus taškų skaičius galimas pagal Hasse nelygybę?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-02-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kiek taškų turi $y^2 = x^3 + x + 1$ virš $\\mathbb{F}_3$?",
+          "back": "4 (įskaitant begalybės tašką).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-03",
+      "topicId": "olimpiada-12-skaiciu-teorija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite natūraliųjų skaičių sprendinių skaičių lygčiai $x^2 - y^2 = 2026$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "0"
+      },
+      "answerText": "0",
+      "coreIdea": {
+        "title": "Kvadratų liekanos moduliu 4",
+        "text": "Sveikojo skaičiaus kvadratas moduliu 4 visada lygus 0 arba 1. Tai apriboja galimas kvadratų skirtumo reikšmes."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išnagrinėkite abiejų pusių liekanas moduliu 4.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2026 = 2000 + 24 + 2 \\equiv 2 \\pmod 4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Surašykite visas galimas $x^2 - y^2$ liekanas moduliu 4 naudodami {0, 1}.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pastebime, kad bet kurio skaičiaus kvadratas $n^2 \\equiv 0 \\pmod 4$ (jei $n$ lyginis) arba $n^2 \\equiv 1 \\pmod 4$ (jei $n$ nelyginis)."
+        },
+        {
+          "text": "Galimos skirtumo $x^2 - y^2 \\pmod 4$ reikšmės: $0-0=0$, $1-1=0$, $1-0=1$, $0-1=-1 \\equiv 3$."
+        },
+        {
+          "text": "Reikšmė 2 moduliu 4 niekada nepasiekiama."
+        },
+        {
+          "text": "Kadangi $2026 \\equiv 2 \\pmod 4$, lygtis sprendinių neturi."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-03-method-1",
+          "title": "Liekanų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Pariteto analizė",
+              "action": "Tikriname liekanas moduliu 4.",
+              "reason": "Tai standartinis būdas įrodyti sprendinių neegzistavimą kvadratinėse lygtyse.",
+              "result": "Prieštara gauta.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "0"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-03-trap-1",
+          "title": "Faktorizacijos bandymas",
+          "wrongMove": "Bandoma skaidyti $(x-y)(x+y) = 2026$ ir ieškoti visų daliklių porų.",
+          "whyTempting": "Tai standartinis būdas, kai lygtis turi sprendinių.",
+          "correction": "Prieš pradedant ilgą perrinkimą, visada verta patikrinti liekanas mažu moduliu.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-03-trap-2",
+          "title": "Lyginumo klaida",
+          "wrongMove": "Manoma, kad jei skaičius lyginis, tai jis gali būti išreikštas kvadratų skirtumu.",
+          "whyTempting": "Supaprastintas mąstymas apie lyginumą.",
+          "correction": "Skaičius turi dalytis iš 4 arba būti nelyginis, kad būtų kvadratų skirtumas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokie kiti moduliai (be 4) yra naudingi dirbant su kvadratais?",
+        "Ar lygtis $x^2 - y^2 = 2024$ turėtų sprendinių?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-03-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kodėl $x^2 - y^2 = 2026$ neturi sprendinių?",
+          "back": "Nes $x^2-y^2 \\not\\equiv 2 \\pmod 4$, o $2026 \\equiv 2 \\pmod 4$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-04",
+      "topicId": "olimpiada-12-skaiciu-teorija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Jei $a, b \\in \\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Pilnas kvadratas"
+      },
+      "answerText": "Pilnas kvadratas",
+      "coreIdea": {
+        "title": "Vijetos šuolis (Vieta Jumping)",
+        "text": "Tai galingas metodas Diofantinėms lygtims spręsti. Fiksuojant kintamąjį, lygtis tampa kvadratine. Antrosios šaknies egzistavimas leidžia sukonstruoti begalinį nusileidimą arba rasti prieštarą minimalumui."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-vietas-jumping"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-vietas-jumping"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime, kad fiksuotam $k$ egzistuoja sprendinių pora $(a, b)$, bet $k$ nėra pilnas kvadratas.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pasirinkite sprendinį $(a, b)$, kuris minimizuoja sumą $a+b$, darant prielaidą $a \\ge b$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite kvadratinę lygtį $x^2 - kbx + b^2 - k = 0$ ir jos antrąją šaknį $x_2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome lygtį $a^2 - kba + b^2 - k = 0$."
+        },
+        {
+          "text": "Jei $(a, b)$ yra sprendinys, tai kita šaknis $x_2 = kb - a = (b^2-k)/a$ taip pat turi tenkinti lygtį."
+        },
+        {
+          "text": "Įrodoma, kad $x_2$ turi būti sveikas skaičius."
+        },
+        {
+          "text": "Jei $k$ nėra kvadratas, įrodoma, kad $x_2 \\neq 0$ ir $x_2 > 0$."
+        },
+        {
+          "text": "Tačiau $x_2 = (b^2-k)/a < a^2/a = a$, todėl $x_2+b < a+b$."
+        },
+        {
+          "text": "Tai prieštarauja sprendinio minimalumui, todėl $k$ privalo būti pilnas kvadratas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-04-method-1",
+          "title": "Begalinio nusileidimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Konstravimas",
+              "action": "Sukuriame mažesnį sprendinį per Vijetos formules.",
+              "reason": "Kad pasiektume prieštarą minimaliam pradiniam sprendiniui.",
+              "result": "Gauta nelygybė $x_2 < a$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Pilnas kvadratas"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-04-trap-1",
+          "title": "Simetrijos nepastebėjimas",
+          "wrongMove": "Nagrinėjami $a$ ir $b$ kaip visiškai skirtingi objektai nefiksuojant vieno iš jų.",
+          "whyTempting": "Įprasta algebrinė transformacija.",
+          "correction": "Uždavinys išsisprendžia tik pavertus jį kvadratine lygtimi vieno kintamojo atžvilgiu.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-04-trap-2",
+          "title": "Klaidingas šaknies ženklo nustatymas",
+          "wrongMove": "Manoma, kad $x_2$ visada teigiamas be įrodymo.",
+          "whyTempting": "Atrodo akivaizdu iš lygties struktūros.",
+          "correction": "Būtina griežtai parodyti $x_2^2 - kbx_2 + b^2 - k = 0$ ir atmesti neigiamus variantus per $k$ reikšmę.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo garsusis šio uždavinio kontekstas 1988 m. IMO?",
+        "Ar šis metodas tinka, jei vardiklis būtų $ab-1$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-04-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra $k = (a^2+b^2)/(ab+1)$ reikšmė natūraliesiems skaičiams?",
+          "back": "Pilnas kvadratas (įrodoma Vijetos šuoliu).",
+          "conceptIds": [
+            "olimpiada-12-concept-vietas-jumping"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-06",
+      "topicId": "olimpiada-12-skaiciu-teorija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Apskaičiuokite 3-adinį vertinimą $v_3(2^{27} + 1)$ naudodami LTE lemą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4"
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "LTE (Lifting The Exponent) lema",
+        "text": "Nelyginiam pirminiam skaičiui $p$, jei $p \\mid a+b$ (n nelyginis), tai $v_p(a^n + b^n) = v_p(a+b) + v_p(n)$."
+      },
+      "strategyTags": [
+        "proof",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Patikrinkite bazinę sąlygą: ar $3$ dalija $2+1$?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nustatykite $a, b$ ir $n$ reikšmes LTE formulėje.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite $v_3(2+1)$ ir $v_3(27)$ atskirai.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame LTE nelyginiam $p=3$. Bazė $a=2, b=1, n=27$."
+        },
+        {
+          "text": "$3$ dalija $2+1$, o $n=27$ yra nelyginis."
+        },
+        {
+          "text": "$v_3(2+1) = v_3(3) = 1$."
+        },
+        {
+          "text": "$v_3(27) = v_3(3^3) = 3$."
+        },
+        {
+          "text": "$v_3(2^{27} + 1) = 1 + 3 = 4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-06-method-1",
+          "title": "LTE lemos taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Parametrų nustatymas",
+              "action": "Įstatome skaičius į lemos formulę.",
+              "reason": "LTE tiesiogiai susieja laipsnio vertinimą su pagrindo vertinimu.",
+              "result": "Gauta reikšmė 4.",
+              "latex": "v_3(2^{27} + 1) = v_3(2+1) + v_3(27)"
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-06-trap-1",
+          "title": "Netinkamas p=2 taikymas",
+          "wrongMove": "Bandoma taikyti tą pačią formulę, kai $p=2$.",
+          "whyTempting": "Noras suvienodinti visus pirminius skaičius.",
+          "correction": "LTE lema pirminiam skaičiui 2 turi specifinę, kitokią formuluotę.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-06-trap-2",
+          "title": "Laipsnio pamiršimas",
+          "wrongMove": "Apskaičiuojamas $v_3(2+1)$ ir pamirštama pridėti $v_3(n)$.",
+          "whyTempting": "Skubėjimas gauti atsakymą.",
+          "correction": "LTE esmė yra laipsnio 'iškėlimas', todėl $n$ įtaka yra kritinė.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei $n$ būtų lyginis?",
+        "Kokia yra LTE lemos sąlyga, kai $p=3$ ir $n$ lyginis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-06-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Apskaičiuokite $v_3(2^{27}+1)$ per LTE.",
+          "back": "$v_3(3) + v_3(27) = 1 + 3 = 4$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-12-test-challenge",
+      "title": "Olimpiadinis iššūkis (12 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-12-skaiciu-teorija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-12-01",
+        "ex-olimpiada-12-02",
+        "ex-olimpiada-12-03",
+        "ex-olimpiada-12-04",
+        "ex-olimpiada-12-05",
+        "ex-olimpiada-12-06",
+        "ex-olimpiada-12-07",
+        "ex-olimpiada-12-08",
+        "ex-olimpiada-12-09",
+        "ex-olimpiada-12-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

@@ -113,6 +113,25 @@ describe('Systems Logic', () => {
 
     expect(targeted.profile.targetedStartChoice).toBe('topic');
   });
+
+  it('normalizes startMode configurations for full-course goals', () => {
+    const fullCourse = systems.normalizeState({
+      ...systems.createInitialState(),
+      profile: {
+        onboarded: true,
+        goal: 'Nežinau nuo ko pradėti',
+        startMode: 'full-course',
+        grade: 9,
+        gradeBand: '9-10',
+        confidence: '',
+        dailyMinutes: 20,
+        olympiad: false,
+        diagnostic: true
+      }
+    });
+    expect(fullCourse.profile.startMode).toBe('full-course');
+    expect(fullCourse.profile.diagnostic).toBe(true);
+  });
 });
 
 describe('Curriculum Content Integrity', () => {

@@ -119,7 +119,7 @@ export const SrsReview: React.FC<SrsReviewProps> = ({
       </div>
 
       {revealed ? (
-        <div className="actions review-actions">
+        <div className="actions review-actions actions-stack-mobile">
           <button
             data-srs="again"
             onClick={() => handleAnswer('again')}
@@ -135,7 +135,7 @@ export const SrsReview: React.FC<SrsReviewProps> = ({
           </button>
         </div>
       ) : (
-        <div className="actions review-actions">
+        <div className="actions review-actions actions-stack-mobile">
           <button
             className="primary"
             onClick={handleReveal}

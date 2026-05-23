@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { State, Profile } from './types';
 import { loadState, saveState, resetState } from './storage';
 import { Sidebar } from './components/Sidebar';
+import { MobileNav } from './components/MobileNav';
 import { Topbar } from './components/Topbar';
 import { Onboarding } from './components/Onboarding';
 import { Dashboard } from './components/Dashboard';
@@ -13,6 +14,7 @@ import { Tests } from './components/Tests';
 import { Glossary } from './components/Glossary';
 import { Settings } from './components/Settings';
 import { Diagnostic } from './components/Diagnostic';
+import { TopicLibrary } from './components/TopicLibrary';
 import { topics, concepts } from './content';
 
 export const App: React.FC = () => {
@@ -143,7 +145,7 @@ export const App: React.FC = () => {
 
   const navigate = (page: string, id?: string) => {
     setRoute({ page, id });
-    if (state && page !== 'onboarding' && id && page === 'topic') {
+    if (state && page !== 'onboarding' && id && (page === 'topic' || page === 'theory' || page === 'practice')) {
       // Keep track of active topic
       updateState((prev) => ({
         ...prev,
@@ -205,7 +207,7 @@ export const App: React.FC = () => {
   const renderActiveView = () => {
     switch (route.page) {
       case 'dashboard':
-        return <Dashboard state={state} navigate={navigate} />;
+        return <Dashboard state={state} navigate={navigate} updateState={updateState} />;
       case 'diagnostic':
         return (
           <Diagnostic
@@ -216,8 +218,18 @@ export const App: React.FC = () => {
           />
         );
       case 'grade':
-        return <GradeFocus state={state} navigate={navigate} />;
+        return <GradeFocus state={state} navigate={navigate} updateState={updateState} />;
       case 'theory':
+        if (!route.id) return <TopicLibrary state={state} mode="theory" navigate={navigate} updateState={updateState} />;
+        return (
+          <TopicView
+            state={state}
+            topicId={route.id}
+            navigate={navigate}
+            updateState={updateState}
+            showToast={showToast}
+          />
+        );
       case 'topic':
         return (
           <TopicView
@@ -238,6 +250,7 @@ export const App: React.FC = () => {
           />
         );
       case 'practice':
+        if (!route.id) return <TopicLibrary state={state} mode="practice" navigate={navigate} updateState={updateState} />;
         return (
           <Practice
             state={state}
@@ -278,7 +291,7 @@ export const App: React.FC = () => {
           />
         );
       default:
-        return <Dashboard state={state} navigate={navigate} />;
+        return <Dashboard state={state} navigate={navigate} updateState={updateState} />;
     }
   };
 
@@ -286,6 +299,11 @@ export const App: React.FC = () => {
     <div className="app-container">
       <Sidebar
         state={state}
+        currentPage={route.page}
+        currentId={route.id}
+        navigate={navigate}
+      />
+      <MobileNav
         currentPage={route.page}
         currentId={route.id}
         navigate={navigate}

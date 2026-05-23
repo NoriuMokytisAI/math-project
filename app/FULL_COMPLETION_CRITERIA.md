@@ -23,6 +23,7 @@ The completed product must include:
 - offline storage,
 - progress export/import codes,
 - web/PWA release,
+- phone web accessibility release gate,
 - Android release,
 - PC desktop release.
 
@@ -71,6 +72,8 @@ The curriculum content is complete when every official grade 5-12 topic has:
 - topic test coverage,
 - mastery mapping,
 - recommendation metadata.
+
+Long-term content expansion should follow `CONTENT_EXPANSION_STRATEGY.md`: maintain an explicit coverage table, prioritize missing official topics and prerequisite foundations first, and expand topics through theory, examples, mistakes, exercises, tests, diagnostics, SRS, and olympiad depth in organized passes.
 
 The olympiad content is complete when:
 
@@ -155,14 +158,27 @@ The web app is complete when:
 1. it is deployed at `NoriuMokytis.lt`,
 2. it loads on current Chrome, Edge, Firefox, and Safari,
 3. it works on desktop and mobile browser widths,
-4. it has a valid PWA manifest,
-5. it can be installed from supported browsers,
-6. service worker caches the app shell,
-7. selected content works offline after first load/cache,
-8. IndexedDB progress persists across reloads,
-9. export/import codes work,
-10. all core learning flows work without login,
-11. no learning feature requires a backend.
+4. it satisfies `WEB_PHONE_ACCESSIBILITY.md`,
+5. it has a valid PWA manifest,
+6. it can be installed from supported browsers,
+7. service worker caches the app shell,
+8. selected content works offline after first load/cache,
+9. IndexedDB progress persists across reloads,
+10. export/import codes work,
+11. all core learning flows work without login,
+12. no learning feature requires a backend.
+
+Phone web release criteria:
+
+1. no whole-page horizontal scroll at `360px`,
+2. no clipped text in dashboard metrics, settings cards, topic cards, buttons, practice statements, SRS cards, or recommendations,
+3. dashboard metric cards do not become narrow unreadable columns,
+4. settings cards do not become vertical strips,
+5. `Teorija` and `Praktika` search/filter controls are usable,
+6. standard and olympiad practice pages are readable and actionable,
+7. mobile navigation does not cover content,
+8. all primary actions have touch-safe targets,
+9. all verification flows from `WEB_PHONE_ACCESSIBILITY.md` pass.
 
 Web full-release test:
 
@@ -273,6 +289,7 @@ The app cannot be called fully completed until all gates pass:
 - export/import roundtrip gate,
 - accessibility smoke gate,
 - mobile layout gate,
+- phone web accessibility gate from `WEB_PHONE_ACCESSIBILITY.md`,
 - desktop layout gate.
 
 ## Definition of Done

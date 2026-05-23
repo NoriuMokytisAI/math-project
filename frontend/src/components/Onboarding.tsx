@@ -118,6 +118,8 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
       ? defaultGradeBandForPreparation(draft.preparationType)
       : draft.gradeBand;
 
+    const relevantTopicIds = selectedTopicId ? [selectedTopicId] : [];
+
     onComplete({
       onboarded: true,
       goal: draft.goal,
@@ -125,6 +127,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
       preparationType: draft.startMode === 'targeted' ? draft.preparationType : undefined,
       targetedStartChoice: draft.startMode === 'targeted' ? draft.targetedStartChoice : undefined,
       targetTopicId: topicId,
+      relevantTopicIds,
       grade: topic?.grade || gradesForBand(gradeBand)[0] || 9,
       gradeBand,
       confidence: 'Nežinoma',
@@ -192,7 +195,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
           <h1>{stepCopy.title}</h1>
           <p className="onboarding-description">{stepCopy.body}</p>
           {renderStep()}
-          <div className="onboarding-actions">
+          <div className="onboarding-actions actions-stack-mobile">
             <button type="button" onClick={handleBack} disabled={safeStepIndex === 0}>
               Atgal
             </button>

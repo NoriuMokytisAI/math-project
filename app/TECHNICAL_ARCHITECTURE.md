@@ -18,6 +18,7 @@ Styling:
 
 - CSS modules or Tailwind
 - mobile-first responsive layout
+- phone accessibility rules from `WEB_PHONE_ACCESSIBILITY.md`
 - design tokens in CSS variables
 
 Packaging:
@@ -145,6 +146,7 @@ Main stores:
 - `srsReviews`
 - `mastery`
 - `achievements`
+- `relevantTopicIds`
 - `contentVersions`
 
 All storage writes should be local and deterministic.
@@ -255,6 +257,7 @@ Visual checks:
 
 - desktop viewport
 - mobile viewport
+- phone viewport matrix from `WEB_PHONE_ACCESSIBILITY.md`
 - offline reload
 
 

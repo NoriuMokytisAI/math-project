@@ -12,22 +12,29 @@
 
 This document is the syllabus guide for olympiad content. It is not the output format.
 
-When an agent is asked to add olympiad-level content to the app, it must translate this syllabus into Lithuanian app content JSON for each grade. The canonical output files are:
+When an agent is asked to add olympiad-level content to the app, it must translate this syllabus into Lithuanian app content JSON split by grade and specific olympiad topic. Grade is used for grouping and filtering. The visible learning cards in `Teorija` and `Praktika` must be concrete topics, not one whole-grade page.
+
+Canonical output paths use this pattern:
 
 ```txt
-content/generated/05/olimpiada-05.json
-content/generated/06/olimpiada-06.json
-content/generated/07/olimpiada-07.json
-content/generated/08/olimpiada-08.json
-content/generated/09/olimpiada-09.json
-content/generated/10/olimpiada-10.json
-content/generated/11/olimpiada-11.json
-content/generated/12/olimpiada-12.json
+content/generated/{grade}/olimpiada-{grade}-{track_slug}.json
 ```
+
+Examples:
+
+```txt
+content/generated/09/olimpiada-09-skaiciu-teorija.json
+content/generated/09/olimpiada-09-algebra.json
+content/generated/09/olimpiada-09-funkcijos.json
+content/generated/09/olimpiada-09-geometrija.json
+content/generated/09/olimpiada-09-kombinatorika.json
+```
+
+Old whole-grade names such as `olimpiada-09.json` may exist only as migration aliases or lightweight overview/navigation files. They must not contain all theory and all exercises for the grade as the primary student-facing topic.
 
 Use this file to decide what topics and methods belong in each grade. Use `OLYMPIAD_EXERCISE_AUTHORING_GUIDE.md` to decide how each problem, solution, hint sequence, prerequisite list, mistake analysis, and SRS seed must be authored. Use `CONTENT_AUTHORING_GUIDE.md` for the shared JSON schema.
 
-Do not create generator scripts, parser scripts, extraction scripts, or temporary automation as the deliverable. The deliverable is finished Lithuanian JSON content in the files above.
+Do not create generator scripts, parser scripts, extraction scripts, or temporary automation as the deliverable. The deliverable is finished Lithuanian JSON content in topic-specific files.
 
 ---
 

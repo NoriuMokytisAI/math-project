@@ -1,0 +1,191 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-09-funkcijos",
+    "title": "Funkcijos",
+    "grade": 9,
+    "strand": "Funkcijos",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-09-12"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Skaičių teorijos ir algebros metodai 9 klasėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "9 klasės olimpiadose skaičių teorija ir algebra sudaro didžiąją dalį uždavinių. Čia susiduriame su Oilerio funkcija $\\varphi(n)$, liekanų klasėmis ir svarbiausiomis nelygybėmis."
+        },
+        {
+          "type": "method",
+          "text": "Naudokite Oilerio teoremą $a^{\\varphi(n)} \\equiv 1 \\pmod n$ didelių laipsnių liekanoms supaprastinti, kai $\\gcd(a, n) = 1$."
+        }
+      ]
+    },
+    {
+      "title": "Kombinatoriniai metodai ir invariantai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant diskrečiuosius uždavinius, naudinga rasti nekintančias savybes (invariantus) arba vienpusiškai kintančias savybes (monovariantus)."
+        },
+        {
+          "type": "method",
+          "text": "Apibrėžkite funkciją nuo padėties (pavyzdžiui, sumą, paritetą ar spalvą) ir stebėkite, kaip ji kinta atliekant leidžiamus žingsnius."
+        }
+      ]
+    }
+  ],
+  "concepts": [],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-09-12",
+      "topicId": "olimpiada-09-funkcijos",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Funkcijos",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, kurios visiems realiesiems skaičiams $x, y$ tenkina lygtį $f(x+y) = f(x) + f(y)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos visos lygties funkcija."
+      },
+      "answerText": "$f(x) = cx$, kur $c$ – bet kokia reali konstanta",
+      "coreIdea": {
+        "title": "Košy funkcinė lygtis",
+        "text": "Tai yra klasikinė Košy funkcinė lygtis. Naudodami indukciją įrodome, kad $f(x) = cx$ visiems racionaliesiems skaičiams, o tolydumas leidžia išplėsti šią savybę visiems realiesiems skaičiams."
+      },
+      "strategyTags": [
+        "induction"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia raskite $f(0)$ ir parodykite, kad $f(-x) = -f(x)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Naudodami indukciją parodykite, kad $f(nx) = nf(x)$ natūraliesiems $n$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Parodykite, kad visiems racionaliesiems $q = m/n$ galioja $f(q) = q \\cdot f(1)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, ši lygybė $f(x) = x \\cdot f(1)$ galioja ir visiems realiesiems $x$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įstatome $x=0, y=0 \\implies f(0) = 2f(0) \\implies f(0) = 0$."
+        },
+        {
+          "text": "Parodome $f(nx) = nf(x)$ natūraliesiems $n$ naudojant indukciją pagal $n$."
+        },
+        {
+          "text": "Išplečiame savybę neigiamiems skaičiams ir trupmenoms, todėl $f(q) = cq$ visiems $q \\in \\mathbb{Q}$ (čia $c = f(1)$)."
+        },
+        {
+          "text": "Kadangi $f$ yra tolydi, bet kuriam realiajam $x$ galime parinkti racionaliųjų skaičių seką $q_n \\to x$, todėl $f(x) = \\lim f(q_n) = \\lim c q_n = cx$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-12-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "induction"
+          ],
+          "steps": [
+            {
+              "title": "Racionalusis taškas",
+              "action": "Įrodome $f(nx) = nf(x)$ visam $n \\in \\mathbb{Z}$ ir $f(q) = f(1)q$ visiems $q \\in \\mathbb{Q}$.",
+              "reason": "Matematinė indukcija ir dalumo savybės.",
+              "latex": "f(q) = cq, \\ c = f(1)",
+              "result": "Lygybė įrodyta racionaliems skaičiams."
+            },
+            {
+              "title": "Tolydumo plėtinys",
+              "action": "Kiekvienam realiajam $x$ egzistuoja racionaliųjų skaičių seka $q_n$, artėjanti į $x$. Kadangi $f$ tolydi, $f(x) = \\lim_{n\\to\\infty} f(q_n) = \\lim_{n\\to\\infty} cq_n = cx$.",
+              "reason": "Tolydumo apibrėžimas ir racionaliųjų skaičių tirštumas realiųjų aibėje.",
+              "latex": "f(x) = cx",
+              "result": "Gautas sprendinys visiems realiesiems skaičiams."
+            }
+          ],
+          "finalAnswer": "$f(x) = cx$, kur $c$ – bet kokia reali konstanta"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-12-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-12-trap-2",
+          "title": "Tolydumo sąlygos praleidimas",
+          "wrongMove": "Teigiama, kad $f(x)=cx$ galioja visiems realiesiems skaičiams tik įrodžius tai racionaliesiems.",
+          "whyTempting": "Racionalieji skaičiai atrodo pakankami padengti visą skaičių tiesę.",
+          "correction": "Būtina paminėti, kad tik tolydumas (arba monotoniškumas) leidžia išplėsti sprendinį iš $\\mathbb{Q}$ į $\\mathbb{R}$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-12-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mat...?$",
+          "back": "Tai yra klasikinė Košy funkcinė lygtis. Naudodami indukciją įrodome, kad $f(x) = cx$ visiems racionaliesiems skaičiams, o tolydumas leidžia išplėsti šią savybę visiems realiesiems skaičiams.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}
