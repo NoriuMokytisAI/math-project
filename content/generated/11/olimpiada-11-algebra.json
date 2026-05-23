@@ -1,0 +1,1449 @@
+{
+  "contentVersion": "0.1.1",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos autoravimo gairės",
+    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+  },
+  "topic": {
+    "id": "olimpiada-11-algebra",
+    "title": "Algebra",
+    "grade": 11,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [
+      "olimpiada-10",
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+    ],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-11-concept-cyclotomic",
+      "olimpiada-11-concept-chebyshev"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-11-09",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-11",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-13",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-15",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-28"
+    ]
+  },
+  "theory": [],
+  "concepts": [
+    {
+      "id": "olimpiada-11-concept-cyclotomic",
+      "title": "Ciklotoniniai daugianariai",
+      "type": "concept",
+      "shortDefinition": "Daugianariai, kurių šaknys yra pirmykštės $n$-tojo laipsnio vieneto šaknys.",
+      "intuition": "Tai elementariausios „plytelės“, iš kurių susideda daugianaris $x^n - 1$ virš racionalųjų skaičių lauko.",
+      "formal": "$\\Phi_n(x) = \\prod_{\\text{gcd}(k,n)=1, 1 \\le k \\le n} (x - e^{2\\pi i k / n})$. Galioja savybė: $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-chebyshev",
+      "title": "Čebyševo daugianariai",
+      "type": "concept",
+      "shortDefinition": "Daugianariai $T_n(x)$, tenkinantys $T_n(\\cos \\theta) = \\cos(n\\theta)$.",
+      "intuition": "Jie susieja trigonometriją su algebriniais daugianariais ir pasižymi unikaliomis ekstremaliomis savybėmis.",
+      "formal": "$T_0(x)=1, T_1(x)=x, T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Ciklotoniniai daugianariai ir dalumas",
+      "problem": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
+      "steps": [
+        {
+          "text": "Ciklotoninis daugianaris $\\Phi_n(x)$ apibrėžiamas kaip $\\prod (x - \\zeta)$, kur $\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys."
+        },
+        {
+          "text": "Kiekviena šaknis $\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\bar{\\zeta}$ (jei ji nėra reali)."
+        },
+        {
+          "text": "Sandauga $(x - \\zeta)(x - \\bar{\\zeta}) = x^2 - (2 \\text{Re} \\zeta)x + 1$."
+        },
+        {
+          "text": "Kadangi $|\\zeta| = 1$, tai $2 \\text{Re} \\zeta \\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\text{Re} \\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\text{Re} \\zeta)^2 - 4 \\le 0$."
+        },
+        {
+          "text": "Jei $n=2$, $\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$."
+        },
+        {
+          "text": "Kadangi visi sandaugos nariai yra teigiami, tai ir $\\Phi_n(x) > 0$."
+        }
+      ],
+      "answer": "Įrodyta"
+    },
+    {
+      "title": "Koši funkcinė lygtis",
+      "problem": "Raskite visas tolydžias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias $f(x+y) = f(x) + f(y)$ visiems $x, y \\in \\mathbb{R}$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome $f(0)$: $f(0+0) = f(0) + f(0) \\implies f(0) = 0$."
+        },
+        {
+          "text": "Indukcija parodome, kad $f(nx) = nf(x)$ visiems natūraliesiems $n$."
+        },
+        {
+          "text": "Tegu $f(1) = c$. Tada $f(n) = cn$ visiems natūraliesiems $n$."
+        },
+        {
+          "text": "Išplėčiame racionaliesiems skaičiams: $f(p/q \\cdot q) = f(p) \\implies qf(p/q) = cp \\implies f(p/q) = c(p/q)$."
+        },
+        {
+          "text": "Kadangi funkcija yra tolydi, o racionalieji skaičiai yra tiršti realiųjų skaičių aibėje, tai $f(x) = cx$ visiems $x \\in \\mathbb{R}$."
+        }
+      ],
+      "answer": "f(x) = cx"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-11-09",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Naudodami Eizenšteino kriterijų, nustatykite, su kuriuo pirminiu skaičiumi $p$ galime įrodyti daugianario $P(x) = x^5 - 10x + 10$ neredukuojamumą virš $\\mathbb{Q}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "5"
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Koeficientų dalumas",
+        "text": "Eizenšteino kriterijui reikia pirminio $p$, kuris dalintų visus koeficientus išskyrus vyriausiąjį, o jo kvadratas nedalintų laisvojo nario."
+      },
+      "strategyTags": [
+        "polynomials",
+        "eisenstein-criterion"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "eisenstein-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Peržiūrėkite koeficientus: 1 (prie $x^5$), 0, 0, 0, -10, 10.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Ieškokite pirminio skaičiaus, kuris dalija -10 ir 10.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kandidatai yra 2 ir 5. Patikrinkite sąlygą dėl $p^2$ dalumo laisvajam nariui (10).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Jei $p=2$, tai $p^2=4 \\nmid 10$. Jei $p=5$, tai $p^2=25 \\nmid 10$. Abu tinka, bet 5 dažniau naudojamas pavyzdžiuose. Patikrinkite vyriausią koeficientą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome koeficientus: $a_5=1, a_4=0, a_3=0, a_2=0, a_1=-10, a_0=10$."
+        },
+        {
+          "text": "Tikriname $p=5$: $5 \\nmid 1$ (tinka), 5 dalija $0, 0, 0, -10, 10$ (tinka)."
+        },
+        {
+          "text": "Tikriname $p^2=25$: $25 \\nmid 10$ (tinka)."
+        },
+        {
+          "text": "Visos kriterijaus sąlygos tenkinamos su $p=5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-09-method-1",
+          "title": "Kriterijaus taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "P parinkimas",
+              "action": "Pasirenkame $p=5$.",
+              "reason": "Jis dalija laisvąjį narį.",
+              "result": "p=5",
+              "latex": "p=5"
+            },
+            {
+              "title": "Patikra",
+              "action": "Tikriname visas sąlygas.",
+              "reason": "Eizenšteino kriterijaus reikalavimai.",
+              "result": "Tenkinama",
+              "latex": "5|10, 25 \\nmid 10"
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-09-trap-1",
+          "title": "Klaidingas dalumas",
+          "wrongMove": "Pasirenkamas $p=2$ ir manoma, kad $2^2=4$ turi dalinti 10.",
+          "whyTempting": "Sumašomos dalumo ir nedalumo sąlygos.",
+          "correction": "Sąlyga yra $p^2 \\nmid a_0$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-09-trap-2",
+          "title": "Pamirštas vyriausio koeficiento tikrinimas",
+          "wrongMove": "Pasirenkamas p, kuris dalija vyriausią koeficientą.",
+          "whyTempting": "Manoma, kad p turi dalinti visus koeficientus.",
+          "correction": "Eizenšteino kriterijus reikalauja, kad p NEDALINTŲ vyriausio koeficiento $a_n$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar galime sakyti, kad daugianaris $x^2+4$ neredukuojamas pagal Eizenšteiną? Kodėl ne?",
+        "Kas yra Gauso lema ir kaip ji susijusi su neredukuojamumu virš Q?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-09-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokie yra trys Eizenšteino kriterijaus reikalavimai pirminiam p?",
+          "back": "1) $p|a_i$ visiems $i < n$, 2) $p \\nmid a_n$, 3) $p^2 \\nmid a_0$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-10",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite 12-ojo ciklotoninio daugianario $\\Phi_{12}(x)$ išraišką naudodami ryšį $x^n - 1 = \\prod_{d|n} \\Phi_d(x)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x^4 - x^2 + 1"
+      },
+      "answerText": "x^4 - x^2 + 1",
+      "coreIdea": {
+        "title": "Daliklio eliminavimas",
+        "text": "$\\Phi_{12}(x) = \\frac{x^{12}-1}{\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6}$. Svarbu suprasti, kad $\\Phi_d$ sandaugos dažnai sudaro kitus $x^k-1$ tipo narius."
+      },
+      "strategyTags": [
+        "polynomials",
+        "cyclotomic-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-cyclotomic"
+      ],
+      "expectedMethodIds": [
+        "cyclotomic-formula"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-cyclotomic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pastebėkite, kad $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Vadinasi, $\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1) \\Phi_4(x)}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite $\\Phi_4(x)$: tai $x^4-1$ daliklis, neturintis $x^2-1$ šaknų. $\\Phi_4(x) = x^2+1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite: $\\frac{x^6+1}{x^2+1}$. Naudokite kubų sumos formulę $a^3+b^3 = (a+b)(a^2-ab+b^2)$ su $a=x^2$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Žinome, kad $x^{12}-1 = \\Phi_1 \\Phi_2 \\Phi_3 \\Phi_4 \\Phi_6 \\Phi_{12}$."
+        },
+        {
+          "text": "Grupė $\\Phi_1 \\Phi_2 \\Phi_3 \\Phi_6 = x^6 - 1$."
+        },
+        {
+          "text": "$\\Phi_4(x) = \\frac{x^4-1}{\\Phi_1 \\Phi_2} = \\frac{x^4-1}{x^2-1} = x^2 + 1$."
+        },
+        {
+          "text": "$\\Phi_{12}(x) = \\frac{x^{12}-1}{(x^6-1)(x^2+1)}$."
+        },
+        {
+          "text": "$\\frac{x^{12}-1}{x^6-1} = x^6 + 1$."
+        },
+        {
+          "text": "$\\Phi_{12}(x) = \\frac{x^6+1}{x^2+1} = \\frac{(x^2)^3+1}{x^2+1} = (x^2)^2 - x^2 + 1 = x^4 - x^2 + 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-10-method-1",
+          "title": "Laipsnių redukcija",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Dalinimas",
+              "action": "Padaliname $x^{12}-1$ iš $x^6-1$.",
+              "reason": "Tai supaprastina išraišką.",
+              "result": "x^6+1",
+              "latex": "\\frac{x^{12}-1}{x^6-1} = x^6+1"
+            },
+            {
+              "title": "Finalizavimas",
+              "action": "Padaliname iš $\\Phi_4$.",
+              "reason": "Lieka tik 12-os eilės šaknys.",
+              "result": "x^4-x^2+1",
+              "latex": "\\frac{x^6+1}{x^2+1} = x^4-x^2+1"
+            }
+          ],
+          "finalAnswer": "x^4 - x^2 + 1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-10-trap-1",
+          "title": "Daugianarių laipsnių painiojimas",
+          "wrongMove": "Tikimasi, kad $\\Phi_{12}$ laipsnis bus $\\varphi(12) = 4$, bet mokinys gauna kitokį dėl klaidų dalinant.",
+          "whyTempting": "Dalinimas kampu dažnai veda prie klaidų.",
+          "correction": "Visada patikrinkite, ar gauto daugianario laipsnis sutampa su $\\varphi(n)$.",
+          "conceptIds": [
+            "olimpiada-11-concept-cyclotomic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-10-trap-2",
+          "title": "Neteisingas daliklių parinkimas",
+          "wrongMove": "Naudojami ne visi d, kurie dalija n.",
+          "whyTempting": "Pamirštami maži dalikliai, pvz., 1.",
+          "correction": "Sandauga $\\prod \\Phi_d(x)$ turi apimti VISUS daliklius $d|n$.",
+          "conceptIds": [
+            "olimpiada-11-concept-cyclotomic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra $\\Phi_n(1)$ reikšmė, kai $n$ yra pirminio skaičiaus laipsnis?",
+        "Kodėl ciklotoniniai daugianariai visada turi sveikuosius koeficientus?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-10-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra ciklotoninio daugianario $\\Phi_n(x)$ laipsnis?",
+          "back": "Eulerio funkcija $\\varphi(n)$.",
+          "conceptIds": [
+            "olimpiada-11-concept-cyclotomic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-11",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite trečiojo laipsnio Čebyševo daugianario $T_3(x)$ išraišką naudodami rekurentinį sąryšį $T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4x^3 - 3x"
+      },
+      "answerText": "4x^3 - 3x",
+      "coreIdea": {
+        "title": "Rekurencija",
+        "text": "Naudokite žinomas pradines vertes $T_0=1$ ir $T_1=x$, tada nuosekliai apskaičiuokite $T_2$ ir $T_3$."
+      },
+      "strategyTags": [
+        "polynomials",
+        "chebyshev-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-chebyshev"
+      ],
+      "expectedMethodIds": [
+        "recurrence-relation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-chebyshev"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo $T_0(x)=1$ ir $T_1(x)=x$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite $T_2(x) = 2x(x) - 1$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dabar įstatykite $T_2$ ir $T_1$ į formulę $T_3(x) = 2x T_2(x) - T_1(x)$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$2x(2x^2 - 1) - x$. Atskliauskite ir sutraukite panašius narius.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$T_0(x) = 1$"
+        },
+        {
+          "text": "$T_1(x) = x$"
+        },
+        {
+          "text": "$T_2(x) = 2x \\cdot T_1(x) - T_0(x) = 2x \\cdot x - 1 = 2x^2 - 1$"
+        },
+        {
+          "text": "$T_3(x) = 2x \\cdot T_2(x) - T_1(x) = 2x(2x^2 - 1) - x$"
+        },
+        {
+          "text": "$T_3(x) = 4x^3 - 2x - x = 4x^3 - 3x$"
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-11-method-1",
+          "title": "Rekurentinis skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "T2 radimas",
+              "action": "Apskaičiuojame antrąjį daugianarį.",
+              "reason": "Žingsnis link T3.",
+              "result": "2x^2-1",
+              "latex": "T_2(x) = 2x^2-1"
+            },
+            {
+              "title": "T3 radimas",
+              "action": "Apskaičiuojame galutinį rezultatą.",
+              "reason": "Rekurencijos taikymas.",
+              "result": "4x^3-3x",
+              "latex": "T_3(x) = 4x^3-3x"
+            }
+          ],
+          "finalAnswer": "4x^3 - 3x"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-11-trap-1",
+          "title": "Klaida koeficiento 2 praleidime",
+          "wrongMove": "Naudojama formulė $x T_n - T_{n-1}$ be koeficiento 2.",
+          "whyTempting": "Painiojama su kitomis rekurentinėmis sekomis (pvz., Fibonačio).",
+          "correction": "Čebyševo daugianariams visada yra daugyba iš $2x$.",
+          "conceptIds": [
+            "olimpiada-11-concept-chebyshev"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-11-trap-2",
+          "title": "Pradinių verčių painiojimas",
+          "wrongMove": "Pradedama nuo $T_0=0$ arba $T_1=1$.",
+          "whyTempting": "Tai įprastos vertės kitoms rekurentinėms sekoms.",
+          "correction": "Čebyševo daugianariams visada $T_0(x)=1$ ir $T_1(x)=x$.",
+          "conceptIds": [
+            "olimpiada-11-concept-chebyshev"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip patikrinti rezultatą naudojant trigonometrinę tapatybę $\\cos(3\\theta) = 4\\cos^3\\theta - 3\\cos\\theta$?",
+        "Koks bus vyriausiasis koeficientas $T_n(x)$ daugianaryje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-11-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Parašykite Čebyševo daugianarių rekurentinį sąryšį.",
+          "back": "$T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)$.",
+          "conceptIds": [
+            "olimpiada-11-concept-chebyshev"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-12",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Raskite visas funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias lygtį $f(x + f(y)) = f(x) + y$ visiems $x, y \\in \\mathbb{R}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "f(x) = x arba f(x) = -x"
+      },
+      "answerText": "f(x) = x arba f(x) = -x",
+      "coreIdea": {
+        "title": "Injektyvumas ir surjektyvumas",
+        "text": "Pirmiausia įrodykite, kad $f$ yra bijekcija. Tada raskite $f(0)$ ir nustatykite linijinę formą."
+      },
+      "strategyTags": [
+        "functional-equations",
+        "bijectivity",
+        "substitution"
+      ],
+      "prerequisiteTopicIds": [
+        "funkcijos-ir-ju-savybes"
+      ],
+      "prerequisiteConceptIds": [
+        "funkcija"
+      ],
+      "expectedMethodIds": [
+        "substitution-method"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Fiksuokite $x$ ir pažiūrėkite į dešinę pusę kaip į $y$ funkciją. Ką tai sako apie $f$ reikšmių aibę?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $f(y_1) = f(y_2)$, tai $f(x) + y_1 = f(x + f(y_1)) = f(x + f(y_2)) = f(x) + y_2$. Vadinasi, $f$ yra injektyvi.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite $x=0$. Gausite $f(f(y)) = f(0) + y$. Tai rodo, kad $f(f(y))$ yra tiesinė funkcija.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pritaikykite $f$ abiem lygties pusėms: $f(f(x+f(y))) = f(f(x)+y)$. Naudokite gautą sąryšį $f(f(z)) = c+z$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Injektyvumas: jei $f(y_1)=f(y_2)$, tai $f(x+f(y_1))=f(x+f(y_2)) \\implies f(x)+y_1 = f(x)+y_2 \\implies y_1=y_2$."
+        },
+        {
+          "text": "Surjektyvumas: dešinė pusė $f(x)+y$ gali įgyti bet kokią reikšmę keičiant $y$."
+        },
+        {
+          "text": "Įstatome $x=0$: $f(f(y)) = y + f(0)$. Tegu $f(0) = c$. Tada $f(f(y)) = y+c$."
+        },
+        {
+          "text": "Pritaikome $f$ pagrindinei lygčiai: $f(f(x+f(y))) = f(f(x)+y)$."
+        },
+        {
+          "text": "$(x+f(y)) + c = (f(x)+y) + c \\implies x + f(y) = f(x) + y$."
+        },
+        {
+          "text": "$f(x) - x = f(y) - y$ visiems $x, y$. Tai reiškia, kad $f(x)-x = k$ (konstanta)."
+        },
+        {
+          "text": "Įstatome $f(x) = x+k$ į pradinę lygtį: $(x+(y+k))+k = (x+k)+y \\implies x+y+2k = x+y+k \\implies k=0$."
+        },
+        {
+          "text": "Gavome $f(x)=x$. Tačiau dar turime galimybę $f(x)=-x+k$ iš kitų transformacijų."
+        },
+        {
+          "text": "Patikriname $f(x)=-x$: $- (x + (-y)) = -x + y \\implies -x+y = -x+y$. Tinka."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-12-method-1",
+          "title": "Bijekcijos ir tiesiškumo analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "functional-equations"
+          ],
+          "steps": [
+            {
+              "title": "Savybių nustatymas",
+              "action": "Įrodome bijekciją.",
+              "reason": "Tai leidžia saugiai taikyti inversines operacijas.",
+              "result": "Injektyvi ir surjektyvi",
+              "latex": "f(y_1)=f(y_2) \\implies y_1=y_2"
+            },
+            {
+              "title": "Konstravimas",
+              "action": "Randame f(f(y)) išraišką.",
+              "reason": "Sluoksniavimas padeda rasti funkcijos pavidalą.",
+              "result": "f(f(y)) = y+c",
+              "latex": "f(f(y)) = y+f(0)"
+            }
+          ],
+          "finalAnswer": "f(x) = x arba f(x) = -x"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-12-trap-1",
+          "title": "Tik vieno sprendinio radimas",
+          "wrongMove": "Mokinys randa $f(x)=x$ ir pamiršta patikrinti $f(x)=-x$.",
+          "whyTempting": "Teigiama tapatybė atrodo natūraliausia.",
+          "correction": "Visada patikrinkite, ar kvadratai ar kiti pokyčiai neleidžia neigiamų sprendinių.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-12-trap-2",
+          "title": "Bijekcijos neįrodymas",
+          "wrongMove": "Iš karto daroma prielaida, kad $f(x)=ax+b$.",
+          "whyTempting": "Tai pagreitina sprendimą.",
+          "correction": "Funkcinėse lygtyse būtina patikrinti savybes (injektyvumą, surjektyvumą) prieš darant išvadas apie pavidalą.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuris žingsnis parodė, kad funkcija turi būti tiesinė?",
+        "Kaip pasikeistų lygtis, jei dešinėje pusėje būtų $f(y) + x$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-12-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kaip įrodyti funkcijos $f$ injektyvumą lygtyje $f(x+f(y)) = f(x)+y$?",
+          "back": "Tarkime $f(y_1)=f(y_2)$ ir parodykime, kad tada $f(x)+y_1 = f(x)+y_2$, todėl $y_1=y_2$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-13",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite sekos $a_n$, apibrėžtos sąryšiu $a_{n+2} = 5a_{n+1} - 6a_n$ su pradinėmis sąlygomis $a_0 = 1, a_1 = 5$, bendrojo nario formulę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3^{n+1} - 2^{n+1}"
+      },
+      "answerText": "3^{n+1} - 2^{n+1}",
+      "coreIdea": {
+        "title": "Charakteringoji lygtis",
+        "text": "Antros eilės tiesinei rekurentinei sekai sudarome kvadratinę lygtį $r^2 - 5r + 6 = 0$. Jos šaknys nusako bendrą nario pavidalą."
+      },
+      "strategyTags": [
+        "sequences",
+        "linear-recurrence"
+      ],
+      "prerequisiteTopicIds": [
+        "tiesinis-sarysis"
+      ],
+      "prerequisiteConceptIds": [
+        "skaiciu-seka"
+      ],
+      "expectedMethodIds": [
+        "characteristic-equation-method"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Surašykite lygtį $r^2 - 5r + 6 = 0$ ir raskite jos šaknis.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Šaknys yra $r_1=2, r_2=3$. Bendras narys yra $a_n = A \\cdot 2^n + B \\cdot 3^n$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite $a_0=1$ ir $a_1=5$, kad sudarytumėte sistemą koeficientams $A$ ir $B$ rasti.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$A+B=1$ ir $2A+3B=5$. Išspręskite šią sistemą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sudarome charakteringąją lygtį: $r^2 - 5r + 6 = 0$."
+        },
+        {
+          "text": "Sprendžiame: $(r-2)(r-3) = 0$, taigi šaknys $r_1=2, r_2=3$."
+        },
+        {
+          "text": "Užrašome bendrą formą: $a_n = A \\cdot 2^n + B \\cdot 3^n$."
+        },
+        {
+          "text": "Taikome pradines sąlygas: $n=0 \\implies A+B=1$; $n=1 \\implies 2A+3B=5$."
+        },
+        {
+          "text": "Iš pirmos lygties $A=1-B$. Įstatome: $2(1-B)+3B=5 \\implies 2+B=5 \\implies B=3$."
+        },
+        {
+          "text": "$A = 1-3 = -2$."
+        },
+        {
+          "text": "$a_n = -2 \\cdot 2^n + 3 \\cdot 3^n = -2^{n+1} + 3^{n+1} = 3^{n+1} - 2^{n+1}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-13-method-1",
+          "title": "Charakteringoji lygtis",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Šaknų radimas",
+              "action": "Išsprendžiame kvadratinę lygtį.",
+              "reason": "Ji nustato bazines sekas.",
+              "result": "r=2, r=3",
+              "latex": "r^2-5r+6=0 \\implies r \\in \\{2, 3\\}"
+            },
+            {
+              "title": "Koeficientai",
+              "action": "Išsprendžiame tiesinių lygčių sistemą.",
+              "reason": "Pradinės sąlygos fiksuoja seką.",
+              "result": "A=-2, B=3",
+              "latex": "a_n = -2 \\cdot 2^n + 3 \\cdot 3^n"
+            }
+          ],
+          "finalAnswer": "3^{n+1} - 2^{n+1}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-13-trap-1",
+          "title": "Klaidingas bendras narys esant sutampančioms šaknims",
+          "wrongMove": "Jei šaknys būtų vienodos (pvz., 2 ir 2), mokinys rašytų $(A+B)2^n$.",
+          "whyTempting": "Fibonačio stiliaus mąstymas.",
+          "correction": "Sutampančioms šaknims reikia dauginti iš $n$: $a_n = (A+Bn)r^n$. (Šiame uždavinyje šaknys skirtingos, tad tiesiog priminimas).",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-13-trap-2",
+          "title": "Koeficientų A ir B sukeitimas",
+          "wrongMove": "Apskaičiavus vertes, jos klaidingai priskiriamos netinkamiems laipsniams.",
+          "whyTempting": "Dėmesio stoka pabaigoje.",
+          "correction": "Visada patikrinkite gautą formulę su $n=0$ ir $n=1$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Fibonačio seka atrodo charakteringosios lygties rėmuose?",
+        "Kas nutiktų, jei lygtis turėtų kompleksines šaknis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-13-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra bendra tiesinės rekurencijos $a_{n+2} = pa_{n+1} + qa_n$ forma, jei šaknys skirtyngos?",
+          "back": "$a_n = A r_1^n + B r_2^n$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-14",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Supaprastinkite sumą $S = \\sin(\\theta) + \\sin(3\\theta) + \\dots + \\sin((2n-1)\\theta)$ visiems leistiniems $\\theta$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+      },
+      "answerText": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}",
+      "coreIdea": {
+        "title": "Trigonometrinis teleskopavimas",
+        "text": "Padauginkite visą sumą iš $2\\sin\\theta$. Naudokite sandaugos vertimo suma formulę $2\\sin A \\sin B = \\cos(A-B) - \\cos(A+B)$. Suma taps teleskopine."
+      },
+      "strategyTags": [
+        "trigonometry",
+        "telescoping-sum"
+      ],
+      "prerequisiteTopicIds": [
+        "trikampiu-trigonometrija-ir-apskritimai"
+      ],
+      "prerequisiteConceptIds": [
+        "trigonometrinis-reiskinys"
+      ],
+      "expectedMethodIds": [
+        "trigonometric-telescoping"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite padauginti sumą iš $2\\sin\\theta$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2\\sin(k\\theta)\\sin\\theta = \\cos((k-1)\\theta) - \\cos((k+1)\\theta)$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite kelis pirmuosius narius po daugybos: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Dauguma narių susiprastins. Liks $1 - \\cos(2n\\theta)$. Naudokite pusės kampo formulę $1-\\cos 2A = 2\\sin^2 A$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$S \\cdot 2\\sin\\theta = \\sum_{k=1}^n 2\\sin((2k-1)\\theta)\\sin\\theta$."
+        },
+        {
+          "text": "Taikome formulę: $2\\sin((2k-1)\\theta)\\sin\\theta = \\cos((2k-2)\\theta) - \\cos(2k\\theta)$."
+        },
+        {
+          "text": "Suma: $(\\cos 0 - \\cos 2\\theta) + (\\cos 2\\theta - \\cos 4\\theta) + \\dots + (\\cos(2n-2)\\theta - \\cos(2n\\theta))$."
+        },
+        {
+          "text": "Susiprastinus lieka $S \\cdot 2\\sin\\theta = \\cos 0 - \\cos(2n\\theta) = 1 - \\cos(2n\\theta)$."
+        },
+        {
+          "text": "Naudojame tapatybę $1 - \\cos(2n\\theta) = 2\\sin^2(n\\theta)$."
+        },
+        {
+          "text": "$S \\cdot 2\\sin\\theta = 2\\sin^2(n\\theta) \\implies S = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-14-method-1",
+          "title": "Teleskopinė suma",
+          "methodType": "main",
+          "strategyTags": [
+            "trigonometry"
+          ],
+          "steps": [
+            {
+              "title": "Dauginimas",
+              "action": "Padauginame iš $2\\sin\\theta$.",
+              "reason": "Tai sukurs teleskopinę struktūrą.",
+              "result": "2S sin\\theta = 1 - cos(2n\\theta)",
+              "latex": "2\\sin\\theta \\sum \\sin((2k-1)\\theta) = 1 - \\cos(2n\\theta)"
+            },
+            {
+              "title": "Supaprastinimas",
+              "action": "Taikome dvigubo kampo sinusą.",
+              "reason": "Norime kompaktiško atsakymo.",
+              "result": "sin^2(n\\theta)/sin\\theta",
+              "latex": "S = \\frac{2\\sin^2(n\\theta)}{2\\sin\\theta} = \\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+            }
+          ],
+          "finalAnswer": "\\frac{\\sin^2(n\\theta)}{\\sin\\theta}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-14-trap-1",
+          "title": "Klaida redukuojant sumą",
+          "wrongMove": "Pamirštamas pirmasis narys $\\cos 0 = 1$.",
+          "whyTempting": "Dažnai manoma, kad visi nariai virsta cos.",
+          "correction": "Atidžiai išrašykite ribinius narius ($k=1$ ir $k=n$).",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-14-trap-2",
+          "title": "Tapatybės $1-\\cos(2A)$ klaida",
+          "wrongMove": "Manoma, kad $1-\\cos(2A) = 2\\cos^2 A$.",
+          "whyTempting": "Painiojama su $1+\\cos(2A)$.",
+          "correction": "Naudokite $1-\\cos(2A) = 2\\sin^2 A$ sumoms su sinusais.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei $\\theta$ būtų $\\pi/n$ kartotinis?",
+        "Kaip sumą galima būtų suskaičiuoti naudojant kompleksinius skaičius (Oilerio formulę)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-14-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia trigonometrinė formulė naudojama sandaugai $2\\sin A \\sin B$ paversti suma?",
+          "back": "$\\cos(A-B) - \\cos(A+B)$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-15",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Tegu $a, b, c > 0$ yra tokie, kad $a+b+c=3$. Įrodykite nelygybę $a^2+b^2+c^2 + ab+bc+ca \\ge 6$ naudodami elementariuosius simetrinius daugianarius $p=a+b+c$ ir $q=ab+bc+ca$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atsakymas gautas perrašius į p^2 - q >= 6"
+      },
+      "answerText": "Atsakymas gautas perrašius į p^2 - q >= 6",
+      "coreIdea": {
+        "title": "Perrašymas per p ir q",
+        "text": "$a^2+b^2+c^2$ išreiškiamas kaip $p^2 - 2q$. Tada visa nelygybė tampa priklausoma tik nuo $p$ ir $q$."
+      },
+      "strategyTags": [
+        "inequalities",
+        "pqr-method",
+        "symmetric-polynomials"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "nelygybe"
+      ],
+      "expectedMethodIds": [
+        "pqr-substitution"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išreikškite sumą $a^2+b^2+c^2$ per $p$ ir $q$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca) = p^2 - 2q$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite tai į pradinę nelygybę: $(p^2 - 2q) + q \\ge 6$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $p=3$, gauname $9 - q \\ge 6$. Ar tiesa, kad $q \\le 3$? Naudokite $p^2 \\ge 3q$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime $p = a+b+c = 3$ ir $q = ab+bc+ca$."
+        },
+        {
+          "text": "Išraiška: $a^2+b^2+c^2 + ab+bc+ca = (p^2 - 2q) + q = p^2 - q$."
+        },
+        {
+          "text": "Nelygybė tampa $p^2 - q \\ge 6$, t.y. $9 - q \\ge 6$, arba $q \\le 3$."
+        },
+        {
+          "text": "Žinome klasikinę nelygybę $(a+b+c)^2 \\ge 3(ab+bc+ca)$, kuri ekvivalenti $p^2 \\ge 3q$."
+        },
+        {
+          "text": "Kadangi $p=3$, tai $9 \\ge 3q \\implies q \\le 3$."
+        },
+        {
+          "text": "Vadinasi, $9-q \\ge 9-3 = 6$. Įrodyta."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-15-method-1",
+          "title": "PQR pakeitimas",
+          "methodType": "main",
+          "strategyTags": [
+            "inequalities"
+          ],
+          "steps": [
+            {
+              "title": "Substitucija",
+              "action": "Pakeičiame kintamuosius.",
+              "reason": "Tai supaprastina nelygybės struktūrą.",
+              "result": "9-q >= 6",
+              "latex": "(a+b+c)^2 - (ab+bc+ca) \\ge 6"
+            },
+            {
+              "title": "Pabaiga",
+              "action": "Taikome q <= p^2/3.",
+              "reason": "Standartinė tapatybė.",
+              "result": "q <= 3",
+              "latex": "q \\le 3 \\implies 9-q \\ge 6"
+            }
+          ],
+          "finalAnswer": "Atsakymas gautas perrašius į p^2 - q >= 6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-15-trap-1",
+          "title": "Sumašymas su AM-GM",
+          "wrongMove": "Bandoma taikyti AM-GM atskirai kiekvienam nariui.",
+          "whyTempting": "AM-GM yra populiariausias įrankis.",
+          "correction": "Simetrinėms nelygybėms su sumos apribojimu dažnai geriau tinka simetriniai daugianariai arba Jenseno nelygybė.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-15-trap-2",
+          "title": "Klaidingas p, q ryšys",
+          "wrongMove": "Manoma, kad $q \\ge 3$, kai $p=3$.",
+          "whyTempting": "Atvirkštinis mąstymas.",
+          "correction": "Naudokite $(a+b+c)^2 \\ge 3(ab+bc+ca)$, kas reiškia $q \\le p^2/3$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada šioje nelygybėje pasiekiama lygybė?",
+        "Kokias kitas nelygybes galima spręsti per p, q, r?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-15-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Išreikškite $a^2+b^2+c^2$ per $p=a+b+c$ ir $q=ab+bc+ca$.",
+          "back": "$p^2 - 2q$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-16",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Naudodami Sturmo teoremą, nustatykite realiųjų šaknų skaičių daugianariui $P(x) = x^3 - 3x + 1$ intervale $[-2, 2]$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Sturmo seka",
+        "text": "Sudarome seką: $P_0=P(x)$, $P_1=P'(x)$, $P_2 = -\\text{rem}(P_0, P_1)$, ir t.t. Šaknų skaičius lygus ženklų pasikeitimų skirtumui galiniuose taškuose."
+      },
+      "strategyTags": [
+        "polynomials",
+        "sturm-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "isvestine-ir-diferencijavimas"
+      ],
+      "expectedMethodIds": [
+        "sturm-sequence-calculation"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite išvestinę $P_1(x) = 3x^2 - 3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Padalinkite $P_0$ iš $P_1$ su liekana. $P_2$ yra liekana su priešingu ženklu.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Seka: $P_0 = x^3-3x+1$, $P_1 = 3x^2-3$, $P_2 = 2x-1$, $P_3 = 3/4$ (teigiama konstanta).",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Suskaičiuokite ženklus taškuose $x=-2$ ir $x=2$. Skaičius $V(x)$ yra ženklų pasikeitimų skaičius sekoje.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$P_0 = x^3 - 3x + 1$."
+        },
+        {
+          "text": "$P_1 = 3x^2 - 3$."
+        },
+        {
+          "text": "$P_2 = -\\text{rem}(P_0, P_1) = 2x - 1$ (po dalybos)."
+        },
+        {
+          "text": "$P_3 = -\\text{rem}(P_1, P_2) = 3/4$ (konstanta)."
+        },
+        {
+          "text": "Taškas $x=-2$: $P_0(-2)=-1, P_1(-2)=9, P_2(-2)=-5, P_3(-2)=0.75$. Ženklai: $(-, +, -, +)$. $V(-2) = 3$ pasikeitimai."
+        },
+        {
+          "text": "Taškas $x=2$: $P_0(2)=3, P_1(2)=9, P_2(2)=3, P_3(2)=0.75$. Ženklai: $(+, +, +, +)$. $V(2) = 0$ pasikeitimų."
+        },
+        {
+          "text": "Šaknų skaičius: $V(-2) - V(2) = 3 - 0 = 3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-16-method-1",
+          "title": "Sturmo seka",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sekos sudarymas",
+              "action": "Apskaičiuojame išvestines ir liekanas.",
+              "reason": "Tai nustato daugianario elgseną.",
+              "result": "4 nariai",
+              "latex": "P_0, P_1, P_2, P_3"
+            },
+            {
+              "title": "Ženklų skaičiavimas",
+              "action": "Tikriname rėžius.",
+              "reason": "Intervalo savybė.",
+              "result": "3",
+              "latex": "V(-2) - V(2) = 3"
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-16-trap-1",
+          "title": "Liekanos ženklo ignoravimas",
+          "wrongMove": "Paimama tiesioginė dalybos liekana vietoj neigiamos liekanos.",
+          "whyTempting": "Dalyba kampu yra įprastesnė.",
+          "correction": "Seka griežtai reikalauja $P_{k+1} = -\\text{rem}(P_{k-1}, P_k)$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-16-trap-2",
+          "title": "Dauginimas iš neigiamo skaičiaus",
+          "wrongMove": "Daugindami narius liekanoms gauti, mokiniai pamiršta pakeisti ženklą.",
+          "whyTempting": "Noras supaprastinti trupmenas.",
+          "correction": "Sturmo sekoje kiekvienas naujas narys yra liekana su PRIEŠINGU ženklu. Tai kritiška ženklų kaitai.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip šis metodas pranašesnis už paprastą kritinių taškų tyrimą?",
+        "Kada Sturmo seka baigiasi?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-16-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Ką nurodo Sturmo teoremos ženklų pasikeitimo skirtumas $V(a) - V(b)$?",
+          "back": "Realiųjų šaknų skaičių intervale $(a, b]$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-28",
+      "topicId": "olimpiada-11-algebra",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Lauke $\\mathbb{F}_2$ (liekanos mod 2) raskite visus antrojo laipsnio neredukuojamus daugianarius. Užrašykite tik patį daugianarį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "x^2 + x + 1"
+      },
+      "answerText": "x^2 + x + 1",
+      "coreIdea": {
+        "title": "Šaknų tikrinimas",
+        "text": "Antro laipsnio daugianaris yra redukuojamas tada ir tik tada, kai jis turi bent vieną šaknį lauke. Lauke $\\mathbb{F}_2$ yra tik dvi galimos šaknys: 0 ir 1."
+      },
+      "strategyTags": [
+        "polynomials",
+        "finite-fields",
+        "irreducibility"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "daugianaris"
+      ],
+      "expectedMethodIds": [
+        "root-check-finite-field"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Daugianaris yra neredukuojamas tam tikrame lauke, jei jo negalima išskaidyti į žemesnio laipsnio daugianarių sandaugą tame pačiame lauke. Antrojo ir trečiojo laipsnio daugianariams tai ekvivalentu neturėjimui šaknų tame lauke.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Lauke $\\mathbb{F}_2$ (liekanos mod 2) galime tiesiog išrašyti visus antrojo laipsnio daugianarius: $x^2, x^2+1, x^2+x, x^2+x+1$. Kurie iš jų neturi šaknų 0 ir 1?",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Patikrinkite $x=0$. Kad daugianaris neturėtų šaknies 0, jo laisvasis narys privalo būti 1. Tai palieka du kandidatus: $x^2+1$ ir $x^2+x+1$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Dabar patikrinkite $x=1$ likusiems kandidatams. $1^2+1 = 2 \\equiv 0 \\pmod 2$, o $1^2+1+1 = 3 \\equiv 1 \\pmod 2$. Kuris iš jų yra neredukuojamas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Antrojo laipsnio daugianaris $P(x) \\in \\mathbb{F}_2[x]$ yra neredukuojamas tada ir tik tada, kai jis neturi šaknų pačiame lauke $\\mathbb{F}_2 = \\{0, 1\\}$."
+        },
+        {
+          "text": "Sudarome visus galimus antrojo laipsnio daugianarius: $x^2$, $x^2+1$, $x^2+x$, $x^2+x+1$."
+        },
+        {
+          "text": "Tikriname šaknį $x=0$: $P(0) = 0$ daugianariams $x^2$ ir $x^2+x$. Jie yra redukuojami."
+        },
+        {
+          "text": "Tikriname šaknį $x=1$ likusiems: $x^2+1$ prie $x=1$ duoda $1+1=0$ mod 2. Jis yra redukuojamas: $x^2+1 = (x+1)^2$."
+        },
+        {
+          "text": "Tikriname $x^2+x+1$: $P(0)=1 \neq 0$ ir $P(1)=1+1+1=1 \neq 0$. Šaknų nėra."
+        },
+        {
+          "text": "Vienintelis neredukuojamas antrojo laipsnio daugianaris lauke $\\mathbb{F}_2$ yra $x^2+x+1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-28-method-1",
+          "title": "Išsami šaknų perranka baigtiniame lauke",
+          "methodType": "main",
+          "strategyTags": [
+            "algebra",
+            "finite-fields"
+          ],
+          "steps": [
+            {
+              "title": "Neredukuojamumo kriterijus",
+              "action": "Remiamės taisykle, kad 2 ir 3 laipsnio daugianariai yra neredukuojami tada ir tik tada, kai jie neturi šaknų lauke.",
+              "reason": "Jei toks daugianaris būtų redukuojamas, jis turėtų bent vieną tiesinį daugiklį (x-r).",
+              "result": "Šaknų tikrinimo metodas",
+              "latex": ""
+            },
+            {
+              "title": "Kandidatų generavimas",
+              "action": "Išrašome visus 2 laipsnio daugianarius pavidalu $x^2 + ax + 1$.",
+              "reason": "Laisvasis narys privalo būti 1, kitaip x=0 būtų šaknis.",
+              "result": "x^2+1, x^2+x+1",
+              "latex": "a_0 = 1"
+            },
+            {
+              "title": "Šaknų tikrinimas",
+              "action": "Įstatome likusią lauko reikšmę x=1 į abu kandidatus.",
+              "reason": "Lauke F2 yra tik dvi reikšmės: 0 ir 1.",
+              "result": "x^2+x+1 neturi šaknų",
+              "latex": "P(1) = 1^2+1+1 = 3 \\equiv 1 \\neq 0 \\pmod 2"
+            }
+          ],
+          "finalAnswer": "x^2 + x + 1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-28-trap-1",
+          "title": "Laisvojo nario ignoravimas",
+          "wrongMove": "Mokinys pamiršta, kad $x^2+x$ taip pat yra antro laipsnio daugianaris.",
+          "whyTempting": "Jis atrodo nepilnas dėl laisvojo nario trūkumo.",
+          "correction": "Visi nariai be laisvojo nario (t.y. laisvasis narys yra 0) visada dalijasi iš $x$, todėl jie visada yra redukuojami.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-28-trap-2",
+          "title": "Neredukuojamumo laipsnio riba",
+          "wrongMove": "Manoma, kad jei ketvirtojo laipsnio daugianaris neturi šaknų, jis yra neredukuojamas.",
+          "whyTempting": "Ši taisyklė galioja 2-ojo ir 3-iojo laipsnio daugianariams.",
+          "correction": "Aukštesnio laipsnio daugianariai gali neturėti šaknų, bet būti dviejų žemesnio laipsnio neredukuojamų daugianarių sandauga (pvz., $(x^2+x+1)^2$).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kiek neredukuojamų antro laipsnio daugianarių yra lauke su 3 elementais $\\mathbb{F}_3$?",
+        "Kodėl baigtiniuose laukuose neredukuojamumas yra toks svarbus kodavimo teorijoje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-28-srs-1",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Koks yra vienintelis 2-ojo laipsnio neredukuojamas daugianaris lauke $\\mathbb{F}_2$?",
+          "back": "$x^2 + x + 1$",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-28-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-11-test-challenge",
+      "title": "11 klasės olimpiadinis iššūkis",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-11-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-11-01",
+        "ex-olimpiada-11-04",
+        "ex-olimpiada-11-07",
+        "ex-olimpiada-11-10",
+        "ex-olimpiada-11-12",
+        "ex-olimpiada-11-14",
+        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-19",
+        "ex-olimpiada-11-24",
+        "ex-olimpiada-11-32"
+      ],
+      "masteryWeight": 2.0
+    }
+  ]
+}

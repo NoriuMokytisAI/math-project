@@ -9,7 +9,12 @@ export const curriculum = {
     "Dėsningumai, sekos ir įvesties-išvesties lentelės",
     "Kelias, laikas, greitis ir matavimo vienetai",
     "Transformacijos: atspindys, posūkis ir postūmis",
-    "Olimpiadinė matematika (5 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Strategijos ir įrodymai",
+    "Olimpiadinė matematika (5 klasė) - Apžvalga"
   ],
   "6": [
     "Sveikieji ir racionalieji skaičiai",
@@ -18,7 +23,11 @@ export const curriculum = {
     "Finansiniai skaičiavimai: tarifai, biudžetas ir mokesčiai",
     "Lygios ir panašios figūros, mastelis ir trikampių lygumas",
     "Moda, mediana, dviejų etapų bandymai ir tikimybė",
-    "Olimpiadinė matematika (6 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (6 klasė) - Apžvalga"
   ],
   "7": [
     "Trikampiai ir Pitagoro teorema",
@@ -28,7 +37,11 @@ export const curriculum = {
     "Atvirkštinis proporcingumas ir jo grafikas",
     "Lygiagrečios tiesės, keturkampiai ir erdvės figūros",
     "Imtys, reprezentatyvumas ir skritulinės diagramos",
-    "Olimpiadinė matematika (7 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (7 klasė) - Apžvalga"
   ],
   "8": [
     "Panašūs trikampiai ir Talio teorema",
@@ -41,7 +54,11 @@ export const curriculum = {
     "Vektoriai, projekcijos ir brėžiniai",
     "Pitagoro teorema, vidurio linijos ir erdviniai taikymai",
     "Histogramos, kvartiliai ir sukauptasis dažnis",
-    "Olimpiadinė matematika (8 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (8 klasė) - Apžvalga"
   ],
   "9": [
     "Funkcijos ir jų savybės",
@@ -51,7 +68,12 @@ export const curriculum = {
     "Lygčių sistemos su tiesinėmis, kvadratinėmis ir racionaliosiomis lygtimis",
     "Apskritimo geometrija ir stačiojo trikampio trigonometrija",
     "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai",
-    "Olimpiadinė matematika (9 klasė)"
+    "Algebra",
+    "Funkcijos",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (9 klasė) - Apžvalga"
   ],
   "10": [
     "Lygčių ir nelygybių sistemos",
@@ -62,7 +84,13 @@ export const curriculum = {
     "Trikampių trigonometrija, sinusų ir kosinusų teoremos",
     "Duomenų sklaida, skirstiniai ir statistinis patikimumas",
     "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė",
-    "Olimpiadinė matematika (10 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Nelygybės",
+    "Skaičių teorija",
+    "Strategijos ir įrodymai",
+    "Olimpiadinė matematika (10 klasė) - Apžvalga"
   ],
   "11": [
     "Sekos ir matematinė indukcija",
@@ -74,7 +102,11 @@ export const curriculum = {
     "Racionaliosios, iracionaliosios, rodiklinės ir logaritminės lygtys",
     "Racionaliosios, rodiklinės ir logaritminės nelygybės",
     "Funkcijų ribos ir tolydumas",
-    "Olimpiadinė matematika (11 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (11 klasė) - Apžvalga"
   ],
   "12": [
     "Pirmykštė funkcija ir integralas",
@@ -87,6 +119,10 @@ export const curriculum = {
     "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai",
     "Statistinė duomenų analizė, koreliacija ir regresija",
     "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai",
-    "Olimpiadinė matematika (12 klasė)"
+    "Algebra",
+    "Geometrija",
+    "Kombinatorika",
+    "Skaičių teorija",
+    "Olimpiadinė matematika (12 klasė) - Apžvalga"
   ]
 };

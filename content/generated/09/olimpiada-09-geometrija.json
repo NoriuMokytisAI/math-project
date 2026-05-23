@@ -1,0 +1,945 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 9 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-09-geometrija",
+    "title": "Geometrija",
+    "grade": 9,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-09-concept-ceva"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-09-14",
+      "ex-olimpiada-09-15",
+      "ex-olimpiada-09-16",
+      "ex-olimpiada-09-17",
+      "ex-olimpiada-09-18",
+      "ex-olimpiada-09-19"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Geometriniai įrodymai ir trigonometrija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijos uždaviniuose svarbu ne tik apskaičiuoti dydžius, bet ir įrodyti taškų kolinearumą, tiesių susikirtimą ar atkarpų lygybę."
+        },
+        {
+          "type": "method",
+          "text": "Taikykite Čevos ir Menelajaus teoremas, kai reikia rasti santykius trikampio kraštinėse arba įrodyti, kad trys tiesės kertasi viename taške."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-09-concept-ceva",
+      "title": "Čevos teorema",
+      "type": "concept",
+      "shortDefinition": "Trikampio kraštinių atkarpų santykių sandauga, kai trys tiesės kertasi viename taške.",
+      "intuition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, kertasi viename taške.",
+      "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Čevos teoremos taikymas",
+      "problem": "Trikampio $ABC$ kraštinėse parinkti taškai $D$, $E$, $F$ taip, kad $AD$, $BE$, $CF$ kertasi taške $P$. Žinoma, kad $BD = DC$ ir $AE = 2EC$. Raskite santykį $AF/FB$.",
+      "steps": [
+        {
+          "text": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$."
+        },
+        {
+          "text": "Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$."
+        },
+        {
+          "text": "Įrašome šias vertes į lygtį: $1 \\cdot \\frac{1}{2} \\cdot \\frac{AF}{FB} = 1$."
+        },
+        {
+          "text": "Iš čia gauname $\\frac{AF}{FB} = 2$."
+        }
+      ],
+      "answer": "$2$"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-09-14",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio kraštinės yra $a=3, b=5, c=7$. Raskite kampą $C$, esantį prieš kraštinę $c$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas trikampio kampas."
+      },
+      "answerText": "$120^\\circ$ (arba $\\frac{2\\pi}{3}$ rad)",
+      "coreIdea": {
+        "title": "Kosinusų teorema",
+        "text": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\cos C$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kuri teorema sieja tris trikampio kraštines ir vieną kampą?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite kosinusų teoremą kampui $C$: $c^2 = a^2 + b^2 - 2ab \\cos C$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomas reikšmes $a=3, b=5, c=7$ ir išreikškite $\\cos C$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Gausite $\\cos C = -1/2$. Raskite atitinkamą kampą trikampyje.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pritaikome kosinusų teoremą: $7^2 = 3^2 + 5^2 - 2(3)(5) \\cos C$."
+        },
+        {
+          "text": "Suprastiname skaičius: $49 = 9 + 25 - 30 \\cos C$."
+        },
+        {
+          "text": "Išreiškiame kosinusą: $49 = 34 - 30 \\cos C \\implies 15 = -30 \\cos C \\implies \\cos C = -1/2$."
+        },
+        {
+          "text": "Kadangi trikampio kampas turi būti tarp $0^\\circ$ ir $180^\\circ$, tai $C = 120^\\circ$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-14-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Kosinusų teoremos užrašymas",
+              "action": "Užrašome $c^2 = a^2 + b^2 - 2ab \\cos C$.",
+              "reason": "Kosinusų teorema sieja visas tris trikampio kraštines su vienu kampu.",
+              "latex": "c^2 = a^2 + b^2 - 2ab \\cos C",
+              "result": "Sukurta lygtis kampo kosinusui rasti."
+            },
+            {
+              "title": "Skaičiavimas",
+              "action": "Įstatome vertes: $49 = 9 + 25 - 30 \\cos C \\implies 15 = -30 \\cos C \\implies \\cos C = -\\frac{1}{2}$.",
+              "reason": "Įstatome žinomus kraštinių ilgius ir atliekame algebrinius pertvarkymus.",
+              "latex": "\\cos C = -\\frac{1}{2}",
+              "result": "Rastas kampo kosinusas."
+            },
+            {
+              "title": "Kampo radimas",
+              "action": "Kadangi $0 < C < 180^\\circ$, tai $C = \\arccos(-1/2) = 120^\\circ$.",
+              "reason": "Vienintelis kampas trikampyje su neigiamu kosinusu $-1/2$ yra $120^\\circ$.",
+              "latex": "C = 120^\\circ",
+              "result": "Gautas ieškomas kampas."
+            }
+          ],
+          "finalAnswer": "$120^\\circ$ (arba $\\frac{2\\pi}{3}$ rad)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-14-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-14-trap-2",
+          "title": "Atbukusio kampo ignoravimas",
+          "wrongMove": "Gavus $\\cos C = -1/2$, klaidingai nurodomas kampas $60^\\circ$.",
+          "whyTempting": "Mokiniai dažnai pamiršta, kad kosinusas yra neigiamas antrajame ketvirtyje.",
+          "correction": "Jei kosinusas neigiamas, kampas trikampyje yra atbukas ($>90^\\circ$).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-14-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio kraštinės yra $a=3, b=5, c=7$. Raskite kampą $C$, ...?",
+          "back": "Kadangi žinomos visos trys trikampio kraštinės, kampą galime tiesiogiai apskaičiuoti pagal kosinusų teoremą: $c^2 = a^2 + b^2 - 2ab \\cos C$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-15",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampyje $ABC$ kampas $A = 30^\\circ$, o prieš jį esanti kraštinė $a = 10$. Raskite šio trikampio apibrėžtinio apskritimo spindulį $R$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas apibrėžtinio apskritimo spindulys."
+      },
+      "answerText": "$R = 10$",
+      "coreIdea": {
+        "title": "Apibendrinta sinusų teorema",
+        "text": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite ryšį tarp trikampio kraštinių, kampų ir apibrėžtinio apskritimo spindulio.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite apibendrintą sinusų teoremą: $\\frac{a}{\\sin A} = 2R$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite reikšmes: $a = 10$ ir $A = 30^\\circ$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Prisiminkite, kad $\\sin 30^\\circ = 1/2$. Apskaičiuokite $R$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome formulę $\\frac{a}{\\sin A} = 2R$."
+        },
+        {
+          "text": "Įstatome kraštinę $a = 10$ ir kampą $A = 30^\\circ$."
+        },
+        {
+          "text": "Apskaičiuojame: $\\frac{10}{\\sin 30^\\circ} = \\frac{10}{1/2} = 20$."
+        },
+        {
+          "text": "Kadangi $2R = 20$, tai apibrėžtinio apskritimo spindulys $R = 10$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-15-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sinusų teoremos formulavimas",
+              "action": "Užrašome lygybę $\\frac{a}{\\sin A} = 2R$.",
+              "reason": "Pagal apibendrintąją sinusų teoremą, kraštinės ir priešpriešinio kampo sinuso santykis yra apibrėžtinio apskritimo skersmuo.",
+              "latex": "\\frac{a}{\\sin A} = 2R",
+              "result": "Sukurta lygtis spinduliui $R$ rasti."
+            },
+            {
+              "title": "Apskaičiavimas",
+              "action": "Kadangi $\\sin 30^\\circ = 0.5$, gauname $2R = \\frac{10}{0.5} = 20 \\implies R = 10$.",
+              "reason": "Įstatome žinomus kintamuosius ir išsprendžiame tiesinę lygtį.",
+              "latex": "R = 10",
+              "result": "Rastas spindulio ilgis."
+            }
+          ],
+          "finalAnswer": "$R = 10$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-15-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-15-trap-2",
+          "title": "Sinusų teoremos formulės klaida",
+          "wrongMove": "Naudojama formulė $R = a/\\sin A$ vietoj teisingos $2R = a/\\sin A$.",
+          "whyTempting": "Dažnas painiojimas tarp spindulio ir skersmens geometrinėse formulėse.",
+          "correction": "Prisiminkite, kad santykis yra lygus APBRĖŽTINIO apskritimo SKERSMENIUI ($2R$).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-15-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampyje $ABC$ kampas $A = 30^\\circ$, o prieš jį esanti kr...?",
+          "back": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-16",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio $ABC$ viduje pažymėtas taškas $P$. Tiesės $AP, BP, CP$ kerta kraštines $BC, CA, AB$ taškuose $D, E, F$ atitinkamai. Žinoma, kad $BD/DC = 2$ ir $CE/EA = 3$. Raskite santykį $AF/FB$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas atkarpų santykis."
+      },
+      "answerText": "1/6",
+      "coreIdea": {
+        "title": "Čevos teorema",
+        "text": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-09-concept-ceva"
+      ],
+      "conceptIds": [
+        "olimpiada-09-concept-ceva"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Trys tiesės kertasi viename taške trikampio viduje. Tai rodo, kad reikia taikyti Čevos teoremą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Čevos teorema teigia: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite duotus santykius $\\frac{BD}{DC} = 2$ ir $\\frac{CE}{EA} = 3$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Iš gautos lygties išreikškite nežinomą santykį $\\frac{AF}{FB}$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal sąlygą tiesės susikerta viename taške, todėl galioja Čevos teorema."
+        },
+        {
+          "text": "Užrašome Čevos teoremos lygybę trikampiui $ABC$."
+        },
+        {
+          "text": "Įstatome duotus santykius: $2 \\cdot 3 \\cdot \\frac{AF}{FB} = 1$."
+        },
+        {
+          "text": "Gauname $6 \\cdot \\frac{AF}{FB} = 1 \\implies \\frac{AF}{FB} = \\frac{1}{6}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-16-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos pasirinkimas",
+              "action": "Užrašome Čevos teoremos formulę: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+              "reason": "Trijų cevianų susikirtimas viename taške yra ekvivalentus šiai lygybei.",
+              "latex": "\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1",
+              "result": "Gauta lygybė kraštinių santykiams."
+            },
+            {
+              "title": "Verčių įstatymas",
+              "action": "Įstatome žinomas vertes $BD/DC = 2$ ir $CE/EA = 3$, todėl $2 \\cdot 3 \\cdot \\frac{AF}{FB} = 1$.",
+              "reason": "Paprastas dydžių pakeitimas iš uždavinio sąlygos.",
+              "latex": "6 \\cdot \\frac{AF}{FB} = 1",
+              "result": "Supaprastinta tiesinė lygtis."
+            },
+            {
+              "title": "Atsakymo radimas",
+              "action": "Išreiškiame santykį: $\\frac{AF}{FB} = \\frac{1}{6}$.",
+              "reason": "Daliname abi puses iš 6.",
+              "latex": "\\frac{AF}{FB} = \\frac{1}{6}",
+              "result": "Rastas atkarpų santykis."
+            }
+          ],
+          "finalAnswer": "1/6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-16-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-16-trap-2",
+          "title": "Neteisinga santykių tvarka",
+          "wrongMove": "Santykių sandauga užrašoma supainiojus viršūnes (pvz., $\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB} = 1$).",
+          "whyTempting": "Nepastebimas „ėjimo ratu“ principas aplink trikampį.",
+          "correction": "Sekite viršūnes viena kryptimi: $A \\to F \\to B \\to D \\to C \\to E \\to A$.",
+          "reviewConceptIds": [
+            "olimpiada-09-concept-ceva"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-16-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio $ABC$ viduje pažymėtas taškas $P$. Tiesės $AP, BP,...?$",
+          "back": "Kadangi trys cevianai $AD, BE, CF$ susikerta viename taške $P$, pritaikome Čevos teoremą: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+          "conceptIds": [
+            "olimpiada-09-concept-ceva"
+          ],
+          "methodIds": [
+            "olimpiada-09-concept-ceva"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-09-16-srs-2",
+          "deck": "practice",
+          "cardType": "concept",
+          "front": "Suformuluokite Čevos teoremą trikampiui $ABC$ su taškais $D, E, F$ kraštinėse.",
+          "back": "Tiesės $AD, BE, CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
+          "conceptIds": [
+            "olimpiada-09-concept-ceva"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-17",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tiesė kerta trikampio $ABC$ kraštines $AB$ ir $AC$ taškuose $F$ ir $E$ atitinkamai, o kraštinės $BC$ pratęsimą už taško $C$ – taške $D$. Žinoma, kad $AF/FB = 2$ ir $BD/DC = 3$ (čia $C$ yra tarp $B$ ir $D$). Raskite santykį $AE/EC$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas kraštinių atkarpų santykis."
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Menelajaus teorema",
+        "text": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Šiame uždavinyje tiesė kerta dvi trikampio kraštines ir trečiosios pratęsimą. Tai klasikinis Menelajaus teoremos atvejis.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite Menelajaus teoremą trikampiui $ABC$ su tiese $F-E-D$: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomas reikšmes $AF/FB = 2$ ir $BD/DC = 3$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išreikškite santykį $\\frac{AE}{EC}$ (atsižvelkite, kad formulėje turite $\\frac{CE}{EA}$).",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tiesė kerta dvi kraštines ir pratęsimą, todėl taikome Menelajaus teoremą."
+        },
+        {
+          "text": "Formulė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "text": "Įstatome duotas reikšmes: $2 \\cdot 3 \\cdot \\frac{CE}{EA} = 1 \\implies 6 \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "text": "Iš čia $\\frac{CE}{EA} = \\frac{1}{6}$, vadinasi $\\frac{AE}{EC} = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-17-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Teoremos pritaikymas",
+              "action": "Užrašome Menelajaus teoremą trikampiui $ABC$: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+              "reason": "Tiesė kerta tris trikampio tieses, todėl taikome Menelajaus teoremą.",
+              "latex": "\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
+              "result": "Gauta pagrindinė lygybė."
+            },
+            {
+              "title": "Apskaičiavimas",
+              "action": "Įstatome vertes: $2 \\cdot 3 \\cdot \\frac{CE}{EA} = 1 \\implies \\frac{CE}{EA} = \\frac{1}{6}$.",
+              "reason": "Suderiname narius iš sąlygos.",
+              "latex": "\\frac{CE}{EA} = \\frac{1}{6}",
+              "result": "Rastas atvirkštinis santykis."
+            },
+            {
+              "title": "Sukeitimas",
+              "action": "Kadangi $\\frac{CE}{EA} = 1/6$, tai $\\frac{AE}{EC} = 6$.",
+              "reason": "Apverčiame trupmeną, kad gautume ieškomą santykį.",
+              "latex": "\\frac{AE}{EC} = 6",
+              "result": "Rastas galutinis santykis."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-17-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-17-trap-2",
+          "title": "Menelajaus ir Čevos teoremų painiojimas",
+          "wrongMove": "Bandoma taikyti Menelajaus teoremą tiesėms, susikertančioms viename taške, arba Čevos teoremą kertančiajai tiesei.",
+          "whyTempting": "Abi teoremos naudoja panašias santykių sandaugas, lygias 1.",
+          "correction": "Menelajaus teorema skirta tiesei, kertančiai trikampį, o Čevos – tiesėms, einančioms per viršūnes į bendrą tašką.",
+          "reviewConceptIds": [
+            "olimpiada-09-concept-ceva"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-17-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tiesė kerta trikampio $ABC$ kraštines $AB$ ir $AC$ taškuose ...?",
+          "back": "Taikome Menelajaus teoremą trikampiui $ABC$ ir tiesei $F-E-D$. Formuluotė: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. Atkreipkite dėmesį, kad Menelajaus teoremoje nariai eina aplink trikampį.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-09-17-srs-2",
+          "deck": "practice",
+          "cardType": "concept",
+          "front": "Užrašykite Menelajaus teoremos lygybę trikampiui $ABC$, kai tiesė kerta kraštines taškuose $F \\in AB$, $E \\in AC$ ir $D \\in BC$ pratęsime.",
+          "back": "$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-18",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampyje $ABC$ kampo $A$ pusiaukampinė kerta kraštinę $BC$ taške $D$. Žinoma, kad $AB = 6, AC = 8$, o $BC = 7$. Raskite atkarpos $BD$ ilgį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas pusiaukampinės dalijamos atkarpos ilgis."
+      },
+      "answerText": "$BD = 3$",
+      "coreIdea": {
+        "title": "Pusiaukampinės savybė",
+        "text": "Pusiaukampinė dalija trikampio kraštinę į atkarpas, proporcingas prie jų esančioms kraštinėms: $BD/DC = AB/AC$. Žinodami $BC$ ilgį, galime rasti $BD$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pusiaukampinė dalija priešpriešinę kraštinę tam tikru santykiu. Koks tai santykis?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Užrašykite pusiaukampinės teoremą: $\\frac{BD}{DC} = \\frac{AB}{AC}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite santykį $\\frac{AB}{AC} = \\frac{6}{8} = \\frac{3}{4}$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $BD + DC = BC = 7$, o $BD$ sudaro 3 dalis iš 7, raskite $BD$ ilgį.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame pusiaukampinės teoremą: $BD/DC = AB/AC = 6/8 = 3/4$."
+        },
+        {
+          "text": "Pažymime $BD = 3k$ ir $DC = 4k$ su tam tikru $k > 0$."
+        },
+        {
+          "text": "Kadangi $BD + DC = BC = 7$, turime $3k + 4k = 7 \\implies 7k = 7 \\implies k = 1$."
+        },
+        {
+          "text": "Apskaičiuojame $BD$: $BD = 3(1) = 3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-18-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Pusiaukampinės savybės taikymas",
+              "action": "Užrašome santykį $\\frac{BD}{DC} = \\frac{AB}{AC}$.",
+              "reason": "Kampo pusiaukampinė dalija priešpriešinę kraštinę santykiu, lygiu kitų dviejų kraštinių santykiui.",
+              "latex": "\\frac{BD}{DC} = \\frac{6}{8} = \\frac{3}{4}",
+              "result": "Nustatytas dalių santykis."
+            },
+            {
+              "title": "Atkarpos ilgio radimas",
+              "action": "Kadangi $BD + DC = 7$, tai $BD = 7 \\cdot \\frac{3}{3+4} = 3$.",
+              "reason": "Padalijame bendrą ilgį proporcingai santykiui $3:4$.",
+              "latex": "BD = 3",
+              "result": "Rastas atkarpos $BD$ ilgis."
+            }
+          ],
+          "finalAnswer": "$BD = 3$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-18-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-18-trap-2",
+          "title": "Atvirkštinis santykis",
+          "wrongMove": "Užrašomas klaidingas santykis $BD/DC = AC/AB$ (supainiojamos kraštinės).",
+          "whyTempting": "Neteisingas vizualinis kraštinių priskyrimas atkarpoms.",
+          "correction": "Atkarpa $BD$ yra prie kraštinės $AB$, o $DC$ prie $AC$, todėl $BD/DC = AB/AC$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-18-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampyje $ABC$ kampo $A$ pusiaukampinė kerta kraštinę $BC$...?",
+          "back": "Pusiaukampinė dalija trikampio kraštinę į atkarpas, proporcingas prie jų esančioms kraštinėms: $BD/DC = AB/AC$. Žinodami $BC$ ilgį, galime rasti $BD$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-09-18-srs-2",
+          "deck": "practice",
+          "cardType": "concept",
+          "front": "Suformuluokite trikampio pusiaukampinės savybę.",
+          "back": "Trikampio vidaus kampo pusiaukampinė dalija priešpriešinę kraštinę į atkarpas, kurių ilgių santykis lygus kitų dviejų trikampio kraštinių ilgių santykiui.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-09-19",
+      "topicId": "olimpiada-09-geometrija",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Į apskritimą įbrėžtas keturkampis $ABCD$. Žinomos jo kraštinės: $AB = 3, BC = 4, CD = 3$ ir $AD = 6$. Įstrižainės $BD$ ilgis yra 5. Raskite kitos įstrižainės $AC$ ilgį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas įstrižainės ilgis."
+      },
+      "answerText": "$AC = 6.6$ (arba $\\frac{33}{5}$)",
+      "coreIdea": {
+        "title": "Ptolemėjo teorema įbrėžtiniam keturkampiui",
+        "text": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$. Visi kiti ilgiai yra žinomi."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Uždavinyje kalbama apie įbrėžtinio keturkampio kraštines ir įstrižaines. Kuri teorema jas susieja?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pritaikykite Ptolemėjo teoremą: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite žinomus dydžius: $AB=3, BC=4, CD=3, AD=6$ ir $BD=5$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išspręskite lygtį: $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6$. Raskite $AC$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Keturkampis įbrėžtas į apskritimą, todėl galioja Ptolemėjo teorema."
+        },
+        {
+          "text": "Formulė: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$."
+        },
+        {
+          "text": "Įstatome skaičius: $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6 = 9 + 24 = 33$."
+        },
+        {
+          "text": "Daliname iš 5: $AC = 33 / 5 = 6.6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-09-19-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Ptolemėjo teoremos užrašymas",
+              "action": "Užrašome $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
+              "reason": "Įbrėžtiniam keturkampiui įstrižainių sandauga yra priešpriešinių kraštinių sandaugų suma.",
+              "latex": "AC \\cdot BD = AB \\cdot CD + BC \\cdot AD",
+              "result": "Gauta lygtis nežinomai įstrižainei."
+            },
+            {
+              "title": "Lygties sprendimas",
+              "action": "Įstatome vertes ir gauname $AC \\cdot 5 = 3 \\cdot 3 + 4 \\cdot 6 = 33 \\implies AC = 6.6$.",
+              "reason": "Paprasta vieno kintamojo tiesinė lygtis.",
+              "latex": "AC = 6.6",
+              "result": "Apskaičiuotas įstrižainės $AC$ ilgis."
+            }
+          ],
+          "finalAnswer": "$AC = 6.6$ (arba $\\frac{33}{5}$)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-09-19-trap-1",
+          "title": "Neišnagrinėti visi atvejai",
+          "wrongMove": "Mokinys pritaiko taisyklę tik keliems skaičiams arba neatsižvelgia į išimtis.",
+          "whyTempting": "Tai leidžia greitai gauti atsakymą be gilaus teorinio pagrindimo.",
+          "correction": "Būtina formaliai pagrįsti sprendimą visiems galimiems kintamųjų rinkiniams.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-09-19-trap-2",
+          "title": "Ptolemėjo teoremos taikymas bet kokiam keturkampiui",
+          "wrongMove": "Bandoma naudoti lygybę $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$ keturkampiui, kurio negalima įbrėžti į apskritimą.",
+          "whyTempting": "Pamirštama, kad ši lygybė galioja tik cikliškiems (įbrėžtiniams) keturkampiams.",
+          "correction": "Bendruoju atveju galioja Ptolemėjo nelygybė ($AC \\cdot BD \\le AB \\cdot CD + BC \\cdot AD$). Lygybė tik kai keturkampis įbrėžtinis.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-09-19-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Į apskritimą įbrėžtas keturkampis $ABCD$. Žinomos jo kraštin...?",
+          "back": "Įbrėžtinio keturkampio įstrižainių sandauga lygi priešpriešinių kraštinių sandaugų sumai: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$. Visi kiti ilgiai yra žinomi.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-09-19-srs-2",
+          "deck": "practice",
+          "cardType": "concept",
+          "front": "Kokia yra Ptolemėjo teoremos formuluotė įbrėžtiniam keturkampiui?",
+          "back": "$AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$, kur $AC, BD$ – įstrižainės, o likusios – kraštinės.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

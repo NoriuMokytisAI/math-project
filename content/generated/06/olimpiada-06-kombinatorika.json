@@ -1,0 +1,977 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-06-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 6,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-06-concept-logic",
+      "olimpiada-06-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-06-ea3fd188",
+      "ex-olimpiada-06-1d7db94c",
+      "ex-olimpiada-06-8b52c9fe",
+      "ex-olimpiada-06-1ad3676c",
+      "ex-olimpiada-06-e897fd75",
+      "ex-olimpiada-06-8de3fc6a"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Kombinatorikos formulės: kėliniai ir deriniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "6 klasėje susipažinsime su svarbiomis kombinatorikos sąvokomis:\n- **Kėliniai (Faktorialas)**: būdų išrikiuoti $n$ skirtingų objektų skaičius yra $n! = n \\times (n-1) \\dots \\times 1$.\n- **Deriniai**: būdų pasirinkti $k$ objektų iš $n$ objektų aibės, neatsižvelgiant į tvarką, skaičius užrašomas formule: $C_n^k = \\frac{n!}{k!(n-k)!}$."
+        },
+        {
+          "type": "warning",
+          "text": "Visada atskirkite, ar tvarka yra svarbi! Jei renkame komandos prezidentą ir pavaduotoją – tvarka svarbi (kėliniai). Jei tiesiog du komandos narius – tvarka nesvarbi (deriniai)."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-06-concept-logic",
+      "title": "Matematinė dedukcija ir prieštaravimas",
+      "type": "concept",
+      "shortDefinition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
+      "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
+      "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-method",
+      "title": "Aritmetikos pagrindinė teorema",
+      "type": "concept",
+      "shortDefinition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
+      "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
+      "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-06-ea3fd188",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skaitmenų $1, 2, 3, 4, 5$, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą, o skaičius turi būti lyginis?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Galima sudaryti $48$ skirtingus lyginius skaičius."
+      },
+      "answerText": "48",
+      "coreIdea": {
+        "title": "Fiksuokite paskutinį skaitmenį",
+        "text": "Kad skaičius būtų lyginis, jis turi baigtis $2$ arba $4$. Apskaičiuokite variantus kiekvienam iš šių atvejų panaudodami faktorialo taisyklę."
+      },
+      "strategyTags": [
+        "kėliniai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: fiksuokite paskutinį skaitmenį. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Kad skaičius būtų lyginis, jis turi baigtis $2$ arba $4$. Apskaičiuokite variantus kiekvienam iš šių atvejų panaudodami faktorialo taisyklę.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Kad skaičius būtų lyginis, jo paskutinis skaitmuo turi būti lyginis. Aibėje $\\{1, 2, 3, 4, 5\\}$ yra ...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Penkiaženklis skaičius yra lyginis tada, kai jo paskutinis skaitmuo yra lyginis. Duotoje aibėje $\\{1, 2, 3, 4, 5\\}$ yra tik du lyginiai skaitmenys: $2$ ir $4$."
+        },
+        {
+          "text": "Paskutinę skaičiaus vietą galime užpildyti $2$ būdais ($2$ arba $4$)."
+        },
+        {
+          "text": "Likusios keturios pozicijos užpildomos likusiais keturiais skaitmenimis bet kokia tvarka. Tai yra kėliniai iš $4$ elementų: $P_4 = 4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai."
+        },
+        {
+          "text": "Bendrai galimų skaičių kiekis randamas sudauginus paskutinio skaitmens pasirinkimo būdus iš likusių pozicijų derinių skaičiaus: $2 \\times 24 = 48$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-ea3fd188-method-1",
+          "title": "Kombinatorinė daugybos taisyklė su apribojimu",
+          "methodType": "main",
+          "strategyTags": [
+            "kėliniai"
+          ],
+          "steps": [
+            {
+              "title": "Apribojimo identifikavimas",
+              "action": "Nustatykite lyginių skaitmenų kiekį aibėje.",
+              "reason": "Lyginumo sąlyga priklauso tik nuo paskutinio skaitmens.",
+              "result": "Gauti du variantai pabaigai: $2$ ir $4$."
+            },
+            {
+              "title": "Laisvųjų pozicijų užpildymas",
+              "action": "Apskaičiuokite $4!$.",
+              "reason": "Visi kiti skaitmenys yra skirtingi ir jų tvarka skaičiuje yra svarbi.",
+              "result": "$24$ būdai kiekvienam pabaigos variantui."
+            },
+            {
+              "title": "Bendros sumos radimas",
+              "action": "Sudauginkite $2 \\cdot 24$.",
+              "reason": "Taikoma kombinatorinė sandaugos taisyklė nepriklausomiems pasirinkimams.",
+              "result": "Iš viso $48$ skaičiai."
+            }
+          ],
+          "finalAnswer": "Galima sudaryti $48$ skirtingus lyginius skaičius."
+        }
+      ],
+      "alternateMethodNote": "Galima rasti bendrą skaičių kiekį ($5! = 120$) ir įvertinti lyginių/nelyginių skaitmenų santykį aibėje ($2/5$ dalių bus lyginiai: $120 \\times 0.4 = 48$).",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-ea3fd188-trap-1",
+          "title": "Sąlygos ignoravimas",
+          "wrongMove": "Atsakymas $120$ ($5!$).",
+          "whyTempting": "Mokiniai dažnai pamiršta lyginumo reikalavimą ir randa visus įmanomus skaičius.",
+          "correction": "Visada perskaitykite sąlygą iki galo – 'lyginis' čia yra esminis raktinis žodis.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-ea3fd188-trap-2",
+          "title": "Pasikartojančių skaitmenų klaida",
+          "wrongMove": "Skaičiavimas $5 \\times 5 \\times 5 \\times 5 \\times 2$.",
+          "whyTempting": "Jei užduotyje nebūtų pasakyta 'naudojamas lygiai vieną kartą', skaitmenys galėtų kartotis.",
+          "correction": "Sąlyga 'lygiai vieną kartą' reiškia, kad turime naudoti kėlinius (faktorialus), o ne laipsnius.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-ea3fd188-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skai...",
+          "back": "Taikome šį metodą: Kad skaičius būtų lyginis, jis turi baigtis $2$ arba $4$. Apskaičiuokite variantus kiekvienam iš šių atvejų panaudodami faktorialo taisyklę.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-1d7db94c",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Klasėje yra $8$ mergaitės ir $6$ berniukai. Reikia išrinkti komandą, kurią sudarytų $2$ mergaitės ir $2$ berniukai. Keliais skirtingais būdais galima sudaryti tokią komandą?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Komandą galima sudaryti $420$ skirtingų būdų."
+      },
+      "answerText": "420",
+      "coreIdea": {
+        "title": "Naudokite derinių formulę",
+        "text": "Atskirai suraskite būdus pasirinkti $2$ mergaites iš $8$ ($C_8^2$) ir $2$ berniukus iš $6$ ($C_6^2$), o tada sudauginkite gautus rezultatus."
+      },
+      "strategyTags": [
+        "deriniai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: naudokite derinių formulę. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Atskirai suraskite būdus pasirinkti $2$ mergaites iš $8$ ($C_8^2$) ir $2$ berniukus iš $6$ ($C_6^2$), o tada sudauginkite gautus rezultatus.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Ieškome būdų pasirinkti mergaites ir berniukus neatsižvelgdami į tvarką:\n- Būdai pasirinkti $2$ merg...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia randame, keliais būdais galima išrinkti $2$ mergaites iš $8$. Kadangi tvarka nesvarbi, naudojame derinių formulę: $C_8^2 = (8 \\times 7) / 2 = 28$ būdai."
+        },
+        {
+          "text": "Tada randame, keliais būdais galima išrinkti $2$ berniukus iš $6$: $C_6^2 = (6 \\times 5) / 2 = 15$ būdų."
+        },
+        {
+          "text": "Kadangi mergaičių ir berniukų pasirinkimai yra nepriklausomi vienas nuo kito, bendrą komandos sudarymo būdų skaičių gauname sudauginę šias galimybes: $N = 28 \\times 15 = 420$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-1d7db94c-method-1",
+          "title": "Nepriklausomų derinių sandauga",
+          "methodType": "main",
+          "strategyTags": [
+            "deriniai"
+          ],
+          "steps": [
+            {
+              "title": "Mergaičių derinių skaičiavimas",
+              "action": "Apskaičiuokite $C_8^2$.",
+              "reason": "Reikia pasirinkti pogrupį neatsižvelgiant į narių eiliškumą.",
+              "result": "$28$ variantų."
+            },
+            {
+              "title": "Berniukų derinių skaičiavimas",
+              "action": "Apskaičiuokite $C_6^2$.",
+              "reason": "Analogiškai nustatome galimybes antrajai grupės daliai.",
+              "result": "$15$ variantų."
+            },
+            {
+              "title": "Sujungimas",
+              "action": "Sudauginkite rezultatus.",
+              "reason": "Kiekvienas mergaičių derinys gali būti suporuotas su bet kuriuo berniukų deriniu.",
+              "result": "Iš viso $420$ būdų."
+            }
+          ],
+          "finalAnswer": "Komandą galima sudaryti $420$ skirtingų būdų."
+        }
+      ],
+      "alternateMethodNote": "Galima bandyti vardinti derinius, tačiau dėl didelio skaičiaus tai būtų labai neefektyvu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-1d7db94c-trap-1",
+          "title": "Tvarkos įskaitymas (Kėliniai)",
+          "wrongMove": "Skaičiavimas $8 \\times 7 \\times 6 \\times 5 = 1680$.",
+          "whyTempting": "Mokiniai dažnai pamiršta padalinti iš faktorialo, kai objektų eilės tvarka nėra svarbi.",
+          "correction": "Kadangi komandos sudėtyje narės A ir B yra tas pats, kas B ir A, būtina naudoti derinių formulę (dalinti iš $2$).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-1d7db94c-trap-2",
+          "title": "Galimybių sudėjimas vietoj daugybos",
+          "wrongMove": "Atsakymas $28 + 15 = 43$.",
+          "whyTempting": "Supainiojamos kombinatorinės sudėties ir daugybos taisyklės.",
+          "correction": "Sudėtis taikoma, kai renkamės ARBA vieną, ARBA kitą. Čia renkame IR mergaites, IR berniukus, todėl variantai dauginami.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-1d7db94c-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Klasėje yra $8$ mergaitės ir $6$ berniukai. Reikia išrinkti ...",
+          "back": "Taikome šį metodą: Atskirai suraskite būdus pasirinkti $2$ mergaites iš $8$ ($C_8^2$) ir $2$ berniukus iš $6$ ($C_6^2$), o tada sudauginkite gautus rezultatus.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-8b52c9fe",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Metamas lošimo kauliukas ir moneta. Kokia tikimybė, kad kauliukas parodys lyginį taškų skaičių, o moneta atvirs herbu?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tikimybė lygi $\\frac{1}{4}$."
+      },
+      "answerText": "1/4",
+      "coreIdea": {
+        "title": "Dauginkite nepriklausomų įvykių tikimybes",
+        "text": "Šie du įvykiai yra nepriklausomi. Tikimybė gauti lyginį taškų skaičių kauliuku lygi $\\frac{3}{6} = \\frac{1}{2}$. Tikimybė gauti herbą moneta lygi $\\frac{1}{2}$."
+      },
+      "strategyTags": [
+        "nepriklausomi-įvykiai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: dauginkite nepriklausomų įvykių tikimybes. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Šie du įvykiai yra nepriklausomi. Tikimybė gauti lyginį taškų skaičių kauliuku lygi $\\frac{3}{6} = \\frac{1}{2}$. Tikimybė gauti herbą moneta lygi $\\frac{1}{2}$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Tegul $A$ yra įvykis, kad kauliukas parodys lyginį skaičių. Palankūs atvejai yra $2, 4, 6$, todėl $P...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nagrinėjame du nepriklausomus eksperimentus. Pirmiausia randame tikimybę, kad lošimo kauliukas parodys lyginį skaičių ($2, 4$ arba $6$). Palankių baigčių yra $3$, o visų galimų – $6$. Tikimybė $P_1 = 3/6 = 1/2$."
+        },
+        {
+          "text": "Tada randame tikimybę, kad moneta atvirs herbu. Yra tik dvi galimos baigtys (herbas arba skaičius), todėl tikimybė $P_2 = 1/2$."
+        },
+        {
+          "text": "Kadangi šie įvykiai yra nepriklausomi, bendra tikimybė, kad abu jie įvyks kartu, lygi jų tikimybių sandaugai: $P = P_1 \\times P_2 = 1/2 \\times 1/2 = 1/4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-8b52c9fe-method-1",
+          "title": "Nepriklausomų įvykių daugybos principas",
+          "methodType": "main",
+          "strategyTags": [
+            "nepriklausomi-įvykiai"
+          ],
+          "steps": [
+            {
+              "title": "Atskirų tikimybių radimas",
+              "action": "Apskaičiuokite $P(kauliukas=lyginis)$ ir $P(moneta=herbas)$.",
+              "reason": "Sudėtinis įvykis susideda iš paprastesnių dedamųjų.",
+              "result": "Gautos dvi reikšmės: $0.5$ ir $0.5$."
+            },
+            {
+              "title": "Jungtinės tikimybės skaičiavimas",
+              "action": "Sudauginkite gautas reikšmes.",
+              "reason": "Nepriklausomų įvykių sankirtos tikimybė lygi jų tikimybių sandaugai.",
+              "result": "Rezultatas $0.25$ arba $1/4$."
+            }
+          ],
+          "finalAnswer": "Tikimybė lygi $\\frac{1}{4}$."
+        }
+      ],
+      "alternateMethodNote": "Galima išrašyti visas $12$ galimų baigčių: $(1,H), (1,S), (2,H) \\dots (6,S)$ ir suskaičiuoti palankias: $(2,H), (4,H), (6,H)$. Matome, kad $3$ iš $12$ yra $1/4$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-8b52c9fe-trap-1",
+          "title": "Tikimybių sudėtis vietoj daugybos",
+          "wrongMove": "Skaičiavimas $1/2 + 1/2 = 1$.",
+          "whyTempting": "Mokiniai kartais mano, kad 'abu' reiškia galimybių apjungimą (sudėtį).",
+          "correction": "Sudėtis taikoma 'arba-arba' tipo įvykiams. Įvykiams, kurie turi įvykti kartu, taikoma daugyba.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-8b52c9fe-trap-2",
+          "title": "Galimų baigčių skaičiaus klaida",
+          "wrongMove": "Manymas, kad monetos tikimybė yra $1$ (nes herbas 'tikrai' gali iškristi).",
+          "whyTempting": "Klaidingas supratimas, kad tikimybė matuoja tik galimybę, o ne jos santykį su visuma.",
+          "correction": "Tikimybė visada yra palankių atvejų dalis nuo visų įmanomų atvejų.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-8b52c9fe-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Metamas lošimo kauliukas ir moneta. Kokia tikimybė, kad kaul...",
+          "back": "Taikome šį metodą: Šie du įvykiai yra nepriklausomi. Tikimybė gauti lyginį taškų skaičių kauliuku lygi $\\frac{3}{6} = \\frac{1}{2}$. Tikimybė gauti herbą moneta lygi $\\frac{1}{2}$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-1ad3676c",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Dėžėje yra $5$ raudoni, $3$ mėlyni ir $2$ žali rutuliai. Atsitiktinai ištraukiamas vienas rutulys. Kokia tikimybė, kad ištrauktas rutulys bus arba mėlynas, arba žalias?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tikimybė lygi $\\frac{1}{2}$."
+      },
+      "answerText": "1/2",
+      "coreIdea": {
+        "title": "Sudėkite nesutaikomų įvykių tikimybes",
+        "text": "Bendras rutulių skaičius yra $5 + 3 + 2 = 10$. Įvykiai 'ištraukti mėlyną rutulį' ir 'ištraukti žalią rutulį' negali įvykti vienu metu. Sudėkite jų tikimybes."
+      },
+      "strategyTags": [
+        "nesutaikomi-įvykiai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: sudėkite nesutaikomų įvykių tikimybes. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Bendras rutulių skaičius yra $5 + 3 + 2 = 10$. Įvykiai 'ištraukti mėlyną rutulį' ir 'ištraukti žalią rutulį' negali įvykti vienu metu. Sudėkite jų tikimybes.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Bendras rutulių skaičius dėžėje lygus $5 + 3 + 2 = 10$. Įvykis $A$ – ištrauktas mėlynas rutulys ($3$...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia apskaičiuojame bendrą rutulių skaičių dėžėje: $N = 5 + 3 + 2 = 10$ rutulių."
+        },
+        {
+          "text": "Nustatome palankių baigčių skaičių. Mums tinka arba mėlyni rutuliai ($3$), arba žali rutuliai ($2$). Kadangi rutulys gali būti tik vienos spalvos, šie įvykiai nesikerta, todėl jų kiekius sudėjus gauname $5$ palankius atvejus."
+        },
+        {
+          "text": "Tikimybė lygi palankių baigčių ir visų galimų baigčių santykiui: $P = 5 / 10 = 1/2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-1ad3676c-method-1",
+          "title": "Nesutaikomų įvykių sumos taisyklė",
+          "methodType": "main",
+          "strategyTags": [
+            "nesutaikomi-įvykiai"
+          ],
+          "steps": [
+            {
+              "title": "Visuminių baigčių nustatymas",
+              "action": "Sudėkite visų spalvų rutulių skaičių.",
+              "reason": "Tikimybės vardikliui reikia žinoti visą baigčių erdvę.",
+              "result": "$10$ rutulių."
+            },
+            {
+              "title": "Palankumo kriterijaus taikymas",
+              "action": "Išskirkite mėlynus ir žalius rutulius kaip sėkmingus variantus.",
+              "reason": "Užduotyje prašoma 'arba vienos, arba kitos' spalvos.",
+              "result": "$3 + 2 = 5$ palankios baigtys."
+            },
+            {
+              "title": "Tikimybės radimas",
+              "action": "Padalykite $5 / 10$.",
+              "reason": "Klasikinis tikimybės apibrėžimas yra palankių atvejų santykis su visais.",
+              "result": "Atsakymas $1/2$."
+            }
+          ],
+          "finalAnswer": "Tikimybė lygi $\\frac{1}{2}$."
+        }
+      ],
+      "alternateMethodNote": "Galima rasti priešingą įvykį 'ištrauktas raudonas rutulys' ($P = 5/10 = 1/2$) ir atimti jį iš vieneto ($1 - 1/2 = 1/2$).",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-1ad3676c-trap-1",
+          "title": "Atskiros spalvos tikimybės pateikimas",
+          "wrongMove": "Atsakymas $3/10$ (tik mėlyni) arba $2/10$ (tik žali).",
+          "whyTempting": "Mokinys pamiršta jungtuką 'arba', nurodantį abiejų variantų tinkamumą.",
+          "correction": "Visada sujunkite palankias grupes, kai prašoma bet kurio iš kelių nurodytų tipų.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-1ad3676c-trap-2",
+          "title": "Visų baigčių skaičiavimo klaida",
+          "wrongMove": "Tikimybės skaičiavimas dalinant iš raudonų rutulių skaičiaus ($3/5$).",
+          "whyTempting": "Mokinys klaidingai interpretuoja santykį (lygina vieną spalvą su kita, o ne su visuma).",
+          "correction": "Tikimybės vardiklyje visada turi būti bendras visų objektų kiekis.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-1ad3676c-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dėžėje yra $5$ raudoni, $3$ mėlyni ir $2$ žali rutuliai. Ats...",
+          "back": "Taikome šį metodą: Bendras rutulių skaičius yra $5 + 3 + 2 = 10$. Įvykiai 'ištraukti mėlyną rutulį' ir 'ištraukti žalią rutulį' negali įvykti vienu metu. Sudėkite jų tikimybes.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-e897fd75",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Metami trys standartiniai lošimo kauliukai. Kokia tikimybė, kad bent ant vieno iš jų iškris $6$ akutės?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tikimybė lygi $\\frac{91}{216}$."
+      },
+      "answerText": "91/216",
+      "coreIdea": {
+        "title": "Naudokite papildomąjį įvykį",
+        "text": "Vietoje to, kad skaičiuotumėte visus sudėtingus variantus tiesiogiai, apskaičiuokite tikimybę, kad nė ant vieno iš trijų kauliukų neiškris $6$ akutės, ir atimkite ją iš $1$."
+      },
+      "strategyTags": [
+        "papildomasis-įvykis",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: naudokite papildomąjį įvykį. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Vietoje to, kad skaičiuotumėte visus sudėtingus variantus tiesiogiai, apskaičiuokite tikimybę, kad nė ant vieno iš trijų kauliukų neiškris $6$ akutės, ir atimkite ją iš $1$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Perskaitome ir išanalizuojame uždavinio sąlygą."
+        },
+        {
+          "text": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$)"
+        },
+        {
+          "text": "Gauta išvada: Tikimybė lygi $\\frac{91}{216}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-e897fd75-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "papildomasis-įvykis"
+          ],
+          "steps": [
+            {
+              "title": "Sąlygos analizė ir formulavimas",
+              "action": "Išsirašome visus žinomus faktus ir kintamuosius.",
+              "reason": "Kad galėtume pritaikyti matematines taisykles.",
+              "result": "Problema suformuluota matematiškai."
+            },
+            {
+              "title": "Sprendimo žingsnis",
+              "action": "Tegul $A$ yra įvykis 'bent ant vieno iš trijų kauliukų iškris $6$ akutės'. Papildomasis įvykis $\\neg A$ yra 'nė ant vieno kauliuko neiškris $6$'. Vieno kauliuko tikimybė neparodyti $6$ yra $5/6$. Kadangi kauliukų metimai nepriklausomi, tikimybė, kad visi trys neparodys $6$, lygi: $P(\\neg A) = (5/6)^3 = 125/216$. Tikimybė $P(A)$ lygi: $P(A) = 1 - P(\\neg A) = 1 - 125/216 = 91/216$ (apytiksliai $0.42$ arba $42\\%$)",
+              "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
+              "result": "Tikimybė lygi $\\frac{91}{216}$."
+            }
+          ],
+          "finalAnswer": "Tikimybė lygi $\\frac{91}{216}$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-e897fd75-trap-1",
+          "title": "Skubotas spėjamas atsakymas",
+          "wrongMove": "Spėjamas atsakymas patikrinus tik vieną variantą.",
+          "whyTempting": "Tai sutaupo laiko ir atrodo teisinga.",
+          "correction": "Būtina parodyti, kad joks kitas atsakymas netinka ir atlikti pilną loginį įrodymą.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-e897fd75-trap-2",
+          "title": "Sąlygos ribojimų nepaisymas",
+          "wrongMove": "Ignoruojamas reikalavimas, kad skaitmenys turi būti skirtingi arba teigiami.",
+          "whyTempting": "Taip lengviau rasti bet kokį skaičių.",
+          "correction": "Perskaitykite sąlygą kelis kartus ir pabaigoje patikrinkite, ar atsakymas tenkina visus ribojimus.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-e897fd75-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Metami trys standartiniai lošimo kauliukai. Kokia tikimybė, ...",
+          "back": "Taikome šį metodą: Vietoje to, kad skaičiuotumėte visus sudėtingus variantus tiesiogiai, apskaičiuokite tikimybę, kad nė ant vieno iš trijų kauliukų neiškris $6$ akutės, ir atimkite ją iš $1$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-8de3fc6a",
+      "topicId": "olimpiada-06-kombinatorika",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Iš $100$ turistų, $50$ kalba angliškai, $40$ kalba vokiškai, $30$ kalba prancūziškai. Žinoma, kad $15$ kalba ir angliškai, ir vokiškai; $10$ kalba ir vokiškai, ir prancūziškai; $8$ kalba ir angliškai, ir prancūziškai. Lygiai $5$ turistai kalba visomis trimis kalbomis. Kiek turistų nekalba nei viena iš šių trijų kalbų?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nekalba nei viena iš kalbų $8$ turistai."
+      },
+      "answerText": "8",
+      "coreIdea": {
+        "title": "Pritaikykite trijų aibių įtraukties formulę",
+        "text": "Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba."
+      },
+      "strategyTags": [
+        "įtrauktis-išskirtis",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo atidaus uždavinio sąlygos perskaitymo. Kokius kintamuosius galime įvesti?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbus pastebėjimas: pritaikykite trijų aibių įtraukties formulę. Ar galite tai pritaikyti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Metodas: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Detalus atlikimas: Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir i...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Perskaitome ir išanalizuojame uždavinio sąlygą."
+        },
+        {
+          "text": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai."
+        },
+        {
+          "text": "Gauta išvada: Nekalba nei viena iš kalbų $8$ turistai."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-8de3fc6a-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "įtrauktis-išskirtis"
+          ],
+          "steps": [
+            {
+              "title": "Sąlygos analizė ir formulavimas",
+              "action": "Išsirašome visus žinomus faktus ir kintamuosius.",
+              "reason": "Kad galėtume pritaikyti matematines taisykles.",
+              "result": "Problema suformuluota matematiškai."
+            },
+            {
+              "title": "Sprendimo žingsnis",
+              "action": "Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir išskirties dėsnį, apskaičiuojame bent viena kalba kalbančių turistų skaičių:\n$|A \\cup V \\cup P| = |A| + |V| + |P| - (|A \\cap V| + |V \\cap P| + |A \\cap P|) + |A \\cap V \\cap P|$\n$|A \\cup V \\cup P| = 50 + 40 + 30 - (15 + 10 + 8) + 5 = 120 - 33 + 5 = 92$ turistai.\nKadangi iš viso yra $100$ turistų, tai nekalbančių nei viena iš šių kalbų yra: $100 - 92 = 8$ turistai.",
+              "reason": "Tai nuosekliai išplaukia iš pateiktų prielaidų ir logikos dėsnių.",
+              "result": "Nekalba nei viena iš kalbų $8$ turistai."
+            }
+          ],
+          "finalAnswer": "Nekalba nei viena iš kalbų $8$ turistai."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-8de3fc6a-trap-1",
+          "title": "Skubotas spėjamas atsakymas",
+          "wrongMove": "Spėjamas atsakymas patikrinus tik vieną variantą.",
+          "whyTempting": "Tai sutaupo laiko ir atrodo teisinga.",
+          "correction": "Būtina parodyti, kad joks kitas atsakymas netinka ir atlikti pilną loginį įrodymą.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-8de3fc6a-trap-2",
+          "title": "Sąlygos ribojimų nepaisymas",
+          "wrongMove": "Ignoruojamas reikalavimas, kad skaitmenys turi būti skirtingi arba teigiami.",
+          "whyTempting": "Taip lengviau rasti bet kokį skaičių.",
+          "correction": "Perskaitykite sąlygą kelis kartus ir pabaigoje patikrinkite, ar atsakymas tenkina visus ribojimus.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-8de3fc6a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Iš $100$ turistų, $50$ kalba angliškai, $40$ kalba vokiškai,...",
+          "back": "Taikome šį metodą: Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - |A \\cap B| - |B \\cap C| - |A \\cap C| + |A \\cap B \\cap C|$, kad rastumėte, kiek turistų kalba bent viena kalba.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

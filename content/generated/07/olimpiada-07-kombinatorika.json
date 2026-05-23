@@ -1,0 +1,1229 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus"
+  },
+  "topic": {
+    "id": "olimpiada-07-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 7,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-07-concept-logic",
+      "olimpiada-07-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-07-e2f6d6a5",
+      "ex-olimpiada-07-378e23f6",
+      "ex-olimpiada-07-efb52880",
+      "ex-olimpiada-07-6c338d21",
+      "ex-olimpiada-07-1088790e",
+      "ex-olimpiada-07-c29d91fb",
+      "ex-olimpiada-07-27644fbd"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Dirichlė principas (narvelių principas)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dirichlė principas yra galinga kombinatorikos strategija: jeigu turime $n$ narvelių ir daugiau negu $n$ balandžių, tai bent viename narvelyje turi nutūpti bent du balandžiai."
+        },
+        {
+          "type": "method",
+          "text": "Sprendžiant uždavinius, svarbu teisingai nustatyti, kas yra „balandžiai“ (elementai) ir kas yra „narveliai“ (savybės ar sritys). Pavyzdžiui, jei stalčiuje yra dviejų spalvų kojinės, traukiant 3 kojines bent dvi bus tos pačios spalvos."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-07-concept-logic",
+      "title": "Olimpiadinė logika",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
+      "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
+      "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-07-concept-method",
+      "title": "Įrodymo metodas",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
+      "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
+      "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-07-e2f6d6a5",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek skirtingų žodžių (nebūtinai prasmingų) galima sudaryti sukeičiant raides žodyje „MATEMATIKA“?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Galima sudaryti 151200 žodžių."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Kėliniai su pasikartojimais",
+        "text": "Naudokite kėlinių su pasikartojimais formulę, kadangi kai kurios raidės žodyje kartojasi."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suskaičiuokite bendrą raidžių skaičių žodyje.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Žodyje yra 10 raidžių: M kartojasi 2 kartus, A – 3 kartus, T – 2 kartus, E – 1, I – 1, K – 1.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Formulė: $P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n=10$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $P = \\frac{10!}{2! \\cdot 3! \\cdot 2!}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suskaičiuojame raidžių dažnius: viso 10 raidžių. M kartojasi 2 kartus, A - 3, T - 2, o E, I, K po 1 kartą."
+        },
+        {
+          "text": "Taikome kėlinių su pasikartojimais formulę: $P = \\frac{10!}{2! \\times 3! \\times 2! \\times 1! \\times 1! \\times 1!}$."
+        },
+        {
+          "text": "Apskaičiuojame: $10! = 3628800$, daliklis yra $2 \\times 6 \\times 2 = 24$."
+        },
+        {
+          "text": "Padalijame: $\\frac{3628800}{24} = 151200$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-method-1",
+          "title": "Kėlinių su pasikartojimais analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Raidžių sudėties nustatymas",
+              "action": "Suskaičiuojame kiekvienos raidės pasikartojimą žodyje.",
+              "reason": "Vienodos raidės sukuria identiškas kombinacijas, kurias reikia atmesti.",
+              "result": "M: 2, A: 3, T: 2, E, I, K: 1. Viso n=10.",
+              "latex": ""
+            },
+            {
+              "title": "Kėlinių formulės taikymas",
+              "action": "Apskaičiuojame kėlinius dalindami bendrą faktorialą iš pasikartojimų faktorialų.",
+              "reason": "Dalyba pašalina perteklinį skaičiavimą dėl identiškų raidžių.",
+              "result": "10! / (2! * 3! * 2!).",
+              "latex": "P = \\frac{10!}{2! \\cdot 3! \\cdot 2! \\cdot 1! \\cdot 1! \\cdot 1!}"
+            },
+            {
+              "title": "Skaitinis apskaičiavimas",
+              "action": "Atliekame veiksmus su faktorialais.",
+              "reason": "Reikia gauti galutinį kombinacijų skaičių.",
+              "result": "3628800 / 24 = 151200.",
+              "latex": "\\frac{3628800}{24} = 151200"
+            }
+          ],
+          "finalAnswer": "Galima sudaryti 151200 žodžių."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-trap-1",
+          "title": "Paprastų kėlinių klaida",
+          "type": "mistake",
+          "wrongMove": "Skaičiuoti $10!$ neatsižvelgiant į raides.",
+          "whyTempting": "Paprasčiausia formulė be jokių apribojimų.",
+          "whyItHappens": "Nepastebima, kad kai kurios raidės (A, M, T) žodyje yra vienodos.",
+          "wrongPattern": "P = 10!",
+          "correction": "Sukeitus dvi raides „A“, žodis lieka toks pat, todėl visas kombinacijas reikia dalinti iš pasikartojančių elementų kėlinių skaičiaus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-trap-2",
+          "title": "Daliklio klaida",
+          "type": "mistake",
+          "wrongMove": "Dalinti iš pasikartojančių raidžių skaičiaus sumos (2+3+2=7).",
+          "whyTempting": "Intuicija gali sakyti, kad reikia „atimti“ arba „padalinti“ iš bendro pasikartojimų kiekio.",
+          "whyItHappens": "Kombinatorikos formulių struktūros nesupratimas.",
+          "wrongPattern": "10! / 7",
+          "correction": "Būtina dalinti iš kiekvienos raidės pasikartojimų skaičiaus faktorialų SANDAUGOS.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra kėlinių su pasikartojimais formulė?",
+          "back": "$P = \\frac{n!}{n_1! \\cdot n_2! \\dots n_k!}$, kur $n$ - bendras elementų skaičius, o $n_i$ - pasikartojančių elementų kiekiai.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-e2f6d6a5-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kiek kartų žodyje MATEMATIKA pasikartoja raidė A?",
+          "back": "3 kartus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-378e23f6",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite Paskalio trikampio 6-osios eilutės (laikant 0-inę eilutę ta, kuri atitinka $(a+b)^0 = 1$) didžiausią skaičių.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Didžiausias skaičius yra 20."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Derinių koeficientų simetrija",
+        "text": "Paskalio trikampio $n$-tosios eilutės koeficientai yra deriniai $\\binom{n}{k}$. Didžiausia reikšmė pasiekiama eilutės viduryje."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite 6-osios eilutės koeficientus kaip derinius.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Koeficientai atitinka $\\binom{6}{k}$ reikšmes, kur $k=0, 1, 2, 3, 4, 5, 6$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite derinius: $\\binom{6}{0}=1$, $\\binom{6}{1}=6$, $\\binom{6}{2}=15$, $\\binom{6}{3}=20$ ir t. t.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi reikšmės auga iki vidurio ir po to simetriškai mažėja, didžiausia yra vidurinė reikšmė $\\binom{6}{3}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Paskalio trikampio 6-osios eilutės koeficientai yra $\\binom{6}{k}$ reikšmės: $1, 6, 15, 20, 15, 6, 1$."
+        },
+        {
+          "text": "Reikšmės yra simetriškos ir didėja link centro."
+        },
+        {
+          "text": "Didžiausias skaičius yra vidurinis narys $\\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-method-1",
+          "title": "Derinių simetrijos analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Eilutės narių nustatymas",
+              "action": "Užrašome 6-osios eilutės narius kaip derinius $\\binom{6}{k}$.",
+              "reason": "Paskalio trikampio n-tosios eilutės elementai tiksliai atitinka derinius iš n po k.",
+              "result": "7 nariai: $\\binom{6}{0}, \\binom{6}{1}, \\dots, \\binom{6}{6}$.",
+              "latex": ""
+            },
+            {
+              "title": "Vidurinio nario radimas",
+              "action": "Nustatome, kuris narys yra didžiausias.",
+              "reason": "Derinių reikšmės auga iki eilutės vidurio ir tada simetriškai mažėja.",
+              "result": "Didžiausias yra $\\binom{6}{3}$.",
+              "latex": "\\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20"
+            }
+          ],
+          "finalAnswer": "Didžiausias skaičius yra 20."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-trap-1",
+          "title": "Eilutės numeravimo klaida",
+          "type": "mistake",
+          "wrongMove": "Pradėti skaičiuoti eiles nuo 1 (vadinant viršūnę pirmąja eile).",
+          "whyTempting": "Natūralus skaičiavimas paprastai prasideda nuo vieneto.",
+          "whyItHappens": "Nesilaikoma matematinių susitarimų dėl Paskalio trikampio.",
+          "wrongPattern": "\\text{6-oji eilutė} \\to (a+b)^5",
+          "correction": "Viršūnė (skaičius 1) yra 0-inė eilė. Tada 6-oji eilė turi 7 elementus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-378e23f6-trap-2",
+          "title": "Kraštinių narių klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad didžiausias skaičius yra paskutinis.",
+          "whyTempting": "Painiojama su kitomis sekomis, kurios tik auga.",
+          "whyItHappens": "Trikampio struktūros nesupratimas.",
+          "wrongPattern": "\\binom{6}{6} = 1",
+          "correction": "Didžiausi skaičiai Paskalio trikampyje visada yra centre, o kraštuose visada yra 1.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-378e23f6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kur pasiekiamas didžiausias Paskalio trikampio eilutės skaičius?",
+          "back": "Eilutės viduryje.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-378e23f6-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kiek narių turi Paskalio trikampio $n$-toji eilutė?",
+          "back": "$n+1$ narį.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-efb52880",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite reiškinio $(2x - y)^4$ skleistinės narių koeficientų sumą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Koeficientų suma lygi 1."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Koeficientų sumos nustatymas",
+        "text": "Norint rasti bet kurio daugianario skleistinės koeficientų sumą, pakanka įstatyti kintamuosius lygius 1."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite: kas nutinka su kintamaisiais $x$ ir $y$ skleistinėje, kai jie abu tampa lygūs 1?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $x=1$ ir $y=1$, tai reiškinys $(2x - y)^4$ tampa $(2(1) - 1)^4$, o skleistinėje lieka tik koeficientų suma.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nereikia pilnai išskleisti viso binomo.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite skaičiavimą: $(2 - 1)^4 = 1^4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Bet kurio daugianario skleistinės koeficientų sumą galima rasti įstačius visus kintamuosius lygius 1."
+        },
+        {
+          "text": "Įstatome $x = 1$ ir $y = 1$ į pradinį reiškinį $(2x - y)^4$."
+        },
+        {
+          "text": "Apskaičiuojame reikšmę: $(2 \\times 1 - 1)^4 = (2 - 1)^4 = 1^4 = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-efb52880-method-1",
+          "title": "Kintamųjų pakeitimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Principas",
+              "action": "Suvokiame, kad koeficientų suma lygi daugianario reikšmei, kai visi kintamieji lygūs 1.",
+              "reason": "Išskleidus $(Ax+By)^n = C_0 x^n + C_1 x^{n-1}y + \\dots$, įstačius $x=1, y=1$, dešinėje lieka tik $C_0 + C_1 + \\dots$.",
+              "result": "Suma = f(1, 1).",
+              "latex": ""
+            },
+            {
+              "title": "Apskaičiavimas",
+              "action": "Įstatome vertes į pradinį reiškinį.",
+              "reason": "Tai greičiausias būdas rasti sumą be pilno skleidimo.",
+              "result": "$(2-1)^4 = 1$.",
+              "latex": "(2 \\cdot 1 - 1)^4 = 1^4 = 1"
+            }
+          ],
+          "finalAnswer": "Koeficientų suma lygi 1."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-efb52880-trap-1",
+          "title": "Bereikalingas skleidimas",
+          "type": "mistake",
+          "wrongMove": "Bandyti pilnai išskleisti $(2x-y)^4$.",
+          "whyTempting": "Tai tiesioginis būdas pamatyti koeficientus.",
+          "whyItHappens": "Nežinojimas apie greitąjį kintamųjų įstatymo metodą.",
+          "wrongPattern": "16x^4 - 32x^3y + \\dots",
+          "correction": "Skleidimas užima daug laiko ir padidina klaidų tikimybę. Įstatyti 1 yra kur kas efektyviau.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-efb52880-trap-2",
+          "title": "Tik teigiamų koeficientų sumavimas",
+          "type": "mistake",
+          "wrongMove": "Ignoruoti minuso ženklus prieš koeficientus.",
+          "whyTempting": "Manoma, kad koeficientas yra tik skaičius be jo ženklo.",
+          "whyItHappens": "Neteisingas koeficiento apibrėžimo supratimas.",
+          "wrongPattern": "16 + 32 + \\dots",
+          "correction": "Koeficientas apima ir jo ženklą. Įstatymas $x=1, y=1$ automatiškai išlaiko teisingus ženklus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-efb52880-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti daugianario skleistinės koeficientų sumą?",
+          "back": "Visus kintamuosius prilyginame 1 ir apskaičiuojame pradinio reiškinio reikšmę.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-efb52880-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kam lygi $(x-x)^n$ koeficientų suma?",
+          "back": "0.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-6c338d21",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stalčiuje yra 10 porų juodų ir 10 porų rudų kojinių (visos kojinės sumaišytos). Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad garantuotume turintys bent vieną vienodos spalvos kojinių porą?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Reikia ištraukti mažiausiai 3 kojines."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Dirichlė principo taikymas",
+        "text": "Naudokite Dirichlė principą. Turime 2 spalvas (narvelius), todėl bet koks didesnis ištrauktų kojinių kiekis užtikrina pasikartojimą."
+      },
+      "strategyTags": [
+        "introductory",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek iš viso yra skirtingų kojinių spalvų?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Spalvos yra dvi: juoda ir ruda. Tai mūsų „narveliai“.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kojinės yra „balandžiai“. Pagal Dirichlė principą, kad bent du balandžiai patektų į tą patį narvelį, reikia $n+1$ balandžių.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $n=2$, tai balandžių skaičius turi būti $2+1 = 3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Turime dvi spalvas (juodą ir rudą), kurios atitinka 2 narvelius."
+        },
+        {
+          "text": "Kojinės, kurias ištraukiame, yra balandžiai."
+        },
+        {
+          "text": "Pagal Dirichlė principą, ištraukus 3 kojines, bent dvi iš jų bus tos pačios spalvos, taigi sudarys vieną porą."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-method-1",
+          "title": "Dirichlė (narvelių) principo analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Kategorijų nustatymas",
+              "action": "Identifikuojame „narvelius“ (spalvas).",
+              "reason": "Dirichlė principas reikalauja suskirstyti elementus į grupes.",
+              "result": "2 narveliai: juoda ir ruda spalvos.",
+              "latex": ""
+            },
+            {
+              "title": "Balandžių parinkimas",
+              "action": "Nustatome mažiausią elementų kiekį, garantuojantį pasikartojimą.",
+              "reason": "Jei turime n narvelių, tai n+1 elementas garantuoja, kad bent du bus tame pačiame narvelyje.",
+              "result": "2 + 1 = 3.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Reikia ištraukti mažiausiai 3 kojines."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-trap-1",
+          "title": "Konkrečios spalvos klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad reikia 21 kojinės.",
+          "whyTempting": "Galvojama apie blogiausią scenarijų, kai norime gauti būtent juodą porą.",
+          "whyItHappens": "Užduoties sąlygos „bent viena bet kokia pora“ nepaisymas.",
+          "wrongPattern": "10 poros juodų + 1 ruda = 21",
+          "correction": "Mums tinka BENT VIENA pora, todėl pakanka 3 kojinių, kad dvi būtų tos pačios spalvos.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-6c338d21-trap-2",
+          "title": "Porų skaičiaus painiojimas su vienetais",
+          "type": "mistake",
+          "wrongMove": "Galvoti, kad spalvų yra 20 (nes yra 10 porų juodų ir 10 porų rudų).",
+          "whyTempting": "Dideli skaičiai sąlygoje (10 ir 10) gali klaidinti.",
+          "whyItHappens": "Neskiriama spalva nuo poros numerio.",
+          "wrongPattern": "20 + 1 = 21",
+          "correction": "Spalvos yra tik dvi. Kiekviena papildoma kojinė virš spalvų skaičiaus sukuria porą.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-6c338d21-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kada taikomas Dirichlė principas kojinių traukimo uždaviniuose?",
+          "back": "Kai ieškome mažiausio elementų kiekio, garantuojančio bent vieną sutapimą tarp riboto skaičiaus kategorijų.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-6c338d21-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Jei yra $n$ spalvų kojinių, kiek reikia ištraukti, kad turėtume porą?",
+          "back": "$n+1$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-1088790e",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, suma $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Teiginys įrodytas indukcijos metodu."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Matematinės indukcijos įrodymas",
+        "text": "Patikrinkite bazę $n=1$ ir parodykite, kad jei teiginys teisingas su $k$, jis teisingas ir su $k+1$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmasis žingsnis: patikrinkite indukcijos bazę, kai $n=1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Bazė: $1 = \\frac{1(1+1)}{2}$, teisinga. Tarkime, kad suma galioja su $n=k$: $S_k = \\frac{k(k+1)}{2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pridėkite sekantį narį $k+1$ prie prielaidos sumos: $S_{k+1} = S_k + (k+1) = \\frac{k(k+1)}{2} + (k+1)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Iškelkite bendrą daugiklį $(k+1)$ prieš skliaustus ir suprastinkite: $(k+1)\\left(\\frac{k}{2} + 1\\right) = \\frac{(k+1)(k+2)}{2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Indukcijos bazė: kai $n=1$, kairėje turime $1$, o dešinėje $\\frac{1(1+1)}{2} = 1$. Lygybė teisinga."
+        },
+        {
+          "text": "Indukcijos prielaida: tarkime, kad lygybė teisinga, kai $n=k$, t. y. $1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$."
+        },
+        {
+          "text": "Indukcijos žingsnis: įrodysime lygybę sekančiam nariui $n=k+1$. Prie prielaidos pridedame naują narį: $(1 + 2 + \\dots + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$."
+        },
+        {
+          "text": "Pertvarkome reiškinį: $\\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$. Lygybė įrodyta visiems $n \\ge 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-1088790e-method-1",
+          "title": "Matematinės indukcijos formalizavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Indukcijos bazė",
+              "action": "Patikriname teiginį su mažiausia galima reikšme n=1.",
+              "reason": "Indukcija turi prasidėti nuo patvirtinto pamato.",
+              "result": "1 = 1(2)/2 = 1. Teisinga.",
+              "latex": "P(1): 1 = \\frac{1(1+1)}{2}"
+            },
+            {
+              "title": "Indukcinė prielaida ir žingsnis",
+              "action": "Tariame, kad galioja P(k), ir įrodome P(k+1).",
+              "reason": "Parodome „domino efektą“: jei galioja vienam, galioja ir kitam.",
+              "result": "S_{k+1} = k(k+1)/2 + (k+1) = (k+1)(k/2 + 1) = (k+1)(k+2)/2.",
+              "latex": "1 + \\dots + k + (k+1) = \\frac{k(k+1)}{2} + (k+1) = \\frac{(k+1)(k+2)}{2}"
+            }
+          ],
+          "finalAnswer": "Teiginys įrodytas indukcijos metodu."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-1088790e-trap-1",
+          "title": "Bazės praleidimas",
+          "type": "mistake",
+          "wrongMove": "Pradėti įrodymą tik nuo k žingsnio.",
+          "whyTempting": "Bazė atrodo pernelyg akivaizdi.",
+          "whyItHappens": "Nesuprantama griežta indukcijos struktūra.",
+          "wrongPattern": "\\text{Tarkime } P(k) \\dots",
+          "correction": "Be bazės galėtume „įrodyti“ neteisingus teiginius, kurie tiesiog išlaiko žingsnio savybę.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-1088790e-trap-2",
+          "title": "Algebrinė klaida bendruose vardikliuose",
+          "type": "mistake",
+          "wrongMove": "Neteisingai sudėti trupmeną ir sveikąjį skaičių.",
+          "whyTempting": "Skubant praleidžiamas bendras vardiklis 2.",
+          "whyItHappens": "Bazinės algebros spragos.",
+          "wrongPattern": "k(k+1)/2 + k+1 = (k^2+k+k+1)/2",
+          "correction": "Būtina $k+1$ padauginti iš 2: $k(k+1)/2 + 2(k+1)/2 = (k+1)(k+2)/2$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-1088790e-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokie yra du pagrindiniai matematinės indukcijos žingsniai?",
+          "back": "1. Indukcijos bazė. 2. Indukcijos žingsnis.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-1088790e-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kam lygi pirmųjų 100 natūraliųjų skaičių suma?",
+          "back": "5050 (naudojant formulę 100*101/2).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-c29d91fb",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Metami du standartiniai lošimo kauliukai. Žinoma, kad iškritusių akučių suma yra lygi 8. Kokia tikimybė, kad bent ant vieno kauliuko iškrito 5 akutės?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tikimybė lygi 2/5 (arba 0.4)."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Sąlyginės tikimybės formulė",
+        "text": "Sąlyginė tikimybė $P(A|B) = \\frac{P(A \\cap B)}{P(B)}$ apriboja galimų baigčių aibę iki tų, kurios tenkina sąlygą $B$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite visas galimas baigtis, kurių suma lygi 8. Tai bus nauja baigčių erdvė.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suma lygi 8 gaunama šiais atvejais: $(2,6), (3,5), (4,4), (5,3), (6,2)$. Viso yra 5 atvejai.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Keli iš šių 5 atvejų turi bent vieną penketuką?",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Tinkantys atvejai yra $(3,5)$ ir $(5,3)$. Padalykite šį skaičių iš bendro galimų atvejų skaičiaus.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome įvykio $B$ (akučių suma lygi 8) galimų baigčių aibę: $(2,6), (3,5), (4,4), (5,3), (6,2)$. Iš viso $5$ atvejai."
+        },
+        {
+          "text": "Iš šių atvejų randame tuos, kurie tenkina įvykį $A$ (iškrito bent vienas penketas): tai yra $(3,5)$ ir $(5,3)$. Iš viso $2$ atvejai."
+        },
+        {
+          "text": "Sąlyginė tikimybė $P(A|B) = \\frac{\\text{palankūs atvejai}}{\\text{visi galimi atvejai}} = \\frac{2}{5}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-method-1",
+          "title": "Sąlyginės tikimybės ir baigčių erdvės redukcija",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Galimų baigčių aibės nustatymas",
+              "action": "Išvardijame visas baigtis, kurios duoda sumą 8.",
+              "reason": "Žinoma informacija (suma 8) susiaurina baigčių erdvę.",
+              "result": "{(2,6), (3,5), (4,4), (5,3), (6,2)}. Viso 5 baigtys.",
+              "latex": ""
+            },
+            {
+              "title": "Palankių baigčių atranka",
+              "action": "Iš susiaurintos aibės atrenkame tas, kurios turi bent vieną 5.",
+              "reason": "Tai mūsų ieškomas įvykis A.",
+              "result": "{(3,5), (5,3)}. Viso 2 baigtys.",
+              "latex": ""
+            },
+            {
+              "title": "Tikimybės apskaičiavimas",
+              "action": "Padalijame palankių baigčių skaičių iš visų galimų naujos erdvės baigčių.",
+              "reason": "Tikimybės apibrėžimas baigtinėje erdvėje.",
+              "result": "2/5.",
+              "latex": "P(A|B) = \\frac{2}{5}"
+            }
+          ],
+          "finalAnswer": "Tikimybė lygi 2/5 (arba 0.4)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-trap-1",
+          "title": "Visos erdvės klaida",
+          "type": "mistake",
+          "wrongMove": "Dalyti iš 36.",
+          "whyTempting": "Standartinė lošimo kauliukų erdvė turi 36 baigtis.",
+          "whyItHappens": "Sąlyginės tikimybės ignoravimas.",
+          "wrongPattern": "2/36 = 1/18",
+          "correction": "Kadangi žinome, kad suma lygi 8, kitos baigtys (pvz., 1,1) tampa neįmanomos ir nedalyvauja skaičiavime.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-c29d91fb-trap-2",
+          "title": "Baigties (4,4) ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suskaičiuoti sumos 8 baigtis.",
+          "whyTempting": "Kartais užmirstama baigtis su vienodais skaičiais.",
+          "whyItHappens": "Sąrašo sudarymo neatidumas.",
+          "wrongPattern": "Baigčių aibė: {(2,6), (3,5), (5,3), (6,2)}",
+          "correction": "Būtina išvardyti visas kombinacijas: 2+6, 3+5, 4+4, 5+3, 6+2.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-c29d91fb-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip apskaičiuojama sąlyginė tikimybė $P(A|B)$?",
+          "back": "Kaip palankių abiem įvykiams baigčių skaičius padalintas iš įvykio-sąlygos $B$ baigčių skaičiaus.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-c29d91fb-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kiek yra galimų baigčių metant du kauliukus, kai suma lygi 7?",
+          "back": "6 baigtys (1,6, 2,5, 3,4, 4,3, 5,2, 6,1).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-07-27644fbd",
+      "topicId": "olimpiada-07-kombinatorika",
+      "grade": 7,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Žaidėjas meta monetą. Jei iškrenta herbas, jis laimi 10 eurų, o jei skaičius – pralaimi 4 eurus. Raskite vieno žaidimo laimėjimo matematinį viltingumą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Matematinis viltingumas yra 3 eurai."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Matematinis viltingumas",
+        "text": "Matematinis viltingumas apskaičiuojamas kaip visų galimų laimėjimų reikšmių ir jų tikimybių sandaugų suma."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "kombinatorika"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-07-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-07-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kokia yra tikimybė, kad iškris herbas, ir kokia tikimybė, kad iškris skaičius?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Abi tikimybės yra lygios $0.5$, nes moneta simetriška.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudauginkite laimėjimą iš herbo ir pralaimėjimą iš skaičiaus su jų tikimybėmis ir sudėkite.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $E = 10 \\cdot 0.5 + (-4) \\cdot 0.5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome baigtis ir jų tikimybes: Herbas su $P=0.5$ ir laimėjimu $+10$ eurų; Skaičius su $P=0.5$ ir laimėjimu $-4$ eurai."
+        },
+        {
+          "text": "Taikome matematinio viltingumo formulę: $E = x_1 P_1 + x_2 P_2$."
+        },
+        {
+          "text": "$E = 10 \\times 0.5 + (-4) \\times 0.5 = 5 - 2 = 3$ eurai."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-method-1",
+          "title": "Laimėjimų ir tikimybių svėrimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Baigčių erdvė",
+              "action": "Nustatome galimus rezultatus ir jų tikimybes.",
+              "reason": "Viltingumui reikia visų scenarijų išsamios analizės.",
+              "result": "H (+10, P=0.5), S (-4, P=0.5).",
+              "latex": ""
+            },
+            {
+              "title": "Sandaugų suma",
+              "action": "Sudauginame kiekvieną vertę iš jos tikimybės ir sudedame.",
+              "reason": "Tai vidutinė laimėjimo vertė per ilgą žaidimų seriją.",
+              "result": "10 * 0.5 + (-4) * 0.5 = 5 - 2 = 3.",
+              "latex": "E(X) = \\sum x_i p_i = 10 \\cdot 0.5 + (-4) \\cdot 0.5"
+            }
+          ],
+          "finalAnswer": "Matematinis viltingumas yra 3 eurai."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-trap-1",
+          "title": "Neigiamos vertės ignoravimas",
+          "type": "mistake",
+          "wrongMove": "Pralaimėjimą traktuoti kaip teigiamą skaičių.",
+          "whyTempting": "Intuityviai skaičiai dažnai sumuojami nenaudojant neigiamų ženklų.",
+          "whyItHappens": "Finansinio nuostolio matematinės prasmės užmiršimas.",
+          "wrongPattern": "10 * 0.5 + 4 * 0.5 = 7",
+          "correction": "Pralaimėjimas yra neigiamas laimėjimas, todėl formulėje jis privalo turėti minuso ženklą.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-07-27644fbd-trap-2",
+          "title": "Aritmetinis vidurkis be tikimybių",
+          "type": "mistake",
+          "wrongMove": "Tikėtis, kad viltingumas visada yra tiesiog skaičių suma padalinta iš 2.",
+          "whyTempting": "Tai sutampa su viltingumu tik kai tikimybės lygios.",
+          "whyItHappens": "Supainiojama su paprastuoju vidurkiu.",
+          "wrongPattern": "(10 - 4) / 2 = 3",
+          "correction": "Nors atsakymas šiame uždavinyje sutampa, bendruoju atveju (pvz., jei tikimybės būtų 0.7 ir 0.3) būtina naudoti pilną formulę.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-07-27644fbd-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip apskaičiuojamas atsitiktinio dydžio matematinis viltingumas?",
+          "back": "Kaip visų galimų dydžio reikšmių ir jas atitinkančių tikimybių sandaugų suma: $E(X) = \\sum x_i P(X = x_i)$.",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-07-concept-method"
+          ],
+          "defaultEnabled": true
+        },
+        {
+          "id": "ex-olimpiada-07-27644fbd-srs-2",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Ką reiškia teigiamas matematinis viltingumas lošime?",
+          "back": "Tai reiškia, kad ilgalaikėje perspektyvoje žaidėjas vidutiniškai laimės (žaidimas jam palankus).",
+          "conceptIds": [
+            "olimpiada-07-concept-logic"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

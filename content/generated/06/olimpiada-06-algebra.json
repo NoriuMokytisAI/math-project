@@ -1,0 +1,1535 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-06-algebra",
+    "title": "Algebra",
+    "grade": 6,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-06-concept-logic",
+      "olimpiada-06-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-06-b4e7dd8a",
+      "ex-olimpiada-06-bdd1881c",
+      "ex-olimpiada-06-ff4946f2",
+      "ex-olimpiada-06-13d0b51d",
+      "ex-olimpiada-06-de608e5f",
+      "ex-olimpiada-06-420ecc0f",
+      "ex-olimpiada-06-8e4f7634",
+      "ex-olimpiada-06-5a19da69",
+      "ex-olimpiada-06-b7ce0257",
+      "ex-olimpiada-06-14ea85c7"
+    ]
+  },
+  "theory": [],
+  "concepts": [
+    {
+      "id": "olimpiada-06-concept-logic",
+      "title": "Matematinė dedukcija ir prieštaravimas",
+      "type": "concept",
+      "shortDefinition": "Loginis metodas, kai teiginys įrodomas parodant, kad jo neigimas veda prie prieštaravimo su žinomais faktais.",
+      "intuition": "Tarkime priešingai – kad teiginys neteisingas, ir pamatysime, kad gauname nesąmonę (pvz., kad nelyginis skaičius lygus lyginiam). Vadinasi, teiginys turi būti teisingas.",
+      "formal": "Įrodymo prieštaravimo būdu (reductio ad absurdum) formalus modelis, kai $\\neg P \\implies Q$ ir $Q$ yra žinoma neteisingu teiginiu.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-06-concept-method",
+      "title": "Aritmetikos pagrindinė teorema",
+      "type": "concept",
+      "shortDefinition": "Kiekvienas natūralusis skaičius, didesnis už 1, gali būti vieninteliu būdu išreikštas pirminių skaičių sandauga.",
+      "intuition": "Pirminiai skaičiai yra lyg 'matematikos atomai' – iš jų galima surinkti bet kurį skaičių, ir šis surinkimo būdas yra unikalus.",
+      "formal": "$n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$, kur $p_i$ yra skirtingi pirminiai skaičiai, o $a_i$ – natūralieji skaičiai.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-06-b4e7dd8a",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Skaičių tiesėje pažymėti taškai $A(-7)$ ir $B(5)$. Raskite atstumą tarp šių taškų ir vidurio taško koordinatę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atstumas lygus $12$, vidurio taško koordinatė yra $-1$."
+      },
+      "answerText": "Atstumas 12, vidurio taškas -1",
+      "coreIdea": {
+        "title": "Naudokite modulio ir vidurkio formules",
+        "text": "Atstumas tarp taškų yra skirtumo modulis $|x_B - x_A|$. Vidurio taško koordinatė yra pažymėtų taškų koordinačių vidurkis."
+      },
+      "strategyTags": [
+        "skaičių-tiesė",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atstumą tarp dviejų taškų skaičių tiesėje rasite atėmę mažesnę koordinatę iš didesnės: $x_B - x_A$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Būkite labai atidūs su ženklais: atimant neigiamą skaičių, veiksmas tampa sudėtimi, t. y. $5 - (-7)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Vidurio taškas yra taškų koordinačių aritmetinis vidurkis: sudėkite abi koordinates ir padalykite iš $2$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame atstumą tarp taškų $A(-7)$ ir $B(5)$: $d = |x_B - x_A| = |5 - (-7)| = |5 + 7| = 12$ vienetų."
+        },
+        {
+          "text": "Apskaičiuojame vidurio taško $M$ koordinatę kaip aritmetinį vidurkį: $x_M = \\frac{x_A + x_B}{2} = \\frac{-7 + 5}{2}$."
+        },
+        {
+          "text": "Atliekame skaičiavimą: $x_M = \\frac{-2}{2} = -1$."
+        },
+        {
+          "text": "Gauti atsakymai: atstumas yra $12$, o vidurio taško koordinatė lygi $-1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-b4e7dd8a-method-1",
+          "title": "Analitinis koordinačių metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "skaičių-tiesė"
+          ],
+          "steps": [
+            {
+              "title": "Atstumo nustatymas",
+              "action": "Atimkite $-7$ iš $5$.",
+              "reason": "Atstumas lygus koordinačių skirtumo moduliui.",
+              "result": "Gauta reikšmė $12$."
+            },
+            {
+              "title": "Vidurio radimas",
+              "action": "Apskaičiuokite $(-7+5)/2$.",
+              "reason": "Vidurio taškas yra lygiai nutolęs nuo abiejų galų.",
+              "result": "Gauta koordinatė $-1$."
+            }
+          ],
+          "finalAnswer": "Atstumas lygus $12$, vidurio taško koordinatė yra $-1$."
+        }
+      ],
+      "alternateMethodNote": "Galima tiesiog suskaičiuoti vienetus skaičių tiesėje arba pastumti tašką $A$ per pusę atstumo ($6$ vienetus) į dešinę: $-7 + 6 = -1$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-b4e7dd8a-trap-1",
+          "title": "Ženklų klaida atimant neigiamą skaičių",
+          "wrongMove": "Skaičiavimas $5 - 7 = -2$.",
+          "whyTempting": "Mokiniai dažnai pamiršta parašyti du minusus iš eilės arba mano, kad vienas minusas jau 'atstovauja' skaičiaus ženklui.",
+          "correction": "Atstumas visada yra teigiamas dydis. Teisingas veiksmas yra $5 - (-7) = 12$.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-b4e7dd8a-trap-2",
+          "title": "Modulio ignoravimas vidurio taško formulėje",
+          "wrongMove": "Manymas, kad vidurys yra $(7+5)/2 = 6$.",
+          "whyTempting": "Atrodo paprasčiau dirbti su teigiamais skaičiais.",
+          "correction": "Būtina išlaikyti skaičių ženklus sumoje. Vidurio taškas tarp neigiamo ir teigiamo skaičiaus dažnai bus arti nulio.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl atstumas niekada negali būti neigiamas?",
+        "Ar vidurio taškas visada bus teigiamas, jei viena koordinatė teigiama, o kita neigiama?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-b4e7dd8a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti atstumą tarp taškų $A(a)$ ir $B(b)$ skaičių tiesėje?",
+          "back": "Atstumas lygus skirtumo moduliui: $d = |b - a|$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-bdd1881c",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite reiškinio reikšmę: $-15 - (-4) \\times (-3) + (-20) / (-5)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Reikšmė lygi $-23$."
+      },
+      "answerText": "-23",
+      "coreIdea": {
+        "title": "Laikykitės ženklų taisyklių",
+        "text": "Pirmiausia atlikite daugybą ir dalybą, atidžiai stebėdami neigiamų ženklų skaičių. Dviejų neigiamų skaičių sandauga ir dalyba yra teigiamas skaičius."
+      },
+      "strategyTags": [
+        "neigiami-skaičiai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite pagrindinę veiksmų eilės taisyklę: pirmiausia atlikite daugybą ir dalybą, o tik pabaigoje – sudėtį ir atimtį.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atidžiai stebėkite minusus. Pavyzdžiui, dauginant du neigiamus skaičius $(-4) \\times (-3)$ rezultatas yra teigiamas skaičius $12$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Atlikite veiksmus dalimis: $(-4) \\times (-3) = 12$ ir $(-20) / (-5) = 4$. Tada įstatykite gautus skaičius atgal į pradinį reiškinį.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia atliekame daugybos veiksmą: $(-4) \\times (-3) = 12$."
+        },
+        {
+          "text": "Tada atliekame dalybos veiksmą: $(-20) / (-5) = 4$."
+        },
+        {
+          "text": "Gautas reikšmes įstatome į pradinį reiškinį: $-15 - (12) + 4$."
+        },
+        {
+          "text": "Atliekame sudėties ir atimties veiksmus iš kairės į dešinę: $-15 - 12 = -27$, o tada $-27 + 4 = -23$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-bdd1881c-method-1",
+          "title": "Nuoseklus veiksmų atlikimas",
+          "methodType": "main",
+          "strategyTags": [
+            "neigiami-skaičiai"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos ir dalybos etapas",
+              "action": "Apskaičiuokite sandaugą $12$ ir dalmenį $4$.",
+              "reason": "Daugyba ir dalyba turi pirmenybę prieš atimtį.",
+              "result": "Gauti tarpiniai rezultatai."
+            },
+            {
+              "title": "Galutinis sudėjimas",
+              "action": "Sujunkite: $-15 - 12 + 4$.",
+              "reason": "Užbaigiamas reiškinio skaičiavimas.",
+              "result": "Reikšmė lygi $-23$."
+            }
+          ],
+          "finalAnswer": "Reikšmė lygi $-23$."
+        }
+      ],
+      "alternateMethodNote": "Galima perrašyti reiškinį kaip neigiamų skaičių sumą: $-15 + (-12) + 4$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-bdd1881c-trap-1",
+          "title": "Daugybos rezultato ženklo klaida",
+          "wrongMove": "Manymas, kad $(-4) \\times (-3) = -12$.",
+          "whyTempting": "Mokiniai dažnai galvoja, kad 'neigiamas skaičius sandaugoje visada duoda neigiamą rezultatą'.",
+          "correction": "Dviejų neigiamų skaičių sandauga visada yra teigiamas skaičius. Minusai vienas kitą 'panaikina'.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-bdd1881c-trap-2",
+          "title": "Veiksmų eilės pažeidimas",
+          "wrongMove": "Pradedama skaičiuoti nuo kairės: $-15 - (-4) = -11$.",
+          "whyTempting": "Natūralus noras skaityti ir skaičiuoti tiesine tvarka.",
+          "correction": "Visada vadovaukitės pirmenybės taisyklėmis: skliaustai, daugyba/dalyba, sudėtis/atimtis.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų rezultatas, jei reiškinyje būtų dar vienas neigiamas daugiklis?",
+        "Koks būtų rezultatas, jei dalybos veiksmas būtų $(-20) / 5$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-bdd1881c-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks rezultatas gaunamas dauginant arba dalinant du neigiamus skaičius?",
+          "back": "Gaunamas teigiamas skaičius (pvz., $(-2) \\times (-3) = 6$).",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-ff4946f2",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Palyginkite du skaičius: $2^{30}$ ir $3^{20}$. Nurodykite, kuris skaičius yra didesnis.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaičius $3^{20}$ yra didesnis."
+      },
+      "answerText": "3^20",
+      "coreIdea": {
+        "title": "Suvienodinkite laipsnio rodiklius",
+        "text": "Laipsnio rodiklius $30$ ir $20$ išreikškite kaip sandaugas su $10$: $30 = 3 \\times 10$, $20 = 2 \\times 10$. Pritaikykite taisyklę $(x^a)^b = x^{ab}$."
+      },
+      "strategyTags": [
+        "laipsniai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Norėdami palyginti du laipsnius su skirtingais pagrindais, pabandykite suvienodinti jų rodiklius. Pastebėkite, kad $30$ ir $20$ yra skaičiaus $10$ kartotiniai.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pritaikykite laipsnio kėlimo laipsniu taisyklę $(a^n)^m = a^{n \\times m}$. Pavyzdžiui, $2^{30}$ galime užrašyti kaip $(2^3)^{10}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Paverskite abu skaičius į pavidalą su rodikliu $10$: $2^{30} = 8^{10}$ ir $3^{20} = 9^{10}$. Dabar juos palyginti yra labai paprasta.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pastebime, kad abiejų skaičių laipsnio rodiklius galima išreikšti per bendrą daugiklį $10$."
+        },
+        {
+          "text": "Pertvarkome pirmąjį skaičių: $2^{30} = 2^{3 \\times 10} = (2^3)^{10} = 8^{10}$."
+        },
+        {
+          "text": "Pertvarkome antrąjį skaičių: $3^{20} = 3^{2 \\times 10} = (3^2)^{10} = 9^{10}$."
+        },
+        {
+          "text": "Lyginame gautus skaičius su vienodais rodikliais: kadangi $9 > 8$, tai $9^{10} > 8^{10}$."
+        },
+        {
+          "text": "Išvada: skaičius $3^{20}$ yra didesnis už $2^{30}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-ff4946f2-method-1",
+          "title": "Rodiklių suvienodinimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "laipsniai"
+          ],
+          "steps": [
+            {
+              "title": "Transformacija",
+              "action": "Užrašykite abu skaičius kaip laipsnius su rodikliu $10$.",
+              "reason": "Kad būtų galima lyginti tik pagrindus.",
+              "result": "Gauti skaičiai $8^{10}$ ir $9^{10}$."
+            },
+            {
+              "title": "Palyginimas",
+              "action": "Nustatykite didesnį pagrindą.",
+              "reason": "Esant vienodiems teigiamiems rodikliams, didesnis pagrindas lemia didesnę vertę.",
+              "result": "Nustatyta, kad $3^{20}$ yra didesnis."
+            }
+          ],
+          "finalAnswer": "Skaičius $3^{20}$ yra didesnis."
+        }
+      ],
+      "alternateMethodNote": "Galima bandyti nuosekliai dauginti, tačiau tai užtruktų labai ilgai ir būtų didelė tikimybė suklysti.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-ff4946f2-trap-1",
+          "title": "Skubotas spėjimas pagal rodiklį",
+          "wrongMove": "Manymas, kad $2^{30}$ didesnis, nes jo rodiklis ($30$) yra didesnis.",
+          "whyTempting": "Mokiniai dažnai galvoja, kad rodiklis turi didesnę įtaką skaičiaus dydžiui nei pagrindas.",
+          "correction": "Būtina įvertinti abu dėmenis. Nedidelis rodiklio skirtumas gali būti kompensuotas didesniu pagrindu.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-ff4946f2-trap-2",
+          "title": "Laipsnio savybių painiojimas",
+          "wrongMove": "Manymas, kad $2^{30} = 2 \\times 30 = 60$.",
+          "whyTempting": "Elementari aritmetinė klaida pradedantiesiems.",
+          "correction": "Laipsnis nurodo, kiek kartų pagrindas dauginamas iš savęs. $2^{30}$ yra milžiniškas skaičius ($>1$ milijardas).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar būtų galima suvienodinti skaičių pagrindus vietoje rodiklių?",
+        "Koks bendras daugiklis geriausiai tiktų lyginant $5^{15}$ ir $2^{35}$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-ff4946f2-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip palyginti du laipsnius su skirtingais pagrindais ir rodikliais (pvz., $2^{30}$ ir $3^{20}$)?",
+          "back": "Reikia suvienodinti rodiklius ieškant jų DBD. Pvz., $2^{30} = (2^3)^{10} = 8^{10}$, o $3^{20} = (3^2)^{10} = 9^{10}$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-13d0b51d",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Šviesos greitis yra maždaug $300\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Šviesos greitis yra $3 \\times 10^8$ m/s."
+      },
+      "answerText": "3 * 10^8 m/s",
+      "coreIdea": {
+        "title": "Konvertuokite vienetus ir skaičiuokite nulius",
+        "text": "Pirmiausia kilometrus paverskite metrais (padauginkite iš $1000$). Tada gautą skaičių užrašykite forma $a \\times 10^n$, kur $1 \\le a < 10$."
+      },
+      "strategyTags": [
+        "standartinė-išraiška",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia kilometrus paverskite metrais. Prisiminkite, kad $1$ km = $1000$ m, todėl greitį reikia padauginti iš $1000$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Šviesos greitis metrais per sekundę bus $300\\ 000 \\times 1000 = 300\\ 000\\ 000$. Suskaičiuokite, kiek nulių yra šiame skaičiuje.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Standartinė skaičiaus išraiška yra $a \\times 10^n$, kur $1 \\le a < 10$. Perkelkite kablelį taip, kad liktų tik skaitmuo $3$, ir suskaičiuokite perkeltų pozicijų kiekį.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kilometrus paverčiame metrais: $300\\ 000 \\text{ km/s} = 300\\ 000 \\times 1000 \\text{ m/s} = 300\\ 000\\ 000$ m/s."
+        },
+        {
+          "text": "Skaičių $300\\ 000\\ 000$ turime užrašyti pavidalu $a \\times 10^n$. Čia $a = 3$."
+        },
+        {
+          "text": "Suskaičiuojame skaitmenų kiekį po trejeto: yra lygiai $8$ nuliai."
+        },
+        {
+          "text": "Vadinasi, greitis standartine išraiška yra $3 \\times 10^8$ m/s."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-13d0b51d-method-1",
+          "title": "Vienetų konvertavimas ir mokslo notacija",
+          "methodType": "main",
+          "strategyTags": [
+            "standartinė-išraiška"
+          ],
+          "steps": [
+            {
+              "title": "Matavimo vienetų derinimas",
+              "action": "Padauginkite $300\\ 000$ iš $10^3$.",
+              "reason": "Užduotis reikalauja greičio metrais per sekundę.",
+              "result": "Gautas skaičius $300\\ 000\\ 000$."
+            },
+            {
+              "title": "Standartizavimas",
+              "action": "Perkelkite kablelį per $8$ pozicijas į kairę.",
+              "reason": "Standartinėje išraiškoje prieš kablelį turi būti tik vienas skaitmuo.",
+              "result": "Rezultatas $3 \\times 10^8$ m/s."
+            }
+          ],
+          "finalAnswer": "Šviesos greitis yra $3 \\times 10^8$ m/s."
+        }
+      ],
+      "alternateMethodNote": "Galima iškart naudoti laipsnius: $300\\ 000 = 3 \\times 10^5$, o padauginus iš $10^3$ (metrai), rodikliai sudedami: $5+3=8$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-13d0b51d-trap-1",
+          "title": "Vienetų keitimo pamiršimas",
+          "wrongMove": "Atsakymas $3 \\times 10^5$.",
+          "whyTempting": "Mokinys teisingai suskaičiuoja nulius pradiniame skaičiuje, bet neperskaito, kad reikia metrų (ne kilometrų).",
+          "correction": "Visada pasitikrinkite matavimo vienetus. $1$ km yra $1000$ kartų didesnis už $1$ metrą.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-13d0b51d-trap-2",
+          "title": "Neteisingas nulio skaičiavimas",
+          "wrongMove": "Atsakymas $3 \\times 10^7$ arba $3 \\times 10^9$.",
+          "whyTempting": "Lengva suklysti vizualiai skaičiuojant ilgą nulių seką.",
+          "correction": "Geriausia nulius skaičiuoti po tris (tūkstančių grupėmis) arba braukyti juos pieštuku.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl mokslinėje išraiškoje visada paliekamas tik vienas skaitmuo prieš kablelį?",
+        "Kaip pasikeistų laipsnio rodiklis, jei greitį matuotume milimetrais per sekundę?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-13d0b51d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra šviesos greičio ($300\\ 000$ km/s) standartinė išraiška m/s?",
+          "back": "$3 \\times 10^8$ m/s (konvertavus: $300\\ 000\\ 000$ m/s).",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-de608e5f",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite reiškinio $\\frac{x^2 - y^2}{x - y}$ reikšmę, kai $x = -2.5$ ir $y = -1.5$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Reikšmė lygi $-4$."
+      },
+      "answerText": "-4",
+      "coreIdea": {
+        "title": "Supaprastinkite reiškinį prieš įstatant",
+        "text": "Naudokite kvadratų skirtumo formulę $x^2 - y^2 = (x-y)(x+y)$. Suprastinkite trupmeną, o tada įstatykite reikšmes."
+      },
+      "strategyTags": [
+        "reiškiniai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prieš įstatydami skaitines reikšmes, pabandykite suprastinti reiškinį naudodami greitosios daugybos formules.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Skaitiklį $x^2 - y^2$ galima išskaidyti į sandaugą $(x - y)(x + y)$. Ar matote, kaip tai padeda?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Suprastinkite trupmeną padalindami skaitiklį ir vardiklį iš $(x - y)$. Liks tik paprastas reiškinys $x + y$, į kurį belieka įstatyti reikšmes.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Užrašome reiškinio skaitiklį kaip kvadratų skirtumą: $x^2 - y^2 = (x - y)(x + y)$."
+        },
+        {
+          "text": "Suprastiname pradinę trupmeną: $\\frac{(x - y)(x + y)}{x - y} = x + y$."
+        },
+        {
+          "text": "Į gautą supaprastintą reiškinį $x + y$ įstatome reikšmes $x = -2.5$ ir $y = -1.5$."
+        },
+        {
+          "text": "Apskaičiuojame sumą: $-2.5 + (-1.5) = -4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-de608e5f-method-1",
+          "title": "Suprastinimo ir įstatymo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "reiškiniai"
+          ],
+          "steps": [
+            {
+              "title": "Algebrinis suprastinimas",
+              "action": "Pakeiskite skaitiklį $(x-y)(x+y)$ ir suprastinkite su vardikliu.",
+              "reason": "Kad išvengtume sudėtingų skaičiavimų su kvadratais.",
+              "result": "Gautas reiškinys $x+y$."
+            },
+            {
+              "title": "Skaičiavimas",
+              "action": "Sudėkite $-2.5$ ir $-1.5$.",
+              "reason": "Tai galutinis žingsnis reikšmei rasti.",
+              "result": "Rezultatas $-4$."
+            }
+          ],
+          "finalAnswer": "Reikšmė lygi $-4$."
+        }
+      ],
+      "alternateMethodNote": "Galima skaičiuoti ir tiesiogiai, tačiau tai reikalauja kėlimo kvadratu: $(-2.5)^2 = 6.25$, $(-1.5)^2 = 2.25$. Trupmena: $(6.25 - 2.25) / (-2.5 - (-1.5)) = 4 / (-1) = -4$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-de608e5f-trap-1",
+          "title": "Neigiamų skaičių sudėties klaida",
+          "wrongMove": "Manymas, kad $-2.5 + (-1.5) = -1.0$.",
+          "whyTempting": "Mokiniai kartais negeba teisingai 'pajusti' neigiamų skaičių sumos ir atlieka atimtį.",
+          "correction": "Sudedant du neigiamus skaičius, jų moduliai sudedami, o prieš rezultatą rašomas minusas: $2.5 + 1.5 = 4$, todėl rezultatas $-4$.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-de608e5f-trap-2",
+          "title": "Vardiklio ženklo klaida",
+          "wrongMove": "Manymas, kad vardiklis $x - y = -2.5 - (-1.5)$ yra lygus $-4$.",
+          "whyTempting": "Supainiojamas atimties veiksmas su sudėtimi.",
+          "correction": "Atimant neigiamą skaičių, minusas ir minusas duoda pliusą: $-2.5 + 1.5 = -1$.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuriuo atveju skaičiavimas buvo greitesnis – prieš ar po suprastinimo?",
+        "Ar reiškinys būtų turėjęs prasmę, jei $x$ būtų lygus $y$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-de608e5f-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip greitai apskaičiuoti reiškinį $\\frac{x^2 - y^2}{x - y}$?",
+          "back": "Suprastinti naudojant kvadratų skirtumo formulę iki $x + y$.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-420ecc0f",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Išspręskite nelygybę: $5 - 3x > 17$. Raskite didžiausią sveikąjį šios nelygybės sprendinį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Didžiausias sveikasis sprendinys yra $-5$."
+      },
+      "answerText": "-5",
+      "coreIdea": {
+        "title": "Keiskite nelygybės ženklą dalijant iš neigiamo skaičiaus",
+        "text": "Spręskite nelygybę kaip lygtį, tačiau nepamirškite: kai dalijate abi nelygybės puses iš neigiamo skaičiaus, nelygybės ženklas keičiasi į priešingą."
+      },
+      "strategyTags": [
+        "nelygybės",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Perkelkite laisvąjį narį $5$ į dešinę nelygybės pusę, nepamiršdami pakeisti jo ženklo į priešingą.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atlikę atimtį dešinėje pusėje, gausite $-3x > 12$. Pagalvokite, kas nutinka su nelygybės ženklu dalijant iš $-3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padaliję iš $-3$, gausite $x < -4$. Dabar raskite didžiausią sveikąjį skaičių, kuris tenkina šią griežtą nelygybę.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia pertvarkome nelygybę perkeldami skaičių $5$: $-3x > 17 - 5$."
+        },
+        {
+          "text": "Suprastiname dešinę pusę: $-3x > 12$."
+        },
+        {
+          "text": "Padalijame abi puses iš $-3$. Kadangi dalijame iš neigiamo skaičiaus, nelygybės ženklas apsiverčia: $x < -4$."
+        },
+        {
+          "text": "Ieškome didžiausio sveikojo skaičiaus, mažesnio už $-4$. Skaičius $-4$ netinka, nes nelygybė griežta, todėl artimiausias mažesnis sveikasis skaičius yra $-5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-420ecc0f-method-1",
+          "title": "Analitinis nelygybės sprendimas",
+          "methodType": "main",
+          "strategyTags": [
+            "nelygybės"
+          ],
+          "steps": [
+            {
+              "title": "Kintamųjų izoliavimas",
+              "action": "Atimkite $5$ iš abiejų nelygybės pusių.",
+              "reason": "Norime palikti narį su $x$ vienoje pusėje.",
+              "result": "$-3x > 12$."
+            },
+            {
+              "title": "Dalyba ir ženklo keitimas",
+              "action": "Padalykite iš $-3$ ir pakeiskite $>$ į $<$.",
+              "reason": "Dalinant iš neigiamo skaičiaus nelygybės kryptis keičiasi.",
+              "result": "$x < -4$."
+            },
+            {
+              "title": "Sveikojo sprendinio parinkimas",
+              "action": "Iš intervalo $(-\\infty; -4)$ išrinkite didžiausią sveikąjį skaičių.",
+              "reason": "Reikia rasti konkretų sveikąjį sprendinį pagal sąlygą.",
+              "result": "$-5$."
+            }
+          ],
+          "finalAnswer": "Didžiausias sveikasis sprendinys yra $-5$."
+        }
+      ],
+      "alternateMethodNote": "Galima tikrinti sveikuosius skaičius iš eilės (pvz., $-3, -4, -5$), kol rasime didžiausią, tenkinantį nelygybę.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-420ecc0f-trap-1",
+          "title": "Nelygybės ženklo nekeitimas",
+          "wrongMove": "Padalijus iš $-3$, paliekamas ženklas $>$, gaunant $x > -4$.",
+          "whyTempting": "Tai dažna klaida pamirštant specifinę nelygybių taisyklę dirbant su neigiamais skaičiais.",
+          "correction": "Visada apverskite nelygybės ženklą, kai dauginate arba dalijate iš neigiamo skaičiaus.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-420ecc0f-trap-2",
+          "title": "Ribinio taško įtraukimas",
+          "wrongMove": "Pasirenkamas atsakymas $-4$.",
+          "whyTempting": "Skaičius $-4$ gaunamas išsprendus lygtį, todėl mokiniai jį laiko sprendiniu.",
+          "correction": "Nelygybė yra griežta ($<$), todėl pats skaičius $-4$ sprendiniu būti negali.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada nelygybės ženklas keičiasi į priešingą?",
+        "Kuo skirtųsi atsakymas, jei nelygybė būtų negriežta ($5 - 3x \\ge 17$)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-420ecc0f-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė taisyklė taikoma dalijant nelygybę iš neigiamo skaičiaus?",
+          "back": "Nelygybės ženklas privalo būti pakeistas į priešingą (pvz., iš $>$ į $<$ ).",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-8e4f7634",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trys darbininkai atlieka darbą per $6$ valandas. Per kiek valandų šį darbą atliktų $5$ tokio paties pajėgumo darbininkai?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Darbą atliks per $3.6$ valandos (arba $3$ val. $36$ min.)."
+      },
+      "answerText": "3.6 valandos (3 val. 36 min.)",
+      "coreIdea": {
+        "title": "Naudokite atvirkštinį proporcingumą",
+        "text": "Darbininkų skaičius ir laikas yra atvirkščiai proporcingi dydžiai. Didesnis darbininkų skaičius atliks darbą greičiau. Raskite bendrą darbo apimtį žmogaus-valandomis."
+      },
+      "strategyTags": [
+        "atvirkštinė-proporcija",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite visą darbo apimtį 'žmogaus-valandomis'. Tai padarysite sudauginę darbininkų skaičių ir jų sugaištą laiką.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Trys darbininkai dirbo po $6$ valandas, todėl bendras darbo kiekis yra $18$ žmogaus-valandų. Šis kiekis nesikeis dirbant $5$ darbininkams.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padalykite bendrą darbo kiekį ($18$) iš naujo darbininkų skaičiaus ($5$). Gautą dešimtainę dalį (valandas) paverskite minutėmis.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame bendrą darbo apimtį: $3 \\text{ darbininkai} \\times 6 \\text{ valandos} = 18 \\text{ žmogaus-valandų}$."
+        },
+        {
+          "text": "Apskaičiuojame laiką, per kurį tą patį darbą atliktų $5$ darbininkai: $T = 18 / 5 = 3.6$ valandos."
+        },
+        {
+          "text": "Konvertuojame laiką į valandas ir minutes: $3$ pilnos valandos ir $0.6 \\times 60 = 36$ minutės."
+        },
+        {
+          "text": "Gauta išvada: $5$ darbininkai darbą atliks per $3$ valandas ir $36$ minutes."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-8e4f7634-method-1",
+          "title": "Atvirkštinės proporcijos metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "atvirkštinė-proporcija"
+          ],
+          "steps": [
+            {
+              "title": "Darbo apimties nustatymas",
+              "action": "Sudauginkite $3 \\cdot 6 = 18$.",
+              "reason": "Žmogaus-valandos parodo pastovų darbo kiekį.",
+              "result": "$18$ žmogaus-valandų."
+            },
+            {
+              "title": "Naujo laiko radimas",
+              "action": "Padalykite $18$ iš $5$.",
+              "reason": "Darbas paskirstomas didesniam darbininkų skaičiui.",
+              "result": "$3.6$ valandos."
+            }
+          ],
+          "finalAnswer": "Darbą atliks per $3.6$ valandos (arba $3$ val. $36$ min.)."
+        }
+      ],
+      "alternateMethodNote": "Galima sudaryti proporciją: $3 / 5 = x / 6$ (atvirkštinė proporcija: daugiau žmonių, mažiau laiko), iš kurios $5x = 18$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-8e4f7634-trap-1",
+          "title": "Tiesioginės proporcijos taikymas",
+          "wrongMove": "Skaičiavimas $3/6 = 5/x$, iš kurio $x = 10$ valandų.",
+          "whyTempting": "Mokiniai pripratę prie tiesioginių proporcijų (daugiau prekių – didesnė kaina).",
+          "correction": "Darbininkų skaičius ir laikas yra atvirkščiai proporcingi: kuo daugiau žmonių dirba, tuo mažiau laiko užtrunka.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-8e4f7634-trap-2",
+          "title": "Neteisingas minučių konvertavimas",
+          "wrongMove": "Teigimas, kad $3.6$ valandos yra $3$ valandos ir $6$ minutės.",
+          "whyTempting": "Klaidingas dešimtainės dalies tapatinimas su laiko vienetais (sistema 100 vs sistema 60).",
+          "correction": "Viena valanda turi $60$ minučių, todėl $0.6$ valandos yra $0.6 \\times 60 = 36$ minutės.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų laikui, jei darbininkų skaičių padvigubintume?",
+        "Kokie dydžiai realiame gyvenime dažniausiai yra atvirkščiai proporcingi?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-8e4f7634-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip kinta laikas ir darbininkų skaičius atliekant tą patį darbą?",
+          "back": "Jie kinta atvirkščiai proporcingai: padidėjus darbininkų skaičiui $n$ kartų, laikas sumažėja $n$ kartų.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-5a19da69",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Prekės kaina buvo padidinta $25\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kainą reikia sumažinti $20\\%$."
+      },
+      "answerText": "20%",
+      "coreIdea": {
+        "title": "Sudarykite procentinį santykį",
+        "text": "Tarkime, kad pradinė kaina buvo $100$. Padidinus $25\\%$, kaina tapo $125$. Dabar reikia rasti, kokią dalį skaičiaus $125$ sudaro skirtumas $25$."
+      },
+      "strategyTags": [
+        "procentai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pasirinkite patogų skaičių pradinei kainai, pavyzdžiui, $100$ Eur. Kokia kaina taps po padidinimo?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Po padidinimo kaina yra $125$ Eur. Norime grįžti prie $100$ Eur, todėl turime kainą sumažinti $25$ Eurais.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dabar apskaičiuokite, kiek procentų sudaro tie $25$ Eurai nuo NAUJOSIOS kainos ($125$ Eur). Naudokite formulę: $(skirtumas / nauja\\_kaina) \\times 100\\%$.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime, kad pradinė prekės kaina buvo $100$ vienetų."
+        },
+        {
+          "text": "Padidinus kainą $25\\%$, naujoji kaina lygi $100 + 25 = 125$ vienetų."
+        },
+        {
+          "text": "Norėdami grįžti prie pradinės kainos ($100$), turime naująją kainą sumažinti $125 - 100 = 25$ vienetais."
+        },
+        {
+          "text": "Apskaičiuojame, kokią dalį sudaro šis sumažinimas nuo naujosios kainos: $25 / 125 = 1/5$."
+        },
+        {
+          "text": "Paverčiame dalį procentais: $1/5 \\times 100\\% = 20\\%$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-5a19da69-method-1",
+          "title": "Santykinio pokyčio metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "procentai"
+          ],
+          "steps": [
+            {
+              "title": "Bazinės vertės nustatymas",
+              "action": "Tarkime, pradinė kaina $x = 100$.",
+              "reason": "Su skaičiumi $100$ lengviausia skaičiuoti procentus.",
+              "result": "Padidinta kaina lygi $125$."
+            },
+            {
+              "title": "Atvirkštinio sumažinimo radimas",
+              "action": "Apskaičiuokite $25 / 125$.",
+              "reason": "Sumažinimas skaičiuojamas nuo naujosios (didesnės) bazės.",
+              "result": "$0.2$ arba $20\\%$."
+            }
+          ],
+          "finalAnswer": "Kainą reikia sumažinti $20\\%$."
+        }
+      ],
+      "alternateMethodNote": "Galima naudoti algebrinę lygti: $1.25x \\cdot (1 - p) = x$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-5a19da69-trap-1",
+          "title": "Simetriškumo klaida",
+          "wrongMove": "Manymas, kad reikia sumažinti tiek pat procentų ($25\\%$).",
+          "whyTempting": "Atrodo logiška: jei padidinome $25$, tai ir sumažinti turime $25$.",
+          "correction": "Padidinimas skaičiuojamas nuo mažesnės bazės, o sumažinimas – nuo didesnės. Todėl procentinė vertė sumažėja.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-5a19da69-trap-2",
+          "title": "Neteisingos bazės pasirinkimas",
+          "wrongMove": "Skaičiavimas $25$ nuo $100$ Eurų sumažinimo etape.",
+          "whyTempting": "Mokiniai nesąmoningai viską lygina su pradiniu skaičiumi.",
+          "correction": "Sumažinimas vyksta NUO naujosios kainos, todėl ji tampa pagrindu ($100\\%$).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl sumažinimo procentas yra mažesnis už padidinimo procentą?",
+        "Kas būtų, jei kainą pirma sumažintume $20\\%$, o tada padidintume $25\\%$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-5a19da69-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Jei kaina padidėjo $25\\%$, kiek procentų ją reikia sumažinti iki pradinės?",
+          "back": "Reikia sumažinti $20\\%$ (skaičiuojant $25 / 125$).",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-b7ce0257",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jei $5$ traktoriai per $4$ dienas suaria $60$ hektarų, kiek hektarų suars $8$ tokie patys traktoriai per $3$ dienas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Traktoriai suars $72$ hektarus."
+      },
+      "answerText": "72",
+      "coreIdea": {
+        "title": "Raskite vieno traktoriaus našumą per dieną",
+        "text": "Apskaičiuokite, kiek hektarų suaria $1$ traktorius per $1$ dieną. Tada padauginkite šį našumą iš naujo traktorių skaičiaus ir dienų skaičiaus."
+      },
+      "strategyTags": [
+        "sudėtinė-proporcija",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia raskite, kiek hektarų suaria visi $5$ traktoriai per VIENĄ dieną. Padalykite $60$ ha iš dienų skaičiaus.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei $5$ traktoriai per dieną suaria $15$ ha, tai vienas traktorius per dieną suaria dar $5$ kartus mažiau hektarų.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Gavę vieno traktoriaus našumą per dieną ($3$ ha), apskaičiuokite, kiek hektarų per dieną suaria $8$ traktoriai, ir padauginkite iš $3$ dienų.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame, kiek hektarų suaria $5$ traktoriai per $1$ dieną: $60 / 4 = 15$ ha/dieną."
+        },
+        {
+          "text": "Apskaičiuojame vieno traktoriaus darbo našumą per dieną: $15 / 5 = 3$ ha/dieną."
+        },
+        {
+          "text": "Randame, kiek hektarų per dieną suars $8$ traktoriai: $8 \\times 3 = 24$ ha/dieną."
+        },
+        {
+          "text": "Apskaičiuojame bendrą plotą per $3$ dienas: $24 \\times 3 = 72$ ha."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-b7ce0257-method-1",
+          "title": "Vienetinio našumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "sudėtinė-proporcija"
+          ],
+          "steps": [
+            {
+              "title": "Vieno traktoriaus galios radimas",
+              "action": "Apskaičiuokite $60 / (5 \\cdot 4)$.",
+              "reason": "Svarbu žinoti bazinį vieneto darbo kiekį.",
+              "result": "$3$ ha per traktorių per dieną."
+            },
+            {
+              "title": "Rezultato mastelio keitimas",
+              "action": "Padauginkite $3$ iš naujų kintamųjų: $3 \\cdot 8 \\cdot 3$.",
+              "reason": "Darbo kiekis tiesiogiai proporcingas traktorių ir dienų skaičiui.",
+              "result": "$72$ ha."
+            }
+          ],
+          "finalAnswer": "Traktoriai suars $72$ hektarus."
+        }
+      ],
+      "alternateMethodNote": "Galima taikyti sudėtinės proporcijos formulę: $x = 60 \\cdot (8/5) \\cdot (3/4) = 72$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-b7ce0257-trap-1",
+          "title": "Atvirkštinio proporcingumo klaida",
+          "wrongMove": "Bandymas dalinti iš $8$ arba $3$, manant, kad plotas mažės.",
+          "whyTempting": "Mokiniai kartais painioja, kada naudoti tiesioginį, o kada atvirkštinį proporcingumą.",
+          "correction": "Daugiau traktorių ir daugiau dienų reiškia didesnį suartą plotą (tiesioginis proporcingumas).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-b7ce0257-trap-2",
+          "title": "Daugiklių praleidimas",
+          "wrongMove": "Apskaičiuojamas plotas tik $8$ traktoriams per $4$ dienas arba $5$ traktoriams per $3$ dienas.",
+          "whyTempting": "Užmirštama, kad keičiasi du parametrai vienu metu.",
+          "correction": "Būtina įvertinti abiejų dydžių (traktorių ir dienų) pokytį lyginant su pradine sąlyga.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų plotas, jei traktorių būtų dvigubai daugiau, o dienų – perpus mažiau?",
+        "Ar skaičiavimo tvarka (pirma dalinti iš $5$ ar iš $4$) turi reikšmės?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-b7ce0257-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip spręsti sudėtinės proporcijos uždavinį (pvz., $n$ traktorių, $m$ dienų, $S$ plotas)?",
+          "back": "Rasti vieno vieneto (traktoriaus) našumą per vieną laiko vienetą (dieną) ir tada padauginti iš naujų reikšmių.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-06-14ea85c7",
+      "topicId": "olimpiada-06-algebra",
+      "grade": 6,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Penkių skaičių vidurkis lygus $12$. Kai pridedame šeštąjį skaičių, visų šešių skaičių vidurkis tampa lygus $14$. Raskite šeštąjį skaičių.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Šeštasis skaičius lygus $24$."
+      },
+      "answerText": "24",
+      "coreIdea": {
+        "title": "Naudokite sumų palyginimą",
+        "text": "Raskite pirmųjų penkių skaičių sumą (padauginkite vidurkį iš 5) ir visų šešių skaičių sumą (padauginkite naują vidurkį iš 6). Skirtumas bus ieškomas skaičius."
+      },
+      "strategyTags": [
+        "vidurkis",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-06-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-06-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite: jei penkių skaičių vidurkis yra $12$, kokia yra jų bendra suma?",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pridėjus šeštąjį skaičių, turime $6$ skaičius, kurių vidurkis yra $14$. Apskaičiuokite šių šešių skaičių bendrą sumą.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skirtumas tarp šešių skaičių sumos ir penkių skaičių sumos ir bus tas 'papildomas' šeštasis skaičius.",
+          "revealsConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame pradinę penkių skaičių sumą: $S_5 = 5 \\times 12 = 60$."
+        },
+        {
+          "text": "Apskaičiuojame naująją šešių skaičių sumą: $S_6 = 6 \\times 14 = 84$."
+        },
+        {
+          "text": "Randame šeštąjį skaičių atimdami sumas: $x = S_6 - S_5 = 84 - 60 = 24$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-06-14ea85c7-method-1",
+          "title": "Sumų skirtumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "vidurkis"
+          ],
+          "steps": [
+            {
+              "title": "Bendrųjų verčių skaičiavimas",
+              "action": "Sudauginkite kiekius su atitinkamais vidurkiais: $5 \\cdot 12$ ir $6 \\cdot 14$.",
+              "reason": "Vidurkio formulė $V = Suma / Kiekis$ leidžia rasti sumą.",
+              "result": "Sumos $60$ ir $84$."
+            },
+            {
+              "title": "Priedo išskyrimas",
+              "action": "Atimkite $84 - 60$.",
+              "reason": "Visi kiti dėmenys sumose yra identiški, todėl skirtumas nurodo naują narį.",
+              "result": "$24$."
+            }
+          ],
+          "finalAnswer": "Šeštasis skaičius lygus $24$."
+        }
+      ],
+      "alternateMethodNote": "Galima sudaryti lygtį: $(60 + x) / 6 = 14$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-06-14ea85c7-trap-1",
+          "title": "Vidurkių skirtumo klaida",
+          "wrongMove": "Manymas, kad šeštasis skaičius yra tiesiog vidurkių skirtumas ($14 - 12 = 2$).",
+          "whyTempting": "Atrodo paprasta, tačiau vidurkių skirtumas neparodo pridėto skaičiaus vertės.",
+          "correction": "Būtina lyginti sumas, nes vidurkis perskaičiuojamas visai aibei.",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-06-14ea85c7-trap-2",
+          "title": "Neteisingas narių skaičius",
+          "wrongMove": "Dauginimas $5 \\times 14$ vietoj $6 \\times 14$.",
+          "whyTempting": "Mokiniai kartais pamiršta, kad pridėjus vieną skaičių, bendras kiekis padidėja.",
+          "correction": "Visada atidžiai sekite objektų skaičių kiekviename etape ($5$ skaičiai -> $6$ skaičiai).",
+          "reviewConceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Ar šeštasis skaičius visada turi būti didesnis už vidurkį, jei bendras vidurkis padidėjo?",
+        "Koks būtų šeštasis skaičius, jei vidurkis sumažėtų iki $10$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-06-14ea85c7-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip rasti pridėtą skaičių, jei žinomi senas ir naujas vidurkiai?",
+          "back": "Apskaičiuoti naująją bendrą sumą ir atimti senąją bendrą sumą.",
+          "conceptIds": [
+            "olimpiada-06-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-06-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-06-test-challenge",
+      "title": "Olimpiadinis iššūkis (6 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-06-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-06-9af12ecd",
+        "ex-olimpiada-06-3e3ce5c2",
+        "ex-olimpiada-06-15b5cb2b",
+        "ex-olimpiada-06-72644951",
+        "ex-olimpiada-06-95300ab8",
+        "ex-olimpiada-06-2eaeade9",
+        "ex-olimpiada-06-f2a0c71a",
+        "ex-olimpiada-06-69e93b63",
+        "ex-olimpiada-06-b4e7dd8a",
+        "ex-olimpiada-06-bdd1881c"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

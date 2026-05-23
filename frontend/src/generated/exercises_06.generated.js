@@ -1939,1104 +1939,8 @@ export const exercises_06 = [
     ]
   },
   {
-    "id": "ex-olimpiada-06-9af12ecd",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite skaičiaus $360$ pirminių daugiklių išskaidymą ir nurodykite, koks yra didžiausias pirminis skaičius šioje išraiškoje.",
-    "answer": "Didžiausias pirminis daugiklis yra $5$ (išskaidymas: $360 = 2^3 \\times 3^2 \\times 5$).",
-    "acceptedAnswers": [
-      "Didžiausias pirminis daugiklis yra $5$ (išskaidymas: $360 = 2^3 \\times 3^2 \\times 5$)."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Pradėkite skaidydami skaičių $360$ į bet kokius du lengvai pastebimus daugiklius, pavyzdžiui, $36$ ir $10$.",
-      "Pastebėkite, kad $36 = 6^2$ ir $10 = 2 \\times 5$. Tačiau $6$ dar nėra pirminis skaičius, todėl jį reikia skaidyti toliau iki $2 \\times 3$.",
-      "Sugrupuokite visus gautus pirminius skaičius: kiek radote dvejetų, trejetų ir penketų? Didžiausias iš šių skaičių ir bus atsakymas."
-    ],
-    "solution": "Pirmiausia skaičių $360$ užrašome kaip paprastą sandaugą: $360 = 36 \\times 10$. Toliau skaidome kiekvieną narį: $36 = 6 \\times 6 = (2 \\times 3) \\times (2 \\times 3) = 2^2 \\times 3^2$. Skaičių $10$ skaidome į $2 \\times 5$. Sujungiame visus pirminius daugiklius: $360 = 2^2 \\times 3^2 \\times 2 \\times 5 = 2^3 \\times 3^2 \\times 5$. Matome, kad pirminiai daugikliai yra $2, 3$ ir $5$. Iš gautų pirminių daugiklių ($2, 3, 5$) didžiausias yra $5$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Naudokite dalumo medį",
-      "text": "Skaidykite skaičių $360$ į du daugiklius (pvz., $36$ ir $10$), o tada kiekvieną iš jų skaidykite toliau, kol gausite tik pirminius skaičius."
-    },
-    "strategyTags": [
-      "pirminiai-daugikliai",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-9af12ecd-method-1",
-        "title": "Nuoseklus skaidymas pirminiais daugikliais",
-        "methodType": "main",
-        "strategyTags": [
-          "pirminiai-daugikliai"
-        ],
-        "steps": [
-          {
-            "title": "Daugiklių medžio sudarymas",
-            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\cdot 6$, o $10$ į $2 \\cdot 5$.",
-            "reason": "Norint pasiekti 'matematinius atomus' – pirminius skaičius.",
-            "result": "Gauti daugikliai $6, 6, 2, 5$."
-          },
-          {
-            "title": "Galutinis išgryninimas",
-            "action": "Pakeiskite kiekvieną $6$ į $2 \\cdot 3$ ir surašykite viską laipsnių pavidalu.",
-            "reason": "Užtikrinama, kad visi sandaugos nariai yra pirminiai skaičiai.",
-            "result": "$360 = 2^3 \\cdot 3^2 \\cdot 5$."
-          }
-        ],
-        "finalAnswer": "Didžiausias pirminis daugiklis yra $5$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-9af12ecd-trap-1",
-        "title": "Sudėtinio skaičiaus palaikymas pirminiu",
-        "wrongMove": "Teigimas, kad $6$ arba $10$ yra didžiausias pirminis daugiklis.",
-        "whyTempting": "Šie skaičiai pasirodo ankstyvame skaidymo etape ir yra didesni už $5$.",
-        "correction": "Visada patikrinkite, ar skaičius dalijasi tik iš savęs ir $1$. Skaičiai $6$ ir $10$ turi daugiau daliklių.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-9af12ecd-trap-2",
-        "title": "Skaitmenų ir daugiklių painiojimas",
-        "wrongMove": "Manymas, kad didžiausias pirminis skaičius yra $3$ (iš skaičiaus $360$ skaitmenų).",
-        "whyTempting": "Skaičius $3$ yra pirmasis skaitmuo ir jis yra pirminis.",
-        "correction": "Ieškokite ne skaičiaus skaitmenų, o skaičių, iš kurių padauginus gaunamas pradinio skaičiaus rezultatas.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kodėl svarbu skaidyti iki galo, kol gausime tik pirminius skaičius?",
-      "Ar skaidymo eiliškumas turi įtakos galutiniam rezultatui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-9af12ecd-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Koks yra didžiausias skaičiaus $360$ pirminis daugiklis?",
-        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\cdot 3^2 \\cdot 5$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pradėkite skaidydami skaičių $360$ į bet kokius du lengvai pastebimus daugiklius, pavyzdžiui, $36$ ir $10$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pastebėkite, kad $36 = 6^2$ ir $10 = 2 \\times 5$. Tačiau $6$ dar nėra pirminis skaičius, todėl jį reikia skaidyti toliau iki $2 \\times 3$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Sugrupuokite visus gautus pirminius skaičius: kiek radote dvejetų, trejetų ir penketų? Didžiausias iš šių skaičių ir bus atsakymas.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-3e3ce5c2",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite skaičių $120$ ir $180$ didžiausio bendrojo daliklio (DBD) ir mažiausio bendrojo kartotinio (MBK) sumą.",
-    "answer": "Suma lygi $420$.",
-    "acceptedAnswers": [
-      "Suma lygi $420$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Pirmiausia abu skaičius išskaidykite pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$, o $180 = 2^2 \\times 3^2 \\times 5$.",
-      "Didžiausiam bendram dalikliui (DBD) imkite bendrus pirminius skaičius su mažiausiais jų rodikliais: $2^2, 3^1$ ir $5^1$.",
-      "Mažiausiam bendram kartotiniui (MBK) imkite visus pasirodžiusius pirminius skaičius su didžiausiais jų rodikliais: $2^3, 3^2$ ir $5^1$. Apskaičiavę abi reikšmes, jas sudėkite."
-    ],
-    "solution": "Išskaidome abu skaičius pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$ ir $180 = 2^2 \\times 3^2 \\times 5$. Randame DBD: $DBD(120, 180) = 2^2 \\times 3 \\times 5 = 4 \\times 3 \\times 5 = 60$. Randame MBK: $MBK(120, 180) = 2^3 \\times 3^2 \\times 5 = 8 \\times 9 \\times 5 = 360$. Sudedame gautas reikšmes: $60 + 360 = 420$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Išskaidykite pirminiais daugikliais",
-      "text": "Užrašykite $120$ ir $180$ pirminiais daugikliais. DBD sudarykite paėmę bendrus daugiklius su mažiausiais rodikliais, o MBK – su didžiausiais rodikliais."
-    },
-    "strategyTags": [
-      "dbd-mbk",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-3e3ce5c2-method-1",
-        "title": "Skaidymas pirminiais daugikliais",
-        "methodType": "main",
-        "strategyTags": [
-          "dbd-mbk"
-        ],
-        "steps": [
-          {
-            "title": "Pirminis išskaidymas",
-            "action": "Užrašykite $120 = 2^3 \\cdot 3^1 \\cdot 5^1$ ir $180 = 2^2 \\cdot 3^2 \\cdot 5^1$.",
-            "reason": "Tai leidžia tiksliai matyti, kokie daugikliai sudaro kiekvieną skaičių.",
-            "result": "Daugikliai paruošti analizei."
-          },
-          {
-            "title": "DBD ir MBK radimas",
-            "action": "Išrinkite daugiklius DBD ($60$) ir MBK ($360$) skaičiavimui.",
-            "reason": "DBD reikalauja mažiausių rodiklių, MBK – didžiausių.",
-            "result": "Gautos DBD ir MBK reikšmės."
-          }
-        ],
-        "finalAnswer": "Suma lygi $420$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-3e3ce5c2-trap-1",
-        "title": "DBD ir MBK taisyklių sumaišymas",
-        "wrongMove": "Paėmimas didžiausių rodiklių DBD skaičiavimui.",
-        "whyTempting": "Žodis 'didžiausias' pavadinime asocijuojasi su didžiausiais laipsniais.",
-        "correction": "Prisiminkite, kad DBD turi būti daliklis (mažesnis skaičius), todėl imame mažiausius bendrus laipsnius.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-3e3ce5c2-trap-2",
-        "title": "MBK radimas tiesiog dauginant",
-        "wrongMove": "Skaičiavimas $MBK = 120 \\times 180 = 21600$.",
-        "whyTempting": "Paprasta taisyklė, tačiau ji galioja tik jei skaičiai neturi bendrų daliklių.",
-        "correction": "Būtina padalinti sandaugą iš DBD, kad bendri daugikliai nebūtų dubliuojami.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kodėl MBK visada yra ne mažesnis už pradinius skaičius, o DBD – ne didesnis?",
-      "Kas nutiktų MBK reikšmei, jei skaičiai būtų pirminiai tarpusavyje?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-3e3ce5c2-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip randamas DBD ir MBK naudojant pirminį išskaidymą?",
-        "back": "DBD: sudauginame bendrus daugiklius mažiausiais rodikliais. MBK: sudauginame visus daugiklius didžiausiais rodikliais.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pirmiausia abu skaičius išskaidykite pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$, o $180 = 2^2 \\times 3^2 \\times 5$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Didžiausiam bendram dalikliui (DBD) imkite bendrus pirminius skaičius su mažiausiais jų rodikliais: $2^2, 3^1$ ir $5^1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Mažiausiam bendram kartotiniui (MBK) imkite visus pasirodžiusius pirminius skaičius su didžiausiais jų rodikliais: $2^3, 3^2$ ir $5^1$. Apskaičiavę abi reikšmes, jas sudėkite.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-15b5cb2b",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Natūraliųjų skaičių sandauga lygi $1000$. Žinoma, kad nei vienas iš šių skaičių nesibaigia nuliu. Raskite šių dviejų skaičių sumą.",
-    "answer": "Skaičių suma lygi $133$.",
-    "acceptedAnswers": [
-      "Skaičių suma lygi $133$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Pradėkite nuo skaičiaus $1000$ pirminio išskaidymo: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$.",
-      "Svarbiausia taisyklė: skaičius baigiasi nuliu tada ir tik tada, kai jis dalijasi iš $10$, t. y. turi savo sudėtyje bent vieną dvejetą IR bent vieną penketą.",
-      "Kadangi nei vienas iš skaičių nesibaigia nuliu, vienas skaičius privalo turėti visus turimus dvejetus ($2^3$), o kitas – visus turimus penketus ($5^3$). Suskaičiuokite šių skaičių sumą."
-    ],
-    "solution": "Išskaidome $1000$ pirminiais daugikliais: $1000 = 2^3 \\times 5^3$. Kad skaičius nesibaigtų nuliu, jame negali būti daugiklių $2$ ir $5$ kartu. Jei abu skaičiai $A$ ir $B$ būtų tokie, tai vienas iš jų turi turėti tik daugiklius $2$, o kitas – tik $5$. Todėl ieškomi skaičiai yra $A = 2^3 = 8$ ir $B = 5^3 = 125$. Patikriname: $8 \\times 125 = 1000$ (tinka), abu nesibaigia nuliu (tinka). Jų suma: $8 + 125 = 133$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Atskirkite 2 ir 5 daugiklius",
-      "text": "Skaičius $1000$ yra $2^3 \\times 5^3$. Jeigu bent vienas iš ieškomų skaičių turi savo sudėtyje ir daugiklį 2, ir daugiklį 5, jis būtinai dalinsis iš 10 ir baigsis nuliu."
-    },
-    "strategyTags": [
-      "aritmetikos-teorema",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-15b5cb2b-method-1",
-        "title": "Atskyrimas pagal pirminius daugiklius",
-        "methodType": "main",
-        "strategyTags": [
-          "aritmetikos-teorema"
-        ],
-        "steps": [
-          {
-            "title": "Struktūros analizė",
-            "action": "Išskaidykite $1000$ į $2^3 \\cdot 5^3$.",
-            "reason": "Norint pamatyti, kaip galima suformuoti du skaičius.",
-            "result": "Gauti pagrindiniai komponentai: trys '2' ir trys '5'."
-          },
-          {
-            "title": "Loginių apribojimų taikymas",
-            "action": "Paskirstykite visus '2' vienam skaičiui, o visus '5' kitam.",
-            "reason": "Bet koks '2' ir '5' derinys tame pačiame skaičiuje sukurtų nulį pabaigoje.",
-            "result": "Gauti skaičiai $8$ ir $125$."
-          }
-        ],
-        "finalAnswer": "Skaičių suma lygi $133$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-15b5cb2b-trap-1",
-        "title": "Atsitiktinis skaidymas į $100$ ir $10$",
-        "wrongMove": "Teigimas, kad skaičiai yra $100$ ir $10$.",
-        "whyTempting": "Jų sandauga tikrai lygi $1000$.",
-        "correction": "Sąlyga griežtai sako, kad nei vienas skaičius NEgali baigtis nuliu. $100$ ir $10$ abu baigiasi nuliais.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-15b5cb2b-trap-2",
-        "title": "Daugiklių palikimas abiejuose skaičiuose",
-        "wrongMove": "Bandymas skaidyti į $20$ ir $50$ arba $2 \\times 500$.",
-        "whyTempting": "Atrodo, kad svarbu tik gauti sandaugą $1000$.",
-        "correction": "Jei bent vienas '2' ir bent vienas '5' pateks į tą patį skaičių, tas skaičius dalinsis iš $10$ ir baigsis nuliu. Būtina juos visiškai atskirti.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kas nutiktų, jei sandauga būtų $10000$? Kokia būtų jų suma?",
-      "Kodėl tik pirminiai skaičiai $2$ ir $5$ lemia nulį skaičiaus gale?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-15b5cb2b-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokie du skaičiai, nesibaigiantys nuliu, padauginti duoda $10^n$?",
-        "back": "Tie skaičiai yra $2^n$ ir $5^n$. Pavyzdžiui, $2^3=8$ ir $5^3=125$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pradėkite nuo skaičiaus $1000$ pirminio išskaidymo: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Svarbiausia taisyklė: skaičius baigiasi nuliu tada ir tik tada, kai jis dalijasi iš $10$, t. y. turi savo sudėtyje bent vieną dvejetą IR bent vieną penketą.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kadangi nei vienas iš skaičių nesibaigia nuliu, vienas skaičius privalo turėti visus turimus dvejetus ($2^3$), o kitas – visus turimus penketus ($5^3$). Suskaičiuokite šių skaičių sumą.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-72644951",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite mažiausią natūralųjį skaičių $n$, iš kurio padauginus skaičių $72$, gautume tikslųjį kubą.",
-    "answer": "Mažiausias toks skaičius yra $3$.",
-    "acceptedAnswers": [
-      "Mažiausias toks skaičius yra $3$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Pirmiausia išskaidykite skaičių $72$ pirminiais daugikliais: $72 = 8 \\times 9 = 2^3 \\times 3^2$.",
-      "Prisiminkite tiksliojo kubo savybę: jo pirminio išskaidymo visi laipsnių rodikliai privalo dalytis iš $3$.",
-      "Pažiūrėkite į daugiklio $3$ laipsnį. Jis dabar yra $2$. Kiek trūksta iki kito skaičiaus, dalaus iš $3$? Tai ir bus mažiausias $n$."
-    ],
-    "solution": "Išskaidome skaičių $72$ pirminiais daugikliais: $72 = 2^3 \\times 3^2$. Sąlyga reikalauja, kad sandauga $72 \\times n$ būtų tikslusis kubas. Tai reiškia, kad visų pirminių daugiklių laipsniai turi būti dalūs iš $3$. Matome, kad daugiklio $2$ laipsnis jau yra $3$ (dalijasi iš $3$), todėl čia nieko keisti nereikia. Daugiklio $3$ laipsnis yra $2$. Mažiausias teigiamas sveikasis skaičius, kurį pridėjus prie $2$ gautume dalų iš $3$ skaičių, yra $1$. Vadinasi, turime padauginti iš $3^1$, todėl mažiausias $n = 3$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Išnagrinėkite pirminių daugiklių laipsnius",
-      "text": "Išskaidykite $72$ pirminiais daugikliais. Tiksliojo kubo pirminio išskaidymo visi laipsnio rodikliai turi būti dalūs iš $3$."
-    },
-    "strategyTags": [
-      "kvadratai-kubai",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-72644951-method-1",
-        "title": "Laipsnių rodiklių lyginimas",
-        "methodType": "main",
-        "strategyTags": [
-          "kvadratai-kubai"
-        ],
-        "steps": [
-          {
-            "title": "Pradinis išskaidymas",
-            "action": "Užrašykite $72 = 2^3 \\cdot 3^2$.",
-            "reason": "Kad matytume esamų daugiklių kiekius.",
-            "result": "Gauti laipsniai: $2$-eto yra $3$, $3$-eto yra $2$."
-          },
-          {
-            "title": "Papildymas iki kubo",
-            "action": "Raskite, kiek trūksta kiekvienam laipsniui iki artimiausio $3$ kartotinio.",
-            "reason": "Tiksliojo kubo laipsniai visada dalūs iš $3$.",
-            "result": "Trūksta vieno trejeto daugiklio ($n=3$)."
-          }
-        ],
-        "finalAnswer": "Mažiausias toks skaičius yra $3$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-72644951-trap-1",
-        "title": "Tiksliojo kvadrato ir kubo painiojimas",
-        "wrongMove": "Teigimas, kad $n=2$, nes $72 \\times 2 = 144 = 12^2$.",
-        "whyTempting": "$144$ yra labai žinomas skaičius-kvadratas, todėl mokiniai nesąmoningai linksta prie jo.",
-        "correction": "Atidžiai perskaitykite sąlygą: prašoma kubo, o ne kvadrato. Kubui reikia $3$-jų vienodų daugiklių.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-72644951-trap-2",
-        "title": "Perteklinis daugiklių pridėjimas",
-        "wrongMove": "Siūlymas $n = 72^2$ arba $n = 2^3 \\times 3^1$.",
-        "whyTempting": "Padauginus $72 \\times 72^2$ tikrai gauname kubą ($72^3$).",
-        "correction": "Uždavinyje prašoma MAŽIAUSIO natūraliojo skaičiaus. $3$ yra kur kas mažesnis už bet kurį kitą variantą.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks būtų $n$, jei ieškotume mažiausio skaičiaus, paverčiančio $72$ kvadratu?",
-      "Ar skaičius $n$ visada yra pirminis?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-72644951-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia savybė turi galioti skaičiaus pirminiam išskaidymui, kad jis būtų tikslusis kubas?",
-        "back": "Visi pirminių daugiklių laipsnių rodikliai privalo dalytis iš $3$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pirmiausia išskaidykite skaičių $72$ pirminiais daugikliais: $72 = 8 \\times 9 = 2^3 \\times 3^2$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Prisiminkite tiksliojo kubo savybę: jo pirminio išskaidymo visi laipsnių rodikliai privalo dalytis iš $3$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Pažiūrėkite į daugiklio $3$ laipsnį. Jis dabar yra $2$. Kiek trūksta iki kito skaičiaus, dalaus iš $3$? Tai ir bus mažiausias $n$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-95300ab8",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Apskaičiuokite reiškinio reikšmę: $\\sqrt{12^2 + 5^2}$.",
-    "answer": "Reikšmė lygi $13$.",
-    "acceptedAnswers": [
-      "Reikšmė lygi $13$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Neskubėkite traukti kvadratinės šaknies iš kiekvieno dėmens atskirai – kvadratinė šaknis iš sumos NĖRA lygi šaknų sumai.",
-      "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
-      "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$)."
-    ],
-    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\sqrt{169} = 13$ (nes $13^2 = 169$).",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Atlikite veiksmus po šaknimi",
-      "text": "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu, sudėkite juos, o tada ištraukite kvadratinę šaknį iš gautos sumos."
-    },
-    "strategyTags": [
-      "šaknys",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-95300ab8-method-1",
-        "title": "Aritmetinis skaičiavimas po šaknimi",
-        "methodType": "main",
-        "strategyTags": [
-          "šaknys"
-        ],
-        "steps": [
-          {
-            "title": "Kvadratų radimas",
-            "action": "Apskaičiuokite $12^2=144$ ir $5^2=25$.",
-            "reason": "Kad galėtume atlikti sudėtį po šaknies ženklu.",
-            "result": "Gauti skaičiai $144$ ir $25$."
-          },
-          {
-            "title": "Šaknies traukimas",
-            "action": "Sudėkite $144+25=169$ ir raskite $\\sqrt{169}$.",
-            "reason": "Tai galutinis veiksmas reiškinio reikšmei nustatyti.",
-            "result": "Reikšmė lygi $13$."
-          }
-        ],
-        "finalAnswer": "Reikšmė lygi $13$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-95300ab8-trap-1",
-        "title": "Šaknies skirstymas dėmenims",
-        "wrongMove": "Rašymas $\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
-        "whyTempting": "Atrodo paprasta 'panaikinti' kvadratų ir šaknies ženklus.",
-        "correction": "Šaknis iš sumos nėra lygi šaknų sumai. Visada pirma sudėkite, o tik tada traukite šaknį.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-95300ab8-trap-2",
-        "title": "Klaidingas kvadrato radimas",
-        "wrongMove": "Manymas, kad $12^2 = 24$ (dauginama iš $2$, o ne kelia laipsniu).",
-        "whyTempting": "Dažna klaida painiojant daugybą su kėlimu kvadratu.",
-        "correction": "Kėlimas kvadratu reiškia skaičiaus dauginimą iš paties savęs: $12 \\times 12 = 144$.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kodėl rezultatas $13$ yra mažesnis už dėmenų sumą $17$?",
-      "Kokie dar skaičių deriniai po šaknimi duoda sveikąjį skaičių?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-95300ab8-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Ar tiesa, kad $\\sqrt{a^2 + b^2} = a + b$?",
-        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Neskubėkite traukti kvadratinės šaknies iš kiekvieno dėmens atskirai – kvadratinė šaknis iš sumos NĖRA lygi šaknų sumai.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$).",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-2eaeade9",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite keturženklį skaičių $4a5b$, kuris dalijasi iš $18$, jei žinoma, kad jo skaitmenų suma yra mažiausia įmanoma.",
-    "answer": "Mažiausią skaitmenų sumą turintis skaičius yra $4050$.",
-    "acceptedAnswers": [
-      "Mažiausią skaitmenų sumą turintis skaičius yra $4050$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Skaičius dalijasi iš $18$ tada, kai jis dalijasi ir iš $2$ (yra lyginis), ir iš $9$ (skaitmenų suma dalijasi iš $9$).",
-      "Kadangi skaičius turi būti lyginis, paskutinis skaitmuo $b$ gali būti tik $0, 2, 4, 6$ arba $8$.",
-      "Skaitmenų suma lygi $4 + a + 5 + b = 9 + a + b$. Kad ši suma dalytųsi iš $9$, suma $a + b$ turi būti lygi $0, 9$ arba $18$. Ieškokite mažiausios sumos derinio su lyginiu $b$."
-    ],
-    "solution": "Skaičius $4a5b$ dalijasi iš $18$, todėl jis turi būti lyginis (baigtis $0, 2, 4, 6, 8$) ir jo skaitmenų suma turi dalytis iš $9$. Užrašome skaitmenų sumą: $S = 4 + a + 5 + b = 9 + a + b$. Kad $9 + a + b$ dalytųsi iš $9$, suma $a + b$ privalo būti $0, 9$ arba $18$. Mažiausia įmanoma $a + b$ reikšmė yra $0$. Tai pasiekiama, kai $a = 0$ ir $b = 0$. Tikriname, ar skaičius $4050$ yra lyginis: $b = 0$ yra lyginis skaitmuo, todėl skaičius tenkina visas sąlygas. Mažiausia skaitmenų suma lygi $9$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Sujunkite dalumo iš 2 ir 9 taisykles",
-      "text": "Skaičius dalijasi iš $18$, kai dalijasi iš $2$ (yra lyginis, t.y. $b$ yra lyginis) ir dalijasi iš $9$ (skaitmenų suma dalijasi iš 9). Kadangi pirmasis skaitmuo yra $4$, skaitmenų suma negali būti $0$."
-    },
-    "strategyTags": [
-      "dalumas-suskaitmenintas",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-2eaeade9-method-1",
-        "title": "Dalumo taisyklių derinimas",
-        "methodType": "main",
-        "strategyTags": [
-          "dalumas-suskaitmenintas"
-        ],
-        "steps": [
-          {
-            "title": "Sąlygų skaidymas",
-            "action": "Iškelkite reikalavimą: $b \\in \\{0, 2, 4, 6, 8\\}$ ir $(9+a+b)$ dalus iš $9$.",
-            "reason": "Skaičius $18$ yra $2$ ir $9$ sandauga.",
-            "result": "Gautos dvi lygiagrečios sąlygos skaitmenims."
-          },
-          {
-            "title": "Minimumo paieška",
-            "action": "Parinkite mažiausius $a$ ir $b$, tenkinančius abi sąlygas.",
-            "reason": "Reikia rasti skaičių su mažiausia skaitmenų suma.",
-            "result": "Rastas skaičius $4050$."
-          }
-        ],
-        "finalAnswer": "Mažiausią skaitmenų sumą turintis skaičius yra $4050$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-2eaeade9-trap-1",
-        "title": "Lyginumo sąlygos pamiršimas",
-        "wrongMove": "Pasirenkamas $b=9$, kad suma $a+b=9$ būtų lengviau pasiekiama.",
-        "whyTempting": "Skaitmuo $9$ idealiai tinka dalumui iš $9$, tačiau jis padaro skaičių nelyginį.",
-        "correction": "Visada prisiminkite, kad dalumas iš $18$ reikalauja, jog skaičius baigtųsi lyginiu skaitmeniu.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-2eaeade9-trap-2",
-        "title": "Klaidingas sumos minimumo vertinimas",
-        "wrongMove": "Manymas, kad mažiausia suma pasiekiama tik su $a=1, b=8$.",
-        "whyTempting": "Mokiniai dažnai pamiršta, kad skaitmuo gali būti lygus nuliui.",
-        "correction": "Nulis yra mažiausias skaitmuo ir jis yra lyginis, todėl visada patikrinkite $0$ variantą pirmiausia.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kodėl mažiausia skaitmenų suma čia lygi $9$, o ne $0$?",
-      "Koks būtų atsakymas, jei skaičius turėtų dalytis iš $15$?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-2eaeade9-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kada skaičius dalijasi iš $18$?",
-        "back": "Kai jis yra lyginis (dalijasi iš $2$) ir jo skaitmenų suma dalijasi iš $9$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Skaičius dalijasi iš $18$ tada, kai jis dalijasi ir iš $2$ (yra lyginis), ir iš $9$ (skaitmenų suma dalijasi iš $9$).",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Kadangi skaičius turi būti lyginis, paskutinis skaitmuo $b$ gali būti tik $0, 2, 4, 6$ arba $8$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Skaitmenų suma lygi $4 + a + 5 + b = 9 + a + b$. Kad ši suma dalytųsi iš $9$, suma $a + b$ turi būti lygi $0, 9$ arba $18$. Ieškokite mažiausios sumos derinio su lyginiu $b$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-f2a0c71a",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Kiek skirtingų daliklių turi skaičius $120$?",
-    "answer": "Skaičius $120$ turi $16$ skirtingų daliklių.",
-    "acceptedAnswers": [
-      "Skaičius $120$ turi $16$ skirtingų daliklių."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
-      "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
-      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
-    ],
-    "solution": "Išskaidome skaičių $120$ pirminiais daugikliais: $120 = 2^3 \\times 3^1 \\times 5^1$. Išrašome kiekvieno pirminio daugiklio laipsnio rodiklius: dvejeto rodiklis yra $3$, trejeto – $1$, penketo – $1$. Prie kiekvieno rodiklio pridedame po $1$ (tai atspindi galimybę daugiklį paimti $0$ kartų): gausime $4, 2$ ir $2$. Sudauginame šiuos skaičius: $4 \\times 2 \\times 2 = 16$. Vadinasi, skaičius $120$ turi $16$ skirtingų daliklių.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Taikykite daliklių skaičiaus formulę",
-      "text": "Išskaidykite $120$ pirminiais daugikliais. Pridėkite prie kiekvieno laipsnio rodiklio po $1$ ir gautus skaičius sudauginkite."
-    },
-    "strategyTags": [
-      "daliklių-skaičius",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-f2a0c71a-method-1",
-        "title": "Kombinatorinis daliklių skaičiavimas",
-        "methodType": "main",
-        "strategyTags": [
-          "daliklių-skaičius"
-        ],
-        "steps": [
-          {
-            "title": "Struktūrinė analizė",
-            "action": "Išskaidykite $120$ į $2^3 \\cdot 3^1 \\cdot 5^1$.",
-            "reason": "Kad matytume, iš kokių 'blokų' galima sudėlioti daliklius.",
-            "result": "Gauti rodikliai $3, 1, 1$."
-          },
-          {
-            "title": "Derinių skaičiavimas",
-            "action": "Sudauginkite $(3+1)(1+1)(1+1)$.",
-            "reason": "Kiekvienas daugiklis suteikia pasirinkimų laisvę (nuo $0$ iki maksimalaus laipsnio).",
-            "result": "Gauta $16$ daliklių."
-          }
-        ],
-        "finalAnswer": "Skaičius $120$ turi $16$ skirtingų daliklių."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-f2a0c71a-trap-1",
-        "title": "Nepilnas daliklių sąrašas",
-        "wrongMove": "Bandymas išrašyti daliklius ranka ir praleidimas tokių skaičių kaip $24$ arba $40$.",
-        "whyTempting": "Skaičius $120$ turi daug daliklių, todėl juos visus sužiūrėti be sistemos yra sunku.",
-        "correction": "Naudokite pirminio išskaidymo formulę – ji užtikrina, kad nebus praleistas nei vienas variantas.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-f2a0c71a-trap-2",
-        "title": "Tik pirminių daugiklių skaičiavimas",
-        "wrongMove": "Atsakymas, kad yra tik $3$ dalikliai ($2, 3, 5$).",
-        "whyTempting": "Klausimas 'kiek skirtingų daliklių' gali būti klaidingai suprastas kaip 'kiek pirminių daliklių'.",
-        "correction": "Sąvoka 'daliklis' apima visus skaičius, iš kurių dalijasi $120$, įskaitant $1$, patį $120$ ir visus sudėtinius derinius.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kodėl pridedame vienetą prie kiekvieno laipsnio rodiklio?",
-      "Kaip pasikeistų atsakymas, jei ieškotume tik TIKRŲJŲ daliklių (mažesnių už patį skaičių)?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-f2a0c71a-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\dots$ visų daliklių skaičių?",
-        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\dots$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-06-69e93b63",
-    "topicId": "olimpiada-06",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite visų skaičiaus $28$ natūraliųjų daliklių sumą.",
-    "answer": "Daliklių suma lygi $56$.",
-    "acceptedAnswers": [
-      "Daliklių suma lygi $56$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-06-concept-logic"
-    ],
-    "hints": [
-      "Surašykite visus skaičiaus $28$ daliklius poromis, kad nieko nepraleistumėte: pradedant nuo $1$ ir baigiant pačiu skaičiumi $28$.",
-      "Daliklių poros yra: $(1, 28)$, $(2, 14)$ ir $(4, 7)$. Patikrinkite, ar tarp $4$ ir $7$ nėra kitų sveikųjų daliklių ($5$ ir $6$ netinka).",
-      "Surašykite visus unikalius daliklius į vieną eilę: $1, 2, 4, 7, 14, 28$ ir juos sudėkite."
-    ],
-    "solution": "Išrašome visus skaičiaus $28$ daliklius: $1, 2, 4, 7, 14$ ir $28$. Sudedame šiuos skaičius: $1 + 2 + 4 + 7 + 14 + 28$. Atliekame veiksmus: $1+2+4=7$; $7+7=14$; $14+14=28$; $28+28=56$. Gauta daliklių suma lygi $56$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Išrašykite daliklius arba taikykite formulę",
-      "text": "Daliklius galite rasti poromis (pvz. $1$ ir $28$, $2$ ir $14$). Sudėkite juos."
-    },
-    "strategyTags": [
-      "daliklių-suma",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-06-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-06-69e93b63-method-1",
-        "title": "Nuoseklus daliklių išrašymas",
-        "methodType": "main",
-        "strategyTags": [
-          "daliklių-suma"
-        ],
-        "steps": [
-          {
-            "title": "Daliklių aibės sudarymas",
-            "action": "Suraskite visus skaičius, iš kurių $28$ dalijasi be liekanos.",
-            "reason": "Uždavinys reikalauja visų daliklių sumos.",
-            "result": "Aibė $\\{1, 2, 4, 7, 14, 28\\}$."
-          },
-          {
-            "title": "Sumavimas",
-            "action": "Sudėkite visus narius: $1+2+4+7+14+28=56$.",
-            "reason": "Tai galutinis užduoties tikslas.",
-            "result": "Rezultatas $56$."
-          }
-        ],
-        "finalAnswer": "Daliklių suma lygi $56$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-06-69e93b63-trap-1",
-        "title": "Paties skaičiaus praleidimas",
-        "wrongMove": "Sudedami tik dalikliai $1, 2, 4, 7, 14$ ir gaunamas atsakymas $28$.",
-        "whyTempting": "Daugelyje uždavinių prašoma rasti 'tikruosius daliklius', todėl mokiniai nesąmoningai atmeta patį skaičių.",
-        "correction": "Sąvoka 'visi dalikliai' visada apima ir patį skaičių, nes jis dalijasi iš savęs.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-06-69e93b63-trap-2",
-        "title": "Vieneto (1) neįtraukimas",
-        "wrongMove": "Pradedama skaičiuoti nuo $2$ ir gaunama suma $55$.",
-        "whyTempting": "Manoma, kad $1$ yra 'akivaizdus' arba netraktuojamas kaip daliklis.",
-        "correction": "Nors $1$ yra pirminis savo prigimtimi, jis yra kiekvieno natūraliojo skaičiaus daliklis ir privalo būti įtrauktas į sumą.",
-        "reviewConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kokie yra kiti mažesni tobulieji skaičiai?",
-      "Ar daliklių skaičius visada yra lyginis? (Užuomina: pažiūrėkite į skaičių $16$)."
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-06-69e93b63-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra visų skaičiaus $28$ daliklių suma?",
-        "back": "$56$. Dalikliai yra $1, 2, 4, 7, 14$ ir $28$.",
-        "conceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Surašykite visus skaičiaus $28$ daliklius poromis, kad nieko nepraleistumėte: pradedant nuo $1$ ir baigiant pačiu skaičiumi $28$.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Daliklių poros yra: $(1, 28)$, $(2, 14)$ ir $(4, 7)$. Patikrinkite, ar tarp $4$ ir $7$ nėra kitų sveikųjų daliklių ($5$ ir $6$ netinka).",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Surašykite visus unikalius daliklius į vieną eilę: $1, 2, 4, 7, 14, 28$ ir juos sudėkite.",
-        "revealsConceptIds": [
-          "olimpiada-06-concept-method"
-        ],
-        "penalty": 0.1
-      }
-    ]
-  },
-  {
     "id": "ex-olimpiada-06-b4e7dd8a",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Skaičių tiesėje pažymėti taškai $A(-7)$ ir $B(5)$. Raskite atstumą tarp šių taškų ir vidurio taško koordinatę.",
@@ -3173,7 +2077,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-bdd1881c",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskaičiuokite reiškinio reikšmę: $-15 - (-4) \\times (-3) + (-20) / (-5)$.",
@@ -3310,7 +2214,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-ff4946f2",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Palyginkite du skaičius: $2^{30}$ ir $3^{20}$. Nurodykite, kuris skaičius yra didesnis.",
@@ -3447,7 +2351,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-13d0b51d",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Šviesos greitis yra maždaug $300\\ 000$ km/s. Užrašykite šį greitį metrais per sekundę standartine (moksline) išraiška.",
@@ -3584,7 +2488,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-de608e5f",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskaičiuokite reiškinio $\\frac{x^2 - y^2}{x - y}$ reikšmę, kai $x = -2.5$ ir $y = -1.5$.",
@@ -3721,7 +2625,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-420ecc0f",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Išspręskite nelygybę: $5 - 3x > 17$. Raskite didžiausią sveikąjį šios nelygybės sprendinį.",
@@ -3864,7 +2768,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-8e4f7634",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trys darbininkai atlieka darbą per $6$ valandas. Per kiek valandų šį darbą atliktų $5$ tokio paties pajėgumo darbininkai?",
@@ -4001,7 +2905,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-5a19da69",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Prekės kaina buvo padidinta $25\\%$. Kiek procentų naująją prekės kainą reikia sumažinti, kad ji vėl taptų pradinė?",
@@ -4138,7 +3042,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-b7ce0257",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Jei $5$ traktoriai per $4$ dienas suaria $60$ hektarų, kiek hektarų suars $8$ tokie patys traktoriai per $3$ dienas?",
@@ -4275,7 +3179,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-14ea85c7",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Penkių skaičių vidurkis lygus $12$. Kai pridedame šeštąjį skaičių, visų šešių skaičių vidurkis tampa lygus $14$. Raskite šeštąjį skaičių.",
@@ -4412,7 +3316,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-bfec6fed",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).",
@@ -4549,7 +3453,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-507d1998",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stačiakampio kraštinės yra $8$ cm ir $6$ cm. Ant kiekvienos kraštinės į išorę nubrėžti pusapskritimai, kurių skersmenys yra tos kraštinės. Raskite gautos figūros bendrą perimetrą (išreikštą per $\\pi$).",
@@ -4686,7 +3590,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-885cff7f",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stačiakampis gretasienis suformuotas iš vienodų kubelių, kurių briaunos ilgis yra $2$ cm. Gretasienio matmenys yra $3 \\times 4 \\times 5$ kubeliai. Kiek iš viso kubelių sudaro šį gretasienį ir koks yra jo tūris?",
@@ -4830,7 +3734,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-f12aaebb",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Jei kubo paviršiaus plotas lygus $150$ cm$^2$, raskite šio kubo tūrį.",
@@ -4980,7 +3884,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-70725241",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Taškai $A(-3, 2)$ ir $B(5, 2)$ yra stačiakampio viršūnės. Raskite atstumą tarp šių taškų. Jei stačiakampio plotas lygus $48$, raskite kitų dviejų viršūnių $C$ ir $D$ y-koordinates, jei žinoma, kad jos yra teigiamos.",
@@ -5130,7 +4034,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-806b3717",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Taškas $A(2, -3)$ yra atspindimas x ašies atžvilgiu į tašką $B$, o tada taškas $B$ pastumiamas per $4$ vienetus į kairę ir $2$ vienetus į viršų, gaunant tašką $C$. Raskite taško $C$ koordinates.",
@@ -5280,7 +4184,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-5dc5710d",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Statusis trikampis turi įžambinę, kurios ilgis $10$ cm, ir vieną statinį, kurio ilgis $6$ cm. Raskite kito statinio ilgį ir trikampio plotą.",
@@ -5424,7 +4328,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-7a255d9b",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Du trikampiai $ABC$ ir $DEF$ yra lygūs. Žinoma, kad $AB = 5$ cm, $BC = 7$ cm, o trikampio $DEF$ perimetras lygus $18$ cm. Raskite kraštinės $DF$ ilgį.",
@@ -5574,7 +4478,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-ea3fd188",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skaitmenų $1, 2, 3, 4, 5$, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą, o skaičius turi būti lyginis?",
@@ -5724,7 +4628,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-1d7db94c",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Klasėje yra $8$ mergaitės ir $6$ berniukai. Reikia išrinkti komandą, kurią sudarytų $2$ mergaitės ir $2$ berniukai. Keliais skirtingais būdais galima sudaryti tokią komandą?",
@@ -5874,7 +4778,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-8b52c9fe",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Metamas lošimo kauliukas ir moneta. Kokia tikimybė, kad kauliukas parodys lyginį taškų skaičių, o moneta atvirs herbu?",
@@ -6018,7 +4922,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-1ad3676c",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Dėžėje yra $5$ raudoni, $3$ mėlyni ir $2$ žali rutuliai. Atsitiktinai ištraukiamas vienas rutulys. Kokia tikimybė, kad ištrauktas rutulys bus arba mėlynas, arba žalias?",
@@ -6168,7 +5072,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-e897fd75",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Metami trys standartiniai lošimo kauliukai. Kokia tikimybė, kad bent ant vieno iš jų iškris $6$ akutės?",
@@ -6312,7 +5216,7 @@ export const exercises_06 = [
   },
   {
     "id": "ex-olimpiada-06-8de3fc6a",
-    "topicId": "olimpiada-06",
+    "topicId": "olimpiada-06-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Iš $100$ turistų, $50$ kalba angliškai, $40$ kalba vokiškai, $30$ kalba prancūziškai. Žinoma, kad $15$ kalba ir angliškai, ir vokiškai; $10$ kalba ir vokiškai, ir prancūziškai; $8$ kalba ir angliškai, ir prancūziškai. Lygiai $5$ turistai kalba visomis trimis kalbomis. Kiek turistų nekalba nei viena iš šių trijų kalbų?",
@@ -6451,6 +5355,1102 @@ export const exercises_06 = [
         "kind": "scaffold",
         "text": "Detalus atlikimas: Pažymėkime aibes: $A$ (anglų), $V$ (vokiečių), $P$ (prancūzų). Naudodami trijų aibių įtraukties ir i...",
         "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-9af12ecd",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite skaičiaus $360$ pirminių daugiklių išskaidymą ir nurodykite, koks yra didžiausias pirminis skaičius šioje išraiškoje.",
+    "answer": "Didžiausias pirminis daugiklis yra $5$ (išskaidymas: $360 = 2^3 \\times 3^2 \\times 5$).",
+    "acceptedAnswers": [
+      "Didžiausias pirminis daugiklis yra $5$ (išskaidymas: $360 = 2^3 \\times 3^2 \\times 5$)."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Pradėkite skaidydami skaičių $360$ į bet kokius du lengvai pastebimus daugiklius, pavyzdžiui, $36$ ir $10$.",
+      "Pastebėkite, kad $36 = 6^2$ ir $10 = 2 \\times 5$. Tačiau $6$ dar nėra pirminis skaičius, todėl jį reikia skaidyti toliau iki $2 \\times 3$.",
+      "Sugrupuokite visus gautus pirminius skaičius: kiek radote dvejetų, trejetų ir penketų? Didžiausias iš šių skaičių ir bus atsakymas."
+    ],
+    "solution": "Pirmiausia skaičių $360$ užrašome kaip paprastą sandaugą: $360 = 36 \\times 10$. Toliau skaidome kiekvieną narį: $36 = 6 \\times 6 = (2 \\times 3) \\times (2 \\times 3) = 2^2 \\times 3^2$. Skaičių $10$ skaidome į $2 \\times 5$. Sujungiame visus pirminius daugiklius: $360 = 2^2 \\times 3^2 \\times 2 \\times 5 = 2^3 \\times 3^2 \\times 5$. Matome, kad pirminiai daugikliai yra $2, 3$ ir $5$. Iš gautų pirminių daugiklių ($2, 3, 5$) didžiausias yra $5$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Naudokite dalumo medį",
+      "text": "Skaidykite skaičių $360$ į du daugiklius (pvz., $36$ ir $10$), o tada kiekvieną iš jų skaidykite toliau, kol gausite tik pirminius skaičius."
+    },
+    "strategyTags": [
+      "pirminiai-daugikliai",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-9af12ecd-method-1",
+        "title": "Nuoseklus skaidymas pirminiais daugikliais",
+        "methodType": "main",
+        "strategyTags": [
+          "pirminiai-daugikliai"
+        ],
+        "steps": [
+          {
+            "title": "Daugiklių medžio sudarymas",
+            "action": "Skaidykite $360$ į $36$ ir $10$, tada $36$ į $6 \\cdot 6$, o $10$ į $2 \\cdot 5$.",
+            "reason": "Norint pasiekti 'matematinius atomus' – pirminius skaičius.",
+            "result": "Gauti daugikliai $6, 6, 2, 5$."
+          },
+          {
+            "title": "Galutinis išgryninimas",
+            "action": "Pakeiskite kiekvieną $6$ į $2 \\cdot 3$ ir surašykite viską laipsnių pavidalu.",
+            "reason": "Užtikrinama, kad visi sandaugos nariai yra pirminiai skaičiai.",
+            "result": "$360 = 2^3 \\cdot 3^2 \\cdot 5$."
+          }
+        ],
+        "finalAnswer": "Didžiausias pirminis daugiklis yra $5$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-9af12ecd-trap-1",
+        "title": "Sudėtinio skaičiaus palaikymas pirminiu",
+        "wrongMove": "Teigimas, kad $6$ arba $10$ yra didžiausias pirminis daugiklis.",
+        "whyTempting": "Šie skaičiai pasirodo ankstyvame skaidymo etape ir yra didesni už $5$.",
+        "correction": "Visada patikrinkite, ar skaičius dalijasi tik iš savęs ir $1$. Skaičiai $6$ ir $10$ turi daugiau daliklių.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-9af12ecd-trap-2",
+        "title": "Skaitmenų ir daugiklių painiojimas",
+        "wrongMove": "Manymas, kad didžiausias pirminis skaičius yra $3$ (iš skaičiaus $360$ skaitmenų).",
+        "whyTempting": "Skaičius $3$ yra pirmasis skaitmuo ir jis yra pirminis.",
+        "correction": "Ieškokite ne skaičiaus skaitmenų, o skaičių, iš kurių padauginus gaunamas pradinio skaičiaus rezultatas.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kodėl svarbu skaidyti iki galo, kol gausime tik pirminius skaičius?",
+      "Ar skaidymo eiliškumas turi įtakos galutiniam rezultatui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-9af12ecd-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Koks yra didžiausias skaičiaus $360$ pirminis daugiklis?",
+        "back": "Atsakymas: $5$. Išskaidymas: $360 = 2^3 \\cdot 3^2 \\cdot 5$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pradėkite skaidydami skaičių $360$ į bet kokius du lengvai pastebimus daugiklius, pavyzdžiui, $36$ ir $10$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pastebėkite, kad $36 = 6^2$ ir $10 = 2 \\times 5$. Tačiau $6$ dar nėra pirminis skaičius, todėl jį reikia skaidyti toliau iki $2 \\times 3$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Sugrupuokite visus gautus pirminius skaičius: kiek radote dvejetų, trejetų ir penketų? Didžiausias iš šių skaičių ir bus atsakymas.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-3e3ce5c2",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite skaičių $120$ ir $180$ didžiausio bendrojo daliklio (DBD) ir mažiausio bendrojo kartotinio (MBK) sumą.",
+    "answer": "Suma lygi $420$.",
+    "acceptedAnswers": [
+      "Suma lygi $420$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Pirmiausia abu skaičius išskaidykite pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$, o $180 = 2^2 \\times 3^2 \\times 5$.",
+      "Didžiausiam bendram dalikliui (DBD) imkite bendrus pirminius skaičius su mažiausiais jų rodikliais: $2^2, 3^1$ ir $5^1$.",
+      "Mažiausiam bendram kartotiniui (MBK) imkite visus pasirodžiusius pirminius skaičius su didžiausiais jų rodikliais: $2^3, 3^2$ ir $5^1$. Apskaičiavę abi reikšmes, jas sudėkite."
+    ],
+    "solution": "Išskaidome abu skaičius pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$ ir $180 = 2^2 \\times 3^2 \\times 5$. Randame DBD: $DBD(120, 180) = 2^2 \\times 3 \\times 5 = 4 \\times 3 \\times 5 = 60$. Randame MBK: $MBK(120, 180) = 2^3 \\times 3^2 \\times 5 = 8 \\times 9 \\times 5 = 360$. Sudedame gautas reikšmes: $60 + 360 = 420$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Išskaidykite pirminiais daugikliais",
+      "text": "Užrašykite $120$ ir $180$ pirminiais daugikliais. DBD sudarykite paėmę bendrus daugiklius su mažiausiais rodikliais, o MBK – su didžiausiais rodikliais."
+    },
+    "strategyTags": [
+      "dbd-mbk",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-3e3ce5c2-method-1",
+        "title": "Skaidymas pirminiais daugikliais",
+        "methodType": "main",
+        "strategyTags": [
+          "dbd-mbk"
+        ],
+        "steps": [
+          {
+            "title": "Pirminis išskaidymas",
+            "action": "Užrašykite $120 = 2^3 \\cdot 3^1 \\cdot 5^1$ ir $180 = 2^2 \\cdot 3^2 \\cdot 5^1$.",
+            "reason": "Tai leidžia tiksliai matyti, kokie daugikliai sudaro kiekvieną skaičių.",
+            "result": "Daugikliai paruošti analizei."
+          },
+          {
+            "title": "DBD ir MBK radimas",
+            "action": "Išrinkite daugiklius DBD ($60$) ir MBK ($360$) skaičiavimui.",
+            "reason": "DBD reikalauja mažiausių rodiklių, MBK – didžiausių.",
+            "result": "Gautos DBD ir MBK reikšmės."
+          }
+        ],
+        "finalAnswer": "Suma lygi $420$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-3e3ce5c2-trap-1",
+        "title": "DBD ir MBK taisyklių sumaišymas",
+        "wrongMove": "Paėmimas didžiausių rodiklių DBD skaičiavimui.",
+        "whyTempting": "Žodis 'didžiausias' pavadinime asocijuojasi su didžiausiais laipsniais.",
+        "correction": "Prisiminkite, kad DBD turi būti daliklis (mažesnis skaičius), todėl imame mažiausius bendrus laipsnius.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-3e3ce5c2-trap-2",
+        "title": "MBK radimas tiesiog dauginant",
+        "wrongMove": "Skaičiavimas $MBK = 120 \\times 180 = 21600$.",
+        "whyTempting": "Paprasta taisyklė, tačiau ji galioja tik jei skaičiai neturi bendrų daliklių.",
+        "correction": "Būtina padalinti sandaugą iš DBD, kad bendri daugikliai nebūtų dubliuojami.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kodėl MBK visada yra ne mažesnis už pradinius skaičius, o DBD – ne didesnis?",
+      "Kas nutiktų MBK reikšmei, jei skaičiai būtų pirminiai tarpusavyje?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-3e3ce5c2-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kaip randamas DBD ir MBK naudojant pirminį išskaidymą?",
+        "back": "DBD: sudauginame bendrus daugiklius mažiausiais rodikliais. MBK: sudauginame visus daugiklius didžiausiais rodikliais.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pirmiausia abu skaičius išskaidykite pirminiais daugikliais: $120 = 2^3 \\times 3 \\times 5$, o $180 = 2^2 \\times 3^2 \\times 5$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Didžiausiam bendram dalikliui (DBD) imkite bendrus pirminius skaičius su mažiausiais jų rodikliais: $2^2, 3^1$ ir $5^1$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Mažiausiam bendram kartotiniui (MBK) imkite visus pasirodžiusius pirminius skaičius su didžiausiais jų rodikliais: $2^3, 3^2$ ir $5^1$. Apskaičiavę abi reikšmes, jas sudėkite.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-15b5cb2b",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Natūraliųjų skaičių sandauga lygi $1000$. Žinoma, kad nei vienas iš šių skaičių nesibaigia nuliu. Raskite šių dviejų skaičių sumą.",
+    "answer": "Skaičių suma lygi $133$.",
+    "acceptedAnswers": [
+      "Skaičių suma lygi $133$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Pradėkite nuo skaičiaus $1000$ pirminio išskaidymo: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$.",
+      "Svarbiausia taisyklė: skaičius baigiasi nuliu tada ir tik tada, kai jis dalijasi iš $10$, t. y. turi savo sudėtyje bent vieną dvejetą IR bent vieną penketą.",
+      "Kadangi nei vienas iš skaičių nesibaigia nuliu, vienas skaičius privalo turėti visus turimus dvejetus ($2^3$), o kitas – visus turimus penketus ($5^3$). Suskaičiuokite šių skaičių sumą."
+    ],
+    "solution": "Išskaidome $1000$ pirminiais daugikliais: $1000 = 2^3 \\times 5^3$. Kad skaičius nesibaigtų nuliu, jame negali būti daugiklių $2$ ir $5$ kartu. Jei abu skaičiai $A$ ir $B$ būtų tokie, tai vienas iš jų turi turėti tik daugiklius $2$, o kitas – tik $5$. Todėl ieškomi skaičiai yra $A = 2^3 = 8$ ir $B = 5^3 = 125$. Patikriname: $8 \\times 125 = 1000$ (tinka), abu nesibaigia nuliu (tinka). Jų suma: $8 + 125 = 133$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Atskirkite 2 ir 5 daugiklius",
+      "text": "Skaičius $1000$ yra $2^3 \\times 5^3$. Jeigu bent vienas iš ieškomų skaičių turi savo sudėtyje ir daugiklį 2, ir daugiklį 5, jis būtinai dalinsis iš 10 ir baigsis nuliu."
+    },
+    "strategyTags": [
+      "aritmetikos-teorema",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-15b5cb2b-method-1",
+        "title": "Atskyrimas pagal pirminius daugiklius",
+        "methodType": "main",
+        "strategyTags": [
+          "aritmetikos-teorema"
+        ],
+        "steps": [
+          {
+            "title": "Struktūros analizė",
+            "action": "Išskaidykite $1000$ į $2^3 \\cdot 5^3$.",
+            "reason": "Norint pamatyti, kaip galima suformuoti du skaičius.",
+            "result": "Gauti pagrindiniai komponentai: trys '2' ir trys '5'."
+          },
+          {
+            "title": "Loginių apribojimų taikymas",
+            "action": "Paskirstykite visus '2' vienam skaičiui, o visus '5' kitam.",
+            "reason": "Bet koks '2' ir '5' derinys tame pačiame skaičiuje sukurtų nulį pabaigoje.",
+            "result": "Gauti skaičiai $8$ ir $125$."
+          }
+        ],
+        "finalAnswer": "Skaičių suma lygi $133$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-15b5cb2b-trap-1",
+        "title": "Atsitiktinis skaidymas į $100$ ir $10$",
+        "wrongMove": "Teigimas, kad skaičiai yra $100$ ir $10$.",
+        "whyTempting": "Jų sandauga tikrai lygi $1000$.",
+        "correction": "Sąlyga griežtai sako, kad nei vienas skaičius NEgali baigtis nuliu. $100$ ir $10$ abu baigiasi nuliais.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-15b5cb2b-trap-2",
+        "title": "Daugiklių palikimas abiejuose skaičiuose",
+        "wrongMove": "Bandymas skaidyti į $20$ ir $50$ arba $2 \\times 500$.",
+        "whyTempting": "Atrodo, kad svarbu tik gauti sandaugą $1000$.",
+        "correction": "Jei bent vienas '2' ir bent vienas '5' pateks į tą patį skaičių, tas skaičius dalinsis iš $10$ ir baigsis nuliu. Būtina juos visiškai atskirti.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kas nutiktų, jei sandauga būtų $10000$? Kokia būtų jų suma?",
+      "Kodėl tik pirminiai skaičiai $2$ ir $5$ lemia nulį skaičiaus gale?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-15b5cb2b-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokie du skaičiai, nesibaigiantys nuliu, padauginti duoda $10^n$?",
+        "back": "Tie skaičiai yra $2^n$ ir $5^n$. Pavyzdžiui, $2^3=8$ ir $5^3=125$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pradėkite nuo skaičiaus $1000$ pirminio išskaidymo: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Svarbiausia taisyklė: skaičius baigiasi nuliu tada ir tik tada, kai jis dalijasi iš $10$, t. y. turi savo sudėtyje bent vieną dvejetą IR bent vieną penketą.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kadangi nei vienas iš skaičių nesibaigia nuliu, vienas skaičius privalo turėti visus turimus dvejetus ($2^3$), o kitas – visus turimus penketus ($5^3$). Suskaičiuokite šių skaičių sumą.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-72644951",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite mažiausią natūralųjį skaičių $n$, iš kurio padauginus skaičių $72$, gautume tikslųjį kubą.",
+    "answer": "Mažiausias toks skaičius yra $3$.",
+    "acceptedAnswers": [
+      "Mažiausias toks skaičius yra $3$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Pirmiausia išskaidykite skaičių $72$ pirminiais daugikliais: $72 = 8 \\times 9 = 2^3 \\times 3^2$.",
+      "Prisiminkite tiksliojo kubo savybę: jo pirminio išskaidymo visi laipsnių rodikliai privalo dalytis iš $3$.",
+      "Pažiūrėkite į daugiklio $3$ laipsnį. Jis dabar yra $2$. Kiek trūksta iki kito skaičiaus, dalaus iš $3$? Tai ir bus mažiausias $n$."
+    ],
+    "solution": "Išskaidome skaičių $72$ pirminiais daugikliais: $72 = 2^3 \\times 3^2$. Sąlyga reikalauja, kad sandauga $72 \\times n$ būtų tikslusis kubas. Tai reiškia, kad visų pirminių daugiklių laipsniai turi būti dalūs iš $3$. Matome, kad daugiklio $2$ laipsnis jau yra $3$ (dalijasi iš $3$), todėl čia nieko keisti nereikia. Daugiklio $3$ laipsnis yra $2$. Mažiausias teigiamas sveikasis skaičius, kurį pridėjus prie $2$ gautume dalų iš $3$ skaičių, yra $1$. Vadinasi, turime padauginti iš $3^1$, todėl mažiausias $n = 3$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Išnagrinėkite pirminių daugiklių laipsnius",
+      "text": "Išskaidykite $72$ pirminiais daugikliais. Tiksliojo kubo pirminio išskaidymo visi laipsnio rodikliai turi būti dalūs iš $3$."
+    },
+    "strategyTags": [
+      "kvadratai-kubai",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-72644951-method-1",
+        "title": "Laipsnių rodiklių lyginimas",
+        "methodType": "main",
+        "strategyTags": [
+          "kvadratai-kubai"
+        ],
+        "steps": [
+          {
+            "title": "Pradinis išskaidymas",
+            "action": "Užrašykite $72 = 2^3 \\cdot 3^2$.",
+            "reason": "Kad matytume esamų daugiklių kiekius.",
+            "result": "Gauti laipsniai: $2$-eto yra $3$, $3$-eto yra $2$."
+          },
+          {
+            "title": "Papildymas iki kubo",
+            "action": "Raskite, kiek trūksta kiekvienam laipsniui iki artimiausio $3$ kartotinio.",
+            "reason": "Tiksliojo kubo laipsniai visada dalūs iš $3$.",
+            "result": "Trūksta vieno trejeto daugiklio ($n=3$)."
+          }
+        ],
+        "finalAnswer": "Mažiausias toks skaičius yra $3$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-72644951-trap-1",
+        "title": "Tiksliojo kvadrato ir kubo painiojimas",
+        "wrongMove": "Teigimas, kad $n=2$, nes $72 \\times 2 = 144 = 12^2$.",
+        "whyTempting": "$144$ yra labai žinomas skaičius-kvadratas, todėl mokiniai nesąmoningai linksta prie jo.",
+        "correction": "Atidžiai perskaitykite sąlygą: prašoma kubo, o ne kvadrato. Kubui reikia $3$-jų vienodų daugiklių.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-72644951-trap-2",
+        "title": "Perteklinis daugiklių pridėjimas",
+        "wrongMove": "Siūlymas $n = 72^2$ arba $n = 2^3 \\times 3^1$.",
+        "whyTempting": "Padauginus $72 \\times 72^2$ tikrai gauname kubą ($72^3$).",
+        "correction": "Uždavinyje prašoma MAŽIAUSIO natūraliojo skaičiaus. $3$ yra kur kas mažesnis už bet kurį kitą variantą.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks būtų $n$, jei ieškotume mažiausio skaičiaus, paverčiančio $72$ kvadratu?",
+      "Ar skaičius $n$ visada yra pirminis?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-72644951-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia savybė turi galioti skaičiaus pirminiam išskaidymui, kad jis būtų tikslusis kubas?",
+        "back": "Visi pirminių daugiklių laipsnių rodikliai privalo dalytis iš $3$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pirmiausia išskaidykite skaičių $72$ pirminiais daugikliais: $72 = 8 \\times 9 = 2^3 \\times 3^2$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Prisiminkite tiksliojo kubo savybę: jo pirminio išskaidymo visi laipsnių rodikliai privalo dalytis iš $3$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Pažiūrėkite į daugiklio $3$ laipsnį. Jis dabar yra $2$. Kiek trūksta iki kito skaičiaus, dalaus iš $3$? Tai ir bus mažiausias $n$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-95300ab8",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Apskaičiuokite reiškinio reikšmę: $\\sqrt{12^2 + 5^2}$.",
+    "answer": "Reikšmė lygi $13$.",
+    "acceptedAnswers": [
+      "Reikšmė lygi $13$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Neskubėkite traukti kvadratinės šaknies iš kiekvieno dėmens atskirai – kvadratinė šaknis iš sumos NĖRA lygi šaknų sumai.",
+      "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
+      "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$)."
+    ],
+    "solution": "Apskaičiuojame skaičių kvadratus po šaknimi: $12^2 = 144$ ir $5^2 = 25$. Sudėdami gautas reikšmes turime: $144 + 25 = 169$. Traukiame kvadratinę šaknį iš sumos: $\\sqrt{169} = 13$ (nes $13^2 = 169$).",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Atlikite veiksmus po šaknimi",
+      "text": "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu, sudėkite juos, o tada ištraukite kvadratinę šaknį iš gautos sumos."
+    },
+    "strategyTags": [
+      "šaknys",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-95300ab8-method-1",
+        "title": "Aritmetinis skaičiavimas po šaknimi",
+        "methodType": "main",
+        "strategyTags": [
+          "šaknys"
+        ],
+        "steps": [
+          {
+            "title": "Kvadratų radimas",
+            "action": "Apskaičiuokite $12^2=144$ ir $5^2=25$.",
+            "reason": "Kad galėtume atlikti sudėtį po šaknies ženklu.",
+            "result": "Gauti skaičiai $144$ ir $25$."
+          },
+          {
+            "title": "Šaknies traukimas",
+            "action": "Sudėkite $144+25=169$ ir raskite $\\sqrt{169}$.",
+            "reason": "Tai galutinis veiksmas reiškinio reikšmei nustatyti.",
+            "result": "Reikšmė lygi $13$."
+          }
+        ],
+        "finalAnswer": "Reikšmė lygi $13$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-95300ab8-trap-1",
+        "title": "Šaknies skirstymas dėmenims",
+        "wrongMove": "Rašymas $\\sqrt{12^2 + 5^2} = 12 + 5 = 17$.",
+        "whyTempting": "Atrodo paprasta 'panaikinti' kvadratų ir šaknies ženklus.",
+        "correction": "Šaknis iš sumos nėra lygi šaknų sumai. Visada pirma sudėkite, o tik tada traukite šaknį.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-95300ab8-trap-2",
+        "title": "Klaidingas kvadrato radimas",
+        "wrongMove": "Manymas, kad $12^2 = 24$ (dauginama iš $2$, o ne kelia laipsniu).",
+        "whyTempting": "Dažna klaida painiojant daugybą su kėlimu kvadratu.",
+        "correction": "Kėlimas kvadratu reiškia skaičiaus dauginimą iš paties savęs: $12 \\times 12 = 144$.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kodėl rezultatas $13$ yra mažesnis už dėmenų sumą $17$?",
+      "Kokie dar skaičių deriniai po šaknimi duoda sveikąjį skaičių?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-95300ab8-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Ar tiesa, kad $\\sqrt{a^2 + b^2} = a + b$?",
+        "back": "Netiesa. Pirmiausia reikia sudėti kvadratus, o tada traukti šaknį. Pvz., $\\sqrt{12^2 + 5^2} = 13$, o ne $17$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Neskubėkite traukti kvadratinės šaknies iš kiekvieno dėmens atskirai – kvadratinė šaknis iš sumos NĖRA lygi šaknų sumai.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pirmiausia pakelkite skaičius $12$ ir $5$ kvadratu: $12^2 = 144$ ir $5^2 = 25$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Sudėkite gautus kvadratus ir raskite, kokio skaičiaus kvadratas yra ši suma ($169$).",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-2eaeade9",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite keturženklį skaičių $4a5b$, kuris dalijasi iš $18$, jei žinoma, kad jo skaitmenų suma yra mažiausia įmanoma.",
+    "answer": "Mažiausią skaitmenų sumą turintis skaičius yra $4050$.",
+    "acceptedAnswers": [
+      "Mažiausią skaitmenų sumą turintis skaičius yra $4050$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Skaičius dalijasi iš $18$ tada, kai jis dalijasi ir iš $2$ (yra lyginis), ir iš $9$ (skaitmenų suma dalijasi iš $9$).",
+      "Kadangi skaičius turi būti lyginis, paskutinis skaitmuo $b$ gali būti tik $0, 2, 4, 6$ arba $8$.",
+      "Skaitmenų suma lygi $4 + a + 5 + b = 9 + a + b$. Kad ši suma dalytųsi iš $9$, suma $a + b$ turi būti lygi $0, 9$ arba $18$. Ieškokite mažiausios sumos derinio su lyginiu $b$."
+    ],
+    "solution": "Skaičius $4a5b$ dalijasi iš $18$, todėl jis turi būti lyginis (baigtis $0, 2, 4, 6, 8$) ir jo skaitmenų suma turi dalytis iš $9$. Užrašome skaitmenų sumą: $S = 4 + a + 5 + b = 9 + a + b$. Kad $9 + a + b$ dalytųsi iš $9$, suma $a + b$ privalo būti $0, 9$ arba $18$. Mažiausia įmanoma $a + b$ reikšmė yra $0$. Tai pasiekiama, kai $a = 0$ ir $b = 0$. Tikriname, ar skaičius $4050$ yra lyginis: $b = 0$ yra lyginis skaitmuo, todėl skaičius tenkina visas sąlygas. Mažiausia skaitmenų suma lygi $9$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Sujunkite dalumo iš 2 ir 9 taisykles",
+      "text": "Skaičius dalijasi iš $18$, kai dalijasi iš $2$ (yra lyginis, t.y. $b$ yra lyginis) ir dalijasi iš $9$ (skaitmenų suma dalijasi iš 9). Kadangi pirmasis skaitmuo yra $4$, skaitmenų suma negali būti $0$."
+    },
+    "strategyTags": [
+      "dalumas-suskaitmenintas",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-2eaeade9-method-1",
+        "title": "Dalumo taisyklių derinimas",
+        "methodType": "main",
+        "strategyTags": [
+          "dalumas-suskaitmenintas"
+        ],
+        "steps": [
+          {
+            "title": "Sąlygų skaidymas",
+            "action": "Iškelkite reikalavimą: $b \\in \\{0, 2, 4, 6, 8\\}$ ir $(9+a+b)$ dalus iš $9$.",
+            "reason": "Skaičius $18$ yra $2$ ir $9$ sandauga.",
+            "result": "Gautos dvi lygiagrečios sąlygos skaitmenims."
+          },
+          {
+            "title": "Minimumo paieška",
+            "action": "Parinkite mažiausius $a$ ir $b$, tenkinančius abi sąlygas.",
+            "reason": "Reikia rasti skaičių su mažiausia skaitmenų suma.",
+            "result": "Rastas skaičius $4050$."
+          }
+        ],
+        "finalAnswer": "Mažiausią skaitmenų sumą turintis skaičius yra $4050$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-2eaeade9-trap-1",
+        "title": "Lyginumo sąlygos pamiršimas",
+        "wrongMove": "Pasirenkamas $b=9$, kad suma $a+b=9$ būtų lengviau pasiekiama.",
+        "whyTempting": "Skaitmuo $9$ idealiai tinka dalumui iš $9$, tačiau jis padaro skaičių nelyginį.",
+        "correction": "Visada prisiminkite, kad dalumas iš $18$ reikalauja, jog skaičius baigtųsi lyginiu skaitmeniu.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-2eaeade9-trap-2",
+        "title": "Klaidingas sumos minimumo vertinimas",
+        "wrongMove": "Manymas, kad mažiausia suma pasiekiama tik su $a=1, b=8$.",
+        "whyTempting": "Mokiniai dažnai pamiršta, kad skaitmuo gali būti lygus nuliui.",
+        "correction": "Nulis yra mažiausias skaitmuo ir jis yra lyginis, todėl visada patikrinkite $0$ variantą pirmiausia.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kodėl mažiausia skaitmenų suma čia lygi $9$, o ne $0$?",
+      "Koks būtų atsakymas, jei skaičius turėtų dalytis iš $15$?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-2eaeade9-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kada skaičius dalijasi iš $18$?",
+        "back": "Kai jis yra lyginis (dalijasi iš $2$) ir jo skaitmenų suma dalijasi iš $9$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Skaičius dalijasi iš $18$ tada, kai jis dalijasi ir iš $2$ (yra lyginis), ir iš $9$ (skaitmenų suma dalijasi iš $9$).",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Kadangi skaičius turi būti lyginis, paskutinis skaitmuo $b$ gali būti tik $0, 2, 4, 6$ arba $8$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Skaitmenų suma lygi $4 + a + 5 + b = 9 + a + b$. Kad ši suma dalytųsi iš $9$, suma $a + b$ turi būti lygi $0, 9$ arba $18$. Ieškokite mažiausios sumos derinio su lyginiu $b$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-f2a0c71a",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Kiek skirtingų daliklių turi skaičius $120$?",
+    "answer": "Skaičius $120$ turi $16$ skirtingų daliklių.",
+    "acceptedAnswers": [
+      "Skaičius $120$ turi $16$ skirtingų daliklių."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
+      "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
+      "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$."
+    ],
+    "solution": "Išskaidome skaičių $120$ pirminiais daugikliais: $120 = 2^3 \\times 3^1 \\times 5^1$. Išrašome kiekvieno pirminio daugiklio laipsnio rodiklius: dvejeto rodiklis yra $3$, trejeto – $1$, penketo – $1$. Prie kiekvieno rodiklio pridedame po $1$ (tai atspindi galimybę daugiklį paimti $0$ kartų): gausime $4, 2$ ir $2$. Sudauginame šiuos skaičius: $4 \\times 2 \\times 2 = 16$. Vadinasi, skaičius $120$ turi $16$ skirtingų daliklių.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Taikykite daliklių skaičiaus formulę",
+      "text": "Išskaidykite $120$ pirminiais daugikliais. Pridėkite prie kiekvieno laipsnio rodiklio po $1$ ir gautus skaičius sudauginkite."
+    },
+    "strategyTags": [
+      "daliklių-skaičius",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-f2a0c71a-method-1",
+        "title": "Kombinatorinis daliklių skaičiavimas",
+        "methodType": "main",
+        "strategyTags": [
+          "daliklių-skaičius"
+        ],
+        "steps": [
+          {
+            "title": "Struktūrinė analizė",
+            "action": "Išskaidykite $120$ į $2^3 \\cdot 3^1 \\cdot 5^1$.",
+            "reason": "Kad matytume, iš kokių 'blokų' galima sudėlioti daliklius.",
+            "result": "Gauti rodikliai $3, 1, 1$."
+          },
+          {
+            "title": "Derinių skaičiavimas",
+            "action": "Sudauginkite $(3+1)(1+1)(1+1)$.",
+            "reason": "Kiekvienas daugiklis suteikia pasirinkimų laisvę (nuo $0$ iki maksimalaus laipsnio).",
+            "result": "Gauta $16$ daliklių."
+          }
+        ],
+        "finalAnswer": "Skaičius $120$ turi $16$ skirtingų daliklių."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-f2a0c71a-trap-1",
+        "title": "Nepilnas daliklių sąrašas",
+        "wrongMove": "Bandymas išrašyti daliklius ranka ir praleidimas tokių skaičių kaip $24$ arba $40$.",
+        "whyTempting": "Skaičius $120$ turi daug daliklių, todėl juos visus sužiūrėti be sistemos yra sunku.",
+        "correction": "Naudokite pirminio išskaidymo formulę – ji užtikrina, kad nebus praleistas nei vienas variantas.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-f2a0c71a-trap-2",
+        "title": "Tik pirminių daugiklių skaičiavimas",
+        "wrongMove": "Atsakymas, kad yra tik $3$ dalikliai ($2, 3, 5$).",
+        "whyTempting": "Klausimas 'kiek skirtingų daliklių' gali būti klaidingai suprastas kaip 'kiek pirminių daliklių'.",
+        "correction": "Sąvoka 'daliklis' apima visus skaičius, iš kurių dalijasi $120$, įskaitant $1$, patį $120$ ir visus sudėtinius derinius.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kodėl pridedame vienetą prie kiekvieno laipsnio rodiklio?",
+      "Kaip pasikeistų atsakymas, jei ieškotume tik TIKRŲJŲ daliklių (mažesnių už patį skaičių)?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-f2a0c71a-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kaip rasti skaičiaus $n = p_1^{a_1} p_2^{a_2} \\dots$ visų daliklių skaičių?",
+        "back": "Reikia sudauginti laipsnio rodiklius, padidintus vienetu: $(a_1 + 1) \\times (a_2 + 1) \\times \\dots$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pirmiausia skaičių $120$ išskaidykite pirminiais daugikliais: $120 = 8 \\times 15 = 2^3 \\times 3^1 \\times 5^1$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Kiekvieną daliklį galima sudaryti renkantis pirminių daugiklių kiekius. Pavyzdžiui, dvejetą galime paimti $0, 1, 2$ arba $3$ kartus (iš viso $4$ pasirinkimai).",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite formulę: jei $n = p_1^{a_1} p_2^{a_2} \\dots$, tai daliklių skaičius yra $(a_1+1)(a_2+1)\\dots$. Mūsų atveju dauginkite $(3+1)$, $(1+1)$ ir $(1+1)$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-06-69e93b63",
+    "topicId": "olimpiada-06-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite visų skaičiaus $28$ natūraliųjų daliklių sumą.",
+    "answer": "Daliklių suma lygi $56$.",
+    "acceptedAnswers": [
+      "Daliklių suma lygi $56$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-06-concept-logic"
+    ],
+    "hints": [
+      "Surašykite visus skaičiaus $28$ daliklius poromis, kad nieko nepraleistumėte: pradedant nuo $1$ ir baigiant pačiu skaičiumi $28$.",
+      "Daliklių poros yra: $(1, 28)$, $(2, 14)$ ir $(4, 7)$. Patikrinkite, ar tarp $4$ ir $7$ nėra kitų sveikųjų daliklių ($5$ ir $6$ netinka).",
+      "Surašykite visus unikalius daliklius į vieną eilę: $1, 2, 4, 7, 14, 28$ ir juos sudėkite."
+    ],
+    "solution": "Išrašome visus skaičiaus $28$ daliklius: $1, 2, 4, 7, 14$ ir $28$. Sudedame šiuos skaičius: $1 + 2 + 4 + 7 + 14 + 28$. Atliekame veiksmus: $1+2+4=7$; $7+7=14$; $14+14=28$; $28+28=56$. Gauta daliklių suma lygi $56$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Išrašykite daliklius arba taikykite formulę",
+      "text": "Daliklius galite rasti poromis (pvz. $1$ ir $28$, $2$ ir $14$). Sudėkite juos."
+    },
+    "strategyTags": [
+      "daliklių-suma",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-06-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-06-69e93b63-method-1",
+        "title": "Nuoseklus daliklių išrašymas",
+        "methodType": "main",
+        "strategyTags": [
+          "daliklių-suma"
+        ],
+        "steps": [
+          {
+            "title": "Daliklių aibės sudarymas",
+            "action": "Suraskite visus skaičius, iš kurių $28$ dalijasi be liekanos.",
+            "reason": "Uždavinys reikalauja visų daliklių sumos.",
+            "result": "Aibė $\\{1, 2, 4, 7, 14, 28\\}$."
+          },
+          {
+            "title": "Sumavimas",
+            "action": "Sudėkite visus narius: $1+2+4+7+14+28=56$.",
+            "reason": "Tai galutinis užduoties tikslas.",
+            "result": "Rezultatas $56$."
+          }
+        ],
+        "finalAnswer": "Daliklių suma lygi $56$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-06-69e93b63-trap-1",
+        "title": "Paties skaičiaus praleidimas",
+        "wrongMove": "Sudedami tik dalikliai $1, 2, 4, 7, 14$ ir gaunamas atsakymas $28$.",
+        "whyTempting": "Daugelyje uždavinių prašoma rasti 'tikruosius daliklius', todėl mokiniai nesąmoningai atmeta patį skaičių.",
+        "correction": "Sąvoka 'visi dalikliai' visada apima ir patį skaičių, nes jis dalijasi iš savęs.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-06-69e93b63-trap-2",
+        "title": "Vieneto (1) neįtraukimas",
+        "wrongMove": "Pradedama skaičiuoti nuo $2$ ir gaunama suma $55$.",
+        "whyTempting": "Manoma, kad $1$ yra 'akivaizdus' arba netraktuojamas kaip daliklis.",
+        "correction": "Nors $1$ yra pirminis savo prigimtimi, jis yra kiekvieno natūraliojo skaičiaus daliklis ir privalo būti įtrauktas į sumą.",
+        "reviewConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kokie yra kiti mažesni tobulieji skaičiai?",
+      "Ar daliklių skaičius visada yra lyginis? (Užuomina: pažiūrėkite į skaičių $16$)."
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-06-69e93b63-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra visų skaičiaus $28$ daliklių suma?",
+        "back": "$56$. Dalikliai yra $1, 2, 4, 7, 14$ ir $28$.",
+        "conceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Surašykite visus skaičiaus $28$ daliklius poromis, kad nieko nepraleistumėte: pradedant nuo $1$ ir baigiant pačiu skaičiumi $28$.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Daliklių poros yra: $(1, 28)$, $(2, 14)$ ir $(4, 7)$. Patikrinkite, ar tarp $4$ ir $7$ nėra kitų sveikųjų daliklių ($5$ ir $6$ netinka).",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Surašykite visus unikalius daliklius į vieną eilę: $1, 2, 4, 7, 14, 28$ ir juos sudėkite.",
+        "revealsConceptIds": [
+          "olimpiada-06-concept-method"
+        ],
+        "penalty": 0.1
       }
     ]
   },

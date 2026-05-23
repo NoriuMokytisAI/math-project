@@ -2897,872 +2897,8 @@ export const exercises_05 = [
     ]
   },
   {
-    "id": "ex-olimpiada-05-031859fd",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į patį skaičiaus priekį (prieš pirmąjį skaitmenį), skaičius padidėja lygiai $2$ kartus. Raskite mažiausią tokį natūralųjį skaičių.",
-    "answer": "Mažiausias toks skaičius yra $105263157894736842$.",
-    "acceptedAnswers": [
-      "Mažiausias toks skaičius yra $105263157894736842$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Pabandykite įsivaizduoti, kas nutinka su skaičiumi, kai jo paskutinis skaitmuo $2$ tampa pirmuoju. Jei pradinis skaičius yra $x$, naujas bus $2$ kartus didesnis.",
-      "Pastebėkite: jei padvigubinto skaičiaus paskutinis skaitmuo yra $4$ (nes $2 \\times 2 = 4$), tai ir pradinio skaičiaus priešpaskutinis skaitmuo turėjo būti $4$.",
-      "Tęskite šį procesą: padauginę $4$ iš $2$, gausite kitą skaitmenį ($8$). Taip nuosekliai atkurkite visą skaičių iš dešinės į kairę.",
-      "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$."
-    ],
-    "solution": "Pažymime pradinį skaičių kaip $10A + 2$, kur $A$ yra skaičiaus dalis be paskutinio dvejeto. Pagal uždavinio sąlygą sudarome lygtį: $2 \\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis. Supaprastinę lygtį gauname $19A = 2 \\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Naudokite skaičiaus skleistinį",
-      "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
-    },
-    "strategyTags": [
-      "skaitmenų-perkėlimas",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-031859fd-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "skaitmenų-perkėlimas"
-        ],
-        "steps": [
-          {
-            "title": "Matematinio modelio sudarymas",
-            "action": "Pažymime ieškomą skaičių kintamaisiais ir užrašome jo skaitmeninę išraišką $10A + 2$.",
-            "reason": "Kad galėtume pritaikyti algebrines operacijas skaitmenų perkėlimui aprašyti.",
-            "result": "Gauta lygtis $2 \\cdot 10^k + A = 2(10A + 2)$."
-          },
-          {
-            "title": "Lygties sprendimas ir analizė",
-            "action": "Išreiškiame $A$ per $k$ ir ieškome mažiausio tinkamo $k$ taikydami dalumo iš $19$ požymius.",
-            "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\cdot 10^k - 4$ privalo dalytis iš $19$.",
-            "result": "Rastas mažiausias skaičius $105263157894736842$."
-          }
-        ],
-        "finalAnswer": "Mažiausias toks skaičius yra $105262$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-031859fd-trap-1",
-        "title": "Skaitmenų skaičiaus $k$ neįvertinimas",
-        "wrongMove": "Manoma, kad skaičius turi tik kelis skaitmenis (pvz., bandoma tik su dviženkliais ar triženkliais).",
-        "whyTempting": "Atrodo, kad mažiausias skaičius turėtų būti trumpas.",
-        "correction": "Būtina spręsti lygtį sistemiškai, kol bus rastas pirmasis dalumo sąlygą tenkinantis $k$.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-031859fd-trap-2",
-        "title": "Klaida dauginant iš 2 su perkėlimu",
-        "wrongMove": "Atkuriant skaitmenis iš galo, pamirštama pridėti vienetą, kai sandauga viršija 10.",
-        "whyTempting": "Tai dažna skaičiavimo klaida atliekant daug žingsnių mintyse.",
-        "correction": "Kiekviename žingsnyje kruopščiai fiksuokite liekaną (perkeliamą dešimtį) kaip įprastoje daugyboje stulpeliu.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-031859fd-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į pa...",
-        "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pabandykite įsivaizduoti, kas nutinka su skaičiumi, kai jo paskutinis skaitmuo $2$ tampa pirmuoju. Jei pradinis skaičius yra $x$, naujas bus $2$ kartus didesnis.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pastebėkite: jei padvigubinto skaičiaus paskutinis skaitmuo yra $4$ (nes $2 \\times 2 = 4$), tai ir pradinio skaičiaus priešpaskutinis skaitmuo turėjo būti $4$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Tęskite šį procesą: padauginę $4$ iš $2$, gausite kitą skaitmenį ($8$). Taip nuosekliai atkurkite visą skaičių iš dešinės į kairę.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-05-45f96440",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite didžiausią penkiaženklį skaičių, kurio visi skaitmenys skirtingi ir kuris dalijasi iš $9$ ir iš $5$.",
-    "answer": "Didžiausias toks skaičius yra $98730$.",
-    "acceptedAnswers": [
-      "Didžiausias toks skaičius yra $98730$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Prisiminkite dalumo iš $5$ taisyklę: skaičius turi baigtis $0$ arba $5$. Kadangi ieškome didžiausio skaičiaus, pradėkite rinkti skaitmenis nuo didžiausio įmanomo ($9$).",
-      "Dalumo iš $9$ taisyklė sako, kad skaitmenų suma turi dalytis iš $9$. Išbandykite didžiausius įmanomus pirmus keturis skaitmenis.",
-      "Taikykite metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
-      "Atlikite konkretų žingsnį: Norint suformuoti didžiausią skaičių, pirmuosius skaitmenis parinksime kuo didesnius: $987...$. Kada..."
-    ],
-    "solution": "Kadangi ieškome didžiausio skaičiaus, pirmus skaitmenis renkamės mažėjančia tvarka: $9, 8, 7, ...$. Patikriname atvejį, kai paskutinis skaitmuo yra $0$. Skaičius yra $987a0$. Suma $24+a$ dalijasi iš $9$, kai $a=3$. Gauname $98730$. Patikriname atvejį, kai paskutinis skaitmuo yra $5$. Skaičius $987a5$. Suma $29+a$ dalijasi iš $9$, kai $a=7$, bet $7$ jau panaudotas. Kitam variantui $986a5$ suma $28+a$ duoda $a=8$ (panaudotas). Lyginant gautus rezultatus, didžiausias tenkinantis sąlygas skaičius yra $98730$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Išnagrinėkite dalumo iš 5 požymį",
-      "text": "Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9)."
-    },
-    "strategyTags": [
-      "dalumo-taisyklės",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-45f96440-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "dalumo-taisyklės"
-        ],
-        "steps": [
-          {
-            "title": "Dalumo požymių derinimas",
-            "action": "Fiksuojame paskutinį skaitmenį ($0$ arba $5$) ir maksimizuojame pirmuosius skaitmenis.",
-            "reason": "Didžiausias skaičius visada turi didžiausius įmanomus skaitmenis aukščiausiuose skyriuose.",
-            "result": "Nustatyti galimi skaičiaus pabaigos variantai."
-          },
-          {
-            "title": "Sąlygų patikra ir optimizavimas",
-            "action": "Taikome skaitmenų sumos taisyklę kiekvienam atvejui, užtikrindami, kad visi skaitmenys būtų skirtingi.",
-            "reason": "Sąlyga reikalauja skirtingų skaitmenų ir dalumo iš 9 vienu metu.",
-            "result": "Rastas skaičius $98730$."
-          }
-        ],
-        "finalAnswer": "Didžiausias toks skaičius yra $98730$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-45f96440-trap-1",
-        "title": "Pamirštas reikalavimas dėl skirtingų skaitmenų",
-        "wrongMove": "Parenkamas skaičius $99990$ arba kitas su pasikartojančiais skaitmenimis.",
-        "whyTempting": "Mokinys susikoncentruoja tik į dalumo požymius, ignoruodamas papildomą sąlygą.",
-        "correction": "Visada perskaitykite sąlygą antrą kartą po to, kai rasite kandidatą į atsakymą.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-45f96440-trap-2",
-        "title": "Tik vieno dalumo iš 5 atvejo tikrinimas",
-        "wrongMove": "Tikrinamas tik atvejis su galūne $5$, pamirštant $0$.",
-        "whyTempting": "Atrodo, kad skaičius su $5$ gale gali būti didesnis dėl didesnio paskutinio skaitmens.",
-        "correction": "Būtina patikrinti abu galimus variantus, nes didžiausią reikšmę lemia pirmieji skaitmenys, o ne paskutinis.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-45f96440-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Raskite didžiausią penkiaženklį skaičių, kurio visi skaitmen...",
-        "back": "Taikome šį metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Prisiminkite dalumo iš $5$ taisyklę: skaičius turi baigtis $0$ arba $5$. Kadangi ieškome didžiausio skaičiaus, pradėkite rinkti skaitmenis nuo didžiausio įmanomo ($9$).",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Dalumo iš $9$ taisyklė sako, kad skaitmenų suma turi dalytis iš $9$. Išbandykite didžiausius įmanomus pirmus keturis skaitmenis.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Norint suformuoti didžiausią skaičių, pirmuosius skaitmenis parinksime kuo didesnius: $987...$. Kada...",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-05-cb54fdbc",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Dėžutėje yra mažiau nei $50$ saldainių. Jei juos dalinsime po $4$, liks $3$ saldainiai. Jei dalinsime po $5$, liks $4$ saldainiai. Be to, žinoma, kad saldainių skaičius dalijasi iš $3$. Kiek saldainių yra dėžutėje?",
-    "answer": "Dėžutėje yra $39$ saldainiai.",
-    "acceptedAnswers": [
-      "Dėžutėje yra $39$ saldainiai."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Pastebėkite, kad abiem dalijimo atvejais (iš 4 ir iš 5) liekana yra vienetu mažesnė už daliklį. Tai reiškia, kad jei pridėtume $1$ saldainį, jų skaičius dalintųsi iš $4$ ir iš $5$ be liekanos.",
-      "Ieškokite skaičių, mažesnių už $50$, kurie dalijasi iš $20$ (bendras $4$ ir $5$ kartotinis), ir tada atimkite $1$.",
-      "Taikykite metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
-      "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste..."
-    ],
-    "solution": "Nustatome, kad skaičius $N+1$ turi dalytis iš $4$ ir $5$, todėl jis turi dalytis iš $20$. Galimos $N+1$ reikšmės iki $50$ yra $20$ ir $40$. Tai atitinka saldainių skaičių $19$ arba $39$. Tikriname papildomą sąlygą – dalumą iš $3$. Skaičius $19$ nesidalija iš $3$, o $39$ dalijasi ($3 \\times 13 = 39$).",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Ieškokite trūkstamo saldainio",
-      "text": "Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$."
-    },
-    "strategyTags": [
-      "dalikliai-kartotiniai",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-cb54fdbc-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "dalikliai-kartotiniai"
-        ],
-        "steps": [
-          {
-            "title": "Bendrojo kartotinio radimas su poslinkiu",
-            "action": "Randame mažiausią bendrąjį $4$ ir $5$ kartotinį ir atimame $1$ dėl liekanų savybės.",
-            "reason": "Sąlyga $N \\equiv -1 \\pmod 4$ ir $N \\equiv -1 \\pmod 5$ leidžia naudoti MBK metodą.",
-            "result": "Kandidatai: $19, 39, 59, ...$"
-          },
-          {
-            "title": "Sąlygų filtravimas",
-            "action": "Atmetame reikšmes, didesnes už $50$, ir patikriname dalumą iš $3$.",
-            "reason": "Reikia rasti vienintelį skaičių, tenkinantį visus tris apribojimus.",
-            "result": "Atsakymas $39$."
-          }
-        ],
-        "finalAnswer": "Dėžutėje yra $39$ saldainiai."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-cb54fdbc-trap-1",
-        "title": "Liekamosios dalies supainiojimas",
-        "wrongMove": "Bandoma pridėti liekanas prie MBK (pvz., $20+3+4$), užuot pastebėjus trūkstamą vienetą.",
-        "whyTempting": "Tai dažna klaida sprendžiant uždavinius su liekanomis be gilios analizės.",
-        "correction": "Visada patikrinkite, ar jūsų sugalvotas skaičius tikrai duoda nurodytas liekanas dalijant iš $4$ ir $5$.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-cb54fdbc-trap-2",
-        "title": "Dalumo iš 3 ignoravimas",
-        "wrongMove": "Pasirenkamas skaičius $19$, nes jis tenkina pirmas dvi sąlygas.",
-        "whyTempting": "Mokinys pamiršta paskutinę sąlygos dalį po to, kai randa pirmą tinkamą variantą.",
-        "correction": "Išrašykite visas sąlygas kaip kontrolinį sąrašą ir patikrinkite kiekvieną punktą.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-cb54fdbc-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dėžutėje yra mažiau nei $50$ saldainių. Jei juos dalinsime p...",
-        "back": "Taikome šį metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pastebėkite, kad abiem dalijimo atvejais (iš 4 ir iš 5) liekana yra vienetu mažesnė už daliklį. Tai reiškia, kad jei pridėtume $1$ saldainį, jų skaičius dalintųsi iš $4$ ir iš $5$ be liekanos.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Ieškokite skaičių, mažesnių už $50$, kurie dalijasi iš $20$ (bendras $4$ ir $5$ kartotinis), ir tada atimkite $1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste...",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-05-a3f215fa",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Stačiakampį popieriaus lapą, kurio kraštinės yra $60$ cm ir $84$ cm, reikia supjaustyti į vienodus didžiausius įmanomus kvadratus be jokių atraižų. Koks yra vieno kvadrato kraštinės ilgis ir kiek iš viso kvadratų gausime?",
-    "answer": "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus.",
-    "acceptedAnswers": [
-      "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Kadangi kvadratų kraštinės turi tiksliai užpildyti abi stačiakampio kraštines, kvadrato kraštinės ilgis turi būti bendras $60$ ir $84$ daliklis.",
-      "Ieškome didžiausio bendrojo daliklio (DBD), kad kvadratai būtų kuo didesni.",
-      "Taikykite metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
-      "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$"
-    ],
-    "solution": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$. Randame DBD($60, 84$) = $2^2 \\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm. Apskaičiuojame kvadratų kiekį: $(60/12) \\times (84/12) = 5 \\times 7 = 35$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Raskite bendrą daliklį",
-      "text": "Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų."
-    },
-    "strategyTags": [
-      "dbd-mbk",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-a3f215fa-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "dbd-mbk"
-        ],
-        "steps": [
-          {
-            "title": "Didžiausio bendrojo daliklio paieška",
-            "action": "Apskaičiuojame DBD skaičiams $60$ ir $84$ naudodami skaidymą daugikliais arba Euklido algoritmą.",
-            "reason": "Tai užtikrina, kad kvadratai bus maksimalaus dydžio ir užpildys plotą be liekanų.",
-            "result": "Kvadrato kraštinė lygi $12$ cm."
-          },
-          {
-            "title": "Kiekio nustatymas",
-            "action": "Padalijame stačiakampio kraštines iš kvadrato kraštinės ir gautus rezultatus sudauginame.",
-            "reason": "Taip sužinome, kiek kvadratų tilps tinklelyje išilgai ilgio ir pločio.",
-            "result": "Iš viso gausime $35$ kvadratus."
-          }
-        ],
-        "finalAnswer": "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-a3f215fa-trap-1",
-        "title": "Plotų dalyba vietoje kraštinių dalybos",
-        "wrongMove": "Bandoma dalinti bendrą plotą iš vieno daliklio, neįsitikinus, ar kvadratai fiziškai telpa be pjaustymo.",
-        "whyTempting": "Atrodo, kad plotas tiesiogiai nusako kiekį.",
-        "correction": "Geometriniuose uždaviniuose visada tikrinkite, ar kraštinės ilgis sveikai dalijasi iš pasirinkto matmens.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-a3f215fa-trap-2",
-        "title": "Mažiausio bendro kartotinio naudojimas",
-        "wrongMove": "Sumišus skaičiuojamas MBK užuot skaičiavus DBD.",
-        "whyTempting": "Terminai DBD ir MBK dažnai painiojami sprendžiant skaičių teorijos uždavinius.",
-        "correction": "Pagalvokite: ar daliname didelį daiktą į mažus (DBD), ar ieškome, kada maži daiktai susitiks (MBK)?",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-a3f215fa-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampį popieriaus lapą, kurio kraštinės yra $60$ cm ir ...",
-        "back": "Taikome šį metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Kadangi kvadratų kraštinės turi tiksliai užpildyti abi stačiakampio kraštines, kvadrato kraštinės ilgis turi būti bendras $60$ ir $84$ daliklis.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Ieškome didžiausio bendrojo daliklio (DBD), kad kvadratai būtų kuo didesni.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-05-f5a521c1",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Skaičių $2021$ galima užrašyti kaip dviejų pirminių skaičių sandaugą. Raskite šių dviejų pirminių skaičių sumą.",
-    "answer": "Pirminių skaičių suma yra $90$.",
-    "acceptedAnswers": [
-      "Pirminių skaičių suma yra $90$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
-      "Išbandykite dalinti iš pirminių skaičių $43, 41, 37$ arba $47, 53$.",
-      "Taikykite metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
-      "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$"
-    ],
-    "solution": "Apskaičiuojame apytikslę šaknį: $\\sqrt{2021} \\approx 44.9$. Tikriname pirminius skaičius mažėjančia tvarka: $43$. Atliekame dalybą: $2021 / 43 = 47$. Kadangi $47$ taip pat yra pirminis skaičius, radome ieškomus daugiklius. Jų suma: $43 + 47 = 90$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Įvertinkite pirminių skaičių dydį",
-      "text": "Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$."
-    },
-    "strategyTags": [
-      "pirminiai-skaičiai",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-f5a521c1-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "pirminiai-skaičiai"
-        ],
-        "steps": [
-          {
-            "title": "Daugiklių paieškos srities apribojimas",
-            "action": "Nustatome skaičiaus kvadratinę šaknį, kad žinotume, kur ieškoti pirminių daugiklių.",
-            "reason": "Bet koks sudėtinis skaičius turi bent vieną daliklį, ne didesnį už jo kvadratinę šaknį.",
-            "result": "Paieška vykdoma aplink $45$."
-          },
-          {
-            "title": "Skaidymas ir sumos skaičiavimas",
-            "action": "Nuosekliai tikriname dalumą iš artimiausių pirminių skaičių ir susumuojame radę porą.",
-            "reason": "Sąlyga garantuoja, kad daugikliai yra pirminiai, todėl jų radimas tiesiogiai veda prie atsakymo.",
-            "result": "Suma lygi $90$."
-          }
-        ],
-        "finalAnswer": "Pirminių skaičių suma yra $90$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-f5a521c1-trap-1",
-        "title": "Bandymai dalinti iš lyginių skaičių",
-        "wrongMove": "Mokinys gaišta laiką tikrindamas dalumą iš $2, 4, 6...$, nors $2021$ nelyginis.",
-        "whyTempting": "Automatinis įprotis tikrinti visus daliklius iš eilės.",
-        "correction": "Prisiminkite dalumo požymius: nelyginis skaičius niekada nesidalins iš lyginio.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-f5a521c1-trap-2",
-        "title": "Netinkamas šaknies įvertinimas",
-        "wrongMove": "Manoma, kad daugikliai turi būti labai maži (pvz., tikrinama tik iki 10).",
-        "whyTempting": "Tikimasi, kad uždavinys bus labai paprastas.",
-        "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\sqrt{N}$.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-f5a521c1-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių $2021$ galima užrašyti kaip dviejų pirminių skaičių ...",
-        "back": "Taikome šį metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Išbandykite dalinti iš pirminių skaičių $43, 41, 37$ arba $47, 53$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-05-ee0b640b",
-    "topicId": "olimpiada-05",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu leidžiama nutrinti bet kuriuos du skaičius ir vietoje jų užrašyti jų skirtumo absoliutų dydį. Ar po kelių tokių ėjimų lentelėje gali likti vienintelis skaičius $0$?",
-    "answer": "Ne, negali likti skaičius $0$.",
-    "acceptedAnswers": [
-      "Ne, negali likti skaičius $0$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-05-concept-logic"
-    ],
-    "hints": [
-      "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
-      "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
-      "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
-      "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis..."
-    ],
-    "solution": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius. Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\min(a,b)$). Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Strategijos ir įrodymai",
-    "olympiadTier": "advanced",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Nagrinėkite bendrą sumos lyginumą",
-      "text": "Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?"
-    },
-    "strategyTags": [
-      "paritetas-invariantas",
-      "proof"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-05-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-05-ee0b640b-method-1",
-        "title": "Pagrindinis loginis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "paritetas-invariantas"
-        ],
-        "steps": [
-          {
-            "title": "Invarianto nustatymas",
-            "action": "Nagrinėjame operaciją $a, b \\to |a-b|$ ir stebime sumos paritetą (lyginumą).",
-            "reason": "Jei tam tikra savybė nesikeičia, galime įrodyti, kad tam tikra būsena nepasiekiama.",
-            "result": "Sumos lyginumas išlieka toks pat (invariantas)."
-          },
-          {
-            "title": "Būsenų palyginimas",
-            "action": "Lyginame pradinės sumos paritetą su norimo rezultato ($0$) paritetu.",
-            "reason": "Prieštaravimas tarp paritetų įrodo, kad tikslas nepasiekiamas.",
-            "result": "Įrodyta, kad likti $0$ negali."
-          }
-        ],
-        "finalAnswer": "Ne, negali likti skaičius $0$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-05-ee0b640b-trap-1",
-        "title": "Konkrečių pavyzdžių bandymas be galo",
-        "wrongMove": "Mokinys bando trinti skaičius įvairiomis kombinacijomis, tikėdamasis rasti sprendinį.",
-        "whyTempting": "Atrodo, kad tiesiog dar nerasta teisinga seka.",
-        "correction": "Jei po kelių bandymų nepavyksta, ieškokite bendros savybės (invarianto), kuri apriboja galimybes.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-invariant"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-05-ee0b640b-trap-2",
-        "title": "Skirtumo modulio ignoravimas",
-        "wrongMove": "Manoma, kad operacija yra paprasta atimtis, nepastebint, kad skaičių kiekis mažėja.",
-        "whyTempting": "Sąlygos greitas perskaitymas.",
-        "correction": "Atidžiai stebėkite, kiek skaičių lieka po kiekvieno veiksmo – tai padės suprasti proceso pabaigą.",
-        "reviewConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "srsRecommended": false
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
-      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-05-ee0b640b-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu l...",
-        "back": "Taikome šį metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
-        "conceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-logic"
-        ],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
-        "revealsConceptIds": [
-          "olimpiada-05-concept-method"
-        ],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
     "id": "ex-olimpiada-05-b95502c0",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Šiuo metu tėvui yra $36$ metai, o jo sūnui – $8$ metai. Po kiek metų tėvas bus lygiai $3$ kartus vyresnis už sūnų?",
@@ -3906,7 +3042,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-cbff97d9",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Įrašykite skliaustus reiškiniui $5 + 7 \\times 8 - 6 / 2$ taip, kad gauto reiškinio reikšmė būtų kuo didesnė. Kokia yra ši didžiausia reikšmė?",
@@ -4050,7 +3186,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-eb7e344a",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{9 \\times 10}$.",
@@ -4194,7 +3330,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-1fc20a2a",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
@@ -4338,7 +3474,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-866100dc",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\ 000$?",
@@ -4482,7 +3618,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-6622d1e0",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\dots$ Raskite kitą šios sekos narį.",
@@ -4626,7 +3762,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-b53ec404",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Jeigu tam tikrą sugalvotą skaičių padaugintume iš $4$, iš gauto rezultato atimtume $7$ ir gautą skirtumą padalintume iš $5$, gautume $9$. Koks skaičius buvo sugalvotas?",
@@ -4770,7 +3906,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-af96bd64",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Keleivinis traukinys išvyko iš stoties $60$ km/h greičiu. Po $2$ valandų iš tos pačios stoties ta pačia kryptimi išvyko greitasis traukinys, kurio greitis $80$ km/h. Po kiek valandų nuo savo išvykimo greitasis traukinys pasivys keleivinį?",
@@ -4914,7 +4050,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-7452e90b",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tiesėje pažymėti $5$ skirtingi taškai. Kiek skirtingų atkarpų, kurių galai yra šie pažymėti taškai, galima rasti šioje tiesėje?",
@@ -5058,7 +4194,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-d944dce6",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite kampą, kurį sudaro laikrodžio valandinė ir minutinė rodyklės (mažesnįjį iš dviejų kampų).",
@@ -5208,7 +4344,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-1b8f2f68",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dydis yra $4$ kartus didesnis už gretimo kampo dydį. Raskite visų keturių susidariusių kampų dydžius.",
@@ -5352,7 +4488,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-6c25d5db",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Lygiašonio trikampio viena kraštinė lygi $10$ cm, o kita lygi $4$ cm. Raskite šio trikampio perimetrą.",
@@ -5502,7 +4638,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-7bf4bab4",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stačiakampio formos lapas, kurio perimetras lygus $30$ cm, buvo perkirptas į du vienodus stačiakampius. Kiekvieno iš šių dviejų mažesnių stačiakampių perimetras lygus $18$ cm. Raskite pradinio stačiakampio kraštinių ilgius.",
@@ -5646,7 +4782,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-9aacf698",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Didelis kvadratas padalintas į $9$ vienodus mažus kvadratėlius. Vieno mažo kvadratėlio perimetras yra $8$ cm. Raskite didžiojo kvadrato perimetrą.",
@@ -5796,7 +4932,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-a5116194",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, o kita sutrumpinta $20\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
@@ -5946,7 +5082,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-df8a80e6",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pailgės šio apskritimo ilgis?",
@@ -6090,7 +5226,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-29a4ca3d",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Kiek simetrijos ašių turi taisyklingasis šešiakampis?",
@@ -6234,7 +5370,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-950a0206",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Koordinačių plokštumoje (tik I ketvirtyje) kvadratas turi tris viršūnes taškuose $(2, 1)$, $(6, 1)$ ir $(2, 5)$. Raskite ketvirtosios kvadrato viršūnės koordinates.",
@@ -6378,7 +5514,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-d91d7cd0",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Kiek yra triženklių skaičių, kurių visi skaitmenys yra skirtingi ir nelyginiai?",
@@ -6522,7 +5658,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-335ceef1",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Marius turi $4$ skirtingas kelnes, $5$ skirtingus marškinius ir $3$ skirtingus švarkus. Keliais skirtingais būdais Marius gali apsirengti (pasirinkti vienas kelnes, vienus marškinius ir vieną švarką)?",
@@ -6659,7 +5795,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-9c2b94b5",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Moneta metama tris kartus iš eilės. Užrašomi visi galimi rezultatai (pvz., HHH – trys herbai). Keliais atvejais iškris bent du herbai?",
@@ -6796,7 +5932,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-f16ab6bb",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Metami du standartiniai lošimo kauliukai. Kokia tikimybė, kad iškritusių akučių suma bus lygi $7$?",
@@ -6939,7 +6075,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-95fb1dbf",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trys vaikai – Mantas, Paulius ir Rokas – nešioja skirtingų spalvų kepures: raudoną, mėlyną ir žalią. Mantas pasakė: „Mano kepurė nėra mėlyna“. Paulius pasakė: „Mano kepurė žalia“. Rokas pasakė: „Manto kepurė nėra raudona“. Žinoma, kad tik Rokas pasakė tiesą. Kokios spalvos kepurę nešioja Mantas?",
@@ -7076,7 +6212,7 @@ export const exercises_05 = [
   },
   {
     "id": "ex-olimpiada-05-dfa8e5ff",
-    "topicId": "olimpiada-05",
+    "topicId": "olimpiada-05-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Klasėje yra $25$ mokiniai. Iš jų $15$ lanko matematikos būrelį, $12$ lanko krepšinio būrelį, o $5$ mokiniai nelanko nė vieno iš šių būrelių. Kiek mokinių lanko abu būrelius?",
@@ -7208,6 +6344,870 @@ export const exercises_05 = [
           "olimpiada-05-concept-method"
         ],
         "penalty": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-031859fd",
+    "topicId": "olimpiada-05-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į patį skaičiaus priekį (prieš pirmąjį skaitmenį), skaičius padidėja lygiai $2$ kartus. Raskite mažiausią tokį natūralųjį skaičių.",
+    "answer": "Mažiausias toks skaičius yra $105263157894736842$.",
+    "acceptedAnswers": [
+      "Mažiausias toks skaičius yra $105263157894736842$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Pabandykite įsivaizduoti, kas nutinka su skaičiumi, kai jo paskutinis skaitmuo $2$ tampa pirmuoju. Jei pradinis skaičius yra $x$, naujas bus $2$ kartus didesnis.",
+      "Pastebėkite: jei padvigubinto skaičiaus paskutinis skaitmuo yra $4$ (nes $2 \\times 2 = 4$), tai ir pradinio skaičiaus priešpaskutinis skaitmuo turėjo būti $4$.",
+      "Tęskite šį procesą: padauginę $4$ iš $2$, gausite kitą skaitmenį ($8$). Taip nuosekliai atkurkite visą skaičių iš dešinės į kairę.",
+      "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$."
+    ],
+    "solution": "Pažymime pradinį skaičių kaip $10A + 2$, kur $A$ yra skaičiaus dalis be paskutinio dvejeto. Pagal uždavinio sąlygą sudarome lygtį: $2 \\cdot 10^k + A = 2(10A + 2)$, kur $k$ yra skaičiaus $A$ skaitmenų kiekis. Supaprastinę lygtį gauname $19A = 2 \\cdot 10^k - 4$. Tikriname $k$ reikšmes, kol randame mažiausią $k=17$, su kuriuo $A$ yra sveikasis skaičius. Gautas skaičius yra $105263157894736842$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Naudokite skaičiaus skleistinį",
+      "text": "Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$."
+    },
+    "strategyTags": [
+      "skaitmenų-perkėlimas",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-031859fd-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "skaitmenų-perkėlimas"
+        ],
+        "steps": [
+          {
+            "title": "Matematinio modelio sudarymas",
+            "action": "Pažymime ieškomą skaičių kintamaisiais ir užrašome jo skaitmeninę išraišką $10A + 2$.",
+            "reason": "Kad galėtume pritaikyti algebrines operacijas skaitmenų perkėlimui aprašyti.",
+            "result": "Gauta lygtis $2 \\cdot 10^k + A = 2(10A + 2)$."
+          },
+          {
+            "title": "Lygties sprendimas ir analizė",
+            "action": "Išreiškiame $A$ per $k$ ir ieškome mažiausio tinkamo $k$ taikydami dalumo iš $19$ požymius.",
+            "reason": "Skaičius $A$ turi būti natūralusis, todėl $2 \\cdot 10^k - 4$ privalo dalytis iš $19$.",
+            "result": "Rastas mažiausias skaičius $105263157894736842$."
+          }
+        ],
+        "finalAnswer": "Mažiausias toks skaičius yra $105262$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-031859fd-trap-1",
+        "title": "Skaitmenų skaičiaus $k$ neįvertinimas",
+        "wrongMove": "Manoma, kad skaičius turi tik kelis skaitmenis (pvz., bandoma tik su dviženkliais ar triženkliais).",
+        "whyTempting": "Atrodo, kad mažiausias skaičius turėtų būti trumpas.",
+        "correction": "Būtina spręsti lygtį sistemiškai, kol bus rastas pirmasis dalumo sąlygą tenkinantis $k$.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-031859fd-trap-2",
+        "title": "Klaida dauginant iš 2 su perkėlimu",
+        "wrongMove": "Atkuriant skaitmenis iš galo, pamirštama pridėti vienetą, kai sandauga viršija 10.",
+        "whyTempting": "Tai dažna skaičiavimo klaida atliekant daug žingsnių mintyse.",
+        "correction": "Kiekviename žingsnyje kruopščiai fiksuokite liekaną (perkeliamą dešimtį) kaip įprastoje daugyboje stulpeliu.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-031859fd-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į pa...",
+        "back": "Taikome šį metodą: Užrašykite skaičių kaip $10A + 2$. Perkėlus $2$ į priekį, naujo skaičiaus vertė yra $2 \\cdot 10^k + A$. Sulyginkite reikšmes ir suraskite kintamąjį $A$.",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pabandykite įsivaizduoti, kas nutinka su skaičiumi, kai jo paskutinis skaitmuo $2$ tampa pirmuoju. Jei pradinis skaičius yra $x$, naujas bus $2$ kartus didesnis.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pastebėkite: jei padvigubinto skaičiaus paskutinis skaitmuo yra $4$ (nes $2 \\times 2 = 4$), tai ir pradinio skaičiaus priešpaskutinis skaitmuo turėjo būti $4$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Tęskite šį procesą: padauginę $4$ iš $2$, gausite kitą skaitmenį ($8$). Taip nuosekliai atkurkite visą skaičių iš dešinės į kairę.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Užrašykite lygtį $19A = 2 \\cdot 10^k - 4$ ir ieškokite mažiausio $k$, su kuriuo dešinė pusė dalijasi iš $19$.",
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-45f96440",
+    "topicId": "olimpiada-05-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite didžiausią penkiaženklį skaičių, kurio visi skaitmenys skirtingi ir kuris dalijasi iš $9$ ir iš $5$.",
+    "answer": "Didžiausias toks skaičius yra $98730$.",
+    "acceptedAnswers": [
+      "Didžiausias toks skaičius yra $98730$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Prisiminkite dalumo iš $5$ taisyklę: skaičius turi baigtis $0$ arba $5$. Kadangi ieškome didžiausio skaičiaus, pradėkite rinkti skaitmenis nuo didžiausio įmanomo ($9$).",
+      "Dalumo iš $9$ taisyklė sako, kad skaitmenų suma turi dalytis iš $9$. Išbandykite didžiausius įmanomus pirmus keturis skaitmenis.",
+      "Taikykite metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
+      "Atlikite konkretų žingsnį: Norint suformuoti didžiausią skaičių, pirmuosius skaitmenis parinksime kuo didesnius: $987...$. Kada..."
+    ],
+    "solution": "Kadangi ieškome didžiausio skaičiaus, pirmus skaitmenis renkamės mažėjančia tvarka: $9, 8, 7, ...$. Patikriname atvejį, kai paskutinis skaitmuo yra $0$. Skaičius yra $987a0$. Suma $24+a$ dalijasi iš $9$, kai $a=3$. Gauname $98730$. Patikriname atvejį, kai paskutinis skaitmuo yra $5$. Skaičius $987a5$. Suma $29+a$ dalijasi iš $9$, kai $a=7$, bet $7$ jau panaudotas. Kitam variantui $986a5$ suma $28+a$ duoda $a=8$ (panaudotas). Lyginant gautus rezultatus, didžiausias tenkinantis sąlygas skaičius yra $98730$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Išnagrinėkite dalumo iš 5 požymį",
+      "text": "Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9)."
+    },
+    "strategyTags": [
+      "dalumo-taisyklės",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-45f96440-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "dalumo-taisyklės"
+        ],
+        "steps": [
+          {
+            "title": "Dalumo požymių derinimas",
+            "action": "Fiksuojame paskutinį skaitmenį ($0$ arba $5$) ir maksimizuojame pirmuosius skaitmenis.",
+            "reason": "Didžiausias skaičius visada turi didžiausius įmanomus skaitmenis aukščiausiuose skyriuose.",
+            "result": "Nustatyti galimi skaičiaus pabaigos variantai."
+          },
+          {
+            "title": "Sąlygų patikra ir optimizavimas",
+            "action": "Taikome skaitmenų sumos taisyklę kiekvienam atvejui, užtikrindami, kad visi skaitmenys būtų skirtingi.",
+            "reason": "Sąlyga reikalauja skirtingų skaitmenų ir dalumo iš 9 vienu metu.",
+            "result": "Rastas skaičius $98730$."
+          }
+        ],
+        "finalAnswer": "Didžiausias toks skaičius yra $98730$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-45f96440-trap-1",
+        "title": "Pamirštas reikalavimas dėl skirtingų skaitmenų",
+        "wrongMove": "Parenkamas skaičius $99990$ arba kitas su pasikartojančiais skaitmenimis.",
+        "whyTempting": "Mokinys susikoncentruoja tik į dalumo požymius, ignoruodamas papildomą sąlygą.",
+        "correction": "Visada perskaitykite sąlygą antrą kartą po to, kai rasite kandidatą į atsakymą.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-45f96440-trap-2",
+        "title": "Tik vieno dalumo iš 5 atvejo tikrinimas",
+        "wrongMove": "Tikrinamas tik atvejis su galūne $5$, pamirštant $0$.",
+        "whyTempting": "Atrodo, kad skaičius su $5$ gale gali būti didesnis dėl didesnio paskutinio skaitmens.",
+        "correction": "Būtina patikrinti abu galimus variantus, nes didžiausią reikšmę lemia pirmieji skaitmenys, o ne paskutinis.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-45f96440-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Raskite didžiausią penkiaženklį skaičių, kurio visi skaitmen...",
+        "back": "Taikome šį metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Prisiminkite dalumo iš $5$ taisyklę: skaičius turi baigtis $0$ arba $5$. Kadangi ieškome didžiausio skaičiaus, pradėkite rinkti skaitmenis nuo didžiausio įmanomo ($9$).",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Dalumo iš $9$ taisyklė sako, kad skaitmenų suma turi dalytis iš $9$. Išbandykite didžiausius įmanomus pirmus keturis skaitmenis.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite metodą: Skaičius, dalus iš $5$, turi baigtis $0$ arba $5$. Kadangi norime rasti didžiausią skaičių, turime maksimizuoti skaitmenis iš kairės į dešinę (pradedant nuo 9).",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atlikite konkretų žingsnį: Norint suformuoti didžiausią skaičių, pirmuosius skaitmenis parinksime kuo didesnius: $987...$. Kada...",
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-cb54fdbc",
+    "topicId": "olimpiada-05-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Dėžutėje yra mažiau nei $50$ saldainių. Jei juos dalinsime po $4$, liks $3$ saldainiai. Jei dalinsime po $5$, liks $4$ saldainiai. Be to, žinoma, kad saldainių skaičius dalijasi iš $3$. Kiek saldainių yra dėžutėje?",
+    "answer": "Dėžutėje yra $39$ saldainiai.",
+    "acceptedAnswers": [
+      "Dėžutėje yra $39$ saldainiai."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Pastebėkite, kad abiem dalijimo atvejais (iš 4 ir iš 5) liekana yra vienetu mažesnė už daliklį. Tai reiškia, kad jei pridėtume $1$ saldainį, jų skaičius dalintųsi iš $4$ ir iš $5$ be liekanos.",
+      "Ieškokite skaičių, mažesnių už $50$, kurie dalijasi iš $20$ (bendras $4$ ir $5$ kartotinis), ir tada atimkite $1$.",
+      "Taikykite metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
+      "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste..."
+    ],
+    "solution": "Nustatome, kad skaičius $N+1$ turi dalytis iš $4$ ir $5$, todėl jis turi dalytis iš $20$. Galimos $N+1$ reikšmės iki $50$ yra $20$ ir $40$. Tai atitinka saldainių skaičių $19$ arba $39$. Tikriname papildomą sąlygą – dalumą iš $3$. Skaičius $19$ nesidalija iš $3$, o $39$ dalijasi ($3 \\times 13 = 39$).",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Ieškokite trūkstamo saldainio",
+      "text": "Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$."
+    },
+    "strategyTags": [
+      "dalikliai-kartotiniai",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-cb54fdbc-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "dalikliai-kartotiniai"
+        ],
+        "steps": [
+          {
+            "title": "Bendrojo kartotinio radimas su poslinkiu",
+            "action": "Randame mažiausią bendrąjį $4$ ir $5$ kartotinį ir atimame $1$ dėl liekanų savybės.",
+            "reason": "Sąlyga $N \\equiv -1 \\pmod 4$ ir $N \\equiv -1 \\pmod 5$ leidžia naudoti MBK metodą.",
+            "result": "Kandidatai: $19, 39, 59, ...$"
+          },
+          {
+            "title": "Sąlygų filtravimas",
+            "action": "Atmetame reikšmes, didesnes už $50$, ir patikriname dalumą iš $3$.",
+            "reason": "Reikia rasti vienintelį skaičių, tenkinantį visus tris apribojimus.",
+            "result": "Atsakymas $39$."
+          }
+        ],
+        "finalAnswer": "Dėžutėje yra $39$ saldainiai."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-cb54fdbc-trap-1",
+        "title": "Liekamosios dalies supainiojimas",
+        "wrongMove": "Bandoma pridėti liekanas prie MBK (pvz., $20+3+4$), užuot pastebėjus trūkstamą vienetą.",
+        "whyTempting": "Tai dažna klaida sprendžiant uždavinius su liekanomis be gilios analizės.",
+        "correction": "Visada patikrinkite, ar jūsų sugalvotas skaičius tikrai duoda nurodytas liekanas dalijant iš $4$ ir $5$.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-cb54fdbc-trap-2",
+        "title": "Dalumo iš 3 ignoravimas",
+        "wrongMove": "Pasirenkamas skaičius $19$, nes jis tenkina pirmas dvi sąlygas.",
+        "whyTempting": "Mokinys pamiršta paskutinę sąlygos dalį po to, kai randa pirmą tinkamą variantą.",
+        "correction": "Išrašykite visas sąlygas kaip kontrolinį sąrašą ir patikrinkite kiekvieną punktą.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-cb54fdbc-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dėžutėje yra mažiau nei $50$ saldainių. Jei juos dalinsime p...",
+        "back": "Taikome šį metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pastebėkite, kad abiem dalijimo atvejais (iš 4 ir iš 5) liekana yra vienetu mažesnė už daliklį. Tai reiškia, kad jei pridėtume $1$ saldainį, jų skaičius dalintųsi iš $4$ ir iš $5$ be liekanos.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Ieškokite skaičių, mažesnių už $50$, kurie dalijasi iš $20$ (bendras $4$ ir $5$ kartotinis), ir tada atimkite $1$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite metodą: Atkreipkite dėmesį, kad abiem atvejais iki pilno padalijimo trūksta lygiai $1$ saldainio. Tai reiškia, kad prie saldainių skaičiaus pridėjus $1$, gautas skaičius dalinsis ir iš $4$, ir iš $5$.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atlikite konkretų žingsnį: Tarkime, saldainių skaičius yra $N$. Kadangi $N \\equiv 3 \\pmod 4$ ir $N \\equiv 4 \\pmod 5$, tai paste...",
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-a3f215fa",
+    "topicId": "olimpiada-05-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Stačiakampį popieriaus lapą, kurio kraštinės yra $60$ cm ir $84$ cm, reikia supjaustyti į vienodus didžiausius įmanomus kvadratus be jokių atraižų. Koks yra vieno kvadrato kraštinės ilgis ir kiek iš viso kvadratų gausime?",
+    "answer": "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus.",
+    "acceptedAnswers": [
+      "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Kadangi kvadratų kraštinės turi tiksliai užpildyti abi stačiakampio kraštines, kvadrato kraštinės ilgis turi būti bendras $60$ ir $84$ daliklis.",
+      "Ieškome didžiausio bendrojo daliklio (DBD), kad kvadratai būtų kuo didesni.",
+      "Taikykite metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
+      "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$"
+    ],
+    "solution": "Skaidome skaičius $60$ ir $84$ pirminiais daugikliais: $60 = 2^2 \\cdot 3 \\cdot 5$, $84 = 2^2 \\cdot 3 \\cdot 7$. Randame DBD($60, 84$) = $2^2 \\cdot 3 = 12$. Vadinasi, kvadrato kraštinė yra $12$ cm. Apskaičiuojame kvadratų kiekį: $(60/12) \\times (84/12) = 5 \\times 7 = 35$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Raskite bendrą daliklį",
+      "text": "Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų."
+    },
+    "strategyTags": [
+      "dbd-mbk",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-a3f215fa-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "dbd-mbk"
+        ],
+        "steps": [
+          {
+            "title": "Didžiausio bendrojo daliklio paieška",
+            "action": "Apskaičiuojame DBD skaičiams $60$ ir $84$ naudodami skaidymą daugikliais arba Euklido algoritmą.",
+            "reason": "Tai užtikrina, kad kvadratai bus maksimalaus dydžio ir užpildys plotą be liekanų.",
+            "result": "Kvadrato kraštinė lygi $12$ cm."
+          },
+          {
+            "title": "Kiekio nustatymas",
+            "action": "Padalijame stačiakampio kraštines iš kvadrato kraštinės ir gautus rezultatus sudauginame.",
+            "reason": "Taip sužinome, kiek kvadratų tilps tinklelyje išilgai ilgio ir pločio.",
+            "result": "Iš viso gausime $35$ kvadratus."
+          }
+        ],
+        "finalAnswer": "Kvadrato kraštinė lygi $12$ cm, iš viso gausime $35$ kvadratus."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-a3f215fa-trap-1",
+        "title": "Plotų dalyba vietoje kraštinių dalybos",
+        "wrongMove": "Bandoma dalinti bendrą plotą iš vieno daliklio, neįsitikinus, ar kvadratai fiziškai telpa be pjaustymo.",
+        "whyTempting": "Atrodo, kad plotas tiesiogiai nusako kiekį.",
+        "correction": "Geometriniuose uždaviniuose visada tikrinkite, ar kraštinės ilgis sveikai dalijasi iš pasirinkto matmens.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-a3f215fa-trap-2",
+        "title": "Mažiausio bendro kartotinio naudojimas",
+        "wrongMove": "Sumišus skaičiuojamas MBK užuot skaičiavus DBD.",
+        "whyTempting": "Terminai DBD ir MBK dažnai painiojami sprendžiant skaičių teorijos uždavinius.",
+        "correction": "Pagalvokite: ar daliname didelį daiktą į mažus (DBD), ar ieškome, kada maži daiktai susitiks (MBK)?",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-a3f215fa-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampį popieriaus lapą, kurio kraštinės yra $60$ cm ir ...",
+        "back": "Taikome šį metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Kadangi kvadratų kraštinės turi tiksliai užpildyti abi stačiakampio kraštines, kvadrato kraštinės ilgis turi būti bendras $60$ ir $84$ daliklis.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Ieškome didžiausio bendrojo daliklio (DBD), kad kvadratai būtų kuo didesni.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite metodą: Didžiausio kvadrato kraštinė turi būti didžiausias bendras stačiakampio kraštinių daliklis (DBD), kad pjaustant neliktų atraižų.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atlikite konkretų žingsnį: Ieškome skaičių $60$ ir $84$ Didžiausio Bendrojo Daliklio (DBD). Skaičiaus $60$ dalikliai: $1, 2, 3,...$",
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-f5a521c1",
+    "topicId": "olimpiada-05-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Skaičių $2021$ galima užrašyti kaip dviejų pirminių skaičių sandaugą. Raskite šių dviejų pirminių skaičių sumą.",
+    "answer": "Pirminių skaičių suma yra $90$.",
+    "acceptedAnswers": [
+      "Pirminių skaičių suma yra $90$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
+      "Išbandykite dalinti iš pirminių skaičių $43, 41, 37$ arba $47, 53$.",
+      "Taikykite metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
+      "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$"
+    ],
+    "solution": "Apskaičiuojame apytikslę šaknį: $\\sqrt{2021} \\approx 44.9$. Tikriname pirminius skaičius mažėjančia tvarka: $43$. Atliekame dalybą: $2021 / 43 = 47$. Kadangi $47$ taip pat yra pirminis skaičius, radome ieškomus daugiklius. Jų suma: $43 + 47 = 90$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Įvertinkite pirminių skaičių dydį",
+      "text": "Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$."
+    },
+    "strategyTags": [
+      "pirminiai-skaičiai",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-f5a521c1-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "pirminiai-skaičiai"
+        ],
+        "steps": [
+          {
+            "title": "Daugiklių paieškos srities apribojimas",
+            "action": "Nustatome skaičiaus kvadratinę šaknį, kad žinotume, kur ieškoti pirminių daugiklių.",
+            "reason": "Bet koks sudėtinis skaičius turi bent vieną daliklį, ne didesnį už jo kvadratinę šaknį.",
+            "result": "Paieška vykdoma aplink $45$."
+          },
+          {
+            "title": "Skaidymas ir sumos skaičiavimas",
+            "action": "Nuosekliai tikriname dalumą iš artimiausių pirminių skaičių ir susumuojame radę porą.",
+            "reason": "Sąlyga garantuoja, kad daugikliai yra pirminiai, todėl jų radimas tiesiogiai veda prie atsakymo.",
+            "result": "Suma lygi $90$."
+          }
+        ],
+        "finalAnswer": "Pirminių skaičių suma yra $90$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-f5a521c1-trap-1",
+        "title": "Bandymai dalinti iš lyginių skaičių",
+        "wrongMove": "Mokinys gaišta laiką tikrindamas dalumą iš $2, 4, 6...$, nors $2021$ nelyginis.",
+        "whyTempting": "Automatinis įprotis tikrinti visus daliklius iš eilės.",
+        "correction": "Prisiminkite dalumo požymius: nelyginis skaičius niekada nesidalins iš lyginio.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-f5a521c1-trap-2",
+        "title": "Netinkamas šaknies įvertinimas",
+        "wrongMove": "Manoma, kad daugikliai turi būti labai maži (pvz., tikrinama tik iki 10).",
+        "whyTempting": "Tikimasi, kad uždavinys bus labai paprastas.",
+        "correction": "Jei skaičius nesidalija iš mažų pirminių skaičių ($2, 3, 5, 7, 11, 13$), reikia drąsiai judėti link $\\sqrt{N}$.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-f5a521c1-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių $2021$ galima užrašyti kaip dviejų pirminių skaičių ...",
+        "back": "Taikome šį metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Kadangi $2021$ yra dviejų pirminių skaičių sandauga, o šie skaičiai turi būti netoli $\\sqrt{2021}$, pradėkite tikrinti dalumą iš skaičių, esančių netoli $45$.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Išbandykite dalinti iš pirminių skaičių $43, 41, 37$ arba $47, 53$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite metodą: Skaičiai turi būti arti kvadratinės šaknies iš $2021$ (kuri yra tarp $44$ ir $45$). Tikrinkite pirminius skaičius, esančius arti $45$.",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atlikite konkretų žingsnį: Kadangi abu daugikliai yra pirminiai skaičiai ir jų sandauga lygi $2021$, jie turi būti arti $\\sqrt{...$",
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-05-ee0b640b",
+    "topicId": "olimpiada-05-strategijos-ir-irodymai",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu leidžiama nutrinti bet kuriuos du skaičius ir vietoje jų užrašyti jų skirtumo absoliutų dydį. Ar po kelių tokių ėjimų lentelėje gali likti vienintelis skaičius $0$?",
+    "answer": "Ne, negali likti skaičius $0$.",
+    "acceptedAnswers": [
+      "Ne, negali likti skaičius $0$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-05-concept-logic"
+    ],
+    "hints": [
+      "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
+      "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
+      "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
+      "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis..."
+    ],
+    "solution": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius. Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\min(a,b)$). Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Strategijos ir įrodymai",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Nagrinėkite bendrą sumos lyginumą",
+      "text": "Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?"
+    },
+    "strategyTags": [
+      "paritetas-invariantas",
+      "proof"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-05-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-05-ee0b640b-method-1",
+        "title": "Pagrindinis loginis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "paritetas-invariantas"
+        ],
+        "steps": [
+          {
+            "title": "Invarianto nustatymas",
+            "action": "Nagrinėjame operaciją $a, b \\to |a-b|$ ir stebime sumos paritetą (lyginumą).",
+            "reason": "Jei tam tikra savybė nesikeičia, galime įrodyti, kad tam tikra būsena nepasiekiama.",
+            "result": "Sumos lyginumas išlieka toks pat (invariantas)."
+          },
+          {
+            "title": "Būsenų palyginimas",
+            "action": "Lyginame pradinės sumos paritetą su norimo rezultato ($0$) paritetu.",
+            "reason": "Prieštaravimas tarp paritetų įrodo, kad tikslas nepasiekiamas.",
+            "result": "Įrodyta, kad likti $0$ negali."
+          }
+        ],
+        "finalAnswer": "Ne, negali likti skaičius $0$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-05-ee0b640b-trap-1",
+        "title": "Konkrečių pavyzdžių bandymas be galo",
+        "wrongMove": "Mokinys bando trinti skaičius įvairiomis kombinacijomis, tikėdamasis rasti sprendinį.",
+        "whyTempting": "Atrodo, kad tiesiog dar nerasta teisinga seka.",
+        "correction": "Jei po kelių bandymų nepavyksta, ieškokite bendros savybės (invarianto), kuri apriboja galimybes.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-invariant"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-05-ee0b640b-trap-2",
+        "title": "Skirtumo modulio ignoravimas",
+        "wrongMove": "Manoma, kad operacija yra paprasta atimtis, nepastebint, kad skaičių kiekis mažėja.",
+        "whyTempting": "Sąlygos greitas perskaitymas.",
+        "correction": "Atidžiai stebėkite, kiek skaičių lieka po kiekvieno veiksmo – tai padės suprasti proceso pabaigą.",
+        "reviewConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "srsRecommended": false
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+      "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-05-ee0b640b-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu l...",
+        "back": "Taikome šį metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
+        "conceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-logic"
+        ],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
+        "revealsConceptIds": [
+          "olimpiada-05-concept-method"
+        ],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
+        "penalty": 0.12
       }
     ]
   },

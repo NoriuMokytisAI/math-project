@@ -2767,1010 +2767,8 @@ export const exercises_07 = [
     "estimatedSeconds": 45
   },
   {
-    "id": "ex-olimpiada-07-1db2920b",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite skaičiaus $2^{2026}$ dalybos iš $7$ liekaną.",
-    "answer": "Dalybos liekana yra 2.",
-    "acceptedAnswers": [
-      "Dalybos liekana yra 2."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Apskaičiuokite pirmųjų dviejų laipsnių liekanas dalijant iš 7.",
-      "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
-      "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
-      "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$."
-    ],
-    "solution": "Pastebime, kad $2^3 \\equiv 1 \\pmod 7$. Padalijame rodiklį: $2026 = 3 \\times 675 + 1$. Pertvarkome laipsnį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Cikliškumo paieška liekanose",
-      "text": "Raskite mažą $2$ laipsnį, kuris moduliu $7$ yra lygus $1$ arba $-1$, ir pritaikykite laipsnio savybes."
-    },
-    "strategyTags": [
-      "introductory",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-1db2920b-method-1",
-        "title": "Cikliškumo analizė",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Periodo radimas",
-            "action": "Apskaičiuojame pirmąsias 2 laipsnių liekanas moduliu 7.",
-            "reason": "Ieškome tokio laipsnio, kuris duotų liekaną 1, kad galėtume supaprastinti didelį laipsnį.",
-            "result": "$2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 = 8 \\equiv 1 \\pmod 7$.",
-            "latex": "2^3 \\equiv 1 \\pmod 7"
-          },
-          {
-            "title": "Rodiklio skaidymas",
-            "action": "Padalijame rodiklį 2026 iš gauto periodo 3.",
-            "reason": "Tai leidžia išreikšti didelį laipsnį per mažesnį, kurio reikšmė moduliu 7 yra žinoma.",
-            "result": "$2026 = 3 \\cdot 675 + 1$.",
-            "latex": "2026 = 3 \\times 675 + 1"
-          },
-          {
-            "title": "Galutinė liekana",
-            "action": "Pertvarkome reiškinį naudodami laipsnių savybes.",
-            "reason": "Kadangi $2^3 \\equiv 1$, tai bet koks jo laipsnis išlieka lygus 1 moduliu 7.",
-            "result": "$2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
-            "latex": "2^{2026} \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7"
-          }
-        ],
-        "finalAnswer": "Dalybos liekana yra 2."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-1db2920b-trap-1",
-        "title": "Neteisingas periodo parinkimas",
-        "type": "mistake",
-        "wrongMove": "Teigti, kad liekana kartojasi kas 7 laipsnius.",
-        "whyTempting": "Manoma, kad periodas būtinai sutampa su pačiu dalikliu (moduliu).",
-        "whyItHappens": "Neperskaitomos pirmosios liekanos ir daroma skubota prielaida.",
-        "wrongPattern": "2^n \\pmod 7 \\text{ kartojasi kas } 7 \\text{ žingsnius}.",
-        "correction": "Liekanų periodas visada yra daliklio $m$ daliklis (pagal Ferma mažąją teoremą $n^{m-1} \\equiv 1$), bet nebūtinai pats $m$. Reikia tikrinti konkrečias reikšmes.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-1db2920b-trap-2",
-        "title": "Aritmetinė klaida skaičiuojant laipsnį",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad $2^3 = 6$.",
-        "whyTempting": "Skubant laipsnio rodiklis supainiojamas su daugikliu.",
-        "whyItHappens": "Elementari dėmesio klaida atliekant mintinus skaičiavimus.",
-        "wrongPattern": "2^3 = 6 \\implies 6 \\equiv -1 \\pmod 7.",
-        "correction": "Būtina prisiminti, kad kėlimas laipsniu yra kartotinė daugyba: $2^3 = 2 \\cdot 2 \\cdot 2 = 8$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-1db2920b-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip greitai rasti didelio laipsnio $a^n \\pmod m$ liekaną?",
-        "back": "Ieškome tokio mažo laipsnio $k$, kad $a^k \\equiv 1 \\pmod m$, tada laipsnio rodiklį $n$ dalijame iš $k$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-1db2920b-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Kokia yra $2^{2026}$ dalybos iš 7 liekana?",
-        "back": "Liekana yra 2. Tai gaunama pastebėjus, kad $2^3 \\equiv 1 \\pmod 7$ ir $2026 = 3 \\cdot 675 + 1$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Apskaičiuokite pirmųjų dviejų laipsnių liekanas dalijant iš 7.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-07-3305c4d4",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Skaičius $A$ gautas užrašius vieną po kito skaičius nuo $1$ iki $20$ iš eilės: $A = 1234567891011121314151617181920$. Raskite šio skaičiaus dalybos iš $9$ liekaną.",
-    "answer": "Dalybos liekana yra 3.",
-    "acceptedAnswers": [
-      "Dalybos liekana yra 3."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Prisiminkite dalumo iš 9 taisyklę.",
-      "Apskaičiuokite visų skaitmenų nuo 1 iki 20 sumą.",
-      "Suskaičiuokite vienetų ir dešimčių skaitmenų sumą atskirai: skaitmenys 1-9 sumuojasi į 45, o skaičiams 10-19 dešimtys yra 10 vienetų, o vienetai vėl yra 0-9.",
-      "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną."
-    ],
-    "solution": "Apskaičiuojame skaitmenų sumą: nuo 1 iki 9 suma yra $45$. Nuo 10 iki 19 skaitmenų suma yra $10 \\times 1 + 45 = 55$. Skaičiaus 20 skaitmenų suma yra $2 + 0 = 2$. Bendra skaitmenų suma lygi $45 + 55 + 2 = 102$. Skaičiaus 102 skaitmenų suma lygi $1+0+2=3$. Todėl liekana dalijant iš 9 yra 3.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "introductory",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Dalybos iš 9 požymis",
-      "text": "Skaičiaus ir jo skaitmenų sumos dalybos iš 9 liekanos sutampa."
-    },
-    "strategyTags": [
-      "introductory",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-3305c4d4-method-1",
-        "title": "Skaitmenų sumos analizė",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Vienetų skaitmenų suma",
-            "action": "Suskaičiuojame visų vienetų pozicijose esančių skaitmenų sumą.",
-            "reason": "Vienetų skaitmenys nuo 1 iki 9 ir nuo 10 iki 19 kartojasi.",
-            "result": "Suma nuo 1 iki 9 yra 45. Skaičiams 10-19 vienetai vėl duoda 45. Skaičiui 20 vienetas yra 0. Bendra: $45+45+0=90$.",
-            "latex": "S_v = 45 + 45 + 0 = 90"
-          },
-          {
-            "title": "Dešimčių skaitmenų suma",
-            "action": "Suskaičiuojame dešimčių pozicijose esančių skaitmenų sumą.",
-            "reason": "Skaičiai nuo 10 iki 19 visi turi dešimtį 1, o skaičius 20 turi 2.",
-            "result": "Dešimtys nuo 10 iki 19 duoda $10 \\cdot 1 = 10$. Skaičius 20 prideda 2. Bendra: $10+2=12$.",
-            "latex": "S_d = 10 \\cdot 1 + 2 = 12"
-          },
-          {
-            "title": "Galutinės liekanos radimas",
-            "action": "Sudedame visas dalines sumas ir randame liekaną moduliu 9.",
-            "reason": "Pagal dalumo požymį, skaičiaus liekana sutampa su jo skaitmenų sumos liekana.",
-            "result": "Bendra suma $90 + 12 = 102$. Skaičiaus 102 skaitmenų suma $1+0+2=3$.",
-            "latex": "102 \\equiv 3 \\pmod 9"
-          }
-        ],
-        "finalAnswer": "Dalybos liekana yra 3."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-3305c4d4-trap-1",
-        "title": "Skaičių ir skaitmenų painiojimas",
-        "type": "mistake",
-        "wrongMove": "Sudėti pačius skaičius nuo 1 iki 20 vietoje jų skaitmenų.",
-        "whyTempting": "Greitai skaitant užduotį „skaitmenų suma“ suprantama kaip „skaičių seka“.",
-        "whyItHappens": "Nepakankamas dėmesys sąvokai „skaitmuo“.",
-        "wrongPattern": "1+2+3+\\dots+20 = 210 \\implies 210 \\pmod 9 = 3.",
-        "correction": "Nors atsakymas šiame pavyzdyje sutapo atsitiktinai, taisyklė reikalauja sumuoti atskirus skaitmenis ($1+2+3+4+5+6+7+8+9+1+0+1+1 \\dots$), o ne pačias vertes.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-3305c4d4-trap-2",
-        "title": "Paskutinio skaitmens taisyklės taikymas",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad liekana lygi paskutiniam skaitmeniui (0).",
-        "whyTempting": "Supainiojama su dalumu iš 2, 5 arba 10.",
-        "whyItHappens": "Dalybos iš 10 taisyklė (liekana lygi paskutiniam skaitmeniui) klaidingai perkeliama kitiems dalikliams.",
-        "wrongPattern": "A \\text{ baigiasi } 0 \\implies A \\equiv 0 \\pmod 9.",
-        "correction": "Dalybai iš 9 svarbi tik visų skaitmenų suma, o ne skaičiaus pabaiga.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-3305c4d4-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra dalumo iš 9 taisyklė liekanų požiūriu?",
-        "back": "Skaičius $N$ ir jo skaitmenų suma $S(N)$ duoda tą pačią liekaną dalijant iš 9, t. y. $N \\equiv S(N) \\pmod 9$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-3305c4d4-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Ar tiesa, kad skaičiaus dalybos iš 3 ir iš 9 liekanos visada sutampa?",
-        "back": "Netiesa. Pavyzdžiui, skaičiaus 6 liekana dalijant iš 3 yra 0, o iš 9 yra 6. Tačiau abu dalumo požymiai remiasi skaitmenų suma.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Prisiminkite dalumo iš 9 taisyklę.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Apskaičiuokite visų skaitmenų nuo 1 iki 20 sumą.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Suskaičiuokite vienetų ir dešimčių skaitmenų sumą atskirai: skaitmenys 1-9 sumuojasi į 45, o skaičiams 10-19 dešimtys yra 10 vienetų, o vienetai vėl yra 0-9.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-07-9dc52ddd",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Fibonacci seka apibrėžiama taip: $F_1 = 1$, $F_2 = 1$, $F_{n} = F_{n-1} + F_{n-2}$ visiems $n \\ge 3$. Įrodykite, kad kas trečias Fibonacci sekos narys yra lyginis.",
-    "answer": "Kas trečias Fibonacci sekos narys yra lyginis.",
-    "acceptedAnswers": [
-      "Kas trečias Fibonacci sekos narys yra lyginis."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Užrašykite pirmųjų 6 narių reikšmes ir nustatykite jų paritetą (lyginis/nelyginis).",
-      "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
-      "Kadangi $F_n = F_{n-1} + F_{n-2}$, tai narių paritetas moduliu 2 priklauso tik nuo dviejų prieš tai einančių narių.",
-      "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada."
-    ],
-    "solution": "Apskaičiuojame paritetą moduliu 2: $F_1 \\equiv 1$, $F_2 \\equiv 1$ (abu nelyginiai). Tada $F_3 = F_2 + F_1 \\equiv 1 + 1 \\equiv 0$ (lyginis). Sekantys nariai: $F_4 = F_3 + F_2 \\equiv 0 + 1 \\equiv 1$, $F_5 = F_4 + F_3 \\equiv 1 + 0 \\equiv 1$. Galiausiai $F_6 = F_5 + F_4 \\equiv 1 + 1 \\equiv 0$. Kadangi ciklas $1, 1, 0$ kartojasi, tai $F_{3k}$ visada yra lyginiai.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Liekanų seka moduliu 2",
-      "text": "Nagrinėkite Fibonacci sekos narių lyginumą (paritetą) moduliu 2."
-    },
-    "strategyTags": [
-      "standard",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-9dc52ddd-method-1",
-        "title": "Pariteto ciklo analizė",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pradinių narių paritetas",
-            "action": "Nustatome pirmųjų trijų Fibonacci narių lyginumą (paritetą).",
-            "reason": "Fibonacci seka apibrėžiama per du ankstesnius narius, todėl paritetas taip pat priklauso nuo jų.",
-            "result": "$F_1=1$ (N), $F_2=1$ (N), $F_3=1+1=2$ (L). Seka moduliu 2: $1, 1, 0$.",
-            "latex": "F_1, F_2, F_3 \\equiv 1, 1, 0 \\pmod 2"
-          },
-          {
-            "title": "Ciklo tęstinumo įrodymas",
-            "action": "Apskaičiuojame sekančių trijų narių paritetą.",
-            "reason": "Ieškome pasikartojančio dėsningumo (ciklo).",
-            "result": "$F_4 = 0+1=1$ (N), $F_5 = 1+0=1$ (N), $F_6 = 1+1=2 \\equiv 0$ (L).",
-            "latex": "F_4, F_5, F_6 \\equiv 1, 1, 0 \\pmod 2"
-          },
-          {
-            "title": "Išvada apie periodiškumą",
-            "action": "Pastebime, kad blokas $(1, 1, 0)$ kartojasi.",
-            "reason": "Kadangi bet kuris narys $F_n \\pmod 2$ priklauso tik nuo $F_{n-1}$ ir $F_{n-2}$ paritetų, radus pasikartojančią porą $(1, 1)$, visa tolimesnė seka bus identiška.",
-            "result": "Nariai $F_3, F_6, F_9, \\dots, F_{3k}$ visada yra lygūs 0 moduliu 2, t. y. lyginiai.",
-            "latex": "F_{3k} \\equiv 0 \\pmod 2"
-          }
-        ],
-        "finalAnswer": "Kas trečias Fibonacci sekos narys yra lyginis."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-9dc52ddd-trap-1",
-        "title": "Bandymas skaičiuoti dideles vertes",
-        "type": "mistake",
-        "wrongMove": "Bandyti įrodyti teiginį skaičiuojant pačius Fibonacci skaičius.",
-        "whyTempting": "Atrodo, kad parodžius daugiau pavyzdžių ($F_{12}=144$ ir pan.), įrodymas bus svaresnis.",
-        "whyItHappens": "Nesuprantama, kad Fibonacci seka auga eksponentiškai ir skaičiavimas ranka greitai tampa nebeįmanomas.",
-        "wrongPattern": "F_{12} = 144 \\text{ (lyginis)}, F_{15} = 610 \\text{ (lyginis)}, \\dots \\implies \\text{įrodyta}.",
-        "correction": "Olimpiadose pavyzdžiai nėra įrodymas. Reikia naudoti pariteto (lyginumo) savybes moduliu 2, kurios parodo dėsningumą be didelių skaičiavimų.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-9dc52ddd-trap-2",
-        "title": "Indukcijos bazės praleidimas",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad seka prasideda nuo lyginio skaičiaus.",
-        "whyTempting": "Norisi, kad „kas trečias“ sutaptų su paprastu dalumu iš 3 ($3, 6, 9 \\dots$).",
-        "whyItHappens": "Nepatikrinami patys pirmieji sekos nariai $F_1$ ir $F_2$.",
-        "wrongPattern": "F_0=0, F_1=1, F_2=1 \\dots \\text{ (jei pradedama nuo nulio)}.",
-        "correction": "Svarbu griežtai laikytis užduoties apibrėžimo: $F_1=1, F_2=1$. Lyginiai skaičiai pasirodo pozicijose $3, 6, 9 \\dots$, o ne $1, 4, 7 \\dots$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-9dc52ddd-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kodėl sekos moduliu $m$ analizė yra naudinga?",
-        "back": "Sumažinamos reikšmių aibės iki baigtinių liekanų aibės, kurioje lengva rasti pasikartojančius periodus.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-9dc52ddd-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Koks yra Fibonacci sekos pariteto (lyginumo) periodas?",
-        "back": "Periodas yra 3: (Nelyginis, Nelyginis, Lyginis).",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Užrašykite pirmųjų 6 narių reikšmes ir nustatykite jų paritetą (lyginis/nelyginis).",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kadangi $F_n = F_{n-1} + F_{n-2}$, tai narių paritetas moduliu 2 priklauso tik nuo dviejų prieš tai einančių narių.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-07-f4b5c481",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Naudodami Euklido algoritmą, raskite skaičių $2026$ ir $1492$ didžiausią bendrąjį daliklį $\\text{dbd}(2026, 1492)$.",
-    "answer": "Didžiausias bendrasis daliklis yra 2.",
-    "acceptedAnswers": [
-      "Didžiausias bendrasis daliklis yra 2."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Padalykite 2026 iš 1492 su liekana.",
-      "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
-      "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
-      "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas."
-    ],
-    "solution": "$2026 = 1 \\times 1492 + 534$. $1492 = 2 \\times 534 + 424$. $534 = 1 \\times 424 + 110$. $424 = 3 \\times 110 + 94$. $110 = 1 \\times 94 + 16$. $94 = 5 \\times 16 + 14$. $16 = 1 \\times 14 + 2$ ir $14 = 7 \\times 2 + 0$. Paskutinė neulinė liekana yra 2, todėl $\\text{dbd}(2026, 1492) = 2$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Liekanų dalybos grandinė",
-      "text": "Euklido algoritmu atlikite kartotinę dalybą su liekana, kol gausite liekaną 0."
-    },
-    "strategyTags": [
-      "standard",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-f4b5c481-method-1",
-        "title": "Euklido algoritmo taikymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Pirminis dalijimas",
-            "action": "Padalijame 2026 iš 1492 su liekana.",
-            "reason": "Euklido algoritmas remiasi savybe $\\text{dbd}(a, b) = \\text{dbd}(b, r)$, kur $r$ yra liekana.",
-            "result": "$2026 = 1 \\cdot 1492 + 534$.",
-            "latex": "2026 = 1 \\times 1492 + 534"
-          },
-          {
-            "title": "Iteracinė liekanų paieška",
-            "action": "Tęsiame dalijimą naudodami ankstesnį daliklį ir gautą liekaną.",
-            "reason": "DBD išlieka toks pat per visą liekanų grandinę.",
-            "result": "Gautos lygybės: $1492 = 2 \\cdot 534 + 424$; $534 = 1 \\cdot 424 + 110$; $424 = 3 \\cdot 110 + 94$; $110 = 1 \\cdot 94 + 16$.",
-            "latex": "1492 = 2 \\times 534 + 424 \\dots 110 = 1 \\times 94 + 16"
-          },
-          {
-            "title": "Galutinio rezultato radimas",
-            "action": "Užbaigiame algoritmą iki liekanos 0.",
-            "reason": "Paskutinė neulinė liekana grandinėje yra ieškomas DBD.",
-            "result": "$94 = 5 \\cdot 16 + 14$; $16 = 1 \\cdot 14 + 2$; $14 = 7 \\cdot 2 + 0$. DBD yra 2.",
-            "latex": "\\text{dbd}(2026, 1492) = 2"
-          }
-        ],
-        "finalAnswer": "Didžiausias bendrasis daliklis yra 2."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-f4b5c481-trap-1",
-        "title": "Nulio kaip DBD priskyrimas",
-        "type": "mistake",
-        "wrongMove": "Sustoti ties liekana 0 ir teigti, kad DBD lygus 0.",
-        "whyTempting": "Skubant supainiojama paskutinė gauta reikšmė grandinėje su pačiu dalikliu.",
-        "whyItHappens": "Neteisingas algoritmo užbaigimo sąlygos supratimas.",
-        "wrongPattern": "14 = 7 \\cdot 2 + 0 \\implies \\text{dbd} = 0.",
-        "correction": "Didžiausias bendrasis daliklis yra paskutinė NEULINĖ liekana. Nulis niekada negali būti DBD (nebent abu skaičiai pradiniai yra nuliai).",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-f4b5c481-trap-2",
-        "title": "Aritmetinė klaida dalyboje su liekana",
-        "type": "mistake",
-        "wrongMove": "Neteisingai apskaičiuoti liekaną viename iš žingsnių.",
-        "whyTempting": "Skaičiai dideli, todėl atimant mintinai lengva suklysti.",
-        "whyItHappens": "Dėmesio klaida atliekant bazinius aritmetinius veiksmus.",
-        "wrongPattern": "2026 - 1492 = 544 \\text{ (vietoje 534)}.",
-        "correction": "Būtina tikrinti kiekvieną žingsnį padauginant dalmenį iš daliklio ir pridedant liekaną. Net viena klaida grandinėje nulemia klaidingą galutinį DBD.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-f4b5c481-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kas yra didžiausias bendrasis daliklis Euklido algoritme?",
-        "back": "Tai paskutinė neulinė liekana, gauta atliekant dalybos su liekana veiksmus.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-f4b5c481-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Jei $\\text{dbd}(a, b) = d$, tai $\\text{dbd}(a/d, b/d) = ?$",
-        "back": "Lygus 1. Padalijus skaičius iš jų DBD, gauti skaičiai visada yra tarpusavyje pirminiai.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Padalykite 2026 iš 1492 su liekana.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-07-c98149bb",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, trupmena $\\frac{21n+4}{14n+3}$ yra nesuprastinama.",
-    "answer": "Įrodyta, kad trupmena yra nesuprastinama.",
-    "acceptedAnswers": [
-      "Įrodyta, kad trupmena yra nesuprastinama."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Tarkime, kad bendras daliklis yra $d$. Tada $d$ turi dalyti ir skaitiklį, ir vardiklį.",
-      "Raskite tokius koeficientus $A$ ir $B$, kad sandaugose $A(21n+4)$ ir $B(14n+3)$ kintamasis $n$ susiprastintų.",
-      "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
-      "Apskaičiuokite: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$. Kadangi $d$ dalija 1, tai $d=1$."
-    ],
-    "solution": "Tarkime, kad $d = \\text{dbd}(21n+4, 14n+3)$. Tada $d$ dalija bet kokį šių skaičių tiesinį derinį su sveikaisiais koeficientais. Sudėliokime derinį, kuris pašalina $n$: $3(14n+3) - 2(21n+4) = 42n + 9 - 42n - 8 = 1$. Kadangi $d$ dalija skirtumą, o šis lygus 1, tai $d$ privalo dalyti 1. Vadinasi, $d=1$, ir trupmena yra nesuprastinama.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Kintamojo eliminavimas",
-      "text": "Įrodykite, kad skaitiklis ir vardiklis yra pirminiai vienas kitam (jų DBD lygus 1) pašalindami kintamąjį $n$ tiesiniu deriniu."
-    },
-    "strategyTags": [
-      "standard",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-c98149bb-method-1",
-        "title": "Tiesinio derinio metodas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Bendrojo daliklio prielaida",
-            "action": "Tarkime, kad egzistuoja bendras daliklis $d > 1$, kuris dalija ir skaitiklį, ir vardiklį.",
-            "reason": "Jei trupmena būtų suprastinama, skaitiklis ir vardiklis turėtų turėti bendrą daliklį, didesnį už 1.",
-            "result": "$d | (21n+4)$ ir $d | (14n+3)$.",
-            "latex": "d = \\text{dbd}(21n+4, 14n+3)"
-          },
-          {
-            "title": "Kintamojo eliminavimas",
-            "action": "Sudarome tokį šių skaičių tiesinį derinį, kuriame nariai su $n$ susiprastintų.",
-            "reason": "Jei $d$ dalija du skaičius, tai jis dalija ir bet kokį jų sveikąjį derinį $Ax + By$.",
-            "result": "Padauginame vardiklį iš 3, o skaitiklį iš 2: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$.",
-            "latex": "3(14n+3) - 2(21n+4) = 1"
-          },
-          {
-            "title": "Išvada apie nesuprastinumą",
-            "action": "Kadangi $d$ dalija gautą skirtumą, nustatome $d$ reikšmę.",
-            "reason": "Vienintelis natūralusis skaičius, dalijantis 1, yra 1.",
-            "result": "$d$ privalo būti lygus 1. Vadinasi, trupmena yra nesuprastinama bet kuriam $n$.",
-            "latex": "d | 1 \\implies d = 1"
-          }
-        ],
-        "finalAnswer": "Įrodyta, kad trupmena yra nesuprastinama."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-c98149bb-trap-1",
-        "title": "Įrodymas pavyzdžiais",
-        "type": "mistake",
-        "wrongMove": "Bandyti įrodyti teiginį įstatant tik konkrečias $n$ reikšmes.",
-        "whyTempting": "Patikrinus $n=1, 2, 3$, gaunamos nesuprastinamos trupmenos ($25/17, 46/31 \\dots$), todėl atrodo, kad tai pakankama.",
-        "whyItHappens": "Nesuprantamas skirtumas tarp pavyzdžio ir bendro matematinio įrodymo.",
-        "wrongPattern": "n=1 \\implies 25/17 \\text{ (nesuprastinama)} \\implies \\text{teisinga visada}.",
-        "correction": "Olimpiadose pavyzdžiai neįrodo bendro teiginio. Reikia naudoti algebra, kuri veiktų bet kokiam kintamajam $n$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-c98149bb-trap-2",
-        "title": "DBD ir skirtumo klaida",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad jei skaitiklis ir vardiklis skiriasi nedideliu skaičiumi, jie visada nesuprastinami.",
-        "whyTempting": "Painiojama su savybe, kad du gretimi skaičiai ($n$ ir $n+1$) visada yra tarpusavyje pirminiai.",
-        "whyItHappens": "Paviršutiniškas panašių savybių taikymas.",
-        "wrongPattern": "(21n+4) - (14n+3) = 7n+1 \\neq 0 \\implies \\text{nesuprastinama}.",
-        "correction": "Skirtumas nebūtinai parodo DBD. Pavyzdžiui, 10 ir 15 skiriasi 5, bet yra suprastinami iš 5. Tik skirtumas, lygus 1, garantuoja nesuprastinumą.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-c98149bb-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kaip įrodoma, kad du reiškiniai su $n$ yra tarpusavyje pirminiai?",
-        "back": "Ieškome tiesinio derinio $A \\cdot f(n) + B \\cdot g(n) = 1$. Jei toks egzistuoja, tai $\\text{dbd}(f(n), g(n)) = 1$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-c98149bb-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Ar trupmena $(n)/(n+1)$ gali būti suprastinama?",
-        "back": "Ne, nes du iš eilės einantys natūralieji skaičiai visada yra tarpusavyje pirminiai.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Tarkime, kad bendras daliklis yra $d$. Tada $d$ turi dalyti ir skaitiklį, ir vardiklį.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Raskite tokius koeficientus $A$ ir $B$, kad sandaugose $A(21n+4)$ ir $B(14n+3)$ kintamasis $n$ susiprastintų.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Apskaičiuokite: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$. Kadangi $d$ dalija 1, tai $d=1$.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-07-a17dfa35",
-    "topicId": "olimpiada-07",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Išspręskite realiaisiais skaičiais lygtį $2\\lfloor x \\rfloor = x + \\{x\\}$, kur $\\{x\\} = x - \\lfloor x \\rfloor$ yra skaičiaus trupmeninė dalis.",
-    "answer": "Sprendiniai yra $x = 0$ ir $x = 1.5$.",
-    "acceptedAnswers": [
-      "Sprendiniai yra $x = 0$ ir $x = 1.5$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-07-concept-logic"
-    ],
-    "hints": [
-      "Pakeiskite $x$ išraiška per sveikąją ir trupmeninę dalį.",
-      "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
-      "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
-      "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams."
-    ],
-    "solution": "Pakeičiame $x = \\lfloor x \\rfloor + \\{x\\}$, tada lygtis tampa $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\}$. Supaprastiname: $\\lfloor x \\rfloor = 2\\{x\\}$. Kadangi trupmeninė dalis tenkina $0 \\le \\{x\\} < 1$, tai $0 \\le 2\\{x\\} < 2$. Kadangi $\\lfloor x \\rfloor$ yra sveikasis skaičius, turime du atvejus: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $\\{x\\} = 0$, todėl $x = 0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\} = 0.5$, todėl $x = 1.5$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "advanced",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Trupmeninės dalies apribojimai",
-      "text": "Pakeiskite $x = \\lfloor x \\rfloor + \\{x\\}$ ir panaudokite savybę, kad $0 \\le \\{x\\} < 1$."
-    },
-    "strategyTags": [
-      "advanced",
-      "proof",
-      "skaičiu-teorija"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-07-concept-method"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-07-a17dfa35-method-1",
-        "title": "Sveikosios ir trupmeninės dalies skaidymas",
-        "methodType": "main",
-        "strategyTags": [
-          "proof"
-        ],
-        "steps": [
-          {
-            "title": "Kintamojo skaidymas",
-            "action": "Pakeičiame $x$ išraiška $\\lfloor x \\rfloor + \\{x\\}$ pradinėje lygtyje.",
-            "reason": "Tai leidžia lygtį su vienu kintamuoju paversti lygtimi su dviem specifiniais komponentais, kurių savybės gerai žinomos.",
-            "result": "Lygtis tampa: $2\\lfloor x \\rfloor = (\\lfloor x \\rfloor + \\{x\\}) + \\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
-            "latex": "\\lfloor x \\rfloor = 2\\{x\\}"
-          },
-          {
-            "title": "Rėžių taikymas",
-            "action": "Pritaikome trupmeninės dalies savybę $0 \\le \\{x\\} < 1$.",
-            "reason": "Kadangi sveikoji dalis lygi dvigubai trupmeninei, jos galimos vertės yra griežtai apribotos.",
-            "result": "Išreiškiame $\\{x\\} = \\lfloor x \\rfloor / 2$. Tada $0 \\le \\lfloor x \\rfloor / 2 < 1$, vadinasi $0 \\le \\lfloor x \\rfloor < 2$.",
-            "latex": "0 \\le \\lfloor x \\rfloor < 2"
-          },
-          {
-            "title": "Atvejų analizė",
-            "action": "Randame visus sveikuosius skaičius duotame intervale.",
-            "reason": "Sveikoji dalis privalo būti sveikasis skaičius.",
-            "result": "Galimos vertės: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $x=0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\}=0.5$, todėl $x=1.5$.",
-            "latex": "x \\in \\{0, 1.5\\}"
-          }
-        ],
-        "finalAnswer": "Sprendiniai yra $x = 0$ ir $x = 1.5$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-07-a17dfa35-trap-1",
-        "title": "Trupmeninės dalies savybių nepaisymas",
-        "type": "mistake",
-        "wrongMove": "Spręsti lygtį algebraiškai neatsižvelgiant į tai, kad $\\{x\\}$ negali būti bet koks skaičius.",
-        "whyTempting": "Atrodo, kad $\\{x\\}$ galima traktuoti kaip paprastą kintamąjį $y$.",
-        "whyItHappens": "Užmirštama, kad $\\{x\\}$ yra griežtai apribota intervalu $[0, 1)$.",
-        "wrongPattern": "\\lfloor x \\rfloor = 2\\{x\\} \\implies \\text{begalybė sprendinių}.",
-        "correction": "Būtina visada naudoti nelygybę $0 \\le \\{x\\} < 1$, kuri susiaurina sprendinių aibę iki baigtinio skaičiaus.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      },
-      {
-        "id": "ex-olimpiada-07-a17dfa35-trap-2",
-        "title": "Sveikosios dalies painiojimas su apvalinimu",
-        "type": "mistake",
-        "wrongMove": "Manyti, kad $\\lfloor x \\rfloor$ yra artimiausias sveikasis skaičius.",
-        "whyTempting": "Kasdienėje kalboje „sveikoji dalis“ dažnai tapatinama su skaičiaus „nukirpimu“ po kablelio.",
-        "whyItHappens": "Trūksta griežto matematinio apibrėžimo taikymo.",
-        "wrongPattern": "\\lfloor 1.9 \\rfloor = 2 \\text{ (klaidingas apvalinimas aukštyn)}.",
-        "correction": "Sveikoji dalis visada eina „į kairę“ skaičių tiesėje: $\\lfloor 1.9 \\rfloor = 1$, $\\lfloor -1.1 \\rfloor = -2$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ]
-      }
-    ],
-    "reflectionPrompts": [
-      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
-      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-07-a17dfa35-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra svarbiausia skaičiaus trupmeninės dalies $\\{x\\}$ savybė lygtims?",
-        "back": "Savybė, kad trupmeninė dalis visada tenkina griežtas ribas: $0 \\le \\{x\\} < 1$.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [
-          "olimpiada-07-concept-method"
-        ],
-        "defaultEnabled": true
-      },
-      {
-        "id": "ex-olimpiada-07-a17dfa35-srs-2",
-        "deck": "practice",
-        "cardType": "fact",
-        "front": "Kiek lygi $\\lfloor -3.2 \\rfloor$?",
-        "back": "Lygi -4. Tai didžiausias sveikasis skaičius, ne didesnis už -3.2.",
-        "conceptIds": [
-          "olimpiada-07-concept-logic"
-        ],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Pakeiskite $x$ išraiška per sveikąją ir trupmeninę dalį.",
-        "revealsConceptIds": [],
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
-        "revealsConceptIds": [],
-        "penalty": 0.08
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
-        "revealsConceptIds": [],
-        "penalty": 0.1
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams.",
-        "revealsConceptIds": [],
-        "penalty": 0.12
-      }
-    ]
-  },
-  {
     "id": "ex-olimpiada-07-15e75e74",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Parduotuvėje parduodami dviračiai (su 2 ratais) ir triračiai (su 3 ratais). Viso yra 15 transporto priemonių, kurios kartu turi 36 ratus. Kiek yra dviračių ir kiek triračių?",
@@ -3944,7 +2942,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-7e30a65c",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Jei žinoma, kad $x + y = 5$ ir $xy = 6$, raskite $x^2 + y^2$ reikšmę.",
@@ -4111,7 +3109,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-5585385b",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Išskaidykite daugianarį $x^2 - 5x + 6$ daugikliais ir raskite jo šaknis.",
@@ -4278,7 +3276,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-9cbe13cb",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "6 darbininkai gali pastatyti namą per 12 dienų. Per kiek dienų tą patį namą pastatytų 9 darbininkai, dirbdami tokiu pačiu našumu?",
@@ -4438,7 +3436,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-4ed27723",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite visų dviženklių skaičių, kurie dalijasi iš 3, sumą.",
@@ -4605,7 +3603,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-6e85f8cd",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Geometrinės progresijos pirmasis narys lygus $3$, o vardiklis lygus $2$. Raskite pirmųjų $6$ jos narių sumą.",
@@ -4772,7 +3770,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-5cb75c1f",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Išspręskite nelygybę $|2x - 5| \\le 9$ ir raskite sveikųjų sprendinių skaičių.",
@@ -4927,7 +3925,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-cc31e7e8",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite funkcijos $f(x) = \\frac{1}{\\sqrt{x - 3}}$ apibrėžimo sritį.",
@@ -5094,7 +4092,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-0f8394c4",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trikampyje $ABC$ kampas $A$ yra dvigubai didesnis už kampą $B$, o priekampis prie viršūnės $C$ lygus $120^\\circ$. Raskite trikampio vidinių kampų dydžius.",
@@ -5261,7 +4259,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-13051fff",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stačiojo trikampio vienas iš smailųjų kampų lygus $30^\\circ$, o įžambinė lygi $10$ cm. Raskite trikampio plotą.",
@@ -5428,7 +4426,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-5db2e7d0",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trikampio $ABC$ kraštinėje $AB$ pažymėtas taškas $D$, o kraštinėje $AC$ – taškas $E$ taip, kad $AD = 4$, $DB = 6$, $AE = 5$, $EC = 3$. Įrodykite, kad trikampiai $ADE$ ir $ACB$ yra panašūs.",
@@ -5583,7 +4581,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-f9377ea2",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Dvi lygiagrečios tiesės $a$ ir $b$ kertamos kirstine $c$. Vieno iš gautų vienašalių kampų dydis yra 4 kartus didesnis už kitą. Raskite šių kampų dydžius.",
@@ -5750,7 +4748,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-939a92ea",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trikampyje $ABC$ nubrėžta pusiaukampinė $AD$ dalija kraštinę $BC$ į dvi atkarpas: $BD = 3$ cm ir $DC = 5$ cm. Raskite šoninių kraštinių $AB$ ir $AC$ santykį.",
@@ -5917,7 +4915,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-c0b5286d",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskritime nubrėžtas kampas $\\angle ABC$ yra įbrėžtinis, o kampas $\\angle AOC$ yra centrinis, kur $O$ – apskritimo centras. Taškai $B$ ir $O$ yra skirtingose tiesės $AC$ pusėse. Jei įbrėžtinis kampas lygus $55^\\circ$, raskite iškilo centrinio kampo $\\angle AOC$ dydį.",
@@ -6072,7 +5070,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-556b0ef2",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tiesė $AB$ liečia apskritimą su centru $O$ taške $T$. Atkarpa $OA$ kerta apskritimą taške $M$, o $OA = 13$ cm, $AT = 12$ cm. Raskite apskritimo spindulį.",
@@ -6239,7 +5237,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-56dd662d",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Ritino spindulys yra $3$ cm, o jo aukštinė lygi $5$ cm. Apskaičiuokite šio ritinio viso paviršiaus plotą.",
@@ -6406,7 +5404,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-5545558b",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite tiesės, einančios per taškus $A(2, 5)$ ir $B(4, 11)$, lygtį pavidalu $y = mx + b$.",
@@ -6573,7 +5571,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-eb9f63ec",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Apskaičiuokite atstumą tarp taškų $P(-1, 3)$ and $Q(5, -5)$ koordinačių plokštumoje.",
@@ -6740,7 +5738,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-6e5da0fd",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Taškas $A(3, -4)$ atspindimas koordinačių pradžios taško $O(0, 0)$ atžvilgiu, o gautas taškas pastumiamas per vektorių $\\vec{v} = (-2, 5)$. Raskite galutines taško koordinates.",
@@ -6900,7 +5898,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-e2f6d6a5",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Kiek skirtingų žodžių (nebūtinai prasmingų) galima sudaryti sukeičiant raides žodyje „MATEMATIKA“?",
@@ -7067,7 +6065,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-378e23f6",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite Paskalio trikampio 6-osios eilutės (laikant 0-inę eilutę ta, kuri atitinka $(a+b)^0 = 1$) didžiausią skaičių.",
@@ -7227,7 +6225,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-efb52880",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite reiškinio $(2x - y)^4$ skleistinės narių koeficientų sumą.",
@@ -7387,7 +6385,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-6c338d21",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Stalčiuje yra 10 porų juodų ir 10 porų rudų kojinių (visos kojinės sumaišytos). Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad garantuotume turintys bent vieną vienodos spalvos kojinių porą?",
@@ -7547,7 +6545,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-1088790e",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, suma $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$.",
@@ -7707,7 +6705,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-c29d91fb",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Metami du standartiniai lošimo kauliukai. Žinoma, kad iškritusių akučių suma yra lygi 8. Kokia tikimybė, kad bent ant vieno kauliuko iškrito 5 akutės?",
@@ -7874,7 +6872,7 @@ export const exercises_07 = [
   },
   {
     "id": "ex-olimpiada-07-27644fbd",
-    "topicId": "olimpiada-07",
+    "topicId": "olimpiada-07-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Žaidėjas meta monetą. Jei iškrenta herbas, jis laimi 10 eurų, o jei skaičius – pralaimi 4 eurus. Raskite vieno žaidimo laimėjimo matematinį viltingumą.",
@@ -8027,6 +7025,1008 @@ export const exercises_07 = [
         "order": 4,
         "kind": "scaffold",
         "text": "Apskaičiuokite: $E = 10 \\cdot 0.5 + (-4) \\cdot 0.5$.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-1db2920b",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite skaičiaus $2^{2026}$ dalybos iš $7$ liekaną.",
+    "answer": "Dalybos liekana yra 2.",
+    "acceptedAnswers": [
+      "Dalybos liekana yra 2."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Apskaičiuokite pirmųjų dviejų laipsnių liekanas dalijant iš 7.",
+      "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
+      "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
+      "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$."
+    ],
+    "solution": "Pastebime, kad $2^3 \\equiv 1 \\pmod 7$. Padalijame rodiklį: $2026 = 3 \\times 675 + 1$. Pertvarkome laipsnį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Cikliškumo paieška liekanose",
+      "text": "Raskite mažą $2$ laipsnį, kuris moduliu $7$ yra lygus $1$ arba $-1$, ir pritaikykite laipsnio savybes."
+    },
+    "strategyTags": [
+      "introductory",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-1db2920b-method-1",
+        "title": "Cikliškumo analizė",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Periodo radimas",
+            "action": "Apskaičiuojame pirmąsias 2 laipsnių liekanas moduliu 7.",
+            "reason": "Ieškome tokio laipsnio, kuris duotų liekaną 1, kad galėtume supaprastinti didelį laipsnį.",
+            "result": "$2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 = 8 \\equiv 1 \\pmod 7$.",
+            "latex": "2^3 \\equiv 1 \\pmod 7"
+          },
+          {
+            "title": "Rodiklio skaidymas",
+            "action": "Padalijame rodiklį 2026 iš gauto periodo 3.",
+            "reason": "Tai leidžia išreikšti didelį laipsnį per mažesnį, kurio reikšmė moduliu 7 yra žinoma.",
+            "result": "$2026 = 3 \\cdot 675 + 1$.",
+            "latex": "2026 = 3 \\times 675 + 1"
+          },
+          {
+            "title": "Galutinė liekana",
+            "action": "Pertvarkome reiškinį naudodami laipsnių savybes.",
+            "reason": "Kadangi $2^3 \\equiv 1$, tai bet koks jo laipsnis išlieka lygus 1 moduliu 7.",
+            "result": "$2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7$.",
+            "latex": "2^{2026} \\equiv 1^{675} \\cdot 2 \\equiv 2 \\pmod 7"
+          }
+        ],
+        "finalAnswer": "Dalybos liekana yra 2."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-1db2920b-trap-1",
+        "title": "Neteisingas periodo parinkimas",
+        "type": "mistake",
+        "wrongMove": "Teigti, kad liekana kartojasi kas 7 laipsnius.",
+        "whyTempting": "Manoma, kad periodas būtinai sutampa su pačiu dalikliu (moduliu).",
+        "whyItHappens": "Neperskaitomos pirmosios liekanos ir daroma skubota prielaida.",
+        "wrongPattern": "2^n \\pmod 7 \\text{ kartojasi kas } 7 \\text{ žingsnius}.",
+        "correction": "Liekanų periodas visada yra daliklio $m$ daliklis (pagal Ferma mažąją teoremą $n^{m-1} \\equiv 1$), bet nebūtinai pats $m$. Reikia tikrinti konkrečias reikšmes.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-1db2920b-trap-2",
+        "title": "Aritmetinė klaida skaičiuojant laipsnį",
+        "type": "mistake",
+        "wrongMove": "Manyti, kad $2^3 = 6$.",
+        "whyTempting": "Skubant laipsnio rodiklis supainiojamas su daugikliu.",
+        "whyItHappens": "Elementari dėmesio klaida atliekant mintinus skaičiavimus.",
+        "wrongPattern": "2^3 = 6 \\implies 6 \\equiv -1 \\pmod 7.",
+        "correction": "Būtina prisiminti, kad kėlimas laipsniu yra kartotinė daugyba: $2^3 = 2 \\cdot 2 \\cdot 2 = 8$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-1db2920b-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kaip greitai rasti didelio laipsnio $a^n \\pmod m$ liekaną?",
+        "back": "Ieškome tokio mažo laipsnio $k$, kad $a^k \\equiv 1 \\pmod m$, tada laipsnio rodiklį $n$ dalijame iš $k$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-1db2920b-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Kokia yra $2^{2026}$ dalybos iš 7 liekana?",
+        "back": "Liekana yra 2. Tai gaunama pastebėjus, kad $2^3 \\equiv 1 \\pmod 7$ ir $2026 = 3 \\cdot 675 + 1$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Apskaičiuokite pirmųjų dviejų laipsnių liekanas dalijant iš 7.",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pastebėkite, kad $2^3 = 8 \\equiv 1 \\pmod 7$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Užrašykite rodiklį $2026$ kaip $3 \\cdot 675 + 1$.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Pertvarkykite reiškinį: $2^{2026} = (2^3)^{675} \\cdot 2^1 \\equiv 1^{675} \\cdot 2 \\pmod 7$.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-3305c4d4",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Skaičius $A$ gautas užrašius vieną po kito skaičius nuo $1$ iki $20$ iš eilės: $A = 1234567891011121314151617181920$. Raskite šio skaičiaus dalybos iš $9$ liekaną.",
+    "answer": "Dalybos liekana yra 3.",
+    "acceptedAnswers": [
+      "Dalybos liekana yra 3."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Prisiminkite dalumo iš 9 taisyklę.",
+      "Apskaičiuokite visų skaitmenų nuo 1 iki 20 sumą.",
+      "Suskaičiuokite vienetų ir dešimčių skaitmenų sumą atskirai: skaitmenys 1-9 sumuojasi į 45, o skaičiams 10-19 dešimtys yra 10 vienetų, o vienetai vėl yra 0-9.",
+      "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną."
+    ],
+    "solution": "Apskaičiuojame skaitmenų sumą: nuo 1 iki 9 suma yra $45$. Nuo 10 iki 19 skaitmenų suma yra $10 \\times 1 + 45 = 55$. Skaičiaus 20 skaitmenų suma yra $2 + 0 = 2$. Bendra skaitmenų suma lygi $45 + 55 + 2 = 102$. Skaičiaus 102 skaitmenų suma lygi $1+0+2=3$. Todėl liekana dalijant iš 9 yra 3.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "introductory",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Dalybos iš 9 požymis",
+      "text": "Skaičiaus ir jo skaitmenų sumos dalybos iš 9 liekanos sutampa."
+    },
+    "strategyTags": [
+      "introductory",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-3305c4d4-method-1",
+        "title": "Skaitmenų sumos analizė",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Vienetų skaitmenų suma",
+            "action": "Suskaičiuojame visų vienetų pozicijose esančių skaitmenų sumą.",
+            "reason": "Vienetų skaitmenys nuo 1 iki 9 ir nuo 10 iki 19 kartojasi.",
+            "result": "Suma nuo 1 iki 9 yra 45. Skaičiams 10-19 vienetai vėl duoda 45. Skaičiui 20 vienetas yra 0. Bendra: $45+45+0=90$.",
+            "latex": "S_v = 45 + 45 + 0 = 90"
+          },
+          {
+            "title": "Dešimčių skaitmenų suma",
+            "action": "Suskaičiuojame dešimčių pozicijose esančių skaitmenų sumą.",
+            "reason": "Skaičiai nuo 10 iki 19 visi turi dešimtį 1, o skaičius 20 turi 2.",
+            "result": "Dešimtys nuo 10 iki 19 duoda $10 \\cdot 1 = 10$. Skaičius 20 prideda 2. Bendra: $10+2=12$.",
+            "latex": "S_d = 10 \\cdot 1 + 2 = 12"
+          },
+          {
+            "title": "Galutinės liekanos radimas",
+            "action": "Sudedame visas dalines sumas ir randame liekaną moduliu 9.",
+            "reason": "Pagal dalumo požymį, skaičiaus liekana sutampa su jo skaitmenų sumos liekana.",
+            "result": "Bendra suma $90 + 12 = 102$. Skaičiaus 102 skaitmenų suma $1+0+2=3$.",
+            "latex": "102 \\equiv 3 \\pmod 9"
+          }
+        ],
+        "finalAnswer": "Dalybos liekana yra 3."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-3305c4d4-trap-1",
+        "title": "Skaičių ir skaitmenų painiojimas",
+        "type": "mistake",
+        "wrongMove": "Sudėti pačius skaičius nuo 1 iki 20 vietoje jų skaitmenų.",
+        "whyTempting": "Greitai skaitant užduotį „skaitmenų suma“ suprantama kaip „skaičių seka“.",
+        "whyItHappens": "Nepakankamas dėmesys sąvokai „skaitmuo“.",
+        "wrongPattern": "1+2+3+\\dots+20 = 210 \\implies 210 \\pmod 9 = 3.",
+        "correction": "Nors atsakymas šiame pavyzdyje sutapo atsitiktinai, taisyklė reikalauja sumuoti atskirus skaitmenis ($1+2+3+4+5+6+7+8+9+1+0+1+1 \\dots$), o ne pačias vertes.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-3305c4d4-trap-2",
+        "title": "Paskutinio skaitmens taisyklės taikymas",
+        "type": "mistake",
+        "wrongMove": "Manyti, kad liekana lygi paskutiniam skaitmeniui (0).",
+        "whyTempting": "Supainiojama su dalumu iš 2, 5 arba 10.",
+        "whyItHappens": "Dalybos iš 10 taisyklė (liekana lygi paskutiniam skaitmeniui) klaidingai perkeliama kitiems dalikliams.",
+        "wrongPattern": "A \\text{ baigiasi } 0 \\implies A \\equiv 0 \\pmod 9.",
+        "correction": "Dalybai iš 9 svarbi tik visų skaitmenų suma, o ne skaičiaus pabaiga.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-3305c4d4-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra dalumo iš 9 taisyklė liekanų požiūriu?",
+        "back": "Skaičius $N$ ir jo skaitmenų suma $S(N)$ duoda tą pačią liekaną dalijant iš 9, t. y. $N \\equiv S(N) \\pmod 9$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-3305c4d4-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Ar tiesa, kad skaičiaus dalybos iš 3 ir iš 9 liekanos visada sutampa?",
+        "back": "Netiesa. Pavyzdžiui, skaičiaus 6 liekana dalijant iš 3 yra 0, o iš 9 yra 6. Tačiau abu dalumo požymiai remiasi skaitmenų suma.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Prisiminkite dalumo iš 9 taisyklę.",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Apskaičiuokite visų skaitmenų nuo 1 iki 20 sumą.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Suskaičiuokite vienetų ir dešimčių skaitmenų sumą atskirai: skaitmenys 1-9 sumuojasi į 45, o skaičiams 10-19 dešimtys yra 10 vienetų, o vienetai vėl yra 0-9.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Bendra skaitmenų suma: $45 + 10 \\cdot 1 + 45 + 2 = 102$. Raskite 102 dalybos iš 9 liekaną.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-9dc52ddd",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Fibonacci seka apibrėžiama taip: $F_1 = 1$, $F_2 = 1$, $F_{n} = F_{n-1} + F_{n-2}$ visiems $n \\ge 3$. Įrodykite, kad kas trečias Fibonacci sekos narys yra lyginis.",
+    "answer": "Kas trečias Fibonacci sekos narys yra lyginis.",
+    "acceptedAnswers": [
+      "Kas trečias Fibonacci sekos narys yra lyginis."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Užrašykite pirmųjų 6 narių reikšmes ir nustatykite jų paritetą (lyginis/nelyginis).",
+      "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
+      "Kadangi $F_n = F_{n-1} + F_{n-2}$, tai narių paritetas moduliu 2 priklauso tik nuo dviejų prieš tai einančių narių.",
+      "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada."
+    ],
+    "solution": "Apskaičiuojame paritetą moduliu 2: $F_1 \\equiv 1$, $F_2 \\equiv 1$ (abu nelyginiai). Tada $F_3 = F_2 + F_1 \\equiv 1 + 1 \\equiv 0$ (lyginis). Sekantys nariai: $F_4 = F_3 + F_2 \\equiv 0 + 1 \\equiv 1$, $F_5 = F_4 + F_3 \\equiv 1 + 0 \\equiv 1$. Galiausiai $F_6 = F_5 + F_4 \\equiv 1 + 1 \\equiv 0$. Kadangi ciklas $1, 1, 0$ kartojasi, tai $F_{3k}$ visada yra lyginiai.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Liekanų seka moduliu 2",
+      "text": "Nagrinėkite Fibonacci sekos narių lyginumą (paritetą) moduliu 2."
+    },
+    "strategyTags": [
+      "standard",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-9dc52ddd-method-1",
+        "title": "Pariteto ciklo analizė",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Pradinių narių paritetas",
+            "action": "Nustatome pirmųjų trijų Fibonacci narių lyginumą (paritetą).",
+            "reason": "Fibonacci seka apibrėžiama per du ankstesnius narius, todėl paritetas taip pat priklauso nuo jų.",
+            "result": "$F_1=1$ (N), $F_2=1$ (N), $F_3=1+1=2$ (L). Seka moduliu 2: $1, 1, 0$.",
+            "latex": "F_1, F_2, F_3 \\equiv 1, 1, 0 \\pmod 2"
+          },
+          {
+            "title": "Ciklo tęstinumo įrodymas",
+            "action": "Apskaičiuojame sekančių trijų narių paritetą.",
+            "reason": "Ieškome pasikartojančio dėsningumo (ciklo).",
+            "result": "$F_4 = 0+1=1$ (N), $F_5 = 1+0=1$ (N), $F_6 = 1+1=2 \\equiv 0$ (L).",
+            "latex": "F_4, F_5, F_6 \\equiv 1, 1, 0 \\pmod 2"
+          },
+          {
+            "title": "Išvada apie periodiškumą",
+            "action": "Pastebime, kad blokas $(1, 1, 0)$ kartojasi.",
+            "reason": "Kadangi bet kuris narys $F_n \\pmod 2$ priklauso tik nuo $F_{n-1}$ ir $F_{n-2}$ paritetų, radus pasikartojančią porą $(1, 1)$, visa tolimesnė seka bus identiška.",
+            "result": "Nariai $F_3, F_6, F_9, \\dots, F_{3k}$ visada yra lygūs 0 moduliu 2, t. y. lyginiai.",
+            "latex": "F_{3k} \\equiv 0 \\pmod 2"
+          }
+        ],
+        "finalAnswer": "Kas trečias Fibonacci sekos narys yra lyginis."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-9dc52ddd-trap-1",
+        "title": "Bandymas skaičiuoti dideles vertes",
+        "type": "mistake",
+        "wrongMove": "Bandyti įrodyti teiginį skaičiuojant pačius Fibonacci skaičius.",
+        "whyTempting": "Atrodo, kad parodžius daugiau pavyzdžių ($F_{12}=144$ ir pan.), įrodymas bus svaresnis.",
+        "whyItHappens": "Nesuprantama, kad Fibonacci seka auga eksponentiškai ir skaičiavimas ranka greitai tampa nebeįmanomas.",
+        "wrongPattern": "F_{12} = 144 \\text{ (lyginis)}, F_{15} = 610 \\text{ (lyginis)}, \\dots \\implies \\text{įrodyta}.",
+        "correction": "Olimpiadose pavyzdžiai nėra įrodymas. Reikia naudoti pariteto (lyginumo) savybes moduliu 2, kurios parodo dėsningumą be didelių skaičiavimų.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-9dc52ddd-trap-2",
+        "title": "Indukcijos bazės praleidimas",
+        "type": "mistake",
+        "wrongMove": "Manyti, kad seka prasideda nuo lyginio skaičiaus.",
+        "whyTempting": "Norisi, kad „kas trečias“ sutaptų su paprastu dalumu iš 3 ($3, 6, 9 \\dots$).",
+        "whyItHappens": "Nepatikrinami patys pirmieji sekos nariai $F_1$ ir $F_2$.",
+        "wrongPattern": "F_0=0, F_1=1, F_2=1 \\dots \\text{ (jei pradedama nuo nulio)}.",
+        "correction": "Svarbu griežtai laikytis užduoties apibrėžimo: $F_1=1, F_2=1$. Lyginiai skaičiai pasirodo pozicijose $3, 6, 9 \\dots$, o ne $1, 4, 7 \\dots$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-9dc52ddd-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kodėl sekos moduliu $m$ analizė yra naudinga?",
+        "back": "Sumažinamos reikšmių aibės iki baigtinių liekanų aibės, kurioje lengva rasti pasikartojančius periodus.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-9dc52ddd-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Koks yra Fibonacci sekos pariteto (lyginumo) periodas?",
+        "back": "Periodas yra 3: (Nelyginis, Nelyginis, Lyginis).",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Užrašykite pirmųjų 6 narių reikšmes ir nustatykite jų paritetą (lyginis/nelyginis).",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pirmieji nariai yra nelyginis (N), nelyginis (N), lyginis (L). Seka prasideda: $1, 1, 2, 3, 5, 8 \\dots$",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kadangi $F_n = F_{n-1} + F_{n-2}$, tai narių paritetas moduliu 2 priklauso tik nuo dviejų prieš tai einančių narių.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Seka moduliu 2 yra $1, 1, 0, 1, 1, 0, 1, 1, 0 \\dots$ Parodykite, kad šis periodas išlieka visada.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-f4b5c481",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Naudodami Euklido algoritmą, raskite skaičių $2026$ ir $1492$ didžiausią bendrąjį daliklį $\\text{dbd}(2026, 1492)$.",
+    "answer": "Didžiausias bendrasis daliklis yra 2.",
+    "acceptedAnswers": [
+      "Didžiausias bendrasis daliklis yra 2."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Padalykite 2026 iš 1492 su liekana.",
+      "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
+      "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
+      "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas."
+    ],
+    "solution": "$2026 = 1 \\times 1492 + 534$. $1492 = 2 \\times 534 + 424$. $534 = 1 \\times 424 + 110$. $424 = 3 \\times 110 + 94$. $110 = 1 \\times 94 + 16$. $94 = 5 \\times 16 + 14$. $16 = 1 \\times 14 + 2$ ir $14 = 7 \\times 2 + 0$. Paskutinė neulinė liekana yra 2, todėl $\\text{dbd}(2026, 1492) = 2$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Liekanų dalybos grandinė",
+      "text": "Euklido algoritmu atlikite kartotinę dalybą su liekana, kol gausite liekaną 0."
+    },
+    "strategyTags": [
+      "standard",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-f4b5c481-method-1",
+        "title": "Euklido algoritmo taikymas",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Pirminis dalijimas",
+            "action": "Padalijame 2026 iš 1492 su liekana.",
+            "reason": "Euklido algoritmas remiasi savybe $\\text{dbd}(a, b) = \\text{dbd}(b, r)$, kur $r$ yra liekana.",
+            "result": "$2026 = 1 \\cdot 1492 + 534$.",
+            "latex": "2026 = 1 \\times 1492 + 534"
+          },
+          {
+            "title": "Iteracinė liekanų paieška",
+            "action": "Tęsiame dalijimą naudodami ankstesnį daliklį ir gautą liekaną.",
+            "reason": "DBD išlieka toks pat per visą liekanų grandinę.",
+            "result": "Gautos lygybės: $1492 = 2 \\cdot 534 + 424$; $534 = 1 \\cdot 424 + 110$; $424 = 3 \\cdot 110 + 94$; $110 = 1 \\cdot 94 + 16$.",
+            "latex": "1492 = 2 \\times 534 + 424 \\dots 110 = 1 \\times 94 + 16"
+          },
+          {
+            "title": "Galutinio rezultato radimas",
+            "action": "Užbaigiame algoritmą iki liekanos 0.",
+            "reason": "Paskutinė neulinė liekana grandinėje yra ieškomas DBD.",
+            "result": "$94 = 5 \\cdot 16 + 14$; $16 = 1 \\cdot 14 + 2$; $14 = 7 \\cdot 2 + 0$. DBD yra 2.",
+            "latex": "\\text{dbd}(2026, 1492) = 2"
+          }
+        ],
+        "finalAnswer": "Didžiausias bendrasis daliklis yra 2."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-f4b5c481-trap-1",
+        "title": "Nulio kaip DBD priskyrimas",
+        "type": "mistake",
+        "wrongMove": "Sustoti ties liekana 0 ir teigti, kad DBD lygus 0.",
+        "whyTempting": "Skubant supainiojama paskutinė gauta reikšmė grandinėje su pačiu dalikliu.",
+        "whyItHappens": "Neteisingas algoritmo užbaigimo sąlygos supratimas.",
+        "wrongPattern": "14 = 7 \\cdot 2 + 0 \\implies \\text{dbd} = 0.",
+        "correction": "Didžiausias bendrasis daliklis yra paskutinė NEULINĖ liekana. Nulis niekada negali būti DBD (nebent abu skaičiai pradiniai yra nuliai).",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-f4b5c481-trap-2",
+        "title": "Aritmetinė klaida dalyboje su liekana",
+        "type": "mistake",
+        "wrongMove": "Neteisingai apskaičiuoti liekaną viename iš žingsnių.",
+        "whyTempting": "Skaičiai dideli, todėl atimant mintinai lengva suklysti.",
+        "whyItHappens": "Dėmesio klaida atliekant bazinius aritmetinius veiksmus.",
+        "wrongPattern": "2026 - 1492 = 544 \\text{ (vietoje 534)}.",
+        "correction": "Būtina tikrinti kiekvieną žingsnį padauginant dalmenį iš daliklio ir pridedant liekaną. Net viena klaida grandinėje nulemia klaidingą galutinį DBD.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-f4b5c481-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kas yra didžiausias bendrasis daliklis Euklido algoritme?",
+        "back": "Tai paskutinė neulinė liekana, gauta atliekant dalybos su liekana veiksmus.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-f4b5c481-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Jei $\\text{dbd}(a, b) = d$, tai $\\text{dbd}(a/d, b/d) = ?$",
+        "back": "Lygus 1. Padalijus skaičius iš jų DBD, gauti skaičiai visada yra tarpusavyje pirminiai.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Padalykite 2026 iš 1492 su liekana.",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pirmas žingsnis: $2026 = 1 \\cdot 1492 + 534$. Dabar dalinkite 1492 iš 534.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Tęskite dalybą su liekanomis: $1492 = 2 \\cdot 534 + 424$, tada $534 = 1 \\cdot 424 + 110$ ir t. t.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Gausite: $424 = 3 \\cdot 110 + 94$, $110 = 1 \\cdot 94 + 16$, $94 = 5 \\cdot 16 + 14$, $16 = 1 \\cdot 14 + 2$, $14 = 7 \\cdot 2 + 0$. Paskutinis neulinis daliklis yra atsakymas.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-c98149bb",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n$, trupmena $\\frac{21n+4}{14n+3}$ yra nesuprastinama.",
+    "answer": "Įrodyta, kad trupmena yra nesuprastinama.",
+    "acceptedAnswers": [
+      "Įrodyta, kad trupmena yra nesuprastinama."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Tarkime, kad bendras daliklis yra $d$. Tada $d$ turi dalyti ir skaitiklį, ir vardiklį.",
+      "Raskite tokius koeficientus $A$ ir $B$, kad sandaugose $A(21n+4)$ ir $B(14n+3)$ kintamasis $n$ susiprastintų.",
+      "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
+      "Apskaičiuokite: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$. Kadangi $d$ dalija 1, tai $d=1$."
+    ],
+    "solution": "Tarkime, kad $d = \\text{dbd}(21n+4, 14n+3)$. Tada $d$ dalija bet kokį šių skaičių tiesinį derinį su sveikaisiais koeficientais. Sudėliokime derinį, kuris pašalina $n$: $3(14n+3) - 2(21n+4) = 42n + 9 - 42n - 8 = 1$. Kadangi $d$ dalija skirtumą, o šis lygus 1, tai $d$ privalo dalyti 1. Vadinasi, $d=1$, ir trupmena yra nesuprastinama.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Kintamojo eliminavimas",
+      "text": "Įrodykite, kad skaitiklis ir vardiklis yra pirminiai vienas kitam (jų DBD lygus 1) pašalindami kintamąjį $n$ tiesiniu deriniu."
+    },
+    "strategyTags": [
+      "standard",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-c98149bb-method-1",
+        "title": "Tiesinio derinio metodas",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Bendrojo daliklio prielaida",
+            "action": "Tarkime, kad egzistuoja bendras daliklis $d > 1$, kuris dalija ir skaitiklį, ir vardiklį.",
+            "reason": "Jei trupmena būtų suprastinama, skaitiklis ir vardiklis turėtų turėti bendrą daliklį, didesnį už 1.",
+            "result": "$d | (21n+4)$ ir $d | (14n+3)$.",
+            "latex": "d = \\text{dbd}(21n+4, 14n+3)"
+          },
+          {
+            "title": "Kintamojo eliminavimas",
+            "action": "Sudarome tokį šių skaičių tiesinį derinį, kuriame nariai su $n$ susiprastintų.",
+            "reason": "Jei $d$ dalija du skaičius, tai jis dalija ir bet kokį jų sveikąjį derinį $Ax + By$.",
+            "result": "Padauginame vardiklį iš 3, o skaitiklį iš 2: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$.",
+            "latex": "3(14n+3) - 2(21n+4) = 1"
+          },
+          {
+            "title": "Išvada apie nesuprastinumą",
+            "action": "Kadangi $d$ dalija gautą skirtumą, nustatome $d$ reikšmę.",
+            "reason": "Vienintelis natūralusis skaičius, dalijantis 1, yra 1.",
+            "result": "$d$ privalo būti lygus 1. Vadinasi, trupmena yra nesuprastinama bet kuriam $n$.",
+            "latex": "d | 1 \\implies d = 1"
+          }
+        ],
+        "finalAnswer": "Įrodyta, kad trupmena yra nesuprastinama."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-c98149bb-trap-1",
+        "title": "Įrodymas pavyzdžiais",
+        "type": "mistake",
+        "wrongMove": "Bandyti įrodyti teiginį įstatant tik konkrečias $n$ reikšmes.",
+        "whyTempting": "Patikrinus $n=1, 2, 3$, gaunamos nesuprastinamos trupmenos ($25/17, 46/31 \\dots$), todėl atrodo, kad tai pakankama.",
+        "whyItHappens": "Nesuprantamas skirtumas tarp pavyzdžio ir bendro matematinio įrodymo.",
+        "wrongPattern": "n=1 \\implies 25/17 \\text{ (nesuprastinama)} \\implies \\text{teisinga visada}.",
+        "correction": "Olimpiadose pavyzdžiai neįrodo bendro teiginio. Reikia naudoti algebra, kuri veiktų bet kokiam kintamajam $n$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-c98149bb-trap-2",
+        "title": "DBD ir skirtumo klaida",
+        "type": "mistake",
+        "wrongMove": "Manyti, kad jei skaitiklis ir vardiklis skiriasi nedideliu skaičiumi, jie visada nesuprastinami.",
+        "whyTempting": "Painiojama su savybe, kad du gretimi skaičiai ($n$ ir $n+1$) visada yra tarpusavyje pirminiai.",
+        "whyItHappens": "Paviršutiniškas panašių savybių taikymas.",
+        "wrongPattern": "(21n+4) - (14n+3) = 7n+1 \\neq 0 \\implies \\text{nesuprastinama}.",
+        "correction": "Skirtumas nebūtinai parodo DBD. Pavyzdžiui, 10 ir 15 skiriasi 5, bet yra suprastinami iš 5. Tik skirtumas, lygus 1, garantuoja nesuprastinumą.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-c98149bb-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kaip įrodoma, kad du reiškiniai su $n$ yra tarpusavyje pirminiai?",
+        "back": "Ieškome tiesinio derinio $A \\cdot f(n) + B \\cdot g(n) = 1$. Jei toks egzistuoja, tai $\\text{dbd}(f(n), g(n)) = 1$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-c98149bb-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Ar trupmena $(n)/(n+1)$ gali būti suprastinama?",
+        "back": "Ne, nes du iš eilės einantys natūralieji skaičiai visada yra tarpusavyje pirminiai.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Tarkime, kad bendras daliklis yra $d$. Tada $d$ turi dalyti ir skaitiklį, ir vardiklį.",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Raskite tokius koeficientus $A$ ir $B$, kad sandaugose $A(21n+4)$ ir $B(14n+3)$ kintamasis $n$ susiprastintų.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Padauginkite skaitiklį iš 2, o vardiklį iš 3. Pastebėkite, kad $2 \\cdot 21 = 42$ ir $3 \\cdot 14 = 42$.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Apskaičiuokite: $3(14n+3) - 2(21n+4) = (42n+9) - (42n+8) = 1$. Kadangi $d$ dalija 1, tai $d=1$.",
+        "revealsConceptIds": [],
+        "penalty": 0.12
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-07-a17dfa35",
+    "topicId": "olimpiada-07-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Išspręskite realiaisiais skaičiais lygtį $2\\lfloor x \\rfloor = x + \\{x\\}$, kur $\\{x\\} = x - \\lfloor x \\rfloor$ yra skaičiaus trupmeninė dalis.",
+    "answer": "Sprendiniai yra $x = 0$ ir $x = 1.5$.",
+    "acceptedAnswers": [
+      "Sprendiniai yra $x = 0$ ir $x = 1.5$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-07-concept-logic"
+    ],
+    "hints": [
+      "Pakeiskite $x$ išraiška per sveikąją ir trupmeninę dalį.",
+      "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
+      "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
+      "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams."
+    ],
+    "solution": "Pakeičiame $x = \\lfloor x \\rfloor + \\{x\\}$, tada lygtis tampa $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\}$. Supaprastiname: $\\lfloor x \\rfloor = 2\\{x\\}$. Kadangi trupmeninė dalis tenkina $0 \\le \\{x\\} < 1$, tai $0 \\le 2\\{x\\} < 2$. Kadangi $\\lfloor x \\rfloor$ yra sveikasis skaičius, turime du atvejus: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $\\{x\\} = 0$, todėl $x = 0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\} = 0.5$, todėl $x = 1.5$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "advanced",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Trupmeninės dalies apribojimai",
+      "text": "Pakeiskite $x = \\lfloor x \\rfloor + \\{x\\}$ ir panaudokite savybę, kad $0 \\le \\{x\\} < 1$."
+    },
+    "strategyTags": [
+      "advanced",
+      "proof",
+      "skaičiu-teorija"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-07-concept-method"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-07-a17dfa35-method-1",
+        "title": "Sveikosios ir trupmeninės dalies skaidymas",
+        "methodType": "main",
+        "strategyTags": [
+          "proof"
+        ],
+        "steps": [
+          {
+            "title": "Kintamojo skaidymas",
+            "action": "Pakeičiame $x$ išraiška $\\lfloor x \\rfloor + \\{x\\}$ pradinėje lygtyje.",
+            "reason": "Tai leidžia lygtį su vienu kintamuoju paversti lygtimi su dviem specifiniais komponentais, kurių savybės gerai žinomos.",
+            "result": "Lygtis tampa: $2\\lfloor x \\rfloor = (\\lfloor x \\rfloor + \\{x\\}) + \\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
+            "latex": "\\lfloor x \\rfloor = 2\\{x\\}"
+          },
+          {
+            "title": "Rėžių taikymas",
+            "action": "Pritaikome trupmeninės dalies savybę $0 \\le \\{x\\} < 1$.",
+            "reason": "Kadangi sveikoji dalis lygi dvigubai trupmeninei, jos galimos vertės yra griežtai apribotos.",
+            "result": "Išreiškiame $\\{x\\} = \\lfloor x \\rfloor / 2$. Tada $0 \\le \\lfloor x \\rfloor / 2 < 1$, vadinasi $0 \\le \\lfloor x \\rfloor < 2$.",
+            "latex": "0 \\le \\lfloor x \\rfloor < 2"
+          },
+          {
+            "title": "Atvejų analizė",
+            "action": "Randame visus sveikuosius skaičius duotame intervale.",
+            "reason": "Sveikoji dalis privalo būti sveikasis skaičius.",
+            "result": "Galimos vertės: $\\lfloor x \\rfloor = 0$ arba $\\lfloor x \\rfloor = 1$. Jei $\\lfloor x \\rfloor = 0$, tai $x=0$. Jei $\\lfloor x \\rfloor = 1$, tai $\\{x\\}=0.5$, todėl $x=1.5$.",
+            "latex": "x \\in \\{0, 1.5\\}"
+          }
+        ],
+        "finalAnswer": "Sprendiniai yra $x = 0$ ir $x = 1.5$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-07-a17dfa35-trap-1",
+        "title": "Trupmeninės dalies savybių nepaisymas",
+        "type": "mistake",
+        "wrongMove": "Spręsti lygtį algebraiškai neatsižvelgiant į tai, kad $\\{x\\}$ negali būti bet koks skaičius.",
+        "whyTempting": "Atrodo, kad $\\{x\\}$ galima traktuoti kaip paprastą kintamąjį $y$.",
+        "whyItHappens": "Užmirštama, kad $\\{x\\}$ yra griežtai apribota intervalu $[0, 1)$.",
+        "wrongPattern": "\\lfloor x \\rfloor = 2\\{x\\} \\implies \\text{begalybė sprendinių}.",
+        "correction": "Būtina visada naudoti nelygybę $0 \\le \\{x\\} < 1$, kuri susiaurina sprendinių aibę iki baigtinio skaičiaus.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      },
+      {
+        "id": "ex-olimpiada-07-a17dfa35-trap-2",
+        "title": "Sveikosios dalies painiojimas su apvalinimu",
+        "type": "mistake",
+        "wrongMove": "Manyti, kad $\\lfloor x \\rfloor$ yra artimiausias sveikasis skaičius.",
+        "whyTempting": "Kasdienėje kalboje „sveikoji dalis“ dažnai tapatinama su skaičiaus „nukirpimu“ po kablelio.",
+        "whyItHappens": "Trūksta griežto matematinio apibrėžimo taikymo.",
+        "wrongPattern": "\\lfloor 1.9 \\rfloor = 2 \\text{ (klaidingas apvalinimas aukštyn)}.",
+        "correction": "Sveikoji dalis visada eina „į kairę“ skaičių tiesėje: $\\lfloor 1.9 \\rfloor = 1$, $\\lfloor -1.1 \\rfloor = -2$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ]
+      }
+    ],
+    "reflectionPrompts": [
+      "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+      "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-07-a17dfa35-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra svarbiausia skaičiaus trupmeninės dalies $\\{x\\}$ savybė lygtims?",
+        "back": "Savybė, kad trupmeninė dalis visada tenkina griežtas ribas: $0 \\le \\{x\\} < 1$.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [
+          "olimpiada-07-concept-method"
+        ],
+        "defaultEnabled": true
+      },
+      {
+        "id": "ex-olimpiada-07-a17dfa35-srs-2",
+        "deck": "practice",
+        "cardType": "fact",
+        "front": "Kiek lygi $\\lfloor -3.2 \\rfloor$?",
+        "back": "Lygi -4. Tai didžiausias sveikasis skaičius, ne didesnis už -3.2.",
+        "conceptIds": [
+          "olimpiada-07-concept-logic"
+        ],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Pakeiskite $x$ išraiška per sveikąją ir trupmeninę dalį.",
+        "revealsConceptIds": [],
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Įstačius gauname $2\\lfloor x \\rfloor = \\lfloor x \\rfloor + 2\\{x\\} \\implies \\lfloor x \\rfloor = 2\\{x\\}$.",
+        "revealsConceptIds": [],
+        "penalty": 0.08
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kadangi $0 \\le \\{x\\} < 1$, tai $2\\{x\\}$ privalo priklausyti intervalui $[0, 2)$.",
+        "revealsConceptIds": [],
+        "penalty": 0.1
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Kadangi $\\lfloor x \\rfloor$ turi būti sveikasis skaičius, o $\\lfloor x \\rfloor = 2\\{x\\}$, tai $\\lfloor x \\rfloor$ gali būti tik 0 arba 1. Raskite $x$ abiems atvejams.",
         "revealsConceptIds": [],
         "penalty": 0.12
       }

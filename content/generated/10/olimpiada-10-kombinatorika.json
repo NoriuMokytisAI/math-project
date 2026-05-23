@@ -1,0 +1,368 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-10-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 10,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 110,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-10-concept-euler-formula-planar"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-10-19",
+      "ex-olimpiada-10-20"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Inversija apskritimo atžvilgiu ir grafų teorija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius."
+        },
+        {
+          "type": "method",
+          "text": "Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-10-concept-euler-formula-planar",
+      "title": "Oilerio formulė plokštiesiems grafams",
+      "type": "concept",
+      "shortDefinition": "Ryšys tarp plokščiojo grafo viršūnių, briaunų ir sričių skaičiaus.",
+      "intuition": "Plokštumoje nupiešto sujungto grafo elementų tarpusavio priklausomybė: $V - E + F = 2$.",
+      "formal": "Bet kuriam susietam plokščiajam grafui su $V$ viršūnėmis, $E$ briaunomis ir $F$ sritimis (įskaitant išorinę) galioja $V - E + F = 2$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Oilerio formulės taikymas grafui",
+      "problem": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
+      "steps": [
+        {
+          "text": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$."
+        },
+        {
+          "text": "Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$."
+        },
+        {
+          "text": "Gauname lygtį: $8 - E + 5 = 2 \\implies 13 - E = 2$."
+        },
+        {
+          "text": "Išsprendžiame briaunų skaičių: $E = 11$."
+        }
+      ],
+      "answer": "$11$"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-10-19",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Sujungtame plokščiajame grafe yra 6 viršūnės ir 10 briaunų. Į kelias sritis (įskaitant išorinę) šis grafas padalija plokštumą?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas plokštumos sričių skaičius."
+      },
+      "answerText": "$6$ sričių",
+      "coreIdea": {
+        "title": "Oilerio formulė plokštumai",
+        "text": "Sujungtam plokščiam grafui galioja Oilerio formulė $V - E + F = 2$. Įstatome žinomas vertes $V=6$ ir $E=10$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-10-concept-euler-formula-planar"
+      ],
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi grafas yra sujungtas ir plokščias, galime taikyti Oilerio formulę.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Formulė teigia: $V - E + F = 2$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite duotus skaičius: viršūnių skaičių $V = 6$ ir briaunų skaičių $E = 10$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Išspręskite lygtį: $6 - 10 + F = 2 \\implies F = 6$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pritaikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$."
+        },
+        {
+          "text": "Įstatome sąlygoje pateiktas vertes: $V = 6, E = 10$."
+        },
+        {
+          "text": "Gauname lygtį: $6 - 10 + F = 2$."
+        },
+        {
+          "text": "Išsprendžiame sričių skaičių: $-4 + F = 2 \\implies F = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-19-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Oilerio formulės užrašymas",
+              "action": "Užrašome $V - E + F = 2$.",
+              "reason": "Oilerio formulė galioja visiems sujungtiems plokštiesiems grafams.",
+              "latex": "V - E + F = 2",
+              "result": "Gauta pagrindinė formulė."
+            },
+            {
+              "title": "Sprendimas",
+              "action": "Įstatome $V=6, E=10$ ir gauname $6 - 10 + F = 2$.",
+              "reason": "Sprendžiame tiesinę lygtį vienam kintamajam.",
+              "latex": "-4 + F = 2",
+              "result": "Gauta supaprastinta lygtis."
+            },
+            {
+              "title": "Atsakymo radimas",
+              "action": "$F = 2 + 4 = 6$.",
+              "reason": "Perkeliame žinomus narius į dešinę pusę.",
+              "latex": "F = 6",
+              "result": "Rastas sričių skaičius."
+            }
+          ],
+          "finalAnswer": "$6$ sričių"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-19-trap-1",
+          "title": "Neplokščiojo grafo klaida",
+          "wrongMove": "Bandoma taikyti Oilerio formulę grafams, kurie nėra plokštieji arba nėra susieti.",
+          "whyTempting": "Mokiniai dažnai laiko Oilerio formulę universalia visiems grafams, nepatikrindami pradinių sąlygų.",
+          "correction": "Oilerio formulė $V-E+F=2$ galioja tik susietiems plokštiesiems grafams. Jei grafas turi $C$ susietumo komponentų, formulė tampa $V-E+F=1+C$.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-19-trap-2",
+          "title": "Išorinės srities ignoravimas",
+          "wrongMove": "Suskaičiuojamos tik „vidinės“ sritys, gaunant $F = 5$ vietoje $6$.",
+          "whyTempting": "Vizualiai mokiniai dažnai mato tik uždaras sritis, apribotas briaunomis, ir pamiršta begalinę išorinę sritį.",
+          "correction": "Oilerio formulėje kintamasis $F$ visada apima visas plokštumos sritis, įskaitant vieną išorinę (begalinę) sritį.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-19-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Sujungtame plokščiajame grafe yra 6 viršūnės ir 10 briaunų. ...?",
+          "back": "Sujungtam plokščiam grafui galioja Oilerio formulė $V - E + F = 2$. Įstatome žinomas vertes $V=6$ ir $E=10$.",
+          "conceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "methodIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-20",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampiniai langeliai (jie yra tos pačios spalvos). Įrodykite, kad likusios lentos neįmanoma pilnai uždengti $2 \\times 1$ domino kauliukais.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodytas domino padengimo neįmanomumas."
+      },
+      "answerText": "Įrodyta naudojant lentos nuspalvinimo dviejomis spalvomis savybes.",
+      "coreIdea": {
+        "title": "Paritetas ir spalvinimas",
+        "text": "Kiekvienas $2 \\times 1$ domino kauliukas visada uždengia tiksliai vieną juodą ir vieną baltą langelį. Kadangi išpjauti du tos pačios spalvos kampiniai langeliai, likusių juodų ir baltų langelių skaičiai skiriasi dviem, todėl pilnas padengimas neįmanomas."
+      },
+      "strategyTags": [
+        "parity"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įsivaizduokite įprastą šachmatų lentos spalvinimą juodais ir baltais langeliais. Kiek iš viso langelių yra lentoje ir kiek iš jų yra juodų/baltų?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvienas domino kauliukas ($2 \\times 1$) visada uždengia vieną baltą ir vieną juodą langelį, kad ir kaip jį padėtume.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kampiniai priešingi langeliai visada yra tos pačios spalvos. Pavyzdžiui, jei abu išpjauti langeliai yra balti, kiek juodų ir baltų langelių lieka lentoje?",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Lieka 32 juodi ir 30 baltų langelių. Kadangi bet koks kauliukų rinkinys turi uždengti po lygiai abiejų spalvų langelių, toks padengimas yra neįmanomas.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nuspalviname lentą šachmatiškai: 32 juodi ir 32 balti langeliai."
+        },
+        {
+          "text": "Priešingi kampiniai langeliai visada yra tos pačios spalvos (tarkime, balti)."
+        },
+        {
+          "text": "Pašalinus juos, lentoje lieka 32 juodi ir 30 baltų langelių."
+        },
+        {
+          "text": "Kadangi kiekvienas domino uždengia po vieną abiejų spalvų langelį, bet koks uždengimas uždengia vienodą skaičių juodų ir baltų langelių, todėl uždengti 32 juodų ir 30 baltų langelių neįmanoma."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-20-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "parity"
+          ],
+          "steps": [
+            {
+              "title": "Lango spalvos nustatymas",
+              "action": "Kampiniai priešingi langeliai turi tą pačią spalvą. Tarkime, abu yra balti.",
+              "reason": "Pagal šachmatinį nuspalvinimą.",
+              "latex": "\\text{Išpjauti langeliai} = 2 \\text{ balti}",
+              "result": "Liko 32 juodi ir 30 baltų langelių."
+            },
+            {
+              "title": "Domino invariantas",
+              "action": "Kiekvienas domino kauliukas uždengia $1 \\text{ juodą } + 1 \\text{ baltą }$ langelį.",
+              "reason": "Nepriklausomai nuo padėties ant šachmatiškai nuspalvintos lentos.",
+              "latex": "D = B + J",
+              "result": "Uždengti langeliai turi turėti lygią abiejų spalvų proporciją."
+            },
+            {
+              "title": "Išvada",
+              "action": "Padengimas domino kauliukais reikalauja, kad uždengtų juodų ir baltų langelių skaičiai būtų lygūs, o kadangi $32 \\neq 30$, pilnas padengimas yra neįmanomas.",
+              "reason": "Atsiranda prieštaravimas su invarianto reikalavimu.",
+              "latex": "32 \\neq 30",
+              "result": "Padengimas neįmanomas."
+            }
+          ],
+          "finalAnswer": "Įrodyta naudojant lentos nuspalvinimo dviejomis spalvomis savybes."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-20-trap-1",
+          "title": "Bendro langelių skaičiaus klaida",
+          "wrongMove": "Manoma, kad jei bendras langelių skaičius yra lyginis ($64 - 2 = 62$), tai padengimas visada įmanomas.",
+          "whyTempting": "Mokiniai dažnai orientuojasi tik į plotą, pamiršdami figūrų formą ir spalvinį invariantą.",
+          "correction": "Lyginis langelių skaičius yra būtina, bet nepakankama sąlyga. Šiuo atveju spalvų disbalansas daro padengimą neįmanomą.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-20-trap-2",
+          "title": "Kampų spalvos klaidingas nustatymas",
+          "wrongMove": "Teigiama, kad priešingi kampiniai langeliai yra skirtingų spalvų.",
+          "whyTempting": "Šoninis mąstymas: gretimi langeliai visada skirtingi, todėl mokiniai klaidingai ekstrapoliuoja tai kampams.",
+          "correction": "Šachmatų lentoje ($8 \\times 8$) tos pačios eilutės kampai yra skirtingi, tačiau įstrižai priešingi kampai visada yra tos pačios spalvos.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-20-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampin...?",
+          "back": "Kiekvienas $2 \\times 1$ domino kauliukas visada uždengia tiksliai vieną juodą ir vieną baltą langelį. Kadangi išpjauti du tos pačios spalvos kampiniai langeliai, likusių juodų ir baltų langelių skaičiai skiriasi dviem, todėl pilnas padengimas neįmanomas.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

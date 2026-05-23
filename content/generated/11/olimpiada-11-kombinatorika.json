@@ -1,0 +1,1140 @@
+{
+  "contentVersion": "0.1.1",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos autoravimo gairės",
+    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+  },
+  "topic": {
+    "id": "olimpiada-11-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 11,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [
+      "olimpiada-10",
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+    ],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-11-concept-nullstellensatz",
+      "olimpiada-11-concept-lovasz",
+      "olimpiada-11-concept-turan"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-11-26",
+      "ex-olimpiada-11-27",
+      "ex-olimpiada-11-29",
+      "ex-olimpiada-11-30",
+      "ex-olimpiada-11-31",
+      "ex-olimpiada-11-32",
+      "ex-olimpiada-11-33"
+    ]
+  },
+  "theory": [],
+  "concepts": [
+    {
+      "id": "olimpiada-11-concept-nullstellensatz",
+      "title": "Kombinatorinis Nulstellensatz",
+      "type": "concept",
+      "shortDefinition": "Teorema apie daugianario nelygumą nuliui gardelės taškuose.",
+      "intuition": "Jei daugianaris turi pakankamai aukštą laipsnį, jis negali „išvengti“ visų taškų tam tikroje aibių sandaugoje.",
+      "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\sum t_i$ ir nario $x_1^{t_1} \\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\dots, s_n) \\in S_1 \\times \\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-lovasz",
+      "title": "Lovaso lokalioji lema",
+      "type": "concept",
+      "shortDefinition": "Tikimybinio metodo įrankis, garantuojantis įvykių išvengimą.",
+      "intuition": "Jei „blogi“ įvykiai yra reti ir mažai susiję tarpusavyje, tai su teigiama tikimybe nė vienas jų neįvyks.",
+      "formal": "Jei $P(A_i) \\le p$ ir kiekvienas įvykis priklauso nuo daugiausiai $d$ kitų įvykių, tai jei $ep(d+1) \\le 1$, $P(\\cap A_i^c) > 0$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-turan",
+      "title": "Turano teorema",
+      "type": "concept",
+      "shortDefinition": "Ekstremaliosios grafų teorijos rezultatas apie maksimalų briaunų skaičių.",
+      "intuition": "Nurodo, kiek briaunų gali turėti grafas, kol jame būtinai atsiras $k$-viršūnių pilnasis pakgrafis (klikė).",
+      "formal": "Grafas su $n$ viršūnių, neturintis $K_{r+1}$ kaip pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$ (beveik lygių dalių pilnasis $r$-dalis grafas).",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Kombinatorinis Nulstellensatz",
+      "problem": "Įrodykite, kad bet kokiame reguliariame grafe, kurio viršūnių laipsnis lygus $d$, egzistuoja pakgrafis, kurio visų viršūnių laipsniai yra lygūs.",
+      "steps": [
+        {
+          "text": "Suformuluojame uždavinį kaip daugianarį virš baigtinio lauko."
+        },
+        {
+          "text": "Tarkime, grafas turi $n$ viršūnių ir $m$ briaunų. Kiekvienai briaunai priskiriame kintamąjį $x_e \\in \\{0, 1\\}$."
+        },
+        {
+          "text": "Sudarytas daugianaris turi nurodyti viršūnių laipsnių sumas."
+        },
+        {
+          "text": "Taikydami Alono Nulstellensatz teoremą, parodome, kad egzistuoja nulinis rinkinys, kuris nėra trivialus, jei laipsnių apribojimai yra tenkinami."
+        }
+      ],
+      "answer": "Remiantis Nulstellensatz"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-11-26",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "SzemerÃ©di reguliarumo lema teigia, kad bet kurį didelį grafą galima suskaidyti į dalis taip, kad briaunų pasiskirstymas tarp jų būtų panašus į atsitiktinį. Kaip vadinamos tokios dalių poros?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "reguliariosios poros"
+      },
+      "answerText": "reguliariosios poros",
+      "coreIdea": {
+        "title": "Reguliarumas",
+        "text": "Lema garantuoja dalių, tarp kurių briaunos pasiskirsčiusios tolygiai (reguliariai), egzistavimą."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "graph-theory",
+        "extremal-combinatorics"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "expectedMethodIds": [
+        "regularity-definition"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Szemerédi reguliarumo lema yra vienas svarbiausių šiuolaikinės grafų teorijos įrankių. Ji teigia, kad bet kurį pakankamai didelį grafą galima apytiksliai aprašyti naudojant nedidelį kiekį 'pseudonatūralių' dalių.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Lema sako, kad galime padalinti viršūnių aibę į beveik vienodo dydžio dalis taip, kad tarp daugumos dalių porų briaunos būtų pasiskirsčiusios tolygiai.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Šis tolygumas reiškia, kad briaunų tankis tarp bet kokių didelių tų dalių poaibių yra beveik toks pat, kaip ir tarp pačių dalių. Tokios poros vadinamos specifiniu terminu.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Terminas tiesiogiai atspindi lemos pavadinimą. Jei lema vadinasi 'reguliarumo lema', tai kaip vadinamos ją tenkinančios poros?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Szemerédi reguliarumo lema teigia, kad kiekvienam $\\epsilon > 0$ ir kiekvienam sveikajam skaičiui $m$, egzistuoja skaičius $M$ toks, kad bet kurį grafą su bent $n \\ge m$ viršūnių galima padalinti į $k$ dalių ($m \\le k \\le M$)."
+        },
+        {
+          "text": "Šis skaidymas pasižymi savybe, kad beveik visos (visos, išskyrus daugiausiai $\\epsilon k^2$) dalių poros $(V_i, V_j)$ yra $\\epsilon$-reguliarios."
+        },
+        {
+          "text": "Pora $(A, B)$ vadinama reguliariąja, jei bet kokiems pakankamai dideliems poaibiams $X \\subseteq A, Y \\subseteq B$, briaunų tankis $d(X, Y)$ yra artimas bendram tankiui $d(A, B)$."
+        },
+        {
+          "text": "Todėl ieškomas terminas yra 'reguliariosios poros'."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-26-method-1",
+          "title": "Grafų teorijos terminologijos analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics",
+            "graph-theory"
+          ],
+          "steps": [
+            {
+              "title": "Lemos esmės nustatymas",
+              "action": "Išanalizuojame Szemerédi lemos teiginį apie briaunų tankį tarp dalių.",
+              "reason": "Lema apibrėžia specifinę postruktūrą dideliuose grafuose, kuri elgiasi panašiai kaip atsitiktinis grafas.",
+              "result": "Pseudoneatsitiktinumas",
+              "latex": ""
+            },
+            {
+              "title": "Tankio tolygumo vertinimas",
+              "action": "Nustatome sąlygą, kad briaunų tankis tarp poaibių yra artimas bendram tankiui.",
+              "reason": "Tai yra pagrindinis lemoje naudojamas 'reguliarumo' kriterijus.",
+              "result": "|d(X,Y) - d(A,B)| < epsilon",
+              "latex": "|d(X, Y) - d(A, B)| < \\epsilon"
+            },
+            {
+              "title": "Termino fiksavimas",
+              "action": "Nurodome taisyklingą pavadinimą dalių poroms, kurios tenkina šią savybę.",
+              "reason": "Tai standartinis terminas algebrinėje kombinatorikoje, tiesiogiai kylantis iš lemos pavadinimo.",
+              "result": "reguliariosios poros",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "reguliariosios poros"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-26-trap-1",
+          "title": "Atsitiktinių porų pavadinimas",
+          "wrongMove": "Vadinama 'atsitiktinėmis poromis' arba 'kvazirandom poromis'.",
+          "whyTempting": "Briaunos pasiskirsčiusios taip, kaip jos būtų pasiskirsčiusios atsitiktiniame grafe.",
+          "correction": "Savybė yra reguliarumas, nes grafas pats savaime nėra atsitiktinis (jis deterministinis), jis tik turi specifinę struktūrinę savybę, vadinamą reguliarumu.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-26-trap-2",
+          "title": "Mažų grafų taikymas",
+          "wrongMove": "Bandoma taikyti reguliarumo lemą mažiems grafams (pvz., n=10).",
+          "whyTempting": "Lema pateikiama kaip universali tiesa apie grafus.",
+          "correction": "Lema yra asimptotinė. Skaičius M, apibrėžiantis dalių skaičių, auga nepaprastai greitai (kaip bokštinė funkcija), todėl mažiems n ši lema tampa nenaudinga – ji prasminga tik ekstremaliai dideliems objektams.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl ši lema laikoma viena svarbiausių šiuolaikinėje kombinatorikoje? (Dėl jos galios tiriant postruktūres).",
+        "Kas yra briaunų tankis (density) tarp dviejų aibių?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-26-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip Szemerédi reguliarumo lemoje vadinamos poros, kurios elgiasi kaip atsitiktiniai grafai?",
+          "back": "Reguliariosios poros.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-26-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-27",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite didžiausią įmanomą briaunų skaičių grafe su $n=6$ viršūnėmis, kuriame nėra nė vieno trikampio ($K_3$).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "9"
+      },
+      "answerText": "9",
+      "coreIdea": {
+        "title": "Mantelio teorema",
+        "text": "Didžiausias briaunų skaičius be trikampių pasiekiamas pilnajame dvidaliam grafe su lygiomis dalimis. Tai speciali Turano teoremos išvada."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "graph-theory",
+        "turan-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "expectedMethodIds": [
+        "turan-graph-construction"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-turan"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Mantelio teorema (specialus Turano teoremos atvejis) nurodo maksimalų briaunų skaičių grafe, kuriame nėra tam tikro dydžio pilnojo pakgrafio. Šiuo atveju draudžiamas objektas yra trikampis $K_3$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Didžiausias briaunų skaičius pasiekiamas tada, kai grafas yra pilnas dvidalias grafas. Norėdami maksimizuoti briaunų skaičių, turite padalinti viršūnes į dvi kuo lygesnes dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Jei turime n viršūnių ir jas padaliname į dalis dydžiais $x$ ir $n-x$, briaunų skaičius pilnajame dvidaliam grafe bus $x(n-x)$. Raskite šios sandaugos maksimumą, kai $n=6$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pagal Mantelio formulę, briaunų skaičius yra $\\lfloor n^2/4 \\rfloor$. Įstatykite $n=6$ ir apskaičiuokite rezultatą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Turano teoremą, grafas su $n$ viršūnių, neturintis $K_{r+1}$ pakgrafio, turi daugiausiai briaunų, kai jis yra Turano grafas $T(n, r)$."
+        },
+        {
+          "text": "Trikampis yra $K_3$, todėl čia $r+1 = 3$, vadinasi $r=2$."
+        },
+        {
+          "text": "Turano grafas $T(n, 2)$ yra pilnas dvidalias grafas $K_{\\lfloor n/2 \\rfloor, \\lceil n/2 \\rceil}$."
+        },
+        {
+          "text": "Kai $n=6$, viršūnės padalinamos į dvi lygias dalis: $3$ ir $3$."
+        },
+        {
+          "text": "Briaunų skaičius yra $3 \\times 3 = 9$."
+        },
+        {
+          "text": "Alternatyviai naudojant Mantelio formulę: $E \\le \\lfloor 6^2/4 \\rfloor = \\lfloor 36/4 \\rfloor = 9$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-27-method-1",
+          "title": "Ekstremalioji grafų teorija (Mantelio teorema)",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics",
+            "graph-theory"
+          ],
+          "steps": [
+            {
+              "title": "Struktūros parinkimas",
+              "action": "Pasirenkame pilną dvidalią struktūrą.",
+              "reason": "Tai maksimizuoja briaunų skaičių be trikampių.",
+              "result": "Dvidalis skaidinys",
+              "latex": ""
+            },
+            {
+              "title": "Dalių optimizavimas",
+              "action": "Padaliname 6 viršūnes į dvi lygias aibes po 3.",
+              "reason": "Simetrija užtikrina maksimalią sandaugą.",
+              "result": "3 ir 3",
+              "latex": "n_1 = 3, n_2 = 3"
+            },
+            {
+              "title": "Briaunų skaičiavimas",
+              "action": "Sudauginame dalių dydžius.",
+              "reason": "Kiekviena viršūnė iš vienos dalies jungiasi su kiekviena iš kitos.",
+              "result": "9",
+              "latex": "E = 3 \\times 3 = 9"
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-27-trap-1",
+          "title": "Netolygus dalių skirstymas",
+          "wrongMove": "Bandoma dalinti viršūnes į 4 ir 2 dalis, tikintis gauti daugiau briaunų.",
+          "whyTempting": "Manoma, kad viena didelė dalis sugeneruos daugiau jungčių.",
+          "correction": "Sandauga $x(n-x)$ visada didžiausia, kai dalys yra kuo lygesnės (arba lygios). $4 \\times 2 = 8$, o $3 \\times 3 = 9$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-27-trap-2",
+          "title": "K3 ir ciklo C3 painiojimas",
+          "wrongMove": "Manoma, kad draudžiami tik nelyginiai ciklai (dvidalių grafų savybė).",
+          "whyTempting": "Dvidališkumas yra pagrindinė savybė be trikampių.",
+          "correction": "Nors grafas be trikampių nebūtinai yra dvidalis (gali turėti $C_5$), bet briaunų MAKSIMUMAS visada pasiekiamas būtent dvidaliame grafe. Nepainiokite bendros savybės su ekstremaliuoju atveju.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų atsakymas, jei neleistume $K_4$ (ketverto pilnojo grafo)?",
+        "Kodėl Turano grafai visada turi 'beveik lygias' dalis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-27-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra maksimalus briaunų skaičius grafe su n viršūnių be trikampių ($K_3$)?",
+          "back": "$\\lfloor n^2 / 4 \\rfloor$ (Mantelio teorema).",
+          "conceptIds": [
+            "olimpiada-11-concept-turan"
+          ],
+          "methodIds": [
+            "ex-olimpiada-11-27-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-29",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Kombinatorinė Nulstellensatz teorema leidžia įrodyti objektų egzistavimą tiriant daugianarių šaknis. Kas yra šios teoremos autorius?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Noga Alonas (Noga Alon)"
+      },
+      "answerText": "Noga Alonas (Noga Alon)",
+      "coreIdea": {
+        "title": "Teoremos autorystė",
+        "text": "Noga Alonas 1999 m. publikavo šį metodą, kuris tapo vienu pagrindinių algebrinės kombinatorikos įrankių."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "algebraic-combinatorics"
+      ],
+      "prerequisiteTopicIds": [
+        "daugianariai-ir-greitosios-daugybos-formules"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-nullstellensatz"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-11-concept-nullstellensatz"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kombinatorinis Nulstellensatz yra galinga teorema, siejanti daugianarių šaknis su kombinatorinėmis struktūromis. Ji dažnai naudojama įrodant, kad tam tikras poaibis gardelėje negali būti visas 'nulinis'.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Šios teoremos autorius yra vienas žymiausių šiuolaikinių Izraelio matematikų, ypač pagarsėjęs savo indėliu į diskrečiąją matematiką ir tikimybinį metodą.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Teorema buvo publikuota 1999 m. ir pavadinta autoriaus vardu. Jo vardas yra keturių raidžių (lietuviškai penkių), o pavardė taip pat trumpa.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Ieškomas asmuo yra Noga Alonas. Kaip taisyklingai užrašyti jo vardą ir pavardę lietuviškai?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kombinatorinį Nulstellensatz suformulavo ir išpopuliarino Noga Alonas 1999 metais."
+        },
+        {
+          "text": "Teorema teigia, kad jei daugianaris turi narį $x_1^{t_1} \\dots x_n^{t_n}$ su nelygiu nuliui koeficientu ir jo laipsnis yra maksimalus, tai jis negali būti nulis visuose gardelės $S_1 times \\dots times S_n$ taškuose, kai $|S_i| > t_i$."
+        },
+        {
+          "text": "Tai yra galingas algebrinis įrankis kombinatorikoje, leidžiantis paprastai įrodyti tokius rezultatus kaip Cauchy-Davenport teorema."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-29-method-1",
+          "title": "Mokslinės istorijos ir faktų analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics",
+            "algebraic-combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Šaltinių identifikavimas",
+              "action": "Susiejame terminą 'Kombinatorinis Nulstellensatz' su algebrinės kombinatorikos raida.",
+              "reason": "Teorema yra vienas svarbiausių šiuolaikinių metodų šioje srityje.",
+              "result": "Algebrinė kombinatorika",
+              "latex": ""
+            },
+            {
+              "title": "Autorystės priskyrimas",
+              "action": "Atpažįstame Noga Aloną kaip pagrindinį šio metodo populiarintoją ir 1999 m. straipsnio autorių.",
+              "reason": "Teorema mokslo bendruomenėje neoficialiai vadinama Alono Nulstellensatz.",
+              "result": "Noga Alon",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Noga Alonas (Noga Alon)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-29-trap-1",
+          "title": "Painiojimas su Hilberto Nulstellensatz",
+          "wrongMove": "Spėjama, kad autorius yra Davidas Hilbertas.",
+          "whyTempting": "Pavadinime yra žodis 'Nulstellensatz', kuris istoriškai siejamas su Hilberto rezultatais algebrinėje geometrijoje.",
+          "correction": "Hilbertas įrodė klasikinę versiją virš algebriškai uždarų laukų. Kombinatorinę (diskrečiąją) versiją, skirtą baigtinėms aibėms, suformulavo Alonas.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-29-trap-2",
+          "title": "Nulių skaičiaus vertinimo klaida",
+          "wrongMove": "Manoma, kad teorema nurodo, KIEK daugianaris turi šaknų.",
+          "whyTempting": "Daugianarių teorija dažnai sukasi apie šaknų skaičiavimą.",
+          "correction": "Teorema neskaičiuoja šaknų, ji garantuoja bent vieno taško, kuriame daugianaris NĖRA nulis, egzistavimą. Tai egzistencinis, o ne kiekybinis rezultatas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip šis metodas panaudojamas įrodant Cauchy-Davenporto teoremą apie aibių sumų dydį?",
+        "Kokia yra pagrindinė sąlyga koeficientui prie vyriausiojo nario?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-29-srs-1",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kas yra 'Kombinatorinio Nulstellensatz' autorius?",
+          "back": "Noga Alon",
+          "conceptIds": [
+            "olimpiada-11-concept-nullstellensatz"
+          ],
+          "methodIds": [
+            "ex-olimpiada-11-29-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-30",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Holo vedybų teorema nurodo sąlygą, kada galima parinkti skirtingus atstovus aibių šeimai. Tegu $S_1 = \\{1, 2\\}, S_2 = \\{1, 3\\}, S_3 = \\{2, 3\\}, S_4 = \\{1, 2, 3\\}$. Ar šiai šeimai galioja Holo sąlyga? Atsakykite 'Taip' arba 'Ne'.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne"
+      },
+      "answerText": "Ne",
+      "coreIdea": {
+        "title": "Holo sąlyga",
+        "text": "Bet kurios $k$ aibių sąjunga turi turėti bent $k$ elementų. Reikia patikrinti visas aibių kombinacijas."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "hall-marriage-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "aibes"
+      ],
+      "expectedMethodIds": [
+        "hall-condition-check"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Holo vedybų teorema (arba skirtingų atstovų aibių teorema) reikalauja, kad bet kurios aibių grupės sąjunga būtų bent jau tokio pat dydžio, kiek yra pačių aibių.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskaičiuokite, kiek unikalių elementų yra visose keturiose aibėse kartu paėmus. Tai ir bus aibių sąjungos $S_1 \\cup S_2 \\cup S_3 \\cup S_4$ dydis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Holo sąlyga teigia: $|\\cup_{i \\in I} S_i| \\ge |I|$ kiekvienam poaibiui $I \\subseteq \\{1, 2, 3, 4\\}$. Patikrinkite šią sąlygą visai grupei, kai $|I| = 4$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Visose aibėse rasti elementai yra tik 1, 2 ir 3. Vadinasi, sąjungos dydis yra 3. Ar 3 yra daugiau arba lygu už aibių skaičių 4?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Holo vedybų teorema nurodo būtinas ir pakankamas sąlygas skirtingiems atstovams parinkti: $|\\cup_{i \\in I} S_i| \\ge |I|$ bet kuriam aibių indeksų poaibiui $I$."
+        },
+        {
+          "text": "Nagrinėjame visą aibių šeimą ($n=4$): $I = \\{1, 2, 3, 4\\}$. Todėl $|I| = 4$."
+        },
+        {
+          "text": "Randame visų aibių sąjungą: $S_1 \\cup S_2 \\cup S_3 \\cup S_4 = \\{1, 2\\} \\cup \\{1, 3\\} \\cup \\{2, 3\\} \\cup \\{1, 2, 3\\} = \\{1, 2, 3\\}$."
+        },
+        {
+          "text": "Sąjungos dydis $|\\{1, 2, 3\\}| = 3$."
+        },
+        {
+          "text": "Kadangi $3 < 4$, egzistuoja poaibis $I$, kuriam Holo sąlyga negalioja."
+        },
+        {
+          "text": "Vadinasi, šiai šeimai Holo sąlyga negalioja."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-30-method-1",
+          "title": "Holo kriterijaus tikrinimas",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics",
+            "set-theory"
+          ],
+          "steps": [
+            {
+              "title": "Sąjungos aibės nustatymas",
+              "action": "Surandame visus unikalius elementus, esančius nagrinėjamose aibėse.",
+              "reason": "Holo teorema remiasi aibių sąjungos dydžiu.",
+              "result": "{1, 2, 3}",
+              "latex": "S_{total} = \\bigcup_{i=1}^4 S_i = \\{1, 2, 3\\}"
+            },
+            {
+              "title": "Kardinalumo palyginimas",
+              "action": "Palyginame sąjungos elementų skaičių su aibių skaičiumi n=4.",
+              "reason": "Jei visų n aibių sąjunga turi mažiau nei n elementų, tai skirtingų atstovų parinkti neįmanoma.",
+              "result": "3 < 4",
+              "latex": "|\\bigcup_{i=1}^4 S_i| < 4"
+            },
+            {
+              "title": "Išvada",
+              "action": "Konstatuojame, kad Holo sąlyga pažeista visai šeimai.",
+              "reason": "Pažeistas bent vienas Holo nelygybės atvejis (šiuo atveju k=4).",
+              "result": "Ne",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Ne"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-30-trap-1",
+          "title": "Tik po vieną aibę tikrinimas",
+          "wrongMove": "Mokinys sako: 'kiekviena aibė turi bent po 2 elementus, vadinasi elementų užteks'.",
+          "whyTempting": "Atrodo, kad problemos kyla tik tada, kai aibės yra tuščios.",
+          "correction": "Svarbu ne tik kiekvienos aibės dydis, bet ir kaip jos persidengia. Net jei aibės didelės, jei jos visos sudarytos iš tų pačių kelių elementų, skirtingų atstovų rasti nepavyks.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-30-trap-2",
+          "title": "Dalinės sėkmės ignoravimas",
+          "wrongMove": "Mokinys randa 3 skirtingus atstovus pirmoms trims aibėms (pvz., 1, 3, 2) ir nusprendžia, kad sąlyga galioja.",
+          "whyTempting": "Pavyko rasti beveik visus atstovus.",
+          "correction": "Holo sąlyga turi galioti VISOMS aibėms vienu metu. Tai, kad galime parinkti atstovus poaibiui, negarantuoja sėkmės visai šeimai.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Holo sąlyga susijusi su didžiausiu poravimu (matching) dvidaliuose grafuose?",
+        "Kiek daugiausiai skirtingų atstovų galime parinkti šiai šeimai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-30-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė Holo vedybų teoremos sąlyga aibių šeimai $S_1, \\dots, S_n$?",
+          "back": "Kiekvienam poaibiui $I$, $|\\cup_{i \\in I} S_i| \\ge |I|$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-30-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-31",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaičiuojamas panašiai kaip determinantas, bet be ženklų kaitaliojimo. Apskaičiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ permanentą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Permanento apibrėžimas",
+        "text": "Dvieilės matricos permanentas yra $a_{11} a_{22} + a_{12} a_{21}$."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "matrix-theory"
+      ],
+      "prerequisiteTopicIds": [
+        "tiesiniu-lygciu-sistemos-8"
+      ],
+      "prerequisiteConceptIds": [
+        "lygciu-sistema"
+      ],
+      "expectedMethodIds": [
+        "permanent-calculation"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Permanentas yra matricos funkcija, labai panaši į determinantą, tačiau jos skaičiavime visi nariai sumuojami su pliuso ženklu, nepaisant permutacijų lygiškumo.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nagrinėjamoje matricoje visi elementai yra lygūs 1. Įstatykite šias vertes į permanento formulę ir atlikite sudėtį.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Suskaičiuokite: $1 \\cdot 1 + 1 \\cdot 1$. Koks rezultatas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Permanentas kvadratinei $2 \\times 2$ matricai apskaičiuojamas sudedant pagrindinės ir šalutinės įstrižainių narių sandaugas."
+        },
+        {
+          "text": "Matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ elementai yra $a_{11}=1, a_{22}=1, a_{12}=1, a_{21}=1$."
+        },
+        {
+          "text": "Taikome formulę: $\\text{per}(A) = a_{11} a_{22} + a_{12} a_{21}$."
+        },
+        {
+          "text": "Įstatome skaičius: $1 \\cdot 1 + 1 \\cdot 1 = 1 + 1 = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-31-method-1",
+          "title": "Tiesioginis permanento skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics",
+            "matrix-theory"
+          ],
+          "steps": [
+            {
+              "title": "Permanento taisyklės parinkimas",
+              "action": "Atpažįstame permanentą kaip matricos invariantą, skaičiuojamą be ženklų kaitaliojimo.",
+              "reason": "Uždavinyje prašoma specifinio 2x2 matricos permanento.",
+              "result": "per(A) = a11*a22 + a12*a21",
+              "latex": "\\text{per}(A) = a_{11}a_{22} + a_{12}a_{21}"
+            },
+            {
+              "title": "Elementų priskyrimas",
+              "action": "Identifikuojame matricos elementus: a11=1, a12=1, a21=1, a22=1.",
+              "reason": "Visi duotosios matricos nariai yra vienetai.",
+              "result": "1, 1, 1, 1",
+              "latex": ""
+            },
+            {
+              "title": "Galutinis apskaičiavimas",
+              "action": "Sudauginame narius ir juos sudedame.",
+              "reason": "Tai tiesioginis formulės taikymas.",
+              "result": "2",
+              "latex": "1 \\cdot 1 + 1 \\cdot 1 = 2"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-31-trap-1",
+          "title": "Painiojimas su determinantu",
+          "wrongMove": "Mokinys atima šalutinės įstrižainės sandaugą: $1 \\cdot 1 - 1 \\cdot 1 = 0$.",
+          "whyTempting": "Determinantas yra viena dažniausiai naudojamų matricos charakteristikų, o jo formulė beveik identiška.",
+          "correction": "Permanento skaičiavime nenaudojami minuso ženklai (nėra kofaktorių ženklų kaitaliojimo). Visos sandaugos sumuojamos teigiamai.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-31-trap-2",
+          "title": "Sulyginimas su pėdsaku (trace)",
+          "wrongMove": "Mokinys tiesiog sudeda pagrindinės įstrižainės narius: $1 + 1 = 2$.",
+          "whyTempting": "Atsakymas sutampa, tačiau tai atsitiktinumas dėl matricos paprastumo.",
+          "correction": "Matricos pėdsakas yra tik įstrižainės SUMA, o permanentas yra visų įmanomų permutacijų SANDAUGŲ suma. Didesnėms matricoms šios reikšmės stipriai skirsis.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl permanentą suskaičiuoti n x n matricai (kai n didelis) yra žymiai sunkiau nei determinantą?",
+        "Kokia yra permanento kombinatorinė prasmė dvidaliuose grafuose (bipartite matchings)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-31-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip skaičiuojamas 2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentas?",
+          "back": "$ad + bc$.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-31-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-32",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Haleso-Džiueto (Hales-Jewett) teorema teigia, kad bet kokiame pakankamai dideliame hiperkube, kurio taškai nuspalvinti baigtiniu spalvų skaičiumi, egzistuoja tam tikra linija. Kaip vadinama tokia linija?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "monochromatinė linija"
+      },
+      "answerText": "monochromatinė linija",
+      "coreIdea": {
+        "title": "Ramzio teorija",
+        "text": "Tai vienas stipriausių Ramzio teorijos rezultatų. Teiginys garantuoja vienos spalvos darinio egzistavimą."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "ramsey-theory"
+      ],
+      "prerequisiteTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-lovasz"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite apie spalvų vienodumą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Viena spalva graikiškai – monochromatinė.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tai linija, kurios visi taškai yra tos pačios spalvos.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atsakymas – monochromatinė linija.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Teorema garantuoja liniją, kurios visi taškai nuspalvinti viena spalva."
+        },
+        {
+          "text": "Tai vadinama monochromatine linija."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-32-method-1",
+          "title": "Terminologija",
+          "methodType": "main",
+          "strategyTags": [
+            "combinatorics"
+          ],
+          "steps": [
+            {
+              "title": "Konteksto nustatymas",
+              "action": "Atpažįstame Hales-Jewett teoremą kaip Ramzio teorijos rezultatą sekoms.",
+              "reason": "Teorema nagrinėja spalvinimo savybes n-matėse gardelėse.",
+              "result": "Ramzio teorija",
+              "latex": ""
+            },
+            {
+              "title": "Struktūros identifikavimas",
+              "action": "Nurodome ieškomą vienos spalvos objektą.",
+              "reason": "Teoremos išvada garantuoja 'vienos spalvos' tiesės egzistavimą.",
+              "result": "monochromatinė linija",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "monochromatinė linija"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-32-trap-1",
+          "title": "Sutapatinimas su Van der Vardeno teorema",
+          "wrongMove": "Manoma, kad tai tiesiog Van der Vardeno teorema.",
+          "whyTempting": "Hales-Jewett yra Van der Vardeno teoremos apibendrinimas.",
+          "correction": "Nors jos susijusios, Hales-Jewett kalba apie struktūras hiperkubuose (simbolių sekas), o ne tik skaičių progresijas.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-32-trap-2",
+          "title": "Dimensijos nepakankamumas",
+          "wrongMove": "Manoma, kad linija egzistuoja bet kokioje dimensijoje.",
+          "whyTempting": "Ramzio tipo teoremos atrodo universalios.",
+          "correction": "Hales-Jewett garantuoja liniją tik kai dimensija n yra 'pakankamai didelė' (priklauso nuo spalvų skaičiaus ir kraštinės ilgio).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip šią teoremą pritaikyti žaidimui 'kryžiukai-nuliukai' aukštesnėse dimensijose?",
+        "Kodėl ši teorema vadinama 'kombinatoriniu šedevru'?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-32-srs-1",
+          "deck": "practice",
+          "cardType": "fact",
+          "front": "Kokio objekto egzistavimą garantuoja Hales-Jewett teorema pakankamai didelės dimensijos spalvotuose hiperkubuose?",
+          "back": "Monochromatinės linijos.",
+          "conceptIds": [],
+          "methodIds": [
+            "ex-olimpiada-11-32-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-33",
+      "topicId": "olimpiada-11-kombinatorika",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Taikant Lovaso lokaliąją lemą įvykiams $A_i$, kurių tikimybė $P(A_i) \\le p$ ir kiekvienas priklauso nuo daugiausiai $d=2$ kitų įvykių. Jei $p = 0.05$, ar galime teigti, kad su teigiama tikimybe joks įvykis neįvyks? Naudokite pakankamąją sąlygą $ep(d+1) \\le 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taip"
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Lemos tikrinimas",
+        "text": "Reikia įstatyti reikšmes į formulę $e \\cdot p \\cdot (d+1)$ ir patikrinti, ar rezultatas neviršija 1."
+      },
+      "strategyTags": [
+        "combinatorics",
+        "probabilistic-method",
+        "lovasz-local-lemma"
+      ],
+      "prerequisiteTopicIds": [
+        "duomenu-charakteristikos-ir-tikimybe-6"
+      ],
+      "prerequisiteConceptIds": [
+        "tikimybe",
+        "olimpiada-11-concept-lovasz"
+      ],
+      "expectedMethodIds": [
+        "lovasz-condition-check"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-lovasz"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įstatykite $e \\approx 2.718, p = 0.05, d = 2$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Skaičiuojame: $2.718 \\cdot 0.05 \\cdot (2+1)$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$0.05 \\cdot 3 = 0.15$. Padauginkite iš $e$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$0.15 \\cdot 2.718$ yra apie $0.407$. Ar tai mažiau už 1?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Sąlyga: $ep(d+1) \\le 1$."
+        },
+        {
+          "text": "$e \\cdot 0.05 \\cdot (2+1) = 3e \\cdot 0.05 = 0.15e$."
+        },
+        {
+          "text": "Kadangi $e < 3$, tai $0.15e < 0.45$."
+        },
+        {
+          "text": "$0.45 \\le 1$, vadinasi sąlyga tenkinama."
+        },
+        {
+          "text": "Išvada: Taip, teigiama tikimybė garantuota."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-33-method-1",
+          "title": "Sąlygos skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "probabilistic-method"
+          ],
+          "steps": [
+            {
+              "title": "Parametrų identifikavimas",
+              "action": "Nustatome lemos kintamųjų reikšmes: p=0.05, d=2.",
+              "reason": "Sąlyga priklauso nuo tikimybės ir kaimynų skaičiaus grafe.",
+              "result": "p=0.05, d=2",
+              "latex": ""
+            },
+            {
+              "title": "Nelygybės tikrinimas",
+              "action": "Apskaičiuojame sandaugą ep(d+1).",
+              "reason": "Tai pakankama sąlyga, kad joks 'blogas' įvykis neįvyktų.",
+              "result": "0.407 < 1",
+              "latex": "e \\cdot 0.05 \\cdot (2+1) \\approx 2.718 \\cdot 0.15 = 0.4077"
+            },
+            {
+              "title": "Išvada",
+              "action": "Konstatuojame, kad savybė galioja.",
+              "reason": "Kadangi 0.407 <= 1, lema garantuoja teigiamą tikimybę.",
+              "result": "Taip",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-33-trap-1",
+          "title": "e vertės pamiršimas",
+          "wrongMove": "Mokinys nežino, kas yra 'e' arba naudoja jį kaip nežinomąjį.",
+          "whyTempting": "Tai matematinė konstanta, nebūtinai žinoma visiems.",
+          "correction": "Oilerio skaičius $e \\approx 2.718$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-33-trap-2",
+          "title": "Nelygybės krypties klaida",
+          "wrongMove": "Manoma, kad ep(d+1) turi būti daugiau už 1.",
+          "whyTempting": "Painiojama su kitomis tikimybinėmis lemuomis, kur ieškoma 'didelių' tikimybių.",
+          "correction": "Lokalioji lema reikalauja, kad sandauga būtų MAŽA (<= 1), kas reiškia, kad įvykiai yra pakankamai reti ir menkai susiję.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl ši lema yra 'lokali'? Ką tai reiškia įvykių nepriklausomumui?",
+        "Kas nutiktų, jei kiekvienas įvykis priklausytų nuo visų kitų?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-33-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra paprasčiausia Lovaso lokaliosios lemos pakankama sąlyga (naudojant e, p, d)?",
+          "back": "$ep(d+1) \\le 1$.",
+          "conceptIds": [
+            "olimpiada-11-concept-lovasz"
+          ],
+          "methodIds": [
+            "ex-olimpiada-11-33-method-1"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-11-test-challenge",
+      "title": "11 klasės olimpiadinis iššūkis",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-11-kombinatorika"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-11-01",
+        "ex-olimpiada-11-04",
+        "ex-olimpiada-11-07",
+        "ex-olimpiada-11-10",
+        "ex-olimpiada-11-12",
+        "ex-olimpiada-11-14",
+        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-19",
+        "ex-olimpiada-11-24",
+        "ex-olimpiada-11-32"
+      ],
+      "masteryWeight": 2.0
+    }
+  ]
+}

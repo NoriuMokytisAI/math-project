@@ -1,0 +1,1599 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-05-geometrija",
+    "title": "Geometrija",
+    "grade": 5,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-05-concept-logic",
+      "olimpiada-05-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-05-7452e90b",
+      "ex-olimpiada-05-d944dce6",
+      "ex-olimpiada-05-1b8f2f68",
+      "ex-olimpiada-05-6c25d5db",
+      "ex-olimpiada-05-7bf4bab4",
+      "ex-olimpiada-05-9aacf698",
+      "ex-olimpiada-05-a5116194",
+      "ex-olimpiada-05-df8a80e6",
+      "ex-olimpiada-05-29a4ca3d",
+      "ex-olimpiada-05-950a0206"
+    ]
+  },
+  "theory": [],
+  "concepts": [
+    {
+      "id": "olimpiada-05-concept-logic",
+      "title": "Olimpiadinė logika ir dedukcija",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas nuosekliai ir griežtai išvesti teisingas išvadas iš pateiktų prielaidų, eliminuojant prieštaravimus.",
+      "intuition": "Mąstymas žingsnis po žingsnio, kai atmetame neįmanomus variantus ir randame vienintelį teisingą kelią.",
+      "formal": "Teiginių logikos dėsnių taikymas, siekiant nustatyti pradinių sąlygų suderinamumą ir gauti logiškai būtinus sekmenis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-method",
+      "title": "Matematinio įrodymo samprata",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentų grandinės sudarymas, neabejotinai patvirtinantis teiginio teisingumą visiems nagrinėjamiems atvejams.",
+      "intuition": "Tai nėra tiesiog kelių pavyzdžių patikrinimas. Tai paaiškinimas, KODĖL tai galioja visada be jokių išimčių.",
+      "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "4 Pavyzdys: Kvadrato dalijimas",
+      "problem": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
+      "steps": [
+        {
+          "text": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $\\sqrt{64} = 8$ cm. Mums reikia padalinti $8 \\times 8$ kvadratą."
+        },
+        {
+          "text": "Kiekvieno stačiakampio plotas $S = a \\times b$. Kraštinės turi būti sveikieji skaičiai, todėl ieškome jų daliklių:\n- $S_1 = 8 \\implies 1 \\times 8$ arba $2 \\times 4$.\n- $S_2 = 12 \\implies 2 \\times 6$ arba $3 \\times 4$.\n- $S_3 = 20 \\implies 4 \\times 5$ (kraštinė negali būti didesnė už $8$, todėl $2 \\times 10$ netinka).\n- $S_4 = 24 \\implies 3 \\times 8$ arba $4 \\times 6$."
+        },
+        {
+          "text": "Visi keturi stačiakampiai turi tilpti į $8 \\times 8$ kvadratą. Kadangi kai kurių stačiakampių plotis turi dalintis iš bendrų kraštinių, pabandykime rasti bendrą struktūrą. Pastebėkime, kad plotai $8$ ir $24$ gali turėti bendrą kraštinę $8$:\n- Jei paimame stačiakampį $1 \\times 8$ (plotas 8) ir $3 \\times 8$ (plotas 24), jie kartu užima $4 \\times 8$ plotą.\n- Tada lieka kita kvadrato dalis, kurios matmenys taip pat yra $4 \\times 8$ (plotas 32).\n- Šioje $4 \\times 8$ dalyje turime sutalpinti stačiakampius, kurių plotai yra $12$ ir $20$. Kadangi viena kraštinė yra $4$, galime padalinti ją į $3 \\times 4$ (plotas 12) ir $5 \\times 4$ (plotas 20). Jų bendras ilgis $3+5=8$. Viskas puikiai tinka!"
+        },
+        {
+          "text": "Taigi stačiakampių matmenys yra: $1 \\times 8$, $3 \\times 8$, $3 \\times 4$, $5 \\times 4$."
+        }
+      ],
+      "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-05-7452e90b",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tiesėje pažymėti $5$ skirtingi taškai. Kiek skirtingų atkarpų, kurių galai yra šie pažymėti taškai, galima rasti šioje tiesėje?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Galima rasti $10$ skirtingų atkarpų."
+      },
+      "answerText": "10",
+      "coreIdea": {
+        "title": "Pasirinkite taškų poras",
+        "text": "Kiekviena atkarpa yra vienareikšmiškai apibrėžiama dviem taškais. Reikia rasti, keliais būdais galima pasirinkti $2$ taškus iš $5$."
+      },
+      "strategyTags": [
+        "atkarpų-skaičiavimas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atkarpa sujungia bet kuriuos du taškus. Galite tiesiog išrašyti visas poras: $AB, AC, AD, AE, BC...$",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pirmąjį atkarpos tašką galite pasirinkti $5$ būdais, o antrąjį – iš likusių $4$ taškų. Ar atkarpa $AB$ skiriasi nuo $BA$?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Kiekviena atkarpa yra vienareikšmiškai apibrėžiama dviem taškais. Reikia rasti, keliais būdais galima pasirinkti $2$ taškus iš $5$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Pažymėkime taškus $A, B, C, D, E$. Atkarpa sudaroma pasirinkus bet kuriuos du taškus. Pirmąjį tašką ...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš pirmo taško galime nubrėžti $4$ atkarpas, iš antro – $3$ naujas, iš trečio – $2$, iš ketvirto – $1$."
+        },
+        {
+          "text": "Suma: $4 + 3 + 2 + 1 = 10$."
+        },
+        {
+          "text": "Alternatyviai: $\\frac{5 \\times 4}{2} = 10$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-7452e90b-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "atkarpų-skaičiavimas"
+          ],
+          "steps": [
+            {
+              "title": "Sistemingas išvardijimas",
+              "action": "Fiksuojame vieną tašką ir skaičiuojame atkarpas iki visų taškų dešinėje, tada judame prie kito taško.",
+              "reason": "Tai padeda nepraleisti variantų ir jų nesidubliuoti.",
+              "result": "Sekos suma $4+3+2+1$."
+            },
+            {
+              "title": "Kombinatorinės formulės taikymas",
+              "action": "Naudojame derinių formulę $C_n^2$ arba sandaugos taisyklę su padalinimu iš 2.",
+              "reason": "Tai greitesnis būdas skaičiuoti, kai taškų yra daug.",
+              "result": "$10$ atkarpų."
+            }
+          ],
+          "finalAnswer": "Galima rasti $10$ skirtingų atkarpų."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-7452e90b-trap-1",
+          "title": "Atkarpų dubliavimas",
+          "wrongMove": "Suskaičiuojama $5 \\times 4 = 20$ atkarpų.",
+          "whyTempting": "Pamirštama, kad atkarpa $AB$ ir $BA$ yra tas pats objektas.",
+          "correction": "Jei objektas neturi krypties (kaip atkarpa), visada padalinkite sandaugą iš $2$.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-7452e90b-trap-2",
+          "title": "Tik gretimų atkarpų skaičiavimas",
+          "wrongMove": "Mokinys suskaičiuoja tik $4$ atkarpas, jungiančias kaimyninius taškus.",
+          "whyTempting": "Sąlygos interpretavimas kaip 'kiek dalių atsirado tiesėje'.",
+          "correction": "Atkarpa gali jungti nebūtinai kaimyninius taškus – bet kurie du taškai sudaro atkarpą.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-7452e90b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Tiesėje pažymėti $5$ skirtingi taškai. Kiek skirtingų atkarp...",
+          "back": "Taikome šį metodą: Kiekviena atkarpa yra vienareikšmiškai apibrėžiama dviem taškais. Reikia rasti, keliais būdais galima pasirinkti $2$ taškus iš $5$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-d944dce6",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite kampą, kurį sudaro laikrodžio valandinė ir minutinė rodyklės (mažesnįjį iš dviejų kampų).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kampas tarp rodyklių yra $130^\\circ$."
+      },
+      "answerText": "130°",
+      "coreIdea": {
+        "title": "Raskite rodyklių poslinkį laipsniais",
+        "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus."
+      },
+      "strategyTags": [
+        "kampai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite, kiek laipsnių minutinė rodyklė pasislenka per 1 minutę ($6^\\circ$) ir kiek valandinė ($0.5^\\circ$).",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nustatykite abiejų rodyklių padėtis laipsniais nuo 12 valandos žymos. Valandinė rodyklė per 40 minučių pasislenka už 3 valandos žymos.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$. Apskaičiuokite valandinės rodyklės papildomą poslinkį: $\\frac{40}{60} \\times 30^\\circ$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Viena valandos padala atitinka $360^\\circ / 12 = 30^\\circ$."
+        },
+        {
+          "text": "Ties $40$ minučių minutinė rodyklė rodo tiksliai į $8$-tą padalą, kas atitinka $8 \\times 30^\\circ = 240^\\circ$ nuo $12$ valandos žymės."
+        },
+        {
+          "text": "Valandinė rodyklė $3$ valandą buvo ties $3$-čia padala ($90^\\circ$). Per $40$ minučių ji pastūmėjo į priekį: $\\frac{40}{60} \\times 30^\\circ = 20^\\circ$. Taigi valandinė rodyklė yra ties $90^\\circ + 20^\\circ = 110^\\circ$."
+        },
+        {
+          "text": "Kampas tarp jų yra $240^\\circ - 110^\\circ = 130^\\circ$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-d944dce6-method-1",
+          "title": "Rodyklių poslinkio metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "kampai"
+          ],
+          "steps": [
+            {
+              "title": "Valandinės rodyklės padėties nustatymas",
+              "action": "Apskaičiuojame bazinį valandų kampą ir pridedame papildomą poslinkį dėl minučių.",
+              "reason": "Valandinė rodyklė juda nuolatos, o ne šuoliais kas valandą.",
+              "result": "Gauta padėtis $110^\\circ$."
+            },
+            {
+              "title": "Minutinės rodyklės padėties nustatymas",
+              "action": "Dauginame minučių skaičių iš minutės poslinkio kampo ($6^\\circ$).",
+              "reason": "Minutinė rodyklė juda $12$ kartų greičiau už valandinę.",
+              "result": "Gauta padėtis $240^\\circ$."
+            },
+            {
+              "title": "Kampo skirtumo radimas",
+              "action": "Atimame mažesnį kampą iš didesnio ir patikriname, ar rezultatas yra mažesnis už $180^\\circ$.",
+              "reason": "Uždavinyje prašoma rasti mažesnįjį iš dviejų galimų kampų.",
+              "result": "Kampas lygus $130^\\circ$."
+            }
+          ],
+          "finalAnswer": "Kampas tarp rodyklių yra $130^\\circ$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes kampų metodas yra pats tiesiausias.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-d944dce6-trap-1",
+          "title": "Valandinės rodyklės poslinkio nepaisymas",
+          "wrongMove": "Manoma, kad valandinė rodyklė stovi lygiai ties 3-ia valanda.",
+          "whyTempting": "Vizualiai valandinė rodyklė juda lėtai, todėl jos poslinkis dažnai pamirštamas.",
+          "correction": "Visada pridėkite prie valandų kampo papildomą dalį: $\\text{minutės} \\times 0.5^\\circ$.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-d944dce6-trap-2",
+          "title": "Klaidingas minutinės rodyklės kampo skaičiavimas",
+          "wrongMove": "Kampas skaičiuojamas nuo 3 valandos, o ne nuo 12 valandos atskaitos taško.",
+          "whyTempting": "Noras tiesiogiai atimti padalas ($8-3=5$), neįvertinus judėjimo krypties.",
+          "correction": "Geriausia skaičiuoti abi padėtis nuo tos pačios 12 valandos atskaitos taško.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-d944dce6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Laikrodis rodo lygiai $3$ valandas ir $40$ minučių. Raskite ...",
+          "back": "Taikome šį metodą: Ciferblatas turi $360^\\circ$, padalintų į $12$ valandų ($30^\\circ$ vienai valandai). Minutinė rodyklė $40$ min žymėje bus ties $8$-tu skaičiumi, o valandinė bus pasislinkusi už $3$-to skaičiaus.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-1b8f2f68",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dydis yra $4$ kartus didesnis už gretimo kampo dydį. Raskite visų keturių susidariusių kampų dydžius.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
+      },
+      "answerText": "36°, 144°, 36°, 144°",
+      "coreIdea": {
+        "title": "Naudokite gretimų kampų sumos savybę",
+        "text": "Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$."
+      },
+      "strategyTags": [
+        "gretimi-kampai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite, kad tiesė sudaro $180^\\circ$ kampą. Gretimi kampai visada kartu sudaro ištiestinį kampą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei vieną kampą pažymėsite $x$, tai pagal sąlygą gretimas kampas bus $4x$. Jų suma privalo būti $180^\\circ$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Gretimų kampų suma visada lygi $180^\\circ$. Susikertant tiesėms taip pat susidaro kryžminiai kampai, kurie yra lygūs.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sudarome lygtį: $x + 4x = 180^\\circ$. Išspręskite ją, kad rastumėte pirmąjį kampą, o tada rasti kitus tris bus paprasta.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime, mažesniojo kampo dydis yra $x^\\circ$. Tada gretimas kampas yra $4x^\\circ$."
+        },
+        {
+          "text": "Kadangi gretimų kampų suma yra $180^\\circ$, gauname lygtį: $x + 4x = 180^\\circ \\implies 5x = 180^\\circ$."
+        },
+        {
+          "text": "Išsprendžiame: $x = 180 / 5 = 36^\\circ$. Tai pirmasis kampas."
+        },
+        {
+          "text": "Gretimas kampas yra $180^\\circ - 36^\\circ = 144^\\circ$."
+        },
+        {
+          "text": "Susikertant dviem tiesėms, susidaro dvi poros lygų kryžminių kampų. Todėl visi keturi kampai yra $36^\\circ, 144^\\circ, 36^\\circ, 144^\\circ$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-method-1",
+          "title": "Gretimų kampų lygties metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "gretimi-kampai"
+          ],
+          "steps": [
+            {
+              "title": "Algebrinės lygties sudarymas",
+              "action": "Pažymime vieną kampą $x$ ir užrašome gretimų kampų sumos lygybę.",
+              "reason": "Tai leidžia rasti konkretų kampo dydį per bendrą geometrinę savybę.",
+              "result": "Lygtis $5x = 180^\\circ$."
+            },
+            {
+              "title": "Visų kampų identifikavimas",
+              "action": "Apskaičiuojame gretimą kampą ir pritaikome kryžminių kampų lygybės taisyklę.",
+              "reason": "Susikertančios tiesės sukuria simetrišką kampų struktūrą.",
+              "result": "Gauti keturi kampai: dvi poros po $36^\\circ$ ir $144^\\circ$."
+            }
+          ],
+          "finalAnswer": "Kampų dydžiai yra $36^\\circ$, $144^\\circ$, $36^\\circ$ ir $144^\\circ$."
+        }
+      ],
+      "alternateMethodNote": "Alternatyvus metodas nenaudojant lygčių: 180 laipsnių padalinti į 1+4=5 dalis.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-trap-1",
+          "title": "Gretimų ir kryžminių kampų painiojimas",
+          "wrongMove": "Manoma, kad nurodytas santykis ($4$ kartus didesnis) galioja kryžminiams kampams.",
+          "whyTempting": "Kryžminiai kampai vizualiai labiau išsiskiria brėžinyje.",
+          "correction": "Kryžminiai kampai visada yra lygūs, o santykis gali galioti tik gretimiems kampams (nebent jie visi statūs).",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-trap-2",
+          "title": "Klaidingas sumos nustatymas",
+          "wrongMove": "Sudaroma lygtis, kurios suma lygi $360^\\circ$ arba $90^\\circ$.",
+          "whyTempting": "Sumišimas tarp visų kampų sumos aplink tašką ir gretimų kampų sumos.",
+          "correction": "Visada prisiminkite: gretimi kampai kartu sudaro tiesę ($180^\\circ$).",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-1b8f2f68-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Dvi tiesės susikerta viename taške. Vieno iš gautų kampų dyd...",
+          "back": "Taikome šį metodą: Gretimų kampų suma visada lygi $180^\\circ$. Jei vienas kampas yra $x$, tai gretimo kampo dydis bus $4x$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-6c25d5db",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Lygiašonio trikampio viena kraštinė lygi $10$ cm, o kita lygi $4$ cm. Raskite šio trikampio perimetrą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Trikampio perimetras lygus $24$ cm."
+      },
+      "answerText": "24 cm",
+      "coreIdea": {
+        "title": "Pritaikykite trikampio nelygybę",
+        "text": "Lygiašonis trikampis turi turėti dvi lygias kraštines. Yra du teoriniai atvejai kraštinėms: $(10, 10, 4)$ arba $(4, 4, 10)$. Patikrinkite, ar abu trikampiai gali egzistuoti pagal trikampio nelygybę."
+      },
+      "strategyTags": [
+        "trikampių-savybės",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Lygiašonis trikampis turi turėti dvi lygias kraštines. Vadinasi, trečioji kraštinė gali būti arba $10$ cm, arba $4$ cm.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Svarbu patikrinti, ar toks trikampis iš viso gali egzistuoti. Pritaikykite trikampio nelygybę: bet kurių dviejų kraštinių suma privalo būti didesnė už trečiąją.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite du teorinius atvejus kraštinėms: $(10, 10, 4)$ ir $(4, 4, 10)$. Atmeskite tą variantą, kuris prieštarauja geometrijos dėsniams.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Patikrinkite antrąjį atvejį: ar $4 + 4 > 10$? Jei ne, šis variantas negalimas. Apskaičiuokite likusio galimo trikampio perimetrą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi trikampis lygiašonis, galimi du kraštinių ilgių rinkiniai: $(10, 10, 4)$ arba $(4, 4, 10)$."
+        },
+        {
+          "text": "Tikriname trikampio nelygybę pirmajam rinkiniui: $10+10>4$, $10+4>10$ (tinka). Perimetras: $10+10+4=24$ cm."
+        },
+        {
+          "text": "Tikriname trikampio nelygybę antrajam rinkiniui: $4+4=8$, o $8 < 10$. Kadangi dviejų kraštinių suma mažesnė už trečiąją, toks trikampis neegzistuoja."
+        },
+        {
+          "text": "Vienintelis galimas atsakymas yra $24$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-6c25d5db-method-1",
+          "title": "Atvejų analizės metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "trikampių-savybės"
+          ],
+          "steps": [
+            {
+              "title": "Geometrinių modelių sudarymas",
+              "action": "Iš lygiašoniškumo savybės suformuojame dvi galimas kraštinių konfigūracijas.",
+              "reason": "Uždavinyje nenurodyta, kuri kraštinė yra šoninė, o kuri – pagrindas.",
+              "result": "Gauti variantai $(10, 10, 4)$ ir $(4, 4, 10)$."
+            },
+            {
+              "title": "Trikampio egzistavimo patikra",
+              "action": "Taikome trikampio nelygybės taisyklę kiekvienam variantui.",
+              "reason": "Ne bet kokių trijų atkarpų rinkinys gali sudaryti trikampį plokštumoje.",
+              "result": "Atmestas neįmanomas variantas $(4, 4, 10)$."
+            },
+            {
+              "title": "Perimetro radimas",
+              "action": "Sudedame visas galimo trikampio kraštines.",
+              "reason": "Perimetras yra visų figūros kontūro atkarpų suma.",
+              "result": "Atsakymas $24$ cm."
+            }
+          ],
+          "finalAnswer": "Trikampio perimetras lygus $24$ cm."
+        }
+      ],
+      "alternateMethodNote": "Šiame uždavinyje kitų sprendimo būdų nėra, nes trikampio nelygybė yra esminis filtravimo įrankis.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-6c25d5db-trap-1",
+          "title": "Trikampio nelygybės ignoravimas",
+          "wrongMove": "Pateikiami du galimi perimetrai ($24$ cm ir $18$ cm) arba pasirenkamas tik mažesnis variantas.",
+          "whyTempting": "Mokinys pamiršta, kad lygiašoniškumas dar negarantuoja trikampio egzistavimo.",
+          "correction": "Visada patikrinkite, ar trumpiausių kraštinių suma viršija ilgiausiąją.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-6c25d5db-trap-2",
+          "title": "Neteisingas lygiašoniškumo supratimas",
+          "wrongMove": "Manoma, kad duota $10$ ir $4$ yra lygios kraštinės (prieštaravimas).",
+          "whyTempting": "Sąlygos neįsigilinimas.",
+          "correction": "Lygiašonis trikampis turi dvi lygias kraštines, o trečia gali būti kitokia.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-6c25d5db-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Lygiašonio trikampio viena kraštinė lygi $10$ cm, o kita lyg...",
+          "back": "Taikome šį metodą: Lygiašonis trikampis turi turėti dvi lygias kraštines. Yra du teoriniai atvejai kraštinėms: $(10, 10, 4)$ arba $(4, 4, 10)$. Patikrinkite, ar abu trikampiai gali egzistuoti pagal trikampio nelygybę.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-7bf4bab4",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stačiakampio formos lapas, kurio perimetras lygus $30$ cm, buvo perkirptas į du vienodus stačiakampius. Kiekvieno iš šių dviejų mažesnių stačiakampių perimetras lygus $18$ cm. Raskite pradinio stačiakampio kraštinių ilgius.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm."
+      },
+      "answerText": "12 cm ir 3 cm",
+      "coreIdea": {
+        "title": "Išreikškite perkirpimo liniją",
+        "text": "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$, o perkirpimas padalina kraštinę $a$ pusiau. Tada naujųjų stačiakampių kraštinės bus $a/2$ ir $b$."
+      },
+      "strategyTags": [
+        "stačiakampiai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pastebėkite, kad perkirpus stačiakampį, naujųjų figūrų perimetrų suma yra didesnė už pradinį perimetrą, nes atsiranda dvi naujos „vidinės“ kraštinės.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite perimetrų skirtumą: $(18 + 18) - 30 = 6$ cm. Šis skirtumas atsirado dėl dviejų naujų kraštinių, kurios yra lygios pradinio stačiakampio pločiui (arba ilgiui).",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Perkirpimas padalina kraštinę $a$ pusiau. Tada naujųjų stačiakampių perimetras bus $2(a/2 + b) = a + 2b = 18$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sujunkite dvi lygtis: $a + b = 15$ (pusė pradinio perimetro) ir $a + 2b = 18$. Atimkite pirmąją iš antrosios, kad rastumėte $b$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Perskaitome ir išanalizuojame uždavinio sąlygą."
+        },
+        {
+          "text": "Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$. Jo perimetras $2a + 2b = 30 \\implies a + b = 15$. Perkirpus stačiakampį pusiau išilgai kraštinės $a$, gauname du stačiakampius su kraštinėmis $a/2$ ir $b$. Mažesnio stačiakampio perimetras yra $2(a/2) + 2b = a + 2b = 18$. Iš pirmos lygties turime $a = 15 - b$. Įstatome į antrąją: $(15 - b) + 2b = 18 \\implies 15 + b = 18 \\implies b = 3$ cm. Tada $a = 15 - 3 = 12$ cm."
+        },
+        {
+          "text": "Taigi, gauname išvadą: Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-method-1",
+          "title": "Perimetrų skirtumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "stačiakampiai"
+          ],
+          "steps": [
+            {
+              "title": "Vidinės pjūvio linijos radimas",
+              "action": "Sudedame dviejų mažų stačiakampių perimetrus ($18+18=36$) ir atimame pradinį perimetrą ($30$).",
+              "reason": "Skirtumas parodo bendrą dviejų naujai atsiradusių „vidinių“ kraštinių ilgį.",
+              "result": "Dvi kraštinės lygios $6$ cm, vadinasi viena lygi $3$ cm."
+            },
+            {
+              "title": "Pradinių matmenų nustatymas",
+              "action": "Naudojame rastą kraštinę ($3$ cm) pradinio perimetro formulei užbaigti: $2(a+3) = 30$.",
+              "reason": "Žinant vieną stačiakampio kraštinę ir bendrą perimetrą, kita kraštinė randama iš lygties.",
+              "result": "Kraštinės yra $12$ cm ir $3$ cm."
+            }
+          ],
+          "finalAnswer": "Pradinio stačiakampio kraštinių ilgiai yra $12$ cm ir $3$ cm."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui taip pat galima taikyti algebrinę lygčių sistemą $2a+2b=30$ ir $a+2b=18$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-trap-1",
+          "title": "Vienos „vidinės“ kraštinės klaida",
+          "wrongMove": "Manoma, kad perimetrų skirtumas $36 - 30 = 6$ cm yra lygus vienai kraštinei.",
+          "whyTempting": "Vizualiai pjūvis yra vienas, todėl mokinys pamiršta, kad abi naujos figūros gavo po kraštinę.",
+          "correction": "Pjūvis sukuria DVI naujas sienas (po vieną kiekvienam stačiakampiui), todėl skirtumą reikia dalinti iš $2$.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-trap-2",
+          "title": "Neteisingas pjūvio krypties pasirinkimas",
+          "wrongMove": "Bandoma pjauti stačiakampį „įstrižai“ iš kampo į kampą.",
+          "whyTempting": "Nepakankamas geometrinių terminų (stačiakampis) suvokimas.",
+          "correction": "Uždavinyje nurodyta, kad gaunami du vienodi stačiakampiai, todėl pjūvis privalo būti lygiagretus kraštinėms.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-7bf4bab4-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos lapas, kurio perimetras lygus $30$ cm, b...",
+          "back": "Taikome šį metodą: Tarkime, pradinio stačiakampio kraštinės yra $a$ ir $b$, o perkirpimas padalina kraštinę $a$ pusiau. Tada naujųjų stačiakampių kraštinės bus $a/2$ ir $b$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-9aacf698",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Didelis kvadratas padalintas į $9$ vienodus mažus kvadratėlius. Vieno mažo kvadratėlio perimetras yra $8$ cm. Raskite didžiojo kvadrato perimetrą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Didžiojo kvadrato perimetras yra $24$ cm."
+      },
+      "answerText": "24 cm",
+      "coreIdea": {
+        "title": "Raskite kraštinių santykį",
+        "text": "Mažo kvadratėlio kraštinę galima lengvai rasti padalijus jo perimetrą iš $4$. Kadangi didysis kvadratas susideda iš $3 \\times 3$ mažų kvadratėlių, jo kraštinė bus $3$ kartus didesnė."
+      },
+      "strategyTags": [
+        "perimetras",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia raskite vieno mažo kvadratėlio kraštinės ilgį. Jei keturių lygių kraštinių suma yra $8$ cm, koks vienos ilgis?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Didysis kvadratas yra sudarytas iš $3 \\times 3$ mažų kvadratėlių. Tai reiškia, kad didžiojo kvadrato kraštinė susideda iš trijų mažų kvadratėlių kraštinių.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Mažo kvadratėlio kraštinę galima lengvai rasti padalijus jo perimetrą iš $4$. Tada gautą ilgį padauginkite iš $3$, kad gautumėte didžiojo kvadrato kraštinę.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Mažo kvadratėlio kraštinė yra $2$ cm. Didžiojo kvadrato kraštinė bus $2 \\times 3 = 6$ cm. Apskaičiuokite šio kvadrato perimetrą.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame mažo kvadratėlio kraštinės ilgį: $8 / 4 = 2$ cm."
+        },
+        {
+          "text": "Kadangi didįjį kvadratą sudaro $9$ kvadratėliai ($3 \\times 3$ išsidėstymu), didžiojo kvadrato kraštinė yra lygi trims mažų kvadratėlių kraštinėms: $3 \\times 2 = 6$ cm."
+        },
+        {
+          "text": "Didžiojo kvadrato perimetras yra keturių jo kraštinių suma: $4 \\times 6 = 24$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-9aacf698-method-1",
+          "title": "Kraštinių mastelio metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "perimetras"
+          ],
+          "steps": [
+            {
+              "title": "Elementariojo matmens radimas",
+              "action": "Padalijame mažo kvadrato perimetrą iš $4$.",
+              "reason": "Visi kvadratai turi po 4 lygias kraštines, todėl perimetras tiesiogiai nusako kraštinę.",
+              "result": "Kraštinė $2$ cm."
+            },
+            {
+              "title": "Konstrukcijos analizė",
+              "action": "Nustatome, kiek mažų kraštinių telpa į didžiojo kvadrato kraštinę.",
+              "reason": "Skaičius $9$ ($3^2$) nurodo, kad tinklelis yra $3 \\times 3$.",
+              "result": "Didžioji kraštinė lygi $6$ cm."
+            },
+            {
+              "title": "Galutinis skaičiavimas",
+              "action": "Dauginame didžiąją kraštinę iš $4$.",
+              "reason": "Didžiojo kvadrato perimetras skaičiuojamas pagal tą pačią kvadrato savybę.",
+              "result": "Atsakymas $24$ cm."
+            }
+          ],
+          "finalAnswer": "Didžiojo kvadrato perimetras yra $24$ cm."
+        }
+      ],
+      "alternateMethodNote": "Alternatyva: Didžiojo kvadrato perimetras yra $3$ kartus didesnis už mažojo, nes tiesinis matmuo padidėjo $3$ kartus ($3 \\times 8 = 24$ cm).",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-9aacf698-trap-1",
+          "title": "Perimetro dauginimas iš 9",
+          "wrongMove": "Mokinys mano, kad didžiojo kvadrato perimetras yra visų mažų perimetrų suma: $9 \\times 8 = 72$ cm.",
+          "whyTempting": "Skaičius $9$ atrodo kaip tiesioginis proporcingumo koeficientas.",
+          "correction": "Sudedant kvadratėlius, vidinės kraštinės „paslepia“ ir nebeturi įtakos bendram perimetrui.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-9aacf698-trap-2",
+          "title": "Neteisingas tinklelio eilių skaičiaus nustatymas",
+          "wrongMove": "Manoma, kad jei yra $9$ kvadratėliai, tai jie sudėti į vieną eilę ($1 \\times 9$).",
+          "whyTempting": "Klaidingas vizualizavimas.",
+          "correction": "Sąlygoje minima, kad jie sudaro „didelį kvadratą“, o devynis vienodus kvadratus galima sudėti į kvadratą tik $3 \\times 3$ būdu.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-9aacf698-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Didelis kvadratas padalintas į $9$ vienodus mažus kvadratėli...",
+          "back": "Taikome šį metodą: Mažo kvadratėlio kraštinę galima lengvai rasti padalijus jo perimetrą iš $4$. Kadangi didysis kvadratas susideda iš $3 \\times 3$ mažų kvadratėlių, jo kraštinė bus $3$ kartus didesnė.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-a5116194",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, o kita sutrumpinta $20\\%$. Kaip ir kiek procentų pasikeitė sklypo plotas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Plotas sumažėjo $4\\%$."
+      },
+      "answerText": "Sumažėjo 4%",
+      "coreIdea": {
+        "title": "Palyginkite pradinį ir naująjį plotą",
+        "text": "Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite su $ab$."
+      },
+      "strategyTags": [
+        "plotas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime, kad pradinio stačiakampio plotas yra $100$ vienetų (pvz., kraštinės $10 \\times 10$). Kaip pasikeis kraštinės po procentinių pokyčių?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pailginimas $20\\%$ atitinka daugybą iš $1.2$, o sutrumpinimas $20\\%$ atitinka daugybą iš $0.8$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite gautą reiškinį su pradiniu plotu $ab$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite sandaugą: $1.2 \\times 0.8$. Gautas skaičius parodys, kokią dalį pradinio ploto sudaro naujasis plotas.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tarkime, pradinio sklypo kraštinės yra $a$ ir $b$. Pradinis plotas yra $S_1 = ab$."
+        },
+        {
+          "text": "Pailginus vieną kraštinę $20\\%$, ji tampa $a + 0.2a = 1.2a$. Sutrumpinus kitą kraštinę $20\\%$, ji tampa $b - 0.2b = 0.8b$."
+        },
+        {
+          "text": "Naujasis sklypo plotas yra $S_2 = 1.2a \\times 0.8b = 0.96ab$."
+        },
+        {
+          "text": "Palyginame: $0.96ab = 96\\% \\cdot ab$. Plotas sumažėjo nuo $100\\%$ iki $96\\%$, t. y. sumažėjo $4\\%$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-a5116194-method-1",
+          "title": "Kintamųjų santykio metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "plotas"
+          ],
+          "steps": [
+            {
+              "title": "Matmenų transformacija",
+              "action": "Užrašome naujas kraštines kaip pradinių kraštinių funkciją su procentiniais koeficientais.",
+              "reason": "Tai leidžia išreikšti plotą nepriklausomai nuo konkrečių kraštinių ilgių.",
+              "result": "Kraštinės $1.2a$ ir $0.8b$."
+            },
+            {
+              "title": "Plotų palyginimas",
+              "action": "Sudauginame koeficientus $1.2$ ir $0.8$.",
+              "reason": "Sandauga parodo bendrą ploto pokyčio mastelį.",
+              "result": "Gautas koeficientas $0.96$."
+            },
+            {
+              "title": "Pokyčio įvertinimas procentais",
+              "action": "Atimame gautą dalį iš $1$ (visumos) ir paverčiame procentais.",
+              "reason": "Rezultatas nurodo galutinį skirtumą nuo pradinės būsenos.",
+              "result": "Sumažėjimas $4\\%$."
+            }
+          ],
+          "finalAnswer": "Plotas sumažėjo $4\\%$."
+        }
+      ],
+      "alternateMethodNote": "Galima įsivaizduoti kvadratą $10 \\times 10 = 100$. Pakeitus kraštines gausime $12 \\times 8 = 96$. Skirtumas $100 - 96 = 4$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-a5116194-trap-1",
+          "title": "Klaidinga prielaida apie nepakitusį plotą",
+          "wrongMove": "Manoma, kad $+20\\%$ ir $-20\\%$ vienas kitą panaikina, todėl plotas lieka toks pat.",
+          "whyTempting": "Skaičiai $20$ ir $20$ atrodo simetriški.",
+          "correction": "Sumažėjimas skaičiuojamas jau nuo padidintos (kitokios) reikšmės, todėl pokyčiai nėra lygūs absoliučiais dydžiais.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-a5116194-trap-2",
+          "title": "Procentų sumavimas vietoje dauginimo",
+          "wrongMove": "Bandoma atimti procentus tiesiogiai: $20\\% - 20\\% = 0\\%$.",
+          "whyTempting": "Neteisingas supratimas, kaip procentai veikia sudėtines figūras.",
+          "correction": "Kraštinės yra dauginamos, todėl ir jų pokyčiai turi būti dauginami kaip koeficientai.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-a5116194-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Stačiakampio formos sklypo viena kraštinė pailginta $20\\%$, ...",
+          "back": "Taikome šį metodą: Tarkime, pradinės kraštinės yra $a$ ir $b$. Naujos kraštinės bus $1.2a$ ir $0.8b$. Sudauginkite jas ir palyginkite su $ab$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-df8a80e6",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pailgės šio apskritimo ilgis?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskritimo ilgis pailgės $6\\pi$ cm."
+      },
+      "answerText": "6π cm",
+      "coreIdea": {
+        "title": "Naudokite apskritimo ilgio formulę",
+        "text": "Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio."
+      },
+      "strategyTags": [
+        "apskritimas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite apskritimo ilgio formulę: $C = 2\\pi r$. Kas nutinka šiam reiškiniui, kai vietoj $r$ įrašome $r+3$?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskritimo ilgis tiesiogiai priklauso nuo spindulio. Padidinus spindulį, ilgis padidėja tam tikru pastoviu dydžiu, nepriklausomai nuo to, koks buvo pradinis spindulys.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Palyginkite du ilgius: pradinį $C_1 = 2\\pi r$ ir naująjį $C_2 = 2\\pi(r+3)$. Atskliauskite naująją formulę ir raskite skirtumą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $2\\pi(r+3) - 2\\pi r = 2\\pi r + 6\\pi - 2\\pi r$. Kas lieka?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pažymime pradinį apskritimo spindulį $r$. Tuomet jo ilgis yra $C_1 = 2\\pi r$."
+        },
+        {
+          "text": "Padidinus spindulį $3$ cm, naujas spindulys tampa $r+3$. Naujas apskritimo ilgis yra $C_2 = 2\\pi(r+3)$."
+        },
+        {
+          "text": "Apskaičiuojame skirtumą: $C_2 - C_1 = 2\\pi(r+3) - 2\\pi r$."
+        },
+        {
+          "text": "Atskliaudžiame: $2\\pi r + 6\\pi - 2\\pi r = 6\\pi$. Apskritimo ilgis pailgės $6\\pi$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-df8a80e6-method-1",
+          "title": "Algebrinio skirtumo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "apskritimas"
+          ],
+          "steps": [
+            {
+              "title": "Kintamojo poslinkio aprašymas",
+              "action": "Užrašome funkciją $C(r) = 2\\pi r$ ir įvertiname jos reikšmę taške $r+3$.",
+              "reason": "Tai leidžia matematiškai tiksliai pavaizduoti fizinį spindulio pasikeitimą.",
+              "result": "Išraiška $2\\pi(r+3)$."
+            },
+            {
+              "title": "Skliaustų atskleidimas ir suprastinimas",
+              "action": "Taikome paskirstymo dėsnį ir sutraukiame panašiuosius narius.",
+              "reason": "Supaprastinus išraišką pamatome, koks narys lemia patį pokytį.",
+              "result": "Skirtumas $6\\pi$."
+            }
+          ],
+          "finalAnswer": "Apskritimo ilgis pailgės $6\\pi$ cm."
+        }
+      ],
+      "alternateMethodNote": "Pastebėkite, kad $\\Delta C = 2\\pi \\Delta r$. Jei $\\Delta r = 3$, tai $\\Delta C = 2\\pi \\cdot 3 = 6\\pi$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-df8a80e6-trap-1",
+          "title": "Daugybos iš 2π pamiršimas pridedamam dydžiui",
+          "wrongMove": "Atsakoma, kad ilgis pailgės tik $3$ cm arba tik $3\\pi$ cm.",
+          "whyTempting": "Mokinys klaidingai atskleidžia skliaustus: $2\\pi(r+3) = 2\\pi r + 3$.",
+          "correction": "Dauginant skliaustus, kiekvienas dėmuo viduje turi būti padaugintas iš koeficiento prieš skliaustus.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-df8a80e6-trap-2",
+          "title": "Reikalavimas pradiniam spinduliui",
+          "wrongMove": "Mokinys bando atspėti arba reikalauja nurodyti pradinį spindulį $r$.",
+          "whyTempting": "Atrodo, kad be pradinio dydžio neįmanoma suskaičiuoti galutinio.",
+          "correction": "Geometrijoje tiesiniai pokyčiai dažnai nepriklauso nuo pradinių parametrų (tiesinė priklausomybė).",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-df8a80e6-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskritimo spindulys padidinamas $3$ cm. Kiek centimetrų pai...",
+          "back": "Taikome šį metodą: Apskritimo ilgio formulė yra $C = 2\\pi r$. Pakeiskite $r$ į $r+3$ ir raskite skirtumą tarp naujojo ir senojo apskritimo ilgio.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-29a4ca3d",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Kiek simetrijos ašių turi taisyklingasis šešiakampis?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taisyklingasis šešiakampis turi $6$ simetrijos ašis."
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Braižykite simetrijos linijas",
+        "text": "Taisyklingojo daugiakampio simetrijos ašys eina per priešingas viršūnes arba per priešingų kraštinių vidurio taškus. Suskaičiuokite juos."
+      },
+      "strategyTags": [
+        "simetrija",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taisyklingojo daugiakampio simetrijos ašys yra linijos, kurios padalina figūrą į dvi identiškas, veidrodines dalis.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Šešiakampyje ašys gali jungti priešingas viršūnes. Kiek tokių porų galima sudaryti?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Nepamirškite, kad ašys taip pat gali eiti per priešingų kraštinių vidurio taškus. Suskaičiuokite šias ašis atskirai.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Suskaičiuokite: $3$ ašys per viršūnes ir $3$ ašys per kraštinių vidurius. Ar yra dar kokių nors kitų linijų?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome simetrijos ašis, einančias per priešingas viršūnes. Kadangi šešiakampis turi $6$ viršūnes ($3$ poras), yra $3$ tokios ašys."
+        },
+        {
+          "text": "Nustatome simetrijos ašis, einančias per priešingų kraštinių vidurio taškus. Kadangi yra $6$ kraštinės ($3$ poros), yra dar $3$ tokios ašys."
+        },
+        {
+          "text": "Sudedame abu rezultatus: $3 + 3 = 6$ simetrijos ašys."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-method-1",
+          "title": "Geometrinio išvardijimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "simetrija"
+          ],
+          "steps": [
+            {
+              "title": "Viršūnių ašių identifikavimas",
+              "action": "Braižome linijas, jungiančias priešingus šešiakampio kampus.",
+              "reason": "Taisyklingajame daugiakampyje su lyginiu kampų skaičiumi priešingos viršūnės visada sudaro simetrijos ašį.",
+              "result": "Rastos $3$ ašys."
+            },
+            {
+              "title": "Kraštinių ašių identifikavimas",
+              "action": "Braižome linijas per priešingų kraštinių vidurio taškus.",
+              "reason": "Šios linijos taip pat yra statmenos kraštinėms ir dalina figūrą pusiau.",
+              "result": "Rastos dar $3$ ašys."
+            }
+          ],
+          "finalAnswer": "Taisyklingasis šešiakampis turi $6$ simetrijos ašis."
+        }
+      ],
+      "alternateMethodNote": "Taisyklingasis n-kampis visada turi tiksliai n simetrijos ašių. Šešiakampiui n=6.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-trap-1",
+          "title": "Kraštinių ašių nepastebėjimas",
+          "wrongMove": "Suskaičiuojamos tik $3$ ašys, einančios per viršūnes.",
+          "whyTempting": "Viršūnes jungiančios linijos (įstrižainės) yra labiau pastebimos.",
+          "correction": "Visada patikrinkite linijas, einančias per kraštinių vidurio taškus – taisyklingosiose figūrose jos taip pat yra simetrijos ašys.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-trap-2",
+          "title": "Ašių painiojimas su visomis įstrižainėmis",
+          "wrongMove": "Bandoma įskaičiuoti trumpąsias įstrižaines (pvz., jungiančias viršūnes kas vieną).",
+          "whyTempting": "Manoma, kad bet kokia įstrižainė yra simetrijos ašis.",
+          "correction": "Sulenkite figūrą per įsivaizduojamą liniją: jei kraštai nesutampa idealiai, tai nėra simetrijos ašis.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-29a4ca3d-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Kiek simetrijos ašių turi taisyklingasis šešiakampis?...",
+          "back": "Taikome šį metodą: Taisyklingojo daugiakampio simetrijos ašys eina per priešingas viršūnes arba per priešingų kraštinių vidurio taškus. Suskaičiuokite juos.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-950a0206",
+      "topicId": "olimpiada-05-geometrija",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Koordinačių plokštumoje (tik I ketvirtyje) kvadratas turi tris viršūnes taškuose $(2, 1)$, $(6, 1)$ ir $(2, 5)$. Raskite ketvirtosios kvadrato viršūnės koordinates.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ketvirtosios viršūnės koordinatės yra $(6, 5)$."
+      },
+      "answerText": "(6, 5)",
+      "coreIdea": {
+        "title": "Atidėkite kraštines koordinačių ašyse",
+        "text": "Kadangi dvi viršūnės $(2,1)$ ir $(6,1)$ turi tą pačią $y$ koordinatę, kraštinė yra horizontali ir jos ilgis lygus $6 - 2 = 4$. Kita kraštinė vertikali, jos ilgis taip pat turi būti $4$."
+      },
+      "strategyTags": [
+        "koordinatės",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nupieškite duotus taškus koordinačių plokštumoje. Pastebėsite, kad dvi viršūnės $(2,1)$ ir $(6,1)$ yra vienoje horizontalioje linijoje.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atstumas tarp $(2,1)$ ir $(6,1)$ yra $6 - 2 = 4$ vienetai. Tai yra kvadrato kraštinės ilgis. Viršūnė $(2,5)$ yra tiksliai virš $(2,1)$ tame pačiame $4$ vienetų atstume.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ketvirtoji viršūnė $D(x, y)$ turi būti nutolusi nuo $C(2,5)$ per $4$ vienetus į dešinę (horizontaliai) arba nuo $B(6,1)$ per $4$ vienetus į viršų (vertikaliai).",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pridėkite kraštinės ilgį ($4$) prie taško $C(2,5)$ x-koordinatės arba prie taško $B(6,1)$ y-koordinatės.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nustatome pirmosios kraštinės ilgį pagal taškus $A(2,1)$ ir $B(6,1)$: $6 - 2 = 4$ vienetai (horizontali kraštinė)."
+        },
+        {
+          "text": "Patikriname kitą kraštinę tarp $A(2,1)$ ir $C(2,5)$: $5 - 1 = 4$ vienetai (vertikali kraštinė). Tai patvirtina, kad kraštinės ilgis yra $4$."
+        },
+        {
+          "text": "Ketvirtoji viršūnė $D$ turi turėti tokią pačią $x$ koordinatę kaip taškas $B(6,1)$ ir tokią pačią $y$ koordinatę kaip taškas $C(2,5)$."
+        },
+        {
+          "text": "Taigi, viršūnės koordinatės yra $(6, 5)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-950a0206-method-1",
+          "title": "Koordinačių projekcijų metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "koordinatės"
+          ],
+          "steps": [
+            {
+              "title": "Kraštinių orientacijos nustatymas",
+              "action": "Ieškome taškų su vienodomis $x$ arba $y$ koordinatėmis.",
+              "reason": "Tai leidžia nustatyti, ar kvadrato kraštinės yra lygiagrečios ašims.",
+              "result": "Nustatyta horizontali kraštinė $AB$ ir vertikali $AC$."
+            },
+            {
+              "title": "Trūkstamo kampo konstravimas",
+              "action": "Deriname žinomas koordinates iš priešingų taškų.",
+              "reason": "Stačiakampio (ir kvadrato) priešingos viršūnės turi „pasidalinti“ savo koordinates su kaimyninėmis viršūnėmis.",
+              "result": "Gautas taškas $(6, 5)$."
+            }
+          ],
+          "finalAnswer": "Ketvirtosios viršūnės koordinatės yra $(6, 5)$."
+        }
+      ],
+      "alternateMethodNote": "Galima taikyti vektorių pridėjimo taisyklę: $D = B + (C - A) = (6,1) + (0,4) = (6,5)$.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-950a0206-trap-1",
+          "title": "X ir Y koordinačių sukeitimas",
+          "wrongMove": "Atsakymas pateikiamas kaip $(5, 6)$.",
+          "whyTempting": "Dažna neatidumo klaida nurašant skaičius.",
+          "correction": "Visada prisiminkite tvarką: pirma rašoma horizontali padėtis ($x$), po to vertikali ($y$).",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-950a0206-trap-2",
+          "title": "Klaidingas kraštinės ilgio apskaičiavimas",
+          "wrongMove": "Manoma, kad kraštinė lygi $6$ arba $5$ (tiesiog paimama viena iš koordinačių).",
+          "whyTempting": "Atstumas painiojamas su absoliučia koordinatės reikšme.",
+          "correction": "Atstumas tarp taškų vienoje tiesėje yra jų koordinačių skirtumas ($x_2 - x_1$).",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-950a0206-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Koordinačių plokštumoje (tik I ketvirtyje) kvadratas turi tr...",
+          "back": "Taikome šį metodą: Kadangi dvi viršūnės $(2,1)$ ir $(6,1)$ turi tą pačią $y$ koordinatę, kraštinė yra horizontali ir jos ilgis lygus $6 - 2 = 4$. Kita kraštinė vertikali, jos ilgis taip pat turi būti $4$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

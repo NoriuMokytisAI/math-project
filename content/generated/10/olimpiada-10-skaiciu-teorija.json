@@ -1,0 +1,842 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-10-skaiciu-teorija",
+    "title": "Skaičių teorija",
+    "grade": 10,
+    "strand": "Skaičių teorija",
+    "level": "olympiad",
+    "order": 110,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-10-concept-quad-reciprocity",
+      "olimpiada-10-concept-gaussian-integers"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Aukštesnioji skaičių teorija ir Gauso sveikieji skaičiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "10 klasėje skaičių teorija plečiasi už paprastų sveikųjų skaičių ribų. Susipažįstame su Gauso sveikaisiais skaičiais $\\mathbb{Z}[i]$ ir jų dalumo savybėmis."
+        },
+        {
+          "type": "method",
+          "text": "Naudokite Gauso skaičių normą $N(a+bi) = a^2+b^2$ norėdami įvertinti pirminių skaičių skaidymą."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-10-concept-quad-reciprocity",
+      "title": "Kvadratinio abipusiškumo dėsnis",
+      "type": "concept",
+      "shortDefinition": "Ryšys tarp dviejų skirtingų nelyginių pirminių skaičių kvadratinių liekanų savybių.",
+      "intuition": "Parodo, ar skaičius yra kvadratinė liekana moduliu $p$ per ryšį su kitu pirminiu skaičiumi $q$.",
+      "formal": "Jei $p$ ir $q$ yra skirtingi nelyginiai pirminiai skaičiai, tai $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-10-concept-gaussian-integers",
+      "title": "Gauso sveikieji skaičiai",
+      "type": "concept",
+      "shortDefinition": "Kompleksiniai skaičiai, kurių realioji ir tariamoji dalys yra sveikieji skaičiai.",
+      "intuition": "Kompleksinių skaičių aibė $\\mathbb{Z}[i]$, kurioje galima atlikti dalybą su liekana ir skaidyti pirminiais daugtuviais.",
+      "formal": "Aibė $\\mathbb{Z}[i] = \\{a + bi \\mid a, b \\in \\mathbb{Z}\\}$, kur $i^2 = -1$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Gauso sveikojo skaičiaus skaidymas",
+      "problem": "Susklaidykite skaičių 5 pirminiais daugtuviais Gauso sveikųjų skaičių aibėje $\\mathbb{Z}[i]$.",
+      "steps": [
+        {
+          "text": "Ieškome skaidinio pavidalu $5 = (a + bi)(a - bi) = a^2 + b^2$."
+        },
+        {
+          "text": "Žinome, kad $5 = 2^2 + 1^2$, todėl galime pasirinkti $a = 2, b = 1$."
+        },
+        {
+          "text": "Gausime skaidinį: $5 = (2 + i)(2 - i)$."
+        },
+        {
+          "text": "Patikriname normą $N(2+i) = 2^2 + 1^2 = 5$, kuri yra pirminis skaičius, todėl $2+i$ ir $2-i$ yra pirminiai Gauso skaičiai."
+        }
+      ],
+      "answer": "$(2+i)(2-i)$"
+    },
+    {
+      "title": "Titu lemos taikymas nelygybės įrodyme",
+      "problem": "Teigiamiems skaičiams $x, y, z$ įrodykite: $\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge \\frac{9}{x+y+z}$.",
+      "steps": [
+        {
+          "text": "Užrašome kairę nelygybės pusę pavidalu: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z}$."
+        },
+        {
+          "text": "Taikome Titu lemą su $a_1=a_2=a_3=1$ ir $b_1=x, b_2=y, b_3=z$."
+        },
+        {
+          "text": "Gauname: $\\frac{1^2}{x} + \\frac{1^2}{y} + \\frac{1^2}{z} \\ge \\frac{(1+1+1)^2}{x+y+z}$."
+        },
+        {
+          "text": "Kadangi $(1+1+1)^2 = 9$, nelygybė įrodyta."
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "title": "Oilerio formulės taikymas grafui",
+      "problem": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
+      "steps": [
+        {
+          "text": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$."
+        },
+        {
+          "text": "Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$."
+        },
+        {
+          "text": "Gauname lygtį: $8 - E + 5 = 2 \\implies 13 - E = 2$."
+        },
+        {
+          "text": "Išsprendžiame briaunų skaičių: $E = 11$."
+        }
+      ],
+      "answer": "$11$"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-10-01",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nustatyta kvadratinės liekanos savybė moduliu 11."
+      },
+      "answerText": "Taip, egzistuoja (pavyzdžiui, $x = 5$).",
+      "coreIdea": {
+        "title": "Legendre simbolis",
+        "text": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-10-concept-quad-reciprocity"
+      ],
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Uždavinį suformuluojame kaip kvadratinio palyginimo sprendžiamumą moduliu 11."
+        },
+        {
+          "text": "Taikome kvadratinio abipusiškumo dėsnį Legendre simboliui $\\left(\\frac{3}{11}\\right)$."
+        },
+        {
+          "text": "Pakeičiame jį į $-\\left(\\frac{11}{3}\\right) = -\\left(\\frac{2}{3}\\right)$."
+        },
+        {
+          "text": "Kadangi 2 nėra kvadratas moduliu 3, gauname $-(-1) = 1$. Todėl sprendinys egzistuoja."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-01-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Legendre simbolio užrašymas",
+              "action": "Turime apskaičiuoti $\\left(\\frac{3}{11}\\right)$.",
+              "reason": "Sprendinio egzistavimas ekvivalentus Legendre simbolio reikšmei 1.",
+              "latex": "\\left(\\frac{3}{11}\\right)",
+              "result": "Suformuluotas liekanos uždavinys."
+            },
+            {
+              "title": "Abipusiškumo dėsnio taikymas",
+              "action": "$\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{1 \\cdot 5} = -1 \\implies \\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
+              "reason": "Pagal kvadratinio abipusiškumo dėsnį, nes abu pirminiai yra nelyginiai.",
+              "latex": "\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)",
+              "result": "Modulis sumažintas iki 3."
+            },
+            {
+              "title": "Simbolio moduliu 3 skaičiavimas",
+              "action": "$\\left(\\frac{11}{3}\\right) = \\left(\\frac{2}{3}\\right) = -1 \\implies \\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
+              "reason": "Kadangi $11 \\equiv 2 \\pmod 3$, o 2 nėra kvadratas mod 3.",
+              "latex": "\\left(\\frac{3}{11}\\right) = 1",
+              "result": "Įrodytas sprendinio egzistavimas. Pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
+            }
+          ],
+          "finalAnswer": "Taip, egzistuoja (pavyzdžiui, $x = 5$)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-01-trap-1",
+          "title": "Kvadratinio abipusiškumo ženklo klaida",
+          "wrongMove": "Pamirštamas $(-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$ daugiklis, teigiant, kad $\\left(\\frac{3}{11}\\right) = \\left(\\frac{11}{3}\\right)$.",
+          "whyTempting": "Daugeliu atvejų Legendre simboliai sutampa, todėl mokiniai linkę supaprastinti taisyklę.",
+          "correction": "Kadangi $3 \\equiv 3 \\pmod{4}$ ir $11 \\equiv 3 \\pmod{4}$, tai $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-01-trap-2",
+          "title": "Nepilnas liekanų tikrinimas",
+          "wrongMove": "Patikrinami tik keli skaičiai (pvz., $x=1, 2$) ir daroma išvada, kad sprendinio nėra.",
+          "whyTempting": "Rankinis tikrinimas yra lėtas ir imlus klaidoms.",
+          "correction": "Naudokite Legendre simbolį arba patikrinkite visas liekanas iki $x=5$ (nes $x^2 \\equiv (-x)^2$).",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-01-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad ...?",
+          "back": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį.",
+          "conceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "methodIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-02",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaičiais.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaičius suskaidytas pirminiais Gauso skaičiais."
+      },
+      "answerText": "$5 = (2+i)(2-i)$",
+      "coreIdea": {
+        "title": "Gauso skaičių norma",
+        "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "conceptIds": [
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Gauso sveikieji skaičiai turi pavidalą $a+bi$. Skaičių 5 bandome užrašyti kaip dviejų Gauso skaičių sandaugą.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pasinaudokite normos savybe $N(xy) = N(x)N(y)$. Kadangi $N(5) = 25$, daliklio norma turi būti 5.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Ieškome skaidinio $5 = (a+bi)(c+di)$."
+        },
+        {
+          "text": "Taikome normą: $N(5) = 25 \\implies N(a+bi)N(c+di) = 25$."
+        },
+        {
+          "text": "Kadangi ieškome netrivialių daliklių, jų normos turi būti lygios 5."
+        },
+        {
+          "text": "Lygtis $a^2+b^2=5$ turi sprendinį $a=2, b=1$, todėl $5 = (2+i)(2-i)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-02-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Normos lygybė",
+              "action": "Užrašome $N(5) = 25 = N(z)N(w)$.",
+              "reason": "Normos multiplikatyvumas $\\mathbb{Z}[i]$ aibėje.",
+              "latex": "N(z)N(w) = 25",
+              "result": "Apribotos galimos daliklių normos."
+            },
+            {
+              "title": "Normos vertės radimas",
+              "action": "Kadangi dalikliai nėra vienetiniai, $N(z) = 5 \\implies a^2+b^2=5$.",
+              "reason": "Vieninteliai netrivialūs 25 dalikliai yra 5 ir 5.",
+              "latex": "a^2+b^2 = 5",
+              "result": "Gauta sveikųjų skaičių kvadratų lygtis."
+            },
+            {
+              "title": "Faktorizacija",
+              "action": "Sprendinys $a=2, b=1$ duoda $z = 2+i$, todėl $5 = (2+i)(2-i)$.",
+              "reason": "Kompleksinių skaičių daugyba $(2+i)(2-i) = 4 - i^2 = 5$.",
+              "latex": "5 = (2+i)(2-i)",
+              "result": "Rastas pirminis skaidinys Gauso skaičiuose."
+            }
+          ],
+          "finalAnswer": "$5 = (2+i)(2-i)$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-02-trap-1",
+          "title": "Klaidinga prielaida apie pirminių skaičių savybes",
+          "wrongMove": "Teigiama, kad 5 negalima suskaidyti, nes jis yra pirminis skaičius sveikųjų skaičių aibėje $\\mathbb{Z}$.",
+          "whyTempting": "Mokiniai dažnai painioja pirminius skaičius $\\mathbb{Z}$ aibėje su pirminiais Gauso skaičiais $\\mathbb{Z}[i]$.",
+          "correction": "Gauso sveikųjų skaičių aibėje pirminis skaičius $p \\equiv 1 \\pmod 4$ visada yra sudėtinis.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-gaussian-integers"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-02-trap-2",
+          "title": "Normos multiplikatyvumo nepaisymas",
+          "wrongMove": "Bandoma rasti daliklius spėliojant be normos $N(z)$ apribojimų.",
+          "whyTempting": "Tai atrodo paprasčiau nei spręsti kvadratinę lygtį $a^2+b^2=5$.",
+          "correction": "Naudokite savybę $N(z) = a^2+b^2$. Jei $z$ dalija 5, tai $N(z)$ dalija $N(5)=25$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-02-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaiči...?",
+          "back": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$.",
+          "conceptIds": [
+            "olimpiada-10-concept-gaussian-integers"
+          ],
+          "methodIds": [
+            "olimpiada-10-concept-gaussian-integers"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-03",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatykite, kuris iš skaičių $2017$ ir $2019$ gali būti užrašytas dviejų sveikųjų skaičių kvadratų suma $a^2+b^2$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Nustatyta galimybė išreikšti dviejų kvadratų suma."
+      },
+      "answerText": "Tik 2017 (nes $2017 \\equiv 1 \\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\equiv 3 \\pmod 4$ su nelyginiu rodikliu).",
+      "coreIdea": {
+        "title": "Fermo teorema apie dviejų kvadratų sumą",
+        "text": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Patikriname pirminį skaičių 2017 moduliu 4. Kadangi $2017 \\equiv 1 \\pmod 4$, jis yra dviejų kvadratų suma."
+        },
+        {
+          "text": "Skaidome skaičių 2019: $2019 = 3 \\cdot 673$."
+        },
+        {
+          "text": "Daliklis 3 yra pirminis pavidalo $4k+3$."
+        },
+        {
+          "text": "Kadangi pirminio 3 laipsnio rodiklis skaičiuje 2019 yra nelyginis (lygus 1), 2019 negalima užrašyti dviejų kvadratų suma."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-03-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Pirmojo skaičiaus analizė",
+              "action": "Skaičius 2017 yra pirminis ir $2017 \\equiv 1 \\pmod 4$.",
+              "reason": "Pagal Fermo teoremą apie dviejų kvadratų sumą.",
+              "latex": "2017 \\equiv 1 \\pmod 4",
+              "result": "2017 galima išreikšti kaip $a^2+b^2$."
+            },
+            {
+              "title": "Antrojo skaičiaus analizė",
+              "action": "Skaidome $2019 = 3 \\cdot 673$, kur $3 \\equiv 3 \\pmod 4$ yra pirminis, įeinantis laipsniu 1.",
+              "reason": "Fermo teoremos apibendrinimas sudėtiniams skaičiams reikalauja lyginių laipsnių pirminiams $p \\equiv 3 \\pmod 4$.",
+              "latex": "2019 = 3^1 \\cdot 673^1",
+              "result": "2019 negalima išreikšti dviejų kvadratų suma."
+            }
+          ],
+          "finalAnswer": "Tik 2017 (nes $2017 \\equiv 1 \\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\equiv 3 \\pmod 4$ su nelyginiu rodikliu)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-03-trap-1",
+          "title": "Tikrinimas tik moduliu 4 be faktorizacijos",
+          "wrongMove": "Nusprendžiama, kad 2019 gali būti užrašytas kvadratų suma, nes $2019 \\equiv 3 \\pmod 4$ (klaidinga logika).",
+          "whyTempting": "Mokiniai dažnai bando taikyti paprastą taisyklę visam skaičiui, užuot skaidę jį pirminiais.",
+          "correction": "Sudėtiniam skaičiui neužtenka patikrinti liekanos moduliu 4; būtina užtikrinti, kad visi pirminiai dalikliai $p \\equiv 3 \\pmod 4$ turėtų lyginį laipsnį.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-03-trap-2",
+          "title": "Pirminių ir sudėtinių skaičių sąlygų painiojimas",
+          "wrongMove": "Teigiama, kad jei skaičius nėra pirminis, jam Fermo teorema negalioja.",
+          "whyTempting": "Fermo teorema dažniausiai pateikiama tik pirminiams skaičiams.",
+          "correction": "Naudokite Fermo teoremos apibendrinimą: skaičius $n$ yra kvadratų suma tada ir tik tada, kai jo skaidinyje kiekvienas pirminis $p = 4k+3$ įeina su lyginiu rodikliu.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-03-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatyk...?",
+          "back": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-04",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine trupmena ir raskite visus jos artinius (konvergentus).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rasta grandininė trupmena ir jos artiniai."
+      },
+      "answerText": "$[1; 2, 3, 4]$, artiniai: $1, \\frac{3}{2}, \\frac{10}{7}, \\frac{43}{30}$",
+      "coreIdea": {
+        "title": "Grandininės trupmenos radimas",
+        "text": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išskirkite sveikąją dalį iš $\\frac{43}{30}$ ir apverskite liekaną.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tęskite procesą: $\\frac{30}{13} = 2 + \\frac{4}{13}$, tada $\\frac{13}{4} = 3 + \\frac{1}{4}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Gauta grandininė trupmena yra $[1; 2, 3, 4]$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Artiniai apskaičiuojami nukertant trupmeną: $C_0 = 1$, $C_1 = 1 + 1/2 = 3/2$, $C_2 = 1 + 1/(2+1/3) = 10/7$, $C_3 = 43/30$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atliekame nuoseklų sveikųjų dalių išskyrimą: $\\frac{43}{30} = 1 + \\frac{13}{30}$."
+        },
+        {
+          "text": "Toliau skaidome liekaną: $\\frac{30}{13} = 2 + \\frac{4}{13}$ ir $\\frac{13}{4} = 3 + \\frac{1}{4}$."
+        },
+        {
+          "text": "Užrašome grandininę trupmeną: $[1; 2, 3, 4]$."
+        },
+        {
+          "text": "Apskaičiuojame artinius $C_0, C_1, C_2, C_3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-04-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Euklido algoritmo taikymas",
+              "action": "Užrašome $\\frac{43}{30} = 1 + \\frac{1}{2 + \\frac{1}{3 + \\frac{1}{4}}}$.",
+              "reason": "Nuoseklus sveikųjų dalių išskyrimas ir liekanų apvertimas.",
+              "latex": "\\frac{43}{30} = [1; 2, 3, 4]",
+              "result": "Gauta grandininė trupmena."
+            },
+            {
+              "title": "Artinių apskaičiavimas",
+              "action": "Apskaičiuojame: $C_0=1$, $C_1=1+\\frac{1}{2}=\\frac{3}{2}$, $C_2=1+\\frac{1}{2+\\frac{1}{3}}=\\frac{10}{7}$, $C_3=\\frac{43}{30}$.",
+              "reason": "Artiniai randami iš dalinių grandininės trupmenos narių.",
+              "latex": "C_0=1, \\ C_1=\\frac{3}{2}, \\ C_2=\\frac{10}{7}, \\ C_3=\\frac{43}{30}",
+              "result": "Rasti visi keturi konvergentai."
+            }
+          ],
+          "finalAnswer": "$[1; 2, 3, 4]$, artiniai: $1, \\frac{3}{2}, \\frac{10}{7}, \\frac{43}{30}$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-04-trap-1",
+          "title": "Aritmetinės klaidos Euklido algoritme",
+          "wrongMove": "Neteisingai apskaičiuojama liekana, pvz., teigiant, kad $30 = 2 \\cdot 13 + 6$ vietoje $4$.",
+          "whyTempting": "Nuoseklus dalijimas reikalauja didelio susikaupimo, ypač su didesniais skaičiais.",
+          "correction": "Kiekviename žingsnyje patikrinkite daugybą: $dalinys = daliklis \\cdot sveikoji\\_dalis + liekana$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-04-trap-2",
+          "title": "Artinių (konvergentų) skaičiavimo painiava",
+          "wrongMove": "Neteisingai taikoma rekurentinė formulė $p_n = a_n p_{n-1} + p_{n-2}$, sumaišant skaitiklius su vardikliais.",
+          "whyTempting": "Formulės yra panašios, todėl lengva sukeisti indeksus ar reikšmes.",
+          "correction": "Apskaičiuokite pirmus kelis artinius tiesiogiai skleisdami trupmeną, kad įsitikintumėte formulės teisingumu.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-04-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine tr...?",
+          "back": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-05",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčiai: $x^2 - 2y^2 = 1$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastas mažiausias Pelio lygties sprendinys."
+      },
+      "answerText": "$x = 3, y = 2$",
+      "coreIdea": {
+        "title": "Pelio lygties fundamentalusis sprendinys",
+        "text": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pradedame tikrinti natūraliąsias reikšmes $y = 1, 2, 3 \\dots$."
+        },
+        {
+          "text": "Įstatome $y=1 \\implies x^2 = 3$, sprendinių nėra."
+        },
+        {
+          "text": "Įstatome $y=2 \\implies x^2 = 1 + 2(4) = 9 \\implies x = 3$."
+        },
+        {
+          "text": "Mažiausias teigiamas sveikasis sprendinys yra $(3, 2)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-05-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sprendinių perrinkimas",
+              "action": "Pertvarkome lygtį: $x^2 = 1 + 2y^2$ ir tikriname $y \\ge 1$.",
+              "reason": "Mažiausią sprendinį natūraliuose skaičiuose patogu rasti perrinkimo būdu mažoms $y$ vertėms.",
+              "latex": "x^2 = 1 + 2y^2",
+              "result": "Pasiruošta reikšmių tikrinimui."
+            },
+            {
+              "title": "Vertės radimas",
+              "action": "Kai $y=2 \\implies x^2 = 9 \\implies x=3$.",
+              "reason": "9 yra tikslusis kvadratas, todėl gauname sveikąjį sprendinį.",
+              "latex": "3^2 - 2(2)^2 = 9 - 8 = 1",
+              "result": "Rastas sprendinys $(3, 2)$."
+            }
+          ],
+          "finalAnswer": "$x = 3, y = 2$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-05-trap-1",
+          "title": "Trivialaus sprendinio pateikimas",
+          "wrongMove": "Pateikiamas sprendinys $(1, 0)$.",
+          "whyTempting": "Ši pora tenkina lygtį $1^2 - 2(0)^2 = 1$.",
+          "correction": "Sąlygoje prašoma natūraliųjų skaičių ($x, y \\ge 1$), todėl $y=0$ netinka.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-05-trap-2",
+          "title": "Per ankstyvas sustojimas perrinkime",
+          "wrongMove": "Patikrinama tik $y=1$ ir daroma išvada, kad lygtis neturi sprendinių natūraliuose skaičiuose.",
+          "whyTempting": "Jei pirmas bandymas nepavyksta, mokiniai dažnai abejoja sprendinių egzistavimu.",
+          "correction": "Tęskite tikrinimą $y=2, 3, \\dots$ arba naudokite grandininių trupmenų metodą fundamentaliajam sprendiniui rasti.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-05-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčia...?",
+          "back": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-10-test-challenge",
+      "title": "Olimpiadinis iššūkis (10 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-10-skaiciu-teorija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-10-01",
+        "ex-olimpiada-10-02",
+        "ex-olimpiada-10-03",
+        "ex-olimpiada-10-04",
+        "ex-olimpiada-10-05",
+        "ex-olimpiada-10-06",
+        "ex-olimpiada-10-07",
+        "ex-olimpiada-10-08",
+        "ex-olimpiada-10-09",
+        "ex-olimpiada-10-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

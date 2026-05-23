@@ -1,0 +1,1372 @@
+{
+  "contentVersion": "0.1.1",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos autoravimo gairės",
+    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+  },
+  "topic": {
+    "id": "olimpiada-11-skaiciu-teorija",
+    "title": "Skaičių teorija",
+    "grade": 11,
+    "strand": "Skaičių teorija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [
+      "olimpiada-10",
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+    ],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-11-concept-crt",
+      "olimpiada-11-concept-order",
+      "olimpiada-11-concept-reciprocity",
+      "olimpiada-11-concept-jacobi"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-02",
+      "ex-olimpiada-11-03",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-05",
+      "ex-olimpiada-11-06",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-08"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Kiniškoji liekanų teorema ir jos taikymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiniškoji liekanų teorema (KLT) yra galingas įrankis sprendžiant sveikųjų skaičių lygčių sistemas moduliu keli skaičiai. Pagrindinė idėja – jei moduliai yra tarpusavyje pirminiai, tai liekanos kiekvienu moduliu nepriklausomai nustato skaičių moduliu tų modulių sandauga."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami rasti skaičių $x$, kuris tenkina $x \\equiv a_i \\pmod{m_i}$, galite naudoti konstruktyvų metodą: raskite bazinius skaičius $e_i$, kurie yra lygūs $1$ moduliu $m_i$ ir $0$ visais kitais moduliais $m_j$. Tada $x = \\sum a_i e_i$ bus sprendinys."
+        }
+      ]
+    },
+    {
+      "title": "Kvadratinis savitarpiškumas ir Legendro simbolis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kvadratinis savitarpiškumas leidžia atsakyti į klausimą: „Ar skaičius yra kvadratinė liekana moduliu $p$?“. Tai viena svarbiausių Gauso teoremų, siejanti dviejų skirtingų pirminių skaičių savybes."
+        },
+        {
+          "type": "method",
+          "text": "Naudokite Legendro simbolį $\\left(\\frac{a}{p}\\right)$. Jei jis lygus $1$, tai $a$ yra kvadratas mod $p$. Skaičiavimams taikykite savybes: $\\left(\\frac{ab}{p}\\right) = \\left(\\frac{a}{p}\\right)\\left(\\frac{b}{p}\\right)$ ir patį savitarpiškumo dėsnį pirminiams $p, q$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-11-concept-crt",
+      "title": "Kiniškoji liekanų teorema (KLT)",
+      "type": "concept",
+      "shortDefinition": "Jei moduliai yra poromis tarpusavyje pirminiai, tai liekanų sistema turi vienintelį sprendinį jungtiniu moduliu.",
+      "intuition": "Tai tarsi koordinačių sistema skaičiams: žinodami skaičiaus „projekcijas“ (liekanas) įvairiomis kryptimis (moduliais), galime tiksliai nustatyti jo padėtį.",
+      "formal": "Tegu $m_1, m_2, \\dots, m_k$ yra natūralieji skaičiai, tokie kad $\\text{gcd}(m_i, m_j) = 1$ visiems $i \\neq j$. Tada lygčių sistema $x \\equiv a_i \\pmod{m_i}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-order",
+      "title": "Eilė ir pradinės šaknys",
+      "type": "concept",
+      "shortDefinition": "Mažiausias teigiamas laipsnis $d$, kuriam $a^d \\equiv 1 \\pmod m$.",
+      "intuition": "Skaičiaus laipsniai moduliu $m$ sukasi ratu; eilė nurodo šio rato ilgį.",
+      "formal": "Sveikojo skaičiaus $a$ eilė moduliu $m$ (žymima $\\text{ord}_m a$) yra mažiausias $d > 0$, tenkinantis $a^d \\equiv 1 \\pmod m$. Jei $\\text{ord}_m g = \\varphi(m)$, tai $g$ vadinama pradine šaknimi.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-reciprocity",
+      "title": "Kvadratinis savitarpiškumas",
+      "type": "concept",
+      "shortDefinition": "Dėsnis, siejantis Legendro simbolius $(\\frac{p}{q})$ ir $(\\frac{q}{p})$.",
+      "intuition": "Leidžia apversti „trupmeną“ Legendro simbolyje, palengvinant kvadratinių liekanų skaičiavimą.",
+      "formal": "Skirtingiems nelyginiams pirminiams $p, q$: $\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-11-concept-jacobi",
+      "title": "Jakobio simbolis",
+      "type": "concept",
+      "shortDefinition": "Legendro simbolio apibendrinimas sudėtiniams moduliams.",
+      "intuition": "Leidžia naudoti savitarpiškumo savybes net kai modulis nėra pirminis, nors simbolio reikšmė tiesiogiai negarantuoja lygties sprendžiamumo.",
+      "formal": "Jei $n = p_1 p_2 \\dots p_k$ (nelyginis), tai $\\left(\\frac{a}{n}\\right) = \\prod_{i=1}^k \\left(\\frac{a}{p_i}\\right)$.",
+      "relatedConceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ]
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Sistemos sprendimas naudojant KLT",
+      "problem": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, tenkinantį sistemą: $x \\equiv 1 \\pmod 3, x \\equiv 2 \\pmod 4, x \\equiv 3 \\pmod 5$.",
+      "steps": [
+        {
+          "text": "Moduliai $3, 4, 5$ yra tarpusavyje pirminiai. Sprendinio ieškome pavidalu $x = 1 \\cdot e_1 + 2 \\cdot e_2 + 3 \\cdot e_3$."
+        },
+        {
+          "text": "$e_1$ turi dalintis iš $4 \\cdot 5 = 20$ ir $e_1 \\equiv 1 \\pmod 3$. Skaičius $40$ tinka ($40 = 3 \\cdot 13 + 1$)."
+        },
+        {
+          "text": "$e_2$ dalijasi iš $3 \\cdot 5 = 15$ ir $e_2 \\equiv 1 \\pmod 4$. $45$ tinka ($45 = 4 \\cdot 11 + 1$)."
+        },
+        {
+          "text": "$e_3$ dalijasi iš $3 \\cdot 4 = 12$ ir $e_3 \\equiv 1 \\pmod 5$. Skaičius $36$ tinka."
+        },
+        {
+          "text": "$x = 1 \\cdot 40 + 2 \\cdot 45 + 3 \\cdot 36 = 40 + 90 + 108 = 238$."
+        },
+        {
+          "text": "Mažiausias teigiamas sprendinys: $238 \\pmod{60} = 58$."
+        }
+      ],
+      "answer": "58"
+    },
+    {
+      "title": "Ciklotoniniai daugianariai ir dalumas",
+      "problem": "Įrodykite, kad bet kuriam natūraliajam skaičiui $n > 1$, ciklotoninis daugianaris $\\Phi_n(x)$ įgyja tik teigiamas reikšmes, kai $x > 1$.",
+      "steps": [
+        {
+          "text": "Ciklotoninis daugianaris $\\Phi_n(x)$ apibrėžiamas kaip $\\prod (x - \\zeta)$, kur $\\zeta$ yra visos pirmykštės $n$-tojo laipsnio vieneto šaknys."
+        },
+        {
+          "text": "Kiekviena šaknis $\\zeta$ pasirodo su savo jungtiniu skaičiumi $\\bar{\\zeta}$ (jei ji nėra reali)."
+        },
+        {
+          "text": "Sandauga $(x - \\zeta)(x - \\bar{\\zeta}) = x^2 - (2 \\text{Re} \\zeta)x + 1$."
+        },
+        {
+          "text": "Kadangi $|\\zeta| = 1$, tai $2 \\text{Re} \\zeta \\le 2$. Vadinasi, kvadratinis trinaris $x^2 - (2 \\text{Re} \\zeta)x + 1$ yra teigiamas visiems $x > 1$, nes jo diskriminantas $D = 4(\\text{Re} \\zeta)^2 - 4 \\le 0$."
+        },
+        {
+          "text": "Jei $n=2$, $\\Phi_2(x) = x+1$, kuris yra teigiamas kai $x > 1$."
+        },
+        {
+          "text": "Kadangi visi sandaugos nariai yra teigiami, tai ir $\\Phi_n(x) > 0$."
+        }
+      ],
+      "answer": "Įrodyta"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-11-01",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina lygčių sistemą: $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 5$, $x \\equiv 2 \\pmod 7$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "23"
+      },
+      "answerText": "23",
+      "coreIdea": {
+        "title": "Bendros liekanos pastebėjimas",
+        "text": "Atkreipkite dėmesį, kad liekana moduliu 3 ir moduliu 7 yra ta pati (2). Tai reiškia, kad $x-2$ dalijasi iš $\\text{lcm}(3, 7)$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "chinese-remainder-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "dalumas",
+        "liekana"
+      ],
+      "expectedMethodIds": [
+        "chinese-remainder-theorem-solution"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-crt"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia apjunkite lygtis su moduliais 3 ir 7, nes jos turi tą pačią liekaną.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi $x \\equiv 2 \\pmod 3$ ir $x \\equiv 2 \\pmod 7$, tai skaičius $x$ tenkina lygti $x \\equiv 2 \\pmod{21}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ieškokite $x$ pavidalu $21k + 2$. Jums reikia rasti tokį $k$, kad $21k + 2 \\equiv 3 \\pmod 5$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Supaprastinkite lygtį: $21k + 2 \\equiv k + 2 \\equiv 3 \\pmod 5$. Mažiausias teigiamas $k=1$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apjungiame pirmąją ir trečiąją lygtis: $x \\equiv 2 \\pmod{\\text{lcm}(3,7)} \\implies x \\equiv 2 \\pmod{21}$."
+        },
+        {
+          "text": "Užrašome $x$ bendra forma: $x = 21k + 2$ kokiam nors sveikajam $k$."
+        },
+        {
+          "text": "Įstatome į antrąją lygtį: $21k + 2 \\equiv 3 \\pmod 5$."
+        },
+        {
+          "text": "Kadangi $21 \\equiv 1 \\pmod 5$, lygtis tampa $1k + 2 \\equiv 3 \\pmod 5$."
+        },
+        {
+          "text": "Atimame 2 iš abiejų pusių: $k \\equiv 1 \\pmod 5$."
+        },
+        {
+          "text": "Mažiausias teigiamas $k=1$, tada $x = 21(1) + 2 = 23$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-01-method-1",
+          "title": "Konstruktyvusis apjungimas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Sujungimas",
+              "action": "Nustatome, kad $x-2$ dalijasi iš $3$ ir $7$.",
+              "reason": "Abi liekanos yra vienodos.",
+              "result": "$x \\equiv 2 \\pmod{21}$",
+              "latex": "x \\equiv 2 \\pmod{21}"
+            },
+            {
+              "title": "Liekanos pritaikymas",
+              "action": "Ieškome $x = 21k + 2$ tenkinančio $x \\equiv 3 \\pmod 5$.",
+              "reason": "Tai paskutinė sąlyga.",
+              "result": "$k \\equiv 1 \\pmod 5$",
+              "latex": "21k+2 \\equiv k+2 \\equiv 3 \\pmod 5"
+            },
+            {
+              "title": "Rezultatas",
+              "action": "Apskaičiuojame $x$.",
+              "reason": "Sistemos sprendinys.",
+              "result": "23",
+              "latex": "x = 21(1) + 2 = 23"
+            }
+          ],
+          "finalAnswer": "23"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-01-trap-1",
+          "title": "Dauginimas be liekanų supaprastinimo",
+          "wrongMove": "Bandoma rasti bendrą modulį 105 tiesiogiai perrenkant visus skaičius.",
+          "whyTempting": "Tai garantuoja rezultatą, bet užima per daug laiko.",
+          "correction": "Naudokite KLT žingsnis po žingsnio arba apjunkite lygtis su bendromis liekanomis.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-01-trap-2",
+          "title": "Klaida redukuojant koeficientą",
+          "wrongMove": "Manoma, kad $21k \\equiv 21k \\pmod 5$ be redukcijos į $1k$.",
+          "whyTempting": "Pamirštama, kad koeficientą prieš nežinomąjį galima pakeisti jo liekana.",
+          "correction": "Prieš spręsdami lygti $Ak \\equiv B \\pmod M$, pakeiskite $A$ liekana dalijant iš $M$.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl sprendimas pagreitėjo pastebėjus bendrą liekaną (2) moduliams 3 ir 7?",
+        "Kas būtų pasikeitę, jei moduliai nebūtų tarpusavyje pirminiai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-01-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra pirmas žingsnis sprendžiant $x \\equiv a \\pmod m$ ir $x \\equiv a \\pmod n$, kai $\\text{gcd}(m,n)=1$?",
+          "back": "Apjungti į vieną lygtį $x \\equiv a \\pmod{mn}$.",
+          "conceptIds": [
+            "olimpiada-11-concept-crt"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-02",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Nustatykite skaičiaus $3$ eilę moduliu $17$ ir nurodykite, ar $3$ yra pradinė šaknis moduliu $17$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "16, taip"
+      },
+      "answerText": "16, taip",
+      "coreIdea": {
+        "title": "Eilės dalumas",
+        "text": "Pagal Fermos mažąją teoremą, eilė turi dalinti $\\varphi(17) = 16$. Tikriname tik 16 daliklius: 1, 2, 4, 8."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "order-modulo-n"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "order-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Eilė $d$ yra mažiausias laipsnis, kuriam $3^d \\equiv 1 \\pmod{17}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tikrinkite tik skaičiaus 16 daliklius. Jei joks mažesnis laipsnis netinka, eilė bus 16.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Skaičiuokite laipsnius nuosekliai keldami kvadratu: $3^2, 3^4, 3^8$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$3^8 \\equiv 16 \\equiv -1 \\pmod{17}$. Ką tai sako apie mažiausią laipsnį, duodantį 1?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame $\\varphi(17) = 16$. Eilė turi būti 1, 2, 4, 8 arba 16."
+        },
+        {
+          "text": "$3^1 \\equiv 3$, $3^2 \\equiv 9$."
+        },
+        {
+          "text": "$3^4 = (3^2)^2 \\equiv 9^2 = 81 = 4 \\cdot 17 + 13 \\equiv 13 \\equiv -4 \\pmod{17}$."
+        },
+        {
+          "text": "$3^8 = (3^4)^2 \\equiv (-4)^2 = 16 \\equiv -1 \\pmod{17}$."
+        },
+        {
+          "text": "Kadangi $3^8 \\not\\equiv 1$, bet $(3^8)^2 \\equiv (-1)^2 \\equiv 1 \\pmod{17}$, mažiausia eilė yra 16."
+        },
+        {
+          "text": "Kadangi eilė lygi $\\varphi(17)$, skaičius 3 yra pradinė šaknis."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-02-method-1",
+          "title": "Laipsnių perranka per daliklius",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Kėlimas kvadratu",
+              "action": "Skaičiuojame $3^2, 3^4, 3^8$.",
+              "reason": "Tai greičiausias būdas pasiekti didelius laipsnius.",
+              "result": "$3^8 \\equiv -1 \\pmod{17}$",
+              "latex": "3^8 \\equiv 16 \\equiv -1 \\pmod{17}"
+            },
+            {
+              "title": "Išvada apie eilę",
+              "action": "Nustatome eilę pagal paskutinį neigiamą rezultatą.",
+              "reason": "Jei $a^k \\equiv -1$, tai eilė yra $2k$.",
+              "result": "16",
+              "latex": "d = 2 \\times 8 = 16"
+            }
+          ],
+          "finalAnswer": "16, taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-02-trap-1",
+          "title": "Visų laipsnių skaičiavimas",
+          "wrongMove": "Mokinys skaičiuoja $3^1, 3^2, 3^3, \\dots, 3^{16}$ iš eilės.",
+          "whyTempting": "Atrodo saugu ir nereikia galvoti apie savybes.",
+          "correction": "Naudokite kėlimą kvadratu ir tikrinkite tik $\\varphi(m)$ daliklius.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-02-trap-2",
+          "title": "Liekanos ženklas",
+          "wrongMove": "Pamirštama, kad $16 \\equiv -1$ palengvina skaičiavimą.",
+          "whyTempting": "Teigiami skaičiai atrodo įprastesni.",
+          "correction": "Naudokite neigiamas liekanas (pvz., $-1$), kad pakėlus kvadratu gautumėte $1$.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl žinant, kad $3^8 \\equiv -1$, galime iškart pasakyti, kad eilė nėra 1, 2, 4 ar 8?",
+        "Kiek iš viso pradinių šaknų turi modulis 17?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-02-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokie laipsniai yra kandidatai į skaičiaus $a$ eilę moduliu $m$?",
+          "back": "Skaičiaus $\\varphi(m)$ dalikliai.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-03",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Išspręskite lygtį $3^x \\equiv 5 \\pmod{17}$, žinodami, kad $3$ yra pradinė šaknis moduliu $17$. Raskite mažiausią teigiamą $x$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "5"
+      },
+      "answerText": "5",
+      "coreIdea": {
+        "title": "Rodyklių perranka",
+        "text": "Kadangi 3 yra pradinė šaknis, ji generuoja visas liekanas. Reikia tiesiog kelti 3 laipsniais, kol gausime 5."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "discrete-logarithm"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "expectedMethodIds": [
+        "index-calculus-basic"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kelkite 3 laipsniais moduliu 17, kol gausite 5.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jau žinote iš praeito uždavinio: $3^2 \\equiv 9, 3^4 \\equiv 13$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite $3^5$ naudodami $3^4 \\cdot 3$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$13 \\cdot 3 = 39$. Kokia šio skaičiaus liekana dalijant iš 17?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$3^1 = 3$"
+        },
+        {
+          "text": "$3^2 = 9$"
+        },
+        {
+          "text": "$3^3 = 27 \\equiv 10 \\pmod{17}$"
+        },
+        {
+          "text": "$3^4 = 30 \\equiv 13 \\pmod{17}$"
+        },
+        {
+          "text": "$3^5 = 13 \\cdot 3 = 39$"
+        },
+        {
+          "text": "Dalijame 39 iš 17: $39 = 2 \\cdot 17 + 5$. Liekana yra 5."
+        },
+        {
+          "text": "Taigi $3^5 \\equiv 5 \\pmod{17}$, atsakymas $x=5$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-03-method-1",
+          "title": "Nuoseklus kėlimas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Laipsnių kėlimas",
+              "action": "Nuosekliai skaičiuojame $3^k$ liekanas moduliu 17.",
+              "reason": "Mažas modulis leidžia rasti sprendinį perrankos būdu.",
+              "result": "$3^2 \\equiv 9, 3^3 \\equiv 10, 3^4 \\equiv 13$",
+              "latex": "3^4 \\equiv 13 \\pmod{17}"
+            },
+            {
+              "title": "Sprendinio radimas",
+              "action": "Apskaičiuojame $3^5$.",
+              "reason": "Tęsiame seką.",
+              "result": "5",
+              "latex": "3^5 = 3 \\cdot 13 = 39 \\equiv 5 \\pmod{17}"
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-03-trap-1",
+          "title": "Klaidingas ciklo ilgis",
+          "wrongMove": "Manoma, kad jei $3^x \\equiv 5$, tai sprendiniai yra $x + 17k$.",
+          "whyTempting": "Painiojamas modulis su ciklo ilgiu.",
+          "correction": "Sprendiniai kartojasi kas $\\text{ord}_m a$, šiuo atveju kas 16.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-03-trap-2",
+          "title": "Netinkamas laipsnių perrinkimas",
+          "wrongMove": "Bandoma spėti x be jokios sistemos, praleidžiant mažas reikšmes.",
+          "whyTempting": "Atrodo, kad sprendimas turi būti didelis skaičius.",
+          "correction": "Kelkite laipsniu sistemingai: $3^1, 3^2, \\dots$, kol pasieksite liekaną 5.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl pradinės šaknies savybė garantavo, kad sprendinys $x$ egzistuoja?",
+        "Kaip šis uždavinys susijęs su diskrečiojo logaritmo problema?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-03-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra diskrečiojo logaritmo apibrėžtis?",
+          "back": "Tai rodiklis $x$, tenkinantis $a^x \\equiv b \\pmod m$.",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-04",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Nustatykite, ar lygtis $x^2 \\equiv 3 \\pmod{73}$ turi sprendinių. Naudokite kvadratinio savitarpiškumo dėsnį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taip"
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Legendro simbolio apvertimas",
+        "text": "Reikia apskaičiuoti $(\\frac{3}{73})$. Pagal savitarpiškumo dėsnį, kadangi $73 \\equiv 1 \\pmod 4$, tai $(\\frac{3}{73}) = (\\frac{73}{3})$."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "quadratic-reciprocity"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ],
+      "expectedMethodIds": [
+        "legendre-symbol-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-reciprocity"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sprendinių egzistavimas ekvivalentus Legendro simbolio $(\\frac{3}{73}) = 1$ reikšmei.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Patikrinkite 73 ir 3 liekanas moduliu 4. Jei bent vienas jų lygus $1 \\pmod 4$, tai $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi $73 = 4 \\cdot 18 + 1$, galime taikyti $(\\frac{3}{73}) = (\\frac{73}{3})$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Redukuokite 73 moduliu 3: $73 \\equiv 1 \\pmod 3$. Ar 1 yra kvadratas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tiriame Legendro simbolį $(\\frac{3}{73})$."
+        },
+        {
+          "text": "Tikriname savitarpiškumo sąlygą: $73 \\equiv 1 \\pmod 4$."
+        },
+        {
+          "text": "Todėl $(\\frac{3}{73}) = (\\frac{73}{3})$."
+        },
+        {
+          "text": "Supaprastiname viršutinį skaičių: $73 \\equiv 1 \\pmod 3$."
+        },
+        {
+          "text": "Gauname $(\\frac{1}{3}) = 1$, nes $1 = 1^2$."
+        },
+        {
+          "text": "Kadangi simbolio reikšmė 1, lygtis turi sprendinių. Atsakymas: Taip."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-04-method-1",
+          "title": "Kvadratinis savitarpiškumas",
+          "methodType": "main",
+          "strategyTags": [
+            "number-theory"
+          ],
+          "steps": [
+            {
+              "title": "Apvertimas",
+              "action": "Pakeičiame $(\\frac{3}{73})$ į $(\\frac{73}{3})$.",
+              "reason": "$73 \\equiv 1 \\pmod 4$.",
+              "result": "$(\\frac{73}{3})$",
+              "latex": "(\\frac{3}{73}) = (\\frac{73}{3})"
+            },
+            {
+              "title": "Redukcija",
+              "action": "Sumažiname skaičių moduliu 3.",
+              "reason": "Legendro simbolis priklauso tik nuo liekanos.",
+              "result": "1",
+              "latex": "(\\frac{73}{3}) = (\\frac{1}{3}) = 1"
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-04-trap-1",
+          "title": "Ženklo klaida apverčiant",
+          "wrongMove": "Manoma, kad visada $(\\frac{p}{q}) = (\\frac{q}{p})$.",
+          "whyTempting": "Tai paprasčiausia taisyklė.",
+          "correction": "Jei abu skaičiai yra $3 \\pmod 4$, atsiranda minuso ženklas.",
+          "conceptIds": [
+            "olimpiada-11-concept-reciprocity"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-04-trap-2",
+          "title": "Pamirštama patikrinti, ar p, q yra nelyginiai pirminiai",
+          "wrongMove": "Taikomas dėsnis tiesiogiai moduliui 2 arba sudėtiniam skaičiui.",
+          "whyTempting": "Noras greitai pritaikyti formulę.",
+          "correction": "Kvadratinis savitarpiškumo dėsnis galioja tik nelyginiams pirminiams. Sudėtiniams naudokite Jakobio simbolį.",
+          "conceptIds": [
+            "olimpiada-11-concept-reciprocity"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip savitarpiškumo dėsnis padeda išvengti didelių skaičių kėlimo laipsniu?",
+        "Kas būtų pasikeitę, jei lygtis būtų $x^2 \\equiv 3 \\pmod{71}$?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-04-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kada $(\\frac{p}{q}) = (\\frac{q}{p})$ pagal kvadratinio savitarpiškumo dėsnį?",
+          "back": "Kai bent vienas iš pirminių $p, q$ yra pavidalo $4k+1$.",
+          "conceptIds": [
+            "olimpiada-11-concept-reciprocity"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-05",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Apskaičiuokite Jakobio simbolį $\\left(\\frac{29}{45}\\right)$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1"
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Išskaidymas",
+        "text": "Jakobio simbolį galima skaičiuoti išskaidžius modulį į pirminius arba taikant apibendrintą savitarpiškumo dėsnį."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "jacobi-symbol"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-11-concept-jacobi"
+      ],
+      "expectedMethodIds": [
+        "jacobi-calculation"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-jacobi"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Galite skaidyti: $(\\frac{29}{45}) = (\\frac{29}{5}) \\cdot (\\frac{29}{9})$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$(\\frac{29}{9})$ visada lygus 1, jei $\\text{gcd}(29, 9)=1$, nes 9 yra kvadratas.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Arba taikykite savitarpiškumą tiesiogiai: $(\\frac{29}{45}) = (\\frac{45}{29})$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$45 \\equiv 16 \\pmod{29}$. Ar 16 yra kvadratas?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame Jakobio savitarpiškumo savybę: $(\\frac{29}{45}) = (\\frac{45}{29})$, nes $29 \\equiv 1 \\pmod 4$."
+        },
+        {
+          "text": "Redukuojame moduliu 29: $45 \\equiv 16 \\pmod{29}$."
+        },
+        {
+          "text": "Gauname $(\\frac{16}{29})$."
+        },
+        {
+          "text": "Kadangi $16 = 4^2$, tai $(\\frac{16}{29}) = 1$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-05-method-1",
+          "title": "Tiesioginis savitarpiškumas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic"
+          ],
+          "steps": [
+            {
+              "title": "Apvertimas",
+              "action": "Sukeičiame skaitiklį ir vardiklį.",
+              "reason": "$29 \\equiv 1 \\pmod 4$.",
+              "result": "(\\frac{45}{29})",
+              "latex": "(\\frac{29}{45}) = (\\frac{45}{29})"
+            },
+            {
+              "title": "Redukcija",
+              "action": "Apskaičiuojame liekaną.",
+              "reason": "Supaprastiname skaičiavimą.",
+              "result": "1",
+              "latex": "(\\frac{45}{29}) = (\\frac{16}{29}) = 1"
+            }
+          ],
+          "finalAnswer": "1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-05-trap-1",
+          "title": "Neteisinga išvada apie sprendinius",
+          "wrongMove": "Manoma, kad jei $(\\frac{a}{n}) = 1$, tai $x^2 \\equiv a \\pmod n$ būtinai turi sprendinių.",
+          "whyTempting": "Tai galioja Legendro simboliui (pirminiams moduliams).",
+          "correction": "Jakobio simbolis $1$ tik sako, kad blogų (reikšmė $-1$) pirminių daliklių yra lyginis skaičius. Reikia patikrinti kiekvieną pirminį daliklį.",
+          "conceptIds": [
+            "olimpiada-11-concept-jacobi"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-11-05-trap-2",
+          "title": "Klaida skaidant Jakobio simbolį",
+          "wrongMove": "Manoma, kad $(\\frac{a}{n}) = 1$ reiškia, kad a yra kvadratas mod n.",
+          "whyTempting": "Painiojama su Legendro simbolio savybe.",
+          "correction": "Jakobio simbolis 1 yra būtina, bet nepakankama sąlyga. Reikia tikrinti visus pirminius daliklius atskirai.",
+          "conceptIds": [
+            "olimpiada-11-concept-jacobi"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra pagrindinė nauda naudojant Jakobio simbolį vietoje Legendro simbolio?",
+        "Ar lygtis $x^2 \\equiv 29 \\pmod{45}$ turi sprendinių? (Patikrinkite mod 5 ir mod 9)."
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-05-srs-1",
+          "deck": "theory",
+          "cardType": "definition",
+          "front": "Kuo Jakobio simbolis skiriasi nuo Legendro simbolio?",
+          "back": "Jakobio simbolis leidžia sudėtinį vardiklį (modulį), o Legendro - tik pirminį.",
+          "conceptIds": [
+            "olimpiada-11-concept-jacobi"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-06",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 80,
+      "statement": "Įrodykite, kad joks sveikasis skaičius $n$, kurio pavidalas yra $8k + 7$, negali būti užrašytas trijų sveikųjų skaičių kvadratų suma. Kokias liekanas įgyja kvadratai moduliu 8?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "0, 1 arba 4; suma niekada nebus 7"
+      },
+      "answerText": "0, 1 arba 4; suma niekada nebus 7",
+      "coreIdea": {
+        "title": "Kvadratinės liekanos mod 8",
+        "text": "Sveikojo skaičiaus kvadratas moduliu 8 gali būti tik 0, 1 arba 4. Reikia patikrinti visas įmanomas trijų tokių liekanų sumas."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "sum-of-squares"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "lyginis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "modular-analysis"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ištirkite, kokias liekanas duoda skaičiai $0^2, 1^2, 2^2, 3^4, \\dots, 7^2$ dalijant iš 8.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kvadratinės liekanos mod 8 yra tik $\\{0, 1, 4\\}$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pabandykite sudėti tris skaičius iš aibės $\\{0, 1, 4\\}$ (leidžiant jiems kartotis) ir pažiūrėkite, ar galite gauti 7 moduliu 8.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Didžiausia suma be 4-eto yra $1+1+1=3$. Su vienu 4-etu: $4+1+1=6$. Su dviem: $4+4+0=8 \\equiv 0$. Ar galima pasiekti 7?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Randame kvadratines liekanas mod 8: $0^2 \\equiv 0, 1^2 \\equiv 1, 2^2 \\equiv 4, 3^2 \\equiv 9 \\equiv 1, 4^2 \\equiv 0, 5^2 \\equiv 1, 6^2 \\equiv 4, 7^2 \\equiv 1$."
+        },
+        {
+          "text": "Aibė yra $S = \\{0, 1, 4\\}$."
+        },
+        {
+          "text": "Nagrinėjame $a^2 + b^2 + c^2 \\pmod 8$. Visos galimos kombinacijos: $(0,0,0) \\to 0$, $(1,1,1) \\to 3$, $(4,4,4) \\to 12 \\equiv 4$, $(4,1,1) \\to 6$, $(4,4,1) \\to 9 \\equiv 1$, $(4,0,0) \\to 4$, $(1,0,0) \\to 1$, $(1,1,0) \\to 2$, $(4,1,0) \\to 5$."
+        },
+        {
+          "text": "Pastebime, kad nė viena kombinacija neduoda sumos 7."
+        },
+        {
+          "text": "Todėl skaičius $8k+7$ negali būti trijų kvadratų suma."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-06-method-1",
+          "title": "Modulinė analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof-by-exhaustion"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų nustatymas",
+              "action": "Apskaičiuojame kvadratus mod 8.",
+              "reason": "Norime apriboti galimas sumas.",
+              "result": "{0, 1, 4}",
+              "latex": "x^2 \\in \\{0, 1, 4\\} \\pmod 8"
+            },
+            {
+              "title": "Perranka",
+              "action": "Patikriname visas trijų elementų sumas.",
+              "reason": "Tai baigtinis skaičius atvejų.",
+              "result": "7 nepasiekiamas",
+              "latex": "s_1+s_2+s_3 \\not\\equiv 7 \\pmod 8"
+            }
+          ],
+          "finalAnswer": "0, 1 arba 4; suma niekada nebus 7"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-06-trap-1",
+          "title": "Modulio 4 naudojimas",
+          "wrongMove": "Mokinys bando įrodyti naudodamas mod 4.",
+          "whyTempting": "Kvadratai mod 4 yra paprastesni (0, 1).",
+          "correction": "Moduliu 4 suma gali būti 3 (pvz., $1+1+1 \\equiv 3 \\equiv 7 \\pmod 4$), todėl tai nieko neįrodo. Reikia tikslesnio modulio 8.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-06-trap-2",
+          "title": "Nepakankamas atvejų peržiūrėjimas",
+          "wrongMove": "Patikrinami tik keli skaičių kvadratai, pvz., tik lyginiai.",
+          "whyTempting": "Manoma, kad dėsningumas akivaizdus.",
+          "correction": "Būtina išnagrinėti visas liekanas moduliu 8 (nuo 0 iki 7), kad įsitikintumėte visais įmanomais variantais.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokia yra Legendre trijų kvadratų teorema apie skaičius, kurie nėra užrašomi trijų kvadratų suma?",
+        "Kodėl moduliu 8 skaičiavimas yra toks efektyvus kvadratams?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-06-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokios yra galimos kvadratų liekanos moduliu 8?",
+          "back": "0, 1 ir 4.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-07",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu $a=2, b=1$. Zigmondžio teorema teigia, kad beveik visada seka $a^n - b^n$ turi „pirmykštį“ pirminį daliklį. Raskite vienintelę reikšmę $n > 2$, kuriai $2^n - 1$ neturi tokio daliklio.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6"
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Išimčių radimas",
+        "text": "Zigmondžio teorema turi kelias žinomas išimtis. Reikia patikrinti mažus $n$ ir pamatyti, kada visi $2^n-1$ dalikliai jau pasirodė ankstesniuose nariuose."
+      },
+      "strategyTags": [
+        "number-theory",
+        "zygsmondy-theorem"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "pirminis-skaicius"
+      ],
+      "expectedMethodIds": [
+        "divisor-analysis"
+      ],
+      "conceptIds": [
+        "olimpiada-11-concept-order"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmykštis daliklis yra toks, kuris nedalina $2^k-1$ jokiems $k < n$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Ištirkite $n=3, 4, 5, 6$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "$2^6 - 1 = 63 = 3^2 \\cdot 7$. Ar 3 ir 7 jau pasirodė ankstesnėse reikšmėse?",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$2^2-1=3$, $2^3-1=7$. Taigi abu skaičiaus 63 dalikliai jau buvo panaudoti.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$n=3: 2^3-1=7$. Pirmykštis daliklis 7."
+        },
+        {
+          "text": "$n=4: 2^4-1=15=3 \\cdot 5$. Pirmykštis daliklis 5 (nes 3 pasirodė prie $n=2$)."
+        },
+        {
+          "text": "$n=5: 2^5-1=31$. Pirmykštis daliklis 31."
+        },
+        {
+          "text": "$n=6: 2^6-1=63=3^2 \\cdot 7$."
+        },
+        {
+          "text": "Tikriname ankstesnius: $2^1-1=1$, $2^2-1=3$, $2^3-1=7$, $2^4-1=15$ (3, 5), $2^5-1=31$."
+        },
+        {
+          "text": "Matome, kad 63 dalikliai $\\{3, 7\\}$ jau pasirodė prie $n=2$ ir $n=3$."
+        },
+        {
+          "text": "Vadinasi, $n=6$ yra ieškoma išimtis."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-07-method-1",
+          "title": "Nuoseklus skaidymas",
+          "methodType": "main",
+          "strategyTags": [
+            "number-theory"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "Skaidome $2^n-1$ pirminiais dauginamaisiais.",
+              "reason": "Norime sužinoti visus daliklius.",
+              "result": "63 = 9 * 7",
+              "latex": "2^6-1 = 63 = 3^2 \\times 7"
+            },
+            {
+              "title": "Pirmykštiškumo tikrinimas",
+              "action": "Lyginame su ankstesniais nariais.",
+              "reason": "Ieškome naujų pirminių skaičių.",
+              "result": "Nėra naujų",
+              "latex": "3|2^2-1, 7|2^3-1"
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-07-trap-1",
+          "title": "Mažų n praleidimas",
+          "wrongMove": "Mokinys bando taikyti bendras formules netyrinėdamas išimčių.",
+          "whyTempting": "Teorema teigia, kad daliklis egzistuoja „beveik visada“.",
+          "correction": "Olimpiadose būtent išimtys (pvz., $2^6-1$ arba $a=2, b=1, n=6$) yra svarbiausios.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-07-trap-2",
+          "title": "Mažų n reikšmių ignoravimas",
+          "wrongMove": "Manoma, kad Zigmondžio teorema galioja visiems n be išimčių.",
+          "whyTempting": "Teorema pateikiama kaip bendras faktas.",
+          "correction": "Visada atsiminkite išimtis: $2^6-1$ ir $2^1-1$. Jos dažnai yra olimpiadinių uždavinių esmė.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokiomis sąlygomis dar gali neegzistuoti pirmykštis daliklis?",
+        "Kaip Zigmondžio teorema naudojama tiriant skaičių eiles?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-07-srs-1",
+          "deck": "theory",
+          "cardType": "fact",
+          "front": "Kokia yra garsioji Zigmondžio teoremos išimtis skaičiams $2^n-1$?",
+          "back": "$n=6$ ($2^6-1=63$ neturi naujo pirminio daliklio).",
+          "conceptIds": [
+            "olimpiada-11-concept-order"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-11-08",
+      "topicId": "olimpiada-11-skaiciu-teorija",
+      "grade": 11,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 75,
+      "statement": "Tegu $v_p(n)$ žymi didžiausią pirminio skaičiaus $p$ laipsnį, dalijantį $n$. Jei $v_3(x) = 2$ ir $v_3(y) = 3$, kokia yra tiksli $v_3(x+y)$ reikšmė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Ultrametrinė lygybė",
+        "text": "Jei dviejų skaičių $p$-adiniai vertinimai yra skirtingi, tai jų sumos vertinimas lygus mažiausiam iš jų."
+      },
+      "strategyTags": [
+        "number-theory",
+        "p-adic-valuation"
+      ],
+      "prerequisiteTopicIds": [
+        "dalumas-ir-liekanos"
+      ],
+      "prerequisiteConceptIds": [
+        "dalumas"
+      ],
+      "expectedMethodIds": [
+        "p-adic-properties"
+      ],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite skaičius $x$ ir $y$ pavidalu $3^k \\cdot m$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$x = 9a, y = 27b$, kur $a$ nesidalija iš 3.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iškelkite bendrą dauginamąjį prieš skliaustus sumoje $x+y$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "$x+y = 9a + 27b = 9(a + 3b)$. Ar $a+3b$ dalijasi iš 3?",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$v_3(x) = 2 \\implies x = 3^2 \\cdot a = 9a$, kur $3 \\nmid a$."
+        },
+        {
+          "text": "$v_3(y) = 3 \\implies y = 3^3 \\cdot b = 27b$, kur $3 \\nmid b$."
+        },
+        {
+          "text": "$x+y = 9a + 27b = 9(a + 3b)$."
+        },
+        {
+          "text": "Tiriame skliaustus: $a + 3b$. Kadangi $3 \\nmid a$, tai $a + 3b$ nesidalija iš 3."
+        },
+        {
+          "text": "Vadinasi, didžiausias 3-eto laipsnis sumoje yra $3^2$."
+        },
+        {
+          "text": "$v_3(x+y) = 2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-11-08-method-1",
+          "title": "Iškėlimas prieš skliaustus",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Faktorizacija",
+              "action": "Iškeliame $3^{\\min(v_3(x), v_3(y))}$.",
+              "reason": "Tai bendras didžiausias žinomas daliklis.",
+              "result": "9(a+3b)",
+              "latex": "x+y = 3^2(a+3b)"
+            },
+            {
+              "title": "Patikra",
+              "action": "Tikriname liekaną mod 3.",
+              "reason": "Norime įsitikinti, kad laipsnis nedidėja.",
+              "result": "a+3b \\equiv a \\neq 0",
+              "latex": "a+3b \\equiv a \\pmod 3"
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-11-08-trap-1",
+          "title": "Manymas, kad laipsniai susideda",
+          "wrongMove": "Spėjama, kad $v(x+y) = v(x) + v(y) = 5$.",
+          "whyTempting": "Painiojama su sandaugos savybe $v(xy) = v(x) + v(y)$.",
+          "correction": "Sumos vertinimui galioja ultrametrinė nelygybė $v(x+y) \\ge \\min(v(x), v(y))$. Lygybė galioja, kai vertinimai skirtingi.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-11-08-trap-2",
+          "title": "Sumažintas tikslumas",
+          "wrongMove": "Spėjama, kad vertinimas yra bent mažiausias, bet ne tiksliai lygus jam.",
+          "whyTempting": "Ultrametrinė nelygybė $v(x+y) \\ge \\min(v(x), v(y))$ dažnai pateikiama tik kaip nelygybė.",
+          "correction": "Jei vertinimai skiriasi, nelygybė virsta griežta lygybe: $v(x+y) = \\min(v(x), v(y))$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutiktų, jei $v_3(x) = v_3(y) = 2$? Ar galėtume tiksliai nustatyti $v_3(x+y)$?",
+        "Kokia yra $v_p(n!)$ formulė (Ležandro formulė)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-11-08-srs-1",
+          "deck": "theory",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė p-adinio vertinimo savybė sumai $v_p(x+y)$, kai $v_p(x) \\neq v_p(y)$?",
+          "back": "$v_p(x+y) = \\min(v_p(x), v_p(y))$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-11-test-challenge",
+      "title": "11 klasės olimpiadinis iššūkis",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-11-skaiciu-teorija"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-11-01",
+        "ex-olimpiada-11-04",
+        "ex-olimpiada-11-07",
+        "ex-olimpiada-11-10",
+        "ex-olimpiada-11-12",
+        "ex-olimpiada-11-14",
+        "ex-olimpiada-11-16",
+        "ex-olimpiada-11-19",
+        "ex-olimpiada-11-24",
+        "ex-olimpiada-11-32"
+      ],
+      "masteryWeight": 2.0
+    }
+  ]
+}

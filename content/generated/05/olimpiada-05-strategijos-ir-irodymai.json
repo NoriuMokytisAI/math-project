@@ -1,0 +1,242 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-05-strategijos-ir-irodymai",
+    "title": "Strategijos ir įrodymai",
+    "grade": 5,
+    "strand": "Strategijos ir įrodymai",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-05-concept-logic",
+      "olimpiada-05-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-05-ee0b640b"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Paritetas: lyginių ir nelyginių skaičių magija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vienas galingiausių ir paprasčiausių įrankių pradinėse olimpiadose yra skaičių lyginumas (paritetas)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prisiminkite pagrindines taisykles:\n- $\\text{Lyginis} \\pm \\text{Lyginis} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\pm \\text{Nelyginis} = \\text{Lyginis}$\n- $\\text{Lyginis} \\pm \\text{Nelyginis} = \\text{Nelyginis}$\n- $\\text{Lyginis} \\times \\text{Bet koks} = \\text{Lyginis}$\n- $\\text{Nelyginis} \\times \\text{Nelyginis} = \\text{Nelyginis}$"
+        },
+        {
+          "type": "method",
+          "text": "Jei uždavinyje kalbama apie objektų mainus, lentelės spalvinimą ar operacijas su skaičiais, stebėkite, kaip keičiasi lyginių arba nelyginių skaičių kiekis. Šis savybės nekintamumas vadinamas **invariantu**."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-05-concept-logic",
+      "title": "Olimpiadinė logika ir dedukcija",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas nuosekliai ir griežtai išvesti teisingas išvadas iš pateiktų prielaidų, eliminuojant prieštaravimus.",
+      "intuition": "Mąstymas žingsnis po žingsnio, kai atmetame neįmanomus variantus ir randame vienintelį teisingą kelią.",
+      "formal": "Teiginių logikos dėsnių taikymas, siekiant nustatyti pradinių sąlygų suderinamumą ir gauti logiškai būtinus sekmenis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-method",
+      "title": "Matematinio įrodymo samprata",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentų grandinės sudarymas, neabejotinai patvirtinantis teiginio teisingumą visiems nagrinėjamiems atvejams.",
+      "intuition": "Tai nėra tiesiog kelių pavyzdžių patikrinimas. Tai paaiškinimas, KODĖL tai galioja visada be jokių išimčių.",
+      "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-05-ee0b640b",
+      "topicId": "olimpiada-05-strategijos-ir-irodymai",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Strategijos ir įrodymai",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu leidžiama nutrinti bet kuriuos du skaičius ir vietoje jų užrašyti jų skirtumo absoliutų dydį. Ar po kelių tokių ėjimų lentelėje gali likti vienintelis skaičius $0$?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Ne, negali likti skaičius $0$."
+      },
+      "answerText": "Ne",
+      "coreIdea": {
+        "title": "Nagrinėkite bendrą sumos lyginumą",
+        "text": "Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?"
+      },
+      "strategyTags": [
+        "paritetas-invariantas",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atkreipkite dėmesį, kaip keičiasi visų ant lentos užrašytų skaičių suma atliekant operaciją. Ar ji visada sumažėja lyginiu skaičiumi?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite pradinę visų skaičių nuo $1$ iki $21$ sumą ir nustatykite jos lyginumą.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Pradinė visų skaičių suma yra $1 + 2 + \\dots + 21 = \\frac{21 \\times 22}{2} = 231$, kas yra nelyginis...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame pradinę sumą $S = 1+2+...+21 = 231$. Tai nelyginis skaičius."
+        },
+        {
+          "text": "Pakeitus $a$ ir $b$ į $|a-b|$, suma pasikeičia dydžiu $(a+b) - |a-b|$. Šis skirtumas visada yra lyginis ($2 \\min(a,b)$)."
+        },
+        {
+          "text": "Kadangi pradinė suma nelyginė, o kiekvienas pokytis lyginis, galutinė suma visada išliks nelyginė. Skaičius $0$ yra lyginis, todėl jis likti negali."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-ee0b640b-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "paritetas-invariantas"
+          ],
+          "steps": [
+            {
+              "title": "Invarianto nustatymas",
+              "action": "Nagrinėjame operaciją $a, b \\to |a-b|$ ir stebime sumos paritetą (lyginumą).",
+              "reason": "Jei tam tikra savybė nesikeičia, galime įrodyti, kad tam tikra būsena nepasiekiama.",
+              "result": "Sumos lyginumas išlieka toks pat (invariantas)."
+            },
+            {
+              "title": "Būsenų palyginimas",
+              "action": "Lyginame pradinės sumos paritetą su norimo rezultato ($0$) paritetu.",
+              "reason": "Prieštaravimas tarp paritetų įrodo, kad tikslas nepasiekiamas.",
+              "result": "Įrodyta, kad likti $0$ negali."
+            }
+          ],
+          "finalAnswer": "Ne, negali likti skaičius $0$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-ee0b640b-trap-1",
+          "title": "Konkrečių pavyzdžių bandymas be galo",
+          "wrongMove": "Mokinys bando trinti skaičius įvairiomis kombinacijomis, tikėdamasis rasti sprendinį.",
+          "whyTempting": "Atrodo, kad tiesiog dar nerasta teisinga seka.",
+          "correction": "Jei po kelių bandymų nepavyksta, ieškokite bendros savybės (invarianto), kuri apriboja galimybes.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-invariant"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-ee0b640b-trap-2",
+          "title": "Skirtumo modulio ignoravimas",
+          "wrongMove": "Manoma, kad operacija yra paprasta atimtis, nepastebint, kad skaičių kiekis mažėja.",
+          "whyTempting": "Sąlygos greitas perskaitymas.",
+          "correction": "Atidžiai stebėkite, kiek skaičių lieka po kiekvieno veiksmo – tai padės suprasti proceso pabaigą.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-ee0b640b-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu l...",
+          "back": "Taikome šį metodą: Pabandykite įvertinti, kaip kinta visų ant lentos užrašytų skaičių suma, kai du skaičius $a$ ir $b$ pakeičiame jų skirtumu $|a-b|$. Ar pasikeičia sumos lyginumas?",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-05-test-challenge",
+      "title": "Olimpiadinis iššūkis (5 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-05-strategijos-ir-irodymai"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-05-031859fd",
+        "ex-olimpiada-05-45f96440",
+        "ex-olimpiada-05-cb54fdbc",
+        "ex-olimpiada-05-a3f215fa",
+        "ex-olimpiada-05-f5a521c1",
+        "ex-olimpiada-05-ee0b640b",
+        "ex-olimpiada-05-b95502c0",
+        "ex-olimpiada-05-cbff97d9",
+        "ex-olimpiada-05-eb7e344a",
+        "ex-olimpiada-05-1fc20a2a"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

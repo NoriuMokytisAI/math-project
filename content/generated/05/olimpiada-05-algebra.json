@@ -1,0 +1,1283 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+  },
+  "topic": {
+    "id": "olimpiada-05-algebra",
+    "title": "Algebra",
+    "grade": 5,
+    "strand": "Algebra",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-05-concept-logic",
+      "olimpiada-05-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-05-b95502c0",
+      "ex-olimpiada-05-cbff97d9",
+      "ex-olimpiada-05-eb7e344a",
+      "ex-olimpiada-05-1fc20a2a",
+      "ex-olimpiada-05-866100dc",
+      "ex-olimpiada-05-6622d1e0",
+      "ex-olimpiada-05-b53ec404",
+      "ex-olimpiada-05-af96bd64"
+    ]
+  },
+  "theory": [],
+  "concepts": [
+    {
+      "id": "olimpiada-05-concept-logic",
+      "title": "Olimpiadinė logika ir dedukcija",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas nuosekliai ir griežtai išvesti teisingas išvadas iš pateiktų prielaidų, eliminuojant prieštaravimus.",
+      "intuition": "Mąstymas žingsnis po žingsnio, kai atmetame neįmanomus variantus ir randame vienintelį teisingą kelią.",
+      "formal": "Teiginių logikos dėsnių taikymas, siekiant nustatyti pradinių sąlygų suderinamumą ir gauti logiškai būtinus sekmenis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-05-concept-method",
+      "title": "Matematinio įrodymo samprata",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentų grandinės sudarymas, neabejotinai patvirtinantis teiginio teisingumą visiems nagrinėjamiems atvejams.",
+      "intuition": "Tai nėra tiesiog kelių pavyzdžių patikrinimas. Tai paaiškinimas, KODĖL tai galioja visada be jokių išimčių.",
+      "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "3 Pavyzdys: Loginis detektyvas",
+      "problem": "Aistė, Beata ir Cecilia dalyvavo matematikos konkurse. Po konkurso jų paklausė apie rezultatus. Aistė pasakė: 'Aš užėmiau pirmą vietą'. Beata pasakė: 'Aš neužėmiau pirmos vietos'. Cecilia pasakė: 'Aistė neužėmė pirmos vietos'. Žinoma, kad tik viena mergaitė pasakė tiesą, o visos kitos sumelavo. Kas užėmė pirmąją vietą, jei mergaitės nesidalino jokia vieta?",
+      "steps": [
+        {
+          "text": "Panagrinėkime Aistės ir Cecilijos teiginius. Aistė sako: 'Aš užėmiau pirmą vietą', o Cecilia sako: 'Aistė neužėmė pirmos vietos'. Šie teiginiai yra priešingi – vienas iš jų būtinai yra tiesa, o kitas – melas."
+        },
+        {
+          "text": "Kadangi tik viena iš trijų mergaičių pasakė tiesą, o viena iš tiesų jau yra tarp Aistės ir Cecilijos, tai Beatos teiginys 'Aš neužėmiau pirmos vietos' būtinai yra melas."
+        },
+        {
+          "text": "Jei Beatos teiginys yra melagingas, tai reiškia, kad Beata iš tikrųjų užėmė pirmą vietą."
+        },
+        {
+          "text": "Patikriname šį atvejį: jei Beata užėmė pirmą vietą, tai:\n- Aistės teiginys yra melas (nes pirmą vietą užėmė Beata);\n- Beatos teiginys yra melas;\n- Cecilijos teiginys 'Aistė neužėmė pirmos vietos' yra tiesa. Viskas puikiai sutampa su sąlyga."
+        }
+      ],
+      "answer": "Beata"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-05-b95502c0",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Šiuo metu tėvui yra $36$ metai, o jo sūnui – $8$ metai. Po kiek metų tėvas bus lygiai $3$ kartus vyresnis už sūnų?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Tėvas bus $3$ kartus vyresnis po $6$ metų."
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Sudarykite tiesinę lygtį",
+        "text": "Tarkime, kad praėjo $x$ metų. Tuomet tėvui bus $36 + x$ metų, o sūnui $8 + x$ metų. Sudarykite santykio lygtį."
+      },
+      "strategyTags": [
+        "lygtys",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pagalvokite, kad kasmet abiejų žmonių amžius padidėja lygiai vienetu. Atstumas (skirtumas) tarp jų amžiaus nesikeičia.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sudarykite lygtį, kurioje nežinomasis $x$ yra praėjusių metų skaičius.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Tarkime, kad praėjo $x$ metų. Tuomet tėvui bus $36 + x$ metų, o sūnui $8 + x$ metų. Sudarykite santykio lygtį.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Pažymėkime praėjusių metų skaičių kaip $x$. Tėvo amžius po $x$ metų bus $36+x$, o sūnaus – $8+x$. Pa...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Po $x$ metų tėvui bus $36+x$, o sūnui $8+x$."
+        },
+        {
+          "text": "Sudarome lygtį: $36+x = 3(8+x)$."
+        },
+        {
+          "text": "Sprendžiame: $36+x = 24+3x \\implies 12 = 2x \\implies x = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-b95502c0-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "lygtys"
+          ],
+          "steps": [
+            {
+              "title": "Kintamojo įvedimas",
+              "action": "Pažymime ieškomą metų skaičių $x$ ir aprašome būsimą amžių.",
+              "reason": "Tai leidžia susieti dabartinius duomenis su būsima sąlyga.",
+              "result": "Amžiaus išraiškos $36+x$ ir $8+x$."
+            },
+            {
+              "title": "Lygties sudarymas ir sprendimas",
+              "action": "Sulyginame tėvo amžių su trigubu sūnaus amžiumi ir išsprendžiame tiesinę lygtį.",
+              "reason": "Sąlyga nurodo konkretų santykį, kurį turi tenkinti $x$.",
+              "result": "$x=6$."
+            }
+          ],
+          "finalAnswer": "Tėvas bus $3$ kartus vyresnis po $6$ metų."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-b95502c0-trap-1",
+          "title": "Vieneto pridėjimas tik vienam asmeniui",
+          "wrongMove": "Lygtis užrašoma kaip $36+x = 3 \\times 8$.",
+          "whyTempting": "Pamirštama, kad sūnus taip pat sensta.",
+          "correction": "Visada prisiminkite: laikas bėga visiems vienodai, todėl prie abiejų pusių pridedame tą patį $x$.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-b95502c0-trap-2",
+          "title": "Neteisingas daugybos krypties parinkimas",
+          "wrongMove": "Dauginama tėvo pusė: $3(36+x) = 8+x$.",
+          "whyTempting": "Mokinys painioja, kas yra vyresnis ir kuriam reikia taikyti daugiklį.",
+          "correction": "Padauginkite mažesnį skaičių, kad jis susilygintų su didesniu.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-b95502c0-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Šiuo metu tėvui yra $36$ metai, o jo sūnui – $8$ metai. Po k...",
+          "back": "Taikome šį metodą: Tarkime, kad praėjo $x$ metų. Tuomet tėvui bus $36 + x$ metų, o sūnui $8 + x$ metų. Sudarykite santykio lygtį.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-cbff97d9",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrašykite skliaustus reiškiniui $5 + 7 \\times 8 - 6 / 2$ taip, kad gauto reiškinio reikšmė būtų kuo didesnė. Kokia yra ši didžiausia reikšmė?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Didžiausia reikšmė yra $93$."
+      },
+      "answerText": "93",
+      "coreIdea": {
+        "title": "Išbandykite daugybos prioritetą",
+        "text": "Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti $5+7$ skliaustuose prieš dauginant iš $8$."
+      },
+      "strategyTags": [
+        "veiksmų-tvarka",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Daugyba iš didesnio skaičiaus duoda didesnį rezultatą. Pabandykite gauti kuo didesnį daugiklį prieš skaičių $8$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Išbandykite variantus: $(5+7) \\times 8$, $7 \\times (8-6)$ ir t.t. Nepamirškite veiksmų tvarkos skliaustų viduje.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti $5+7$ skliaustuose prieš dauginant iš $8$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Išbandome įvairias skliaustų dėjimo vietas:\n1. Be skliaustų: $5 + 56 - 3 = 59$.\n2. Su $(5+7)$: $(5+7...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tikriname pagrindinį variantą: $(5 + 7) \\times 8 - 6 / 2 = 12 \\times 8 - 3 = 96 - 3 = 93$."
+        },
+        {
+          "text": "Tikriname kitą variantą: $5 + 7 \\times (8 - 6 / 2) = 5 + 7 \\times 5 = 40$."
+        },
+        {
+          "text": "Palyginę visus skliaustų dėjimo būdus, matome, kad didžiausia reikšmė yra $93$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-cbff97d9-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "veiksmų-tvarka"
+          ],
+          "steps": [
+            {
+              "title": "Strateginis skliaustų grupavimas",
+              "action": "Ieškome būdų padidinti dauginamąsias dalis arba sumažinti atimamąsias.",
+              "reason": "Matematinės išraiškos reikšmė labiausiai priklauso nuo aukščiausio prioriteto veiksmų su didžiausiais skaičiais.",
+              "result": "Atrinkti pagrindiniai kandidatai."
+            },
+            {
+              "title": "Skaičiavimas ir lyginimas",
+              "action": "Nuosekliai apskaičiuojame kiekvieno varianto reikšmę laikydamiesi veiksmų tvarkos.",
+              "reason": "Tai vienintelis būdas įsitikinti, kuris variantas yra optimalus.",
+              "result": "Maksimali reikšmė $93$."
+            }
+          ],
+          "finalAnswer": "Didžiausia reikšmė yra $93$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-cbff97d9-trap-1",
+          "title": "Veiksmų tvarkos nepaisymas be skliaustų",
+          "wrongMove": "Skaičiuojama iš eilės iš kairės į dešinę: $(5+7) \\times 8 = 96$, tada $96-6=90$, tada $90/2=45$.",
+          "whyTempting": "Pradinis impulsas skaičiuoti taip, kaip parašyta.",
+          "correction": "Visada prisiminkite hierarchiją: daugyba ir dalyba atliekamos prieš sudėtį ir atimtį.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-cbff97d9-trap-2",
+          "title": "Tik akivaizdžiausių variantų tikrinimas",
+          "wrongMove": "Mokinys patikrina tik vieną būdą ir sustoja.",
+          "whyTempting": "Tinginystė arba klaidingas įsitikinimas, kad pirmas rastas būdas yra geriausias.",
+          "correction": "Olimpiadiniuose uždaviniuose 'didžiausia reikšmė' reikalauja bent kelių skirtingų bandymų palyginimo.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-cbff97d9-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Įrašykite skliaustus reiškiniui $5 + 7 \\times 8 - 6 / 2$ tai...",
+          "back": "Taikome šį metodą: Norint gauti kuo didesnį rezultatą, reikia sudauginti kuo didesnius skaičius. Pabandykite sujungti $5+7$ skliaustuose prieš dauginant iš $8$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-eb7e344a",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{9 \\times 10}$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Suma lygi $\\frac{9}{10}$."
+      },
+      "answerText": "9/10",
+      "coreIdea": {
+        "title": "Skaidykite trupmenas",
+        "text": "Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$."
+      },
+      "strategyTags": [
+        "trupmenos",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nereikia skaičiuoti bendrojo vardiklio visoms trupmenoms – tai užimtų per daug laiko. Pastebėkite dėsningumą: $\\frac{1}{2} = 1 - \\frac{1}{2}$, $\\frac{1}{6} = \\frac{1}{2} - \\frac{1}{3}$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pabandykite kiekvieną dėmenį $\\frac{1}{n(n+1)}$ užrašyti kaip skirtumą $\\frac{1}{n} - \\frac{1}{n+1}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Pritaikome teleskopinį skaidymą kiekvienam dėmeniui:\n$\\frac{1}{1 \\times 2} = 1 - \\frac{1}{2}$\n$\\frac...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išskleidžiame sumą: $(1 - \\frac{1}{2}) + (\\frac{1}{2} - \\frac{1}{3}) + (\\frac{1}{3} - \\frac{1}{4}) + \\dots + (\\frac{1}{9} - \\frac{1}{10})$."
+        },
+        {
+          "text": "Pastebime, kad visi viduriniai nariai susinaikina: $-\\frac{1}{2} + \\frac{1}{2} = 0$, $-\\frac{1}{3} + \\frac{1}{3} = 0$ ir t.t."
+        },
+        {
+          "text": "Lieka tik pirmas ir paskutinis nariai: $1 - \\frac{1}{10} = \\frac{9}{10}$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-eb7e344a-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "trupmenos"
+          ],
+          "steps": [
+            {
+              "title": "Teleskopinės sumos metodas",
+              "action": "Kiekvieną trupmeną skaidome į elementariųjų trupmenų skirtumą.",
+              "reason": "Tai leidžia supaprastinti ilgą seką į trumpą išraišką.",
+              "result": "Suma su daugeliu nulių."
+            },
+            {
+              "title": "Galutinis supaprastinimas",
+              "action": "Sutraukiame narius ir atliekame paskutinį atimties veiksmą.",
+              "reason": "Liekantys kraštiniai nariai duoda tikslų rezultatą be sudėtingų bendrųjų vardiklių.",
+              "result": "Suma $\\frac{9}{10}$."
+            }
+          ],
+          "finalAnswer": "Suma lygi $\\frac{9}{10}$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-eb7e344a-trap-1",
+          "title": "Bandymas rasti bendrą vardiklį",
+          "wrongMove": "Mokinys bando sudauginti $1 \\times 2 \\times 3 \\times ... \\times 10$ vardiklyje.",
+          "whyTempting": "Tai standartinis mokyklinis būdas sudėti trupmenas.",
+          "correction": "Pamatę ilgą trupmenų seką, visada ieškokite gudrybės ar dėsningumo (skaidymo), o ne skaičiuokite tiesiogiai.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-eb7e344a-trap-2",
+          "title": "Netinkamas narių kiekio suskaičiavimas",
+          "wrongMove": "Manoma, kad paskutinis narys yra $\\frac{1}{9}$ arba $\\frac{1}{11}$.",
+          "whyTempting": "Sąlygos užrašas '...+ 1/(9*10)' gali būti klaidingai interpretuojamas.",
+          "correction": "Atidžiai pažiūrėkite į paskutinį sandaugos narį vardiklyje – jis nurodo, kur baigiasi seka.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-eb7e344a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Apskaičiuokite sumą: $\\frac{1}{1 \\times 2} + \\frac{1}{2 \\tim...$",
+          "back": "Taikome šį metodą: Pastebėkite, kad bet kurią šios sekos trupmeną galima užrašyti kaip dviejų paprastųjų trupmenų skirtumą: $\\frac{1}{n(n+1)} = \\frac{1}{n} - \\frac{1}{n+1}$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-1fc20a2a",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs dar $10$ metimų, iš kurių $8$ buvo taiklūs, jo taiklumo procentas pakilo iki $65\\%$. Kiek iš viso baudų metimų atliko krepšininkas pabaigoje?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Iš viso atlikta $40$ metimų."
+      },
+      "answerText": "40",
+      "coreIdea": {
+        "title": "Išreikškite taiklius metimus",
+        "text": "Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui."
+      },
+      "strategyTags": [
+        "procentai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taiklumo procentas yra santykis tarp pataikytų metimų ir visų bandymų. Naudokite lygtį šiam santykiui aprašyti.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tarkime, kad pradžioje buvo $x$ metimų. Kiek iš jų buvo taiklūs, jei taiklumas $60\\%$?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Tarkime, iš pradžių krepšininkas metė $x$ kartų. Taiklių metimų skaičius buvo $0.6x$. Atlikus dar $1...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taiklių metimų pradžioje buvo $0.6x$."
+        },
+        {
+          "text": "Po papildomų metimų taiklių yra $0.6x + 8$, o visų metimų $x + 10$."
+        },
+        {
+          "text": "Sudarome lygtį: $\\frac{0.6x + 8}{x + 10} = 0.65$. Ją išsprendę gauname $x = 30$."
+        },
+        {
+          "text": "Galutinis metimų skaičius: $30 + 10 = 40$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "procentai"
+          ],
+          "steps": [
+            {
+              "title": "Procentų vertimas į trupmenas",
+              "action": "Užrašome pataikymus kaip dalį nuo kintamojo $x$.",
+              "reason": "Tai leidžia sudaryti matematinę lygybę kintamajam rasti.",
+              "result": "Išraiška $0.6x$."
+            },
+            {
+              "title": "Dinaminio pokyčio modeliavimas",
+              "action": "Pridedame naujus metimus prie abiejų santykio pusių ir sulyginame su nauju procentu.",
+              "reason": "Sąlyga nusako sistemos būseną po konkrečių pokyčių.",
+              "result": "Išspręsta lygtis, $x=30$, pabaigoje $40$."
+            }
+          ],
+          "finalAnswer": "Iš viso atlikta $40$ metimų."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-trap-1",
+          "title": "Atsakymo pateikimas tik pradiniam metimų skaičiui",
+          "wrongMove": "Mokinys randa $x=30$ ir užrašo tai kaip atsakymą.",
+          "whyTempting": "Džiaugsmas radus nežinomąjį priverčia pamiršti galutinį klausimą.",
+          "correction": "Visada perskaitykite klausimą: ar prašoma 'kiek buvo pradžioje', ar 'kiek iš viso'?",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-trap-2",
+          "title": "Netvarkingas procentų skaičiavimas",
+          "wrongMove": "Manoma, kad $60\\% + 8$ metimai tiesiog prideda $8$ prie procentų.",
+          "whyTempting": "Klaidingas supratimas apie procentų prigimtį.",
+          "correction": "Procentai visada skaičiuojami nuo kintančios visumos, todėl juos visada paverskite skaičiais arba trupmenomis.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-1fc20a2a-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Krepšininkas pataikė $60\\%$ visų mestų baudų metimų. Atlikęs...",
+          "back": "Taikome šį metodą: Tarkime, kad pradžioje buvo atlikta $x$ metimų. Taiklių metimų skaičius buvo $0.6x$. Sudarykite lygtį naujam taiklumui.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-866100dc",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dviejų kaimų yra $8$ cm. Koks bus atstumas tarp šių kaimų kitame žemėlapyje, kurio mastelis $1 : 200\\ 000$?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atstumas kitame žemėlapyje bus $2$ cm."
+      },
+      "answerText": "2 cm",
+      "coreIdea": {
+        "title": "Naudokite atvirkštinį santykį",
+        "text": "Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$."
+      },
+      "strategyTags": [
+        "proporcijos",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Mastelis $1 : 200\\ 000$ yra $4$ kartus 'smulkesnis' nei $1 : 50\\ 000$. Tai reiškia, kad tas pats atstumas žemėlapyje atrodys mažesnis.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagalvokite: jei mastelio vardiklis didėja, tai atstumas brėžinyje turi mažėti. Kiek kartų padidėjo vardiklis?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Pradinis mastelis yra $1 : 50\\ 000$, o naujasis mastelis – $1 : 200\\ 000$. Naujasis mastelis yra $20...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame mastelių santykį: $200\\ 000 / 50\\ 000 = 4$."
+        },
+        {
+          "text": "Kadangi naujas mastelis sumažina vaizdą dar $4$ kartus labiau, tai atstumas žemėlapyje bus $4$ kartus trumpesnis."
+        },
+        {
+          "text": "Atstumas = $8 / 4 = 2$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-866100dc-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proporcijos"
+          ],
+          "steps": [
+            {
+              "title": "Mastelių palyginimas",
+              "action": "Nustatome, kiek kartų pasikeitė mastelio koeficientas.",
+              "reason": "Mastelis yra tiesioginis mažinimo koeficientas, todėl jo pokytis tiesiogiai veikia brėžinio matmenis.",
+              "result": "Koeficientas $4$."
+            },
+            {
+              "title": "Proporcingas perskaičiavimas",
+              "action": "Padalijame pradinį brėžinio atstumą iš mastelio pokyčio koeficiento.",
+              "reason": "Didesnis vardiklis reiškia didesnį suspaudimą žemėlapyje.",
+              "result": "Atsakymas $2$ cm."
+            }
+          ],
+          "finalAnswer": "Atstumas kitame žemėlapyje bus $2$ cm."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-866100dc-trap-1",
+          "title": "Daugyba vietoje dalybos",
+          "wrongMove": "Mokinys $8$ padaugina iš $4$ ir gauna $32$ cm.",
+          "whyTempting": "Matomas skaičių didėjimas ($200k > 50k$) klaidingai susiejamas su atstumo didėjimu.",
+          "correction": "Įsivaizduokite realybę: kuo 'stambesnis' mastelis, tuo daugiau detalių (ir centimetrų) telpa, o 'smulkesniame' (pvz., pasaulio žemėlapyje) viskas yra maža.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-866100dc-trap-2",
+          "title": "Vienetų supainiojimas",
+          "wrongMove": "Bandoma paversti mastelį į kilometrus ir pametami nuliai.",
+          "whyTempting": "Dažnai mokiniai bando atlikti per daug nereikalingų skaičiavimų.",
+          "correction": "Jei klausia centimetrų kitame žemėlapyje, geriausia naudoti tiesioginį mastelių santykį be vertimo į kilometrus.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-866100dc-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Žemėlapyje, kurio mastelis $1 : 50\\ 000$, atstumas tarp dvie...",
+          "back": "Taikome šį metodą: Didesnis mastelio skaičius reiškia, kad žemėlapis labiau sumažintas. Palyginkite mastelius $50\\ 000$ ir $200\\ 000$.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-6622d1e0",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 23, 47, \\dots$ Raskite kitą šios sekos narį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kitas sekos narys yra $95$."
+      },
+      "answerText": "95",
+      "coreIdea": {
+        "title": "Ieškokite sąryšio tarp gretimų narių",
+        "text": "Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį."
+      },
+      "strategyTags": [
+        "sekos",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pažiūrėkite į skirtumus tarp gretimų narių: $3, 6, 12, 24...$ Ką pastebite apie šiuos skirtumus?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvienas narys yra gautas padauginus prieš tai buvusį iš $2$ ir kažką pridėjus. Pabandykite rasti šį skaičių.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Išnagrinėkime sekos narių skirtumus ir dėsningumus:\n- $2 \\times 2 + 1 = 5$\n- $5 \\times 2 + 1 = 11$\n-...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pastebime taisyklę: $2 \\times 2 + 1 = 5$, $5 \\times 2 + 1 = 11$, $11 \\times 2 + 1 = 23$."
+        },
+        {
+          "text": "Taisyklė yra $a_{n+1} = 2a_n + 1$."
+        },
+        {
+          "text": "Sekantis narys: $47 \\times 2 + 1 = 94 + 1 = 95$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-6622d1e0-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "sekos"
+          ],
+          "steps": [
+            {
+              "title": "Dėsningumo nustatymas",
+              "action": "Lyginame gretimų narių santykius ir skirtumus, ieškodami pasikartojančio veiksmo.",
+              "reason": "Sekos olimpiadose dažnai remiasi tiesinėmis rekurentinėmis formulėmis.",
+              "result": "Formulė $2n+1$."
+            },
+            {
+              "title": "Ekstrapoliacija",
+              "action": "Taikome rastą taisyklę paskutiniam žinomam nariui.",
+              "reason": "Jei dėsningumas pasitvirtina bent keturis kartus, juo galima remtis tolimesniam nariui nustatyti.",
+              "result": "Rastas skaičius $95$."
+            }
+          ],
+          "finalAnswer": "Kitas sekos narys yra $95$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-6622d1e0-trap-1",
+          "title": "Tik vieno skirtumo patikrinimas",
+          "wrongMove": "Pastebėjus, kad $5-2=3$, manoma, kad seka yra aritmetinė (pridedama po 3).",
+          "whyTempting": "Per didelis skubėjimas ir paprasčiausio modelio ieškojimas.",
+          "correction": "Visada patikrinkite dėsningumą bent tarp trijų ar keturių narių porų.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-6622d1e0-trap-2",
+          "title": "Skaičiavimo klaida dauginant",
+          "wrongMove": "Apskaičiuojama $47 \\times 2 = 84$ arba panašiai.",
+          "whyTempting": "Stresas arba neatidumas atliekant elementarius veiksmus.",
+          "correction": "Atlikite svarbius skaičiavimus raštu arba patikrinkite juos du kartus.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-6622d1e0-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Skaičių seka sudaryta pagal tam tikrą taisyklę: $2, 5, 11, 2...$",
+          "back": "Taikome šį metodą: Pažiūrėkite, kaip iš $2$ gauti $5$, iš $5$ gauti $11$. Kiekvienas narys yra maždaug dvigubai didesnis už prieš tai buvusį.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-b53ec404",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Jeigu tam tikrą sugalvotą skaičių padaugintume iš $4$, iš gauto rezultato atimtume $7$ ir gautą skirtumą padalintume iš $5$, gautume $9$. Koks skaičius buvo sugalvotas?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Sugalvotas skaičius yra $13$."
+      },
+      "answerText": "13",
+      "coreIdea": {
+        "title": "Atlikite veiksmus atbuline tvarka",
+        "text": "Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą."
+      },
+      "strategyTags": [
+        "lygtys",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Įsivaizduokite, kad einate atgal nuo galutinio rezultato $9$. Jei paskutinis veiksmas buvo dalyba iš $5$, koks skaičius buvo prieš tai?",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvieną atliktą veiksmą pakeiskite priešingu veiksmu: dalybą – daugyba, atimtį – sudėtimi.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Sudarome lygtį sugalvotam skaičiui $x$: $\\frac{4x - 7}{5} = 9$. Padauginame abi puses iš $5$: $4x - ...$",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Prieš dalinant iš $5$, buvo $9 \\times 5 = 45$."
+        },
+        {
+          "text": "Prieš atimant $7$, buvo $45 + 7 = 52$."
+        },
+        {
+          "text": "Prieš dauginant iš $4$, buvo $52 / 4 = 13$. Sugalvotas skaičius yra $13$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-b53ec404-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "lygtys"
+          ],
+          "steps": [
+            {
+              "title": "Atbulinės eigos metodas",
+              "action": "Vykdome visus uždavinyje aprašytus veiksmus priešinga tvarka.",
+              "reason": "Tai paprasčiausias būdas rasti pradinį skaičių lygčių sistemose su viena grandine.",
+              "result": "Grandinė: $9 \\to 45 \\to 52 \\to 13$."
+            },
+            {
+              "title": "Patikra",
+              "action": "Įstatome gautą skaičių į pradinę sąlygą ir atliekame veiksmus tiesiogine tvarka.",
+              "reason": "Tai leidžia išvengti aritmetinių klaidų sprendžiant atbulai.",
+              "result": "Patvirtinta $13$."
+            }
+          ],
+          "finalAnswer": "Sugalvotas skaičius yra $13$."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-b53ec404-trap-1",
+          "title": "Veiksmų tvarkos sumaišymas",
+          "wrongMove": "Bandoma pirma pridėti $7$, o tada dauginti iš $5$ (neteisinga eiga).",
+          "whyTempting": "Nesilaikoma loginės sekos 'nuo galo'.",
+          "correction": "Užsirašykite veiksmus tiesiogine tvarka ir tada skaitykite juos iš dešinės į kairę.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-b53ec404-trap-2",
+          "title": "Klaida dalinant 52 iš 4",
+          "wrongMove": "Gaunamas rezultatas $12$ arba $14$.",
+          "whyTempting": "Skaičiavimas mintyse be pasitikrinimo.",
+          "correction": "Skaidykite $52$ į $40 + 12$, tada dalinti iš $4$ bus daug paprasčiau.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-b53ec404-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Jeigu tam tikrą sugalvotą skaičių padaugintume iš $4$, iš ga...",
+          "back": "Taikome šį metodą: Jei galutinis rezultatas gautas padalijus iš $5$, tai prieš dalijimą skaičius turėjo būti $9 \\times 5 = 45$. Tęskite atbulinę eigą.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-05-af96bd64",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Keleivinis traukinys išvyko iš stoties $60$ km/h greičiu. Po $2$ valandų iš tos pačios stoties ta pačia kryptimi išvyko greitasis traukinys, kurio greitis $80$ km/h. Po kiek valandų nuo savo išvykimo greitasis traukinys pasivys keleivinį?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Greitasis traukinys pasivys po $6$ valandų."
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Raskite pradinį atstumą ir santykinį greitį",
+        "text": "Per $2$ valandas keleivinis traukinys jau nuvažiavo tam tikrą atstumą. Greitasis traukinys jį vejasi greičiu, kuris lygus greičių skirtumui."
+      },
+      "strategyTags": [
+        "judėjimo-uždaviniai",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-05-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-05-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia sužinokite, kiek kilometrų keleivinis traukinys nuvažiavo per tas $2$ valandas, kol greitasis dar stovėjo stotyje.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Greitasis traukinys yra $20$ km/h greitesnis. Tai reiškia, kad kiekvieną valandą jis sumažina atstumą iki keleivinio traukinio $20$ kilometrų.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite metodą: Per $2$ valandas keleivinis traukinys jau nuvažiavo tam tikrą atstumą. Greitasis traukinys jį vejasi greičiu, kuris lygus greičių skirtumui.",
+          "revealsConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Atlikite konkretų žingsnį: Keleivinis traukinys per $2$ valandas nuvažiavo $s = 60 \\text{ km/h} \\times 2 \\text{ h} = 120$ km. G...",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Keleivinis nuvažiavo $60 \\times 2 = 120$ km."
+        },
+        {
+          "text": "Greičių skirtumas $80 - 60 = 20$ km/h."
+        },
+        {
+          "text": "Laikas = $120 / 20 = 6$ valandos."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-05-af96bd64-method-1",
+          "title": "Pagrindinis loginis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "judėjimo-uždaviniai"
+          ],
+          "steps": [
+            {
+              "title": "Pradinio atotrūkio nustatymas",
+              "action": "Apskaičiuojame atstumą, kurį nuvažiavo pirmas objektas iki antrojo starto.",
+              "reason": "Tai yra 'vymos' distancija, kurią turi įveikti greitesnis objektas.",
+              "result": "$120$ km."
+            },
+            {
+              "title": "Artėjimo greičio skaičiavimas",
+              "action": "Randame greičių skirtumą ir padalijame atstumą iš šio skirtumo.",
+              "reason": "Santykinis greitis parodo, kaip greitai mažėja tarpas tarp objektų.",
+              "result": "Susitikimo laikas $6$ val."
+            }
+          ],
+          "finalAnswer": "Greitasis traukinys pasivys po $6$ valandų."
+        }
+      ],
+      "alternateMethodNote": "Šiam uždaviniui alternatyvus metodas nepateikiamas, nes uždavinys išsprendžiamas vieninteliu natūraliu keliu.",
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-05-af96bd64-trap-1",
+          "title": "Bendraujantis laiko skaičiavimas",
+          "wrongMove": "Bandoma dalinti $120$ iš $80$ (greitojo traukinio greičio).",
+          "whyTempting": "Mokinys pamiršta, kad pirmasis traukinys taip pat juda į priekį.",
+          "correction": "Visada naudokite santykinį (artėjimo) greitį, kai abu objektai juda ta pačia kryptimi.",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-05-af96bd64-trap-2",
+          "title": "Laiko pridėjimas prie pradinio vėlavimo",
+          "wrongMove": "Manoma, kad atsakymas yra $6+2=8$ valandos.",
+          "whyTempting": "Sumišimas dėl to, nuo kurio momento skaičiuojamas laikas.",
+          "correction": "Atidžiai skaitykite klausimą: ar prašoma laiko nuo greitojo traukinio išvykimo, ar nuo keleivinio?",
+          "reviewConceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "srsRecommended": false
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją?",
+        "Kokie būtų buvę kiti variantai, jei skaičiai sąlygoje būtų pakeisti?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-05-af96bd64-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokią strategiją taikome sprendžiant uždavinius apie: Keleivinis traukinys išvyko iš stoties $60$ km/h greičiu. Po...",
+          "back": "Taikome šį metodą: Per $2$ valandas keleivinis traukinys jau nuvažiavo tam tikrą atstumą. Greitasis traukinys jį vejasi greičiu, kuris lygus greičių skirtumui.",
+          "conceptIds": [
+            "olimpiada-05-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-05-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-05-test-challenge",
+      "title": "Olimpiadinis iššūkis (5 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-05-algebra"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-05-031859fd",
+        "ex-olimpiada-05-45f96440",
+        "ex-olimpiada-05-cb54fdbc",
+        "ex-olimpiada-05-a3f215fa",
+        "ex-olimpiada-05-f5a521c1",
+        "ex-olimpiada-05-ee0b640b",
+        "ex-olimpiada-05-b95502c0",
+        "ex-olimpiada-05-cbff97d9",
+        "ex-olimpiada-05-eb7e344a",
+        "ex-olimpiada-05-1fc20a2a"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

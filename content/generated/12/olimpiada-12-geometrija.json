@@ -1,0 +1,824 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus for Grade 12"
+  },
+  "topic": {
+    "id": "olimpiada-12-geometrija",
+    "title": "Geometrija",
+    "grade": 12,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-12-concept-barycentric",
+      "olimpiada-12-concept-feuerbach"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-12-12",
+      "ex-olimpiada-12-13",
+      "ex-olimpiada-12-14",
+      "ex-olimpiada-12-15",
+      "ex-olimpiada-12-16",
+      "ex-olimpiada-12-17"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Šiuolaikiniai geometrijos metodai: baricentrinės koordinatės ir judantys taškai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijos uždaviniuose, kur sunku rasti sintetinį įrodymą, baricentrinės koordinatės leidžia atlikti tikslų algebrinį skaičiavimą."
+        },
+        {
+          "type": "method",
+          "text": "Kiekvieną tašką išreikškite svoriais $(x:y:z)$ trikampio viršūnėse. Tiesės lygtis tampa tiesine lygtimi, o collinearity (taškų gulėjimas vienoje tiesėje) tikrinamas matricų determinantais."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-12-concept-barycentric",
+      "title": "Baricentrinės koordinatės",
+      "type": "concept",
+      "shortDefinition": "Koordinačių sistema geometrijoje, kurioje taško padėtis apibrėžiama trikampio viršūnių masėmis.",
+      "intuition": "Bet kurį plokštumos tašką galime išreikšti trikampio viršūnių tiesine kombinacija su svoriais, kurių suma lygi 1. Tai leidžia algebriškai spręsti geometrijos uždavinius.",
+      "formal": "Taškas $P$ trikampio $ABC$ plokštumoje užrašomas koordinatėmis $(x:y:z)$, kur $x \\vec{A} + y \\vec{B} + z \\vec{C} = (x+y+z) \\vec{P}$. Koordinačių reikšmės proporcingos trikampių $PBC$, $PCA$, $PAB$ orientuotiems plotams.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-12-concept-feuerbach",
+      "title": "Feuerbacho teorema ir mixtilinear apskritimai",
+      "type": "concept",
+      "shortDefinition": "Teorema apie devynių taškų apskritimo ir įbrėžtinio bei priabrėžtinių apskritimų sąlytį.",
+      "intuition": "Trikampio devynių taškų apskritimas visada liečia įbrėžtinį apskritimą aus vidaus ir tris priabrėžtinius apskritimus iš išorės.",
+      "formal": "Devynių taškų apskritimas yra liestinis įbrėžtiniam apskritimui taške $F$ (Feuerbacho taškas) ir priabrėžtiniams apskritimams taškuose $F_A, F_B, F_C$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Baricentrinės koordinatės",
+      "problem": "Trikampyje $ABC$ raskite pusiaukraštinių susikirtimo taško (centroido) $G$ baricentrines koordinates.",
+      "steps": [
+        {
+          "text": "Centroidas dalija pusiaukraštines santykiu 2:1."
+        },
+        {
+          "text": "Jo atstumai iki kraštinių, sverti kraštinių ilgiais, sukuria tris vienodo ploto trikampius $S_{GBC} = S_{GCA} = S_{GAB}$."
+        },
+        {
+          "text": "Todėl baricentrinės koordinatės yra lygios ir užrašomos santykiu $(1 : 1 : 1)$."
+        }
+      ],
+      "answer": "(1 : 1 : 1)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-12-12",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Kiek sutampančių taškų reikšmių pakanka įrodyti, kad projektinė transformacija (homografija) tiesėje yra tapati?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Projektinė geometrija: Homografijos",
+        "text": "Projektinė transformacija tiesėje apibrėžiama lygtimi $f(x) = (ax+b)/(cx+d)$. Kadangi turime 3 laisvės laipsnius (koeficientus galima padalyti iš vieno iš jų), 3 taškai vienareikšmiškai apibrėžia transformaciją."
+      },
+      "strategyTags": [
+        "logic",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite bendrąją trupmeninę-tiesinę funkciją $f(z)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskaičiuokite nepriklausomus koeficientus lygtyje.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kiek lygčių reikia sudaryti, kad rasti $a, b, c, d$ santykius?",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Projektinė transformacija $f(x) = \\frac{ax+b}{cx+d}$ turi 3 laisvės laipsnius."
+        },
+        {
+          "text": "Tapatumo transformacija yra $f(x) = x$, t.y. $a=1, b=0, c=0, d=1$."
+        },
+        {
+          "text": "Fiksavus 3 taškus $x_1, x_2, x_3$, gauname sistemą, kuri turi tik vieną sprendinį."
+        },
+        {
+          "text": "Jei 3 taškai lieka vietoje, tai visa funkcija yra tapati."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-12-method-1",
+          "title": "Koeficientų analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Laisvės laipsnių skaičiavimas",
+              "action": "Nustatome minimalų taškų kiekį sistemai uždaryti.",
+              "reason": "Tai pagrindinė projektinės geometrijos teorema.",
+              "result": "Gauta reikšmė 3.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-12-trap-1",
+          "title": "Painiojimas su tiesine funkcija",
+          "wrongMove": "Sakoma, kad užtenka 2 taškų.",
+          "whyTempting": "Tiesei $y=ax+b$ užtenka dviejų taškų.",
+          "correction": "Projektinė transformacija yra bendresnė ir apima dalybą iš $cx+d$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-12-trap-2",
+          "title": "Laisvės laipsnių klaida",
+          "wrongMove": "Manoma, kad reikia 4 taškų, nes yra 4 raidės $a,b,c,d$.",
+          "whyTempting": "Tiesioginis kintamųjų skaičiavimas.",
+          "correction": "Svarbūs tik santykiai (pvz. $a/d$), todėl vienas koeficientas visada gali būti fiksuotas kaip 1.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks objektas išlieka nekintamas projektinėje transformacijoje (dvigubas santykis)?",
+        "Kaip ši teorema padeda įrodyti Desargo teoremą?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-12-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kiek taškų apibrėžia homografiją tiesėje?",
+          "back": "3 taškai.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-13",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Jei $a, b, c$ yra taisyklingojo trikampio viršūnės kompleksinėje plokštumoje, tenkinančios sąlygą $a + b\\omega + c\\omega^2 = 0$, koks yra $\\omega$ apibrėžimas, užtikrinantis šį ryšį?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "e^{2\\pi i / 3}"
+      },
+      "answerText": "e^{2\\pi i / 3}",
+      "coreIdea": {
+        "title": "Kompleksiniai skaičiai ir sukiniai",
+        "text": "Taisyklingasis trikampis pasižymi simetrija sukiniui per 120 laipsnių. Kompleksinis skaičius $\\omega = e^{2\\pi i / 3}$ atlieka būtent šį sukinį."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Viršūnes laikykite vektoriais iš trikampio centro (tada $a+b+c=0$).",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Vektorius $b$ gaunamas pasukus $a$ per $120^\\circ$ kampą.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite šį sukinį per kompleksinę eksponentę.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taisyklingajame trikampyje viršūnės yra išsidėsčiusios kas $120^\\circ$ aplink centrą."
+        },
+        {
+          "text": "Pasukimas per $120^\\circ$ atitinka daugybą iš $e^{2\\pi i / 3}$."
+        },
+        {
+          "text": "Lygties struktūra $a + b\\omega + c\\omega^2 = 0$ yra ekvivalenti teiginiui, kad taškai sudaro taisyklingąjį trikampį."
+        },
+        {
+          "text": "Išvada: $\\omega$ yra trečiojo laipsnio vieneto šaknis."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-13-method-1",
+          "title": "Rotacinė analizė",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Vektorių sulyginimas",
+              "action": "Išreiškiame viršūnes per centro sukinį.",
+              "reason": "Tai patogiausias būdas dirbti su taisyklingomis figūromis.",
+              "result": "Identifikuotas kampas $120^\\circ$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "e^{2\\pi i / 3}"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-13-trap-1",
+          "title": "Kampo sumaišymas",
+          "wrongMove": "Manoma, kad $\\omega$ atitinka $60^\\circ$ kampą.",
+          "whyTempting": "Taisyklingo trikampio vidaus kampai yra $60^\\circ$.",
+          "correction": "Centrinis kampas (nuo centro iki viršūnių) yra $360/3 = 120$ laipsnių.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-13-trap-2",
+          "title": "Ženklo klaida eksponentėje",
+          "wrongMove": "Rašoma $e^{\\pi i / 3}$.",
+          "whyTempting": "Panašių formulių gausa trigonometrijoje.",
+          "correction": "Visada pasitikrinkite: visas ratas yra $2\\pi$, todėl trečdalis rato yra $2\\pi/3$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atrodytų lygtis kvadratui kompleksinėje plokštumoje?",
+        "Kokia yra $1 + \\omega + \\omega^2$ reikšmė?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-13-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia kompleksinė konstanta susieja taisyklingo trikampio viršūnes?",
+          "back": "$\\omega = e^{2\\pi i / 3}$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-14",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite trikampio $ABC$ pusiaukraštinių susikirtimo taško (centroido) $G$ baricentrines koordinates.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "(1 : 1 : 1)"
+      },
+      "answerText": "(1 : 1 : 1)",
+      "coreIdea": {
+        "title": "Svorio centras ir plotai",
+        "text": "Baricentrinės koordinatės $(x:y:z)$ nurodo, kokias 'mases' reikia padėti viršūnėse, kad taškas būtų masės centras. Centroidui visos viršūnės turi vienodą įtaką."
+      },
+      "strategyTags": [
+        "proof",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite centroido apibrėžimą: $G = (A+B+C)/3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Baricentrines koordinates sudaro viršūnių koeficientai lygtyje.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Patikrinkite trikampių $GAB, GBC, GCA$ plotų santykį.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Centroidas dalija kiekvieną pusiaukraštinę santykiu 2:1."
+        },
+        {
+          "text": "Tai lemia, kad trikampiai $GBC, GCA, GAB$ turi vienodus plotus."
+        },
+        {
+          "text": "Kadangi baricentrinės koordinatės proporcingos priešpriešinių trikampių plotams, jos turi būti lygios."
+        },
+        {
+          "text": "Normalizuota forma: $1/3 : 1/3 : 1/3$, o standartinė santykio forma yra $(1 : 1 : 1)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-14-method-1",
+          "title": "Plotų santykio metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Geometrinė analizė",
+              "action": "Parodome plotų lygybę.",
+              "reason": "Tai giliausias baricentrinių koordinačių supratimas.",
+              "result": "Koordinatės nustatytos.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "(1 : 1 : 1)"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-14-trap-1",
+          "title": "Klaidingas kraštinių ilgio naudojimas",
+          "wrongMove": "Manoma, kad koordinatės yra $(a:b:c)$.",
+          "whyTempting": "Centroidas atrodo susijęs su kraštinėmis.",
+          "correction": "Koordinatės $(a:b:c)$ atitinka įbrėžtinio apskritimo centrą, o ne centroidą.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-14-trap-2",
+          "title": "Vektorinė sumaištis",
+          "wrongMove": "Pamirštama, kad koordinačių suma turi būti lygi 1 (arba jos turi būti santykio formoje).",
+          "whyTempting": "Nepakankamas baricentrinių koordinačių formalizmo išmanymas.",
+          "correction": "Visada užtikrinkite, kad santykis būtų supaprastintas iki paprasčiausių sveikųjų skaičių.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kokie yra ortocentro koeficientai?",
+        "Kaip naudojant šias koordinates rasti tašką pusiaukraštinėje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-14-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokios yra centroido baricentrinės koordinatės?",
+          "back": "$(1 : 1 : 1)$.",
+          "conceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-15",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu turime tris apskritimus plokštumoje, kurių centrai nesudaro vienos tiesės. Kiek bendrų radikalių centrų (taškų, turinčių vienodą laipsnį visų trijų apskritimų atžvilgiu) jie turi?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1"
+      },
+      "answerText": "1",
+      "coreIdea": {
+        "title": "Radikalių ašių sankirta",
+        "text": "Dviem apskritimams egzistuoja radikali ašis – tiesė, kurios taškai turi vienodą laipsnį abiejų apskritimų atžvilgiu. Trys tokios ašys, priklausančios apskritimų poroms, visada kertasi viename taške."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nagrinėkite tris radikalias ašis poroms (1,2), (2,3) ir (3,1).",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei taškas priklauso pirmai ir antrai ašiai, jo laipsnis $L_1 = L_2$ ir $L_2 = L_3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iš tranzityvumo seka, kad jis priklauso ir trečiajai ašiai.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Radikali ašis dviem apskritimams yra tiesė."
+        },
+        {
+          "text": "Dvi ašys (nesant lygiagretumo) kertasi viename taške."
+        },
+        {
+          "text": "Šiame taške laipsnis visų trijų apskritimų atžvilgiu yra vienodas."
+        },
+        {
+          "text": "Vadinasi, trečioji radikali ašis taip pat privalo eiti per šį tašką."
+        },
+        {
+          "text": "Kadangi centrai nesudaro tiesės, ašys negali būti lygiagrečios, todėl sankirta yra unikali."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-15-method-1",
+          "title": "Tranzityvumo įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Laipsnio sulyginimas",
+              "action": "Parodome, kad bendras taškas tenkina visas sąlygas.",
+              "reason": "Tai fundamentalus geometrijos konstravimo principas.",
+              "result": "Gauta reikšmė 1.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "1"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-15-trap-1",
+          "title": "Sumišimas su susikirtimo taškais",
+          "wrongMove": "Manoma, kad atsakymas priklauso nuo to, ar apskritimai kertasi.",
+          "whyTempting": "Radikali ašis sutampa su bendra styga, kai apskritimai kertasi.",
+          "correction": "Radikali ašis egzistuoja ir nekertantiems apskritimams; tai nekeitžia taškų skaičiaus.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-15-trap-2",
+          "title": "Ašies lygiagretumas",
+          "wrongMove": "Teigiama, kad taškų gali nebūti.",
+          "whyTempting": "Jei centrai būtų vienoje tiesėje, radikalios ašys būtų lygiagrečios.",
+          "correction": "Sąlygoje pasakyta, kad centrai nesudaro vienos tiesės, todėl ašys privalo kirstis.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kas nutinka, jei apskritimai yra koncentriniai?",
+        "Kaip radikalus centras naudojamas konstruojant statmeną apskritimą?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-15-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kiek radikalių centrų turi 3 apskritimai (nesant kolineariems centrams)?",
+          "back": "1.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-16",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Kiek mišrių įbrėžtinių apskritimų, kurie liečia dvi trikampio kraštines ir apibrėžtinį apskritimą, turi bet koks trikampis?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Mixtilinear apskritimų konfigūracija",
+        "text": "Kiekvienai viršūnei galima sukonstruoti vieną apskritimą, kuris yra įsispraudęs tarp dviejų iš tos viršūnės išeinančių kraštinių ir liečia trikampio apibrėžtinį apskritimą."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apsvarstykite vieną viršūnę, pavyzdžiui, A.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskritimas turi liesti kraštines AB ir AC.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kadangi trikampis turi 3 viršūnes, pakartokite šį mąstymą kiekvienai iš jų.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Viršūnei A egzistuoja unikalus apskritimas liečiantis AB, AC ir lanką BC."
+        },
+        {
+          "text": "Viršūnei B egzistuoja unikalus apskritimas liečiantis BA, BC ir lanką AC."
+        },
+        {
+          "text": "Viršūnei C egzistuoja unikalus apskritimas liečiantis CA, CB ir lanką AB."
+        },
+        {
+          "text": "Sumažinus iki visų įmanomų porų, gauname 3 tokius apskritimus."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-16-method-1",
+          "title": "Viršūnių perrinkimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Simetrijos išnaudojimas",
+              "action": "Parodome unikalumą kiekvienai viršūnei.",
+              "reason": "Konfigūracija yra simetriška trikampio elementų atžvilgiu.",
+              "result": "Nustatyta reikšmė 3.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-16-trap-1",
+          "title": "Painiojimas su priabrėžtiniais apskritimais",
+          "wrongMove": "Manoma, kad tai yra tie patys apskritimai, kurie liečia kraštines iš išorės.",
+          "whyTempting": "Abu tipai liečia visas 3 tieses (arba jų tęsinius/apibrėžtinius objektus).",
+          "correction": "Mixtilinear apskritimai liečia apibrėžtinį apskritimą, o ne trečią kraštinę.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-16-trap-2",
+          "title": "Skaičiavimo klaida",
+          "wrongMove": "Sakoma 6 (skaičiuojant išorines ir vidines galimybes).",
+          "whyTempting": "Dvigubo lanko egzistavimas (mažasis ir didysis lankas).",
+          "correction": "Standartiškai 'mixtilinear incircle' nurodo tik įbrėžtinę pusę (mažąjį lanką).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kur guli šių apskritimų sąlyčio su apibrėžtiniu apskritimu taškai?",
+        "Kaip šie apskritimai susiję su įbrėžtiniu apskritimu (Incircle)?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-16-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kiek mixtilinear incircles turi trikampis?",
+          "back": "3.",
+          "conceptIds": [
+            "olimpiada-12-concept-feuerbach"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-17",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Taisyklingo trikampio aukštinė yra $h$. Pagal Vivianio teoremą, raskite statmenų, nuleistų iš bet kurio vidinio taško į visas tris kraštines, ilgių sumą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "h"
+      },
+      "answerText": "h",
+      "coreIdea": {
+        "title": "Vivianio teorema",
+        "text": "Tai elegantiška teorema, teigianti, kad taisyklingame trikampyje atstumų nuo taško iki kraštinių suma yra pastovi ir lygi trikampio aukštinei. Tai įrodoma per plotų lygybę."
+      },
+      "strategyTags": [
+        "proof",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Sujunkite vidinį tašką $P$ su visomis trimis viršūnėmis $A, B, C$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Trikampio $ABC$ plotas yra trijų mažų trikampių $PAB, PBC, PCA$ plotų suma.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite plotus naudodami kraštinę $s$ ir atstumus $h_1, h_2, h_3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trikampio $ABC$ plotas $S = \\frac{1}{2} s \\cdot h$, kur $s$ yra kraštinė."
+        },
+        {
+          "text": "Mažųjų trikampių plotų suma: $\\frac{1}{2} s h_1 + \\frac{1}{2} s h_2 + \\frac{1}{2} s h_3$."
+        },
+        {
+          "text": "Išlyginame: $\\frac{1}{2} s h = \\frac{1}{2} s (h_1 + h_2 + h_3)$."
+        },
+        {
+          "text": "Suprastiname $s$ ir $1/2$, gauname $h = h_1 + h_2 + h_3$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-17-method-1",
+          "title": "Plotų sumavimo metodas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Skaidymas",
+              "action": "Padaliname trikampį į tris dalis su bendra viršūne $P$.",
+              "reason": "Tai leidžia tiesiogiai susieti atstumus su bendru plotu.",
+              "result": "Gauta pastovi suma $h$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "h"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-17-trap-1",
+          "title": "Priklausomybė nuo taško padėties",
+          "wrongMove": "Manoma, kad centre suma kitokia nei prie kraštinės.",
+          "whyTempting": "Atrodo, kad arčiau viršūnės atstumai turėtų 'pasikeisti' reikšmingai.",
+          "correction": "Suma išlieka identiška bet kuriam taškui trikampio viduje.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-17-trap-2",
+          "title": "Taikymas netaisyklingam trikampiui",
+          "wrongMove": "Bandoma taikyti tą pačią konstanta bet kokiam trikampiui.",
+          "whyTempting": "Noras apibendrinti teoremas.",
+          "correction": "Suma yra pastovi tik tada, kai visos kraštinės lygios (kad plotų formulėse $s$ būtų bendras vardiklis).",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip ši teorema apibendrinama taisyklingiems daugiakampiams?",
+        "Kas nutinka, jei taškas yra trikampio išorėje?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-17-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra atstumų nuo taško iki kraštinių suma taisyklingame trikampyje?",
+          "back": "Lygi trikampio aukštinei $h$ (Vivianio teorema).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

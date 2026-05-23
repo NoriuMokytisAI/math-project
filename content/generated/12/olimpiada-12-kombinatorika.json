@@ -1,0 +1,1189 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus for Grade 12"
+  },
+  "topic": {
+    "id": "olimpiada-12-kombinatorika",
+    "title": "Kombinatorika",
+    "grade": 12,
+    "strand": "Kombinatorika",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-12-concept-probabilistic-second-moment"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-12-05",
+      "ex-olimpiada-12-11",
+      "ex-olimpiada-12-18",
+      "ex-olimpiada-12-19",
+      "ex-olimpiada-12-20",
+      "ex-olimpiada-12-21",
+      "ex-olimpiada-12-22",
+      "ex-olimpiada-12-23",
+      "ex-olimpiada-12-24"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Ekstremalioji ir adityvioji kombinatorika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uždaviniuose apie aibių sumas taikoma Koši-Davenporto teorema ir kiti adityviosios kombinatorikos įrankiai."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami įvertinti sumos aibės $A+B$ dydį moduliu pirminis skaičius $p$, naudokite nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-12-concept-probabilistic-second-moment",
+      "title": "Antrojo momento metodas",
+      "type": "concept",
+      "shortDefinition": "Tikimybinis metodas įrodyti, kad atsitiktinis dydis yra teigiamas su didele tikimybe, naudojant dispersiją.",
+      "intuition": "Jei dydžio dispersija yra maža, palyginti su jo vidurkiu, tai dydis labai retai nukrypsta nuo vidurkio ir beveik niekada nebūna lygus nuliui.",
+      "formal": "Atsitiktiniam dydžiui $X \\ge 0$ galioja Čebyševo nelygybė formoje: $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2} = \\frac{E[X^2] - E[X]^2}{E[X]^2}$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Antrojo momento metodas",
+      "problem": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X = 0)$ iš viršaus.",
+      "steps": [
+        {
+          "text": "Taikome formulę $P(X = 0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$."
+        },
+        {
+          "text": "Įstatome reikšmes: $P(X=0) \\le \\frac{5}{10^2} = \\frac{5}{100} = 0.05$."
+        }
+      ],
+      "answer": "0.05"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-12-05",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Ar Šuro teorema garantuoja, kad nuspalvinus teigiamus sveikuosius skaičius baigtiniu skaičiumi spalvų, visada rasime vienspalvį sprendinį $x+y=z$? Atsakykite 'Taip' arba 'Ne'.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Taip"
+      },
+      "answerText": "Taip",
+      "coreIdea": {
+        "title": "Šuro teorema ir sumų aibės",
+        "text": "Šuro teorema teigia, kad bet kuriam spalvų skaičiui $k$ egzistuoja riba $S(k)$, tokia, kad intervale $[1, S(k)]$ bet koks $k$-spalvinimas turės vienspalvį trejetą $(x, y, x+y)$."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Prisiminkite Šuro teoremos formuluotę kombinatorikoje.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Teorema tiesiogiai mini lygtį $x+y=z$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Ar svarbu, kad $x$ ir $y$ gali būti lygūs? Teorema leidžia $x=y$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Identifikuojame uždavinį kaip Rėmzio teorijos dalį."
+        },
+        {
+          "text": "Šuro teorema garantuoja vienspalvį trejetą bet kuriam baigtiniam spalvų skaičiui."
+        },
+        {
+          "text": "Kadangi klausiama apie garantiją, atsakymas yra teigiamas."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-05-method-1",
+          "title": "Teorinis patvirtinimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Apibrėžimo taikymas",
+              "action": "Susiejame teoremos sąlygą su uždavinio klausimu.",
+              "reason": "Teorema yra egzistencinis teiginys.",
+              "result": "Patvirtinta.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Taip"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-05-trap-1",
+          "title": "Sumišimas su Van der Vardeno teorema",
+          "wrongMove": "Manoma, kad ieškome aritmetinės progresijos.",
+          "whyTempting": "Abi temos nagrinėja spalvinimus ir skaičių struktūras.",
+          "correction": "Van der Vardenas nagrinėja $a, a+d, a+2d$, o Šuras nagrinėja $x, y, x+y$.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-05-trap-2",
+          "title": "Begalybės baimė",
+          "wrongMove": "Manoma, kad begaliniam skaičiui spalvų teorema negalioja.",
+          "whyTempting": "Sąlygoje minimas 'baigtinis skaičius', kas gali sukelti abejonę.",
+          "correction": "Teorema galioja bet kokiam fiksuotam baigtiniam $k$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks yra mažiausias $x+y=z$ sprendinys 2-spalvinimui?",
+        "Kaip Šuro skaičiai $S(k)$ susiję su Rėmzio skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-05-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Ką garantuoja Šuro teorema spalvinant sveikuosius skaičius?",
+          "back": "Egzistuoja vienspalvis sprendinys lygčiai $x+y=z$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-11",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite $2 \\times 2$ matricos, kurios visi keturi elementai lygūs $1/2$, permanentą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "1/2"
+      },
+      "answerText": "1/2",
+      "coreIdea": {
+        "title": "Permanento apibrėžimas",
+        "text": "Permanentas skaičiuojamas panašiai kaip determinantas, tačiau visos sandaugos imamos su teigiamu ženklu, nepriklausomai nuo kėlinio ženklo."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite matricos struktūrą $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Permanento formulė $2 \\times 2$ matricai yra $ad + bc$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite visas reikšmes $1/2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Matrica yra $\\begin{pmatrix} 1/2 & 1/2 \\ 1/2 & 1/2 \\end{pmatrix}$."
+        },
+        {
+          "text": "Pagal formulę $\\text{perm}(A) = (1/2)(1/2) + (1/2)(1/2)$."
+        },
+        {
+          "text": "Skaičiuojame: $1/4 + 1/4 = 2/4 = 1/2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-11-method-1",
+          "title": "Tiesioginis skaičiavimas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Apibrėžimo taikymas",
+              "action": "Sudauginame narius be atimties ženklo.",
+              "reason": "Permanentas skiriasi nuo determinanto būtent šiuo aspektu.",
+              "result": "Gautas 1/2.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "1/2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-11-trap-1",
+          "title": "Painiojimas su determinantu",
+          "wrongMove": "Apskaičiuojamas $1/4 - 1/4 = 0$.",
+          "whyTempting": "Determinantas yra daug dažniau naudojama operacija.",
+          "correction": "Visada atidžiai perskaitykite operacijos pavadinimą; permanentui nereikia keisti ženklų.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-11-trap-2",
+          "title": "Matricos matmenų klaida",
+          "wrongMove": "Manoma, kad permanentas yra tik įstrižainės narių suma.",
+          "whyTempting": "Sumišimas su matricos pėdsaku (trace).",
+          "correction": "Permanentas apima visas įmanomas elementų pasirinkimo kombinacijas iš skirtingų eilučių ir stulpelių.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl permanentą skaičiuoti yra sunkiau nei determinantą didelėms matricoms?",
+        "Kokia yra Van der Waerdeno hipotezė apie dvigubai stochastines matricas?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-11-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra permanentas $2 \\times 2$ matricos su visais $1/2$?",
+          "back": "1/2 (nes $1/4 + 1/4 = 1/2$).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-18",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Atsitiktinis dydis $X \\ge 0$ turi vidurkį $E[X] = 10$ ir dispersiją $\\text{Var}(X) = 5$. Įvertinkite tikimybę $P(X=0)$ iš viršaus naudodami antrojo momento metodo principą (Čebyševo nelygybės formą).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "0.05"
+      },
+      "answerText": "0.05",
+      "coreIdea": {
+        "title": "Antrojo momento metodas",
+        "text": "Tikimybiniame metode antrasis momentas (dispersija) leidžia parodyti, kad atsitiktinis dydis yra teigiamas su didele tikimybe. Jei dispersija maža lyginant su vidurkio kvadratu, tikimybė, kad dydis bus 0, yra maža."
+      },
+      "strategyTags": [
+        "logic",
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-probabilistic-second-moment"
+      ],
+      "expectedMethodIds": [],
+      "conceptIds": [
+        "olimpiada-12-concept-probabilistic-second-moment"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Naudokite nelygybę $P(X=0) \\le \\frac{\\text{Var}(X)}{(E[X])^2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite vardiklį: $10^2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Padalykite dispersiją iš gauto rezultato.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Formulė: $P(X=0) \\le \\frac{\\text{Var}(X)}{E[X]^2}$."
+        },
+        {
+          "text": "Įstatome duomenis: $E[X] = 10$, $\\text{Var}(X) = 5$."
+        },
+        {
+          "text": "$P(X=0) \\le \\frac{5}{100} = 0.05$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-18-method-1",
+          "title": "Čebyševo nelygybės taikymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Momentų skaičiavimas",
+              "action": "Įvertiname nuokrypio tikimybę.",
+              "reason": "Tai pagrindinis įrankis tikimybiniuose įrodymuose.",
+              "result": "Tikimybė neviršija 5%.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "0.05"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-18-trap-1",
+          "title": "Vardiklio klaida",
+          "wrongMove": "Dalijama iš $E[X]$ vietoj $E[X]^2$.",
+          "whyTempting": "Painiojimas su Markovo nelygybe.",
+          "correction": "Markovo nelygybė įvertina $P(X \\ge a)$, o antrojo momento metodui būtinas kvadratas dispersijai atliepti.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-18-trap-2",
+          "title": "Atsakymo interpretacija",
+          "wrongMove": "Sakoma, kad tikimybė lygi 0.05.",
+          "whyTempting": "Noras rasti tikslų skaičių.",
+          "correction": "Tai yra tik viršutinis rėžis (įvertis), tikroji tikimybė gali būti daug mažesnė.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų įvertis, jei dispersija būtų 100?",
+        "Kada antrojo momento metodas yra naudingesnis už Markovo nelygybę?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-18-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia formulė įvertina $P(X=0)$ naudojant dispersiją?",
+          "back": "$P(X=0) \\le \\text{Var}(X)/E[X]^2$.",
+          "conceptIds": [
+            "olimpiada-12-concept-probabilistic-second-moment"
+          ],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-19",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite pilnojo grafo $K_3$ (trikampio) gretimumo matricos didžiausią tikrinę reikšmę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2"
+      },
+      "answerText": "2",
+      "coreIdea": {
+        "title": "Spektrinė grafų teorija",
+        "text": "Reguliariam grafui, kurio kiekviena viršūnė turi laipsnį $d$, didžiausia tikrinė reikšmė visada lygi $d$. Taip pat atitinkamas tikrinis vektorius yra $(1, 1, \\dots, 1)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite $K_3$ gretimumo matricą.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Koks yra kiekvienos viršūnės laipsnis (kaimynų skaičius) grafe $K_3$?",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Prisiminkite ryšį tarp $d$-reguliaraus grafo ir jo spektro.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$K_3$ yra grafas su 3 viršūnėmis, kur kiekviena sujungta su visomis kitomis."
+        },
+        {
+          "text": "Viršūnės laipsnis $d = 3-1 = 2$."
+        },
+        {
+          "text": "Matrica yra $\\begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\end{pmatrix}$."
+        },
+        {
+          "text": "Eilučių sumos yra pastovios ir lygios 2."
+        },
+        {
+          "text": "Didžiausia tikrinė reikšmė reguliariam grafui lygi jo laipsniui, t.y. 2."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-19-method-1",
+          "title": "Reguliarumo savybė",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Laipsnio identifikavimas",
+              "action": "Nustatome grafo kaimynų skaičių.",
+              "reason": "Tai greičiausias būdas rasti spektrinį spindulį reguliariems objektams.",
+              "result": "Gauta reikšmė 2.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-19-trap-1",
+          "title": "Viršūnių skaičiaus painiojimas su laipsniu",
+          "wrongMove": "Sako, kad atsakymas yra 3.",
+          "whyTempting": "Grafas vadinamas $K_3$.",
+          "correction": "Laipsnis visada lygus $n-1$, todėl atsakymas yra 2.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-19-trap-2",
+          "title": "Matricos sudarymo klaida",
+          "wrongMove": "Įstrižainėje rašomi vienetai.",
+          "whyTempting": "Sumišimas su kilpomis (self-loops).",
+          "correction": "Paprastuose grafuose kilpų nėra, todėl įstrižainė privalo būti užpildyta nuliais.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks būtų pilnojo grafo $K_n$ spektrinis spindulys?",
+        "Kokios yra likusios dvi $K_3$ tikrinės reikšmės?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-19-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia didžiausia $K_3$ matricos tikrinė reikšmė?",
+          "back": "2 (lygi grafo laipsniui).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-20",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite incidencyvumo matricos (virš lauko $\\mathbb{F}_2$) rangą jungiamame grafe su 5 viršūnėmis.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "4"
+      },
+      "answerText": "4",
+      "coreIdea": {
+        "title": "Algebrinė grafų teorija: Rangas",
+        "text": "Jungiamam grafui su $n$ viršūnių incidencyvumo matricos rangas virš $\\mathbb{F}_2$ yra lygus $n-1$. Tai tiesiogiai susiję su faktu, kad bet kurio medžio briaunos yra tiesiškai nepriklausomos, o ciklas sukuria priklausomybę."
+      },
+      "strategyTags": [
+        "logic",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apsvarstykite paprasčiausią jungiamą grafą su 5 viršūnėmis – medį.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiek briaunų turi medis su $n$ viršūnių? ($n-1$).",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pastebėkite, kad visų eilučių suma $\\mathbb{F}_2$ yra nulinis vektorius, kas sumažina rangą bent vienetu.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Incidencyvumo matrica turi $n=5$ eilučių (viršūnių)."
+        },
+        {
+          "text": "Kiekvienas stulpelis (briauna) turi lygiai du vienetus, todėl visų eilučių suma moduliu 2 yra 0."
+        },
+        {
+          "text": "Tai reiškia, kad eilutės yra tiesiškai priklausomos, tad $Rangas \\le n-1$."
+        },
+        {
+          "text": "Jungiamam grafui bet kurios $n-1$ eilutės yra nepriklausomos."
+        },
+        {
+          "text": "Išvada: $Rangas = 5-1 = 4$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-20-method-1",
+          "title": "Matricų teorija grafuose",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Priklausomybės nustatymas",
+              "action": "Parodome, kad viršūnių vektoriai sumuojasi į nulį.",
+              "reason": "Tai nustato viršutinę rango ribą.",
+              "result": "Gauta reikšmė 4.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-20-trap-1",
+          "title": "Briaunų skaičiaus tapatinimas su rangu",
+          "wrongMove": "Sakoma, kad rangas lygus briaunų skaičiui (pvz. 10 pilnam grafui).",
+          "whyTempting": "Matricos stulpelių skaičius atrodo svarbus.",
+          "correction": "Rangas negali viršyti eilučių skaičiaus, todėl dideliame grafe jis visada ribojamas viršūnių skaičiaus.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-20-trap-2",
+          "title": "Sumišimas su nesusijusiais komponentais",
+          "wrongMove": "Teigiama, kad rangas visada $n-1$.",
+          "whyTempting": "Supaprastinta taisyklė.",
+          "correction": "Sąlygoje pasakyta 'jungiamame'. Jei būtų $k$ komponentų, rangas būtų $n-k$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų rangas, jei grafas turėtų 2 atskiras dalis?",
+        "Kuo skiriasi incidencyvumo ir gretimumo matricų rangai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-20-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra 5 viršūnių jungiamo grafo incidencyvumo matricos rangas?",
+          "back": "4 (t.y. $n-1$).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-21",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite Rėmzio skaičių $R(3,3)$ – mažiausią žmonių grupę, kurioje visada yra bent trys tarpusavyje pažįstami arba trys tarpusavyje nepažįstami asmenys.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6"
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Rėmzio teorija: R(3,3)",
+        "text": "Rėmzio skaičiai nurodo minimalią struktūrą, kurioje neišvengiamai atsiranda tam tikra vienspalvė dalis. $R(3,3)=6$ yra klasikinis 'vakarėlio' uždavinys."
+      },
+      "strategyTags": [
+        "logic",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apsvarstykite 5 žmonių grupę ir nupieškite grafą, kuriame nėra $K_3$ ir $\\bar{K}_3$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Paimkite vieną žmogų iš 6 ir pažiūrėkite į jo 5 ryšius.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pagal Dirichlė principą, bent 3 iš jų privalo būti tos pačios spalvos (pažįstami arba ne).",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Parodome, kad 5 neužtenka: nupiešiamas ciklas $C_5$, kuriame nėra trikampių nei pagrindiniame grafe, nei papildinyje."
+        },
+        {
+          "text": "Nagrinėjame 6 žmones. Pasirenkame viršūnę $V$."
+        },
+        {
+          "text": "$V$ turi 5 kaimynus. Pagal Dirichlė principą, bent 3 briaunos iš $V$ yra raudonos (arba mėlynos)."
+        },
+        {
+          "text": "Tegu kaimynai yra $A, B, C$. Jei tarp jų yra bent viena raudona briauna, turime raudoną trikampį."
+        },
+        {
+          "text": "Jei visos briaunos tarp $A, B, C$ mėlynos, turime mėlyną trikampį."
+        },
+        {
+          "text": "Bet kuriuo atveju trikampis egzistuoja, tad $R(3,3)=6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-21-method-1",
+          "title": "Dirichlė principo taikymas grafuose",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Dvipusis įrodymas",
+              "action": "Parodome pavyzdį 5 ir prieštarą 6-etui.",
+              "reason": "Rėmzio skaičiui reikia nustatyti tikslią ribą iš abiejų pusių.",
+              "result": "Gauta reikšmė 6.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-21-trap-1",
+          "title": "Klaidingas atsakymas 5",
+          "wrongMove": "Manoma, kad 5 žmonių užtenka.",
+          "whyTempting": "5 yra 'apvali' reikšmė geometriniams pavyzdžiams.",
+          "correction": "Pavyzdys su $C_5$ parodo, kad 5 žmonės gali sudaryti grupę be trikampių.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-21-trap-2",
+          "title": "Tikimybinio argumento klaida",
+          "wrongMove": "Bandoma spėti vertę per vidutinį trikampių skaičių.",
+          "whyTempting": "Tikimybinis metodas dažnai naudojamas Rėmzio riboms rasti.",
+          "correction": "Mažoms vertėms kaip $R(3,3)$ būtinas tikslus konstruktyvus įrodymas.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kodėl $R(4,4)$ yra žymiai didesnis (18)?",
+        "Kaip šis uždavinys susijęs su Šuro teorema?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-21-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra R(3,3) reikšmė?",
+          "back": "6.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-22",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Raskite didžiausią įmanomą briaunų skaičių grafe su 5 viršūnėmis, kuriame nėra nė vieno trikampio ($K_3$-free).",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6"
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Turano teorema (ir Mantelio teorema)",
+        "text": "Mantelio teorema teigia, kad grafas be trikampių gali turėti ne daugiau kaip $n^2/4$ briaunų. Didžiausias toks grafas yra pilnasis dvidalis grafas $K_{\\lfloor n/2 \\rfloor, \\lceil n/2 \\rceil}$."
+      },
+      "strategyTags": [
+        "logic",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite padalyti 5 viršūnes į dvi grupes ir sujungti visas briaunas tarp grupių.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suskaičiuokite briaunas skaidymams (1, 4) ir (2, 3).",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite Mantelio formulę $\\lfloor n^2/4 \\rfloor$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Grafas be trikampių negali turėti briaunų savo vidinėse dalyse, jei jis yra dvidalis."
+        },
+        {
+          "text": "Pagal Mantelio teoremą, ekstremalus grafas yra dvidalis."
+        },
+        {
+          "text": "Suskirstome viršūnes į aibes po 2 ir 3."
+        },
+        {
+          "text": "Briaunų skaičius $2 \\cdot 3 = 6$."
+        },
+        {
+          "text": "Patikriname formulę: $\\lfloor 5^2 / 4 \\rfloor = \\lfloor 25 / 4 \\rfloor = 6$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-22-method-1",
+          "title": "Ekstremalių grafikų konstravimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Dvidališkumo optimizavimas",
+              "action": "Subalansuojame dalių dydžius sandaugai maksimizuoti.",
+              "reason": "Tai pagrindinis ekstremaliosios grafų teorijos principas.",
+              "result": "Gauta reikšmė 6.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-22-trap-1",
+          "title": "Ciklo C5 pasirinkimas",
+          "wrongMove": "Manoma, kad 5-kampis yra geriausias (5 briaunos).",
+          "whyTempting": "Ciklas be trikampio atrodo labai efektyvus.",
+          "correction": "Dvidalis grafas $K_{2,3}$ leidžia pridėti dar vieną briauną neprarandant $K_3$-free savybės.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-22-trap-2",
+          "title": "Neteisingas n² skaičiavimas",
+          "wrongMove": "Skaičiuojama $5^2/2 = 12.5$ ir apvalinama.",
+          "whyTempting": "Sumišimas su pilnojo grafo briaunų skaičiaus formule.",
+          "correction": "Formulė yra $n^2/4$, nes daliname į DVI lygias dalis.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip pasikeistų atsakymas, jei draustume $K_4$?",
+        "Ar toks grafas visada privalo būti dvidalis?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-22-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kiek max briaunų turi n=5 grafas be trikampių?",
+          "back": "6 (pagal Mantelio teoremą).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-23",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Pagal Rotho teoremą adityviojoje kombinatorikoje, kokio minimalaus ilgio aritmetinę progresiją garantuotai rasime bet kurioje teigiamo tankio sveikųjų skaičių aibėje?",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3"
+      },
+      "answerText": "3",
+      "coreIdea": {
+        "title": "Rotho ir Szemerédi teoremos",
+        "text": "Rotho teorema yra Szemerédi teoremos atvejis $k=3$. Ji teigia, kad jei aibė $A \\subset \\mathbb{N}$ turi teigiamą tankį, joje yra be galo daug 3 narių aritmetinių progresijų."
+      },
+      "strategyTags": [
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Atskirkite Rotho teoremą nuo bendrosios Szemerédi teoremos.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Rotho rezultatas buvo istorinis lūžis būtent konkrečiam ilgiui.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Klausimas apie tankį, o ne spalvinimą (kaip Van der Vardeno atveju).",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Aibės tankis $\\delta > 0$ reiškia, kad aibė yra 'didelė'."
+        },
+        {
+          "text": "Rotho teorema (1953) įrodė, kad tokia aibė turi 3 narių progresiją."
+        },
+        {
+          "text": "Bendresnė Szemerédi teorema vėliau tai išplėtė bet kokiam $k$."
+        },
+        {
+          "text": "Atsakymas remiantis konkrečia Rotho pavarde yra 3."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-23-method-1",
+          "title": "Teorinis priskyrimas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Konteksto analizė",
+              "action": "Susiejame autorių su jo pasiekta konstanta.",
+              "reason": "Olimpiadose svarbu skirti specifinius matematinius teiginius.",
+              "result": "Gauta reikšmė 3.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-23-trap-1",
+          "title": "Sumišimas su Van der Vardeno teorema",
+          "wrongMove": "Manoma, kad aibė turi būti spalvinama.",
+          "whyTempting": "Abi nagrinėja aritmetines progresijas.",
+          "correction": "Van der Vardenas nagrinėja visas spalvas, o Rothas – tik vieną, bet tankią aibę.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-23-trap-2",
+          "title": "Bet kokio ilgio spėjimas",
+          "wrongMove": "Sakoma 'bet kokio' arba 'k'.",
+          "whyTempting": "Szemerédi teorema leidžia bet kokį $k$.",
+          "correction": "Būtent Rotho vardas specifiškai siejamas su pirmuoju įrodymu ilgiui 3.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip Rotho teorema susijusi su Furstenbergo ergodine teorija?",
+        "Kokia yra geriausia žinoma viršutinė riba aibės dydžiui be 3-progresijų?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-23-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokio ilgio progresiją garantuoja Rotho teorema?",
+          "back": "3.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-12-24",
+      "topicId": "olimpiada-12-kombinatorika",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 85,
+      "statement": "Tegu $|A|=3$ ir $|B|=4$ yra poaibiai lauke $\\mathbb{Z}_{11}$. Raskite mažiausią galimą sumos aibės $A+B = \\{a+b : a\\in A, b\\in B\\}$ dydį pagal Koši-Davenporto teoremą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6"
+      },
+      "answerText": "6",
+      "coreIdea": {
+        "title": "Koši-Davenporto teorema",
+        "text": "Adityviojoje kombinatorikoje ši teorema teigia, kad sumos aibės dydis moduliu pirminis skaičius $p$ tenkina nelygybę $|A+B| \\ge \\min(p, |A|+|B|-1)$."
+      },
+      "strategyTags": [
+        "algebraic-transformation",
+        "logic"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Identifikuokite $p=11$, $|A|=3$ ir $|B|=4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Apskaičiuokite $|A|+|B|-1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Palyginkite rezultatą su $p$ ir pasirinkite mažesnįjį.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "$|A| + |B| - 1 = 3 + 4 - 1 = 6$."
+        },
+        {
+          "text": "Tikriname rėžį: $\\min(11, 6) = 6$."
+        },
+        {
+          "text": "Mažiausias galimas dydis yra 6."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-12-24-method-1",
+          "title": "Sumų aibės įvertis",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Formulės taikymas",
+              "action": "Apskaičiuojame teorinį minimumą.",
+              "reason": "Tai bazinė adityviosios kombinatorikos teorema.",
+              "result": "Gauta reikšmė 6.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-12-24-trap-1",
+          "title": "Sumažinimas vienetu pamirštas",
+          "wrongMove": "Manoma, kad minimumas yra $|A|+|B| = 7$.",
+          "whyTempting": "Intuityvus sudėjimas.",
+          "correction": "Teoremoje yra '-1', nes elementai gali 'persidengti' progresijos būdu.",
+          "conceptIds": []
+        },
+        {
+          "id": "ex-olimpiada-12-24-trap-2",
+          "title": "Modulio p ignoravimas",
+          "wrongMove": "Jei suma būtų didesnė už 11, sakoma didesnis skaičius.",
+          "whyTempting": "Skaičiavimas be apribojimų.",
+          "correction": "Aibės dydis niekada negali viršyti viso lauko dydžio $p=11$.",
+          "conceptIds": []
+        }
+      ],
+      "reflectionPrompts": [
+        "Kada pasiekiamas tikslus minimumas 6?",
+        "Kas nutinka, jei aibės yra aritmetinės progresijos su tuo pačiu skirtumu?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-12-24-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia Koši-Davenporto formulė sumos aibei?",
+          "back": "min(p, |A|+|B|-1).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "olimpiada-12-test-challenge",
+      "title": "Olimpiadinis iššūkis (12 klasė)",
+      "type": "olympiad",
+      "topicIds": [
+        "olimpiada-12-kombinatorika"
+      ],
+      "exerciseIds": [
+        "ex-olimpiada-12-01",
+        "ex-olimpiada-12-02",
+        "ex-olimpiada-12-03",
+        "ex-olimpiada-12-04",
+        "ex-olimpiada-12-05",
+        "ex-olimpiada-12-06",
+        "ex-olimpiada-12-07",
+        "ex-olimpiada-12-08",
+        "ex-olimpiada-12-09",
+        "ex-olimpiada-12-10"
+      ],
+      "masteryWeight": 1.5
+    }
+  ]
+}

@@ -1,0 +1,1912 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olympiad Guidelines",
+    "notes": "Generated from Olympiad Syllabus"
+  },
+  "topic": {
+    "id": "olimpiada-08-geometrija",
+    "title": "Geometrija",
+    "grade": 8,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 100,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-08-concept-logic",
+      "olimpiada-08-concept-method"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-08-b12edc64",
+      "ex-olimpiada-08-8f2f8e36",
+      "ex-olimpiada-08-22b2c6e7",
+      "ex-olimpiada-08-cc8ac0d9",
+      "ex-olimpiada-08-ca242a96",
+      "ex-olimpiada-08-ed9ada96",
+      "ex-olimpiada-08-c034e9e3",
+      "ex-olimpiada-08-35696f22",
+      "ex-olimpiada-08-9a9234f7",
+      "ex-olimpiada-08-d789b136",
+      "ex-olimpiada-08-ce546a26"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Apskritimo geometrija ir taško galia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijoje ryšiai tarp kampų ir atkarpų apskritime leidžia įrodyti daugelį teoremų. Kampas tarp stygų arba liestinių yra susijęs su atitinkamų lankų dydžiais, o stygų susikirtimo taškas turi pastovią sandaugą."
+        },
+        {
+          "type": "method",
+          "text": "Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$. Jei taškas $P$ yra apskritimo išorėje, ir iš jo nubrėžta liestinė $PT$ bei kirstinė $PAB$, tai galioja $PT^2 = PA \\cdot PB$. Tai leidžia rasti atkarpų ilgius ir įrodyti panašumus."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-08-concept-logic",
+      "title": "Olimpiadinė logika",
+      "type": "concept",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
+      "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
+      "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "olimpiada-08-concept-method",
+      "title": "Įrodymo metodas",
+      "type": "concept",
+      "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
+      "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
+      "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Herono formulės taikymas trikampio plotui",
+      "problem": "Raskite trikampio su kraštinėmis 13, 14, 15 plotą.",
+      "steps": [
+        {
+          "text": "Pirmiausia apskaičiuojame pusperimetrį $p = \\frac{13 + 14 + 15}{2} = 21$."
+        },
+        {
+          "text": "Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$."
+        },
+        {
+          "text": "Įstatome vertes: $S = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6}$."
+        },
+        {
+          "text": "Apskaičiuojame daugindami pirminiais: $S = \\sqrt{3 \\times 7 \\times 2^3 \\times 7 \\times 2 \\times 3} = \\sqrt{3^2 \\times 7^2 \\times 2^4} = 3 \\times 7 \\times 4 = 84$."
+        }
+      ],
+      "answer": "Trikampio plotas lygus 84."
+    },
+    {
+      "title": "Taško galios teorema apskritime",
+      "problem": "Apskritime susikerta dvi stygos $AB$ ir $CD$ taške $P$. Žinoma, kad $AP = 4$ cm, $PB = 6$ cm, o $CP = 3$ cm. Raskite atkarpos $PD$ ilgį.",
+      "steps": [
+        {
+          "text": "Pagal stygų susikirtimo savybę (Taško galios teoremą), gautų atkarpų sandaugos yra lygios: $AP \\times PB = CP \\times PD$."
+        },
+        {
+          "text": "Įstatome žinomas vertes: $4 \\times 6 = 3 \\times PD \\implies 24 = 3 \\times PD$."
+        },
+        {
+          "text": "Išreiškiame atkarpos ilgį: $PD = 24 / 3 = 8$ cm."
+        }
+      ],
+      "answer": "Atkarpos $PD$ ilgis lygus 8 cm."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-08-b12edc64",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskritimo skersmens galai yra taškuose $A(1, 2)$ ir $B(7, 10)$. Raskite šio apskritimo lygtį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Apskritimo lygtis: $(x-4)^2 + (y-6)^2 = 25$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Apskritimo lygtis iš skersmens taškų",
+        "text": "Apskritimo centras yra skersmens vidurio taškas, o spindulys yra atstumo tarp centro ir bet kurio taško ilgis (arba pusė skersmens)."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite apskritimo centro tašką $(h, k)$ naudodami vidurio taško formulę.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Centro koordinatės: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$. Centras yra $C(4, 6)$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite skersmens ilgį $AB$ arba tiesiogiai spindulio kvadratą $r^2 = (x_c - x_a)^2 + (y_c - y_a)^2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Gausite $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 25$. Užrašykite apskritimo lygtį $(x-h)^2 + (y-k)^2 = r^2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame apskritimo centrą $C(h, k)$ kaip atkarpos $AB$ vidurio tašką: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$."
+        },
+        {
+          "text": "Centro koordinatės yra $C(4, 6)$."
+        },
+        {
+          "text": "Apskaičiuojame spindulio kvadratą $r^2$ kaip atstumą nuo centro $C$ iki taško $A$: $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 9 + 16 = 25$."
+        },
+        {
+          "text": "Užrašome apskritimo lygtį: $(x-4)^2 + (y-6)^2 = 25$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-b12edc64-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame apskritimo centrą $C(h, k)$ kaip atkarpos $AB$ vidurio tašką: $h = \\frac{1+7}{2} = 4$ ir $k = \\frac{2+10}{2} = 6$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Centro koordinatės yra $C(4, 6)$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame spindulio kvadratą $r^2$ kaip atstumą nuo centro $C$ iki taško $A$: $r^2 = (4-1)^2 + (6-2)^2 = 3^2 + 4^2 = 9 + 16 = 25$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Užrašome apskritimo lygtį: $(x-4)^2 + (y-6)^2 = 25$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Apskritimo lygtis: $(x-4)^2 + (y-6)^2 = 25$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-b12edc64-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Užrašyti apskritimo lygtį pavidalu $(x+4)^2 + (y+6)^2 = 25$.",
+          "whyTempting": "Supainiojami ženklai lygties šablone.",
+          "whyItHappens": "Supainiojami ženklai lygties šablone.",
+          "wrongPattern": "Užrašyti apskritimo lygtį pavidalu $(x+4)^2 + (y+6)^2 = 25$.",
+          "correction": "Apskritimo lygtis turi minuso ženklus prieš centro koordinates: $(x-h)^2 + (y-k)^2 = r^2$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-b12edc64-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-b12edc64-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra apskritimo, kurio centras $(h,k)$ ir spindulys $r$, lygtis?",
+          "back": "$(x-h)^2 + (y-k)^2 = r^2$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-8f2f8e36",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Rombo įstrižainių ilgiai yra 12 cm ir 16 cm. Raskite šio rombo perimetrą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rombo perimetras yra 40 cm."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Rombo įstrižainių savybės",
+        "text": "Rombo įstrižainės yra statmenos viena kitai ir susikirtimo taške dalijasi pusiau. Tai leidžia taikyti Pitagoro teoremą rombo kraštinei rasti."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nubraižykite rombą su įstrižainėmis. Jos susikirtimo taške dalijasi pusiau.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pusės įstrižainių yra 6 cm ir 8 cm. Jos sudaro stačiojo trikampio statinius.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pritaikykite Pitagoro teoremą rombo kraštinei $a$ rasti: $a^2 = 6^2 + 8^2$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Gausite $a = 10$ cm. Apskaičiuokite perimetrą $P = 4a$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai."
+        },
+        {
+          "text": "Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm."
+        },
+        {
+          "text": "Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm."
+        },
+        {
+          "text": "Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-8f2f8e36-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Rombo įstrižainės susikirtimo taške dalijasi pusiau ir yra statmenos viena kitai.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Todėl rombo kraštinė $a$ yra įžambinė stačiojo trikampio, kurio statiniai yra įstrižainių pusės: $6$ cm ir $8$ cm.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Taikome Pitagoro teoremą: $a^2 = 6^2 + 8^2 = 36 + 64 = 100 \\implies a = 10$ cm.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame perimetrą: $P = 4a = 4 \\times 10 = 40$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Rombo perimetras yra 40 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-8f2f8e36-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Skaičiuoti rombo kraštinę naudojant pačius įstrižainių ilgius: $a^2 = 12^2 + 16^2$.",
+          "whyTempting": "Pamirštama, kad Pitagoro trikampį sudaro įstrižainių pusės, o ne ištisos įstrižainės.",
+          "whyItHappens": "Pamirštama, kad Pitagoro trikampį sudaro įstrižainių pusės, o ne ištisos įstrižainės.",
+          "wrongPattern": "Skaičiuoti rombo kraštinę naudojant pačius įstrižainių ilgius: $a^2 = 12^2 + 16^2$.",
+          "correction": "Įstrižainės susikirsdamos dalijasi pusiau, todėl skaičiavimams būtina naudoti pusinius ilgius.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-8f2f8e36-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-8f2f8e36-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokie yra rombo įstrižainių geometriniai ypatumai?",
+          "back": "Įstrižainės yra statmenos (kertasi $90^\\circ$ kampu) ir susikirtimo taške dalijasi pusiau.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-22b2c6e7",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Stačiajame trikampyje statinis prieš smailųjį kampą $\\alpha$ lygus $3$ cm, o įžambinė lygi $5$ cm. Raskite $\\cos \\alpha$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "$\\cos \\alpha = 4/5$ (arba 0.8)."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Trigonometrinis santykis stačiajame trikampyje",
+        "text": "Kosinusas yra priglaustinio statinio ir įžambinės santykis. Pirmiausia raskite antrąjį statinį."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite priglaustinį statinį $b$ naudodami Pitagoro teoremą.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$b = \\sqrt{5^2 - 3^2} = 4$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pagal apibrėžimą, $\\cos \\alpha$ yra priglaustinio statinio ir įžambinės santykis.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Santykis: $b / c = 4 / 5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm."
+        },
+        {
+          "text": "Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$."
+        },
+        {
+          "text": "Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-22b2c6e7-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Pagal Pitagoro teoremą randame priglaustinį statinį $b$: $b = \\sqrt{5^2 - 3^2} = 4$ cm.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kosinuso apibrėžimas: $\\cos \\alpha = \\frac{\\text{priglaustinis statinis}}{\\text{įžambinė}}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome vertes: $\\cos \\alpha = 4 / 5 = 0.8$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "$\\cos \\alpha = 4/5$ (arba 0.8)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-22b2c6e7-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
+          "whyTempting": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
+          "whyItHappens": "Supainiojamas kosinusas su sinusu (kuris yra priešpriešinio statinio santykis).",
+          "wrongPattern": "Parašyti $\\cos \\alpha = 3/5$ tiesiogiai.",
+          "correction": "Sinusas yra priešpriešinio statinio santykis, o kosinusas – priglaustinio statinio santykis su įžambine.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-22b2c6e7-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-22b2c6e7-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kas yra kosinusas stačiajame trikampyje?",
+          "back": "Tai priglaustinio statinio ir įžambinės ilgių santykis: $\\cos \\alpha = \\frac{adjacent}{hypotenuse}$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-cc8ac0d9",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskaičiuokite trikampio, kurio kraštinės yra 5 cm, 6 cm ir 9 cm, plotą naudodami Herono formulę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Herono formulės taikymas",
+        "text": "Apskaičiuokite pusperimetrį $p$ ir pritaikykite plotui formulę $S = \\sqrt{p(p-a)(p-b)(p-c)}$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite trikampio pusperimetrį $p$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite formulę: $S = \\sqrt{10(10-5)(10-6)(10-9)}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $S = \\sqrt{10 \\cdot 5 \\cdot 4 \\cdot 1} = \\sqrt{200}$. Supaprastinkite šaknį.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm."
+        },
+        {
+          "text": "Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$."
+        },
+        {
+          "text": "Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$."
+        },
+        {
+          "text": "$S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-cc8ac0d9-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame pusperimetrį: $p = \\frac{5 + 6 + 9}{2} = 10$ cm.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Taikome Herono formulę: $S = \\sqrt{p(p-a)(p-b)(p-c)}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome kraštines: $S = \\sqrt{10(10-5)(10-6)(10-9)} = \\sqrt{10 \\times 5 \\times 4 \\times 1}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "$S = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}$ $\\text{cm}^2$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Plotas lygus $10\\sqrt{2}$ $\\text{cm}^2$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-cc8ac0d9-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Naudoti perimetrą $P=20$ vietoje pusperimetrio $p=10$ formulėje.",
+          "whyTempting": "Sumaišomi perimetras ir pusperimetris.",
+          "whyItHappens": "Sumaišomi perimetras ir pusperimetris.",
+          "wrongPattern": "Naudoti perimetrą $P=20$ vietoje pusperimetrio $p=10$ formulėje.",
+          "correction": "Herono formulėje $p$ visada žymi pusperimetrį, todėl perimetrą būtina padalinti iš 2.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-cc8ac0d9-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-cc8ac0d9-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra Herono trikampio ploto formulė?",
+          "back": "$S = \\sqrt{p(p-a)(p-b)(p-c)}$, kur $p = \\frac{a+b+c}{2}$ yra pusperimetris.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-ca242a96",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio kraštinės yra $13$ cm, $14$ cm ir $15$ cm. Jo plotas lygus $84$ $\\text{cm}^2$. Raskite apie šį trikampį apibrėžto apskritimo spindulį $R$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Spindulys lygus 65/8 cm (arba 8.125 cm)."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Apibrėžtinio apskritimo spindulio formulė",
+        "text": "Pritaikykite formulę $R = \\frac{abc}{4S}$, kur $S$ – trikampio plotas, o $a, b, c$ – kraštinės."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite formulę, jungiančią kraštines, plotą ir apibrėžtinį spindulį.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Formulė yra $R = \\frac{abc}{4S}$. Mums duota $a=13$, $b=14$, $c=15$ ir $S=84$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite vertes: $R = \\frac{13 \\cdot 14 \\cdot 15}{4 \\cdot 84}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Suprastinkite trupmeną dalindami bendrus daliklius (14 ir 84 dalijasi iš 14, lieka 6; 15 ir 6 dalijasi iš 3).",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame apibrėžto apskritimo spindulio formulę $R = \\frac{abc}{4S}$."
+        },
+        {
+          "text": "Įstatome žinomus skaičius: $R = \\frac{13 \\times 14 \\times 15}{4 \\times 84}$."
+        },
+        {
+          "text": "Suprastiname skaitiklį ir vardiklį: $\\frac{14}{84} = \\frac{1}{6}$."
+        },
+        {
+          "text": "Gauname $R = \\frac{13 \\times 15}{4 \\times 6} = \\frac{13 \\times 5}{4 \\times 2} = \\frac{65}{8} = 8.125$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-ca242a96-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Naudojame apibrėžto apskritimo spindulio formulę $R = \\frac{abc}{4S}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome žinomus skaičius: $R = \\frac{13 \\times 14 \\times 15}{4 \\times 84}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Suprastiname skaitiklį ir vardiklį: $\\frac{14}{84} = \\frac{1}{6}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Gauname $R = \\frac{13 \\times 15}{4 \\times 6} = \\frac{13 \\times 5}{4 \\times 2} = \\frac{65}{8} = 8.125$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Spindulys lygus 65/8 cm (arba 8.125 cm)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-ca242a96-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Supainioti formulę su įbrėžtinio apskritimo formule $r = S/p$.",
+          "whyTempting": "Spinduliai $R$ (apibrėžtinis) ir $r$ (įbrėžtinis) dažnai sumaišomi.",
+          "whyItHappens": "Spinduliai $R$ (apibrėžtinis) ir $r$ (įbrėžtinis) dažnai sumaišomi.",
+          "wrongPattern": "Supainioti formulę su įbrėžtinio apskritimo formule $r = S/p$.",
+          "correction": "Apibrėžtiniam spinduliui visada naudojama formulė $abc/(4S)$, o įbrėžtiniam – $S/p$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-ca242a96-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-ca242a96-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia formulė sieja trikampio kraštines, plotą ir apibrėžto apskritimo spindulį?",
+          "back": "$R = \\frac{abc}{4S}$, kur $S$ yra plotas, o $a,b,c$ yra kraštinės.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-ed9ada96",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Apskritimo stygos $AB$ ir $CD$ susikerta taške $P$. Žinoma, kad lankas $AC = 40^\\circ$, o lankas $BD = 60^\\circ$. Raskite kampą $\\angle APD$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Kampas $\\angle APD = 130^\\circ$."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Kampas tarp susikertančių stygų",
+        "text": "Kampas tarp dviejų apskritimo stygų yra lygus lankų, kuriuos jos atkerta, sumos pusei. Kampas $\\angle APD$ yra gretutinis šiam kampui."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite kampą $\\angle APC$ tarp stygų, nukreiptą į lankus $AC$ ir $BD$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pagal apskritimo kampų savybes, $\\angle APC = \\frac{\\cup AC + \\cup BD}{2}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Apskaičiuokite: $\\angle APC = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kampas $\\angle APD$ yra gretutinis kampui $\\angle APC$, todėl jų suma lygi $180^\\circ$. Raskite $\\angle APD$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$."
+        },
+        {
+          "text": "Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$)."
+        },
+        {
+          "text": "Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-ed9ada96-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame kampą tarp stygų $\\angle APC$: $\\angle APC = \\frac{\\cup AC + \\cup BD}{2} = \\frac{40^\\circ + 60^\\circ}{2} = 50^\\circ$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kampai $\\angle APC$ ir $\\angle APD$ yra gretutiniai (guli ant vienos tiesės $CD$).",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Todėl jų suma lygi $180^\\circ$: $\\angle APD = 180^\\circ - \\angle APC = 180^\\circ - 50^\\circ = 130^\\circ$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Kampas $\\angle APD = 130^\\circ$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-ed9ada96-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
+          "whyTempting": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
+          "whyItHappens": "Neteisingai suprantama, kuris kampas apskaičiuojamas pagal formulę.",
+          "wrongPattern": "Teigti, kad $\\angle APD = 50^\\circ$ tiesiogiai.",
+          "correction": "Formulė duoda kampą, nukreiptą tiesiai į nurodytus lankus (t. y. smailųjį kampą tarp stygų). Šoninis kampas yra gretutinis.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-ed9ada96-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-ed9ada96-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kaip randamas kampas tarp susikertančių stygų apskritimo viduje?",
+          "back": "Jis lygus lankų, į kuriuos remiasi šis kampas ir jam priešpriešinis kampas, sumos pusei: $\\theta = \\frac{\\cup_1 + \\cup_2}{2}$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-c034e9e3",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Iš taško $P$, esančio apskritimo išorėje, nubrėžta liestinė $PT$ ir kirstinė, kertanti apskritimą taškuose $A$ ir $B$. Jei $PT = 6$ cm ir $PA = 4$ cm, raskite atkarpos $AB$ ilgį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atkarpos $AB$ ilgis yra 5 cm."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Liestinės ir kirstinės teorema",
+        "text": "Pagal taško galios teoremą, iš to paties taško išvestos liestinės kvadratas yra lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Užrašykite liestinės ir kirstinės teoremos lygtį.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$PT^2 = PA \\cdot PB$. Žinome $PT = 6$ ir $PA = 4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Įstatykite vertes: $6^2 = 4 \\cdot PB \\implies 36 = 4 \\cdot PB \\implies PB = 9$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $PB$ susideda iš $PA$ ir $AB$, tai $AB = PB - PA$. Apskaičiuokite $AB$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$."
+        },
+        {
+          "text": "Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$."
+        },
+        {
+          "text": "Randame visos kirstinės ilgį: $PB = 9$ cm."
+        },
+        {
+          "text": "Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-c034e9e3-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Taikome liestinės ir kirstinės teoremą: $PT^2 = PA \\times PB$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Įstatome reikšmes: $6^2 = 4 \\times PB \\implies 36 = 4 \\times PB$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Randame visos kirstinės ilgį: $PB = 9$ cm.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi taškas $A$ yra tarp $P$ ir $B$, tai $PB = PA + AB$. Iš čia $AB = 9 - 4 = 5$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Atkarpos $AB$ ilgis yra 5 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-c034e9e3-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
+          "whyTempting": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
+          "whyItHappens": "Dauginamos dvi matomos kirstinės atkarpos (išorinė ir vidinė).",
+          "wrongPattern": "Užrašyti teoremą kaip $PT^2 = PA \\cdot AB$, gaunant $36 = 4 \\cdot AB \\implies AB = 9$ cm.",
+          "correction": "Teoremoje reikalaujama dauginti išorinė dalis $PA$ iš VISOS kirstinės $PB$, t. y. $PT^2 = PA(PA + AB)$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-c034e9e3-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-c034e9e3-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra apskritimo liestinės ir kirstinės teorema (taško galia)?",
+          "back": "Liestinės atkarpos kvadratas lygus kirstinės išorinės dalies ir visos kirstinės sandaugai: $PT^2 = PA \\cdot PB$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-35696f22",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Dviejų panašių trikampių plotų santykis lygus $9:16$. Didesniojo trikampio perimetras lygus $24$ cm. Raskite mažesniojo trikampio perimetrą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Mažesniojo trikampio perimetras lygus 18 cm."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Panašumo koeficientas ir plotų santykis",
+        "text": "Panašių figūrų plotų santykis yra lygus panašumo koeficiento kvadratui $k^2$, o perimetrų santykis lygus pačiam koeficientui $k$."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite trikampių panašumo koeficientą $k$ iš plotų santykio.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$k^2 = 9/16 \\implies k = 3/4$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Perimetrų santykis atitinka panašumo koeficientą: $\\frac{P_{small}}{P_{large}} = k$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Įstatykite žinomas reikšmes: $P_{small} = 24 \\cdot \\frac{3}{4}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$."
+        },
+        {
+          "text": "Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$."
+        },
+        {
+          "text": "Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$."
+        },
+        {
+          "text": "Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-35696f22-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Panašių trikampių plotų santykis yra lygus panašumo koeficiento kvadratui: $k^2 = \\frac{9}{16}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Ištraukiame šaknį ir randame koeficientą: $k = \\sqrt{\\frac{9}{16}} = \\frac{3}{4}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Panašių figūrų perimetrų santykis lygus tiesiniam koeficientui $k$: $\\frac{P_{small}}{P_{large}} = \\frac{3}{4}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame: $P_{small} = 24 \\times \\frac{3}{4} = 18$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Mažesniojo trikampio perimetras lygus 18 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-35696f22-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Naudoti plotų santykį tiesiogiai perimetrui, t. y. $P_{small} = 24 \\times \\frac{9}{16} = 13.5$ cm.",
+          "whyTempting": "Pamirštama, kad plotai priklauso nuo koeficiento kvadrato, o perimetras yra tiesinis matmuo.",
+          "whyItHappens": "Pamirštama, kad plotai priklauso nuo koeficiento kvadrato, o perimetras yra tiesinis matmuo.",
+          "wrongPattern": "Naudoti plotų santykį tiesiogiai perimetrui, t. y. $P_{small} = 24 \\times \\frac{9}{16} = 13.5$ cm.",
+          "correction": "Tiesiniai matmenys (perimetras, kraštinės, aukštinės) visada santykiuoja kaip $k$, o plotas – kaip $k^2$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-35696f22-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-35696f22-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kuo skiriasi panašių figūrų plotų santykis nuo perimetrų santykio?",
+          "back": "Perimetrų santykis lygus $k$, o plotų santykis lygus $k^2$ (panašumo koeficiento kvadratui).",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-9a9234f7",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampyje centroidas žymimas $G$, apibrėžto apskritimo centras $O$, o ortocentras $H$. Šie trys taškai guli Oilerio tiesėje. Jei atstumas $OG = 4$ cm, raskite atkarpos $GH$ ilgį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Atkarpos $GH$ ilgis lygus 8 cm."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Oilerio tiesės taškų proporcija",
+        "text": "Centroidas $G$ dalija atkarpą tarp ortocentro $H$ ir apibrėžto apskritimo centro $O$ santykiu $2:1$, skaičiuojant nuo ortocentro."
+      },
+      "strategyTags": [
+        "advanced",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Koks yra taškų $O$, $G$, $H$ išsidėstymo eiliškumas ir proporcijos tiesėje?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Taškai išsidėstę tvarka $O - G - H$, o santykis yra $GH = 2 \\cdot OG$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Žinome, kad atstumas $OG = 4$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Padauginkite atstumą $OG$ iš 2, kad gautumėte $GH$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal Oilerio tiesės teoremą, trikampio centroidas $G$, apibrėžtinio centro taškas $O$ ir ortocentras $H$ yra vienoje tiesėje."
+        },
+        {
+          "text": "Centroidas $G$ visada dalija atkarpą $OH$ taip, kad $GH = 2 \\times OG$."
+        },
+        {
+          "text": "Kadangi $OG = 4$ cm, tai $GH = 2 \\times 4 = 8$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-9a9234f7-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Pagal Oilerio tiesės teoremą, trikampio centroidas $G$, apibrėžtinio centro taškas $O$ ir ortocentras $H$ yra vienoje tiesėje.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Centroidas $G$ visada dalija atkarpą $OH$ taip, kad $GH = 2 \\times OG$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi $OG = 4$ cm, tai $GH = 2 \\times 4 = 8$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Atkarpos $GH$ ilgis lygus 8 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-9a9234f7-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad $G$ yra vidurio taškas, todėl $GH = OG = 4$ cm.",
+          "whyTempting": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
+          "whyItHappens": "Vidurio taškas yra labiausiai paplitęs pasidalijimo santykis.",
+          "wrongPattern": "Manyti, kad $G$ yra vidurio taškas, todėl $GH = OG = 4$ cm.",
+          "correction": "Centroidas dalija atkarpą būtent santykiu $2:1$ (ortocentro pusėje atkarpa dvigubai ilgesnė), todėl $GH = 2 \\cdot OG$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-9a9234f7-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-9a9234f7-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra Oilerio tiesės taškų $O$ (apibrėžtinio centras), $G$ (centroidas) ir $H$ (ortocentras) santykis?",
+          "back": "Taškai yra vienoje tiesėje tvarka $O-G-H$, o atkarpa $GH = 2 \\cdot OG$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-d789b136",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio apibrėžtinio apskritimo spindulys lygus $10$ cm. Raskite šio trikampio devynių taškų apskritimo spindulį.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Devynių taškų apskritimo spindulys yra 5 cm."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Devynių taškų apskritimo spindulio savybė",
+        "text": "Devynių taškų apskritimo spindulys yra lygus pusei apibrėžtinio apskritimo spindulio."
+      },
+      "strategyTags": [
+        "advanced",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Koks ryšys sieja devynių taškų apskritimo spindulį su pradinio trikampio apibrėžtiniu spinduliu?",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Šis spindulys visada lygus $R / 2$, kur $R$ yra apibrėžto apskritimo spindulys.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Mums duotas $R = 10$ cm.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Padalykite 10 iš 2.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Devynių taškų apskritimas (Oilerio apskritimas) turi daug geometrinių savybių."
+        },
+        {
+          "text": "Viena iš pagrindinių savybių yra ta, kad jo spindulys $R_9$ visada lygus pusei apie trikampį apibrėžto apskritimo spindulio $R$."
+        },
+        {
+          "text": "Kadangi $R = 10$ cm, tai $R_9 = R / 2 = 10 / 2 = 5$ cm."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-d789b136-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Devynių taškų apskritimas (Oilerio apskritimas) turi daug geometrinių savybių.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Viena iš pagrindinių savybių yra ta, kad jo spindulys $R_9$ visada lygus pusei apie trikampį apibrėžto apskritimo spindulio $R$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi $R = 10$ cm, tai $R_9 = R / 2 = 10 / 2 = 5$ cm.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "Devynių taškų apskritimo spindulys yra 5 cm."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-d789b136-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad spindulys priklauso nuo trikampio tipo (pvz., statusis ar smailusis).",
+          "whyTempting": "Pradeda ieškoti papildomų sąlygų.",
+          "whyItHappens": "Pradeda ieškoti papildomų sąlygų.",
+          "wrongPattern": "Manyti, kad spindulys priklauso nuo trikampio tipo (pvz., statusis ar smailusis).",
+          "correction": "Savybė $R_9 = R/2$ galioja absoliučiai bet kokiam trikampiui plokštumoje.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-d789b136-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-d789b136-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Koks yra devynių taškų apskritimo spindulio santykis su apibrėžtiniu spinduliu?",
+          "back": "Devynių taškų apskritimo spindulys visada lygus pusei apibrėžtinio apskritimo spindulio ($R_9 = R/2$).",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-08-ce546a26",
+      "topicId": "olimpiada-08-geometrija",
+      "grade": 8,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Žinoma, kad $\\sin \\theta = \\frac{3}{5}$ ir $\\theta$ yra smailusis kampas. Apskaičiuokite $\\sin 2\\theta$ reikšmę.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "$\\sin 2\\theta = 24/25$ (arba 0.96)."
+      },
+      "answerText": "Įrodymas pateiktas sprendimo žingsniuose.",
+      "coreIdea": {
+        "title": "Dvigubo kampo sinuso formulė",
+        "text": "Taikykite formulę $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$. Kosinusą raskite pagal pagrindinę tapatybę."
+      },
+      "strategyTags": [
+        "standard",
+        "proof",
+        "geometrija"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-08-concept-method"
+      ],
+      "conceptIds": [
+        "olimpiada-08-concept-logic"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite $\\cos \\theta$ naudodami formulę $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
+          "revealsConceptIds": [],
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi kampas smailusis, kosinusas teigiamas: $\\cos \\theta = \\sqrt{1 - (3/5)^2} = 4/5$.",
+          "revealsConceptIds": [],
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Užrašykite dvigubo kampo formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
+          "revealsConceptIds": [],
+          "penalty": 0.1
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Apskaičiuokite: $2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5}$.",
+          "revealsConceptIds": [],
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$."
+        },
+        {
+          "text": "Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$."
+        },
+        {
+          "text": "Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$."
+        },
+        {
+          "text": "Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-08-ce546a26-method-1",
+          "title": "Griežtas įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Žingsnis 1",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Pirmiausia apskaičiuojame $\\cos \\theta$ naudodami pagrindinę tapatybę: $\\sin^2 \\theta + \\cos^2 \\theta = 1$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 2",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Kadangi $\\theta$ yra smailusis kampas (I ketvirtis), kosinusas yra teigiamas: $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 3",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Taikome dvigubo kampo sinusą formulę: $\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
+              "latex": ""
+            },
+            {
+              "title": "Žingsnis 4",
+              "action": "Atliekame loginį žingsnį.",
+              "reason": "Remiamės uždavinio sąlyga ir matematinėmis taisyklėmis.",
+              "result": "Apskaičiuojame: $\\sin 2\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25} = 0.96$.",
+              "latex": ""
+            }
+          ],
+          "finalAnswer": "$\\sin 2\\theta = 24/25$ (arba 0.96)."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-08-ce546a26-trap-1",
+          "title": "Dažna klaida",
+          "type": "mistake",
+          "wrongMove": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
+          "whyTempting": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
+          "whyItHappens": "Mechaniškai iškeliamas koeficientas prieš trigonometrinę funkciją.",
+          "wrongPattern": "Manyti, kad $\\sin 2\\theta = 2 \\sin \\theta = 6/5$.",
+          "correction": "Sinuso reikšmė negali viršyti 1, todėl $6/5$ yra matematiškai neįmanoma. Būtina taikyti sandaugos formulę su kosinusu.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        },
+        {
+          "id": "ex-olimpiada-08-ce546a26-trap-2",
+          "title": "Sąlygos interpretacija",
+          "type": "mistake",
+          "wrongMove": "Neteisingai suprasti uždavinio klausimą arba duotus duomenis.",
+          "whyTempting": "Paviršutiniškas sąlygos perskaitymas.",
+          "whyItHappens": "Neskiriama pakankamai laiko sąlygos analizei.",
+          "wrongPattern": "Spręsti ne tą uždavinį, kuris suformuluotas.",
+          "correction": "Atidžiai perskaitykite sąlygą bent du kartus prieš pradedant spręsti.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ]
+        }
+      ],
+      "reflectionPrompts": [
+        "Koks buvo svarbiausias šio uždavinio persilaužimo taškas?",
+        "Kaip šį sprendimą galėtume pritaikyti bendresniam atvejui?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-08-ce546a26-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra dvigubo kampo sinuso formulė?",
+          "back": "$\\sin 2\\theta = 2 \\sin \\theta \\cos \\theta$.",
+          "conceptIds": [
+            "olimpiada-08-concept-logic"
+          ],
+          "methodIds": [
+            "olimpiada-08-concept-method"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

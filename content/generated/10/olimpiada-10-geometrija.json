@@ -1,0 +1,794 @@
+{
+  "contentVersion": "0.1.0",
+  "source": {
+    "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
+    "textbook": "Olimpiadinės matematikos gidas",
+    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+  },
+  "topic": {
+    "id": "olimpiada-10-geometrija",
+    "title": "Geometrija",
+    "grade": 10,
+    "strand": "Geometrija",
+    "level": "olympiad",
+    "order": 110,
+    "estimatedStudyMinutes": 60,
+    "prerequisiteTopicIds": [],
+    "nextTopicIds": [],
+    "conceptIds": [
+      "olimpiada-10-concept-inversion"
+    ],
+    "formulaIds": [],
+    "mistakeIds": [],
+    "exerciseIds": [
+      "ex-olimpiada-10-14",
+      "ex-olimpiada-10-15",
+      "ex-olimpiada-10-16",
+      "ex-olimpiada-10-17",
+      "ex-olimpiada-10-18"
+    ]
+  },
+  "theory": [
+    {
+      "title": "Inversija apskritimo atžvilgiu ir grafų teorija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius."
+        },
+        {
+          "type": "method",
+          "text": "Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "olimpiada-10-concept-inversion",
+      "title": "Inversija apskritimo atžvilgiu",
+      "type": "concept",
+      "shortDefinition": "Geometrinis atvaizdis, kuris kiekvieną tašką $P$ (išskyrus centrą $O$) atvaizduoja į tašką $P'$ tiesėje $OP$ taip, kad $OP \\cdot OP' = R^2$.",
+      "intuition": "Erdvės transformacija, kuri tieses ir apskritimus paverčia kitais apskritimais ar tiesėmis.",
+      "formal": "Atvaizdis $\\psi$ su centru $O$ ir spinduliu $R$, atvaizduojantis tašką $P \\neq O$ į $P'$, kur $P' \\in OP$ ir $OP \\cdot OP' = R^2$.",
+      "relatedConceptIds": []
+    }
+  ],
+  "formulas": [],
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "title": "Inversijos taikymas geometrijoje",
+      "problem": "Nustatykite, į ką inversija su centru $O$ ir spinduliu $R$ atvaizduoja tiesę, einančią per centrą $O$.",
+      "steps": [
+        {
+          "text": "Tegul tiesė $l$ eina per inversijos centrą $O$."
+        },
+        {
+          "text": "Kiekvienas taškas $P \\in l$ ($P \\neq O$) yra atvaizduojamas į tašką $P'$ tiesėje $OP$."
+        },
+        {
+          "text": "Kadangi tiesė eina per $O$, tiesė $OP$ sutampa su pačia tiese $l$."
+        },
+        {
+          "text": "Todėl visi taškai $P'$ taip pat priklauso tai pačiai tiesei $l$."
+        },
+        {
+          "text": "Vadinasi, tiesė, einanti per centrą, yra atvaizduojama į save pačią (atmetus patį centrą $O$)."
+        }
+      ],
+      "answer": "Į save pačią (be taško $O$)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-olimpiada-10-14",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Įrodykite, kad atliekant inversiją apskritimo atžvilgiu, tiesė, kuri neina per inversijos centrą, atvaizduojama į apskritimą, einantį per inversijos centrą.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodytas tiesės atvaizdavimas į apskritimą."
+      },
+      "answerText": "Įrodyta taikant inversijos apibrėžimą ir stačiųjų trikampių panašumą.",
+      "coreIdea": {
+        "title": "Stačiųjų trikampių panašumas inversijoje",
+        "text": "Tarkime, $O$ yra inversijos centras, o $l$ yra tiesė. Nubrėžiame statmenį $OA$ iš $O$ į $l$. Bet kuriam tiesės taškui $P$ trikampiai $OAP$ ir $OP'A'$ yra panašūs, o kadangi kampas $OAP$ yra status, kampas $OP'A'$ taip pat bus status, kas reiškia, kad $P'$ guli ant apskritimo su skersmeniu $OA'$."
+      },
+      "strategyTags": [
+        "geometric-auxiliary-line"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [
+        "olimpiada-10-concept-inversion"
+      ],
+      "conceptIds": [
+        "olimpiada-10-concept-inversion"
+      ],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pasirinkite tašką $O$ kaip koordinačių pradžią ir nubrėžkite statmenį $OA$ iš $O$ į tiesę $l$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tegul $A'$ yra taško $A$ inversijos vaizdas. Bet kuriam kitam tiesės taškui $P$ ir jo vaizdui $P'$ galioja $OP \\cdot OP' = OA \\cdot OA' = R^2$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iš to seka santykis $OP/OA = OA'/OP'$, todėl trikampiai $OAP$ ir $OP'A'$ yra panašūs (bendras kampas $O$).",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi kampas $OAP = 90^\\circ$ (nes $OA$ status tiesei), tai ir kampas $OP'A'$ turi būti $90^\\circ$. Taškas $P'$ guli ant apskritimo, kurio skersmuo yra $OA'$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Nubrėžiame statmenį $OA$ iš centro $O$ į duotąją tiesę $l$."
+        },
+        {
+          "text": "Tegul $A'$ yra $A$ vaizdas po inversijos, o $P$ – bet koks tiesės $l$ taškas, o $P'$ – jo vaizdas."
+        },
+        {
+          "text": "Pagal inversijos apibrėžimą, $OP \\cdot OP' = OA \\cdot OA' = R^2 \\implies \\frac{OP}{OA} = \\frac{OA'}{OP'}$."
+        },
+        {
+          "text": "Trikampiai $OAP$ ir $OP'A'$ turi bendrą kampą $O$ ir proporcingas kraštines, todėl jie yra panašūs."
+        },
+        {
+          "text": "Kadangi $\\angle OAP = 90^\\circ$, tai ir $\\angle OP'A' = 90^\\circ$. Vadinasi, $P'$ visada guli ant apskritimo su skersmeniu $OA'$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-14-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "geometric-auxiliary-line"
+          ],
+          "steps": [
+            {
+              "title": "Statmens nubrėžimas",
+              "action": "Tegul $OA \\perp l$ su $A \\in l$, ir $A'$ yra $A$ inversijos vaizdas: $OA \\cdot OA' = R^2$.",
+              "reason": "Sukuriamas atskaitos taškas tiesėje.",
+              "latex": "OA \\cdot OA' = R^2",
+              "result": "Nubrėžtas statmuo ir nustatytas jo vaizdas."
+            },
+            {
+              "title": "Panašumo nustatymas",
+              "action": "Bet kuriam $P \\in l$, $OP \\cdot OP' = OA \\cdot OA' \\implies \\triangle OAP \\sim \\triangle OP'A'$.",
+              "reason": "Pagal kraštinių santykius ir bendrą kampą $O$.",
+              "latex": "\\triangle OAP \\sim \\triangle OP'A'",
+              "result": "Įrodytas dviejų trikampių panašumas."
+            },
+            {
+              "title": "Kampo savybė",
+              "action": "$\\angle OAP = 90^\\circ \\implies \\angle OP'A' = 90^\\circ$. Taškas $P'$ guli ant apskritimo su skersmeniu $OA'$.",
+              "reason": "Panašių trikampių atitinkami kampai yra lygūs, o $90^\\circ$ kampas brėžia apskritimą pagal Taleso teoremą.",
+              "latex": "\\angle OP'A' = 90^\\circ",
+              "result": "Įrodytas tiesės atvaizdavimas į apskritimą, einantį per $O$."
+            }
+          ],
+          "finalAnswer": "Įrodyta taikant inversijos apibrėžimą ir stačiųjų trikampių panašumą."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-14-trap-1",
+          "title": "Tiesių atvaizdavimo klaida",
+          "wrongMove": "Manoma, kad bet kuri tiesė po inversijos lieka tiese.",
+          "whyTempting": "Dauguma paprastų transformacijų (posūkiai, postūmiai) išlaiko tieses tiesėmis.",
+          "correction": "Tik tiesės, einančios per inversijos centrą, lieka tiesėmis. Kitos tiesės tampa apskritimais, einančiais per centrą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-inversion"
+          ],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-14-trap-2",
+          "title": "Apskritimo skersmens klaida",
+          "wrongMove": "Neteisingai apskaičiuojamas gauto apskritimo skersmuo, pvz., teigiant, kad jis lygus $R$.",
+          "whyTempting": "Mokiniai dažnai bando susieti skersmenį tiesiogiai su inversijos spinduliu be papildomų skaičiavimų.",
+          "correction": "Apskritimo skersmuo yra $OA'$, kur $OA' = R^2 / OA$. Jis priklauso nuo tiesės atstumo iki centro.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-inversion"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-14-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad atliekant inversiją apskritimo atžvilgiu, tie...?",
+          "back": "Tarkime, $O$ yra inversijos centras, o $l$ yra tiesė. Nubrėžiame statmenį $OA$ iš $O$ į $l$. Bet kuriam tiesės taškui $P$ trikampiai $OAP$ ir $OP'A'$ yra panašūs, o kadangi kampas $OAP$ yra status, kampas $OP'A'$ taip pat bus status, kas reiškia, kad $P'$ guli ant apskritimo su skersmeniu $OA'$.",
+          "conceptIds": [
+            "olimpiada-10-concept-inversion"
+          ],
+          "methodIds": [
+            "olimpiada-10-concept-inversion"
+          ],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-15",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul trys kompleksiniai skaičiai $a, b, c$ žymi trikampio viršūnes kompleksinėje plokštumoje. Įrodykite, kad šis trikampis yra lygiakraštis tada ir tik tada, kai galioja lygybė: $a^2 + b^2 + c^2 = ab + bc + ca$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta lygiakraščio trikampio sąlyga kompleksiniais skaičiais."
+      },
+      "answerText": "Įrodyta naudojant sukimo operatorių $e^{i\\pi/3}$.",
+      "coreIdea": {
+        "title": "Sukimas kompleksinėje plokštumoje",
+        "text": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\circ$ ($e^{i\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\pi/3}$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Lygiakraščiame trikampyje kraštinę $AC$ galima gauti pasukus kraštinę $AB$ $60^\\circ$ kampu apie tašką $A$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kompleksiniais skaičiais tai užrašoma: $c-a = (b-a)\\omega$, kur $\\omega = e^{i\\pi/3}$ tenkina lygtį $\\omega^2 - \\omega + 1 = 0$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Pertvarkykite lygtį: $c - a(1-\\omega) - b\\omega = 0$. Kadangi $1-\\omega = -\\omega^2$, gauname $c + a\\omega^2 - b\\omega = 0$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Pakelkite šį ryšį kvadratu arba sudauginkite su konjuguotu, kad pašalintumėte $\\omega$, ir gausite simetrinę formą $a^2+b^2+c^2 = ab+bc+ca$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Tegul $\\omega = e^{i\\pi/3}$, kuris tenkina $\\omega^2 - \\omega + 1 = 0 \\implies \\omega^2 = \\omega - 1$."
+        },
+        {
+          "text": "Lygiakraščio trikampio sąlyga yra $c - a = (b - a)\\omega$."
+        },
+        {
+          "text": "Pertvarkome lygtį: $c - a(1-\\omega) - b\\omega = 0 \\implies c + a\\omega^2 - b\\omega = 0$."
+        },
+        {
+          "text": "Panaudoję sąryšį su šaknimis, gauname, kad ši sąlyga ekvivalentu kvadratinei tapatybei $a^2+b^2+c^2 = ab+bc+ca$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-15-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Sukimo lygtis",
+              "action": "Užrašome $c-a = (b-a)\\omega$, kur $\\omega^2 - \\omega + 1 = 0$.",
+              "reason": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus vieną vektorių $60^\\circ$ kampu gauname kitą.",
+              "latex": "c-a = (b-a)\\omega",
+              "result": "Sukurta geometrinė lygtis kompleksinėje formoje."
+            },
+            {
+              "title": "Pertvarkymas",
+              "action": "Suvedame į $a(\\omega - 1) - b\\omega + c = 0 \\implies -a\\omega^2 - b\\omega + c = 0 \\implies a\\omega^2 + b\\omega - c = 0$.",
+              "reason": "Naudojame tapatybę $\\omega - 1 = \\omega^2$.",
+              "latex": "a\\omega^2 + b\\omega - c = 0",
+              "result": "Gauta tiesinė priklausomybė su $\\omega$."
+            },
+            {
+              "title": "Šaknies eliminavimas",
+              "action": "Šis reiškinys dalijasi iš $\\omega^2-\\omega+1$, kas atitinka simetrinę lygybę $a^2+b^2+c^2 - ab-bc-ca = 0$.",
+              "reason": "Kadangi $\\omega$ yra polinomo $x^2-x+1$ šaknis, išreiškiame per simetrinius koeficientus.",
+              "latex": "a^2+b^2+c^2 = ab+bc+ca",
+              "result": "Įrodyta abipusė sąlyga."
+            }
+          ],
+          "finalAnswer": "Įrodyta naudojant sukimo operatorių $e^{i\\pi/3}$."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-15-trap-1",
+          "title": "Klaidinga prielaida apie realiuosius skaičius",
+          "wrongMove": "Manoma, kad lygybė $a^2+b^2+c^2 = ab+bc+ca$ galioja tik jei $a, b, c$ yra realieji skaičiai.",
+          "whyTempting": "Realiųjų skaičių aibėje ši lygybė reiškia $a=b=c$ (taškas), todėl mokiniai nesitiki, kad kompleksinėje plokštumoje ji aprašo lygiakraštį trikampį.",
+          "correction": "Kompleksinėje plokštumoje ši lygybė yra ekvivalentu sukimo sąlygai $c-a = (b-a)e^{\\pm i\\pi/3}$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-15-trap-2",
+          "title": "Sukimo krypties nepaisymas",
+          "wrongMove": "Bandoma įrodyti teiginį naudojant tik vieną sukimo kryptį (pvz., $+60^\\circ$).",
+          "whyTempting": "Mokiniai dažnai pamiršta, kad trikampio viršūnės gali būti išvardytos prieš laikrodžio rodyklę arba pagal ją.",
+          "correction": "Lygiakraščiam trikampiui tapatybė $a^2+b^2+c^2 - ab-bc-ca = 0$ apima abu atvejus, nes ji gauta sudauginus abi galimas sukimo lygtis.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-15-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul trys kompleksiniai skaičiai $a, b, c$ žymi trikampio v...?",
+          "back": "Trikampis yra lygiakraštis tada ir tik tada, kai pasukus kraštinę $b-a$ kampu $60^\\circ$ ($e^{i\\pi/3}$) gauname kraštinę $c-a$. Tai ekvivalentu $(c-a) = (b-a)e^{i\\pi/3}$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-16",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Raskite trikampio $ABC$, kurio kraštinių ilgiai yra $a, b, c$, įbrėžtinio apskritimo centro $I$ baricentrines koordinates.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Rastos įbrėžtinio apskritimo centro baricentrinės koordinatės."
+      },
+      "answerText": "$I = (a : b : c)$",
+      "coreIdea": {
+        "title": "Baricentrinių koordinačių ir plotų ryšys",
+        "text": "Baricentrinės koordinatės $(x:y:z)$ atitinka priešpriešinių trikampių plotus: $x:y:z = S_{IBC}:S_{ICA}:S_{IAB}$. Kadangi $I$ yra incenter, visų trijų trikampių aukštinės lygios $r$ (įbrėžto apskritimo spinduliui), todėl plotai proporcingi kraštinėms."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Taško $P$ baricentrinės koordinatės $(x:y:z)$ apibrėžiamos per trikampių plotų santykius: $S_{PBC}:S_{PCA}:S_{PAB}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Nagrinėkite tašką $P = I$ (įbrėžtinio apskritimo centrą). Nubrėžkite statmenis iš $I$ į kraštines $BC, CA, AB$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Šie statmenys visi yra lygūs $r$ (įbrėžto apskritimo spinduliui).",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Trikampio $IBC$ plotas yra $\\frac{1}{2} a r$, trikampio $ICA$ plotas yra $\\frac{1}{2} b r$, trikampio $IAB$ plotas yra $\\frac{1}{2} c r$. Jų santykis yra $a : b : c$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal baricentrinių koordinačių apibrėžimą, taško $I$ koordinatės proporcingos plotams: $(S_{IBC} : S_{ICA} : S_{IAB})$."
+        },
+        {
+          "text": "Kiekvieno iš trijų mažųjų trikampių aukštinė iš viršūnės $I$ į trikampio $ABC$ kraštines yra įbrėžtinio apskritimo spindulys $r$."
+        },
+        {
+          "text": "Apskaičiuojame plotus: $S_{IBC} = \\frac{1}{2} a r$, $S_{ICA} = \\frac{1}{2} b r$ ir $S_{IAB} = \\frac{1}{2} c r$."
+        },
+        {
+          "text": "Santykis yra $\\frac{1}{2} a r : \\frac{1}{2} b r : \\frac{1}{2} c r = a : b : c$, todėl $I = (a : b : c)$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-16-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Plotų santykio užrašymas",
+              "action": "Ieškome koordinačių santykio $I = (S_{IBC} : S_{ICA} : S_{IAB})$.",
+              "reason": "Baricentrinės koordinatės atitinka trikampių plotų svorius.",
+              "latex": "I = (S_{IBC} : S_{ICA} : S_{IAB})",
+              "result": "Geometrinė problema perrašyta plotais."
+            },
+            {
+              "title": "Plotų skaičiavimas",
+              "action": "Užrašome $S_{IBC} = \\frac{1}{2}ar$, $S_{ICA} = \\frac{1}{2}br$, $S_{IAB} = \\frac{1}{2}cr$.",
+              "reason": "Kampo pusiaukampinių sankirta $I$ nutolusi nuo kraštinių vienodu spinduliu $r$.",
+              "latex": "S_a = \\frac{1}{2}ar, \\ S_b = \\frac{1}{2}br, \\ S_c = \\frac{1}{2}cr",
+              "result": "Gauti plotų reiškiniai per kraštines."
+            },
+            {
+              "title": "Santykio suprastinimas",
+              "action": "Suprastiname santykį iš $\\frac{1}{2}r$: $I = (a : b : c)$.",
+              "reason": "Santykyje galime padalyti visus narius iš bendro teigiamo daugyklio.",
+              "latex": "I = (a : b : c)",
+              "result": "Rastos baricentrinės koordinatės."
+            }
+          ],
+          "finalAnswer": "$I = (a : b : c)$"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-16-trap-1",
+          "title": "Sunkio centro ir įbrėžtinio centro painiojimas",
+          "wrongMove": "Manoma, kad incenter koordinatės yra $(1:1:1)$.",
+          "whyTempting": "$(1:1:1)$ yra paprasčiausios koordinatės, tačiau jos priklauso trikampio sunkio centrui (centroidui), o ne įbrėžtinio apskritimo centrui.",
+          "correction": "Centroidas dalija plotus po lygiai, o incenter plotus dalija proporcingai kraštinėms: $(a:b:c)$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-16-trap-2",
+          "title": "Atvirkštinio proporcingumo klaida",
+          "wrongMove": "Teigiama, kad koordinatės yra atvirkščiai proporcingos kraštinėms, t. y. $(1/a : 1/b : 1/c)$.",
+          "whyTempting": "Kai kurios kitos koordinatės (pvz., normalinės) turi atvirkštines savybes, todėl mokiniai jas sumaišo.",
+          "correction": "Baricentrinės koordinatės tiesiogiai priklauso nuo trikampių plotų, kurie šiuo atveju yra $ar/2, br/2, cr/2$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-16-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite trikampio $ABC$, kurio kraštinių ilgiai yra $a, b, c...?$",
+          "back": "Baricentrinės koordinatės $(x:y:z)$ atitinka priešpriešinių trikampių plotus: $x:y:z = S_{IBC}:S_{ICA}:S_{IAB}$. Kadangi $I$ yra incenter, visų trijų trikampių aukštinės lygios $r$ (įbrėžto apskritimo spinduliui), todėl plotai proporcingi kraštinėms.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-17",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Tegul trikampiai $ABC$ ir $ADE$ yra tiesiogiai panašūs ir turi bendrą viršūnę $A$. Įrodykite, kad trikampiai $ABD$ ir $ACE$ taip pat yra tiesiogiai panašūs.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodytas spiralinio panašumo sukeitimas."
+      },
+      "answerText": "Trikampių panašumas įrodytas per kraštinių santykius ir kampą tarp jų.",
+      "coreIdea": {
+        "title": "Kombinuotas kraštinių santykis ir kampas",
+        "text": "Kadangi $\\triangle ABC \\sim \\triangle ADE$, tai $AB/AC = AD/AE \\implies AB/AD = AC/AE$. Be to, kampas $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Panašumas $\\triangle ABC \\sim \\triangle ADE$ reiškia, kad kraštinių santykiai yra lygūs: $\\frac{AB}{AD} = \\frac{AC}{AE}$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pertvarkykite šį santykį į $\\frac{AB}{AC} = \\frac{AD}{AE}$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Išnagrinėkite kampus $\\angle BAD$ ir $\\angle CAE$. Pastebėkite, kad $\\angle BAD = \\angle BAC - \\angle DAC$ (arba su pliuso ženklu priklausomai nuo orientacijos).",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kadangi $\\angle BAC = \\angle DAE$, kampai $\\angle BAD$ ir $\\angle CAE$ yra lygūs. Pagal dvi kraštines ir kampą tarp jų (SUS), $\\triangle ABD \\sim \\triangle ACE$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pagal trikampių tiesioginį panašumą, kraštinių santykiai yra: $AB/AC = AD/AE$."
+        },
+        {
+          "text": "Suapvaliname ir sukeičiame narius vietomis: $AB/AD = AC/AE$."
+        },
+        {
+          "text": "Nagrinėjame kampus: $\\angle BAD = \\angle BAC - \\angle DAC$ ir $\\angle CAE = \\angle DAE - \\angle DAC$."
+        },
+        {
+          "text": "Kadangi $\\angle BAC = \\angle DAE$, tai $\\angle BAD = \\angle CAE$. Todėl trikampiai yra panašūs pagal SUS požymį."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-17-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Kraštinių santykių lygybė",
+              "action": "Užrašome $\\frac{AB}{AC} = \\frac{AD}{AE} \\implies \\frac{AB}{AD} = \\frac{AC}{AE}$.",
+              "reason": "Panašių trikampių atitinkamų kraštinių santykių savybė.",
+              "latex": "\\frac{AB}{AD} = \\frac{AC}{AE}",
+              "result": "Nustatyta kraštinių proporcija naujiems trikampiams."
+            },
+            {
+              "title": "Kampų lygybės įrodymas",
+              "action": "Užrašome $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$.",
+              "reason": "Atimame bendrą kampą $\\angle DAC$ iš lygių kampų $\\angle BAC$ ir $\\angle DAE$.",
+              "latex": "\\angle BAD = \\angle CAE",
+              "result": "Įrodyta kampų lygybė."
+            },
+            {
+              "title": "Išvada",
+              "action": "Trikampiai $ABD$ ir $ACE$ yra panašūs pagal dvi kraštines ir kampą tarp jų (SUS požymis).",
+              "reason": "Kampai tarp proporcingų kraštinių yra lygūs.",
+              "latex": "\\triangle ABD \\sim \\triangle ACE",
+              "result": "Panašumas sėkmingai įrodytas."
+            }
+          ],
+          "finalAnswer": "Trikampių panašumas įrodytas per kraštinių santykius ir kampą tarp jų."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-17-trap-1",
+          "title": "Viršūnių eilės klaida",
+          "wrongMove": "Neteisingai nurodoma panašių trikampių viršūnių eilė, pvz., teigiant $\\triangle ABD \\sim \\triangle AEC$.",
+          "whyTempting": "Mokiniai dažnai surašo viršūnes intuityviai, nepatikrinę atitinkamų kampų lygybės.",
+          "correction": "Būtina griežtai sekti kampų atitikmenis: taškas $B$ atitinka $C$, o $D$ atitinka $E$, todėl $\\triangle ABD \\sim \\triangle ACE$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-17-trap-2",
+          "title": "Santykio sukeitimo klaida",
+          "wrongMove": "Bandoma naudoti santykį $AB/AC = AE/AD$ vietoj $AB/AC = AD/AE$.",
+          "whyTempting": "Painiojami panašių trikampių atitinkamų kraštinių santykiai, ypač kai trikampiai turi bendrą viršūnę.",
+          "correction": "Iš $\\triangle ABC \\sim \\triangle ADE$ seka $AB/AD = AC/AE$, kas po sukeitimo duoda $AB/AC = AD/AE$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-17-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Tegul trikampiai $ABC$ ir $ADE$ yra tiesiogiai panašūs ir tu...?",
+          "back": "Kadangi $\\triangle ABC \\sim \\triangle ADE$, tai $AB/AC = AD/AE \\implies AB/AD = AC/AE$. Be to, kampas $\\angle BAD = \\angle BAC - \\angle DAC = \\angle DAE - \\angle DAC = \\angle CAE$.",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "ex-olimpiada-10-18",
+      "topicId": "olimpiada-10-geometrija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 70,
+      "statement": "Trikampio $ABC$ apibrėžtiniame apskritime kampo $A$ pusiaukampinė kerta apskritimą taške $M$. Tegul $I$ yra trikampio $ABC$ įbrėžtinio apskritimo centras. Įrodykite, kad $MB = MI = MC$.",
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Įrodyta atkarpų lygybė $MB = MI$."
+      },
+      "answerText": "Teiginys įrodytas apskaičiavus trikampio $MBI$ kampus.",
+      "coreIdea": {
+        "title": "Trikampio kampų skaičiavimas",
+        "text": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$. Kampas $\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = A/2 + B/2$. Kampas $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas)."
+      },
+      "strategyTags": [
+        "algebraic-transformation"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [],
+      "expectedMethodIds": [],
+      "conceptIds": [],
+      "hints": [
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kadangi $AM$ yra kampo $A$ pusiaukampinė, taškas $M$ yra lanko $BC$ vidurio taškas, todėl $MB = MC$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Norint parodyti $MB = MI$, pakanka įrodyti, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$.",
+          "penalty": 0.07
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Kampas $\\angle MIB$ yra trikampio $ABI$ išorinis kampas, todėl $\\angle MIB = \\angle IAB + \\angle IBA = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$.",
+          "penalty": 0.09
+        },
+        {
+          "order": 4,
+          "kind": "scaffold",
+          "text": "Kampas $\\angle MBI = \\angle MBC + \\angle CBI$. Kadangi įbrėžtiniai kampai $\\angle MBC$ ir $\\angle MAC$ remiasi į tą patį lanką $MC$, jie lygūs. Todėl $\\angle MBI = \\frac{1}{2}\\angle A + \\frac{1}{2}\\angle B$. Kampai lygūs, todėl $MB = MI$.",
+          "penalty": 0.11
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kadangi $M$ yra apskritimo lanko vidurys, iškart turime $MB = MC$."
+        },
+        {
+          "text": "Apskaičiuojame kampą $\\angle MIB$ kaip trikampio $ABI$ išorinį kampą: $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$."
+        },
+        {
+          "text": "Kampą $\\angle MBI$ išreiškiame kaip dviejų kampų sumą: $\\angle MBI = \\angle MBC + \\angle CBI$."
+        },
+        {
+          "text": "Kadangi $\\angle MBC = \\angle MAC = A/2$ ir $\\angle CBI = B/2$, gauname $\\angle MBI = A/2 + B/2$."
+        },
+        {
+          "text": "Kadangi du kampai lygūs, trikampis $MBI$ lygiašonis, todėl $MB = MI$."
+        }
+      ],
+      "solutionMethods": [
+        {
+          "id": "ex-olimpiada-10-18-method-1",
+          "title": "Pagrindinis įrodymas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-transformation"
+          ],
+          "steps": [
+            {
+              "title": "Lanko savybė",
+              "action": "Kadangi $AM$ yra pusiaukampinė, $M$ dalija lanką $BC$ pusiau, todėl $MB = MC$.",
+              "reason": "Lygūs įbrėžtiniai kampai kerta vienodo ilgio stygas.",
+              "latex": "MB = MC",
+              "result": "Įrodyta pirmoji lygybė."
+            },
+            {
+              "title": "Išorinio kampo skaičiavimas",
+              "action": "Kampas $\\angle MIB = \\angle IAB + \\angle IBA = \\frac{A}{2} + \\frac{B}{2}$.",
+              "reason": "Trikampio išorinis kampas yra lygus kitų dviejų trikampio kampų sumai.",
+              "latex": "\\angle MIB = \\frac{A+B}{2}",
+              "result": "Rastas kampo $\\angle MIB$ dydis."
+            },
+            {
+              "title": "Kampo MBI analizė",
+              "action": "$\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = \\frac{A}{2} + \\frac{B}{2}$.",
+              "reason": "Kampai $\\angle MBC$ ir $\\angle MAC$ yra įbrėžtiniai ir remiasi į tą patį lanką $MC$.",
+              "latex": "\\angle MBI = \\frac{A+B}{2}",
+              "result": "Įrodyta kampų lygybė $\\angle MBI = \\angle MIB$, todėl trikampis $MBI$ yra lygiašonis $\\implies MB = MI$."
+            }
+          ],
+          "finalAnswer": "Teiginys įrodytas apskaičiavus trikampio $MBI$ kampus."
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "ex-olimpiada-10-18-trap-1",
+          "title": "Lanko savybės nepaisymas",
+          "wrongMove": "Nesuprantama, kodėl taškas $M$ yra lanko $BC$ vidurio taškas.",
+          "whyTempting": "Mokiniai dažnai nepastebi ryšio tarp kampo pusiaukampinės ir lankų, kuriuos ji kerta apibrėžtiniame apskritime.",
+          "correction": "Įbrėžtiniai kampai, besiremiantys į lygius lankus, yra lygūs. Kadangi $\\angle BAM = \\angle CAM$, tai lankai $BM$ ir $MC$ yra lygūs $\\implies MB = MC$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        },
+        {
+          "id": "ex-olimpiada-10-18-trap-2",
+          "title": "Išorinio kampo skaičiavimo klaida",
+          "wrongMove": "Neteisingai taikoma išorinio kampo teorema kampui $\\angle MIB$.",
+          "whyTempting": "Trikampyje $ABI$ yra daug kampų, todėl lengva sumaišyti, kurių vidinių kampų sumai lygus išorinis kampas.",
+          "correction": "$\\angle MIB$ yra trikampio $ABI$ išorinis kampas ties viršūne $I$, todėl jis lygus $\\angle IAB + \\angle IBA = A/2 + B/2$.",
+          "reviewConceptIds": [],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+        "Kokie buvo kritiniai sprendimo žingsniai?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "ex-olimpiada-10-18-srs-1",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampio $ABC$ apibrėžtiniame apskritime kampo $A$ pusiauka...?",
+          "back": "Parodysime, kad trikampis $MBI$ yra lygiašonis, t. y. $\\angle MBI = \\angle MIB$. Kampas $\\angle MBI = \\angle MBC + \\angle CBI = \\angle MAC + \\angle CBI = A/2 + B/2$. Kampas $\\angle MIB = \\angle IAB + \\angle IBA = A/2 + B/2$ (trikampio $ABI$ išorinis kampas).",
+          "conceptIds": [],
+          "methodIds": [],
+          "defaultEnabled": true
+        }
+      ]
+    }
+  ],
+  "tests": []
+}

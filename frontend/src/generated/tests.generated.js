@@ -220,7 +220,47 @@ export const tests = [
     "id": "olimpiada-05-test-challenge",
     "title": "Olimpiadinis iššūkis (5 klasė)",
     "topicIds": [
-      "olimpiada-05"
+      "olimpiada-05-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-05-031859fd",
+      "ex-olimpiada-05-45f96440",
+      "ex-olimpiada-05-cb54fdbc",
+      "ex-olimpiada-05-a3f215fa",
+      "ex-olimpiada-05-f5a521c1",
+      "ex-olimpiada-05-ee0b640b",
+      "ex-olimpiada-05-b95502c0",
+      "ex-olimpiada-05-cbff97d9",
+      "ex-olimpiada-05-eb7e344a",
+      "ex-olimpiada-05-1fc20a2a"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-05-test-challenge",
+    "title": "Olimpiadinis iššūkis (5 klasė)",
+    "topicIds": [
+      "olimpiada-05-skaiciu-teorija"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-05-031859fd",
+      "ex-olimpiada-05-45f96440",
+      "ex-olimpiada-05-cb54fdbc",
+      "ex-olimpiada-05-a3f215fa",
+      "ex-olimpiada-05-f5a521c1",
+      "ex-olimpiada-05-ee0b640b",
+      "ex-olimpiada-05-b95502c0",
+      "ex-olimpiada-05-cbff97d9",
+      "ex-olimpiada-05-eb7e344a",
+      "ex-olimpiada-05-1fc20a2a"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-05-test-challenge",
+    "title": "Olimpiadinis iššūkis (5 klasė)",
+    "topicIds": [
+      "olimpiada-05-strategijos-ir-irodymai"
     ],
     "exerciseIds": [
       "ex-olimpiada-05-031859fd",
@@ -456,7 +496,27 @@ export const tests = [
     "id": "olimpiada-06-test-challenge",
     "title": "Olimpiadinis iššūkis (6 klasė)",
     "topicIds": [
-      "olimpiada-06"
+      "olimpiada-06-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-06-9af12ecd",
+      "ex-olimpiada-06-3e3ce5c2",
+      "ex-olimpiada-06-15b5cb2b",
+      "ex-olimpiada-06-72644951",
+      "ex-olimpiada-06-95300ab8",
+      "ex-olimpiada-06-2eaeade9",
+      "ex-olimpiada-06-f2a0c71a",
+      "ex-olimpiada-06-69e93b63",
+      "ex-olimpiada-06-b4e7dd8a",
+      "ex-olimpiada-06-bdd1881c"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-06-test-challenge",
+    "title": "Olimpiadinis iššūkis (6 klasė)",
+    "topicIds": [
+      "olimpiada-06-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-06-9af12ecd",
@@ -764,7 +824,27 @@ export const tests = [
     "id": "olimpiada-07-test-challenge",
     "title": "Olimpiadinis iššūkis (7 klasė)",
     "topicIds": [
-      "olimpiada-07"
+      "olimpiada-07-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-07-1db2920b",
+      "ex-olimpiada-07-3305c4d4",
+      "ex-olimpiada-07-9dc52ddd",
+      "ex-olimpiada-07-f4b5c481",
+      "ex-olimpiada-07-c98149bb",
+      "ex-olimpiada-07-a17dfa35",
+      "ex-olimpiada-07-15e75e74",
+      "ex-olimpiada-07-7e30a65c",
+      "ex-olimpiada-07-5585385b",
+      "ex-olimpiada-07-9cbe13cb"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-07-test-challenge",
+    "title": "Olimpiadinis iššūkis (7 klasė)",
+    "topicIds": [
+      "olimpiada-07-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-07-1db2920b",
@@ -928,7 +1008,27 @@ export const tests = [
     "id": "olimpiada-08-test-challenge",
     "title": "Olimpiadinis iššūkis (8 klasė)",
     "topicIds": [
-      "olimpiada-08"
+      "olimpiada-08-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-08-efad3e02",
+      "ex-olimpiada-08-9c8a454f",
+      "ex-olimpiada-08-b19cc2f8",
+      "ex-olimpiada-08-4670481e",
+      "ex-olimpiada-08-8a5b6d7c",
+      "ex-olimpiada-08-371ff322",
+      "ex-olimpiada-08-8f8af17c",
+      "ex-olimpiada-08-ef659ec4",
+      "ex-olimpiada-08-fe7262fc",
+      "ex-olimpiada-08-56d15a87"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-08-test-challenge",
+    "title": "Olimpiadinis iššūkis (8 klasė)",
+    "topicIds": [
+      "olimpiada-08-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-08-efad3e02",
@@ -1380,7 +1480,27 @@ export const tests = [
     "id": "olimpiada-09-test-challenge",
     "title": "Olimpiadinis iššūkis (9 klasė)",
     "topicIds": [
-      "olimpiada-09"
+      "olimpiada-09-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-09-01",
+      "ex-olimpiada-09-02",
+      "ex-olimpiada-09-03",
+      "ex-olimpiada-09-04",
+      "ex-olimpiada-09-05",
+      "ex-olimpiada-09-06",
+      "ex-olimpiada-09-07",
+      "ex-olimpiada-09-08",
+      "ex-olimpiada-09-09",
+      "ex-olimpiada-09-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-09-test-challenge",
+    "title": "Olimpiadinis iššūkis (9 klasė)",
+    "topicIds": [
+      "olimpiada-09-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-09-01",
@@ -1616,7 +1736,67 @@ export const tests = [
     "id": "olimpiada-10-test-challenge",
     "title": "Olimpiadinis iššūkis (10 klasė)",
     "topicIds": [
-      "olimpiada-10"
+      "olimpiada-10-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05",
+      "ex-olimpiada-10-06",
+      "ex-olimpiada-10-07",
+      "ex-olimpiada-10-08",
+      "ex-olimpiada-10-09",
+      "ex-olimpiada-10-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-10-test-challenge",
+    "title": "Olimpiadinis iššūkis (10 klasė)",
+    "topicIds": [
+      "olimpiada-10-nelygybes"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05",
+      "ex-olimpiada-10-06",
+      "ex-olimpiada-10-07",
+      "ex-olimpiada-10-08",
+      "ex-olimpiada-10-09",
+      "ex-olimpiada-10-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-10-test-challenge",
+    "title": "Olimpiadinis iššūkis (10 klasė)",
+    "topicIds": [
+      "olimpiada-10-skaiciu-teorija"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-10-01",
+      "ex-olimpiada-10-02",
+      "ex-olimpiada-10-03",
+      "ex-olimpiada-10-04",
+      "ex-olimpiada-10-05",
+      "ex-olimpiada-10-06",
+      "ex-olimpiada-10-07",
+      "ex-olimpiada-10-08",
+      "ex-olimpiada-10-09",
+      "ex-olimpiada-10-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-10-test-challenge",
+    "title": "Olimpiadinis iššūkis (10 klasė)",
+    "topicIds": [
+      "olimpiada-10-strategijos-ir-irodymai"
     ],
     "exerciseIds": [
       "ex-olimpiada-10-01",
@@ -1924,7 +2104,67 @@ export const tests = [
     "id": "olimpiada-11-test-challenge",
     "title": "11 klasės olimpiadinis iššūkis",
     "topicIds": [
-      "olimpiada-11"
+      "olimpiada-11-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-24",
+      "ex-olimpiada-11-32"
+    ],
+    "masteryWeight": 2.0
+  },
+  {
+    "id": "olimpiada-11-test-challenge",
+    "title": "11 klasės olimpiadinis iššūkis",
+    "topicIds": [
+      "olimpiada-11-geometrija"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-24",
+      "ex-olimpiada-11-32"
+    ],
+    "masteryWeight": 2.0
+  },
+  {
+    "id": "olimpiada-11-test-challenge",
+    "title": "11 klasės olimpiadinis iššūkis",
+    "topicIds": [
+      "olimpiada-11-kombinatorika"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-11-01",
+      "ex-olimpiada-11-04",
+      "ex-olimpiada-11-07",
+      "ex-olimpiada-11-10",
+      "ex-olimpiada-11-12",
+      "ex-olimpiada-11-14",
+      "ex-olimpiada-11-16",
+      "ex-olimpiada-11-19",
+      "ex-olimpiada-11-24",
+      "ex-olimpiada-11-32"
+    ],
+    "masteryWeight": 2.0
+  },
+  {
+    "id": "olimpiada-11-test-challenge",
+    "title": "11 klasės olimpiadinis iššūkis",
+    "topicIds": [
+      "olimpiada-11-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-11-01",
@@ -2232,7 +2472,47 @@ export const tests = [
     "id": "olimpiada-12-test-challenge",
     "title": "Olimpiadinis iššūkis (12 klasė)",
     "topicIds": [
-      "olimpiada-12"
+      "olimpiada-12-algebra"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-12-01",
+      "ex-olimpiada-12-02",
+      "ex-olimpiada-12-03",
+      "ex-olimpiada-12-04",
+      "ex-olimpiada-12-05",
+      "ex-olimpiada-12-06",
+      "ex-olimpiada-12-07",
+      "ex-olimpiada-12-08",
+      "ex-olimpiada-12-09",
+      "ex-olimpiada-12-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-12-test-challenge",
+    "title": "Olimpiadinis iššūkis (12 klasė)",
+    "topicIds": [
+      "olimpiada-12-kombinatorika"
+    ],
+    "exerciseIds": [
+      "ex-olimpiada-12-01",
+      "ex-olimpiada-12-02",
+      "ex-olimpiada-12-03",
+      "ex-olimpiada-12-04",
+      "ex-olimpiada-12-05",
+      "ex-olimpiada-12-06",
+      "ex-olimpiada-12-07",
+      "ex-olimpiada-12-08",
+      "ex-olimpiada-12-09",
+      "ex-olimpiada-12-10"
+    ],
+    "masteryWeight": 1.5
+  },
+  {
+    "id": "olimpiada-12-test-challenge",
+    "title": "Olimpiadinis iššūkis (12 klasė)",
+    "topicIds": [
+      "olimpiada-12-skaiciu-teorija"
     ],
     "exerciseIds": [
       "ex-olimpiada-12-01",

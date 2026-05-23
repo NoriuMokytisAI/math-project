@@ -1860,805 +1860,8 @@ export const exercises_10 = [
     "estimatedSeconds": 45
   },
   {
-    "id": "ex-olimpiada-10-01",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
-    "answer": "Nustatyta kvadratinės liekanos savybė moduliu 11.",
-    "acceptedAnswers": [
-      "Nustatyta kvadratinės liekanos savybė moduliu 11."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-10-concept-quad-reciprocity"
-    ],
-    "hints": [
-      "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
-      "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
-      "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
-      "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
-    ],
-    "solution": "Uždavinį suformuluojame kaip kvadratinio palyginimo sprendžiamumą moduliu 11. Taikome kvadratinio abipusiškumo dėsnį Legendre simboliui $\\left(\\frac{3}{11}\\right)$. Pakeičiame jį į $-\\left(\\frac{11}{3}\\right) = -\\left(\\frac{2}{3}\\right)$. Kadangi 2 nėra kvadratas moduliu 3, gauname $-(-1) = 1$. Todėl sprendinys egzistuoja.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Legendre simbolis",
-      "text": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį."
-    },
-    "strategyTags": [
-      "modular-arithmetic"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-10-concept-quad-reciprocity"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-01-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "modular-arithmetic"
-        ],
-        "steps": [
-          {
-            "title": "Legendre simbolio užrašymas",
-            "action": "Turime apskaičiuoti $\\left(\\frac{3}{11}\\right)$.",
-            "reason": "Sprendinio egzistavimas ekvivalentus Legendre simbolio reikšmei 1.",
-            "latex": "\\left(\\frac{3}{11}\\right)",
-            "result": "Suformuluotas liekanos uždavinys."
-          },
-          {
-            "title": "Abipusiškumo dėsnio taikymas",
-            "action": "$\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{1 \\cdot 5} = -1 \\implies \\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
-            "reason": "Pagal kvadratinio abipusiškumo dėsnį, nes abu pirminiai yra nelyginiai.",
-            "latex": "\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)",
-            "result": "Modulis sumažintas iki 3."
-          },
-          {
-            "title": "Simbolio moduliu 3 skaičiavimas",
-            "action": "$\\left(\\frac{11}{3}\\right) = \\left(\\frac{2}{3}\\right) = -1 \\implies \\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
-            "reason": "Kadangi $11 \\equiv 2 \\pmod 3$, o 2 nėra kvadratas mod 3.",
-            "latex": "\\left(\\frac{3}{11}\\right) = 1",
-            "result": "Įrodytas sprendinio egzistavimas. Pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
-          }
-        ],
-        "finalAnswer": "Taip, egzistuoja (pavyzdžiui, $x = 5$)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-01-trap-1",
-        "title": "Kvadratinio abipusiškumo ženklo klaida",
-        "wrongMove": "Pamirštamas $(-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$ daugiklis, teigiant, kad $\\left(\\frac{3}{11}\\right) = \\left(\\frac{11}{3}\\right)$.",
-        "whyTempting": "Daugeliu atvejų Legendre simboliai sutampa, todėl mokiniai linkę supaprastinti taisyklę.",
-        "correction": "Kadangi $3 \\equiv 3 \\pmod{4}$ ir $11 \\equiv 3 \\pmod{4}$, tai $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
-        "reviewConceptIds": [
-          "olimpiada-10-concept-quad-reciprocity"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-01-trap-2",
-        "title": "Nepilnas liekanų tikrinimas",
-        "wrongMove": "Patikrinami tik keli skaičiai (pvz., $x=1, 2$) ir daroma išvada, kad sprendinio nėra.",
-        "whyTempting": "Rankinis tikrinimas yra lėtas ir imlus klaidoms.",
-        "correction": "Naudokite Legendre simbolį arba patikrinkite visas liekanas iki $x=5$ (nes $x^2 \\equiv (-x)^2$).",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-01-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad ...?",
-        "back": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį.",
-        "conceptIds": [
-          "olimpiada-10-concept-quad-reciprocity"
-        ],
-        "methodIds": [
-          "olimpiada-10-concept-quad-reciprocity"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-02",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaičiais.",
-    "answer": "Skaičius suskaidytas pirminiais Gauso skaičiais.",
-    "acceptedAnswers": [
-      "Skaičius suskaidytas pirminiais Gauso skaičiais."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-10-concept-gaussian-integers"
-    ],
-    "hints": [
-      "Gauso sveikieji skaičiai turi pavidalą $a+bi$. Skaičių 5 bandome užrašyti kaip dviejų Gauso skaičių sandaugą.",
-      "Pasinaudokite normos savybe $N(xy) = N(x)N(y)$. Kadangi $N(5) = 25$, daliklio norma turi būti 5.",
-      "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
-      "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$."
-    ],
-    "solution": "Ieškome skaidinio $5 = (a+bi)(c+di)$. Taikome normą: $N(5) = 25 \\implies N(a+bi)N(c+di) = 25$. Kadangi ieškome netrivialių daliklių, jų normos turi būti lygios 5. Lygtis $a^2+b^2=5$ turi sprendinį $a=2, b=1$, todėl $5 = (2+i)(2-i)$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Gauso skaičių norma",
-      "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-10-concept-gaussian-integers"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-02-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Normos lygybė",
-            "action": "Užrašome $N(5) = 25 = N(z)N(w)$.",
-            "reason": "Normos multiplikatyvumas $\\mathbb{Z}[i]$ aibėje.",
-            "latex": "N(z)N(w) = 25",
-            "result": "Apribotos galimos daliklių normos."
-          },
-          {
-            "title": "Normos vertės radimas",
-            "action": "Kadangi dalikliai nėra vienetiniai, $N(z) = 5 \\implies a^2+b^2=5$.",
-            "reason": "Vieninteliai netrivialūs 25 dalikliai yra 5 ir 5.",
-            "latex": "a^2+b^2 = 5",
-            "result": "Gauta sveikųjų skaičių kvadratų lygtis."
-          },
-          {
-            "title": "Faktorizacija",
-            "action": "Sprendinys $a=2, b=1$ duoda $z = 2+i$, todėl $5 = (2+i)(2-i)$.",
-            "reason": "Kompleksinių skaičių daugyba $(2+i)(2-i) = 4 - i^2 = 5$.",
-            "latex": "5 = (2+i)(2-i)",
-            "result": "Rastas pirminis skaidinys Gauso skaičiuose."
-          }
-        ],
-        "finalAnswer": "$5 = (2+i)(2-i)$"
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-02-trap-1",
-        "title": "Klaidinga prielaida apie pirminių skaičių savybes",
-        "wrongMove": "Teigiama, kad 5 negalima suskaidyti, nes jis yra pirminis skaičius sveikųjų skaičių aibėje $\\mathbb{Z}$.",
-        "whyTempting": "Mokiniai dažnai painioja pirminius skaičius $\\mathbb{Z}$ aibėje su pirminiais Gauso skaičiais $\\mathbb{Z}[i]$.",
-        "correction": "Gauso sveikųjų skaičių aibėje pirminis skaičius $p \\equiv 1 \\pmod 4$ visada yra sudėtinis.",
-        "reviewConceptIds": [
-          "olimpiada-10-concept-gaussian-integers"
-        ],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-02-trap-2",
-        "title": "Normos multiplikatyvumo nepaisymas",
-        "wrongMove": "Bandoma rasti daliklius spėliojant be normos $N(z)$ apribojimų.",
-        "whyTempting": "Tai atrodo paprasčiau nei spręsti kvadratinę lygtį $a^2+b^2=5$.",
-        "correction": "Naudokite savybę $N(z) = a^2+b^2$. Jei $z$ dalija 5, tai $N(z)$ dalija $N(5)=25$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-02-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaiči...?",
-        "back": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$.",
-        "conceptIds": [
-          "olimpiada-10-concept-gaussian-integers"
-        ],
-        "methodIds": [
-          "olimpiada-10-concept-gaussian-integers"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Gauso sveikieji skaičiai turi pavidalą $a+bi$. Skaičių 5 bandome užrašyti kaip dviejų Gauso skaičių sandaugą.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pasinaudokite normos savybe $N(xy) = N(x)N(y)$. Kadangi $N(5) = 25$, daliklio norma turi būti 5.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-03",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatykite, kuris iš skaičių $2017$ ir $2019$ gali būti užrašytas dviejų sveikųjų skaičių kvadratų suma $a^2+b^2$.",
-    "answer": "Nustatyta galimybė išreikšti dviejų kvadratų suma.",
-    "acceptedAnswers": [
-      "Nustatyta galimybė išreikšti dviejų kvadratų suma."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
-      "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
-      "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
-      "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma."
-    ],
-    "solution": "Patikriname pirminį skaičių 2017 moduliu 4. Kadangi $2017 \\equiv 1 \\pmod 4$, jis yra dviejų kvadratų suma. Skaidome skaičių 2019: $2019 = 3 \\cdot 673$. Daliklis 3 yra pirminis pavidalo $4k+3$. Kadangi pirminio 3 laipsnio rodiklis skaičiuje 2019 yra nelyginis (lygus 1), 2019 negalima užrašyti dviejų kvadratų suma.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Fermo teorema apie dviejų kvadratų sumą",
-      "text": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu."
-    },
-    "strategyTags": [
-      "modular-arithmetic"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-03-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "modular-arithmetic"
-        ],
-        "steps": [
-          {
-            "title": "Pirmojo skaičiaus analizė",
-            "action": "Skaičius 2017 yra pirminis ir $2017 \\equiv 1 \\pmod 4$.",
-            "reason": "Pagal Fermo teoremą apie dviejų kvadratų sumą.",
-            "latex": "2017 \\equiv 1 \\pmod 4",
-            "result": "2017 galima išreikšti kaip $a^2+b^2$."
-          },
-          {
-            "title": "Antrojo skaičiaus analizė",
-            "action": "Skaidome $2019 = 3 \\cdot 673$, kur $3 \\equiv 3 \\pmod 4$ yra pirminis, įeinantis laipsniu 1.",
-            "reason": "Fermo teoremos apibendrinimas sudėtiniams skaičiams reikalauja lyginių laipsnių pirminiams $p \\equiv 3 \\pmod 4$.",
-            "latex": "2019 = 3^1 \\cdot 673^1",
-            "result": "2019 negalima išreikšti dviejų kvadratų suma."
-          }
-        ],
-        "finalAnswer": "Tik 2017 (nes $2017 \\equiv 1 \\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\equiv 3 \\pmod 4$ su nelyginiu rodikliu)."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-03-trap-1",
-        "title": "Tikrinimas tik moduliu 4 be faktorizacijos",
-        "wrongMove": "Nusprendžiama, kad 2019 gali būti užrašytas kvadratų suma, nes $2019 \\equiv 3 \\pmod 4$ (klaidinga logika).",
-        "whyTempting": "Mokiniai dažnai bando taikyti paprastą taisyklę visam skaičiui, užuot skaidę jį pirminiais.",
-        "correction": "Sudėtiniam skaičiui neužtenka patikrinti liekanos moduliu 4; būtina užtikrinti, kad visi pirminiai dalikliai $p \\equiv 3 \\pmod 4$ turėtų lyginį laipsnį.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-03-trap-2",
-        "title": "Pirminių ir sudėtinių skaičių sąlygų painiojimas",
-        "wrongMove": "Teigiama, kad jei skaičius nėra pirminis, jam Fermo teorema negalioja.",
-        "whyTempting": "Fermo teorema dažniausiai pateikiama tik pirminiams skaičiams.",
-        "correction": "Naudokite Fermo teoremos apibendrinimą: skaičius $n$ yra kvadratų suma tada ir tik tada, kai jo skaidinyje kiekvienas pirminis $p = 4k+3$ įeina su lyginiu rodikliu.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-03-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatyk...?",
-        "back": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-04",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine trupmena ir raskite visus jos artinius (konvergentus).",
-    "answer": "Rasta grandininė trupmena ir jos artiniai.",
-    "acceptedAnswers": [
-      "Rasta grandininė trupmena ir jos artiniai."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Išskirkite sveikąją dalį iš $\\frac{43}{30}$ ir apverskite liekaną.",
-      "Tęskite procesą: $\\frac{30}{13} = 2 + \\frac{4}{13}$, tada $\\frac{13}{4} = 3 + \\frac{1}{4}$.",
-      "Gauta grandininė trupmena yra $[1; 2, 3, 4]$.",
-      "Artiniai apskaičiuojami nukertant trupmeną: $C_0 = 1$, $C_1 = 1 + 1/2 = 3/2$, $C_2 = 1 + 1/(2+1/3) = 10/7$, $C_3 = 43/30$."
-    ],
-    "solution": "Atliekame nuoseklų sveikųjų dalių išskyrimą: $\\frac{43}{30} = 1 + \\frac{13}{30}$. Toliau skaidome liekaną: $\\frac{30}{13} = 2 + \\frac{4}{13}$ ir $\\frac{13}{4} = 3 + \\frac{1}{4}$. Užrašome grandininę trupmeną: $[1; 2, 3, 4]$. Apskaičiuojame artinius $C_0, C_1, C_2, C_3$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Grandininės trupmenos radimas",
-      "text": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-04-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Euklido algoritmo taikymas",
-            "action": "Užrašome $\\frac{43}{30} = 1 + \\frac{1}{2 + \\frac{1}{3 + \\frac{1}{4}}}$.",
-            "reason": "Nuoseklus sveikųjų dalių išskyrimas ir liekanų apvertimas.",
-            "latex": "\\frac{43}{30} = [1; 2, 3, 4]",
-            "result": "Gauta grandininė trupmena."
-          },
-          {
-            "title": "Artinių apskaičiavimas",
-            "action": "Apskaičiuojame: $C_0=1$, $C_1=1+\\frac{1}{2}=\\frac{3}{2}$, $C_2=1+\\frac{1}{2+\\frac{1}{3}}=\\frac{10}{7}$, $C_3=\\frac{43}{30}$.",
-            "reason": "Artiniai randami iš dalinių grandininės trupmenos narių.",
-            "latex": "C_0=1, \\ C_1=\\frac{3}{2}, \\ C_2=\\frac{10}{7}, \\ C_3=\\frac{43}{30}",
-            "result": "Rasti visi keturi konvergentai."
-          }
-        ],
-        "finalAnswer": "$[1; 2, 3, 4]$, artiniai: $1, \\frac{3}{2}, \\frac{10}{7}, \\frac{43}{30}$"
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-04-trap-1",
-        "title": "Aritmetinės klaidos Euklido algoritme",
-        "wrongMove": "Neteisingai apskaičiuojama liekana, pvz., teigiant, kad $30 = 2 \\cdot 13 + 6$ vietoje $4$.",
-        "whyTempting": "Nuoseklus dalijimas reikalauja didelio susikaupimo, ypač su didesniais skaičiais.",
-        "correction": "Kiekviename žingsnyje patikrinkite daugybą: $dalinys = daliklis \\cdot sveikoji\\_dalis + liekana$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-04-trap-2",
-        "title": "Artinių (konvergentų) skaičiavimo painiava",
-        "wrongMove": "Neteisingai taikoma rekurentinė formulė $p_n = a_n p_{n-1} + p_{n-2}$, sumaišant skaitiklius su vardikliais.",
-        "whyTempting": "Formulės yra panašios, todėl lengva sukeisti indeksus ar reikšmes.",
-        "correction": "Apskaičiuokite pirmus kelis artinius tiesiogiai skleisdami trupmeną, kad įsitikintumėte formulės teisingumu.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-04-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine tr...?",
-        "back": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Išskirkite sveikąją dalį iš $\\frac{43}{30}$ ir apverskite liekaną.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Tęskite procesą: $\\frac{30}{13} = 2 + \\frac{4}{13}$, tada $\\frac{13}{4} = 3 + \\frac{1}{4}$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Gauta grandininė trupmena yra $[1; 2, 3, 4]$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Artiniai apskaičiuojami nukertant trupmeną: $C_0 = 1$, $C_1 = 1 + 1/2 = 3/2$, $C_2 = 1 + 1/(2+1/3) = 10/7$, $C_3 = 43/30$.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-05",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčiai: $x^2 - 2y^2 = 1$.",
-    "answer": "Rastas mažiausias Pelio lygties sprendinys.",
-    "acceptedAnswers": [
-      "Rastas mažiausias Pelio lygties sprendinys."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
-      "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
-      "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
-      "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$."
-    ],
-    "solution": "Pradedame tikrinti natūraliąsias reikšmes $y = 1, 2, 3 \\dots$. Įstatome $y=1 \\implies x^2 = 3$, sprendinių nėra. Įstatome $y=2 \\implies x^2 = 1 + 2(4) = 9 \\implies x = 3$. Mažiausias teigiamas sveikasis sprendinys yra $(3, 2)$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Skaičių teorija",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Pelio lygties fundamentalusis sprendinys",
-      "text": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-05-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Sprendinių perrinkimas",
-            "action": "Pertvarkome lygtį: $x^2 = 1 + 2y^2$ ir tikriname $y \\ge 1$.",
-            "reason": "Mažiausią sprendinį natūraliuose skaičiuose patogu rasti perrinkimo būdu mažoms $y$ vertėms.",
-            "latex": "x^2 = 1 + 2y^2",
-            "result": "Pasiruošta reikšmių tikrinimui."
-          },
-          {
-            "title": "Vertės radimas",
-            "action": "Kai $y=2 \\implies x^2 = 9 \\implies x=3$.",
-            "reason": "9 yra tikslusis kvadratas, todėl gauname sveikąjį sprendinį.",
-            "latex": "3^2 - 2(2)^2 = 9 - 8 = 1",
-            "result": "Rastas sprendinys $(3, 2)$."
-          }
-        ],
-        "finalAnswer": "$x = 3, y = 2$"
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-05-trap-1",
-        "title": "Trivialaus sprendinio pateikimas",
-        "wrongMove": "Pateikiamas sprendinys $(1, 0)$.",
-        "whyTempting": "Ši pora tenkina lygtį $1^2 - 2(0)^2 = 1$.",
-        "correction": "Sąlygoje prašoma natūraliųjų skaičių ($x, y \\ge 1$), todėl $y=0$ netinka.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-05-trap-2",
-        "title": "Per ankstyvas sustojimas perrinkime",
-        "wrongMove": "Patikrinama tik $y=1$ ir daroma išvada, kad lygtis neturi sprendinių natūraliuose skaičiuose.",
-        "whyTempting": "Jei pirmas bandymas nepavyksta, mokiniai dažnai abejoja sprendinių egzistavimu.",
-        "correction": "Tęskite tikrinimą $y=2, 3, \\dots$ arba naudokite grandininių trupmenų metodą fundamentaliajam sprendiniui rasti.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-05-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčia...?",
-        "back": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-06",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvienas natūralusis skaičius $n > 1$ gali būti suskaidytas į pirminių skaičių sandaugą.",
-    "answer": "Teiginys įrodytas pilnąja indukcija.",
-    "acceptedAnswers": [
-      "Teiginys įrodytas pilnąja indukcija."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
-      "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
-      "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
-      "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius."
-    ],
-    "solution": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas. Indukcijos prielaida: tarkime, kad bet kuris $2 \\le k < n$ gali būti suskaidytas pirminiais daugtuviais. Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\cdot b$, kur $2 \\le a, b < n$. Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\dots p_r$, $b = q_1 \\dots q_s$. Tada $n = p_1 \\dots p_r q_1 \\dots q_s$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Strategijos ir įrodymai",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Pilnoji indukcija",
-      "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
-    },
-    "strategyTags": [
-      "induction"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-06-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "induction"
-        ],
-        "steps": [
-          {
-            "title": "Indukcijos bazė",
-            "action": "Įrodome bazę $n=2$. Kadangi 2 yra pirminis skaičius, teiginys teisingas.",
-            "reason": "Skaidymas pirminiais taikomas ir pačiam pirminiam skaičiui.",
-            "latex": "n = 2",
-            "result": "Bazė patikrinta."
-          },
-          {
-            "title": "Indukcijos žingsnis",
-            "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\cdot b$, kur $a, b < n$.",
-            "reason": "Taikome stipriąją indukciją, kur prielaida galioja visiems mažesniems nariams.",
-            "latex": "n = ab",
-            "result": "Sudėtinis skaičius išreikštas sandauga."
-          },
-          {
-            "title": "Skaidinių sujungimas",
-            "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\prod p_i$, $b = \\prod q_j \\implies n = \\prod p_i \\prod q_j$.",
-            "reason": "Įstatome mažesnių skaičių skaidinius į sandaugą.",
-            "latex": "n = p_1 \\dots p_r q_1 \\dots q_s",
-            "result": "Teiginys įrodytas."
-          }
-        ],
-        "finalAnswer": "Teiginys įrodytas pilnąja indukcija."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-06-trap-1",
-        "title": "Silpnosios indukcijos taikymas",
-        "wrongMove": "Bandoma įrodyti teiginį darant prielaidą tik skaičiui $n-1$.",
-        "whyTempting": "Mokiniai yra labiau įpratę prie paprastosios (silpnosios) indukcijos.",
-        "correction": "Šiam uždaviniui būtina stiprioji (pilnoji) indukcija, nes sudėtinio skaičiaus dalikliai gali būti bet kokie skaičiai tarp 2 ir $n-1$, nebūtinai $n-1$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-06-trap-2",
-        "title": "Indukcijos bazės praleidimas",
-        "wrongMove": "Pradedama įrodinėti nuo bendro atvejo nepatikrinus mažiausios reikšmės $n=2$.",
-        "whyTempting": "Teiginys atrodo savaime suprantamas.",
-        "correction": "Indukcijos įrodymas yra nepilnas be bazės, kuri užtikrina pradinį grandinės narį.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-06-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvi...?",
-        "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
     "id": "ex-olimpiada-10-07",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tegul $x, y, z$ yra realieji skaičiai, tenkinantys sąlygas: $x+y+z = 3$, $xy+yz+zx = 2$ ir $xyz = 1$. Apskaičiuokite sumą $x^3+y^3+z^3$.",
@@ -2791,7 +1994,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-08",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tegul $x_1, x_2, x_3$ yra lygties $x^3 - x - 1 = 0$ šaknys. Apskaičiuokite jų ketvirtųjų laipsnių sumą $p_4 = x_1^4 + x_2^4 + x_3^4$.",
@@ -2923,543 +2126,8 @@ export const exercises_10 = [
     ]
   },
   {
-    "id": "ex-olimpiada-10-09",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams $a$ ir $b$ galioja nelygybė: $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
-    "answer": "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
-    "acceptedAnswers": [
-      "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
-      "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
-      "Šių narių suma yra $3a^5 + 2b^5$, o jų sandauga yra $a^{15}b^{10}$.",
-      "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta."
-    ],
-    "solution": "Pasirenkame penkis teigiamus skaičius: $a^5, a^5, a^5, b^5, b^5$. Pritaikome jiems aritmetinio-geometrinio vidurkio (AM-GM) nelygybę. Aritmetinis vidurkis yra $\\frac{3a^5 + 2b^5}{5}$. Geometrinis vidurkis yra $\\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5} = \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Nelygybės",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Pasvertasis AM-GM",
-      "text": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-09-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Penkių narių pasirinkimas",
-            "action": "Tegul duoti skaičiai yra $x_1=x_2=x_3=a^5$ ir $x_4=x_5=b^5$.",
-            "reason": "Suderiname narius taip, kad geometrinis vidurkis turėtų laipsnius 3 ir 2.",
-            "latex": "\\{a^5, a^5, a^5, b^5, b^5\\}",
-            "result": "Nustatyti AM-GM kintamieji."
-          },
-          {
-            "title": "AM-GM taikymas",
-            "action": "$\\frac{a^5+a^5+a^5+b^5+b^5}{5} \\ge \\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5}$.",
-            "reason": "Taikome klasikinę AM-GM nelygybę 5 nariams.",
-            "latex": "\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}}",
-            "result": "Gauta pradinė nelygybės forma."
-          },
-          {
-            "title": "Supaprastinimas",
-            "action": "$\\sqrt[5]{a^{15}b^{10}} = a^3b^2 \\implies a^3b^2 \\le \\frac{3a^5+2b^5}{5}$.",
-            "reason": "Šaknies traukimas iš kintamųjų laipsnių.",
-            "latex": "a^3 b^2 \\le \\frac{3a^5+2b^5}{5}",
-            "result": "Nelygybė įrodyta."
-          }
-        ],
-        "finalAnswer": "Nelygybė įrodyta taikant pasvertąją AM-GM nelygybę."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-09-trap-1",
-        "title": "Netinkamas AM-GM narių pasirinkimas",
-        "wrongMove": "Bandoma taikyti AM-GM nelygybę tik dviem nariams $a^5$ ir $b^5$, gaunant $\\frac{a^5+b^5}{2} \\ge a^{2.5}b^{2.5}$.",
-        "whyTempting": "Dviejų narių vidurkis yra paprasčiausia AM-GM forma.",
-        "correction": "Norint gauti nelygybę su $a^3b^2$, reikia 5 narių (trijų $a^5$ ir dviejų $b^5$), kad geometrinis vidurkis būtų $\\sqrt[5]{a^{15}b^{10}}$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-09-trap-2",
-        "title": "Aritmetinės klaidos laipsnių skaičiavime",
-        "wrongMove": "Neteisingai apskaičiuojama sandauga $a^5 \\cdot a^5 \\cdot a^5 = a^{125}$ (dauginant rodiklius vietoje sudėties).",
-        "whyTempting": "Mokiniai dažnai painioja laipsnių daugybos taisykles su kėlimu laipsniu.",
-        "correction": "Dauginant laipsnius su vienodais pagrindais, rodikliai sudedami: $a^5 \\cdot a^5 \\cdot a^5 = a^{5+5+5} = a^{15}$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-09-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams...?",
-        "back": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Šių narių suma yra $3a^5 + 2b^5$, o jų sandauga yra $a^{15}b^{10}$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-10",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{a+b+c}{2}$.",
-    "answer": "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$.",
-    "acceptedAnswers": [
-      "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [
-      "olimpiada-10-concept-titus-lemma"
-    ],
-    "hints": [
-      "Kairėje nelygybės pusėje turime kvadratų ir vardiklių santykių sumą. Tam idealiai tinka Titu lema.",
-      "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
-      "Priskirkite $x_1=a, x_2=b, x_3=c$ ir $y_1=b+c, y_2=c+a, y_3=a+b$.",
-      "Suskaičiuokite vardiklių sumą: $y_1+y_2+y_3 = 2(a+b+c)$. Įrašykite į nelygybę ir suprastinkite."
-    ],
-    "solution": "Pritaikome Titu lemą trims nariams su $x_i \\in \\{a, b, c\\}$ ir $y_i \\in \\{b+c, c+a, a+b\\}$. Formulė duoda: $\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{(b+c) + (c+a) + (a+b)}$. Vardiklio suma yra $2(a+b+c)$. Sutrumpiname $(a+b+c)$ ir gauname dešinėje pusėje $\\frac{a+b+c}{2}$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Nelygybės",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Titu lema",
-      "text": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [
-      "olimpiada-10-concept-titus-lemma"
-    ],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-10-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Titu lemos taikymas",
-            "action": "Užrašome $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)}$.",
-            "reason": "Titu lema teigia, kad kvadratų ir teigiamų vardiklių santykių suma yra ne mažesnė už sumos kvadratą, padalintą iš vardiklių sumos.",
-            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}",
-            "result": "Gauta bendroji nelygybės forma."
-          },
-          {
-            "title": "Supaprastinimas",
-            "action": "Kadangi $a+b+c > 0$, galime suprastinti: $\\frac{(a+b+c)^2}{2(a+b+c)} = \\frac{a+b+c}{2}$.",
-            "reason": "Trupmenos skaitiklio ir vardiklio dalijimas iš teigiamo reiškinio $a+b+c$.",
-            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}",
-            "result": "Nelygybė įrodyta."
-          }
-        ],
-        "finalAnswer": "Nelygybė įrodyta taikant Titu lemą."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-10-trap-1",
-        "title": "Vardiklių sumos klaida",
-        "wrongMove": "Teigiama, kad $(b+c) + (c+a) + (a+b) = a+b+c$.",
-        "whyTempting": "Mokiniai dažnai skuba ir nepastebi, kad kiekvienas kintamasis pasikartoja du kartus.",
-        "correction": "Sudedant vardiklius gaunama $2a+2b+2c = 2(a+b+c)$. Tai lemia papildomą koeficientą $1/2$ dešinėje pusėje.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-10-trap-2",
-        "title": "Netinkamas Titu lemos narių priskyrimas",
-        "wrongMove": "Bandoma taikyti nelygybę formoje $\\sum \\frac{a}{b+c}$ tiesiogiai, nepaverčiant skaitiklio kvadratu.",
-        "whyTempting": "Titu lema (Sedrakiano nelygybė) reikalauja skaitiklių kvadratų.",
-        "correction": "Jei turite $\\frac{a}{b+c}$, užrašykite tai kaip $\\frac{a^2}{a(b+c)}$ prieš taikydami lemą, arba užtikrinkite, kad skaitiklis jau yra kvadratas.",
-        "reviewConceptIds": [
-          "olimpiada-10-concept-titus-lemma"
-        ],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-10-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\fra...?$",
-        "back": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$.",
-        "conceptIds": [
-          "olimpiada-10-concept-titus-lemma"
-        ],
-        "methodIds": [
-          "olimpiada-10-concept-titus-lemma"
-        ],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Kairėje nelygybės pusėje turime kvadratų ir vardiklių santykių sumą. Tam idealiai tinka Titu lema.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Priskirkite $x_1=a, x_2=b, x_3=c$ ir $y_1=b+c, y_2=c+a, y_3=a+b$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Suskaičiuokite vardiklių sumą: $y_1+y_2+y_3 = 2(a+b+c)$. Įrašykite į nelygybę ir suprastinkite.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-11",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioja nelygybė: $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
-    "answer": "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$.",
-    "acceptedAnswers": [
-      "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
-      "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
-      "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
-      "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$."
-    ],
-    "solution": "Funkcija $f(x) = \\sin x$ yra du kartus diferencijuojama intervale $(0, \\pi)$. Antroji išvestinė $f''(x) = -\\sin x < 0$ visame smailiojo trikampio kampų intervale, todėl funkcija yra įgaubta. Pagal Jenseno nelygybę, $\\frac{\\sin A + \\sin B + \\sin C}{3} \\le \\sin\\left(\\frac{A+B+C}{3}\\right) = \\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$. Padauginame iš 3 ir gauname $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Nelygybės",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Jenseno nelygybė trigonometrinėms funkcijoms",
-      "text": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-11-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Funkcijos analizė",
-            "action": "Nagrinėjame $f(x) = \\sin x$, $f''(x) = -\\sin x$.",
-            "reason": "Išvestinė parodo funkcijos įgaubtumą.",
-            "latex": "f''(x) < 0 \\text{ intervale } (0, \\pi)",
-            "result": "Funkcija yra įgaubta."
-          },
-          {
-            "title": "Jenseno nelygybės užrašymas",
-            "action": "$\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right) \\implies \\frac{\\sum \\sin A}{3} \\le \\sin\\left(\\frac{\\pi}{3}\\right)$.",
-            "reason": "Jenseno nelygybė įgaubtoms funkcijoms su svoriais $1/3$.",
-            "latex": "\\sum \\sin A \\le 3 \\sin(60^\\circ)",
-            "result": "Gauta ribinė nelygybės vertė."
-          },
-          {
-            "title": "Galutinis vertinimas",
-            "action": "$\\sum \\sin A \\le 3 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{3\\sqrt{3}}{2}$.",
-            "reason": "Įstatome žinomą sinuso vertę ir padauginame iš 3.",
-            "latex": "\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}",
-            "result": "Nelygybė įrodyta."
-          }
-        ],
-        "finalAnswer": "Nelygybė įrodyta taikant Jenseno nelygybę tolydžiai įgaubtai funkcijai $f(x) = \\sin x$ intervale $(0, \\pi)$."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-11-trap-1",
-        "title": "Neteisinga nelygybės kryptis",
-        "wrongMove": "Taikoma Jenseno nelygybė kaip išgaubtai (convex) funkcijai: $\\frac{\\sum f(x_i)}{3} \\ge f(\\frac{\\sum x_i}{3})$.",
-        "whyTempting": "Mokiniai dažnai painioja įgaubtų (concave) ir išgaubtų (convex) funkcijų savybes bei nelygybės ženklus.",
-        "correction": "$\\sin x$ intervale $(0, \\pi)$ yra įgaubta ($f'' < 0$), todėl vidurkių sinusas yra didesnis arba lygus sinusų vidurkiui.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-11-trap-2",
-        "title": "Taikymo srities nepaisymas",
-        "wrongMove": "Taikoma nelygybė kampams, kurie nepatenka į intervalą $(0, \\pi)$.",
-        "whyTempting": "Tikimasi, kad nelygybė galioja visiems kampams, neatsižvelgiant į trikampio savybes.",
-        "correction": "Jenseno nelygybė reikalauja, kad funkcija būtų įgaubta visame nagrinėjamame intervale. Trikampio kampai $A, B, C$ visada yra $(0, \\pi)$, kur $\\sin x$ yra įgaubta.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-11-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioj...?",
-        "back": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
-    "id": "ex-olimpiada-10-12",
-    "topicId": "olimpiada-10",
-    "type": "structuredReasoning",
-    "level": "olympiad",
-    "statement": "Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
-    "answer": "Įrodyta Šūro nelygybė.",
-    "acceptedAnswers": [
-      "Įrodyta Šūro nelygybė."
-    ],
-    "answerTolerance": 0,
-    "choices": [],
-    "concepts": [],
-    "hints": [
-      "Tai klasikinė Šūro nelygybė su parametru $r=1$.",
-      "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
-      "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
-      "Atskliauskite ir sugrupuokite narius, kad gautumėte pateiktą nelygybę."
-    ],
-    "solution": "Tarkime be bendrumo praradimo, kad $a \\ge b \\ge c$. Užrašome Šūro formą su $r=1$: $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$. Atskliaudžiame reiškinius: $a^3 - a^2 b - a^2 c + abc + b^3 - b^2 a - b^2 c + abc + c^3 - c^2 a - c^2 b + abc \\ge 0$. Sugrupuojame neigiamus narius ir perkeliame juos į dešinę pusę: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
-    "alternate": "",
-    "estimatedSeconds": 60,
-    "olympiadTrack": "Nelygybės",
-    "olympiadTier": "standard",
-    "requiredPrerequisiteMastery": 70,
-    "coreIdea": {
-      "title": "Šūro nelygybės forma",
-      "text": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę."
-    },
-    "strategyTags": [
-      "algebraic-transformation"
-    ],
-    "prerequisiteTopicIds": [],
-    "prerequisiteConceptIds": [],
-    "expectedMethodIds": [],
-    "solutionMethods": [
-      {
-        "id": "ex-olimpiada-10-12-method-1",
-        "title": "Pagrindinis įrodymas",
-        "methodType": "main",
-        "strategyTags": [
-          "algebraic-transformation"
-        ],
-        "steps": [
-          {
-            "title": "Šūro nelygybės užrašymas",
-            "action": "Užrašome $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$.",
-            "reason": "Šūro nelygybė su $r=1$ visada galioja neneigiamiems realiesiems skaičiams.",
-            "latex": "\\sum_{cyc} a(a-b)(a-c) \\ge 0",
-            "result": "Gauta pradinė sistemos forma."
-          },
-          {
-            "title": "Išskleidimas",
-            "action": "Išskleisdami gauname $a^3+b^3+c^3 + 3abc - (a^2b+ab^2+b^2c+bc^2+c^2a+ca^2) \\ge 0$.",
-            "reason": "Atliekame algebrinį skliaustų atidarymą.",
-            "latex": "a^3+b^3+c^3 + 3abc \\ge \\sum_{sym} a^2 b",
-            "result": "Nelygybė išreikšta simetrinėmis sumomis."
-          },
-          {
-            "title": "Grupavimas",
-            "action": "Sutvarkome dešinę pusę: $\\sum_{sym} a^2b = ab(a+b) + bc(b+c) + ca(c+a)$.",
-            "reason": "Sugrupuojame narius po du su bendru daugikliu.",
-            "latex": "a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)",
-            "result": "Uždavinys įrodytas."
-          }
-        ],
-        "finalAnswer": "Nelygybė įrodyta, tai yra 3-ojo laipsnio Šūro nelygybė."
-      }
-    ],
-    "commonTraps": [
-      {
-        "id": "ex-olimpiada-10-12-trap-1",
-        "title": "AM-GM nelygybės netinkamas taikymas",
-        "wrongMove": "Bandoma įrodyti nelygybę tiesiogiai taikant AM-GM kiekvienam nariui atskirai.",
-        "whyTempting": "AM-GM yra populiariausia nelygybė, todėl mokiniai bando ją taikyti visur, net jei kintamųjų laipsniai nesutampa.",
-        "correction": "Šūro nelygybė yra stipresnė už AM-GM tam tikrose srityse. Geriausia ją įrodyti naudojant ciklinę sumą $\\sum a(a-b)(a-c) \\ge 0$.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      },
-      {
-        "id": "ex-olimpiada-10-12-trap-2",
-        "title": "3abc nario pamiršimas",
-        "wrongMove": "Praleidžiamas $3abc$ narys kairėje nelygybės pusėje.",
-        "whyTempting": "Mokiniai dažnai painioja Šūro nelygybę su kitomis simetrinėmis nelygybėmis, kurios neturi laisvojo nario.",
-        "correction": "3-ojo laipsnio Šūro nelygybė visada turi $3abc$ narį, kuris subalansuoja mišrias sandaugas dešinėje pusėje.",
-        "reviewConceptIds": [],
-        "srsRecommended": true
-      }
-    ],
-    "reflectionPrompts": [
-      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-      "Kokie buvo kritiniai sprendimo žingsniai?"
-    ],
-    "extensionQuestions": [],
-    "srsSeeds": [
-      {
-        "id": "ex-olimpiada-10-12-srs-1",
-        "deck": "practice",
-        "cardType": "method",
-        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^...?$",
-        "back": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę.",
-        "conceptIds": [],
-        "methodIds": [],
-        "defaultEnabled": true
-      }
-    ],
-    "hintsRaw": [
-      {
-        "order": 1,
-        "kind": "orientation",
-        "text": "Tai klasikinė Šūro nelygybė su parametru $r=1$.",
-        "penalty": 0.05
-      },
-      {
-        "order": 2,
-        "kind": "observation",
-        "text": "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
-        "penalty": 0.07
-      },
-      {
-        "order": 3,
-        "kind": "method",
-        "text": "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
-        "penalty": 0.09
-      },
-      {
-        "order": 4,
-        "kind": "scaffold",
-        "text": "Atskliauskite ir sugrupuokite narius, kad gautumėte pateiktą nelygybę.",
-        "penalty": 0.11
-      }
-    ]
-  },
-  {
     "id": "ex-olimpiada-10-13",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-algebra",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Susklaidykite daugianarį $n^4 + 4$ į dviejų antrojo laipsnio daugianarių su sveikaisiais koeficientais sandaugą.",
@@ -3592,7 +2260,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-14",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Įrodykite, kad atliekant inversiją apskritimo atžvilgiu, tiesė, kuri neina per inversijos centrą, atvaizduojama į apskritimą, einantį per inversijos centrą.",
@@ -3737,7 +2405,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-15",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tegul trys kompleksiniai skaičiai $a, b, c$ žymi trikampio viršūnes kompleksinėje plokštumoje. Įrodykite, kad šis trikampis yra lygiakraštis tada ir tik tada, kai galioja lygybė: $a^2 + b^2 + c^2 = ab + bc + ca$.",
@@ -3870,7 +2538,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-16",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Raskite trikampio $ABC$, kurio kraštinių ilgiai yra $a, b, c$, įbrėžtinio apskritimo centro $I$ baricentrines koordinates.",
@@ -4003,7 +2671,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-17",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Tegul trikampiai $ABC$ ir $ADE$ yra tiesiogiai panašūs ir turi bendrą viršūnę $A$. Įrodykite, kad trikampiai $ABD$ ir $ACE$ taip pat yra tiesiogiai panašūs.",
@@ -4136,7 +2804,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-18",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-geometrija",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Trikampio $ABC$ apibrėžtiniame apskritime kampo $A$ pusiaukampinė kerta apskritimą taške $M$. Tegul $I$ yra trikampio $ABC$ įbrėžtinio apskritimo centras. Įrodykite, kad $MB = MI = MC$.",
@@ -4269,7 +2937,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-19",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Sujungtame plokščiajame grafe yra 6 viršūnės ir 10 briaunų. Į kelias sritis (įskaitant išorinę) šis grafas padalija plokštumą?",
@@ -4414,7 +3082,7 @@ export const exercises_10 = [
   },
   {
     "id": "ex-olimpiada-10-20",
-    "topicId": "olimpiada-10",
+    "topicId": "olimpiada-10-kombinatorika",
     "type": "structuredReasoning",
     "level": "olympiad",
     "statement": "Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampiniai langeliai (jie yra tos pačios spalvos). Įrodykite, kad likusios lentos neįmanoma pilnai uždengti $2 \\times 1$ domino kauliukais.",
@@ -4541,6 +3209,1338 @@ export const exercises_10 = [
         "order": 4,
         "kind": "scaffold",
         "text": "Lieka 32 juodi ir 30 baltų langelių. Kadangi bet koks kauliukų rinkinys turi uždengti po lygiai abiejų spalvų langelių, toks padengimas yra neįmanomas.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-09",
+    "topicId": "olimpiada-10-nelygybes",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams $a$ ir $b$ galioja nelygybė: $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
+    "answer": "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
+    "acceptedAnswers": [
+      "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
+      "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
+      "Šių narių suma yra $3a^5 + 2b^5$, o jų sandauga yra $a^{15}b^{10}$.",
+      "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta."
+    ],
+    "solution": "Pasirenkame penkis teigiamus skaičius: $a^5, a^5, a^5, b^5, b^5$. Pritaikome jiems aritmetinio-geometrinio vidurkio (AM-GM) nelygybę. Aritmetinis vidurkis yra $\\frac{3a^5 + 2b^5}{5}$. Geometrinis vidurkis yra $\\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5} = \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Nelygybės",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Pasvertasis AM-GM",
+      "text": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-09-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Penkių narių pasirinkimas",
+            "action": "Tegul duoti skaičiai yra $x_1=x_2=x_3=a^5$ ir $x_4=x_5=b^5$.",
+            "reason": "Suderiname narius taip, kad geometrinis vidurkis turėtų laipsnius 3 ir 2.",
+            "latex": "\\{a^5, a^5, a^5, b^5, b^5\\}",
+            "result": "Nustatyti AM-GM kintamieji."
+          },
+          {
+            "title": "AM-GM taikymas",
+            "action": "$\\frac{a^5+a^5+a^5+b^5+b^5}{5} \\ge \\sqrt[5]{a^5 \\cdot a^5 \\cdot a^5 \\cdot b^5 \\cdot b^5}$.",
+            "reason": "Taikome klasikinę AM-GM nelygybę 5 nariams.",
+            "latex": "\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}}",
+            "result": "Gauta pradinė nelygybės forma."
+          },
+          {
+            "title": "Supaprastinimas",
+            "action": "$\\sqrt[5]{a^{15}b^{10}} = a^3b^2 \\implies a^3b^2 \\le \\frac{3a^5+2b^5}{5}$.",
+            "reason": "Šaknies traukimas iš kintamųjų laipsnių.",
+            "latex": "a^3 b^2 \\le \\frac{3a^5+2b^5}{5}",
+            "result": "Nelygybė įrodyta."
+          }
+        ],
+        "finalAnswer": "Nelygybė įrodyta taikant pasvertąją AM-GM nelygybę."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-09-trap-1",
+        "title": "Netinkamas AM-GM narių pasirinkimas",
+        "wrongMove": "Bandoma taikyti AM-GM nelygybę tik dviem nariams $a^5$ ir $b^5$, gaunant $\\frac{a^5+b^5}{2} \\ge a^{2.5}b^{2.5}$.",
+        "whyTempting": "Dviejų narių vidurkis yra paprasčiausia AM-GM forma.",
+        "correction": "Norint gauti nelygybę su $a^3b^2$, reikia 5 narių (trijų $a^5$ ir dviejų $b^5$), kad geometrinis vidurkis būtų $\\sqrt[5]{a^{15}b^{10}}$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-09-trap-2",
+        "title": "Aritmetinės klaidos laipsnių skaičiavime",
+        "wrongMove": "Neteisingai apskaičiuojama sandauga $a^5 \\cdot a^5 \\cdot a^5 = a^{125}$ (dauginant rodiklius vietoje sudėties).",
+        "whyTempting": "Mokiniai dažnai painioja laipsnių daugybos taisykles su kėlimu laipsniu.",
+        "correction": "Dauginant laipsnius su vienodais pagrindais, rodikliai sudedami: $a^5 \\cdot a^5 \\cdot a^5 = a^{5+5+5} = a^{15}$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-09-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams...?",
+        "back": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Šių narių suma yra $3a^5 + 2b^5$, o jų sandauga yra $a^{15}b^{10}$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Pagal AM-GM gauname: $\\frac{3a^5 + 2b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$. Nelygybė įrodyta.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-10",
+    "topicId": "olimpiada-10-nelygybes",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{a+b+c}{2}$.",
+    "answer": "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$.",
+    "acceptedAnswers": [
+      "Įrodyta $\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-10-concept-titus-lemma"
+    ],
+    "hints": [
+      "Kairėje nelygybės pusėje turime kvadratų ir vardiklių santykių sumą. Tam idealiai tinka Titu lema.",
+      "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
+      "Priskirkite $x_1=a, x_2=b, x_3=c$ ir $y_1=b+c, y_2=c+a, y_3=a+b$.",
+      "Suskaičiuokite vardiklių sumą: $y_1+y_2+y_3 = 2(a+b+c)$. Įrašykite į nelygybę ir suprastinkite."
+    ],
+    "solution": "Pritaikome Titu lemą trims nariams su $x_i \\in \\{a, b, c\\}$ ir $y_i \\in \\{b+c, c+a, a+b\\}$. Formulė duoda: $\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{(b+c) + (c+a) + (a+b)}$. Vardiklio suma yra $2(a+b+c)$. Sutrumpiname $(a+b+c)$ ir gauname dešinėje pusėje $\\frac{a+b+c}{2}$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Nelygybės",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Titu lema",
+      "text": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-10-concept-titus-lemma"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-10-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Titu lemos taikymas",
+            "action": "Užrašome $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)}$.",
+            "reason": "Titu lema teigia, kad kvadratų ir teigiamų vardiklių santykių suma yra ne mažesnė už sumos kvadratą, padalintą iš vardiklių sumos.",
+            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}",
+            "result": "Gauta bendroji nelygybės forma."
+          },
+          {
+            "title": "Supaprastinimas",
+            "action": "Kadangi $a+b+c > 0$, galime suprastinti: $\\frac{(a+b+c)^2}{2(a+b+c)} = \\frac{a+b+c}{2}$.",
+            "reason": "Trupmenos skaitiklio ir vardiklio dalijimas iš teigiamo reiškinio $a+b+c$.",
+            "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}",
+            "result": "Nelygybė įrodyta."
+          }
+        ],
+        "finalAnswer": "Nelygybė įrodyta taikant Titu lemą."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-10-trap-1",
+        "title": "Vardiklių sumos klaida",
+        "wrongMove": "Teigiama, kad $(b+c) + (c+a) + (a+b) = a+b+c$.",
+        "whyTempting": "Mokiniai dažnai skuba ir nepastebi, kad kiekvienas kintamasis pasikartoja du kartus.",
+        "correction": "Sudedant vardiklius gaunama $2a+2b+2c = 2(a+b+c)$. Tai lemia papildomą koeficientą $1/2$ dešinėje pusėje.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-10-trap-2",
+        "title": "Netinkamas Titu lemos narių priskyrimas",
+        "wrongMove": "Bandoma taikyti nelygybę formoje $\\sum \\frac{a}{b+c}$ tiesiogiai, nepaverčiant skaitiklio kvadratu.",
+        "whyTempting": "Titu lema (Sedrakiano nelygybė) reikalauja skaitiklių kvadratų.",
+        "correction": "Jei turite $\\frac{a}{b+c}$, užrašykite tai kaip $\\frac{a^2}{a(b+c)}$ prieš taikydami lemą, arba užtikrinkite, kad skaitiklis jau yra kvadratas.",
+        "reviewConceptIds": [
+          "olimpiada-10-concept-titus-lemma"
+        ],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-10-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\fra...?$",
+        "back": "Taikome Titu lemą (Sedrakiano nelygybę): $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{(a+b+c)^2}{(b+c)+(c+a)+(a+b)} = \\frac{(a+b+c)^2}{2(a+b+c)}$.",
+        "conceptIds": [
+          "olimpiada-10-concept-titus-lemma"
+        ],
+        "methodIds": [
+          "olimpiada-10-concept-titus-lemma"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Kairėje nelygybės pusėje turime kvadratų ir vardiklių santykių sumą. Tam idealiai tinka Titu lema.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Užrašykite bendrąją Titu lemos formą: $\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Priskirkite $x_1=a, x_2=b, x_3=c$ ir $y_1=b+c, y_2=c+a, y_3=a+b$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Suskaičiuokite vardiklių sumą: $y_1+y_2+y_3 = 2(a+b+c)$. Įrašykite į nelygybę ir suprastinkite.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-11",
+    "topicId": "olimpiada-10-nelygybes",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioja nelygybė: $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
+    "answer": "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$.",
+    "acceptedAnswers": [
+      "Įrodyta $\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}$."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
+      "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
+      "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
+      "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$."
+    ],
+    "solution": "Funkcija $f(x) = \\sin x$ yra du kartus diferencijuojama intervale $(0, \\pi)$. Antroji išvestinė $f''(x) = -\\sin x < 0$ visame smailiojo trikampio kampų intervale, todėl funkcija yra įgaubta. Pagal Jenseno nelygybę, $\\frac{\\sin A + \\sin B + \\sin C}{3} \\le \\sin\\left(\\frac{A+B+C}{3}\\right) = \\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$. Padauginame iš 3 ir gauname $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Nelygybės",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Jenseno nelygybė trigonometrinėms funkcijoms",
+      "text": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-11-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Funkcijos analizė",
+            "action": "Nagrinėjame $f(x) = \\sin x$, $f''(x) = -\\sin x$.",
+            "reason": "Išvestinė parodo funkcijos įgaubtumą.",
+            "latex": "f''(x) < 0 \\text{ intervale } (0, \\pi)",
+            "result": "Funkcija yra įgaubta."
+          },
+          {
+            "title": "Jenseno nelygybės užrašymas",
+            "action": "$\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right) \\implies \\frac{\\sum \\sin A}{3} \\le \\sin\\left(\\frac{\\pi}{3}\\right)$.",
+            "reason": "Jenseno nelygybė įgaubtoms funkcijoms su svoriais $1/3$.",
+            "latex": "\\sum \\sin A \\le 3 \\sin(60^\\circ)",
+            "result": "Gauta ribinė nelygybės vertė."
+          },
+          {
+            "title": "Galutinis vertinimas",
+            "action": "$\\sum \\sin A \\le 3 \\cdot \\frac{\\sqrt{3}}{2} = \\frac{3\\sqrt{3}}{2}$.",
+            "reason": "Įstatome žinomą sinuso vertę ir padauginame iš 3.",
+            "latex": "\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}",
+            "result": "Nelygybė įrodyta."
+          }
+        ],
+        "finalAnswer": "Nelygybė įrodyta taikant Jenseno nelygybę tolydžiai įgaubtai funkcijai $f(x) = \\sin x$ intervale $(0, \\pi)$."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-11-trap-1",
+        "title": "Neteisinga nelygybės kryptis",
+        "wrongMove": "Taikoma Jenseno nelygybė kaip išgaubtai (convex) funkcijai: $\\frac{\\sum f(x_i)}{3} \\ge f(\\frac{\\sum x_i}{3})$.",
+        "whyTempting": "Mokiniai dažnai painioja įgaubtų (concave) ir išgaubtų (convex) funkcijų savybes bei nelygybės ženklus.",
+        "correction": "$\\sin x$ intervale $(0, \\pi)$ yra įgaubta ($f'' < 0$), todėl vidurkių sinusas yra didesnis arba lygus sinusų vidurkiui.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-11-trap-2",
+        "title": "Taikymo srities nepaisymas",
+        "wrongMove": "Taikoma nelygybė kampams, kurie nepatenka į intervalą $(0, \\pi)$.",
+        "whyTempting": "Tikimasi, kad nelygybė galioja visiems kampams, neatsižvelgiant į trikampio savybes.",
+        "correction": "Jenseno nelygybė reikalauja, kad funkcija būtų įgaubta visame nagrinėjamame intervale. Trikampio kampai $A, B, C$ visada yra $(0, \\pi)$, kur $\\sin x$ yra įgaubta.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-11-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioj...?",
+        "back": "Funkcija $f(x) = \\sin x$ yra įgaubta (concave) intervale $(0, \\pi)$, nes jos antroji išvestinė $f''(x) = -\\sin x < 0$. Taikome Jenseno nelygybę: $\\frac{f(A)+f(B)+f(C)}{3} \\le f\\left(\\frac{A+B+C}{3}\\right)$.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Ištirkite funkcijos $f(x) = \\sin x$ išgaubtumą intervale $(0, \\pi)$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Kadangi antroji išvestinė yra neigiama, funkcija yra įgaubta. Įgaubtoms funkcijoms galioja Jenseno nelygybė su ženklu $\\le$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Užrašykite Jenseno nelygybę kampams $A, B, C$: $\\sin A + \\sin B + \\sin C \\le 3 \\sin\\left(\\frac{A+B+C}{3}\\right)$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Kadangi trikampio kampų suma yra $A+B+C = 180^\\circ$, tai kampų vidurkis yra $60^\\circ$. Apskaičiuokite $3 \\sin 60^\\circ$.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-12",
+    "topicId": "olimpiada-10-nelygybes",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
+    "answer": "Įrodyta Šūro nelygybė.",
+    "acceptedAnswers": [
+      "Įrodyta Šūro nelygybė."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Tai klasikinė Šūro nelygybė su parametru $r=1$.",
+      "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
+      "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
+      "Atskliauskite ir sugrupuokite narius, kad gautumėte pateiktą nelygybę."
+    ],
+    "solution": "Tarkime be bendrumo praradimo, kad $a \\ge b \\ge c$. Užrašome Šūro formą su $r=1$: $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$. Atskliaudžiame reiškinius: $a^3 - a^2 b - a^2 c + abc + b^3 - b^2 a - b^2 c + abc + c^3 - c^2 a - c^2 b + abc \\ge 0$. Sugrupuojame neigiamus narius ir perkeliame juos į dešinę pusę: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Nelygybės",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Šūro nelygybės forma",
+      "text": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-12-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Šūro nelygybės užrašymas",
+            "action": "Užrašome $a(a-b)(a-c) + b(b-a)(b-c) + c(c-a)(c-b) \\ge 0$.",
+            "reason": "Šūro nelygybė su $r=1$ visada galioja neneigiamiems realiesiems skaičiams.",
+            "latex": "\\sum_{cyc} a(a-b)(a-c) \\ge 0",
+            "result": "Gauta pradinė sistemos forma."
+          },
+          {
+            "title": "Išskleidimas",
+            "action": "Išskleisdami gauname $a^3+b^3+c^3 + 3abc - (a^2b+ab^2+b^2c+bc^2+c^2a+ca^2) \\ge 0$.",
+            "reason": "Atliekame algebrinį skliaustų atidarymą.",
+            "latex": "a^3+b^3+c^3 + 3abc \\ge \\sum_{sym} a^2 b",
+            "result": "Nelygybė išreikšta simetrinėmis sumomis."
+          },
+          {
+            "title": "Grupavimas",
+            "action": "Sutvarkome dešinę pusę: $\\sum_{sym} a^2b = ab(a+b) + bc(b+c) + ca(c+a)$.",
+            "reason": "Sugrupuojame narius po du su bendru daugikliu.",
+            "latex": "a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)",
+            "result": "Uždavinys įrodytas."
+          }
+        ],
+        "finalAnswer": "Nelygybė įrodyta, tai yra 3-ojo laipsnio Šūro nelygybė."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-12-trap-1",
+        "title": "AM-GM nelygybės netinkamas taikymas",
+        "wrongMove": "Bandoma įrodyti nelygybę tiesiogiai taikant AM-GM kiekvienam nariui atskirai.",
+        "whyTempting": "AM-GM yra populiariausia nelygybė, todėl mokiniai bando ją taikyti visur, net jei kintamųjų laipsniai nesutampa.",
+        "correction": "Šūro nelygybė yra stipresnė už AM-GM tam tikrose srityse. Geriausia ją įrodyti naudojant ciklinę sumą $\\sum a(a-b)(a-c) \\ge 0$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-12-trap-2",
+        "title": "3abc nario pamiršimas",
+        "wrongMove": "Praleidžiamas $3abc$ narys kairėje nelygybės pusėje.",
+        "whyTempting": "Mokiniai dažnai painioja Šūro nelygybę su kitomis simetrinėmis nelygybėmis, kurios neturi laisvojo nario.",
+        "correction": "3-ojo laipsnio Šūro nelygybė visada turi $3abc$ narį, kuris subalansuoja mišrias sandaugas dešinėje pusėje.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-12-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^...?$",
+        "back": "Šūro nelygybė teigia, kad $\\sum a^r(a-b)(a-c) \\ge 0$. Parinksime $r=1$ ir išskleisime šią sumą, kas tiesiogiai duoda ieškomą nelygybę.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Tai klasikinė Šūro nelygybė su parametru $r=1$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pradėkite nuo teiginio: $a(a-b)(a-c) + b(b-c)(b-a) + c(c-a)(c-b) \\ge 0$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kodėl ši suma visada yra neneigiama? Išnagrinėkite atvejį, kai $a \\ge b \\ge c$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Atskliauskite ir sugrupuokite narius, kad gautumėte pateiktą nelygybę.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-01",
+    "topicId": "olimpiada-10-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
+    "answer": "Nustatyta kvadratinės liekanos savybė moduliu 11.",
+    "acceptedAnswers": [
+      "Nustatyta kvadratinės liekanos savybė moduliu 11."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-10-concept-quad-reciprocity"
+    ],
+    "hints": [
+      "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
+      "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
+      "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
+      "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
+    ],
+    "solution": "Uždavinį suformuluojame kaip kvadratinio palyginimo sprendžiamumą moduliu 11. Taikome kvadratinio abipusiškumo dėsnį Legendre simboliui $\\left(\\frac{3}{11}\\right)$. Pakeičiame jį į $-\\left(\\frac{11}{3}\\right) = -\\left(\\frac{2}{3}\\right)$. Kadangi 2 nėra kvadratas moduliu 3, gauname $-(-1) = 1$. Todėl sprendinys egzistuoja.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Legendre simbolis",
+      "text": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį."
+    },
+    "strategyTags": [
+      "modular-arithmetic"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-10-concept-quad-reciprocity"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-01-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "modular-arithmetic"
+        ],
+        "steps": [
+          {
+            "title": "Legendre simbolio užrašymas",
+            "action": "Turime apskaičiuoti $\\left(\\frac{3}{11}\\right)$.",
+            "reason": "Sprendinio egzistavimas ekvivalentus Legendre simbolio reikšmei 1.",
+            "latex": "\\left(\\frac{3}{11}\\right)",
+            "result": "Suformuluotas liekanos uždavinys."
+          },
+          {
+            "title": "Abipusiškumo dėsnio taikymas",
+            "action": "$\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{1 \\cdot 5} = -1 \\implies \\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
+            "reason": "Pagal kvadratinio abipusiškumo dėsnį, nes abu pirminiai yra nelyginiai.",
+            "latex": "\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)",
+            "result": "Modulis sumažintas iki 3."
+          },
+          {
+            "title": "Simbolio moduliu 3 skaičiavimas",
+            "action": "$\\left(\\frac{11}{3}\\right) = \\left(\\frac{2}{3}\\right) = -1 \\implies \\left(\\frac{3}{11}\\right) = -(-1) = 1$.",
+            "reason": "Kadangi $11 \\equiv 2 \\pmod 3$, o 2 nėra kvadratas mod 3.",
+            "latex": "\\left(\\frac{3}{11}\\right) = 1",
+            "result": "Įrodytas sprendinio egzistavimas. Pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$."
+          }
+        ],
+        "finalAnswer": "Taip, egzistuoja (pavyzdžiui, $x = 5$)."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-01-trap-1",
+        "title": "Kvadratinio abipusiškumo ženklo klaida",
+        "wrongMove": "Pamirštamas $(-1)^{\\frac{p-1}{2}\\frac{q-1}{2}}$ daugiklis, teigiant, kad $\\left(\\frac{3}{11}\\right) = \\left(\\frac{11}{3}\\right)$.",
+        "whyTempting": "Daugeliu atvejų Legendre simboliai sutampa, todėl mokiniai linkę supaprastinti taisyklę.",
+        "correction": "Kadangi $3 \\equiv 3 \\pmod{4}$ ir $11 \\equiv 3 \\pmod{4}$, tai $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$.",
+        "reviewConceptIds": [
+          "olimpiada-10-concept-quad-reciprocity"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-01-trap-2",
+        "title": "Nepilnas liekanų tikrinimas",
+        "wrongMove": "Patikrinami tik keli skaičiai (pvz., $x=1, 2$) ir daroma išvada, kad sprendinio nėra.",
+        "whyTempting": "Rankinis tikrinimas yra lėtas ir imlus klaidoms.",
+        "correction": "Naudokite Legendre simbolį arba patikrinkite visas liekanas iki $x=5$ (nes $x^2 \\equiv (-x)^2$).",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-01-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad ...?",
+        "back": "Turime apskaičiuoti Legendre simbolį $\\left(\\frac{3}{11}\\right)$ taikydami kvadratinio abipusiškumo dėsnį.",
+        "conceptIds": [
+          "olimpiada-10-concept-quad-reciprocity"
+        ],
+        "methodIds": [
+          "olimpiada-10-concept-quad-reciprocity"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Klausiama, ar 3 yra kvadratinė liekana moduliu 11. Tai galima užrašyti kaip Legendre simbolį $\\left(\\frac{3}{11}\\right)$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Kadangi ir 3, ir 11 yra pirminiai skaičiai, taikome kvadratinio abipusiškumo dėsnį: $\\left(\\frac{3}{11}\\right)\\left(\\frac{11}{3}\\right) = (-1)^{\\frac{3-1}{2}\\frac{11-1}{2}} = -1$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Todėl $\\left(\\frac{3}{11}\\right) = -\\left(\\frac{11}{3}\\right)$. Dabar apskaičiuokite $\\left(\\frac{11}{3}\\right)$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Sumažinkite moduliu 3: $11 \\equiv 2 \\pmod 3$. Kadangi $2$ nėra kvadratas moduliu 3, $\\left(\\frac{2}{3}\\right) = -1$, vadinasi $\\left(\\frac{3}{11}\\right) = -(-1) = 1$. Sprendinys egzistuoja, pavyzdžiui, $5^2 = 25 \\equiv 3 \\pmod{11}$.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-02",
+    "topicId": "olimpiada-10-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaičiais.",
+    "answer": "Skaičius suskaidytas pirminiais Gauso skaičiais.",
+    "acceptedAnswers": [
+      "Skaičius suskaidytas pirminiais Gauso skaičiais."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [
+      "olimpiada-10-concept-gaussian-integers"
+    ],
+    "hints": [
+      "Gauso sveikieji skaičiai turi pavidalą $a+bi$. Skaičių 5 bandome užrašyti kaip dviejų Gauso skaičių sandaugą.",
+      "Pasinaudokite normos savybe $N(xy) = N(x)N(y)$. Kadangi $N(5) = 25$, daliklio norma turi būti 5.",
+      "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
+      "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$."
+    ],
+    "solution": "Ieškome skaidinio $5 = (a+bi)(c+di)$. Taikome normą: $N(5) = 25 \\implies N(a+bi)N(c+di) = 25$. Kadangi ieškome netrivialių daliklių, jų normos turi būti lygios 5. Lygtis $a^2+b^2=5$ turi sprendinį $a=2, b=1$, todėl $5 = (2+i)(2-i)$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Gauso skaičių norma",
+      "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [
+      "olimpiada-10-concept-gaussian-integers"
+    ],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-02-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Normos lygybė",
+            "action": "Užrašome $N(5) = 25 = N(z)N(w)$.",
+            "reason": "Normos multiplikatyvumas $\\mathbb{Z}[i]$ aibėje.",
+            "latex": "N(z)N(w) = 25",
+            "result": "Apribotos galimos daliklių normos."
+          },
+          {
+            "title": "Normos vertės radimas",
+            "action": "Kadangi dalikliai nėra vienetiniai, $N(z) = 5 \\implies a^2+b^2=5$.",
+            "reason": "Vieninteliai netrivialūs 25 dalikliai yra 5 ir 5.",
+            "latex": "a^2+b^2 = 5",
+            "result": "Gauta sveikųjų skaičių kvadratų lygtis."
+          },
+          {
+            "title": "Faktorizacija",
+            "action": "Sprendinys $a=2, b=1$ duoda $z = 2+i$, todėl $5 = (2+i)(2-i)$.",
+            "reason": "Kompleksinių skaičių daugyba $(2+i)(2-i) = 4 - i^2 = 5$.",
+            "latex": "5 = (2+i)(2-i)",
+            "result": "Rastas pirminis skaidinys Gauso skaičiuose."
+          }
+        ],
+        "finalAnswer": "$5 = (2+i)(2-i)$"
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-02-trap-1",
+        "title": "Klaidinga prielaida apie pirminių skaičių savybes",
+        "wrongMove": "Teigiama, kad 5 negalima suskaidyti, nes jis yra pirminis skaičius sveikųjų skaičių aibėje $\\mathbb{Z}$.",
+        "whyTempting": "Mokiniai dažnai painioja pirminius skaičius $\\mathbb{Z}$ aibėje su pirminiais Gauso skaičiais $\\mathbb{Z}[i]$.",
+        "correction": "Gauso sveikųjų skaičių aibėje pirminis skaičius $p \\equiv 1 \\pmod 4$ visada yra sudėtinis.",
+        "reviewConceptIds": [
+          "olimpiada-10-concept-gaussian-integers"
+        ],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-02-trap-2",
+        "title": "Normos multiplikatyvumo nepaisymas",
+        "wrongMove": "Bandoma rasti daliklius spėliojant be normos $N(z)$ apribojimų.",
+        "whyTempting": "Tai atrodo paprasčiau nei spręsti kvadratinę lygtį $a^2+b^2=5$.",
+        "correction": "Naudokite savybę $N(z) = a^2+b^2$. Jei $z$ dalija 5, tai $N(z)$ dalija $N(5)=25$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-02-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaiči...?",
+        "back": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$, todėl pirminių faktorių norma turi būti 5. Tai veda prie lygties $a^2+b^2=5$.",
+        "conceptIds": [
+          "olimpiada-10-concept-gaussian-integers"
+        ],
+        "methodIds": [
+          "olimpiada-10-concept-gaussian-integers"
+        ],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Gauso sveikieji skaičiai turi pavidalą $a+bi$. Skaičių 5 bandome užrašyti kaip dviejų Gauso skaičių sandaugą.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Pasinaudokite normos savybe $N(xy) = N(x)N(y)$. Kadangi $N(5) = 25$, daliklio norma turi būti 5.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Raskite sveikųjų skaičių porą $(a,b)$, kuriai $a^2+b^2=5$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Sprendiniai yra $a=2, b=1$. Todėl $5 = (2+i)(2-i)$.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-03",
+    "topicId": "olimpiada-10-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatykite, kuris iš skaičių $2017$ ir $2019$ gali būti užrašytas dviejų sveikųjų skaičių kvadratų suma $a^2+b^2$.",
+    "answer": "Nustatyta galimybė išreikšti dviejų kvadratų suma.",
+    "acceptedAnswers": [
+      "Nustatyta galimybė išreikšti dviejų kvadratų suma."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
+      "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
+      "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
+      "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma."
+    ],
+    "solution": "Patikriname pirminį skaičių 2017 moduliu 4. Kadangi $2017 \\equiv 1 \\pmod 4$, jis yra dviejų kvadratų suma. Skaidome skaičių 2019: $2019 = 3 \\cdot 673$. Daliklis 3 yra pirminis pavidalo $4k+3$. Kadangi pirminio 3 laipsnio rodiklis skaičiuje 2019 yra nelyginis (lygus 1), 2019 negalima užrašyti dviejų kvadratų suma.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Fermo teorema apie dviejų kvadratų sumą",
+      "text": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu."
+    },
+    "strategyTags": [
+      "modular-arithmetic"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-03-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "modular-arithmetic"
+        ],
+        "steps": [
+          {
+            "title": "Pirmojo skaičiaus analizė",
+            "action": "Skaičius 2017 yra pirminis ir $2017 \\equiv 1 \\pmod 4$.",
+            "reason": "Pagal Fermo teoremą apie dviejų kvadratų sumą.",
+            "latex": "2017 \\equiv 1 \\pmod 4",
+            "result": "2017 galima išreikšti kaip $a^2+b^2$."
+          },
+          {
+            "title": "Antrojo skaičiaus analizė",
+            "action": "Skaidome $2019 = 3 \\cdot 673$, kur $3 \\equiv 3 \\pmod 4$ yra pirminis, įeinantis laipsniu 1.",
+            "reason": "Fermo teoremos apibendrinimas sudėtiniams skaičiams reikalauja lyginių laipsnių pirminiams $p \\equiv 3 \\pmod 4$.",
+            "latex": "2019 = 3^1 \\cdot 673^1",
+            "result": "2019 negalima išreikšti dviejų kvadratų suma."
+          }
+        ],
+        "finalAnswer": "Tik 2017 (nes $2017 \\equiv 1 \\pmod 4$ yra pirminis, o $2019$ turi pirminį daliklį $3 \\equiv 3 \\pmod 4$ su nelyginiu rodikliu)."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-03-trap-1",
+        "title": "Tikrinimas tik moduliu 4 be faktorizacijos",
+        "wrongMove": "Nusprendžiama, kad 2019 gali būti užrašytas kvadratų suma, nes $2019 \\equiv 3 \\pmod 4$ (klaidinga logika).",
+        "whyTempting": "Mokiniai dažnai bando taikyti paprastą taisyklę visam skaičiui, užuot skaidę jį pirminiais.",
+        "correction": "Sudėtiniam skaičiui neužtenka patikrinti liekanos moduliu 4; būtina užtikrinti, kad visi pirminiai dalikliai $p \\equiv 3 \\pmod 4$ turėtų lyginį laipsnį.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-03-trap-2",
+        "title": "Pirminių ir sudėtinių skaičių sąlygų painiojimas",
+        "wrongMove": "Teigiama, kad jei skaičius nėra pirminis, jam Fermo teorema negalioja.",
+        "whyTempting": "Fermo teorema dažniausiai pateikiama tik pirminiams skaičiams.",
+        "correction": "Naudokite Fermo teoremos apibendrinimą: skaičius $n$ yra kvadratų suma tada ir tik tada, kai jo skaidinyje kiekvienas pirminis $p = 4k+3$ įeina su lyginiu rodikliu.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-03-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Remdamiesi Fermo teorema apie dviejų kvadratų sumą, nustatyk...?",
+        "back": "Pirminis skaičius yra dviejų kvadratų suma tada ir tik tada, kai $p = 2$ arba $p \\equiv 1 \\pmod 4$. Sudėtinis skaičius gali būti taip užrašytas tada ir tik tada, kai jo skaidinyje visi pirminiai dalikliai, lygūs $3 \\pmod 4$, įeina su lyginiu laipsniu.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Prisiminkite Fermo teoremą: pirminį skaičių galima užrašyti dviejų kvadratų suma tada ir tik tada, kai $p \\equiv 1 \\pmod 4$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Ištirkite $2017$. Skaičius $2017$ yra pirminis. Raskite jo liekaną moduliu 4.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Kadangi $2017 = 4 \\cdot 504 + 1$, jis gali būti užrašytas kaip $a^2+b^2$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Dabar ištirkite $2019$. $2019$ dalijasi iš 3, t. y. $2019 = 3 \\cdot 673$. Kadangi 3 yra pirminis pavidalo $4k+3$, o jo laipsnis yra 1 (nelyginis), skaičius $2019$ negali būti išreikštas kvadratų suma.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-04",
+    "topicId": "olimpiada-10-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine trupmena ir raskite visus jos artinius (konvergentus).",
+    "answer": "Rasta grandininė trupmena ir jos artiniai.",
+    "acceptedAnswers": [
+      "Rasta grandininė trupmena ir jos artiniai."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Išskirkite sveikąją dalį iš $\\frac{43}{30}$ ir apverskite liekaną.",
+      "Tęskite procesą: $\\frac{30}{13} = 2 + \\frac{4}{13}$, tada $\\frac{13}{4} = 3 + \\frac{1}{4}$.",
+      "Gauta grandininė trupmena yra $[1; 2, 3, 4]$.",
+      "Artiniai apskaičiuojami nukertant trupmeną: $C_0 = 1$, $C_1 = 1 + 1/2 = 3/2$, $C_2 = 1 + 1/(2+1/3) = 10/7$, $C_3 = 43/30$."
+    ],
+    "solution": "Atliekame nuoseklų sveikųjų dalių išskyrimą: $\\frac{43}{30} = 1 + \\frac{13}{30}$. Toliau skaidome liekaną: $\\frac{30}{13} = 2 + \\frac{4}{13}$ ir $\\frac{13}{4} = 3 + \\frac{1}{4}$. Užrašome grandininę trupmeną: $[1; 2, 3, 4]$. Apskaičiuojame artinius $C_0, C_1, C_2, C_3$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Grandininės trupmenos radimas",
+      "text": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-04-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Euklido algoritmo taikymas",
+            "action": "Užrašome $\\frac{43}{30} = 1 + \\frac{1}{2 + \\frac{1}{3 + \\frac{1}{4}}}$.",
+            "reason": "Nuoseklus sveikųjų dalių išskyrimas ir liekanų apvertimas.",
+            "latex": "\\frac{43}{30} = [1; 2, 3, 4]",
+            "result": "Gauta grandininė trupmena."
+          },
+          {
+            "title": "Artinių apskaičiavimas",
+            "action": "Apskaičiuojame: $C_0=1$, $C_1=1+\\frac{1}{2}=\\frac{3}{2}$, $C_2=1+\\frac{1}{2+\\frac{1}{3}}=\\frac{10}{7}$, $C_3=\\frac{43}{30}$.",
+            "reason": "Artiniai randami iš dalinių grandininės trupmenos narių.",
+            "latex": "C_0=1, \\ C_1=\\frac{3}{2}, \\ C_2=\\frac{10}{7}, \\ C_3=\\frac{43}{30}",
+            "result": "Rasti visi keturi konvergentai."
+          }
+        ],
+        "finalAnswer": "$[1; 2, 3, 4]$, artiniai: $1, \\frac{3}{2}, \\frac{10}{7}, \\frac{43}{30}$"
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-04-trap-1",
+        "title": "Aritmetinės klaidos Euklido algoritme",
+        "wrongMove": "Neteisingai apskaičiuojama liekana, pvz., teigiant, kad $30 = 2 \\cdot 13 + 6$ vietoje $4$.",
+        "whyTempting": "Nuoseklus dalijimas reikalauja didelio susikaupimo, ypač su didesniais skaičiais.",
+        "correction": "Kiekviename žingsnyje patikrinkite daugybą: $dalinys = daliklis \\cdot sveikoji\\_dalis + liekana$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-04-trap-2",
+        "title": "Artinių (konvergentų) skaičiavimo painiava",
+        "wrongMove": "Neteisingai taikoma rekurentinė formulė $p_n = a_n p_{n-1} + p_{n-2}$, sumaišant skaitiklius su vardikliais.",
+        "whyTempting": "Formulės yra panašios, todėl lengva sukeisti indeksus ar reikšmes.",
+        "correction": "Apskaičiuokite pirmus kelis artinius tiesiogiai skleisdami trupmeną, kad įsitikintumėte formulės teisingumu.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-04-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Užrašykite racionalųjį skaičių $\\frac{43}{30}$ grandinine tr...?",
+        "back": "Naudojame Euklido algoritmą: $\\frac{43}{30} = 1 + \\frac{13}{30} = 1 + \\frac{1}{2 + 4/13} = 1 + \\frac{1}{2 + 1/(3 + 1/4)}$.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Išskirkite sveikąją dalį iš $\\frac{43}{30}$ ir apverskite liekaną.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Tęskite procesą: $\\frac{30}{13} = 2 + \\frac{4}{13}$, tada $\\frac{13}{4} = 3 + \\frac{1}{4}$.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Gauta grandininė trupmena yra $[1; 2, 3, 4]$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Artiniai apskaičiuojami nukertant trupmeną: $C_0 = 1$, $C_1 = 1 + 1/2 = 3/2$, $C_2 = 1 + 1/(2+1/3) = 10/7$, $C_3 = 43/30$.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-05",
+    "topicId": "olimpiada-10-skaiciu-teorija",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčiai: $x^2 - 2y^2 = 1$.",
+    "answer": "Rastas mažiausias Pelio lygties sprendinys.",
+    "acceptedAnswers": [
+      "Rastas mažiausias Pelio lygties sprendinys."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
+      "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
+      "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
+      "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$."
+    ],
+    "solution": "Pradedame tikrinti natūraliąsias reikšmes $y = 1, 2, 3 \\dots$. Įstatome $y=1 \\implies x^2 = 3$, sprendinių nėra. Įstatome $y=2 \\implies x^2 = 1 + 2(4) = 9 \\implies x = 3$. Mažiausias teigiamas sveikasis sprendinys yra $(3, 2)$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Skaičių teorija",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Pelio lygties fundamentalusis sprendinys",
+      "text": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$."
+    },
+    "strategyTags": [
+      "algebraic-transformation"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-05-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "algebraic-transformation"
+        ],
+        "steps": [
+          {
+            "title": "Sprendinių perrinkimas",
+            "action": "Pertvarkome lygtį: $x^2 = 1 + 2y^2$ ir tikriname $y \\ge 1$.",
+            "reason": "Mažiausią sprendinį natūraliuose skaičiuose patogu rasti perrinkimo būdu mažoms $y$ vertėms.",
+            "latex": "x^2 = 1 + 2y^2",
+            "result": "Pasiruošta reikšmių tikrinimui."
+          },
+          {
+            "title": "Vertės radimas",
+            "action": "Kai $y=2 \\implies x^2 = 9 \\implies x=3$.",
+            "reason": "9 yra tikslusis kvadratas, todėl gauname sveikąjį sprendinį.",
+            "latex": "3^2 - 2(2)^2 = 9 - 8 = 1",
+            "result": "Rastas sprendinys $(3, 2)$."
+          }
+        ],
+        "finalAnswer": "$x = 3, y = 2$"
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-05-trap-1",
+        "title": "Trivialaus sprendinio pateikimas",
+        "wrongMove": "Pateikiamas sprendinys $(1, 0)$.",
+        "whyTempting": "Ši pora tenkina lygtį $1^2 - 2(0)^2 = 1$.",
+        "correction": "Sąlygoje prašoma natūraliųjų skaičių ($x, y \\ge 1$), todėl $y=0$ netinka.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-05-trap-2",
+        "title": "Per ankstyvas sustojimas perrinkime",
+        "wrongMove": "Patikrinama tik $y=1$ ir daroma išvada, kad lygtis neturi sprendinių natūraliuose skaičiuose.",
+        "whyTempting": "Jei pirmas bandymas nepavyksta, mokiniai dažnai abejoja sprendinių egzistavimu.",
+        "correction": "Tęskite tikrinimą $y=2, 3, \\dots$ arba naudokite grandininių trupmenų metodą fundamentaliajam sprendiniui rasti.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-05-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčia...?",
+        "back": "Mažiausias natūralusis sprendinys vadinamas fundamentaluoju. Kadangi $\\sqrt{2}$ artiniai yra $1, 3/2, \\dots$, artinys $3/2$ tiesiogiai duoda sprendinį $x=3, y=2$.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Kadangi ieškome mažiausio natūraliojo sprendinio, galime tiesiog tikrinti mažas $y$ vertes: $y=1, 2, \\dots$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "If $y=1$, tai $x^2 = 1 + 2 = 3$ (ne kvadratas).",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "If $y=2$, tai $x^2 = 1 + 2 \\cdot 4 = 9$.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Kadangi 9 yra tikslusis kvadratas ($3^2$), gauname sprendinį $x=3, y=2$.",
+        "penalty": 0.11
+      }
+    ]
+  },
+  {
+    "id": "ex-olimpiada-10-06",
+    "topicId": "olimpiada-10-strategijos-ir-irodymai",
+    "type": "structuredReasoning",
+    "level": "olympiad",
+    "statement": "Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvienas natūralusis skaičius $n > 1$ gali būti suskaidytas į pirminių skaičių sandaugą.",
+    "answer": "Teiginys įrodytas pilnąja indukcija.",
+    "acceptedAnswers": [
+      "Teiginys įrodytas pilnąja indukcija."
+    ],
+    "answerTolerance": 0,
+    "choices": [],
+    "concepts": [],
+    "hints": [
+      "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
+      "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
+      "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
+      "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius."
+    ],
+    "solution": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas. Indukcijos prielaida: tarkime, kad bet kuris $2 \\le k < n$ gali būti suskaidytas pirminiais daugtuviais. Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\cdot b$, kur $2 \\le a, b < n$. Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\dots p_r$, $b = q_1 \\dots q_s$. Tada $n = p_1 \\dots p_r q_1 \\dots q_s$.",
+    "alternate": "",
+    "estimatedSeconds": 60,
+    "olympiadTrack": "Strategijos ir įrodymai",
+    "olympiadTier": "standard",
+    "requiredPrerequisiteMastery": 70,
+    "coreIdea": {
+      "title": "Pilnoji indukcija",
+      "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
+    },
+    "strategyTags": [
+      "induction"
+    ],
+    "prerequisiteTopicIds": [],
+    "prerequisiteConceptIds": [],
+    "expectedMethodIds": [],
+    "solutionMethods": [
+      {
+        "id": "ex-olimpiada-10-06-method-1",
+        "title": "Pagrindinis įrodymas",
+        "methodType": "main",
+        "strategyTags": [
+          "induction"
+        ],
+        "steps": [
+          {
+            "title": "Indukcijos bazė",
+            "action": "Įrodome bazę $n=2$. Kadangi 2 yra pirminis skaičius, teiginys teisingas.",
+            "reason": "Skaidymas pirminiais taikomas ir pačiam pirminiam skaičiui.",
+            "latex": "n = 2",
+            "result": "Bazė patikrinta."
+          },
+          {
+            "title": "Indukcijos žingsnis",
+            "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\cdot b$, kur $a, b < n$.",
+            "reason": "Taikome stipriąją indukciją, kur prielaida galioja visiems mažesniems nariams.",
+            "latex": "n = ab",
+            "result": "Sudėtinis skaičius išreikštas sandauga."
+          },
+          {
+            "title": "Skaidinių sujungimas",
+            "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\prod p_i$, $b = \\prod q_j \\implies n = \\prod p_i \\prod q_j$.",
+            "reason": "Įstatome mažesnių skaičių skaidinius į sandaugą.",
+            "latex": "n = p_1 \\dots p_r q_1 \\dots q_s",
+            "result": "Teiginys įrodytas."
+          }
+        ],
+        "finalAnswer": "Teiginys įrodytas pilnąja indukcija."
+      }
+    ],
+    "commonTraps": [
+      {
+        "id": "ex-olimpiada-10-06-trap-1",
+        "title": "Silpnosios indukcijos taikymas",
+        "wrongMove": "Bandoma įrodyti teiginį darant prielaidą tik skaičiui $n-1$.",
+        "whyTempting": "Mokiniai yra labiau įpratę prie paprastosios (silpnosios) indukcijos.",
+        "correction": "Šiam uždaviniui būtina stiprioji (pilnoji) indukcija, nes sudėtinio skaičiaus dalikliai gali būti bet kokie skaičiai tarp 2 ir $n-1$, nebūtinai $n-1$.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      },
+      {
+        "id": "ex-olimpiada-10-06-trap-2",
+        "title": "Indukcijos bazės praleidimas",
+        "wrongMove": "Pradedama įrodinėti nuo bendro atvejo nepatikrinus mažiausios reikšmės $n=2$.",
+        "whyTempting": "Teiginys atrodo savaime suprantamas.",
+        "correction": "Indukcijos įrodymas yra nepilnas be bazės, kuri užtikrina pradinį grandinės narį.",
+        "reviewConceptIds": [],
+        "srsRecommended": true
+      }
+    ],
+    "reflectionPrompts": [
+      "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
+      "Kokie buvo kritiniai sprendimo žingsniai?"
+    ],
+    "extensionQuestions": [],
+    "srsSeeds": [
+      {
+        "id": "ex-olimpiada-10-06-srs-1",
+        "deck": "practice",
+        "cardType": "method",
+        "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvi...?",
+        "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
+        "conceptIds": [],
+        "methodIds": [],
+        "defaultEnabled": true
+      }
+    ],
+    "hintsRaw": [
+      {
+        "order": 1,
+        "kind": "orientation",
+        "text": "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
+        "penalty": 0.05
+      },
+      {
+        "order": 2,
+        "kind": "observation",
+        "text": "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
+        "penalty": 0.07
+      },
+      {
+        "order": 3,
+        "kind": "method",
+        "text": "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
+        "penalty": 0.09
+      },
+      {
+        "order": 4,
+        "kind": "scaffold",
+        "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
         "penalty": 0.11
       }
     ]
