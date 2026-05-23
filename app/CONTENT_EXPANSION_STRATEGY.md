@@ -50,6 +50,8 @@ Every official curriculum topic must have:
 
 This is the minimum needed for the app to show a complete topic.
 
+Minimum content is not the same as production quality. A topic with only a few paragraphs of theory should remain marked as incomplete even if it has exercises. Production-ready topics must also satisfy the display and depth requirements in `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`.
+
 ### Layer 2: Reliable Independent Learning
 
 After the minimum exists, strengthen the topic so a student can learn alone:
@@ -335,6 +337,14 @@ For each topic, add theory until a student can understand the idea without anoth
 - show when the concept is used,
 - show what comes next.
 
+Production-ready theory depth targets:
+
+- normal curriculum topic: 800-1500 useful Lithuanian words,
+- major or exam-heavy topic: 1200-2500+ useful Lithuanian words,
+- olympiad topic: 1000+ useful Lithuanian words focused on methods, strategies, and proof patterns.
+
+Do not satisfy these targets with filler. Use more explanation only when it improves independent learning.
+
 ### Pass 4: Examples
 
 Add examples in a progression:
@@ -375,11 +385,15 @@ For each subskill, include:
 Each exercise needs:
 
 - answer,
+- difficulty or olympiad tier metadata,
+- estimated time where useful,
 - validator-compatible format,
 - hints,
 - solution,
 - concept ids,
 - mistake tags where relevant.
+
+Exercises should be selectable in the UI. Author enough metadata for the app to filter by difficulty, concept, solved status, exercise type, mistake tag, strategy tag, olympiad tier, and estimated time.
 
 ### Pass 7: Tests
 

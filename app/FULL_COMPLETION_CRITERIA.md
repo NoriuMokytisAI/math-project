@@ -62,6 +62,7 @@ The curriculum content is complete when every official grade 5-12 topic has:
 - curriculum reference,
 - prerequisite topics,
 - theory sections,
+- mature theory depth that satisfies `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`,
 - clickable glossary links,
 - concept definitions,
 - formulas where relevant,
@@ -72,6 +73,7 @@ The curriculum content is complete when every official grade 5-12 topic has:
 - topic test coverage,
 - mastery mapping,
 - recommendation metadata.
+- selectable practice metadata such as difficulty, exercise type, concept tags, mistake tags, strategy tags, and estimated time where useful.
 
 Long-term content expansion should follow `CONTENT_EXPANSION_STRATEGY.md`: maintain an explicit coverage table, prioritize missing official topics and prerequisite foundations first, and expand topics through theory, examples, mistakes, exercises, tests, diagnostics, SRS, and olympiad depth in organized passes.
 
@@ -81,6 +83,8 @@ The olympiad content is complete when:
 - olympiad content never blocks ordinary curriculum mastery,
 - olympiad exercises have higher difficulty tags,
 - olympiad theory lists required prerequisites,
+- olympiad theory is split by specific topic/track and is not a whole-grade dump,
+- olympiad topics satisfy the depth and display requirements in `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`,
 - olympiad progress is tracked separately from curriculum progress.
 
 ## Exercise Completion
@@ -91,6 +95,10 @@ The exercise system is complete when it supports:
 - numeric input,
 - expression input,
 - ordered steps,
+- topic practice selection before solving,
+- choosing a difficulty group inside a topic,
+- choosing an exact exercise inside a topic,
+- filtering exercises by solved status, concept, type, mistake tag, strategy tag, olympiad tier, and estimated time where metadata exists,
 - matching,
 - graph interpretation,
 - formula selection,

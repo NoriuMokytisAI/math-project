@@ -246,6 +246,10 @@ Recommended topics should be based on diagnostic recommendations first, then `Ak
 
 Clicking a Teorija card opens the individual theory topic page. Clicking a Praktika card starts practice for that topic.
 
+Practice for a topic must begin with a selectable exercise page, not a hidden random queue. The student must be able to choose difficulty, exact exercise, solved/unsolved status, answer type, concepts, mistake tags, strategy tags, and estimated time where metadata exists. A recommended next exercise may be shown first, but it must not replace student choice.
+
+Theory pages must be designed for deep study. A mature topic should not be only a few paragraphs; it should include structured theory, definitions, formulas or methods, worked examples, common mistakes, prerequisite links, glossary links, SRS seeds, and clear entry points into practice and tests. The detailed requirements are defined in `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`.
+
 ## Phone Web Experience
 
 Phone web usability is a first-class product requirement.

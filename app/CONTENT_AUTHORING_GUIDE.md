@@ -577,7 +577,10 @@ Before returning content, verify:
 - Every exercise has at least 2 hints.
 - Every exercise has a full solution.
 - Every exercise has concept tags.
+- Every exercise has difficulty metadata suitable for filtering and selection.
 - Every topic has theory, concepts, examples, exercises, and at least one test.
+- No topic with exercises has empty or stub-level theory.
+- Olympiad topic theory matches its own track and does not contain unrelated grade-pack material.
 - Every learner-facing field is Lithuanian.
 - The topic follows the official curriculum source.
 
@@ -586,6 +589,7 @@ Before returning content, verify:
 For each curriculum topic, generate at minimum:
 
 - 4 theory sections,
+- 800+ Lithuanian words of theory for production-ready topics,
 - 8 concepts,
 - 2 formulas if the topic uses formulas,
 - 4 common mistakes,
@@ -596,11 +600,18 @@ For each curriculum topic, generate at minimum:
 
 For olympiad extension topics, generate at minimum:
 
-- 3 theory/method sections,
+- 4 theory/method sections,
+- 1000+ Lithuanian words of theory/method explanation for production-ready topics,
 - 5 concepts or methods,
 - 5 worked examples,
 - 15 exercises,
 - 1 challenge test.
+
+Major curriculum topics, exam-heavy topics, and high-prerequisite topics should go beyond the minimum and target 1200-2500+ Lithuanian words of structured theory.
+
+These word targets are not filler targets. They must come from useful explanations, definitions, examples, methods, mistake analysis, prerequisite reminders, and transfer guidance. If a topic cannot meet the target yet, it should be treated as incomplete rather than production-ready.
+
+For display and interaction requirements, also follow `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`.
 
 ## Current App Compatibility
 

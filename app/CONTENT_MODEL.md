@@ -176,10 +176,17 @@ type Exercise = {
   conceptIds: string[];
   formulaIds: string[];
   mistakeTags: string[];
+  difficultyGroup?: "easy" | "medium" | "hard" | "mixed" | "test";
+  olympiadTier?: "introductory" | "standard" | "advanced" | "selection";
+  strategyTags?: string[];
+  selectableTitle?: string;
+  statementPreview?: string;
   estimatedSeconds: number;
   source?: string;
 };
 ```
+
+Exercise metadata must support the practice selection UI. A topic practice page needs to filter and display exercises by difficulty, solved status, type, concept, mistake tag, strategy tag, olympiad tier, and estimated time. See `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md`.
 
 ## Answer Spec
 

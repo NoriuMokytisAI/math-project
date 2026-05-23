@@ -161,11 +161,18 @@ Use Zod or JSON Schema to catch:
 - invalid prerequisite links,
 - glossary links to missing concepts,
 - exercise answers without validators,
+- exercises without difficulty or olympiad tier metadata,
+- exercises without concept tags,
 - hints without order,
 - SRS cards without concept ids,
 - curriculum references without grade/topic mapping.
+- production-ready topics with stub-level theory,
+- olympiad topics containing unrelated track content,
+- topics with exercises but no selectable exercise metadata.
 
 Build should fail if content graph references are broken.
+
+During early content expansion, depth checks may warn instead of fail. Before full release, the checks in `CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md` are release gates.
 
 ## Math Rendering
 

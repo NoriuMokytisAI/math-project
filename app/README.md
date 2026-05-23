@@ -28,6 +28,7 @@ The implementation target is now the completed product, not a narrow prototype:
 - [Content model and schemas](./CONTENT_MODEL.md)
 - [Content authoring guide](./CONTENT_AUTHORING_GUIDE.md)
 - [Content expansion strategy](./CONTENT_EXPANSION_STRATEGY.md)
+- [Content display and depth requirements](./CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md)
 - [Olympiad exercise authoring guide](./OLYMPIAD_EXERCISE_AUTHORING_GUIDE.md)
 - [Learning systems: SRS, mastery, diagnostics](./LEARNING_SYSTEMS.md)
 - [Cognitive diagnosis model implementation guide](./CDM_IMPLEMENTATION_GUIDE.md)
@@ -67,6 +68,10 @@ The dashboard topic area is **Aktualios temos**. It is a focused local list of t
 The full curriculum and olympiad browser lives in **Teorija** and **Praktika**. Both pages use a card-based library layout with `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, and difficulty filters. Recommended cards appear first; all other matching topics appear below.
 
 Olympiad content follows the same topic-level browsing rule as school content. Grades may group or filter olympiad cards, but the student must choose a specific olympiad topic such as `Skaičių teorija`, `Algebra`, `Geometrija`, `Kombinatorika`, `Funkcijos`, `Nelygybės`, or `Strategijos ir įrodymai`. The app should not send the student to one giant page containing all olympiad material for a grade.
+
+`Praktika` must not behave like a hidden random exercise queue. Opening a topic's practice page must first show a selectable exercise library with difficulty controls, filters, exact exercise cards, solved status, and a recommended next exercise. The detailed standard is defined in [Content display and depth requirements](./CONTENT_DISPLAY_AND_DEPTH_REQUIREMENTS.md).
+
+`Teorija` must support deep lessons, not only a few paragraphs. Mature curriculum and olympiad topics need structured sections, examples, mistakes, formulas/methods, glossary links, prerequisite links, and enough explanatory depth to teach independently.
 
 ## Canonical Phone Web Standard
 

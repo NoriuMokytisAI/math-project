@@ -201,6 +201,16 @@ Concept chips wrap. Formulas, examples, and KaTeX blocks must not cause page ove
 
 ### Practice
 
+Topic practice selection:
+
+- difficulty controls fit without horizontal scroll,
+- filters open in a phone-safe sheet or stacked controls,
+- exercise cards are one-column,
+- exercise previews wrap,
+- `Spręsti` buttons remain visible,
+- solved status, tags, and estimated time do not clip,
+- exact exercise selection is possible without zooming.
+
 Standard practice:
 
 - problem statement full width,

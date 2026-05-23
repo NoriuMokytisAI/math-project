@@ -157,6 +157,7 @@ Deliverables:
 - phone-safe `Teorija` and `Praktika` library controls with collapsed filters and one-column topic cards,
 - recommended topic cards above all other matching topic cards,
 - theory reader for all curriculum topics,
+- deep theory reader structure with table of contents, definitions, formulas/methods, examples, mistakes, practice, and tests,
 - `Pridėti prie aktualių temų` action on individual theory topic pages,
 - clickable concept links,
 - glossary page/drawer,
@@ -185,10 +186,14 @@ Additional entry behavior:
 - `/practice` should open a card-library practice index, not a random/default exercise.
 - The practice index uses the same `Mokyklinis` / `Olimpiadinis` toggle, search, grade, discipline, difficulty filters, and recommended-first card ordering as `Teorija`.
 - In olympiad mode, practice cards must represent specific olympiad topics within a grade, for example `Skaičių teorija`, `Algebra`, `Geometrija`, or `Kombinatorika`; a whole-grade olympiad card may be an overview only.
-- Practice topic cards open `/practice/:practiceSetId` or the equivalent topic practice route.
+- Practice topic cards open a topic practice selection page, not the solving screen directly.
+- The topic practice selection page must let the student choose difficulty, exact exercise, solved status, exercise type, concept, mistake tag, strategy tag, and estimated time where metadata exists.
+- The solving screen must include navigation back to exercise selection plus easier, harder, same-level, and similar exercise actions.
 
 Deliverables:
 
+- topic practice selection page,
+- exercise cards with status, difficulty, tags, preview, and `Spręsti`,
 - exercise renderer,
 - phone-safe standard and olympiad practice layouts,
 - multiple choice,

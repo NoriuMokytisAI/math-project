@@ -249,6 +249,25 @@ Both `Teorija` and `Praktika` must have card-library index pages when opened wit
 
 The default content toggle must come from onboarding mode: olympiad mode defaults to `Olimpiadinis`; other modes default to `Mokyklinis`.
 
+When `Praktika` is opened for a specific topic, the app must show a practice selection page before the solving screen. Requirements:
+
+- show recommended next exercise without forcing it,
+- allow choosing a difficulty group,
+- allow choosing the exact exercise,
+- allow filtering by solved status, concept, exercise type, mistake tag, strategy tag, and estimated time when metadata exists,
+- show exercise cards with status, difficulty, preview, tags, and `Spręsti`,
+- make difficulty filters affect the actual exercise pool,
+- provide solving-screen navigation back to the exercise list and to easier/harder/similar exercises.
+
+When `Teorija` is opened for a specific topic, the app must support deep structured lessons. Requirements:
+
+- table of contents or section navigation,
+- separate areas for theory, definitions, formulas/methods, examples, mistakes, practice, and tests,
+- concept links to `Žodynas`,
+- prerequisite links,
+- phone-safe navigation without clipped text,
+- enough display structure for long mature lessons.
+
 Olympiad library requirements:
 
 - olympiad grade selection is only a filter or visual group,
