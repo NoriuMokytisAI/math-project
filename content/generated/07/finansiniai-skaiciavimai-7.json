@@ -2,17 +2,17 @@
   "contentVersion": "0.1.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
-    "textbook": "12_klase_teorija.pdf",
-    "notes": "7 klasės programa mini palūkanas, palūkanų normą, biudžetus ir finansinių pasiūlymų palyginimą."
+    "textbook": "matematika_k12.pdf",
+    "notes": "7 klasės finansinio raštingumo programa: biudžetas, palūkanos, bankų paslaugos ir procentiniai skaičiavimai."
   },
   "topic": {
     "id": "finansiniai-skaiciavimai-7",
-    "title": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai",
+    "title": "Finansiniai skaičiavimai: biudžetas ir palūkanos",
     "grade": 7,
     "strand": "Skaičiai ir skaičiavimai",
     "level": "curriculum",
     "order": 3,
-    "estimatedStudyMinutes": 100,
+    "estimatedStudyMinutes": 120,
     "prerequisiteTopicIds": [
       "finansiniai-skaiciavimai-6"
     ],
@@ -20,29 +20,22 @@
       "finansiniai-skaiciavimai-8"
     ],
     "conceptIds": [
-      "skaicius",
-      "naturalieji-skaiciai",
-      "sveikieji-skaiciai",
-      "racionalieji-skaiciai",
-      "trupmena",
-      "procentas",
-      "santykis",
-      "proporcija",
-      "apvalinimas",
-      "kartotiniai",
-      "dalikliai",
-      "pirminis-skaicius",
-      "desimtainiai-skaiciai",
-      "mastelis"
+      "biudzetas",
+      "pajamos",
+      "islaidos",
+      "palukanos",
+      "paprastosios-palukanos",
+      "palukanu-norma",
+      "indelis",
+      "paskola"
     ],
     "formulaIds": [
-      "procento-formule",
-      "santykio-formule",
-      "proporcijos-sandauga"
+      "paprastuju-palukanu-formule",
+      "galutines-sumos-formule"
     ],
     "mistakeIds": [
-      "painioja-procenta-su-daiktu",
-      "santykiu-nesupratimas"
+      "metu-ir-menesiu-painiojimas",
+      "procentu-skaiciavimo-klaidos"
     ],
     "exerciseIds": [
       "finansiniai-skaiciavimai-7-ex-001",
@@ -69,548 +62,436 @@
   },
   "theory": [
     {
-      "id": "finansiniai-skaiciavimai-7-ivadas",
-      "title": "Įvadas",
+      "id": "finansinis-rastingumas-ivadas",
+      "title": "Kodėl svarbu mokėti skaičiuoti pinigus?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai yra tema, kurioje mokomasi atpažinti pagrindinius palūkanos ir biudžetas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[skaicius|Skaičius]], [[naturalieji-skaiciai|Natūralieji skaičiai]], [[sveikieji-skaiciai|Sveikieji skaičiai]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "skaicius",
-          "text": "Skaičius aprašo kiekybę ar tvarką palūkanos ir biudžetas uždaviniuose."
-        },
-        {
-          "type": "definition",
-          "conceptId": "naturalieji-skaiciai",
-          "text": "Skaičiai, kuriais skaičiuojame objektus ir tvarką."
-        },
-        {
-          "type": "definition",
-          "conceptId": "sveikieji-skaiciai",
-          "text": "Natūralieji skaičiai, jų priešingieji ir nulis."
+          "text": "Finansinis raštingumas nėra tik gebėjimas suskaičiuoti grąžą parduotuvėje. Tai menas valdyti savo išteklius taip, kad pasiektumėte savo tikslus – nesvarbu, ar tai būtų naujas dviratis, studijos universitete, ar kelionė aplink pasaulį. 7-oje klasėje mes žengiame žingsnį toliau nuo paprastų nuolaidų skaičiavimo ir pradedame nagrinėti, kaip pinigai „dirba“ laike."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[skaicius|Skaičius]] ir [[racionalieji-skaiciai|Racionalieji skaičiai]]."
+          "text": "Pinigai turi laiko vertę: euras šiandien yra vertas daugiau nei euras po metų, nes šiandien turimą eurą galite investuoti ir uždirbti palūkanų."
         }
       ]
     },
     {
-      "id": "finansiniai-skaiciavimai-7-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[sveikieji-skaiciai|Sveikieji skaičiai]] ar [[racionalieji-skaiciai|Racionalieji skaičiai]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "procento-formule",
-          "latex": "x\\% = \\frac{x}{100}"
-        }
-      ]
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "asmeninis-biudzetas",
+      "title": "Asmeninis biudžetas: pajamos ir išlaidos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kiekvieno finansinio plano pagrindas yra biudžetas. Tai paprastas sąrašas, kuriame matome, iš kur pinigai ateina ir kur jie išeina."
+        },
+        {
+          "type": "definition",
+          "conceptId": "biudzetas",
+          "text": "[[biudzetas|Biudžetas]] – tai pajamų ir išlaidų planas tam tikram laikotarpiui (pavyzdžiui, mėnesiui ar metams)."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[pajamos|Pajamos]] gali būti kišenpinigiai, uždarbis už smulkius darbus ar dovanos. [[islaidos|Išlaidos]] skirstomos į būtinasias (maistas, transportas) ir nebūtinasias (laisvalaikis, skanėstai)."
+        },
+        {
+          "type": "method",
+          "text": "Subalansuoto biudžeto taisyklė: Pajamos - Išlaidos = Santaupos. Jei šis skaičius teigiamas, jūs sėkmingai taupote. Jei neigiamas – išleidžiate daugiau nei uždirbate."
+        }
+      ]
+    },
+    {
+      "id": "palukanu-samprata",
+      "title": "Kas yra palūkanos?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduokite, kad palūkanos yra „nuoma“, kurią mokate už pasiskolintus pinigus, arba „atlygis“, kurį gaunate už tai, kad leidžiate bankui naudotis jūsų santaupomis."
+        },
+        {
+          "type": "definition",
+          "conceptId": "palukanos",
+          "text": "[[palukanos|Palūkanos]] – tai mokestis už naudojimąsi svetimais pinigais, paprastai skaičiuojamas procentais nuo pradinės sumos."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[palukanu-norma|Palūkanų norma]] nurodo, kiek procentų nuo sumos reikės sumokėti ar bus uždirbta per metus."
+        }
+      ]
+    },
+    {
+      "id": "paprastosios-palukanos",
+      "title": "Paprastosios palūkanos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "7-oje klasėje mokomės skaičiuoti paprastąsias palūkanas. Jos vadinamos paprastosiomis, nes skaičiuojamos tik nuo pradinės padėtos ar pasiskolintos sumos."
+        },
+        {
+          "type": "formula",
+          "formulaId": "paprastuju-palukanu-formule",
+          "latex": "I = P \\cdot i \\cdot t"
+        },
+        {
+          "type": "paragraph",
+          "text": "Čia:\n- $I$ – sukauptos palūkanos (eurais),\n- $P$ – pradinė suma (indėlis ar paskola),\n- $i$ – metinė palūkanų norma (paversta dešimtaine trupmena, pavyzdžiui, $5\\% = 0,05$),\n- $t$ – laikas metais."
+        },
+        {
+          "type": "warning",
+          "text": "Svarbu: jei laikas duotas mėnesiais, jį būtina paversti metais dalinant iš 12. Pavyzdžiui, 3 mėnesiai yra $3/12 = 0,25$ metų."
+        }
+      ]
+    },
+    {
+      "id": "galutine-suma",
+      "title": "Galutinė sukaupta suma",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dažnai mums rūpi ne tik uždirbtos palūkanos, bet ir tai, kiek pinigų iš viso turėsime laikotarpio pabaigoje."
+        },
+        {
+          "type": "formula",
+          "formulaId": "galutines-sumos-formule",
+          "latex": "S = P + I = P(1 + i \\cdot t)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė leidžia vienu žingsniu apskaičiuoti bendrą sumą $S$, kurią atsiimsite iš banko po $t$ metų."
+        }
+      ]
+    },
+    {
+      "id": "banko-paslaugos-indelis-paskola",
+      "title": "Indėliai ir paskolos: praktinis skirtumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bankas veikia kaip tarpininkas. Žmonės, turintys atliekamų pinigų, padeda juos kaip indėlius ir gauna nedideles palūkanas. Žmonės, kuriems reikia pinigų pirkiniams (pavyzdžiui, būstui ar automobiliui), skolinasi iš banko ir moka didesnes palūkanas."
+        },
+        {
+          "type": "definition",
+          "conceptId": "indelis",
+          "text": "[[indelis|Indėlis]] – į banką padėti pinigai saugojimui ir palūkanoms uždirbti."
+        },
+        {
+          "type": "definition",
+          "conceptId": "paskola",
+          "text": "[[paskola|Paskola]] – iš banko pasiskolinti pinigai, kuriuos reikės grąžinti su palūkanomis."
+        },
+        {
+          "type": "method",
+          "text": "Palygindami bankų pasiūlymus, visada žiūrėkite ne tik į palūkanų normą, bet ir į papildomus mokesčius (sutarties sudarymo, sąskaitos tvarkymo)."
+        }
+      ]
+    },
+    {
+      "id": "infliacija-ir-pirkamoji-galia",
+      "title": "Trumpai apie infliaciją",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Galbūt girdėjote tėvus skundžiantis, kad „anksčiau už 10 eurų galėjai nusipirkti pilną krepšį“. Tai infliacijos pasekmė. Infliacija – tai bendras kainų lygio kilimas, dėl kurio už tą patį pinigų kiekį galime nusipirkti vis mažiau."
+        },
+        {
+          "type": "note",
+          "text": "Kad jūsų santaupos nenuvertėtų, jų palūkanų norma turėtų būti didesnė už infliacijos lygį."
+        }
+      ]
+    },
+    {
+      "id": "finansinio-skaiciavimo-strategija",
+      "title": "Kaip spręsti finansinius uždavinius?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. **Identifikuokite kintamuosius**: Kas yra $P$, $i$ ir $t$?\n2. **Suvienodinkite vienetus**: Ar palūkanos ir laikas yra „metiniai“?\n3. **Paverskite procentus trupmena**: Visada naudokite $0,05$, o ne $5$ skaičiavimuose.\n4. **Įvertinkite logiškumą**: Ar palūkanos negavo didesnės už pradinę sumą per vieną mėnesį? Jei taip – patikrinkite kablelius."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "skaicius",
-      "title": "Skaičius",
+      "id": "biudzetas",
+      "title": "Biudžetas",
       "type": "concept",
-      "shortDefinition": "Skaičius aprašo kiekybę ar tvarką palūkanos ir biudžetas uždaviniuose.",
-      "intuition": "Skaičius yra pagrindinis kiekybės užrašymo būdas.",
-      "formal": "Skaičius yra matematinis objektas, kuriuo žymima kiekio arba padėties reikšmė.",
+      "shortDefinition": "Pajamų ir išlaidų planas.",
+      "intuition": "Tai tavo pinigų žemėlapis – matai, iš kur jie atėjo ir kur išėjo.",
+      "formal": "Biudžetas yra finansinis planas, kuriame numatomos pajamos ir išlaidos tam tikram laikotarpiui.",
       "notation": [],
       "relatedConceptIds": [
-        "naturalieji-skaiciai",
-        "sveikieji-skaiciai",
-        "racionalieji-skaiciai"
+        "pajamos",
+        "islaidos"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "finansiniai-skaiciavimai-7"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "naturalieji-skaiciai",
-      "title": "Natūralieji skaičiai",
+      "id": "palukanos",
+      "title": "Palūkanos",
       "type": "concept",
-      "shortDefinition": "Skaičiai, kuriais skaičiuojame objektus ir tvarką.",
-      "intuition": "Tai pirmas sluoksnis palūkanos ir biudžetas temose.",
-      "formal": "Natūralieji skaičiai yra 0, 1, 2, 3, ...",
+      "shortDefinition": "Mokestis už naudojimąsi svetimais pinigais.",
+      "intuition": "Atlygis tau už taupymą arba mokestis bankui už skolinimąsi.",
+      "formal": "Palūkanos yra pinigų suma, kurią skolininkas moka kreditoriui už paskolą arba bankas moka indėlininkui už indėlį.",
       "notation": [
-        "N"
+        "I"
       ],
       "relatedConceptIds": [
-        "sveikieji-skaiciai",
-        "kartotiniai",
-        "dalikliai"
+        "palukanu-norma",
+        "paprastosios-palukanos"
       ],
-      "prerequisiteConceptIds": [
-        "skaicius"
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "finansiniai-skaiciavimai-7"
       ],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "sveikieji-skaiciai",
-      "title": "Sveikieji skaičiai",
+      "id": "palukanu-norma",
+      "title": "Palūkanų norma",
       "type": "concept",
-      "shortDefinition": "Natūralieji skaičiai, jų priešingieji ir nulis.",
-      "intuition": "Tai leidžia skaičiuoti ir į minusinę pusę.",
-      "formal": "Sveikųjų skaičių aibė žymima Z.",
+      "shortDefinition": "Palūkanų dydis procentais.",
+      "intuition": "Kiek procentų tavo sumos „užaugs“ per metus.",
+      "formal": "Santykinis dydis, išreiškiamas procentais, rodantis palūkanų santykį su pradine suma per tam tikrą laiką (dažniausiai metus).",
       "notation": [
-        "Z"
+        "i",
+        "r"
       ],
       "relatedConceptIds": [
-        "naturalieji-skaiciai",
-        "racionalieji-skaiciai"
+        "palukanos"
       ],
-      "prerequisiteConceptIds": [
-        "skaicius"
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "finansiniai-skaiciavimai-7"
       ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "racionalieji-skaiciai",
-      "title": "Racionalieji skaičiai",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, užrašomi trupmena p/q.",
-      "intuition": "Tai visi skaičiai, kuriuos galima tiksliai arba periodiškai užrašyti trupmena.",
-      "formal": "Racionalusis skaičius yra skaičius, kurį galima užrašyti p/q, kai q != 0.",
-      "notation": [
-        "Q"
-      ],
-      "relatedConceptIds": [
-        "trupmena",
-        "desimtainiai-skaiciai"
-      ],
-      "prerequisiteConceptIds": [
-        "sveikieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trupmena",
-      "title": "Trupmena",
-      "type": "concept",
-      "shortDefinition": "Vienos visumos dalies užrašas.",
-      "intuition": "Trupmena padeda kalbėti apie dalis, santykius ir dalijimą.",
-      "formal": "Trupmena yra p/q, kur p yra skaitiklis, q yra vardiklis, q != 0.",
-      "notation": [
-        "p/q"
-      ],
-      "relatedConceptIds": [
-        "racionalieji-skaiciai",
-        "procentas"
-      ],
-      "prerequisiteConceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "procentas",
-      "title": "Procentas",
-      "type": "concept",
-      "shortDefinition": "Šimtoji dalis.",
-      "intuition": "Procentai patogiai aprašo dalį nuo visumos.",
-      "formal": "x procentų yra x/100 visumos.",
-      "notation": [
-        "%"
-      ],
-      "relatedConceptIds": [
-        "trupmena",
-        "santykis"
-      ],
-      "prerequisiteConceptIds": [
-        "racionalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "santykis",
-      "title": "Santykis",
-      "type": "concept",
-      "shortDefinition": "Dviejų dydžių palyginimas.",
-      "intuition": "Santykis sako, kiek vieno dydžio tenka kitam.",
-      "formal": "Santykis a:b arba a/b rodo dviejų dydžių palyginimą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "procentas"
-      ],
-      "prerequisiteConceptIds": [
-        "trupmena"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcija",
-      "title": "Proporcija",
-      "type": "concept",
-      "shortDefinition": "Dviejų santykių lygybė.",
-      "intuition": "Kai mastelis išlieka tas pats, santykiai tampa proporcingi.",
-      "formal": "a:b = c:d reiškia a/d = b/c ir kartu a·d = b·c.",
-      "notation": [
-        "a:b = c:d"
-      ],
-      "relatedConceptIds": [
-        "santykis",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [
-        "trupmena"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apvalinimas",
-      "title": "Apvalinimas",
-      "type": "concept",
-      "shortDefinition": "Skaičiaus pakeitimas artimu patogesniu skaičiumi.",
-      "intuition": "Apvalinimas padeda greitai įvertinti rezultatą.",
-      "formal": "Apvalinant laikomasi pasirinkto tikslumo taisyklės.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skaicius",
-        "desimtainiai-skaiciai"
-      ],
-      "prerequisiteConceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kartotiniai",
-      "title": "Kartotiniai",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, gaunami dauginant iš natūraliojo skaičiaus.",
-      "intuition": "Kartotiniai padeda spręsti ritmiškus ir dalijimo uždavinius.",
-      "formal": "Skaičiaus n kartotiniai yra n, 2n, 3n, ...",
-      "notation": [],
-      "relatedConceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "prerequisiteConceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "dalikliai",
-      "title": "Dalikliai",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, kuriais duotasis skaičius dalijasi be liekanos.",
-      "intuition": "Dalikliai yra priešinga kartotinių pusė.",
-      "formal": "Skaičius d yra skaičiaus n daliklis, jei n/d yra sveikasis skaičius.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kartotiniai",
-        "pirminis-skaicius"
-      ],
-      "prerequisiteConceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirminis-skaicius",
-      "title": "Pirminis skaičius",
-      "type": "concept",
-      "shortDefinition": "Natūralusis skaičius, turintis tik du daliklius.",
-      "intuition": "Pirminiai skaičiai yra skaidymo į sandaugą pagrindas.",
-      "formal": "Pirminis skaičius turi tik 1 ir patį save kaip daliklius.",
-      "notation": [],
-      "relatedConceptIds": [
-        "dalikliai",
-        "skaidymas-i-daugiklius"
-      ],
-      "prerequisiteConceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "desimtainiai-skaiciai",
-      "title": "Dešimtainiai skaičiai",
-      "type": "concept",
-      "shortDefinition": "Skaičiai su kableliu.",
-      "intuition": "Dešimtainiai skaičiai patogūs matuojant ir skaičiuojant pinigus.",
-      "formal": "Dešimtainis skaičius užrašomas naudojant dešimtąsias, šimtąsias ir t. t.",
-      "notation": [],
-      "relatedConceptIds": [
-        "racionalieji-skaiciai",
-        "apvalinimas"
-      ],
-      "prerequisiteConceptIds": [
-        "sveikieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mastelis",
-      "title": "Mastelis",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp piešinio ir tikrovės.",
-      "intuition": "Mastelis leidžia mažą modelį sieti su dideliu objektu.",
-      "formal": "Mastelis apibrėžia, kaip brėžinio ilgiai susiję su tikrais ilgiais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "santykis"
-      ],
-      "prerequisiteConceptIds": [
-        "racionalieji-skaiciai"
-      ],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "procento-formule",
-      "title": "Procento formulė",
+      "id": "paprastuju-palukanu-formule",
+      "title": "Paprastųjų palūkanų formulė",
       "type": "formula",
-      "latex": "x\\% = \\frac{x}{100}",
+      "latex": "I = P \\cdot i \\cdot t",
       "conditions": [
-        "Skaičiuojant procentus"
+        "t išreiškiamas metais",
+        "i yra dešimtainė trupmena"
       ],
       "variables": {
-        "x": "procentų skaičius"
+        "I": "uždirbtos palūkanos",
+        "P": "pradinė suma",
+        "i": "metinė palūkanų norma",
+        "t": "laikas metais"
       },
-      "explanation": "Padeda iš procentų pereiti į trupmeną.",
+      "explanation": "Apskaičiuoja uždarbį arba mokestį tik nuo pradinės sumos.",
       "relatedConceptIds": [
-        "procentas",
-        "trupmena"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "santykio-formule",
-      "title": "Santykio užrašas",
-      "type": "formula",
-      "latex": "a:b = \\frac{a}{b}",
-      "conditions": [
-        "Lyginant dydžius"
-      ],
-      "variables": {
-        "a": "pirmas dydis",
-        "b": "antras dydis"
-      },
-      "explanation": "Santykį galima užrašyti trupmena.",
-      "relatedConceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcijos-sandauga",
-      "title": "Proporcijos sandauga",
-      "type": "formula",
-      "latex": "a\\cdot d = b\\cdot c",
-      "conditions": [
-        "Kai a:b = c:d"
-      ],
-      "variables": {
-        "a": "pirmas",
-        "b": "antras",
-        "c": "trečias",
-        "d": "ketvirtas"
-      },
-      "explanation": "Sandauga leidžia spręsti proporcijas.",
-      "relatedConceptIds": [
-        "proporcija"
+        "palukanos",
+        "paprastosios-palukanos"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "painioja-procenta-su-daiktu",
-      "title": "Painioja procentą su kiekiu",
-      "type": "mistake",
+      "id": "metu-ir-menesiu-painiojimas",
+      "title": "Metų ir mėnesių painiojimas",
+      "topicId": "finansiniai-skaiciavimai-7",
       "conceptIds": [
-        "procentas"
+        "paprastosios-palukanos"
       ],
-      "wrongPattern": "Tiesiog rašo 15 vietoje 15 %.",
-      "whyItHappens": "Procentas yra dalis nuo šimto, todėl reikia dalinti iš 100.",
-      "correction": "15 % = 0.15 arba 15/100.",
-      "wrongExample": "15 % nuo 80 = 15",
-      "correctExample": "15 % nuo 80 = 12",
-      "defaultSrs": true
-    },
-    {
-      "id": "santykiu-nesupratimas",
-      "title": "Santykį supainioja su skirtumu",
-      "type": "mistake",
-      "conceptIds": [
-        "santykis"
-      ],
-      "wrongPattern": "Skaičiuoja 18:24 kaip 24-18.",
-      "whyItHappens": "Santykis yra palyginimas, ne atimtis.",
-      "correction": "Naudok dalybą arba trupmeną.",
-      "wrongExample": "18:24 = 6",
-      "correctExample": "18:24 = 3:4",
+      "wrongPattern": "Į formulę vietoj metų įrašo mėnesių skaičių (pvz., 6 mėnesius laiko kaip 6 metus).",
+      "whyItHappens": "Mokinys pamiršta, kad palūkanų norma nurodoma metams.",
+      "correction": "Mėnesius dalinkite iš 12: pvz., $6 \\text{ mėn.} = 0,5 \\text{ metų}$.",
+      "exampleWrong": "I = 1000 * 0,05 * 6 (kai turėta omeny 6 mėnesiai)",
+      "exampleCorrect": "I = 1000 * 0,05 * (6/12) = 25 Eur",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "finansiniai-skaiciavimai-7-exmp-1",
-      "title": "Skaičiaus įvertinimas",
+      "id": "fin-exmp-1",
+      "title": "Paprastųjų palūkanų skaičiavimas",
       "level": "easy",
-      "problem": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai: rask 15 % nuo 80.",
+      "problem": "Vilius į banką padėjo $500$ Eur indėlį. Metinė palūkanų norma yra $4\\%$. Kiek palūkanų jis uždirbs po $1$ metų?",
       "conceptIds": [
-        "procentas",
-        "santykis"
+        "palukanos",
+        "palukanu-norma"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "paprastuju-palukanu-formule"
+      ],
       "steps": [
         {
-          "text": "15 % reiškia 15/100.",
-          "latex": "80 \\cdot \\frac{15}{100}"
+          "text": "Nustatome kintamuosius: $P = 500$, $i = 0,04$, $t = 1$.",
+          "latex": "I = 500 \\cdot 0,04 \\cdot 1"
         },
         {
           "text": "Apskaičiuojame.",
-          "latex": "12"
+          "latex": "I = 20 \\text{ Eur}"
         }
       ],
-      "answer": "12"
+      "answer": "20 Eur"
     },
     {
-      "id": "finansiniai-skaiciavimai-7-exmp-2",
-      "title": "Santykio supaprastinimas",
+      "id": "fin-exmp-2",
+      "title": "Galutinė suma po kelerių metų",
       "level": "easy",
-      "problem": "Supaprastink santykį 18:24.",
+      "problem": "Marija pasiskolino $2000$ Eur iš banko su $10\\%$ metinėmis paprastosiomis palūkanomis. Kiek iš viso pinigų ji turės grąžinti bankui po $3$ metų?",
       "conceptIds": [
-        "santykis",
-        "proporcija"
+        "palukanos",
+        "paskola"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Padalijame abu narius iš 6.",
-          "latex": "18:24 = 3:4"
-        }
-      ],
-      "answer": "3:4"
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-exmp-3",
-      "title": "Trupmena į procentus",
-      "level": "medium",
-      "problem": "Paversk 3/4 procentais.",
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Padaliname skaitiklį iš vardiklio.",
-          "latex": "\\frac{3}{4}=0.75"
+          "text": "Apskaičiuojame uždirbtas palūkanas.",
+          "latex": "I = 2000 \\cdot 0,10 \\cdot 3 = 600 \\text{ Eur}"
         },
         {
-          "text": "Padauginame iš 100 %.",
-          "latex": "0.75=75\\%"
+          "text": "Pridedame palūkanas prie pradinės sumos.",
+          "latex": "S = 2000 + 600 = 2600 \\text{ Eur}"
         }
       ],
-      "answer": "75%"
+      "answer": "2600 Eur"
     },
     {
-      "id": "finansiniai-skaiciavimai-7-exmp-4",
-      "title": "Daliklių paieška",
+      "id": "fin-exmp-3",
+      "title": "Palūkanos už kelis mėnesius",
       "level": "medium",
-      "problem": "Išvardyk 12 daliklius.",
+      "problem": "Indėlis yra $1200$ Eur, metinė palūkanų norma $6\\%$. Kiek palūkanų bus sukaupta per $4$ mėnesius?",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "palukanos"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Ieškome porų, kurių sandauga 12.",
-          "latex": "1\\cdot12, 2\\cdot6, 3\\cdot4"
+          "text": "Paverčiame mėnesius metais.",
+          "latex": "t = 4/12 = 1/3 \\text{ metų}"
         },
         {
-          "text": "Parašome daliklius.",
-          "latex": "1, 2, 3, 4, 6, 12"
+          "text": "Skaičiuojame palūkanas.",
+          "latex": "I = 1200 \\cdot 0,06 \\cdot \\frac{1}{3} = 1200 \\cdot 0,02 = 24 \\text{ Eur}"
         }
       ],
-      "answer": "1, 2, 3, 4, 6, 12"
+      "answer": "24 Eur"
     },
     {
-      "id": "finansiniai-skaiciavimai-7-exmp-5",
-      "title": "Apvalinimas",
+      "id": "fin-exmp-4",
+      "title": "Biudžeto planavimas",
+      "level": "easy",
+      "problem": "Simo pajamos per mėnesį yra $40$ Eur. Jis išleidžia $12$ Eur pramogoms ir $15$ Eur skanėstams. Kiek procentų savo pajamų jis sutaupo?",
+      "conceptIds": [
+        "biudzetas",
+        "santaupos"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendras išlaidas.",
+          "latex": "12 + 15 = 27 \\text{ Eur}"
+        },
+        {
+          "text": "Randame sutaupytą sumą.",
+          "latex": "40 - 27 = 13 \\text{ Eur}"
+        },
+        {
+          "text": "Apskaičiuojame procentinę dalį.",
+          "latex": "\\frac{13}{40} \\cdot 100\\% = 32,5\\%"
+        }
+      ],
+      "answer": "32,5%"
+    },
+    {
+      "id": "fin-exmp-5",
+      "title": "Pradinės sumos radimas",
       "level": "hard",
-      "problem": "Suapvalink 19.86 iki vienetų.",
+      "problem": "Po metų bankas klientui išmokėjo $15$ Eur palūkanų. Žinoma, kad metinė norma buvo $2,5\\%$. Kokio dydžio indėlį buvo padėjęs klientas?",
       "conceptIds": [
-        "apvalinimas"
+        "palukanos",
+        "indelis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Žiūrime į dešimtąsias.",
-          "latex": "19.86"
+          "text": "Naudojame formulę $I = P \\cdot i \\cdot t$ ir išreiškiame $P$.",
+          "latex": "15 = P \\cdot 0,025 \\cdot 1"
         },
         {
-          "text": "Kadangi 0.86 >= 0.5, keliame į viršų.",
-          "latex": "20"
+          "text": "Padaliname iš koeficiento.",
+          "latex": "P = \\frac{15}{0,025} = 600 \\text{ Eur}"
         }
       ],
-      "answer": "20"
+      "answer": "600 Eur"
+    },
+    {
+      "id": "fin-exmp-6",
+      "title": "Palūkanų normos nustatymas",
+      "level": "hard",
+      "problem": "Klientas pasiskolino $1000$ Eur, o po $2$ metų grąžino $1160$ Eur. Kokia buvo metinė paprastųjų palūkanų norma?",
+      "conceptIds": [
+        "palukanu-norma"
+      ],
+      "steps": [
+        {
+          "text": "Randame sumokėtas palūkanas.",
+          "latex": "I = 1160 - 1000 = 160 \\text{ Eur}"
+        },
+        {
+          "text": "Įstatome į formulę $160 = 1000 \\cdot i \\cdot 2$.",
+          "latex": "160 = 2000 \\cdot i"
+        },
+        {
+          "text": "Randame $i$.",
+          "latex": "i = \\frac{160}{2000} = 0,08"
+        },
+        {
+          "text": "Paverčiame procentais.",
+          "latex": "0,08 = 8\\%"
+        }
+      ],
+      "answer": "8%"
+    },
+    {
+      "id": "fin-exmp-7",
+      "title": "Pirkimo išsimokėtinai palyginimas",
+      "level": "hard",
+      "problem": "Telefonas kainuoja $600$ Eur. Galima pirkti iškart arba išsimokėtinai: pradinė įmoka $100$ Eur ir $12$ mėnesių po $45$ Eur. Kiek procentų pabrangsta telefonas perkant išsimokėtinai?",
+      "conceptIds": [
+        "paskola"
+      ],
+      "steps": [
+        {
+          "text": "Apskaičiuojame bendrą kainą perkant išsimokėtinai.",
+          "latex": "100 + 12 \\cdot 45 = 100 + 540 = 640 \\text{ Eur}"
+        },
+        {
+          "text": "Randame pabrangimą eurais.",
+          "latex": "640 - 600 = 40 \\text{ Eur}"
+        },
+        {
+          "text": "Apskaičiuojame pabrangimą procentais nuo pradinės kainos.",
+          "latex": "\\frac{40}{600} \\cdot 100\\% \\approx 6,67\\%"
+        }
+      ],
+      "answer": "6,67%"
+    },
+    {
+      "id": "fin-exmp-8",
+      "title": "Tikslas ir taupymas",
+      "level": "medium",
+      "problem": "Eglė nori sutaupyti $480$ Eur kompiuteriui per $2$ metus. Kiek vidutiniškai ji turi atidėti kas mėnesį į taupyklę?",
+      "conceptIds": [
+        "biudzetas",
+        "santaupos"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendrą mėnesių skaičių.",
+          "latex": "2 \\cdot 12 = 24 \\text{ mėn.}"
+        },
+        {
+          "text": "Padaliname sumą iš mėnesių skaičiaus.",
+          "latex": "480 / 24 = 20 \\text{ Eur/mėn.}"
+        }
+      ],
+      "answer": "20 Eur"
     }
   ],
   "exercises": [
@@ -618,876 +499,259 @@
       "id": "finansiniai-skaiciavimai-7-ex-001",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 12 ir 15?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Apskaičiuok 5 % palūkanas nuo 200 Eur sumos už vienerius metus.",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a1",
-            "text": "12"
-          },
-          {
-            "id": "b1",
-            "text": "13"
-          },
-          {
-            "id": "c1",
-            "text": "16"
-          }
-        ],
-        "correctChoiceIds": [
-          "a1"
-        ]
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
+          "text": "Naudok formulę I = P * i.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tikriname dalumą.",
-          "latex": "12 \\mid 12"
+          "text": "200 * 0,05 = 10.",
+          "latex": "10"
         }
       ],
-      "answerText": "12",
-      "alternateMethods": [],
+      "answerText": "10",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "palukanos"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 30
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-002",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 18 ir 24?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Jei tavo pajamos 50 Eur, o išlaidos 35 Eur, kiek Eur sutaupai?",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a2",
-            "text": "18"
-          },
-          {
-            "id": "b2",
-            "text": "19"
-          },
-          {
-            "id": "c2",
-            "text": "25"
-          }
-        ],
-        "correctChoiceIds": [
-          "a2"
-        ]
+        "kind": "numeric",
+        "value": 15,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
+          "text": "Atimk išlaidas iš pajamų.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tikriname dalumą.",
-          "latex": "18 \\mid 18"
+          "text": "50 - 35 = 15.",
+          "latex": "15"
         }
       ],
-      "answerText": "18",
-      "alternateMethods": [],
+      "answerText": "15",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "biudzetas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 20
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-003",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 36 ir 48?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Kiek yra 2 % nuo 1000 Eur?",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a3",
-            "text": "36"
-          },
-          {
-            "id": "b3",
-            "text": "37"
-          },
-          {
-            "id": "c3",
-            "text": "49"
-          }
-        ],
-        "correctChoiceIds": [
-          "a3"
-        ]
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
+          "text": "1000 * 0,02.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tikriname dalumą.",
-          "latex": "36 \\mid 36"
+          "text": "1000 * 0,02 = 20.",
+          "latex": "20"
         }
       ],
-      "answerText": "36",
-      "alternateMethods": [],
+      "answerText": "20",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "palukanu-norma"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 20
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-004",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 45 ir 60?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Indėlis 400 Eur, metinės palūkanos 3 %. Kiek Eur turėsi po metų iš viso?",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a4",
-            "text": "45"
-          },
-          {
-            "id": "b4",
-            "text": "46"
-          },
-          {
-            "id": "c4",
-            "text": "61"
-          }
-        ],
-        "correctChoiceIds": [
-          "a4"
-        ]
+        "kind": "numeric",
+        "value": 412,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
+          "text": "Pridėk palūkanas prie pradinės sumos.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tikriname dalumą.",
-          "latex": "45 \\mid 45"
+          "text": "400 + 400 * 0,03 = 400 + 12 = 412.",
+          "latex": "412"
         }
       ],
-      "answerText": "45",
-      "alternateMethods": [],
+      "answerText": "412",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "indelis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 40
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-005",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 72 ir 90?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Skoliniesi 100 Eur. Palūkanos 10 %. Kiek Eur palūkanų sumokėsi?",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a5",
-            "text": "72"
-          },
-          {
-            "id": "b5",
-            "text": "73"
-          },
-          {
-            "id": "c5",
-            "text": "91"
-          }
-        ],
-        "correctChoiceIds": [
-          "a5"
-        ]
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
+          "text": "100 * 0,10.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Tikriname dalumą.",
-          "latex": "72 \\mid 72"
+          "text": "10.",
+          "latex": "10"
         }
       ],
-      "answerText": "72",
-      "alternateMethods": [],
+      "answerText": "10",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "paskola"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 20
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-006",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Išvardyk vieną 24 kartotinį, didesnį už 24.",
+      "statement": "Kiek Eur palūkanų sukaups $1000$ Eur indėlis per pusę metų, jei metinė norma $4\\%$?",
       "answer": {
         "kind": "numeric",
-        "value": 48,
+        "value": 20,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
+          "text": "Pusė metų yra 0,5 metų.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Dauginame iš 2.",
-          "latex": "48"
+          "text": "1000 * 0,04 * 0,5 = 20.",
+          "latex": "20"
         }
       ],
-      "answerText": "48",
-      "alternateMethods": [],
+      "answerText": "20",
       "conceptIds": [
-        "kartotiniai"
+        "palukanos"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 45
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-007",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Išvardyk vieną 36 kartotinį, didesnį už 36.",
+      "statement": "Jei 3 mėnesių palūkanos yra 15 Eur, o pradinė suma 1000 Eur, kokia yra metinė palūkanų norma procentais?",
       "answer": {
         "kind": "numeric",
-        "value": 72,
+        "value": 6,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
+          "text": "3 mėnesiai yra 1/4 metų.",
+          "penalty": 0.1
         },
         {
           "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
+          "text": "Metinės palūkanos būtų 15 * 4 = 60 Eur.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Dauginame iš 2.",
-          "latex": "72"
+          "text": "(60 / 1000) * 100 = 6.",
+          "latex": "6"
         }
       ],
-      "answerText": "72",
-      "alternateMethods": [],
+      "answerText": "6",
       "conceptIds": [
-        "kartotiniai"
+        "palukanu-norma"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 60
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-008",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Išvardyk vieną 48 kartotinį, didesnį už 48.",
+      "statement": "Prekė kainavo 80 Eur. Jai pritaikyta 25 % nuolaida. Kokia nauja kaina?",
       "answer": {
         "kind": "numeric",
-        "value": 96,
+        "value": 60,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
+          "text": "Rask 25 % nuo 80 ir atimk.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Dauginame iš 2.",
-          "latex": "96"
+          "text": "80 - 20 = 60.",
+          "latex": "60"
         }
       ],
-      "answerText": "96",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "answerText": "60",
+      "estimatedSeconds": 40
     },
     {
       "id": "finansiniai-skaiciavimai-7-ex-009",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "easy",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Išvardyk vieną 60 kartotinį, didesnį už 60.",
-      "answer": {
-        "kind": "numeric",
-        "value": 120,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "120"
-        }
-      ],
-      "answerText": "120",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-010",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 72 kartotinį, didesnį už 72.",
-      "answer": {
-        "kind": "numeric",
-        "value": 144,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "144"
-        }
-      ],
-      "answerText": "144",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-011",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 1/2 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "50\\%",
-        "acceptedEquivalentForms": [
-          "50%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "1/2 = 50%"
-        }
-      ],
-      "answerText": "50%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-012",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 3/4 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "75\\%",
-        "acceptedEquivalentForms": [
-          "75%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "3/4 = 75%"
-        }
-      ],
-      "answerText": "75%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-013",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 2/5 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "40\\%",
-        "acceptedEquivalentForms": [
-          "40%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "2/5 = 40%"
-        }
-      ],
-      "answerText": "40%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-014",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 7/10 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "70\\%",
-        "acceptedEquivalentForms": [
-          "70%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "7/10 = 70%"
-        }
-      ],
-      "answerText": "70%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-015",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 9/20 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "45\\%",
-        "acceptedEquivalentForms": [
-          "45%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "9/20 = 45%"
-        }
-      ],
-      "answerText": "45%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-016",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 18:24. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "18:24 = 3:4"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-017",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 30:45. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 15.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "30:45 = 2:3"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-018",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 42:56. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 14.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "42:56 = 3:4"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-ex-019",
-      "topicId": "finansiniai-skaiciavimai-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 64:80. Užrašyk pirmąjį nario skaičių.",
+      "statement": "Kiek mėnesių reikia laikyti 1000 Eur indėlį su 12 % metinėmis palūkanomis, kad uždirbtum 40 Eur?",
       "answer": {
         "kind": "numeric",
         "value": 4,
@@ -1496,84 +760,60 @@
       "hints": [
         {
           "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
+          "text": "Metinės palūkanos yra 120 Eur.",
+          "penalty": 0.1
         },
         {
           "order": 2,
-          "text": "Didžiausias bendras daliklis yra 16.",
-          "penalty": 0.12
+          "text": "Mėnesio palūkanos yra 10 Eur.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Daliname iš BDK.",
-          "latex": "64:80 = 4:5"
+          "text": "40 / 10 = 4.",
+          "latex": "4"
         }
       ],
       "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
+      "estimatedSeconds": 50
     },
     {
-      "id": "finansiniai-skaiciavimai-7-ex-020",
+      "id": "finansiniai-skaiciavimai-7-ex-010",
       "topicId": "finansiniai-skaiciavimai-7",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Sutrumpink santykį 84:96. Užrašyk pirmąjį nario skaičių.",
+      "statement": "Tavo pajamos 100 Eur. 40 % išleidi maistui, 30 % pramogoms. Kiek Eur lieka taupymui?",
       "answer": {
         "kind": "numeric",
-        "value": 7,
+        "value": 30,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 12.",
-          "penalty": 0.12
+          "text": "Iš viso išleidi 70 %.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Daliname iš BDK.",
-          "latex": "84:96 = 7:8"
+          "text": "100 - 70 = 30.",
+          "latex": "30"
         }
       ],
-      "answerText": "7",
-      "alternateMethods": [],
+      "answerText": "30",
       "conceptIds": [
-        "santykis",
-        "proporcija"
+        "biudzetas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
+      "estimatedSeconds": 30
     }
   ],
   "tests": [
     {
-      "id": "finansiniai-skaiciavimai-7-test-topic",
-      "title": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai testas",
+      "id": "finansiniai-skaiciavimai-7-test-1",
+      "title": "Finansai: Biudžetas ir Palūkanos",
       "scope": "topic",
       "topicIds": [
         "finansiniai-skaiciavimai-7"
@@ -1581,142 +821,37 @@
       "exerciseIds": [
         "finansiniai-skaiciavimai-7-ex-001",
         "finansiniai-skaiciavimai-7-ex-002",
-        "finansiniai-skaiciavimai-7-ex-003",
         "finansiniai-skaiciavimai-7-ex-004",
-        "finansiniai-skaiciavimai-7-ex-005",
         "finansiniai-skaiciavimai-7-ex-006",
         "finansiniai-skaiciavimai-7-ex-007",
-        "finansiniai-skaiciavimai-7-ex-008"
+        "finansiniai-skaiciavimai-7-ex-010"
       ],
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-test-challenge",
-      "title": "Finansiniai skaičiavimai: palūkanos ir ilgalaikiai tikslai iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "finansiniai-skaiciavimai-7"
-      ],
-      "exerciseIds": [
-        "finansiniai-skaiciavimai-7-ex-009",
-        "finansiniai-skaiciavimai-7-ex-010",
-        "finansiniai-skaiciavimai-7-ex-011",
-        "finansiniai-skaiciavimai-7-ex-012",
-        "finansiniai-skaiciavimai-7-ex-013",
-        "finansiniai-skaiciavimai-7-ex-014",
-        "finansiniai-skaiciavimai-7-ex-015",
-        "finansiniai-skaiciavimai-7-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7,
+      "timeLimitSeconds": 1200
     }
   ],
   "srsCards": [
     {
-      "id": "finansiniai-skaiciavimai-7-srs-skaicius",
+      "id": "srs-fin-formule",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra skaičius?",
-      "back": "Skaičius aprašo kiekybę ar tvarką palūkanos ir biudžetas uždaviniuose.",
-      "conceptIds": [
-        "skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-naturalieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra natūralieji skaičiai?",
-      "back": "Skaičiai, kuriais skaičiuojame objektus ir tvarką.",
-      "conceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-sveikieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra sveikieji skaičiai?",
-      "back": "Natūralieji skaičiai, jų priešingieji ir nulis.",
-      "conceptIds": [
-        "sveikieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-racionalieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra racionalieji skaičiai?",
-      "back": "Skaičiai, užrašomi trupmena p/q.",
-      "conceptIds": [
-        "racionalieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-procento-formule",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra procento formulė?",
-      "back": "Padeda iš procentų pereiti į trupmeną.",
+      "front": "Paprastųjų palūkanų formulė (I)",
+      "back": "I = P * i * t",
       "conceptIds": [
-        "procento-formule"
+        "paprastosios-palukanos"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "finansiniai-skaiciavimai-7-srs-santykio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra santykio užrašas?",
-      "back": "Santykį galima užrašyti trupmena.",
+      "id": "srs-biudzetas",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kokia pagrindinė biudžeto lygtis taupymui?",
+      "back": "Pajamos - Išlaidos = Santaupos",
       "conceptIds": [
-        "santykio-formule"
+        "biudzetas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-painioja-procenta-su-daiktu",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra painioja procentą su kiekiu?",
-      "back": "15 % = 0.15 arba 15/100.",
-      "conceptIds": [
-        "painioja-procenta-su-daiktu"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "finansiniai-skaiciavimai-7-srs-santykiu-nesupratimas",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra santykį supainioja su skirtumu?",
-      "back": "Naudok dalybą arba trupmeną.",
-      "conceptIds": [
-        "santykiu-nesupratimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

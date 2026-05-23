@@ -70,84 +70,133 @@
   },
   "theory": [
     {
-      "id": "lygios-ir-panasios-figuros-ivadas",
-      "title": "Įvadas",
+      "id": "lygios-ir-panasios-figuros-lygybe",
+      "title": "Lygios figūros: kai viena yra kitos kopija",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lygios ir panašios figūros, mastelis ir trikampių lygumas yra tema, kurioje mokomasi atpažinti pagrindinius lygybė, panašumas ir mastelis modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "text": "Geometrijoje dvi figūros vadinamos [[lygybe|lygiomis]], jei jas galima uždėti vieną ant kitos taip, kad jos visiškai sutaptų. Įsivaizduokite, kad iškerpate dvi širdeles iš popieriaus naudodami tą patį šabloną – jos bus lygios. Net jei vieną jų apversite ar pasuksite, jų forma ir dydis nepasikeis."
         },
         {
           "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
+          "text": "Lygios figūros turi vienodo ilgio atitinkamas kraštines ir vienodo dydžio atitinkamus kampus."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
+          "text": "Svarbu atsiminti: jei dvi figūros yra lygios, tai jų perimetrai ir plotai taip pat yra lygūs. Tačiau jei dviejų figūrų plotai lygūs, jos nebūtinai yra lygios (pvz., kvadratas ir stačiakampis gali turėti tą patį plotą, bet skirtingą formą)."
         }
       ]
     },
     {
-      "id": "lygios-ir-panasios-figuros-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Lygios ir panašios figūros, mastelis ir trikampių lygumas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "lygios-ir-panasios-figuros-trikampiu-lygumas",
+      "title": "Trikampių lygumo požymiai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Norėdami įsitikinti, ar du trikampiai yra lygūs, mums nebūtina matuoti visų šešių jų elementų (trijų kraštinių ir trijų kampų). Pakanka žinoti tik tris tam tikrus elementus."
+        },
+        {
+          "type": "theorem",
+          "text": "Trys pagrindiniai trikampių lygumo požymiai:\n1. **K-K-K (Kraštinė-Kraštinė-Kraštinė):** Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms.\n2. **K-S-K (Kampas-Sutampanti kraštinė-Kampas):** Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem kampams.\n3. **S-K-S (Sutampanti kraštinė-Kampas-Sutampanti kraštinė):** Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra lygūs kito trikampio dviem kraštinėms ir kampui tarp jų."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-panasumas",
+      "title": "Panašios figūros: ta pati forma, kitas mastelis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ar kada nors didinote nuotrauką telefone? Vaizdas nuotraukoje lieka toks pat, tik viskas pasidaro didesni. Geometrijoje tokios figūros vadinamos [[panasumas|panašiomis]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "panasus-trikampiai",
+          "text": "Dvi figūros yra panašios, jei jų atitinkami kampai yra lygūs, o atitinkamos kraštinės yra proporcingos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proporcingumas reiškia, kad jei vieną kraštinę padidinsime 2 kartus, tai ir visas kitas kraštines privalome padidinti lygiai 2 kartus. Šis skaičius vadinamas **panašumo koeficientu** ($k$)."
+        },
+        {
+          "type": "example",
+          "text": "Jei turime trikampį su kraštinėmis 3, 4, 5, tai panašus į jį (su koeficientu $k=2$) bus trikampis su kraštinėmis 6, 8, 10."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-mastelis",
+      "title": "Mastelis: žemėlapiai ir brėžiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[mastelis|Mastelis]] yra praktinis panašumo taikymas. Jis parodo, kiek kartų realūs objektai (miestai, pastatai) yra sumažinti žemėlapyje ar brėžinyje."
+        },
+        {
+          "type": "definition",
+          "text": "Mastelis yra brėžinio atkarpos ilgio ir ją atitinkančios tikrosios atkarpos ilgio santykis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, mastelis 1 : 100 000 reiškia, kad 1 cm žemėlapyje atitinka 100 000 cm (arba 1 km) tikrovėje."
+        },
+        {
+          "type": "method",
+          "text": "Kaip skaičiuoti su masteliu:\n- Norėdami rasti tikrąjį atstumą: atstumą žemėlapyje padauginkite iš mastelio skaičiaus.\n- Norėdami rasti atstumą žemėlapyje: tikrąjį atstumą padalykite iš mastelio skaičiaus."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-trikampio-elementai",
+      "title": "Svarbios trikampio linijos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiekvienas trikampis turi „vidaus linijas“, kurios padeda spręsti sudėtingesnius uždavinius:"
+        },
+        {
+          "type": "definition",
+          "text": "1. **Aukštinė** – statmuo, nuleistas iš viršūnės į priešingą kraštinę.\n2. **Pusiaukraštinė** – atkarpa, jungianti viršūnę su priešingos kraštinės viduriu.\n3. **Pusiaukampinė** – spindulys (arba atkarpa), dalijantis kampą į dvi lygias dalis."
+        },
+        {
+          "type": "note",
+          "text": "Lygiakraščiame trikampyje visos šios trys linijos sutampa!"
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-plotai-perimetrai",
+      "title": "Kaip keičiasi perimetras ir plotas?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei figūrą padidiname $k$ kartų (panašumas), jos matmenys keičiasi skirtingai:"
+        },
+        {
+          "type": "property",
+          "text": "- **Perimetras** padidėja lygiai $k$ kartų.\n- **Plotas** padidėja $k^2$ kartų!"
+        },
+        {
+          "type": "example",
+          "text": "Jei kvadrato kraštinę padidinsime 3 kartus, jo perimetras padidės 3 kartus, bet plotas padidės net $3^2 = 9$ kartus."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-klaidos",
+      "title": "Dažnos klaidos geometrijoje",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Nesusitapatinkite „lygus“ ir „panašus“. Visi lygūs trikampiai yra panašūs (su koeficientu $k=1$), bet ne visi panašūs trikampiai yra lygūs."
+        },
+        {
+          "type": "warning",
+          "text": "Skaičiuodami mastelį, nepamirškite suvienodinti vienetų! Negalima lyginti centimetrų su kilometrais tiesiogiai – pirmiausia kilometrus paverskite centimetrais."
+        },
+        {
+          "type": "method",
+          "text": "Tikrindami trikampių lygumą, visada žiūrėkite, ar kampas yra BŪTENT tarp tų dviejų kraštinių (S-K-S požymis). Jei kampas bus ne tarp jų, trikampiai gali būti ir nelygūs."
         }
       ]
     }
@@ -387,7 +436,7 @@
       "id": "trikampio-plotas",
       "title": "Trikampio plotas",
       "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
+      "latex": "S=\\frac{1}, {2}ah",
       "conditions": [
         "Kai žinomas pagrindas ir aukštinė"
       ],
@@ -493,1068 +542,192 @@
   "workedExamples": [
     {
       "id": "lygios-ir-panasios-figuros-exmp-1",
-      "title": "Perimetras",
+      "title": "Trikampių lygumas (K-K-K)",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
+      "problem": "Trikampio ABC kraštinės yra 5 cm, 7 cm ir 8 cm. Trikampio DEF kraštinės taip pat yra 5 cm, 7 cm ir 8 cm. Ar šie trikampiai lygūs?",
       "conceptIds": [
-        "perimetras"
+        "trikampis"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Palyginame atitinkamas kraštines: 5=5, 7=7, 8=8.",
+          "latex": ""
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Kadangi visos trys kraštinės lygios, trikampiai yra lygūs pagal K-K-K požymį.",
+          "latex": ""
         }
       ],
-      "answer": "26"
+      "answer": "Taip, lygūs pagal K-K-K"
     },
     {
       "id": "lygios-ir-panasios-figuros-exmp-2",
-      "title": "Plotas",
+      "title": "Trikampio plotas",
       "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
+      "problem": "Trikampio pagrindas 12 cm, o į jį nuleista aukštinė 7 cm. Raskite trikampio plotą.",
       "conceptIds": [
         "plotas",
-        "keturkampis"
+        "trikampis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "trikampio-plotas"
+      ],
       "steps": [
         {
           "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "latex": "S = \\frac{1}, {2} \\cdot a \\cdot h"
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Įstatome reikšmes.",
+          "latex": "S = \\frac{1}, {2} \\cdot 12 \\cdot 7 = 42"
         }
       ],
-      "answer": "42"
+      "answer": "42 cm²"
     },
     {
       "id": "lygios-ir-panasios-figuros-exmp-3",
       "title": "Pitagoro teorema",
       "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
+      "problem": "Stačiajame trikampyje statiniai yra 6 cm ir 8 cm. Raskite įžambinę.",
       "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
+        "pitagoro-teorema"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "pitagoro-formule"
+      ],
       "steps": [
         {
           "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "latex": "c^2 = 6^2 + 8^2 = 36 + 64 = 100"
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Ištraukiame šaknį.",
+          "latex": "c = \\sqrt{100} = 10"
         }
       ],
-      "answer": "10"
+      "answer": "10 cm"
     },
     {
       "id": "lygios-ir-panasios-figuros-exmp-4",
-      "title": "Panašumas",
+      "title": "Mastelis: atstumas žemėlapyje",
       "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
+      "problem": "Atstumas tarp dviejų miestų yra 50 km. Koks bus atstumas žemėlapyje, kurio mastelis 1 : 500 000?",
       "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
+        "mastelis"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Paverčiame kilometrus į centimetrus.",
+          "latex": "50 km = 50 000 m = 5 000 000 cm"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Padalijame iš mastelio skaičiaus.",
+          "latex": "5 000 000 : 500 000 = 10"
         }
       ],
-      "answer": "10"
+      "answer": "10 cm"
     },
     {
       "id": "lygios-ir-panasios-figuros-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
+      "title": "Panašūs trikampiai: kraštinės paieška",
+      "level": "medium",
+      "problem": "Trikampiai ABC ir DEF yra panašūs. ABC kraštinės yra 4, 6, 8. Mažiausia DEF kraštinė yra 12. Raskite didžiausią DEF kraštinę.",
       "conceptIds": [
-        "koordinates",
-        "vektorius"
+        "panasus-trikampiai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Randame panašumo koeficientą k lygindami mažiausias kraštines.",
+          "latex": "k = 12 : 4 = 3"
+        },
+        {
+          "text": "Didžiausia ABC kraštinė yra 8. Ją padauginame iš koeficiento k.",
+          "latex": "8 \\cdot 3 = 24"
+        }
+      ],
+      "answer": "24"
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-exmp-6",
+      "title": "Panašių figūrų plotai",
+      "level": "hard",
+      "problem": "Dviejų panašių trikampių kraštinių santykis yra 2:5. Mažesniojo trikampio plotas yra 12 cm². Koks yra didesniojo plotas?",
+      "conceptIds": [
+        "panasus-trikampiai",
+        "plotas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Panašumo koeficientas k = 5/2 = 2,5.",
+          "latex": ""
+        },
+        {
+          "text": "Plotų santykis lygus k².",
+          "latex": "k^2 = (2,5)^2 = 6,25"
+        },
+        {
+          "text": "Dauginame mažąjį plotą iš k².",
+          "latex": "12 \\cdot 6,25 = 75"
+        }
+      ],
+      "answer": "75 cm²"
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-exmp-7",
+      "title": "Apskritimo ilgis",
+      "level": "easy",
+      "problem": "Apskritimo spindulys r = 10 cm. Raskite jo ilgį (naudokite pi = 3,14).",
+      "conceptIds": [
+        "apskritimas"
+      ],
+      "formulaIds": [
+        "apskritimo-ilgis"
+      ],
+      "steps": [
+        {
+          "text": "Taikome formulę C = 2 * pi * r.",
+          "latex": "C = 2 \\cdot 3,14 \\cdot 10"
         },
         {
           "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "latex": "C = 62,8"
         }
       ],
-      "answer": "5"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "lygios-ir-panasios-figuros-ex-001",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "answer": "62,8 cm"
     },
     {
-      "id": "lygios-ir-panasios-figuros-ex-002",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-003",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-004",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-005",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
+      "id": "lygios-ir-panasios-figuros-exmp-8",
+      "title": "Trikampio lygumas (S-K-S)",
       "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-006",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-007",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-008",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-009",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-010",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-011",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-012",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-013",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-014",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-015",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-016",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-017",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-018",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-019",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-ex-020",
-      "topicId": "lygios-ir-panasios-figuros",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygios ir panašios figūros, mastelis ir trikampių lygumas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "lygios-ir-panasios-figuros-test-topic",
-      "title": "Lygios ir panašios figūros, mastelis ir trikampių lygumas testas",
-      "scope": "topic",
-      "topicIds": [
-        "lygios-ir-panasios-figuros"
-      ],
-      "exerciseIds": [
-        "lygios-ir-panasios-figuros-ex-001",
-        "lygios-ir-panasios-figuros-ex-002",
-        "lygios-ir-panasios-figuros-ex-003",
-        "lygios-ir-panasios-figuros-ex-004",
-        "lygios-ir-panasios-figuros-ex-005",
-        "lygios-ir-panasios-figuros-ex-006",
-        "lygios-ir-panasios-figuros-ex-007",
-        "lygios-ir-panasios-figuros-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-test-challenge",
-      "title": "Lygios ir panašios figūros, mastelis ir trikampių lygumas iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "lygios-ir-panasios-figuros"
-      ],
-      "exerciseIds": [
-        "lygios-ir-panasios-figuros-ex-009",
-        "lygios-ir-panasios-figuros-ex-010",
-        "lygios-ir-panasios-figuros-ex-011",
-        "lygios-ir-panasios-figuros-ex-012",
-        "lygios-ir-panasios-figuros-ex-013",
-        "lygios-ir-panasios-figuros-ex-014",
-        "lygios-ir-panasios-figuros-ex-015",
-        "lygios-ir-panasios-figuros-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "lygios-ir-panasios-figuros-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
+      "problem": "Trikampyje ABC kraštinės AB=5, BC=8, o kampas B=40°. Trikampyje KLM kraštinės KL=5, LM=8, o kampas L=40°. Ar trikampiai lygūs?",
       "conceptIds": [
         "trikampis"
       ],
       "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
+      "steps": [
+        {
+          "text": "Tikriname sąlygas: dvi kraštinės lygios (5=5 ir 8=8).",
+          "latex": ""
+        },
+        {
+          "text": "Kampas tarp tų kraštinių taip pat lygus (40°=40°).",
+          "latex": ""
+        },
+        {
+          "text": "Trikampiai lygūs pagal S-K-S požymį.",
+          "latex": ""
+        }
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
+      "answer": "Taip, lygūs pagal S-K-S"
+    }
+  ],
+  "exercises": [
     {
-      "id": "lygios-ir-panasios-figuros-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygios-ir-panasios-figuros-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
+      "id": "lygios-ir-panasios-figuros-ex-001"},
     {
       "id": "lygios-ir-panasios-figuros-srs-pitagoro-teorema-netaikoma-ne-staciajame",
       "deck": "practice",

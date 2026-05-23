@@ -2,12 +2,12 @@
   "contentVersion": "0.1.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
-    "textbook": "12_klase_teorija.pdf",
-    "notes": "7 klasėje programa įveda reprezentatyviąją imtį, atsitiktinę atranką ir skritulines diagramas."
+    "textbook": "matematika_k12.pdf",
+    "notes": "7 klasės duomenų analizės kursas: imtys, reprezentatyvumas, dažniai, vidurkis, mediana, moda ir diagramos."
   },
   "topic": {
     "id": "imtys-ir-diagramos-7",
-    "title": "Imtys, reprezentatyvumas ir skritulinės diagramos",
+    "title": "Imtys, duomenų analizė ir diagramos",
     "grade": 7,
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
@@ -20,25 +20,25 @@
       "histogramos-kvartiliai-ir-sukauptasis-daznis"
     ],
     "conceptIds": [
-      "duomenys",
+      "generaline-visuma",
       "imtis",
+      "reprezentatyvumas",
       "daznis",
+      "santykinis-daznis",
       "vidurkis",
       "mediana",
       "moda",
-      "sklaida",
-      "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "skrituline-diagrama",
+      "stulpeline-diagrama"
     ],
     "formulaIds": [
       "vidurkio-formule",
-      "tikimybes-formule"
+      "santykinio-daznio-formule",
+      "skritulines-diagramos-kampo-formule"
     ],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "nereprezentatyvi-imtis",
+      "medianos-rikiavimo-klaida"
     ],
     "exerciseIds": [
       "imtys-ir-diagramos-7-ex-001",
@@ -65,434 +65,411 @@
   },
   "theory": [
     {
-      "id": "imtys-ir-diagramos-7-ivadas",
-      "title": "Įvadas",
+      "id": "statistika-kasdienybeje",
+      "title": "Statistika: kaip nepasiklysti duomenų jūroje?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imtys, reprezentatyvumas ir skritulinės diagramos yra tema, kurioje mokomasi atpažinti pagrindinius imtys ir diagramos modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Kiekvieną dieną girdime teiginius: „8 iš 10 odontologų rekomenduoja šią pastą“ arba „Dauguma moksleivių laisvalaikį leidžia prie kompiuterio“. Bet kaip mokslininkai tai sužino? Ar jie apklausia visus pasaulio odontologus ir visus moksleivius? Žinoma, ne. Čia į pagalbą ateina statistika – mokslas apie duomenų rinkimą, sisteminimą ir analizę."
         },
         {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
+          "type": "note",
+          "text": "Statistika padeda daryti pagrįstas išvadas apie dideles grupes, ištiriant tik mažą jų dalį."
         }
       ]
     },
     {
-      "id": "imtys-ir-diagramos-7-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "visuma-ir-imtis",
+      "title": "Generalinė visuma ir imtis",
       "blocks": [
         {
+          "type": "paragraph",
+          "text": "Norėdami ištirti kokį nors reiškinį, pirmiausia turime apibrėžti objektų grupę, kuri mus domina."
+        },
+        {
           "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "conceptId": "generaline-visuma",
+          "text": "[[generaline-visuma|Generalinė visuma]] – tai visa tiriamų objektų ar reiškinių aibė (pvz., visi Lietuvos 7-okai)."
         },
         {
           "type": "definition",
           "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
+          "text": "[[imtis|Imtis]] – tai dalis objektų, paimtų iš generalinės visumos tyrimui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad išvados būtų teisingos, imtis turi būti **reprezentatyvi**. Tai reiškia, kad ji turi tiksliai atspindėti visos grupės savybes. Geriausias būdas tai pasiekti – **atsitiktinė atranka**, kai kiekvienas grupės narys turi vienodą galimybę patekti į tyrimą."
+        },
+        {
+          "type": "warning",
+          "text": "Jei norite sužinoti visos mokyklos nuomonę apie maistą, bet apklausite tik savo geriausius draugus – jūsų imtis nebus reprezentatyvi!"
+        }
+      ]
+    },
+    {
+      "id": "duomenu-sisteminimas",
+      "title": "Duomenų sisteminimas ir dažniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Surinkti žali duomenys dažniausiai yra netvarkingas skaičių ar atsakymų sąrašas. Juos reikia sutvarkyti į dažnių lenteles."
         },
         {
           "type": "definition",
           "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
-        }
-      ]
-    },
-    {
-      "id": "imtys-ir-diagramos-7-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Imtys, reprezentatyvumas ir skritulinės diagramos sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "text": "[[daznis|Dažnis]] – skaičius, rodantis, kiek kartų konkreti reikšmė pasikartojo duomenų rinkinyje."
         },
         {
           "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "imtys-ir-diagramos-7-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "santykinio-daznio-formule",
+          "latex": "f_{sant} = \\frac{f}{n}"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "[[santykinis-daznis|Santykinis dažnis]] parodo, kokią visų duomenų dalį sudaro konkretus atsakymas. Jis dažniausiai išreiškiamas trupmena arba procentais."
         }
       ]
     },
     {
-      "id": "imtys-ir-diagramos-7-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "duomenu-charakteristikos",
+      "title": "Pagrindinės duomenų charakteristikos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Duomenų rinkinį galime apibūdinti trimis pagrindiniais skaičiais:"
+        },
+        {
+          "type": "method",
+          "text": "1. [[vidurkis|Vidurkis]]: visų reikšmių suma padalinta iš jų skaičiaus.\n2. [[mediana|Mediana]]: vidurinė reikšmė surikiuotoje (nuo mažiausios iki didžiausios) duomenų eilėje.\n3. [[moda|Moda]]: dažniausiai pasikartojanti reikšmė."
+        },
+        {
+          "type": "note",
+          "text": "Jei duomenų kiekis porinis, mediana yra dviejų vidurinių reikšmių aritmetinis vidurkis."
+        }
+      ]
+    },
+    {
+      "id": "vizualizacija-stulpelines-diagramos",
+      "title": "Stulpelinės diagramos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stulpelinė diagrama geriausiai tinka lyginti skirtingų kategorijų dydžius (pvz., kiek mokinių lanko krepšinį, o kiek futbolą)."
+        },
+        {
+          "type": "method",
+          "text": "Braižant stulpelinę diagramą:\n- Horizantalioje ašyje žymimos kategorijos.\n- Vertikalioje ašyje žymimas dažnis arba procentinė dalis.\n- Stulpelių plotis turi būti vienodas, o tarpai tarp jų – taip pat vienodi."
+        }
+      ]
+    },
+    {
+      "id": "vizualizacija-skritulines-diagramos",
+      "title": "Skritulinės diagramos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skritulinė diagrama parodo, kaip visuma dalijama į dalis (proporcijas). Visas skritulys atitinka $100\\%$ arba $360^\\circ$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "skritulines-diagramos-kampo-formule",
+          "latex": "\\alpha = \\frac{f}{n} \\cdot 360^\\circ"
+        },
+        {
+          "type": "paragraph",
+          "text": "Čia $\\alpha$ – skritulio išpjovos kampas laipsniais, $f$ – konkrečios reikšmės dažnis, $n$ – bendras duomenų kiekis."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-patikimumas",
+      "title": "Ar duomenys nemeluoja?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbu kritiškai vertinti statistiką. Kartais diagramos braižomos taip, kad sudarytų klaidingą įspūdį (pvz., vertikali ašis pradedama ne nuo nulio, todėl maži skirtumai atrodo didžiuliai)."
+        },
+        {
+          "type": "warning",
+          "text": "Visada patikrinkite ašių mastelį ir imties dydį prieš darydami išvadas."
+        }
+      ]
+    },
+    {
+      "id": "sprendimo-strategija-statistika",
+      "title": "Kaip analizuoti duomenis?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. **Surikiuokite**: Pirmas žingsnis visada turėtų būti duomenų surikiavimas didėjimo tvarka.\n2. **Suskaičiuokite**: Raskite bendrą kiekį $n$ ir dažnius.\n3. **Pasirinkite įrankį**: Jei reikia lyginti kiekius – braižykite stulpelius, jei reikia rodyti dalis nuo visumos – skritulį."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "duomenys",
-      "title": "Duomenys",
-      "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "imtis",
       "title": "Imtis",
       "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
+      "shortDefinition": "Tiriamų objektų dalis.",
+      "intuition": "Tarsi vienas šaukštas sriubos, iš kurio sprendi apie visą puodą.",
+      "formal": "Statistinio tyrimo objektų poaibis, paimtas iš generalinės visumos.",
+      "notation": [
+        "n"
+      ],
       "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+        "generaline-visuma",
+        "reprezentatyvumas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "imtys-ir-diagramos-7"
+      ],
       "defaultSrs": true
     },
     {
       "id": "daznis",
       "title": "Dažnis",
       "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
+      "shortDefinition": "Pasikartojimų skaičius.",
+      "intuition": "Kiek kartų tas pats skaičius pasirodo sąraše.",
+      "formal": "Skaičius, nurodantis, kiek kartų stebėjimo reikšmė pasitaiko duomenų imtyje.",
+      "notation": [
+        "f"
+      ],
       "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
+        "santykinis-daznis"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
+      "appearsInTopicIds": [
+        "imtys-ir-diagramos-7"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koreliacija",
-      "title": "Koreliacija",
-      "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
       "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
+      "title": "Aritmetinis vidurkis",
       "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
+      "latex": "\\bar{x} = \\frac{\\sum x_i}{n}",
+      "conditions": [],
       "variables": {
-        "n": "reikšmių skaičius"
+        "x": "vidurkis",
+        "sum x": "visų reikšmių suma",
+        "n": "reikšmių kiekis"
       },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
+      "explanation": "Apskaičiuoja vidutinę visų duomenų reikšmę.",
       "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
+        "vidurkis"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
-      "type": "mistake",
+      "id": "medianos-rikiavimo-klaida",
+      "title": "Medianos radimas nerikiavus duomenų",
+      "topicId": "imtys-ir-diagramos-7",
       "conceptIds": [
-        "vidurkis"
+        "mediana"
       ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "Paima vidurinį skaičių iš bet kokios sekos.",
+      "whyItHappens": "Mokinys pamiršta, kad mediana apibrėžiama tik surikiuotiems duomenims.",
+      "correction": "Visada pirmiausia surikiuokite duomenis didėjimo tvarka.",
+      "exampleWrong": "Duomenys {5, 1, 9}, mediana = 1 (klaida)",
+      "exampleCorrect": "Surikiuoti {1, 5, 9}, mediana = 5",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "imtys-ir-diagramos-7-exmp-1",
-      "title": "Vidurkis",
+      "id": "stat-exmp-1",
+      "title": "Vidurkis, mediana ir moda",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Duoti kontrolinio darbo pažymiai: 5, 8, 7, 10, 5, 9, 6. Raskite vidurkį, medianą ir modą.",
       "conceptIds": [
-        "vidurkis"
+        "vidurkis",
+        "mediana",
+        "moda"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Suskaičiuojame vidurkį.",
+          "latex": "\\bar{x} = \\frac{5+8+7+10+5+9+6}{7} = \\frac{50}{7} \\approx 7,14"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Surikiuojame duomenis: 5, 5, 6, 7, 8, 9, 10.",
+          "latex": "5, 5, 6, 7, 8, 9, 10"
+        },
+        {
+          "text": "Randame medianą (vidurinis skaičius).",
+          "latex": "Me = 7"
+        },
+        {
+          "text": "Randame modą (dažniausias skaičius).",
+          "latex": "Mo = 5"
         }
       ],
-      "answer": "20/3"
+      "answer": "Vidurkis ≈ 7,14; Mediana = 7; Moda = 5"
     },
     {
-      "id": "imtys-ir-diagramos-7-exmp-2",
-      "title": "Mediana",
+      "id": "stat-exmp-2",
+      "title": "Dažnių lentelė",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Apklausus 20 mokinių, kokį naminį gyvūną jie augina, gauti atsakymai: 8 šunys, 5 katės, 3 papūgos, 4 neaugina nieko. Sudarykite dažnių ir santykinių dažnių lentelę.",
+      "conceptIds": [
+        "daznis",
+        "santykinis-daznis"
+      ],
+      "steps": [
+        {
+          "text": "Užrašome dažnius $f$: Šunys: 8, Katės: 5, Papūgos: 3, Nieko: 4.",
+          "latex": "n = 8+5+3+4 = 20"
+        },
+        {
+          "text": "Skaičiuojame santykinius dažnius procentais.",
+          "latex": "\\text{Šunys: } \\frac{8}{20} \\cdot 100\\% = 40\\%"
+        },
+        {
+          "text": "Tęsiame kitiems.",
+          "latex": "\\text{Katės: } 25\\%, \\text{ Papūgos: } 15\\%, \\text{ Nieko: } 20\\%"
+        }
+      ],
+      "answer": "Šunys 40%, Katės 25%, Papūgos 15%, Nieko 20%"
+    },
+    {
+      "id": "stat-exmp-3",
+      "title": "Skritulinės diagramos kampas",
+      "level": "medium",
+      "problem": "Klasėje yra 30 mokinių. 9 iš jų lanko dailės būrelį. Kokio didumo kampą ši grupė užims skritulinėje diagramoje?",
+      "conceptIds": [
+        "skrituline-diagrama"
+      ],
+      "formulaIds": [
+        "skritulines-diagramos-kampo-formule"
+      ],
+      "steps": [
+        {
+          "text": "Nustatome santykinį dažnį.",
+          "latex": "\\frac{9}{30} = 0,3"
+        },
+        {
+          "text": "Dauginame iš 360 laipsnių.",
+          "latex": "\\alpha = 0,3 \\cdot 360^\\circ = 108^\\circ"
+        }
+      ],
+      "answer": "108°"
+    },
+    {
+      "id": "stat-exmp-4",
+      "title": "Mediana poriniam skaičiui duomenų",
+      "level": "medium",
+      "problem": "Raskite medianą duomenų: 12, 15, 10, 18, 20, 14.",
       "conceptIds": [
         "mediana"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
+          "text": "Surikiuojame duomenis.",
+          "latex": "10, 12, 14, 15, 18, 20"
         },
         {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
+          "text": "Duomenų kiekis $n=6$ (porinis), todėl imame du vidurinius: 14 ir 15.",
+          "latex": "Me = \\frac{14+15}{2} = 14,5"
         }
       ],
-      "answer": "5"
+      "answer": "14,5"
     },
     {
-      "id": "imtys-ir-diagramos-7-exmp-3",
-      "title": "Tikimybė",
+      "id": "stat-exmp-5",
+      "title": "Reprezentatyvumo vertinimas",
       "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
+      "problem": "Miesto meras nori sužinoti gyventojų nuomonę apie naują parką. Jis nusprendžia apklausti 100 žmonių, išeinančių iš prabangaus prekybos centro. Ar ši imtis reprezentatyvi?",
       "conceptIds": [
-        "tikimybe",
-        "ivyki"
+        "reprezentatyvumas",
+        "imtis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Įvertiname imties vietą: prabangus prekybos centras atspindi tik tam tikrą gyventojų dalį (pasiturinčius pirkėjus).",
+          "latex": "\\text{Atranka nėra atsitiktinė.}"
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Padarome išvadą: imtis nėra reprezentatyvi, nes neatspindi visų gyventojų sluoksnių nuomonės.",
+          "latex": "\\text{Ne.}"
         }
       ],
-      "answer": "1/6"
+      "answer": "Ne, nes imtis pasirinkta tik specifinėje vietoje."
     },
     {
-      "id": "imtys-ir-diagramos-7-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
-        }
-      ],
-      "answer": "4"
-    },
-    {
-      "id": "imtys-ir-diagramos-7-exmp-5",
-      "title": "Sklaida",
+      "id": "stat-exmp-6",
+      "title": "Vidurkis iš dažnių lentelės",
       "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "problem": "Turime duomenis apie šeimų turimų vaikų skaičių: 0 vaikų turi 5 šeimos, 1 vaiką – 10 šeimų, 2 vaikus – 15 šeimų. Koks yra vidutinis vaikų skaičius šeimoje?",
       "conceptIds": [
-        "sklaida"
+        "vidurkis",
+        "daznis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Apskaičiuojame bendrą vaikų skaičių (sumą).",
+          "latex": "0 \\cdot 5 + 1 \\cdot 10 + 2 \\cdot 15 = 0 + 10 + 30 = 40"
+        },
+        {
+          "text": "Apskaičiuojame bendrą šeimų skaičių $n$.",
+          "latex": "n = 5 + 10 + 15 = 30"
+        },
+        {
+          "text": "Padaliname sumą iš kiekio.",
+          "latex": "\\bar{x} = 40 / 30 \\approx 1,33"
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "1,33 vaiko"
+    },
+    {
+      "id": "stat-exmp-7",
+      "title": "Atvirkštinis uždavinys: vidurkis",
+      "level": "hard",
+      "problem": "Keturių skaičių vidurkis yra 7. Penktas skaičius yra 12. Koks bus visų penkių skaičių vidurkis?",
+      "conceptIds": [
+        "vidurkis"
+      ],
+      "steps": [
+        {
+          "text": "Randame pirmų keturių skaičių sumą.",
+          "latex": "S_4 = 4 \\cdot 7 = 28"
+        },
+        {
+          "text": "Pridedame penktą skaičių.",
+          "latex": "S_5 = 28 + 12 = 40"
+        },
+        {
+          "text": "Skaičiuojame naują vidurkį.",
+          "latex": "\\bar{x}_5 = 40 / 5 = 8"
+        }
+      ],
+      "answer": "8"
+    },
+    {
+      "id": "stat-exmp-8",
+      "title": "Procentų pavertimas kampais",
+      "level": "hard",
+      "problem": "Skritulinėje diagramoje 'Krepšinio' sektorius užima 40 %. Kiek tai bus laipsnių?",
+      "conceptIds": [
+        "skrituline-diagrama"
+      ],
+      "steps": [
+        {
+          "text": "Visas apskritimas yra 360 laipsnių.",
+          "latex": "100\\% = 360^\\circ"
+        },
+        {
+          "text": "Apskaičiuojame 40 % nuo 360.",
+          "latex": "\\alpha = 360 \\cdot 0,4 = 144^\\circ"
+        }
+      ],
+      "answer": "144°"
     }
   ],
   "exercises": [
@@ -500,46 +477,9 @@
       "id": "imtys-ir-diagramos-7-ex-001",
       "topicId": "imtys-ir-diagramos-7",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Rask skaičių 4, 6, 8 vidurkį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame ir dalijame.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "vidurkis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4+6+8=18.",
-          "latex": "18/3=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-002",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
+      "statement": "Rask vidurkį skaičių: 2, 4, 9.",
       "answer": {
         "kind": "numeric",
         "value": 5,
@@ -548,725 +488,136 @@
       "hints": [
         {
           "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
+          "text": "(2+4+9)/3.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "1,2,5,7,9.",
+          "text": "15 / 3 = 5.",
           "latex": "5"
         }
       ],
       "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "imtys-ir-diagramos-7-ex-002",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Rask medianą: 1, 5, 2, 8, 7.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Surikiuok: 1, 2, 5, 7, 8.",
+          "penalty": 0.1
+        }
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "solutionSteps": [
+        {
+          "text": "Vidurinis yra 5.",
+          "latex": "5"
+        }
+      ],
+      "answerText": "5",
+      "estimatedSeconds": 30
     },
     {
       "id": "imtys-ir-diagramos-7-ex-003",
       "topicId": "imtys-ir-diagramos-7",
       "grade": 7,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
+      "level": "Lengvi",
+      "type": "numericInput",
+      "statement": "Rask modą: 4, 5, 4, 2, 4, 3.",
       "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
+          "text": "Kuris skaičius pasikartoja dažniausiai?",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
+          "text": "4 kartojasi 3 kartus.",
+          "latex": "4"
         }
       ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "answerText": "4",
+      "estimatedSeconds": 20
     },
     {
       "id": "imtys-ir-diagramos-7-ex-004",
       "topicId": "imtys-ir-diagramos-7",
       "grade": 7,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
+      "statement": "Apklausta 10 žmonių. 3 pasakė 'taip'. Koks yra 'taip' santykinis dažnis procentais?",
       "answer": {
         "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
+        "value": 30,
+        "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
+          "text": "3 iš 10 paverk procentais.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
+          "text": "(3/10) * 100 = 30.",
+          "latex": "30"
         }
       ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
+      "answerText": "30",
+      "estimatedSeconds": 20
     },
     {
       "id": "imtys-ir-diagramos-7-ex-005",
       "topicId": "imtys-ir-diagramos-7",
       "grade": 7,
-      "level": "hard",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
+      "statement": "Kiek laipsnių sudaro 25 % skritulinėje diagramoje?",
       "answer": {
         "kind": "numeric",
-        "value": 2,
+        "value": 90,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
+          "text": "Ketvirtis nuo 360 laipsnių.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
+          "text": "360 / 4 = 90.",
+          "latex": "90"
         }
       ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-006",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-007",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-008",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-009",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-010",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-011",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-012",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-013",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-014",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-015",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-016",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-017",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-018",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-019",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "imtys-ir-diagramos-7-ex-020",
-      "topicId": "imtys-ir-diagramos-7",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Imtys, reprezentatyvumas ir skritulinės diagramos: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "90",
+      "estimatedSeconds": 25
     }
   ],
   "tests": [
     {
-      "id": "imtys-ir-diagramos-7-test-topic",
-      "title": "Imtys, reprezentatyvumas ir skritulinės diagramos testas",
+      "id": "imtys-ir-diagramos-7-test-1",
+      "title": "Duomenų analizės pradmenys",
       "scope": "topic",
       "topicIds": [
         "imtys-ir-diagramos-7"
@@ -1276,140 +627,45 @@
         "imtys-ir-diagramos-7-ex-002",
         "imtys-ir-diagramos-7-ex-003",
         "imtys-ir-diagramos-7-ex-004",
-        "imtys-ir-diagramos-7-ex-005",
-        "imtys-ir-diagramos-7-ex-006",
-        "imtys-ir-diagramos-7-ex-007",
-        "imtys-ir-diagramos-7-ex-008"
+        "imtys-ir-diagramos-7-ex-005"
       ],
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "imtys-ir-diagramos-7-test-challenge",
-      "title": "Imtys, reprezentatyvumas ir skritulinės diagramos iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "imtys-ir-diagramos-7"
-      ],
-      "exerciseIds": [
-        "imtys-ir-diagramos-7-ex-009",
-        "imtys-ir-diagramos-7-ex-010",
-        "imtys-ir-diagramos-7-ex-011",
-        "imtys-ir-diagramos-7-ex-012",
-        "imtys-ir-diagramos-7-ex-013",
-        "imtys-ir-diagramos-7-ex-014",
-        "imtys-ir-diagramos-7-ex-015",
-        "imtys-ir-diagramos-7-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7,
+      "timeLimitSeconds": 900
     }
   ],
   "srsCards": [
     {
-      "id": "imtys-ir-diagramos-7-srs-duomenys",
+      "id": "srs-vidurkis",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
+      "cardType": "formula",
+      "front": "Kaip skaičiuojamas vidurkis?",
+      "back": "Visų reikšmių suma / reikšmių skaičius",
       "conceptIds": [
         "vidurkis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "imtys-ir-diagramos-7-srs-vidurkio-formule",
-      "deck": "practice",
+      "id": "srs-mediana",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra mediana?",
+      "back": "Vidurinė surikiuotų duomenų reikšmė",
+      "conceptIds": [
+        "mediana"
+      ],
+      "defaultEnabled": true
+    },
+    {
+      "id": "srs-skrit-kampas",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
+      "front": "Skritulinės diagramos kampo formulė",
+      "back": "α = (f/n) * 360°",
       "conceptIds": [
-        "vidurkio-formule"
+        "skrituline-diagrama"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "imtys-ir-diagramos-7-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

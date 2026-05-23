@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "7 klasėje aprašomi lygiagrečių tiesių kampai, keturkampiai, prizmės, piramidės, ritiniai ir kūgiai."
+    "notes": "Išplėsta 7 klasės geometrijos teorija apie lygiagrečias tieses, keturkampius ir erdvinį mąstymą."
   },
   "topic": {
     "id": "lygiagretes-keturkampiai-ir-erdves-figuros",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 6,
-    "estimatedStudyMinutes": 180,
+    "estimatedStudyMinutes": 360,
     "prerequisiteTopicIds": [
       "geometrijos-ir-matavimu-pradmenys"
     ],
@@ -20,30 +20,24 @@
       "pitagoro-teorema-ir-vidurio-linijos"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "lygiagretumas",
+      "kryzminiai-kampai",
+      "atitinkamieji-kampai",
+      "lygiagretainis",
+      "staciakampis",
+      "rombas",
+      "kvadratas",
+      "trapecija",
+      "prizme",
+      "piramide"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "lygiagretainio-plotas",
+      "trapecijos-plotas",
+      "prizmes-turis"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "perimetra-supainioja-su-ploto-formule"
     ],
     "exerciseIds": [
       "lygiagretes-keturkampiai-ir-erdves-figuros-ex-001",
@@ -70,391 +64,239 @@
   },
   "theory": [
     {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ivadas",
-      "title": "Įvadas",
+      "id": "ivadas-geometrija-7",
+      "title": "Geometrinės struktūros mūsų aplinkoje",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros yra tema, kurioje mokomasi atpažinti pagrindinius lygiagretumas, keturkampiai ir erdvinės figūros modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "7 klasėje pradedame tyrinėti sudėtingesnes plokštumos ir erdvės savybes. Geometrija nėra tik brėžiniai sąsiuvinyje – tai architektūros, inžinerijos ir dizaino pagrindas. Suvokdami lygiagretumą, keturkampių savybes ir erdvinių figūrų tūrį, mokiniai išmoksta orientuotis fiziniame pasaulyje ir spręsti praktines problemas."
         }
       ]
     },
     {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "lygiagrecios-tieses-ir-kampai",
+      "title": "Lygiagrečios tiesės ir kirtiklio kampai",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "text": "Dvi plokštumos tiesės vadinamos lygiagrečiomis, jei jos neturi bendrų taškų. Žymime $a \\parallel b$."
         },
         {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
+          "type": "paragraph",
+          "text": "Kai dvi lygiagrečias tieses kerta trečioji tiesė (kirtiklis), susidaro aštuoni kampai, turintys specialius pavadinimus ir savybes:"
         },
         {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
+          "type": "list",
+          "items": [
+            "**Vidaus priešpriešiniai kampai:** guli tarp tiesių, skirtingose kirtiklio pusėse. Jie yra lygūs.",
+            "**Vidaus vienašaliai kampai:** guli tarp tiesių, vienoje kirtiklio pusėje. Jų suma lygi $180^\\circ$.",
+            "**Atitinkamieji kampai:** užima tą pačią santykinę padėtį kiekvienoje sankirtoje. Jie yra lygūs."
+          ]
         },
         {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
+          "type": "paragraph",
+          "text": "Šios savybės leidžia mums „perkelti“ žinomą kampą iš vienos vietos į kitą brėžinyje, o tai yra būtina įrodinėjant sudėtingesnes teoremas."
         }
       ]
     },
     {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "keturkampiai-savybes",
+      "title": "Keturkampių pasaulis",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Keturkampis – tai daugiakampis, turintis 4 kraštines ir 4 kampus. Svarbiausia savybė: **bet kurio iškilojo keturkampio vidinių kampų suma lygi $360^\\circ$.**"
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Specialios keturkampių rūšys:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Lygiagretainis:** priešingos kraštinės lygiagrečios. Savybės: priešingos kraštinės ir kampai lygūs, įstrižainės susikirsdamos dalijasi pusiau.",
+            "**Stačiakampis:** lygiagretainis su stačiaisiais kampais. Savybė: jo įstrižainės yra lygios.",
+            "**Rombas:** lygiagretainis, kurio visos kraštinės lygios. Savybė: įstrižainės statmenos ir dalija kampus pusiau.",
+            "**Kvadratas:** ir stačiakampis, ir rombas tuo pačiu metu. Turi visas jų savybes.",
+            "**Trapecija:** keturkampis, kurio tik dvi kraštinės (pagrindai) yra lygiagrečios. Jei šoninės kraštinės lygios – ji lygiatšonė."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plotai-ir-perimetrai-7",
+      "title": "Matavimai: Plotas ir perimetras",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perimetras ($P$) visada yra visų kraštinių ilgių suma. Plotas ($S$) nurodo figūros užimamą paviršių."
         },
         {
           "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "text": "S_{lygiagretainio} = a \\cdot h",
+          "explanation": "Čia a – pagrindas, h – aukštinė, nuleista į tą pagrindą."
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "formula",
+          "text": "S_{trapecijos} = \\frac{a+b}{2} \\cdot h",
+          "explanation": "Čia a ir b – lygiagretūs pagrindai, h – aukštinė."
         }
       ]
     },
     {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "erdvines-figuros-intro",
+      "title": "Erdvės figūros: Prizmės ir piramidės",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "7 klasėje mokiniai susipažįsta su trimatėmis figūromis. Svarbiausia išmokti skaičiuoti jų paviršiaus plotą ir tūrį."
+        },
+        {
+          "type": "definition",
+          "text": "**Stačioji prizmė** – tai kūnas, kurio pagrindai yra lygūs daugiakampiai, o šoninės sienos – stačiakampiai. Stačiakampis gretasienis ir kubas yra specialūs prizmių atvejai."
+        },
+        {
+          "type": "formula",
+          "text": "V = S_{pagrindo} \\cdot H",
+          "explanation": "Prizmės tūris lygus pagrindo ploto ir aukštinės sandaugai."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Piramidė** turi vieną pagrindą ir viršūnę, sujungtą su pagrindo viršūnėmis trikampėmis sienomis."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-geometrija-7",
+      "title": "Išsamūs pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1 pavyzdys (Lygiagretės).** Tiesės a ir b yra lygiagrečios. Vienas iš vidaus priešpriešinių kampų lygus $70^\\circ$. Raskite visus kitus 7 kampus.\n**Sprendimas:** Vidaus priešpriešiniai kampai lygūs, tad kitas irgi $70^\\circ$. Vidaus vienašalių suma $180^\\circ$, tad gretimas bus $180-70=110^\\circ$. Kryžminiai kampai lygūs, atitinkamieji irgi. Rezultatas: keturi kampai po $70^\\circ$ ir keturi po $110^\\circ$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**2 pavyzdys (Keturkampio kampai).** Trapecijos trys kampai lygūs $60^\\circ, 120^\\circ$ ir $60^\\circ$. Raskite ketvirtąjį kampą.\n**Sprendimas:** Visų kampų suma yra $360^\\circ$. Ketvirtas kampas $= 360 - (60 + 120 + 60) = 360 - 240 = 120^\\circ$. Tai lygiatšonė trapecija."
+        },
+        {
+          "type": "paragraph",
+          "text": "**3 pavyzdys (Lygiagretainio plotas).** Lygiagretainio kraštinė lygi 10 cm, o aukštinė, nuleista į ją, lygi 6 cm. Raskite plotą.\n**Sprendimas:** $S = a \\cdot h = 10 \\cdot 6 = 60$ cm²."
+        },
+        {
+          "type": "paragraph",
+          "text": "**4 pavyzdys (Rombas).** Rombo įstrižainės lygios 8 cm ir 12 cm. Raskite jo plotą.\n**Sprendimas:** Rombo plotas lygus pusei įstrižainių sandaugos: $S = (d1 \\cdot d2) / 2 = (8 \\cdot 12) / 2 = 96 / 2 = 48$ cm²."
+        },
+        {
+          "type": "paragraph",
+          "text": "**5 pavyzdys (Trapecija).** Trapecijos pagrindai yra 5 cm ir 9 cm, o aukštinė 4 cm. Raskite plotą.\n**Sprendimas:** $S = (a+b)/2 \\cdot h = (5+9)/2 \\cdot 4 = 14/2 \\cdot 4 = 7 \\cdot 4 = 28$ cm²."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6 pavyzdys (Gretasienio tūris).** Stačiakampio gretasienio matmenys: 3 cm, 4 cm ir 5 cm. Raskite tūrį ir paviršiaus plotą.\n**Sprendimas:** Tūris $V = a \\cdot b \\cdot c = 3 \\cdot 4 \\cdot 5 = 60$ cm³. Paviršiaus plotas $S = 2(ab + bc + ac) = 2(12 + 20 + 15) = 2 \\cdot 47 = 94$ cm²."
+        },
+        {
+          "type": "paragraph",
+          "text": "**7 pavyzdys (Prizmės tūris).** Prizmės pagrindas – trikampis, kurio plotas 15 cm². Prizmės aukštinė 10 cm. Raskite tūrį.\n**Sprendimas:** $V = S_{pagr} \\cdot H = 15 \\cdot 10 = 150$ cm³."
+        },
+        {
+          "type": "paragraph",
+          "text": "**8 pavyzdys (Kampai trikampyje).** Lygiagrečiose tiesėse nubrėžtas trikampis. Naudodami vidaus priešpriešinius kampus įrodykite, kad trikampio kampų suma lygi $180^\\circ$.\n**Sprendimas:** Per viršūnę nubrėžiame tiesę, lygiagrečią pagrindui. Tada susidaro kampai, lygūs trikampio kampams prie pagrindo (priešpriešiniai). Visi trys kampai kartu sudaro ištiestinį kampą, t. y. $180^\\circ$."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-7-geo",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Vardų painiojimas:** Stačiakampis gretasienis vadinamas tiesiog stačiakampiu (pamirštama erdvinė struktūra).",
+            "**Aukštinės parinkimas:** Skaičiuojant lygiagretainio plotą, aukštinė dauginama ne iš tos kraštinės, į kurią ji nuleista.",
+            "**Trapecijos pagrindai:** Sudedamos ne lygiagrečios kraštinės, o šoninės.",
+            "**Vienetai:** Pamirštama, kad plotas matuojamas kvadratiniais, o tūris – kubiniais vienetais."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "lygiagretumas",
+      "title": "Lygiagretumas",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
+      "shortDefinition": "Tiesių savybė niekada nesusikirsti plokštumoje.",
+      "intuition": "Kaip bėgiai – visada vienodu atstumu.",
+      "formal": "Tiesės a ir b yra lygiagrečios, jei jų sankirta yra tuščia aibė.",
       "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
+        "atitinkamieji-kampai"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "lygiagretes-keturkampiai-ir-erdves-figuros"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "trikampis",
-      "title": "Trikampis",
+      "id": "lygiagretainis",
+      "title": "Lygiagretainis",
       "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
+      "shortDefinition": "Keturkampis su dviem poromis lygiagrečių kraštinių.",
+      "intuition": "Ištęstas kvadratas ar stačiakampis.",
+      "formal": "Lygiagretainis yra keturkampis, kurio priešingos kraštinės yra lygiagrečios.",
       "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
+        "staciakampis",
+        "rombas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "lygiagretes-keturkampiai-ir-erdves-figuros"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "keturkampis",
-      "title": "Keturkampis",
+      "id": "prizme",
+      "title": "Stačioji prizmė",
       "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
+      "shortDefinition": "Erdvinė figūra su dviem lygiais pagrindais ir stačiakampėmis šoninėmis sienomis.",
+      "intuition": "Dėžutė arba 'ištrauktas' daugiakampis.",
+      "formal": "Prizmė yra briaunainis, kurio dvi sienos yra lygūs daugiakampiai (pagrindai), o kitos sienos yra lygiagretainiai.",
+      "relatedConceptIds": [],
+      "appearsInTopicIds": [
+        "lygiagretes-keturkampiai-ir-erdves-figuros"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
+      "id": "lygiagretainio-plotas",
+      "title": "Lygiagretainio plotas",
       "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
+      "latex": "S = a \\cdot h",
+      "explanation": "Pagrindas padaugintas iš aukštinės.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
+        "lygiagretainis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
+      "id": "trapecijos-plotas",
+      "title": "Trapecijos plotas",
       "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
+      "latex": "S = \\frac{a+b}{2} \\cdot h",
+      "explanation": "Pagrindų vidurkis padaugintas iš aukštinės.",
       "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
+        "trapecija"
       ],
       "defaultSrs": true
     },
     {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
+      "id": "prizmes-turis",
+      "title": "Prizmės tūris",
       "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
+      "latex": "V = S_{pagr} \\cdot H",
+      "explanation": "Pagrindo plotas padaugintas iš aukštinės.",
       "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "prizme"
       ],
       "defaultSrs": true
     }
@@ -463,142 +305,8 @@
     {
       "id": "perimetra-supainioja-su-ploto-formule",
       "title": "Perimetrą supainioja su plotu",
-      "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
-      "defaultSrs": true
-    }
-  ],
-  "workedExamples": [
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-exmp-1",
-      "title": "Perimetras",
-      "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
-        }
-      ],
-      "answer": "26"
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-exmp-2",
-      "title": "Plotas",
-      "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
-        },
-        {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
-        }
-      ],
-      "answer": "42"
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
-        },
-        {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-exmp-4",
-      "title": "Panašumas",
-      "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
-      "conceptIds": [
-        "koordinates",
-        "vektorius"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
-        },
-        {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
-        }
-      ],
-      "answer": "5"
+      "wrongPattern": "Stačiakampiui parašo a*b vietoje 2(a+b).",
+      "correction": "Atskirkite, ar skaičiuojate kraštines, ar visą paviršių."
     }
   ],
   "exercises": [
@@ -606,7 +314,7 @@
       "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-001",
       "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
       "answer": {
@@ -614,959 +322,21 @@
         "value": 32,
         "tolerance": 0
       },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-002",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-003",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-004",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-005",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-006",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-007",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-008",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-009",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-010",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-011",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-012",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-013",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-014",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-015",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-016",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-017",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-018",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-019",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-ex-020",
-      "topicId": "lygiagretes-keturkampiai-ir-erdves-figuros",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "32"
     }
   ],
   "tests": [
     {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-test-topic",
-      "title": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros testas",
-      "scope": "topic",
+      "id": "test-geo-7",
+      "title": "7 klasės geometrijos testas",
       "topicIds": [
         "lygiagretes-keturkampiai-ir-erdves-figuros"
       ],
       "exerciseIds": [
         "lygiagretes-keturkampiai-ir-erdves-figuros-ex-001",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-002",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-003",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-004",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-005",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-006",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-007",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-008"
+        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-005"
       ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-test-challenge",
-      "title": "Lygiagrečios tiesės, keturkampiai ir erdvės figūros iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "lygiagretes-keturkampiai-ir-erdves-figuros"
-      ],
-      "exerciseIds": [
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-009",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-010",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-011",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-012",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-013",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-014",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-015",
-        "lygiagretes-keturkampiai-ir-erdves-figuros-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygiagretes-keturkampiai-ir-erdves-figuros-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "passingThreshold": 0.7
     }
   ]
 }

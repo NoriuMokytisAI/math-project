@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Expanded Grade 8 Olympiad Algebra content."
+    "notes": "Expanded to 1500+ words with deep method notes and 5 worked examples."
   },
   "topic": {
     "id": "olimpiada-08-algebra",
@@ -12,23 +12,29 @@
     "strand": "Algebra",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "laipsniai-ir-saknys"
     ],
     "nextTopicIds": [],
     "conceptIds": [
-      "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method",
+      "vijeto-teorema",
+      "skaidymas-dauginamaisiais",
+      "diofanto-lygtys",
       "am-gm-nelygybe",
-      "pilnojo-kvadrato-isskyrimas",
-      "diofanto-lygtys"
+      "modulis-intervalai",
+      "simetriniai-reiskiniai"
     ],
     "formulaIds": [
       "vijeto-teorema-kvadratine",
-      "am-gm-formule"
+      "am-gm-formule",
+      "kvadratu-skirtumas",
+      "kubu-suma-skirtumas"
     ],
-    "mistakeIds": [],
+    "mistakeIds": [
+      "am-gm-neigiami-skaiciai",
+      "saknu-praradimas-dalijant"
+    ],
     "exerciseIds": [
       "ex-olimpiada-08-fe7262fc",
       "ex-olimpiada-08-56d15a87",
@@ -54,97 +60,139 @@
   },
   "theory": [
     {
-      "id": "diofantines-lygtys-ir-dalumas",
-      "title": "Diofantinės lygtys ir dalumas",
+      "id": "alg-8-theory-1",
+      "title": "Algebrinės transformacijos: Menas skaidyti",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sveikųjų skaičių lygtys, vadinamos Diofantinėmis lygtimis, turi ilgą istoriją. Tiesinė Diofantinė lygtis su dviem kintamaisiais turi pavidalą $ax + by = c$, kur $a, b, c$ yra sveikieji skaičiai. Ji turi sveikųjų skaičių sprendinių tada ir tik tada, kai skaičių $a$ ir $b$ didžiausias bendrasis daliklis $\\text{dbd}(a, b)$ dalija laisvąjį narį $c$."
+          "text": "Olimpiadinėje algebroje gebėjimas transformuoti reiškinį į patogesnę formą yra kritinis. Dažniausiai tai reiškia reiškinio išskaidymą dauginamaisiais arba pilnojo kvadrato išskyrimą. Tai leidžia pamatyti struktūrą ten, kur iš pradžių matėsi tik chaosas."
         },
         {
           "type": "method",
-          "text": "Jei lygtis turi sprendinių, vieną atskirąjį sprendinį galima rasti Euklido algoritmu arba spėliojimo būdu. Žinant vieną sprendinį $(x_0, y_0)$, visi kiti sprendiniai užrašomi formule: $x = x_0 + \\frac{b}{d}t$ ir $y = y_0 - \\frac{a}{d}t$, kur $d = \\text{dbd}(a, b)$ ir $t \\in \\mathbb{Z}$."
-        }
-      ]
-    },
-    {
-      "id": "vijeto-teorema-ir-simetrija",
-      "title": "Vijeto teorema ir simetriniai reiškiniai",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Vijeto teorema sieja lygties koeficientus su jos šaknų suma ir sandauga. Kvadratinei lygčiai $ax^2 + bx + c = 0$ galioja: $x_1 + x_2 = -\\frac{b}{a}$ ir $x_1 x_2 = \\frac{c}{a}$."
+          "title": "Skaidymo strategijos",
+          "text": "1. **Grupavimas:** narių sujungimas į poras ar grupes, turinčias bendrą daugiklį. \n 2. **Sutrumpinto dauginimo formulės:** ne tik žinoti $(a+b)^2$, bet ir mokėti atpažinti jas atvirkštine tvarka. \n 3. **Sumanus pridėjimas ir atėmimas:** pavyzdžiui, pridėjus ir atėmus $2x^2$, reiškinį $x^4 + 4$ galima paversti $(x^2+2)^2 - 4x^2$, o tai jau yra kvadratų skirtumas."
         },
         {
-          "type": "note",
-          "text": "Simetriniai reiškiniai, tokie kaip $x_1^2 + x_2^2$ arba $\\frac{1}{x_1} + \\frac{1}{x_2}$, gali būti išreikšti per šaknų sumą ir sandaugą, net nežinant pačių šaknų reikšmių."
+          "type": "paragraph",
+          "text": "Ypatingas dėmesys skiriamas simetriniams reiškiniams – tai reiškiniai, kurie nesikeičia sukeitus kintamuosius vietomis (pvz., $x^2 + y^2$). Juos visada galima išreikšti per pagrindines simetrines sumas $s = x+y$ ir $p = xy$."
         }
       ]
     },
     {
-      "id": "nelygybes-am-gm",
-      "title": "Nelygybės: AM-GM principas",
+      "id": "alg-8-theory-2",
+      "title": "Kvadratinės lygtys ir Vijeto teorema",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) teigia, kad neneigiamiems skaičiams jų aritmetinis vidurkis yra ne mažesnis už geometrinį vidurkį."
+          "text": "8-oje klasėje kvadratinės lygtys tampa pagrindiniu įrankiu. Olimpiadose retai prašoma tiesiog rasti šaknis per diskriminantą – dažniau reikia analizuoti jų savybes naudojant Vijeto teoremą."
+        },
+        {
+          "type": "theorem",
+          "title": "Vijeto teorema",
+          "text": "Jei $x_1$ ir $x_2$ yra lygties $ax^2 + bx + c = 0$ šaknys, tai: \n $x_1 + x_2 = -\\frac{b}{a}$ \n $x_1 x_2 = \\frac{c}{a}$"
+        },
+        {
+          "type": "strategy",
+          "title": "Reiškinių skaičiavimas be šaknų radimo",
+          "text": "Jei reikia rasti $x_1^2 + x_2^2$, naudojame formulę $(x_1+x_2)^2 - 2x_1x_2$. Jei reikia $x_1^3 + x_2^3$, naudojame $(x_1+x_2)(x_1^2 - x_1x_2 + x_2^2)$. Tai sutaupo daug laiko ir apsaugo nuo klaidų dirbant su iracionaliomis šaknimis."
+        }
+      ]
+    },
+    {
+      "id": "alg-8-theory-3",
+      "title": "Diofantinės lygtys: Sveikieji sprendiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diofantinės lygtys – tai lygtys, kurių sprendinių ieškome tik sveikųjų skaičių aibėje. Tai tiltas tarp algebros ir skaičių teorijos."
+        },
+        {
+          "type": "method",
+          "title": "Skaidymo metodas Diofanto lygtyse",
+          "text": "Jei lygtį galime užrašyti pavidalu $(\\text{reiškinys}_1) \\cdot (\\text{reiškinys}_2) = \\text{skaičius}$, tai uždavinys virsta baigtinio skaičiaus atvejų nagrinėjimu (skaičiaus dalikliai)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, lygtis $xy + 2x + 3y = 1$ gali būti pertvarkyta į $(x+3)(y+2) = 1 + 6 = 7$. Kadangi 7 yra pirminis skaičius, turime tik 4 galimas daliklių poras: $(1,7), (7,1), (-1,-7), (-7,-1)$."
+        }
+      ]
+    },
+    {
+      "id": "alg-8-theory-4",
+      "title": "Nelygybės: AM-GM vidurkiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aritmetinio ir geometrinio vidurkių nelygybė (AM-GM) yra viena pamatinių nelygybių matematikoje."
         },
         {
           "type": "formula",
-          "formulaId": "am-gm-formule",
-          "latex": "\\frac{a+b}{2} \\ge \\sqrt{ab}"
+          "title": "AM-GM dviems skaičiams",
+          "text": "$\\frac{a+b}{2} \\ge \\sqrt{ab}$, kai $a, b \\ge 0$."
         },
         {
-          "type": "note",
-          "text": "Lygybė galioja tada ir tik tada, kai $a = b$. Ši nelygybė yra galingas įrankis įrodant kitas nelygybes ir ieškant funkcijų ekstremumų."
+          "type": "strategy",
+          "title": "Kada taikyti AM-GM?",
+          "text": "1. Kai reikia įrodyti, kad suma yra didesnė už tam tikrą konstantą. \n 2. Kai reikia rasti funkcijos mažiausią reikšmę (ekstremumą). \n 3. Lygybė galioja tada ir tik tada, kai $a=b$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svarbu: niekada netaikykite AM-GM skaičiams, kurie gali būti neigiami! Prieš taikydami, visada įsitikinkite neneigiamumu."
+        }
+      ]
+    },
+    {
+      "id": "alg-8-theory-5",
+      "title": "Absoliutinė reikšmė (modulis) ir intervalai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lygtys ir nelygybės su moduliais olimpiadose sprendžiamos skaidant skaičių tiesę į intervalus, kuriuose modulio reiškinio ženklas yra pastovus."
+        },
+        {
+          "type": "method",
+          "title": "Nulinių taškų metodas",
+          "text": "Raskite visus taškus, kuriuose po moduliu esantys reiškiniai lygūs nuliui. Šie taškai suskirsto tiesę į intervalus. Kiekviename intervale „nuimkite“ modulio ženklus pagal apibrėžimą: $|f(x)| = f(x)$, jei $f(x) \\ge 0$, ir $|f(x)| = -f(x)$, jei $f(x) < 0$."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "olimpiada-08-concept-logic",
-      "title": "Olimpiadinė logika",
+      "id": "vijeto-teorema",
+      "title": "Vijeto teorema",
       "type": "concept",
-      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus ir formuluoti griežtus įrodymus.",
-      "intuition": "Kūrybiškas mąstymas ir dėsningumų ieškojimas sprendžiant nestandartinius uždavinius.",
-      "formal": "Griežtas loginis samprotavimas, pagrįstas aksiomomis ir matematinėmis teoremomis.",
-      "relatedConceptIds": []
+      "shortDefinition": "Sąryšis tarp lygties šaknų ir koeficientų.",
+      "relatedConceptIds": [
+        "simetriniai-reiskiniai"
+      ]
     },
     {
-      "id": "olimpiada-08-concept-method",
-      "title": "Įrodymo metodas",
-      "type": "concept",
-      "shortDefinition": "Loginis argumentavimas, kuriuo remiantis patvirtinamas arba paneigiamas teiginys.",
-      "intuition": "Nuoseklus teiginių išvedimas žingsnis po žingsnio iki galutinės išvados.",
-      "formal": "Dedukcinis įrodymas, apimantis pradinę prielaidą, teoremų taikymą ir teisingą išvadą.",
-      "relatedConceptIds": []
-    },
-    {
-      "id": "am-gm-nelygybe",
-      "title": "AM-GM nelygybė",
+      "id": "skaidymas-dauginamaisiais",
+      "title": "Skaidymas dauginamaisiais",
       "type": "method",
-      "shortDefinition": "Aritmetinio ir geometrinio vidurkių sąryšis.",
-      "intuition": "Skaičių vidurkis visada didesnis arba lygus jų geometriniam vidurkiui.",
-      "formal": "Neneigiamiems $a_1, a_2, \\dots, a_n$: $\\frac{a_1 + \\dots + a_n}{n} \\ge \\sqrt[n]{a_1 \\dots a_n}$.",
-      "relatedConceptIds": []
-    },
-    {
-      "id": "pilnojo-kvadrato-isskyrimas",
-      "title": "Pilnojo kvadrato išskyrimas",
-      "type": "method",
-      "shortDefinition": "Kvadratinio trynio pertvarkymas į binomo kvadratą ir konstantą.",
-      "intuition": "Užrašome $x^2 + bx + c$ kaip $(x+k)^2 + m$.",
-      "formal": "$ax^2 + bx + c = a(x + \\frac{b}{2a})^2 + (c - \\frac{b^2}{4a})$.",
+      "shortDefinition": "Reiškinio užrašymas kaip sandaugos.",
       "relatedConceptIds": []
     },
     {
       "id": "diofanto-lygtys",
       "title": "Diofanto lygtys",
       "type": "concept",
-      "shortDefinition": "Lygtys, kurių sprendinių ieškoma tik sveikųjų skaičių aibėje.",
-      "intuition": "Uždaviniai, kur atsakymai privalo būti sveiki skaičiai.",
-      "formal": "Lygtis $f(x_1, \\dots, x_n) = 0$, kur $x_i \\in \\mathbb{Z}$.",
+      "shortDefinition": "Lygtys sveikaisiais skaičiais.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "am-gm-nelygybe",
+      "title": "AM-GM nelygybė",
+      "type": "method",
+      "shortDefinition": "Aritmetinis vidurkis >= Geometrinis vidurkis.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "modulis-intervalai",
+      "title": "Modulis ir intervalai",
+      "type": "method",
+      "shortDefinition": "Lygčių su moduliais sprendimo būdas.",
       "relatedConceptIds": []
     }
   ],
@@ -152,108 +200,161 @@
     {
       "id": "vijeto-teorema-kvadratine",
       "title": "Vijeto teorema kvadratinei lygčiai",
-      "latex": "x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 x_2 = \\frac{c}{a}",
-      "explanation": "Sieja kvadratinės lygties šaknis su koeficientais."
+      "formula": "$x_1 + x_2 = -\\frac{b}{a}, \\quad x_1 x_2 = \\frac{c}{a}$",
+      "description": "Sieja kvadratinės lygties šaknis su koeficientais."
     },
     {
       "id": "am-gm-formule",
       "title": "AM-GM nelygybė dviems skaičiams",
-      "latex": "\\frac{a+b}{2} \\ge \\sqrt{ab}",
-      "explanation": "Galioja neneigiamiems a ir b."
+      "formula": "$\\frac{a+b}{2} \\ge \\sqrt{ab}$",
+      "description": "Galioja neneigiamiems a ir b."
+    },
+    {
+      "id": "kvadratu-skirtumas",
+      "title": "Kvadratų skirtumas",
+      "formula": "$a^2 - b^2 = (a-b)(a+b)$",
+      "description": "Viena dažniausiai naudojamų skaidymo formulių."
     }
   ],
   "mistakes": [
     {
       "id": "am-gm-neigiami-skaiciai",
       "title": "AM-GM taikymas neigiamiems skaičiams",
-      "wrongPattern": "Taikyti AM-GM, kai skaičiai gali būti neigiami.",
-      "correction": "AM-GM galioja tik neneigiamiems skaičiams. Jei skaičiai neigiami, reikia dirbti su jų moduliais arba keisti ženklus.",
-      "whyItHappens": "Pamirštama esminė nelygybės galiojimo sąlyga."
+      "description": "Taikyti AM-GM, kai skaičiai gali būti neigiami.",
+      "remedy": "Patikrinkite sąlygą $a, b \\ge 0$ prieš taikydami."
+    },
+    {
+      "id": "saknu-praradimas-dalijant",
+      "title": "Šaknų praradimas dalijant",
+      "description": "Padalijimas abiejų lygties pusių iš reiškinio su kintamuoju (pvz., iš $x$).",
+      "remedy": "Užuot dalinę, kelkite bendrą daugiklį prieš skliaustus."
     }
   ],
   "workedExamples": [
     {
-      "title": "Tiesinės diofantinės lygties sprendimas",
-      "problem": "Išspręskite sveikaisiais skaičiais lygtį $3x - 5y = 1$.",
+      "id": "we-alg-8-1",
+      "title": "Vijeto teoremos taikymas simetriniam reiškiniui",
+      "level": "medium",
+      "problem": "Tarkime, $x_1$ ir $x_2$ yra lygties $x^2 - 5x + 3 = 0$ šaknys. Neskaičiuodami pačių šaknų, raskite reiškinio $x_1^2 + x_2^2$ reikšmę.",
+      "conceptIds": [
+        "vijeto-teorema",
+        "simetriniai-reiskiniai"
+      ],
       "steps": [
         {
-          "text": "Kadangi $\\text{dbd}(3, -5) = 1$, lygtis turi sveikųjų sprendinių."
+          "text": "Pagal Vijeto teoremą: $x_1 + x_2 = 5$ ir $x_1 x_2 = 3$."
         },
         {
-          "text": "Spėliojimo būdu randame vieną atskirąjį sprendinį: jei $x = 2$, tai $3(2) - 5(1) = 1$. Sprendinys $(2, 1)$."
+          "text": "Žinome, kad $(x_1 + x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2$."
         },
         {
-          "text": "Bendrasis sprendinys: $x = 2 + 5t, y = 1 + 3t, t \\in \\mathbb{Z}$."
+          "text": "Išreiškiame ieškomą sumą: $x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2$."
+        },
+        {
+          "text": "Įstatome reikšmes: $5^2 - 2 \\cdot 3 = 25 - 6 = 19$."
         }
       ],
-      "answer": "x = 2+5t, y = 1+3t"
+      "answer": "19"
     },
     {
-      "title": "Skaičių palyginimas laipsniais",
-      "problem": "Kuris skaičius didesnis: $2^{300}$ ar $3^{200}$?",
+      "id": "we-alg-8-2",
+      "title": "Diofantinė lygtis su skaidymu",
+      "level": "hard",
+      "problem": "Raskite visus sveikųjų skaičių poras $(x, y)$, tenkinančias lygtį $xy + 3x - y = 7$.",
+      "conceptIds": [
+        "diofanto-lygtys",
+        "skaidymas-dauginamaisiais"
+      ],
       "steps": [
         {
-          "text": "$2^{300} = (2^3)^{100} = 8^{100}$."
+          "text": "Bandom sugrupuoti narius taip, kad gautume sandaugą. Pridėkime po $-3$ abiejose pusėse: $xy + 3x - y - 3 = 7 - 3$."
         },
         {
-          "text": "$3^{200} = (3^2)^{100} = 9^{100}$."
+          "text": "Grupuojame: $x(y+3) - 1(y+3) = 4$."
         },
         {
-          "text": "$9 > 8$, todėl $3^{200}$ yra didesnis."
+          "text": "Gauname $(x-1)(y+3) = 4$."
+        },
+        {
+          "text": "Kadangi $x, y$ yra sveikieji, skliausteliuose esantys skaičiai yra skaičiaus 4 dalikliai. Galimos poros $(x-1, y+3)$ yra: $(1,4), (4,1), (2,2), (-1,-4), (-4,-1), (-2,-2)$."
+        },
+        {
+          "text": "Sprendžiame kiekvieną sistemą: \n 1) $x-1=1, y+3=4 \\implies (2,1)$ \n 2) $x-1=4, y+3=1 \\implies (5,-2)$ \n 3) $x-1=2, y+3=2 \\implies (3,-1)$ \n 4) $x-1=-1, y+3=-4 \\implies (0,-7)$ \n 5) $x-1=-4, y+3=-1 \\implies (-3,-4)$ \n 6) $x-1=-2, y+3=-2 \\implies (-1,-5)$."
         }
       ],
-      "answer": "3^200"
+      "answer": "(2,1), (5,-2), (3,-1), (0,-7), (-3,-4), (-1,-5)"
     },
     {
-      "title": "Lygtis su moduliais",
-      "problem": "Išspręskite lygtį $|x-1| + |x-3| = 2$.",
+      "id": "we-alg-8-3",
+      "title": "AM-GM nelygybė ir ekstremumas",
+      "level": "medium",
+      "problem": "Įrodykite, kad teigiamiems skaičiams $a$ ir $b$ galioja nelygybė $(a+b)(\\frac{1}{a} + \\frac{1}{b}) \\ge 4$.",
+      "conceptIds": [
+        "am-gm-nelygybe"
+      ],
       "steps": [
         {
-          "text": "Nagrinėjame intervalus: $x < 1$, $1 \\le x \\le 3$, $x > 3$."
+          "text": "Atskliaudžiame reiškinį: $1 + \\frac{a}{b} + \\frac{b}{a} + 1 = 2 + \\frac{a}{b} + \\frac{b}{a}$."
         },
         {
-          "text": "Intervale $[1, 3]$ lygtis tampa $x-1 + 3-x = 2$, t.y. $2=2$. Visi taškai tinka."
+          "text": "Taikome AM-GM nelygybę nariams $\\frac{a}{b}$ ir $\\frac{b}{a}$ (jie teigiami): $\\frac{\\frac{a}{b} + \\frac{b}{a}}{2} \\ge \\sqrt{\\frac{a}{b} \\cdot \\frac{b}{a}} = \\sqrt{1} = 1$."
+        },
+        {
+          "text": "Iš čia seka, kad $\\frac{a}{b} + \\frac{b}{a} \\ge 2$."
+        },
+        {
+          "text": "Pridedame likusį dvejetą: $2 + (\\frac{a}{b} + \\frac{b}{a}) \\ge 2 + 2 = 4$. Įrodyta."
         }
       ],
-      "answer": "x ∈ [1, 3]"
+      "answer": "Įrodyta"
     },
     {
-      "title": "Simetrinio reiškinio reikšmė",
-      "problem": "Jei $a+b=5$ ir $ab=6$, raskite $a^2+b^2$.",
+      "id": "we-alg-8-4",
+      "title": "Lygtis su moduliu per intervalus",
+      "level": "hard",
+      "problem": "Išspręskite lygtį $|x+2| + |x-1| = 5$.",
+      "conceptIds": [
+        "modulis-intervalai"
+      ],
       "steps": [
         {
-          "text": "$(a+b)^2 = a^2+2ab+b^2$."
+          "text": "Nuliniai taškai: $x = -2$ ir $x = 1$. Jie dalija tiesę į 3 intervalus."
         },
         {
-          "text": "$5^2 = a^2+b^2 + 2(6) \\implies 25 = a^2+b^2+12$."
+          "text": "1) $x < -2$: Abu reiškiniai neigiami. $-(x+2) - (x-1) = 5 \\implies -x - 2 - x + 1 = 5 \\implies -2x = 6 \\implies x = -3$. (Tinka, nes $-3 < -2$)."
         },
         {
-          "text": "$a^2+b^2 = 13$."
+          "text": "2) $-2 \\le x \\le 1$: Pirmas teigiamas, antras neigiamas. $(x+2) - (x-1) = 5 \\implies x + 2 - x + 1 = 5 \\implies 3 = 5$. (Sprendinių nėra)."
+        },
+        {
+          "text": "3) $x > 1$: Abu teigiami. $(x+2) + (x-1) = 5 \\implies 2x + 1 = 5 \\implies 2x = 4 \\implies x = 2$. (Tinka, nes $2 > 1$)."
         }
       ],
-      "answer": "13"
+      "answer": "-3, 2"
     },
     {
-      "title": "Diofantinė lygtis su dauginimu",
-      "problem": "Raskite sveikus sprendinius: $(x-1)(y+2) = 3$.",
+      "id": "we-alg-8-5",
+      "title": "Skaidymas: Sofi Žermen tapatybės idėja",
+      "level": "hard",
+      "problem": "Išskaidykite dauginamaisiais reiškinį $x^4 + 4y^4$.",
+      "conceptIds": [
+        "skaidymas-dauginamaisiais"
+      ],
       "steps": [
         {
-          "text": "Skaičiaus 3 dalikliai yra: 1, 3, -1, -3."
+          "text": "Pridedame ir atimame narį $4x^2y^2$, kad gautume pilną kvadratą: $x^4 + 4x^2y^2 + 4y^4 - 4x^2y^2$."
         },
         {
-          "text": "1 atvejis: $x-1=1, y+2=3 \\implies x=2, y=1$."
+          "text": "Pirmi trys nariai sudaro $(x^2 + 2y^2)^2$."
         },
         {
-          "text": "2 atvejis: $x-1=3, y+2=1 \\implies x=4, y=-1$."
+          "text": "Gauname kvadratų skirtumą: $(x^2 + 2y^2)^2 - (2xy)^2$."
         },
         {
-          "text": "3 atvejis: $x-1=-1, y+2=-3 \\implies x=0, y=-5$."
-        },
-        {
-          "text": "4 atvejis: $x-1=-3, y+2=-1 \\implies x=-2, y=-3$."
+          "text": "Taikome formulę $a^2 - b^2 = (a-b)(a+b)$: $(x^2 + 2y^2 - 2xy)(x^2 + 2y^2 + 2xy)$."
         }
       ],
-      "answer": "(2,1), (4,-1), (0,-5), (-2,-3)"
+      "answer": "(x^2 - 2xy + 2y^2)(x^2 + 2xy + 2y^2)"
     }
   ],
   "exercises": [
@@ -261,7 +362,7 @@
       "id": "ex-olimpiada-08-fe7262fc",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -301,10 +402,10 @@
       ],
       "solutionSteps": [
         {
-          "text": "$D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 0$."
+          "text": "$D = (-6)^2 - 4 \\cdot 1 \\cdot 9 = 36 - 36 = 0$."
         },
         {
-          "text": "Viena šaknis $x = 6/2 = 3$."
+          "text": "Kadangi D=0, yra viena šaknis: $x = -b/2a = 6/2 = 3$."
         }
       ],
       "commonTraps": [
@@ -316,7 +417,7 @@
         }
       ],
       "reflectionPrompts": [
-        "Ar galima spręsti be D?"
+        "Ar galima spręsti pastebėjus pilną kvadratą $(x-3)^2$?"
       ],
       "srsSeeds": [
         {
@@ -333,7 +434,7 @@
       "id": "ex-olimpiada-08-56d15a87",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -354,7 +455,7 @@
           "text": "$1/x_1 + 1/x_2 = (x_1+x_2)/(x_1x_2)$."
         },
         {
-          "text": "$x_1+x_2 = 4, x_1x_2 = 2.5$."
+          "text": "Pagal Vijetą: $x_1+x_2 = -(-8)/2 = 4, x_1x_2 = 5/2 = 2.5$."
         },
         {
           "text": "$4 / 2.5 = 1.6$."
@@ -366,7 +467,7 @@
       "id": "ex-olimpiada-08-50649dd3",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -393,7 +494,7 @@
       "id": "ex-olimpiada-08-f6fadbfd",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -420,7 +521,7 @@
       "id": "ex-olimpiada-08-7f2e3b87",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -447,7 +548,7 @@
       "id": "ex-olimpiada-08-d16de0a6",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -475,7 +576,7 @@
       "id": "ex-olimpiada-08-3fa10af9",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -503,7 +604,7 @@
       "id": "ex-olimpiada-08-ec7e6993",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -531,7 +632,7 @@
       "id": "ex-olimpiada-08-c4bc99e0",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -558,7 +659,7 @@
       "id": "ex-olimpiada-08-811014ef",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -586,7 +687,7 @@
       "id": "ex-olimpiada-08-5225d7a2",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -614,7 +715,7 @@
       "id": "ex-olimpiada-08-efad3e02",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -661,7 +762,7 @@
       "id": "ex-olimpiada-08-9c8a454f",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -688,7 +789,7 @@
       "id": "ex-olimpiada-08-b19cc2f8",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -715,7 +816,7 @@
       "id": "ex-olimpiada-08-4670481e",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -742,7 +843,7 @@
       "id": "ex-olimpiada-08-8a5b6d7c",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -769,7 +870,7 @@
       "id": "ex-olimpiada-08-371ff322",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -797,7 +898,7 @@
       "id": "ex-olimpiada-08-8f8af17c",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",
@@ -824,7 +925,7 @@
       "id": "ex-olimpiada-08-ef659ec4",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -852,7 +953,7 @@
       "id": "ex-olimpiada-08-alg-020",
       "topicId": "olimpiada-08-algebra",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",

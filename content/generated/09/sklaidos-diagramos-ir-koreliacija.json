@@ -1,44 +1,39 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "9 klasėje programa nagrinėja sklaidos diagramas, tiesinę koreliaciją ir tiesės lygtį duomenų ryšiui aprašyti."
+    "notes": "Išsami sklaidos diagramų ir koreliacijos teorija 9 klasei."
   },
   "topic": {
     "id": "sklaidos-diagramos-ir-koreliacija",
-    "title": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai",
+    "title": "Sklaidos diagramos ir koreliacija",
     "grade": 9,
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 7,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
-      "histogramos-kvartiliai-ir-sukauptasis-daznis"
+      "funkcijos-ir-ju-savybes",
+      "duomenys-ir-tikimybe"
     ],
-    "nextTopicIds": [
-      "duomenu-sklaida-skirstiniai-ir-patikimumas"
-    ],
+    "nextTopicIds": [],
     "conceptIds": [
-      "duomenys",
-      "imtis",
-      "daznis",
-      "vidurkis",
-      "mediana",
-      "moda",
-      "sklaida",
-      "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "sklaidos-diagrama",
+      "koreliacija",
+      "teigiama-koreliacija",
+      "neigiama-koreliacija",
+      "koreliacijos-koeficientas",
+      "regresijos-tiese",
+      "priezastingumas",
+      "interpoliacija",
+      "ekstrapoliacija"
     ],
-    "formulaIds": [
-      "vidurkio-formule",
-      "tikimybes-formule"
-    ],
+    "formulaIds": [],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "koreliacija-nera-priezastingumas",
+      "blogas-tieses-brezimas",
+      "ekstrapoliacijos-pavojus"
     ],
     "exerciseIds": [
       "sklaidos-diagramos-ir-koreliacija-ex-001",
@@ -65,246 +60,345 @@
   },
   "theory": [
     {
-      "id": "sklaidos-diagramos-ir-koreliacija-ivadas",
-      "title": "Įvadas",
+      "id": "sklaidos-ivadas",
+      "title": "1. Statistika ir ryšiai: Kodėl kintamieji „draugauja“?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai yra tema, kurioje mokomasi atpažinti pagrindinius sklaidos diagramos ir koreliacija modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveiki atvykę į duomenų mokslo pradmenis! Iki šiol dažniausiai analizavote vieną kintamąjį (pvz., klasės mokinių ūgius). Tačiau gyvenime viskas susiję. Ar pastebėjote, kad kuo daugiau mokotės, tuo geresni jūsų pažymiai? Arba kuo karštesnė diena, tuo daugiau ledų parduodama parduotuvėje?"
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
+          "text": "Šioje temoje mokysimės tirti ryšius tarp dviejų skirtingų dydžių. Mes ne tik spėliosime, bet ir naudosime matematinius įrankius, kad pamatytume, ar tie dydžiai juda kartu, ar priešingomis kryptimis, o gal jie visiškai neturi nieko bendro."
         }
       ]
     },
     {
-      "id": "sklaidos-diagramos-ir-koreliacija-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "sklaidos-diagrama-savoka",
+      "title": "2. Sklaidos diagrama (Scatter Plot): Duomenų portretas",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "conceptId": "sklaidos-diagrama",
+          "text": "Sklaidos diagrama – tai grafinis dviejų kintamųjų duomenų atvaizdavimas taškais koordinačių plokštumoje."
         },
         {
-          "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
-        },
-        {
-          "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "type": "paragraph",
+          "text": "Kiekvienas matavimas (pvz., vieno žmogaus ūgis ir jo svoris) tampa vienu tašku $(x, y)$. Kai nubrėžiame daug tokių taškų, pamatome bendrą „debesį“. Šis debesis mums išduoda paslaptį apie ryšį tarp $x$ ir $y$."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Horizontali $Ox$ ašis paprastai skiriama nepriklausomam kintamajam (priežasčiai), o vertikali $Oy$ ašis – priklausomam kintamajam (pasekmei)."
         }
       ]
     },
     {
-      "id": "sklaidos-diagramos-ir-koreliacija-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "koreliacija-kryptis",
+      "title": "3. Koreliacija: Ryšio kryptis",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "definition",
+          "conceptId": "koreliacija",
+          "text": "Koreliacija – tai statistinis ryšys tarp dviejų ar daugiau kintamųjų, kai vieno kintamojo pokytis yra susijęs su kito kintamojo pokyčiu."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
+          "type": "list",
+          "items": [
+            "**Teigiama koreliacija:** Kai vienas kintamasis didėja, kitas taip pat linkęs didėti. Taškų debesis „kyla“ į viršų (pvz., vaiko amžius ir jo ūgis).",
+            "**Neigiama koreliacija:** Kai vienas kintamasis didėja, kitas linkęs mažėti. Taškų debesis „leidžiasi“ žemyn (pvz., automobilio greitis ir kelionės trukmė).",
+            "**Nulinė koreliacija:** Taškai išsibarstę chaotiškai. Ryšio nėra (pvz., žmogaus vardas ir jo sėkmė loterijoje)."
+          ]
         }
       ]
     },
     {
-      "id": "sklaidos-diagramos-ir-koreliacija-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "koreliacijos-stiprumas-ir-r",
+      "title": "4. Ryšio stiprumas ir koeficientas $r$",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Koreliacija gali būti stipri arba silpna. Jei taškai išsidėstę labai arti įsivaizduojamos tiesės – ryšys stiprus. Jei jie sudaro platų, neryškų debesį – ryšys silpnas."
+        },
+        {
+          "type": "definition",
+          "conceptId": "koreliacijos-koeficientas",
+          "text": "Koreliacijos koeficientas ($r$) yra skaičius nuo -1 iki 1, kuris tiksliai nusako ryšio stiprumą ir kryptį."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**$r = 1$:** Ideali teigiama koreliacija (visi taškai tiesėje).",
+            "**$r = -1$:** Ideali neigiama koreliacija.",
+            "**$r = 0$:** Ryšio nėra.",
+            "**$0,7 < |r| < 1$:** Stipri koreliacija.",
+            "**$0,3 < |r| < 0,7$:** Vidutinė koreliacija.",
+            "**$0 < |r| < 0,3$:** Silpna koreliacija."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regresijos-tiese-teorija",
+      "title": "5. Regresijos tiesė: Geriausiai tinkanti linija",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "regresijos-tiese",
+          "text": "Regresijos tiesė (tendencijos linija) – tai tiesė, kuri nubrėžiama per sklaidos diagramos taškus taip, kad ji būtų kuo arčiau visų taškų."
+        },
+        {
+          "type": "paragraph",
+          "text": "9 klasėje mes mokomės šią tiesę brėžti „iš akies“. Ji turėtų eiti per taškų debesies vidurį, palikdama maždaug po lygiai taškų virš savęs ir po savimi."
+        }
+      ]
+    },
+    {
+      "id": "prognozavimas-interpoliacija",
+      "title": "6. Prognozavimas: Žvilgsnis į ateitį",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kam mums reikalinga regresijos tiesė? Kad galėtume prognozuoti!"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Interpoliacija:** Reikšmės prognozavimas **tarp** turimų duomenų taškų. Tai paprastai yra gana patikima.",
+            "**Ekstrapoliacija:** Reikšmės prognozavimas **už** turimų duomenų ribų. Tai pavojinga, nes negalime būti tikri, kad dėsningumas išliks toks pat (pvz., vaikas negali augti amžinai tuo pačiu tempu)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "koreliacija-vs-priezastingumas",
+      "title": "7. DIDŽIOJI PAMOKA: Koreliacija nėra Priežastingumas",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tai pati svarbiausia šios temos taisyklė. Jei du dalykai kinta kartu, tai dar nereiškia, kad vienas sukelia kitą!"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdys: Vasarą padidėja ledų pardavimai ir padidėja nuskendimų skaičius. Ar ledų valgymas sukelia nuskendimus? Ne! Abu šiuos dalykus sukelia trečiasis veiksnys – karštas oras. Matematika rodo stiprią koreliaciją, bet logika sako, kad priežastingumo nėra."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-analizes-strategija",
+      "title": "8. Sprendimo strategija: Kaip tirti duomenis?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. **Nubraižykite diagramą:** Pažymėkite taškus $(x, y)$.\n2. **Nustatykite kryptį:** Ar debesis kyla, leidžiasi, ar yra chaotiškas?\n3. **Įvertinkite stiprumą:** Kaip arti taškai yra vienas kito?\n4. **Nubrėžkite tiesę:** Naudokite liniuotę!\n5. **Padarykite išvadą:** Suformuluokite sakinį: „Didėjant $x$, kintamasis $y$ linkęs [didėti/mažėti]“."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-sklaida",
+      "title": "9. Dažnos klaidos interpretuojant diagramas",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Klaida Nr. 1: Išskirčių ignoravimas. Jei vienas taškas yra labai toli nuo visų kitų, jis vadinamas **išskirtimi**. Jis gali stipriai pakeisti regresijos tiesės kryptį, todėl jį reikia vertinti kritiškai."
+        },
+        {
+          "type": "warning",
+          "text": "Klaida Nr. 2: Pernelyg pasitikima ekstrapoliacija. Spėjant, kas bus po 20 metų remiantis 2 metų duomenimis, dažnai klystama."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-sklaida",
+      "title": "10. Išsamūs pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pažiūrėkime, kaip tai veikia praktikoje."
         }
       ]
     }
   ],
+  "workedExamples": [
+    {
+      "id": "sklaida-ex-1",
+      "title": "Ryšio krypties nustatymas",
+      "level": "easy",
+      "problem": "Tiriamas ryšys tarp automobilio amžiaus ir jo kainos. Kokios koreliacijos tikėtumėtės?",
+      "conceptIds": [
+        "koreliacija",
+        "neigiama-koreliacija"
+      ],
+      "steps": [
+        {
+          "text": "Pagalvokite apie logiką: senstant automobiliui (didėjant amžiui), jo vertė rinkoje paprastai krenta (mažėja kaina).",
+          "latex": "\\text{Amžius } \\uparrow \\quad \\Rightarrow \\quad \\text{Kaina } \\downarrow"
+        },
+        {
+          "text": "Kadangi kintamieji juda priešingomis kryptimis, tai yra neigiama koreliacija.",
+          "latex": "r < 0"
+        }
+      ],
+      "answer": "Neigiama koreliacija"
+    },
+    {
+      "id": "sklaida-ex-2",
+      "title": "Koreliacijos koeficiento r prasmė",
+      "level": "easy",
+      "problem": "Turime tris koreliacijos koeficientus: $r_1 = 0,85$; $r_2 = -0,92$; $r_3 = 0,1$. Kuris jų rodo stipriausią ryšį?",
+      "conceptIds": [
+        "koreliacijos-koeficientas"
+      ],
+      "steps": [
+        {
+          "text": "Ryšio stiprumas vertinamas pagal koeficiento modulį (absoliučią vertę).",
+          "latex": "|0,85| = 0,85; \\quad |-0,92| = 0,92; \\quad |0,1| = 0,1"
+        },
+        {
+          "text": "Didžiausia reikšmė yra 0,92.",
+          "latex": "0,92 > 0,85 > 0,1"
+        }
+      ],
+      "answer": "-0,92 (tai labai stipri neigiama koreliacija)"
+    },
+    {
+      "id": "sklaida-ex-3",
+      "title": "Diagramos braižymas ir interpretavimas",
+      "level": "medium",
+      "problem": "Duoti duomenys apie mokymosi valandas (x) ir testo balus (y): (1; 40), (2; 55), (3; 60), (4; 85), (5; 90). Apibūdinkite ryšį.",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "teigiama-koreliacija"
+      ],
+      "steps": [
+        {
+          "text": "Įsivaizduokime taškus plokštumoje. Didėjant x (valandoms), didėja y (balai).",
+          "latex": "(1, 40) \\to (5, 90)"
+        },
+        {
+          "text": "Taškai išsidėstę beveik tiese, kylančia į viršų.",
+          "latex": "\\text{Ryšys yra teigiamas ir stiprus.}"
+        }
+      ],
+      "answer": "Stipri teigiama koreliacija"
+    },
+    {
+      "id": "sklaida-ex-4",
+      "title": "Prognozavimas (Interpoliacija)",
+      "level": "medium",
+      "problem": "Remiantis ankstesniu pavyzdžiu, kiek balų tikėtina gauti mokiusis 2,5 valandos?",
+      "conceptIds": [
+        "interpoliacija",
+        "regresijos-tiese"
+      ],
+      "steps": [
+        {
+          "text": "Tai yra interpoliacija, nes 2,5 yra tarp mūsų turimų duomenų (1 ir 5).",
+          "latex": "x = 2,5 \\in [1; 5]"
+        },
+        {
+          "text": "Žiūrime į taškus (2; 55) ir (3; 60). Reikšmė turėtų būti tarp jų.",
+          "latex": "\\text{Prognozė: apie 57-58 balai.}"
+        }
+      ],
+      "answer": "Apie 57-58 balai"
+    },
+    {
+      "id": "sklaida-ex-5",
+      "title": "Ekstrapoliacijos pavojus",
+      "level": "medium",
+      "problem": "Gėlė per pirmas 5 dienas paaugo nuo 1 cm iki 5 cm. Ar galime teigti, kad po 100 dienų ji bus 100 cm aukščio?",
+      "conceptIds": [
+        "ekstrapoliacija"
+      ],
+      "steps": [
+        {
+          "text": "Tendencija rodo 1 cm per dieną augimą.",
+          "latex": "y = 1x"
+        },
+        {
+          "text": "Skaičiavimas po 100 dienų yra tolima ekstrapoliacija.",
+          "latex": "x = 100"
+        },
+        {
+          "text": "Biologiniai procesai nėra begaliniai – augalas pasiekia savo maksimalų aukštį ir nustoja augti.",
+          "latex": "\\text{Išvada: Spėjimas nepatikimas.}"
+        }
+      ],
+      "answer": "Ne, tai nepatikima ekstrapoliacija."
+    },
+    {
+      "id": "sklaida-ex-6",
+      "title": "Išskirčių atpažinimas",
+      "level": "hard",
+      "problem": "Klasės mokinių batų dydžiai ir ūgis rodo stiprią koreliaciją, tačiau vienas mokinys yra 190 cm ūgio ir nešioja 38 dydžio batus. Kaip tai vadinama?",
+      "conceptIds": [
+        "sklaidos-diagrama"
+      ],
+      "steps": [
+        {
+          "text": "Dauguma taškų sudaro kylančią tiesę.",
+          "latex": "(160, 38), (170, 41), ..."
+        },
+        {
+          "text": "Taškas (190, 38) yra toli nuo šios bendros tendencijos.",
+          "latex": "\\text{Tai yra išskirtis (outlier).}"
+        }
+      ],
+      "answer": "Išskirtis"
+    },
+    {
+      "id": "sklaida-ex-7",
+      "title": "Priežastingumo analizė",
+      "level": "hard",
+      "problem": "Nustatyta, kad miestuose, kuriuose yra daugiau bažnyčių, yra ir daugiau nusikaltimų. Ar bažnyčios sukelia nusikaltimus?",
+      "conceptIds": [
+        "priezastingumas"
+      ],
+      "steps": [
+        {
+          "text": "Koreliacija egzistuoja, nes abu kintamieji didėja didėjant miestui.",
+          "latex": "\\text{Bažnyčios } \\uparrow, \\text{ Nusikaltimai } \\uparrow"
+        },
+        {
+          "text": "Trečiasis kintamasis yra gyventojų skaičius. Dideliuose miestuose visko yra daugiau.",
+          "latex": "\\text{Tai koreliacija be priežastingumo.}"
+        }
+      ],
+      "answer": "Ne, tai tik koreliacija dėl bendro faktoriaus (gyventojų skaičiaus)."
+    },
+    {
+      "id": "sklaida-ex-8",
+      "title": "Regresijos tiesės brėžimas",
+      "level": "hard",
+      "problem": "Turite taškus: (10, 100), (20, 180), (30, 310), (40, 400). Kuris iš šių taškų labiausiai 'tempia' regresijos tiesę į viršų?",
+      "conceptIds": [
+        "regresijos-tiese"
+      ],
+      "steps": [
+        {
+          "text": "Patikrinkime bendrą santykį y/x.",
+          "latex": "100/10=10; \\quad 180/20=9; \\quad 310/30=10,3; \\quad 400/40=10"
+        },
+        {
+          "text": "Taškas (30, 310) turi didžiausią santykinį y, todėl jis yra šiek tiek virš idealios tiesės y=10x.",
+          "latex": "310 > 300"
+        }
+      ],
+      "answer": "(30, 310)"
+    }
+  ],
   "concepts": [
     {
-      "id": "duomenys",
-      "title": "Duomenys",
+      "id": "sklaidos-diagrama",
+      "title": "Sklaidos diagrama",
       "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
+      "shortDefinition": "Taškų diagrama dviem kintamiesiems.",
+      "intuition": "Duomenų „debesis“, rodantis, kaip du dalykai susiję tarpusavyje.",
+      "formal": "Plokštumos taškų rinkinis {(xi, yi)}, vaizduojantis matavimų poras.",
       "notation": [],
       "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "imtis",
-      "title": "Imtis",
-      "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
+        "koreliacija",
+        "regresijos-tiese"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -314,1103 +408,70 @@
       "id": "koreliacija",
       "title": "Koreliacija",
       "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
+      "shortDefinition": "Ryšys tarp kintamųjų.",
+      "intuition": "Kiek vienas kintamasis „nori“ judėti kartu su kitu.",
+      "formal": "Statistinis priklausomumas tarp dviejų atsitiktinių dydžių.",
+      "notation": [
+        "r"
+      ],
+      "relatedConceptIds": [
+        "teigiama-koreliacija",
+        "neigiama-koreliacija",
+        "koreliacijos-koeficientas"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "priezastingumas",
+      "title": "Priežastingumas",
+      "type": "concept",
+      "shortDefinition": "Priežasties ir pasekmės ryšys.",
+      "intuition": "Vienas dalykas ne tik susijęs su kitu, bet jį tiesiogiai sukelia.",
+      "formal": "Sąryšis, kur vienas įvykis (priežastis) yra atsakingas už kito įvykio (pasekmės) atsiradimą.",
       "notation": [],
       "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+        "koreliacija"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
-  "formulas": [
-    {
-      "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
-      "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
-      "variables": {
-        "n": "reikšmių skaičius"
-      },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
-      "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "defaultSrs": true
-    }
-  ],
+  "formulas": [],
   "mistakes": [
     {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
+      "id": "koreliacija-nera-priezastingumas",
+      "title": "Koreliacijos painiojimas su priežastingumu",
       "type": "mistake",
       "conceptIds": [
-        "vidurkis"
+        "koreliacija",
+        "priezastingumas"
       ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
+      "wrongPattern": "Teigia, kad 'skaitymas didina ūgį', nes tyrimas parodė, kad aukštesni mokiniai perskaito daugiau knygų.",
+      "whyItHappens": "Nematomas trečiasis faktorius (pvz., amžius: vyresni vaikai yra ir aukštesni, ir daugiau skaito).",
+      "correction": "Koreliacija tik nurodo ryšį, bet ne jo prigimtį.",
+      "wrongExample": "A sukelia B",
+      "correctExample": "A ir B yra susiję (galbūt dėl C)",
       "defaultSrs": true
     },
     {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
+      "id": "ekstrapoliacijos-pavojus",
+      "title": "Nereali ekstrapoliacija",
       "type": "mistake",
       "conceptIds": [
-        "tikimybe"
+        "ekstrapoliacija"
       ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "Prognozuoja, kad po 100 metų žmogus bėgs 100 metrų per 2 sekundes, remiantis pastarųjų 10 metų rekordais.",
+      "whyItHappens": "Tikima, kad dabartinis tempas išliks amžinai, neatsižvelgiant į fizines ribas.",
+      "correction": "Prognozės už duomenų ribų yra tik spėjimai, reikalaujantys papildomo konteksto.",
+      "wrongExample": "Tiesė tęsiasi begaliniai.",
+      "correctExample": "Tiesė galioja tik tam tikrame diapazone.",
       "defaultSrs": true
     }
   ],
-  "workedExamples": [
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-exmp-1",
-      "title": "Vidurkis",
-      "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
-        },
-        {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
-        }
-      ],
-      "answer": "20/3"
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-exmp-2",
-      "title": "Mediana",
-      "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
-        },
-        {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
-        }
-      ],
-      "answer": "5"
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-exmp-3",
-      "title": "Tikimybė",
-      "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
-        },
-        {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
-        }
-      ],
-      "answer": "1/6"
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
-        }
-      ],
-      "answer": "4"
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-exmp-5",
-      "title": "Sklaida",
-      "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
-        }
-      ],
-      "answer": "B turi didesnę sklaidą"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-001",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask skaičių 4, 6, 8 vidurkį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame ir dalijame.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "vidurkis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4+6+8=18.",
-          "latex": "18/3=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-002",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-003",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-004",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-005",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-006",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-007",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-008",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-009",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-010",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-011",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-012",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-013",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-014",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-015",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-016",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-017",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-018",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-019",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-ex-020",
-      "topicId": "sklaidos-diagramos-ir-koreliacija",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-test-topic",
-      "title": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai testas",
-      "scope": "topic",
-      "topicIds": [
-        "sklaidos-diagramos-ir-koreliacija"
-      ],
-      "exerciseIds": [
-        "sklaidos-diagramos-ir-koreliacija-ex-001",
-        "sklaidos-diagramos-ir-koreliacija-ex-002",
-        "sklaidos-diagramos-ir-koreliacija-ex-003",
-        "sklaidos-diagramos-ir-koreliacija-ex-004",
-        "sklaidos-diagramos-ir-koreliacija-ex-005",
-        "sklaidos-diagramos-ir-koreliacija-ex-006",
-        "sklaidos-diagramos-ir-koreliacija-ex-007",
-        "sklaidos-diagramos-ir-koreliacija-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-test-challenge",
-      "title": "Sklaidos diagramos, tiesinė koreliacija ir duomenų ryšiai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "sklaidos-diagramos-ir-koreliacija"
-      ],
-      "exerciseIds": [
-        "sklaidos-diagramos-ir-koreliacija-ex-009",
-        "sklaidos-diagramos-ir-koreliacija-ex-010",
-        "sklaidos-diagramos-ir-koreliacija-ex-011",
-        "sklaidos-diagramos-ir-koreliacija-ex-012",
-        "sklaidos-diagramos-ir-koreliacija-ex-013",
-        "sklaidos-diagramos-ir-koreliacija-ex-014",
-        "sklaidos-diagramos-ir-koreliacija-ex-015",
-        "sklaidos-diagramos-ir-koreliacija-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-duomenys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-vidurkio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sklaidos-diagramos-ir-koreliacija-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "exercises": [],
+  "tests": [],
+  "srsCards": []
 }

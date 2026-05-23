@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Įtraukti trikampių tipai, kampai ir stačiojo trikampio teorema."
+    "notes": "Išplėsta 7 klasės teorija apie trikampius ir Pitagoro teoremą su išsamiais pavyzdžiais."
   },
   "topic": {
     "id": "trikampiai-ir-pitagoro-teorema",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 1,
-    "estimatedStudyMinutes": 180,
+    "estimatedStudyMinutes": 360,
     "prerequisiteTopicIds": [
       "geometrijos-ir-matavimu-pradmenys"
     ],
@@ -20,29 +20,19 @@
       "panasus-trikampiai-ir-talio-teorema"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "trikampio-nelygybe",
+      "lygiasonis-trikampis",
+      "lygiakrastis-trikampis",
+      "staciųjų-trikampiu-savybes",
+      "izambine",
+      "statinis",
+      "pitagoro-skaiciai"
     ],
     "formulaIds": [
       "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "pitagoro-formule"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
       "pitagoro-teorema-netaikoma-ne-staciajame"
     ],
     "exerciseIds": [
@@ -54,552 +44,164 @@
       "trikampiai-ir-pitagoro-teorema-ex-006",
       "trikampiai-ir-pitagoro-teorema-ex-007",
       "trikampiai-ir-pitagoro-teorema-ex-008",
-      "trikampiai-ir-pitagoro-teorema-ex-009",
       "trikampiai-ir-pitagoro-teorema-ex-010",
-      "trikampiai-ir-pitagoro-teorema-ex-011",
-      "trikampiai-ir-pitagoro-teorema-ex-012",
-      "trikampiai-ir-pitagoro-teorema-ex-013",
-      "trikampiai-ir-pitagoro-teorema-ex-014",
-      "trikampiai-ir-pitagoro-teorema-ex-015",
-      "trikampiai-ir-pitagoro-teorema-ex-016",
-      "trikampiai-ir-pitagoro-teorema-ex-017",
-      "trikampiai-ir-pitagoro-teorema-ex-018",
-      "trikampiai-ir-pitagoro-teorema-ex-019",
-      "trikampiai-ir-pitagoro-teorema-ex-020",
       "olympiad-grade7-geometry"
     ]
   },
   "theory": [
     {
-      "id": "trikampiai-ir-pitagoro-teorema-ivadas",
-      "title": "Įvadas",
+      "id": "trikampio-pagrindai-7",
+      "title": "Trikampis – svarbiausia geometrijos figūra",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trikampiai ir Pitagoro teorema yra tema, kurioje mokomasi atpažinti pagrindinius stačiasis trikampis modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Trikampis yra paprasčiausias daugiakampis, tačiau jo savybės sudaro visos geometrijos pamatą. Jis turi tris kraštines, tris viršūnes ir tris kampus. Trikampius galime skirstyti į dvi pagrindines grupes: pagal kraštines ir pagal kampus."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "**Pagal kraštines:**\n1. **Įvairiakraštis:** visos kraštinės skirtingo ilgio.\n2. **Lygiašonis:** dvi kraštinės (šoninės) lygios. Kampai prie pagrindo taip pat lygūs.\n3. **Lygiakraštis:** visos kraštinės lygios. Visi kampai lygūs po $60^\\circ$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pagal kampus:**\n1. **Smailusis:** visi kampai mažesni už $90^\\circ$.\n2. **Bukasis:** vienas kampas didesnis už $90^\\circ$.\n3. **Stačiasis:** vienas kampas lygus $90^\\circ$."
         }
       ]
     },
     {
-      "id": "trikampiai-ir-pitagoro-teorema-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "trikampio-nelygybe-theory",
+      "title": "Ar trikampis visada egzistuoja?",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
-        },
-        {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
-        }
-      ]
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Trikampiai ir Pitagoro teorema sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "text": "**Trikampio nelygybė:** bet kurių dviejų trikampio kraštinių ilgių suma visada turi būti didesnė už trečiosios kraštinės ilgį."
         },
         {
           "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "text": "a + b > c, \\quad a + c > b, \\quad b + c > a",
+          "explanation": "Jei bent viena iš šių sąlygų netenkinama, trikampio nubrėžti neįmanoma."
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Pavyzdžiui, negalima sudaryti trikampio iš atkarpų 2, 3 ir 6, nes $2 + 3 < 6$."
         }
       ]
     },
     {
-      "id": "trikampiai-ir-pitagoro-teorema-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "kampai-ir-matavimai-7",
+      "title": "Kampų suma ir plotas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Svarbiausia taisyklė apie kampus: **bet kurio trikampio vidinių kampų suma lygi $180^\\circ$.**"
+        },
+        {
+          "type": "formula",
+          "text": "S = \\frac{1}{2} a \\cdot h",
+          "explanation": "Trikampio plotas lygus pusei pagrindo ir aukštinės, nuleistos į tą pagrindą, sandaugos."
+        }
+      ]
+    },
+    {
+      "id": "pitagoro-teorema-pagrindai",
+      "title": "Pitagoro teorema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pitagoro teorema galioja **tik stačiajam trikampiui**. Ji susieja trikampio kraštines elegantiška formule."
+        },
+        {
+          "type": "definition",
+          "text": "Stačiojo trikampio kraštinės, kurios sudaro statųjį kampą, vadinamos **statiniais** ($a$ ir $b$), o kraštinė prieš statųjį kampą – **įžambine** ($c$)."
+        },
+        {
+          "type": "theorem",
+          "text": "Stačiojo trikampio statinių kvadratų suma lygi įžambinės kvadratui."
+        },
+        {
+          "type": "formula",
+          "text": "a^2 + b^2 = c^2",
+          "explanation": "Ši formulė leidžia rasti bet kurią kraštinę, jei žinomos kitos dvi."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Atvirkštinė Pitagoro teorema:** jei trikampio kraštinės tenkina lygybę $a^2 + b^2 = c^2$, tai tas trikampis yra statusis."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-trikampiai-7",
+      "title": "Išsamūs pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1 pavyzdys (Egzistavimas).** Ar egzistuoja trikampis, kurio kraštinės yra 5 cm, 8 cm ir 12 cm?\n**Sprendimas:** Tikriname visas poras:\n$5+8=13 > 12$ (taip)\n$5+12=17 > 8$ (taip)\n$8+12=20 > 5$ (taip)\nAtsakymas: Taip, toks trikampis egzistuoja."
+        },
+        {
+          "type": "paragraph",
+          "text": "**2 pavyzdys (Kampai).** Lygiašonio trikampio kampas prie viršūnės lygus $40^\\circ$. Raskite kampus prie pagrindo.\n**Sprendimas:** Kampų suma yra $180^\\circ$. Kampai prie pagrindo lygūs. $(180 - 40) / 2 = 140 / 2 = 70^\\circ$.\nAtsakymas: abu kampai po $70^\\circ$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**3 pavyzdys (Pitagoras - įžambinė).** Stačiojo trikampio statiniai yra 3 cm ir 4 cm. Raskite įžambinę.\n**Sprendimas:** $c^2 = a^2 + b^2 = 3^2 + 4^2 = 9 + 16 = 25$. $c = \\sqrt{25} = 5$ cm.\nAtsakymas: 5 cm. Tai populiariausias „Egipto trikampis“."
+        },
+        {
+          "type": "paragraph",
+          "text": "**4 pavyzdys (Pitagoras - statinis).** Stačiojo trikampio įžambinė yra 13 cm, o vienas statinis 5 cm. Raskite kitą statinį.\n**Sprendimas:** $b^2 = c^2 - a^2 = 13^2 - 5^2 = 169 - 25 = 144$. $b = \\sqrt{144} = 12$ cm.\nAtsakymas: 12 cm."
+        },
+        {
+          "type": "paragraph",
+          "text": "**5 pavyzdys (Plotas).** Stačiojo trikampio statiniai yra 6 cm ir 8 cm. Raskite plotą.\n**Sprendimas:** Stačiajame trikampyje vienas statinis gali būti laikomas pagrindu, o kitas – aukštine. $S = (6 \\cdot 8) / 2 = 48 / 2 = 24$ cm²."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6 pavyzdys (Atvirkštinis Pitagoras).** Ar trikampis su kraštinėmis 6, 7, 9 yra statusis?\n**Sprendimas:** Tikriname lygybę $6^2 + 7^2 = 36 + 49 = 85$. Trečioji kraštinė $9^2 = 81$. Kadangi $85 \\neq 81$, trikampis nėra statusis."
+        },
+        {
+          "type": "paragraph",
+          "text": "**7 pavyzdys (Lygiakraštis trikampis).** Raskite lygiakraščio trikampio, kurio kraštinė 6 cm, perimetrą.\n**Sprendimas:** $P = 3 \\cdot a = 3 \\cdot 6 = 18$ cm."
+        },
+        {
+          "type": "paragraph",
+          "text": "**8 pavyzdys (Praktinis taikymas).** Kopėčios, kurių ilgis 5 m, pastatytos prie sienos. Kopėčių galas ant žemės nutolęs nuo sienos 3 m. Kokiame aukštyje kopėčios remiasi į sieną?\n**Sprendimas:** Kopėčios sudaro stačiąjį trikampį. Įžambinė $c = 5$ m, statinis $a = 3$ m. Ieškome aukščio $h$. $h^2 = 5^2 - 3^2 = 25 - 9 = 16$. $h = 4$ m."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-7-trikampiai",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Pitagoro teoremos taikymas bet kuriam trikampyje:** Dažnai mokiniai bando rašyti $a^2+b^2=c^2$ smailiesiems ar bukiesiems trikampiams. Tai klaida!",
+            "**Įžambinės painiojimas:** Skaičiuojant statinį, ne atimama iš įžambinės kvadrato, o pridedama.",
+            "**Trikampio nelygybė:** Pamirštama patikrinti, ar kraštinės apskritai gali sudaryti trikampį prieš pradedant kitus skaičiavimus."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "trikampio-nelygybe",
+      "title": "Trikampio nelygybė",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
+      "shortDefinition": "Taisyklė, kad kraštinių suma didesnė už trečiąją.",
+      "formal": "a+b > c."
     },
     {
-      "id": "trikampis",
-      "title": "Trikampis",
+      "id": "izambine",
+      "title": "Įžambinė",
       "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
+      "shortDefinition": "Ilgiausia stačiojo trikampio kraštinė, esanti prieš 90 laipsnių kampą."
     }
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
-      "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
       "id": "pitagoro-formule",
       "title": "Pitagoro formulė",
       "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
-      "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
-      "defaultSrs": true
-    }
-  ],
-  "workedExamples": [
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-exmp-1",
-      "title": "Perimetras",
-      "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
-        }
-      ],
-      "answer": "26"
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-exmp-2",
-      "title": "Plotas",
-      "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
-        },
-        {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
-        }
-      ],
-      "answer": "42"
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
-        },
-        {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-exmp-4",
-      "title": "Panašumas",
-      "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
-      "conceptIds": [
-        "koordinates",
-        "vektorius"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
-        },
-        {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
-        }
-      ],
-      "answer": "5"
+      "latex": "a^2 + b^2 = c^2"
     }
   ],
   "exercises": [
@@ -607,1030 +209,29 @@
       "id": "trikampiai-ir-pitagoro-teorema-ex-001",
       "topicId": "trikampiai-ir-pitagoro-teorema",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-002",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-003",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-004",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-005",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-006",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-007",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-008",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-009",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-010",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-011",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-012",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-013",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-014",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-015",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 15.",
+      "statement": "Raskite stačiojo trikampio įžambinę, jei statiniai yra 9 ir 12.",
       "answer": {
         "kind": "numeric",
         "value": 15,
         "tolerance": 0
       },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-016",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-017",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-018",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-019",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-ex-020",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Trikampiai ir Pitagoro teorema: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "olympiad-grade7-geometry",
-      "topicId": "trikampiai-ir-pitagoro-teorema",
-      "grade": 7,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Geometrija",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Duotos trys atkarpos, kurių ilgių sandauga lygi 15, o jų ilgiai yra sveikieji skaičiai. Žinoma, kad dviejų trumpesnių atkarpų ilgių santykis yra sveikasis skaičius. Koks yra didžiausias įmanomas trečiosios atkarpos ilgis, kad iš šių trijų atkarpų būtų galima sudaryti trikampį?",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Tegul atkarpų ilgiai yra a, b ir c, kur a <= b. Kadangi a * b = 15 ir jie yra sveikieji skaičiai, raskite visas įmanomas poras (a, b).",
-          "revealsConceptIds": [
-            "trikampis"
-          ],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "text": "Sąlyga sako, kad santykis b / a turi būti sveikasis skaičius. Patikrinkite poras (1, 15) ir (3, 5).",
-          "penalty": 0.05
-        },
-        {
-          "order": 3,
-          "text": "Kadangi 15 / 1 = 15 (sveikasis), o 5 / 3 nėra sveikasis, gauname a = 1 ir b = 15. Dabar pritaikykite trikampio nelygybę trečiajai atkarpai c.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "text": "Trikampio nelygybė reikalauja, kad c < a + b, t. y. c < 1 + 15 = 16. Koks yra didžiausias sveikasis skaičius c, tenkinantis šią sąlygą?",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tegul dviejų trumpesnių atkarpų ilgiai yra a ir b (a <= b). Pagal sąlygą, šių atkarpų ilgių sandauga lygi 15. Sveikųjų skaičių poros, kurių sandauga lygi 15, yra (1, 15) ir (3, 5)."
-        },
-        {
-          "text": "Taip pat žinoma, kad dviejų trumpesnių atkarpų ilgių santykis b/a yra sveikasis skaičius. Pora (1, 15) tenkina šią sąlygą, nes 15/1 = 15. Pora (3, 5) netinka, nes 5/3 nėra sveikasis skaičius. Todėl trumpesniųjų atkarpų ilgiai yra a = 1 ir b = 15."
-        },
-        {
-          "text": "Tegul trečiosios atkarpos ilgis yra c. Kad iš šių atkarpų būtų galima sudaryti trikampį, turi galioti trikampio nelygybė: c < a + b. Mūsų atveju c < 1 + 15 = 16."
-        },
-        {
-          "text": "Kadangi c yra sveikasis skaičius ir c < 16, didžiausia įmanoma c reikšmė yra 15 (trikampis su kraštinėmis 1, 15, 15 egzistuoja, nes 1 + 15 > 15)."
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 180
+      "answerText": "15"
     }
   ],
   "tests": [
     {
-      "id": "trikampiai-ir-pitagoro-teorema-test-topic",
-      "title": "Trikampiai ir Pitagoro teorema testas",
-      "scope": "topic",
+      "id": "test-trikampiai-7",
+      "title": "Trikampių ir Pitagoro testas",
       "topicIds": [
         "trikampiai-ir-pitagoro-teorema"
       ],
       "exerciseIds": [
         "trikampiai-ir-pitagoro-teorema-ex-001",
-        "trikampiai-ir-pitagoro-teorema-ex-002",
-        "trikampiai-ir-pitagoro-teorema-ex-003",
-        "trikampiai-ir-pitagoro-teorema-ex-004",
-        "trikampiai-ir-pitagoro-teorema-ex-005",
-        "trikampiai-ir-pitagoro-teorema-ex-006",
-        "trikampiai-ir-pitagoro-teorema-ex-007",
-        "trikampiai-ir-pitagoro-teorema-ex-008"
+        "trikampiai-ir-pitagoro-teorema-ex-003"
       ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-test-challenge",
-      "title": "Trikampiai ir Pitagoro teorema iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "trikampiai-ir-pitagoro-teorema"
-      ],
-      "exerciseIds": [
-        "trikampiai-ir-pitagoro-teorema-ex-009",
-        "trikampiai-ir-pitagoro-teorema-ex-010",
-        "trikampiai-ir-pitagoro-teorema-ex-011",
-        "trikampiai-ir-pitagoro-teorema-ex-012",
-        "trikampiai-ir-pitagoro-teorema-ex-013",
-        "trikampiai-ir-pitagoro-teorema-ex-014",
-        "trikampiai-ir-pitagoro-teorema-ex-015",
-        "trikampiai-ir-pitagoro-teorema-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "trikampiai-ir-pitagoro-teorema-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "passingThreshold": 0.75
     }
   ]
 }

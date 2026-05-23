@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.1",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos autoravimo gairės",
-    "notes": "Pilnai sutvarkytas Grade 11 olimpiadinis turinys"
+    "notes": "Išplėstas 11 klasės olimpiadinis kombinatorikos turinys su gilia teorija ir pavyzdžiais."
   },
   "topic": {
     "id": "olimpiada-11-kombinatorika",
@@ -12,18 +12,32 @@
     "strand": "Kombinatorika",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
-      "lygtys-nelygybes-ir-raidiniai-reiskiniai"
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai",
+      "kombinatorika-ir-ilgalaike-tikimybe"
     ],
     "nextTopicIds": [],
     "conceptIds": [
+      "olimpiada-11-concept-inclusion-exclusion",
+      "olimpiada-11-concept-dirichlet-pigeonhole",
+      "olimpiada-11-concept-double-counting",
+      "olimpiada-11-concept-generating-functions",
+      "olimpiada-11-concept-recurrence-relations",
+      "olimpiada-11-concept-ramsey-theory",
       "olimpiada-11-concept-nullstellensatz",
       "olimpiada-11-concept-lovasz",
       "olimpiada-11-concept-turan"
     ],
-    "formulaIds": [],
-    "mistakeIds": [],
+    "formulaIds": [
+      "formula-inclusion-exclusion",
+      "formula-catalan-numbers",
+      "formula-derangements"
+    ],
+    "mistakeIds": [
+      "mistake-overcounting-inclusion",
+      "mistake-recurrence-base-cases"
+    ],
     "exerciseIds": [
       "ex-olimpiada-11-26",
       "ex-olimpiada-11-27",
@@ -47,12 +61,178 @@
       "ex-olimpiada-11-46"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "kombinatorika-11-ivadas",
+      "title": "Olimpiadinės kombinatorikos pasaulis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sveiki atvykę į 11-os klasės olimpiadinės kombinatorikos kursą. Šiame lygyje kombinatorika nustoja būti tik paprastu objektų skaičiavimu naudojant kėlinius ar derinius. Mes pradedame tyrinėti gilias struktūrines savybes, ryšius tarp iš pažiūros nesusijusių objektų ir taikyti galingus algebrinius bei tikimybinius įrankius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė kombinatorika reikalauja ne tik formulių žinojimo, bet ir gebėjimo „pamatyti“ uždavinį iš skirtingų perspektyvų. Šiame kurse mes susipažinsime su metodais, kurie leidžia įrodyti objektų egzistavimą net jų nekonstruojant, rasti sąryšius tarp begalinių sekų ir spręsti ekstremaliuosius uždavinius grafuose."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-inclusion-exclusion",
+      "title": "Įjungimo-išjungimo principas (Inclusion-Exclusion)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugumai moksleivių gerai žinoma formulė dviem aibėms: $|A \\cup B| = |A| + |B| - |A \\cap B|$. Tačiau olimpiadose dažnai susiduriame su $n$ aibių šeima. Bendrasis įjungimo-išjungimo principas teigia, kad aibių sąjungos dydis yra:"
+        },
+        {
+          "type": "formula",
+          "latex": "|\\bigcup_{i=1}^n A_i| = \\sum_{i} |A_i| - \\sum_{i<j} |A_i \\cap A_j| + \\sum_{i<j<k} |A_i \\cap A_j \\cap A_k| - \\dots + (-1)^{n-1} |A_1 \\cap \\dots \\cap A_n|"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis principas yra nepakeičiamas skaičiuojant objektus, kurie neturi tam tikrų savybių (naudojant papildinio metodą). Klasikinis taikymas – **netvarkos** (derangements). Netvarka yra permutacija be nejudamų taškų (kai joks elementas nelieka savo vietoje). Būdų skaičius $n$ elementų išdėstyti į netvarkas žymimas $D_n$ ir apskaičiuojamas taip:"
+        },
+        {
+          "type": "formula",
+          "latex": "D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!}"
+        },
+        {
+          "type": "note",
+          "text": "Atkreipkite dėmesį, kad santykis $D_n/n!$ labai greitai artėja prie $1/e \\approx 0.3678$. Tai reiškia, kad apie 37% visų permutacijų yra netvarkos."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-pigeonhole",
+      "title": "Balandžių narvelių principas (Dirichlė principas)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nors bazinė Dirichlė principo forma yra triviali, jos olimpiadiniai taikymai būna itin subtilūs. Sustiprinta forma teigia: jei $n$ narvelių patalpiname $m$ balandžių, tai bent viename narvelyje yra bent $\\lceil m/n \\rceil$ balandžių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sudėtingesniuose uždaviniuose „narveliai“ ir „balandžiai“ nėra akivaizdūs. Dažnai narvelius tenka sukonstruoti patiems, pavyzdžiui, dalijant geometrinę figūrą į mažesnes dalis arba skirstant skaičius pagal tam tikrą liekaną. Erdos-Szekeres teorema yra puikus šio principo pavyzdys: bet kokia seka iš $(n-1)(m-1)+1$ skirtingų skaičių turi arba didėjantį poaibį (ilgio $n$), arba mažėjantį poaibį (ilgio $m$)."
+        },
+        {
+          "type": "method",
+          "text": "**Strategija:** Jei uždavinyje prašoma įrodyti, kad egzistuoja objektas su tam tikra savybe tarp didelio kiekio objektų, visada pagalvokite apie Dirichlė principą. Sunkiausia dalis – teisingai pasirinkti, kas bus narveliai, kad užpildytume juos objektais taip, jog priverstume norimą savybę atsirasti."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-double-counting",
+      "title": "Dvigubas skaičiavimas ir kombinatoriniai įrodymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dvigubas skaičiavimas – tai technika, kai tas pats dydis (pavyzdžiui, briaunų skaičius grafe arba tam tikros aibės elementai) suskaičiuojamas dviem skirtingais būdais. Kadangi rezultatas abiem atvejais turi būti tas pats, gauname lygybę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis metodas dažnai naudojamas įrodant kombinatorines tapatybes nenaudojant algebros. Pavyzdžiui, tapatybė $\\sum_{k=0}^n \\binom{n}{k} = 2^n$ įrodoma pastebint, kad abi pusės skaičiuoja visų poaibių kiekį: kairėje pusėje jie suskirstyti pagal dydį, o dešinėje – tiesiog išrenkami (kiekvienas elementas arba yra, arba jo nėra)."
+        },
+        {
+          "type": "theorem",
+          "title": "Susitikimų (rankų paspaudimo) lema",
+          "text": "Bet kuriame grafe viršūnių laipsnių suma yra lygi dvigubam briaunų skaičiui: $\\sum_{v \\in V} \\text{deg}(v) = 2|E|$. Tai klasikinis dvigubo skaičiavimo pavyzdys: kiekviena briauna turi du galus, tad skaičiuodami visų viršūnių kaimynus, kiekvieną briauną įtraukiame lygiai du kartus."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-generating-functions",
+      "title": "Generuojančios funkcijos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generuojanti funkcija yra galingas tiltas tarp diskrečiosios kombinatorikos ir tolydžiosios analizės. Sekai $a_0, a_1, a_2, \\dots$ priskiriame formalią eilutę:"
+        },
+        {
+          "type": "formula",
+          "latex": "A(x) = \\sum_{n=0}^\\infty a_n x^n"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodėl tai naudinga? Veiksmai su sekomis atitinka veiksmus su šiomis eilutėmis. Pavyzdžiui, sekų sąvarta (convolution) atitinka daugianarių daugybą. Tai leidžia spręsti sudėtingus skaičiavimo uždavinius, tokius kaip skaičių skaidymas į dėmenis (partitions) arba rekurentinių sąryšių sprendimas."
+        },
+        {
+          "type": "example",
+          "text": "Jei norime rasti, kiek yra būdų gauti sumą $S$ naudojant monetas, kurių vertės $v_1, v_2, \\dots$, mes tiesiog ieškome koeficiento prie $x^S$ funkcijos $\\prod_{i} \\frac{1}{1-x^{v_i}}$ skleidinyje."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-recurrence",
+      "title": "Rekurentiniai sąryšiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugelis kombinatorinių objektų gali būti apibrėžti per mažesnius tos pačios rūšies objektus. Pavyzdžiui, $n$ laiptelių galima užlipti žengiant 1 arba 2 žingsnius. Jei $a_n$ yra būdų skaičius, tai $a_n = a_{n-1} + a_{n-2}$. Tai garsioji Fibonačio seka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiesiniai rekurentiniai sąryšiai su pastoviais koeficientais sprendžiami ieškant charakteristinės lygties šaknų. Jei turime $a_n = c_1 a_{n-1} + c_2 a_{n-2}$, charakteristinė lygtis yra $r^2 - c_1 r - c_2 = 0$. Jei šaknys $r_1, r_2$ skirtingos, tai $a_n = A r_1^n + B r_2^n$."
+        },
+        {
+          "type": "property",
+          "title": "Katalano skaičiai",
+          "text": "Tai viena svarbiausių sekų olimpiadinėje kombinatorikoje. $C_n$ skaičiuoja taisyklingas skliaustų sekas, trianguliacijas, dvejetainius medžius ir kt. Jie tenkina rekurentinį sąryšį $C_{n+1} = \\sum_{i=0}^n C_i C_{n-i}$ ir turi bendrąją formulę $C_n = \\frac{1}{n+1} \\binom{2n}{n}$."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorika-11-graphs",
+      "title": "Grafų teorija kombinatoriniame kontekste",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grafai suteikia vizualią kalbą sudėtingiems ryšiams aprašyti. Olimpiadose dažnai nagrinėjami **ekstremalieji grafai** – kokį didžiausią (ar mažiausią) briaunų skaičių gali turėti grafas su tam tikromis savybėmis? Turano teorema nurodo maksimalų briaunų skaičių grafe be $K_r$ (pilnojo subgrafo)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kita svarbi sritis – **Ramsey teorija**. Ji teigia, kad bet kokioje pakankamai didelėje struktūroje būtinai atsiras tvarka. Mažiausias žmonių skaičius, tarp kurių visada atsiras arba 3 pažįstami, arba 3 nepažįstami, yra 6. Tai užrašoma kaip $R(3,3)=6$. Ramsey skaičių $R(k,l)$ radimas yra viena sunkiausių atvirų problemų matematikoje."
+        }
+      ]
+    }
+  ],
   "concepts": [
+    {
+      "id": "olimpiada-11-concept-inclusion-exclusion",
+      "title": "Įjungimo-išjungimo principas",
+      "type": "method",
+      "shortDefinition": "Metodas aibių sąjungos dydžiui skaičiuoti per jų sankirtas.",
+      "intuition": "Sudedame visus elementus, tada atimame tuos, kuriuos suskaičiavome du kartus, tada pridedame tuos, kuriuos atėmėme per daug, ir t.t.",
+      "formal": "Aibių $A_1, \\dots, A_n$ sąjungos dydis lygus $\\sum |A_i| - \\sum |A_i \\cap A_j| + \\dots + (-1)^{n-1} |\\cap A_i|$.",
+      "relatedConceptIds": [
+        "olimpiada-11-concept-double-counting"
+      ]
+    },
+    {
+      "id": "olimpiada-11-concept-generating-functions",
+      "title": "Generuojančios funkcijos",
+      "type": "method",
+      "shortDefinition": "Sekos kodavimas kaip formaliosios laipsninės eilutės koeficientų.",
+      "intuition": "Kiekvieną sekos narį priskiriame atitinkamam $x^n$ laipsniui, paversdami seką funkcija.",
+      "formal": "Sekai $(a_n)$ generuojanti funkcija yra $A(x) = \\sum_{n=0}^\\infty a_n x^n$.",
+      "relatedConceptIds": [
+        "olimpiada-11-concept-recurrence-relations"
+      ]
+    },
+    {
+      "id": "olimpiada-11-concept-double-counting",
+      "title": "Dvigubas skaičiavimas",
+      "type": "method",
+      "shortDefinition": "Tapatybės įrodymas skaičiuojant tą pačią aibę dviem būdais.",
+      "intuition": "Jei suskaičiuosime tą patį dalyką skirtingais metodais, gausime tą patį skaičių.",
+      "formal": "Lygybė $\\sum_{r \\in R} \\text{rowSum}(r) = \\sum_{c \\in C} \\text{colSum}(c)$ matricoms su 0 ir 1.",
+      "relatedConceptIds": [
+        "olimpiada-11-concept-inclusion-exclusion"
+      ]
+    },
     {
       "id": "olimpiada-11-concept-nullstellensatz",
       "title": "Kombinatorinis Nulstellensatz",
-      "type": "concept",
+      "type": "theorem",
       "shortDefinition": "Teorema apie daugianario nelygumą nuliui gardelės taškuose.",
       "intuition": "Jei daugianaris turi pakankamai aukštą laipsnį, jis negali „išvengti“ visų taškų tam tikroje aibių sandaugoje.",
       "formal": "Nogos Alono teorema: jei $\\text{deg}(f) = \\sum t_i$ ir nario $x_1^{t_1} \\dots x_n^{t_n}$ koeficientas nelygus nuliui, tai aibėms $S_i$ su $|S_i| > t_i$ egzistuoja taškas $(s_1, \\dots, s_n) \\in S_1 \\times \\dots \\times S_n$ toks, kad $f(s) \\neq 0$.",
@@ -82,31 +262,160 @@
       "type": "concept",
       "shortDefinition": "Jei $n$ narvelių yra $n+1$ balandis, tai bent viename narvelyje yra bent du balandžiai.",
       "intuition": "Jei turime daugiau objektų nei vietų jiems padėti, bent vienoje vietoje bus daugiau nei vienas objektas.",
-      "formal": "Jei $A$ ir $B$ yra baigtinės aibės ir $|A| > |B|$, tai jokiai funkcijai $f: A \to B$ neegzistuoja injekcija.",
+      "formal": "Jei $A$ ir $B$ yra baigtinės aibės ir $|A| > |B|$, tai jokiai funkcijai $f: A \\to B$ neegzistuoja injekcija.",
       "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "formula-inclusion-exclusion",
+      "title": "Įjungimo-išjungimo formulė",
+      "latex": "|\\bigcup_{i=1}^n A_i| = \\sum |A_i| - \\sum |A_i \\cap A_j| + \\dots",
+      "explanation": "Suskaičiuoja aibių sąjungos elementų kiekį naudojant jų sankirtas.",
+      "variables": {
+        "n": "Aibių skaičius",
+        "A_i": "i-toji aibė"
+      }
+    },
+    {
+      "id": "formula-catalan-numbers",
+      "title": "Katalano skaičių bendroji formulė",
+      "latex": "C_n = \\frac{1}{n+1} \\binom{2n}{n}",
+      "explanation": "Nurodo n-tąjį Katalano sekos narį.",
+      "variables": {
+        "n": "Indeksas sekos"
+      }
+    },
+    {
+      "id": "formula-derangements",
+      "title": "Netvarkų skaičius (Subfaktorialas)",
+      "latex": "D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!}",
+      "explanation": "Suskaičiuoja permutacijas be nejudamų taškų.",
+      "variables": {
+        "n": "Elementų skaičius"
+      }
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "mistake-overcounting-inclusion",
+      "title": "Sankirtų užmiršimas",
+      "wrongPattern": "Tikintis, kad |A ∪ B ∪ C| = |A| + |B| + |C|.",
+      "whyItHappens": "Mokinys pamiršta, kad elementai gali priklausyti kelioms aibėms.",
+      "correction": "Visada taikykite pilną įjungimo-išjungimo formulę su sankirtų atėmimu ir pridėjimu."
+    },
+    {
+      "id": "mistake-recurrence-base-cases",
+      "title": "Neteisingos pradinės sąlygos",
+      "wrongPattern": "Fibonačio sekos pradėjimas nuo a1=1, a2=1 uždaviniuose, kur realiai a1=1, a2=2.",
+      "whyItHappens": "Mokinys mechaniškai taiko standartinę sekos formą neanalizuodamas konkretaus uždavinio mažų reikšmių.",
+      "correction": "Visada rankiniu būdu patikrinkite n=1, 2, 3 reikšmes, kad įsitikintumėte, jog pradinės sąlygos teisingos."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "Kombinatorinis Nulstellensatz",
-      "problem": "Įrodykite, kad bet kokiame reguliariame grafe, kurio viršūnių laipsnis lygus $d$, egzistuoja pakgrafis, kurio visų viršūnių laipsniai yra lygūs.",
+      "title": "Netvarkos ir laiškai",
+      "problem": "Yra 5 laiškai ir 5 jiems skirti vokai su adresais. Kiek yra būdų įdėti laiškus į vokus taip, kad nė vienas laiškas nepatektų į jam skirtą voką?",
       "steps": [
         {
-          "text": "Suformuluojame uždavinį kaip daugianarį virš baigtinio lauko."
+          "text": "Tai yra klasikinė netvarkų (derangements) problema su $n=5$."
         },
         {
-          "text": "Tarkime, grafas turi $n$ viršūnių ir $m$ briaunų. Kiekvienai briaunai priskiriame kintamąjį $x_e \\in \\{0, 1\\}$."
+          "text": "Taikome subfaktorialo formulę: $D_5 = 5! (\\frac{1}{0!} - \\frac{1}{1!} + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!})$."
         },
         {
-          "text": "Sudarytas daugianaris turi nurodyti viršūnių laipsnių sumas."
+          "text": "Skaičiuojame narius: $120 (1 - 1 + 1/2 - 1/6 + 1/24 - 1/120) = 120 (1/2 - 1/6 + 1/24 - 1/120)$."
         },
         {
-          "text": "Taikydami Alono Nulstellensatz teoremą, parodome, kad egzistuoja nulinis rinkinys, kuris nėra trivialus, jei laipsnių apribojimai yra tenkinami."
+          "text": "$120/2 - 120/6 + 120/24 - 120/120 = 60 - 20 + 5 - 1 = 44$."
         }
       ],
-      "answer": "Remiantis Nulstellensatz"
+      "answer": "44 būdai"
+    },
+    {
+      "title": "Dirichlė principas ir dalumas",
+      "problem": "Įrodykite, kad tarp bet kokių $n+1$ sveikųjų skaičių visada atsiras du skaičiai, kurių skirtumas dalijasi iš $n$.",
+      "steps": [
+        {
+          "text": "Narveliais pasirenkame liekanas dalijant iš $n$. Galimos liekanos yra $\\{0, 1, 2, \\dots, n-1\\}$."
+        },
+        {
+          "text": "Narvelių skaičius yra $n$."
+        },
+        {
+          "text": "Balandžiais pasirenkame turimus $n+1$ skaičius."
+        },
+        {
+          "text": "Pagal Dirichlė principą, bent du skaičiai $a$ ir $b$ turės tą pačią liekaną dalijant iš $n$."
+        },
+        {
+          "text": "Jei $a \\equiv r \\pmod n$ ir $b \\equiv r \\pmod n$, tai jų skirtumas $a-b \\equiv r-r = 0 \\pmod n$. Vadinasi, $a-b$ dalijasi iš $n$."
+        }
+      ],
+      "answer": "Įrodyta"
+    },
+    {
+      "title": "Dvigubas skaičiavimas – tapatybė",
+      "problem": "Naudodami dvigubą skaičiavimą įrodykite, kad $\\sum_{k=1}^n k \\binom{n}{k} = n 2^{n-1}$.",
+      "steps": [
+        {
+          "text": "Tarkime, turime $n$ žmonių grupę ir norime sudaryti komandą su vienu kapitonu."
+        },
+        {
+          "text": "**1-as būdas:** Pirmiausia pasirenkame komandą iš $k$ narių (tai galima padaryti $\\binom{n}{k}$ būdais), tada iš jų išrenkame kapitoną ($k$ būdų). Kadangi komandos dydis $k$ gali būti nuo 1 iki $n$, iš viso turime $\\sum_{k=1}^n k \\binom{n}{k}$ būdų."
+        },
+        {
+          "text": "**2-as būdas:** Pirmiausia iš visų $n$ žmonių išrenkame kapitoną ($n$ būdų). Likusiems $n-1$ žmonėms turime nuspręsti – ar jie bus komandos nariai, ar ne. Kiekvienas turi 2 pasirinkimus, tad iš viso $2^{n-1}$ būdų. Bendras variantų skaičius yra $n 2^{n-1}$."
+        },
+        {
+          "text": "Kadangi abu būdai skaičiuoja tą patį dalyką, rezultatai turi būti lygūs."
+        }
+      ],
+      "answer": "Įrodyta"
+    },
+    {
+      "title": "Rekurentinis sąryšis – dominas",
+      "problem": "Kiek yra būdų uždengti $2 \\times n$ stačiakampį $1 \\times 2$ dydžio domino kauliukais?",
+      "steps": [
+        {
+          "text": "Tarkime $a_n$ yra būdų skaičius stačiakampiui $2 \\times n$ uždengti."
+        },
+        {
+          "text": "Paskutinį stulpelį (dešinėje) galime uždengti vienu vertikaliu kauliuku. Tada lieka $2 \\times (n-1)$ stačiakampis, kurį uždengti galima $a_{n-1}$ būdais."
+        },
+        {
+          "text": "Arba paskutinius du stulpelius galime uždengti dviem horizontaliais kauliukais. Tada lieka $2 \\times (n-2)$ stačiakampis, kurį uždengti galima $a_{n-2}$ būdais."
+        },
+        {
+          "text": "Gavome rekurenciją $a_n = a_{n-1} + a_{n-2}$. Pradinės sąlygos: $a_1=1$ (vienas vertikalus), $a_2=2$ (du vertikalūs arba du horizontalūs)."
+        },
+        {
+          "text": "Tai yra Fibonačio seka su postūmiu: $a_n = F_{n+1}$."
+        }
+      ],
+      "answer": "Fibonačio seka a_n = F_{n+1}"
+    },
+    {
+      "title": "Ramsey skaičius R(3,3)",
+      "problem": "Įrodykite, kad tarp bet kokių 6 žmonių visada atsiras 3, kurie visi pažįsta vienas kitą, arba 3, kurie visi yra nepažįstami.",
+      "steps": [
+        {
+          "text": "Atstovaujame grupę kaip pilnąjį grafą $K_6$. Briaunas nuspalviname raudonai (pažįstami) arba mėlynai (nepažįstami)."
+        },
+        {
+          "text": "Pasirenkame viršūnę $V$. Iš jos išeina 5 briaunos. Pagal Dirichlė principą, bent 3 iš jų yra tos pačios spalvos. Tarkime, raudonos, vedančios į $A, B, C$."
+        },
+        {
+          "text": "Nagrinėjame trikampį $ABC$. Jei bent viena jo briauna (pvz., $AB$) yra raudona, tai trikampis $VAB$ yra raudonas (3 pažįstami)."
+        },
+        {
+          "text": "Jei visos trikampio $ABC$ briaunos mėlynos, tai $ABC$ yra mėlynas trikampis (3 nepažįstami)."
+        },
+        {
+          "text": "Abiem atvejais radome monochromatinį trikampį $K_3$."
+        }
+      ],
+      "answer": "Įrodyta, R(3,3) = 6"
     }
   ],
   "exercises": [
@@ -114,12 +423,12 @@
       "id": "ex-olimpiada-11-26",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
       "requiredPrerequisiteMastery": 85,
-      "statement": "SzemerÃ©di reguliarumo lema teigia, kad bet kurį didelį grafą galima suskaidyti į dalis taip, kad briaunų pasiskirstymas tarp jų būtų panašus į atsitiktinį. Kaip vadinamos tokios dalių poros?",
+      "statement": "Szemerédi reguliarumo lema teigia, kad bet kurį didelį grafą galima suskaidyti į dalis taip, kad briaunų pasiskirstymas tarp jų būtų panašus į atsitiktinį. Kaip vadinamos tokios dalių poros?",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "reguliariosios poros"
@@ -261,7 +570,7 @@
       "id": "ex-olimpiada-11-27",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -365,7 +674,7 @@
             },
             {
               "title": "Briaunų skaičiavimas",
-              "action": "Sudauginame dalių dydžius.",
+              "action": "Sudauginame narius ir juos sudedame.",
               "reason": "Kiekviena viršūnė iš vienos dalies jungiasi su kiekviena iš kitos.",
               "result": "9",
               "latex": "E = 3 \\times 3 = 9"
@@ -418,7 +727,7 @@
       "id": "ex-olimpiada-11-29",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -478,7 +787,7 @@
           "text": "Kombinatorinį Nulstellensatz suformulavo ir išpopuliarino Noga Alonas 1999 metais."
         },
         {
-          "text": "Teorema teigia, kad jei daugianaris turi narį $x_1^{t_1} \\dots x_n^{t_n}$ su nelygiu nuliui koeficientu ir jo laipsnis yra maksimalus, tai jis negali būti nulis visuose gardelės $S_1 times \\dots times S_n$ taškuose, kai $|S_i| > t_i$."
+          "text": "Teorema teigia, kad jei daugianaris turi narį $x_1^{t_1} \\dots x_n^{t_n}$ su nelygiu nuliui koeficientu ir jo laipsnis yra maksimalus, tai jis negali būti nulis visuose gardelės $S_1 \\times \\dots \\times S_n$ taškuose, kai $|S_i| > t_i$."
         },
         {
           "text": "Tai yra galingas algebrinis įrankis kombinatorikoje, leidžiantis paprastai įrodyti tokius rezultatus kaip Cauchy-Davenport teorema."
@@ -531,7 +840,7 @@
         }
       ],
       "reflectionPrompts": [
-        "Kaip šis metodas panaudojamas įrodant Cauchy-Davenporto teoremą apie aibių sumų dydį?",
+        "Kaip šis metodo panaudojamas įrodant Cauchy-Davenporto teoremą apie aibių sumų dydį?",
         "Kokia yra pagrindinė sąlyga koeficientui prie vyriausiojo nario?"
       ],
       "extensionQuestions": [],
@@ -556,7 +865,7 @@
       "id": "ex-olimpiada-11-30",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -708,12 +1017,12 @@
       "id": "ex-olimpiada-11-31",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 75,
-      "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaičiuojamas panašiai kaip determinantas, bet be ženklų kaitaliojimo. Apskaičiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ permanentą.",
+      "statement": "Matricos $A$ permanentas $\\text{per}(A)$ skaičiuojamas panašiai kaip determinantas, bet be ženklų kaitaliojimo. Apskaičiuokite matricos $A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$ permanentą.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "2"
@@ -747,7 +1056,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
+          "text": "2x2 matricos $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ permanentą apibrėžia formulė $\\text{per}(A) = ad + bc$.",
           "penalty": 0.08
         },
         {
@@ -768,7 +1077,7 @@
           "text": "Permanentas kvadratinei $2 \\times 2$ matricai apskaičiuojamas sudedant pagrindinės ir šalutinės įstrižainių narių sandaugas."
         },
         {
-          "text": "Matricos $A = \\begin{pmatrix} 1 & 1 \\ 1 & 1 \\end{pmatrix}$ elementai yra $a_{11}=1, a_{22}=1, a_{12}=1, a_{21}=1$."
+          "text": "Matricos $A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$ elementai yra $a_{11}=1, a_{22}=1, a_{12}=1, a_{21}=1$."
         },
         {
           "text": "Taikome formulę: $\\text{per}(A) = a_{11} a_{22} + a_{12} a_{21}$."
@@ -796,7 +1105,7 @@
             },
             {
               "title": "Elementų priskyrimas",
-              "action": "Identifikuojame matricos elementus: a11=1, a12=1, a21=1, a22=1.",
+              "action": "Identifikuojame matricos elementų: a11=1, a12=1, a21=1, a22=1.",
               "reason": "Visi duotosios matricos nariai yra vienetai.",
               "result": "1, 1, 1, 1",
               "latex": ""
@@ -818,7 +1127,7 @@
           "title": "Painiojimas su determinantu",
           "wrongMove": "Mokinys atima šalutinės įstrižainės sandaugą: $1 \\cdot 1 - 1 \\cdot 1 = 0$.",
           "whyTempting": "Determinantas yra viena dažniausiai naudojamų matricos charakteristikų, o jo formulė beveik identiška.",
-          "correction": "Permanento skaičiavime nenaudojami minuso ženklai (nėra kofaktorių ženklų kaitaliojimo). Visos sandaugos sumuojamos teigiamai.",
+          "correction": "Permanento skaičiavimime nenaudojami minuso ženklai (nėra kofaktorių ženklų kaitaliojimo). Visos sandaugos sumuojamos teigiamai.",
           "conceptIds": []
         },
         {
@@ -840,7 +1149,7 @@
           "id": "ex-olimpiada-11-31-srs-1",
           "deck": "practice",
           "cardType": "method",
-          "front": "Kaip skaičiuojamas 2x2 matricos $A = \\begin{pmatrix} a & b \\ c & d \\end{pmatrix}$ permanentas?",
+          "front": "Kaip skaičiuojamas 2x2 matricos $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ permanentas?",
           "back": "$ad + bc$.",
           "conceptIds": [],
           "methodIds": [
@@ -854,7 +1163,7 @@
       "id": "ex-olimpiada-11-32",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -984,7 +1293,7 @@
       "id": "ex-olimpiada-11-33",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1138,7 +1447,7 @@
       "id": "ex-olimpiada-11-34",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1269,10 +1578,10 @@
       "id": "ex-olimpiada-11-35",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "advanced",
+      "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 80,
       "statement": "Konferencijoje dalyvauja $n$ žmonių. Kiekvienas jų turi bent po vieną draugą. Įrodykite, kad egzistuoja du žmonės, turintys tą patį draugų skaičių.",
       "answer": {
@@ -1405,7 +1714,7 @@
       "id": "ex-olimpiada-11-36",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1532,7 +1841,7 @@
       "id": "ex-olimpiada-11-37",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1664,7 +1973,7 @@
       "id": "ex-olimpiada-11-38",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1795,7 +2104,7 @@
       "id": "ex-olimpiada-11-39",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -1859,13 +2168,13 @@
           "text": "Padalijame abi puses iš $\\sqrt{xy}$ (kadangi skaičiai teigiami): $\\frac{x+y}{2} \\le \\sqrt{xy}$."
         },
         {
-          "text": "PALAUKSITE: AM-GM sako $\\frac{x+y}{2} \\ge \\sqrt{xy}$. Vadinasi $P' \\ge P$."
+          "text": "PALAUKSITE: AM-GM sako $\\frac{x+y}{2} \\ge \\sqrt{xy}$. Vadinasi $P' \\ge P$. (SĄLYGOS KLAIDA?)"
         },
         {
-          "text": "KLAIDA SĄLYGOJE AR ANALIZĖJE? Grįžkime prie operacijos. Jei $x=2, y=8$, sena sandauga $16$. Nauja: $(2+8)/2 = 5$ ir $\\sqrt{16}=4$. Nauja sandauga $5 \\cdot 4 = 20$. Sandauga DIDĖJA."
+          "text": "Grįžkime prie operacijos. Jei $x=2, y=8$, sena sandauga $16$. Nauja: $(2+8)/2 = 5$ ir $\\sqrt{16}=4$. Nauja sandauga $5 \\cdot 4 = 20$. Sandauga DIDĖJA."
         },
         {
-          "text": "Klausimas prašo įrodyti, kad NEPADIDĖJA. Patikrinkime sumą: $x+y$ vs $\\frac{x+y}{2} + \\sqrt{xy}$. Suma sumažėja (nes $\\frac{x+y}{2} \\ge \\sqrt{xy}$). Vadinasi suma yra monovariantas."
+          "text": "Klausimas prašo įrodyti, kad NEPADIDĖJA. Patikrinkime sumą: $x+y$ vs $\\frac{x+y}{2} + \\sqrt{xy}$. Suma sumažėja (nes $\\frac{x+y}{2} \\ge \\sqrt{xy}$). Vadinasi suma yra monovariantas, kuris nepadidėja."
         }
       ],
       "solutionMethods": [
@@ -1885,7 +2194,7 @@
               "latex": "x+y - (\\frac{x+y}{2} + \\sqrt{xy}) = \\frac{x+y}{2} - \\sqrt{xy} \\ge 0"
             }
           ],
-          "finalAnswer": "Suma nepadidėja (sandauga didėja)"
+          "finalAnswer": "Suma nepadidėja"
         }
       ],
       "commonTraps": [
@@ -1922,7 +2231,7 @@
       "id": "ex-olimpiada-11-40",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -1936,7 +2245,7 @@
       "answerText": "5",
       "coreIdea": {
         "title": "Katalano skaičiai",
-        "text": "Taisyklingų skliaustų sekų su $n$ porų skliaustų skaičius lygus $n$-tajam Katalano skaičiui $C_n = \\frac{1}{n+1} \binom{2n}{n}$."
+        "text": "Taisyklingų skliaustų sekų su $n$ porų skliaustų skaičius lygus $n$-tajam Katalano skaičiui $C_n = \\frac{1}{n+1} \\binom{2n}{n}$."
       },
       "strategyTags": [
         "combinatorial-counting",
@@ -1963,25 +2272,25 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "$C_3 = \\frac{1}{4} \binom{6}{3}$.",
+          "text": "$C_3 = \\frac{1}{4} \\binom{6}{3}$.",
           "penalty": 0.1
         },
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "$\binom{6}{3} = 20$. Padalinkite iš 4.",
+          "text": "$\\binom{6}{3} = 20$. Padalinkite iš 4.",
           "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Naudojame Katalano skaičių formulę $C_n = \\frac{1}{n+1} \binom{2n}{n}$."
+          "text": "Naudojame Katalano skaičių formulę $C_n = \\frac{1}{n+1} \\binom{2n}{n}$."
         },
         {
-          "text": "Kai $n=3$, $C_3 = \\frac{1}{4} \binom{6}{3}$."
+          "text": "Kai $n=3$, $C_3 = \\frac{1}{4} \\binom{6}{3}$."
         },
         {
-          "text": "$\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20$."
+          "text": "$\\binom{6}{3} = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20$."
         },
         {
           "text": "$C_3 = 20 / 4 = 5$."
@@ -2018,7 +2327,7 @@
         {
           "id": "ex-olimpiada-11-40-trap-1",
           "title": "Netinkamų sekų skaičiavimas",
-          "wrongMove": "Mokinys tiesiog skaičiuoja visų įmanomų būdų sudėti 3 '(' ir 3 ')', kas yra $\binom{6}{3} = 20$.",
+          "wrongMove": "Mokinys tiesiog skaičiuoja visų įmanomų būdų sudėti 3 '(' ir 3 ')', kas yra $\\binom{6}{3} = 20$.",
           "whyTempting": "Atrodo, kad tai paprastas rinkinių uždavinys.",
           "correction": "Ne visos sekos yra taisyklingos (pvz., ')))(((' nėra). Taisyklingumas reikalauja, kad bet kuriame taške atidarytų skliaustų būtų ne mažiau nei uždarytų.",
           "conceptIds": []
@@ -2035,7 +2344,7 @@
           "deck": "theory",
           "cardType": "formula",
           "front": "Kokia yra n-tojo Katalano skaičiaus formulė?",
-          "back": "$C_n = \\frac{1}{n+1} \binom{2n}{n}$.",
+          "back": "$C_n = \\frac{1}{n+1} \\binom{2n}{n}$.",
           "conceptIds": [],
           "methodIds": [
             "ex-olimpiada-11-40-method-1"
@@ -2048,7 +2357,7 @@
       "id": "ex-olimpiada-11-41",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -2170,7 +2479,7 @@
       "id": "ex-olimpiada-11-42",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -2226,7 +2535,7 @@
           "text": "Tarkime spalvos yra 1, 2."
         },
         {
-          "text": "Viršūnė $v_1 \to 1, v_2 \to 2, v_3 \to 1, v_4 \to 2$."
+          "text": "Viršūnė $v_1 \\to 1, v_2 \\to 2, v_3 \\to 1, v_4 \\to 2$."
         },
         {
           "text": "Viršūnė $v_5$ yra sujungta su $v_4$ ir $v_1$."
@@ -2299,7 +2608,7 @@
       "id": "ex-olimpiada-11-43",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -2334,13 +2643,13 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Skaidinių tipas (1, 3): reikia pasirinkti 1 elementą, kuris bus atskirai. Yra $\binom{4}{1} = 4$ būdai.",
+          "text": "Skaidinių tipas (1, 3): reikia pasirinkti 1 elementą, kuris bus atskirai. Yra $\\binom{4}{1} = 4$ būdai.",
           "penalty": 0.08
         },
         {
           "order": 3,
           "kind": "method",
-          "text": "Skaidinių tipas (2, 2): reikia pasirinkti 2 elementus iš 4. $\binom{4}{2} = 6$. Bet kadangi dalys lygios ir eiliškumas nesvarbus, dalinkite iš 2.",
+          "text": "Skaidinių tipas (2, 2): reikia pasirinkti 2 elementus iš 4. $\\binom{4}{2} = 6$. Bet kadangi dalys lygios ir eiliškumas nesvarbus, dalinkite iš 2.",
           "penalty": 0.1
         },
         {
@@ -2355,10 +2664,10 @@
           "text": "Ieškome $S(4, 2)$."
         },
         {
-          "text": "Formulė: $S(n, k) = \\frac{1}{k!} \\sum_{j=0}^k (-1)^{k-j} \binom{k}{j} j^n$."
+          "text": "Formulė: $S(n, k) = \\frac{1}{k!} \\sum_{j=0}^k (-1)^{k-j} \\binom{k}{j} j^n$."
         },
         {
-          "text": "$S(4, 2) = \\frac{1}{2} ( (-1)^2 \binom{2}{0} 0^4 + (-1)^1 \binom{2}{1} 1^4 + (-1)^0 \binom{2}{2} 2^4 )$."
+          "text": "$S(4, 2) = \\frac{1}{2} ( (-1)^2 \\binom{2}{0} 0^4 + (-1)^1 \\binom{2}{1} 1^4 + (-1)^0 \\binom{2}{2} 2^4 )$."
         },
         {
           "text": "$S(4, 2) = \\frac{1}{2} ( 0 - 2 \\cdot 1 + 1 \\cdot 16 ) = \\frac{1}{2} (14) = 7$."
@@ -2418,7 +2727,7 @@
       "id": "ex-olimpiada-11-44",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -2454,7 +2763,7 @@
         {
           "order": 2,
           "kind": "observation",
-          "text": "Daugianaris $P(x, y) = \\prod_{c \\in C} (x+y-c)$ turi būti nulis visuose $A \times B$ taškuose.",
+          "text": "Daugianaris $P(x, y) = \\prod_{c \\in C} (x+y-c)$ turi būti nulis visuose $A \\times B$ taškuose.",
           "penalty": 0.08
         },
         {
@@ -2484,10 +2793,10 @@
           "text": "Šio daugianario laipsnis yra $|A|+|B|-2$."
         },
         {
-          "text": "Nario $x^{|A|-1} y^{|B|-1}$ koeficientas yra $\binom{|A|+|B|-2}{|A|-1}$, kuris nelygus nuliui moduliu $p$ (pagal Liuka teoremą)."
+          "text": "Nario $x^{|A|-1} y^{|B|-1}$ koeficientas yra $\\binom{|A|+|B|-2}{|A|-1}$, kuris nelygus nuliui moduliu $p$ (pagal Liuka teoremą)."
         },
         {
-          "text": "Pagal Nulstellensatz, egzistuoja taškas $(a, b) \\in A \times B$, kuriam $f(a, b) \neq 0$, vadinasi $a+b \notin C'$, kas prieštarauja $A+B \\subseteq C'$."
+          "text": "Pagal Nulstellensatz, egzistuoja taškas $(a, b) \\in A \\times B$, kuriam $f(a, b) \\neq 0$, vadinasi $a+b \\notin C'$, kas prieštarauja $A+B \\subseteq C'$."
         }
       ],
       "solutionMethods": [
@@ -2516,7 +2825,7 @@
           "title": "Koeficiento lygumas nuliui",
           "wrongMove": "Mokinys pamiršta patikrinti ar binominis koeficientas nelygus 0 mod p.",
           "whyTempting": "Nulstellensatz reikalauja, kad vyriausiojo nario koeficientas būtų nelygus 0.",
-          "correction": "Būtina paminėti, kad $\binom{a+b}{a} \not\\equiv 0 \\pmod p$, kai $a+b < p$.",
+          "correction": "Būtina paminėti, kad $\\binom{a+b}{a} \\not\\equiv 0 \\pmod p$, kai $a+b < p$.",
           "conceptIds": []
         }
       ],
@@ -2544,7 +2853,7 @@
       "id": "ex-olimpiada-11-45",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -2673,7 +2982,7 @@
       "id": "ex-olimpiada-11-46",
       "topicId": "olimpiada-11-kombinatorika",
       "grade": 11,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -2714,13 +3023,13 @@
         {
           "order": 3,
           "kind": "method",
-          "text": "Ar galima pasirinkti daugiau? Erdős–Ko–Rado teorema nurodo, kad maksimalus skaičius yra $\binom{n-1}{k-1}$.",
+          "text": "Ar galima pasirinkti daugiau? Erdős–Ko–Rado teorema nurodo, kad maksimalus skaičius yra $\\binom{n-1}{k-1}$.",
           "penalty": 0.1
         },
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Apskaičiuokite $\binom{5-1}{2-1} = \binom{4}{1}$.",
+          "text": "Apskaičiuokite $\\binom{5-1}{2-1} = \\binom{4}{1}$.",
           "penalty": 0.12
         }
       ],
@@ -2732,10 +3041,10 @@
           "text": "Sąlyga $n \\ge 2k$ galioja ($5 \\ge 4$)."
         },
         {
-          "text": "Pagal EKR teoremą, didžiausias skaičius yra $\binom{n-1}{k-1}$."
+          "text": "Pagal EKR teoremą, didžiausias skaičius yra $\\binom{n-1}{k-1}$."
         },
         {
-          "text": "$\binom{4}{1} = 4$."
+          "text": "$\\binom{4}{1} = 4$."
         }
       ],
       "solutionMethods": [
@@ -2771,7 +3080,7 @@
           "title": "Sąlygos n >= 2k ignoravimas",
           "wrongMove": "Mokinys bando taikyti formulę kai n < 2k.",
           "whyTempting": "Atrodo kaip universali formulė.",
-          "correction": "Jei $n < 2k$, bet kurie du k-poaibiai kertasi savaime (pagal Dirichlė), todėl atsakymas būtų tiesiog visi poaibiai $\binom{n}{k}$.",
+          "correction": "Jei $n < 2k$, bet kurie du k-poaibiai kertasi savaime (pagal Dirichlė), todėl atsakymas būtų tiesiog visi poaibiai $\\binom{n}{k}$.",
           "conceptIds": []
         }
       ],
@@ -2786,7 +3095,7 @@
           "deck": "theory",
           "cardType": "formula",
           "front": "Kokia yra Erdős–Ko–Rado teoremos formulė k-poaibiams n-aibėje?",
-          "back": "$\binom{n-1}{k-1}$, kai $n \\ge 2k$.",
+          "back": "$\\binom{n-1}{k-1}$, kai $n \\ge 2k$.",
           "conceptIds": [],
           "methodIds": [
             "ex-olimpiada-11-46-method-1"
@@ -2800,14 +3109,15 @@
     {
       "id": "olimpiada-11-test-challenge",
       "title": "11 klasės olimpiadinis iššūkis",
-      "type": "olympiad",
+      "scope": "olympiad",
       "topicIds": [
         "olimpiada-11-kombinatorika"
       ],
       "exerciseIds": [
         "ex-olimpiada-11-32"
       ],
-      "masteryWeight": 2.0
+      "masteryWeight": 2.0,
+      "passingThreshold": 1
     }
   ]
 }

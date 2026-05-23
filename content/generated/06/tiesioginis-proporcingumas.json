@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
-    "textbook": "12_klase_teorija.pdf",
-    "notes": "6 klasės programa atskirai aprašo tiesioginį proporcingumą, proporcijas ir grafikus."
+    "textbook": "matematika_k12.pdf",
+    "notes": "Išplėsta teorija apie tiesioginį proporcingumą, apimanti algebrinį modeliavimą, grafikus ir praktines užduotis."
   },
   "topic": {
     "id": "tiesioginis-proporcingumas",
@@ -12,34 +12,31 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 3,
-    "estimatedStudyMinutes": 130,
+    "estimatedStudyMinutes": 200,
     "prerequisiteTopicIds": [
-      "sveikieji-racionalieji-skaiciai"
+      "sveikieji-racionalieji-skaiciai",
+      "trupmenos-procentai-santykiai"
     ],
     "nextTopicIds": [
       "atvirkstinis-proporcingumas"
     ],
     "conceptIds": [
-      "kintamasis",
-      "reiskinys",
-      "koeficientas",
-      "lygtis",
-      "nelygybe",
-      "sprendinys",
-      "sistema",
-      "formule",
-      "tiesine-funkcija",
-      "distributyvusis-destymas",
-      "tiesine-lygybe",
-      "proporcingumas"
+      "tiesioginis-proporcingumas",
+      "proporcingumo-koeficientas",
+      "proporcija",
+      "tiesinis-grafikas",
+      "priklausomas-kintamasis",
+      "nepriklausomas-kintamasis",
+      "koordinaciu-plokstuma"
     ],
     "formulaIds": [
-      "sklaidos-desnis",
-      "tiesines-lygties-forma"
+      "tiesioginio-proporcingumo-formule",
+      "proporcijos-pagrindine-savybe"
     ],
     "mistakeIds": [
-      "perkelia-be-zenklo-kaitos",
-      "sumaiso-koeficientus"
+      "k-skaiciavimo-klaida",
+      "grafiko-pradzios-taskas",
+      "sumaisytas-proporcingumas"
     ],
     "exerciseIds": [
       "tiesioginis-proporcingumas-ex-001",
@@ -66,1452 +63,377 @@
   },
   "theory": [
     {
-      "id": "tiesioginis-proporcingumas-ivadas",
-      "title": "Įvadas",
+      "id": "tp-ivadas",
+      "title": "Tiesioginis proporcingumas: kai dydžiai auga kartu",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tiesioginis proporcingumas, santykis ir proporcija yra tema, kurioje mokomasi atpažinti pagrindinius tiesioginis proporcingumas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
+          "text": "Daugelis dalykų pasaulyje yra susiję: kuo daugiau perkate obuolių, tuo daugiau mokate; kuo ilgiau važiuojate pastoviu greičiu, tuo toliau nuvažiuojate. Tokią priklausomybę, kai vienam dydžiui padidėjus kelis kartus, tiek pat kartų padidėja ir kitas dydis, vadiname tiesioginiu proporcingumu."
         }
       ]
     },
     {
-      "id": "tiesioginis-proporcingumas-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "tp-apibrezimas",
+      "title": "Kas yra tiesioginis proporcingumas?",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "kintamasis",
-          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
+          "text": "**Tiesioginiu proporcingumu** vadinama funkcija, kurią galima užrašyti formule $y = kx$. Čia $x$ yra nepriklausomas kintamasis, $y$ – priklausomas kintamasis, o $k$ – pastovus skaičius, vadinamas **proporcingumo koeficientu** ($k \\neq 0$)."
         },
         {
-          "type": "definition",
-          "conceptId": "reiskinys",
-          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "koeficientas",
-          "text": "Skaičius prie raidės."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
-        }
-      ]
-    },
-    {
-      "id": "tiesioginis-proporcingumas-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Tiesioginis proporcingumas, santykis ir proporcija sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Svarbiausia savybė: dviejų atitinkamų dydžių santykis visada išlieka pastovus ir lygus $k$."
         },
         {
           "type": "formula",
-          "formulaId": "sklaidos-desnis",
-          "latex": "a(b+c)=ab+ac"
+          "latex": "\\frac{y}{x} = k"
         }
       ]
     },
     {
-      "id": "tiesioginis-proporcingumas-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "tiesioginis-proporcingumas-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "tp-lentele-metodas",
+      "title": "Proporcingumo atpažinimas lentelėje",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Jei turime duomenų lentelę, galime lengvai patikrinti, ar tai tiesioginis proporcingumas. Reikia padalinti kiekvieną $y$ reikšmę iš atitinkamos $x$ reikšmės."
+        },
+        {
+          "type": "table",
+          "text": "Pavyzdys: Obuolių kaina",
+          "data": [
+            ["Svoris x (kg)", "1", "2", "3", "5"],
+            ["Kaina y (Eur)", "1,5", "3", "4,5", "7,5"]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tikriname santykius: $1,5:1 = 1,5$; $3:2 = 1,5$; $4,5:3 = 1,5$. Kadangi santykis visada toks pats, tai tiesioginis proporcingumas, o $k = 1,5$."
+        }
+      ]
+    },
+    {
+      "id": "tp-grafikas-section",
+      "title": "Tiesioginio proporcingumo grafikas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiesioginio proporcingumo grafikas koordinatų plokštumoje visada turi dvi ypatingas savybes:"
+        },
+        {
+          "type": "property",
+          "text": "1. Grafikas yra **tiesė**.\n2. Grafikas visada eina per **koordinatų pradžios tašką (0; 0)**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodėl per (0; 0)? Nes jei formulėje $y = kx$ vietoj $x$ įstatysime 0, gausime $y = k \\cdot 0 = 0$. Tai logiška: jei neperkame nė vieno kilogramo obuolių ($x=0$), tai ir mokame 0 eurų ($y=0$)."
+        }
+      ]
+    },
+    {
+      "id": "tp-santykis-proporcija",
+      "title": "Santykis ir proporcija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiesioginis proporcingumas yra glaudžiai susijęs su proporcija – dviejų santykių lygybe."
+        },
+        {
+          "type": "definition",
+          "text": "**Proporcija** yra lygybė $\\frac{a}{b} = \\frac{c}{d}$."
+        },
+        {
+          "type": "property",
+          "text": "**Pagrindinė proporcijos savybė**: proporcijos narių, esančių priešpriešiais (įstrižai), sandaugos yra lygios."
+        },
+        {
+          "type": "formula",
+          "latex": "a \\cdot d = b \\cdot c"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši savybė dažnai vadinama „kryžmine taisykle“ arba „drugelio metodu“. Ji leidžia rasti nežinomą proporcijos narį."
+        }
+      ]
+    },
+    {
+      "id": "tp-daznos-klaidos",
+      "title": "Dažnos klaidos ir perspėjimai",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Ne kiekviena tiesė yra tiesioginis proporcingumas! Pavyzdžiui, $y = x + 2$ yra tiesė, bet ji neina per tašką (0;0), todėl tai nėra tiesioginis proporcingumas (santykis $y/x$ čia nėra pastovus)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kita klaida: sumaišoma $x$ ir $y$ vieta skaičiuojant koeficientą $k$. Visada atminkite, kad $k = \\frac{y}{x}$ (priklausomas dydis dalinamas iš nepriklausomo)."
+        }
+      ]
+    },
+    {
+      "id": "tp-modeliavimas",
+      "title": "Matematinis modeliavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spręsdami tekstinius uždavinius, mes „modeliuojame“ – užrašome gyvenimišką situaciją matematine kalba. \nŽingsniai:\n1. Įvardinkite $x$ ir $y$.\n2. Raskite koeficientą $k$ iš žinomų duomenų.\n3. Užrašykite formulę $y = kx$.\n4. Naudokite formulę ieškomam dydžiui rasti."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kintamasis",
-      "title": "Kintamasis",
+      "id": "tiesioginis-proporcingumas",
+      "title": "Tiesioginis proporcingumas",
       "type": "concept",
-      "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "intuition": "Tai ta vieta, kur tiesioginis proporcingumas uždavinyje įdedame reikšmę.",
-      "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "shortDefinition": "Dydžių ryšys, kai jų santykis yra pastovus.",
+      "intuition": "Dvigubai daugiau darbo - dvigubai didesnis atlygis.",
+      "formal": "Funkcija $y = kx$, kur $k$ yra konstanta.",
+      "notation": ["y = kx"],
+      "relatedConceptIds": ["proporcingumo-koeficientas", "tiesinis-grafikas"],
+      "prerequisiteConceptIds": ["santykis"],
+      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
       "defaultSrs": true
     },
     {
-      "id": "reiskinys",
-      "title": "Reiškinys",
+      "id": "proporcingumo-koeficientas",
+      "title": "Proporcingumo koeficientas",
       "type": "concept",
-      "shortDefinition": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "intuition": "Reiškinys yra formulės arba skaičiavimo žingsnio užrašas.",
-      "formal": "Reiškinys sudaromas naudojant aritmetinius veiksmus ir skliaustus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kintamasis",
-        "koeficientas"
-      ],
+      "shortDefinition": "Daugiklis, rodantis ryšį tarp proporcingų dydžių.",
+      "intuition": "Tai 'vieno vieneto kaina' arba pastovus daugiklis.",
+      "formal": "Skaičius $k = y/x$.",
+      "notation": ["k"],
+      "relatedConceptIds": ["tiesioginis-proporcingumas"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
       "defaultSrs": true
     },
     {
-      "id": "koeficientas",
-      "title": "Koeficientas",
+      "id": "proporcija",
+      "title": "Proporcija",
       "type": "concept",
-      "shortDefinition": "Skaičius prie raidės.",
-      "intuition": "Koeficientas pasako, kiek kartų daugėja raidė.",
-      "formal": "Koeficientas yra skaitinis daugiklis prie kintamojo.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "lygtis",
-      "title": "Lygtis",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "intuition": "Lygtis sprendžiama ieškant, kokia reikšmė tinka abiem pusėms.",
-      "formal": "Lygtis yra lygybė, kurioje yra bent vienas nežinomasis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "nelygybe",
-      "title": "Nelygybė",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių palyginimas nelygybės ženklu.",
-      "intuition": "Nelygybė aprašo reikšmių sritį, ne tik vieną tašką.",
-      "formal": "Nelygybė naudoja ženklus <, >, <=, >=.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sprendinys",
-      "title": "Sprendinys",
-      "type": "concept",
-      "shortDefinition": "Reikšmė, kuri tenkina lygtį ar nelygybę.",
-      "intuition": "Sprendinys yra atsakymas, kurį galima patikrinti.",
-      "formal": "Sprendinys yra nežinomojo reikšmė, dėl kurios teiginys tampa teisingas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sistema",
-      "title": "Lygčių sistema",
-      "type": "concept",
-      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "intuition": "Sistema reiškia, kad keli apribojimai galioja kartu.",
-      "formal": "Sistema turi tenkinti visas lygtis vienu metu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "formule",
-      "title": "Formulė",
-      "type": "concept",
-      "shortDefinition": "Trumpas ryšio užrašas tarp dydžių.",
-      "intuition": "Formulė leidžia vienu sakiniu užrašyti daug žodžių.",
-      "formal": "Formulė yra bendras ryšio tarp dydžių užrašas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "proporcija",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-funkcija",
-      "title": "Tiesinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
-      "intuition": "Tai viena paprasčiausių priklausomybių tarp dydžių.",
-      "formal": "Tiesinė funkcija užrašoma y = ax + b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "distributyvusis-destymas",
-      "title": "Sklaidos dėsnis",
-      "type": "concept",
-      "shortDefinition": "Daugiklis dauginamas su kiekvienu dėmeniu skliaustuose.",
-      "intuition": "Tai padeda išskleisti ir sutvarkyti reiškinius.",
-      "formal": "a(b + c) = ab + ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c-ab-ac"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-lygybe",
-      "title": "Tiesinė lygtis",
-      "type": "concept",
-      "shortDefinition": "Lygtis, kurioje nežinomasis yra tik pirmuoju laipsniu.",
-      "intuition": "Šias lygtis sprendžiame nuosekliai atskirdami nežinomąjį.",
-      "formal": "Tiesinė lygtis turi formą ax + b = 0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcingumas",
-      "title": "Proporcingumas",
-      "type": "concept",
-      "shortDefinition": "Ryšys, kai vienas dydis kinta pastoviu santykiu su kitu.",
-      "intuition": "Proporcingumas yra mastelio ir procentų pagrindas.",
-      "formal": "Jei a/b = c/d, dydžiai yra proporcingi.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "shortDefinition": "Dviejų santykių lygybė.",
+      "intuition": "Jei 2 kainuoja 4, tai 4 kainuoja 8.",
+      "formal": "Lygybė a:b = c:d.",
+      "notation": ["a/b = c/d"],
+      "relatedConceptIds": ["tiesioginis-proporcingumas"],
+      "prerequisiteConceptIds": ["santykis"],
+      "appearsInTopicIds": ["tiesioginis-proporcingumas"],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sklaidos-desnis",
-      "title": "Sklaidos dėsnis",
+      "id": "tiesioginio-proporcingumo-formule",
+      "title": "Tiesioginio proporcingumo formulė",
       "type": "formula",
-      "latex": "a(b+c)=ab+ac",
-      "conditions": [
-        "Sklaidant skliaustus"
-      ],
+      "latex": "y = kx",
+      "conditions": ["k != 0"],
       "variables": {
-        "a": "daugiklis",
-        "b": "pirmas dėmuo",
-        "c": "antras dėmuo"
+        "y": "priklausomas kintamasis",
+        "x": "nepriklausomas kintamasis",
+        "k": "proporcingumo koeficientas"
       },
-      "explanation": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "distributyvusis-destymas",
-        "reiskinys"
-      ],
+      "explanation": "Pagrindinis algebrinis modelis tiesioginiam ryšiui.",
+      "relatedConceptIds": ["tiesioginis-proporcingumas"],
       "defaultSrs": true
     },
     {
-      "id": "tiesines-lygties-forma",
-      "title": "Tiesinės lygties forma",
+      "id": "proporcijos-pagrindine-savybe",
+      "title": "Pagrindinė proporcijos savybė",
       "type": "formula",
-      "latex": "ax+b=0",
-      "conditions": [
-        "Vienas nežinomasis"
-      ],
+      "latex": "a \\cdot d = b \\cdot c",
+      "conditions": ["Kai a/b = c/d"],
       "variables": {
-        "a": "koeficientas prie x",
-        "b": "laisvasis narys"
+        "a, b, c, d": "proporcijos nariai"
       },
-      "explanation": "Tai paprasčiausia lygties forma.",
-      "relatedConceptIds": [
-        "tiesine-lygybe",
-        "lygtis"
-      ],
+      "explanation": "Leidžia spręsti proporcijas dauginant narius kryžmai.",
+      "relatedConceptIds": ["proporcija"],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perkelia-be-zenklo-kaitos",
-      "title": "Perkelia narį nepakeitęs ženklo",
+      "id": "k-skaiciavimo-klaida",
+      "title": "Neteisingas koeficiento skaičiavimas",
       "type": "mistake",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "wrongPattern": "Rašo x+5=12 -> x=12+5.",
-      "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
-      "correction": "Iš abiejų pusių atimk 5.",
-      "wrongExample": "x=17",
-      "correctExample": "x=7",
-      "defaultSrs": true
-    },
-    {
-      "id": "sumaiso-koeficientus",
-      "title": "Sumaišo koeficientus su laisvaisiais nariais",
-      "type": "mistake",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "wrongPattern": "3x + 2x rašo kaip 5x².",
-      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
-      "correction": "3x+2x=5x.",
-      "wrongExample": "3x+2x=5x²",
-      "correctExample": "3x+2x=5x",
+      "conceptIds": ["proporcingumo-koeficientas"],
+      "wrongPattern": "Skaičiuoja k = x/y vietoj k = y/x.",
+      "whyItHappens": "Supainiojami priklausomas ir nepriklausomas kintamieji.",
+      "correction": "Visada dalinkite funkcijos reikšmę (y) iš argumentą (x).",
+      "wrongExample": "Jei y=10, x=2, rašo k=0,2.",
+      "correctExample": "k = 10/2 = 5.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "tiesioginis-proporcingumas-exmp-1",
-      "title": "Reiškinio sutvarkymas",
+      "id": "ex-k-radimas",
+      "title": "Koeficiento radimas iš taško",
       "level": "easy",
-      "problem": "Supaprastink 3x + 2x - x.",
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
+      "problem": "Tiesioginio proporcingumo grafikas eina per tašką (4; 12). Raskite koeficientą k.",
+      "conceptIds": ["proporcingumo-koeficientas", "tiesioginis-proporcingumas"],
       "steps": [
         {
-          "text": "Sudedame koeficientus.",
-          "latex": "3x+2x-x=(3+2-1)x"
+          "text": "Žinome taško koordinates x = 4 ir y = 12.",
+          "latex": ""
         },
         {
-          "text": "Gauname.",
-          "latex": "4x"
+          "text": "Taikome koeficiento formulę k = y/x.",
+          "latex": "k = \\frac{12}{4} = 3"
         }
       ],
-      "answer": "4x"
+      "answer": "k = 3"
     },
     {
-      "id": "tiesioginis-proporcingumas-exmp-2",
-      "title": "Lygties sprendimas",
+      "id": "ex-proporcijos-sprendimas",
+      "title": "Proporcijos su nežinomuoju sprendimas",
       "level": "easy",
-      "problem": "Išspręsk 2x + 5 = 17.",
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
+      "problem": "Išspręskite proporciją: x/5 = 10/2.",
+      "conceptIds": ["proporcija"],
       "steps": [
         {
-          "text": "Atimame 5 iš abiejų pusių.",
-          "latex": "2x=12"
+          "text": "Taikome pagrindinę proporcijos savybę (dauginame kryžmai).",
+          "latex": "x \\cdot 2 = 5 \\cdot 10"
         },
         {
-          "text": "Daliname iš 2.",
-          "latex": "x=6"
+          "text": "Suprastiname lygtį.",
+          "latex": "2x = 50"
+        },
+        {
+          "text": "Randame x.",
+          "latex": "x = 50 : 2 = 25"
         }
       ],
-      "answer": "x=6"
+      "answer": "x = 25"
     },
     {
-      "id": "tiesioginis-proporcingumas-exmp-3",
-      "title": "Nelygybė",
+      "id": "ex-reiksmes-radimas",
+      "title": "Reikšmės radimas pagal formulę",
       "level": "medium",
-      "problem": "Išspręsk 3x - 4 < 11.",
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
+      "problem": "Dydis y yra tiesiogiai proporcingas x su koeficientu k=0,5. Raskite y, kai x=14.",
+      "conceptIds": ["tiesioginio-proporcingumo-formule"],
       "steps": [
         {
-          "text": "Pridedame 4.",
-          "latex": "3x<15"
+          "text": "Užrašome formulę.",
+          "latex": "y = 0,5 \\cdot x"
         },
         {
-          "text": "Daliname iš 3.",
-          "latex": "x<5"
+          "text": "Įstatome x reikšmę.",
+          "latex": "y = 0,5 \\cdot 14 = 7"
         }
       ],
-      "answer": "x<5"
+      "answer": "y = 7"
     },
     {
-      "id": "tiesioginis-proporcingumas-exmp-4",
-      "title": "Modeliavimas",
+      "id": "ex-lentele-pildymas",
+      "title": "Proporcingumo lentelės pildymas",
       "level": "medium",
-      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
+      "problem": "Užpildykite tuščią vietą, jei y proporcingas x: x=2 -> y=6; x=5 -> y=?",
+      "conceptIds": ["tiesioginis-proporcingumas", "proporcingumo-koeficientas"],
       "steps": [
         {
-          "text": "Bendra kaina yra 4x.",
-          "latex": "4x=20"
+          "text": "Pirmiausia raskime koeficientą k iš pirmosios poros.",
+          "latex": "k = 6 : 2 = 3"
         },
         {
-          "text": "Išsprendžiame.",
-          "latex": "x=5"
+          "text": "Dabar apskaičiuokime ieškomą y reikšmę.",
+          "latex": "y = 3 \\cdot 5 = 15"
         }
       ],
-      "answer": "x=5"
+      "answer": "15"
     },
     {
-      "id": "tiesioginis-proporcingumas-exmp-5",
-      "title": "Formulė",
-      "level": "hard",
-      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
-      "conceptIds": [
-        "formule",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
+      "id": "ex-tekstinis-kuras",
+      "title": "Kuro sąnaudos (Tekstinis uždavinys)",
+      "level": "medium",
+      "problem": "Automobilis nuvažiavo 120 km ir sunaudojo 9 litrus kuro. Kiek litrų kuro reikės 200 km kelionei?",
+      "conceptIds": ["proporcija"],
       "steps": [
         {
-          "text": "Išreiškiame t.",
-          "latex": "t=\\frac{s}{v}"
+          "text": "Susidarome proporciją (kilometrai prie kilometrų, litrai prie litrų).",
+          "latex": "\\frac{120}{200} = \\frac{9}{x}"
         },
         {
-          "text": "Įstatome duomenis.",
-          "latex": "t=\\frac{96}{12}=8"
-        }
-      ],
-      "answer": "t=8"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "tiesioginis-proporcingumas-ex-001",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "1x",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "1x"
-        }
-      ],
-      "answerText": "1x",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-002",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "6a",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "6a"
-        }
-      ],
-      "answerText": "6a",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-003",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "2y+6",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "2y+6"
-        }
-      ],
-      "answerText": "2y+6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-004",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "m+8",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "m+8"
-        }
-      ],
-      "answerText": "m+8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-005",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "10p-5",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "10p-5"
-        }
-      ],
-      "answerText": "10p-5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-006",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: x+5=12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
+          "text": "Dauginame kryžmai.",
+          "latex": "120 \\cdot x = 200 \\cdot 9"
         },
         {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
+          "text": "Suskaičiuojame dešinę pusę.",
+          "latex": "120x = 1800"
+        },
         {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
+          "text": "Randame x.",
+          "latex": "x = 1800 : 120 = 15"
         }
       ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
+      "answer": "15 litrų."
     },
     {
-      "id": "tiesioginis-proporcingumas-ex-007",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
+      "id": "ex-grafikas-atpazinimas",
+      "title": "Grafiko atpažinimas",
       "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 3x=18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
+      "problem": "Ar funkcija y = 2x + 1 yra tiesioginis proporcingumas?",
+      "conceptIds": ["tiesioginis-proporcingumas", "tiesinis-grafikas"],
+      "steps": [
         {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
+          "text": "Patikriname, ar grafikas eina per (0;0). Įstatome x=0.",
+          "latex": "y = 2 \\cdot 0 + 1 = 1"
         },
         {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
+          "text": "Kadangi gavome y=1, o ne y=0, grafikas neina per koordinačių pradžią.",
+          "latex": ""
         }
       ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
+      "answer": "Ne, tai nėra tiesioginis proporcingumas."
     },
     {
-      "id": "tiesioginis-proporcingumas-ex-008",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 2x-4=10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-009",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 5x+2=27.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-010",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-011",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x >= 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-012",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-013",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x <= 2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-014",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
+      "id": "ex-greitis-atstumas",
+      "title": "Judėjimo uždavinys",
       "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3x = 18"
-          },
-          {
-            "id": "b",
-            "text": "x + 3 = 18"
-          },
-          {
-            "id": "c",
-            "text": "18x = 3"
-          },
-          {
-            "id": "d",
-            "text": "x - 3 = 18"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
+      "problem": "Dviratininkas važiuoja pastoviu greičiu. Per 1,5 valandos jis nuvažiuoja 27 km. Kiek kilometrų jis nuvažiuos per 40 minučių?",
+      "conceptIds": ["proporcija", "skaiciu-konvertavimas"],
+      "steps": [
         {
-          "order": 1,
-          "text": "Ieškok ryšio tarp kiekio ir kainos.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "formule"
-          ]
+          "text": "Paverčiame laiką į tas pačias vienetas (minutes). 1,5 val = 90 min.",
+          "latex": "1,5 \\cdot 60 = 90"
         },
         {
-          "order": 2,
-          "text": "Vienas bilietas kainuoja 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
+          "text": "Susidarome proporciją.",
+          "latex": "\\frac{90}{40} = \\frac{27}{x}"
+        },
         {
-          "text": "Bendra kaina lygi 3x.",
-          "latex": "3x=18"
+          "text": "Sprendžiame proporciją.",
+          "latex": "90x = 27 \\cdot 40"
+        },
+        {
+          "text": "Randame x.",
+          "latex": "x = 1080 : 90 = 12"
         }
       ],
-      "answerText": "3x = 18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
+      "answer": "12 km."
     },
     {
-      "id": "tiesioginis-proporcingumas-ex-015",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-016",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
+      "id": "ex-sudetingas-koeficientas",
+      "title": "Koeficientas su trupmenomis",
       "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
+      "problem": "Jei y tiesiogiai proporcingas x, ir žinoma, kad y=3/4 kai x=2/3, raskite koeficientą k.",
+      "conceptIds": ["proporcingumo-koeficientas"],
+      "steps": [
         {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
+          "text": "Naudojame formulę k = y : x.",
+          "latex": "k = \\frac{3}{4} : \\frac{2}{3}"
+        },
+        {
+          "text": "Dalybą keičiame daugyba iš apverstos trupmenos.",
+          "latex": "k = \\frac{3}{4} \\cdot \\frac{3}{2} = \\frac{9}{8}"
+        },
+        {
+          "text": "Paverčiame mišriuoju skaičiumi.",
+          "latex": "k = 1\\frac{1}{8} = 1,125"
         }
       ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-017",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-018",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-019",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesioginis-proporcingumas-ex-020",
-      "topicId": "tiesioginis-proporcingumas",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesioginis proporcingumas, santykis ir proporcija: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "tiesioginis-proporcingumas-test-topic",
-      "title": "Tiesioginis proporcingumas, santykis ir proporcija testas",
-      "scope": "topic",
-      "topicIds": [
-        "tiesioginis-proporcingumas"
-      ],
-      "exerciseIds": [
-        "tiesioginis-proporcingumas-ex-001",
-        "tiesioginis-proporcingumas-ex-002",
-        "tiesioginis-proporcingumas-ex-003",
-        "tiesioginis-proporcingumas-ex-004",
-        "tiesioginis-proporcingumas-ex-005",
-        "tiesioginis-proporcingumas-ex-006",
-        "tiesioginis-proporcingumas-ex-007",
-        "tiesioginis-proporcingumas-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "tiesioginis-proporcingumas-test-challenge",
-      "title": "Tiesioginis proporcingumas, santykis ir proporcija iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "tiesioginis-proporcingumas"
-      ],
-      "exerciseIds": [
-        "tiesioginis-proporcingumas-ex-009",
-        "tiesioginis-proporcingumas-ex-010",
-        "tiesioginis-proporcingumas-ex-011",
-        "tiesioginis-proporcingumas-ex-012",
-        "tiesioginis-proporcingumas-ex-013",
-        "tiesioginis-proporcingumas-ex-014",
-        "tiesioginis-proporcingumas-ex-015",
-        "tiesioginis-proporcingumas-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "tiesioginis-proporcingumas-srs-kintamasis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kintamasis?",
-      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-reiskinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reiškinys?",
-      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "conceptIds": [
-        "reiskinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-koeficientas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra koeficientas?",
-      "back": "Skaičius prie raidės.",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-sklaidos-desnis",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sklaidos dėsnis?",
-      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "conceptIds": [
-        "sklaidos-desnis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-tiesines-lygties-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinės lygties forma?",
-      "back": "Tai paprasčiausia lygties forma.",
-      "conceptIds": [
-        "tiesines-lygties-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-perkelia-be-zenklo-kaitos",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
-      "back": "Iš abiejų pusių atimk 5.",
-      "conceptIds": [
-        "perkelia-be-zenklo-kaitos"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesioginis-proporcingumas-srs-sumaiso-koeficientus",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra sumaišo koeficientus su laisvaisiais nariais?",
-      "back": "3x+2x=5x.",
-      "conceptIds": [
-        "sumaiso-koeficientus"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "answer": "1,125"
     }
   ]
 }

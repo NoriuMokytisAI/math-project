@@ -1,5 +1,5 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
@@ -20,25 +20,21 @@
       "sklaidos-diagramos-ir-koreliacija"
     ],
     "conceptIds": [
-      "duomenys",
-      "imtis",
-      "daznis",
-      "vidurkis",
-      "mediana",
-      "moda",
-      "sklaida",
-      "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "intervalinis-grupavimas",
+      "histograma",
+      "sukauptasis-daznis",
+      "kvartiliai",
+      "interkvartilinis-plotis",
+      "dezute-su-usais",
+      "mediana"
     ],
     "formulaIds": [
-      "vidurkio-formule",
-      "tikimybes-formule"
+      "interkvartilinio-plocio-formule"
     ],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "painioja-histograma-su-stulpeline",
+      "neteisingas-kvartiliu-skaiciavimas",
+      "sukauptojo-daznio-sumavimo-klaida"
     ],
     "exerciseIds": [
       "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-001",
@@ -65,262 +61,176 @@
   },
   "theory": [
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ivadas",
-      "title": "Įvadas",
+      "id": "intervalinis-grupavimas-ivadas",
+      "title": "Duomenų grupavimas į intervalus",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Histogramos, kvartiliai ir sukauptasis dažnis yra tema, kurioje mokomasi atpažinti pagrindinius histogramos, kvartiliai ir sukauptasis dažnis modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "text": "Statistikoje dažnai susiduriame su dideliais duomenų kiekiais (pvz., visos klasės mokinių ūgiai). Jei kiekvieną ūgį žymėtume atskirai, diagrama būtų per daug detali ir neaiški. Todėl duomenys grupuojami."
         },
         {
           "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
+          "conceptId": "intervalinis-grupavimas",
+          "text": "[[intervalinis-grupavimas|Intervalinis grupavimas]] – tai duomenų suskirstymas į lygius intervalus (rėžius). Pavyzdžiui, ūgiai nuo 150 cm iki 160 cm, nuo 160 cm iki 170 cm ir t. t."
         },
-        {
-          "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
-        }
-      ]
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Histogramos, kvartiliai ir sukauptasis dažnis sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
         {
           "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "text": "Sudaroma dažnių lentelė, kurioje nurodoma, kiek reikšmių patenka į kiekvieną intervalą."
+        }
+      ]
+    },
+    {
+      "id": "histogramos-teorija",
+      "title": "Histograma: kas tai ir kaip ją braižyti?",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "histograma",
+          "text": "[[histograma|Histograma]] – tai diagrama, skirta vaizduoti grupuotus (tęstinius) duomenis. Ją sudaro vienas prie kito priglausti stulpeliai."
+        },
+        {
+          "type": "method",
+          "title": "Histogramos braižymas",
+          "text": "1. Horizontalioje ašyje (x) atidedami duomenų intervalai.\n2. Vertikalioje ašyje (y) atidedamas dažnis (kiekis).\n3. Stulpeliai braižomi be tarpų, nes duomenys yra tęstiniai."
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "title": "Histograma vs Stulpelinė diagrama",
+          "text": "Stulpelinė diagrama vaizduoja atskiras kategorijas (pvz., akių spalvą), todėl tarp stulpelių yra tarpai. Histogramoje tarpų nėra!"
         }
       ]
     },
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "sukauptasis-daznis-teorija",
+      "title": "Sukauptasis dažnis",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kartais mums rūpi ne tik kiek narių yra viename intervale, bet ir kiek jų iš viso neviršija tam tikros ribos."
+        },
+        {
+          "type": "definition",
+          "conceptId": "sukauptasis-daznis",
+          "text": "[[sukauptasis-daznis|Sukauptasis dažnis]] – tai visų ankstesnių dažnių suma iki tam tikro taško imtinai."
+        },
+        {
+          "type": "example",
+          "text": "Jei pirmo intervalo dažnis yra 5, o antro – 8, tai antro intervalo sukauptasis dažnis yra $5 + 8 = 13$."
+        },
+        {
+          "type": "note",
+          "text": "Paskutiniojo intervalo sukauptasis dažnis visada lygus visam imties narių skaičiui $n$."
+        }
+      ]
+    },
+    {
+      "id": "kvartiliai-teorija",
+      "title": "Kvartiliai: Duomenų skirstymas į keturias dalis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mediana padalija surikiuotus duomenis į dvi lygias dalis. Kvartiliai šią idėją pratęsia ir padalija duomenis į keturias lygias dalis (po 25 % duomenų kiekvienoje)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kvartiliai",
+          "text": "[[kvartiliai|Kvartiliai]] – tai trys reikšmės, dalijančios duomenis į keturis ketvirčius:\n1. **Pirmasis kvartilis ($Q_1$)** – apatinis ketvirtis (25 %).\n2. **Antrasis kvartilis ($Q_2$ arba Mediana)** – vidurys (50 %).\n3. **Trečiasis kvartilis ($Q_3$)** – viršutinis ketvirtis (75 %)."
+        },
+        {
+          "type": "method",
+          "title": "Kaip rasti kvartilius?",
+          "text": "1. Surikiuokite duomenis didėjimo tvarka.\n2. Raskite medianą ($Q_2$).\n3. $Q_1$ yra kairiosios pusės (nuo pradžios iki medianos) mediana.\n4. $Q_3$ yra dešiniosios pusės (nuo medianos iki pabaigos) mediana."
+        }
+      ]
+    },
+    {
+      "id": "interkvartilinis-plotis-teorija",
+      "title": "Interkvartilinis plotis (IQR) ir sklaida",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kvartiliai padeda suprasti, kaip stipriai duomenys yra 'susispaudę' aplink centrą."
+        },
+        {
+          "type": "definition",
+          "conceptId": "interkvartilinis-plotis",
+          "text": "[[interkvartilinis-plotis|Interkvartilinis plotis]] (IQR) – tai skirtumas tarp trečiojo ir pirmojo kvartilių. Jis parodo, kokiame diapazone išsidėstę viduriniai 50 % duomenų."
+        },
+        {
+          "type": "formula",
+          "formulaId": "interkvartilinio-plocio-formule",
+          "latex": "IQR = Q_3 - Q_1"
+        },
+        {
+          "type": "note",
+          "text": "Kuo IQR mažesnis, tuo duomenys yra labiau vienodi (mažesnė sklaida)."
+        }
+      ]
+    },
+    {
+      "id": "dezute-su-usais-teorija",
+      "title": "„Dėžutė su ūsais“ (Box plot)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai grafinis būdas pavaizduoti penkių skaičių suvestinę: mažiausią reikšmę, $Q_1$, medianą, $Q_3$ ir didžiausią reikšmę."
+        },
+        {
+          "type": "method",
+          "text": "1. Dėžutė brėžiama nuo $Q_1$ iki $Q_3$.\n2. Linija dėžutės viduje žymi medianą.\n3. „Ūsai“ tęsiasi nuo dėžutės iki mažiausios ir didžiausios reikšmių."
+        },
+        {
+          "type": "note",
+          "text": "Ši diagrama leidžia akimirksniu pamatyti duomenų asimetriją ir sklaidą."
+        }
+      ]
+    },
+    {
+      "id": "statistika-klaidos",
+      "title": "Dažniausios klaidos dirbant su statistika",
+      "blocks": [
+        {
+          "type": "warning",
+          "title": "Nesurikiuoti duomenys",
+          "text": "Pati dažniausia klaida – ieškoti medianos ar kvartilių nesurikiavus duomenų didėjimo tvarka. Visada pirmiausia suregistruokite skaičius nuo mažiausio iki didžiausio!"
+        },
+        {
+          "type": "warning",
+          "title": "Intervalų persidengimas",
+          "text": "Kuriant intervalus, jie neturi persidengti. Pvz., jei vienas intervalas yra 10-20, o kitas 20-30, skaičius 20 turi priklausyti tik vienam iš jų (dažniausiai antrajam)."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "duomenys",
-      "title": "Duomenys",
+      "id": "histograma",
+      "title": "Histograma",
       "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
+      "shortDefinition": "Diagrama grupuotiems duomenims vaizduoti.",
+      "intuition": "Stulpeliai be tarpų, rodantys duomenų pasiskirstymą.",
+      "formal": "Statistinė diagrama, kurioje plotai virš intervalų yra proporcingi tų intervalų dažniams.",
       "notation": [],
       "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
+        "intervalinis-grupavimas"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "imtis",
-      "title": "Imtis",
+      "id": "kvartiliai",
+      "title": "Kvartiliai",
       "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+      "shortDefinition": "Reikšmės, dalijančios duomenis į keturias dalis.",
+      "intuition": "Matematiniai 'peiliai', supjaustantys duomenų eilę į 4 lygius ketvirčius.",
+      "formal": "Kintamojo reikšmės, dalijančios surikiuotą imtį į keturias lygias dalis.",
+      "notation": [
+        "Q1, Q2, Q3"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
       "relatedConceptIds": [
         "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koreliacija",
-      "title": "Koreliacija",
-      "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+        "interkvartilinis-plotis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -329,170 +239,202 @@
   ],
   "formulas": [
     {
-      "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
+      "id": "interkvartilinio-plocio-formule",
+      "title": "Interkvartilinis plotis",
       "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
-      "variables": {
-        "n": "reikšmių skaičius"
-      },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
+      "latex": "IQR = Q_3 - Q_1",
+      "explanation": "Apskaičiuoja vidurinių 50 % duomenų sklaidą.",
       "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
+        "kvartiliai"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
+      "id": "painioja-histograma-su-stulpeline",
+      "title": "Braižo tarpus tarp stulpelių histogramoje",
       "type": "mistake",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "Stulpeliai atskirti vienas nuo kito.",
+      "whyItHappens": "Supainiojama su paprasta stulpeline diagrama.",
+      "correction": "Kadangi duomenys yra tęstiniai (pvz., laikas, svoris), stulpeliai turi liestis.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-exmp-1",
-      "title": "Vidurkis",
+      "id": "stat-exmp-1",
+      "title": "Intervalinės lentelės sudarymas",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Duoti mokinių testų rezultatai: 12, 15, 22, 25, 28, 35, 38, 42. Sugrupuokite juos į intervalus po 10 taškų (10-20, 20-30 ir t.t.) ir surašykite dažnius.",
       "conceptIds": [
-        "vidurkis"
+        "intervalinis-grupavimas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Intervalas [10; 20): skaičiai 12, 15.",
+          "latex": "\\text{Dažnis} = 2"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Intervalas [20; 30): skaičiai 22, 25, 28.",
+          "latex": "\\text{Dažnis} = 3"
+        },
+        {
+          "text": "Intervalas [30; 40): skaičiai 35, 38.",
+          "latex": "\\text{Dažnis} = 2"
+        },
+        {
+          "text": "Intervalas [40; 50): skaičius 42.",
+          "latex": "\\text{Dažnis} = 1"
         }
       ],
-      "answer": "20/3"
+      "answer": "Dažniai: 2, 3, 2, 1."
     },
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-exmp-2",
-      "title": "Mediana",
+      "id": "stat-exmp-2",
+      "title": "Sukauptojo dažnio skaičiavimas",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Turime dažnius: 4, 7, 2, 5. Suskaičiuokite sukauptuosius dažnius.",
       "conceptIds": [
+        "sukauptasis-daznis"
+      ],
+      "steps": [
+        {
+          "text": "Pirmas sukauptasis dažnis lygus pirmam dažniui.",
+          "latex": "4"
+        },
+        {
+          "text": "Antras: $4 + 7 = 11$.",
+          "latex": "11"
+        },
+        {
+          "text": "Trečias: $11 + 2 = 13$.",
+          "latex": "13"
+        },
+        {
+          "text": "Ketvirtas: $13 + 5 = 18$.",
+          "latex": "18"
+        }
+      ],
+      "answer": "Sukauptieji dažniai: 4, 11, 13, 18."
+    },
+    {
+      "id": "stat-exmp-3",
+      "title": "Kvartilių radimas (nelyginis skaičius)",
+      "level": "medium",
+      "problem": "Raskite duomenų 2, 5, 8, 10, 12, 15, 20 kvartilius $Q_1, Q_2, Q_3$.",
+      "conceptIds": [
+        "kvartiliai",
         "mediana"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
+          "text": "Duomenys jau surikiuoti. Vidurinė reikšmė (mediana) yra 10.",
+          "latex": "Q_2 = 10"
         },
         {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
-        }
-      ],
-      "answer": "5"
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-exmp-3",
-      "title": "Tikimybė",
-      "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Kairioji pusė (iki 10): 2, 5, 8. Jos mediana yra 5.",
+          "latex": "Q_1 = 5"
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Dešinioji pusė (po 10): 12, 15, 20. Jos mediana yra 15.",
+          "latex": "Q_3 = 15"
         }
       ],
-      "answer": "1/6"
+      "answer": "Q1=5, Q2=10, Q3=15"
     },
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
+      "id": "stat-exmp-4",
+      "title": "IQR skaičiavimas",
+      "level": "easy",
+      "problem": "Jei $Q_1 = 45$ ir $Q_3 = 70$, koks yra interkvartilinis plotis?",
       "conceptIds": [
-        "moda"
+        "interkvartilinis-plotis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "interkvartilinio-plocio-formule"
+      ],
       "steps": [
         {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
+          "text": "Atimame $Q_1$ iš $Q_3$.",
+          "latex": "70 - 45 = 25"
         }
       ],
-      "answer": "4"
+      "answer": "25"
     },
     {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-exmp-5",
-      "title": "Sklaida",
+      "id": "stat-exmp-5",
+      "title": "Kvartilių radimas (lyginis skaičius)",
       "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "problem": "Raskite kvartilius: 1, 3, 3, 4, 5, 6, 7, 8.",
       "conceptIds": [
-        "sklaida"
+        "kvartiliai",
+        "mediana"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Yra 8 skaičiai. Mediana yra tarp 4-ojo ir 5-ojo.",
+          "latex": "Q_2 = (4+5)/2 = 4,5"
+        },
+        {
+          "text": "Kairioji pusė: 1, 3, 3, 4. Mediana tarp 3 ir 3.",
+          "latex": "Q_1 = 3"
+        },
+        {
+          "text": "Dešinioji pusė: 5, 6, 7, 8. Mediana tarp 6 ir 7.",
+          "latex": "Q_3 = 6,5"
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "Q1=3, Q2=4,5, Q3=6,5"
+    },
+    {
+      "id": "stat-exmp-6",
+      "title": "Histogramos interpretavimas",
+      "level": "medium",
+      "problem": "Histogramoje stulpelio, atitinkančio intervalą 20-30, aukštis yra 12. Kiek reikšmių pateko į šį intervalą?",
+      "conceptIds": [
+        "histograma"
+      ],
+      "steps": [
+        {
+          "text": "Histogramos y ašis rodo dažnį (kiekį).",
+          "latex": "12"
+        }
+      ],
+      "answer": "12 reikšmių"
+    },
+    {
+      "id": "stat-exmp-7",
+      "title": "Dėžutės su ūsais braižymo elementai",
+      "level": "medium",
+      "problem": "Duomenų rinkinio minimumas 2, Q1=5, Mediana=7, Q3=10, Maksimumas=15. Kokio ilgio bus pati „dėžutė“?",
+      "conceptIds": [
+        "dezute-su-usais",
+        "interkvartilinis-plotis"
+      ],
+      "steps": [
+        {
+          "text": "Dėžutės ilgis lygus interkvartiliniam pločiui (IQR).",
+          "latex": "10 - 5 = 5"
+        }
+      ],
+      "answer": "5 vienetai"
+    },
+    {
+      "id": "stat-exmp-8",
+      "title": "Sukauptasis dažnis grafike",
+      "level": "hard",
+      "problem": "Sukauptojo dažnio grafikas rodo, kad 60-asis procentilis atitinka reikšmę 45. Ką tai reiškia?",
+      "conceptIds": [
+        "sukauptasis-daznis"
+      ],
+      "steps": [
+        {
+          "text": "Tai reiškia, kad 60 % visų duomenų yra lygūs arba mažesni už 45.",
+          "latex": "60\\%"
+        }
+      ],
+      "answer": "60% duomenų neviršija 45."
     }
   ],
   "exercises": [
@@ -500,7 +442,7 @@
       "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-001",
       "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
       "grade": 8,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask skaičių 4, 6, 8 vidurkį.",
       "answer": {
@@ -532,885 +474,6 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 35
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-002",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-003",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-004",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-005",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-006",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-007",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-008",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-009",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-010",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-011",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-012",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-013",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-014",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-015",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-016",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-017",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-018",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-019",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-020",
-      "topicId": "histogramos-kvartiliai-ir-sukauptasis-daznis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Histogramos, kvartiliai ir sukauptasis dažnis: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-test-topic",
-      "title": "Histogramos, kvartiliai ir sukauptasis dažnis testas",
-      "scope": "topic",
-      "topicIds": [
-        "histogramos-kvartiliai-ir-sukauptasis-daznis"
-      ],
-      "exerciseIds": [
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-001",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-002",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-003",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-004",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-005",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-006",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-007",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-test-challenge",
-      "title": "Histogramos, kvartiliai ir sukauptasis dažnis iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "histogramos-kvartiliai-ir-sukauptasis-daznis"
-      ],
-      "exerciseIds": [
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-009",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-010",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-011",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-012",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-013",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-014",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-015",
-        "histogramos-kvartiliai-ir-sukauptasis-daznis-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-duomenys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-vidurkio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "histogramos-kvartiliai-ir-sukauptasis-daznis-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
     }
   ]
 }

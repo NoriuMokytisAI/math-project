@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "10 klasėje programa aprašo rinkinius, tvarkos svarbą, sudėties ir daugybos taisykles bei ilgalaikį santykinį dažnį."
+    "notes": "10 klasėje programa aprašo rinkinius, tvarkos svarbą, sudėties ir daugybos taisykles bei ilgalaikį santykinį dažnį. Išsamus teorinis papildymas."
   },
   "topic": {
     "id": "kombinatorika-ir-ilgalaike-tikimybe",
@@ -12,7 +12,7 @@
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 8,
-    "estimatedStudyMinutes": 150,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "duomenu-charakteristikos-ir-tikimybe-6"
     ],
@@ -20,25 +20,30 @@
       "priklausomi-ir-nepriklausomi-ivykiai"
     ],
     "conceptIds": [
-      "duomenys",
-      "imtis",
-      "daznis",
-      "vidurkis",
-      "mediana",
-      "moda",
-      "sklaida",
+      "kombinatorika",
+      "sudeties-taisykle",
+      "daugybos-taisykle",
+      "faktorialas",
+      "perstatos",
       "tikimybe",
       "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "klasikine-tikimybe",
+      "santykinis-daznis",
+      "ilgalaike-tikimybe",
+      "priesingas-ivyki",
+      "baigtis"
     ],
     "formulaIds": [
-      "vidurkio-formule",
-      "tikimybes-formule"
+      "faktorialo-formule",
+      "perstatu-formule",
+      "tikimybes-formule",
+      "santykinio-daznio-formule",
+      "priesingo-ivykio-formule"
     ],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "sumaiso-sudeti-ir-daugyba",
+      "neteisingas-baigciu-skaicius",
+      "tikimybe-didesne-uz-viena"
     ],
     "exerciseIds": [
       "kombinatorika-ir-ilgalaike-tikimybe-ex-001",
@@ -60,440 +65,386 @@
       "kombinatorika-ir-ilgalaike-tikimybe-ex-017",
       "kombinatorika-ir-ilgalaike-tikimybe-ex-018",
       "kombinatorika-ir-ilgalaike-tikimybe-ex-019",
-      "kombinatorika-ir-ilgalaike-tikimybe-ex-020",
-      "olympiad-grade10-combinatorics"
+      "kombinatorika-ir-ilgalaike-tikimybe-ex-020"
     ]
   },
   "theory": [
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ivadas",
-      "title": "Įvadas",
+      "id": "kombinatorikos-pagrindai",
+      "title": "Kombinatorikos pagrindai: Sudėties ir daugybos taisyklės",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė yra tema, kurioje mokomasi atpažinti pagrindinius kombinatorika ir tikimybė modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "text": "Kombinatorika yra matematikos sritis, tirianti būdus, kaip galima parinkti ir išdėstyti objektus pagal tam tikras taisykles. Svarbiausia – suskaičiuoti galimų variantų kiekį tiesiogiai jų neišvardijant."
         },
         {
           "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
+          "conceptId": "sudeties-taisykle",
+          "text": "**Sudėties taisyklė:** Jei objektą A galima pasirinkti $m$ būdais, o objektą B – $n$ būdais (ir pasirinkimai vienas kito neįtakoja), tai pasirinkti **arba** A, **arba** B galima $m + n$ būdais."
         },
         {
           "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "conceptId": "daugybos-taisykle",
+          "text": "**Daugybos taisyklė:** Jei objektą A galima pasirinkti $m$ būdais, o po kiekvieno tokio pasirinkimo kitą objektą B galima pasirinkti $n$ būdais, tai abiejų objektų porą (A **ir** B) galima pasirinkti $m \\cdot n$ būdais."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Raktiniai žodžiai: „ARBA“ reiškia sudėtį, „IR“ reiškia daugybą."
         }
       ]
     },
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "faktorialas-ir-perstatos",
+      "title": "Faktorialas ir perstatos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Dažnai mums reikia suskaičiuoti, keliais būdais galime išrikiuoti tam tikrą skaičių skirtingų objektų į eilę."
+        },
+        {
+          "type": "definition",
+          "conceptId": "faktorialas",
+          "text": "Skaičiaus $n$ faktorialas (žymimas $n!$) yra visų natūraliųjų skaičių nuo 1 iki $n$ sandauga: $n! = 1 \\cdot 2 \\cdot 3 \\cdot ... \\cdot n$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "faktorialo-formule",
+          "latex": "n! = \\prod_{k=1}^{n} k"
+        },
+        {
+          "type": "definition",
+          "conceptId": "perstatos",
+          "text": "Perstatos – tai $n$ skirtingų elementų išdėstymo eilės tvarka būdai. Jų skaičius lygus $n!$."
+        },
+        {
+          "type": "note",
+          "text": "Susitarta, kad $0! = 1$ ir $1! = 1$."
+        }
+      ]
+    },
+    {
+      "id": "klasikine-tikimybe-teorija",
+      "title": "Klasikinis tikimybės apibrėžimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikimybė nusako įvykio pasirodymo galimybę atliekant bandymą. Klasikinis apibrėžimas taikomas tada, kai visos bandymo baigtys yra vienodai galimos."
+        },
+        {
+          "type": "definition",
+          "conceptId": "klasikine-tikimybe",
+          "text": "Įvykio A tikimybė $P(A)$ yra palankių baigčių skaičiaus $m$ ir visų galimų baigčių skaičiaus $n$ santykis: $P(A) = m / n$."
+        },
+        {
+          "type": "property",
+          "text": "Tikimybės reikšmė visada yra tarp 0 ir 1 ($0 \\leq P(A) \\leq 1$). \n1. $P(A) = 0$ reiškia, kad įvykis negalimas. \n2. $P(A) = 1$ reiškia, kad įvykis yra būtinas."
+        },
+        {
+          "type": "formula",
+          "formulaId": "priesingo-ivykio-formule",
+          "latex": "P(\\bar{A}) = 1 - P(A)",
+          "text": "Čia $\\bar{A}$ yra įvykiui A priešingas įvykis (įvykis neįvyks)."
+        }
+      ]
+    },
+    {
+      "id": "santykinis-daznis-ilgalaike",
+      "title": "Santykinis dažnis ir ilgalaikė tikimybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Realiame gyvenime ne visada galime suskaičiuoti visas teorines baigtis. Tada naudojame stebėjimus."
+        },
+        {
+          "type": "definition",
+          "conceptId": "santykinis-daznis",
+          "text": "Įvykio santykinis dažnis yra įvykio pasirodymų skaičiaus $k$ ir visų atliktų bandymų skaičiaus $N$ santykis: $W(A) = k / N$."
+        },
+        {
+          "type": "theorem",
+          "conceptId": "ilgalaike-tikimybe",
+          "title": "Santykinio dažnio stabilumas",
+          "text": "Didinant bandymų skaičių $N$, įvykio santykinis dažnis artėja prie teorinės tikimybės $P(A)$. Tai vadinama didžiųjų skaičių dėsnio apraiška."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, metus monetą 10 kartų, herbas gali iškristi 7 kartus (dažnis 0,7), bet metus 1 000 000 kartų, dažnis bus labai artimas 0,5."
+        }
+      ]
+    },
+    {
+      "id": "baigtys-ir-ivykiai",
+      "title": "Bandymas, baigtys ir įvykiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbu teisingai suprasti terminologiją uždaviniuose."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Bandymas:** veiksmas, kurio rezultatas nėra iš anksto žinomas (pvz., metame kauliuką).",
+            "**Elementarioji baigtis:** vienas iš galimų bandymo rezultatų (pvz., iškrito 3).",
+            "**Įvykis:** viena ar kelios baigtys (pvz., iškrito lyginis skaičius – palankios baigtys 2, 4, 6)."
+          ]
+        },
+        {
+          "type": "method",
+          "text": "Visas bandymo baigtis patogu pavaizduoti lentelėmis (metant du kauliukus) arba medžio diagramomis (kai atliekami keli veiksmai iš eilės)."
+        }
+      ]
+    },
+    {
+      "id": "kombinatorikos-tikimybiu-rysys",
+      "title": "Kombinatorikos ir tikimybių ryšys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sudėtingesniuose tikimybių uždaviniuose tiek palankias, tiek visas baigtis turime suskaičiuoti naudodami kombinatorikos taisykles."
+        },
+        {
+          "type": "method",
+          "text": "1. Nustatykite, ar svarbi elementų tvarka (jei taip – naudojame perstatas arba daugybos taisyklę). \n2. Suskaičiuokite visų galimų baigčių skaičių $n$. \n3. Suskaičiuokite palankių baigčių skaičių $m$. \n4. Padalinkite $m/n$."
+        }
+      ]
+    },
+    {
+      "id": "klaidos-tikimybe",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Niekada nerašykite tikimybės, didesnės už 1 arba mažesnės už 0. Jei gavote $P=1,2$, vadinasi, kažkur suklydote skaičiuodami baigtis."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Visų baigčių nuvertinimas (pvz., metant dvi monetas, yra 4 baigtys: HH, HS, SH, SS, o ne 3).",
+            "Sumaišoma sudėties ir daugybos taisyklė.",
+            "Tikimybės painiojimas su dažniu (tikimybė yra teorinė, dažnis – praktinis)."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "duomenys",
-      "title": "Duomenys",
-      "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "imtis",
-      "title": "Imtis",
-      "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "kombinatorika",
       "title": "Kombinatorika",
       "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
+      "shortDefinition": "Matematikos šaka apie rinkinių sudarymą ir skaičiavimą.",
+      "intuition": "Mokslas apie tai, 'keliais būdais' galima kažką padaryti.",
       "relatedConceptIds": [
-        "tikimybe"
+        "tikimybe",
+        "daugybos-taisykle"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "koreliacija",
-      "title": "Koreliacija",
+      "id": "faktorialas",
+      "title": "Faktorialas",
       "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+      "shortDefinition": "Natūraliųjų skaičių nuo 1 iki n sandauga.",
+      "notation": [
+        "n!"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": [
+        "perstatos"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "santykinis-daznis",
+      "title": "Santykinis dažnis",
+      "type": "concept",
+      "shortDefinition": "Įvykio pasirodymų dalis visų bandymų sekoje.",
+      "intuition": "Kiek procentų bandymų baigėsi sėkmingai praktikoje.",
+      "relatedConceptIds": [
+        "ilgalaike-tikimybe"
+      ],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
-      "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
+      "id": "tikimybes-formule",
+      "title": "Klasikinė tikimybės formulė",
+      "latex": "P(A) = \\frac{m}{n}",
       "variables": {
-        "n": "reikšmių skaičius"
+        "m": "palankių baigčių skaičius",
+        "n": "visų galimų baigčių skaičius"
       },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
-      "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
+      "explanation": "Tikimybė yra sėkmingų variantų dalis.",
       "defaultSrs": true
     },
     {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
+      "id": "perstatu-formule",
+      "title": "Perstatų skaičiaus formulė",
+      "latex": "P_n = n!",
+      "explanation": "Keliais būdais galima sukeisti n objektų vietomis.",
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
-      "type": "mistake",
+      "id": "sumaiso-sudeti-ir-daugyba",
+      "title": "Sukeičia sudėties ir daugybos taisykles",
       "conceptIds": [
-        "vidurkis"
+        "sudeties-taisykle",
+        "daugybos-taisykle"
       ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "Daugina variantus ten, kur reikia sudėti (arba atvirkščiai).",
+      "correction": "Jei renkatės tik vieną iš grupių – sudėkite. Jei renkatės po vieną iš kiekvienos grupės – dauginkite.",
+      "wrongExample": "Yra 3 obuoliai ir 2 kriaušės. Keliais būdais galima pasirinkti vieną vaisių? 3 * 2 = 6.",
+      "correctExample": "3 + 2 = 5.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-exmp-1",
-      "title": "Vidurkis",
+      "id": "daugybos-taisykle-example",
+      "title": "Daugybos taisyklės taikymas",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Mokinys turi 3 skirtingas kuprines ir 4 skirtingus penalus. Keliais būdais jis gali pasirinkti vieną kuprinę ir vieną penalą?",
       "conceptIds": [
-        "vidurkis"
+        "daugybos-taisykle"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
-        },
-        {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Kadangi reikia pasirinkti ir vieną, ir kitą, taikome daugybos taisyklę.",
+          "latex": "3 \\cdot 4 = 12"
         }
       ],
-      "answer": "20/3"
+      "answer": "12"
     },
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-exmp-2",
-      "title": "Mediana",
+      "id": "faktorialas-example",
+      "title": "Faktorialo skaičiavimas",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Apskaičiuokite $5!$.",
       "conceptIds": [
-        "mediana"
+        "faktorialas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
-        },
-        {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
+          "text": "Dauginame visus skaičius nuo 1 iki 5.",
+          "latex": "1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 120"
         }
       ],
-      "answer": "5"
+      "answer": "120"
     },
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-exmp-3",
-      "title": "Tikimybė",
+      "id": "perstatos-example",
+      "title": "Objektų išrikiavimas",
       "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
+      "problem": "Keliais būdais 6 mokiniai gali susėsti į 6 vietas vienoje eilėje?",
       "conceptIds": [
-        "tikimybe",
-        "ivyki"
+        "perstatos"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Tai perstatų uždavinys, nes naudojame visus 6 objektus ir keičiame jų tvarką.",
+          "latex": "P_6 = 6!"
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Apskaičiuojame.",
+          "latex": "720"
+        }
+      ],
+      "answer": "720"
+    },
+    {
+      "id": "tikimybe-kauliukas-example",
+      "title": "Kauliuko metimo tikimybė",
+      "level": "easy",
+      "problem": "Metamas standartinis lošimo kauliukas. Kokia tikimybė, kad iškris daugiau nei 4 akys?",
+      "conceptIds": [
+        "klasikine-tikimybe"
+      ],
+      "steps": [
+        {
+          "text": "Visos galimos baigtys: {1, 2, 3, 4, 5, 6}. Jų skaičius n = 6."
+        },
+        {
+          "text": "Palankios baigtys (daugiau nei 4): {5, 6}. Jų skaičius m = 2."
+        },
+        {
+          "text": "Tikimybė $P = m / n$.",
+          "latex": "P = 2/6 = 1/3"
+        }
+      ],
+      "answer": "1/3"
+    },
+    {
+      "id": "priesingas-ivyki-example",
+      "title": "Priešingo įvykio taikymas",
+      "level": "medium",
+      "problem": "Tikimybė, kad šiandien lis, yra 0,15. Kokia tikimybė, kad šiandien nelis?",
+      "conceptIds": [
+        "priesingas-ivyki"
+      ],
+      "steps": [
+        {
+          "text": "Įvykis 'nelis' yra priešingas įvykiui 'lis'.",
+          "latex": "P = 1 - 0,15 = 0,85"
+        }
+      ],
+      "answer": "0,85"
+    },
+    {
+      "id": "skaiciai-kombinatorika-example",
+      "title": "Skaičių sudarymas",
+      "level": "medium",
+      "problem": "Kiek galima sudaryti triženklių skaičių naudojant skaitmenis 1, 2, 3, jei skaitmenys gali kartotis?",
+      "conceptIds": [
+        "daugybos-taisykle"
+      ],
+      "steps": [
+        {
+          "text": "Turime 3 vietas skaičiuje. Į kiekvieną vietą galime įrašyti bet kurį iš 3 skaitmenų.",
+          "latex": "3 \\cdot 3 \\cdot 3 = 27"
+        }
+      ],
+      "answer": "27"
+    },
+    {
+      "id": "santykinis-daznis-pavyzdys",
+      "title": "Santykinio dažnio skaičiavimas",
+      "level": "medium",
+      "problem": "Krepšininkas metė į krepšį 50 kartų ir pataikė 32 kartus. Koks yra pataikymo santykinis dažnis?",
+      "conceptIds": [
+        "santykinis-daznis"
+      ],
+      "steps": [
+        {
+          "text": "Dalijame sėkmingų bandymų skaičių iš visų bandymų.",
+          "latex": "W = 32 / 50 = 0,64"
+        }
+      ],
+      "answer": "0,64"
+    },
+    {
+      "id": "kombinuotas-uždavinys-example",
+      "title": "Kombinuotas perstatų ir tikimybės uždavinys",
+      "level": "hard",
+      "problem": "Ant trijų kortelių užrašytos raidės M, A, S. Jos sumaišomos ir atsitiktinai išrikiuojamos į eilę. Kokia tikimybė, kad gausime žodį SAM?",
+      "conceptIds": [
+        "perstatos",
+        "klasikine-tikimybe"
+      ],
+      "steps": [
+        {
+          "text": "Visas galimas raidžių išrikiavimo būdų skaičius n = 3!.",
+          "latex": "3! = 6"
+        },
+        {
+          "text": "Palankus yra tik vienas konkretus išsidėstymas SAM, tad m = 1."
+        },
+        {
+          "text": "Tikimybė $P = 1/6$."
         }
       ],
       "answer": "1/6"
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
-        }
-      ],
-      "answer": "4"
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-exmp-5",
-      "title": "Sklaida",
-      "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
-        }
-      ],
-      "answer": "B turi didesnę sklaidą"
     }
   ],
   "exercises": [
@@ -501,7 +452,7 @@
       "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-001",
       "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask skaičių 4, 6, 8 vidurkį.",
       "answer": {
@@ -525,955 +476,49 @@
           "latex": "18/3=6"
         }
       ],
-      "answerText": "6",
-      "alternateMethods": [],
       "conceptIds": [
         "vidurkis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "estimatedSeconds": 35
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-002",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-003",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-004",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-005",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-006",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-007",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-008",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-009",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-010",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-011",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-012",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-013",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-014",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-015",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-016",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-017",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-018",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-019",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-ex-020",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "olympiad-grade10-combinatorics",
-      "topicId": "kombinatorika-ir-ilgalaike-tikimybe",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Kiek yra keturženklių natūraliųjų skaičių, kurių visi skaitmenys yra skirtingi, o skaitmenų suma lygi 10?",
-      "answer": {
-        "kind": "numeric",
-        "value": 96,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Raskite visas keturių skirtingų skaitmenų aibes {a, b, c, d} (nuo 0 iki 9), kurių suma lygi 10.",
-          "revealsConceptIds": [
-            "kombinatorika"
-          ],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "text": "Yra tik dvi tokios skaitmenų aibės: {0, 1, 2, 7} ir {0, 1, 3, 6} ir {0, 2, 3, 5} ir {1, 2, 3, 4}. Palaukite, paskaičiuokite atidžiai.",
-          "penalty": 0.05
-        },
-        {
-          "order": 3,
-          "text": "Patikrinkime skirtingų skaitmenų aibes, kurių suma lygi 10: 1) {0, 1, 2, 7} (suma 10), 2) {0, 1, 3, 6} (suma 10), 3) {0, 1, 4, 5} (suma 10), 4) {0, 2, 3, 5} (suma 10), 5) {1, 2, 3, 4} (suma 10). Iš viso 5 aibės.",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "text": "Kiekvienai aibei paskaičiuokite, kiek keturženklių skaičių galima sudaryti (keturženklis skaičius negali prasidėti 0). Pavyzdžiui, aibei {1, 2, 3, 4} yra 4! = 24 skaičiai. Aibei su nuliu, pvz., {0, 1, 2, 7}, pirmoje vietoje gali būti 3 skaitmenys, kitose likę 3! = 6 skaitmenys, iš viso 3 * 3! = 18 skaičių.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pirmiausia raskime visas keturių skirtingų skaitmenų {a, b, c, d} (nuo 0 iki 9) aibes, kurių suma lygi 10."
-        },
-        {
-          "text": "Sąrašas aibių: \n1. {1, 2, 3, 4} (suma 1 + 2 + 3 + 4 = 10)\n2. {0, 1, 2, 7} (suma 0 + 1 + 2 + 7 = 10)\n3. {0, 1, 3, 6} (suma 0 + 1 + 3 + 6 = 10)\n4. {0, 1, 4, 5} (suma 0 + 1 + 4 + 5 = 10)\n5. {0, 2, 3, 5} (suma 0 + 2 + 3 + 5 = 10)\nKitų skirtingų teigiamų skaitmenų aibių su suma 10 nėra (pvz., jei nėra 0, mažiausia suma keturių skirtingų skaitmenų yra 1+2+3+4=10; jei yra 0, ieškome trijų skirtingų nelygių nuliui skaitmenų su suma 10, kas duoda viršuje nurodytus keturis variantus)."
-        },
-        {
-          "text": "Apskaičiuokime galimus sudaryti keturženklius skaičius kiekvienam atvejui:\n- Aibei {1, 2, 3, 4} (nėra nulio): galime sudaryti 4! = 24 skirtingus keturženklius skaičius.\n- Kiekvienai iš keturių aibių, kuriose yra nulis (pvz., {0, 1, 2, 7}): pirmasis skaitmuo negali būti 0 (yra 3 galimybės). Likusiems trims skaitmenims išdėstyti yra 3! = 6 galimybės. Iš viso 3 * 6 = 18 skaičių vienai tokiai aibei."
-        },
-        {
-          "text": "Sudėkime visus variantus: 24 + 18 + 18 + 18 + 18 = 24 + 4 * 18 = 24 + 72 = 96. Palaukite, klausimas prašo atsakymo nurodant tik vieną reikšmę ar kitokį skaičių? Taip, iš viso 96 skaičiai."
-        }
-      ],
-      "answerText": "96",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kombinatorika"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 180
     }
   ],
   "tests": [
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-test-topic",
-      "title": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė testas",
+      "id": "kombinatorika-test-1",
+      "title": "Kombinatorika ir tikimybė testas",
       "scope": "topic",
       "topicIds": [
         "kombinatorika-ir-ilgalaike-tikimybe"
       ],
       "exerciseIds": [
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-001",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-002",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-003",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-004",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-005",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-006",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-007",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-008"
+        "kombinatorika-ir-ilgalaike-tikimybe-ex-001"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-test-challenge",
-      "title": "Kombinatorika ir ilgalaikė santykinio dažnio tikimybė iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "kombinatorika-ir-ilgalaike-tikimybe"
-      ],
-      "exerciseIds": [
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-009",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-010",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-011",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-012",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-013",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-014",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-015",
-        "kombinatorika-ir-ilgalaike-tikimybe-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
   "srsCards": [
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-duomenys",
+      "id": "srs-n-factorial",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
+      "front": "Ką reiškia n!",
+      "back": "Skaičių nuo 1 iki n sandaugą (faktorialą).",
       "conceptIds": [
-        "duomenys"
+        "faktorialas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-imtis",
+      "id": "srs-classical-prob",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-vidurkio-formule",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
+      "front": "Kokia yra klasikinė tikimybės formulė?",
+      "back": "P(A) = m / n (palankios / visos).",
+      "formulaIds": [
         "tikimybes-formule"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kombinatorika-ir-ilgalaike-tikimybe-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

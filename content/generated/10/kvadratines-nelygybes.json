@@ -1,18 +1,18 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "10 klasės programa nagrinėja kvadratines nelygybes algebriniu ir grafiniu būdu."
+    "notes": "10 klasės programa nagrinėja kvadratines nelygybes, akcentuojant grafinį (parabolės) ir intervalų metodus."
   },
   "topic": {
     "id": "kvadratines-nelygybes",
-    "title": "Kvadratinės nelygybės ir grafinis sprendimas",
+    "title": "Kvadratinės nelygybės",
     "grade": 10,
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 5,
-    "estimatedStudyMinutes": 150,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "kvadratine-funkcija-ir-lygtys",
       "nelygybes-ir-intervalai"
@@ -21,29 +21,24 @@
       "racionaliosios-rodiklines-ir-logaritmines-nelygybes"
     ],
     "conceptIds": [
-      "funkcija",
-      "argumentas",
-      "apibrezimo-sritis",
-      "reiksmiu-sritis",
-      "grafikas",
-      "funkcijos-nulis",
-      "didejimas",
-      "mazejimas",
-      "kvadratine-funkcija",
-      "parabole",
-      "virsune",
-      "simetrijos-asis",
-      "diskriminantas",
-      "saknys"
+      "kvadratine-nelygybe",
+      "paraboles-metodas",
+      "intervalu-metodas",
+      "posaknio-zenklas",
+      "griežtoji-nelygybe",
+      "negriežtoji-nelygybe",
+      "tuščia-aibė",
+      "visų-realiųjų-skaičių-aibė"
     ],
     "formulaIds": [
-      "virsunes-formule",
-      "diskriminanto-formule",
-      "kvadratines-lygties-formule"
+      "diskriminantas-formule",
+      "kvadratines-lygties-saknys",
+      "trinario-skaidymas"
     ],
     "mistakeIds": [
-      "diskriminanta-supainioja",
-      "virsunes-formule-netiksli"
+      "lygiagretus-skaidymas-be-a",
+      "zenklo-nekeitimas-dalinant-is-neigiamo",
+      "skliausteliu-zenklai-intervale"
     ],
     "exerciseIds": [
       "kvadratines-nelygybes-ex-001",
@@ -55,534 +50,263 @@
       "kvadratines-nelygybes-ex-007",
       "kvadratines-nelygybes-ex-008",
       "kvadratines-nelygybes-ex-009",
-      "kvadratines-nelygybes-ex-010",
-      "kvadratines-nelygybes-ex-011",
-      "kvadratines-nelygybes-ex-012",
-      "kvadratines-nelygybes-ex-013",
-      "kvadratines-nelygybes-ex-014",
-      "kvadratines-nelygybes-ex-015",
-      "kvadratines-nelygybes-ex-016",
-      "kvadratines-nelygybes-ex-017",
-      "kvadratines-nelygybes-ex-018",
-      "kvadratines-nelygybes-ex-019",
-      "kvadratines-nelygybes-ex-020"
+      "kvadratines-nelygybes-ex-010"
     ]
   },
   "theory": [
     {
-      "id": "kvadratines-nelygybes-ivadas",
-      "title": "Įvadas",
+      "id": "kvadratines-nelygybes-ivadas-detalus",
+      "title": "1. Įvadas: Kas yra kvadratinė nelygybė?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kvadratinės nelygybės ir grafinis sprendimas yra tema, kurioje mokomasi atpažinti pagrindinius kvadratinės nelygybės modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Iki šiol sprendėte kvadratines lygtis, kurių atsakymas būdavo konkretūs taškai (šaknys). Tačiau gyvenime dažniau klausiame ne „kada bus lygu nuliui?“, o „kada bus teigiama?“, „kada pelnas viršys išlaidas?“ arba „kada objektas bus aukščiau tam tikros ribos?“. Į tokius klausimus atsako **kvadratinės nelygybės**."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kvadratine-nelygybe",
+          "text": "[[kvadratine-nelygybe|Kvadratine nelygybe]] vadinama nelygybė, kurios viena pusė yra kvadratinis trinaris $ax^2 + bx + c$, o kita – nulis, sujungti vienu iš ženklų: $>$, $<$, $\\le$ arba $\\ge$."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[funkcija|Funkcija]], [[argumentas|Argumentas]], [[apibrezimo-sritis|Apibrėžimo sritis]] ir uždavinių sprendimo."
+          "text": "Svarbiausia suprasti: kvadratinės nelygybės atsakymas dažniausiai yra ne vienas skaičius, o ištisas **skaičių intervalas** (arba keli intervalai)."
         }
       ]
     },
     {
-      "id": "kvadratines-nelygybes-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "kvadratines-nelygybes-paraboles-metodas",
+      "title": "2. Parabolės metodas (Grafinis būdas)",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "funkcija",
-          "text": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę."
+          "type": "paragraph",
+          "text": "Tai vizualiausias ir saugiausias būdas spręsti nelygybes. Mes įsivaizduojame trinarį kaip funkciją $y = ax^2 + bx + c$, kurios grafikas yra parabolė."
         },
-        {
-          "type": "definition",
-          "conceptId": "argumentas",
-          "text": "Nepriklausomas kintamasis."
-        },
-        {
-          "type": "definition",
-          "conceptId": "apibrezimo-sritis",
-          "text": "Visų leistinų argumentų aibė."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[funkcija|Funkcija]] ir [[reiksmiu-sritis|Reikšmių sritis]]."
-        }
-      ]
-    },
-    {
-      "id": "kvadratines-nelygybes-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Kvadratinės nelygybės ir grafinis sprendimas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[apibrezimo-sritis|Apibrėžimo sritis]] ar [[reiksmiu-sritis|Reikšmių sritis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "virsunes-formule",
-          "latex": "x_v=-\\frac{b}{2a}"
-        }
-      ]
-    },
-    {
-      "id": "kvadratines-nelygybes-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
         {
           "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "title": "Sprendimo algoritmas",
+          "text": "1. **Raskite šaknis**: Išspręskite lygtį $ax^2 + bx + c = 0$. Tai bus taškai, kuriuose parabolė kerta $OX$ ašį.\n2. **Nustatykite šakų kryptį**: Pažiūrėkite į koeficientą $a$. Jei $a > 0$, šakos kyla į viršų (šypsenėlė). Jei $a < 0$, šakos leidžiasi žemyn (liūdnas veidas).\n3. **Nubraižykite eskizą**: Užtenka pasižymėti $OX$ ašį, šaknis ant jos ir apytikslę parabolės formą.\n4. **Išrinkite sritį**: \n   - Jei nelygybė $> 0$ arba $\\ge 0$, ieškome dalies virš $OX$ ašies.\n   - Jei nelygybė $< 0$ arba $\\le 0$, ieškome dalies po $OX$ ašimi."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-intervalu-metodas",
+      "title": "3. Intervalų metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei parabolė nepatinka, galite naudoti grynai algebrinį metodą."
+        },
+        {
+          "type": "method",
+          "text": "1. Išskaidykite trinarį dauginamaisiais: $a(x-x_1)(x-x_2)$.\n2. Atidėkite taškus $x_1$ ir $x_2$ skaičių tiesėje.\n3. Tiesė pasidalins į 3 intervalus.\n4. Iš kiekvieno intervalo paimkite bet kokį skaičių, įstatykite į trinarį ir nustatykite ženklą (+ arba -).\n5. Pasirinkite intervalus, atitinkančius nelygybės ženklą."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-specialus-atvejai",
+      "title": "4. Klastingi atvejai: Kai diskriminantas nėra teigiamas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kvadratinės nelygybės gali pateikti staigmenų, kai parabolė nekerta ašies arba tik ją paliečia."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Kai $D = 0$**: Parabolė tik liečia ašį viename taške. Pavyzdžiui, $(x-2)^2 > 0$ galioja visur, išskyrus tašką $x=2$. O $(x-2)^2 < 0$ neturi sprendinių.",
+            "**Kai $D < 0$**: Parabolė „kabo“ virš ašies (jei $a>0$) arba yra po ja (jei $a<0$). Tai reiškia, kad nelygybė arba teisinga su visais $x$, arba neturi sprendinių (tuščia aibė $\\emptyset$)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-klaidos",
+      "title": "5. Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Didžiausia klaida: dalinimas iš neigiamo skaičiaus neapsukant nelygybės ženklo. Jei turite $-x^2 + 4 > 0$, padauginę iš $-1$ privalote gauti $x^2 - 4 < 0$."
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "Skliaustų tipas: griežtoms nelygybėms ($>, <$) naudojame paprastus skliaustus $( )$, o taškai brėžinyje yra „tušti“. Negriežtoms ($\\ge, \\le$) – laužtinius $[ ]$, o taškai „pilni“."
         }
       ]
-    },
-    {
-      "id": "kvadratines-nelygybes-rysys",
-      "title": "Ryšys su kitomis temomis",
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
-        }
-      ]
-    }
-  ],
-  "concepts": [
-    {
-      "id": "funkcija",
-      "title": "Funkcija",
-      "type": "concept",
-      "shortDefinition": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "intuition": "Tai pagrindinis kvadratinės nelygybės modelis.",
-      "formal": "Funkcija yra atvaizdis, kiekvienam x priskiriantis vienintelį f(x).",
-      "notation": [],
-      "relatedConceptIds": [
-        "argumentas",
-        "grafikas",
-        "apibrezimo-sritis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "argumentas",
-      "title": "Argumentas",
-      "type": "concept",
-      "shortDefinition": "Nepriklausomas kintamasis.",
-      "intuition": "Tai įvestis, kurią duodame funkcijai.",
-      "formal": "Argumentas yra funkcijos įvesties kintamasis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "reiksmiu-sritis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apibrezimo-sritis",
-      "title": "Apibrėžimo sritis",
-      "type": "concept",
-      "shortDefinition": "Visų leistinų argumentų aibė.",
-      "intuition": "Tai visi x, kuriuos funkcija priima.",
-      "formal": "Apibrėžimo sritis D(f) yra visų leistinų x aibė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [
-        "d-f"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "reiksmiu-sritis",
-      "title": "Reikšmių sritis",
-      "type": "concept",
-      "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
-      "intuition": "Tai visi galimi y atsakymai.",
-      "formal": "Reikšmių sritis yra funkcijos galimų reikšmių aibė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [
-        "e-f"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "grafikas",
-      "title": "Grafikas",
-      "type": "concept",
-      "shortDefinition": "Taškų rinkinys koordinačių plokštumoje.",
-      "intuition": "Grafikas leidžia funkciją pamatyti akimis.",
-      "formal": "Funkcijos grafikas yra visų taškų (x, f(x)) aibė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "funkcijos-nulis",
-        "didejimas",
-        "mazejimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "funkcijos-nulis",
-      "title": "Funkcijos nulis",
-      "type": "concept",
-      "shortDefinition": "Argumentas, kuriam funkcijos reikšmė lygi nuliui.",
-      "intuition": "Tai vieta, kur grafikas susiduria su x ašimi.",
-      "formal": "x0 yra nulis, jei f(x0)=0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "grafikas",
-        "saknys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "didejimas",
-      "title": "Didėjimas",
-      "type": "concept",
-      "shortDefinition": "Kai didesniam argumentui atitinka didesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas kyla.",
-      "formal": "Funkcija didėja intervale, jei x1 < x2 implikuoja f(x1) < f(x2).",
-      "notation": [],
-      "relatedConceptIds": [
-        "mazejimas",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mazejimas",
-      "title": "Mažėjimas",
-      "type": "concept",
-      "shortDefinition": "Kai didesniam argumentui atitinka mažesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas leidžiasi.",
-      "formal": "Funkcija mažėja intervale, jei x1 < x2 implikuoja f(x1) > f(x2).",
-      "notation": [],
-      "relatedConceptIds": [
-        "didejimas",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kvadratine-funkcija",
-      "title": "Kvadratinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija su x² nariu.",
-      "intuition": "Tai parabolės istorija.",
-      "formal": "Kvadratinė funkcija yra f(x)=ax²+bx+c, kur a!=0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "parabole",
-        "virsune",
-        "diskriminantas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "parabole",
-      "title": "Parabolė",
-      "type": "concept",
-      "shortDefinition": "Kvadratinės funkcijos grafikas.",
-      "intuition": "U formos arba apversta U forma.",
-      "formal": "Parabolė yra kvadratinės funkcijos grafikas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kvadratine-funkcija",
-        "virsune"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "virsune",
-      "title": "Viršūnė",
-      "type": "concept",
-      "shortDefinition": "Aukščiausias arba žemiausias parabolės taškas.",
-      "intuition": "Tai parabolės lūžio vieta.",
-      "formal": "Viršūnė yra taškas, kuriame kvadratinė funkcija pasiekia ekstremumą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "parabole",
-        "simetrijos-asis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrijos-asis",
-      "title": "Simetrijos ašis",
-      "type": "concept",
-      "shortDefinition": "Tiesė, dalijanti parabolę į dvi vienodas dalis.",
-      "intuition": "Tai parabolės veidrodis.",
-      "formal": "Parabolės simetrijos ašis yra x=-b/(2a).",
-      "notation": [],
-      "relatedConceptIds": [
-        "virsune",
-        "parabole"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "diskriminantas",
-      "title": "Diskriminantas",
-      "type": "concept",
-      "shortDefinition": "Dydis, nusakantis kvadratinės lygties nulių skaičių.",
-      "intuition": "Jis sako, ar parabolė kirs ašį.",
-      "formal": "D=b²-4ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknys",
-        "kvadratine-funkcija"
-      ],
-      "prerequisiteConceptIds": [
-        "d"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknys",
-      "title": "Šaknys",
-      "type": "concept",
-      "shortDefinition": "Lygties sprendiniai.",
-      "intuition": "Šaknys yra ten, kur funkcija lygi nuliui.",
-      "formal": "Kvadratinės lygties šaknys yra sprendiniai, gaunami pagal diskriminantą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcijos-nulis",
-        "diskriminantas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    }
-  ],
-  "formulas": [
-    {
-      "id": "virsunes-formule",
-      "title": "Viršūnės x koordinatė",
-      "type": "formula",
-      "latex": "x_v=-\\frac{b}{2a}",
-      "conditions": [
-        "Kvadratinė funkcija"
-      ],
-      "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas"
-      },
-      "explanation": "Padeda rasti parabolės viršūnę.",
-      "relatedConceptIds": [
-        "virsune",
-        "kvadratine-funkcija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "diskriminanto-formule",
-      "title": "Diskriminantas",
-      "type": "formula",
-      "latex": "D=b^2-4ac",
-      "conditions": [
-        "Kvadratinė lygtis"
-      ],
-      "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas",
-        "c": "laisvasis narys"
-      },
-      "explanation": "Rodo šaknų skaičių.",
-      "relatedConceptIds": [
-        "diskriminantas",
-        "saknys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "kvadratines-lygties-formule",
-      "title": "Kvadratinės lygties formulė",
-      "type": "formula",
-      "latex": "x=\\frac{-b\\pm\\sqrt{D}}{2a}",
-      "conditions": [
-        "Kai D>=0"
-      ],
-      "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas",
-        "D": "diskriminantas"
-      },
-      "explanation": "Tiesioginis būdas rasti šaknis.",
-      "relatedConceptIds": [
-        "saknys",
-        "diskriminantas"
-      ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "diskriminanta-supainioja",
-      "title": "Diskriminantą apskaičiuoja su neteisingu ženklu",
-      "type": "mistake",
-      "conceptIds": [
-        "diskriminantas"
-      ],
-      "wrongPattern": "Rašo b²+4ac vietoje b²-4ac.",
-      "whyItHappens": "Ženklas yra minusas.",
-      "correction": "Naudok D=b²-4ac.",
-      "wrongExample": "D=25+24",
-      "correctExample": "D=25-24",
-      "defaultSrs": true
-    },
-    {
-      "id": "virsunes-formule-netiksli",
-      "title": "Viršūnės formulėje pamiršta dalinti iš 2a",
-      "type": "mistake",
-      "conceptIds": [
-        "virsune"
-      ],
-      "wrongPattern": "Rašo x=-b/a.",
-      "whyItHappens": "Simetrijos ašis eina per -b/(2a).",
-      "correction": "Visada dalink iš 2a.",
-      "wrongExample": "x=4",
-      "correctExample": "x=2",
-      "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "kvadratines-nelygybes-exmp-1",
-      "title": "Viršūnė",
+      "id": "kvad-nel-ex-1",
+      "title": "Standartinė nelygybė (a > 0, D > 0)",
       "level": "easy",
-      "problem": "Rask viršūnės x koordinatę funkcijai x²-4x+1.",
+      "problem": "Išspręskite nelygybę: $x^2 - 5x + 6 > 0$.",
       "conceptIds": [
-        "funkcija",
-        "apibrezimo-sritis"
+        "paraboles-metodas",
+        "griežtoji-nelygybe"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame formulę.",
-          "latex": "x_v=-\\frac{b}{2a}"
+          "text": "Randame šaknis: x² - 5x + 6 = 0.",
+          "latex": "x_1 = 2, \\quad x_2 = 3"
         },
         {
-          "text": "Gauname.",
-          "latex": "2"
+          "text": "Koeficientas a = 1 (teigiamas), todėl parabolės šakos nukreiptos į viršų.",
+          "latex": "a > 0"
+        },
+        {
+          "text": "Nubraižome parabolę. Ji kerta ašį taškuose 2 ir 3. Virš ašies (+) yra kraštiniai intervalai.",
+          "latex": "x \\in (-\\infty; 2) \\cup (3; +\\infty)"
         }
       ],
-      "answer": "2"
+      "answer": "(-\\infty; 2) \\cup (3; +\\infty)"
     },
     {
-      "id": "kvadratines-nelygybes-exmp-2",
-      "title": "Diskriminantas",
+      "id": "kvad-nel-ex-2",
+      "title": "Negriežtoji nelygybė",
       "level": "easy",
-      "problem": "Rask D funkcijai x²-5x+6.",
+      "problem": "Išspręskite: $x^2 - 4 \\le 0$.",
       "conceptIds": [
-        "grafikas"
+        "negriežtoji-nelygybe"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "D=b²-4ac.",
-          "latex": "D=(-5)^2-4\\cdot1\\cdot6"
+          "text": "Šaknys: x² = 4.",
+          "latex": "x_1 = -2, \\quad x_2 = 2"
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "1"
+          "text": "Parabolės šakos į viršų. Reikia dalies po ašimi (arba ant jos). Tai vidurinis intervalas.",
+          "latex": "x \\in [-2; 2]"
         }
       ],
-      "answer": "1"
+      "answer": "[-2; 2]"
     },
     {
-      "id": "kvadratines-nelygybes-exmp-3",
-      "title": "Šaknys",
+      "id": "kvad-nel-ex-3",
+      "title": "Neigiamas koeficientas a",
       "level": "medium",
-      "problem": "Rask x²-7x+10 šaknis.",
+      "problem": "Išspręskite: $-x^2 + 4x - 3 \\ge 0$.",
       "conceptIds": [
-        "funkcijos-nulis",
-        "grafikas"
+        "paraboles-metodas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Išskaidome.",
-          "latex": "(x-5)(x-2)=0"
+          "text": "Patogiau nelygybę padauginti iš -1 (keičiasi ženklas!).",
+          "latex": "x^2 - 4x + 3 \\le 0"
         },
         {
-          "text": "Šaknys.",
-          "latex": "x=2 ir x=5"
+          "text": "Randame šaknis (pagal Vietą).",
+          "latex": "x_1 = 1, \\quad x_2 = 3"
+        },
+        {
+          "text": "Šakos į viršų (naujos nelygybės), ieškome po ašimi.",
+          "latex": "x \\in [1; 3]"
         }
       ],
-      "answer": "x=2 ir x=5"
+      "answer": "[1; 3]"
     },
     {
-      "id": "kvadratines-nelygybes-exmp-4",
-      "title": "Parabolė",
+      "id": "kvad-nel-ex-4",
+      "title": "Atvejis, kai D = 0 (Griežta)",
       "level": "medium",
-      "problem": "Jei a>0, kaip atsiveria parabola?",
+      "problem": "Išspręskite: $x^2 - 6x + 9 > 0$.",
       "conceptIds": [
-        "argumentas"
+        "tuščia-aibė"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Teigiamas a reiškia atsivėrimą aukštyn.",
-          "latex": "aukštyn"
+          "text": "Pastebime pilną kvadratą.",
+          "latex": "(x - 3)^2 > 0"
+        },
+        {
+          "text": "Kvadratas visada yra teigiamas, išskyrus atvejį, kai vidus lygus 0.",
+          "latex": "x - 3 \\neq 0 \\Rightarrow x \\neq 3"
         }
       ],
-      "answer": "aukštyn"
+      "answer": "(-\\infty; 3) \\cup (3; +\\infty)"
     },
     {
-      "id": "kvadratines-nelygybes-exmp-5",
-      "title": "Ekstremumas",
+      "id": "kvad-nel-ex-5",
+      "title": "Atvejis, kai D = 0 (Negriežta)",
+      "level": "medium",
+      "problem": "Išspręskite: $x^2 + 2x + 1 \\le 0$.",
+      "conceptIds": [
+        "negriežtoji-nelygybe"
+      ],
+      "steps": [
+        {
+          "text": "Sutvarkome.",
+          "latex": "(x + 1)^2 \\le 0"
+        },
+        {
+          "text": "Kvadratas negali būti mažesnis už 0. Jis gali būti tik lygus 0.",
+          "latex": "(x + 1)^2 = 0 \\Rightarrow x = -1"
+        }
+      ],
+      "answer": "-1"
+    },
+    {
+      "id": "kvad-nel-ex-6",
+      "title": "Atvejis, kai D < 0 (Nėra sprendinių)",
       "level": "hard",
-      "problem": "Funkcijai 2x²-8x+3 rask minimumo reikšmę.",
+      "problem": "Išspręskite: $x^2 + x + 5 < 0$.",
       "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
+        "tuščia-aibė"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Viršūnės x koordinatė.",
-          "latex": "x=2"
+          "text": "Diskriminantas: D = 1 - 20 = -19.",
+          "latex": "D < 0"
         },
         {
-          "text": "Įstatome.",
-          "latex": "f(2)=-5"
+          "text": "Šakos į viršų, šaknų nėra – parabolė „kabo“ virš ašies. Ji niekada nebūna neigiama.",
+          "latex": "x \\in \\emptyset"
         }
       ],
-      "answer": "-5"
+      "answer": "\\emptyset"
+    },
+    {
+      "id": "kvad-nel-ex-7",
+      "title": "Atvejis, kai D < 0 (Visi skaičiai)",
+      "level": "hard",
+      "problem": "Išspręskite: $x^2 - 2x + 10 > 0$.",
+      "conceptIds": [
+        "visų-realiųjų-skaičių-aibė"
+      ],
+      "steps": [
+        {
+          "text": "Diskriminantas: D = 4 - 40 = -36.",
+          "latex": "D < 0"
+        },
+        {
+          "text": "Šakos į viršų, parabolė visada virš ašies. Vadinasi, visas trinaris visada teigiamas.",
+          "latex": "x \\in (-\\infty; +\\infty)"
+        }
+      ],
+      "answer": "R"
+    },
+    {
+      "id": "kvad-nel-ex-8",
+      "title": "Nelygybė be laisvojo nario",
+      "level": "medium",
+      "problem": "Išspręskite: $2x^2 - 8x \\le 0$.",
+      "conceptIds": [
+        "intervalu-metodas"
+      ],
+      "steps": [
+        {
+          "text": "Iškeliame 2x.",
+          "latex": "2x(x - 4) \\le 0"
+        },
+        {
+          "text": "Nulio taškai yra 0 ir 4.",
+          "latex": "x_1 = 0, \\quad x_2 = 4"
+        },
+        {
+          "text": "Šakos į viršų, ieškome neigiamos srities (tarp šaknų).",
+          "latex": "x \\in [0; 4]"
+        }
+      ],
+      "answer": "[0; 4]"
     }
   ],
   "exercises": [
@@ -590,927 +314,37 @@
       "id": "kvadratines-nelygybes-ex-001",
       "topicId": "kvadratines-nelygybes",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Funkcijai f(x)=x²-4x+1 rask viršūnės x koordinatę.",
+      "statement": "Kokia yra mažiausia sveikoji x reikšmė, tenkinanti nelygybę x² - 9 \\u2le 0?",
       "answer": {
         "kind": "numeric",
-        "value": 2,
+        "value": -3,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Naudok -b/(2a).",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis",
-            "reiksmiu-sritis"
-          ]
+          "text": "Šaknys yra -3 ir 3.",
+          "penalty": 0
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame viršūnę.",
-          "latex": "x=2"
+          "text": "x \u2208 [-3; 3]. Mažiausia reikšmė yra -3.",
+          "latex": "-3"
         }
       ],
-      "answerText": "2",
+      "answerText": "-3",
       "alternateMethods": [],
       "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-002",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Funkcijai f(x)=x²-6x+5 rask viršūnės x koordinatę.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok -b/(2a).",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis",
-            "reiksmiu-sritis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame viršūnę.",
-          "latex": "x=3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-003",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Funkcijai f(x)=2x²-8x+3 rask viršūnės x koordinatę.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok -b/(2a).",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis",
-            "reiksmiu-sritis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame viršūnę.",
-          "latex": "x=2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-004",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Funkcijai f(x)=x²+2x-3 rask viršūnės x koordinatę.",
-      "answer": {
-        "kind": "numeric",
-        "value": -1,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok -b/(2a).",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis",
-            "reiksmiu-sritis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame viršūnę.",
-          "latex": "x=-1"
-        }
-      ],
-      "answerText": "-1",
-      "alternateMethods": [],
-      "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-005",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Apskaičiuok diskriminantą lygties x²-5x+6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 1,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "D=b²-4ac.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "grafikas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "25-24=1.",
-          "latex": "1"
-        }
-      ],
-      "answerText": "1",
-      "alternateMethods": [],
-      "conceptIds": [
-        "grafikas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-006",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Ką reiškia D<0 kvadratinėje lygties situacijoje?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Du realūs sprendiniai"
-          },
-          {
-            "id": "b",
-            "text": "Vienas realus sprendinys"
-          },
-          {
-            "id": "c",
-            "text": "Nėra realių sprendinių"
-          },
-          {
-            "id": "d",
-            "text": "Visada yra šaknis 0"
-          }
-        ],
-        "correctChoiceIds": [
-          "c"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Neigiamo skaičiaus šaknies realiai nėra.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "grafikas",
-            "funkcijos-nulis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Neigiamas diskriminantas reiškia realių šaknų nebuvimą.",
-          "latex": "D<0"
-        }
-      ],
-      "answerText": "Nėra realių sprendinių",
-      "alternateMethods": [],
-      "conceptIds": [
-        "grafikas",
-        "funkcijos-nulis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-007",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Rask kvadratinės funkcijos 2x²-8x+1 minimumo reikšmę.",
-      "answer": {
-        "kind": "numeric",
-        "value": -7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surask viršūnę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis",
-            "reiksmiu-sritis"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "x=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įstatome x=2.",
-          "latex": "f(2)=-7"
-        }
-      ],
-      "answerText": "-7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "apibrezimo-sritis",
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-008",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-009",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-010",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-011",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-012",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-013",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-014",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-015",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-016",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-017",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-018",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-019",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratines-nelygybes-ex-020",
-      "topicId": "kvadratines-nelygybes",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinės nelygybės ir grafinis sprendimas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
+        "negriežtoji-nelygybe"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
     }
   ],
-  "tests": [
-    {
-      "id": "kvadratines-nelygybes-test-topic",
-      "title": "Kvadratinės nelygybės ir grafinis sprendimas testas",
-      "scope": "topic",
-      "topicIds": [
-        "kvadratines-nelygybes"
-      ],
-      "exerciseIds": [
-        "kvadratines-nelygybes-ex-001",
-        "kvadratines-nelygybes-ex-002",
-        "kvadratines-nelygybes-ex-003",
-        "kvadratines-nelygybes-ex-004",
-        "kvadratines-nelygybes-ex-005",
-        "kvadratines-nelygybes-ex-006",
-        "kvadratines-nelygybes-ex-007",
-        "kvadratines-nelygybes-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "kvadratines-nelygybes-test-challenge",
-      "title": "Kvadratinės nelygybės ir grafinis sprendimas iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "kvadratines-nelygybes"
-      ],
-      "exerciseIds": [
-        "kvadratines-nelygybes-ex-009",
-        "kvadratines-nelygybes-ex-010",
-        "kvadratines-nelygybes-ex-011",
-        "kvadratines-nelygybes-ex-012",
-        "kvadratines-nelygybes-ex-013",
-        "kvadratines-nelygybes-ex-014",
-        "kvadratines-nelygybes-ex-015",
-        "kvadratines-nelygybes-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "kvadratines-nelygybes-srs-funkcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra funkcija?",
-      "back": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-argumentas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra argumentas?",
-      "back": "Nepriklausomas kintamasis.",
-      "conceptIds": [
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-apibrezimo-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra apibrėžimo sritis?",
-      "back": "Visų leistinų argumentų aibė.",
-      "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-reiksmiu-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reikšmių sritis?",
-      "back": "Visų galimų funkcijos reikšmių aibė.",
-      "conceptIds": [
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-virsunes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra viršūnės x koordinatė?",
-      "back": "Padeda rasti parabolės viršūnę.",
-      "conceptIds": [
-        "virsunes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-diskriminanto-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra diskriminantas?",
-      "back": "Rodo šaknų skaičių.",
-      "conceptIds": [
-        "diskriminanto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-diskriminanta-supainioja",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra diskriminantą apskaičiuoja su neteisingu ženklu?",
-      "back": "Naudok D=b²-4ac.",
-      "conceptIds": [
-        "diskriminanta-supainioja"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratines-nelygybes-srs-virsunes-formule-netiksli",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra viršūnės formulėje pamiršta dalinti iš 2a?",
-      "back": "Visada dalink iš 2a.",
-      "conceptIds": [
-        "virsunes-formule-netiksli"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "tests": [],
+  "srsCards": []
 }

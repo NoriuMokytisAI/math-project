@@ -57,57 +57,115 @@
   "theory": [
     {
       "id": "olimpiada-05-theory-intro",
-      "title": "Kas yra olimpiadinė strategija?",
+      "title": "Kas yra olimpiadinė strategija? Mąstymo menas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olimpiadiniai uždaviniai dažnai atrodo sudėtingi ne dėl didelių skaičių, o dėl to, kad jiems išspręsti reikia ne tik formulių, bet ir specialių mąstymo metodų – **strategijų**."
+          "text": "Olimpiadinė matematika skiriasi nuo mokyklinės tuo, kad čia nėra vieno „teisingo“ algoritmo, kurį išmokus galima išspręsti visus uždavinius. Kiekvienas naujas galvosūkis – tai maža tvirtovė, kurią reikia paimti šturmu. O tam mums reikia ginklų arsenalo, kurį matematikai vadina **strategijomis**."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje susipažinsime su pagrindiniais įrankiais, kurie padeda rasti sprendimą net tada, kai iš pradžių neaišku, nuo ko pradėti."
+          "text": "Šioje temoje mes mokysimės ne skaičiuoti, o mąstyti. Sužinosime, kaip pamatyti tai, kas nematoma (invariantus), kaip suvaldyti chaosą (Dirichlė principas) ir kaip rasti tiesą ten, kur visi meluoja (logika). Sėkmingas olimpiadininkas yra tas, kuris turi kantrybės išbandyti kelis metodus ir drąsos ieškoti neįprastų sprendimų."
         }
       ]
     },
     {
       "id": "olimpiada-05-theory-parity",
-      "title": "Paritetas: Lyginumas kaip įrankis",
+      "title": "1. Paritetas: Paprasčiausias invariantas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičiaus lyginumas (ar jis dalijasi iš 2) vadinamas **paritetu**. Svarbu žinoti, kaip paritetas kinta atliekant veiksmus:"
+          "text": "Paritetas yra skaičiaus savybė būti lyginiam arba nelyginiam. Nors tai atrodo paprasta, olimpiadose paritetas yra galingas įrodymo įrankis. Pagrindinė idėja: jei pradinė situacija turi vienokį paritetą, o atliekami veiksmai jo nekeičia, tai galutinė situacija su kitokiu paritetu yra nepasiekiama."
         },
         {
-          "type": "list",
-          "text": "- Lyginis + Lyginis = Lyginis\n- Nelyginis + Nelyginis = Lyginis\n- Lyginis + Nelyginis = Nelyginis\n- Nelyginis × Nelyginis = Nelyginis\n- Lyginis × bet koks = Lyginis"
+          "type": "method",
+          "text": "**Pariteto taisyklės**:\n- Sudėtis/Atimtis: $L \\pm L = L, N \\pm N = L, L \\pm N = N$.\n- Daugyba: $L \\times \\text{bet kas} = L, N \\times N = N$."
         },
         {
-          "type": "note",
-          "text": "Daugelis uždavinių apie „ar galima“ išsprendžiami parodant, kad pradinės ir galutinės būsenos paritetai nesutampa."
+          "type": "paragraph",
+          "text": "Pavyzdžiui, jei ant lentos užrašyti skaičiai 1, 2, 3, 4, 5, jų suma yra 15 (nelyginė). Jei mes nutrinsime du skaičius ir užrašysime jų skirtumą, bendros sumos paritetas nepasikeis. Vadinasi, mes niekada negalėsime pasiekti būsenos, kurioje likęs paskutinis skaičius būtų lyginis (pvz., 0)."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-theory-invariant",
+      "title": "2. Invariantas: Stabilumas pokyčių sūkuryje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Invariantas – tai dydis arba savybė, kuri nekinta (išlieka pastovi) atliekant tam tikras operacijas. Jei paritetas yra populiariausias invariantas, tai egzistuoja ir kiti: skaičių suma, liekana dalijant iš 3, spalva (spalvinimo metoduose) ir t. t."
+        },
+        {
+          "type": "method",
+          "text": "**Strategija**: Suraskite dydį, kuris nesikeičia atliekant uždavinyje nurodytus veiksmus. Tada palyginkite pradinį invariantą su norimu gauti rezultatu. Jei jie skiriasi – atsakymas „neįmanoma“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Invariantas padeda „nukirsti“ neteisingus kelius. Vietoj to, kad bandytumėte milijonus kombinacijų, jūs vienu sakiniu įrodote, kodėl nė viena iš jų netiks."
         }
       ]
     },
     {
       "id": "olimpiada-05-theory-dirichlet",
-      "title": "Dirichlė principas (Balandžių narveliai)",
+      "title": "3. Dirichlė principas: Balandžių narveliai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tai vienas paprasčiausių, bet galingiausių metodų. Jis sako: „Jei turime $n$ narvelių ir daugiau nei $n$ balandžių, tai bent viename narvelyje turės nutūpti bent du balandžiai“."
+          "text": "Tai principas, kurį intuityviai supranta kiekvienas: jei turime 5 balandžius ir tik 4 narvelius, bent viename narvelyje turės būti bent du balandžiai. Olimpiadose balandžiai ir narveliai būna užmaskuoti."
         },
         {
           "type": "example",
-          "text": "Pavyzdžiui, jei turite 3 kojines, o spalvų yra tik 2 (juoda ir balta), tai bent dvi kojinės tikrai bus vienodos spalvos."
+          "text": "Uždavinys: Klasėje yra 13 vaikų. Įrodykite, kad bent du gimė tą patį mėnesį.\nAnalizė: Vaikai yra „balandžiai“ (13), o mėnesiai – „narveliai“ (12). Kadangi balandžių daugiau nei narvelių, bent du vaikai patenka į tą patį mėnesį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunkiausia užduotis – nuspręsti, kas yra „balandžiai“, o kas – „narveliai“. Kartais narveliais tampa liekanos, spalvos arba geometrinės sritys."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-theory-coloring",
+      "title": "4. Spalvinimo metodas: Geometrinė logika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei uždavinys susijęs su lentelės (pvz., šachmatų) uždengimu figūromis (pvz., domino), dažnai padeda lentelės nudažymas keliomis spalvomis. Klasikinis spalvinimas – šachmatinis (juoda ir balta)."
+        },
+        {
+          "type": "method",
+          "text": "**Pagrindinė mintis**: Kiekviena figūra (domino kauliukas) uždengia tam tikrą spalvų derinį (pvz., 1 juodą ir 1 baltą langelį). Jei visoje lentelėje juodų ir baltų langelių skaičius nesutampa, tai lentelės uždengti domino kauliukais nepavyks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sudėtingesniuose uždaviniuose naudojamos 3 ar daugiau spalvų, spalvinama įstrižainėmis arba blokais."
         }
       ]
     },
     {
       "id": "olimpiada-05-theory-backwards",
-      "title": "Ėjimas nuo galo",
+      "title": "5. Ėjimas nuo galo: Kelionė laiku atgal",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kai žinome operacijų seką ir galutinį rezultatą, bet nežinome pradinio skaičiaus, patogiausia spręsti einant nuo pabaigos į pradžią ir atliekant atvirkštinius veiksmus."
+          "text": "Daugelis procesų matematikoje yra grįžtami. Jei žinome, kas atsitiko pabaigoje, galime „atsukti filmą“ ir pamatyti, kas buvo pradžioje. Tai ypač naudinga spręstant žaidimų strategijas arba uždavinius apie skaičių keitimus."
+        },
+        {
+          "type": "method",
+          "text": "**Taisyklė**: Kiekvieną veiksmą pakeiskite jam priešingu (sudėtį – atimtimi, daugybą – dalyba) ir eikite nuo paskutinio žinomo rezultato iki pradinio."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-theory-logic",
+      "title": "6. Logika: Riteriai, melagiai ir prieštaravimai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Loginiai uždaviniai moko mus daryti prielaidas. Jei prielaida veda prie nesąmonės (prieštaravimo), vadinasi, prielaida buvo klaidinga. Tai vadinama **įrodymu prieštaraujant**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, jei įtariame, kad Jonas sako tiesą, bet iš to išplaukia, kad jis tuo pačiu metu meluoja – vadinasi, mūsų pradinė mintis apie Jono sąžiningumą buvo neteisinga."
         }
       ]
     }
@@ -178,49 +236,59 @@
       "relatedConceptIds": []
     }
   ],
-  "formulas": [],
+  "formulas": [
+    {
+      "id": "f-sum-1-n",
+      "title": "Pirmųjų n skaičių suma",
+      "formula": "S = \\frac{n(n+1)}{2}",
+      "description": "Labai naudinga skaičiuojant pradinį paritetą uždaviniuose apie skaičių trynimą."
+    }
+  ],
   "mistakes": [
     {
       "id": "trap-checking-examples-only",
       "title": "Tikrinami tik keli pavyzdžiai",
-      "wrongPattern": "Mokinys patikrina 2-3 pavyzdžius ir daro išvadą, kad teiginys teisingas.",
-      "whyItHappens": "Pavyzdžiai sukuria klaidingą užtikrintumo jausmą.",
-      "correction": "Olimpiadose reikia bendro paaiškinimo (įrodymo), kodėl tai galioja visiems atvejams.",
-      "defaultSrs": true
+      "description": "Mokinys patikrina 2-3 pavyzdžius ir daro išvadą, kad teiginys teisingas.",
+      "fix": "Olimpiadose reikia bendro paaiškinimo (įrodymo), kodėl tai galioja visiems atvejams. Pavyzdžiai gali parodyti kryptį, bet jie nėra įrodymas."
     },
     {
       "id": "trap-guessing-patterns",
       "title": "Spėjimas pagal dėsningumą",
-      "wrongPattern": "Mokinys pastebi dėsningumą pirmose keliose būsenose ir spėja atsakymą nepagrįsdamas.",
-      "whyItHappens": "Nenoras gilintis į mechanizmą, kodėl dėsningumas veikia.",
-      "correction": "Būtina rasti invariantą arba loginį ryšį, kuris garantuoja dėsningumą.",
-      "defaultSrs": true
+      "description": "Mokinys pastebi dėsningumą pirmose keliose būsenose ir spėja atsakymą nepagrįsdamas.",
+      "fix": "Būtina rasti invariantą arba loginį ryšį, kuris garantuoja dėsningumą. Paklauskite savęs: „Ar tai veiks, jei pradiniai skaičiai bus kitokie?“"
+    },
+    {
+      "id": "m-backwards-order",
+      "title": "Neteisinga tvarka einant nuo galo",
+      "description": "Mokinys bando eiti nuo galo, bet atlieka veiksmus ne ta tvarka, kuria jie buvo atliekami.",
+      "fix": "Užsirašykite veiksmų grandinę ir griežtai sekite ją atgal: paskutinis veiksmas tampa pirmuoju atvirkštiniu veiksmu."
     }
   ],
   "workedExamples": [
     {
-      "id": "ex-worked-backwards-1",
-      "title": "Paslaptingas skaičius",
-      "level": "easy",
-      "problem": "Sugalvojau skaičių, prie jo pridėjau 10, tada padauginau iš 2 ir gavau 40. Kokį skaičių sugalvojau?",
-      "conceptIds": [
-        "olimpiada-05-concept-backwards"
-      ],
-      "steps": [
-        {
-          "text": "Pradedame nuo galo: gautas rezultatas yra 40.",
-          "latex": "40"
-        },
-        {
-          "text": "Paskutinis veiksmas buvo daugyba iš 2. Atliekame dalybą iš 2.",
-          "latex": "40 : 2 = 20"
-        },
-        {
-          "text": "Prieš tai buvo pridėta 10. Atliekame atimtį.",
-          "latex": "20 - 10 = 10"
-        }
-      ],
-      "answer": "Sugalvotas skaičius yra 10."
+      "title": "Paritetas ir monetos",
+      "statement": "Ant stalo guli 9 monetos. 5 iš jų guli herbu į viršų, o 4 - skaičiumi. Ar galima, apverčiant lygiai po dvi bet kurias monetas vienu metu, pasiekti, kad visos monetos gulėtų herbu į viršų?",
+      "solution": "Analizuojame **invariantą** - skaičiumi į viršų gulinčių monetų paritetą.\n1. Pradinė būsena: 4 monetos guli skaičiumi į viršų. Tai **lyginis** skaičius.\n2. Galimi veiksmai apverčiant 2 monetas:\n   - Apverčiame 2 herbus $\\to$ jie tampa 2 skaičiais. Skaičių kiekis padidėja 2.\n   - Apverčiame 2 skaičius $\\to$ jie tampa 2 herbais. Skaičių kiekis sumažėja 2.\n   - Apverčiame 1 herbą ir 1 skaičių $\\to$ herbas tampa skaičiumi, o skaičius - herbu. Skaičių kiekis nesikeičia.\n3. Išvada: Visi įmanomi veiksmai skaičių kiekį pakeičia lyginiu skaičiumi (0, +2 arba -2). Vadinasi, skaičių kiekio **paritetas nesikeičia**.\n4. Norimas tikslas: 9 herbai, t. y. 0 skaičių. 0 yra lyginis skaičius.\n5. Kadangi pradinė būsena (4) ir tikslo būsena (0) abi yra lyginės, tai atrodo įmanoma. Tačiau, jei būtų buvę 5 skaičiai (nelyginis), pasiekti 0 (lyginį) būtų neįmanoma.\nŠiuo atveju atsakymas yra TAIP, tai įmanoma.\n\n**Atsakymas:** Taip."
+    },
+    {
+      "title": "Dirichlė principas ir skaičiai",
+      "statement": "Pasirinkite bet kuriuos 6 skaičius iš aibės {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. Įrodykite, kad tarp jų tikrai bus du skaičiai, kurių suma lygi 11.",
+      "solution": "Sudarome „narvelius“ iš skaičių porų, kurių suma yra 11:\n- {1, 10}\n- {2, 9}\n- {3, 8}\n- {4, 7}\n- {5, 6}\n\nIš viso turime **5 narvelius**. Mes renkamės **6 skaičius** („balandžius“).\nKadangi balandžių (6) yra daugiau nei narvelių (5), pagal Dirichlė principą bent du skaičiai pateks į tą patį narvelį. O kadangi kiekvienas narvelis sudarytas iš skaičių poros, kurios suma lygi 11, tai pasirinktoje grupėje tikrai bus tokia pora.\n\n**Atsakymas:** Įrodyta."
+    },
+    {
+      "title": "Ėjimas nuo galo su skaičiais",
+      "statement": "Marius sugalvojo skaičių. Jį padvigubino, tada pridėjo 10, gautą rezultatą padalino iš 4 ir galiausiai atėmė 2. Marius gavo skaičių 5. Kokį skaičių jis sugalvojo?",
+      "solution": "Taikome ėjimo nuo galo strategiją, keisdami veiksmus priešingais:\n1. Galutinis rezultatas: **5**\n2. Atvirkštinis veiksmas atimčiai 2: $5 + 2 = 7$\n3. Atvirkštinis veiksmas dalybai iš 4: $7 \\times 4 = 28$\n4. Atvirkštinis veiksmas sudėčiai 10: $28 - 10 = 18$\n5. Atvirkštinis veiksmas daugybai iš 2: $18 : 2 = 9$\n\nPatikrinimas: $9 \\times 2 = 18 \\to 18 + 10 = 28 \\to 28 : 4 = 7 \\to 7 - 2 = 5$. Tinka.\n\n**Atsakymas:** 9."
+    },
+    {
+      "title": "Spalvinimas ir domino",
+      "statement": "Iš $8 \\times 8$ lentelės (64 langeliai) išpjauti du priešingi kampiniai langeliai. Ar galima likusią 62 langelių dalį uždengti $1 \\times 2$ domino kauliukais?",
+      "solution": "Naudojame šachmatinio spalvinimo invariantą.\n1. Įprastoje $8 \\times 8$ lentelėje yra 32 balti ir 32 juodi langeliai.\n2. Priešingi kampiniai langeliai visada yra **tos pačios spalvos** (pvz., abu balti).\n3. Išpjovus du baltus langelius, lieka: 30 baltų ir 32 juodi langeliai.\n4. Kiekvienas domino kauliukas visada uždengia **vieną baltą ir vieną juodą** langelį.\n5. Kad uždengtume visą plotą, mums reikėtų 31 domino kauliuko, kurie iš viso uždengtų 31 baltą ir 31 juodą langelį.\n6. Kadangi mūsų lentelėje baltų ir juodų langelių skaičius nesutampa (30 prieš 32), uždengti neįmanoma.\n\n**Atsakymas:** Ne."
+    },
+    {
+      "title": "Logika: Riteriai ir melagiai",
+      "statement": "Kelyje susitinkate du žmones, A ir B. Žinote, kad vienas jų visada sako tiesą, o kitas visada meluoja. A sako: „Bent vienas iš mūsų yra melagis“. Kas yra A ir kas yra B?",
+      "solution": "Išnagrinėkime atvejus pagal tai, kas yra A:\n- **Tarkime, kad A sako tiesą (A yra riteris).** Tada tai, ką jis pasakė, turi būti tiesa. Jis pasakė, kad bent vienas iš jų yra melagis. Kadangi A nėra melagis, vadinasi, melagis turi būti B. Ši situacija neturi prieštaravimų.\n- **Tarkime, kad A meluoja (A yra melagis).** Tada tai, ką jis pasakė, turi būti melas. Jis pasakė, kad bent vienas iš jų yra melagis. Bet jei A yra melagis, tai teiginys „bent vienas yra melagis“ yra gryna tiesa! Melagis negali sakyti tiesos. Prieštaravimas.\n\nIšvada: A būtinai sako tiesą (yra riteris), o B yra melagis.\n\n**Atsakymas:** A - riteris, B - melagis."
     }
   ],
   "exercises": [
@@ -228,7 +296,7 @@
       "id": "ex-olimpiada-05-ee0b640b",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -364,7 +432,7 @@
       "id": "ex-olimpiada-05-031859fd",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "introductory",
@@ -373,17 +441,27 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Nelyginių skaičių suma",
         "text": "Keturių nelyginių skaičių suma visada yra lyginė."
       },
-      "strategyTags": ["parity"],
+      "strategyTags": [
+        "parity"
+      ],
       "hints": [
         {
           "order": 1,
@@ -405,9 +483,15 @@
         }
       ],
       "solutionSteps": [
-        { "text": "Kiekviena krūvelė turi nelyginį monetų skaičių." },
-        { "text": "Keturių nelyginių skaičių suma yra: nelyginis + nelyginis + nelyginis + nelyginis = lyginis + lyginis = lyginis." },
-        { "text": "Skaičius 15 yra nelyginis, todėl tokio išdėstymo padaryti neįmanoma." }
+        {
+          "text": "Kiekviena krūvelė turi nelyginį monetų skaičių."
+        },
+        {
+          "text": "Keturių nelyginių skaičių suma yra: nelyginis + nelyginis + nelyginis + nelyginis = lyginis + lyginis = lyginis."
+        },
+        {
+          "text": "Skaičius 15 yra nelyginis, todėl tokio išdėstymo padaryti neįmanoma."
+        }
       ],
       "commonTraps": [
         {
@@ -416,17 +500,21 @@
           "wrongMove": "Mokinys bando parinkti skaičius (pvz., 1, 3, 5, 7) ir tikisi, kad jų suma bus 15.",
           "whyTempting": "Atrodo paprasčiau nei ieškoti bendros taisyklės.",
           "correction": "Naudokite pariteto taisyklę, kad įrodytumėte, jog jokia kombinacija netiks.",
-          "reviewConceptIds": ["olimpiada-05-concept-parity"]
+          "reviewConceptIds": [
+            "olimpiada-05-concept-parity"
+          ]
         }
       ],
-      "reflectionPrompts": ["Ar atsakymas pasikeistų, jei būtų 5 krūvelės?"],
+      "reflectionPrompts": [
+        "Ar atsakymas pasikeistų, jei būtų 5 krūvelės?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-45f96440",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "introductory",
@@ -435,96 +523,174 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip, tai tiesa" },
-          { "id": "no", "text": "Ne, nebūtinai" }
+          {
+            "id": "yes",
+            "text": "Taip, tai tiesa"
+          },
+          {
+            "id": "no",
+            "text": "Ne, nebūtinai"
+          }
         ],
-        "correctChoiceIds": ["yes"]
+        "correctChoiceIds": [
+          "yes"
+        ]
       },
       "answerText": "Taip",
       "coreIdea": {
         "title": "Dirichlė principas",
         "text": "Mėnesių yra 12, o mokinių daugiau – 13. Todėl bent du turi „nutūpti“ į tą patį mėnesį."
       },
-      "strategyTags": ["pigeonhole-principle"],
+      "strategyTags": [
+        "pigeonhole-principle"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiek yra mėnesių per metus?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Jei kiekvienas mokinys švęstų gimtadienį skirtingą mėnesį, kiek daugiausiai mokinių galėtų būti?", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek yra mėnesių per metus?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei kiekvienas mokinys švęstų gimtadienį skirtingą mėnesį, kiek daugiausiai mokinių galėtų būti?",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Metuose yra 12 mėnesių." },
-        { "text": "Jei visi 12 mokinių gimtų skirtingais mėnesiais, kiekvienam mėnesiui tektų po vieną mokinį." },
-        { "text": "Kadangi mokinių yra 13 (daugiau nei mėnesių), bent vieną mėnesį turi gimti bent du mokiniai." }
+        {
+          "text": "Metuose yra 12 mėnesių."
+        },
+        {
+          "text": "Jei visi 12 mokinių gimtų skirtingais mėnesiais, kiekvienam mėnesiui tektų po vieną mokinį."
+        },
+        {
+          "text": "Kadangi mokinių yra 13 (daugiau nei mėnesių), bent vieną mėnesį turi gimti bent du mokiniai."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kiek reikėtų mokinių, kad būtume tikri, jog bent 3 gimė tą patį mėnesį?"],
+      "reflectionPrompts": [
+        "Kiek reikėtų mokinių, kad būtume tikri, jog bent 3 gimė tą patį mėnesį?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-cb54fdbc",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 50,
       "statement": "Sugalvojau skaičių. Jį padauginau iš 3, pridėjau 5, gautą sumą padalinau iš 2 ir gavau 10. Kokį skaičių sugalvojau?",
-      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
       "answerText": "5",
       "coreIdea": {
         "title": "Ėjimas nuo galo",
         "text": "Atlikite visus veiksmus atvirkštine tvarka, pradedant nuo rezultato."
       },
-      "strategyTags": ["reverse-thinking"],
+      "strategyTags": [
+        "reverse-thinking"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Paskutinis veiksmas buvo dalyba iš 2, gavome 10. Koks skaičius buvo prieš tai?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Prieš padalijant iš 2 buvo $10 \\times 2 = 20$. Atlikite kitus žingsnius atgal.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Paskutinis veiksmas buvo dalyba iš 2, gavome 10. Koks skaičius buvo prieš tai?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Prieš padalijant iš 2 buvo $10 \\times 2 = 20$. Atlikite kitus žingsnius atgal.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Pradedame nuo rezultato: 10." },
-        { "text": "Atliekame atvirkštinį veiksmą dalybai: $10 \\times 2 = 20$." },
-        { "text": "Atliekame atvirkštinį veiksmą sudėčiai: $20 - 5 = 15$." },
-        { "text": "Atliekame atvirkštinį veiksmą daugybai: $15 : 3 = 5$." }
+        {
+          "text": "Pradedame nuo rezultato: 10."
+        },
+        {
+          "text": "Atliekame atvirkštinį veiksmą dalybai: $10 \\times 2 = 20$."
+        },
+        {
+          "text": "Atliekame atvirkštinį veiksmą sudėčiai: $20 - 5 = 15$."
+        },
+        {
+          "text": "Atliekame atvirkštinį veiksmą daugybai: $15 : 3 = 5$."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kodėl svarbu atlikti veiksmus tiksliai atvirkštine tvarka?"],
+      "reflectionPrompts": [
+        "Kodėl svarbu atlikti veiksmus tiksliai atvirkštine tvarka?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-a3f215fa",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 60,
       "statement": "Trys draugai – Adomas, Benas ir Cedrikas – užėmė pirmąsias tris vietas bėgimo varžybose. Adomas užėmė ne pirmą vietą, o Benas – ne pirmą ir ne antrą. Kokią vietą užėmė Cedrikas? (Atsakymą pateikite skaičiumi)",
-      "answer": { "kind": "numeric", "value": 1, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
       "answerText": "1",
       "coreIdea": {
         "title": "Logika ir eliminavimas",
         "text": "Naudokite informaciją, kad atmestumėte negalimus variantus kiekvienam draugui."
       },
-      "strategyTags": ["casework"],
+      "strategyTags": [
+        "casework"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pradėkite nuo Beno. Kurią vietą jis užėmė?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Jei Benas ne pirmas ir ne antras, vadinasi jis trečias.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo Beno. Kurią vietą jis užėmė?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei Benas ne pirmas ir ne antras, vadinasi jis trečias.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Benas užėmė ne 1-ą ir ne 2-ą vietą, vadinasi, jis užėmė 3-ią vietą." },
-        { "text": "Adomas užėmė ne 1-ą vietą, o 3-ia jau užimta Beno, vadinasi, Adomas užėmė 2-ą vietą." },
-        { "text": "Liko vienintelė laisva vieta (1-oji) ir vienintelis draugas – Cedrikas. Vadinasi, Cedrikas užėmė 1-ą vietą." }
+        {
+          "text": "Benas užėmė ne 1-ą ir ne 2-ą vietą, vadinasi, jis užėmė 3-ią vietą."
+        },
+        {
+          "text": "Adomas užėmė ne 1-ą vietą, o 3-ia jau užimta Beno, vadinasi, Adomas užėmė 2-ą vietą."
+        },
+        {
+          "text": "Liko vienintelė laisva vieta (1-oji) ir vienintelis draugas – Cedrikas. Vadinasi, Cedrikas užėmė 1-ą vietą."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kaip būtų patogu susirašyti informaciją tokio tipo uždaviniuose? (Patarimas: Lentelė)"],
+      "reflectionPrompts": [
+        "Kaip būtų patogu susirašyti informaciją tokio tipo uždaviniuose? (Patarimas: Lentelė)"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-f5a521c1",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -533,37 +699,70 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "white", "text": "Balta" },
-          { "id": "black", "text": "Juoda" }
+          {
+            "id": "white",
+            "text": "Balta"
+          },
+          {
+            "id": "black",
+            "text": "Juoda"
+          }
         ],
-        "correctChoiceIds": ["black"]
+        "correctChoiceIds": [
+          "black"
+        ]
       },
       "answerText": "Juoda",
       "coreIdea": {
         "title": "Baltų rutuliukų lyginumas",
         "text": "Stebėkite, kaip keičiasi baltų rutuliukų skaičius po kiekvieno ėjimo. Jis visada išlieka lyginis."
       },
-      "strategyTags": ["invariant", "parity"],
+      "strategyTags": [
+        "invariant",
+        "parity"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Yra trys atvejai: ištraukiame (B, B), (J, J) arba (B, J). Kiekvienu atveju pažiūrėkite, kaip pakinta baltų skaičius.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Jei (B, B) -> +1 juodas (baltų sumažėja 2). Jei (J, J) -> +1 juodas (baltų nesikeičia). Jei (B, J) -> +1 baltas (baltų nesikeičia - vieną išėmėm, kitą įdėjom).", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Yra trys atvejai: ištraukiame (B, B), (J, J) arba (B, J). Kiekvienu atveju pažiūrėkite, kaip pakinta baltų skaičius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei (B, B) -> +1 juodas (baltų sumažėja 2). Jei (J, J) -> +1 juodas (baltų nesikeičia). Jei (B, J) -> +1 baltas (baltų nesikeičia - vieną išėmėm, kitą įdėjom).",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Baltų rutuliukų skaičius po kiekvieno ėjimo arba sumažėja 2, arba nesikeičia." },
-        { "text": "Vadinasi, baltų rutuliukų skaičiaus lyginumas yra invariantas (nesikeičia)." },
-        { "text": "Pradžioje buvo 100 baltų rutuliukų (lyginis skaičius)." },
-        { "text": "Pabaigoje turi likti vienas rutuliukas. Jei jis būtų baltas, baltų skaičius taptų 1 (nelyginis), o tai neįmanoma." },
-        { "text": "Todėl paskutinis rutuliukas privalo būti juodas." }
+        {
+          "text": "Baltų rutuliukų skaičius po kiekvieno ėjimo arba sumažėja 2, arba nesikeičia."
+        },
+        {
+          "text": "Vadinasi, baltų rutuliukų skaičiaus lyginumas yra invariantas (nesikeičia)."
+        },
+        {
+          "text": "Pradžioje buvo 100 baltų rutuliukų (lyginis skaičius)."
+        },
+        {
+          "text": "Pabaigoje turi likti vienas rutuliukas. Jei jis būtų baltas, baltų skaičius taptų 1 (nelyginis), o tai neįmanoma."
+        },
+        {
+          "text": "Todėl paskutinis rutuliukas privalo būti juodas."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Ar atsakymas pasikeistų, jei pradžioje būtų 101 baltas rutuliukas?"],
+      "reflectionPrompts": [
+        "Ar atsakymas pasikeistų, jei pradžioje būtų 101 baltas rutuliukas?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-b95502c0",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -572,36 +771,66 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Langelių skaičius",
         "text": "Domino kauliukas visada uždengia lygų langelių skaičių (2). Ar lentelėje langelių skaičius lyginis?"
       },
-      "strategyTags": ["parity"],
+      "strategyTags": [
+        "parity"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiek iš viso langelių yra $5 \\times 5$ lentelėje?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kiekvienas domino kauliukas uždengia lygiai 2 langelius. Sudėjus bet kiek kauliukų, bendras uždengtų langelių skaičius visada bus lyginis.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek iš viso langelių yra $5 \\times 5$ lentelėje?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiekvienas domino kauliukas uždengia lygiai 2 langelius. Sudėjus bet kiek kauliukų, bendras uždengtų langelių skaičius visada bus lyginis.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Lentelėje yra $5 \\times 5 = 25$ langeliai." },
-        { "text": "Kiekvienas domino kauliukas uždengia 2 langelius." },
-        { "text": "Vadinasi, bet koks kauliukų skaičius uždengs lyginį langelių kiekį (2, 4, 6...)." },
-        { "text": "Kadangi 25 yra nelyginis skaičius, pilnai uždengti lentelės neįmanoma." }
+        {
+          "text": "Lentelėje yra $5 \\times 5 = 25$ langeliai."
+        },
+        {
+          "text": "Kiekvienas domino kauliukas uždengia 2 langelius."
+        },
+        {
+          "text": "Vadinasi, bet koks kauliukų skaičius uždengs lyginį langelių kiekį (2, 4, 6...)."
+        },
+        {
+          "text": "Kadangi 25 yra nelyginis skaičius, pilnai uždengti lentelės neįmanoma."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kokių matmenų lenteles visada galima uždengti domino kauliukais?"],
+      "reflectionPrompts": [
+        "Kokių matmenų lenteles visada galima uždengti domino kauliukais?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-cbff97d9",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -610,36 +839,66 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "p1", "text": "Pirmasis žaidėjas" },
-          { "id": "p2", "text": "Antrasis žaidėjas" }
+          {
+            "id": "p1",
+            "text": "Pirmasis žaidėjas"
+          },
+          {
+            "id": "p2",
+            "text": "Antrasis žaidėjas"
+          }
         ],
-        "correctChoiceIds": ["p2"]
+        "correctChoiceIds": [
+          "p2"
+        ]
       },
       "answerText": "Antrasis žaidėjas",
       "coreIdea": {
         "title": "Laiminčios pozicijos",
         "text": "Tikslas yra palikti priešininkui skaičių, kurį jis negalėtų „apeiti“. Šiame žaidime tai yra 4 kartotiniai."
       },
-      "strategyTags": ["invariant"],
+      "strategyTags": [
+        "invariant"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pabandykite rasti, kiek saldainių turėtumėte palikti priešininkui, kad jis bet kokiu atveju pralaimėtų. Pvz., jei jam paliksite 4 saldainius.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Jei priešininkas paima 1, jūs paimate 3. Jei jis 2 - jūs 2. Jei jis 3 - jūs 1. Abiem atvejais jūs paimate paskutinį iš tos 4-etės.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite rasti, kiek saldainių turėtumėte palikti priešininkui, kad jis bet kokiu atveju pralaimėtų. Pvz., jei jam paliksite 4 saldainius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei priešininkas paima 1, jūs paimate 3. Jei jis 2 - jūs 2. Jei jis 3 - jūs 1. Abiem atvejais jūs paimate paskutinį iš tos 4-etės.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Žaidėjai gali paimti 1, 2 arba 3 saldainius. Pastebime, kad bet kokį pirmo žaidėjo paimtą skaičių $x$ antrasis gali papildyti iki 4 ($4-x$)." },
-        { "text": "Vadinasi, antrasis žaidėjas gali užtikrinti, kad po kiekvieno jo ėjimo likusių saldainių skaičius sumažėtų lygiai 4." },
-        { "text": "Pradinis skaičius 20 dalijasi iš 4. Todėl antrasis žaidėjas visada gali palikti priešininkui 16, 12, 8, 4 ir galiausiai 0 saldainių." },
-        { "text": "Tas, kuris palieka 0, paima paskutinį ir laimi. Tai padarys antrasis žaidėjas." }
+        {
+          "text": "Žaidėjai gali paimti 1, 2 arba 3 saldainius. Pastebime, kad bet kokį pirmo žaidėjo paimtą skaičių $x$ antrasis gali papildyti iki 4 ($4-x$)."
+        },
+        {
+          "text": "Vadinasi, antrasis žaidėjas gali užtikrinti, kad po kiekvieno jo ėjimo likusių saldainių skaičius sumažėtų lygiai 4."
+        },
+        {
+          "text": "Pradinis skaičius 20 dalijasi iš 4. Todėl antrasis žaidėjas visada gali palikti priešininkui 16, 12, 8, 4 ir galiausiai 0 saldainių."
+        },
+        {
+          "text": "Tas, kuris palieka 0, paima paskutinį ir laimi. Tai padarys antrasis žaidėjas."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kas laimėtų, jei saldainių būtų 21?"],
+      "reflectionPrompts": [
+        "Kas laimėtų, jei saldainių būtų 21?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-eb7e344a",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -654,29 +913,61 @@
         "title": "Kampas tarp lėktuvų",
         "text": "Jei du lėktuvai skrenda į tą patį oro uostą $P$, atstumas tarp jų pradinių taškų turi būti didesnis už atstumus iki $P$. Tai reiškia, kad kampas tarp jų turi būti didesnis nei 60 laipsnių."
       },
-      "strategyTags": ["extremal-principle", "geometry-interpretation"],
+      "strategyTags": [
+        "extremal-principle",
+        "geometry-interpretation"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Nagrinėkite oro uostą $P$, į kurį skrenda lėktuvai iš $A$ ir $B$.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kadangi lėktuvas iš $A$ skrido į $P$, o ne į $B$, tai atstumas $AP$ yra mažesnis už $AB$. Panašiai $BP < AB$.", "penalty": 0.1 },
-        { "order": 3, "kind": "method", "text": "Trikampyje $ABP$ kraštinė $AB$ yra didžiausia. Tai reiškia, kad kampas $APB$ yra didžiausias trikampio kampas ir jis didesnis už 60 laipsnių.", "penalty": 0.12 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nagrinėkite oro uostą $P$, į kurį skrenda lėktuvai iš $A$ ir $B$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi lėktuvas iš $A$ skrido į $P$, o ne į $B$, tai atstumas $AP$ yra mažesnis už $AB$. Panašiai $BP < AB$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Trikampyje $ABP$ kraštinė $AB$ yra didžiausia. Tai reiškia, kad kampas $APB$ yra didžiausias trikampio kampas ir jis didesnis už 60 laipsnių.",
+          "penalty": 0.12
+        }
       ],
       "solutionSteps": [
-        { "text": "Tarkime, kad į oro uostą $P$ atskrido lėktuvai iš $A$ ir $B$." },
-        { "text": "Pagal sąlygą, $P$ yra artimiausias oro uostas lėktuvui iš $A$, todėl $AP < AB$." },
-        { "text": "Taip pat $P$ yra artimiausias oro uostui $B$, todėl $BP < AB$." },
-        { "text": "Trikampyje $ABP$ kraštinė $AB$ yra ilgesnė už kitas dvi, vadinasi, kampas $\\angle APB$ yra didesnis už $60^\\circ$." },
-        { "text": "Aplink tašką $P$ iš viso yra $360^\\circ$. Jei kiekvienas kampas tarp gretimų lėktuvų yra $> 60^\\circ$, tai lėktuvų gali būti daugiausiai $360 : 60 = 6$, bet kadangi kampas griežtai didesnis už 60, tai 6 jau netelpa." },
-        { "text": "Vadinasi, nusileisti gali ne daugiau kaip 5 lėktuvai." }
+        {
+          "text": "Tarkime, kad į oro uostą $P$ atskrido lėktuvai iš $A$ ir $B$."
+        },
+        {
+          "text": "Pagal sąlygą, $P$ yra artimiausias oro uostas lėktuvui iš $A$, todėl $AP < AB$."
+        },
+        {
+          "text": "Taip pat $P$ yra artimiausias oro uostui $B$, todėl $BP < AB$."
+        },
+        {
+          "text": "Trikampyje $ABP$ kraštinė $AB$ yra ilgesnė už kitas dvi, vadinasi, kampas $\\angle APB$ yra didesnis už $60^\\circ$."
+        },
+        {
+          "text": "Aplink tašką $P$ iš viso yra $360^\\circ$. Jei kiekvienas kampas tarp gretimų lėktuvų yra $> 60^\\circ$, tai lėktuvų gali būti daugiausiai $360 : 60 = 6$, bet kadangi kampas griežtai didesnis už 60, tai 6 jau netelpa."
+        },
+        {
+          "text": "Vadinasi, nusileisti gali ne daugiau kaip 5 lėktuvai."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Kodėl atstumų skirtingumas yra svarbus šiam uždaviniui?"],
+      "reflectionPrompts": [
+        "Kodėl atstumų skirtingumas yra svarbus šiam uždaviniui?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-olimpiada-05-1fc20a2a",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -685,39 +976,73 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "knight", "text": "Riteris" },
-          { "id": "liar", "text": "Melagis" }
+          {
+            "id": "knight",
+            "text": "Riteris"
+          },
+          {
+            "id": "liar",
+            "text": "Melagis"
+          }
         ],
-        "correctChoiceIds": ["knight"]
+        "correctChoiceIds": [
+          "knight"
+        ]
       },
       "answerText": "Melagis",
       "coreIdea": {
         "title": "Prieštaravimų paieška",
         "text": "Patikrinkite A teiginį. Jei A būtų riteris, jo teiginys būtų tiesa, bet tai vestų prie prieštaravimo."
       },
-      "strategyTags": ["contradiction"],
+      "strategyTags": [
+        "contradiction"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Ar gali riteris pasakyti „Aš esu melagis“?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "A sako, kad visi yra melagiai. Jei jis sako tiesą, jis pats turi būti melagis. Tai neįmanoma, todėl A yra melagis.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ar gali riteris pasakyti „Aš esu melagis“?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "A sako, kad visi yra melagiai. Jei jis sako tiesą, jis pats turi būti melagis. Tai neįmanoma, todėl A yra melagis.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "A sako: „Mes visi melagiai“. Jei A būtų riteris, tai būtų tiesa, vadinasi, A turėtų būti melagis. Tai prieštaravimas, todėl A yra melagis." },
-        { "text": "Kadangi A yra melagis, jo sakinys „Mes visi melagiai“ yra melas. Tai reiškia, kad bent vienas iš jų yra riteris." },
-        { "text": "B sako: „Tik vienas iš mūsų yra riteris“. Tarkime, B yra riteris. Tada jo sakinys tiesa, ir riterių yra tik vienas (pats B). A yra melagis, C irgi turi būti melagis. Viskas sutampa." },
-        { "text": "Pala, o kas jei B yra melagis? Tada riterių turi būti arba 0, arba daugiau nei 1. Bet jau nustatėme, kad riterių bent vienas yra. Vadinasi, riterių turėtų būti bent 2 (B meluoja, kad yra tik 1). Jei riterių bent 2, o B yra melagis, tai riteriai turėtų būti A ir C. Bet jau žinome, kad A yra melagis. Vadinasi, vienintelis riteris gali būti tik C. Bet tada B sakinys būtų tiesa, o B melagis. Vėl prieštaravimas." },
-        { "text": "Vadinasi, B būtinai yra riteris. Pala, mano atsakymas buvo melagis. Peržiūrėkime logiką." },
-        { "text": "A (Melagis): „Visi melagiai“ -> Melas, vadinasi, yra bent 1 riteris. B sako: „Tik vienas riteris“. Jei B riteris -> tiesa, riteris tik 1 (B), C - melagis. Tinka. Jei B melagis -> riterių ne 1. Kadangi yra bent vienas, vadinasi riterių 2 arba 3. Jei riterių 2 ar 3, o B melagis, tai A ir C turi būti riteriai. Bet A yra melagis. Prieštaravimas. Vadinasi, B yra riteris." }
+        {
+          "text": "A sako: „Mes visi melagiai“. Jei A būtų riteris, tai būtų tiesa, vadinasi, A turėtų būti melagis. Tai prieštaravimas, todėl A yra melagis."
+        },
+        {
+          "text": "Kadangi A yra melagis, jo sakinys „Mes visi melagiai“ yra melas. Tai reiškia, kad bent vienas iš jų yra riteris."
+        },
+        {
+          "text": "B sako: „Tik vienas iš mūsų yra riteris“. Tarkime, B yra riteris. Tada jo sakinys tiesa, ir riterių yra tik vienas (pats B). A yra melagis, C irgi turi būti melagis. Viskas sutampa."
+        },
+        {
+          "text": "Pala, o kas jei B yra melagis? Tada riterių turi būti arba 0, arba daugiau nei 1. Bet jau nustatėme, kad riterių bent vienas yra. Vadinasi, riterių turėtų būti bent 2 (B meluoja, kad yra tik 1). Jei riterių bent 2, o B yra melagis, tai riteriai turėtų būti A ir C. Bet jau žinome, kad A yra melagis. Vadinasi, vienintelis riteris gali būti tik C. Bet tada B sakinys būtų tiesa, o B melagis. Vėl prieštaravimas."
+        },
+        {
+          "text": "Vadinasi, B būtinai yra riteris. Pala, mano atsakymas buvo melagis. Peržiūrėkime logiką."
+        },
+        {
+          "text": "A (Melagis): „Visi melagiai“ -> Melas, vadinasi, yra bent 1 riteris. B sako: „Tik vienas riteris“. Jei B riteris -> tiesa, riteris tik 1 (B), C - melagis. Tinka. Jei B melagis -> riterių ne 1. Kadangi yra bent vienas, vadinasi riterių 2 arba 3. Jei riterių 2 ar 3, o B melagis, tai A ir C turi būti riteriai. Bet A yra melagis. Prieštaravimas. Vadinasi, B yra riteris."
+        }
       ],
       "alternateMethodNote": "Atsiprašau, teisingas atskymas yra Riteris. Pataisau atsakymą.",
       "commonTraps": [],
-      "reflectionPrompts": ["Kodėl A niekada negali būti riteris?"],
+      "reflectionPrompts": [
+        "Kodėl A niekada negali būti riteris?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-ol-05-si-11",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -726,67 +1051,123 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Sandaugos ir sumos paritetas",
         "text": "Jei sandauga nelyginė, visi skaičiai privalo būti nelyginiai. Tada patikrinkite jų sumos lyginumą."
       },
-      "strategyTags": ["parity"],
+      "strategyTags": [
+        "parity"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kada sveikųjų skaičių sandauga yra nelyginė?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Sandauga nelyginė tik tada, kai VISI skaičiai yra nelyginiai.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kada sveikųjų skaičių sandauga yra nelyginė?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Sandauga nelyginė tik tada, kai VISI skaičiai yra nelyginiai.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Kad skaičių sandauga būtų nelyginė, kiekvienas iš 6 skaičių turi būti nelyginis." },
-        { "text": "Sudėję 6 nelyginius skaičius, gauname: N+N+N+N+N+N = L+L+L = L (lyginį skaičių)." },
-        { "text": "Vadinasi, suma visada bus lyginė, todėl ji negali būti nelyginė tuo pačiu metu kaip sandauga." }
+        {
+          "text": "Kad skaičių sandauga būtų nelyginė, kiekvienas iš 6 skaičių turi būti nelyginis."
+        },
+        {
+          "text": "Sudėję 6 nelyginius skaičius, gauname: N+N+N+N+N+N = L+L+L = L (lyginį skaičių)."
+        },
+        {
+          "text": "Vadinasi, suma visada bus lyginė, todėl ji negali būti nelyginė tuo pačiu metu kaip sandauga."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Ar atsakymas pasikeistų, jei skaičių būtų 7?"],
+      "reflectionPrompts": [
+        "Ar atsakymas pasikeistų, jei skaičių būtų 7?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-ol-05-si-12",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 65,
       "statement": "Ant lentos užrašyti skaičiai 1, 2, 3, ..., 10. Vienu ėjimu leidžiama bet kuriuos du skaičius $a$ ir $b$ pakeisti skaičiumi $a+b-1$. Koks skaičius liks po 9 tokių ėjimų?",
-      "answer": { "kind": "numeric", "value": 46, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 46,
+        "tolerance": 0
+      },
       "answerText": "46",
       "coreIdea": {
         "title": "Sumos pokytis",
         "text": "Stebėkite, kaip pasikeičia visų skaičių suma po vieno ėjimo. Ji visada sumažėja lygiai vienetu."
       },
-      "strategyTags": ["invariant"],
+      "strategyTags": [
+        "invariant"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kokia yra pradinė skaičių suma?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Atlikus veiksmą, vietoje $a+b$ turime $a+b-1$. Suma sumažėjo 1. Kiek ėjimų bus atlikta?", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kokia yra pradinė skaičių suma?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Atlikus veiksmą, vietoje $a+b$ turime $a+b-1$. Suma sumažėjo 1. Kiek ėjimų bus atlikta?",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Pradinė suma yra $1+2+3+4+5+6+7+8+9+10 = 55$." },
-        { "text": "Kiekvienu ėjimu iš dviejų skaičių padarome vieną, todėl skaičių kiekis sumažėja vienetu." },
-        { "text": "Po 9 ėjimų liks tik vienas skaičius." },
-        { "text": "Kiekvienu ėjimu bendra skaičių suma sumažėja lygiai 1 (nes $a$ ir $b$ pakeičiami $a+b-1$)." },
-        { "text": "Po 9 ėjimų bendra suma sumažės 9 vienetais: $55 - 9 = 46$." }
+        {
+          "text": "Pradinė suma yra $1+2+3+4+5+6+7+8+9+10 = 55$."
+        },
+        {
+          "text": "Kiekvienu ėjimu iš dviejų skaičių padarome vieną, todėl skaičių kiekis sumažėja vienetu."
+        },
+        {
+          "text": "Po 9 ėjimų liks tik vienas skaičius."
+        },
+        {
+          "text": "Kiekvienu ėjimu bendra skaičių suma sumažėja lygiai 1 (nes $a$ ir $b$ pakeičiami $a+b-1$)."
+        },
+        {
+          "text": "Po 9 ėjimų bendra suma sumažės 9 vienetais: $55 - 9 = 46$."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Ar galutinis rezultatas priklauso nuo to, kokius skaičius renkamės trinti?"],
+      "reflectionPrompts": [
+        "Ar galutinis rezultatas priklauso nuo to, kokius skaičius renkamės trinti?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-ol-05-si-13",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "easy",
@@ -795,25 +1176,49 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "red", "text": "Raudoną" },
-          { "id": "blue", "text": "Mėlyną" },
-          { "id": "green", "text": "Žalią" }
+          {
+            "id": "red",
+            "text": "Raudoną"
+          },
+          {
+            "id": "blue",
+            "text": "Mėlyną"
+          },
+          {
+            "id": "green",
+            "text": "Žalią"
+          }
         ],
-        "correctChoiceIds": ["red"]
+        "correctChoiceIds": [
+          "red"
+        ]
       },
       "answerText": "Raudoną",
       "coreIdea": {
         "title": "Eliminavimo metodas",
         "text": "Pradėkite nuo vaiko, apie kurį žinome daugiausiai informacijos."
       },
-      "strategyTags": ["casework"],
+      "strategyTags": [
+        "casework"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kokia kepurė yra Tomo, jei ji ne mėlyna ir ne raudona?", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kokia kepurė yra Tomo, jei ji ne mėlyna ir ne raudona?",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "Tomas turi ne mėlyną ir ne raudoną, vadinasi, jis turi žalią kepurę." },
-        { "text": "Jono kepurė ne raudona, o žalia jau užimta Tomo, vadinasi, Jonas turi mėlyną kepurę." },
-        { "text": "Likusiam vaikui Lukui lieka paskutinė spalva – raudona." }
+        {
+          "text": "Tomas turi ne mėlyną ir ne raudoną, vadinasi, jis turi žalią kepurę."
+        },
+        {
+          "text": "Jono kepurė ne raudona, o žalia jau užimta Tomo, vadinasi, Jonas turi mėlyną kepurę."
+        },
+        {
+          "text": "Likusiam vaikui Lukui lieka paskutinė spalva – raudona."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],
@@ -823,7 +1228,7 @@
       "id": "ex-ol-05-si-14",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -838,26 +1243,49 @@
         "title": "Liekanos kaip narveliai",
         "text": "Skaičių skirtumas dalijasi iš 5 tada ir tik tada, kai tie skaičiai turi tą pačią liekaną dalijant iš 5."
       },
-      "strategyTags": ["pigeonhole-principle", "modular-arithmetic"],
+      "strategyTags": [
+        "pigeonhole-principle",
+        "modular-arithmetic"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiek yra skirtingų liekanų dalijant skaičių iš 5?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Liekanos gali būti 0, 1, 2, 3 arba 4. Iš viso 5 galimos liekanos.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek yra skirtingų liekanų dalijant skaičių iš 5?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Liekanos gali būti 0, 1, 2, 3 arba 4. Iš viso 5 galimos liekanos.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Bet kurį skaičių dalijant iš 5, galime gauti vieną iš 5 liekanų: 0, 1, 2, 3 arba 4." },
-        { "text": "Mes turime 6 skaičius (objektus) ir tik 5 galimas liekanas (narvelius)." },
-        { "text": "Pagal Dirichlė principą, bent du skaičiai privalo turėti tą pačią liekaną." },
-        { "text": "Jei du skaičiai turi tą pačią liekaną dalijant iš 5, tai jų skirtumas dalijasi iš 5 be liekanos." }
+        {
+          "text": "Bet kurį skaičių dalijant iš 5, galime gauti vieną iš 5 liekanų: 0, 1, 2, 3 arba 4."
+        },
+        {
+          "text": "Mes turime 6 skaičius (objektus) ir tik 5 galimas liekanas (narvelius)."
+        },
+        {
+          "text": "Pagal Dirichlė principą, bent du skaičiai privalo turėti tą pačią liekaną."
+        },
+        {
+          "text": "Jei du skaičiai turi tą pačią liekaną dalijant iš 5, tai jų skirtumas dalijasi iš 5 be liekanos."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Ar šis teiginys galioja 5 skaičiams?"],
+      "reflectionPrompts": [
+        "Ar šis teiginys galioja 5 skaičiams?"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-ol-05-si-15",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -866,25 +1294,48 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "p1", "text": "Pirmasis žaidėjas" },
-          { "id": "p2", "text": "Antrasis žaidėjas" }
+          {
+            "id": "p1",
+            "text": "Pirmasis žaidėjas"
+          },
+          {
+            "id": "p2",
+            "text": "Antrasis žaidėjas"
+          }
         ],
-        "correctChoiceIds": ["p2"]
+        "correctChoiceIds": [
+          "p2"
+        ]
       },
       "answerText": "Antrasis žaidėjas",
       "coreIdea": {
         "title": "Papildymas iki 3",
         "text": "Laiminti strategija yra visada palikti priešininkui 3 kartotinį."
       },
-      "strategyTags": ["invariant"],
+      "strategyTags": [
+        "invariant"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Jei paimama 1 arba 2, pabandykite rasti 'saugius' skaičius, kuriuos norėtumėte palikti kitam žaidėjui.", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Jei paimama 1 arba 2, pabandykite rasti 'saugius' skaičius, kuriuos norėtumėte palikti kitam žaidėjui.",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "Bet kokį pirmo žaidėjo paimtą skaičių $x$ antrasis gali papildyti iki 3 ($3-x$)." },
-        { "text": "Pradinis akmenukų skaičius 15 dalijasi iš 3." },
-        { "text": "Vadinasi, antrasis žaidėjas po kiekvieno savo ėjimo gali palikti priešininkui skaičių, kuris dalijasi iš 3 (12, 9, 6, 3, 0)." },
-        { "text": "Antrasis žaidėjas paliks 0 ir laimės." }
+        {
+          "text": "Bet kokį pirmo žaidėjo paimtą skaičių $x$ antrasis gali papildyti iki 3 ($3-x$)."
+        },
+        {
+          "text": "Pradinis akmenukų skaičius 15 dalijasi iš 3."
+        },
+        {
+          "text": "Vadinasi, antrasis žaidėjas po kiekvieno savo ėjimo gali palikti priešininkui skaičių, kuris dalijasi iš 3 (12, 9, 6, 3, 0)."
+        },
+        {
+          "text": "Antrasis žaidėjas paliks 0 ir laimės."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],
@@ -894,7 +1345,7 @@
       "id": "ex-ol-05-si-16",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -903,25 +1354,49 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Spalvinimas trimis spalvomis",
         "text": "Nors langelių skaičius (15) dalijasi iš 3, spalvinimo metodas parodo, kad uždengti neįmanoma."
       },
-      "strategyTags": ["coloring", "invariant"],
+      "strategyTags": [
+        "coloring",
+        "invariant"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Nudažykite lentelę įstrižai trimis spalvomis (1, 2, 3).", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Nudažykite lentelę įstrižai trimis spalvomis (1, 2, 3).",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Lentelėje yra $16 - 1 = 15$ langelių. Kadangi 15 dalijasi iš 3, iš pirmo žvilgsnio atrodo, kad galima." },
-        { "text": "Nudažykime langelius įstrižai 3 spalvomis. Kiekvienas $1 \\times 3$ stačiakampis visada uždengs po vieną kiekvienos spalvos langelį." },
-        { "text": "Suskaičiavus spalvų kiekius $4 \\times 4$ lentelėje ir atėmus kampinį langelį, pamatysime, kad spalvų kiekiai nėra lygūs (pvz., vienos spalvos yra 5, kitos 4, trečios 6)." },
-        { "text": "Kadangi stačiakampiai reikalauja vienodo kiekvienos spalvos langelių skaičiaus, uždengti neįmanoma." }
+        {
+          "text": "Lentelėje yra $16 - 1 = 15$ langelių. Kadangi 15 dalijasi iš 3, iš pirmo žvilgsnio atrodo, kad galima."
+        },
+        {
+          "text": "Nudažykime langelius įstrižai 3 spalvomis. Kiekvienas $1 \\times 3$ stačiakampis visada uždengs po vieną kiekvienos spalvos langelį."
+        },
+        {
+          "text": "Suskaičiavus spalvų kiekius $4 \\times 4$ lentelėje ir atėmus kampinį langelį, pamatysime, kad spalvų kiekiai nėra lygūs (pvz., vienos spalvos yra 5, kitos 4, trečios 6)."
+        },
+        {
+          "text": "Kadangi stačiakampiai reikalauja vienodo kiekvienos spalvos langelių skaičiaus, uždengti neįmanoma."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],
@@ -931,7 +1406,7 @@
       "id": "ex-ol-05-si-17",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -940,25 +1415,49 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Ciklo lyginumas",
         "text": "Kad galėtume pakaitomis suskirstyti vaikus į dvi grupes, rate turi būti lyginis vaikų skaičius."
       },
-      "strategyTags": ["parity", "graph-interpretation"],
+      "strategyTags": [
+        "parity",
+        "graph-interpretation"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pabandykite rate sustatyti B, M, B, M... Kas nutiks pabaigoje?", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite rate sustatyti B, M, B, M... Kas nutiks pabaigoje?",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "Kad berniukas laikytų tik mergaičių rankas, o mergaitė – tik berniukų, vaikai rate turi stovėti pakaitomis: B, M, B, M, ..." },
-        { "text": "Tai reiškia, kad rate turi būti po lygiai berniukų ir mergaičių." },
-        { "text": "Tada bendras vaikų skaičius rate būtinai turi būti lyginis." },
-        { "text": "Kadangi 11 yra nelyginis skaičius, tokio išdėstymo padaryti neįmanoma (paskutinis vaikas rate turės kaimyną tos pačios lyties)." }
+        {
+          "text": "Kad berniukas laikytų tik mergaičių rankas, o mergaitė – tik berniukų, vaikai rate turi stovėti pakaitomis: B, M, B, M, ..."
+        },
+        {
+          "text": "Tai reiškia, kad rate turi būti po lygiai berniukų ir mergaičių."
+        },
+        {
+          "text": "Tada bendras vaikų skaičius rate būtinai turi būti lyginis."
+        },
+        {
+          "text": "Kadangi 11 yra nelyginis skaičius, tokio išdėstymo padaryti neįmanoma (paskutinis vaikas rate turės kaimyną tos pačios lyties)."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],
@@ -968,36 +1467,55 @@
       "id": "ex-ol-05-si-18",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 65,
       "statement": "Krepšyje buvo obuoliai. Pirmas pirkėjas nupirko pusę visų obuolių ir dar pusę obuolio. Antras pirkėjas nupirko pusę likusių ir dar pusę obuolio. Trečias nupirko pusę likusių ir dar pusę obuolio. Po to krepšys liko tuščias. Kiek obuolių buvo pradžioje?",
-      "answer": { "kind": "numeric", "value": 7, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
       "answerText": "7",
       "coreIdea": {
         "title": "Atvirkštinė operacija pusei",
         "text": "Jei pirkėjas paėmė pusę ir dar pusę, vadinasi, prieš tai buvo (likutis + 0.5) * 2."
       },
-      "strategyTags": ["reverse-thinking"],
+      "strategyTags": [
+        "reverse-thinking"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pradėkite nuo galo: po trečio pirkėjo liko 0 obuolių. Kiek buvo prieš jam nuperkant?", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pradėkite nuo galo: po trečio pirkėjo liko 0 obuolių. Kiek buvo prieš jam nuperkant?",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Po 3-io pirkėjo liko 0. Prieš tai buvo: $(0 + 0,5) \\times 2 = 1$ obuolys." },
-        { "text": "Prieš 2-ą pirkėją buvo: $(1 + 0,5) \\times 2 = 3$ obuoliai." },
-        { "text": "Prieš 1-ą pirkėją buvo: $(3 + 0,5) \\times 2 = 7$ obuolių." }
+        {
+          "text": "Po 3-io pirkėjo liko 0. Prieš tai buvo: $(0 + 0,5) \\times 2 = 1$ obuolys."
+        },
+        {
+          "text": "Prieš 2-ą pirkėją buvo: $(1 + 0,5) \\times 2 = 3$ obuoliai."
+        },
+        {
+          "text": "Prieš 1-ą pirkėją buvo: $(3 + 0,5) \\times 2 = 7$ obuolių."
+        }
       ],
       "commonTraps": [],
-      "reflectionPrompts": ["Ar obuoliai buvo pjaustomi? (Ne, visada gauname sveiką skaičių)"],
+      "reflectionPrompts": [
+        "Ar obuoliai buvo pjaustomi? (Ne, visada gauname sveiką skaičių)"
+      ],
       "srsSeeds": []
     },
     {
       "id": "ex-ol-05-si-19",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
@@ -1006,26 +1524,52 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "A" },
-          { "id": "b", "text": "B" },
-          { "id": "c", "text": "C" }
+          {
+            "id": "a",
+            "text": "A"
+          },
+          {
+            "id": "b",
+            "text": "B"
+          },
+          {
+            "id": "c",
+            "text": "C"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "answerText": "B",
       "coreIdea": {
         "title": "Hipotezės tikrinimas",
         "text": "Darykite prielaidą apie vieną asmenį ir žiūrėkite, ar nekyla prieštaravimų kitiems teiginiams."
       },
-      "strategyTags": ["casework"],
+      "strategyTags": [
+        "casework"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Tarkime, kad A sako tiesą. Ar tada B sako tiesą?", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime, kad A sako tiesą. Ar tada B sako tiesą?",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "Jei A sako tiesą, tai B meluoja. Jei B meluoja, tai C turėtų sakyti tiesą. Bet C sako, kad A meluoja (o mes tarėme, kad A sako tiesą). Prieštaravimas." },
-        { "text": "Vadinasi, A privalo meluoti. Jei A meluoja, tai jo teiginys „B meluoja“ yra klaidingas, vadinasi, B sako tiesą." },
-        { "text": "Jei B sako tiesą, tai jo teiginys „C meluoja“ yra teisingas, vadinasi, C meluoja." },
-        { "text": "Patikriname C: jis sako, kad A ir B abu meluoja. Kadangi B sako tiesą, tai C teiginys yra melas. Viskas sutampa." }
+        {
+          "text": "Jei A sako tiesą, tai B meluoja. Jei B meluoja, tai C turėtų sakyti tiesą. Bet C sako, kad A meluoja (o mes tarėme, kad A sako tiesą). Prieštaravimas."
+        },
+        {
+          "text": "Vadinasi, A privalo meluoti. Jei A meluoja, tai jo teiginys „B meluoja“ yra klaidingas, vadinasi, B sako tiesą."
+        },
+        {
+          "text": "Jei B sako tiesą, tai jo teiginys „C meluoja“ yra teisingas, vadinasi, C meluoja."
+        },
+        {
+          "text": "Patikriname C: jis sako, kad A ir B abu meluoja. Kadangi B sako tiesą, tai C teiginys yra melas. Viskas sutampa."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],
@@ -1035,7 +1579,7 @@
       "id": "ex-ol-05-si-20",
       "topicId": "olimpiada-05-strategijos-ir-irodymai",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "advanced",
@@ -1044,28 +1588,58 @@
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "yes", "text": "Taip" },
-          { "id": "no", "text": "Ne" }
+          {
+            "id": "yes",
+            "text": "Taip"
+          },
+          {
+            "id": "no",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["no"]
+        "correctChoiceIds": [
+          "no"
+        ]
       },
       "answerText": "Ne",
       "coreIdea": {
         "title": "Liekanos moduliu 3",
         "text": "Stebėkite skirtumus tarp chameleonų skaičių. Po kiekvieno susitikimo skirtumų liekanos dalijant iš 3 nesikeičia."
       },
-      "strategyTags": ["invariant", "modular-arithmetic"],
+      "strategyTags": [
+        "invariant",
+        "modular-arithmetic"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Jei susitinka pilkas (P) ir rudas (R), tai pilkų sumažėja 1, rudų sumažėja 1, o žalių (Ž) padaugėja 2. Kaip pasikeičia skirtumas P-R?", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Jei susitinka pilkas (P) ir rudas (R), tai pilkų sumažėja 1, rudų sumažėja 1, o žalių (Ž) padaugėja 2. Kaip pasikeičia skirtumas P-R?",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Nagrinėjame chameleonų skaičių skirtumų liekanas dalijant iš 3. Pradiniai skaičiai: 13, 15, 17. Jų liekanos: 1, 0, 2." },
-        { "text": "Skirtumų liekanos: $13-15 = -2$ (liekana 1), $15-17 = -2$ (liekana 1), $17-13 = 4$ (liekana 1)." },
-        { "text": "Susitikus dviem chameleonams, pvz., P ir R, jų skaičiai pasikeičia: $P \\to P-1$, $R \\to R-1$, $Ž \\to Ž+2$." },
-        { "text": "Skirtumas $P-R$ nesikeičia. Skirtumai $P-Ž$ ir $R-Ž$ pasikeičia lygiai 3 vienetais ($P-1 - (Ž+2) = P-Ž-3$)." },
-        { "text": "Tai reiškia, kad skirtumų liekanos dalijant iš 3 yra invariantas." },
-        { "text": "Kad visi taptų vienos spalvos, du skaičiai turėtų tapti 0. Tada jų skirtumas būtų 0 (liekana 0)." },
-        { "text": "Bet mūsų pradinės liekanos buvo 1. Kadangi liekana negali pasikeisti iš 1 į 0, tai vienos spalvos būsena nepasiekiama." }
+        {
+          "text": "Nagrinėjame chameleonų skaičių skirtumų liekanas dalijant iš 3. Pradiniai skaičiai: 13, 15, 17. Jų liekanos: 1, 0, 2."
+        },
+        {
+          "text": "Skirtumų liekanos: $13-15 = -2$ (liekana 1), $15-17 = -2$ (liekana 1), $17-13 = 4$ (liekana 1)."
+        },
+        {
+          "text": "Susitikus dviem chameleonams, pvz., P ir R, jų skaičiai pasikeičia: $P \\to P-1$, $R \\to R-1$, $Ž \\to Ž+2$."
+        },
+        {
+          "text": "Skirtumas $P-R$ nesikeičia. Skirtumai $P-Ž$ ir $R-Ž$ pasikeičia lygiai 3 vienetais ($P-1 - (Ž+2) = P-Ž-3$)."
+        },
+        {
+          "text": "Tai reiškia, kad skirtumų liekanos dalijant iš 3 yra invariantas."
+        },
+        {
+          "text": "Kad visi taptų vienos spalvos, du skaičiai turėtų tapti 0. Tada jų skirtumas būtų 0 (liekana 0)."
+        },
+        {
+          "text": "Bet mūsų pradinės liekanos buvo 1. Kadangi liekana negali pasikeisti iš 1 į 0, tai vienos spalvos būsena nepasiekiama."
+        }
       ],
       "commonTraps": [],
       "reflectionPrompts": [],

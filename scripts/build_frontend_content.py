@@ -17,23 +17,24 @@ def js(value: object) -> str:
 
 def plain_block(block: dict) -> str:
     kind = block.get("type")
+    text = block.get("text", "")
     if kind == "paragraph":
-        return block["text"]
+        return text
     if kind == "definition":
-        return f"{block['text']}"
+        return f"{text}"
     if kind == "theorem":
-        return f"Teorema. {block['text']}"
+        return f"Teorema. {text}"
     if kind == "property":
-        return f"Savybė. {block['text']}"
+        return f"Savybė. {text}"
     if kind == "note":
-        return f"Pastaba. {block['text']}"
+        return f"Pastaba. {text}"
     if kind == "warning":
-        return f"Įspėjimas. {block['text']}"
+        return f"Įspėjimas. {text}"
     if kind == "method":
-        return f"Metodas. {block['text']}"
+        return f"Metodas. {text}"
     if kind == "formula":
-        return f"Formulė: {block['latex']}"
-    return block.get("text", "")
+        return f"Formulė: {block.get('latex', '')}"
+    return text
 
 
 def solution_text(example: dict) -> str:
@@ -101,12 +102,13 @@ def render_content() -> str:
 
         for item in data.get("formulas", []):
             fid = item["id"]
+            explanation = item.get("explanation", item.get("title", ""))
             concepts[fid] = {
                 "title": item["title"],
                 "type": item.get("type", "formula"),
-                "definition": item["explanation"],
-                "intuition": item["explanation"],
-                "formal": item["latex"],
+                "definition": explanation,
+                "intuition": explanation,
+                "formal": item.get("latex", ""),
                 "related": item.get("relatedConceptIds", []),
                 "topics": [topic["id"]],
             }
@@ -116,9 +118,9 @@ def render_content() -> str:
             concepts[mid] = {
                 "title": item["title"],
                 "type": item.get("type", "mistake"),
-                "definition": item["whyItHappens"],
-                "intuition": item["wrongPattern"],
-                "formal": item["correction"],
+                "definition": item.get("whyItHappens", item.get("title", "")),
+                "intuition": item.get("wrongPattern", ""),
+                "formal": item.get("correction", ""),
                 "related": item.get("conceptIds", []),
                 "topics": [topic["id"]],
             }
@@ -140,22 +142,26 @@ def render_content() -> str:
                 }
                 for section in data.get("theory", [])
             ],
-            "formulas": [item["latex"] for item in data.get("formulas", [])],
-            "mistakes": [f"{m['title']} — {m['correction']}" for m in data.get("mistakes", [])],
+            "formulas": [item.get("latex", "") for item in data.get("formulas", [])],
+            "mistakes": [f"{m['title']} — {m.get('correction', '')}" for m in data.get("mistakes", [])],
             "examples": [
                 {
                     "title": ex["title"],
-                    "text": ex["problem"],
-                    "solution": solution_text(ex),
-                    "answer": ex["answer"],
+                    "text": ex.get("problem") or ex.get("statement", ""),
+                    "solution": solution_text(ex) or ex.get("solution", ""),
+                    "answer": ex.get("answer", ""),
                 }
                 for ex in data.get("workedExamples", [])
             ],
         }
 
         for ex in data.get("exercises", []):
-            answer = ex["answer"]
-            if answer["kind"] == "choice":
+            if not isinstance(ex, dict): continue
+            answer = ex.get("answer")
+            if not isinstance(answer, dict):
+                answer = {"kind": "numeric", "value": 0}
+            
+            if answer.get("kind") == "choice":
                 choices = [choice["text"] for choice in answer["choices"]]
                 correct = next((choice["text"] for choice in answer["choices"] if choice["id"] in answer["correctChoiceIds"]), answer["choices"][0]["text"])
                 answer_value = correct
@@ -178,17 +184,17 @@ def render_content() -> str:
             if answer["kind"] == "choice":
                 answer_tolerance = 0
             ex_obj = {
-                "id": ex["id"],
-                "topicId": ex["topicId"],
-                "type": ex["type"],
+                "id": ex.get("id", "missing-id"),
+                "topicId": ex.get("topicId", topic["id"]),
+                "type": ex.get("type", "numeric"),
                 "level": ex.get("level", "curriculum"),
-                "statement": ex["statement"],
+                "statement": ex.get("statement", ""),
                 "answer": answer_value,
                 "acceptedAnswers": accepted_answers,
                 "answerTolerance": answer_tolerance,
                 "choices": choices,
                 "concepts": ex.get("conceptIds", []),
-                "hints": [hint["text"] for hint in ex.get("hints", [])],
+                "hints": [hint["text"] for hint in ex.get("hints", []) if "text" in hint],
                 "solution": " ".join(step.get("text", "") for step in ex.get("solutionSteps", [])),
                 "alternate": " ".join(method.get("text", "") for method in ex.get("alternateMethods", [])) or "",
                 "estimatedSeconds": ex.get("estimatedSeconds", 60),
@@ -220,7 +226,7 @@ def render_content() -> str:
                 "title": test["title"],
                 "topicIds": test["topicIds"],
                 "exerciseIds": test["exerciseIds"],
-                "masteryWeight": test["masteryWeight"],
+                "masteryWeight": test.get("masteryWeight", 1.0),
             })
 
     achievements = {

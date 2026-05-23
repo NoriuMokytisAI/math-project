@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Expanded content for Grade 10 Olympiad Inequalities"
+    "notes": "Deeply expanded theory and worked examples for Grade 10 Olympiad Inequalities"
   },
   "topic": {
     "id": "olimpiada-10-nelygybes",
@@ -12,7 +12,7 @@
     "strand": "Nelygybės",
     "level": "olympiad",
     "order": 110,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
@@ -23,7 +23,9 @@
       "olimpiada-10-concept-schur",
       "olimpiada-10-concept-rearrangement",
       "olimpiada-10-concept-chebyshev",
-      "olimpiada-10-concept-muirhead"
+      "olimpiada-10-concept-muirhead",
+      "concept-homogenization",
+      "concept-normalization"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -52,32 +54,98 @@
   },
   "theory": [
     {
-      "title": "Klasikinės nelygybės",
+      "id": "theory-ineq-olympiad-essence",
+      "title": "Nelygybių įrodymo menas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olimpiadinėje matematikoje nelygybių įrodymas remiasi keliomis pagrindinėmis nelygybėmis: AM-GM, Koši-Švarco (Cauchy-Schwarz), Jenseno ir kitomis."
+          "text": "Nelygybės yra viena kūrybiškiausių olimpiadinės matematikos sričių. Skirtingai nuo lygčių, kur dažnai egzistuoja aiškus algoritmas, nelygybių įrodymai reikalauja gebėjimo „pajusti“ reiškinį: kuri jo dalis auga greičiau, kur pasiekiama lygybė ir kokį klasikinį įrankį geriausia pritaikyti. 10 klasėje nelygybės tampa sistemingu įrankiu, leidžiančiu vertinti sudėtingas algebrines ir trigonometrines išraiškas."
         },
         {
-          "type": "method",
-          "text": "AM-GM nelygybė: neneigiamų skaičių aritmetinis vidurkis yra ne mažesnis už jų geometrinį vidurkį."
-        },
-        {
-          "type": "method",
-          "text": "Koši-Švarco nelygybė: vektorių skaliarinės sandaugos kvadratas neviršija jų ilgių kvadratų sandaugos."
+          "type": "paragraph",
+          "text": "Sėkmingas sprendimas prasideda nuo trijų žingsnių:\n1. **Lygybės taško radimas:** Dažniausiai lygybė pasiekiama, kai visi kintamieji lygūs ($a=b=c$) arba kai kai kurie kintamieji lygūs nuliui. Tai padeda parinkti svorius AM-GM nelygybėje.\n2. **Homogeniškumo patikrinimas:** Ar visi nariai turi tą patį laipsnį?\n3. **Supaprastinimas:** Trupmenų sujungimas (Titu lema) arba laipsnių mažinimas."
         }
       ]
     },
     {
-      "title": "Titu lema ir Jenseno nelygybė",
+      "id": "theory-ineq-means",
+      "title": "Vidurkių hierarchija (QM-AM-GM-HM)",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trupmeninėms nelygybėms spręsti dažnai naudojama Titu lema (Sedrakiano nelygybė), kuri yra Koši-Švarco nelygybės išvada."
+          "text": "Tai pati dažniausiai naudojama nelygybių grupė. Bet kokiems teigiamiems skaičiams galioja grandinė:\n$$ \\sqrt{\\frac{a_1^2 + \\dots + a_n^2}, {n}} \\ge \\frac{a_1 + \\dots + a_n}, {n} \\ge \\sqrt[n], {a_1 \\dots a_n} \\ge \\frac{n}, {\\frac{1}, {a_1} + \\dots + \\frac{1}, {a_n}} $$"
         },
         {
+          "type": "method",
+          "text": "AM-GM taikymas: Jei turime sumą ir norime gauti sandaugą (arba atvirkščiai), AM-GM yra pirmas pasirinkimas. Svarbu: AM-GM nelygybę galima naudoti tik teigiamiems skaičiams. Jei kintamieji gali būti neigiami, AM-GM netinka!"
+        }
+      ]
+    },
+    {
+      "id": "theory-ineq-cauchy-titu",
+      "title": "Cauchy-Schwarz ir Titu lema",
+      "blocks": [
+        {
           "type": "paragraph",
-          "text": "Jenseno nelygybė susieja išgaubtosios funkcijos reikšmių vidurkį su vidurkio reikšme."
+          "text": "Cauchy-Schwarz nelygybė $(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$ yra universali, nes galioja visiems realiesiems skaičiams."
+        },
+        {
+          "type": "formulaCallout",
+          "text": "**Titu lema (Sedrakiano nelygybė):** Tai trupmeninė Cauchy-Schwarz forma:\n$$ \\frac{a_1^2}, {b_1} + \\frac{a_2^2}, {b_2} + \\dots + \\frac{a_n^2}, {b_n} \\ge \\frac{(a_1 + a_2 + \\dots + a_n)^2}, {b_1 + b_2 + \\dots + b_n} $$\nSąlyga: $b_i > 0$."
+        },
+        {
+          "type": "method",
+          "text": "Strategija: Naudokite Titu lemą, kai nelygybės kairėje pusėje yra trupmenų suma. Tai leidžia „sujungti“ vardiklius į vieną bendrą sumą, kas dažnai supaprastina reiškinį."
+        }
+      ]
+    },
+    {
+      "id": "theory-ineq-jensen",
+      "title": "Išgaubtumas ir Jenseno nelygybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jenseno nelygybė yra galingas įrankis, kai nelygybė turi pavidalą $f(a) + f(b) + f(c)$."
+        },
+        {
+          "type": "definitionCallout",
+          "text": "Funkcija $f$ vadinama **išgaubta** (convex), jei $f(\\frac{x+y}, {2}) \\le \\frac{f(x)+f(y)}, {2}$. Vizualiai jos grafikas primena „dubenį“ (pvz., $x^2, e^x, 1/x$ kai $x>0$)."
+        },
+        {
+          "type": "method",
+          "text": "Jenseno nelygybė: Išgaubtai funkcijai $f(\\frac{\\sum x_i}, {n}) \\le \\frac{\\sum f(x_i)}, {n}$. Jei funkcija įgaubta (concave, pvz., $\\ln x$ arba $\\sin x$ intervale $(0, \\pi)$), nelygybės ženklas keičiasi į priešingą."
+        }
+      ]
+    },
+    {
+      "id": "theory-ineq-homogenization",
+      "title": "Homogeniškumas ir normalizavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nelygybė vadinama homogenine, jei padauginus visus kintamuosius iš skaičiaus $k$, abi pusės pasikeičia $k^d$ kartų (laipsnis nesikeičia)."
+        },
+        {
+          "type": "method",
+          "text": "Strategija: Jei nelygybė yra homogeninė, galime padaryti papildomą prielaidą (normalizuoti), pavyzdžiui, $a+b+c=1$ arba $abc=1$. Tai leidžia pašalinti vieną kintamąjį arba supaprastinti vardiklius. Priešingai, jei nelygybė turi apribojimą (pvz., $abc=1$), ją galime paversti homogenine (homogenizuoti) įstatydami atitinkamus reiškinius."
+        }
+      ]
+    },
+    {
+      "id": "theory-ineq-rearrangement",
+      "title": "Pertvarkymo ir Čebyšovo nelygybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šios nelygybės remiasi kintamųjų surikiavimu. Tarkime $a_1 \\le a_2 \\le a_3$ ir $b_1 \\le b_2 \\le b_3$."
+        },
+        {
+          "type": "property",
+          "text": "**Pertvarkymo nelygybė:** Suma $\\sum a_i b_{\\sigma(i)}$ yra maksimali, kai sekos surikiuotos vienodai, ir minimali, kai sekos surikiuotos priešingai."
+        },
+        {
+          "type": "property",
+          "text": "**Čebyšovo nelygybė:** $\\frac{\\sum a_i}, {n} \\cdot \\frac{\\sum b_i}, {n} \\le \\frac{\\sum a_i b_i}, {n}$ (vidurkių sandauga $\\le$ sandaugos vidurkiui vienodai surikiuotoms sekoms)."
         }
       ]
     }
@@ -88,8 +156,6 @@
       "title": "AM-GM nelygybė",
       "type": "concept",
       "shortDefinition": "Aritmetinio ir geometrinio vidurkių nelygybė.",
-      "intuition": "Skaičių vidurkis visada yra ne mažesnis už jų 'geometrinį vidurkį' (šaknį iš sandaugos).",
-      "formal": "Neneigiamiems skaičiams $a_1, a_2, \\dots, a_n$: $\frac{a_1+a_2+\\dots+a_n}{n} \\ge \\sqrt[n]{a_1 a_2 \\dots a_n}$.",
       "relatedConceptIds": []
     },
     {
@@ -97,30 +163,20 @@
       "title": "Koši-Švarco nelygybė",
       "type": "concept",
       "shortDefinition": "Nelygybė, susiejanti sumas ir kvadratų sumas.",
-      "intuition": "Skaliarinė sandauga yra ne didesnė už ilgių sandaugą.",
-      "formal": "$(\\sum a_i b_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)$.",
-      "relatedConceptIds": [
-        "olimpiada-10-concept-titus-lemma"
-      ]
+      "relatedConceptIds": []
     },
     {
       "id": "olimpiada-10-concept-titus-lemma",
-      "title": "Titu lema (Sedrakiano nelygybė)",
+      "title": "Titu lema",
       "type": "concept",
       "shortDefinition": "Koši-Švarco nelygybės trupmeninė forma.",
-      "intuition": "Leidžia 'sujungti' vardiklius nelygybėse su kvadratų trupmenomis.",
-      "formal": "$\\sum_{i=1}^n \\frac{a_i^2}{b_i} \\ge \\frac{(\\sum a_i)^2}{\\sum b_i}$ kai $b_i > 0$.",
-      "relatedConceptIds": [
-        "olimpiada-10-concept-cauchy-schwarz"
-      ]
+      "relatedConceptIds": []
     },
     {
       "id": "olimpiada-10-concept-jensen",
       "title": "Jenseno nelygybė",
       "type": "concept",
       "shortDefinition": "Nelygybė išgaubtosioms funkcijoms.",
-      "intuition": "Išgaubtos funkcijos (convex) vidurkis yra didesnis už reikšmę vidurkio taške.",
-      "formal": "Išgaubtai funkcijai $f$: $f(\frac{x_1+\\dots+x_n}{n}) \\le \frac{f(x_1)+\\dots+f(x_n)}{n}$.",
       "relatedConceptIds": []
     },
     {
@@ -128,1646 +184,67 @@
       "title": "Šūro nelygybė",
       "type": "concept",
       "shortDefinition": "Simetrinė nelygybė trims kintamiesiems.",
-      "intuition": "Susieja laipsnių sumas su mišriomis sandaugomis.",
-      "formal": "$\\sum a^r(a-b)(a-c) \\ge 0$ neneigiamiems $a, b, c$.",
       "relatedConceptIds": []
     },
     {
-      "id": "olimpiada-10-concept-rearrangement",
-      "title": "Pertvarkymo nelygybė",
+      "id": "concept-homogenization",
+      "title": "Homogenizavimas",
       "type": "concept",
-      "shortDefinition": "Nelygybė apie dvejopai surikiuotas sumas.",
-      "intuition": "Sandaugų suma yra didžiausia, kai abi sekos surikiuotos vienoda tvarka.",
-      "formal": "Jei $a_1 \\le \\dots \\le a_n$ ir $b_1 \\le \\dots \\le b_n$, tai $\\sum a_i b_{n-i+1} \\le \\sum a_i b_{\\sigma(i)} \\le \\sum a_i b_i$.",
-      "relatedConceptIds": []
-    },
-    {
-      "id": "olimpiada-10-concept-chebyshev",
-      "title": "Čebyšovo nelygybė",
-      "type": "concept",
-      "shortDefinition": "Santykinė nelygybė tarp sumų ir sandaugų.",
-      "intuition": "Susieja sekų vidurkių sandaugą su sandaugų vidurkiu.",
-      "formal": "Jei $a_i$ ir $b_i$ vienodai surikiuotos, tai $n \\sum a_i b_i \\ge (\\sum a_i)(\\sum b_i)$.",
-      "relatedConceptIds": [
-        "olimpiada-10-concept-rearrangement"
-      ]
-    },
-    {
-      "id": "olimpiada-10-concept-muirhead",
-      "title": "Muirhead nelygybė",
-      "type": "concept",
-      "shortDefinition": "Simetrinių sumų palyginimas naudojant mažoravimą.",
-      "intuition": "Labiau 'išsklaidyti' laipsniai duoda didesnę sumą.",
-      "formal": "Jei vektorius $a$ mažoruoja $b$, tai $[a] \\ge [b]$.",
+      "shortDefinition": "Nelygybės narių laipsnių suvienodinimas naudojant apribojimus.",
       "relatedConceptIds": []
     }
   ],
   "formulas": [],
-  "mistakes": [],
+  "mistakes": [
+    {
+      "id": "mistake-am-gm-negative",
+      "title": "AM-GM taikymas neigiamiems skaičiams",
+      "description": "Dažnai mokiniai bando naudoti AM-GM nelygybę skaičiams, kurių teigiamumas nėra įrodytas.",
+      "prevention": "Visada patikrinkite sąlygą: ar $a, b, c$ yra realieji teigiami skaičiai? Jei ne, AM-GM naudoti negalima."
+    },
+    {
+      "id": "mistake-jensen-convexity",
+      "title": "Neteisingas išgaubtumo nustatymas",
+      "description": "Jenseno nelygybės ženklo sumaišymas (naudojant įgaubtą funkciją kaip išgaubtą).",
+      "prevention": "Visada patikrinkite antrąją išvestinę $f''(x) > 0$ (išgaubta) arba nubraižykite eskizą."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "AM-GM taikymas",
-      "problem": "Teigiamiems skaičiams $a, b$ įrodykite: $a+b \\ge 2\\sqrt{ab}$.",
-      "steps": [
-        {
-          "text": "Užrašome AM-GM nelygybę dviem nariams."
-        },
-        {
-          "text": "Aritmetinis vidurkis yra $(a+b)/2$, geometrinis vidurkis yra $\\sqrt{ab}$."
-        },
-        {
-          "text": "Gauname $(a+b)/2 \\ge \\sqrt{ab}$."
-        },
-        {
-          "text": "Padauginame iš 2."
-        }
-      ],
-      "answer": "Įrodyta."
+      "id": "we-ineq-titu-basic",
+      "title": "Titu lemos taikymas trupmenoms",
+      "content": "Įrodykite, kad teigiamiems skaičiams $a, b, c$ galioja: $\\frac{a^2}, {b+c} + \\frac{b^2}, {c+a} + \\frac{c^2}, {a+b} \\ge \\frac{a+b+c}, {2}$.\n\n**Sprendimas:**\n1. Kairėje pusėje turime kvadratų trupmenas. Tai idealus atvejis Titu lemai.\n2. Taikome formulę: $\\sum \\frac{a_i^2}, {b_i} \\ge \\frac{(\\sum a_i)^2}, {\\sum b_i}$.\n3. Čia $a_1=a, a_2=b, a_3=c$ ir $b_1=b+c, b_2=c+a, b_3=a+b$.\n4. Skaitiklis: $(a+b+c)^2$.\n5. Vardiklis: $(b+c) + (c+a) + (a+b) = 2(a+b+c)$.\n6. Gauname: $\\frac{(a+b+c)^2}, {2(a+b+c)} = \\frac{a+b+c}, {2}$.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Titu lema leidžia vienu žingsniu atsikratyti trupmenų sumos."
+    },
+    {
+      "id": "we-ineq-am-gm-weights",
+      "title": "AM-GM su papildomais nariais",
+      "content": "Teigiamiems skaičiams $a, b$ įrodykite: $\\frac{a^3}, {b} + ab \\ge 2a^2$.\n\n**Sprendimas:**\n1. Norime panaikinti vardiklį $b$.\n2. Taikome AM-GM dviem nariams: $\\frac{x+y}, {2} \\ge \\sqrt{xy}$.\n3. Pasirenkame $x = \\frac{a^3}, {b}$ ir $y = ab$.\n4. $\\frac{\\frac{a^3}, {b} + ab}, {2} \\ge \\sqrt{\\frac{a^3}, {b} \\cdot ab} = \\sqrt{a^4} = a^2$.\n5. Padauginame iš 2: $\\frac{a^3}, {b} + ab \\ge 2a^2$.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Parinkus tinkamą narį $ab$, AM-GM „išvalo“ laipsnius ir vardiklius."
+    },
+    {
+      "id": "we-ineq-jensen-trig",
+      "title": "Jenseno nelygybė trikampio kampams",
+      "content": "Įrodykite, kad bet kuriam trikampiui $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}, {2}$.\n\n**Sprendimas:**\n1. Funkcija $f(x) = \\sin x$ intervale $(0, \\pi)$ yra įgaubta ($f''(x) = -\\sin x < 0$).\n2. Pagal Jenseno nelygybę įgaubtoms funkcijoms: $\\frac{f(A)+f(B)+f(C)}, {3} \\le f(\\frac{A+B+C}, {3})$.\n3. $\\frac{\\sin A + \\sin B + \\sin C}, {3} \\le \\sin(\\frac{180^\\circ}, {3}) = \\sin(60^\\circ)$.\n4. $\\sin A + \\sin B + \\sin C \\le 3 \\cdot \\frac{\\sqrt{3}}, {2} = \\frac{3\\sqrt{3}}, {2}$.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Jenseno nelygybė yra pagrindinis metodas tiriant trikampio kampų funkcijų sumas."
+    },
+    {
+      "id": "we-ineq-cauchy-schwarz-sqrt",
+      "title": "Cauchy-Schwarz su šaknimis",
+      "content": "Jei $a+b+c = 1$, įrodykite: $\\sqrt{a} + \\sqrt{b} + \\sqrt{c} \\le \\sqrt{3}$.\n\n**Sprendimas:**\n1. Naudojame Cauchy-Schwarz formą $(\\sum x_i y_i)^2 \\le (\\sum x_i^2)(\\sum y_i^2)$.\n2. Pasirenkame rinkinius $(\\sqrt{a}, \\sqrt{b}, \\sqrt{c})$ ir $(1, 1, 1)$.\n3. $(\\sqrt{a}\\cdot 1 + \\sqrt{b}\\cdot 1 + \\sqrt{c}\\cdot 1)^2 \\le ((\\sqrt{a})^2 + (\\sqrt{b})^2 + (\\sqrt{c})^2)(1^2+1^2+1^2)$.\n4. $(\\sqrt{a} + \\sqrt{b} + \\sqrt{c})^2 \\le (a+b+c)(3)$.\n5. Kadangi $a+b+c=1$, tai $(\\sqrt{a} + \\sqrt{b} + \\sqrt{c})^2 \\le 3$.\n6. Ištraukiame šaknį: $\\sqrt{a} + \\sqrt{b} + \\sqrt{c} \\le \\sqrt{3}$.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Cauchy-Schwarz puikiai tinka norint sumą paversti kvadratų suma (arba šaknų sumą paprasta suma)."
+    },
+    {
+      "id": "we-ineq-normalization-abc",
+      "title": "Normalizavimo metodas",
+      "content": "Įrodykite $\\frac{a}, {b+c} + \\frac{b}, {c+a} + \\frac{c}, {a+b} \\ge \\frac{3}, {2}$ teigiamiems skaičiams.\n\n**Sprendimas:**\n1. Pastebime, kad nelygybė yra homogeninė (pakeitus $a,b,c \\to ka,kb,kc$, niekas nesikeičia).\n2. Galime daryti prielaidą $a+b+c = 1$.\n3. Tada $\\frac{a}, {1-a} + \\frac{b}, {1-b} + \\frac{c}, {1-c} \\ge \\frac{3}, {2}$.\n4. Funkcija $f(x) = \\frac{x}, {1-x}$ yra išgaubta intervale $(0, 1)$.\n5. Pagal Jenseno nelygybę: $f(a)+f(b)+f(c) \\ge 3f(\\frac{a+b+c}, {3}) = 3f(1/3)$.\n6. $3 \\cdot \\frac{1/3}, {1-1/3} = 3 \\cdot \\frac{1/3}, {2/3} = 3 \\cdot 1/2 = 3/2$.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Normalizavimas pašalina laisvę kisti sumai, paverčiant uždavinį vieno kintamojo funkcijos tyrimu."
     }
   ],
   "exercises": [
     {
       "id": "ex-olimpiada-10-01",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Įrodykite, kad bet kuriam teigiamam skaičiui $x$ galioja nelygybė $x + \frac{1}{x} \\ge 2$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta $x + 1/x \\ge 2$."
-      },
-      "answerText": "Nelygybė tiesiogiai išplaukia iš AM-GM nelygybės.",
-      "coreIdea": {
-        "title": "AM-GM nelygybė",
-        "text": "Taikome AM-GM nelygybę skaičiams $x$ ir $1/x$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kairėje pusėje turime skaičių ir jam atvirkštinį skaičių.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Pabandykite pritaikyti AM-GM nelygybę skaičiams $a=x$ ir $b=1/x$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "AM-GM sako, kad $(a+b)/2 \\ge \\sqrt{ab}$. Kas atsitinka su sandauga $ab$?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pagal AM-GM nelygybę teigiamiems skaičiams $x$ ir $1/x$ gauname: $\frac{x + 1/x}{2} \\ge \\sqrt{x \\cdot \frac{1}{x}}$."
-        },
-        {
-          "text": "Kadangi $x \\cdot 1/x = 1$, gauname $\frac{x + 1/x}{2} \\ge 1$."
-        },
-        {
-          "text": "Padauginę iš 2, turime $x + \frac{1}{x} \\ge 2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-01-method-1",
-          "title": "AM-GM metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Narių parinkimas",
-              "action": "Taikome AM-GM skaičiams $x$ ir $1/x$.",
-              "reason": "Skaičiaus ir jo atvirkštinio sandauga yra pastovi (lygi 1).",
-              "latex": "\\frac{x + 1/x}{2} \\ge \\sqrt{x \\cdot \\frac{1}{x}}",
-              "result": "Nelygybė užrašyta AM-GM formoje."
-            },
-            {
-              "title": "Supaprastinimas",
-              "action": "Apskaičiuojame geometrinį vidurkį $\\sqrt{1}=1$ ir padauginame iš 2.",
-              "reason": "Aritmetinis veiksmas nelygybės pusėse.",
-              "latex": "x + \\frac{1}{x} \\ge 2",
-              "result": "Nelygybė įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta taikant AM-GM nelygybę."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-01-trap-1",
-          "title": "Neigiamų skaičių ignoravimas",
-          "wrongMove": "Teigiama, kad nelygybė galioja visiems $x \\ne 0$.",
-          "whyTempting": "Atrodo, kad taisyklė universali.",
-          "correction": "AM-GM galioja tik neneigiamiems skaičiams. Jei $x < 0$, nelygybė keičia ženklą (pvz., $-1 + (-1) = -2$).",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kodėl AM-GM čia buvo efektyvus?",
-        "Kada šioje nelygybėje pasiekiama lygybė?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-02",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Įrodykite Koši-Švarco nelygybę dviem kintamiesiems: $(a_1 b_1 + a_2 b_2)^2 \\le (a_1^2 + a_2^2)(b_1^2 + b_2^2)$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Koši-Švarco nelygybė 2D atveju."
-      },
-      "answerText": "Nelygybė įrodyta atskliaudžiant arba naudojant vektorių savybes.",
-      "coreIdea": {
-        "title": "Kvadratų skirtumas",
-        "text": "Nelygybė ekvivalenti teiginiui, kad pilnas kvadratas yra neneigiamas."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-cauchy-schwarz"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Atskliauskite abi nelygybės puses.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Perkelkite viską į vieną pusę ir sugrupuokite narius.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Turėtumėte gauti pilną kvadratą pavidalu $(a_1 b_2 - a_2 b_1)^2 \\ge 0$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atskliaudžiame kairę pusę: $(a_1 b_1 + a_2 b_2)^2 = a_1^2 b_1^2 + 2 a_1 b_1 a_2 b_2 + a_2^2 b_2^2$."
-        },
-        {
-          "text": "Atskliaudžiame dešinę pusę: $(a_1^2 + a_2^2)(b_1^2 + b_2^2) = a_1^2 b_1^2 + a_1^2 b_2^2 + a_2^2 b_1^2 + a_2^2 b_2^2$."
-        },
-        {
-          "text": "Sulyginame puses: $a_1^2 b_1^2 + 2 a_1 b_1 a_2 b_2 + a_2^2 b_2^2 \\le a_1^2 b_1^2 + a_1^2 b_2^2 + a_2^2 b_1^2 + a_2^2 b_2^2$."
-        },
-        {
-          "text": "Suprastiname narius $a_1^2 b_1^2$ ir $a_2^2 b_2^2$."
-        },
-        {
-          "text": "Gauname $2 a_1 b_1 a_2 b_2 \\le a_1^2 b_2^2 + a_2^2 b_1^2$, kas yra $0 \\le (a_1 b_2 - a_2 b_1)^2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-02-method-1",
-          "title": "Algebrinis išskleidimas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Išskleidimas",
-              "action": "Atskliaudžiame abi puses ir suprastiname.",
-              "reason": "Algebrinis supaprastinimas leidžia pamatyti skirtumą tarp pusių.",
-              "latex": "(a_1 b_1 + a_2 b_2)^2 \\le a_1^2 b_1^2 + a_1^2 b_2^2 + a_2^2 b_1^2 + a_2^2 b_2^2",
-              "result": "Gauta supaprastinta forma."
-            },
-            {
-              "title": "Kvadrato sudarymas",
-              "action": "Perkeliame narius: $a_1^2 b_2^2 - 2 a_1 b_2 a_2 b_1 + a_2^2 b_1^2 \\ge 0$.",
-              "reason": "Atpažįstame pilno kvadrato formulę $(x-y)^2$.",
-              "latex": "(a_1 b_2 - a_2 b_1)^2 \\ge 0",
-              "result": "Nelygybė įrodyta, nes kvadratas visada neneigiamas."
-            }
-          ],
-          "finalAnswer": "Įrodyta, kad skirtumas yra $(a_1 b_2 - a_2 b_1)^2 \\ge 0$."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-02-trap-1",
-          "title": "Klaida skliaustų kėlime kvadratu",
-          "wrongMove": "$(a_1 b_1 + a_2 b_2)^2 = a_1^2 b_1^2 + a_2^2 b_2^2$.",
-          "whyTempting": "Mokiniai dažnai pamiršta dvigubą sandaugą.",
-          "correction": "Naudokite formulę $(x+y)^2 = x^2 + 2xy + y^2$.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kada šioje nelygybėje galioja lygybė?",
-        "Kaip tai susiję su vektorių kolinearumu?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-03",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 60,
-      "statement": "Tegul $x > -1$ ir $n$ yra natūralusis skaičius. Įrodykite Bernulio nelygybę: $(1+x)^n \\ge 1 + nx$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Bernulio nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant matematinę indukciją.",
-      "coreIdea": {
-        "title": "Matematinė indukcija",
-        "text": "Nelygybėms su natūraliaisiais rodikliais $n$ dažniausiai tinka indukcijos metodas."
-      },
-      "strategyTags": [
-        "induction"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Patikrinkite bazę su $n=1$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Tarkime, kad nelygybė galioja $n=k$: $(1+x)^k \\ge 1 + kx$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Padauginkite abi puses iš $(1+x)$ ir parodykite, kad tai daugiau už $1+(k+1)x$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bazė $n=1$: $(1+x)^1 = 1+x \\ge 1+1x$ (teisinga)."
-        },
-        {
-          "text": "Indukcijos prielaida: tarkime $(1+x)^k \\ge 1+kx$."
-        },
-        {
-          "text": "Indukcijos žingsnis: $(1+x)^{k+1} = (1+x)^k (1+x) \\ge (1+kx)(1+x)$."
-        },
-        {
-          "text": "Atskliaudžiame: $(1+kx)(1+x) = 1 + x + kx + kx^2 = 1 + (k+1)x + kx^2$."
-        },
-        {
-          "text": "Kadangi $kx^2 \\ge 0$, tai $1 + (k+1)x + kx^2 \\ge 1 + (k+1)x$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-03-method-1",
-          "title": "Indukcijos metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "induction"
-          ],
-          "steps": [
-            {
-              "title": "Bazė ir prielaida",
-              "action": "Patikriname $n=1$ ir darome prielaidą $k$.",
-              "reason": "Indukcijos standartas.",
-              "latex": "(1+x)^k \\ge 1+kx",
-              "result": "Prielaida paruošta."
-            },
-            {
-              "title": "Žingsnis",
-              "action": "Dauginame iš $(1+x)$ (kuris teigiamas, nes $x > -1$).",
-              "reason": "Pereiname prie laipsnio $k+1$.",
-              "latex": "(1+x)^{k+1} \\ge 1+(k+1)x+kx^2",
-              "result": "Gauta nelygybė su liekanos nariu."
-            },
-            {
-              "title": "Išvada",
-              "action": "Atmetame $kx^2$, nes jis neneigiamas.",
-              "reason": "Gavome dešinę nelygybės pusę.",
-              "latex": "1+(k+1)x+kx^2 \\ge 1+(k+1)x",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta matematinės indukcijos būdu."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-03-trap-1",
-          "title": "Sąlygos $x > -1$ nepaisymas",
-          "wrongMove": "Dauginama iš $(1+x)$ nepažymint, kad tai nekeičia nelygybės ženklo.",
-          "whyTempting": "Mokiniai dažnai pamiršta, kad dauginant iš neigiamo skaičiaus ženklas keičiasi.",
-          "correction": "Būtina pabrėžti, kad $1+x > 0$, todėl daugyba yra legiti."
-        }
-      ],
-      "reflectionPrompts": [
-        "Kada galioja griežta lygybė?",
-        "Ar nelygybė galioja trupmeniniams $n$?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-04",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Teigiamiems skaičiams $a, b, c$ įrodykite: $a^3 + b^3 + c^3 \\ge 3abc$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta $a^3+b^3+c^3 \\ge 3abc$."
-      },
-      "answerText": "Tai yra AM-GM nelygybė trims nariams.",
-      "coreIdea": {
-        "title": "AM-GM trims nariams",
-        "text": "AM-GM teigia, kad trijų skaičių vidurkis yra ne mažesnis už jų kubinę šaknį iš sandaugos."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Taikykite AM-GM nelygybę skaičiams $x=a^3, y=b^3, z=c^3$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "AM-GM forma: $\frac{x+y+z}{3} \\ge \\sqrt[3]{xyz}$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pagal AM-GM nelygybę trims teigiamiems skaičiams $a^3, b^3, c^3$ turime: $\frac{a^3 + b^3 + c^3}{3} \\ge \\sqrt[3]{a^3 \\cdot b^3 \\cdot c^3}$."
-        },
-        {
-          "text": "Sandauga po šaknimi yra $(abc)^3$."
-        },
-        {
-          "text": "Ištraukę kubinę šaknį, gauname $abc$."
-        },
-        {
-          "text": "Padauginame iš 3: $a^3 + b^3 + c^3 \\ge 3abc$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-04-method-1",
-          "title": "AM-GM taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "AM-GM formulė",
-              "action": "Užrašome $\\frac{a^3+b^3+c^3}{3} \\ge \\sqrt[3]{a^3b^3c^3}$.",
-              "reason": "Tiesioginis AM-GM taikymas teigiamiems kubams.",
-              "latex": "\\frac{a^3+b^3+c^3}{3} \\ge abc",
-              "result": "Nelygybė gauta daline forma."
-            },
-            {
-              "title": "Sutvarkymas",
-              "action": "Padauginame abi puses iš 3.",
-              "reason": "Kad gautume pradinę uždavinio formą.",
-              "latex": "a^3+b^3+c^3 \\ge 3abc",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta naudojant AM-GM nelygybę."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-05",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite Nesbito nelygybę teigiamiems skaičiams $a, b, c$: $\\frac{a}{b+c} + \\frac{b}{c+a} + \\frac{c}{a+b} \\ge \\frac{3}{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Nesbito nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta naudojant Titu lemą arba Koši-Švarco nelygybę.",
-      "coreIdea": {
-        "title": "Titu lemos taikymas",
-        "text": "Kad galėtume pritaikyti Titu lemą, skaitiklius reikia paversti kvadratais."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-titus-lemma"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Parašykite narius pavidalu $\\frac{a^2}{a(b+c)}$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Taikykite Titu lemą: $\\sum \\frac{a^2}{ab+ac} \\ge \\frac{(a+b+c)^2}{\\sum (ab+ac)}$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Vardiklis bus $2(ab+bc+ca)$. Pasinaudokite nelygybe $(a+b+c)^2 \\ge 3(ab+bc+ca)$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pakeičiame trupmenas: $\\frac{a^2}{ab+ac} + \\frac{b^2}{bc+ba} + \\frac{c^2}{ca+cb}$."
-        },
-        {
-          "text": "Taikome Titu lemą: $\\sum \\frac{a^2}{ab+ac} \\ge \\frac{(a+b+c)^2}{2(ab+bc+ca)}$."
-        },
-        {
-          "text": "Žinome, kad $(a+b+c)^2 = a^2+b^2+c^2 + 2(ab+bc+ca)$."
-        },
-        {
-          "text": "Taip pat žinome, kad $a^2+b^2+c^2 \\ge ab+bc+ca$."
-        },
-        {
-          "text": "Todėl $(a+b+c)^2 \\ge 3(ab+bc+ca)$."
-        },
-        {
-          "text": "Įstatome: $\\frac{3(ab+bc+ca)}{2(ab+bc+ca)} = \\frac{3}{2}$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-05-method-1",
-          "title": "Titu lemos metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Transformacija",
-              "action": "Užrašome $\\sum \\frac{a^2}{a(b+c)} \\ge \\frac{(a+b+c)^2}{2(ab+bc+ca)}$.",
-              "reason": "Titu lema reikalauja kvadratų skaitikliuose.",
-              "latex": "\\sum \\frac{a^2}{ab+ac} \\ge \\frac{(a+b+c)^2}{2\\sum ab}",
-              "result": "Gauta trupmeninė nelygybė."
-            },
-            {
-              "title": "Sąryšis tarp sumų",
-              "action": "Naudojame $(a+b+c)^2 \\ge 3(ab+bc+ca)$.",
-              "reason": "Tai klasikinė nelygybė išplaukianti iš $a^2+b^2+c^2 \\ge ab+bc+ca$.",
-              "latex": "\\frac{(a+b+c)^2}{2\\sum ab} \\ge \\frac{3\\sum ab}{2\\sum ab} = 1.5",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta Nesbito nelygybė naudojant Titu lemą."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-06",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Duotos dvi skaičių sekos $a_1 \\le a_2 \\le a_3$ ir $b_1 \\le b_2 \\le b_3$. Įrodykite, kad $a_1 b_3 + a_2 b_2 + a_3 b_1 \\le a_1 b_1 + a_2 b_2 + a_3 b_3$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta pertvarkymo nelygybė 3 elementams."
-      },
-      "answerText": "Tai yra tiesioginis pertvarkymo nelygybės atvejis.",
-      "coreIdea": {
-        "title": "Pertvarkymo nelygybė",
-        "text": "Sandaugų suma yra didžiausia, kai sekos surikiuotos vienoda tvarka."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-rearrangement"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Išnagrinėkite skirtumą tarp dešinės ir kairės pusės.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Sukelkite narius į grupes: $a_3(b_3-b_1) + a_1(b_1-b_3) = (a_3-a_1)(b_3-b_1)$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atimame kairę pusę iš dešinės: $(a_1 b_1 + a_2 b_2 + a_3 b_3) - (a_1 b_3 + a_2 b_2 + a_3 b_1)$."
-        },
-        {
-          "text": "Suprastiname $a_2 b_2$."
-        },
-        {
-          "text": "Liekame su $a_1 b_1 + a_3 b_3 - a_1 b_3 - a_3 b_1$."
-        },
-        {
-          "text": "Sugrupuojame: $a_3(b_3 - b_1) - a_1(b_3 - b_1) = (a_3 - a_1)(b_3 - b_1)$."
-        },
-        {
-          "text": "Kadangi $a_3 \\ge a_1$ ir $b_3 \\ge b_1$, skirtumas yra neneigiamas."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-06-method-1",
-          "title": "Skirtumo metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Grupavimas",
-              "action": "Apskaičiuojame $(a_3b_3 + a_1b_1) - (a_3b_1 + a_1b_3)$.",
-              "reason": "Vidurinis narys sutampa, todėl nagrinėjame tik kraštinius.",
-              "latex": "a_3(b_3-b_1) - a_1(b_3-b_1)",
-              "result": "Gauta faktorizuota forma."
-            },
-            {
-              "title": "Ženklų analizė",
-              "action": "$(a_3-a_1)(b_3-b_1) \\ge 0$.",
-              "reason": "Sekos surikiuotos didėjimo tvarka.",
-              "latex": "(a_3-a_1)(b_3-b_1) \\ge 0",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta per narių grupavimą."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-07",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Jei $a_1 \\le a_2 \\le \\dots \\le a_n$ ir $b_1 \\le b_2 \\le \\dots \\le b_n$, įrodykite: $\frac{\\sum a_i}{n} \\cdot \frac{\\sum b_i}{n} \\le \frac{\\sum a_i b_i}{n}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Čebyšovo nelygybė."
-      },
-      "answerText": "Tai yra Čebyšovo nelygybė.",
-      "coreIdea": {
-        "title": "Pertvarkymo nelygybės apibendrinimas",
-        "text": "Čebyšovo nelygybė sako, kad vienodai surikiuotų sekų sandaugų vidurkis yra ne mažesnis už vidurkių sandaugą."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-chebyshev"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Padauginkite abi puses iš $n^2$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nagrinėkite sumą $\\sum_{i,j} (a_i - a_j)(b_i - b_j)$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Nagrinėjame sumą $S = \\sum_{i=1}^n \\sum_{j=1}^n (a_i - a_j)(b_i - b_j)$."
-        },
-        {
-          "text": "Kadangi sekos surikiuotos vienodai, tai $(a_i - a_j)$ ir $(b_i - b_j)$ visada turi tą patį ženklą, todėl jų sandauga neneigiama. $S \\ge 0$."
-        },
-        {
-          "text": "Išskleidžiame $S$: $\\sum_i \\sum_j (a_i b_i - a_i b_j - a_j b_i + a_j b_j) \\ge 0$."
-        },
-        {
-          "text": "Tai yra $n \\sum a_i b_i - (\\sum a_i)(\\sum b_j) - (\\sum a_j)(\\sum b_i) + n \\sum a_j b_j \\ge 0$."
-        },
-        {
-          "text": "$2n \\sum a_i b_i - 2 (\\sum a_i)(\\sum b_i) \\ge 0$."
-        },
-        {
-          "text": "Padalinę iš $2n^2$, gauname Čebyšovo nelygybę."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-07-method-1",
-          "title": "Dvigubos sumos metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Neneigiama suma",
-              "action": "Užrašome $\\sum_{i,j} (a_i-a_j)(b_i-b_j) \\ge 0$.",
-              "reason": "Vienodai surikiuotos sekos užtikrina vienodus ženklus.",
-              "latex": "\\sum_i \\sum_j (a_i-a_j)(b_i-b_j) \\ge 0",
-              "result": "Pradinė nelygybė suformuluota."
-            },
-            {
-              "title": "Išskleidimas",
-              "action": "Išskleidžiame skliaustus ir sumuojame po vieną kintamąjį.",
-              "reason": "Sumavimo savybių taikymas.",
-              "latex": "2n \\sum a_ib_i \\ge 2 (\\sum a_i)(\\sum b_i)",
-              "result": "Gauta supaprastinta forma."
-            }
-          ],
-          "finalAnswer": "Įrodyta naudojant dvigubą sumą."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-08",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Teigiamiems skaičiams $a, b, c$, kurių suma lygi 1, įrodykite: $a^2 + b^2 + c^2 \\ge \frac{1}{3}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta $a^2+b^2+c^2 \\ge 1/3$."
-      },
-      "answerText": "Nelygybė įrodyta naudojant Koši-Švarco nelygybę arba Jenseno nelygybę funkcijai $f(x)=x^2$.",
-      "coreIdea": {
-        "title": "Koši-Švarco nelygybė",
-        "text": "Naudojame Koši-Švarco nelygybę vektoriams $(a, b, c)$ ir $(1, 1, 1)$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-cauchy-schwarz"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite sumą $(a+b+c)^2$ ir palyginkite su kvadratų suma.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Pagal Koši-Švarcą: $(a \\cdot 1 + b \\cdot 1 + c \\cdot 1)^2 \\le (a^2+b^2+c^2)(1^2+1^2+1^2)$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome Koši-Švarco nelygybę: $(a+b+c)^2 \\le (a^2+b^2+c^2)(1+1+1)$."
-        },
-        {
-          "text": "Žinome, kad $a+b+c = 1$."
-        },
-        {
-          "text": "Gauname $1^2 \\le (a^2+b^2+c^2) \\cdot 3$."
-        },
-        {
-          "text": "Padaliname iš 3: $a^2 + b^2 + c^2 \\ge \frac{1}{3}$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-08-method-1",
-          "title": "Koši-Švarco metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Nelygybės pasirinkimas",
-              "action": "Taikome $(\\sum a_i \\cdot 1)^2 \\le (\\sum a_i^2)(\\sum 1^2)$.",
-              "reason": "Tai greičiausias būdas susieti sumą su kvadratų suma.",
-              "latex": "(1)^2 \\le (a^2+b^2+c^2) \\cdot 3",
-              "result": "Gauta tiesioginė nelygybė."
-            }
-          ],
-          "finalAnswer": "Įrodyta naudojant Koši-Švarco nelygybę."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-09",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad bet kuriems teigiamiems realiesiems skaičiams $a$ ir $b$ galioja nelygybė: $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta $a^3 b^2 \\le \\frac{3a^5 + 2b^5}{5}$."
-      },
-      "answerText": "Nelygybė įrodyta taikant pasvertąją AM-GM nelygybę.",
-      "coreIdea": {
-        "title": "Pasvertasis AM-GM",
-        "text": "Taikome AM-GM nelygybę 5 nariams, iš kurių trys yra $a^5$, o du yra $b^5$: $\\frac{a^5 + a^5 + a^5 + b^5 + b^5}{5} \\ge \\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "conceptIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Dešinėje nelygybės pusėje matome penkių narių sumą, padalytą iš 5, kur trys nariai yra $a^5$ ir du yra $b^5$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Taikykite paprastąją AM-GM nelygybę šiems penkiems nariams: $a^5, a^5, a^5, b^5, b^5$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pasirenkame penkis teigiamus skaičius: $a^5, a^5, a^5, b^5, b^5$."
-        },
-        {
-          "text": "Pritaikome jiems aritmetinio-geometrinio vidurkio (AM-GM) nelygybę."
-        },
-        {
-          "text": "Aritmetinis vidurkis yra $\\frac{3a^5 + 2b^5}{5}$."
-        },
-        {
-          "text": "Geometrinis vidurkis yra $\\sqrt[5]{a^{15}b^{10}} = a^3 b^2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-09-method-1",
-          "title": "AM-GM taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "AM-GM 5 nariams",
-              "action": "$\\frac{3a^5+2b^5}{5} \\ge \\sqrt[5]{(a^5)^3(b^5)^2}$.",
-              "reason": "AM-GM su svoriais 3/5 ir 2/5.",
-              "latex": "\\frac{3a^5+2b^5}{5} \\ge a^3b^2",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Nelygybė įrodyta taikant AM-GM."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-10",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Teigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $\\frac{a^2}{b+c} + \\frac{b^2}{c+a} + \\frac{c^2}{a+b} \\ge \\frac{a+b+c}{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Nesbito tipo nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant Titu lemą.",
-      "coreIdea": {
-        "title": "Titu lema",
-        "text": "Taikome Titu lemą: $\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{\\sum (b+c)}$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-titus-lemma"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Suskaičiuokite vardiklių sumą.",
-          "penalty": 0.05
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome Titu lemą: $\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}$."
-        },
-        {
-          "text": "Suprastiname $(a+b+c)$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-10-method-1",
-          "title": "Titu lema",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Taikymas",
-              "action": "$\\sum \\frac{a^2}{b+c} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}$.",
-              "reason": "Tiesioginis Titu lemos taikymas.",
-              "latex": "\\sum \\frac{a^2}{b+c} \\ge \\frac{a+b+c}{2}",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta taikant Titu lemą."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-11",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad bet kuriam smailiajam trikampiui $ABC$ galioja nelygybė: $\\sin A + \\sin B + \\sin C \\le \\frac{3\\sqrt{3}}{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta nelygybė trikampio kampams."
-      },
-      "answerText": "Nelygybė įrodyta taikant Jenseno nelygybę funkcijai $f(x) = \\sin x$.",
-      "coreIdea": {
-        "title": "Jenseno nelygybė",
-        "text": "Sinuso funkcija smailiojo trikampio kampams yra įgaubta."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-jensen"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Naudojame Jenseno nelygybę: $\\frac{\\sum \\sin A}{3} \\le \\sin(\\frac{\\sum A}{3}) = \\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-11-method-1",
-          "title": "Jenseno nelygybė",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Vidurkis",
-              "action": "$\\sum \\sin A \\le 3 \\sin(60^\\circ)$.",
-              "reason": "Sinusas yra įgaubta funkcija intervale $(0, \\pi)$.",
-              "latex": "\\sum \\sin A \\le \\frac{3\\sqrt{3}}{2}",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta taikant Jenseno nelygybę."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-12",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Neneigiamiems realiesiems skaičiams $a, b, c$ įrodykite: $a^3+b^3+c^3 + 3abc \\ge ab(a+b) + bc(b+c) + ca(c+a)$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Šūro nelygybė."
-      },
-      "answerText": "Tai yra klasikinė Šūro nelygybė.",
-      "coreIdea": {
-        "title": "Šūro nelygybė",
-        "text": "Šūro nelygybė su $r=1$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-schur"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Taikome $\\sum a(a-b)(a-c) \\ge 0$ ir išskleidžiame."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-12-method-1",
-          "title": "Šūro forma",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Išskleidimas",
-              "action": "$\\sum a^3 + 3abc \\ge \\sum ab(a+b)$.",
-              "reason": "Šūro nelygybės savybė.",
-              "latex": "\\sum a(a-b)(a-c) \\ge 0",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta kaip Šūro nelygybė."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-13",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Įrodykite nelygybę teigiamiems skaičiams $a, b, c$: $\\frac{a^3}{b^2} + \\frac{b^3}{c^2} + \\frac{c^3}{a^2} \\ge a + b + c$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant AM-GM arba Titu lemą su pakeitimais.",
-      "coreIdea": {
-        "title": "AM-GM su papildomais nariais",
-        "text": "Prie kiekvieno nario pridedame papildomų kintamųjų, kad pritaikytume AM-GM ir gautume tiesinius narius."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Taikykite AM-GM trims nariams: $\\frac{a^3}{b^2} + b + b \\ge 3a$.",
-          "penalty": 0.05
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pagal AM-GM nelygybę: $\\frac{a^3}{b^2} + b + b \\ge 3\\sqrt[3]{\\frac{a^3}{b^2} \\cdot b \\cdot b} = 3a$."
-        },
-        {
-          "text": "Analogiškai: $\\frac{b^3}{c^2} + c + c \\ge 3b$ ir $\\frac{c^3}{a^2} + a + a \\ge 3c$."
-        },
-        {
-          "text": "Sudedame nelygybes: $\\sum \\frac{a^3}{b^2} + 2(a+b+c) \\ge 3(a+b+c)$."
-        },
-        {
-          "text": "Atimame $2(a+b+c)$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-13-method-1",
-          "title": "AM-GM papildymo metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "AM-GM blokas",
-              "action": "$\\frac{a^3}{b^2} + 2b \\ge 3a$.",
-              "reason": "Naudojame AM-GM sandaugai supaprastinti.",
-              "latex": "\\sum (\\frac{a^3}{b^2} + 2b) \\ge 3\\sum a",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta taikant AM-GM nelygybę."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-14",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Teigiamiems skaičiams $a, b, c$ įrodykite: $a^4 + b^4 + c^4 \\ge a^2b^2 + b^2c^2 + c^2a^2$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta 4 laipsnio nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta naudojant Koši-Švarco nelygybę arba Muirhead nelygybę.",
-      "coreIdea": {
-        "title": "Kvadratų nelygybė",
-        "text": "Ši nelygybė yra $x^2+y^2+z^2 \\ge xy+yz+zx$ atvejis, kai $x=a^2, y=b^2, z=c^2$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Žinome bendrą nelygybę $x^2+y^2+z^2 \\ge xy+yz+zx$."
-        },
-        {
-          "text": "Įstatome $x=a^2, y=b^2, z=c^2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-14-method-1",
-          "title": "Pakeitimo metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Pakeitimas",
-              "action": "Tegul $x=a^2, y=b^2, z=c^2$.",
-              "reason": "Supaprastiname laipsnius.",
-              "latex": "x^2+y^2+z^2 \\ge xy+yz+zx",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta per kintamųjų pakeitimą."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-15",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad teigiamiems skaičiams $a, b$ galioja: $\\sqrt{\\frac{a^2+b^2}{2}} \\ge \\frac{a+b}{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta QM-AM nelygybė."
-      },
-      "answerText": "Tai yra nelygybė tarp kvadratinio ir aritmetinio vidurkių.",
-      "coreIdea": {
-        "title": "Kvadratinio vidurkio viršenybė",
-        "text": "Pakelkite abi puses kvadratu ir suprastinkite."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Keliame kvadratu: $\\frac{a^2+b^2}{2} \\ge \\frac{a^2+2ab+b^2}{4}$."
-        },
-        {
-          "text": "Padauginame iš 4: $2a^2+2b^2 \\ge a^2+2ab+b^2$."
-        },
-        {
-          "text": "Sutvarkome: $a^2-2ab+b^2 \\ge 0$, t.y. $(a-b)^2 \\ge 0$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-15-method-1",
-          "title": "Kvadratu kėlimas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Sulyginimas",
-              "action": "Keliame kvadratu ir dauginame iš 4.",
-              "reason": "Panaikiname šaknis ir vardiklius.",
-              "latex": "(a-b)^2 \\ge 0",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-16",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 85,
-      "statement": "Jei $a, b, c > 0$ ir $abc=1$, įrodykite: $\\frac{1}{a+b+1} + \\frac{1}{b+c+1} + \\frac{1}{c+a+1} \\le 1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta nelygybė su apribojimu."
-      },
-      "answerText": "Nelygybė įrodyta naudojant kintamųjų pakeitimą $a=x^3, b=y^3, c=z^3$ arba panašiai.",
-      "coreIdea": {
-        "title": "Kintamųjų pakeitimas",
-        "text": "Naudokite pakeitimą $a=x^3, b=y^3, c=z^3$, kad pašalintumėte sąlygą $abc=1$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Taikykite $a+b+1 \\ge a^{1/3}b^{1/3}(a^{1/3}+b^{1/3}+c^{1/3})$?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Pabandykite pakeitimą $a=\frac{x}{y}, b=\frac{y}{z}, c=\frac{z}{x}$.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tegul $a=x^3, b=y^3, c=z^3$ su $xyz=1$."
-        },
-        {
-          "text": "Naudojame $x^3+y^3 \\ge xy(x+y)$."
-        },
-        {
-          "text": "Tada $\\frac{1}{a+b+1} = \\frac{1}{x^3+y^3+1} \\le \\frac{1}{xy(x+y)+xyz} = \\frac{1}{xy(x+y+z)} = \\frac{z}{x+y+z}$."
-        },
-        {
-          "text": "Sudedame: $\\frac{z}{x+y+z} + \\frac{x}{x+y+z} + \\frac{y}{x+y+z} = 1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-16-method-1",
-          "title": "Pakeitimo metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Įvertinimas",
-              "action": "Naudojame $a+b+1 \\ge ab^{1/2}(a^{1/2}+b^{1/2})+1$.",
-              "reason": "Klasikinė kubų sumos nelygybė.",
-              "latex": "\\sum \\frac{z}{x+y+z} = 1",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-17",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad neneigiamiems skaičiams $a, b, c$ galioja: $(a+b)(b+c)(c+a) \\ge 8abc$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta tris kartus pritaikius AM-GM dviem nariams.",
-      "coreIdea": {
-        "title": "AM-GM sandaugai",
-        "text": "Kiekvieną skliaustą įvertiname atskirai naudojant AM-GM."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$a+b \\ge 2\\sqrt{ab}$."
-        },
-        {
-          "text": "$b+c \\ge 2\\sqrt{bc}$."
-        },
-        {
-          "text": "$c+a \\ge 2\\sqrt{ca}$."
-        },
-        {
-          "text": "Sudauginame: $(a+b)(b+c)(c+a) \\ge 2\\sqrt{ab} \\cdot 2\\sqrt{bc} \\cdot 2\\sqrt{ca} = 8\\sqrt{a^2b^2c^2} = 8abc$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-17-method-1",
-          "title": "AM-GM metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Skliaustų vertinimas",
-              "action": "Taikome AM-GM kiekvienam skliaustui.",
-              "reason": "Sandauga išsiskaido į paprastas nelygybes.",
-              "latex": "(a+b)(b+c)(c+a) \\ge 8abc",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-18",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Įrodykite, kad teigiamiems skaičiams $a, b, c$ galioja: $\\frac{a}{b} + \\frac{b}{c} + \\frac{c}{a} \\ge 3$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta ciklinė nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant AM-GM nelygybę trims nariams.",
-      "coreIdea": {
-        "title": "AM-GM cikliniams nariams",
-        "text": "Sandauga šių trijų narių yra lygi 1."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Taikome AM-GM trims nariams: $\\frac{\\frac{a}{b} + \\frac{b}{c} + \\frac{c}{a}}{3} \\ge \\sqrt[3]{\\frac{a}{b} \\cdot \\frac{b}{c} \\cdot \\frac{c}{a}}$."
-        },
-        {
-          "text": "Sandauga yra $\\frac{abc}{bca} = 1$."
-        },
-        {
-          "text": "Todėl $\\frac{\\text{suma}}{3} \\ge 1 \\implies \\text{suma} \\ge 3$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-18-method-1",
-          "title": "AM-GM",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Vertinimas",
-              "action": "$\\sum \\frac{a}{b} \\ge 3 \\sqrt[3]{\\prod \\frac{a}{b}} = 3$.",
-              "reason": "Tiesioginis AM-GM taikymas.",
-              "latex": "\\sum \\frac{a}{b} \\ge 3",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-19",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad bet kuriems teigiamiems skaičiams $a, b, c$ galioja: $a^2b + b^2c + c^2a \\ge 3abc$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta ciklinė nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant AM-GM nelygybę trims nariams.",
-      "coreIdea": {
-        "title": "AM-GM sandaugai",
-        "text": "Narių sandauga yra $(abc)^3$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-am-gm"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Taikome AM-GM skaičiams $a^2b, b^2c, c^2a$."
-        },
-        {
-          "text": "Jų vidurkis $\\ge \\sqrt[3]{a^2b \\cdot b^2c \\cdot c^2a} = \\sqrt[3]{a^3b^3c^3} = abc$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-19-method-1",
-          "title": "AM-GM",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Taikymas",
-              "action": "$\\frac{a^2b+b^2c+c^2a}{3} \\ge abc$.",
-              "reason": "AM-GM trims nariams.",
-              "latex": "a^2b+b^2c+c^2a \\ge 3abc",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-20",
-      "topicId": "olimpiada-10-nelygybes",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Nelygybės",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Įrodykite, kad teigiamiems skaičiams $a, b, c$ galioja: $\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{c^2}{a} \\ge a + b + c$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta ciklinė trupmeninė nelygybė."
-      },
-      "answerText": "Nelygybė įrodyta taikant Titu lemą arba AM-GM nelygybę.",
-      "coreIdea": {
-        "title": "Titu lema",
-        "text": "Tiesioginis Titu lemos taikymas su vardikliais $b, c, a$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-titus-lemma"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Taikome Titu lemą: $\\frac{a^2}{b} + \\frac{b^2}{c} + \\frac{c^2}{a} \\ge \\frac{(a+b+c)^2}{b+c+a} = a+b+c$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-20-method-1",
-          "title": "Titu lema",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Taikymas",
-              "action": "$\\sum \\frac{a^2}{b} \\ge \\frac{(\\sum a)^2}{\\sum a} = \\sum a$.",
-              "reason": "Vardiklių suma yra tokia pati kaip skaitiklių suma (be kvadratų).",
-              "latex": "\\sum \\frac{a^2}{b} \\ge a+b+c",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    }
-  ],
-  "tests": [
-    {
-      "id": "olimpiada-10-test-challenge",
-      "title": "Nelygybių iššūkis (10 klasė)",
-      "type": "olympiad",
-      "topicIds": [
-        "olimpiada-10-nelygybes"
-      ],
-      "exerciseIds": [
-        "ex-olimpiada-10-01",
-        "ex-olimpiada-10-02",
-        "ex-olimpiada-10-04",
-        "ex-olimpiada-10-05",
-        "ex-olimpiada-10-08",
-        "ex-olimpiada-10-09",
-        "ex-olimpiada-10-10",
-        "ex-olimpiada-10-13",
-        "ex-olimpiada-10-16",
-        "ex-olimpiada-10-20"
-      ],
+
       "masteryWeight": 1.5
     }
   ]

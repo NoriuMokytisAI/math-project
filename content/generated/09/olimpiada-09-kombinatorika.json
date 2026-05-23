@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Papildyta 9 klasės olimpiadinė kombinatorika: skaičiavimo taisyklės, rinkiniai, Dirichlė principas."
+    "notes": "Deeply expanded theory and worked examples for Grade 9 Olympiad Combinatorics"
   },
   "topic": {
     "id": "olimpiada-09-kombinatorika",
@@ -12,7 +12,7 @@
     "strand": "Duomenys ir tikimybės",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 180,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
@@ -21,7 +21,10 @@
       "ol-09-comb-concept-gretiniai",
       "ol-09-comb-concept-deriniai",
       "ol-09-comb-concept-dirichle",
-      "ol-09-comb-concept-inkliuzija"
+      "ol-09-comb-concept-inkliuzija",
+      "concept-invariant",
+      "concept-graph-theory",
+      "concept-coloring-method"
     ],
     "formulaIds": [
       "ol-09-comb-formula-keliniai",
@@ -53,45 +56,86 @@
   },
   "theory": [
     {
-      "id": "ol-09-comb-theory-1",
-      "title": "Pagrindinės skaičiavimo taisyklės",
+      "id": "theory-comb-olympiad-intro",
+      "title": "Kombinatorinio mąstymo menas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kombinatorikoje viskas prasideda nuo dviejų pagrindinių taisyklių: sudėties ir daugybos."
+          "text": "Kombinatorika olimpiadose nėra tik formulių taikymas. Tai menas skaičiuoti objektus, kurių tiesiogiai pamatyti neįmanoma, ir įrodinėti teiginius apie jų egzistavimą ar neįmanomumą. Pagrindinis skirtumas nuo mokyklinės kombinatorikos – čia dažnai susiduriame su „egzistavimo“ uždaviniais: nereikia pasakyti, *kiek* yra objektų, reikia įrodyti, kad *bent vienas* toks objektas turi tam tikrą savybę."
         },
         {
-          "type": "definition",
-          "conceptId": "ol-09-comb-concept-daugyba",
-          "text": "Daugybos taisyklė: jei pirmą objektą galime pasirinkti $n$ būdų, o antrą - $m$ būdų, tai abu kartu galime pasirinkti $n \\cdot m$ būdų."
+          "type": "paragraph",
+          "text": "Sprendžiant olimpiadinį uždavinį, pirmiausia reikia suprasti, ar tai skaičiavimo uždavinys, ar struktūrinis įrodymas. Skaičiavimo uždaviniuose naudojame daugybos taisyklę, derinius ir perstatymus. Įrodymo uždaviniuose pasitelkiame Dirichlė principą, invariantus, spalvinimo metodą arba grafų teoriją."
         }
       ]
     },
     {
-      "id": "ol-09-comb-theory-2",
-      "title": "Rinkiniai: Kėliniai, gretiniai ir deriniai",
+      "id": "theory-comb-double-counting",
+      "title": "Dvigubo skaičiavimo metodas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Svarbu atskirti, kada tvarka yra svarbi (gretiniai), o kada - ne (deriniai)."
+          "text": "Dvigubas skaičiavimas yra viena gražiausių kombinatorikos strategijų. Idėja paprasta: suskaičiuokite tą pačią aibę dviem skirtingais būdais ir sulyginkite gautus rezultatus."
         },
         {
           "type": "method",
-          "text": "Naudokite derinius $C_n^k$, kai renkatės grupę elementų, kur jų eiliškumas neturi reikšmės."
+          "text": "Strategija: Jei turite lentelę su nuliais ir vienetais, galite skaičiuoti vienetų kiekį eilutėmis arba stulpeliais. Gauta lygybė dažnai atskleidžia netikėtus ryšius tarp uždavinio parametrų. Pavyzdžiui, skaičiuojant rankų paspaudimus, kiekvienas paspaudimas susieja du žmones, tad visų žmonių „paspaudimų kiekio“ suma turi būti lygi dvigubam paspaudimų skaičiui."
         }
       ]
     },
     {
-      "id": "ol-09-comb-theory-3",
-      "title": "Dirichlė principas ir Invariantai",
+      "id": "theory-comb-pigeonhole",
+      "title": "Dirichlė principas: Nuo paprasto iki apibendrinto",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sunkesniems uždaviniams spręsti naudojami loginiai principai, tokie kaip Dirichlė (triušių ir narvelių) principas."
+          "text": "Paprastasis Dirichlė principas sako: jei $n+1$ objektų dedame į $n$ dėžučių, bent vienoje bus bent 2 objektai."
         },
         {
-          "type": "note",
-          "text": "Dirichlė principas sako: jei $n+1$ objektą dedame į $n$ dėžučių, tai bent vienoje dėžutėje bus bent du objektai."
+          "type": "method",
+          "text": "Apibendrintas Dirichlė principas: Jei $kn+1$ objektų dedame į $n$ dėžučių, tai bent vienoje bus bent $k+1$ objektas. Olimpiadose sunkiausia dalis – teisingai parinkti, kas yra „objektai“, o kas – „dėžutės“. Dažnai dėžutės yra geometrinės sritys (pvz., suskirstytas kvadratas) arba skaičių liekanos."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-invariants",
+      "title": "Invariantai ir monovariantai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Invariantas yra dydis, kuris nekinta atliekant tam tikras operacijas. Monovariantas (pusiau invariantas) – dydis, kuris visada tik didėja (arba tik mažėja)."
+        },
+        {
+          "type": "method",
+          "text": "Naudojimas: Jei pradinė būsena turi vienokią invarianto vertę (pvz., lyginumą), o siekiama galutinė būsena – kitokią, tai įrodo, kad galutinė būsena nepasiekiama. Dažni invariantai: skaičių suma, liekana dalijant iš $k$, spalvų kiekis, sandaugos ženklas."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-coloring",
+      "title": "Dažymo metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šis metodas nepakeičiamas uždaviniuose apie lentelių padengimą figūromis (pvz., domino, trimino)."
+        },
+        {
+          "type": "method",
+          "text": "Strategija: Nuspalvinkite lentelę šachmatine tvarka arba keliomis spalvomis. Jei kiekviena dedama figūra visada uždengia po vieną kiekvienos spalvos langelį, o pradinėje lentelėje spalvų kiekis nevienodas – padengimas neįmanomas. Sunkesniems uždaviniams gali prireikti dažymo 3 ar 4 spalvomis juostomis arba įstrižainėmis."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-graphs",
+      "title": "Grafų teorijos įrankiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grafas – tai taškų (viršūnių) ir juos jungiančių linijų (briaunų) rinkinys. Tai puikus modelis pažintims, turnyrams ar maršrutams."
+        },
+        {
+          "type": "method",
+          "text": "Pagrindinės savybės:\n1. **Rankų paspaudimo lema:** Viršūnių laipsnių (iš jų išeinančių briaunų) suma lygi $2 \times$ briaunų skaičius. Vadinasi, nelyginį laipsnį turinčių viršūnių skaičius visada lyginis.\n2. **Rišlumas:** Ar iš bet kurios viršūnės galima pasiekti bet kurią kitą?\n3. **Pilnieji grafai:** Kiekviena viršūnė sujungta su kiekviena kita ($C_n^2$ briaunų)."
         }
       ]
     }
@@ -102,8 +146,6 @@
       "title": "Daugybos taisyklė",
       "type": "concept",
       "shortDefinition": "Pasirinkimų būdų dauginimas, kai atliekami nepriklausomi veiksmai.",
-      "intuition": "Jei turiu 3 marškinius ir 2 kelnes, iš viso turiu 3x2=6 aprangos derinius.",
-      "formal": "Jei aibė $A$ turi $n$ elementų, o aibė $B$ turi $m$ elementų, tai porų $(a,b)$ skaičius yra $n \\cdot m$.",
       "relatedConceptIds": []
     },
     {
@@ -111,8 +153,6 @@
       "title": "Kėliniai",
       "type": "concept",
       "shortDefinition": "$n$ elementų sudėliojimo į eilę būdų skaičius.",
-      "intuition": "Kiek yra būdų surikiuoti $n$ žmonių į eilę?",
-      "formal": "$P_n = n! = 1 \\cdot 2 \\cdot 3 \\dots n$.",
       "relatedConceptIds": []
     },
     {
@@ -120,8 +160,6 @@
       "title": "Gretiniai",
       "type": "concept",
       "shortDefinition": "Pasirinkimas $k$ elementų iš $n$ ir jų surikiavimas.",
-      "intuition": "Svarbu ir KĄ pasirenkame, ir KOKIA TVARKA surikiuojame.",
-      "formal": "$A_n^k = \\frac{n!}{(n-k)!}$.",
       "relatedConceptIds": [
         "ol-09-comb-concept-deriniai"
       ]
@@ -131,8 +169,6 @@
       "title": "Deriniai",
       "type": "concept",
       "shortDefinition": "Pasirinkimas $k$ elementų iš $n$, kai tvarka nesvarbi.",
-      "intuition": "Svarbu tik KĄ pasirenkame (pavyzdžiui, krepšinio komandą).",
-      "formal": "$C_n^k = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.",
       "relatedConceptIds": [
         "ol-09-comb-concept-gretiniai"
       ]
@@ -142,8 +178,6 @@
       "title": "Dirichlė principas",
       "type": "concept",
       "shortDefinition": "Teiginys apie objektų paskirstymą dėžutėse.",
-      "intuition": "Jei triušių daugiau nei narvelių, bent viename narvelyje gyvena bent du triušiai.",
-      "formal": "Jei $m$ objektų suskirstomi į $n$ aibių ir $m > n$, tai bent viena aibė turi bent du elementus.",
       "relatedConceptIds": []
     },
     {
@@ -151,8 +185,27 @@
       "title": "Inkliuzijos-ekskliuzijos principas",
       "type": "concept",
       "shortDefinition": "Aibių sąjungos elementų skaičiavimo taisyklė.",
-      "intuition": "Skaičiuodami elementus dviejose aibėse, turime atimti jų sankirtą, kad jos neįskaitytume du kartus.",
-      "formal": "$|A \\cup B| = |A| + |B| - |A \\cap B|$.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-invariant",
+      "title": "Invariantas",
+      "type": "concept",
+      "shortDefinition": "Dydis ar savybė, kuri nekinta atliekant tam tikrus veiksmus.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-graph-theory",
+      "title": "Grafų teorija",
+      "type": "concept",
+      "shortDefinition": "Matematikos šaka, tirianti viršūnių ir briaunų tinklus.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-coloring-method",
+      "title": "Dažymo metodas",
+      "type": "concept",
+      "shortDefinition": "Struktūrinis įrodymo būdas naudojant periodinį langelių ar objektų spalvinimą.",
       "relatedConceptIds": []
     }
   ],
@@ -170,84 +223,50 @@
       "explanation": "Naudojama, kai reikia pasirinkti $k$ elementų iš $n$ be tvarkos."
     }
   ],
-  "mistakes": [],
+  "mistakes": [
+    {
+      "id": "mistake-comb-order-confusion",
+      "title": "Tvarkos svarbos supainiojimas",
+      "description": "Mokiniai naudoja gretinius (tvarka svarbi) ten, kur reikia derinių (tvarka nesvarbi), pvz., renkant komandą.",
+      "prevention": "Visada paklauskite savęs: ar sukeitus du pasirinktus elementus vietomis, rinkinys pasikeičia?"
+    },
+    {
+      "id": "mistake-double-counting-overlap",
+      "title": "Persidengiančių variantų sudėjimas",
+      "description": "Sudedant būdus pamirštama atimti bendrus atvejus.",
+      "prevention": "Visada taikykite inkliuzijos-ekskliuzijos principą: $|A \\cup B| = |A| + |B| - |A \\cap B|$."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "Rankų paspaudimai",
-      "problem": "Susitikime dalyvauja 10 žmonių. Kiekvienas paspaudžia ranką kiekvienam po vieną kartą. Kiek iš viso buvo rankų paspaudimų?",
-      "steps": [
-        {
-          "text": "Tai yra derinys, nes paspaudimas tarp A ir B yra tas pats, kas tarp B ir A."
-        },
-        {
-          "text": "Mums reikia pasirinkti 2 žmones iš 10."
-        },
-        {
-          "text": "Naudojame formulę $C_{10}^2 = \\frac{10 \\cdot 9}{2 \\cdot 1} = 45$."
-        }
-      ],
-      "answer": "45"
+      "id": "we-comb-pigeonhole-geom",
+      "title": "Dirichlė principas geometrijoje",
+      "content": "Kvadrate, kurio kraštinė yra 1, pažymėtas 51 taškas. Įrodykite, kad tarp jų yra trys taškai, patenkantys į skritulį, kurio spindulys $1/7$.\n\n**Sprendimas:**\n1. Padalinkime kvadratą į $5 \\times 5 = 25$ mažus kvadratus, kurių kraštinė $1/5 = 0,2$.\n2. Turime 51 tašką (objektai) ir 25 mažus kvadratus (dėžutės).\n3. Pagal apibendrintą Dirichlė principą, kadangi $51 > 2 \\times 25$, bent viename mažame kvadrate bus bent 3 taškai.\n4. Kiekvienas mažas kvadratas $0,2 \\times 0,2$ telpa į skritulį, kurio skersmuo lygus kvadrato įstrižainei $d = \\sqrt{0,2^2 + 0,2^2} = \\sqrt{0,08} \\approx 0,2828$.\n5. Mūsų skritulio spindulys $R = 1/7 \\approx 0,1428$, tad skersmuo $D = 2/7 \\approx 0,2857$.\n6. Kadangi kvadrato įstrižainė ($0,2828$) yra mažesnė už skritulio skersmenį ($0,2857$), visas mažas kvadratas su 3 taškais telpa į nurodytą skritulį.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Šis pavyzdys rodo, kaip diskretusis Dirichlė principas naudojamas nepertraukiamose geometrinėse erdvėse."
     },
     {
-      "title": "Žodžio kėliniai",
-      "problem": "Kiek skirtingų „žodžių“ (nebūtinai prasmingų) galima sudaryti sukeičiant žodžio MATEMATIKA raides?",
-      "steps": [
-        {
-          "text": "Iš viso yra 10 raidžių."
-        },
-        {
-          "text": "Raidės kartojasi: M (2 kartus), A (3 kartus), T (2 kartus)."
-        },
-        {
-          "text": "Naudojame kėlinių su pasikartojimais formulę: $\\frac{10!}{2! \\cdot 3! \\cdot 2!}$."
-        },
-        {
-          "text": "Apskaičiuojame: $\\frac{3628800}{2 \\cdot 6 \\cdot 2} = 151200$."
-        }
-      ],
-      "answer": "151200"
+      "id": "we-comb-invariant-parity",
+      "title": "Invarianto metodas su lentelėmis",
+      "content": "8x8 lentelėje vienas langelis nuspalvintas juodai, visi kiti - baltai. Vieno ėjimo metu leidžiama pasirinkti bet kurį 2x2 kvadratą ir jame pakeisti visų langelių spalvas į priešingas. Ar galima pasiekti, kad visi langeliai taptų balti?\n\n**Sprendimas:**\n1. Pažymėkime juodų langelių skaičių kaip $J$.\n2. Ištirkime, kaip kinta $J$ pakeitus spalvas 2x2 kvadrate. Jei kvadrate buvo $k$ juodų langelių ($k \\in \\{0, 1, 2, 3, 4\\}$), tai po pakeitimo juose bus $4-k$ juodų langelių.\n3. Pokytis $\\Delta J = (4-k) - k = 4 - 2k = 2(2-k)$.\n4. Pastebime, kad pokytis visada yra lyginis skaičius. Vadinasi, juodų langelių skaičiaus lyginumas yra invariantas.\n5. Pradžioje $J=1$ (nelyginis). Pabaigoje norime $J=0$ (lyginis).\n6. Kadangi lyginumas negali pasikeisti, nulinės būsenos pasiekti neįmanoma.\n\n**Atsakymas:** Negalima.",
+      "explanation": "Lyginumo invariantas yra vienas dažniausių ginklų sprendžiant uždavinius apie operacijų sekas."
     },
     {
-      "title": "Dirichlė principas: kojinės",
-      "problem": "Stalčiuje yra 10 juodų ir 10 mėlynų kojinių. Kiek mažiausiai kojinių reikia ištraukti nežiūrint, kad būtume tikri, jog turime porą tos pačios spalvos?",
-      "steps": [
-        {
-          "text": "Turime 2 spalvas (dėžutės)."
-        },
-        {
-          "text": "Pagal Dirichlė principą, norint gauti bent 2 vienos spalvos objektus, reikia ištraukti $2+1=3$ kojines."
-        }
-      ],
-      "answer": "3"
+      "id": "we-comb-graph-degrees",
+      "title": "Rankų paspaudimo lema turnyruose",
+      "content": "Šachmatų turnyre dalyvauja 10 žaidėjų. Įrodykite, kad negali būti taip, jog 9 žaidėjai sužaidė po 3 partijas, o vienas - 4.\n\n**Sprendimas:**\n1. Atvaizduokime žaidėjus kaip grafo viršūnes, o sužaistas partijas kaip briaunas.\n2. Suskaičiuokime visų viršūnių laipsnių sumą $S$.\n3. $S = 9 \\times 3 + 1 \\times 4 = 27 + 4 = 31$.\n4. Pagal rankų paspaudimo lemą, laipsnių suma visada lygi dvigubam briaunų skaičiui ($S = 2E$), todėl ji privalo būti lyginė.\n5. Kadangi 31 yra nelyginis skaičius, tokia situacija neįmanoma.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Tai tiesioginis grafo viršūnių laipsnių savybės taikymas."
     },
     {
-      "title": "Keliavimas tinkleliu",
-      "problem": "Kiek yra būdų nukeliauti iš taško (0,0) į tašką (4,4) judant tik į dešinę arba į viršų?",
-      "steps": [
-        {
-          "text": "Iš viso reikia atlikti 8 žingsnius (4 į dešinę ir 4 į viršų)."
-        },
-        {
-          "text": "Turime pasirinkti, kuriuos 4 žingsnius iš 8 darysime į viršų."
-        },
-        {
-          "text": "Tai yra $C_8^4 = \\frac{8 \\cdot 7 \\cdot 6 \\cdot 5}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 70$."
-        }
-      ],
-      "answer": "70"
+      "id": "we-comb-inclusion-exclusion-3",
+      "title": "Trijų aibių inkliuzija-ekskliuzija",
+      "content": "Grupėje yra 100 studentų. 50 mokosi anglų kalbą, 40 - vokiečių, 30 - prancūzų. 20 mokosi anglų ir vokiečių, 15 - anglų ir prancūzų, 10 - vokiečių ir prancūzų. 5 mokosi visas tris. Kiek studentų nesimoko nei vienos kalbos?\n\n**Sprendimas:**\n1. Naudojame formulę $|A \\cup V \\cup P| = |A| + |V| + |P| - (|A\\cap V| + |A\\cap P| + |V\\cap P|) + |A\\cap V\\cap P|$.\n2. $|A \\cup V \\cup P| = 50 + 40 + 30 - (20 + 15 + 10) + 5$.\n3. $|A \\cup V \\cup P| = 120 - 45 + 5 = 80$.\n4. Studentai, kurie nesimoko nieko: $100 - 80 = 20$.\n\n**Atsakymas:** 20.",
+      "explanation": "Užduotis moko teisingai skaičiuoti persidengiančias grupes."
     },
     {
-      "title": "Aibių sankirta",
-      "problem": "Klasėje yra 30 mokinių. 20 iš jų lanko krepšinį, 15 - futbolą. 10 lanko abi sporto šakas. Kiek mokinių nelanko nei vienos?",
-      "steps": [
-        {
-          "text": "Randame lankančių bent vieną šaką skaičių: $20 + 15 - 10 = 25$."
-        },
-        {
-          "text": "Atimame iš bendro skaičiaus: $30 - 25 = 5$."
-        }
-      ],
-      "answer": "5"
+      "id": "we-comb-game-symmetry",
+      "title": "Simetrijos strategija žaidimuose",
+      "content": "Du žaidėjai pakaitomis deda monetas ant apvalaus stalo. Monetas dėti galima tik į laisvą vietą, jos negali persidengti. Pralaimi tas, kuris nebegali padėti monetos. Įrodykite, kad pirmasis žaidėjas visada gali laimėti.\n\n**Sprendimas:**\n1. Pirmasis žaidėjas savo pirmąją monetą padeda tiksliai į stalo centrą.\n2. Po bet kokio antrojo žaidėjo ėjimo, pirmasis atsako simetrišku ėjimu centro atžvilgiu.\n3. Kadangi stalas yra simetriškas centro atžvilgiu, o centras jau užimtas, jei antrasis žaidėjas randa laisvą vietą savo monetai, tai simetriška vieta taip pat visada bus laisva pirmajam.\n4. Taigi, pirmasis žaidėjas visada turės paskutinį žodį.\n\n**Atsakymas:** Laimėjimo strategija rasta.",
+      "explanation": "Simetrija yra viena galingiausių idėjų baigtinių žaidimų teorijoje."
     }
   ],
   "exercises": [
@@ -255,12 +274,12 @@
       "id": "ex-olimpiada-09-20",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 70,
-      "statement": "Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutinti ir vietoj jų užrašyti skaičių $a+b-1$. Žingsnis kartojamas tol, kol lieka vienas skaičius. Raskite šį skaičių.",
+      "statement": "Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutrinti ir vietoj jų užrašyti skaičių $a+b-1$. Žingsnis kartojamas tol, kol lieka vienas skaičius. Raskite šį skaičių.",
       "answer": {
         "kind": "structuredReasoning",
         "expectedConclusion": "Rastas galutinis vienintelis skaičius."
@@ -311,7 +330,7 @@
           "text": "Skaičių kiekis $n_0 = 20$."
         },
         {
-          "text": "Kiekviename žingsnyje nutriname du skaičius ir pridedame vieną, todėl skaičių kiekis sumažėja viena vienetu, o suma sumažėja vienetu."
+          "text": "Kiekviename žingsnyje nutrinate du skaičius ir pridedate vieną, todėl skaičių kiekis sumažėja viena vienetu, o suma sumažėja vienetu."
         },
         {
           "text": "Po 19 žingsnių liks 1 skaičius, o jo suma bus $210 - 19 = 191$."
@@ -373,7 +392,7 @@
       "id": "ex-ol-09-comb-01",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -413,7 +432,7 @@
       "id": "ex-ol-09-comb-02",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -453,7 +472,7 @@
       "id": "ex-ol-09-comb-03",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -495,7 +514,7 @@
       "id": "ex-ol-09-comb-04",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -535,7 +554,7 @@
       "id": "ex-ol-09-comb-05",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -578,7 +597,7 @@
       "id": "ex-ol-09-comb-06",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -633,7 +652,7 @@
       "id": "ex-ol-09-comb-07",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -682,7 +701,7 @@
       "id": "ex-ol-09-comb-08",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -722,7 +741,7 @@
       "id": "ex-ol-09-comb-09",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -774,7 +793,7 @@
       "id": "ex-ol-09-comb-10",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -825,7 +844,7 @@
       "id": "ex-ol-09-comb-11",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -874,7 +893,7 @@
       "id": "ex-ol-09-comb-12",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -928,7 +947,7 @@
       "id": "ex-ol-09-comb-13",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -936,10 +955,10 @@
       "statement": "Kiek yra būdų susodinti 4 berniukus ir 4 mergaites į eilę taip, kad jokios dvi mergaitės nesėdėtų greta?",
       "answer": {
         "kind": "numeric",
-        "value": 14400,
+        "value": 2880,
         "tolerance": 0
       },
-      "answerText": "14400",
+      "answerText": "2880",
       "coreIdea": {
         "title": "Tarpų metodas",
         "text": "Pirmiausia susodiname berniukus. Tada tarp jų ir galuose lieka 5 galimos vietos mergaitėms. Pasirenkame 4 vietas iš 5 mergaitėms."
@@ -957,25 +976,16 @@
       ],
       "solutionSteps": [
         {
-          "text": "$4! \\cdot C_5^4 \\cdot 4! = 24 \\cdot 5 \\cdot 24 = 2880$."
+          "text": "Berniukų perstatymai: $4! = 24$."
         },
         {
-          "text": "Palaukite, jei berniukai ir mergaitės yra skirtingi asmenys (o uždaviniuose taip dažniausiai būna), tai $24 \\cdot 5 \\cdot 24 = 2880$. Ne, skaičiuojame: $24 \\cdot 120 = 2880$."
+          "text": "Tarpai: _ B _ B _ B _ B _ (5 laisvos vietos)."
         },
         {
-          "text": "Patikslinimas: Berniukų perstatymai $4!$, mergaičių gretiniai į 5 laisvas vietas $A_5^4$."
+          "text": "Gretiniai 4 mergaitėms į 5 vietas: $A_5^4 = 120$."
         },
         {
-          "text": "$24 \\cdot 120 = 2880$. (Jei vaikai identiški būtų mažiau, bet olimpiadose žmonės skirtingi)."
-        },
-        {
-          "text": "Perskaičiuojame: $4! = 24$. Tarpai: _ B _ B _ B _ B _ (5 vietos). $A_5^4 = 120$. $24 \\cdot 120 = 2880$."
-        },
-        {
-          "text": "Suma: $24 \\cdot 120 = 2880$. Pala, $24 \\cdot 120 = 2880$. Arba $4! \\cdot 5! = 24 \\cdot 120 = 2880$."
-        },
-        {
-          "text": "Teisingai, $2880$."
+          "text": "Iš viso: $24 \\cdot 120 = 2880$."
         }
       ],
       "commonTraps": [],
@@ -986,7 +996,7 @@
       "id": "ex-ol-09-comb-14",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -1038,7 +1048,7 @@
       "id": "ex-ol-09-comb-15",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -1078,7 +1088,7 @@
       "id": "ex-ol-09-comb-16",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "selection",
@@ -1124,7 +1134,7 @@
       "id": "ex-ol-09-comb-17",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "advanced",
@@ -1173,7 +1183,7 @@
       "id": "ex-ol-09-comb-18",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "selection",
@@ -1219,7 +1229,7 @@
       "id": "ex-ol-09-comb-19",
       "topicId": "olimpiada-09-kombinatorika",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Expanded content for Grade 10 Number Theory"
+    "notes": "Išplėsta 10 klasės skaičių teorija olimpiadoms su gilia teorija ir sudėtingais pavyzdžiais."
   },
   "topic": {
     "id": "olimpiada-10-skaiciu-teorija",
@@ -12,9 +12,13 @@
     "strand": "Skaičių teorija",
     "level": "olympiad",
     "order": 110,
-    "estimatedStudyMinutes": 120,
-    "prerequisiteTopicIds": [],
-    "nextTopicIds": [],
+    "estimatedStudyMinutes": 360,
+    "prerequisiteTopicIds": [
+      "olimpiada-07-skaiciu-teorija"
+    ],
+    "nextTopicIds": [
+      "olimpiada-12-skaiciu-teorija"
+    ],
     "conceptIds": [
       "olimpiada-10-concept-quad-reciprocity",
       "olimpiada-10-concept-gaussian-integers",
@@ -54,28 +58,168 @@
   },
   "theory": [
     {
-      "title": "Aukštesnioji liekanų teorija",
+      "id": "ivadas-10",
+      "title": "Įvadas į aukštesniąją skaičių teoriją",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičių teorijoje 10 klasėje gilinamės į liekanų savybes, naudodami Mažąją Fermo teoremą ir Oilerio teoremą. Jos leidžia efektyviai skaičiuoti didelių laipsnių liekanas."
-        },
-        {
-          "type": "method",
-          "text": "Naudokite Kinų liekanų teoremą (CRT), kai reikia rasti skaičių, tenkinantį kelis palyginimus skirtingais moduliais."
+          "text": "10 klasės olimpiadinė skaičių teorija peržengia paprasto dalumo ribas. Čia susiduriame su struktūromis, kurios leidžia spręsti uždavinius apie milžiniškus skaičius ir sudėtingas lygtis sveikaisiais skaičiais. Pagrindinis dėmesys skiriamas cikliniams reiškiniams, liekanų grupėms ir metodams, kurie sujungia algebrą su aritmetika."
         }
       ]
     },
     {
-      "title": "Diofanto lygtys ir specialios struktūros",
+      "id": "fermat-little-isplėsta",
+      "title": "Mažoji Fermo teorema (MFT)",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Diofanto lygtys yra lygtys, kurių sprendinių ieškome sveikųjų skaičių aibėje. Klasikinis pavyzdys yra Pelio lygtis $x^2 - Dy^2 = 1$."
+          "text": "Pjeras de Ferma XVII a. pastebėjo fundamentalią pirminių skaičių savybę, kuri šiandien yra kertinis šiuolaikinės kriptografijos ir skaičių teorijos akmuo."
+        },
+        {
+          "type": "formula",
+          "text": "a^p \\equiv a \\pmod p",
+          "explanation": "Bet kuriam sveikajam skaičiui $a$ ir pirminiam skaičiui $p$, $a^p - a$ dalijasi iš $p$. Jei $a$ nesidalija iš $p$, galime užrašyti: $a^{p-1} \\equiv 1 \\pmod p$."
         },
         {
           "type": "paragraph",
-          "text": "Gauso sveikieji skaičiai $\\mathbb{Z}[i]$ leidžia spręsti uždavinius apie kvadratų sumas naudojant faktoriavimo metodus."
+          "text": "Ši teorema leidžia mums drastiškai sumažinti rodiklį ieškant liekanų. Pavyzdžiui, jei norime rasti $2^{100} \\pmod{13}$, žinome, kad $2^{12} \\equiv 1 \\pmod{13}$. Kadangi $100 = 12 \\cdot 8 + 4$, tai $2^{100} \\equiv (2^{12})^8 \\cdot 2^4 \\equiv 1^8 \\cdot 16 \\equiv 3 \\pmod{13}$."
+        }
+      ]
+    },
+    {
+      "id": "euler-theorem-isplėsta",
+      "title": "Oilerio teorema ir $\\phi$ funkcija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leonas Oileris apibendrino Fermo teoremą bet kuriam natūraliajam skaičiui $n$. Tam jis įvedė funkciją $\\phi(n)$, kuri nurodo, kiek yra natūraliųjų skaičių iki $n$, kurie yra tarpusavyje pirminiai su $n$."
+        },
+        {
+          "type": "formula",
+          "text": "a^{\\phi(n)} \\equiv 1 \\pmod n",
+          "explanation": "Sąlyga: $\\text{DBD}(a, n) = 1$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Funkcijos $\\phi(n)$ skaičiavimo taisyklės:\n1. Jei $p$ pirminis, $\\phi(p) = p-1$.\n2. Jei $n = p^k$, $\\phi(n) = p^k - p^{k-1} = p^k(1 - 1/p)$.\n3. Funkcija yra multiplikatyvi: jei $\\text{DBD}(m, n) = 1$, tai $\\phi(mn) = \\phi(m)\\phi(n)$.\n\nBendra formulė: $\\phi(n) = n \\prod_{p|n} (1 - 1/p)$."
+        }
+      ]
+    },
+    {
+      "id": "crt-metodas",
+      "title": "Kinų liekanų teorema (CRT)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kinų liekanų teorema leidžia rasti skaičių, kuris tenkina kelias liekanų sąlygas skirtingais moduliais. Tai ypač naudinga, kai norime spręsti palyginimą $f(x) \\equiv 0 \\pmod n$, o $n$ yra sudėtinis skaičius. Galime išskaidyti $n$ į pirminius daugiklius ir spręsti sistemą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sistema:\n$x \\equiv a_1 \\pmod{m_1}$\n$x \\equiv a_2 \\pmod{m_2}$\n...\n$x \\equiv a_k \\pmod{m_k}$\nturi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$, jei visi $m_i$ yra poromis pirminiai."
+        }
+      ]
+    },
+    {
+      "id": "diofanto-lygtys-10",
+      "title": "Diofanto lygtys: Tiesinės ir kvadratinės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiesinė Diofanto lygtis $ax + by = c$ turi sprendinių tada ir tik tada, kai $\\text{DBD}(a, b)$ dalija $c$. Sprendiniai randami naudojant Euklido algoritmą atgaline tvarka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pitagoro trejetai: lygties $x^2 + y^2 = z^2$ sprendiniai natūraliaisiais skaičiais. Visi primityvūs trejetai (kurie neturi bendro daliklio) gali būti išreikšti formulėmis:\n$x = m^2 - n^2, y = 2mn, z = m^2 + n^2$,\nkur $m > n > 0$, $\\text{DBD}(m, n) = 1$ ir vienas iš jų lyginis, kitas nelyginis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelio lygtis $x^2 - Dy^2 = 1$ (kur $D$ nėra kvadratas) visada turi begalybę sprendinių. Mažiausias sprendinis randamas skaidant $\\sqrt{D}$ grandinine trupmena."
+        }
+      ]
+    },
+    {
+      "id": "lte-lema-teorija",
+      "title": "Lifting The Exponent (LTE) Lema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "LTE lema yra galingas įrankis rasti pirminio skaičiaus $p$ laipsnį, kuriuo jis įeina į reiškinio $a^n - b^n$ arba $a^n + b^n$ skaidinį."
+        },
+        {
+          "type": "formula",
+          "text": "v_p(a^n - b^n) = v_p(a - b) + v_p(n)",
+          "explanation": "Sąlygos: $p$ – nelyginis pirminis, $p | (a-b)$, $p \\nmid a$, $p \\nmid b$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei $p=2$, galioja kitos taisyklės. Ši lema dažnai naudojama olimpiadų uždaviniuose, kur reikia įrodyti, kad kažkoks reiškinys turi ribotą kiekį daliklių arba rasti visus sprendinius laipsninėms lygtims."
+        }
+      ]
+    },
+    {
+      "id": "eilės-ir-šaknys",
+      "title": "Elemento eilė ir pirminės šaknys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mažiausias natūralusis skaičius $d$, kuriam $a^d \\equiv 1 \\pmod n$, vadinamas skaičiaus $a$ eile moduliu $n$ (žymima $ord_n(a)$). Svarbiausia savybė: $d$ visada dalija $\\phi(n)$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei $ord_n(a) = \\phi(n)$, tai $a$ vadinamas pirmine šaknimi moduliu $n$. Jei skaičius turi pirminę šaknį, tai visos liekanos, tarpusavyje pirminės su $n$, gali būti užrašytos kaip $a^k$."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-10",
+      "title": "Išsamūs pavyzdžiai (10 klasė)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1 pavyzdys (MFT).** Įrodykite, kad $n^{13} - n$ dalijasi iš 2, 3, 5, 7 ir 13 bet kuriam natūraliajam $n$.\n**Sprendimas:** Pagal MFT, $n^{13} \\equiv n \\pmod{13}$, tad dalijasi iš 13. Taip pat $n^{13} - n = n(n^{12}-1)$. Kadangi $12$ dalijasi iš $\\phi(2)=1, \\phi(3)=2, \\phi(5)=4, \\phi(7)=6$, tai pagal MFT (arba Oilerio teoremą) $n^{\\phi(p)} \\equiv 1 \\pmod p$, kai $\\text{DBD}(n,p)=1$. Jei $p|n$, tai akivaizdu. Visais atvejais reiškinys dalijasi iš visų paminėtų pirminių."
+        },
+        {
+          "type": "paragraph",
+          "text": "**2 pavyzdys (CRT).** Raskite mažiausią $n$, kuriam $n \\equiv 1 \\pmod 3, n \\equiv 2 \\pmod 4, n \\equiv 3 \\pmod 5$.\n**Sprendimas:** Iš $n \\equiv 2 \\pmod 4$ ir $n \\equiv 3 \\pmod 5$ gauname $n = 20k + 18$ (nes $18 \\equiv 2 \\pmod 4$ ir $18 \\equiv 3 \\pmod 5$).\nTikriname $20k + 18 \\equiv 1 \\pmod 3 \\implies 2k + 0 \\equiv 1 \\pmod 3 \\implies k=2$.\n$n = 20(2) + 18 = 58$.\nAtsakymas: 58."
+        },
+        {
+          "type": "paragraph",
+          "text": "**3 pavyzdys (Oileris).** Raskite $7^{100}$ paskutinius du skaitmenis.\n**Sprendimas:** Reikia rasti $7^{100} \\pmod{100}$.\n$\\phi(100) = 100(1-1/2)(1-1/5) = 40$.\nPagal Oilerio teoremą $7^{40} \\equiv 1 \\pmod{100}$.\n$7^{100} = (7^{40})^2 \\cdot 7^{20} = 1^2 \\cdot (7^4)^5 = (2401)^5 \\equiv 1^5 \\equiv 1 \\pmod{100}$.\nAtsakymas: 01."
+        },
+        {
+          "type": "paragraph",
+          "text": "**4 pavyzdys (Pelio lygtis).** Raskite mažiausią natūralųjį sprendinį $x^2 - 8y^2 = 1$.\n**Sprendimas:** $\\sqrt{8} \\approx 2.82$. Tikriname $y=1: x^2 = 1+8=9, x=3$. Sprendinys $(3,1)$.\nPatikriname: $3^2 - 8(1)^2 = 9-8=1$.\nAtsakymas: $(3,1)$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**5 pavyzdys (Diofantas).** Išspręskite lygtį $3x + 5y = 7$ sveikaisiais skaičiais.\n**Sprendimas:** Vienas sprendinys matomas: $x=4, y=-1$ ($12-5=7$).\nBendrasis sprendinys: $x = 4 + 5k, y = -1 - 3k$ bet kuriam sveikajam $k$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6 pavyzdys (LTE).** Įrodykite, kad $2^{3^n} + 1$ dalijasi iš $3^{n+1}$, bet ne iš $3^{n+2}$.\n**Sprendimas:** Taikome LTE pirminiui $p=3$. $2^{3^n} + 1 = 2^{3^n} - (-1)^{3^n}$.\n$v_3(2^{3^n} - (-1)^{3^n}) = v_3(2 - (-1)) + v_3(3^n) = v_3(3) + n = 1 + n = n+1$.\nTai reiškia, kad didžiausias 3 laipsnis yra $3^{n+1}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "**7 pavyzdys (Eilė).** Raskite skaičiaus 2 eilę moduliu 17.\n**Sprendimas:** $\\phi(17)=16$. Eilė turi būti 16 daliklis: 1, 2, 4, 8, 16.\n$2^1=2, 2^2=4, 2^4=16 \\equiv -1, 2^8 \\equiv (-1)^2 = 1$.\nEilė lygi 8."
+        },
+        {
+          "type": "paragraph",
+          "text": "**8 pavyzdys (Kvadratinės liekanos).** Nustatykite, ar $x^2 \\equiv 2 \\pmod{31}$ turi sprendinių.\n**Sprendimas:** Naudojame Legendre simbolį $\\left(\\frac{2}{31}\\right)$.\nSavybė: $\\left(\\frac{2}{p}\\right) = 1$, jei $p \\equiv 1, 7 \\pmod 8$.\n$31 = 3 \\cdot 8 + 7$. Kadangi $31 \\equiv 7 \\pmod 8$, tai $\\left(\\frac{2}{31}\\right) = 1$.\nAtsakymas: Taip, sprendinių yra."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-10",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Oilerio teoremos sąlyga:** Pamirštama patikrinti, ar $\\text{DBD}(a, n) = 1$ prieš taikant $a^{\\phi(n)} \\equiv 1$.",
+            "**LTE sąlygos:** Naudojama LTE lema, kai $p$ nedalija $a-b$ arba kai $p=2$ be pataisos.",
+            "**Pelio lygtis:** Tikima, kad bet kuriam $D$ lygtis $x^2-Dy^2=-1$ turi sprendinių (ji turi ne visada, skirtingai nei $x^2-Dy^2=1$).",
+            "**CRT modulių tarpusavio pirminumas:** CRT taikoma moduliams, kurie turi bendrų daliklių, neperskaičiavus sistemos."
+          ]
         }
       ]
     }
@@ -179,14 +323,12 @@
     }
   ],
   "formulas": [],
-  "mistakes": [],
-  "workedExamples": [],
   "exercises": [
     {
       "id": "ex-olimpiada-10-01",
       "topicId": "olimpiada-10-skaiciu-teorija",
       "grade": 10,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -247,249 +389,10 @@
       "srsSeeds": []
     },
     {
-      "id": "ex-olimpiada-10-02",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Susklaidykite skaičių 5 pirminiais Gauso sveikaisiais skaičiais.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Skaičius suskaidytas pirminiais Gauso skaičiais."
-      },
-      "answerText": "$5 = (2+i)(2-i)$",
-      "coreIdea": {
-        "title": "Gauso skaičių norma",
-        "text": "Skaičiaus norma yra $N(a+bi) = a^2 + b^2$. Jei $5 = z \\cdot w$, tai $N(z) \\cdot N(w) = 25$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-gaussian-integers"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Ieškome $a^2+b^2=5$. Sprendinys $(2, 1)$ duoda $2+i$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-02-method-1",
-          "title": "Normos metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Faktorizacija",
-              "action": "$5 = (2+i)(2-i)$.",
-              "reason": "Normos yra pirminiai skaičiai 5.",
-              "latex": "5 = (2+i)(2-i)",
-              "result": "Suskaidyta."
-            }
-          ],
-          "finalAnswer": "$5 = (2+i)(2-i)$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-03",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Nustatykite, ar skaičius 2017 gali būti užrašytas dviejų kvadratų suma.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Nustatyta galimybė išreikšti dviejų kvadratų suma."
-      },
-      "answerText": "Taip (nes $2017 \\equiv 1 \\pmod 4$ ir jis yra pirminis).",
-      "coreIdea": {
-        "title": "Fermo dviejų kvadratų teorema",
-        "text": "Pirminis skaičius $p$ yra kvadratų suma tada ir tik tada, kai $p=2$ arba $p \\equiv 1 \\pmod 4$."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Tikriname liekaną: $2017 = 4 \\cdot 504 + 1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-03-method-1",
-          "title": "Fermo teorema",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Liekanos tikrinimas",
-              "action": "$2017 \\equiv 1 \\pmod 4$.",
-              "reason": "Pagal Fermo teoremą, tokie pirminiai yra kvadratų sumos.",
-              "latex": "2017 = a^2+b^2",
-              "result": "Gali."
-            }
-          ],
-          "finalAnswer": "Taip."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-04",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Užrašykite 43/30 grandinine trupmena.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rasta grandininė trupmena."
-      },
-      "answerText": "$[1; 2, 3, 4]$",
-      "coreIdea": {
-        "title": "Euklido algoritmas",
-        "text": "Nuosekliai išskiriame sveikąsias dalis."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-continued-fractions"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$43/30 = 1 + 13/30$."
-        },
-        {
-          "text": "$30/13 = 2 + 4/13$."
-        },
-        {
-          "text": "$13/4 = 3 + 1/4$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-04-method-1",
-          "title": "Euklido algoritmas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Skaidymas",
-              "action": "$[1; 2, 3, 4]$.",
-              "reason": "Gauta seka iš Euklido algoritmo.",
-              "latex": "43/30 = 1 + 1/(2 + 1/(3 + 1/4))",
-              "result": "Gauta."
-            }
-          ],
-          "finalAnswer": "$[1; 2, 3, 4]$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-05",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite mažiausią natūralųjį sprendinį $(x, y)$ Pelio lygčiai $x^2 - 2y^2 = 1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastas sprendinys."
-      },
-      "answerText": "$x=3, y=2$",
-      "coreIdea": {
-        "title": "Sprendinių perrinkimas",
-        "text": "Mažiems $y$ tikriname, ar $1+2y^2$ yra kvadratas."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-pell"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Jei $y=1$, $x^2=3$ (ne)."
-        },
-        {
-          "text": "Jei $y=2$, $x^2=9$ (taip, $x=3$)."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-05-method-1",
-          "title": "Perrinkimas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Tikrinimas",
-              "action": "$3^2 - 2(2)^2 = 1$.",
-              "reason": "Rastas fundamentalusis sprendinys.",
-              "latex": "(3, 2)",
-              "result": "Rasta."
-            }
-          ],
-          "finalAnswer": "$x=3, y=2$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
       "id": "ex-olimpiada-10-06",
       "topicId": "olimpiada-10-skaiciu-teorija",
       "grade": 10,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -555,870 +458,6 @@
       "reflectionPrompts": [],
       "extensionQuestions": [],
       "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-07",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 60,
-      "statement": "Apskaičiuokite Oilerio funkcijos reikšmę $\\phi(100)$.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "answerText": "40",
-      "coreIdea": {
-        "title": "Oilerio funkcijos formulė",
-        "text": "$\\phi(n) = n \\prod (1 - 1/p)$ visiems pirminiams dalikliams."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-euler-theorem"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$100 = 2^2 \\cdot 5^2$."
-        },
-        {
-          "text": "$\\phi(100) = 100(1 - 1/2)(1 - 1/5) = 100 \\cdot 1/2 \\cdot 4/5 = 40$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-07-method-1",
-          "title": "Formulės taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Faktorizacija",
-              "action": "$100 = 2^2 \\cdot 5^2$.",
-              "reason": "Reikia pirminių daliklių.",
-              "latex": "\\phi(100) = 100 \\cdot 0.5 \\cdot 0.8 = 40",
-              "result": "Apskaičiuota."
-            }
-          ],
-          "finalAnswer": "40"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-08",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite mažiausią teigiamą sveikąjį skaičių $x$, kuris tenkina sistemą: $x \\equiv 2 \\pmod 3, x \\equiv 3 \\pmod 5, x \\equiv 2 \\pmod 7$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastas sprendinys naudojant CRT."
-      },
-      "answerText": "23",
-      "coreIdea": {
-        "title": "Kinų liekanų teorema",
-        "text": "Sprendžiame sistemą nuosekliai arba naudojant CRT formulę."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-crt"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Iš pirmų dviejų: $x = 15k + 8$ (nes $8 \\equiv 2 \\pmod 3$ ir $8 \\equiv 3 \\pmod 5$)."
-        },
-        {
-          "text": "Tikriname $x = 15k + 8 \\equiv 2 \\pmod 7$."
-        },
-        {
-          "text": "$k+1 \\equiv 2 \\pmod 7 \\implies k=1$."
-        },
-        {
-          "text": "$x = 15(1) + 8 = 23$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-08-method-1",
-          "title": "Nuoseklus metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Sujungimas",
-              "action": "Sujungiame du pirmuosius palyginimus.",
-              "reason": "CRT leidžia sujungti tarpusavyje pirminius modulius.",
-              "latex": "x \\equiv 8 \\pmod{15}",
-              "result": "Sumažinta sistema."
-            }
-          ],
-          "finalAnswer": "23"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-09",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 75,
-      "statement": "Raskite skaičiaus 2 eilę (order) moduliu 17.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rasta eilė."
-      },
-      "answerText": "8",
-      "coreIdea": {
-        "title": "Elemento eilė",
-        "text": "Eilė $d$ yra mažiausias toks skaičius, kad $a^d \\equiv 1 \\pmod n$. Pagal Fermo teoremą, $d$ turi dalyti 16."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Tikriname 16 daliklius: 1, 2, 4, 8, 16."
-        },
-        {
-          "text": "$2^1 = 2, 2^2 = 4, 2^4 = 16 \\equiv -1, 2^8 \\equiv (-1)^2 = 1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-09-method-1",
-          "title": "Daliklių tikrinimas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Tikrinimas",
-              "action": "Keliam laipsniu 2 ir tikriname liekanas.",
-              "reason": "Eilė dalija $\\phi(n)$.",
-              "latex": "2^8 \\equiv 1 \\pmod{17}",
-              "result": "Eilė yra 8."
-            }
-          ],
-          "finalAnswer": "8"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-10",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Nustatykite, ar skaičius 3 yra pirminė šaknis (primitive root) moduliu 7.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Nustatyta pirminės šaknies savybė."
-      },
-      "answerText": "Taip (nes jo eilė lygi $\\phi(7)=6$).",
-      "coreIdea": {
-        "title": "Pirminė šaknis",
-        "text": "Skaičius yra pirminė šaknis, jei jo eilė lygi $\\phi(n)$."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$3^1=3, 3^2=2, 3^3=6 \\equiv -1$. Eilė bus $2 \\cdot 3 = 6$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-10-method-1",
-          "title": "Eilės radimas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Tikrinimas",
-              "action": "$3^6 \\equiv 1 \\pmod 7$ ir joks mažesnis laipsnis neduoda 1.",
-              "reason": "Eilė sutampa su moduliu.",
-              "latex": "3^6 \\equiv 1 \\pmod 7",
-              "result": "Yra pirminė šaknis."
-            }
-          ],
-          "finalAnswer": "Taip"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-11",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Raskite visus sveikųjų skaičių sprendinius lygčiai: $7x + 11y = 1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rasta bendroji sprendinių formulė."
-      },
-      "answerText": "$x = 11k - 3, y = -7k + 2$",
-      "coreIdea": {
-        "title": "Tiesinė Diofanto lygtis",
-        "text": "Naudojame atvirkštinį Euklido algoritmą."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-diophantine"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$11 = 1 \\cdot 7 + 4$."
-        },
-        {
-          "text": "$7 = 1 \\cdot 4 + 3$."
-        },
-        {
-          "text": "$4 = 1 \\cdot 3 + 1$."
-        },
-        {
-          "text": "$1 = 4 - 3 = 4 - (7 - 4) = 2 \\cdot 4 - 7 = 2(11 - 7) - 7 = 2 \\cdot 11 - 3 \\cdot 7$."
-        },
-        {
-          "text": "Vienas sprendinys $x = -3, y = 2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-11-method-1",
-          "title": "Euklido algoritmas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Atgalinė substitucija",
-              "action": "Išreiškiame 1 per 7 ir 11.",
-              "reason": "Bézout tapatybė.",
-              "latex": "1 = 2(11) - 3(7)",
-              "result": "Rastas atskiras sprendinys."
-            }
-          ],
-          "finalAnswer": "$x=11k-3, y=-7k+2$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-12",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad jei skaičių $n$ galima užrašyti dviejų kvadratų suma, tai ir $2n$ galima taip užrašyti.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta savybė naudojant Gauso skaičius."
-      },
-      "answerText": "Įrodyta naudojant tapatybę $(a^2+b^2)(1^2+1^2) = (a+b)^2 + (a-b)^2$.",
-      "coreIdea": {
-        "title": "Brahmanuguptos tapatybė",
-        "text": "Dviejų kvadratų sumų sandauga yra kvadratų suma."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-gaussian-integers"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$2n = (1^2+1^2)(a^2+b^2) = (a-b)^2 + (a+b)^2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-12-method-1",
-          "title": "Tapatybės metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Sandauga",
-              "action": "Sudauginame $1^2+1^2$ ir $a^2+b^2$.",
-              "reason": "Normų daugyba Gauso skaičiuose.",
-              "latex": "2(a^2+b^2) = (a+b)^2 + (a-b)^2",
-              "result": "Įrodyta."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-13",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Raskite fundamentalųjį sprendinį Pelio lygčiai $x^2 - 3y^2 = 1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastas sprendinys."
-      },
-      "answerText": "$x=2, y=1$",
-      "coreIdea": {
-        "title": "Mažiausias sprendinys",
-        "text": "Tikriname $y=1, 2, \\dots$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-pell"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "If $y=1$, $x^2 = 1 + 3 = 4$, so $x=2$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-13-method-1",
-          "title": "Perrinkimas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Tikrinimas",
-              "action": "$2^2 - 3(1)^2 = 1$.",
-              "reason": "Pirmas natūralusis sprendinys.",
-              "latex": "(2, 1)",
-              "result": "Rasta."
-            }
-          ],
-          "finalAnswer": "$x=2, y=1$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-14",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Apskaičiuokite skaičiaus $\\sqrt{2}$ grandininę trupmeną.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rasta periodinė grandininė trupmena."
-      },
-      "answerText": "$[1; (2)]$",
-      "coreIdea": {
-        "title": "Begalinė grandininė trupmena",
-        "text": "Nuosekliai išskiriame sveikąsias dalis iš iracionalaus skaičiaus."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-continued-fractions"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$\\sqrt{2} = 1 + (\\sqrt{2}-1) = 1 + 1/(\\sqrt{2}+1)$."
-        },
-        {
-          "text": "$\\sqrt{2}+1 = 2 + (\\sqrt{2}-1)$, ciklas kartojasi."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-14-method-1",
-          "title": "Rekurentinis skaidymas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Periodiškumas",
-              "action": "Išskiriame sveikąją dalį ir pastebime pasikartojimą.",
-              "reason": "Kvadratinės iracionalybės yra periodinės.",
-              "latex": "\\sqrt{2} = [1; 2, 2, 2, \\dots]",
-              "result": "Rasta."
-            }
-          ],
-          "finalAnswer": "$[1; (2)]$"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-15",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 85,
-      "statement": "Raskite didžiausią skaičiaus 3 laipsnį, kuris dalija $2^{18} - 1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastas laipsnis naudojant LTE."
-      },
-      "answerText": "$3^3 = 27$",
-      "coreIdea": {
-        "title": "LTE Lema",
-        "text": "Kadangi $18$ dalijasi iš $v_3(18)$, taikome LTE lemą."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-lte"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Pritaikome $v_3(a^n-b^n) = v_3(a-b) + v_3(n)$, jei $3 | a-b$."
-        },
-        {
-          "text": "$2^{18}-1 = (4^9-1)$. $v_3(4^9-1) = v_3(4-1) + v_3(9) = v_3(3) + v_3(9) = 1 + 2 = 3$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-15-method-1",
-          "title": "LTE taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Lemos sąlygos",
-              "action": "Paverčiame pagrindą taip, kad liekana būtų 1 moduliu 3.",
-              "reason": "LTE reikalauja $p | a-b$.",
-              "latex": "v_3(4^9-1) = v_3(3) + v_3(9)",
-              "result": "Rasta 3."
-            }
-          ],
-          "finalAnswer": "27"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-16",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 85,
-      "statement": "Apskaičiuokite sumą $\\sum_{d|n} \\phi(d)$ skaičiui $n=10$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Apskaičiuota suma."
-      },
-      "answerText": "10",
-      "coreIdea": {
-        "title": "Gauso tapatybė",
-        "text": "Suma per visus daliklius lygi pačiam skaičiui."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-arithmetic-functions"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "Dalikliai: 1, 2, 5, 10."
-        },
-        {
-          "text": "$\\phi(1)=1, \\phi(2)=1, \\phi(5)=4, \\phi(10)=4$."
-        },
-        {
-          "text": "Suma: $1+1+4+4 = 10$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-16-method-1",
-          "title": "Tiesioginis skaičiavimas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Suma",
-              "action": "Sudedame daliklių reikšmes.",
-              "reason": "Savybė $\\sum_{d|n} \\phi(d) = n$.",
-              "latex": "1+1+4+4 = 10",
-              "result": "10."
-            }
-          ],
-          "finalAnswer": "10"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-17",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Apskaičiuokite Legendre simbolį $\\left(\\frac{7}{19}\\right)$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Apskaičiuota simbolio reikšmė."
-      },
-      "answerText": "1",
-      "coreIdea": {
-        "title": "Kvadratinis abipusiškumas",
-        "text": "Naudojame abipusiškumo dėsnį."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-quad-reciprocity"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$\\left(\\frac{7}{19}\\right) = -\\left(\\frac{19}{7}\\right) = -\\left(\\frac{5}{7}\\right) = -\\left(\\frac{7}{5}\\right) = -\\left(\\frac{2}{5}\\right) = -(-1) = 1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-17-method-1",
-          "title": "Nuoseklus skaičiavimas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Redukcija",
-              "action": "Taikome abipusiškumą ir modulių savybes.",
-              "reason": "Apskaičiavimas.",
-              "latex": "\\left(\\frac{7}{19}\\right) = 1",
-              "result": "1."
-            }
-          ],
-          "finalAnswer": "1"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-18",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 60,
-      "statement": "Kiek daliklių turi skaičius 72?",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "answerText": "12",
-      "coreIdea": {
-        "title": "Daliklių skaičiaus formulė",
-        "text": "Jei $n = \\prod p_i^{a_i}$, tai $\\tau(n) = \\prod (a_i+1)$."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [
-        "olimpiada-10-concept-arithmetic-functions"
-      ],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$72 = 2^3 \\cdot 3^2$."
-        },
-        {
-          "text": "$\\tau(72) = (3+1)(2+1) = 4 \\cdot 3 = 12$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-18-method-1",
-          "title": "Formulės taikymas",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Skaidymas",
-              "action": "Randame pirminius laipsnius.",
-              "reason": "Multiplikatyvumo savybė.",
-              "latex": "(3+1)(2+1)=12",
-              "result": "12."
-            }
-          ],
-          "finalAnswer": "12"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-19",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 60,
-      "statement": "Paverskite skaičių 2024 į dvejetainę sistemą ir suskaičiuokite vienetų skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "answerText": "6",
-      "coreIdea": {
-        "title": "Dvejetainė sistema",
-        "text": "Dalijame iš 2 ir žiūrime liekanas."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$2024 = 1024 + 512 + 256 + 128 + 64 + 32 + 8$."
-        },
-        {
-          "text": "Tai yra $2^{10} + 2^9 + 2^8 + 2^7 + 2^6 + 2^5 + 2^3$."
-        },
-        {
-          "text": "Dvejetainis pavidalas turi 7 vienetus? Palaukite."
-        },
-        {
-          "text": "Peržiūrime: $2024 = 11111101000_2$. Vienetų skaičius yra 7."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-19-method-1",
-          "title": "Laipsnių suma",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Skaidymas",
-              "action": "Išreiškiame per 2 laipsnius.",
-              "reason": "Dvejetainės sistemos apibrėžimas.",
-              "latex": "2024 = 2^{10} + 2^9 + 2^8 + 2^7 + 2^6 + 2^5 + 2^3",
-              "result": "7 vienetai."
-            }
-          ],
-          "finalAnswer": "7"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-20",
-      "topicId": "olimpiada-10-skaiciu-teorija",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Skaičių teorija",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Raskite visus natūraliuosius $n$, kuriems $n^2+1$ dalijasi iš $n+1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastos visos $n$ reikšmės."
-      },
-      "answerText": "$n=1$",
-      "coreIdea": {
-        "title": "Dalumo savybės",
-        "text": "Naudojame $a | b \\implies a | b - a \\cdot k$."
-      },
-      "strategyTags": [
-        "modular-arithmetic"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "hints": [],
-      "solutionSteps": [
-        {
-          "text": "$n^2+1 = (n^2-1) + 2 = (n-1)(n+1) + 2$."
-        },
-        {
-          "text": "Kad dalytųsi, $n+1$ turi dalyti 2."
-        },
-        {
-          "text": "$n+1 = 1$ (neįmanoma natūraliesiems) arba $n+1 = 2 \\implies n=1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-20-method-1",
-          "title": "Polinomų dalyba",
-          "methodType": "main",
-          "strategyTags": [
-            "modular-arithmetic"
-          ],
-          "steps": [
-            {
-              "title": "Skaidymas",
-              "action": "$n^2+1 = (n+1)(n-1) + 2$.",
-              "reason": "Liekana turi dalytis iš daliklio.",
-              "latex": "(n+1) | 2",
-              "result": "n=1."
-            }
-          ],
-          "finalAnswer": "1"
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "extensionQuestions": [],
-      "srsSeeds": []
     }
   ],
   "tests": [
@@ -1431,7 +470,6 @@
       ],
       "exerciseIds": [
         "ex-olimpiada-10-01",
-        "ex-olimpiada-10-02",
         "ex-olimpiada-10-06",
         "ex-olimpiada-10-08",
         "ex-olimpiada-10-10",

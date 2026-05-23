@@ -65,31 +65,83 @@
   },
   "theory": [
     {
-      "id": "apskritimas-ir-skritulys-pagrindai",
-      "title": "Apskritimas ir skritulys: pagrindinės sąvokos",
+      "id": "ivadas-i-apskritimo-geometrija",
+      "title": "Įvadas į apskritimo geometriją",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[apskritimas|Apskritimas]] – tai visų plokštumos taškų, nutolusių nuo vieno taško (centro) tuo pačiu atstumu, aibė. Šis atstumas vadinamas [[spindulys|spinduliu]] (r)."
+          "text": "Apskritimas yra viena tobuliausių ir dažniausiai gamtoje bei technikoje sutinkamų geometrinių figūrų. Nuo pat seniausių laikų žmonės stebėjo saulės diską, pilnatį, naudojo ratus transportui ir kūrė architektūros šedevrus remdamiesi apskritimo savybėmis. Šioje pamokoje išmoksime ne tik atskirti apskritimą nuo skritulio, bet ir skaičiuoti jų elementus: ilgį, plotą, lankus bei išpjovas."
         },
         {
-          "type": "paragraph",
-          "text": "[[skritulys|Skritulys]] – tai plokštumos dalis, kurią riboja apskritimas. Skritulys apima ir patį apskritimą, ir visus jo viduje esančius taškus."
-        },
-        {
-          "type": "definition",
-          "conceptId": "skersmuo",
-          "text": "[[skersmuo|Skersmuo]] (d) yra atkarpa, jungianti du apskritimo taškus ir einanti per jo centrą. Skersmuo yra dvigubai ilgesnis už spindulį: d = 2r."
+          "type": "note",
+          "text": "Svarbu suprasti esminį skirtumą: apskritimas yra linija (tarsi lankas ar tuščiaviduris žiedas), o skritulys – plokštumos dalis (tarsi moneta ar blynas)."
         }
       ]
     },
     {
-      "id": "pi-skaicius-ir-ilgis",
-      "title": "Skaičius Pi ir apskritimo ilgis",
+      "id": "pagrindines-savokos-ir-elementai",
+      "title": "Pagrindinės sąvokos ir elementai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Visų apskritimų ilgio ir jų skersmens santykis yra pastovus skaičius, žymimas graikiška raide [[pi-skaicius|π (pi)]]."
+          "text": "Kiekvienas apskritimas turi savo centrą – tašką, nuo kurio visi apskritimo taškai yra nutolę vienodu atstumu."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apskritimas",
+          "text": "[[apskritimas|Apskritimas]] – tai visų plokštumos taškų, nutolusių nuo vieno taško (centro) tuo pačiu atstumu $r$, aibė."
+        },
+        {
+          "type": "definition",
+          "conceptId": "spindulys",
+          "text": "[[spindulys|Spindulys]] ($r$) – atkarpa, jungianti apskritimo centrą su bet kuriuo apskritimo tašku."
+        },
+        {
+          "type": "definition",
+          "conceptId": "skersmuo",
+          "text": "[[skersmuo|Skersmuo]] ($d$) – atkarpa, jungianti du apskritimo taškus ir einanti per jo centrą."
+        },
+        {
+          "type": "method",
+          "text": "Ryšys tarp spindulio ir skersmens yra esminis sprendžiant uždavinius: skersmuo visada yra dvigubai ilgesnis už spindulį.",
+          "latex": "d = 2r \\quad \\text{arba} \\quad r = \\frac{d}{2}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Be spindulio ir skersmens, apskritime galime brėžti stygas. Styga – tai atkarpa, jungianti du bet kuriuos apskritimo taškus. Ilgiausia apskritimo styga yra skersmuo."
+        }
+      ]
+    },
+    {
+      "id": "skaicius-pi-ir-istorija",
+      "title": "Paslaptingasis skaičius π (Pi)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei paimtumėte bet kokį apskritą daiktą (puodelį, monetą, ratą), išmatuotumėte jo apvadinį ilgį ir padalintumėte iš jo skersmens, visada gautumėte tą patį skaičių. Šis pastovus santykis matematikoje žymimas graikiška raide $\\pi$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "pi-skaicius",
+          "text": "[[pi-skaicius|Skaičius π]] yra apskritimo ilgio ir jo skersmens santykis. Tai iracionalusis skaičius, kurio skaitmenų seka po kablelio yra begalinė ir neperiodinė."
+        },
+        {
+          "type": "note",
+          "text": "Mokyklos kurse dažniausiai naudojame apytikslę reikšmę $\\pi \\approx 3,14$ arba $\\pi \\approx \\frac{22}{7}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Senovės graikų matematikas Archimedas pirmasis moksliškai pagrindė $\\pi$ vertę, naudodamas įbrėžtinius ir apibrėžtinius daugiakampius. Šiandien kompiuteriai apskaičiavo trilijonus $\\pi$ skaitmenų, tačiau praktiniams inžineriniams skaičiavimams visiškai pakanka vos kelių skaitmenų po kablelio."
+        }
+      ]
+    },
+    {
+      "id": "apskritimo-ilgis",
+      "title": "Apskritimo ilgis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Apskritimo ilgis (dažnai vadinamas apskritimo perimetru) parodo, kokį atstumą nueitume apėję vieną kartą aplink apskritimą."
         },
         {
           "type": "formula",
@@ -97,18 +149,22 @@
           "latex": "C = 2\\pi r \\quad \\text{arba} \\quad C = \\pi d"
         },
         {
-          "type": "note",
-          "text": "Skaičius π yra iracionalusis, jo apytikslė reikšmė yra 3,14."
+          "type": "paragraph",
+          "text": "Kur $C$ – apskritimo ilgis, $r$ – spindulys, $d$ – skersmuo. Jei užduotyje prašoma pateikti „tikslų atsakymą“, skaičiaus $\\pi$ nereikia keisti į 3,14 – jis paliekamas kaip simbolis (pavyzdžiui, $10\\pi$)."
+        },
+        {
+          "type": "warning",
+          "text": "Skaitydami sąlygą, visada atkreipkite dėmesį, ar duotas spindulys, ar skersmuo. Tai dažniausia klaidų priežastis!"
         }
       ]
     },
     {
-      "id": "skritulio-plotas",
+      "id": "skritulio-plotas-geometrija",
       "title": "Skritulio plotas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[skritulio-plotas|Skritulio plotas]] parodo, kokį paviršiaus dydį užima figūra. Jis apskaičiuojamas pagal formulę:"
+          "text": "Skritulio plotas nusako plokštumos dalį, esančią apskritimo viduje. Galite įsivaizduoti, kad skritulį supjaustome į labai daug siaurų trikampių (išpjovų) ir sudėliojame juos į figūrą, panašią į stačiakampį. Tokio „stačiakampio“ viena kraštinė būtų lygi spinduliui $r$, o kita – pusei apskritimo ilgio $\\pi r$."
         },
         {
           "type": "formula",
@@ -116,32 +172,84 @@
           "latex": "S = \\pi r^2"
         },
         {
-          "type": "warning",
-          "text": "Nepamirškite, kad keliamas kvadratu tik spindulys, o ne visa sandauga πr."
+          "type": "method",
+          "text": "Jei žinomas tik skersmuo $d$, plotą galime skaičiuoti taip:",
+          "latex": "S = \\pi \\left(\\frac{d}{2}\\right)^2 = \\frac{\\pi d^2}{4}"
+        },
+        {
+          "type": "note",
+          "text": "Nepamirškite matavimo vienetų: jei spindulys cm, tai ilgis cm, o plotas – $\\text{cm}^2$."
         }
       ]
     },
     {
-      "id": "lankas-ir-ispjova",
-      "title": "Apskritimo lankas ir skritulio išpjova",
+      "id": "lankas-ir-centrinis-kampas",
+      "title": "Apskritimo lankas ir centrinis kampas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[lankas|Lankas]] yra apskritimo dalis tarp dviejų jo taškų. [[ispjova|Išpjova]] yra skritulio dalis, apribota dviem spinduliais ir lanku."
+          "text": "Dalis apskritimo vadinama lanku. Lanką galime apibūdinti jo ilgiu (centimetrais, metrais) arba laipsniais. Kampas, kurio viršūnė yra apskritimo centre, vadinamas centriniu kampu."
+        },
+        {
+          "type": "definition",
+          "conceptId": "lankas",
+          "text": "[[lankas|Lankas]] – tai apskritimo dalis tarp dviejų jo taškų. Lanką atitinka tam tikras centrinis kampas $\\alpha$."
         },
         {
           "type": "paragraph",
-          "text": "Jei lanką atitinkantis centrinis kampas yra α laipsnių, tai lanko ilgį l ir išpjovos plotą S_ispj apskaičiuojame taip:"
+          "text": "Kadangi visas apskritimas sudaro $360^\\circ$, tai $1^\\circ$ lanko ilgis yra $\\frac{1}{360}$ dalis viso ilgio. Todėl lanko, kurio centrinis kampas yra $\\alpha$, ilgio formulė yra:"
         },
         {
           "type": "formula",
           "formulaId": "lanko-ilgio-formule",
           "latex": "l = \\frac{2\\pi r \\alpha}{360} = \\frac{\\pi r \\alpha}{180}"
+        }
+      ]
+    },
+    {
+      "id": "ispjova-ir-jos-plotas",
+      "title": "Skritulio išpjova",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Išpjova yra skritulio dalis, panaši į picos gabalėlį. Ją riboja du spinduliai ir lankas."
+        },
+        {
+          "type": "definition",
+          "conceptId": "ispjova",
+          "text": "[[ispjova|Išpjova]] – tai skritulio dalis, apribota dviem spinduliais ir lanku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Išpjovos plotas sudaro tokią pačią viso skritulio ploto dalį, kokią centrinis kampas sudaro nuo viso $360^\\circ$ kampo:"
         },
         {
           "type": "formula",
           "formulaId": "ispjovos-ploto-formule",
           "latex": "S_{\\text{išpj}} = \\frac{\\pi r^2 \\alpha}{360}"
+        },
+        {
+          "type": "method",
+          "text": "Yra dar vienas patogus būdas rasti išpjovos plotą, jei žinome lanko ilgį $l$:",
+          "latex": "S_{\\text{išpj}} = \\frac{l \\cdot r}{2}"
+        }
+      ]
+    },
+    {
+      "id": "praktiniai-patarimai-ir-klaidos",
+      "title": "Praktiniai patarimai ir dažnos klaidos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant uždavinius su apskritimais, svarbu nepasimesti tarp formulių. Štai keli patarimai:"
+        },
+        {
+          "type": "method",
+          "text": "1. Visada pirmiausia išsiaiškinkite spindulį $r$. Jei duotas skersmuo, plotas ar ilgis, pirmas žingsnis beveik visada bus rasti $r$.\n2. Plotas visada turi kvadratą ($r^2$), nes plotas matuojamas kvadratiniais vienetais.\n3. Ilgis visada yra linijinis ($2r$ arba $d$)."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida: skaičiuojant plotą, mokiniai kartais padaugina $\\pi$ iš $r$, o tada gautą rezultatą kelia kvadratu. Teisinga tvarka: pirmiausia $r$ keliamas kvadratu, o tada dauginamas iš $\\pi$."
         }
       ]
     }
@@ -155,9 +263,15 @@
       "intuition": "Tai tarsi tuščiaviduris žiedas.",
       "formal": "Apskritimas yra figūra, kurios visi taškai plokštumoje yra nutolę nuo taško O atstumu r.",
       "notation": [],
-      "relatedConceptIds": ["skritulys", "spindulys", "centras"],
+      "relatedConceptIds": [
+        "skritulys",
+        "spindulys",
+        "centras"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -168,9 +282,14 @@
       "intuition": "Tai tarsi pilnavidurė moneta ar blynas.",
       "formal": "Skritulys yra aibė taškų, kurių atstumas iki centro neviršija spindulio r.",
       "notation": [],
-      "relatedConceptIds": ["apskritimas", "skritulio-plotas"],
+      "relatedConceptIds": [
+        "apskritimas",
+        "skritulio-plotas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -180,10 +299,17 @@
       "shortDefinition": "Atstumas nuo centro iki bet kurio apskritimo taško.",
       "intuition": "Dviračio rato stipinas.",
       "formal": "Atkarpa, jungianti apskritimo centrą su bet kuriuo jo tašku.",
-      "notation": ["r"],
-      "relatedConceptIds": ["skersmuo", "centras"],
+      "notation": [
+        "r"
+      ],
+      "relatedConceptIds": [
+        "skersmuo",
+        "centras"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -193,10 +319,17 @@
       "shortDefinition": "Atkarpa, jungianti du taškus ir einanti per centrą.",
       "intuition": "Ilgiausia galima atkarpa apskritimo viduje.",
       "formal": "Atkarpa, jungianti du apskritimo taškus ir einanti per jo centrą; d = 2r.",
-      "notation": ["d", "D"],
-      "relatedConceptIds": ["spindulys"],
+      "notation": [
+        "d",
+        "D"
+      ],
+      "relatedConceptIds": [
+        "spindulys"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -206,10 +339,16 @@
       "shortDefinition": "Apskritimo ilgio ir skersmens santykis.",
       "intuition": "Maždaug 3,14.",
       "formal": "Matematinė konstanta π, lygi apskritimo ilgio ir jo skersmens santykiui.",
-      "notation": ["π"],
-      "relatedConceptIds": ["apskritimo-ilgis"],
+      "notation": [
+        "π"
+      ],
+      "relatedConceptIds": [
+        "apskritimo-ilgis"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -219,10 +358,17 @@
       "shortDefinition": "Atstumas aplink apskritimą.",
       "intuition": "Jei apskritimą „ištiestume“ į tiesę.",
       "formal": "Apskritimo perimetras, apskaičiuojamas kaip 2πr.",
-      "notation": ["C"],
-      "relatedConceptIds": ["pi-skaicius", "spindulys"],
+      "notation": [
+        "C"
+      ],
+      "relatedConceptIds": [
+        "pi-skaicius",
+        "spindulys"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -232,10 +378,17 @@
       "shortDefinition": "Paviršiaus, apriboto apskritimu, dydis.",
       "intuition": "Kiek dažų reikėtų skrituliui nudažyti.",
       "formal": "Skritulio užimamas plotas S = πr².",
-      "notation": ["S"],
-      "relatedConceptIds": ["skritulys", "spindulys"],
+      "notation": [
+        "S"
+      ],
+      "relatedConceptIds": [
+        "skritulys",
+        "spindulys"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -246,9 +399,14 @@
       "intuition": "Išpjauta picos krašto dalis.",
       "formal": "Apskritimo dalis tarp dviejų jo taškų.",
       "notation": [],
-      "relatedConceptIds": ["apskritimas", "centrinis-kampas"],
+      "relatedConceptIds": [
+        "apskritimas",
+        "centrinis-kampas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -259,9 +417,14 @@
       "intuition": "Picos gabalėlis.",
       "formal": "Skritulio dalis, apribota lanko ir dviejų spindulių, jungiančių lanko galus su centru.",
       "notation": [],
-      "relatedConceptIds": ["skritulys", "lankas"],
+      "relatedConceptIds": [
+        "skritulys",
+        "lankas"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["apskritimas-ir-skritulys"],
+      "appearsInTopicIds": [
+        "apskritimas-ir-skritulys"
+      ],
       "defaultSrs": true
     }
   ],
@@ -278,7 +441,10 @@
         "π": "pi (≈3,14)"
       },
       "explanation": "Apskaičiuoja atstumą aplink apskritimą.",
-      "relatedConceptIds": ["apskritimo-ilgis", "spindulys"],
+      "relatedConceptIds": [
+        "apskritimo-ilgis",
+        "spindulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -292,7 +458,10 @@
         "r": "spindulys"
       },
       "explanation": "Apskaičiuoja skritulio paviršiaus plotą.",
-      "relatedConceptIds": ["skritulio-plotas", "spindulys"],
+      "relatedConceptIds": [
+        "skritulio-plotas",
+        "spindulys"
+      ],
       "defaultSrs": true
     },
     {
@@ -300,13 +469,17 @@
       "title": "Lanko ilgis",
       "type": "formula",
       "latex": "l = \\frac{\\pi r \\alpha}{180}",
-      "conditions": ["α - centrinis kampas laipsniais"],
+      "conditions": [
+        "α - centrinis kampas laipsniais"
+      ],
       "variables": {
         "l": "lanko ilgis",
         "α": "centrinis kampas"
       },
       "explanation": "Apskaičiuoja apskritimo dalies (lanko) ilgį.",
-      "relatedConceptIds": ["lankas"],
+      "relatedConceptIds": [
+        "lankas"
+      ],
       "defaultSrs": true
     },
     {
@@ -314,13 +487,17 @@
       "title": "Išpjovos plotas",
       "type": "formula",
       "latex": "S_{\\text{išpj}} = \\frac{\\pi r^2 \\alpha}{360}",
-      "conditions": ["α - centrinis kampas laipsniais"],
+      "conditions": [
+        "α - centrinis kampas laipsniais"
+      ],
       "variables": {
         "S_išpj": "išpjovos plotas",
         "α": "centrinis kampas"
       },
       "explanation": "Apskaičiuoja skritulio dalies (picos gabalėlio) plotą.",
-      "relatedConceptIds": ["ispjova"],
+      "relatedConceptIds": [
+        "ispjova"
+      ],
       "defaultSrs": true
     }
   ],
@@ -329,7 +506,10 @@
       "id": "painioja-spinduli-su-skersmeniu",
       "title": "Painioja spindulį su skersmeniu",
       "topicId": "apskritimas-ir-skritulys",
-      "conceptIds": ["spindulys", "skersmuo"],
+      "conceptIds": [
+        "spindulys",
+        "skersmuo"
+      ],
       "wrongPattern": "Į formulę vietoj spindulio įrašo skersmenį.",
       "whyItHappens": "Užduotyje duotas skersmuo, bet mokinys automatiškai naudoja jį formulėje 2πr.",
       "correction": "Jei duotas skersmuo d, spindulį r raskite padaliję d iš 2.",
@@ -341,7 +521,10 @@
       "id": "painioja-ilgio-ir-ploto-formules",
       "title": "Painioja ilgio ir ploto formules",
       "topicId": "apskritimas-ir-skritulys",
-      "conceptIds": ["apskritimo-ilgis", "skritulio-plotas"],
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "skritulio-plotas"
+      ],
       "wrongPattern": "Naudoja πr² ilgiui arba 2πr plotui.",
       "whyItHappens": "Abi formulės turi tuos pačius elementus (2, π, r).",
       "correction": "Plotas visada susijęs su kvadratu (r²), ilgis - su linijiniu matavimu (2r).",
@@ -355,28 +538,39 @@
       "id": "apsk-exmp-1",
       "title": "Apskritimo ilgio radimas",
       "level": "easy",
-      "problem": "Apskaičiuok apskritimo ilgį, kai spindulys r = 5 cm. (Atsakymą pateik su π).",
-      "conceptIds": ["apskritimo-ilgis", "spindulys"],
-      "formulaIds": ["apskritimo-ilgio-formule"],
+      "problem": "Apskaičiuok apskritimo ilgį, kai spindulys $r = 5$ cm. (Atsakymą pateik su $\\pi$).",
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "spindulys"
+      ],
+      "formulaIds": [
+        "apskritimo-ilgio-formule"
+      ],
       "steps": [
         {
           "text": "Naudojame apskritimo ilgio formulę.",
           "latex": "C = 2\\pi r"
         },
         {
-          "text": "Įrašome r = 5.",
+          "text": "Įrašome $r = 5$.",
           "latex": "C = 2\\pi \\cdot 5 = 10\\pi"
         }
       ],
-      "answer": "10π cm"
+      "answer": "$10\\pi$ cm"
     },
     {
       "id": "apsk-exmp-2",
       "title": "Skritulio ploto radimas",
       "level": "easy",
-      "problem": "Apskaičiuok skritulio plotą, kai skersmuo d = 8 m. (Naudok π ≈ 3,14).",
-      "conceptIds": ["skritulio-plotas", "skersmuo", "spindulys"],
-      "formulaIds": ["skritulio-ploto-formule"],
+      "problem": "Apskaičiuok skritulio plotą, kai skersmuo $d = 8$ m. (Naudok $\\pi \\approx 3,14$).",
+      "conceptIds": [
+        "skritulio-plotas",
+        "skersmuo",
+        "spindulys"
+      ],
+      "formulaIds": [
+        "skritulio-ploto-formule"
+      ],
       "steps": [
         {
           "text": "Pirmiausia randame spindulį.",
@@ -397,9 +591,13 @@
       "id": "apsk-exmp-3",
       "title": "Lanko ilgio radimas",
       "level": "medium",
-      "problem": "Apskaičiuok lanko ilgį, kai spindulys r = 6 cm, o centrinis kampas α = 60°.",
-      "conceptIds": ["lankas"],
-      "formulaIds": ["lanko-ilgio-formule"],
+      "problem": "Apskaičiuok lanko ilgį, kai spindulys $r = 6$ cm, o centrinis kampas $\\alpha = 60^\\circ$.",
+      "conceptIds": [
+        "lankas"
+      ],
+      "formulaIds": [
+        "lanko-ilgio-formule"
+      ],
       "steps": [
         {
           "text": "Naudojame lanko ilgio formulę.",
@@ -410,22 +608,29 @@
           "latex": "l = \\frac{2\\pi \\cdot 6 \\cdot 60}{360}"
         },
         {
-          "text": "Suprastiname trupmeną (60/360 = 1/6).",
+          "text": "Suprastiname trupmeną ($60/360 = 1/6$).",
           "latex": "l = \\frac{12\\pi}{6} = 2\\pi \\text{ cm}"
         }
       ],
-      "answer": "2π cm"
+      "answer": "$2\\pi$ cm"
     },
     {
       "id": "apsk-exmp-4",
       "title": "Spindulio radimas iš ploto",
       "level": "medium",
-      "problem": "Skritulio plotas yra 25π cm². Rask jo apskritimo ilgį.",
-      "conceptIds": ["skritulio-plotas", "apskritimo-ilgis", "spindulys"],
-      "formulaIds": ["skritulio-ploto-formule", "apskritimo-ilgio-formule"],
+      "problem": "Skritulio plotas yra $25\\pi \\text{ cm}^2$. Rask jo apskritimo ilgį.",
+      "conceptIds": [
+        "skritulio-plotas",
+        "apskritimo-ilgis",
+        "spindulys"
+      ],
+      "formulaIds": [
+        "skritulio-ploto-formule",
+        "apskritimo-ilgio-formule"
+      ],
       "steps": [
         {
-          "text": "Iš ploto formulės randame spindulį r.",
+          "text": "Iš ploto formulės randame spindulį $r$.",
           "latex": "25\\pi = \\pi r^2 \\implies r^2 = 25 \\implies r = 5 \\text{ cm}"
         },
         {
@@ -433,18 +638,24 @@
           "latex": "C = 2\\pi r = 2\\pi \\cdot 5 = 10\\pi \\text{ cm}"
         }
       ],
-      "answer": "10π cm"
+      "answer": "$10\\pi$ cm"
     },
     {
       "id": "apsk-exmp-5",
       "title": "Išpjovos plotas",
       "level": "hard",
-      "problem": "Rask išpjovos plotą, jei jos lanko ilgis yra 4π cm, o spindulys r = 10 cm.",
-      "conceptIds": ["ispjova", "lankas"],
-      "formulaIds": ["ispjovos-ploto-formule", "lanko-ilgio-formule"],
+      "problem": "Rask išpjovos plotą, jei jos lanko ilgis yra $4\\pi$ cm, o spindulys $r = 10$ cm.",
+      "conceptIds": [
+        "ispjova",
+        "lankas"
+      ],
+      "formulaIds": [
+        "ispjovos-ploto-formule",
+        "lanko-ilgio-formule"
+      ],
       "steps": [
         {
-          "text": "Galima pastebėti ryšį tarp lanko ilgio ir išpjovos ploto: S = (l * r) / 2.",
+          "text": "Galima pastebėti ryšį tarp lanko ilgio ir išpjovos ploto: $S = (l \\cdot r) / 2$.",
           "latex": "S_{\\text{išpj}} = \\frac{4\\pi \\cdot 10}{2}"
         },
         {
@@ -452,7 +663,95 @@
           "latex": "S_{\\text{išpj}} = 20\\pi \\text{ cm}^2"
         }
       ],
-      "answer": "20π cm²"
+      "answer": "$20\\pi \\text{ cm}^2$"
+    },
+    {
+      "id": "apsk-exmp-6",
+      "title": "Rato apsisukimai",
+      "level": "medium",
+      "problem": "Dviračio rato skersmuo yra $70$ cm. Kiek metrų nuvažiuos dviratis, jei ratas apsisuks $100$ kartų? (Naudok $\\pi \\approx 3,14$, atsakymą suapvalink iki vienetų).",
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "skersmuo"
+      ],
+      "formulaIds": [
+        "apskritimo-ilgio-formule"
+      ],
+      "steps": [
+        {
+          "text": "Pirmiausia apskaičiuojame vieno apsisukimo ilgį, kuris lygus apskritimo ilgiui.",
+          "latex": "C = \\pi d = 3,14 \\cdot 70 = 219,8 \\text{ cm}"
+        },
+        {
+          "text": "Tada apskaičiuojame bendrą atstumą padauginę iš apsisukimų skaičiaus.",
+          "latex": "L = 100 \\cdot 219,8 = 21980 \\text{ cm}"
+        },
+        {
+          "text": "Paverčiame centimetrus į metrus.",
+          "latex": "21980 \\text{ cm} = 219,8 \\text{ m} \\approx 220 \\text{ m}"
+        }
+      ],
+      "answer": "$220$ m"
+    },
+    {
+      "id": "apsk-exmp-7",
+      "title": "Kelių figūrų kombinacija",
+      "level": "hard",
+      "problem": "Iš stačiakampio, kurio kraštinės yra $10$ cm ir $12$ cm, iškirptas didžiausias įmanomas skritulys. Koks likusio stačiakampio plotas? (Naudok $\\pi \\approx 3,14$).",
+      "conceptIds": [
+        "skritulio-plotas",
+        "skersmuo"
+      ],
+      "formulaIds": [
+        "skritulio-ploto-formule"
+      ],
+      "steps": [
+        {
+          "text": "Didžiausio įmanomo skritulio skersmuo bus lygus trumpesniajai stačiakampio kraštinei.",
+          "latex": "d = 10 \\text{ cm} \\implies r = 5 \\text{ cm}"
+        },
+        {
+          "text": "Apskaičiuojame stačiakampio plotą.",
+          "latex": "S_{st} = 10 \\cdot 12 = 120 \\text{ cm}^2"
+        },
+        {
+          "text": "Apskaičiuojame skritulio plotą.",
+          "latex": "S_{sk} = 3,14 \\cdot 5^2 = 3,14 \\cdot 25 = 78,5 \\text{ cm}^2"
+        },
+        {
+          "text": "Atimame skritulio plotą iš stačiakampio ploto.",
+          "latex": "S_{likęs} = 120 - 78,5 = 41,5 \\text{ cm}^2"
+        }
+      ],
+      "answer": "41,5 cm²"
+    },
+    {
+      "id": "apsk-exmp-8",
+      "title": "Atvirkštinis uždavinys: spindulys iš lanko",
+      "level": "hard",
+      "problem": "Apskritimo lanko, kurio centrinis kampas yra $45^\\circ$, ilgis lygus $\\pi$ cm. Rask apskritimo spindulį.",
+      "conceptIds": [
+        "lankas",
+        "spindulys"
+      ],
+      "formulaIds": [
+        "lanko-ilgio-formule"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame lanko ilgio formulę ir įstatome žinomas reikšmes.",
+          "latex": "\\pi = \\frac{\\pi \\cdot r \\cdot 45}{180}"
+        },
+        {
+          "text": "Suprastiname trupmeną $\\frac{45}{180}$.",
+          "latex": "\\frac{45}{180} = \\frac{1}{4}"
+        },
+        {
+          "text": "Išsprendžiame lygtį spinduliui $r$ rasti.",
+          "latex": "\\pi = \\frac{\\pi \\cdot r}{4} \\implies 1 = \\frac{r}{4} \\implies r = 4 \\text{ cm}"
+        }
+      ],
+      "answer": "4 cm"
     }
   ],
   "exercises": [
@@ -460,378 +759,693 @@
       "id": "apsk-ex-001",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskaičiuok apskritimo ilgį, kai r = 7. (Naudok π ≈ 3).",
-      "answer": { "kind": "numeric", "value": 42, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 42,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Naudok formulę C = 2πr.", "penalty": 0.1 },
-        { "order": 2, "text": "Padaugink 2 * 3 * 7.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Naudok formulę C = 2πr.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Padaugink 2 * 3 * 7.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "C = 2 * 3 * 7 = 42.", "latex": "C = 42" }
+        {
+          "text": "C = 2 * 3 * 7 = 42.",
+          "latex": "C = 42"
+        }
       ],
       "answerText": "42",
-      "conceptIds": ["apskritimo-ilgis"],
+      "conceptIds": [
+        "apskritimo-ilgis"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "apsk-ex-002",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskaičiuok skritulio plotą, kai r = 10. (Naudok π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 314, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 314,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Naudok formulę S = πr².", "penalty": 0.1 },
-        { "order": 2, "text": "r² = 100.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Naudok formulę S = πr².",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "r² = 100.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S = 3,14 * 10² = 314.", "latex": "S = 314" }
+        {
+          "text": "S = 3,14 * 10² = 314.",
+          "latex": "S = 314"
+        }
       ],
       "answerText": "314",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 40
     },
     {
       "id": "apsk-ex-003",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskritimo skersmuo yra 20. Koks jo spindulys?",
-      "answer": { "kind": "numeric", "value": 10, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Spindulys yra pusė skersmens.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Spindulys yra pusė skersmens.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "r = 20 / 2 = 10.", "latex": "r = 10" }
+        {
+          "text": "r = 20 / 2 = 10.",
+          "latex": "r = 10"
+        }
       ],
       "answerText": "10",
-      "conceptIds": ["spindulys", "skersmuo"],
+      "conceptIds": [
+        "spindulys",
+        "skersmuo"
+      ],
       "estimatedSeconds": 20
     },
     {
       "id": "apsk-ex-004",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kokia yra apytikslė π reikšmė?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "2,14" },
-          { "id": "b", "text": "3,14" },
-          { "id": "c", "text": "3,41" },
-          { "id": "d", "text": "4,13" }
+          {
+            "id": "a",
+            "text": "2,14"
+          },
+          {
+            "id": "b",
+            "text": "3,14"
+          },
+          {
+            "id": "c",
+            "text": "3,41"
+          },
+          {
+            "id": "d",
+            "text": "4,13"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Tai prasideda skaičiumi 3.", "penalty": 0.05 }
+        {
+          "order": 1,
+          "text": "Tai prasideda skaičiumi 3.",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "π ≈ 3,14159...", "latex": "\\pi \\approx 3,14" }
+        {
+          "text": "π ≈ 3,14159...",
+          "latex": "\\pi \\approx 3,14"
+        }
       ],
       "answerText": "3,14",
-      "conceptIds": ["pi-skaicius"],
+      "conceptIds": [
+        "pi-skaicius"
+      ],
       "estimatedSeconds": 15
     },
     {
       "id": "apsk-ex-005",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskritimo ilgis yra 12π. Koks jo spindulys?",
-      "answer": { "kind": "numeric", "value": 6, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "C = 2πr. Sulygink 12π = 2πr.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "C = 2πr. Sulygink 12π = 2πr.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "12π / (2π) = 6.", "latex": "r = 6" }
+        {
+          "text": "12π / (2π) = 6.",
+          "latex": "r = 6"
+        }
       ],
       "answerText": "6",
-      "conceptIds": ["apskritimo-ilgis", "spindulys"],
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "spindulys"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "apsk-ex-006",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Skritulio plotas yra 49π. Koks jo spindulys?",
-      "answer": { "kind": "numeric", "value": 7, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "S = πr². 49π = πr².", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "S = πr². 49π = πr².",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "r² = 49, tad r = 7.", "latex": "r = 7" }
+        {
+          "text": "r² = 49, tad r = 7.",
+          "latex": "r = 7"
+        }
       ],
       "answerText": "7",
-      "conceptIds": ["skritulio-plotas", "spindulys"],
+      "conceptIds": [
+        "skritulio-plotas",
+        "spindulys"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "apsk-ex-007",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskaičiuok lanko ilgį, kai r = 18, o α = 40°. (Naudok π ≈ 3).",
-      "answer": { "kind": "numeric", "value": 12, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "l = (2πr * α) / 360.", "penalty": 0.12 },
-        { "order": 2, "text": "l = (2 * 3 * 18 * 40) / 360.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "l = (2πr * α) / 360.",
+          "penalty": 0.12
+        },
+        {
+          "order": 2,
+          "text": "l = (2 * 3 * 18 * 40) / 360.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "l = (108 * 40) / 360 = 108 / 9 = 12.", "latex": "l = 12" }
+        {
+          "text": "l = (108 * 40) / 360 = 108 / 9 = 12.",
+          "latex": "l = 12"
+        }
       ],
       "answerText": "12",
-      "conceptIds": ["lankas"],
+      "conceptIds": [
+        "lankas"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "apsk-ex-008",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskaičiuok išpjovos plotą, kai r = 6, o α = 90°. (Atsakymą pateik be π, t.y. padalink iš π).",
-      "answer": { "kind": "numeric", "value": 9, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "S_išpj = (πr² * α) / 360.", "penalty": 0.12 },
-        { "order": 2, "text": "90° yra ketvirtadalis skritulio.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "S_išpj = (πr² * α) / 360.",
+          "penalty": 0.12
+        },
+        {
+          "order": 2,
+          "text": "90° yra ketvirtadalis skritulio.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S = (π * 36 * 90) / 360 = 36π / 4 = 9π.", "latex": "S = 9\\pi" }
+        {
+          "text": "S = (π * 36 * 90) / 360 = 36π / 4 = 9π.",
+          "latex": "S = 9\\pi"
+        }
       ],
       "answerText": "9",
-      "conceptIds": ["ispjova"],
+      "conceptIds": [
+        "ispjova"
+      ],
       "estimatedSeconds": 50
     },
     {
       "id": "apsk-ex-009",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kiek kartų padidės apskritimo ilgis, jei jo spindulį padidinsime 3 kartus?",
-      "answer": { "kind": "numeric", "value": 3, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Palygink C1 = 2πr ir C2 = 2π(3r).", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Palygink C1 = 2πr ir C2 = 2π(3r).",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "C2 = 3 * (2πr) = 3C1.", "latex": "3" }
+        {
+          "text": "C2 = 3 * (2πr) = 3C1.",
+          "latex": "3"
+        }
       ],
       "answerText": "3",
-      "conceptIds": ["apskritimo-ilgis"],
+      "conceptIds": [
+        "apskritimo-ilgis"
+      ],
       "estimatedSeconds": 40
     },
     {
       "id": "apsk-ex-010",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kiek kartų padidės skritulio plotas, jei jo spindulį padidinsime 4 kartus?",
-      "answer": { "kind": "numeric", "value": 16, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Palygink S1 = πr² ir S2 = π(4r)².", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Palygink S1 = πr² ir S2 = π(4r)².",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S2 = π * 16r² = 16S1.", "latex": "16" }
+        {
+          "text": "S2 = π * 16r² = 16S1.",
+          "latex": "16"
+        }
       ],
       "answerText": "16",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 45
     },
     {
       "id": "apsk-ex-011",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskritimo lanko ilgis yra π, o spindulys r = 2. Rask centrinį kampą laipsniais.",
-      "answer": { "kind": "numeric", "value": 90, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 90,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "π = (2π * 2 * α) / 360.", "penalty": 0.12 }
+        {
+          "order": 1,
+          "text": "π = (2π * 2 * α) / 360.",
+          "penalty": 0.12
+        }
       ],
       "solutionSteps": [
-        { "text": "1 = (4 * α) / 360 => 4α = 360 => α = 90.", "latex": "\\alpha = 90" }
+        {
+          "text": "1 = (4 * α) / 360 => 4α = 360 => α = 90.",
+          "latex": "\\alpha = 90"
+        }
       ],
       "answerText": "90",
-      "conceptIds": ["lankas"],
+      "conceptIds": [
+        "lankas"
+      ],
       "estimatedSeconds": 70
     },
     {
       "id": "apsk-ex-012",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Skersmuo padidėjo 10 cm. Kiek centimetrų padidėjo apskritimo ilgis? (Naudok π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 31.4, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 31.4,
+        "tolerance": 0.01
+      },
       "hints": [
-        { "order": 1, "text": "C = πd. Pokytis ΔC = π * (Δd).", "penalty": 0.15 }
+        {
+          "order": 1,
+          "text": "C = πd. Pokytis ΔC = π * (Δd).",
+          "penalty": 0.15
+        }
       ],
       "solutionSteps": [
-        { "text": "ΔC = 3,14 * 10 = 31,4.", "latex": "31,4" }
+        {
+          "text": "ΔC = 3,14 * 10 = 31,4.",
+          "latex": "31,4"
+        }
       ],
       "answerText": "31,4",
-      "conceptIds": ["apskritimo-ilgis", "skersmuo"],
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "skersmuo"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "apsk-ex-013",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Duotas kvadratas, kurio kraštinė 10. Jame įbrėžtas skritulys. Rask likusį kvadrato plotą (ne skritulio). (Naudok π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 21.5, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 21.5,
+        "tolerance": 0.01
+      },
       "hints": [
-        { "order": 1, "text": "Skritulio spindulys r = 5.", "penalty": 0.1 },
-        { "order": 2, "text": "S_kvadrato = 100. S_skritulio = 3,14 * 25.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Skritulio spindulys r = 5.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "S_kvadrato = 100. S_skritulio = 3,14 * 25.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S = 100 - (3,14 * 25) = 100 - 78,5 = 21,5.", "latex": "21,5" }
+        {
+          "text": "S = 100 - (3,14 * 25) = 100 - 78,5 = 21,5.",
+          "latex": "21,5"
+        }
       ],
       "answerText": "21,5",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 100
     },
     {
       "id": "apsk-ex-014",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Apskritimo ilgis padidėjo 18,84 cm. Kiek padidėjo spindulys? (π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 3, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0.01
+      },
       "hints": [
-        { "order": 1, "text": "ΔC = 2π * Δr.", "penalty": 0.15 }
+        {
+          "order": 1,
+          "text": "ΔC = 2π * Δr.",
+          "penalty": 0.15
+        }
       ],
       "solutionSteps": [
-        { "text": "18,84 = 2 * 3,14 * Δr => 18,84 = 6,28 * Δr => Δr = 3.", "latex": "3" }
+        {
+          "text": "18,84 = 2 * 3,14 * Δr => 18,84 = 6,28 * Δr => Δr = 3.",
+          "latex": "3"
+        }
       ],
       "answerText": "3",
-      "conceptIds": ["apskritimo-ilgis", "spindulys"],
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "spindulys"
+      ],
       "estimatedSeconds": 80
     },
     {
       "id": "apsk-ex-015",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Skritulio išpjovos plotas yra 12π, o centrinis kampas 120°. Rask skritulio plotą.",
-      "answer": { "kind": "numeric", "value": 36, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "120° yra 1/3 skritulio.", "penalty": 0.1 },
-        { "order": 2, "text": "Padaugink išpjovos plotą iš 3.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "120° yra 1/3 skritulio.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Padaugink išpjovos plotą iš 3.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S_viso = 12π * (360/120) = 36π.", "latex": "36\\pi" }
+        {
+          "text": "S_viso = 12π * (360/120) = 36π.",
+          "latex": "36\\pi"
+        }
       ],
       "answerText": "36",
-      "conceptIds": ["ispjova", "skritulio-plotas"],
+      "conceptIds": [
+        "ispjova",
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "apsk-ex-016",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Rato skersmuo 50 cm. Kiek kartų ratas apsisuks nuvažiavęs 314 m kelią? (π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 200, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 200,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Vienas apsisukimas lygus apskritimo ilgiui C = πd.", "penalty": 0.12 },
-        { "order": 2, "text": "C = 3,14 * 0,5 m = 1,57 m.", "penalty": 0.1 },
-        { "order": 3, "text": "Padalink 314 iš 1,57.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Vienas apsisukimas lygus apskritimo ilgiui C = πd.",
+          "penalty": 0.12
+        },
+        {
+          "order": 2,
+          "text": "C = 3,14 * 0,5 m = 1,57 m.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Padalink 314 iš 1,57.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "314 / 1,57 = 200.", "latex": "200" }
+        {
+          "text": "314 / 1,57 = 200.",
+          "latex": "200"
+        }
       ],
       "answerText": "200",
-      "conceptIds": ["apskritimo-ilgis", "skersmuo"],
+      "conceptIds": [
+        "apskritimo-ilgis",
+        "skersmuo"
+      ],
       "estimatedSeconds": 120
     },
     {
       "id": "apsk-ex-017",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Skritulio plotas yra 100. Koks kito skritulio plotas, jei jo spindulys 2 kartus mažesnis?",
-      "answer": { "kind": "numeric", "value": 25, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Plotas priklauso nuo spindulio kvadrato.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Plotas priklauso nuo spindulio kvadrato.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "S2 = S1 / 2² = 100 / 4 = 25.", "latex": "25" }
+        {
+          "text": "S2 = S1 / 2² = 100 / 4 = 25.",
+          "latex": "25"
+        }
       ],
       "answerText": "25",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 45
     },
     {
       "id": "apsk-ex-018",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Apskritimo lanko ilgis l = 5π, spindulys r = 10. Rask išpjovos plotą. (Atsakymą pateik be π).",
-      "answer": { "kind": "numeric", "value": 25, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Naudok formulę S = (l * r) / 2.", "penalty": 0.2 }
+        {
+          "order": 1,
+          "text": "Naudok formulę S = (l * r) / 2.",
+          "penalty": 0.2
+        }
       ],
       "solutionSteps": [
-        { "text": "S = (5π * 10) / 2 = 25π.", "latex": "25\\pi" }
+        {
+          "text": "S = (5π * 10) / 2 = 25π.",
+          "latex": "25\\pi"
+        }
       ],
       "answerText": "25",
-      "conceptIds": ["ispjova", "lankas"],
+      "conceptIds": [
+        "ispjova",
+        "lankas"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "apsk-ex-019",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Dviem apskritimais apriboto žiedo plotas, kai išorinis r=5, o vidinis r=3. (Naudok π ≈ 3,14).",
-      "answer": { "kind": "numeric", "value": 50.24, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 50.24,
+        "tolerance": 0.01
+      },
       "hints": [
-        { "order": 1, "text": "S_žiedo = S_išor - S_vidinis.", "penalty": 0.1 },
-        { "order": 2, "text": "S = π(5² - 3²) = π(25 - 9) = 16π.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "S_žiedo = S_išor - S_vidinis.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "S = π(5² - 3²) = π(25 - 9) = 16π.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "16 * 3,14 = 50,24.", "latex": "50,24" }
+        {
+          "text": "16 * 3,14 = 50,24.",
+          "latex": "50,24"
+        }
       ],
       "answerText": "50,24",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "estimatedSeconds": 90
     },
     {
       "id": "apsk-ex-020",
       "topicId": "apskritimas-ir-skritulys",
       "grade": 7,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Jei apskritimo ilgis yra 1, koks jo skersmuo? (Naudok π ≈ 3,14. Suapvalink iki šimtųjų).",
-      "answer": { "kind": "numeric", "value": 0.32, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 0.32,
+        "tolerance": 0.01
+      },
       "hints": [
-        { "order": 1, "text": "C = πd => d = C / π.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "C = πd => d = C / π.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "d = 1 / 3,14 ≈ 0,3184.", "latex": "0,32" }
+        {
+          "text": "d = 1 / 3,14 ≈ 0,3184.",
+          "latex": "0,32"
+        }
       ],
       "answerText": "0,32",
-      "conceptIds": ["skersmuo", "apskritimo-ilgis"],
+      "conceptIds": [
+        "skersmuo",
+        "apskritimo-ilgis"
+      ],
       "estimatedSeconds": 60
     }
   ],
@@ -840,8 +1454,17 @@
       "id": "apskritimas-ir-skritulys-test-1",
       "title": "Apskritimas ir skritulys: bazinis testas",
       "scope": "topic",
-      "topicIds": ["apskritimas-ir-skritulys"],
-      "exerciseIds": ["apsk-ex-001", "apsk-ex-002", "apsk-ex-003", "apsk-ex-005", "apsk-ex-006", "apsk-ex-009"],
+      "topicIds": [
+        "apskritimas-ir-skritulys"
+      ],
+      "exerciseIds": [
+        "apsk-ex-001",
+        "apsk-ex-002",
+        "apsk-ex-003",
+        "apsk-ex-005",
+        "apsk-ex-006",
+        "apsk-ex-009"
+      ],
       "timeLimitSeconds": 900,
       "masteryWeight": 1.2,
       "passingThreshold": 0.7
@@ -850,8 +1473,17 @@
       "id": "apskritimas-ir-skritulys-test-2",
       "title": "Apskritimas ir skritulys: sudėtingesni uždaviniai",
       "scope": "topic",
-      "topicIds": ["apskritimas-ir-skritulys"],
-      "exerciseIds": ["apsk-ex-011", "apsk-ex-012", "apsk-ex-013", "apsk-ex-014", "apsk-ex-015", "apsk-ex-016"],
+      "topicIds": [
+        "apskritimas-ir-skritulys"
+      ],
+      "exerciseIds": [
+        "apsk-ex-011",
+        "apsk-ex-012",
+        "apsk-ex-013",
+        "apsk-ex-014",
+        "apsk-ex-015",
+        "apsk-ex-016"
+      ],
       "timeLimitSeconds": 1500,
       "masteryWeight": 1.5,
       "passingThreshold": 0.65
@@ -864,7 +1496,9 @@
       "cardType": "formula",
       "front": "Kokia yra apskritimo ilgio formulė?",
       "back": "C = 2πr arba C = πd",
-      "conceptIds": ["apskritimo-ilgis"],
+      "conceptIds": [
+        "apskritimo-ilgis"
+      ],
       "defaultEnabled": true
     },
     {
@@ -873,7 +1507,9 @@
       "cardType": "formula",
       "front": "Kokia yra skritulio ploto formulė?",
       "back": "S = πr²",
-      "conceptIds": ["skritulio-plotas"],
+      "conceptIds": [
+        "skritulio-plotas"
+      ],
       "defaultEnabled": true
     },
     {
@@ -882,7 +1518,10 @@
       "cardType": "concept",
       "front": "Koks ryšys tarp skersmens (d) ir spindulio (r)?",
       "back": "d = 2r",
-      "conceptIds": ["skersmuo", "spindulys"],
+      "conceptIds": [
+        "skersmuo",
+        "spindulys"
+      ],
       "defaultEnabled": true
     },
     {
@@ -891,7 +1530,9 @@
       "cardType": "concept",
       "front": "Kokia apytikslė π reikšmė?",
       "back": "3,14",
-      "conceptIds": ["pi-skaicius"],
+      "conceptIds": [
+        "pi-skaicius"
+      ],
       "defaultEnabled": true
     }
   ]

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "matematika_k12.pdf",
-    "notes": "Aibių teorijos pagrindai, veiksmai su aibėmis ir Veno diagramos."
+    "notes": "Aibių teorijos pagrindai, veiksmai su aibėmis ir Veno diagramos. Išplėsta versija."
   },
   "topic": {
     "id": "aibes-ir-veiksmai",
@@ -12,7 +12,7 @@
     "strand": "Skaičiai ir skaičiavimai",
     "level": "curriculum",
     "order": 1,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "realieji-skaiciai-modulis-saknys-laipsniai"
     ],
@@ -27,20 +27,32 @@
       "aibiu-sajunga",
       "aibiu-sankirta",
       "aibiu-skirtumas",
+      "aibiu-papildinys",
+      "visuotine-aibe",
       "veno-diagrama",
       "realiuju-skaiciu-aibe",
-      "baigtine-aibe"
+      "baigtine-aibe",
+      "begaline-aibe",
+      "kardinalumas",
+      "kaipsnis-aibe",
+      "intervalas"
     ],
     "formulaIds": [
       "sajungos-apibrezimas",
       "sankirtos-apibrezimas",
-      "skirtumo-apibrezimas"
+      "skirtumo-apibrezimas",
+      "papildinio-apibrezimas",
+      "de-morgano-desniai",
+      "sajungos-elementu-skaicius-2",
+      "sajungos-elementu-skaicius-3"
     ],
     "mistakeIds": [
       "painioja-sajunga-ir-sankirta",
       "skirtumo-tvarka",
       "tuscios-aibes-zymejimas",
-      "elementas-vs-poaibis"
+      "elementas-vs-poaibis",
+      "intervalu-skliaustai",
+      "papildinio-kontekstas"
     ],
     "exerciseIds": [
       "aibes-ex-001",
@@ -67,59 +79,119 @@
   },
   "theory": [
     {
-      "id": "aibes-savoka",
-      "title": "Aibės sąvoka ir žymėjimas",
+      "id": "ivadas-i-aibiu-teorija",
+      "title": "1. Įvadas į aibių teoriją",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[aibe|Aibė]] yra tam tikrų objektų, vadinamų [[elementas|elementais]], rinkinys. Aibės dažniausiai žymimos didžiosiomis raidėmis (A, B, C...), o jų elementai išvardijami riestiniuose skliaustuose."
+          "text": "Aibių teorija yra šiuolaikinės matematikos pamatas. Beveik visas matematines sąvokas – skaičius, funkcijas, geometrines figūras – galima apibrėžti naudojant aibes. Šią teoriją XIX a. pabaigoje sukūrė Georgas Kantoras. Nors iš pirmo žvilgsnio aibių idėja atrodo paprasta, ji leidžia griežtai nagrinėti begalybės sąvoką ir kurti sudėtingas logines struktūras."
+        },
+        {
+          "type": "note",
+          "text": "Kodėl mums to reikia? Aibių kalba leidžia matematikams susikalbėti vienareikšmiškai. Pavyzdžiui, kai sakome „lyginiai skaičiai“, mes kalbame apie tam tikrą sveikųjų skaičių aibės poaibį."
+        }
+      ]
+    },
+    {
+      "id": "aibes-savoka-ir-zymejimas-isplestas",
+      "title": "2. Aibės sąvoka, elementai ir žymėjimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[aibe|Aibė]] yra tam tikrų objektų rinkinys, kuris traktuojamas kaip viena visuma. Tie objektai vadinami aibės [[elementas|elementais]]. Svarbu suprasti, kad aibėje elementų tvarka nėra svarbi, o tas pats elementas aibėje negali kartotis (tiksliau, pasikartojimai nekeičia pačios aibės)."
         },
         {
           "type": "definition",
           "conceptId": "aibe",
-          "text": "Aibė – tai visuma objektų, kurie turi bendrą požymį arba yra tiesiog sujungti į vieną rinkinį."
+          "text": "Aibė – tai matematikos pirminė sąvoka, reiškianti skirtingų objektų rinkinį, turintį bendrą požymį arba tiesiog sujungtą į visumą."
         },
         {
           "type": "paragraph",
-          "text": "Jei objektas x priklauso aibei A, rašome x ∈ A. Jei nepriklauso – x ∉ A. Aibė, neturinti nei vieno elemento, vadinama [[tuscia-aibe|tuščiąja aibe]] ir žymima ∅."
+          "text": "Aibės žymimos didžiosiomis lotyniškomis raidėmis: $A, B, C, \\dots$, o jų elementai – mažosiomis raidėmis: $a, b, x, \\dots$. Jei elementas $x$ priklauso aibei $A$, rašome $x \\in A$. Jei $x$ nepriklauso aibei $A$, rašome $x \notin A$."
+        },
+        {
+          "type": "note",
+          "text": "Aibės aprašymo būdai:\n1. **Išvardijant elementus:** $A = \\{1, 2, 3\\}$.\n2. **Nurodant būdingąją savybę:** $B = \\{x \\mid x \text{ yra teigiamas lyginis skaičius}\\}$. Šis užrašas skaitomas: „Aibė B, kurią sudaro tokie elementai x, kad x yra teigiamas lyginis skaičius“."
+        },
+        {
+          "type": "example",
+          "text": "Aibė $M = \\{2, 4, 6\\}$ ir aibė $N = \\{x \\mid x \text{ yra lyginis vienaženklis skaičius\n} x > 0, x \\in \\mathbb{N}\\}$. Abi šios aibės yra tapačios, nes turi tuos pačius elementus."
         }
       ]
     },
     {
-      "id": "aibiu-sajunga-ir-sankirta",
-      "title": "Aibių sąjunga ir sankirta",
+      "id": "tuscia-aibe-ir-poaibiai-isplestas",
+      "title": "3. Tuščioji aibė ir poaibiai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pagrindiniai veiksmai su aibėmis yra [[aibiu-sajunga|sąjunga]] ir [[aibiu-sankirta|sankirta]]."
+          "text": "Ypatingą vietą užima [[tuscia-aibe|tuščioji aibė]], kuri neturi nė vieno elemento. Ji žymima simboliu $\\emptyset$ arba \\{\\}. Svarbu nepainioti $\\emptyset$ su $\\{0\\}$ (aibė, turinti vieną elementą – nulį) arba $\\{\\emptyset\\}$ (aibė, kurios elementas yra kita aibė)."
         },
         {
-          "type": "property",
-          "text": "Aibių A ir B sąjunga (A ∪ B) yra aibė, kurią sudaro visi elementai, priklausantys bent vienai iš tų aibių."
+          "type": "definition",
+          "conceptId": "poaibis",
+          "text": "Aibė $B$ vadinama aibės $A$ poaibiu ($B \\subseteq A$), jei kiekvienas aibės $B$ elementas taip pat priklauso ir aibei $A$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekviena aibė turi bent du poaibius (jei ji pati nėra tuščia): pačią save ir tuščiąją aibę. Taigi $\\emptyset \\subseteq A$ ir $A \\subseteq A$ galioja bet kokiai aibei $A$. Jei $B \\subseteq A$, bet $B \neq A$, tai $B$ vadinamas **tikriniu poaibiu**."
+        },
+        {
+          "type": "note",
+          "text": "Jei aibė turi $n$ elementų, tai ji iš viso turi $2^n$ poaibių. Pavyzdžiui, aibė $\\{1, 2\\}$ turi $2^2 = 4$ poaibius: $\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}$."
+        }
+      ]
+    },
+    {
+      "id": "aibiu-sajunga-ir-sankirta-isplestas",
+      "title": "4. Aibių sąjunga ir sankirta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atliekant veiksmus su aibėmis, gaunamos naujos aibės. Du pagrindiniai veiksmai – sąjunga ir sankirta."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aibiu-sajunga",
+          "text": "Aibių $A$ ir $B$ sąjunga ($A \\cup B$) – tai aibė, kurią sudaro elementai, priklausantys bent vienai iš tų aibių (t. y. $x \\in A$ arba $x \\in B$)."
         },
         {
           "type": "formula",
           "formulaId": "sajungos-apibrezimas",
-          "latex": "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}"
+          "latex": "A \\cup B = \\{x \\mid x \\in A \\lor x \\in B\\}"
         },
         {
-          "type": "property",
-          "text": "Aibių A ir B sankirta (A ∩ B) yra aibė, kurią sudaro tik tie elementai, kurie priklauso ir aibei A, ir aibei B tuo pačiu metu."
+          "type": "paragraph",
+          "text": "Sąjunga intuityviai atitinka loginę jungtį „ARBA“. Jei norime rasti visų mokinių, kurie lanko krepšinį ARBA futbolą, aibę, mes ieškome jų sąjungos."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aibiu-sankirta",
+          "text": "Aibių $A$ and $B$ sankirta ($A \\cap B$) – tai aibė, kurią sudaro elementai, priklausantys ir aibei $A$, ir aibei $B$ tuo pačiu metu."
         },
         {
           "type": "formula",
           "formulaId": "sankirtos-apibrezimas",
-          "latex": "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}"
+          "latex": "A \\cap B = \\{x \\mid x \\in A \\land x \\in B\\}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sankirta atitinka loginę jungtį „IR“. Tai yra bendra dalis. Jei $A \\cap B = \\emptyset$, sakome, kad aibės $A$ ir $B$ yra **nesikertančios**."
         }
       ]
     },
     {
-      "id": "aibiu-skirtumas-ir-poaibis",
-      "title": "Aibių skirtumas ir poaibis",
+      "id": "aibiu-skirtumas-ir-papildinys-isplestas",
+      "title": "5. Aibių skirtumas ir papildinys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[aibiu-skirtumas|Aibių skirtumas]] (A \\ B) yra aibė, kurią sudaro elementai, priklausantys aibei A, bet nepriklausantys aibei B."
+          "text": "Kitas svarbus veiksmas yra [[aibiu-skirtumas|skirtumas]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aibiu-skirtumas",
+          "text": "Aibių $A$ ir $B$ skirtumas ($A \\setminus B$) yra aibė, kurią sudaro visi aibės $A$ elementai, kurie nepriklauso aibei $B$."
         },
         {
           "type": "formula",
@@ -128,21 +200,151 @@
         },
         {
           "type": "paragraph",
-          "text": "Jei kiekvienas aibės B elementas priklauso ir aibei A, sakome, kad B yra aibės A [[poaibis|poaibis]] (B ⊆ A)."
+          "text": "Skirtumas nėra komutatyvus veiksmas: $A \\setminus B$ paprastai nėra lygu $B \\setminus A$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kai nagrinėjame aibes, kurios visos yra tam tikros didelės aibės $U$ (vadinamos **visuotine aibe**) poaibiai, galime apibrėžti [[aibiu-papildinys|papildinį]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aibiu-papildinys",
+          "text": "Aibės $A$ papildinys ($\bar{A}$ arba $A^c$) visuotinės aibės $U$ atžvilgiu yra aibė $U \\setminus A$."
+        },
+        {
+          "type": "note",
+          "text": "Papildinys $\bar{A}$ apima viską, kas NĖRA aibėje $A$, bet priklauso kontekstui $U$. Pavyzdžiui, jei $U$ yra sveikieji skaičiai, tai lyginių skaičių papildinys yra nelyginiai skaičiai."
         }
       ]
     },
     {
-      "id": "veno-diagramos-teorija",
-      "title": "Veno diagramos",
+      "id": "veiksmu-savybes-ir-desningumai",
+      "title": "6. Veiksmų savybės ir dėsningumai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[veno-diagrama|Veno diagramos]] yra vaizdus būdas aibėms ir veiksmams su jomis pavaizduoti plokštumoje (dažniausiai apskritimais)."
+          "text": "Aibių veiksmai pasižymi savybėmis, panašiomis į skaičių sudėties ir daugybos savybes. Jos vadinamos aibių algebra."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Komutatyvumas:** $A \\cup B = B \\cup A$ ir $A \\cap B = B \\cap A$.",
+            "**Asociatyvumas:** $(A \\cup B) \\cup C = A \\cup (B \\cup C)$ ir $(A \\cap B) \\cap C = A \\cap (B \\cap C)$.",
+            "**Distributyvumas:** $A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$ ir $A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)$.",
+            "**Idempotentiškumas:** $A \\cup A = A$ ir $A \\cap A = A$."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ypač svarbūs yra **De Morgano dėsniai**, susiejantys sąjungą, sankirtą ir papildinį:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "de-morgano-desniai",
+          "latex": "\\overline{A \\cup B} = \\bar{A} \\cap \\bar{B}, \\quad \\overline{A \\cap B} = \\bar{A} \\cup \\bar{B}"
         },
         {
           "type": "note",
-          "text": "Veno diagramos padeda spręsti uždavinius, kuriuose reikia rasti elementų skaičių susikertančiose grupėse."
+          "text": "Šie dėsniai sako, kad sąjungos papildinys yra papildinių sankirta, o sankirtos papildinys – papildinių sąjunga. Tai labai naudinga supaprastinant sudėtingus aibių reiškinius."
+        }
+      ]
+    },
+    {
+      "id": "veno-diagramos-ir-taikymai",
+      "title": "7. Veno diagramos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[veno-diagrama|Veno diagramos]] – tai vaizdus aibių santykių vaizdavimo būdas. Paprastai visuotinė aibė $U$ vaizduojama stačiakampiu, o jos poaibiai – apskritimais stačiakampio viduje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diagramos padeda spręsti uždavinius, susijusius su elementų skaičiumi. Baigtinės aibės elementų skaičių žymime $|A|$ arba $n(A)$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sajungos-elementu-skaicius-2",
+          "latex": "|A \\cup B| = |A| + |B| - |A \\cap B|"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė paaiškinama paprastai: sudėję $A$ ir $B$ elementus, bendrus elementus (sankirtą) suskaičiuojame du kartus, todėl vieną kartą juos turime atimti."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sajungos-elementu-skaicius-3",
+          "latex": "|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|"
+        }
+      ]
+    },
+    {
+      "id": "skaiciu-aibes-isplestas",
+      "title": "8. Skaičių aibės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikoje nuolat naudojamos standartinės skaičių aibės:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "$\\mathbb{N} = \\{1, 2, 3, \\dots\\}$ – natūraliųjų skaičių aibė.",
+            "$\\mathbb{Z} = \\{\\dots, -2, -1, 0, 1, 2, \\dots\\}$ – sveikųjų skaičių aibė.",
+            "$\\mathbb{Q} = \\{ \frac{m}, {n} \\mid m \\in \\mathbb{Z}, n \\in \\mathbb{N} \\}$ – racionaliųjų skaičių aibė.",
+            "$\\mathbb{I}$ – iracionaliųjų skaičių aibė (skaičiai, kurių negalima užrašyti paprastąja trupmena, pvz., $\\sqrt{2}, \\pi$).",
+            "$\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}$ – realiųjų skaičių aibė."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Šių aibių santykis yra toks: $\\mathbb{N} \\subseteq \\mathbb{Z} \\subseteq \\mathbb{Q} \\subseteq \\mathbb{R}$."
+        }
+      ]
+    },
+    {
+      "id": "intervalai-kaip-aibes",
+      "title": "9. Intervalai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Realiųjų skaičių aibės poaibiai dažnai užrašomi kaip [[intervalas|intervalai]]."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Uždaras intervalas: $[a, b] = \\{x \\in \\mathbb{R} \\mid a \\le x \\le b\\}$.",
+            "Atviras intervalas: $(a, b) = \\{x \\in \\mathbb{R} \\mid a < x < b\\}$.",
+            "Pusaatviriai intervalai: $[a, b)$ arba $(a, b]$.",
+            "Begaliniuose intervaluose visada naudojami apvalūs skliaustai: $(-\\infty, a], (b, \\infty)$."
+          ]
+        },
+        {
+          "type": "warning",
+          "text": "Atkreipkite dėmesį į skliaustus! Laužtiniai skliaustai $[ ]$ reiškia, kad galas įskaičiuojamas, o apvalūs $( )$ – kad neįskaičiuojamas."
+        }
+      ]
+    },
+    {
+      "id": "strategijos-ir-klaidos",
+      "title": "10. Dažniausios klaidos ir strategijos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant aibių uždavinius, mokiniai dažnai daro tipines klaidas. Štai kaip jų išvengti:"
+        },
+        {
+          "type": "mistake",
+          "mistakeId": "elementas-vs-poaibis",
+          "text": "Painiojama priklausomybė ($\\in$) ir poaibis ($\\subseteq$). Prisiminkite: elementas priklauso aibei ($1 \\in \\{1, 2\\}$), o aibė yra kitos aibės poaibis ($\\{1\\} \\subseteq \\{1, 2\\}$)."
+        },
+        {
+          "type": "mistake",
+          "mistakeId": "skirtumo-tvarka",
+          "text": "Manoma, kad $A \\setminus B = B \\setminus A$. Tai netiesa! Pavyzdžiui, $\\{1, 2\\} \\setminus \\{2, 3\\} = \\{1\\}$, o $\\{2, 3\\} \\setminus \\{1, 2\\} = \\{3\\}$."
+        },
+        {
+          "type": "note",
+          "text": "**Strategija:** Sprendžiant tekstinius uždavinius apie žmonių grupes, visada pradėkite pildyti Veno diagramą nuo pačio vidurio (trijų ar dviejų aibių sankirtos) ir eikite į išorę."
         }
       ]
     }
@@ -291,6 +493,48 @@
       "defaultSrs": true
     },
     {
+      "id": "aibiu-papildinys",
+      "title": "Aibių papildinys",
+      "type": "concept",
+      "shortDefinition": "Elementai, kurie nepriklauso duotai aibei, bet priklauso visuotinei aibei.",
+      "intuition": "Viskas, kas yra aplink aibę jos kontekste.",
+      "formal": "A^c = {x ∈ U | x ∉ A}.",
+      "notation": [
+        "\\bar{A}",
+        "A^c"
+      ],
+      "relatedConceptIds": [
+        "visuotine-aibe",
+        "aibiu-skirtumas"
+      ],
+      "prerequisiteConceptIds": [
+        "aibe"
+      ],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "visuotine-aibe",
+      "title": "Visuotinė aibė",
+      "type": "concept",
+      "shortDefinition": "Aibė, kurioje yra visi nagrinėjamo uždavinio objektai.",
+      "intuition": "Pasaulis arba rėmai, kuriuose veikiame.",
+      "formal": "Aibė U, kurios poaibiai yra visos nagrinėjamos aibės.",
+      "notation": [
+        "U"
+      ],
+      "relatedConceptIds": [
+        "aibiu-papildinys"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
       "id": "veno-diagrama",
       "title": "Veno diagrama",
       "type": "concept",
@@ -309,12 +553,14 @@
     },
     {
       "id": "realiuju-skaiciu-aibe",
-      "title": "Realiuju skaiciu aibe",
+      "title": "Realiųjų skaičių aibė",
       "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
+      "shortDefinition": "Visų racionaliųjų ir iracionaliųjų skaičių visuma.",
+      "intuition": "Visi skaičiai ant skaičių tiesės.",
+      "formal": "R = Q ∪ I.",
+      "notation": [
+        "R"
+      ],
       "relatedConceptIds": [],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
@@ -324,13 +570,88 @@
     },
     {
       "id": "baigtine-aibe",
-      "title": "Baigtine aibe",
+      "title": "Baigtinė aibė",
       "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
+      "shortDefinition": "Aibė, turinti konkretų elementų skaičių.",
+      "intuition": "Aibė, kurią galima suskaičiuoti ir pabaigti.",
+      "formal": "Aibė, kurios elementų skaičius n yra natūralusis skaičius arba nulis.",
+      "relatedConceptIds": [
+        "begaline-aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "begaline-aibe",
+      "title": "Begalinė aibė",
+      "type": "concept",
+      "shortDefinition": "Aibė, kurios elementų skaičius nėra baigtinis.",
+      "intuition": "Aibė, kurios elementus skaičiuodami niekada nebaigtume.",
+      "formal": "Aibė, kuri nėra baigtinė.",
+      "relatedConceptIds": [
+        "baigtine-aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "kardinalumas",
+      "title": "Aibės galia (kardinalumas)",
+      "type": "concept",
+      "shortDefinition": "Aibės elementų skaičiaus matas.",
+      "intuition": "Aibės dydis.",
+      "formal": "Aibės elementų kiekis (baigtinėms aibėms).",
+      "notation": [
+        "|A|",
+        "n(A)"
+      ],
+      "relatedConceptIds": [
+        "baigtine-aibe"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "kaipsnis-aibe",
+      "title": "Laisvumo aibė (Power set)",
+      "type": "concept",
+      "shortDefinition": "Visų duotosios aibės poaibių aibė.",
+      "intuition": "Aibė, sudaryta iš visų galimų pradinės aibės derinių.",
+      "formal": "P(A) = {B | B ⊆ A}.",
+      "notation": [
+        "P(A)",
+        "2^A"
+      ],
+      "relatedConceptIds": [
+        "poaibis"
+      ],
+      "prerequisiteConceptIds": [
+        "aibe"
+      ],
+      "appearsInTopicIds": [
+        "aibes-ir-veiksmai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "intervalas",
+      "title": "Intervalas",
+      "type": "concept",
+      "shortDefinition": "Skaičių aibės dalis tarp dviejų ribų.",
+      "intuition": "Atkarpa ant skaičių tiesės.",
+      "formal": "{x ∈ R | a < x < b} ir kiti variantai.",
+      "relatedConceptIds": [
+        "realiuju-skaiciu-aibe"
+      ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
         "aibes-ir-veiksmai"
@@ -342,7 +663,7 @@
     {
       "id": "sajungos-apibrezimas",
       "title": "Aibių sąjungos apibrėžimas",
-      "latex": "A \\cup B = \\{x \\mid x \\in A \\text{ arba } x \\in B\\}",
+      "latex": "A \\cup B = \\{x \\mid x \\in A \\lor x \\in B\\}",
       "conditions": [
         "A ir B yra aibės"
       ],
@@ -360,7 +681,7 @@
     {
       "id": "sankirtos-apibrezimas",
       "title": "Aibių sankirtos apibrėžimas",
-      "latex": "A \\cap B = \\{x \\mid x \\in A \\text{ ir } x \\in B\\}",
+      "latex": "A \\cap B = \\{x \\mid x \\in A \\land x \\in B\\}",
       "conditions": [
         "A ir B yra aibės"
       ],
@@ -390,6 +711,54 @@
       "explanation": "Skirtumas palieka tik tuos A elementus, kurių nėra aibėje B.",
       "relatedConceptIds": [
         "aibiu-skirtumas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "papildinio-apibrezimas",
+      "title": "Aibės papildinio apibrėžimas",
+      "latex": "\\bar{A} = U \\setminus A",
+      "conditions": [
+        "U yra visuotinė aibė",
+        "A ⊆ U"
+      ],
+      "explanation": "Papildinį sudaro visi elementai, kurie nepriklauso A, bet priklauso U.",
+      "relatedConceptIds": [
+        "aibiu-papildinys"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "de-morgano-desniai",
+      "title": "De Morgano dėsniai",
+      "latex": "\\overline{A \\cup B} = \\bar{A} \\cap \\bar{B}, \\quad \\overline{A \\cap B} = \\bar{A} \\cup \\bar{B}",
+      "explanation": "Dėsniai, nusakantys ryšį tarp papildinio ir sąjungos bei sankirtos.",
+      "relatedConceptIds": [
+        "aibiu-papildinys",
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sajungos-elementu-skaicius-2",
+      "title": "Dviejų aibių sąjungos elementų skaičius",
+      "latex": "|A \\cup B| = |A| + |B| - |A \\cap B|",
+      "explanation": "Naudojama skaičiuoti elementų kiekį, kai aibės persidengia.",
+      "relatedConceptIds": [
+        "kardinalumas",
+        "aibiu-sajunga"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "sajungos-elementu-skaicius-3",
+      "title": "Trijų aibių sąjungos elementų skaičius",
+      "latex": "|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |A \\cap C| + |B \\cap C|) + |A \\cap B \\cap C|",
+      "explanation": "Sudėtingesnė formulė trims persidengiančioms aibėms.",
+      "relatedConceptIds": [
+        "kardinalumas",
+        "veno-diagrama"
       ],
       "defaultSrs": true
     }
@@ -448,6 +817,32 @@
       "wrongExample": "{1} ∈ {1, 2}",
       "correctExample": "{1} ⊆ {1, 2}",
       "defaultSrs": true
+    },
+    {
+      "id": "intervalu-skliaustai",
+      "title": "Neteisingi intervalų skliaustai",
+      "conceptIds": [
+        "intervalas"
+      ],
+      "wrongPattern": "Mano, kad [a, b] ir (a, b) yra tas pats.",
+      "whyItHappens": "Nesuprantama griežtos ir negriežtos nelygybės reikšmė.",
+      "correction": "Laužtinis skliaustas [ ] reiškia, kad galas įeina į aibę, apvalus ( ) – ne.",
+      "wrongExample": "2 ∈ (2, 5)",
+      "correctExample": "2 ∉ (2, 5), bet 2 ∈ [2, 5]",
+      "defaultSrs": true
+    },
+    {
+      "id": "papildinio-kontekstas",
+      "title": "Papildinys be visuotinės aibės",
+      "conceptIds": [
+        "aibiu-papildinys"
+      ],
+      "wrongPattern": "Bando rasti aibės papildinį neapibrėžus visuotinės aibės U.",
+      "whyItHappens": "Nesuprantama, kad „viskas, kas ne A“ priklauso nuo konteksto.",
+      "correction": "Visada nurodykite, kokios aibės atžvilgiu skaičiuojate papildinį.",
+      "wrongExample": "A = {lyginiai skaičiai}, rasti \\bar{A} (neaišku, ar U yra N, Z ar R).",
+      "correctExample": "U = Z, A = {lyginiai}, \\bar{A} = {nelyginiai}.",
+      "defaultSrs": true
     }
   ],
   "workedExamples": [
@@ -460,7 +855,6 @@
         "aibiu-sajunga",
         "aibiu-sankirta"
       ],
-      "formulaIds": [],
       "steps": [
         {
           "text": "Sąjungai surašome visus elementus iš abiejų aibių, nepasikartodami.",
@@ -481,7 +875,6 @@
       "conceptIds": [
         "aibiu-skirtumas"
       ],
-      "formulaIds": [],
       "steps": [
         {
           "text": "Iš aibės A išmetame elementus, kurie yra aibėje B (tai c ir d).",
@@ -503,11 +896,10 @@
         "veno-diagrama",
         "aibiu-sajunga"
       ],
-      "formulaIds": [],
       "steps": [
         {
           "text": "Apskaičiuojame, kiek mokinių lanko bent vieną būrelį (sąjunga). Naudojame formulę |A ∪ B| = |A| + |B| - |A ∩ B|.",
-          "latex": "20 + 15 - 10 = 25"
+          "latex": "|A \\cup B| = 20 + 15 - 10 = 25"
         },
         {
           "text": "Iš bendro mokinių skaičiaus atimame tuos, kurie lanko bent vieną būrelį.",
@@ -525,7 +917,6 @@
         "poaibis",
         "tuscia-aibe"
       ],
-      "formulaIds": [],
       "steps": [
         {
           "text": "Prisiminkite, kad tuščioji aibė yra kiekvienos aibės poaibis.",
@@ -552,7 +943,6 @@
         "aibiu-skirtumas",
         "aibiu-sajunga"
       ],
-      "formulaIds": [],
       "steps": [
         {
           "text": "Pirmiausia randame A ∩ B.",
@@ -568,6 +958,86 @@
         }
       ],
       "answer": "{2, 3}"
+    },
+    {
+      "id": "de-morgan-verification",
+      "title": "De Morgano dėsnio patikrinimas",
+      "level": "medium",
+      "problem": "Duota U = {1, 2, 3, 4, 5, 6}, A = {1, 2, 3}, B = {2, 3, 4}. Patikrinkite, ar galioja dėsnis \\overline{A \\cup B} = \\bar{A} \\cap \\bar{B}.",
+      "conceptIds": [
+        "de-morgano-desniai",
+        "aibiu-papildinys"
+      ],
+      "steps": [
+        {
+          "text": "Randame kairiąją pusę. Pirmiausia A ∪ B.",
+          "latex": "A \\cup B = \\{1, 2, 3, 4\\}"
+        },
+        {
+          "text": "Tada randame šios sąjungos papildinį U atžvilgiu.",
+          "latex": "\\overline{A \\cup B} = \\{5, 6\\}"
+        },
+        {
+          "text": "Randame dešiniąją pusę. Pirmiausia papildinius \\bar{A} ir \\bar{B}.",
+          "latex": "\\bar{A} = \\{4, 5, 6\\}, \\quad \\bar{B} = \\{1, 5, 6\\}"
+        },
+        {
+          "text": "Randame jų sankirtą.",
+          "latex": "\\bar{A} \\cap \\bar{B} = \\{5, 6\\}"
+        },
+        {
+          "text": "Palyginame rezultatus. Abi pusės lygios {5, 6}.",
+          "latex": "\\{5, 6\\} = \\{5, 6\\}"
+        }
+      ],
+      "answer": "Dėsnis patvirtintas, abi pusės lygios {5, 6}."
+    },
+    {
+      "id": "intervalai-example",
+      "title": "Veiksmai su intervalais",
+      "level": "medium",
+      "problem": "Raskite intervalų A = [-2, 3) ir B = [1, 5] sąjungą ir sankirtą.",
+      "conceptIds": [
+        "intervalas",
+        "aibiu-sajunga",
+        "aibiu-sankirta"
+      ],
+      "steps": [
+        {
+          "text": "Sankirta – tai bendra dalis. Intervalas A prasideda ties -2, B ties 1. Bendra dalis prasideda nuo didesniojo (1). A baigiasi ties 3 (neįskaitant), B ties 5. Bendra dalis baigiasi ties mažesniuoju (3).",
+          "latex": "A \\cap B = [1, 3)"
+        },
+        {
+          "text": "Sąjunga – apima viską nuo mažiausio iki didžiausio taško, jei intervalai persidengia.",
+          "latex": "A \\cup B = [-2, 5]"
+        }
+      ],
+      "answer": "A ∩ B = [1, 3), A ∪ B = [-2, 5]"
+    },
+    {
+      "id": "veno-3-aibes",
+      "title": "Sudėtingas Veno diagramos uždavinys (3 aibės)",
+      "level": "hard",
+      "problem": "Apklausoje dalyvavo 50 žmonių. 25 mėgsta kavą (K), 20 – arbatą (A), 15 – sultis (S). 10 mėgsta K ir A, 7 – K ir S, 5 – A ir S. 3 mėgsta visus tris gėrimus. Kiek žmonių nemėgsta nė vieno iš šių gėrimų?",
+      "conceptIds": [
+        "veno-diagrama",
+        "kardinalumas"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame trijų aibių sąjungos formulę: |K∪A∪S| = |K|+|A|+|S| - (|K∩A|+|K∩S|+|A∩S|) + |K∩A∩S|.",
+          "latex": "|K \\cup A \\cup S| = 25 + 20 + 15 - (10 + 7 + 5) + 3"
+        },
+        {
+          "text": "Atliekame skaičiavimus.",
+          "latex": "60 - 22 + 3 = 41"
+        },
+        {
+          "text": "Iš viso žmonių yra 50, tad nemėgstančių nė vieno yra:",
+          "latex": "50 - 41 = 9"
+        }
+      ],
+      "answer": "9 žmonės"
     }
   ],
   "exercises": [
@@ -575,7 +1045,7 @@
       "id": "aibes-ex-001",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Kiek elementų turi aibė A = {2, 4, 6, 8, 10}?",
       "answer": {
@@ -605,7 +1075,7 @@
       "id": "aibes-ex-002",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kuris simbolis reiškia tuščiąją aibę?",
       "answer": {
@@ -655,7 +1125,7 @@
       "id": "aibes-ex-003",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "A = {1, 3}, B = {3, 5}. Raskite A ∩ B.",
       "answer": {
@@ -705,7 +1175,7 @@
       "id": "aibes-ex-004",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "A = {1, 2}, B = {3, 4}. Raskite A ∪ B.",
       "answer": {
@@ -755,7 +1225,7 @@
       "id": "aibes-ex-005",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "A = {1, 2, 3}, B = {2}. Raskite A \\ B.",
       "answer": {
@@ -805,7 +1275,7 @@
       "id": "aibes-ex-006",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Ar tiesa, kad {1} ⊆ {1, 2, 3}?",
       "answer": {
@@ -847,7 +1317,7 @@
       "id": "aibes-ex-007",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Aibė A turi 10 elementų, B turi 8 elementus, o jų sankirta A ∩ B turi 3 elementus. Kiek elementų turi sąjunga A ∪ B?",
       "answer": {
@@ -877,7 +1347,7 @@
       "id": "aibes-ex-008",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Raskite aibės A = {x | x yra lyginis skaičius} ir B = {x | x yra pirminis skaičius} sankirtą A ∩ B.",
       "answer": {
@@ -927,7 +1397,7 @@
       "id": "aibes-ex-009",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kiek iš viso poaibių turi aibė A = {a, b, c}?",
       "answer": {
@@ -957,7 +1427,7 @@
       "id": "aibes-ex-010",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "A = {1, 2, 3, 4, 5}, B = {2, 4, 6}. Raskite (A \\ B) ∩ {1, 2}.",
       "answer": {
@@ -1013,7 +1483,7 @@
       "id": "aibes-ex-011",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Iš 100 žmonių 70 kalba lietuviškai, 50 – angliškai. Kiek žmonių kalba abiem kalbomis, jei visi kalba bent viena?",
       "answer": {
@@ -1043,7 +1513,7 @@
       "id": "aibes-ex-012",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Kuri iš šių aibių yra begalinė?",
       "answer": {
@@ -1093,7 +1563,7 @@
       "id": "aibes-ex-013",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "A yra B poaibis, o B yra C poaibis. Kuri išvada teisinga?",
       "answer": {
@@ -1143,7 +1613,7 @@
       "id": "aibes-ex-014",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Grupėje yra 10 žmonių. 5 mėgsta obuolius, 4 mėgsta kriaušes, 2 mėgsta ir obuolius, ir kriaušes. Kiek žmonių nemėgsta nei obuolių, nei kriaušių?",
       "answer": {
@@ -1173,7 +1643,7 @@
       "id": "aibes-ex-015",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Raskite (A \\ B) ∪ (B \\ A), kai A = {1, 2, 3}, B = {3, 4, 5}.",
       "answer": {
@@ -1224,7 +1694,7 @@
       "id": "aibes-ex-016",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Kiek elementų turi aibė P(A), jei A = {1, 2, 3, 4}? (P(A) yra visų aibės A poaibių aibė).",
       "answer": {
@@ -1254,7 +1724,7 @@
       "id": "aibes-ex-017",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Kokia aibė yra (-∞; 2] ∩ [0; 5)?",
       "answer": {
@@ -1304,7 +1774,7 @@
       "id": "aibes-ex-018",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Jei A ∩ B = A, tai kas yra tiesa?",
       "answer": {
@@ -1355,7 +1825,7 @@
       "id": "aibes-ex-019",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Aibės A, B, C turi po 10 elementų. Kiekvienos dvi aibės turi po 4 bendrus elementus. Visos trys aibės turi 1 bendrą elementą. Kiek elementų turi jų sąjunga?",
       "answer": {
@@ -1386,7 +1856,7 @@
       "id": "aibes-ex-020",
       "topicId": "aibes-ir-veiksmai",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Ar aibė {x | x² < 0, x ∈ R} yra tuščia?",
       "answer": {

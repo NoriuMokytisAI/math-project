@@ -67,84 +67,150 @@
   },
   "theory": [
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ivadas",
-      "title": "Įvadas",
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-raidiniai-reiskiniai",
+      "title": "Nuo skaičių prie raidžių: raidiniai reiškiniai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lygtys, nelygybės ir raidiniai reiškiniai yra tema, kurioje mokomasi atpažinti pagrindinius vieno nežinomojo lygtys modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Iki šiol matematikoje dažniausiai skaičiavome su konkrečiais skaičiais. Tačiau kartais skaičius mums yra nežinomas arba jis gali keistis. Tokiu atveju naudojame raides (dažniausiai $x, y, a, b$). Ši matematikos šaka vadinama algebra."
         },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
         {
           "type": "definition",
           "conceptId": "kintamasis",
-          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
-        },
-        {
-          "type": "definition",
-          "conceptId": "reiskinys",
-          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
+          "text": "Kintamasis – tai raidė, kuri žymi nežinomą arba kintantį skaičių."
         },
         {
           "type": "definition",
           "conceptId": "koeficientas",
-          "text": "Skaičius prie raidės."
+          "text": "Koeficientas – tai skaičius, parašytas prieš raidę (pvz., reiškinyje $5x$, skaičius 5 yra koeficientas)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
+          "text": "Jei prieš raidę skaičiaus nėra, laikome, kad koeficientas yra 1 (pvz., $x$ yra tas pats, kas $1x$). Jei parašyta $-x$, koeficientas yra $-1$."
         }
       ]
     },
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-sutvarkymas",
+      "title": "Reiškinių supaprastinimas",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Lygtys, nelygybės ir raidiniai reiškiniai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Kaip sudėti 3 obuolius ir 2 obuolius? Gausime 5 obuolius. Panašiai veikia ir [[reiskinys|raidiniai reiškiniai]]. Galime sudėti arba atimti tik tuos narius, kurie turi tokias pačias raides. Tai vadinama **panašių narių sutraukimu**."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "example",
+          "text": "Supaprastinkime: $4x + 7 - 2x + 3$. \n1. Sugrupuojame narius su $x$: $4x - 2x = 2x$. \n2. Sugrupuojame skaičius: $7 + 3 = 10$. \n3. Atsakymas: $2x + 10$."
+        },
+        {
+          "type": "warning",
+          "text": "Niekada nesudėkite skaičiaus su raide! $2x + 5$ NĖRA lygu $7x$. Tai dažniausia klaida pradedant mokytis algebros."
+        }
+      ]
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-sklaida",
+      "title": "Sklaidos dėsnis (skliaustų atskleidimas)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei turime skaičių prieš skliaustus, privalome jį padauginti iš KIEKVIENO nario, esančio skliaustuose."
         },
         {
           "type": "formula",
           "formulaId": "sklaidos-desnis",
-          "latex": "a(b+c)=ab+ac"
-        }
-      ]
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
+          "latex": "a(b + c) = ab + ac"
+        },
         {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "type": "example",
+          "text": "$3(x + 4) = 3 \\cdot x + 3 \\cdot 4 = 3x + 12$."
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "Jei prieš skliaustus yra minuso ženklas, atskleidžiant skliaustus VISI ženklai skliaustų viduje pasikeičia į priešingus: $-(x - 5) = -x + 5$."
         }
       ]
     },
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-lygtis",
+      "title": "Kas yra lygtis ir kaip ją spręsti?",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "lygtis",
+          "text": "Lygtis – tai lygybė su nežinomuoju ($x$). Išspręsti lygtį reiškia rasti tokią $x$ reikšmę, su kuria lygybė būtų teisinga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Į lygtį žiūrėkite kaip į svarstykles. Abi pusės privalo likti pusiausvyroje. Todėl ką darote vienoje pusėje, privalote padaryti ir kitoje."
+        },
+        {
+          "type": "method",
+          "text": "Pagrindinės taisyklės:\n1. Prie abiejų lygties pusių galime pridėti arba iš abiejų atimti tą patį skaičių.\n2. Abi lygties puses galime padauginti arba padalyti iš to paties (nelygaus nuliui) skaičiaus."
+        }
+      ]
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-zingsniai",
+      "title": "Lygčių sprendimo žingsniai",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Norėdami išspręsti lygtį (pvz., $3x - 5 = 10$):\n1. „Perkelkite“ narius be $x$ į dešinę pusę (pakeisdami veiksmą į priešingą): $3x = 10 + 5$.\n2. Sutvarkykite puses: $3x = 15$.\n3. Padalykite iš skaičiaus prie $x$: $x = 15 : 3$.\n4. Gaukite atsakymą: $x = 5$."
+        },
+        {
+          "type": "note",
+          "text": "Visada pasitikrinkite! Įstatykite gautą $x$ į pradinę lygtį: $3 \\cdot 5 - 5 = 15 - 5 = 10$. Teisinga!"
+        }
+      ]
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-nelygybes",
+      "title": "Įvadas į nelygybes",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kai lyginame du reiškinius ne lygybės, o didumo/mažumo ženklais ($<, >, \\le, \\ge$), gauname [[nelygybe|nelygybę]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nelygybės sprendžiamos beveik taip pat kaip lygtys, tačiau jos dažniausiai turi ne vieną atsakymą, o ištisą jų rinkinį."
+        },
+        {
+          "type": "warning",
+          "text": "Svarbiausia taisyklė: jei abi nelygybės puses dauginate arba dalijate iš NEIGIAMO skaičiaus, nelygybės ženklas privalo apsiversti į priešingą pusę! (Pvz., iš $<$ tampa $>$)."
+        }
+      ]
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-modeliavimas",
+      "title": "Uždavinių modeliavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Algebra yra galingas įrankis spręsti „gyvenimiškus“ uždavinius. Reikia tik išmokti tekstą paversti lygčių kalba."
+        },
+        {
+          "type": "method",
+          "text": "Kaip modeliuoti:\n1. Nežinomą dydį pažymėkite $x$.\n2. Pagal teksto sąlygas sudarykite reiškinį (pvz., „skaičių padidino 5 kartus“ $\\rightarrow 5x$).\n3. Sudarykite lygtį ir ją išspręskite."
+        }
+      ]
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-klaidos",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Perkeliant narį per lygybės ženklą, jo ženklas PRIVALO pasikeisti. $+5$ tampa $-5$, o daugyba tampa dalyba."
+        },
+        {
+          "type": "warning",
+          "text": "Panašių narių sutraukimas: nepameskite raidžių. $3x + x$ yra $4x$, o ne $3$ ar $3x^2$."
+        },
+        {
+          "type": "method",
+          "text": "Jei lygtis atrodo sudėtinga su daug skliaustų, pirmiausia juos visus atskleiskite, tada sutraukite panašius narius ir tik tada pradėkite „kilnoti“ narius iš vienos pusės į kitą."
         }
       ]
     }
@@ -155,7 +221,7 @@
       "title": "Kintamasis",
       "type": "concept",
       "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "intuition": "Tai ta vieta, kur vieno nežinomojo lygtys uždavinyje įdedame reikšmę.",
+      "intuition": "Tai ta vieta, kur įdedame reikšmę.",
       "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
       "notation": [],
       "relatedConceptIds": [
@@ -373,13 +439,14 @@
       "id": "tiesines-lygties-forma",
       "title": "Tiesinės lygties forma",
       "type": "formula",
-      "latex": "ax+b=0",
+      "latex": "ax+b=c",
       "conditions": [
         "Vienas nežinomasis"
       ],
       "variables": {
         "a": "koeficientas prie x",
-        "b": "laisvasis narys"
+        "b": "laisvasis narys",
+        "c": "skaičius dešinėje"
       },
       "explanation": "Tai paprasčiausia lygties forma.",
       "relatedConceptIds": [
@@ -399,32 +466,32 @@
       ],
       "wrongPattern": "Rašo x+5=12 -> x=12+5.",
       "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
-      "correction": "Iš abiejų pusių atimk 5.",
+      "correction": "Iš abiejų pusių atimk 5 (arba perkelk pakeitęs ženklą).",
       "wrongExample": "x=17",
       "correctExample": "x=7",
       "defaultSrs": true
     },
     {
       "id": "sumaiso-koeficientus",
-      "title": "Sumaišo koeficientus su laisvaisiais nariais",
+      "title": "Neteisingas panašių narių sutraukimas",
       "type": "mistake",
       "conceptIds": [
         "koeficientas"
       ],
-      "wrongPattern": "3x + 2x rašo kaip 5x².",
-      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
-      "correction": "3x+2x=5x.",
-      "wrongExample": "3x+2x=5x²",
-      "correctExample": "3x+2x=5x",
+      "wrongPattern": "3x + 2 rašo kaip 5x.",
+      "whyItHappens": "Sudėti galima tik skaičius su vienodomis raidėmis.",
+      "correction": "Palik 3x + 2 kaip yra, jų sudėti negalima.",
+      "wrongExample": "3x + 2 = 5x",
+      "correctExample": "3x + 2 (nesusipaprastina toliau)",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-1",
-      "title": "Reiškinio sutvarkymas",
+      "title": "Panašių narių sutraukimas",
       "level": "easy",
-      "problem": "Supaprastink 3x + 2x - x.",
+      "problem": "Supaprastinkite reiškinį: $5x + 3y - 2x + 4y$.",
       "conceptIds": [
         "reiskinys",
         "koeficientas"
@@ -432,1140 +499,189 @@
       "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame koeficientus.",
-          "latex": "3x+2x-x=(3+2-1)x"
+          "text": "Sujungiame narius su x.",
+          "latex": "5x - 2x = 3x"
         },
         {
-          "text": "Gauname.",
-          "latex": "4x"
+          "text": "Sujungiame narius su y.",
+          "latex": "3y + 4y = 7y"
+        },
+        {
+          "text": "Užrašome galutinį reiškinį.",
+          "latex": "3x + 7y"
         }
       ],
-      "answer": "4x"
+      "answer": "3x + 7y"
     },
     {
       "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-2",
-      "title": "Lygties sprendimas",
+      "title": "Lygties sprendimas (2 žingsniai)",
       "level": "easy",
-      "problem": "Išspręsk 2x + 5 = 17.",
+      "problem": "Išspręskite lygtį: $4x - 7 = 13$.",
       "conceptIds": [
         "lygtis",
+        "sprendinys"
+      ],
+      "formulaIds": [
+        "tiesines-lygties-forma"
+      ],
+      "steps": [
+        {
+          "text": "Pridedame 7 prie abiejų pusių.",
+          "latex": "4x = 13 + 7 = 20"
+        },
+        {
+          "text": "Daliname abi puses iš 4.",
+          "latex": "x = 20 : 4 = 5"
+        }
+      ],
+      "answer": "x = 5"
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-3",
+      "title": "Skliaustų atskleidimas",
+      "level": "medium",
+      "problem": "Supaprastinkite: $2(3x - 5) + 4x$.",
+      "conceptIds": [
+        "distributyvusis-destymas"
+      ],
+      "formulaIds": [
+        "sklaidos-desnis"
+      ],
+      "steps": [
+        {
+          "text": "Dauginame 2 iš skliaustų narių.",
+          "latex": "2 \\cdot 3x - 2 \\cdot 5 = 6x - 10"
+        },
+        {
+          "text": "Pridedame likusį narį 4x.",
+          "latex": "6x - 10 + 4x"
+        },
+        {
+          "text": "Sutraukiame panašius narius.",
+          "latex": "10x - 10"
+        }
+      ],
+      "answer": "10x - 10"
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-4",
+      "title": "Modeliavimas: skaičių uždavinys",
+      "level": "medium",
+      "problem": "Sugalvotą skaičių padidino 8, tada gautą sumą padaugino iš 3 ir gavo 30. Koks tai skaičius?",
+      "conceptIds": [
+        "lygtis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sugalvotą skaičių pažymime x. Sudarome lygtį.",
+          "latex": "3(x + 8) = 30"
+        },
+        {
+          "text": "Daliname abi puses iš 3.",
+          "latex": "x + 8 = 10"
+        },
+        {
+          "text": "Atimame 8.",
+          "latex": "x = 2"
+        }
+      ],
+      "answer": "2"
+    },
+    {
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-5",
+      "title": "Nelygybės sprendimas",
+      "level": "medium",
+      "problem": "Išspręskite nelygybę: $2x + 5 < 11$.",
+      "conceptIds": [
+        "nelygybe",
         "sprendinys"
       ],
       "formulaIds": [],
       "steps": [
         {
           "text": "Atimame 5 iš abiejų pusių.",
-          "latex": "2x=12"
+          "latex": "2x < 6"
         },
         {
-          "text": "Daliname iš 2.",
-          "latex": "x=6"
+          "text": "Daliname abi puses iš 2.",
+          "latex": "x < 3"
         }
       ],
-      "answer": "x=6"
+      "answer": "x < 3"
     },
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-3",
-      "title": "Nelygybė",
-      "level": "medium",
-      "problem": "Išspręsk 3x - 4 < 11.",
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pridedame 4.",
-          "latex": "3x<15"
-        },
-        {
-          "text": "Daliname iš 3.",
-          "latex": "x<5"
-        }
-      ],
-      "answer": "x<5"
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-4",
-      "title": "Modeliavimas",
-      "level": "medium",
-      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Bendra kaina yra 4x.",
-          "latex": "4x=20"
-        },
-        {
-          "text": "Išsprendžiame.",
-          "latex": "x=5"
-        }
-      ],
-      "answer": "x=5"
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-5",
-      "title": "Formulė",
-      "level": "hard",
-      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
-      "conceptIds": [
-        "formule",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Išreiškiame t.",
-          "latex": "t=\\frac{s}{v}"
-        },
-        {
-          "text": "Įstatome duomenis.",
-          "latex": "t=\\frac{96}{12}=8"
-        }
-      ],
-      "answer": "t=8"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-001",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-6",
+      "title": "Reiškinio reikšmės skaičiavimas",
       "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "1x",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "1x"
-        }
-      ],
-      "answerText": "1x",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-002",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "6a",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "6a"
-        }
-      ],
-      "answerText": "6a",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-003",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "2y+6",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "2y+6"
-        }
-      ],
-      "answerText": "2y+6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-004",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "m+8",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "m+8"
-        }
-      ],
-      "answerText": "m+8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-005",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "10p-5",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "10p-5"
-        }
-      ],
-      "answerText": "10p-5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-006",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: x+5=12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-007",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 3x=18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-008",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 2x-4=10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-009",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 5x+2=27.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-010",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-011",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x >= 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-012",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-013",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x <= 2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-014",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3x = 18"
-          },
-          {
-            "id": "b",
-            "text": "x + 3 = 18"
-          },
-          {
-            "id": "c",
-            "text": "18x = 3"
-          },
-          {
-            "id": "d",
-            "text": "x - 3 = 18"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok ryšio tarp kiekio ir kainos.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "formule"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Vienas bilietas kainuoja 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bendra kaina lygi 3x.",
-          "latex": "3x=18"
-        }
-      ],
-      "answerText": "3x = 18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-015",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-016",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-017",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-018",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-019",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-020",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygtys, nelygybės ir raidiniai reiškiniai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "olympiad-grade6-equations",
-      "topicId": "lygtys-nelygybes-ir-raidiniai-reiskiniai",
-      "grade": 6,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Algebra",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Keli vaikai nuėjo grybauti ir kartu rado 65 grybus. Žinoma, kad jokie du vaikai nerado po lygiai grybų ir nei vienas nerado tuščio krepšelio (kiekvienas rado bent 1 grybą). Koks yra didžiausias įmanomas vaikų skaičius?",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Tarkime, kad vaikų yra N. Kadangi visi rado skirtingą grybų skaičių ir bent po vieną, pabandykime minimizuoti bendrą grybų sumą.",
-          "revealsConceptIds": [
-            "kintamasis",
-            "lygtis"
-          ],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "text": "Mažiausia įmanoma N vaikų surinktų grybų suma bus tada, kai jie rado 1, 2, 3, ..., N grybų.",
-          "penalty": 0.05
-        },
-        {
-          "order": 3,
-          "text": "Skaičių nuo 1 iki N suma lygi N*(N+1)/2. Ši suma negali viršyti bendro rasto grybų skaičiaus (65).",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "text": "Patikrink didžiausią sveikąjį skaičių N, kuriam N*(N+1)/2 <= 65. Pavyzdžiui, jei N=10, suma lygi 55. Jei N=11, suma lygi 66.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarkime, kad susirinko N vaikų. Kadangi kiekvienas rado skirtingą grybų skaičių ir niekas nerado 0 grybų, minimalus rasto grybų skaičius atskiriems vaikams yra 1, 2, 3, ..., N."
-        },
-        {
-          "text": "Bendra rasta grybų suma negali būti mažesnė už šių mažiausių skirtingų kiekių sumą. Užrašykime sumą: S = 1 + 2 + 3 + ... + N."
-        },
-        {
-          "text": "Naudodami aritmetinės progresijos sumos formulę arba tiesioginį sudėjimą gauname, kad S = N*(N+1)/2. Kadangi bendras grybų skaičius yra 65, turime sąlygą S <= 65."
-        },
-        {
-          "text": "Įstatome N reikšmes: Jei N = 10, tai S = 10 * 11 / 2 = 55 <= 65 (įmanoma, likusius 10 grybų galima atiduoti bet kuriam vaikui, kad grybų skaičiai vis tiek liktų skirtingi). Jei N = 11, tai S = 11 * 12 / 2 = 66 > 65 (neįmanoma, nes net mažiausia įmanoma skirtingų grybų suma viršija 65). Taigi, didžiausias įmanomas vaikų skaičius yra 10."
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis",
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 180
-    }
-  ],
-  "tests": [
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-test-topic",
-      "title": "Lygtys, nelygybės ir raidiniai reiškiniai testas",
-      "scope": "topic",
-      "topicIds": [
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai"
-      ],
-      "exerciseIds": [
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-001",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-002",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-003",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-004",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-005",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-006",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-007",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-test-challenge",
-      "title": "Lygtys, nelygybės ir raidiniai reiškiniai iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai"
-      ],
-      "exerciseIds": [
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-009",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-010",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-011",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-012",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-013",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-014",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-015",
-        "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-kintamasis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kintamasis?",
-      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-reiskinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reiškinys?",
-      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
+      "problem": "Apskaičiuokite reiškinio $3a - 2b$ reikšmę, kai $a = 4$ ir $b = 5$.",
       "conceptIds": [
         "reiskinys"
       ],
       "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-koeficientas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra koeficientas?",
-      "back": "Skaičius prie raidės.",
-      "conceptIds": [
-        "koeficientas"
+      "steps": [
+        {
+          "text": "Įstatome raidžių reikšmes į reiškinį.",
+          "latex": "3 \\cdot 4 - 2 \\cdot 5"
+        },
+        {
+          "text": "Atliekame veiksmus.",
+          "latex": "12 - 10 = 2"
+        }
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "answer": "2"
     },
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-7",
+      "title": "Lygtis su x abiejose pusėse",
+      "level": "hard",
+      "problem": "Išspręskite lygtį: $5x - 3 = 2x + 9$.",
       "conceptIds": [
         "lygtis"
       ],
       "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "steps": [
+        {
+          "text": "Sukeliame narius su x į kairę, skaičius – į dešinę.",
+          "latex": "5x - 2x = 9 + 3"
+        },
+        {
+          "text": "Sutraukiame narius.",
+          "latex": "3x = 12"
+        },
+        {
+          "text": "Daliname iš 3.",
+          "latex": "x = 4"
+        }
+      ],
+      "answer": "x = 4"
     },
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-sklaidos-desnis",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sklaidos dėsnis?",
-      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-exmp-8",
+      "title": "Nelygybė su neigiamu skaičiumi",
+      "level": "hard",
+      "problem": "Išspręskite nelygybę: $-3x > 12$.",
       "conceptIds": [
-        "sklaidos-desnis"
+        "nelygybe"
       ],
       "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
+      "steps": [
+        {
+          "text": "Daliname abi puses iš -3. Kadangi daliname iš neigiamo skaičiaus, ženklas apsiverčia.",
+          "latex": "x < 12 : (-3)"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "x < -4"
+        }
+      ],
+      "answer": "x < -4"
+    }
+  ],
+  "exercises": [
     {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-tiesines-lygties-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinės lygties forma?",
-      "back": "Tai paprasčiausia lygties forma.",
-      "conceptIds": [
-        "tiesines-lygties-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-perkelia-be-zenklo-kaitos",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
-      "back": "Iš abiejų pusių atimk 5.",
-      "conceptIds": [
-        "perkelia-be-zenklo-kaitos"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
+      "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-ex-001"},
     {
       "id": "lygtys-nelygybes-ir-raidiniai-reiskiniai-srs-sumaiso-koeficientus",
       "deck": "practice",

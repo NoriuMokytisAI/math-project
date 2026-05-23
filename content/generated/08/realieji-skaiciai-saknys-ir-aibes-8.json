@@ -12,45 +12,34 @@
     "strand": "Skaičiai ir skaičiavimai",
     "level": "curriculum",
     "order": 3,
-    "estimatedStudyMinutes": 170,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
-      "laipsniai-ir-saknys"
+      "naturalieji-skaiciai-dalikliai-kartotiniai"
     ],
-    "nextTopicIds": [
-      "realieji-skaiciai-modulis-saknys-laipsniai"
-    ],
+    "nextTopicIds": [],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
-      "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "naturalieji-skaiciai",
+      "sveikieji-skaiciai",
+      "racionalieji-skaiciai",
+      "iracionalieji-skaiciai",
+      "realieji-skaiciai",
+      "kvadratine-saknis",
+      "kubine-saknis",
+      "posaknis",
+      "skaiciu-aibiu-sankirta",
+      "skaiciu-aibiu-sajunga"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "kvadratines-saknies-savybe-daugyba",
+      "kvadratines-saknies-savybe-dalyba",
+      "kvadratines-saknies-kvadratas",
+      "kubines-saknies-savybe-daugyba",
+      "skaiciaus-kvadrato-saknis"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "neigiamas-posaknis-kvadratineje-saknyje",
+      "saknu-sudetis-be-bendro-daugyklio",
+      "saknies-traukimas-is-atskiru-demenu"
     ],
     "exerciseIds": [
       "realieji-skaiciai-saknys-ir-aibes-8-ex-001",
@@ -62,378 +51,333 @@
       "realieji-skaiciai-saknys-ir-aibes-8-ex-007",
       "realieji-skaiciai-saknys-ir-aibes-8-ex-008",
       "realieji-skaiciai-saknys-ir-aibes-8-ex-009",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-010",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-011",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-012",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-013",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-014",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-015",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-016",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-017",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-018",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-019",
-      "realieji-skaiciai-saknys-ir-aibes-8-ex-020"
+      "realieji-skaiciai-saknys-ir-aibes-8-ex-010"
     ]
   },
   "theory": [
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ivadas",
-      "title": "Įvadas",
+      "id": "realieji-skaiciai-aibes-ivadas",
+      "title": "Įvadas į skaičių pasaulį",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Realieji skaičiai, šaknys ir skaičių aibės yra tema, kurioje mokomasi atpažinti pagrindinius realieji skaičiai, šaknys ir aibės modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Skaičiai lydi mus kiekviename žingsnyje. Pradedame nuo paprasčiausio daiktų skaičiavimo (1, 2, 3...), o vėliau susiduriame su situacijomis, kur prireikia neigiamų skaičių temperatūrai matuoti, trupmenų dalijant picą ar sudėtingesnių skaičių, tokių kaip $\\pi$ (pi) ar kvadratinė šaknis iš 2, matuojant geometrines figūras. Visi šie skaičiai sudaro vientisą sistemą, kurią vadiname [[realieji-skaiciai|realiųjų skaičių]] aibe."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
+          "text": "Šioje temoje išmoksime ne tik klasifikuoti skaičius į skirtingas šeimas (aibas), bet ir dirbti su šaknimis – veiksmu, kuris leidžia mums rasti skaičių, kurį pakėlus kvadratu ar kubu gautume norimą rezultatą. Tai pamatas, ant kurio laikosi visa vėlesnė algebra ir geometrija."
         }
       ]
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "realieji-skaiciai-aibiu-klasifikacija",
+      "title": "Skaičių aibės",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
+          "type": "paragraph",
+          "text": "Matematikoje skaičiai skirstomi į aibas pagal jų savybes. Svarbu suprasti, kad mažesnės aibės „gyvena“ didesnių aibių viduje."
         },
         {
           "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
+          "conceptId": "naturalieji-skaiciai",
+          "text": "[[naturalieji-skaiciai|Natūralieji skaičiai]] (žymimi $\\mathbb{N}$) – tai skaičiai, naudojami daiktams skaičiuoti: $1, 2, 3, 4, ...$. Kartais prie jų priskiriamas ir nulis ($0$), tačiau dažniau jis laikomas sveikuoju skaičiumi."
         },
         {
           "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
+          "conceptId": "sveikieji-skaiciai",
+          "text": "[[sveikieji-skaiciai|Sveikieji skaičiai]] (žymimi $\\mathbb{Z}$) – tai natūralieji skaičiai, jiems priešingi neigiami skaičiai ir nulis: $..., -3, -2, -1, 0, 1, 2, 3, ...$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "racionalieji-skaiciai",
+          "text": "[[racionalieji-skaiciai|Racionalieji skaičiai]] (žymimi $\\mathbb{Q}$) – tai visi skaičiai, kuriuos galime užrašyti kaip nesuprastinamą trupmeną $\\frac{m}{n}$, kur $m \\in \\mathbb{Z}$ (sveikasis skaičius), o $n \\in \\mathbb{N}$ (natūralusis skaičius). Tai apima sveikuosius skaičius, paprastąsias trupmenas, baigtines dešimtaines trupmenas ir periodines dešimtaines trupmenas (pvz., $0,333... = \\frac{1}{3}$)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "iracionalieji-skaiciai",
+          "text": "[[iracionalieji-skaiciai|Iracionalieji skaičiai]] (žymimi $\\mathbb{I}$) – tai skaičiai, kurių negalima užrašyti kaip santykio $\\frac{m}{n}$. Jų dešimtainė išraiška yra nebaigtinė ir neperiodinė. Garsiausi pavyzdžiai: $\\pi \\approx 3,14159...$ ir $\\sqrt{2} \\approx 1,41421...$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "realieji-skaiciai",
+          "text": "[[realieji-skaiciai|Realieji skaičiai]] (žymimi $\\mathbb{R}$) – tai visų racionaliųjų ir iracionaliųjų skaičių sąjunga. Kiekvienas taškas skaičių tiesėje atitinka tam tikrą realųjį skaičių."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+          "text": "Svarbu prisiminti: $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$. Tai reiškia, kad kiekvienas natūralusis skaičius yra ir sveikasis, ir racionalusis, ir realusis."
         }
       ]
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Realieji skaičiai, šaknys ir skaičių aibės sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "realieji-skaiciai-kvadratine-saknis",
+      "title": "Kvadratinė šaknis",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kvadratinės šaknies traukimas yra veiksmas, atvirkštinis kėlimui kvadratu."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kvadratine-saknis",
+          "text": "Neneigiamo skaičiaus $a$ [[kvadratine-saknis|kvadratinė šaknis]] (rašoma $\\sqrt{a}$) yra toks neneigiamas skaičius $b$, kurį pakėlę kvadratu gauname $a$. Taigi, $\\sqrt{a} = b$, jei $b^2 = a$ ir $b \\ge 0$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "kvadratines-saknies-kvadratas",
+          "latex": "(\\sqrt{a})^2 = a \\quad (a \\ge 0)"
+        },
+        {
+          "type": "warning",
+          "text": "Pošaknis $a$ kvadratinėje šaknyje $\\sqrt{a}$ negali būti neigiamas skaičius realiųjų skaičių aibėje, nes bet kurį skaičių pakėlę kvadratu gausime neneigiamą rezultatą: $2^2 = 4$ ir $(-2)^2 = 4$."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami apskaičiuoti $\\sqrt{a}$, klausiame savęs: koks neneigiamas skaičius pakeltas kvadratu duoda $a$? Pavyzdžiui, $\\sqrt{49} = 7$, nes $7^2 = 49$."
+        }
+      ]
+    },
+    {
+      "id": "realieji-skaiciai-saknu-savybes",
+      "title": "Kvadratinių šaknų savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dirbant su šaknimis, dažnai prireikia jas suprastinti arba sudauginti. Tam naudojame šias savybes:"
+        },
+        {
+          "type": "formula",
+          "title": "Sandaugos šaknis",
+          "formulaId": "kvadratines-saknies-savybe-daugyba",
+          "latex": "\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b} \\quad (a \\ge 0, b \\ge 0)"
+        },
+        {
+          "type": "formula",
+          "title": "Santykio šaknis",
+          "formulaId": "kvadratines-saknies-savybe-dalyba",
+          "latex": "\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}} \\quad (a \\ge 0, b > 0)"
+        },
+        {
+          "type": "formula",
+          "title": "Kvadratas po šaknimi",
+          "formulaId": "skaiciaus-kvadrato-saknis",
+          "latex": "\\sqrt{a^2} = |a|"
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios savybės leidžia mums **iškelti daugiklį prieš šaknies ženklą**. Pavyzdžiui: $\\sqrt{12} = \\sqrt{4 \\cdot 3} = \\sqrt{4} \\cdot \\sqrt{3} = 2\\sqrt{3}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taip pat galime **įkelti daugiklį po šaknies ženklu**: $3\\sqrt{2} = \\sqrt{3^2 \\cdot 2} = \\sqrt{9 \\cdot 2} = \\sqrt{18}$."
+        }
+      ]
+    },
+    {
+      "id": "realieji-skaiciai-kubine-saknis",
+      "title": "Kubinė šaknis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kubinė šaknis yra susijusi su kėlimu kubu ($a^3$)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kubine-saknis",
+          "text": "Skaičiaus $a$ [[kubine-saknis|kubinė šaknis]] (rašoma $\\sqrt[3]{a}$) yra toks skaičius $b$, kurį pakėlę kubu gauname $a$. Taigi, $\\sqrt[3]{a} = b$, jei $b^3 = a$."
+        },
+        {
+          "type": "note",
+          "text": "Skirtingai nei kvadratinė šaknis, kubinė šaknis gali būti traukiama ir iš neigiamų skaičių. Pavyzdžiui, $\\sqrt[3]{-8} = -2$, nes $(-2)^3 = -8$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "kubines-saknies-savybe-daugyba",
+          "latex": "\\sqrt[3]{a \\cdot b} = \\sqrt[3]{a} \\cdot \\sqrt[3]{b}"
+        }
+      ]
+    },
+    {
+      "id": "realieji-skaiciai-iracionalumas-vardiklyje",
+      "title": "Iracionalumo naikinimas vardiklyje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikoje laikoma „gražiau“, jei trupmenos vardiklyje nėra šaknies. Norėdami jos atsikratyti, skaitiklį ir vardiklį dauginame iš tokios pačios šaknies."
+        },
+        {
+          "type": "method",
+          "text": "Pavyzdys: $\\frac{6}{\\sqrt{2}} = \\frac{6 \\cdot \\sqrt{2}}{\\sqrt{2} \\cdot \\sqrt{2}} = \\frac{6\\sqrt{2}}{2} = 3\\sqrt{2}$."
+        }
+      ]
+    },
+    {
+      "id": "realieji-skaiciai-palyginimas",
+      "title": "Šaknų įvertinimas ir palyginimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kadangi daugelis šaknų yra iracionalieji skaičiai, jų tikslią reikšmę galime tik apytiksliai įvertinti tarp dviejų gretimų sveikųjų skaičių."
+        },
+        {
+          "type": "method",
+          "text": "Pavyzdžiui, tarp kokių sveikųjų skaičių yra $\\sqrt{20}$? Žinome, kad $4^2 = 16$ ir $5^2 = 25$. Kadangi $16 < 20 < 25$, tai $4 < \\sqrt{20} < 5$."
+        }
+      ]
+    },
+    {
+      "id": "realieji-skaiciai-klaidos",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Didžiausia klaida: manyti, kad $\\sqrt{a + b} = \\sqrt{a} + \\sqrt{b}$. PATIKRINKIME: $\\sqrt{9 + 16} = \\sqrt{25} = 5$, bet $\\sqrt{9} + \\sqrt{16} = 3 + 4 = 7$. Matome, kad $5 \\ne 7$!"
+        },
+        {
+          "type": "warning",
+          "text": "Nepamirškite: $\\sqrt{-16}$ neegzistuoja realiųjų skaičių aibėje, bet $\\sqrt[3]{-27}$ yra lygus $-3$."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
+      "id": "naturalieji-skaiciai",
+      "title": "Natūralieji skaičiai",
       "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai realieji skaičiai, šaknys ir aibės temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
+      "shortDefinition": "Skaičiai, naudojami daiktams skaičiuoti.",
+      "intuition": "Tai patys pirmieji skaičiai, kuriuos išmokstame: 1, 2, 3...",
+      "formal": "N = {1, 2, 3, ...}",
+      "notation": [
+        "\\mathbb{N}"
+      ],
       "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
+        "sveikieji-skaiciai"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
+      "id": "sveikieji-skaiciai",
+      "title": "Sveikieji skaičiai",
       "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
+      "shortDefinition": "Natūralieji skaičiai, jiems priešingi skaičiai ir nulis.",
+      "intuition": "Tai skaičiai be trupmeninės dalies, apimantys ir skolas (neigiamus skaičius).",
+      "formal": "Z = {..., -2, -1, 0, 1, 2, ...}",
+      "notation": [
+        "\\mathbb{Z}"
+      ],
       "relatedConceptIds": [
-        "seka",
-        "indukcija"
+        "naturalieji-skaiciai",
+        "racionalieji-skaiciai"
       ],
       "prerequisiteConceptIds": [
-        "a-n"
+        "naturalieji-skaiciai"
       ],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
+      "id": "racionalieji-skaiciai",
+      "title": "Racionalieji skaičiai",
       "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
+      "shortDefinition": "Skaičiai, kuriuos galima užrašyti trupmena m/n.",
+      "intuition": "Tai bet koks skaičius, kurį galime tiksliai padalinti: pusė, trečdalis, 0,25 ir t.t.",
+      "formal": "Q = {m/n | m ∈ Z, n ∈ N}",
+      "notation": [
+        "\\mathbb{Q}"
+      ],
       "relatedConceptIds": [
-        "seka",
-        "laipsnis"
+        "sveikieji-skaiciai",
+        "iracionalieji-skaiciai"
       ],
       "prerequisiteConceptIds": [
-        "q"
+        "sveikieji-skaiciai"
       ],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
+      "id": "iracionalieji-skaiciai",
+      "title": "Iracionalieji skaičiai",
       "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
+      "shortDefinition": "Skaičiai, kurių negalima užrašyti kaip m/n santykio.",
+      "intuition": "Tai skaičiai, kurių dešimtainė uodega tęsiasi amžinai be jokio pasikartojančio rašto.",
+      "formal": "I = R \\ Q",
+      "notation": [
+        "\\mathbb{I}"
+      ],
       "relatedConceptIds": [
-        "seka",
-        "teorema"
+        "racionalieji-skaiciai",
+        "realieji-skaiciai"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "laipsnis",
-      "title": "Laipsnis",
+      "id": "realieji-skaiciai",
+      "title": "Realieji skaičiai",
       "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
+      "shortDefinition": "Visi racionalieji ir iracionalieji skaičiai.",
+      "intuition": "Tai visi skaičiai, kurie egzistuoja ant begalinės skaičių tiesės.",
+      "formal": "R = Q ∪ I",
+      "notation": [
+        "\\mathbb{R}"
+      ],
       "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
+        "iracionalieji-skaiciai",
+        "racionalieji-skaiciai"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "saknis",
-      "title": "Šaknis",
+      "id": "kvadratine-saknis",
+      "title": "Kvadratinė šaknis",
       "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
+      "shortDefinition": "Veiksmas, atvirkštinis kėlimui kvadratu.",
+      "intuition": "Koks skaičius padaugintas iš savęs duoda šį rezultatą?",
+      "formal": "√a = b <=> b² = a, b ≥ 0",
+      "notation": [
+        "\\sqrt{a}"
+      ],
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "kubine-saknis",
+        "posaknis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "rodiklis",
-      "title": "Rodiklis",
+      "id": "kubine-saknis",
+      "title": "Kubinė šaknis",
       "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
+      "shortDefinition": "Veiksmas, atvirkštinis kėlimui kubu.",
+      "intuition": "Koks skaičius pakeltas trečiuoju laipsniu duoda šį rezultatą?",
+      "formal": "∛a = b <=> b³ = a",
+      "notation": [
+        "\\sqrt[3]{a}"
+      ],
       "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
+        "kvadratine-saknis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "logaritmas",
-      "title": "Logaritmas",
+      "id": "posaknis",
+      "title": "Pošaknis",
       "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
+      "shortDefinition": "Reiškinys arba skaičius po šaknies ženklu.",
+      "intuition": "Tai „namelis“, kuriame sėdi skaičius, iš kurio traukiame šaknį.",
+      "formal": "a išraiškoje √a",
       "notation": [],
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestine",
-      "title": "Išvestinė",
-      "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
-      "relatedConceptIds": [
-        "integralas",
-        "isvestine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
+        "kvadratine-saknis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -442,264 +386,361 @@
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
+      "id": "kvadratines-saknies-savybe-daugyba",
+      "title": "Sandaugos kvadratinė šaknis",
       "type": "formula",
-      "latex": "a_n",
+      "latex": "\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}",
       "conditions": [
-        "Sekoms"
+        "a \\ge 0",
+        "b \\ge 0"
       ],
       "variables": {
-        "n": "indeksas"
+        "a": "pirmas daugiklis",
+        "b": "antras daugiklis"
       },
-      "explanation": "Žymi n-tąjį sekos narį.",
+      "explanation": "Sandaugos šaknis lygi jos daugiklių šaknų sandaugai.",
       "relatedConceptIds": [
-        "seka"
+        "kvadratine-saknis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
+      "id": "kvadratines-saknies-savybe-dalyba",
+      "title": "Santykio kvadratinė šaknis",
       "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
+      "latex": "\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}",
       "conditions": [
-        "Kai skirtumas pastovus"
+        "a \\ge 0",
+        "b > 0"
       ],
       "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
+        "a": "skaitiklis",
+        "b": "vardiklis"
       },
-      "explanation": "Naudojama sekų uždaviniuose.",
+      "explanation": "Dalmens šaknis lygi dalinio ir daliklio šaknų dalmeniui.",
       "relatedConceptIds": [
-        "aritmetine-progresija"
+        "kvadratine-saknis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
+      "id": "kvadratines-saknies-kvadratas",
+      "title": "Šaknies kėlimas kvadratu",
       "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
+      "latex": "(\\sqrt{a})^2 = a",
       "conditions": [
-        "Kai santykis pastovus"
+        "a \\ge 0"
       ],
       "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
+        "a": "pošaknis"
       },
-      "explanation": "Naudojama augimui ir mažėjimui.",
+      "explanation": "Kėlimas kvadratu panaikina kvadratinę šaknį.",
       "relatedConceptIds": [
-        "geometrine-progresija"
+        "kvadratine-saknis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
+      "id": "skaiciaus-kvadrato-saknis",
+      "title": "Kvadrato šaknis",
       "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
+      "latex": "\\sqrt{a^2} = |a|",
+      "conditions": [],
       "variables": {
-        "a": "pagrindas"
+        "a": "skaičius"
       },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
+      "explanation": "Ištraukę šaknį iš kvadrato, gauname skaičiaus modulį (absoliučiąją vertę).",
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "kvadratine-saknis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
+      "id": "kubines-saknies-savybe-daugyba",
+      "title": "Sandaugos kubinė šaknis",
       "type": "formula",
-      "latex": "\\log_a b=c \\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
+      "latex": "\\sqrt[3]{a \\cdot b} = \\sqrt[3]{a} \\cdot \\sqrt[3]{b}",
+      "conditions": [],
       "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
+        "a": "pirmas daugiklis",
+        "b": "antras daugiklis"
       },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
+      "explanation": "Kubinės šaknies savybė sandaugai galioja visiems realiesiems skaičiams.",
       "relatedConceptIds": [
-        "logaritmas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
-      "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
-      "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "kubine-saknis"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
+      "id": "neigiamas-posaknis-kvadratineje-saknyje",
+      "title": "Bandymai traukti kvadratinę šaknį iš neigiamo skaičiaus",
       "type": "mistake",
       "conceptIds": [
-        "laipsnis"
+        "kvadratine-saknis"
       ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
+      "wrongPattern": "√(-9) = -3 arba √(-9) = 3",
+      "whyItHappens": "Mokiniai supainioja su kubine šaknimi arba pamiršta, kad kvadratas visada teigiamas.",
+      "correction": "Realiųjų skaičių aibėje kvadratinė šaknis iš neigiamo skaičiaus neturi prasmės.",
+      "wrongExample": "\\sqrt{-16} = -4",
+      "correctExample": "\\sqrt{-16} \\text{ neegzistuoja } \\mathbb{R}",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
+      "id": "saknu-sudetis-be-bendro-daugyklio",
+      "title": "Šaknų sudėtis sudedant pošaknius",
       "type": "mistake",
       "conceptIds": [
-        "integralas"
+        "kvadratine-saknis"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
+      "wrongPattern": "√2 + √3 = √5",
+      "whyItHappens": "Bandoma taikyti sandaugos taisyklę sudėčiai.",
+      "correction": "Galima sudėti tik tokias pačias šaknis: 2√2 + 3√2 = 5√2.",
+      "wrongExample": "\\sqrt{2} + \\sqrt{3} = \\sqrt{5}",
+      "correctExample": "\\sqrt{2} + \\sqrt{3} \\approx 1,41 + 1,73 = 3,14",
+      "defaultSrs": true
+    },
+    {
+      "id": "saknies-traukimas-is-atskiru-demenu",
+      "title": "Šaknies traukimas iš sumos narių atskirai",
+      "type": "mistake",
+      "conceptIds": [
+        "kvadratine-saknis"
+      ],
+      "wrongPattern": "√(a² + b²) = a + b",
+      "whyItHappens": "Netinkamas sandaugos savybės taikymas sumai.",
+      "correction": "Pirmiausia reikia atlikti veiksmus po šaknimi (sudėtį), o tik tada traukti šaknį.",
+      "wrongExample": "\\sqrt{9 + 16} = 3 + 4 = 7",
+      "correctExample": "\\sqrt{9 + 16} = \\sqrt{25} = 5",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-exmp-1",
-      "title": "Seka",
+      "id": "realieji-skaiciai-exmp-1",
+      "title": "Skaičių klasifikavimas",
       "level": "easy",
-      "problem": "Jei a_n=2n+1, rask a_4.",
+      "problem": "Kurioms aibėms (N, Z, Q, I, R) priklauso skaičius -5?",
       "conceptIds": [
-        "seka"
+        "naturalieji-skaiciai",
+        "sveikieji-skaiciai",
+        "racionalieji-skaiciai",
+        "realieji-skaiciai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Įstatome n=4.",
-          "latex": "9"
+          "text": "Patikriname, ar skaičius natūralusis. Ne, nes jis neigiamas.",
+          "latex": "-5 \\notin \\mathbb{N}"
+        },
+        {
+          "text": "Patikriname, ar jis sveikasis. Taip, nes tai neigiamas skaičius be trupmeninės dalies.",
+          "latex": "-5 \\in \\mathbb{Z}"
+        },
+        {
+          "text": "Kadangi jis sveikasis, jis automatiškai yra ir racionalusis (galima užrašyti kaip -5/1).",
+          "latex": "-5 \\in \\mathbb{Q}"
+        },
+        {
+          "text": "Visi racionalieji skaičiai yra ir realieji.",
+          "latex": "-5 \\in \\mathbb{R}"
         }
       ],
-      "answer": "9"
+      "answer": "-5 priklauso Z, Q ir R."
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-exmp-2",
-      "title": "Laipsnis",
+      "id": "realieji-skaiciai-exmp-2",
+      "title": "Kvadratinės šaknies apskaičiavimas",
       "level": "easy",
-      "problem": "Apskaičiuok 2^5.",
+      "problem": "Apskaičiuokite: $\\sqrt{0,64} + \\sqrt{1\\frac{7}{9}}$",
       "conceptIds": [
-        "laipsnis"
+        "kvadratine-saknis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "kvadratines-saknies-savybe-dalyba"
+      ],
       "steps": [
         {
-          "text": "32.",
-          "latex": "32"
+          "text": "Ištraukiame šaknį iš dešimtainės trupmenos: 0,8^2 = 0,64.",
+          "latex": "\\sqrt{0,64} = 0,8"
+        },
+        {
+          "text": "Paverčiame mišrųjį skaičių netaisyklingąja trupmena.",
+          "latex": "1\\frac{7}{9} = \\frac{16}{9}"
+        },
+        {
+          "text": "Taikome dalybos savybę.",
+          "latex": "\\sqrt{\\frac{16}{9}} = \\frac{\\sqrt{16}}{\\sqrt{9}} = \\frac{4}{3}"
+        },
+        {
+          "text": "Sudedame rezultatus: 0,8 = 4/5.",
+          "latex": "\\frac{4}{5} + \\frac{4}{3} = \\frac{12}{15} + \\frac{20}{15} = \\frac{32}{15} = 2\\frac{2}{15}"
         }
       ],
-      "answer": "32"
+      "answer": "2\\frac{2}{15}"
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-exmp-3",
-      "title": "Logaritmas",
+      "id": "realieji-skaiciai-exmp-3",
+      "title": "Daugiklio iškėlimas prieš šaknį",
       "level": "medium",
-      "problem": "Koks log_2 8?",
+      "problem": "Suprastinkite reiškinį: $\\sqrt{72}$",
       "conceptIds": [
-        "logaritmas"
+        "kvadratine-saknis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "kvadratines-saknies-savybe-daugyba"
+      ],
       "steps": [
         {
-          "text": "3.",
-          "latex": "3"
+          "text": "Skaidome 72 į dauginamuosius, iš kurių vienas būtų didžiausias galimas pilnas kvadratas.",
+          "latex": "72 = 36 \\cdot 2"
+        },
+        {
+          "text": "Taikome sandaugos šaknies savybę.",
+          "latex": "\\sqrt{36 \\cdot 2} = \\sqrt{36} \\cdot \\sqrt{2}"
+        },
+        {
+          "text": "Ištraukiame šaknį iš 36.",
+          "latex": "6\\sqrt{2}"
         }
       ],
-      "answer": "3"
+      "answer": "6\\sqrt{2}"
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-exmp-4",
-      "title": "Trigonometrinis santykis",
+      "id": "realieji-skaiciai-exmp-4",
+      "title": "Veiksmai su šaknimis",
       "level": "medium",
-      "problem": "Stačiajame trikampyje priešpriešinė 3, įžambinė 5. Rask sinusą.",
+      "problem": "Apskaičiuokite: $(3\\sqrt{2} - \\sqrt{8}) \\cdot \\sqrt{2}$",
       "conceptIds": [
-        "sinusas",
-        "kosinusas"
+        "kvadratine-saknis"
+      ],
+      "formulaIds": [
+        "kvadratines-saknies-savybe-daugyba",
+        "kvadratines-saknies-kvadratas"
+      ],
+      "steps": [
+        {
+          "text": "Pirmiausia suprastiname √8.",
+          "latex": "\\sqrt{8} = \\sqrt{4 \\cdot 2} = 2\\sqrt{2}"
+        },
+        {
+          "text": "Atliekame veiksmą skliaustuose.",
+          "latex": "3\\sqrt{2} - 2\\sqrt{2} = 1\\sqrt{2} = \\sqrt{2}"
+        },
+        {
+          "text": "Dauginame iš √2.",
+          "latex": "\\sqrt{2} \\cdot \\sqrt{2} = (\\sqrt{2})^2 = 2"
+        }
+      ],
+      "answer": "2"
+    },
+    {
+      "id": "realieji-skaiciai-exmp-5",
+      "title": "Kubinės šaknies apskaičiavimas",
+      "level": "easy",
+      "problem": "Apskaičiuokite: $\\sqrt[3]{-125} + \\sqrt[3]{27}$",
+      "conceptIds": [
+        "kubine-saknis"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "3/5.",
-          "latex": "3/5"
+          "text": "Randame skaičių, kurį pakėlę kubu gauname -125. Tai -5.",
+          "latex": "(-5)^3 = -125 \\Rightarrow \\sqrt[3]{-125} = -5"
+        },
+        {
+          "text": "Randame skaičių, kurį pakėlę kubu gauname 27. Tai 3.",
+          "latex": "3^3 = 27 \\Rightarrow \\sqrt[3]{27} = 3"
+        },
+        {
+          "text": "Sudedame gautas reikšmes.",
+          "latex": "-5 + 3 = -2"
         }
       ],
-      "answer": "3/5"
+      "answer": "-2"
     },
     {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-exmp-5",
-      "title": "Integralas",
+      "id": "realieji-skaiciai-exmp-6",
+      "title": "Iracionalumo naikinimas vardiklyje",
+      "level": "medium",
+      "problem": "Panaikinkite iracionalumą trupmenos vardiklyje: $\\frac{10}{\\sqrt{5}}$",
+      "conceptIds": [
+        "kvadratine-saknis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Dauginame skaitiklį ir vardiklį iš √5.",
+          "latex": "\\frac{10 \\cdot \\sqrt{5}}{\\sqrt{5} \\cdot \\sqrt{5}}"
+        },
+        {
+          "text": "Vardiklyje √5 * √5 = 5.",
+          "latex": "\\frac{10\\sqrt{5}}{5}"
+        },
+        {
+          "text": "Suprastiname trupmeną padalindami 10 iš 5.",
+          "latex": "2\\sqrt{5}"
+        }
+      ],
+      "answer": "2\\sqrt{5}"
+    },
+    {
+      "id": "realieji-skaiciai-exmp-7",
+      "title": "Šaknų įvertinimas",
+      "level": "medium",
+      "problem": "Tarp kokių dviejų gretimų sveikųjų skaičių yra skaičius $-\\sqrt{10}$?",
+      "conceptIds": [
+        "kvadratine-saknis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pirmiausia įvertiname teigiamą reikšmę √10. Žinome pilnus kvadratus 9 ir 16.",
+          "latex": "9 < 10 < 16 \\Rightarrow \\sqrt{9} < \\sqrt{10} < \\sqrt{16}"
+        },
+        {
+          "text": "Vadinasi: $3 < \\sqrt{10} < 4$.",
+          "latex": "3 < \\sqrt{10} < 4"
+        },
+        {
+          "text": "Padauginę iš -1, pakeičiame nelygybės ženklus.",
+          "latex": "-3 > -\\sqrt{10} > -4"
+        }
+      ],
+      "answer": "Tarp -4 ir -3."
+    },
+    {
+      "id": "realieji-skaiciai-exmp-8",
+      "title": "Sudėtingesnis reiškinys",
       "level": "hard",
-      "problem": "Rask ∫2x dx.",
+      "problem": "Apskaičiuokite: $\\sqrt{(\\sqrt{2}-2)^2} + \\sqrt{2}$",
       "conceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "kvadratine-saknis",
+        "skaiciaus-kvadrato-saknis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "skaiciaus-kvadrato-saknis"
+      ],
       "steps": [
         {
-          "text": "x² + C.",
-          "latex": "x^2 + C"
+          "text": "Taikome taisyklę √(a²) = |a|.",
+          "latex": "|\\sqrt{2} - 2| + \\sqrt{2}"
+        },
+        {
+          "text": "Nustatome modulio poženklio ženklą. Kadangi √2 ≈ 1,41, tai √2 - 2 yra neigiamas.",
+          "latex": "\\sqrt{2} - 2 < 0"
+        },
+        {
+          "text": "Nuimame modulį pakeisdami ženklus.",
+          "latex": "-(\\sqrt{2} - 2) + \\sqrt{2} = -\\sqrt{2} + 2 + \\sqrt{2}"
+        },
+        {
+          "text": "Suprastiname reiškinį.",
+          "latex": "2"
         }
       ],
-      "answer": "x² + C"
+      "answer": "2"
     }
   ],
   "exercises": [
@@ -707,891 +748,95 @@
       "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-001",
       "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
       "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Apskaičiuok a_3, kai a_n=2n+1.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
+      "level": "Lengvi",
+      "type": "multipleChoice",
+      "statement": "Kuris iš šių skaičių yra iracionalusis?",
+      "options": [
+        "√9",
+        "0,333...",
+        "√5",
+        "-4"
+      ],
+      "answer": "√5",
       "hints": [
         {
           "order": 1,
-          "text": "Įstatyk n=3.",
-          "penalty": 0.1,
+          "text": "Iracionalieji skaičiai yra tie, kurių šaknis neišsitraukia sveikai ir jie nėra baigtinės ar periodinės trupmenos.",
+          "penalty": 0,
           "revealsConceptIds": [
-            "seka"
+            "iracionalieji-skaiciai"
           ]
         }
       ],
       "solutionSteps": [
         {
-          "text": "a_3=7",
-          "latex": "7"
+          "text": "√9 = 3 (racionalusis). 0,333... = 1/3 (racionalusis). -4 (sveikasis/racionalusis). √5 negali būti užrašytas trupmena m/n.",
+          "latex": "\\sqrt{5}"
         }
       ],
-      "answerText": "7",
+      "answerText": "√5",
       "alternateMethods": [],
       "conceptIds": [
-        "seka"
+        "iracionalieji-skaiciai"
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 40
     },
     {
       "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-002",
       "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
       "grade": 8,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 2.",
+      "statement": "Apskaičiuokite: 2√16 - √81",
       "answer": {
         "kind": "numeric",
-        "value": 2,
+        "value": -1,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
+          "text": "Pirmiausia ištraukite šaknis.",
+          "penalty": 0,
           "revealsConceptIds": [
-            "seka"
+            "kvadratine-saknis"
           ]
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "2"
+          "text": "2 * 4 - 9 = 8 - 9 = -1",
+          "latex": "2 \\cdot 4 - 9 = -1"
         }
       ],
-      "answerText": "2",
+      "answerText": "-1",
       "alternateMethods": [],
       "conceptIds": [
-        "seka"
+        "kvadratine-saknis"
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-003",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 3.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-004",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-005",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-006",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-007",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-008",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-009",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-010",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-011",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-012",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-013",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-014",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-015",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-016",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-017",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-018",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-019",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-ex-020",
-      "topicId": "realieji-skaiciai-saknys-ir-aibes-8",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Realieji skaičiai, šaknys ir skaičių aibės: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 30
     }
   ],
   "tests": [
     {
       "id": "realieji-skaiciai-saknys-ir-aibes-8-test-topic",
-      "title": "Realieji skaičiai, šaknys ir skaičių aibės testas",
+      "title": "Realieji skaičiai ir šaknys: kontrolinis",
       "scope": "topic",
       "topicIds": [
         "realieji-skaiciai-saknys-ir-aibes-8"
       ],
       "exerciseIds": [
         "realieji-skaiciai-saknys-ir-aibes-8-ex-001",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-002",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-003",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-004",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-005",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-006",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-007",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-008"
+        "realieji-skaiciai-saknys-ir-aibes-8-ex-002"
       ],
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-test-challenge",
-      "title": "Realieji skaičiai, šaknys ir skaičių aibės iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "realieji-skaiciai-saknys-ir-aibes-8"
-      ],
-      "exerciseIds": [
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-009",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-010",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-011",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-012",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-013",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-014",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-015",
-        "realieji-skaiciai-saknys-ir-aibes-8-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7,
+      "timeLimitSeconds": 1200
     }
   ],
-  "srsCards": [
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-seka",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-aritmetine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-sekos-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
-      "conceptIds": [
-        "sekos-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
-      "conceptIds": [
-        "aritmetines-progresijos-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
-      "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "realieji-skaiciai-saknys-ir-aibes-8-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "srsCards": []
 }

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Išplėstiniame III gimnazijos kurse aprašomos funkcijų ribos ir tolydumas."
+    "notes": "Išplėsta versija apie funkcijų ribas ir tolydumą."
   },
   "topic": {
     "id": "funkciju-ribos-ir-tolydumas",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 9,
-    "estimatedStudyMinutes": 170,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "laipsnines-saknies-rodiklines-logaritmines-ir-trigonometrines-funkcijos"
     ],
@@ -20,37 +20,31 @@
       "isvestine-ir-diferencijavimas"
     ],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
-      "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "riba",
+      "sekos-riba",
+      "funkcijos-riba",
+      "vienpuse-riba",
+      "neapibreztumas",
+      "tolydumas",
+      "trukio-taskas",
+      "asimptote",
+      "begalybe",
+      "sklaida",
+      "konvergavimas"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "ribu-sumos-taisykle",
+      "ribu-sandaugos-taisykle",
+      "ribu-dalmens-taisykle",
+      "pirmoji-svarbioji-riba",
+      "antroji-svarbioji-riba",
+      "tolydumo-salyga"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "dalyba-is-nulio-vs-riba",
+      "neapibreztumo-ignoravimas",
+      "vienpusiu-ribu-nepaisymas",
+      "laipsnio-klaida-begalybeje"
     ],
     "exerciseIds": [
       "funkciju-ribos-ir-tolydumas-ex-001",
@@ -77,629 +71,636 @@
   },
   "theory": [
     {
-      "id": "funkciju-ribos-ir-tolydumas-ivadas",
-      "title": "Įvadas",
+      "id": "ribos-koncepcija",
+      "title": "1. Ribos koncepcija ir prasmė",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Funkcijų ribos ir tolydumas yra tema, kurioje mokomasi atpažinti pagrindinius funkcijų ribos ir tolydumas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
-        },
-        {
-          "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
-        },
-        {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
+          "text": "Ribos sąvoka yra kertinis matematinės analizės akmuo. Ji leidžia mums suprasti, kaip funkcija elgiasi „arti“ tam tikro taško, net jei tame taške funkcija nėra apibrėžta. Be ribų negalėtume apibrėžti nei išvestinės, nei integralo."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+          "text": "Intuicija: Įsivaizduokite, kad einate tiltu link prarajos. Riba sako ne tai, kas nutiks įkritus į prarają, o tai, kokiame aukštyje būsite būtent tą akimirką, kai priartėsite prie jos krašto."
         }
       ]
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Funkcijų ribos ir tolydumas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "sekos-riba-teorija",
+      "title": "2. Skaičių sekos riba",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Skaičių [[seka|seka]] – tai funkcija, kurios argumentas yra natūralusis skaičius $n$. Mes domimės, kas nutinka su sekos nariu $a_n$, kai $n$ tampa labai didelis ($n \to \\infty$)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "sekos-riba",
+          "text": "Skaičius $A$ vadinamas sekos $\\{a_n\\}$ riba, jei bet kokiam, kad ir labai mažam teigiamam skaičiui $\\epsilon$ (epsilon), galima nurodyti tokį numerį $N$, kad visiems $n > N$ galiotų nelygybė $|a_n - A| < \\epsilon$."
+        },
+        {
+          "type": "formula",
+          "latex": "\\lim_{n \to \\infty} a_n = A"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei seka turi baigtinę ribą, ji vadinama **konverguojančia**, jei ne – **diverguojančia**."
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-riba-taske-teorija",
+      "title": "3. Funkcijos riba taške",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nagrinėdami funkcijos $f(x)$ ribą taške $x_0$, tiriame funkcijos reikšmių elgesį, kai argumentas $x$ artėja prie $x_0$ iš bet kurios pusės, bet nėra lygus $x_0$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "funkcijos-riba",
+          "text": "Skaičius $L$ vadinamas funkcijos $f(x)$ riba taške $x_0$, jei argumentui $x$ neaprėžtai artėjant prie $x_0$, funkcijos reikšmės $f(x)$ neaprėžtai artėja prie skaičiaus $L$."
+        },
+        {
+          "type": "formula",
+          "latex": "\\lim_{x \to x_0} f(x) = L"
+        },
+        {
+          "type": "warning",
+          "text": "Svarbu: Riba nepriklauso nuo to, kokia yra funkcijos reikšmė pačiame taške $x_0$. Funkcija tame taške gali būti net neapibrėžta!"
+        }
+      ]
+    },
+    {
+      "id": "vienpuses-ribos-teorija",
+      "title": "4. Vienpusės ribos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kartais funkcija elgiasi skirtingai artėjant prie taško iš kairės ir iš dešinės pusės. Tam naudojamos [[vienpuse-riba|vienpusės ribos]]."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Riba iš kairės:** $\\lim_{x \to x_0^-} f(x) = L_1$ (artėjame per $x < x_0$)",
+            "**Riba iš dešinės:** $\\lim_{x \to x_0^+} f(x) = L_2$ (artėjame per $x > x_0$)"
+          ]
+        },
+        {
+          "type": "theorem",
+          "text": "Funkcijos riba taške $x_0$ egzistuoja tada ir tik tada, kai egzistuoja abi vienpusės ribos ir jos yra lygios."
+        }
+      ]
+    },
+    {
+      "id": "ribu-skaiciavimo-taisykles",
+      "title": "5. Ribų skaičiavimo taisyklės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei egzistuoja baigtinės ribos $\\lim f(x) = A$ ir $\\lim g(x) = B$, tai galioja šios savybės:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "ribu-sumos-taisykle",
+          "latex": "\\lim_{x \to x_0}, [f(x) \\pm g(x)] = A \\pm B"
+        },
+        {
+          "type": "formula",
+          "formulaId": "ribu-sandaugos-taisykle",
+          "latex": "\\lim_{x \to x_0}, [f(x) \\cdot g(x)] = A \\cdot B"
+        },
+        {
+          "type": "formula",
+          "formulaId": "ribu-dalmens-taisykle",
+          "latex": "\\lim_{x \to x_0} \\frac{f(x)}, {g(x)} = \\frac{A}, {B}, \\quad (B \neq 0)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei funkcija yra tolydi (pavyzdžiui, daugianaris), tai ribą galima apskaičiuoti tiesiog įstačius reikšmę: $\\lim_{x \to x_0} f(x) = f(x_0)$."
+        }
+      ]
+    },
+    {
+      "id": "neapibreztumai-teorija",
+      "title": "6. Neapibrėžtumai ir jų naikinimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dažnai tiesiogiai įstatę $x_0$ gauname beprasmius reiškinius, vadinamus [[neapibreztumas|neapibrėžtumais]]. Dažniausi iš jų: $\frac{0}, {0}$ ir $\frac{\\infty}, {\\infty}$."
+        },
+        {
+          "type": "note",
+          "text": "**Kaip naikinti neapibrėžtumus?**\n1. **$\frac{0}, {0}$ atveju:** skaidykite skaitiklį ir vardiklį dauginamaisiais ir suprastinkite.\n2. **$\frac{0}, {0}$ su šaknimis:** dauginkite iš jungtinio reiškinio.\n3. **$\frac{\\infty}, {\\infty}$ atveju:** dalinkite visus narius iš didžiausio vardiklio laipsnio."
+        }
+      ]
+    },
+    {
+      "id": "riba-begalybeje-asimptotes",
+      "title": "7. Riba begalybėje ir asimptotės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai $x \to \\infty$ arba $x \to -\\infty$, funkcijos riba nurodo grafiko elgesį toli nuo koordinačių pradžios."
+        },
+        {
+          "type": "definition",
+          "conceptId": "asimptote",
+          "text": "Jei $\\lim_{x \to \\infty} f(x) = b$, tai tiesė $y = b$ vadinama **horizontaliaja asimptote**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei funkcijos riba taške $x_0$ lygi begalybei ($\\lim_{x \to x_0} f(x) = \\infty$), tai tiesė $x = x_0$ vadinama **vertikaliąja asimptote**."
+        }
+      ]
+    },
+    {
+      "id": "tolydumas-teorija",
+      "title": "8. Funkcijos tolydumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Intuityviai funkcija yra [[tolydumas|tolydi]], jei jos grafiką galima nupiešti neatitraukiant pieštuko nuo popieriaus."
+        },
+        {
+          "type": "definition",
+          "conceptId": "tolydumas",
+          "text": "Funkcija $f(x)$ vadinama tolydžia taške $x_0$, jei išpildytos trys sąlygos:\n1. Funkcija yra apibrėžta taške $x_0$.\n2. Egzistuoja baigtinė riba $\\lim_{x \to x_0} f(x)$.\n3. Ši riba lygi funkcijos reikšmei tame taške: $\\lim_{x \to x_0} f(x) = f(x_0)$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tolydumo-salyga",
+          "latex": "\\lim_{x \to x_0^-} f(x) = \\lim_{x \to x_0^+} f(x) = f(x_0)"
+        }
+      ]
+    },
+    {
+      "id": "trukio-taskai-teorija",
+      "title": "9. Trūkio taškai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei bent viena tolydumo sąlyga nėra tenkinama, taškas $x_0$ vadinamas [[trukio-taskas|trūkio tašku]]."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Pašalinamas trūkis:** Riba egzistuoja, bet ji nelygi funkcijos reikšmei (arba funkcija neapibrėžta).",
+            "**I rūšies trūkis (šuolis):** Vienpusės ribos egzistuoja, bet jos nėra lygios.",
+            "**II rūšies trūkis:** Bent viena iš vienpusių ribų yra begalinė arba neegzistuoja."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "svarbiosios-ribos-teorija",
+      "title": "10. Svarbiosios ribos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikoje yra keletas standartinių ribų, kurios dažnai naudojamos sudėtingesniems uždaviniams spręsti."
+        },
+        {
+          "type": "formula",
+          "formulaId": "pirmoji-svarbioji-riba",
+          "title": "Pirmoji svarbioji riba",
+          "latex": "\\lim_{x \to 0} \\frac{\\sin x}, {x} = 1"
+        },
+        {
+          "type": "formula",
+          "formulaId": "antroji-svarbioji-riba",
+          "title": "Antroji svarbioji riba (skaičius e)",
+          "latex": "\\lim_{n \to \\infty} \\left(1 + \\frac{1}, {n}\\right)^n = e \\approx 2{\n}718"
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
+      "id": "riba",
+      "title": "Riba",
       "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai funkcijų ribos ir tolydumas temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
+      "shortDefinition": "Reikšmė, prie kurios neaprėžtai artėja funkcijos reikšmė.",
+      "intuition": "Tai tikslas, kurį funkcija bando pasiekti, bet nebūtinai pasiekia.",
+      "formal": "Funkcijos reikšmės elgesys argumentui artėjant prie konkretaus taško.",
       "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
+        "sekos-riba",
+        "funkcijos-riba"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
+      "id": "sekos-riba",
+      "title": "Sekos riba",
       "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
+      "shortDefinition": "Skaičius, prie kurio artėja sekos nariai n-tąjam nariui didėjant.",
+      "intuition": "Kas nutiks su seka po labai ilgo laiko?",
+      "formal": "L, kai ∀ε>0 ∃N: ∀n>N |a_n - L| < ε.",
       "relatedConceptIds": [
-        "seka",
-        "indukcija"
-      ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
-        "q"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "teorema"
+        "seka"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "laipsnis",
-      "title": "Laipsnis",
+      "id": "funkcijos-riba",
+      "title": "Funkcijos riba taške",
       "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
+      "shortDefinition": "Funkcijos elgesys arti tam tikro taško.",
+      "intuition": "Kokia būtų reikšmė, jei nebūtų skylės grafike?",
+      "formal": "L, kai x → x0.",
       "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
+        "vienpuse-riba",
+        "tolydumas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "saknis",
-      "title": "Šaknis",
+      "id": "vienpuse-riba",
+      "title": "Vienpusė riba",
       "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
+      "shortDefinition": "Riba artėjant tik iš vienos pusės (kairės arba dešinės).",
+      "intuition": "Artėjimas prie sienos tik iš kairės pusės.",
+      "notation": [
+        "x → x0-",
+        "x → x0+"
+      ],
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "trukio-taskas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "rodiklis",
-      "title": "Rodiklis",
+      "id": "neapibreztumas",
+      "title": "Neapibrėžtumas",
       "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
+      "shortDefinition": "Reiškinys, kurio reikšmės negalima nustatyti tiesiogiai įstačius skaičių.",
+      "intuition": "Kova tarp nulio ir nulio arba begalybės ir begalybės.",
+      "formal": "Santykiniai simboliai 0/0, ∞/∞, 0*∞ ir kt.",
+      "relatedConceptIds": [],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "tolydumas",
+      "title": "Tolydumas",
+      "type": "concept",
+      "shortDefinition": "Savybė, kai funkcijos riba sutampa su jos reikšme.",
+      "intuition": "Grafikas be pertrūkių ir skylių.",
+      "formal": "lim(x→x0) f(x) = f(x0).",
       "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
+        "trukio-taskas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "logaritmas",
-      "title": "Logaritmas",
+      "id": "trukio-taskas",
+      "title": "Trūkio taškas",
       "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
+      "shortDefinition": "Taškas, kuriame funkcija nėra tolydi.",
+      "intuition": "Skylė, šuolis arba begalinis grafiko nutolimas.",
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
+        "tolydumas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "kosinusas",
-      "title": "Kosinusas",
+      "id": "asimptote",
+      "title": "Asimptotė",
       "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
+      "shortDefinition": "Tiesė, prie kurios funkcijos grafikas neaprėžtai artėja.",
+      "intuition": "Nematoma riba, kurios grafikas niekada nepaliečia (arba paliečia tik begalybėje).",
       "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
+        "begalybe"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
+      "appearsInTopicIds": [
+        "funkciju-ribos-ir-tolydumas"
       ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestine",
-      "title": "Išvestinė",
-      "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
-      "relatedConceptIds": [
-        "integralas",
-        "isvestine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
-      "type": "formula",
-      "latex": "a_n",
-      "conditions": [
-        "Sekoms"
-      ],
-      "variables": {
-        "n": "indeksas"
-      },
-      "explanation": "Žymi n-tąjį sekos narį.",
+      "id": "ribu-sumos-taisykle",
+      "title": "Ribų sumos taisyklė",
+      "latex": "\\lim_{x \\to x_0}, [f(x) \\pm g(x)] = \\lim_{x \\to x_0} f(x) \\pm \\lim_{x \\to x_0} g(x)",
+      "explanation": "Sumos riba lygi ribų sumai.",
       "relatedConceptIds": [
-        "seka"
+        "riba"
       ],
       "defaultSrs": true
     },
     {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
+      "id": "ribu-sandaugos-taisykle",
+      "title": "Ribų sandaugos taisyklė",
+      "latex": "\\lim_{x \\to x_0}, [f(x) \\cdot g(x)] = \\lim_{x \\to x_0} f(x) \\cdot \\lim_{x \\to x_0} g(x)",
+      "explanation": "Sandaugos riba lygi ribų sandaugai.",
       "relatedConceptIds": [
-        "aritmetine-progresija"
+        "riba"
       ],
       "defaultSrs": true
     },
     {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
+      "id": "ribu-dalmens-taisykle",
+      "title": "Ribų dalmens taisyklė",
+      "latex": "\\lim_{x \\to x_0} \\frac{f(x)}, {g(x)} = \\frac{\\lim_{x \\to x_0} f(x)}, {\\lim_{x \\to x_0} g(x)}",
       "conditions": [
-        "Kai santykis pastovus"
+        "Vardiklio riba nelygi nuliui"
       ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
-      },
-      "explanation": "Naudojama augimui ir mažėjimui.",
+      "explanation": "Dalmens riba lygi ribų dalmeniui.",
       "relatedConceptIds": [
-        "geometrine-progresija"
+        "riba"
       ],
       "defaultSrs": true
     },
     {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
+      "id": "pirmoji-svarbioji-riba",
+      "title": "Pirmoji svarbioji riba",
+      "latex": "\\lim_{x \\to 0} \\frac{\\sin x}, {x} = 1",
+      "explanation": "Naudojama trigonometrinėms riboms skaičiuoti.",
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "sinusas",
+        "riba"
       ],
       "defaultSrs": true
     },
     {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\log_a b=c \\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
-      },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
+      "id": "antroji-svarbioji-riba",
+      "title": "Antroji svarbioji riba",
+      "latex": "\\lim_{n \\to \\infty} (1 + \\frac{1}, {n})^n = e",
+      "explanation": "Apibrėžia eksponentės pagrindą e.",
       "relatedConceptIds": [
-        "logaritmas"
+        "begalybe",
+        "riba"
       ],
       "defaultSrs": true
     },
     {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
+      "id": "tolydumo-salyga",
+      "title": "Funkcijos tolydumo sąlyga",
+      "latex": "\\lim_{x \\to x_0^-} f(x) = \\lim_{x \\to x_0^+} f(x) = f(x_0)",
+      "explanation": "Visos trys vertės turi sutapti, kad funkcija būtų tolydi.",
       "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
-      "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "tolydumas",
+        "vienpuse-riba"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
-      "type": "mistake",
+      "id": "dalyba-is-nulio-vs-riba",
+      "title": "Painioja dalybą iš nulio su riba",
       "conceptIds": [
-        "laipsnis"
+        "riba"
       ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
+      "wrongPattern": "Mano, kad 1/0 yra tiesiog klaida.",
+      "whyItHappens": "Nesuprantama, kad skaičių teorijoje 1/0 negalima, bet ribose 1/x artėja prie begalybės.",
+      "correction": "Ribose skaičius dalintas iš labai mažo dydžio (artėjančio prie 0) duoda begalybę.",
+      "wrongExample": "lim(x→0) 1/x = klaida",
+      "correctExample": "lim(x→0+) 1/x = +∞",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
-      "type": "mistake",
+      "id": "neapibreztumo-ignoravimas",
+      "title": "Tiesioginis įstatymas esant neapibrėžtumui",
       "conceptIds": [
-        "integralas"
+        "neapibreztumas"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
+      "wrongPattern": "Rašo 0/0 = 0 arba 0/0 = 1.",
+      "whyItHappens": "Nesuprantama, kad 0/0 reikia papildomai tirti (naikinti neapibrėžtumą).",
+      "correction": "Gautą 0/0 neapibrėžtumą reikia naikinti prastinant reiškinį.",
+      "wrongExample": "lim(x→1) (x-1)/(x²-1) = 0/0 = 0",
+      "correctExample": "lim(x→1) (x-1)/((x-1)(x+1)) = lim(x→1) 1/(x+1) = 1/2",
+      "defaultSrs": true
+    },
+    {
+      "id": "vienpusiu-ribu-nepaisymas",
+      "title": "Vienpusių ribų nepaisymas trūkio taškuose",
+      "conceptIds": [
+        "vienpuse-riba",
+        "trukio-taskas"
+      ],
+      "wrongPattern": "Teigia, kad riba egzistuoja, nors iš kairės ir dešinės artėja prie skirtingų reikšmių.",
+      "whyItHappens": "Tiriamas tik artėjimas iš vienos pusės.",
+      "correction": "Riba egzistuoja tik tada, kai kairioji riba lygi dešiniajai.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "funkciju-ribos-ir-tolydumas-exmp-1",
-      "title": "Seka",
+      "id": "riba-seka-basic",
+      "title": "Paprasta sekos riba",
       "level": "easy",
-      "problem": "Jei a_n=2n+1, rask a_4.",
+      "problem": "Apskaičiuokite ribą: $\\lim_{n \\to \\infty} \\frac{2n + 3}, {n + 1}$",
       "conceptIds": [
-        "seka"
+        "sekos-riba"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Įstatome n=4.",
-          "latex": "9"
-        }
-      ],
-      "answer": "9"
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-exmp-2",
-      "title": "Laipsnis",
-      "level": "easy",
-      "problem": "Apskaičiuok 2^5.",
-      "conceptIds": [
-        "laipsnis"
-      ],
-      "formulaIds": [],
-      "steps": [
+          "text": "Pastebime neapibrėžtumą $\\frac{\\infty}, {\\infty}$. Daliname skaitiklį ir vardiklį iš didžiausio $n$ laipsnio (šiuo atveju $n^1$).",
+          "latex": "\\lim_{n \\to \\infty} \\frac{\\frac{2n}, {n} + \\frac{3}, {n}}, {\\frac{n}, {n} + \\frac{1}, {n}} = \\lim_{n \\to \\infty} \\frac{2 + \\frac{3}, {n}}, {1 + \\frac{1}, {n}}"
+        },
         {
-          "text": "32.",
-          "latex": "32"
+          "text": "Žinome, kad kai $n \\to \\infty$, tai $\\frac{3}, {n} \\to 0$ ir $\\frac{1}, {n} \\to 0$.",
+          "latex": "\\frac{2 + 0}, {1 + 0} = 2"
         }
       ],
-      "answer": "32"
+      "answer": "2"
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-exmp-3",
-      "title": "Logaritmas",
+      "id": "riba-0-per-0-factoring",
+      "title": "Neapibrėžtumas 0/0 (skaidymas)",
       "level": "medium",
-      "problem": "Koks log_2 8?",
+      "problem": "Apskaičiuokite ribą: $\\lim_{x \\to 2} \\frac{x^2 - 4}, {x - 2}$",
       "conceptIds": [
-        "logaritmas"
+        "neapibreztumas",
+        "funkcijos-riba"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3.",
-          "latex": "3"
+          "text": "Įstatę $x = 2$, gauname $\\frac{2^2 - 4}, {2 - 2} = \\frac{0}, {0}$. Tai neapibrėžtumas.",
+          "latex": "\\frac{0}, {0}"
+        },
+        {
+          "text": "Skaidome skaitiklį naudodami kvadratų skirtumo formulę: $x^2 - 4 = (x-2)(x+2)$.",
+          "latex": "\\lim_{x \\to 2} \\frac{(x-2)(x+2)}, {x-2}"
+        },
+        {
+          "text": "Suprastiname $(x-2)$ narį ir apskaičiuojame likusią ribą.",
+          "latex": "\\lim_{x \\to 2} (x + 2) = 2 + 2 = 4"
+        }
+      ],
+      "answer": "4"
+    },
+    {
+      "id": "riba-0-per-0-conjugate",
+      "title": "Neapibrėžtumas 0/0 (jungtinis reiškinys)",
+      "level": "hard",
+      "problem": "Apskaičiuokite ribą: $\\lim_{x \\to 0} \\frac{\\sqrt{x+1} - 1}, {x}$",
+      "conceptIds": [
+        "neapibreztumas"
+      ],
+      "steps": [
+        {
+          "text": "Įstatę $x = 0$, gauname $0/0$. Dauginame skaitiklį ir vardiklį iš skaitiklio jungtinio reiškinio $(\\sqrt{x+1} + 1)$.",
+          "latex": "\\lim_{x \\to 0} \\frac{(\\sqrt{x+1} - 1)(\\sqrt{x+1} + 1)}, {x(\\sqrt{x+1} + 1)}"
+        },
+        {
+          "text": "Skaitiklyje pritaikome $(a-b)(a+b) = a^2 - b^2$.",
+          "latex": "\\lim_{x \\to 0} \\frac{(x+1) - 1}, {x(\\sqrt{x+1} + 1)} = \\lim_{x \\to 0} \\frac{x}, {x(\\sqrt{x+1} + 1)}"
+        },
+        {
+          "text": "Suprastiname $x$ ir įstatome reikšmę.",
+          "latex": "\\lim_{x \\to 0} \\frac{1}, {\\sqrt{x+1} + 1} = \\frac{1}, {1 + 1} = \\frac{1}, {2}"
+        }
+      ],
+      "answer": "1/2"
+    },
+    {
+      "id": "riba-begalybeje-ratio",
+      "title": "Riba begalybėje",
+      "level": "medium",
+      "problem": "Apskaičiuokite ribą: $\\lim_{x \\to \\infty} \\frac{3x^2 + 5x}, {2x^2 - 1}$",
+      "conceptIds": [
+        "asimptote",
+        "begalybe"
+      ],
+      "steps": [
+        {
+          "text": "Daliname visus narius iš aukščiausio vardiklio laipsnio $x^2$.",
+          "latex": "\\lim_{x \\to \\infty} \\frac{\\frac{3x^2}, {x^2} + \\frac{5x}, {x^2}}, {\\frac{2x^2}, {x^2} - \\frac{1}, {x^2}} = \\lim_{x \\to \\infty} \\frac{3 + \\frac{5}, {x}}, {2 - \\frac{1}, {x^2}}"
+        },
+        {
+          "text": "Kadangi $5/x \\to 0$ ir $1/x^2 \\to 0$, lieka koeficientų santykis.",
+          "latex": "\\frac{3 + 0}, {2 - 0} = 1{\n}5"
+        }
+      ],
+      "answer": "1.5"
+    },
+    {
+      "id": "vienpuse-riba-ex",
+      "title": "Vienpusės ribos tyrimas",
+      "level": "medium",
+      "problem": "Apskaičiuokite funkcijos $f(x) = \\frac{|x|}, {x}$ ribas taške $x = 0$ iš kairės ir iš dešinės.",
+      "conceptIds": [
+        "vienpuse-riba",
+        "trukio-taskas"
+      ],
+      "steps": [
+        {
+          "text": "Kai $x \\to 0^+$, tai $x > 0$, todėl $|x| = x$. Riba iš dešinės yra:",
+          "latex": "\\lim_{x \\to 0^+} \\frac{x}, {x} = 1"
+        },
+        {
+          "text": "Kai $x \\to 0^-$, tai $x < 0$, todėl $|x| = -x$. Riba iš kairės yra:",
+          "latex": "\\lim_{x \\to 0^-} \\frac{-x}, {x} = -1"
+        },
+        {
+          "text": "Išvada: kadangi $1 \\neq -1$, riba $\\lim_{x \\to 0} f(x)$ neegzistuoja.",
+          "latex": "1 \\neq -1"
+        }
+      ],
+      "answer": "Riba iš dešinės 1, iš kairės -1. Bendra riba neegzistuoja."
+    },
+    {
+      "id": "tolydumo-radimas-k",
+      "title": "Parametro k radimas tolydumui užtikrinti",
+      "level": "hard",
+      "problem": "Raskite parametro $k$ reikšmę, su kuria funkcija $f(x) = \\begin{cases} 2x + k, & x \\le 1 \\\\ x^2 + 3, & x > 1 \\end{cases}$ būtų tolydi taške $x = 1$.",
+      "conceptIds": [
+        "tolydumas"
+      ],
+      "steps": [
+        {
+          "text": "Funkcija bus tolydi, jei riba iš kairės bus lygi ribai iš dešinės.",
+          "latex": "\\lim_{x \\to 1^-} (2x + k) = \\lim_{x \\to 1^+} (x^2 + 3)"
+        },
+        {
+          "text": "Apskaičiuojame abi puses.",
+          "latex": "2(1) + k = 1^2 + 3"
+        },
+        {
+          "text": "Sprendžiame lygtį.",
+          "latex": "2 + k = 4 \\implies k = 2"
+        }
+      ],
+      "answer": "k = 2"
+    },
+    {
+      "id": "svarbioji-riba-ex",
+      "title": "Pirmosios svarbiosios ribos taikymas",
+      "level": "hard",
+      "problem": "Apskaičiuokite ribą: $\\lim_{x \\to 0} \\frac{\\sin(3x)}, {x}$",
+      "conceptIds": [
+        "riba"
+      ],
+      "steps": [
+        {
+          "text": "Siekdami pritaikyti formulę $\\frac{\\sin u}, {u} \\to 1$, turime vardiklyje gauti tokį patį argumentą $3x$. Dauginame ir daliname iš 3.",
+          "latex": "\\lim_{x \\to 0} \\frac{3 \\cdot \\sin(3x)}, {3x}"
+        },
+        {
+          "text": "Konstantą 3 iškeliame prieš ribos ženklą. Kadangi kai $x \\to 0$, tai ir $3x \\to 0$.",
+          "latex": "3 \\cdot \\lim_{3x \\to 0} \\frac{\\sin(3x)}, {3x}"
+        },
+        {
+          "text": "Pagal svarbiąją ribą, trupmena artėja prie 1.",
+          "latex": "3 \\cdot 1 = 3"
         }
       ],
       "answer": "3"
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-exmp-4",
-      "title": "Trigonometrinis santykis",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje priešpriešinė 3, įžambinė 5. Rask sinusą.",
-      "conceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "3/5.",
-          "latex": "3/5"
-        }
-      ],
-      "answer": "3/5"
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-exmp-5",
-      "title": "Integralas",
+      "id": "eba-e-definition",
+      "title": "Antrosios svarbiosios ribos radimas",
       "level": "hard",
-      "problem": "Rask ∫2x dx.",
+      "problem": "Apskaičiuokite $\\lim_{n \\to \\infty} (1 + \\frac{2}, {n})^n$",
       "conceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "begalybe",
+        "riba"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "x² + C.",
-          "latex": "x^2 + C"
+          "text": "Pertvarkome reiškinį taip, kad jis atitiktų formą $(1 + 1/u)^u$. Pažymime $u = n/2$, tada $n = 2u$.",
+          "latex": "\\lim_{u \\to \\infty} (1 + \\frac{1}, {u})^{2u}"
+        },
+        {
+          "text": "Naudojame laipsnių savybę $(a^b)^c = a^{bc}$.",
+          "latex": "\\left[ \\lim_{u \\to \\infty} (1 + \\frac{1}, {u})^u \\right]^2"
+        },
+        {
+          "text": "Skliausteliuose esanti riba yra skaičius $e$.",
+          "latex": "e^2"
         }
       ],
-      "answer": "x² + C"
+      "answer": "e^2"
     }
   ],
   "exercises": [
@@ -707,747 +708,172 @@
       "id": "funkciju-ribos-ir-tolydumas-ex-001",
       "topicId": "funkciju-ribos-ir-tolydumas",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskaičiuok a_3, kai a_n=2n+1.",
+      "statement": "Apskaičiuokite ribą: $\\lim_{x \\to 3} (2x^2 - 5)$",
       "answer": {
         "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
+        "value": 13
       },
       "hints": [
         {
           "order": 1,
-          "text": "Įstatyk n=3.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Funkcija yra tolydi, tiesiog įstatykite x = 3."
         }
       ],
       "solutionSteps": [
         {
-          "text": "a_3=7",
-          "latex": "7"
+          "text": "2 * 3^2 - 5 = 2 * 9 - 5 = 18 - 5 = 13",
+          "latex": "13"
         }
       ],
-      "answerText": "7",
-      "alternateMethods": [],
+      "answerText": "13",
       "conceptIds": [
-        "seka"
+        "funkcijos-riba"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "estimatedSeconds": 40
     },
     {
       "id": "funkciju-ribos-ir-tolydumas-ex-002",
       "topicId": "funkciju-ribos-ir-tolydumas",
       "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 2.",
+      "level": "Lengvi",
+      "type": "multipleChoice",
+      "statement": "Kokia yra ribos $\\lim_{x \\to 0} \\frac{\\sin x}, {x}$ reikšmė?",
       "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
+        "kind": "choice",
+        "choices": [
+          {
+            "id": "a",
+            "text": "0"
+          },
+          {
+            "id": "b",
+            "text": "1"
+          },
+          {
+            "id": "c",
+            "text": "Begalybė"
+          },
+          {
+            "id": "d",
+            "text": "Neegzistuoja"
+          }
+        ],
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Tai pirmoji svarbioji riba."
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "2"
+          "text": "Pagal apibrėžimą ši riba yra lygi 1.",
+          "latex": "1"
         }
       ],
-      "answerText": "2",
-      "alternateMethods": [],
+      "answerText": "1",
       "conceptIds": [
-        "seka"
+        "riba"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 20
     },
     {
       "id": "funkciju-ribos-ir-tolydumas-ex-003",
       "topicId": "funkciju-ribos-ir-tolydumas",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 3.",
+      "statement": "Apskaičiuokite ribą: $\\lim_{x \\to 5} \\frac{x^2 - 25}, {x - 5}$",
       "answer": {
         "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
+        "value": 10
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Skaidykite skaitiklį (x-5)(x+5)."
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "3"
+          "text": "lim (x-5)(x+5)/(x-5) = lim (x+5) = 10",
+          "latex": "10"
         }
       ],
-      "answerText": "3",
-      "alternateMethods": [],
+      "answerText": "10",
       "conceptIds": [
-        "seka"
+        "neapibreztumas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 60
     },
     {
       "id": "funkciju-ribos-ir-tolydumas-ex-004",
       "topicId": "funkciju-ribos-ir-tolydumas",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 4.",
+      "statement": "Apskaičiuokite $\\lim_{n \\to \\infty} \\frac{4n^2 + 1}, {2n^2 - 3n}$",
       "answer": {
         "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
+        "value": 2
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Dalinkite iš n²."
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
+          "text": "4/2 = 2",
+          "latex": "2"
         }
       ],
-      "answerText": "4",
-      "alternateMethods": [],
+      "answerText": "2",
       "conceptIds": [
-        "seka"
+        "begalybe"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 50
     },
     {
       "id": "funkciju-ribos-ir-tolydumas-ex-005",
       "topicId": "funkciju-ribos-ir-tolydumas",
       "grade": 11,
-      "level": "medium",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 5.",
+      "statement": "Raskite k reikšmę, kad funkcija f(x) būtų tolydi visoje R, kai f(x)=x+1 (kai x<2) ir f(x)=kx-1 (kai x>=2).",
       "answer": {
         "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
+        "value": 2
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "2+1 = k*2 - 1"
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
+          "text": "3 = 2k - 1 => 2k = 4 => k = 2",
+          "latex": "2"
         }
       ],
-      "answerText": "5",
-      "alternateMethods": [],
+      "answerText": "2",
       "conceptIds": [
-        "seka"
+        "tolydumas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-006",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-007",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-008",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-009",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-010",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-011",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-012",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-013",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-014",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-015",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-016",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-017",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-018",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-019",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-ex-020",
-      "topicId": "funkciju-ribos-ir-tolydumas",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijų ribos ir tolydumas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 90
     }
   ],
   "tests": [
     {
-      "id": "funkciju-ribos-ir-tolydumas-test-topic",
-      "title": "Funkcijų ribos ir tolydumas testas",
+      "id": "ribos-testas-1",
+      "title": "Ribos ir tolydumas: Pagrindai",
       "scope": "topic",
       "topicIds": [
         "funkciju-ribos-ir-tolydumas"
@@ -1456,141 +882,56 @@
         "funkciju-ribos-ir-tolydumas-ex-001",
         "funkciju-ribos-ir-tolydumas-ex-002",
         "funkciju-ribos-ir-tolydumas-ex-003",
-        "funkciju-ribos-ir-tolydumas-ex-004",
-        "funkciju-ribos-ir-tolydumas-ex-005",
-        "funkciju-ribos-ir-tolydumas-ex-006",
-        "funkciju-ribos-ir-tolydumas-ex-007",
-        "funkciju-ribos-ir-tolydumas-ex-008"
+        "funkciju-ribos-ir-tolydumas-ex-004"
       ],
+      "timeLimitSeconds": 1200,
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-test-challenge",
-      "title": "Funkcijų ribos ir tolydumas iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "funkciju-ribos-ir-tolydumas"
-      ],
-      "exerciseIds": [
-        "funkciju-ribos-ir-tolydumas-ex-009",
-        "funkciju-ribos-ir-tolydumas-ex-010",
-        "funkciju-ribos-ir-tolydumas-ex-011",
-        "funkciju-ribos-ir-tolydumas-ex-012",
-        "funkciju-ribos-ir-tolydumas-ex-013",
-        "funkciju-ribos-ir-tolydumas-ex-014",
-        "funkciju-ribos-ir-tolydumas-ex-015",
-        "funkciju-ribos-ir-tolydumas-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7
     }
   ],
   "srsCards": [
     {
-      "id": "funkciju-ribos-ir-tolydumas-srs-seka",
+      "id": "srs-riba-def",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
+      "front": "Kas yra funkcijos riba taške?",
+      "back": "Reikšmė, prie kurios artėja funkcijos reikšmės, kai argumentas artėja prie duotojo taško.",
       "conceptIds": [
-        "seka"
+        "funkcijos-riba"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-srs-aritmetine-progresija",
+      "id": "srs-tolydumas-cond",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
+      "front": "Kokia yra pagrindinė tolydumo sąlyga taške x0?",
+      "back": "lim(x→x0) f(x) = f(x0)",
       "conceptIds": [
-        "aritmetine-progresija"
+        "tolydumas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
+      "id": "srs-0-per-0-naikinimas",
+      "deck": "practice",
+      "cardType": "method",
+      "front": "Kaip naikinti 0/0 neapibrėžtumą daugianariuose?",
+      "back": "Skaidyti dauginamaisiais ir prastinti bendrus narius.",
       "conceptIds": [
-        "geometrine-progresija"
+        "neapibreztumas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "funkciju-ribos-ir-tolydumas-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-srs-sekos-forma",
+      "id": "srs-pirmoji-svarbioji",
       "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
+      "front": "Kokia yra pirmoji svarbioji riba?",
+      "back": "lim(x→0) (sin x / x) = 1",
       "conceptIds": [
-        "sekos-forma"
+        "riba"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
-      "conceptIds": [
-        "aritmetines-progresijos-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
-      "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkciju-ribos-ir-tolydumas-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

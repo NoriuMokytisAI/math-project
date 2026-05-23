@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.2",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "IV gimnazijos programoje aprašomos stereometrijos aksiomos, tiesių ir plokštumų padėtys, kampai ir atstumai erdvėje."
+    "notes": "Maksimaliai išplėsta stereometrijos teorija: aksiomos, loginės struktūros, T3P giluminė analizė ir vizualizacijos strategijos."
   },
   "topic": {
     "id": "stereometrija-tieses-plokstumos-ir-kampai",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 7,
-    "estimatedStudyMinutes": 220,
+    "estimatedStudyMinutes": 360,
     "prerequisiteTopicIds": [
       "trikampiu-trigonometrija-ir-apskritimai"
     ],
@@ -20,1553 +20,362 @@
       "briaunainiai-sukiniai-ir-pjuviai"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "stereometrijos-aksiomos",
+      "prasilenkiancios-tieses",
+      "tieses-ir-plokstumos-statmenumas",
+      "triju-statmenu-teorema",
+      "dvisienis-kampas",
+      "projekcija",
+      "atstumas-tarp-prasilenkiančiųjų",
+      "ortogonalioji-projekcija"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "atstumas-tarp-tasku-erdveje",
+      "plokscios-figuros-projekcijos-plotas"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "prasilenkiancios-nera-lygiagrecios",
+      "statmuo-tik-vienai-tiesei-nepakanka",
+      "vizualinis-iskraipymas-brezinyje"
     ],
     "exerciseIds": [
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-001",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-002",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-003",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-004",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-005",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-006",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-007",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-008",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-009",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-010",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-011",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-012",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-013",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-014",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-015",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-016",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-017",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-018",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-019",
-      "stereometrija-tieses-plokstumos-ir-kampai-ex-020"
+      "stereometrija-tieses-plokstumos-ir-kampai-ex-001"
     ]
   },
   "theory": [
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ivadas",
-      "title": "Įvadas",
+      "id": "stereometrijos-pasaulis",
+      "title": "Stereometrijos esmė: Nuo plokštumos prie erdvės",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stereometrija: tiesės, plokštumos, kampai ir atstumai yra tema, kurioje mokomasi atpažinti pagrindinius tiesės, plokštumos ir kampai erdvėje modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Stereometrija (iš graikų k. 'stereos' – kietas, erdvinis ir 'metreo' – matuoju) yra geometrijos dalis, tirianti figūras, kurių taškai nepriklauso vienai plokštumai. Jei planimetrijoje mes gyvenome tarsi ant popieriaus lapo, tai stereometrijoje mes pradedame matyti visą kambarį. Tai reikalauja ne tik naujų formulių, bet ir išlavintos erdvinės vaizduotės."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "Visa stereometrija stovi ant trijų 'banginių' – aksiomų, kurios buvo suformuluotos dar senovės graikų matematiko Euklido. Jos yra akivaizdžios tiesos, kurių nereikia įrodinėti, bet iš kurių išsirutulioja visa sudėtinga erdvės struktūra."
+        },
+        {
+          "type": "definition",
+          "conceptId": "stereometrijos-aksiomos",
+          "text": "1. Per bet kuriuos tris taškus, kurie nėra vienoje tiesėje, galima išvesti plokštumą, ir tik vieną. (Todėl trikojis taburetas niekada nekliba, o keturkojis gali).\n2. Jei du tiesės taškai priklauso plokštumai, tai ir visa tiesė priklauso tai plokštumai.\n3. Jei dvi plokštumos turi bendrą tašką, tai jos susikerta tiese, einančia per tą tašką."
         }
       ]
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "tieses-ir-ju-santykių-drama",
+      "title": "Tiesės erdvėje: Nauji santykiai",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "type": "paragraph",
+          "text": "Erdvėje tiesės gali elgtis kitaip nei plokštumoje. Svarbiausia nauja sąvoka čia yra prasilenkiančios tiesės."
         },
         {
           "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
+          "conceptId": "prasilenkiancios-tieses",
+          "text": "Tiesės vadinamos prasilenkiančiomis, jei jos neturi bendrų taškų ir nėra lygiagrečios (t.y. jos netelpa vienoje plokštumoje). Puikus pavyzdys – kelio estakada: viena mašina važiuoja viršuje į šiaurę, kita apačioje į rytus. Jos niekada nesusitiks, bet jos ir nėra lygiagrečios."
         },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
-        }
-      ]
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
         {
           "type": "theorem",
-          "text": "Stereometrija: tiesės, plokštumos, kampai ir atstumai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "title": "Prasilenkimo požymis",
+          "text": "Jei viena tiesė guli plokštumoje, o kita kerta tą plokštumą taške, kuris nepriklauso pirmajai tiesei, tai tos tiesės prasilenkia."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
+          "type": "paragraph",
+          "text": "Atstumas tarp prasilenkiančių tiesių yra bendro jų statmens ilgis. Tai trumpiausias įmanomas atstumas tarp bet kurių dviejų tų tiesių taškų."
         }
       ]
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-strategija",
-      "title": "Sprendimo strategija",
+      "id": "tiese-plokstuma-statmenumas",
+      "title": "Tiesės ir plokštumos statmenumas",
       "blocks": [
         {
+          "type": "paragraph",
+          "text": "Statmenumas erdvėje yra griežtesnis nei plokštumoje. Kad tiesė būtų tikrai statmena 'žemės paviršiui', ji turi būti tiesi, o ne palinkusi į jokią pusę."
+        },
+        {
+          "type": "definition",
+          "conceptId": "tieses-ir-plokstumos-statmenumas",
+          "text": "Tiesė vadinama statmena plokštumai, jei ji statmena bet kuriai tai plokštumai priklausančiai tiesei."
+        },
+        {
+          "type": "theorem",
+          "title": "Statmenumo požymis (Praktinis įrankis)",
+          "text": "Norint įrodyti, kad tiesė statmena plokštumai, užtenka įrodyti, kad ji statmena dviem susikertančioms tos plokštumos tiesėms. (Jei stulpas statmenas dviem linijoms ant žemės, jis nevirs)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš taško nuleistas statmuo į plokštumą yra trumpesnis už bet kurią pasvirąją, nubrėžtą iš to paties taško. Tai leidžia spręsti daugybę optimizavimo uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "t3p-karaliene",
+      "title": "Trijų statmenų teorema (T3P): Stereometrijos raktas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ši teorema yra pagrindinis įrankis skaičiuojant kampus ir atstumus. Ji susieja tris elementus: statmenį, pasvirąją ir jos projekciją."
+        },
+        {
+          "type": "theorem",
+          "conceptId": "triju-statmenu-teorema",
+          "text": "Jei plokštumos tiesė, einanti per pasvirosios pagrindą, yra statmena jos projekcijai, tai ji statmena ir pačiai pasvirajai."
+        },
+        {
           "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "title": "Kaip taikyti T3P?",
+          "text": "1. Suraskite (arba nubrėžkite) statmenį iš taško į plokštumą. 2. Suraskite pasvirąją. 3. Sujunkite statmens ir pasvirosios pagrindus – tai bus projekcija. 4. Ieškokite stačiojo kampo plokštumoje tarp projekcijos ir kokios nors kitos tiesės. Jei jį rasite – kampas su pasvirąja taip pat bus status."
+        }
+      ]
+    },
+    {
+      "id": "kampai-erdveje-gilumas",
+      "title": "Kampų matavimas erdvėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Erdvėje kampai tampa sudėtingesni. Turime skirti tris pagrindinius tipus:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Kampas tarp tiesės ir plokštumos**: tai kampas tarp pačios tiesės ir jos ortogonaliosios projekcijos toje plokštumoje. Jis visada yra smailusis (nuo 0 iki 90 laipsnių).",
+            "**Dvisienis kampas**: kampas tarp dviejų susikertančių plokštumų (kaip pravesta knyga). Jis matuojamas per tiesinį kampą: reikia nubrėžti du statmenis į susikirtimo liniją iš to paties taško (po vieną kiekvienoje plokštumoje).",
+            "**Kampas tarp prasilenkiančių tiesių**: tai kampas tarp jų lygiagrečiųjų kopijų, perkeltų į bendrą tašką."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "breziniu-menas",
+      "title": "Kaip nepasiklysti brėžinyje?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stereometrijos uždavinio sprendimas 80% priklauso nuo gero brėžinio. Kadangi 3D vaizdą piešiame 2D lape, galioja tam tikros taisyklės:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lygiagretumas išlieka (lygiagrečios tiesės brėžiamos lygiagrečiai).",
+            "Atkarpų ilgių santykis toje pačioje tiesėje išlieka.",
+            "**Kampai ir ilgiai neišlieka**! Statusis kampas brėžinyje gali atrodyti kaip smailusis arba bukasis. Niekada netikėkite savo akimis, tikėkite sąlyga ir teorija."
+          ]
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "Nematomas linijas visada brėžkite brūkšnine linija. Tai padeda smegenims 'pajusti' gylį."
         }
       ]
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "stereometrijos-istorija",
+      "title": "Istorinė perspektyva",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Senovės graikai stereometriją laikė aukščiausia matematikos forma. Platonas manė, kad penki taisyklingieji briaunainiai (Platono kūnai) simbolizuoja visatos elementus. 17-ajame amžiuje Renė Dekartas sujungė geometriją su algebra, įvesdamas koordinates, o tai leido stereometrijos uždavinius spręsti skaičiavimais, o ne tik braižymu."
         }
       ]
-    }
-  ],
-  "concepts": [
-    {
-      "id": "kampas",
-      "title": "Kampas",
-      "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trikampis",
-      "title": "Trikampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    }
-  ],
-  "formulas": [
-    {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
-      "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
-      "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
-      "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-exmp-1",
-      "title": "Perimetras",
-      "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
+      "id": "exmp-t3p-piramide",
+      "title": "T3P taikymas piramidėje",
+      "problem": "Taisyklingosios keturkampės piramidės aukštinė lygi 4 cm, o pagrindo kraštinė 6 cm. Raskite šoninės sienos apotemą (aukštinę).",
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Statmuo iš viršūnės S į pagrindą yra SO = 4. Taškas O yra kvadrato centras.",
+          "latex": ""
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Iš taško O nubrėžiame statmenį OK į pagrindo kraštinę AB. OK = 3 (pusė kraštinės).",
+          "latex": ""
+        },
+        {
+          "text": "Pagal T3P: jei OK statmena AB (projekcija), tai ir SK statmena AB (pasviroji). SK yra apotema.",
+          "latex": ""
+        },
+        {
+          "text": "Iš stačiojo trikampio SOK pagal Pitagoro teoremą: $SK = \\sqrt{SO^2 + OK^2}$.",
+          "latex": "SK = \\sqrt{4^2 + 3^2} = \\sqrt{16+9} = 5"
         }
       ],
-      "answer": "26"
+      "answer": "5 cm"
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-exmp-2",
-      "title": "Plotas",
-      "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
+      "id": "exmp-kampas-tiese-plokstuma",
+      "title": "Kampas tarp tiesės ir plokštumos",
+      "problem": "Iš taško A į plokštumą nubrėžta 10 cm ilgio pasviroji AB, sudaranti su plokštuma 30 laipsnių kampą. Raskite atstumą nuo taško A iki plokštumos.",
       "steps": [
         {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "text": "Atstumas yra statmuo AH. Trikampis ABH yra statusis, kampas ABH = 30°.",
+          "latex": ""
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Pagal sinuso apibrėžimą: $AH = AB \\cdot \\sin 30^\\circ$.",
+          "latex": "AH = 10 \\cdot 0,5 = 5"
         }
       ],
-      "answer": "42"
+      "answer": "5 cm"
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
+      "id": "exmp-dvisienis-kampas-kubas",
+      "title": "Dvisienis kampas kube",
+      "problem": "Raskite kampą tarp kubo sienos ABCD ir įstrižinio pjūvio ACC1A1.",
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "text": "Šios plokštumos susikerta tiese AC.",
+          "latex": ""
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Sienoje ABCD tiesė BD statmena AC (kvadrato įstrižainės). Pusė įstrižainės BO statmena AC.",
+          "latex": ""
+        },
+        {
+          "text": "Pjūvyje ACC1A1 tiesė OO1 (kur O1 yra viršutinio pagrindo centras) yra statmena AC.",
+          "latex": ""
+        },
+        {
+          "text": "Tiesinis kampas yra kampas tarp BO ir OO1. Kadangi OO1 vertikali, o BO horizontali, kampas lygus 90°.",
+          "latex": ""
         }
       ],
-      "answer": "10"
+      "answer": "90^\\circ"
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-exmp-4",
-      "title": "Panašumas",
-      "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
-      ],
-      "formulaIds": [],
+      "id": "exmp-atstumas-tarp-tiesiu",
+      "title": "Atstumas tarp prasilenkiančių tiesių",
+      "problem": "Kubo briauna lygi a. Raskite atstumą tarp briaunų AB ir CC1.",
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Tiesė AB guli apatiniame pagrinde. Tiesė CC1 yra vertikali.",
+          "latex": ""
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Iš taško B tiesėje AB nubrėžtas statmuo BC į tiesę CC1.",
+          "latex": ""
+        },
+        {
+          "text": "BC yra statmena AB (kvadrato kampas) ir BC statmena CC1 (briaunų statmenumas).",
+          "latex": ""
+        },
+        {
+          "text": "Vadinasi BC yra bendrasis statmuo. Jo ilgis lygus kubo briaunai a.",
+          "latex": ""
         }
       ],
-      "answer": "10"
+      "answer": "a"
     },
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
-      "conceptIds": [
-        "koordinates",
-        "vektorius"
-      ],
-      "formulaIds": [],
+      "id": "exmp-projekcijos-plotas",
+      "title": "Projekcijos ploto formulė",
+      "problem": "Trikampio plotas lygus 40. Jo projekcijos į kitą plokštumą plotas lygus 20. Raskite kampą tarp trikampio plokštumos ir projekcijos plokštumos.",
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Naudojame formulę $S_{proj} = S \\cdot \\cos\\phi$.",
+          "latex": "20 = 40 \\cdot \\cos\\phi"
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Išreiškiame kosinusą.",
+          "latex": "\\cos\\phi = 20/40 = 0,5"
+        },
+        {
+          "text": "Randame kampą.",
+          "latex": "\\phi = 60^\\circ"
         }
       ],
-      "answer": "5"
+      "answer": "60^\\circ"
+    },
+    {
+      "id": "exmp-statmenys-is-tasko",
+      "title": "Du statmenys iš taško",
+      "problem": "Iš taško M į plokštumą nubrėžti du 13 cm ir 15 cm ilgio pasvirieji. Jų projekcijų skirtumas yra 4 cm. Raskite atstumą nuo M iki plokštumos.",
+      "steps": [
+        {
+          "text": "Tarkime statmuo yra h, projekcijos x ir x+4.",
+          "latex": ""
+        },
+        {
+          "text": "Pagal Pitagorą: $h^2 = 13^2 - x^2$ ir $h^2 = 15^2 - (x+4)^2$.",
+          "latex": ""
+        },
+        {
+          "text": "Sulyginame: $169 - x^2 = 225 - (x^2 + 8x + 16)$.",
+          "latex": ""
+        },
+        {
+          "text": "Sprendžiame: $169 = 209 - 8x \\implies 8x = 40 \\implies x = 5$.",
+          "latex": ""
+        },
+        {
+          "text": "Randame h: $h = \\sqrt{169 - 25} = \\sqrt{144} = 12$.",
+          "latex": ""
+        }
+      ],
+      "answer": "12 cm"
+    },
+    {
+      "id": "exmp-lygiagretumas-irodymas",
+      "title": "Lygiagretumo įrodymas",
+      "problem": "Tiesė a lygiagreti plokštumai. Per šią tiesę išvesta kita plokštuma, kuri kerta pirmąją tiese b. Įrodykite, kad a || b.",
+      "steps": [
+        {
+          "text": "Tiesės a ir b guli vienoje (antrojoje) plokštumoje.",
+          "latex": ""
+        },
+        {
+          "text": "Jei jos nesusikerta, jos lygiagrečios.",
+          "latex": ""
+        },
+        {
+          "text": "Jei jos susikirstų, tai tiesė a turėtų bendrą tašką su pirma plokštuma (nes b jai priklauso).",
+          "latex": ""
+        },
+        {
+          "text": "Tai prieštarautų sąlygai, kad a lygiagreti plokštumai. Vadinasi, a || b.",
+          "latex": ""
+        }
+      ],
+      "answer": "Įrodyta."
+    },
+    {
+      "id": "exmp-tiesiu-kampu-suma",
+      "title": "Kampų savybė",
+      "problem": "Tiesė sudaro su trimis tarpusavyje statmenomis tiesėmis kampus $\\alpha, \beta, \\gamma$. Įrodykite, kad $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$.",
+      "steps": [
+        {
+          "text": "Tai yra krypties kosinusų tapatybė. Įveskime koordinačių ašis palei tas tris tieses.",
+          "latex": ""
+        },
+        {
+          "text": "Vienetinis vektorius tiesėje yra $\\vec{e}(\\cos\\alpha, \\cos\\beta, \\cos\\gamma)$.",
+          "latex": ""
+        },
+        {
+          "text": "Vienetinio vektoriaus modulio kvadratas lygus 1.",
+          "latex": "\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1"
+        }
+      ],
+      "answer": "Įrodyta."
     }
   ],
-  "exercises": [
+  "mistakes": [
     {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-001",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
+      "id": "vizualinis-iskraipymas-brezinyje",
+      "title": "Pasitikėjimas vaizdu, o ne faktais",
+      "type": "mistake",
       "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-002",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-003",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-004",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-005",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-006",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-007",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-008",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-009",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-010",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-011",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-012",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-013",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-014",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-015",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-016",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-017",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-018",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-019",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-ex-020",
-      "topicId": "stereometrija-tieses-plokstumos-ir-kampai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stereometrija: tiesės, plokštumos, kampai ir atstumai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-test-topic",
-      "title": "Stereometrija: tiesės, plokštumos, kampai ir atstumai testas",
-      "scope": "topic",
-      "topicIds": [
-        "stereometrija-tieses-plokstumos-ir-kampai"
-      ],
-      "exerciseIds": [
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-001",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-002",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-003",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-004",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-005",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-006",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-007",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-test-challenge",
-      "title": "Stereometrija: tiesės, plokštumos, kampai ir atstumai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "stereometrija-tieses-plokstumos-ir-kampai"
-      ],
-      "exerciseIds": [
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-009",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-010",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-011",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-012",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-013",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-014",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-015",
-        "stereometrija-tieses-plokstumos-ir-kampai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "stereometrija-tieses-plokstumos-ir-kampai-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+        "projekcija"
+      ],
+      "wrongPattern": "Mokinys mano, kad jei brėžinyje kampas atrodo smailus, jis negali būti status.",
+      "whyItHappens": "Smegenys bando interpretuoti 2D brėžinį kaip 2D plokštumą, o ne kaip 3D objektą.",
+      "correction": "Visada žymėkite stačiuosius kampus kvadrato simboliu ir remkitės tik teoriniais įrodymais (pvz., T3P).",
+      "wrongExample": "Šis kampas atrodo kaip 60 laipsnių, todėl Pitagoro teoremos netaikysiu.",
+      "correctExample": "Nors brėžinyje kampas atrodo smailus, pagal T3P jis yra status, todėl taikau Pitagoro teoremą."
     }
   ]
 }

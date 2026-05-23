@@ -48,26 +48,106 @@
   },
   "theory": [
     {
-      "id": "olimpiada-07-alg-theory-1",
-      "title": "Euklido algoritmas ir tarpusavyje pirminiai skaičiai",
+      "id": "olimpiada-07-alg-theory-intro",
+      "title": "Algebra: Nuo formulių estetikos iki lygčių sistemų",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Didžiausio bendrojo daliklio (DBD) radimas yra vienas iš pamatinių skaičių teorijos uždavinių. Euklido algoritmas remiasi pastebėjimu, kad dviejų skaičių $a$ ir $b$ ($a > b$) DBD yra toks pat kaip skaičių $b$ ir $a - b$ (arba liekanos $a \\pmod b$)."
+          "text": "Septintoje klasėje algebra tampa pagrindiniu olimpiadininko įrankiu. Mes nustojame skaičiuoti tik su skaitmenimis ir pradedame valdyti struktūras. Čia svarbu ne 'išspręsti' lygtį, o suprasti, kokias transformacijas galime atlikti, kad sudėtingas reiškinys virstų elegantiška ir paprasta išraiška. Algebra moko mus matyti bendrumus ten, kur kiti mato tik skirtingus skaičius."
         },
         {
-          "type": "method",
-          "text": "Kartotinai dalindami su liekana, greitai randame bet kokių dviejų skaičių DBD. Jei dviejų skaičių DBD yra lygus 1, jie vadinami tarpusavyje pirminiais."
+          "type": "paragraph",
+          "text": "Sėkmingas septintoko pasirodymas olimpiadose priklauso nuo trijų dalykų: puikaus sutrumpintos daugybos formulių valdymo, gebėjimo skaidyti daugianarius daugikliais ir lankstaus mąstymo sudarant lygčių sistemas. Šiame skyriuje gilinsimės į metodus, kurie leidžia suvaldyti net ir pačias painiausias algebrines pinkles."
         }
       ]
     },
     {
-      "id": "olimpiada-07-alg-theory-2",
-      "title": "Algebrinės transformacijos",
+      "id": "olimpiada-07-alg-theory-identities",
+      "title": "1. Sutrumpintos daugybos formulės: Greičio ir grožio įrankis",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olimpiadinėje algebroje svarbu ne tik spręsti lygtis, bet ir sumaniai keisti jų pavidalą naudojant sutrumpintos daugybos formules."
+          "text": "Sutrumpintos daugybos formulės nėra tik atmintinai mokomi tekstai – tai galingi įrankiai, leidžiantys akimirksniu atlikti veiksmus, kurie užtruktų minutes dauginant 'stulpeliu' arba skliaustas iš skliausto."
+        },
+        {
+          "type": "method",
+          "text": "**Pagrindinės formulės**:\n- **Sumos/skirtumo kvadratas**: $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$\n- **Kvadratų skirtumas**: $a^2 - b^2 = (a-b)(a+b)$\n- **Kubų suma/skirtumas**: $a^3 \\pm b^3 = (a \\pm b)(a^2 \\mp ab + b^2)$"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Strategija: Pilnojo kvadrato išskyrimas**. Olimpiadose dažnai duodamas reiškinys $x^2 + 6x + 10$. Mes galime jį perrašyti kaip $(x^2 + 6x + 9) + 1 = (x+3)^2 + 1$. Kadangi bet koks kvadratas yra neneigiamas, mes iškart matome, kad šio reiškinio mažiausia vertė yra 1 (kai $x=-3$). Tai nepakeičiamas metodas įrodant nelygybes."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-07-alg-theory-factoring",
+      "title": "2. Skaidymas daugikliais: Algebrinė detektyva",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skaidymas daugikliais yra procesas, kai sumą paverčiame sandauga. Tai raktas į lygčių sprendimą, trupmenų prastinimą ir skaičių teorijos uždavinius."
+        },
+        {
+          "type": "method",
+          "text": "**Pagrindiniai būdai**:\n1. **Iškėlimas prieš skliaustus**: ieškome visų narių bendro daugiklio.\n2. **Grupavimas**: skirstome narius į poras, kad kiekviena pora turėtų bendrą daugiklį.\n3. **Formulių taikymas**: atpažįstame kvadratų ar kubų skirtumus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Strategija: Dirbtinis nario pridėjimas/atėmimas**. Kartais, kad pavyktų sugrupuoti, reikia pridėti 'gudrų nulį'. Pavyzdžiui, skaidant $x^4 + 4$, galime pridėti ir atimti $4x^2$: $x^4 + 4x^2 + 4 - 4x^2 = (x^2+2)^2 - (2x)^2 = (x^2+2-2x)(x^2+2+2x)$."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-07-alg-theory-systems",
+      "title": "3. Lygčių sistemos: Dviejų nežinomųjų balansas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Septintoje klasėje susipažįstame su tiesinių lygčių sistemomis. Nors yra du pagrindiniai metodai (keitimo ir sudėties), olimpiadose dažnai reikia kažko daugiau."
+        },
+        {
+          "type": "method",
+          "text": "**Netradiciniai metodai**: Dažnai naudinga lygtis ne tik sudėti ar atimti, bet ir padauginti ar padalinti vieną iš kitos. Pavyzdžiui, jei turime $xy = 6$ ir $yz = 10$ ir $xz = 15$, sudauginę visas tris lygtis gausime $(xyz)^2 = 900$, iš kur $xyz = 30$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tekstiniuose uždaviniuose lygčių sistemos padeda modeliuoti judėjimą upe (prieš srovę ir pasroviui), tirpalų maišymą ar amžiaus skirtumus."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-07-alg-theory-diophantine",
+      "title": "4. Diofantinės lygtys: Kai ieškome tik sveikųjų skaičių",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diofantinės lygtys – tai algebros ir skaičių teorijos sankirta. Čia turime vieną lygtį su dviem nežinomaisiais, bet žinome, kad $x$ ir $y$ turi būti sveikieji skaičiai."
+        },
+        {
+          "type": "method",
+          "text": "**Skaidymo į daugiklius metodas**: Lygtį $xy + x + y = 5$ perrašome pridedami 1 prie abiejų pusių: $(x+1)(y+1) = 6$. Dabar mums tereikia išnagrinėti skaičiaus 6 daliklius ($1 \\cdot 6, 2 \\cdot 3, -1 \\cdot -6$ ir t.t.)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai viena gražiausių strategijų, nes ji paverčia begalinių galimybių paiešką baigtiniu variantų sąrašu."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-07-alg-theory-inequalities",
+      "title": "5. Nelygybės ir modulis: Intervalų logika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dirbant su nelygybėmis, svarbiausia taisyklė – neigiamas skaičius. Dauginant arba dalijant iš neigiamo skaičiaus, nelygybės ženklas privalo apsisukti."
+        },
+        {
+          "type": "method",
+          "text": "**Modulis nelygybėse**: $|x| < a$ reiškia, kad $x$ yra tarp $-a$ ir $a$ (atstumas nuo nulio mažas). $|x| > a$ reiškia, kad $x$ yra už šio intervalo ribų (atstumas nuo nulio didelis)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose dažnai tenka spręsti nelygybes su kintamuoju vardiklyje. Čia negalima tiesiog 'padauginti iš vardiklio', nes nežinome jo ženklo. Reikia perkelti viską į vieną pusę ir analizuoti skaitiklio bei vardiklio ženklų derinius."
         }
       ]
     }
@@ -77,141 +157,191 @@
       "id": "olimpiada-07-concept-logic",
       "title": "Olimpiadinė logika",
       "type": "concept",
-      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
+      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus, matyti bendras struktūras ir konstruoti įrodymus.",
+      "intuition": "Tai 'mąstymas už skaičių ribų' – kai ne tik sprendžiame, bet ir suprantame, kodėl sprendimas veikia.",
+      "formal": "Dedukcinis ir abdukcinis mąstymas, taikomas matematinėms sistemoms analizuoti.",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-07-concept-method",
       "title": "Įrodymo metodas",
       "type": "concept",
-      "shortDefinition": "Loginis argumentavimas.",
+      "shortDefinition": "Loginis argumentavimas, užtikrinantis teiginio teisingumą visiems nagrinėjamiems atvejams.",
+      "intuition": "Tai atsakymas į klausimą 'kodėl?', kuris galioja visada, o ne tik vienam pavyzdžiui.",
+      "formal": "Aksiomomis ir anksčiau įrodytomis teoremomis pagrįsta teiginių seka.",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-07-concept-divisibility",
-      "title": "Dalumas",
+      "title": "Algebrinis dalumas",
       "type": "concept",
-      "shortDefinition": "Savybė, kai skaičius dalijasi be liekanos.",
+      "shortDefinition": "Savybė, kai vienas daugianaris dalijasi iš kito be liekanos arba skaičius dalija reiškinio reikšmę.",
+      "intuition": "Tai skaičių teorijos perkėlimas į algebrą.",
+      "formal": "Reiškinys A dalus iš B, jei egzistuoja reiškinys Q, kad A = B * Q.",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-07-concept-proportion",
-      "title": "Olimpiada 07 concept proportion",
+      "title": "Proporcijos ir santykiai",
       "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "olimpiada-07-algebra"
-      ],
-      "defaultSrs": true
+      "shortDefinition": "Dydžių palyginimas per jų dalmenį ir dviejų santykių lygybė.",
+      "intuition": "Dydžių tarpusavio ryšys: kiek kartų vienas didesnis už kitą.",
+      "formal": "a/b = c/d, pagrindinė savybė: a*d = b*c.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "f-square-sum",
+      "title": "Sumos kvadratas",
+      "formula": "(a + b)^2 = a^2 + 2ab + b^2",
+      "description": "Pagrindinė septintos klasės algebros formulė."
+    },
+    {
+      "id": "f-diff-squares",
+      "title": "Kvadratų skirtumas",
+      "formula": "a^2 - b^2 = (a-b)(a+b)",
+      "description": "Leidžia išskaidyti skirtumą į sandaugą."
+    },
+    {
+      "id": "f-cube-sum",
+      "title": "Kubų suma",
+      "formula": "a^3 + b^3 = (a + b)(a^2 - ab + b^2)",
+      "description": "Naudinga sudėtingesniuose skaidymo uždaviniuose."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "m-square-error",
+      "title": "Sumos kvadrato ignoravimas",
+      "description": "Rašymas $(a+b)^2 = a^2 + b^2$, pamirštant narys $2ab$.",
+      "fix": "Visada priminkite sau, kad kvadratas yra viso skliausto dauginimas iš savęs: $(a+b)(a+b)$."
+    },
+    {
+      "id": "m-inequality-minus",
+      "title": "Nelygybės ženklo klaida",
+      "description": "Pamirštama apversti nelygybės ženklą dauginant iš neigiamo skaičiaus.",
+      "fix": "Griežta taisyklė: padauginus iš $-1$, $>$ tampa $<$."
+    },
+    {
+      "id": "m-root-sum",
+      "title": "Šaknies skirstymas",
+      "description": "Manymas, kad $\\sqrt{a^2+b^2} = a+b$.",
+      "fix": "Šaknis iš sumos NĖRA lygi šaknų sumai. Pirmiausia reikia atlikti veiksmus sumos viduje."
+    }
+  ],
   "workedExamples": [
     {
-      "id": "we-olimpiada-07-alg-01",
-      "title": "Lygčių sistemos sudėjimo metodas",
-      "level": "medium",
-      "problem": "Išspręskite sistemą: $x + y = 10, x - y = 4$.",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
+      "id": "we-ol-7-alg-1",
+      "title": "Gudrus skaičiavimas su formulėmis",
+      "problem": "Apskaičiuokite reikšmę be skaičiuotuvo: $999^2 + 1999$.",
       "steps": [
         {
-          "text": "Sudėjus lygtis: $2x = 14 \\implies x = 7$.",
-          "latex": "2x=14"
+          "text": "Pastebėkime, kad $1999 = 2000 - 1 = 2 \\cdot 1000 - 1$."
         },
         {
-          "text": "Įstačius $x=7$ į $x+y=10$: $y = 3$.",
-          "latex": "7+y=10"
+          "text": "Tačiau yra dar geresnis būdas: $1999 = 1000 + 999$."
+        },
+        {
+          "text": "O dar geriau: $999^2 + 1999 = 999^2 + 2 \\cdot 999 + 1$."
+        },
+        {
+          "text": "Matome sumos kvadrato formulę: $a^2 + 2ab + b^2$, kur $a=999, b=1$."
+        },
+        {
+          "text": "Rezultatas: $(999+1)^2 = 1000^2 = 1\\ 000\\ 000$."
         }
       ],
-      "answer": "x=7, y=3"
+      "answer": "1 000 000"
     },
     {
-      "id": "we-olimpiada-07-alg-02",
-      "title": "Skaitmenų sukeitimas",
-      "level": "hard",
-      "problem": "Dviženklio skaičiaus skaitmenų suma 12. Sukeitus juos, skaičius padidėja 18. Raskite skaičių.",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
+      "id": "we-ol-7-alg-2",
+      "title": "Lygčių sistemos transformacija",
+      "problem": "Išspręskite sistemą: $x + xy + y = 11$, $x^2y + xy^2 = 30$.",
       "steps": [
         {
-          "text": "Lygtys: $x+y=12$ ir $(10y+x) - (10x+y) = 18 \\implies 9(y-x) = 18 \\implies y-x=2$.",
-          "latex": "y-x=2"
+          "text": "Pertvarkome pirmą lygtį: $x+y + xy = 11$."
         },
         {
-          "text": "Iš $y+x=12$ ir $y-x=2$ gauname $y=7, x=5$.",
-          "latex": "x=5, y=7"
+          "text": "Iškeliame bendrą daugiklį antroje lygtyje: $xy(x+y) = 30$."
+        },
+        {
+          "text": "Pažymime $S = x+y$ ir $P = xy$."
+        },
+        {
+          "text": "Gauname paprastą sistemą: $S+P=11$ ir $S \\cdot P = 30$."
+        },
+        {
+          "text": "Skaičiai, kurių suma 11, o sandauga 30, yra 5 ir 6."
+        },
+        {
+          "text": "Atvejis 1: $x+y=5, xy=6 \\to$ sprendiniai $(2, 3)$ ir $(3, 2)$."
+        },
+        {
+          "text": "Atvejis 2: $x+y=6, xy=5 \\to$ sprendiniai $(1, 5)$ ir $(5, 1)$."
         }
       ],
-      "answer": "57"
+      "answer": "(1, 5), (5, 1), (2, 3), (3, 2)"
     },
     {
-      "id": "we-olimpiada-07-alg-03",
-      "title": "Procentų taikymas",
-      "level": "easy",
-      "problem": "Prekė kainavo 100 eurų. Kaina padidėjo 10%, o tada sumažėjo 10%. Kokia galutinė kaina?",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
+      "id": "we-ol-7-alg-3",
+      "title": "Nelygybės įrodymas",
+      "problem": "Įrodykite, kad bet kokiems $a$ ir $b$ galioja: $a^2 + b^2 \\ge 2ab$.",
       "steps": [
         {
-          "text": "Po padidėjimo: $100 \\cdot 1.1 = 110$.",
-          "latex": "100 \\cdot 1.1 = 110"
+          "text": "Perkeliame viską į vieną pusę: $a^2 - 2ab + b^2 \\ge 0$."
         },
         {
-          "text": "Po sumažėjimo: $110 \\cdot 0.9 = 99$.",
-          "latex": "110 \\cdot 0.9 = 99"
+          "text": "Atpažįstame skirtumo kvadrato formulę: $(a-b)^2 \\ge 0$."
+        },
+        {
+          "text": "Kadangi bet kurio realiojo skaičiaus kvadratas visada yra neneigiamas, nelygybė įrodyta."
         }
       ],
-      "answer": "99"
+      "answer": "Įrodyta"
     },
     {
-      "id": "we-olimpiada-07-alg-04",
-      "title": "Daugianarių skaidymas",
-      "level": "medium",
-      "problem": "Išskaidykite $a^2 - b^2 + a - b$.",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
+      "id": "we-ol-7-alg-4",
+      "title": "Diofantinė lygtis",
+      "problem": "Raskite visus sveikuosius skaičius $x$ ir $y$, kad $xy = x + y + 3$.",
       "steps": [
         {
-          "text": "Sugrupuokite: $(a^2 - b^2) + (a - b)$.",
-          "latex": "(a-b)(a+b) + (a-b)"
+          "text": "Perkeliame kintamuosius: $xy - x - y = 3$."
         },
         {
-          "text": "Iškelkite $(a-b)$ prieš skliaustus: $(a-b)(a+b+1)$.",
-          "latex": "(a-b)(a+b+1)"
+          "text": "Pridedame 1 prie abiejų pusių, kad galėtume sugrupuoti: $xy - x - y + 1 = 4$."
+        },
+        {
+          "text": "Skaidome: $x(y-1) - (y-1) = 4 \\to (x-1)(y-1) = 4$."
+        },
+        {
+          "text": "Išnagrinėjame skaičiaus 4 daliklius: $(1, 4), (2, 2), (4, 1), (-1, -4), (-2, -2), (-4, -1)$."
+        },
+        {
+          "text": "Iš kiekvienos poros randame $x$ ir $y$. Pvz., iš $(1, 4)$ turime $x-1=1, y-1=4 \\to (2, 5)$."
         }
       ],
-      "answer": "(a-b)(a+b+1)"
+      "answer": "(2, 5), (3, 3), (5, 2), (0, -3), (-1, -1), (-3, 0)"
     },
     {
-      "id": "we-olimpiada-07-alg-05",
-      "title": "Aritmetinė seka",
-      "level": "medium",
-      "problem": "Raskite dešimtąjį sekos 2, 5, 8, ... narį.",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
+      "id": "we-ol-7-alg-5",
+      "title": "Reiškinio suprastinimas",
+      "problem": "Suprastinkite: $\\frac{a^3 - b^3}{a-b} - 3ab$.",
       "steps": [
         {
-          "text": "Skirtumas $d = 3, a_1 = 2$.",
-          "latex": "d=3"
+          "text": "Pritaikome kubų skirtumo formulę: $a^3 - b^3 = (a-b)(a^2 + ab + b^2)$."
         },
         {
-          "text": "$a_{10} = 2 + 9 \\cdot 3 = 29$.",
-          "latex": "a_{10} = 2 + 27 = 29"
+          "text": "Suprastiname trupmeną padalindami iš $(a-b)$: lieka $a^2 + ab + b^2$."
+        },
+        {
+          "text": "Atimame likusį narį: $a^2 + ab + b^2 - 3ab = a^2 - 2ab + b^2$."
+        },
+        {
+          "text": "Atpažįstame skirtumo kvadratą: $(a-b)^2$."
         }
       ],
-      "answer": "29"
+      "answer": "(a-b)^2"
     }
   ],
   "exercises": [
@@ -219,7 +349,7 @@
       "id": "ex-olimpiada-07-15e75e74",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -274,7 +404,7 @@
       "id": "ex-olimpiada-07-7e30a65c",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -328,7 +458,7 @@
       "id": "ex-olimpiada-07-5585385b",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -373,7 +503,7 @@
       "id": "ex-olimpiada-07-9cbe13cb",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -418,7 +548,7 @@
       "id": "ex-olimpiada-07-4ed27723",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -463,7 +593,7 @@
       "id": "ex-olimpiada-07-6e85f8cd",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -508,7 +638,7 @@
       "id": "ex-olimpiada-07-5cb75c1f",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -553,7 +683,7 @@
       "id": "ex-olimpiada-07-cc31e7e8",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -598,7 +728,7 @@
       "id": "ex-olimpiada-07-alg-09",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -643,7 +773,7 @@
       "id": "ex-olimpiada-07-alg-10",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -688,7 +818,7 @@
       "id": "ex-olimpiada-07-alg-11",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -733,7 +863,7 @@
       "id": "ex-olimpiada-07-alg-12",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "advanced",
@@ -778,7 +908,7 @@
       "id": "ex-olimpiada-07-alg-13",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -823,7 +953,7 @@
       "id": "ex-olimpiada-07-alg-14",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -868,7 +998,7 @@
       "id": "ex-olimpiada-07-alg-15",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -913,7 +1043,7 @@
       "id": "ex-olimpiada-07-alg-16",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -958,7 +1088,7 @@
       "id": "ex-olimpiada-07-alg-17",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1003,7 +1133,7 @@
       "id": "ex-olimpiada-07-alg-18",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1048,7 +1178,7 @@
       "id": "ex-olimpiada-07-alg-19",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1093,7 +1223,7 @@
       "id": "ex-olimpiada-07-alg-20",
       "topicId": "olimpiada-07-algebra",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",

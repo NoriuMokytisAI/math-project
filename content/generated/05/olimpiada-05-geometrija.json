@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Generated from Olympiad Syllabus with high-quality math olympiad problems."
+    "notes": "Atnaujinta su išsamia teorija ir metodiniais pavyzdžiais."
   },
   "topic": {
     "id": "olimpiada-05-geometrija",
@@ -12,12 +12,16 @@
     "strand": "Geometrija",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 120,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
       "olimpiada-05-concept-logic",
-      "olimpiada-05-concept-method"
+      "olimpiada-05-concept-method",
+      "geo-strat-skaidymas",
+      "geo-strat-papildymas",
+      "geo-strat-zsymetrija",
+      "geo-strat-skaiciavimas"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -44,7 +48,38 @@
       "ex-olimpiada-05-geo-010"
     ]
   },
-  "theory": [],
+  "theory": [
+    {
+      "id": "geo-intro",
+      "title": "Kas yra olimpiadinė geometrija?",
+      "content": "Sveiki atvykę į geometrijos pasaulį! Penktos klasės olimpiadose geometrija nėra vien tik mokėjimas naudotis liniuote ar žinoti, kas yra kvadratas. Tai gebėjimas **matyti** tai, kas neparašyta sąlygoje, ir **atpažinti struktūrą** ten, kur kiti mato tik linijų kratinį.\n\nPagrindinis skirtumas tarp paprastų uždavinių ir olimpiadinių yra tas, kad olimpiadose jums retai bus pateikta paruošta formulė. Jums patiems reikės susikurti sprendimo kelią, dažnai naudojant pagalbines linijas, figūrų perstūmimus ar net „veidrodinį mąstymą“. Šioje pamokoje apžvelgsime pagrindines strategijas, kurios padės įveikti net sudėtingiausius geometrijos iššūkius."
+    },
+    {
+      "id": "geo-visual",
+      "title": "Geometrinė intuicija ir vizualizacija",
+      "content": "Vienas svarbiausių įrankių olimpiadininko arsenale yra **vizualizacija**. Tai gebėjimas mintyse pasukti figūrą, ją perpjauti ar sujungti su kita.\n\n**Strategija: Pagalbinės linijos.** Dažnai uždavinys atrodo neišsprendžiamas, nes mums trūksta informacijos. Nubrėžę vieną papildomą liniją (pavyzdžiui, sujungę dvi viršūnes arba pratęsę kraštinę iki susikirtimo), galime pamatyti pažįstamas figūras – stačiakampius ar lygius trikampius.\n\n**Strategija: „Nekintamumo“ paieška.** Keičiant figūros formą (pavyzdžiui, lankstant popierių), kai kurios savybės nesikeičia. Plotas paprastai išlieka toks pat, jei nieko neišmetame, o kampai tarp linijų gali išlikti lygūs dėl simetrijos. Mokėjimas atskirti, kas keičiasi, o kas ne, yra raktas į sėkmę."
+    },
+    {
+      "id": "geo-area-perimeter",
+      "title": "Sudėtinių figūrų perimetras ir plotas",
+      "content": "Olimpiadinės figūros dažnai primena laiptus, raides arba keistus dantračius. Kaip rasti jų perimetrą ar plotą neskaičiuojant kiekvienos mažos atkarpos atskirai?\n\n**1. Skaidymo metodas.** Jei figūra yra sudėtinga, supjaustykite ją į paprastas dalis: stačiakampius, kvadratus ar trikampius. Visos figūros plotas bus lygus jos dalių plotų sumai: $S_{\\text{viso}} = S_1 + S_2 + \\dots + S_n$.\n\n**2. Papildymo (stačiakampio rėmo) metodas.** Kartais lengviau ne skaidyti figūrą, o „įdėti“ ją į didelį stačiakampį. Tada figūros plotas bus lygus didžiojo stačiakampio plotui minus „tuščių“ kampų plotai. Šis metodas ypač naudingas skaičiuojant „laiptuotų“ figūrų plotą.\n\n**3. Perimetro perstūmimo taisyklė.** Įsivaizduokite laiptuotą figūrą. Jei visas „vidines“ laiptelių atkarpas pastumtume į išorę, dažnai gautume paprastą stačiakampį. Tai reiškia, kad tokios figūros perimetras yra lygus stačiakampio, į kurį ji telpa, perimetrui. Svarbu: tai galioja tik jei figūra neturi „įdubimų“ (vidinių kampų, kurie neatsiremia į išorinį rėmą)."
+    },
+    {
+      "id": "geo-angles",
+      "title": "Kampų medžioklė ir laikrodžiai",
+      "content": "Kampai olimpiadose slepiasi visur. Penktoje klasėje svarbiausia suprasti tris dalykus:\n\n1.  **Gretimi kampai:** Jų suma visada lygi $180^\\circ$. Jei žinote vieną, žinote ir kitą: $\\alpha + \\beta = 180^\\circ$.\n2.  **Kryžminiai kampai:** Kai dvi tiesės susikerta, priešpriešiais esantys kampai yra lygūs.\n3.  **Trikampio kampų suma:** Nors tai dažniau mokomasi vėliau, olimpiadose tai bazinis faktas – bet kokio trikampio vidinių kampų suma yra $180^\\circ$.\n\n**Laikrodžio rodyklių kampai.** Tai klasikinė tema. Prisiminkite:\n- Ciferblatas yra apskritimas, turintis $360^\\circ$.\n- Kiekviena valandos padala (nuo 1 iki 2, nuo 2 iki 3 ir t.t.) atitinka $30^\\circ$ ($360 / 12 = 30$).\n- **Svarbiausia gudrybė:** Valandinė rodyklė nestovi vietoje, kol minutinė juda! Per vieną minutę minutinė rodyklė pasislenka $6^\\circ$ ($360 / 60$), o valandinė – tik $0.5^\\circ$ ($30 / 60$). Šis mažas poslinkis dažnai yra uždavinio „kabliukas“."
+    },
+    {
+      "id": "geo-counting",
+      "title": "Sistemingas figūrų skaičiavimas",
+      "content": "„Kiek trikampių matote šiame brėžinyje?“ – tai klausimas, kuriame mokiniai dažniausiai daro klaidų dėl skubėjimo. Kad nepasiklystumėte, naudokite **metodinį žymėjimą**.\n\n**Žingsniai:**\n1.  Suskirstykite brėžinį į mažiausias „elementariąsias“ dalis ir jas sunumeruokite (1, 2, 3...).\n2.  Skaičiuokite trikampius (ar kitas figūras) pagal tai, iš kiek dalių jie sudaryti:\n    - Tik iš vienos dalies: (1), (2), (3)...\n    - Iš dviejų dalių derinių: (1+2), (2+3)...\n    - Iš trijų dalių derinių ir t.t.\n3.  Surašykite visus derinius sąraše. Taip nieko nepraleisite ir nieko nesuskaičiuosite du kartus."
+    },
+    {
+      "id": "geo-symmetry",
+      "title": "Simetrija ir karpymai",
+      "content": "Simetrija padeda spręsti uždavinius, kuriuose reikia rasti trumpiausią kelią arba suprasti, kas nutiks perkirpus sulankstytą popierių.\n\n**Karpymai (Tangramų logika).** Kai figūra sukarpoma ir sudėliojama nauja, jos **plotas nesikeičia**. Tai vadinama plotų tverme. Tačiau **perimetras gali pasikeisti** dramatiškai! Kiekvienas naujas pjūvis sukuria dvi naujas kraštines, kurios anksčiau buvo figūros viduje. \n\n**Simetrijos ašys.** Taisyklingosios figūros turi tiek simetrijos ašių, kiek turi kraštinių (pvz., kvadratas – 4, lygiakraštis trikampis – 3). Olimpiadose dažnai klausiama apie raidžių simetriją ar skaičių atspindžius. Pavyzdžiui, skaičius 808 veidrodyje atrodo taip pat, o 106 – jau nebe."
+    }
+  ],
   "concepts": [
     {
       "id": "olimpiada-05-concept-logic",
@@ -63,26 +98,175 @@
       "intuition": "Tai nėra tiesiog kelių pavyzdžių patikrinimas. Tai paaiškinimas, KODĖL tai galioja visada be jokių išimčių.",
       "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "geo-strat-skaidymas",
+      "title": "Skaidymo strategija",
+      "type": "method",
+      "shortDefinition": "Sudėtingos figūros padalinimas į paprastesnes dalis (stačiakampius, trikampius), kurių savybes lengviau apskaičiuoti.",
+      "intuition": "Jei negali įveikti visos tvirtovės iškart, paimk ją po vieną kambarį.",
+      "formal": "Figūros ploto adityvumo savybė, teigianti, kad nesikertančių figūrų sąjungos plotas lygus jų plotų sumai.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "geo-strat-papildymas",
+      "title": "Papildymo strategija",
+      "type": "method",
+      "shortDefinition": "Figūros papildymas iki didesnės, taisyklingos formos (pvz., stačiakampio), o tada nereikalingų dalių atėmimas.",
+      "intuition": "Kartais lengviau nupiešti rėmą ir iškirpti tai, ko nereikia, nei lipdyti iš mažų gabalėlių.",
+      "formal": "Ploto skaičiavimas naudojant skirtumo operaciją: $S = S_{\\text{rėmo}} - S_{\\text{tuštumos}}$.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "formula-clock-angle",
+      "title": "Laikrodžio rodyklių greičiai",
+      "latex": "v_{\\text{min}} = 6^\\circ/\\text{min}, \\quad v_{\\text{val}} = 0,5^\\circ/\\text{min}",
+      "description": "Minutinė rodyklė per minutę nueina 6 laipsnius, o valandinė - tik pusę laipsnio."
+    },
+    {
+      "id": "formula-n-gon-diag",
+      "title": "Taisyklingojo daugiakampio simetrija",
+      "latex": "N_{\\text{ašys}} = n",
+      "description": "Taisyklingasis n-kampis turi tiksliai n simetrijos ašių."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "mistake-perimeter-add",
+      "title": "Plotų ir perimetrų painiojimas skaidant",
+      "description": "Mokiniai dažnai mano, kad sudėjus dvi figūras, jų perimetrai tiesiog susisumuoja.",
+      "correction": "Sudedant figūras, perimetras sumažėja dvigubu suliejimo linijos ilgiu, nes tos kraštinės tampa vidinėmis."
+    },
+    {
+      "id": "mistake-clock-static",
+      "title": "Statiška valandinė rodyklė",
+      "description": "Manymas, kad 3:30 valandinė rodyklė vis dar rodo tiesiai į 3.",
+      "correction": "Valandinė rodyklė visada juda. Ties 3:30 ji bus pusiaukelėje tarp 3 ir 4."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "4 Pavyzdys: Kvadrato dalijimas",
-      "problem": "Kvadratinį popieriaus lapą, kurio plotas yra $64\\text{ cm}^2$, norima padalinti į $4$ stačiakampius, kurių kraštinės yra sveikieji skaičiai, o plotai lygūs $8\\text{ cm}^2$, $12\\text{ cm}^2$, $20\\text{ cm}^2$ ir $24\\text{ cm}^2$. Kokie turi būti šių stačiakampių matmenys?",
+      "id": "ex-work-1",
+      "title": "1 Pavyzdys: Sistemingas trikampių skaičiavimas",
+      "problem": "Kiek iš viso trikampių yra brėžinyje, kurį sudaro didelis trikampis, padalintas viena horizontalia linija per vidurį ir viena vertikalia linija iš viršūnės į pagrindą?",
+      "strategyRationale": "Naudosime dalių žymėjimo metodą, kad nepraleistume nė vieno trikampio ir išvengtume dubliavimo. Tai saugiausias būdas skaičiavimo uždaviniuose.",
       "steps": [
         {
-          "text": "Jei kvadrato plotas yra $64$, jo kraštinės ilgis yra $8$ cm."
+          "text": "Suskirstome figūrą į mažiausius plotelius. Po horizontalios ir vertikalios linijos kirtimosi turime 4 mažas sritis: kairė viršuje (A), dešinė viršuje (B), kairė apačioje (C), dešinė apačioje (D).",
+          "latex": "\\text{Sritys: } A, B, C, D"
         },
         {
-          "text": "Kiekvieno stačiakampio plotas $S = a \\times b$. Ieškome daliklių, kurie tilptų į $8 \\times 8$ kvadratą."
+          "text": "Skaičiuojame trikampius iš 1 dalies: A ir B yra trikampiai. C ir D yra keturkampiai (trapecijos). Viso: 2.",
+          "latex": "N_1 = 2 \\text{ (A, B)}"
         },
         {
-          "text": "Pabandykime: 1x8 (plotas 8) ir 3x8 (plotas 24). Jie užima 4x8 plotą. Lieka kita kvadrato dalis 4x8. Ją padaliname į 3x4 (plotas 12) ir 5x4 (plotas 20). 3+5=8. Viskas tinka."
+          "text": "Skaičiuojame trikampius iš 2 dalių: (A+B) sudaro didesnį trikampį viršuje. (A+C) sudaro trikampį kairėje pusėje. (B+D) sudaro trikampį dešinėje pusėje. Viso: 3.",
+          "latex": "N_2 = 3 \\text{ (A+B, A+C, B+D)}"
+        },
+        {
+          "text": "Skaičiuojame trikampius iš 4 dalių: (A+B+C+D) yra visas didysis trikampis. Viso: 1.",
+          "latex": "N_4 = 1 \\text{ (Visuma)}"
+        },
+        {
+          "text": "Sudedame visus rastus trikampius: $2 + 3 + 1 = 6$.",
+          "latex": "2 + 3 + 1 = 6"
         }
       ],
-      "answer": "$1 \\times 8$ cm, $3 \\times 8$ cm, $3 \\times 4$ cm ir $5 \\times 4$ cm."
+      "answer": "Brėžinyje yra 6 trikampiai."
+    },
+    {
+      "id": "ex-work-2",
+      "title": "2 Pavyzdys: Laikrodžio kampas ties 3:30",
+      "problem": "Apskaičiuokite mažesnįjį kampą tarp laikrodžio valandinės ir minutinės rodyklių, kai laikrodis rodo lygiai 3 valandas ir 30 minučių.",
+      "strategyRationale": "Svarbiausia nepamiršti, kad valandinė rodyklė per 30 minučių pasislenka iš savo pradinės padėties. Skaičiuosime abiejų rodyklių padėtį laipsniais nuo 12 valandos žymos.",
+      "steps": [
+        {
+          "text": "Minutinė rodyklė yra ties 30 minučių padala, o tai atitinka lygiai pusę ciferblato.",
+          "latex": "30 \\times 6^\\circ = 180^\\circ"
+        },
+        {
+          "text": "Valandinė rodyklė 3 valandą buvo ties $3 \\times 30^\\circ = 90^\\circ$. Per 30 minučių ji dar pasislinko į priekį.",
+          "latex": "30 \\times 0,5^\\circ = 15^\\circ"
+        },
+        {
+          "text": "Bendra valandinės rodyklės padėtis nuo 12-os valandos yra $90^\\circ + 15^\\circ = 105^\\circ$.",
+          "latex": "90^\\circ + 15^\\circ = 105^\\circ"
+        },
+        {
+          "text": "Kampas tarp rodyklių yra skirtumas tarp jų padėčių: $180^\\circ - 105^\\circ = 75^\\circ$.",
+          "latex": "180^\\circ - 105^\\circ = 75^\\circ"
+        }
+      ],
+      "answer": "Kampas yra $75^\\circ$."
+    },
+    {
+      "id": "ex-work-3",
+      "title": "3 Pavyzdys: Perimetras po padalinimo",
+      "problem": "Kvadratas, kurio perimetras 40 cm, perkirptas į du vienodus stačiakampius. Koks yra vieno tokio stačiakampio perimetras?",
+      "strategyRationale": "Uždavinį sprendžiame per kraštinių ilgio radimą. Svarbu suprasti, kaip pasikeičia matmenys perkerpant kvadratą pusiau lygiagrečiai kraštinei.",
+      "steps": [
+        {
+          "text": "Randame kvadrato kraštinę $a$: $40 / 4 = 10$ cm.",
+          "latex": "a = 40 / 4 = 10"
+        },
+        {
+          "text": "Perkerpant kvadratą į du lygius stačiakampius, viena jų kraštinė išlieka 10 cm, o kita tampa perpus mažesnė - 5 cm.",
+          "latex": "10 / 2 = 5"
+        },
+        {
+          "text": "Apskaičiuojame stačiakampio perimetrą $P = 2 \\times (ilgis + plotis)$.",
+          "latex": "P = 2 \\times (10 + 5) = 2 \\times 15 = 30 \\text{ cm}"
+        }
+      ],
+      "answer": "Vieno stačiakampio perimetras yra 30 cm."
+    },
+    {
+      "id": "ex-work-4",
+      "title": "4 Pavyzdys: Laiptuotos figūros perimetras",
+      "problem": "Iš kvadrato, kurio kraštinė 10 cm, kampo iškirptas mažas kvadratėlis, kurio kraštinė 3 cm. Koks yra gautos figūros perimetras?",
+      "strategyRationale": "Naudosime „perstūmimo“ strategiją. Vizualizuokite, kaip vidinės iškirpto kampo kraštinės gali būti pastumtos į išorę.",
+      "steps": [
+        {
+          "text": "Pradinio kvadrato perimetras buvo $10 \\times 4 = 40$ cm.",
+          "latex": "P_{\\text{prad}} = 40"
+        },
+        {
+          "text": "Iškirpus kampą, atsiranda dvi naujos atkarpos (kiekviena po 3 cm), bet kartu prarandamos dvi pradinio kvadrato išorinės atkarpos (taip pat po 3 cm).",
+          "latex": "P_{\\text{naujas}} = P_{\\text{prad}} - 3 - 3 + 3 + 3"
+        },
+        {
+          "text": "Pastebime, kad naujai sukurtos vidinės kraštinės tiksliai pakeičia tas, kurios buvo iškirptos. Todėl perimetras nesikeičia.",
+          "latex": "40 - 6 + 6 = 40 \\text{ cm}"
+        }
+      ],
+      "answer": "Figūros perimetras išlieka 40 cm."
+    },
+    {
+      "id": "ex-work-5",
+      "title": "5 Pavyzdys: Sulankstyto lapo karpymas",
+      "problem": "Kvadratinis popieriaus lapas perlenkiamas per vidurį du kartus (gaunamas 4 kartus mažesnis kvadratėlis). Tada sulankstyto kvadrato centre iškerpama skylutė. Kiek skylučių bus išlanksčius lapą?",
+      "strategyRationale": "Šis uždavinys reikalauja erdvinio mąstymo ir simetrijos supratimo. Kiekvienas lenkimas padvigubina popieriaus sluoksnių skaičių.",
+      "steps": [
+        {
+          "text": "Pirmas lenkimas pusiau: popierius tampa 2 sluoksnių storio.",
+          "latex": "2^1 = 2"
+        },
+        {
+          "text": "Antras lenkimas pusiau: popierius tampa 4 sluoksnių storio.",
+          "latex": "2^2 = 4"
+        },
+        {
+          "text": "Jei kerpama per visus sluoksnius, kiekvienas sluoksnis gaus po skylutę.",
+          "latex": "1 \\times 4 = 4"
+        },
+        {
+          "text": "Kadangi skylutė buvo sulankstyto kvadrato centre, išlanksčius jos nesusilies ir bus išsidėsčiusios simetriškai centro atžvilgiu.",
+          "latex": "\\text{Atsakymas: } 4"
+        }
+      ],
+      "answer": "Išlanksčius lapą bus 4 skylutės."
     }
   ],
   "exercises": [
@@ -90,7 +274,7 @@
       "id": "ex-olimpiada-05-7452e90b",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -228,7 +412,7 @@
       "id": "ex-olimpiada-05-d944dce6",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -323,7 +507,7 @@
         {
           "id": "ex-olimpiada-05-d944dce6-trap-1",
           "title": "Valandinės rodyklės poslinkio nepaisymas",
-          "wrongMove": "Manoma, kad ji stovi tiesiai ant 3.",
+          "wrongMove": "Manoma, kad she stovi tiesiai ant 3.",
           "whyTempting": "Vizualiai juda lėtai.",
           "correction": "Pridėkite minučių įtaką valandinei rodyklei.",
           "reviewConceptIds": [
@@ -369,7 +553,7 @@
       "id": "ex-olimpiada-05-1b8f2f68",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -480,7 +664,7 @@
       "id": "ex-olimpiada-05-6c25d5db",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -591,7 +775,7 @@
       "id": "ex-olimpiada-05-7bf4bab4",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -702,7 +886,7 @@
       "id": "ex-olimpiada-05-9aacf698",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -803,7 +987,7 @@
       "id": "ex-olimpiada-05-a5116194",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -894,7 +1078,7 @@
       "id": "ex-olimpiada-05-df8a80e6",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -985,7 +1169,7 @@
       "id": "ex-olimpiada-05-29a4ca3d",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1076,7 +1260,7 @@
       "id": "ex-olimpiada-05-950a0206",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1167,7 +1351,7 @@
       "id": "ex-olimpiada-05-geo-001",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1256,7 +1440,7 @@
       "id": "ex-olimpiada-05-geo-002",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1339,7 +1523,7 @@
       "id": "ex-olimpiada-05-geo-003",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1428,7 +1612,7 @@
       "id": "ex-olimpiada-05-geo-004",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1513,7 +1697,7 @@
       "id": "ex-olimpiada-05-geo-005",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1584,7 +1768,7 @@
       "id": "ex-olimpiada-05-geo-006",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1673,7 +1857,7 @@
       "id": "ex-olimpiada-05-geo-007",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1743,7 +1927,7 @@
       "id": "ex-olimpiada-05-geo-008",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -1831,7 +2015,7 @@
       "id": "ex-olimpiada-05-geo-009",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1901,7 +2085,7 @@
       "id": "ex-olimpiada-05-geo-010",
       "topicId": "olimpiada-05-geometrija",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1999,14 +2183,8 @@
         "ex-olimpiada-05-d944dce6",
         "ex-olimpiada-05-1b8f2f68",
         "ex-olimpiada-05-6c25d5db",
-        "ex-olimpiada-05-geo-001",
-        "ex-olimpiada-05-geo-002",
-        "ex-olimpiada-05-geo-003",
-        "ex-olimpiada-05-geo-004",
-        "ex-olimpiada-05-geo-005",
-        "ex-olimpiada-05-geo-006"
-      ],
-      "masteryWeight": 1.5
+        "ex-olimpiada-05-7bf4bab4"
+      ]
     }
   ]
 }

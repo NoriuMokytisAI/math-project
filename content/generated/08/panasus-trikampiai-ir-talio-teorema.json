@@ -1,5 +1,5 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
@@ -20,30 +20,21 @@
       "transformacijos-ir-koordinates"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
+      "panasumas",
       "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "panasumo-koeficientas",
+      "atitinkamos-krastines",
+      "trikampiu-panasumo-pozymiai",
+      "proporcingos-atkarpos"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "panasumo-santykis",
+      "plotu-santykis"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "sumaiso-atitinkamas-krastines",
+      "pamirsta-k-kvadratu-plotams",
+      "neteisingas-talio-teoremos-uzrasymas"
     ],
     "exerciseIds": [
       "panasus-trikampiai-ir-talio-teorema-ex-001",
@@ -70,231 +61,164 @@
   },
   "theory": [
     {
-      "id": "panasus-trikampiai-ir-talio-teorema-ivadas",
-      "title": "Įvadas",
+      "id": "panasumas-ivadas",
+      "title": "Panašumo sąvoka ir mastelis",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Panašūs trikampiai ir Talio teorema yra tema, kurioje mokomasi atpažinti pagrindinius panašumas ir mastelis modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "text": "Kasdieniame gyvenime dažnai matome objektus, kurie yra vienodos formos, bet skirtingo dydžio: nuotraukos, žemėlapiai, modeliai. Geometrijoje tokios figūros vadinamos panašiomis."
         },
         {
           "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
+          "conceptId": "panasumas",
+          "text": "Dvi figūros vadinamos [[panasumas|panašiomis]], jei vieną jų galima gauti iš kitos visas jos kraštines padidinus arba sumažinus tiek pat kartų (išlaikant kampus)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
+          "text": "Panašių figūrų atitinkami kampai yra lygūs, o atitinkamos kraštinės – proporcingos."
         }
       ]
     },
     {
-      "id": "panasus-trikampiai-ir-talio-teorema-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Panašūs trikampiai ir Talio teorema sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "talio-teorema-teorija",
+      "title": "Talio teorema",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Talio teorema aprašo ryšį tarp lygiagrečių tiesių, kurios kerta kampo kraštines."
+        },
+        {
+          "type": "definition",
+          "conceptId": "talio-teorema",
+          "text": "[[talio-teorema|Talio teorema]]: Jei dvi lygiagrečios tiesės kerta kampo kraštines, tai atkirstos atitinkamos kraštinių atkarpos yra proporcingos."
+        },
+        {
+          "type": "formula",
+          "latex": "\\frac{a}{b} = \\frac{c}{d}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai reiškia, kad jei vienoje kampo kraštinėje viena atkarpa yra dvigubai ilgesnė už kitą, tai ir kitoje kraštinėje atitinkamų atkarpų santykis bus toks pat."
+        }
+      ]
+    },
+    {
+      "id": "trikampiu-panasumas-ivadas",
+      "title": "Trikampių panašumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampiai yra dažniausiai naudojamos figūros panašumo uždaviniuose."
+        },
+        {
+          "type": "definition",
+          "conceptId": "panasumo-koeficientas",
+          "text": "[[panasumo-koeficientas|Panašumo koeficientas]] ($k$) – tai skaičius, rodantis, kiek kartų vieno trikampio kraštinės yra didesnės (arba mažesnės) už kito trikampio atitinkamas kraštines."
+        },
+        {
+          "type": "formula",
+          "formulaId": "panasumo-santykis",
+          "latex": "\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2} = k"
+        }
+      ]
+    },
+    {
+      "id": "trikampiu-panasumo-pozymiai-teorija",
+      "title": "Trikampių panašumo požymiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Norint įrodyti, kad du trikampiai yra panašūs, nebūtina tikrinti visų kraštinių ir visų kampų. Pakanka žinoti vieną iš trijų požymių:"
+        },
+        {
+          "type": "method",
+          "title": "1. Požymis pagal du kampus (KK)",
+          "text": "Jei vieno trikampio du kampai yra lygūs kito trikampio dviem kampams, tai tie trikampiai yra panašūs."
+        },
+        {
+          "type": "method",
+          "title": "2. Požymis pagal dvi kraštines ir kampą (KSK)",
+          "text": "Jei vieno trikampio dvi kraštinės yra proporcingos kito trikampio dviem kraštinėms, o kampai tarp tų kraštinių yra lygūs, tai tie trikampiai yra panašūs."
+        },
+        {
+          "type": "method",
+          "title": "3. Požymis pagal tris kraštines (KKK)",
+          "text": "Jei vieno trikampio visos trys kraštinės yra proporcingos kito trikampio atitinkamoms kraštinėms, tai tie trikampiai yra panašūs."
+        }
+      ]
+    },
+    {
+      "id": "panasumo-koeficientas-perimetrai-plotai",
+      "title": "Perimetrų ir plotų santykis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Panašumo koeficientas $k$ veikia ne tik kraštines, bet ir kitus trikampio elementus."
+        },
+        {
+          "type": "property",
+          "text": "1. **Perimetrų santykis** lygus panašumo koeficientui: $\\frac{P_1}{P_2} = k$."
+        },
+        {
+          "type": "property",
+          "text": "2. **Plotų santykis** lygus panašumo koeficiento kvadratui: $\\frac{S_1}{S_2} = k^2$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "plotu-santykis",
+          "latex": "\\frac{S_1}{S_2} = k^2"
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida: mokiniai mano, kad plotai skiriasi $k$ kartų. Prisiminkite, plotas yra dvimatis, todėl koeficientą reikia kelti kvadratu!"
+        }
+      ]
+    },
+    {
+      "id": "praktinis-panasumo-taikymas",
+      "title": "Praktinis panašumo taikymas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Panašumas leidžia išmatuoti objektus, prie kurių negalime tiesiogiai prieiti (pvz., medžio aukštį ar upės plotį)."
+        },
+        {
+          "type": "method",
+          "title": "Aukščio matavimas pagal šešėlį",
+          "text": "Saulės spinduliai krenta tuo pačiu kampu, todėl objektas ir jo šešėlis sudaro trikampį, panašų į trikampį, kurį sudaro matuotojas (arba lazda) ir jo šešėlis. Matuojame šešėlius ir žinomą lazdos aukštį, tada randame nežinomą aukštį naudodami proporciją."
+        }
+      ]
+    },
+    {
+      "id": "geometrija-panasumas-klaidos",
+      "title": "Dažniausios klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "title": "Atitinkamų kraštinių sumaišymas",
+          "text": "Kraštinės atitinka viena kitą, jei jos yra **prieš tuos pačius kampus**. Prieš didžiausią kampą visada bus didžiausia kraštinė."
+        },
+        {
+          "type": "warning",
+          "title": "Neteisingas proporcijos sudarymas",
+          "text": "Sudarydami proporciją, visada vienoje pusėje (skaitikliuose) rašykite vieno trikampio duomenis, o kitoje (vardikliuose) – kito trikampio atitinkamus duomenis."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "panasumas",
+      "title": "Panašumas",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
+      "shortDefinition": "Figūrų savybė turėti vienodą formą.",
+      "intuition": "Tai tarsi tas pats objektas, tik padidintas arba sumažintas.",
+      "formal": "Dvi figūros yra panašios, jei jų atitinkami kampai lygūs, o atitinkamos kraštinės proporcingos.",
+      "notation": [
+        "~"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trikampis",
-      "title": "Trikampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
       "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
+        "panasumo-koeficientas",
         "mastelis"
       ],
       "prerequisiteConceptIds": [],
@@ -305,77 +229,12 @@
       "id": "talio-teorema",
       "title": "Talio teorema",
       "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
+      "shortDefinition": "Lygiagrečių tiesių atkirstų atkarpų proporcingumas.",
+      "intuition": "Lygiagrečios tiesės kampo kraštines supjausto 'proporcingai'.",
+      "formal": "Lygiagrečios tiesės, kirsdamos kampo kraštines, atkerta jose proporcingas atkarpas.",
       "notation": [],
       "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
+        "proporcingos-atkarpos"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -384,221 +243,222 @@
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
+      "id": "panasumo-santykis",
+      "title": "Kraštinių santykis",
       "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
+      "latex": "\\frac{a_1}{a_2} = k",
+      "explanation": "Atitinkamų kraštinių ilgių santykis yra pastovus ir lygus panašumo koeficientui.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
+        "panasumo-koeficientas"
       ],
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
+      "id": "plotu-santykis",
+      "title": "Panašių figūrų plotų santykis",
       "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
+      "latex": "\\frac{S_1}{S_2} = k^2",
+      "explanation": "Plotų santykis lygus panašumo koeficiento kvadratui.",
       "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "panasumas"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
+      "id": "pamirsta-k-kvadratu-plotams",
+      "title": "Pamiršta pakelti koeficientą kvadratu skaičiuojant plotus",
       "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "wrongPattern": "S2 = k * S1",
+      "whyItHappens": "Inercijos dėlei taikomas tas pats koeficientas kaip ir kraštinėms.",
+      "correction": "Plotas yra dviejų matmenų sandauga, todėl abi kraštinės padidėja k kartų, o plotas - k * k kartų.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "panasus-trikampiai-ir-talio-teorema-exmp-1",
-      "title": "Perimetras",
+      "id": "panasumas-exmp-1",
+      "title": "Talio teoremos taikymas",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
+      "problem": "Kampo kraštinės kerta dvi lygiagrečios tiesės. Vienoje kraštinėje jos atkerta 4 cm ir 6 cm ilgio atkarpas. Kitoje kraštinėje trumpesnioji atkarpa yra 10 cm. Raskite ilgesniąją atkarpą x.",
       "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
-        }
-      ],
-      "answer": "26"
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-exmp-2",
-      "title": "Plotas",
-      "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
-        },
-        {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
-        }
-      ],
-      "answer": "42"
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
-        },
-        {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-exmp-4",
-      "title": "Panašumas",
-      "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
         "talio-teorema"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Sudaro proporciją pagal Talio teoremą.",
+          "latex": "\\frac{4}{6} = \\frac{10}{x}"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Išsprendžiame proporciją naudodami kryžminę daugybą.",
+          "latex": "4x = 60"
+        },
+        {
+          "text": "Randame x.",
+          "latex": "x = 15"
         }
       ],
-      "answer": "10"
+      "answer": "15 cm"
     },
     {
-      "id": "panasus-trikampiai-ir-talio-teorema-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
+      "id": "panasumas-exmp-2",
+      "title": "Panašumo koeficiento radimas",
+      "level": "easy",
+      "problem": "Trikampis $ABC$ panašus į trikampį $A'B'C'$. Kraštinė $AB=5$, o atitinkama kraštinė $A'B'=15$. Raskite panašumo koeficientą k (didžiojo trikampio mažojo atžvilgiu).",
       "conceptIds": [
-        "koordinates",
-        "vektorius"
+        "panasumo-koeficientas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Dalijame atitinkamas kraštines.",
+          "latex": "k = \\frac{A'B'}{AB} = \\frac{15}{5}"
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Suskaičiuojame.",
+          "latex": "k = 3"
         }
       ],
-      "answer": "5"
+      "answer": "k = 3"
+    },
+    {
+      "id": "panasumas-exmp-3",
+      "title": "Nežinomos kraštinės radimas",
+      "level": "medium",
+      "problem": "Trikampiai yra panašūs. Mažojo trikampio kraštinės yra 3, 4 ir 5. Didžiojo trikampio ilgiausia kraštinė lygi 20. Raskite kitas dvi didžiojo trikampio kraštines.",
+      "conceptIds": [
+        "panasumas"
+      ],
+      "steps": [
+        {
+          "text": "Randame panašumo koeficientą naudodami ilgiausias kraštines.",
+          "latex": "k = \\frac{20}{5} = 4"
+        },
+        {
+          "text": "Dauginame kitas mažojo trikampio kraštines iš k.",
+          "latex": "a = 3 \\cdot 4 = 12, \\quad b = 4 \\cdot 4 = 16"
+        }
+      ],
+      "answer": "12 ir 16"
+    },
+    {
+      "id": "panasumas-exmp-4",
+      "title": "Panašių trikampių perimetras",
+      "level": "medium",
+      "problem": "Dviejų panašių trikampių panašumo koeficientas $k=0,5$. Mažesniojo trikampio perimetras yra 18 cm. Koks yra didesniojo trikampio perimetras?",
+      "conceptIds": [
+        "panasumas"
+      ],
+      "steps": [
+        {
+          "text": "Kadangi $k=0,5$, tai reiškia, kad pirmasis trikampis yra 2 kartus mažesnis už antrąjį (arba antrasis 2 kartus didesnis).",
+          "latex": "\\frac{P_{\\text{maž}}}{P_{\\text{didž}}} = 0,5"
+        },
+        {
+          "text": "Išreiškiame didesnį perimetrą.",
+          "latex": "P_{\\text{didž}} = \\frac{18}{0,5} = 18 \\cdot 2 = 36"
+        }
+      ],
+      "answer": "36 cm"
+    },
+    {
+      "id": "panasumas-exmp-5",
+      "title": "Plotų santykio taikymas",
+      "level": "hard",
+      "problem": "Dviejų panašių trikampių atitinkamų kraštinių santykis yra 2:5. Mažesniojo trikampio plotas yra 12 cm². Raskite didesniojo trikampio plotą.",
+      "conceptIds": [
+        "panasumas"
+      ],
+      "formulaIds": [
+        "plotu-santykis"
+      ],
+      "steps": [
+        {
+          "text": "Nustatome panašumo koeficientą $k = 5/2 = 2,5$.",
+          "latex": "k = 2,5"
+        },
+        {
+          "text": "Plotų santykis yra $k^2$.",
+          "latex": "k^2 = 2,5^2 = 6,25"
+        },
+        {
+          "text": "Dauginame mažąjį plotą iš $k^2$.",
+          "latex": "S_{\\text{didž}} = 12 \\cdot 6,25 = 75"
+        }
+      ],
+      "answer": "75 cm²"
+    },
+    {
+      "id": "panasumas-exmp-6",
+      "title": "Aukščio radimas pagal šešėlį",
+      "level": "medium",
+      "problem": "Medžio šešėlio ilgis yra 12 m. Tuo pačiu metu 1,5 m aukščio mokinio šešėlis yra 2 m ilgio. Koks medžio aukštis?",
+      "conceptIds": [
+        "panasumas"
+      ],
+      "steps": [
+        {
+          "text": "Sudarysime panašius trikampius iš objekto aukščio ir šešėlio. Proporcija: medžio aukštis / mokinio aukštis = medžio šešėlis / mokinio šešėlis.",
+          "latex": "\\frac{H}{1,5} = \\frac{12}{2}"
+        },
+        {
+          "text": "Supaprastiname dešinę pusę.",
+          "latex": "\\frac{H}{1,5} = 6"
+        },
+        {
+          "text": "Randame H.",
+          "latex": "H = 6 \\cdot 1,5 = 9"
+        }
+      ],
+      "answer": "9 m"
+    },
+    {
+      "id": "panasumas-exmp-7",
+      "title": "Trikampių panašumo įrodymas (KK)",
+      "level": "medium",
+      "problem": "Trikampyje $ABC$ nubrėžta atkarpa $DE$, lygiagreti pagrindui $AC$. Įrodykite, kad trikampis $ABC$ panašus į $DBE$.",
+      "conceptIds": [
+        "trikampiu-panasumo-pozymiai"
+      ],
+      "steps": [
+        {
+          "text": "Kampas B yra bendras abiems trikampiams.",
+          "latex": "\\angle B = \\angle B"
+        },
+        {
+          "text": "Kampas $BDE$ lygus kampui $BAC$ (atitinkamieji kampai, nes $DE || AC$).",
+          "latex": "\\angle BDE = \\angle BAC"
+        },
+        {
+          "text": "Pagal du lygius kampus (KK požymis), trikampiai yra panašūs.",
+          "latex": "ABC \\sim DBE"
+        }
+      ],
+      "answer": "Įrodyta pagal KK požymį."
+    },
+    {
+      "id": "panasumas-exmp-8",
+      "title": "Atvirkštinis uždavinys: kraštinių radimas iš plotų",
+      "level": "hard",
+      "problem": "Dviejų panašių trikampių plotai yra 20 cm² ir 80 cm². Didesniojo trikampio kraštinė yra 14 cm. Raskite atitinkamą mažesniojo trikampio kraštinę.",
+      "conceptIds": [
+        "panasumas"
+      ],
+      "steps": [
+        {
+          "text": "Randame plotų santykį, kuris lygus $k^2$.",
+          "latex": "k^2 = \\frac{80}{20} = 4"
+        },
+        {
+          "text": "Ištraukiame šaknį, kad gautume panašumo koeficientą k.",
+          "latex": "k = \\sqrt{4} = 2"
+        },
+        {
+          "text": "Mažesniojo trikampio kraštinė yra k kartų mažesnė.",
+          "latex": "a = \\frac{14}{2} = 7"
+        }
+      ],
+      "answer": "7 cm"
     }
   ],
   "exercises": [
@@ -606,7 +466,7 @@
       "id": "panasus-trikampiai-ir-talio-teorema-ex-001",
       "topicId": "panasus-trikampiai-ir-talio-teorema",
       "grade": 8,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
       "answer": {
@@ -643,930 +503,6 @@
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-002",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-003",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-004",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-005",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-006",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-007",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-008",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-009",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-010",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-011",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-012",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-013",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-014",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-015",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-016",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-017",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-018",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-019",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-ex-020",
-      "topicId": "panasus-trikampiai-ir-talio-teorema",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Panašūs trikampiai ir Talio teorema: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-test-topic",
-      "title": "Panašūs trikampiai ir Talio teorema testas",
-      "scope": "topic",
-      "topicIds": [
-        "panasus-trikampiai-ir-talio-teorema"
-      ],
-      "exerciseIds": [
-        "panasus-trikampiai-ir-talio-teorema-ex-001",
-        "panasus-trikampiai-ir-talio-teorema-ex-002",
-        "panasus-trikampiai-ir-talio-teorema-ex-003",
-        "panasus-trikampiai-ir-talio-teorema-ex-004",
-        "panasus-trikampiai-ir-talio-teorema-ex-005",
-        "panasus-trikampiai-ir-talio-teorema-ex-006",
-        "panasus-trikampiai-ir-talio-teorema-ex-007",
-        "panasus-trikampiai-ir-talio-teorema-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-test-challenge",
-      "title": "Panašūs trikampiai ir Talio teorema iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "panasus-trikampiai-ir-talio-teorema"
-      ],
-      "exerciseIds": [
-        "panasus-trikampiai-ir-talio-teorema-ex-009",
-        "panasus-trikampiai-ir-talio-teorema-ex-010",
-        "panasus-trikampiai-ir-talio-teorema-ex-011",
-        "panasus-trikampiai-ir-talio-teorema-ex-012",
-        "panasus-trikampiai-ir-talio-teorema-ex-013",
-        "panasus-trikampiai-ir-talio-teorema-ex-014",
-        "panasus-trikampiai-ir-talio-teorema-ex-015",
-        "panasus-trikampiai-ir-talio-teorema-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "panasus-trikampiai-ir-talio-teorema-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
     }
   ]
 }

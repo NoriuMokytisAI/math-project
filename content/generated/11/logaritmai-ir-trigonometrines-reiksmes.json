@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "III gimnazijos klasėje skaičių srityje įvedami logaritmai, vienetinis apskritimas, tangentų tiesė ir atvirkštinės trigonometrinės reikšmės."
+    "notes": "Išsami logaritmų ir trigonometrijos pagrindų teorija."
   },
   "topic": {
     "id": "logaritmai-ir-trigonometrines-reiksmes",
@@ -12,7 +12,7 @@
     "strand": "Skaičiai ir skaičiavimai",
     "level": "curriculum",
     "order": 5,
-    "estimatedStudyMinutes": 190,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "realieji-skaiciai-modulis-saknys-laipsniai"
     ],
@@ -20,37 +20,34 @@
       "rodiklines-logaritmines-ir-trigonometrines-funkcijos"
     ],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
       "logaritmas",
+      "pagrindinis-logaritmu-tapatumas",
+      "radianas",
+      "vienetinis-apskritimas",
       "sinusas",
       "kosinusas",
       "tangentas",
-      "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "kotangentas",
+      "redukcija",
+      "atvirkstine-trigonometrine-reiksme",
+      "pagrindo-keitimas"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "log-def",
+      "log-sum",
+      "log-diff",
+      "log-power",
+      "log-base-change",
+      "trig-pythagorean",
+      "tan-def",
+      "cot-def",
+      "deg-to-rad"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "log-sum-wrong",
+      "sin-cos-square",
+      "rad-deg-confusion",
+      "log-base-negative"
     ],
     "exerciseIds": [
       "logaritmai-ir-trigonometrines-reiksmes-ex-001",
@@ -77,629 +74,488 @@
   },
   "theory": [
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ivadas",
-      "title": "Įvadas",
+      "id": "logaritmo-savoka-teorija",
+      "title": "1. Logaritmo sąvoka ir pagrindinis tapatumas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Logaritmai ir trigonometrinės reikšmės yra tema, kurioje mokomasi atpažinti pagrindinius logaritmai ir trigonometrinės reikšmės modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
+          "text": "[[logaritmas|Logaritmas]] yra matematinė operacija, kuri nurodo, kokiu laipsniu reikia pakelti pagrindą, kad gautume tam tikrą skaičių. Tai yra atvirkštinis veiksmas laipsniavimui."
         },
         {
           "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
-        },
-        {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
-        }
-      ]
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Logaritmai ir trigonometrinės reikšmės sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "conceptId": "logaritmas",
+          "text": "Skaičiaus $b$ logaritmas pagrindu $a$ (žymima $\\log_a b$) yra laipsnio rodiklis, kuriuo pakėlę skaičių $a$, gauname skaičių $b$."
         },
         {
           "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "log-def",
+          "latex": "\\log_a b = c \\iff a^c = b"
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "Sąlygos: pagrindas $a$ turi būti teigiamas ir nelygus vienetui ($a > 0, a \\neq 1$), o skaičius $b$ turi būti teigiamas ($b > 0$)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "pagrindinis-logaritmu-tapatumas",
+          "title": "Pagrindinis logaritmų tapatumas",
+          "latex": "a^{\\log_a b} = b"
         }
       ]
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "logaritmu-savybes-teorija",
+      "title": "2. Logaritmų savybės ir veiksmai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Logaritmai turi savybes, kurios leidžia sudėtingus skaičiavimus paversti paprastesniais."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Sandaugos logaritmas:** $\\log_a (xy) = \\log_a x + \\log_a y$ (daugyba virsta sudėtimi).",
+            "**Dalmens logaritmas:** $\\log_a (\\frac{x}, {y}) = \\log_a x - \\log_a y$ (dalyba virsta atimtimi).",
+            "**Laipsnio logaritmas:** $\\log_a (x^k) = k \\cdot \\log_a x$ (laipsnį galima iškelti į priekį).",
+            "**Vieneto logaritmas:** $\\log_a 1 = 0$.",
+            "**Pagrindo logaritmas:** $\\log_a a = 1$."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pagrindo-keitimas-teorija",
+      "title": "3. Logaritmų pagrindo keitimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei turime logaritmą nepatogiu pagrindu, galime jį pakeisti į bet kokį kitą pagrindą $c$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "log-base-change",
+          "latex": "\\log_a b = \\frac{\\log_c b}, {\\log_c a}"
+        },
+        {
+          "type": "note",
+          "text": "Ši formulė ypač naudinga skaičiuojant skaičiuotuvu, kuriame dažniausiai yra tik dešimtainis ($\\lg x$, pagrindas 10) ir natūralusis ($\\ln x$, pagrindas $e$) logaritmai."
+        }
+      ]
+    },
+    {
+      "id": "kampu-matavimas-teorija",
+      "title": "4. Kampų matavimas: laipsniai ir radianai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trigonometrijoje kampai matuojami ne tik laipsniais, bet ir [[radianas|radianais]]."
+        },
+        {
+          "type": "definition",
+          "text": "Vienas radianas – tai kampas, kurį atitinka lanko ilgis, lygus apskritimo spinduliui."
+        },
+        {
+          "type": "formula",
+          "formulaId": "deg-to-rad",
+          "latex": "180^\\circ = \\pi \\text{ rad}, \\quad 1^\\circ = \\frac{\\pi}, {180} \\text{ rad}"
+        },
+        {
+          "type": "note",
+          "text": "Atminkite pagrindines vertes: $90^\\circ = \\pi/2$, $60^\\circ = \\pi/3$, $45^\\circ = \\pi/4$, $30^\\circ = \\pi/6$."
+        }
+      ]
+    },
+    {
+      "id": "vienetinis-apskritimas-teorija",
+      "title": "5. Vienetinis apskritimas ir trigonometriniai santykiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[vienetinis-apskritimas|Vienetinis apskritimas]] – tai apskritimas, kurio spindulys $R=1$, o centras koordinačių pradžios taške."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Taško koordinatė $x$ ant apskritimo atitinka kampo **kosinusą** ($\\cos \\alpha$).",
+            "Taško koordinatė $y$ ant apskritimo atitinka kampo **sinusą** ($\\sin \\alpha$)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kadangi spindulys lygus 1, pagal Pitagoro teoremą gauname pagrindinę trigonometrijos tapatybę:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "trig-pythagorean",
+          "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1"
+        }
+      ]
+    },
+    {
+      "id": "pagrindines-trig-reiksmes-teorija",
+      "title": "6. Pagrindinės trigonometrinės reikšmės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Būtina žinoti standartinių kampų ($0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$) vertes. Pavyzdžiui, $\\sin 30^\\circ = 1/2$, $\\cos 60^\\circ = 1/2$, $\\sin 45^\\circ = \\sqrt{2}/2$."
+        }
+      ]
+    },
+    {
+      "id": "redukcijos-formules-teorija",
+      "title": "7. Redukcijos formulės ir jų taikymas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[redukcija|Redukcija]] leidžia bet kokio kampo trigonometrinę reikšmę pakeisti smailiojo kampo reikšme."
+        },
+        {
+          "type": "method",
+          "text": "**Taisyklė:**\n1. Nustatykite, kuriame ketvirtyje yra kampas ir koks ten pradinės funkcijos ženklas.\n2. Jei naudojate $\\pi \\pm \\alpha$ arba $2\\pi \\pm \\alpha$, funkcija nesikeičia.\n3. Jei naudojate $\\pi/2 \\pm \\alpha$ arba $3\\pi/2 \\pm \\alpha$, funkcija keičiasi į kofunkciją (sin $\\leftrightarrow$ cos, tan $\\leftrightarrow$ cot)."
+        }
+      ]
+    },
+    {
+      "id": "tan-ir-cot-teorija",
+      "title": "8. Tangentas ir kotangentas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Be sinuso ir kosinuso naudojame [[tangentas|tangentą]] ir [[kotangentas|kotangentą]]."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tan-def",
+          "latex": "\\tan \\alpha = \\frac{\\sin \\alpha}, {\\cos \\alpha}"
+        },
+        {
+          "type": "formula",
+          "formulaId": "cot-def",
+          "latex": "\\cot \\alpha = \\frac{\\cos \\alpha}, {\\sin \\alpha}"
+        },
+        {
+          "type": "note",
+          "text": "Iš šių formulių išplaukia, kad $\tan \\alpha \\cdot \\cot \\alpha = 1$."
+        }
+      ]
+    },
+    {
+      "id": "atvirkstines-trig-reiksmes-teorija",
+      "title": "9. Atvirkštinės trigonometrinės reikšmės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klausimas „koks kampas duoda tokią reikšmę?“ sprendžiamas naudojant atvirkštines funkcijas: $\\arcsin x, \\arccos x, \\arctan x$."
+        },
+        {
+          "type": "example",
+          "text": "$\\arcsin(1/2) = 30^\\circ$ (arba $\\pi/6$), nes $\\sin 30^\\circ = 1/2$."
+        }
+      ]
+    },
+    {
+      "id": "trig-zenklai-ketvirciuose",
+      "title": "10. Trigonometrinių funkcijų ženklai",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "I ketvirtis (0–90°): visi teigiami.",
+            "II ketvirtis (90–180°): tik $\\sin$ teigiamas.",
+            "III ketvirtis (180–270°): tik $\\tan$ ir $\\cot$ teigiami.",
+            "IV ketvirtis (270–360°): tik $\\cos$ teigiamas."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
-      "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai logaritmai ir trigonometrinės reikšmės temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "indukcija"
-      ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
-        "q"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "teorema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsnis",
-      "title": "Laipsnis",
-      "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknis",
-      "title": "Šaknis",
-      "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodiklis",
-      "title": "Rodiklis",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "logaritmas",
       "title": "Logaritmas",
       "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
+      "shortDefinition": "Laipsnio rodiklis, kuriuo pakėlus pagrindą gaunamas duotas skaičius.",
+      "intuition": "Atvirkštinis veiksmas laipsniui.",
+      "formal": "log_a b = c ⇔ a^c = b.",
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "pagrindinis-logaritmu-tapatumas"
       ],
       "prerequisiteConceptIds": [
-        "log-a-b-c"
+        "laipsnis"
       ],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "logaritmai-ir-trigonometrines-reiksmes"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "sinusas",
-      "title": "Sinusas",
+      "id": "radianas",
+      "title": "Radianas",
       "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
+      "shortDefinition": "Kampo matavimo vienetas.",
+      "intuition": "Kampas, kurio lankas lygus spinduliui.",
+      "relatedConceptIds": [],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
+      "appearsInTopicIds": [
+        "logaritmai-ir-trigonometrines-reiksmes"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "tangentas",
-      "title": "Tangentas",
+      "id": "vienetinis-apskritimas",
+      "title": "Vienetinis apskritimas",
       "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
+      "shortDefinition": "Apskritimas su spinduliu R=1.",
+      "intuition": "Trigonometrijos „žemėlapis“.",
       "relatedConceptIds": [
         "sinusas",
         "kosinusas"
       ],
-      "prerequisiteConceptIds": [
-        "tan"
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [
+        "logaritmai-ir-trigonometrines-reiksmes"
       ],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "isvestine",
-      "title": "Išvestinė",
+      "id": "redukcija",
+      "title": "Redukcija",
       "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
+      "shortDefinition": "Kampo didumo mažinimas neprarandant trigonometrinės informacijos.",
+      "intuition": "Didelio kampo suvedimas į smailųjį.",
+      "relatedConceptIds": [],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
+      "appearsInTopicIds": [
+        "logaritmai-ir-trigonometrines-reiksmes"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
-      "relatedConceptIds": [
-        "integralas",
-        "isvestine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
-      "type": "formula",
-      "latex": "a_n",
-      "conditions": [
-        "Sekoms"
-      ],
-      "variables": {
-        "n": "indeksas"
-      },
-      "explanation": "Žymi n-tąjį sekos narį.",
-      "relatedConceptIds": [
-        "seka"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
-      "relatedConceptIds": [
-        "aritmetine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
-      "conditions": [
-        "Kai santykis pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
-      },
-      "explanation": "Naudojama augimui ir mažėjimui.",
-      "relatedConceptIds": [
-        "geometrine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
-      },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
+      "id": "log-sum",
+      "title": "Sandaugos logaritmas",
+      "latex": "\\log_a (x \\cdot y) = \\log_a x + \\log_a y",
+      "explanation": "Daugyba logaritmo viduje tampa sudėtimi.",
       "relatedConceptIds": [
         "logaritmas"
       ],
       "defaultSrs": true
     },
     {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
+      "id": "trig-pythagorean",
+      "title": "Pagrindinė trigonometrijos tapatybė",
+      "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+      "explanation": "Svarbiausia formulė, siejanti sinusą ir kosinusą.",
       "relatedConceptIds": [
-        "sinusas"
+        "sinusas",
+        "kosinusas"
       ],
       "defaultSrs": true
     },
     {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
+      "id": "log-base-change",
+      "title": "Pagrindo keitimo formulė",
+      "latex": "\\log_a b = \\frac{\\log_c b}, {\\log_c a}",
+      "explanation": "Leidžia pakeisti nepatogų logaritmo pagrindą kitu.",
       "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "logaritmas"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
-      "type": "mistake",
+      "id": "log-sum-wrong",
+      "title": "Neteisingas sumos logaritmas",
       "conceptIds": [
-        "laipsnis"
+        "logaritmas"
       ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
+      "wrongPattern": "log(x + y) = log x + log y",
+      "whyItHappens": "Painiojama su sandaugos savybe.",
+      "correction": "log(x+y) negalima išskaidyti paprastai. Tik log(x*y) tampa suma.",
+      "wrongExample": "\\log(2+3) = \\log 2 + \\log 3",
+      "correctExample": "\\log(2 \\cdot 3) = \\log 2 + \\log 3",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
-      "type": "mistake",
+      "id": "rad-deg-confusion",
+      "title": "Painioja laipsnius ir radianus",
       "conceptIds": [
-        "integralas"
+        "radianas"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
+      "wrongPattern": "sin(1) = sin(1°)",
+      "whyItHappens": "Nesuprantama, kad skaičius be laipsnio ženklo reiškia radianą.",
+      "correction": "Sin(1) yra maždaug sin(57°). Visada patikrinkite nustatymus skaičiuotuve.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-exmp-1",
-      "title": "Sinusas",
+      "id": "log-calc-basic",
+      "title": "Logaritmo reikšmės skaičiavimas",
       "level": "easy",
-      "problem": "Jei priešpriešinė 5, įžambinė 13, rask sinusą.",
+      "problem": "Apskaičiuokite log_2 16 ir log_3 (1/27).",
       "conceptIds": [
-        "sinusas"
+        "logaritmas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "5/13.",
-          "latex": "\\\\sin\\\\alpha=5/13"
+          "text": "16 yra 2⁴, todėl logaritmas yra 4.",
+          "latex": "\\log_2 2^4 = 4"
+        },
+        {
+          "text": "1/27 yra 3⁻³, todėl logaritmas yra -3.",
+          "latex": "\\log_3 3^{-3} = -3"
         }
       ],
-      "answer": "5/13"
+      "answer": "4 ir -3"
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-exmp-2",
-      "title": "Kosinusas",
+      "id": "log-simplify-ex",
+      "title": "Logaritminio reiškinio paprastinimas",
+      "level": "medium",
+      "problem": "Suprastinkite: 2 log_5 10 - log_5 4.",
+      "conceptIds": [
+        "logaritmas"
+      ],
+      "steps": [
+        {
+          "text": "Įkeliame dauginamąjį į laipsnį.",
+          "latex": "\\log_5 10^2 - \\log_5 4 = \\log_5 100 - \\log_5 4"
+        },
+        {
+          "text": "Taikome skirtumo savybę (dalyba).",
+          "latex": "\\log_5 (100 / 4) = \\log_5 25"
+        },
+        {
+          "text": "Apskaičiuojame galutinę vertę.",
+          "latex": "\\log_5 5^2 = 2"
+        }
+      ],
+      "answer": "2"
+    },
+    {
+      "id": "log-x-solve",
+      "title": "Logaritminė lygtis su nežinomu pagrindu",
+      "level": "medium",
+      "problem": "Išspręskite lygtį: log_x 49 = 2.",
+      "conceptIds": [
+        "logaritmas"
+      ],
+      "steps": [
+        {
+          "text": "Pagal apibrėžimą: x² = 49.",
+          "latex": "x^2 = 49"
+        },
+        {
+          "text": "Kadangi pagrindas x privalo būti teigiamas, renkamės teigiamą šaknį.",
+          "latex": "x = \\sqrt{49} = 7"
+        }
+      ],
+      "answer": "x = 7"
+    },
+    {
+      "id": "deg-rad-conv-ex",
+      "title": "Laipsnių keitimas radianais",
       "level": "easy",
-      "problem": "Jei gretimoji 12, įžambinė 13, rask kosinusą.",
+      "problem": "Paverskite 150° radianais.",
       "conceptIds": [
-        "kosinusas"
+        "radianas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "12/13.",
-          "latex": "\\\\cos\\\\alpha=12/13"
+          "text": "Dauginame iš π/180.",
+          "latex": "150 \\cdot \\frac{\\pi}, {180} = \\frac{15\\pi}, {18} = \\frac{5\\pi}, {6}"
         }
       ],
-      "answer": "12/13"
+      "answer": "5π/6 rad"
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-exmp-3",
-      "title": "Tangentas",
+      "id": "reduction-ex",
+      "title": "Redukcijos formulės taikymas",
       "level": "medium",
-      "problem": "Jei priešpriešinė 3, gretimoji 4, rask tangento reikšmę.",
+      "problem": "Apskaičiuokite cos(150°).",
       "conceptIds": [
-        "tangentas"
+        "redukcija"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3/4.",
-          "latex": "\\tan\\\\alpha=3/4"
+          "text": "Užrašome kampą patogia forma: 150° = 180° - 30°.",
+          "latex": "\\cos(180^\\circ - 30^\\circ)"
+        },
+        {
+          "text": "150° yra II ketvirtyje, ten kosinusas neigiamas. Funkcija nesikeičia (nes naudojame 180°).",
+          "latex": "-\\cos 30^\\circ"
+        },
+        {
+          "text": "Įstatome lentelės vertę.",
+          "latex": "-\\frac{\\sqrt{3}}, {2}"
         }
       ],
-      "answer": "3/4"
+      "answer": "-√3/2"
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-exmp-4",
-      "title": "Santykiai",
+      "id": "trig-identity-find",
+      "title": "Sinuso radimas pagal kosinusą",
       "level": "medium",
-      "problem": "Ką rodo trigonometriniai santykiai stačiajame trikampyje?",
+      "problem": "Raskite sin α, jei cos α = 0,6 ir α yra I ketvirtyje.",
       "conceptIds": [
         "sinusas",
-        "kosinusas",
-        "tangentas"
+        "kosinusas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Kraštinių santykį.",
-          "latex": "santykiai"
+          "text": "Naudojame pagrindinę tapatybę.",
+          "latex": "\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - 0{\n}6^2 = 1 - 0{\n}36 = 0{\n}64"
+        },
+        {
+          "text": "Traukiame šaknį. Kadangi I ketvirtis, sinusas teigiamas.",
+          "latex": "\\sin \\alpha = \\sqrt{0{\n}64} = 0{\n}8"
         }
       ],
-      "answer": "kraštinių santykius"
+      "answer": "0.8"
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-exmp-5",
-      "title": "Kampas",
+      "id": "trig-simplify-identities",
+      "title": "Trigonometrinio reiškinio paprastinimas",
       "level": "hard",
-      "problem": "Jei sin α = 1/2, koks dažnai naudojamas kampo pavyzdys?",
+      "problem": "Suprastinkite: (1 - sin²α) / cos²α - 1.",
       "conceptIds": [
-        "sinusas"
+        "sinusas",
+        "kosinusas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "30°.",
-          "latex": "30^\\\\circ"
+          "text": "Atpažįstame, kad 1 - sin²α = cos²α.",
+          "latex": "\\frac{\\cos^2 \\alpha}, {\\cos^2 \\alpha} - 1"
+        },
+        {
+          "text": "Suprastiname trupmeną.",
+          "latex": "1 - 1 = 0"
         }
       ],
-      "answer": "30°"
+      "answer": "0"
+    },
+    {
+      "id": "arctan-ex",
+      "title": "Atvirkštinės funkcijos vertė",
+      "level": "easy",
+      "problem": "Apskaičiuokite arctan(1) radianais.",
+      "conceptIds": [
+        "atvirkstine-trigonometrine-reiksme"
+      ],
+      "steps": [
+        {
+          "text": "Klausime: kokio smailiojo kampo tangentas lygus 1?",
+          "latex": "\\tan \\alpha = 1 \\implies \\alpha = 45^\\circ"
+        },
+        {
+          "text": "Paverčiame radianais.",
+          "latex": "\\frac{\\pi}, {4}"
+        }
+      ],
+      "answer": "π/4"
     }
   ],
   "exercises": [
@@ -707,890 +563,81 @@
       "id": "logaritmai-ir-trigonometrines-reiksmes-ex-001",
       "topicId": "logaritmai-ir-trigonometrines-reiksmes",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskaičiuok a_3, kai a_n=2n+1.",
+      "statement": "Apskaičiuokite log_2 8.",
       "answer": {
         "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
+        "value": 3
       },
       "hints": [
         {
           "order": 1,
-          "text": "Įstatyk n=3.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "2 pakelta kokiu laipsniu yra 8?"
         }
       ],
       "solutionSteps": [
         {
-          "text": "a_3=7",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-002",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 2.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-003",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 3.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
+          "text": "2^3 = 8",
           "latex": "3"
         }
       ],
       "answerText": "3",
-      "alternateMethods": [],
       "conceptIds": [
-        "seka"
+        "logaritmas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-004",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-005",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-006",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-007",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-008",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-009",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-010",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-011",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-012",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-013",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-014",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-015",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-016",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-017",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-018",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-019",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-ex-020",
-      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
-      "grade": 11,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Logaritmai ir trigonometrinės reikšmės: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 20
     }
   ],
   "tests": [
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-test-topic",
-      "title": "Logaritmai ir trigonometrinės reikšmės testas",
+      "id": "log-trig-testas-1",
+      "title": "Logaritmų ir trigonometrijos pagrindai",
       "scope": "topic",
       "topicIds": [
         "logaritmai-ir-trigonometrines-reiksmes"
       ],
       "exerciseIds": [
-        "logaritmai-ir-trigonometrines-reiksmes-ex-001",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-002",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-003",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-004",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-005",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-006",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-007",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-008"
+        "logaritmai-ir-trigonometrines-reiksmes-ex-001"
       ],
+      "timeLimitSeconds": 1200,
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-test-challenge",
-      "title": "Logaritmai ir trigonometrinės reikšmės iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "logaritmai-ir-trigonometrines-reiksmes"
-      ],
-      "exerciseIds": [
-        "logaritmai-ir-trigonometrines-reiksmes-ex-009",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-010",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-011",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-012",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-013",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-014",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-015",
-        "logaritmai-ir-trigonometrines-reiksmes-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7
     }
   ],
   "srsCards": [
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-seka",
+      "id": "srs-log-def",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
+      "front": "Ką reiškia log_a b = c?",
+      "back": "Tai reiškia, kad a^c = b.",
       "conceptIds": [
-        "seka"
+        "logaritmas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-aritmetine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-sekos-forma",
+      "id": "srs-trig-identity-1",
       "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
+      "front": "Kokia yra pagrindinė sinuso ir kosinuso tapatybė?",
+      "back": "sin²α + cos²α = 1",
       "conceptIds": [
-        "sekos-forma"
+        "sinusas",
+        "kosinusas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
+      "id": "srs-rad-to-deg",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
+      "front": "Kiek laipsnių yra π radianų?",
+      "back": "180 laipsnių.",
       "conceptIds": [
-        "aritmetines-progresijos-formule"
+        "radianas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
-      "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "logaritmai-ir-trigonometrines-reiksmes-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

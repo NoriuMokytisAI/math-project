@@ -46,19 +46,133 @@
   },
   "theory": [
     {
-      "title": "Sistemingas sąrašų sudarymas ir skaičiavimas",
+      "title": "Įvadas į olimpiadinę kombinatoriką: Kaip nieko nepraleisti?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kombinatorikos uždaviniuose dažnai reikia rasti galimų derinių skaičių. Pagrindinis pradedančiojo priešas – netvarkingas skaičiavimas, kai kai kurie variantai praleidžiami, o kiti suskaičiuojami du kartus."
+          "text": "Kombinatorika yra matematikos sritis, tirianti būdus, kaip parinkti, išdėstyti ir suskaičiuoti objektus pagal tam tikras taisykles. Penktos klasės olimpiadose kombinatorika dažnai tampa iššūkiu ne dėl sudėtingų formulių (kurių šiame amžiuje dar beveik nenaudojame), o dėl loginio griežtumo trūkumo. Pagrindinis klausimas, kurį sau užduoda olimpiadininkas: „Ar aš suskaičiavau viską?“ ir „Ar aš ko nors nesuskaičiavau du kartus?“"
         },
         {
-          "type": "warning",
-          "text": "Visada sudarykite sąrašus sistemiškai! Pavyzdžiui, jei ieškote triženklių skaičių, rašykite juos didėjimo tvarka (nuo mažiausio iki didžiausio)."
+          "type": "paragraph",
+          "text": "Sėkmingas kombinatorikos uždavinių sprendimas remiasi trimis „banginiais“: sistemingumu, pagrindinėmis skaičiavimo taisyklėmis ir specialiaisiais principais, tokiais kaip Dirichlė principas. Šioje pamokoje apžvelgsime strategijas, kurios padės suvaldyti net ir painiausius variantus."
+        }
+      ]
+    },
+    {
+      "title": "1. Pagrindinės skaičiavimo taisyklės: Sudėtis ir Daugyba",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "**Sudėties taisyklė (ARBA)**: Jei objektą A galime pasirinkti $n$ būdais, o objektą B – $m$ būdais, ir pasirinkimai nesikerta (negalima pasirinkti abiejų vienu metu), tai pasirinkti „A arba B“ galime $n + m$ būdais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, jei lentynoje yra 5 matematikos knygos ir 3 istorijos knygos, tai pasirinkti vieną bet kurią knygą galime $5 + 3 = 8$ būdais. Svarbu įsitikinti, kad nėra knygos, kuri būtų ir matematikos, ir istorijos vienu metu (sankirtos nebuvimas)."
         },
         {
           "type": "method",
-          "text": "**Daugybos taisyklė**: Jeigu pirmąjį objektą galime pasirinkti $a$ būdais, o antrąjį – $b$ būdais, tai abiejų objektų poros pasirinkimo būdų skaičius yra $a \\times b$."
+          "text": "**Daugybos taisyklė (IR)**: Jei pirmąjį objektą galime pasirinkti $n$ būdais, o po kiekvieno tokio pasirinkimo antrąjį objektą galime pasirinkti $m$ būdais, tai porą (A ir B) galime pasirinkti $n \\times m$ būdais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai viena galingiausių taisyklių. Įsivaizduokite, kad turite 3 skirtingas kepures ir 4 skirtingus šalikus. Kiekvienai kepurei galite priderinti bet kurį iš 4 šalikų. Kadangi turime 3 kepures, bendras derinių skaičius yra $4 + 4 + 4 = 3 \\times 4 = 12$."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida: Daugybos taisyklę mokiniai bando taikyti ten, kur pasirinkimai priklauso vienas nuo kito arba kai eiliškumas nėra svarbus, nors skaičiuojama kaip su eiliškumu. Visada paklauskite savęs: „Ar kiekvienam pirmo objekto pasirinkimui tikrai tenka lygiai tiek pat antro objekto pasirinkimų?“"
+        }
+      ]
+    },
+    {
+      "title": "2. Sisteminio išvardijimo strategija: Leksikografinė tvarka",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai variantų nėra daug (pavyzdžiui, iki 20-30), geriausia juos tiesiog išrašyti. Tačiau rašant bet kaip, lengva susipainioti. Olimpiadininkai naudoja **leksikografinę tvarką** – tai tvarka, kuria žodžiai surašyti žodyne arba skaičiai didėjimo tvarka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, sudarant visus galimus triženklius skaičius iš skaitmenų 1, 2, 3 (nenaudojant tų pačių skaitmenų), rašykime juos taip:\n1. Pradedame mažiausiu šimtu: 123, 132.\n2. Tada einame prie kito skaitmens šimtuose: 213, 231.\n3. Galiausiai: 312, 321.\nŠitaip mes turime aiškią struktūrą ir matome, kad nieko nepraleidome."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitas būdas – **galimybių medis**. Tai grafinis vaizdavimas, kur iš vieno taško (pradžios) brėžiamos šakos į visus įmanomus pirmo žingsnio pasirinkimus, iš jų – į antro žingsnio pasirinkimus ir t. t. Medžio galinių „šakelių“ skaičius parodo visus variantus."
+        }
+      ]
+    },
+    {
+      "title": "3. Permutacijos: Kaip susodinti draugus į eilę?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Permutacija – tai objektų išdėstymas tam tikra tvarka. Jei turime $n$ skirtingų objektų, tai pirmoje vietoje galime padėti bet kurį iš jų ($n$ pasirinkimų), antroje vietoje – bet kurį iš likusių ($n-1$ pasirinkimas), trečioje – iš likusių $n-2$ ir taip toliau."
+        },
+        {
+          "type": "method",
+          "text": "**Faktorialas**: $n$ skirtingų objektų eilėje galime išrikiuoti $n! = n \\times (n-1) \\times (n-2) \\times \\dots \\times 1$ būdais."
+        },
+        {
+          "type": "paragraph",
+          "text": "5-oje klasėje faktorialo žymėjimo nebūtina mokėti, bet principą suprasti būtina. Pavyzdžiui, 4 mokiniai į eilę gali atsistoti $4 \\times 3 \\times 2 \\times 1 = 24$ būdais."
+        }
+      ]
+    },
+    {
+      "title": "4. Rankų paspaudimo uždavinys ir porų parinkimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vienas klasikinių uždavinių: „Kiek bus rankų paspaudimų, jei 5 draugai visi pasisveikina vienas su kitu?“ Čia daugybos taisyklė $5 \\times 4 = 20$ duotų klaidingą atsakymą. Kodėl?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nes jei Jonas paspaudė ranką Petrui, tai Petras tuo pačiu metu paspaudė ranką Jonui. Mes tą patį įvykį suskaičiavome du kartus! Todėl bendrą sumą reikia dalinti iš 2."
+        },
+        {
+          "type": "method",
+          "text": "**Strategija „Kiekvienas su kiekvienu“**: Jei yra $n$ dalyvių, tai kiekvienas jų gali paspausti ranką $n-1$ kitam asmeniui. Kadangi kiekvieną paspaudimą atlieka du žmonės, formulė yra: $\\frac{n \\times (n-1)}{2}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mūsų pavyzdžiui: $\\frac{5 \\times 4}{2} = 10$. Galima tai suprasti ir sudėtimi: pirmas žmogus paspaudžia 4 rankas, antras – 3 naujas rankas, trečias – 2, ketvirtas – 1, penktas jau su visais pasisveikino. Suma: $4+3+2+1 = 10$."
+        }
+      ]
+    },
+    {
+      "title": "5. Dirichlė principas: Balandžiai ir narveliai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai vienas elegantiškiausių olimpiadinių įrankių. Jo esmė paprasta: jei turime daugiau „balandžių“ negu „narvelių“, tai bent viename narvelyje turi būti bent du balandžiai."
+        },
+        {
+          "type": "method",
+          "text": "**Dirichlė principas**: Jei $n+1$ objektą paskirstysime į $n$ dėžučių, tai bent vienoje dėžutėje bus bent du objektai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, jei klasėje yra 13 mokinių, tai bent du iš jų yra gimę tą patį mėnesį. Kodėl? Nes mėnesių yra 12 (tai mūsų „narveliai“), o mokinių 13 (tai „balandžiai“). Net jei pirmieji 12 gimė skirtingais mėnesiais, 13-asis būtinai „įkris“ į kurį nors jau užimtą mėnesį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose šis principas dažnai naudojamas įrodant, kad kažkas *egzistuoja*, net jei nežinome tiksliai kas. Sunkiausia dalis – teisingai nustatyti, kas yra „narveliai“, o kas – „balandžiai“."
+        }
+      ]
+    },
+    {
+      "title": "6. Papildinio metodas: Skaičiavimas „nuo priešingo galo“",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kartais tiesiogiai suskaičiuoti visus tinkamus variantus yra labai sunku, nes jų yra daug ir skirtingų tipų. Tada lengviau suskaičiuoti visus įmanomus variantus ir iš jų atimti tuos, kurie mums *netinka*."
+        },
+        {
+          "type": "method",
+          "text": "**Strategija**: Tinkami variantai = Visi variantai - Netinkami variantai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, kiek yra dviženklių skaičių, turinčių bent vieną skaitmenį 1? \n- Visi dviženkliai: 90 skaičių.\n- Neturintys nė vieno vieneto: dešimtyse gali būti (2-9, t.y. 8 variantai), vienetuose (0, 2-9, t.y. 9 variantai). Iš viso $8 \\times 9 = 72$.\n- Atsakymas: $90 - 72 = 18$."
         }
       ]
     }
@@ -81,17 +195,90 @@
       "intuition": "Tai nėra tiesiog kelių pavyzdžių patikrinimas. Tai paaiškinimas, KODĖL tai galioja visada be jokių išimčių.",
       "formal": "Dedukcinis samprotavimas, prasidedantis aksiomomis arba žinomais faktais ir per baigtinį žingsnių skaičių pasiekiantis teoremą.",
       "relatedConceptIds": []
+    },
+    {
+      "id": "concept-dirichlet-principle",
+      "title": "Dirichlė (balandžių narvelių) principas",
+      "type": "concept",
+      "shortDefinition": "Principas teigiantis, kad jei elementų skaičius viršija vietų (dėžučių) skaičių, bent vienoje vietoje bus daugiau nei vienas elementas.",
+      "intuition": "Jei turite 3 kojines, o kojų tik dvi, tai dvi kojinės tikrai bus nuo tos pačios kojos (jei spalvos tik dvi).",
+      "formal": "Funkcija iš aibės A į aibę B, kur |A| > |B|, negali būti injektyvi.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
-  "workedExamples": [],
+  "formulas": [
+    {
+      "id": "f-sum-rule",
+      "title": "Sudėties taisyklė",
+      "formula": "N = n + m",
+      "description": "Kai renkamės vieną objektą ARBA iš aibės A (n elementų), ARBA iš aibės B (m elementų), o aibės neturi bendrų elementų."
+    },
+    {
+      "id": "f-product-rule",
+      "title": "Daugybos taisyklė",
+      "formula": "N = n \\times m",
+      "description": "Kai renkamės objektų porą: pirmą iš n variantų, o antrą iš m variantų."
+    },
+    {
+      "id": "f-handshake",
+      "title": "Rankų paspaudimo formulė",
+      "formula": "N = \\frac{n(n-1)}{2}",
+      "description": "Būdų skaičius pasirinkti porą iš n elementų, kai tvarka nesvarbi (kiekvienas su kiekvienu)."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "m-double-counting",
+      "title": "Dvigubas skaičiavimas",
+      "description": "Tas pats variantas suskaičiuojamas kelis kartus, nes nepastebima, kad objektų tvarka nėra svarbi.",
+      "fix": "Visada paklauskite: „Ar sukeitus objektus vietomis gaunamas naujas variantas?“ Jei ne - dalinkite iš atitinkamo skaičiaus."
+    },
+    {
+      "id": "m-zero-leading",
+      "title": "Nulis skaičiaus pradžioje",
+      "description": "Skaičiuojant skaičius, nulis negali būti pirmas skaitmuo (pvz., 052 nėra triženklis skaičius).",
+      "fix": "Pirmą skaitmenį rinkitės iš 9 variantų (1-9), o ne iš 10."
+    },
+    {
+      "id": "m-missing-system",
+      "title": "Nesistemingas sąrašas",
+      "description": "Variantų rašymas be aiškios tvarkos dažniausiai baigiasi praleidimais.",
+      "fix": "Naudokite leksikografinę tvarką (pagal didėjimą) arba galimybių medį."
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Skaitmenų perstatymas",
+      "statement": "Kiek skirtingų keturženklių skaičių galima sudaryti naudojant skaitmenis 0, 1, 2, 3, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą?",
+      "solution": "Naudojame daugybos taisyklę su apribojimu:\n1. Tūkstančių skaitmuo: gali būti 1, 2 arba 3 (0 negali būti pradžioje). Turime **3 pasirinkimus**.\n2. Šimtų skaitmuo: gali būti bet kuris iš likusių 3 skaitmenų (įskaitant 0, kurio nenaudojome pradžioje). Turime **3 pasirinkimus**.\n3. Dešimčių skaitmuo: lieka 2 nepanaudoti skaitmenys. Turime **2 pasirinkimus**.\n4. Vienetų skaitmuo: lieka **1 pasirinkimas**.\n\nBendras skaičius: $3 \\times 3 \\times 2 \\times 1 = 18$.\n\n**Atsakymas:** 18."
+    },
+    {
+      "title": "Turnyro partijos",
+      "statement": "Šachmatų turnyre dalyvauja 6 žaidėjai. Kiekvienas su kiekvienu sužaidžia po vieną partiją. Kiek iš viso partijų bus sužaista?",
+      "solution": "Tai klasikinis „kiekvienas su kiekvienu“ uždavinys.\n- Pirmas žaidėjas sužaidžia su 5 kitais.\n- Antras žaidėjas sužaidžia su 4 naujais (su pirmu jau sužaidė).\n- Trečias žaidėjas – su 3 naujais.\n- Ketvirtas – su 2 naujais.\n- Penktas – su 1 nauju.\n- Šeštas jau su visais sužaidė.\n\nSuma: $5 + 4 + 3 + 2 + 1 = 15$.\nArba pagal formulę: $\\frac{6 \\times (6-1)}{2} = \\frac{30}{2} = 15$.\n\n**Atsakymas:** 15."
+    },
+    {
+      "title": "Spalvotos kojinės",
+      "statement": "Dėžėje yra 10 juodų ir 10 mėlynų kojinių. Jos visos sumaišytos. Kambaryje tamsu, todėl spalvų nematyti. Kiek mažiausiai kojinių reikia ištraukti, kad būtume tikri, jog turime bent vieną tos pačios spalvos porą?",
+      "solution": "Taikome Dirichlė principą.\n- „Narveliai“ yra spalvos: Juoda ir Mėlyna (2 narveliai).\n- Kad būtume tikri, jog viename narvelyje atsidurs bent 2 kojinės, mums reikia turėti daugiau „balandžių“ nei narvelių.\n- $2 + 1 = 3$ kojinės.\n\nPaaiškinimas: jei ištrauksime 2 kojines, jos gali būti skirtingų spalvų (viena juoda, viena mėlyna). Trečioji ištraukta kojinė būtinai sutaps su viena iš pirmųjų dviejų.\n\n**Atsakymas:** 3."
+    },
+    {
+      "title": "Vėliavų spalvinimas",
+      "statement": "Turime 3 spalvas: raudoną, žalią ir geltoną. Kiek yra būdų nuspalvinti trijų horizontalių juostų vėliavą, jei gretimos juostos turi būti skirtingų spalvų, o spalvos gali kartotis?",
+      "solution": "Taikome daugybos taisyklę žingsnis po žingsnio:\n1. Viršutinė juosta: Galime rinktis bet kurią iš **3 spalvų**.\n2. Vidurinė juosta: Ji turi skirtis nuo viršutinės, todėl turime **2 pasirinkimus** (bet kuri spalva, išskyrus tą, kurią panaudojome viršuje).\n3. Apatinė juosta: Ji turi skirtis tik nuo vidurinės juostos. Spalva gali būti tokia pati kaip viršutinės, bet kitokia nei vidurinės. Tad vėl turime **2 pasirinkimus**.\n\nIš viso: $3 \\times 2 \\times 2 = 12$.\n\n**Atsakymas:** 12."
+    },
+    {
+      "title": "Suma lygi 5",
+      "statement": "Kiek yra triženklių skaičių, kurių skaitmenų suma lygi 5?",
+      "solution": "Čia geriausia taikyti sisteminį išrašymą pagal pirmąjį skaitmenį:\n- Jei šimtai yra **1**: likusių skaitmenų suma turi būti 4. Poros (dešimtys, vienetai): (0,4), (1,3), (2,2), (3,1), (4,0). Iš viso **5 variantai**.\n- Jei šimtai yra **2**: likusių suma 3. Poros: (0,3), (1,2), (2,1), (3,0). Iš viso **4 variantai**.\n- Jei šimtai yra **3**: likusių suma 2. Poros: (0,2), (1,1), (2,0). Iš viso **3 variantai**.\n- Jei šimtai yra **4**: likusių suma 1. Poros: (0,1), (1,0). Iš viso **2 variantai**.\n- Jei šimtai yra **5**: likusių suma 0. Pora: (0,0). Iš viso **1 variantas**.\n\nBendra suma: $5 + 4 + 3 + 2 + 1 = 15$.\n\n**Atsakymas:** 15."
+    }
+  ],
   "exercises": [
     {
       "id": "ex-olimpiada-05-d91d7cd0",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -106,23 +293,47 @@
         "title": "Pasirinkite skaitmenis nuosekliai",
         "text": "Nelyginiai skaitmenys yra: $1, 3, 5, 7, 9$ (iš viso penki). Pirmąjį skaitmenį galime pasirinkti iš $5$ variantų, o tolesnius – iš likusių skaitmenų."
       },
-      "strategyTags": ["kombinatorika", "proof"],
+      "strategyTags": [
+        "kombinatorika",
+        "proof"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmiausia išsirašykite visus nelyginius skaitmenis: $1, 3, 5, 7, 9$. Jų yra lygiai $5$.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kadangi skaitmenys turi būti skirtingi, kiekvienai kitai skaičiaus pozicijai turėsite vienu pasirinkimu mažiau.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Taikykite daugybos taisyklę: $5 \\times 4 \\times 3$.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia išsirašykite visus nelyginius skaitmenis: $1, 3, 5, 7, 9$. Jų yra lygiai $5$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi skaitmenys turi būti skirtingi, kiekvienai kitai skaičiaus pozicijai turėsite vienu pasirinkimu mažiau.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Taikykite daugybos taisyklę: $5 \\times 4 \\times 3$.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Nelyginių skaitmenų aibė yra {1, 3, 5, 7, 9} (5 elementai)." },
-        { "text": "Šimtams - 5 galimybės, dešimtims - 4, vienetams - 3." },
-        { "text": "Iš viso: 5 * 4 * 3 = 60." }
+        {
+          "text": "Nelyginių skaitmenų aibė yra {1, 3, 5, 7, 9} (5 elementai)."
+        },
+        {
+          "text": "Šimtams - 5 galimybės, dešimtims - 4, vienetams - 3."
+        },
+        {
+          "text": "Iš viso: 5 * 4 * 3 = 60."
+        }
       ]
     },
     {
       "id": "ex-olimpiada-05-335ceef1",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -137,22 +348,43 @@
         "title": "Taikykite kombinatorinės sandaugos taisyklę",
         "text": "Kiekvienas kelnių pasirinkimas derinamas su kitais drabužiais."
       },
-      "strategyTags": ["kombinatorinė-sandauga"],
+      "strategyTags": [
+        "kombinatorinė-sandauga"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Marius turi pasirinkti vieną daiktą iš kiekvienos grupės.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Vienas kelnių pasirinkimas suteikia 5 galimybes pasirinkti marškinius.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Dauginkite pasirinkimus: 4 * 5 * 3.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Marius turi pasirinkti vieną daiktą iš kiekvienos grupės.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Vienas kelnių pasirinkimas suteikia 5 galimybes pasirinkti marškinius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dauginkite pasirinkimus: 4 * 5 * 3.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Pasirinkimai: 4 kelnės, 5 marškiniai, 3 švarkai." },
-        { "text": "Būdai: 4 * 5 * 3 = 60." }
+        {
+          "text": "Pasirinkimai: 4 kelnės, 5 marškiniai, 3 švarkai."
+        },
+        {
+          "text": "Būdai: 4 * 5 * 3 = 60."
+        }
       ]
     },
     {
       "id": "ex-olimpiada-05-9c2b94b5",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -167,22 +399,43 @@
         "title": "Užrašykite visus galimus derinius",
         "text": "Iš viso yra 8 variantai. Suskaičiuokite tuos, kurie turi 2 arba 3 herbus."
       },
-      "strategyTags": ["kombinatorika"],
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiekvienas metimas turi 2 variantus (H arba S).", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Iš viso yra 8 deriniai. Išrašykite juos.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Tinka: HHH, HHS, HSH, SHH.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiekvienas metimas turi 2 variantus (H arba S).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Iš viso yra 8 deriniai. Išrašykite juos.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Tinka: HHH, HHS, HSH, SHH.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Deriniai: HHH, HHS, HSH, HSS, SHH, SHS, SSH, SSS." },
-        { "text": "Bent du herbai: HHH, HHS, HSH, SHH (4 variantai)." }
+        {
+          "text": "Deriniai: HHH, HHS, HSH, HSS, SHH, SHS, SSH, SSS."
+        },
+        {
+          "text": "Bent du herbai: HHH, HHS, HSH, SHH (4 variantai)."
+        }
       ]
     },
     {
       "id": "ex-olimpiada-05-f16ab6bb",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -197,23 +450,46 @@
         "title": "Palankių baigčių radimas",
         "text": "Iš viso 36 baigtys. Raskite poras, kurių suma 7."
       },
-      "strategyTags": ["tikimybė"],
+      "strategyTags": [
+        "tikimybė"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Viso baigčių yra 6 * 6 = 36.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Išrašykite poras: (1,6), (2,5)...", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Palankių baigčių yra 6. Tikimybė 6/36.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Viso baigčių yra 6 * 6 = 36.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Išrašykite poras: (1,6), (2,5)...",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Palankių baigčių yra 6. Tikimybė 6/36.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Viso baigčių: 36." },
-        { "text": "Sumai 7 palankios: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) (iš viso 6)." },
-        { "text": "P = 6/36 = 1/6." }
+        {
+          "text": "Viso baigčių: 36."
+        },
+        {
+          "text": "Sumai 7 palankios: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) (iš viso 6)."
+        },
+        {
+          "text": "P = 6/36 = 1/6."
+        }
       ]
     },
     {
       "id": "ex-olimpiada-05-95fb1dbf",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
@@ -228,23 +504,46 @@
         "title": "Loginė analizė",
         "text": "Jei tik Rokas sakė tiesą, tai Mantas ir Paulius melavo."
       },
-      "strategyTags": ["logika"],
+      "strategyTags": [
+        "logika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Manto ir Pauliaus teiginiai yra melagingi.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Mantas sakė „ne mėlyna“. Kadangi tai melas, tai jo kepurė mėlyna.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Patikrinkite kitas spalvas, kad įsitikintumėte.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Manto ir Pauliaus teiginiai yra melagingi.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Mantas sakė „ne mėlyna“. Kadangi tai melas, tai jo kepurė mėlyna.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Patikrinkite kitas spalvas, kad įsitikintumėte.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Manto teiginys melas -> kepurė mėlyna." },
-        { "text": "Pauliaus teiginys melas -> jo ne žalia (raudona)." },
-        { "text": "Rokui lieka žalia. Roko teiginys tiesa (Manto ne raudona)." }
+        {
+          "text": "Manto teiginys melas -> kepurė mėlyna."
+        },
+        {
+          "text": "Pauliaus teiginys melas -> jo ne žalia (raudona)."
+        },
+        {
+          "text": "Rokui lieka žalia. Roko teiginys tiesa (Manto ne raudona)."
+        }
       ]
     },
     {
       "id": "ex-olimpiada-05-dfa8e5ff",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
@@ -259,338 +558,711 @@
         "title": "Venų diagramos",
         "text": "Sankirtos radimas per įtraukties-išskirties principą."
       },
-      "strategyTags": ["venų-diagramos"],
+      "strategyTags": [
+        "venų-diagramos"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Lankančių bent vieną yra 25 - 5 = 20.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Suma 15 + 12 = 27 viršija 20.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Sankirta = 27 - 20 = 7.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Lankančių bent vieną yra 25 - 5 = 20.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Suma 15 + 12 = 27 viršija 20.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sankirta = 27 - 20 = 7.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Lanko bent vieną: 20." },
-        { "text": "Suma: 27." },
-        { "text": "Abu: 27 - 20 = 7." }
+        {
+          "text": "Lanko bent vieną: 20."
+        },
+        {
+          "text": "Suma: 27."
+        },
+        {
+          "text": "Abu: 27 - 20 = 7."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-001",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "5 draugai kiekvienas paspaudė ranką kiekvienam. Kiek iš viso paspaudimų?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Iš viso 10." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Iš viso 10."
+      },
       "answerText": "10",
-      "coreIdea": { "title": "Porų skaičiavimas", "text": "Kiekvienas paspaudimas jungia 2 žmones." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Porų skaičiavimas",
+        "text": "Kiekvienas paspaudimas jungia 2 žmones."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmas asmuo pasveikina 4 kitus.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Antras asmuo jau pasveikino pirmą, tad jam lieka 3 nauji.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Sudėkite: 4 + 3 + 2 + 1 = 10.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmas asmuo pasveikina 4 kitus.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Antras asmuo jau pasveikino pirmą, tad jam lieka 3 nauji.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Sudėkite: 4 + 3 + 2 + 1 = 10.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "4 + 3 + 2 + 1 = 10." }
+        {
+          "text": "4 + 3 + 2 + 1 = 10."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-002",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "Iš A į B veda 3 keliai, iš B į C - 4. Keliais būdais galima nuvažiuoti iš A į C per B?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "12 būdų." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "12 būdų."
+      },
       "answerText": "12",
-      "coreIdea": { "title": "Daugybos taisyklė", "text": "Kiekvienas kelias A-B derinamas su B-C." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Daugybos taisyklė",
+        "text": "Kiekvienas kelias A-B derinamas su B-C."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiekvienas iš 3 kelių turi 4 tęsinius.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Pabandykite nupiešti schemą.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Dauginkite: 3 * 4 = 12.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiekvienas iš 3 kelių turi 4 tęsinius.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pabandykite nupiešti schemą.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Dauginkite: 3 * 4 = 12.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "3 * 4 = 12." }
+        {
+          "text": "3 * 4 = 12."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-003",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek triženklių skaičių galima sudaryti iš kortelių 2, 4, 6 (naudojant visas po kartą)?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 skaičiai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 skaičiai."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Permutacijos", "text": "Skaitmenų perstatymas." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Permutacijos",
+        "text": "Skaitmenų perstatymas."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmajam skaitmeniui yra 3 galimybės.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Antrajam lieka 2, trečiajam 1.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Surašykite juos: 246, 264, 426, 462, 624, 642.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmajam skaitmeniui yra 3 galimybės.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Antrajam lieka 2, trečiajam 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Surašykite juos: 246, 264, 426, 462, 624, 642.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "3 * 2 * 1 = 6." }
+        {
+          "text": "3 * 2 * 1 = 6."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-004",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "Krepšyje 3 raudoni ir 2 žali rutuliai. Kokia tikimybė ištraukti žalią?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "2/5." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2/5."
+      },
       "answerText": "2/5",
-      "coreIdea": { "title": "Tikimybė", "text": "Palankūs / Visi." },
-      "strategyTags": ["tikimybė"],
+      "coreIdea": {
+        "title": "Tikimybė",
+        "text": "Palankūs / Visi."
+      },
+      "strategyTags": [
+        "tikimybė"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiek iš viso rutulių?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Visi = 5. Palankūs (žali) = 2.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "P = 2 / 5.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek iš viso rutulių?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Visi = 5. Palankūs (žali) = 2.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "P = 2 / 5.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Iš viso 5. Žalių 2. P = 2/5." }
+        {
+          "text": "Iš viso 5. Žalių 2. P = 2/5."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-005",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek kelių yra iš A į C tinklyje 2x2 (judant tik dešinėn ar viršun)?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 būdai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 būdai."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Kelių skaičiavimas", "text": "Paskalio trikampis tinklyje." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Kelių skaičiavimas",
+        "text": "Paskalio trikampis tinklyje."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiekvienas kelias turi 4 žingsnius (2 dešinėn, 2 viršun).", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Išrašykite kelius raidėmis (D ir V).", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Variantai: DDVV, DVDV, DVVD, VDDV, VDVD, VVDD.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiekvienas kelias turi 4 žingsnius (2 dešinėn, 2 viršun).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Išrašykite kelius raidėmis (D ir V).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Variantai: DDVV, DVDV, DVVD, VDDV, VDVD, VVDD.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Iš viso 6 variantai." }
+        {
+          "text": "Iš viso 6 variantai."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-006",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Vilius, Gytis, Saulius lenktyniavo. Vilius ne paskutinis, Gytis anksčiau už Vilių. Kokia tvarka?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Gytis, Vilius, Saulius." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Gytis, Vilius, Saulius."
+      },
       "answerText": "Gytis, Vilius, Saulius",
-      "coreIdea": { "title": "Loginė analizė", "text": "Atranka pagal sąlygas." },
-      "strategyTags": ["logika"],
+      "coreIdea": {
+        "title": "Loginė analizė",
+        "text": "Atranka pagal sąlygas."
+      },
+      "strategyTags": [
+        "logika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Vilius gali būti 1 arba 2.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kadangi Gytis už jį anksčiau, Vilius negali būti 1.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Vadinasi Vilius 2. Gytis 1. Saulius 3.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Vilius gali būti 1 arba 2.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi Gytis už jį anksčiau, Vilius negali būti 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Vadinasi Vilius 2. Gytis 1. Saulius 3.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Gytis (1), Vilius (2), Saulius (3)." }
+        {
+          "text": "Gytis (1), Vilius (2), Saulius (3)."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-007",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "Iš 4 mokinių (A, B, C, D) reikia išrinkti 2. Keliais būdais?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 būdai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 būdai."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Deriniai", "text": "Porų išrašymas be tvarkos." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Deriniai",
+        "text": "Porų išrašymas be tvarkos."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Surašykite visas poras su A: AB, AC, AD.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Tęskite su B (bet be BA): BC, BD.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Paskutinė pora CD. Iš viso 3+2+1 = 6.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Surašykite visas poras su A: AB, AC, AD.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Tęskite su B (bet be BA): BC, BD.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Paskutinė pora CD. Iš viso 3+2+1 = 6.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Poros: AB, AC, AD, BC, BD, CD. Iš viso 6." }
+        {
+          "text": "Poros: AB, AC, AD, BC, BD, CD. Iš viso 6."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-008",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek yra triženklių skaičių, kurių skaitmenų suma lygi 4?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "10 skaičių." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "10 skaičių."
+      },
       "answerText": "10",
-      "coreIdea": { "title": "Sistemingas išrašymas", "text": "Ieškoti pagal pirmą skaitmenį." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Sistemingas išrašymas",
+        "text": "Ieškoti pagal pirmą skaitmenį."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmas skaitmuo gali būti 1, 2, 3, 4.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Jei pirmas 1, tai kiti du sumoje duoda 3: 0+3, 1+2, 2+1, 3+0.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Iš viso: 4 (su 1) + 3 (su 2) + 2 (su 3) + 1 (su 4) = 10.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmas skaitmuo gali būti 1, 2, 3, 4.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Jei pirmas 1, tai kiti du sumoje duoda 3: 0+3, 1+2, 2+1, 3+0.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Iš viso: 4 (su 1) + 3 (su 2) + 2 (su 3) + 1 (su 4) = 10.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "103, 130, 112, 121, 202, 220, 211, 301, 310, 400. Iš viso 10." }
+        {
+          "text": "103, 130, 112, 121, 202, 220, 211, 301, 310, 400. Iš viso 10."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-009",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "Keliais būdais galime nuspalvinti 3 dalių vėliavą 3 spalvomis (skirtingomis)?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 būdai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 būdai."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Daugybos taisyklė", "text": "3 * 2 * 1." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Daugybos taisyklė",
+        "text": "3 * 2 * 1."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmai daliai 3 spalvos.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Antrai daliai lieka 2 (nes turi skirtis).", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Paskutinei lieka 1. 3 * 2 * 1 = 6.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmai daliai 3 spalvos.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Antrai daliai lieka 2 (nes turi skirtis).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Paskutinei lieka 1. 3 * 2 * 1 = 6.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "3 * 2 * 1 = 6." }
+        {
+          "text": "3 * 2 * 1 = 6."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-010",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek būdų gauti 10 eurų sumą naudojant tik 2 ir 5 eurų monetas?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "2 būdai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "2 būdai."
+      },
       "answerText": "2",
-      "coreIdea": { "title": "Lygčių sprendimas", "text": "Atvejų analizė." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Lygčių sprendimas",
+        "text": "Atvejų analizė."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Ar galime naudoti dvi po 5 eurus?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "O jei nenaudosime 5 eurų, kiek reikės po 2?", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Variantai: (5+5) ir (2+2+2+2+2). Iš viso 2.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Ar galime naudoti dvi po 5 eurus?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "O jei nenaudosime 5 eurų, kiek reikės po 2?",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Variantai: (5+5) ir (2+2+2+2+2). Iš viso 2.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Variantai: 5+5 arba 2+2+2+2+2." }
+        {
+          "text": "Variantai: 5+5 arba 2+2+2+2+2."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-011",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "Kiek žodžių galima sudaryti iš raidžių MAMA?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 žodžiai." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 žodžiai."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Permutacijos su pasikartojimu", "text": "Vienodos raidės nesuteikia naujų žodžių." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Permutacijos su pasikartojimu",
+        "text": "Vienodos raidės nesuteikia naujų žodžių."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Jei raidės būtų skirtingos, būtų 24 žodžiai.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kadangi turime 2 M ir 2 A, jų sukeitimas nieko nekeičia.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Surašykite: AAMM, AMAM, AMMA, MAAM, MAMA, MMAA.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Jei raidės būtų skirtingos, būtų 24 žodžiai.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kadangi turime 2 M ir 2 A, jų sukeitimas nieko nekeičia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Surašykite: AAMM, AMAM, AMMA, MAAM, MAMA, MMAA.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "6 variantai." }
+        {
+          "text": "6 variantai."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-012",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "introductory",
       "requiredPrerequisiteMastery": 60,
       "statement": "3 rūšių ledai, 2 rūšių pabarstukai. Kiek porcijų?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "6 porcijos." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "6 porcijos."
+      },
       "answerText": "6",
-      "coreIdea": { "title": "Daugybos taisyklė", "text": "3 * 2." },
-      "strategyTags": ["kombinatorika"],
+      "coreIdea": {
+        "title": "Daugybos taisyklė",
+        "text": "3 * 2."
+      },
+      "strategyTags": [
+        "kombinatorika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiekvieną ledų rūšį galime pabarstyti 2 būdais.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "3 * 2 = 6.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Naudokite daugybos taisyklę.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiekvieną ledų rūšį galime pabarstyti 2 būdais.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "3 * 2 = 6.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Naudokite daugybos taisyklę.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "3 * 2 = 6." }
+        {
+          "text": "3 * 2 = 6."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-013",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek kvadratų lentelėje 3x3?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "14 kvadratų." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "14 kvadratų."
+      },
       "answerText": "14",
-      "coreIdea": { "title": "Geometrinė kombinatorika", "text": "Kvadratai 1x1, 2x2, 3x3." },
-      "strategyTags": ["geometrija"],
+      "coreIdea": {
+        "title": "Geometrinė kombinatorika",
+        "text": "Kvadratai 1x1, 2x2, 3x3."
+      },
+      "strategyTags": [
+        "geometrija"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Suskaičiuokite 1x1 (jų 9).", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Dabar 2x2 (jų 4) ir 3x3 (1).", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "9 + 4 + 1 = 14.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suskaičiuokite 1x1 (jų 9).",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Dabar 2x2 (jų 4) ir 3x3 (1).",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "9 + 4 + 1 = 14.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "9 + 4 + 1 = 14." }
+        {
+          "text": "9 + 4 + 1 = 14."
+        }
       ]
     },
     {
       "id": "ex-ol-05-comb-014",
       "topicId": "olimpiada-05-kombinatorika",
       "grade": 5,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Kombinatorika",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 70,
       "statement": "Kiek kojinių reikia ištraukti (iš 10 raudonų ir 10 mėlynų), kad turėtume porą?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "3 kojines." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "3 kojines."
+      },
       "answerText": "3",
-      "coreIdea": { "title": "Dirichlė principas", "text": "Balandžių narveliai." },
-      "strategyTags": ["logika"],
+      "coreIdea": {
+        "title": "Dirichlė principas",
+        "text": "Balandžių narveliai."
+      },
+      "strategyTags": [
+        "logika"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Kiek spalvų turime?", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Blogiausiu atveju pirmos dvi bus skirtingos.", "penalty": 0.08 },
-        { "order": 3, "kind": "method", "text": "Trečia būtinai sutaps su kuria nors spalva.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Kiek spalvų turime?",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Blogiausiu atveju pirmos dvi bus skirtingos.",
+          "penalty": 0.08
+        },
+        {
+          "order": 3,
+          "kind": "method",
+          "text": "Trečia būtinai sutaps su kuria nors spalva.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "2 spalvos + 1 = 3 kojinės." }
+        {
+          "text": "2 spalvos + 1 = 3 kojinės."
+        }
       ]
     }
   ],
@@ -599,7 +1271,9 @@
       "id": "test-olimpiada-05-kombinatorika",
       "title": "Kombinatorikos iššūkis (5 klasė)",
       "type": "olympiad",
-      "topicIds": ["olimpiada-05-kombinatorika"],
+      "topicIds": [
+        "olimpiada-05-kombinatorika"
+      ],
       "exerciseIds": [
         "ex-olimpiada-05-d91d7cd0",
         "ex-olimpiada-05-335ceef1",

@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+    "notes": "Deeply expanded theory and worked examples for Grade 10 Olympiad Combinatorics"
   },
   "topic": {
     "id": "olimpiada-10-kombinatorika",
@@ -12,7 +12,7 @@
     "strand": "Kombinatorika",
     "level": "olympiad",
     "order": 110,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
@@ -20,7 +20,10 @@
       "concept-deriniai",
       "concept-keliniai-su-pasikartojimais",
       "concept-ijungimo-isjungimo-principas",
-      "concept-katalano-skaiciai"
+      "concept-katalano-skaiciai",
+      "concept-generating-functions",
+      "concept-recurrence-relations",
+      "concept-ramsey-theory"
     ],
     "formulaIds": [],
     "mistakeIds": [],
@@ -49,41 +52,98 @@
   },
   "theory": [
     {
-      "title": "Inversija apskritimo atžvilgiu ir grafų teorija",
+      "id": "theory-comb-10-intro",
+      "title": "Kombinatorikos gelmės: Nuo skaičiavimo iki struktūrų",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Inversija yra galinga geometrinė transformacija, kuri apskritimus ir tieses pakeičia kitais apskritimais ar tiesėmis, dažnai supaprastindama liestinių uždavinius."
+          "text": "10 klasės olimpiadinė kombinatorika tolsta nuo paprasto „kiek būdų“ klausimo ir pasineria į gilias diskrečiosios matematikos struktūras. Čia susiduriame su metodais, kurie leidžia skaičiuoti objektus netiesiogiai (per funkcijas), tirti grafų globalias savybes ir įrodinėti dėsningumus, kurie atrodo visiškai atsitiktiniai (pvz., Ramsey teorija). Sėkmę šiame lygyje lemia nebe mokėjimas pasirinkti formulę, o gebėjimas sukonstruoti bijekciją, rasti rekurentinį ryšį arba pritaikyti invariantą sudėtingoje būsenų erdvėje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šiame kurse mes nagrinėjame tris pagrindines kryptis: rekurenciją, pažangią grafų teoriją ir ekstremaliąją kombinatoriką."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-recurrence",
+      "title": "Rekurentiniai sąryšiai: Skaičiavimo dinamika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rekurencija yra metodas, kai uždavinio sprendimas $a_n$ išreiškiamas per mažesnius atvejus $a_{n-1}, a_{n-2}$ ir t. t."
         },
         {
           "type": "method",
-          "text": "Pasirinkite inversijos centrą taške, kuriame susikerta arba liečiasi keli apskritimai."
+          "text": "Skaidymo strategija: Įsivaizduokite paskutinį žingsnį konstruojant $n$ dydžio objektą. Jei šį žingsnį galima atlikti keliais būdais, kurie veda į $n-1$ arba $n-2$ dydžio objektus, turime rekurentinę formulę. Klasikinis pavyzdys – laiptų kilimas arba domino padengimas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sprendimas: Gavę tiesinį rekurentinį sąryšį $a_n = p a_{n-1} + q a_{n-2}$, naudojame charakteristinę lygtį $r^2 - pr - q = 0$, kad rastume bendrą nario formulę."
         }
       ]
     },
     {
-      "title": "Dirichlė principas (Pigeonhole Principle)",
+      "id": "theory-comb-generating",
+      "title": "Generuojančios funkcijos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jei n+1 objektą dedame į n dėžučių, tai bent vienoje dėžutėje bus bent du objektai."
+          "text": "Generuojanti funkcija yra „begalinis polinomas“ $A(x) = a_0 + a_1 x + a_2 x^2 + \\dots$, kurio koeficientai yra mūsų ieškomos sekos nariai."
         },
         {
-          "type": "note",
-          "text": "Šis principas dažnai naudojamas įrodant egzistavimą neieškant konkretaus pavyzdžio."
+          "type": "method",
+          "text": "Galios metodas: Šis įrankis paverčia kombinatorines operacijas algebrinėmis. Objektų rinkimas (sudėtis) virsta polinomų daugyba. Pavyzdžiui, būdų skaičius gauti sumą $S$ metant kauliukus yra koeficientas prie $x^S$ funkcijoje $(x+x^2+x^3+x^4+x^5+x^6)^n$."
         }
       ]
     },
     {
-      "title": "Grafų teorijos pagrindai",
+      "id": "theory-comb-graphs-planar",
+      "title": "Grafų teorija: Plokštumas ir spalvinimas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Grafas susideda iš viršūnių ir jas jungiančių briaunų. Rankų paspaudimo lema teigia, kad visų viršūnių laipsnių suma lygi dvigubam briaunų skaičiui."
+          "text": "Plokščiasis grafas – tai grafas, kurį galima nupiešti plokštumoje be briaunų susikirtimų."
         },
         {
-          "type": "formula",
-          "latex": "\\sum deg(v) = 2|E|"
+          "type": "formulaCallout",
+          "text": "**Oilerio formulė:** $V - E + F = 2$. Čia $V$ – viršūnės, $E$ – briaunos, $F$ – sritys (įskaitant išorinę). Ši formulė yra fundamentalus ryšys, ribojantis briaunų skaičių plokščiame grafe ($E \\le 3V-6$)."
+        },
+        {
+          "type": "method",
+          "text": "Chromatinis skaičius: Tai mažiausias spalvų kiekis, kuriuo galima nuspalvinti grafo viršūnes taip, kad jokios dvi gretimos viršūnės nebūtų tos pačios spalvos. Plokštiesiems grafams šis skaičius niekada neviršija 4 (keturių spalvų teorema)."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-extremal",
+      "title": "Ekstremalioji kombinatorika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekstremalioji kombinatorika tiria, kokio didumo (arba mažumo) turi būti sistema, kad joje būtinai atsirastų tam tikra savybė."
+        },
+        {
+          "type": "theorem",
+          "text": "**Turano teorema:** Tai pagrindinis rezultatas apie briaunų skaičių grafe, kuriame nėra pilnojo poiaubio $K_r$. Pavyzdžiui, jei grafe su $n$ viršūnių nėra trikampių ($K_3$), tai briaunų skaičius negali viršyti $\\lfloor n^2/4 \\rfloor$."
+        },
+        {
+          "type": "method",
+          "text": "Strategija: Norėdami įrodyti ekstremalų teiginį, dažnai pradedame nuo „blogo“ pavyzdžio konstravimo (pvz., dvidalis grafas), o tada parodome, kad bet koks nukrypimas sukuria ieškomą struktūrą."
+        }
+      ]
+    },
+    {
+      "id": "theory-comb-bijection",
+      "title": "Bijekcijos metodas ir Katalano skaičiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bijekcija – tai abipusė vienareikšmė atitiktis tarp dviejų aibių. Jei galime kiekvieną sudėtingos aibės $A$ elementą susieti su vienu paprastos aibės $B$ elementu, tai $|A| = |B|$."
+        },
+        {
+          "type": "example",
+          "text": "Katalano skaičiai $C_n = \\frac{1}, {n+1} \\binom{2n}, {n}$ atsiranda dešimtyse skirtingų kontekstų: taisyklingos skliaustelių sekos, trikampių trianguliacijos, maršrutai tinklelyje po įstrižaine. Sunkiausia dalis olimpiadoje – pamatyti, kad uždavinys iš tiesų skaičiuoja būtent šiuos objektus."
         }
       ]
     }
@@ -93,9 +153,7 @@
       "id": "olimpiada-10-concept-euler-formula-planar",
       "title": "Oilerio formulė plokštiesiems grafams",
       "type": "concept",
-      "shortDefinition": "Ryšys tarp plokščiojo grafo viršūnių, briaunų ir sričių skaičiaus.",
-      "intuition": "Plokštumoje nupiešto sujungto grafo elementų tarpusavio priklausomybė: $V - E + F = 2$.",
-      "formal": "Bet kuriam susietam plokščiajam grafui su $V$ viršūnėmis, $E$ briaunomis ir $F$ sritimis (įskaitant išorinę) galioja $V - E + F = 2$.",
+      "shortDefinition": "Ryšys $V - E + F = 2$ susietiems plokštiesiems grafams.",
       "relatedConceptIds": []
     },
     {
@@ -103,50 +161,96 @@
       "title": "Deriniai",
       "type": "concept",
       "shortDefinition": "Pasirinkimai iš n elementų po k, kai tvarka nesvarbi.",
-      "formal": "^k = \\frac{n!}{k!(n-k)!}$"
+      "relatedConceptIds": []
     },
     {
       "id": "concept-keliniai-su-pasikartojimais",
       "title": "Kėliniai su pasikartojimais",
       "type": "concept",
       "shortDefinition": "Objektų išdėstymas eilėje, kai kai kurie objektai yra identiški.",
-      "formal": "$\\frac{n!}{n_1! n_2! \\dots n_k!}$"
+      "relatedConceptIds": []
     },
     {
       "id": "concept-ijungimo-isjungimo-principas",
       "title": "Įjungimo-išjungimo principas",
       "type": "method",
-      "shortDefinition": "Metodas aibių sąjungos elementų skaičiui rasti atimant perteklines sankirtas."
+      "shortDefinition": "Aibių sąjungos dydžio skaičiavimas per sankirtas.",
+      "relatedConceptIds": []
     },
     {
       "id": "concept-katalano-skaiciai",
       "title": "Katalano skaičiai",
       "type": "concept",
-      "shortDefinition": "Skaičių seka, aprašanti taisyklingas skliaustelių sekas, trikampių trianguliacijas ir kt.",
-      "formal": " = \\frac{1}{n+1} \\binom{2n}{n}$"
+      "shortDefinition": "Seka $C_n$, aprašanti daugybę kombinatorinių struktūrų.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-generating-functions",
+      "title": "Generuojančios funkcijos",
+      "type": "concept",
+      "shortDefinition": "Polinomai ar eilutės, kurių koeficientai koduoja sekos narius.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-recurrence-relations",
+      "title": "Rekurentiniai sąryšiai",
+      "type": "concept",
+      "shortDefinition": "Sekos apibrėžimas per jos ankstesnius narius.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-ramsey-theory",
+      "title": "Ramzio teorija",
+      "type": "concept",
+      "shortDefinition": "Mokslas apie tvarkos atsiradimą didelėse sistemose (R(n,m)).",
+      "relatedConceptIds": []
     }
   ],
   "formulas": [],
-  "mistakes": [],
+  "mistakes": [
+    {
+      "id": "mistake-planar-non-connected",
+      "title": "Oilerio formulės taikymas nesusietam grafui",
+      "description": "Mokiniai naudoja $V-E+F=2$ grafui, kuris turi kelias atskiras dalis.",
+      "prevention": "Visada patikrinkite, ar grafas susietas. Jei yra $k$ komponentų, formulė tampa $V-E+F = 1+k$."
+    },
+    {
+      "id": "mistake-catalan-index",
+      "title": "Katalano skaičių indekso klaida",
+      "description": "Siejant uždavinį su Katalano skaičiais, dažnai suklystama pasirenkant $n$ (pvz., n vietoj n-1).",
+      "prevention": "Patikrinkite mažiausią atvejį (n=1, 2) ir palyginkite su žinomomis Katalano reikšmėmis (1, 2, 5, 14)."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "Oilerio formulės taikymas grafui",
-      "problem": "Sujungtas plokščias grafas turi 8 viršūnes ir dalija plokštumą į 5 sritis. Kiek briaunų turi šis grafas?",
-      "steps": [
-        {
-          "text": "Taikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$."
-        },
-        {
-          "text": "Įrašome žinomas reikšmes: $V = 8$ ir $F = 5$."
-        },
-        {
-          "text": "Gauname lygtį: $8 - E + 5 = 2 \\implies 13 - E = 2$."
-        },
-        {
-          "text": "Išsprendžiame briaunų skaičių: $E = 11$."
-        }
-      ],
-      "answer": "$11$"
+      "id": "we-comb-recurrence-tiling",
+      "title": "Stačiakampio padengimas domino",
+      "content": "Keliais būdais galima uždengti $2 \\times n$ stačiakampį $1 \\times 2$ domino kauliukais?\n\n**Sprendimas:**\n1. Tegul $a_n$ yra būdų skaičius.\n2. Paskutinis stulpelis gali būti užpildytas dviem būdais:\n   - Vienu vertikaliu domino kauliuku. Tada likęs plotas yra $2 \\times (n-1)$, kurį uždengti yra $a_{n-1}$ būdų.\n   - Dviem horizontaliais domino kauliukais. Tada likęs plotas yra $2 \\times (n-2)$, kurį uždengti yra $a_{n-2}$ būdų.\n3. Gauname rekurentinį sąryšį $a_n = a_{n-1} + a_{n-2}$.\n4. Pradinės sąlygos: $a_1=1$ (vienas vertikalus), $a_2=2$ (du vertikalūs arba du horizontalūs).\n5. Tai Fibonačio seka. $a_n = F_{n+1}$.\n\n**Atsakymas:** $F_{n+1}$.",
+      "explanation": "Paskutinio žingsnio analizė yra standartinis kelias į rekurenciją."
+    },
+    {
+      "id": "we-comb-generating-sums",
+      "title": "Suma naudojant generuojančias funkcijas",
+      "content": "Keliais būdais galima gauti sumą 10 naudojant tik skaičius 1, 2 ir 3, jei tvarka svarbi?\n\n**Sprendimas:**\n1. Kiekvienas pasirinkimas (1, 2 arba 3) atitinka polinomą $P(x) = x^1 + x^2 + x^3$.\n2. Jei naudojame $k$ skaičių, būdų skaičius yra koeficientas prie $x^{10}$ funkcijoje $(x+x^2+x^3)^k$.\n3. Kadangi $k$ gali būti bet koks, nagrinėjame sumą $S(x) = 1 + P(x) + P(x)^2 + \\dots = \\frac{1}, {1 - (x+x^2+x^3)}$.\n4. Išskleidę šią eilutę, rasime reikiamą koeficientą. (Praktikoje tai dažnai virsta rekurencija $a_n = a_{n-1} + a_{n-2} + a_{n-3}$).\n\n**Atsakymas:** Skaičiuojama per koeficientą.",
+      "explanation": "Generuojančios funkcijos leidžia užkoduoti pasirinkimų taisykles algebrinėje formoje."
+    },
+    {
+      "id": "we-comb-graph-planar-bound",
+      "title": "Ekstremalus briaunų skaičius plokštumoje",
+      "content": "Įrodykite, kad grafas su 5 viršūnėmis, kuriame kiekviena viršūnė sujungta su kiekviena kita ($K_5$), nėra plokščiasis.\n\n**Sprendimas:**\n1. Plokščiajam sujungtam grafui galioja $E \\le 3V - 6$ (nes kiekviena sritis apribota bent 3 briaunomis).\n2. Grafui $K_5$: $V = 5$, briaunų skaičius $E = \\binom{5}, {2} = 10$.\n3. Tikriname nelygybę: $10 \\le 3(5) - 6 = 9$.\n4. $10 \\le 9$ yra neteisinga, todėl grafas negali būti plokščiasis.\n\n**Atsakymas:** Įrodyta.",
+      "explanation": "Oilerio formulė leidžia nustatyti geometrinius apribojimus abstraktiems ryšiams."
+    },
+    {
+      "id": "we-comb-catalan-paths",
+      "title": "Maršrutai po įstrižaine",
+      "content": "Kiek yra būdų nukeliauti iš $(0,0)$ į $(n,n)$ judant tik į dešinę ir į viršų taip, kad maršrutas niekada nepakiltų virš tiesės $y=x$?\n\n**Sprendimas:**\n1. Visų maršrutų be apribojimų yra $\\binom{2n}, {n}$.\n2. Naudojame „atspindžio principą“: kiekvienas „blogas“ maršrutas (kuris paliečia $y=x+1$) gali būti unikaliai susietas su maršrutu iš $(-1, 1)$ į $(n,n)$.\n3. „Blogų“ maršrutų skaičius yra $\\binom{2n}, {n-1}$.\n4. „Gerų“ maršrutų skaičius $C_n = \\binom{2n}, {n} - \\binom{2n}, {n-1} = \\frac{1}, {n+1} \\binom{2n}, {n}$.\n\n**Atsakymas:** $C_n$.",
+      "explanation": "Bijekcija su atspindžiu yra vienas elegantiškiausių kombinatorikos įrodymų."
+    },
+    {
+      "id": "we-comb-inclusion-exclusion-complex",
+      "title": "Netvarkos (Derangements)",
+      "content": "Kiek yra būdų sudėlioti $n$ laiškų į $n$ vokų taip, kad nė vienas laiškas nepatektų į savo voką?\n\n**Sprendimas:**\n1. Naudojame įjungimo-išjungimo principą.\n2. Bendras permutacijų skaičius $n!$.\n3. Atimame tas, kur bent 1 laiškas savo vietoje, pridedame tas, kur bent 2, ir t. t.\n4. Formulė: $D_n = n! (1 - \\frac{1}, {1!} + \\frac{1}, {2!} - \\dots + \\frac{(-1)^n}, {n!})$.\n\n**Atsakymas:** $D_n$.",
+      "explanation": "Šis uždavinys rodo, kaip PIE metodas suvaldo sudėtingus apribojimus."
     }
   ],
   "exercises": [
@@ -154,1558 +258,7 @@
       "id": "ex-olimpiada-10-19",
       "topicId": "olimpiada-10-kombinatorika",
       "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Sujungtame plokščiajame grafe yra 6 viršūnės ir 10 briaunų. Į kelias sritis (įskaitant išorinę) šis grafas padalija plokštumą?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Rastas plokštumos sričių skaičius."
-      },
-      "answerText": "$6$ sričių",
-      "coreIdea": {
-        "title": "Oilerio formulė plokštumai",
-        "text": "Sujungtam plokščiam grafui galioja Oilerio formulė $V - E + F = 2$. Įstatome žinomas vertes $V=6$ ir $E=10$."
-      },
-      "strategyTags": [
-        "algebraic-transformation"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [
-        "olimpiada-10-concept-euler-formula-planar"
-      ],
-      "conceptIds": [
-        "olimpiada-10-concept-euler-formula-planar"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kadangi grafas yra sujungtas ir plokščias, galime taikyti Oilerio formulę.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Formulė teigia: $V - E + F = 2$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Įstatykite duotus skaičius: viršūnių skaičių $V = 6$ ir briaunų skaičių $E = 10$.",
-          "penalty": 0.09
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Išspręskite lygtį: $6 - 10 + F = 2 \\implies F = 6$.",
-          "penalty": 0.11
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pritaikome Oilerio formulę plokštiesiems grafams: $V - E + F = 2$."
-        },
-        {
-          "text": "Įstatome sąlygoje pateiktas vertes: $V = 6, E = 10$."
-        },
-        {
-          "text": "Gauname lygtį: $6 - 10 + F = 2$."
-        },
-        {
-          "text": "Išsprendžiame sričių skaičių: $-4 + F = 2 \\implies F = 6$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-19-method-1",
-          "title": "Pagrindinis įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "algebraic-transformation"
-          ],
-          "steps": [
-            {
-              "title": "Oilerio formulės užrašymas",
-              "action": "Užrašome $V - E + F = 2$.",
-              "reason": "Oilerio formulė galioja visiems sujungtiems plokštiesiems grafams.",
-              "latex": "V - E + F = 2",
-              "result": "Gauta pagrindinė formulė."
-            },
-            {
-              "title": "Sprendimas",
-              "action": "Įstatome $V=6, E=10$ ir gauname $6 - 10 + F = 2$.",
-              "reason": "Sprendžiame tiesinę lygtį vienam kintamajam.",
-              "latex": "-4 + F = 2",
-              "result": "Gauta supaprastinta lygtis."
-            },
-            {
-              "title": "Atsakymo radimas",
-              "action": "$F = 2 + 4 = 6$.",
-              "reason": "Perkeliame žinomus narius į dešinę pusę.",
-              "latex": "F = 6",
-              "result": "Rastas sričių skaičius."
-            }
-          ],
-          "finalAnswer": "$6$ sričių"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-19-trap-1",
-          "title": "Neplokščiojo grafo klaida",
-          "wrongMove": "Bandoma taikyti Oilerio formulę grafams, kurie nėra plokštieji arba nėra susieti.",
-          "whyTempting": "Mokiniai dažnai laiko Oilerio formulę universalia visiems grafams, nepatikrindami pradinių sąlygų.",
-          "correction": "Oilerio formulė $V-E+F=2$ galioja tik susietiems plokštiesiems grafams. Jei grafas turi $C$ susietumo komponentų, formulė tampa $V-E+F=1+C$.",
-          "reviewConceptIds": [
-            "olimpiada-10-concept-euler-formula-planar"
-          ],
-          "srsRecommended": true
-        },
-        {
-          "id": "ex-olimpiada-10-19-trap-2",
-          "title": "Išorinės srities ignoravimas",
-          "wrongMove": "Suskaičiuojamos tik „vidinės“ sritys, gaunant $F = 5$ vietoje $6$.",
-          "whyTempting": "Vizualiai mokiniai dažnai mato tik uždaras sritis, apribotas briaunomis, ir pamiršta begalinę išorinę sritį.",
-          "correction": "Oilerio formulėje kintamasis $F$ visada apima visas plokštumos sritis, įskaitant vieną išorinę (begalinę) sritį.",
-          "reviewConceptIds": [
-            "olimpiada-10-concept-euler-formula-planar"
-          ],
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-        "Kokie buvo kritiniai sprendimo žingsniai?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-10-19-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Sujungtame plokščiajame grafe yra 6 viršūnės ir 10 briaunų. ...?",
-          "back": "Sujungtam plokščiam grafui galioja Oilerio formulė $V - E + F = 2$. Įstatome žinomas vertes $V=6$ ir $E=10$.",
-          "conceptIds": [
-            "olimpiada-10-concept-euler-formula-planar"
-          ],
-          "methodIds": [
-            "olimpiada-10-concept-euler-formula-planar"
-          ],
-          "defaultEnabled": true
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-20",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampiniai langeliai (jie yra tos pačios spalvos). Įrodykite, kad likusios lentos neįmanoma pilnai uždengti $2 \\times 1$ domino kauliukais.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodytas domino padengimo neįmanomumas."
-      },
-      "answerText": "Įrodyta naudojant lentos nuspalvinimo dviejomis spalvomis savybes.",
-      "coreIdea": {
-        "title": "Paritetas ir spalvinimas",
-        "text": "Kiekvienas $2 \\times 1$ domino kauliukas visada uždengia tiksliai vieną juodą ir vieną baltą langelį. Kadangi išpjauti du tos pačios spalvos kampiniai langeliai, likusių juodų ir baltų langelių skaičiai skiriasi dviem, todėl pilnas padengimas neįmanomas."
-      },
-      "strategyTags": [
-        "parity"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "conceptIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Įsivaizduokite įprastą šachmatų lentos spalvinimą juodais ir baltais langeliais. Kiek iš viso langelių yra lentoje ir kiek iš jų yra juodų/baltų?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kiekvienas domino kauliukas ($2 \\times 1$) visada uždengia vieną baltą ir vieną juodą langelį, kad ir kaip jį padėtume.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Kampiniai priešingi langeliai visada yra tos pačios spalvos. Pavyzdžiui, jei abu išpjauti langeliai yra balti, kiek juodų ir baltų langelių lieka lentoje?",
-          "penalty": 0.09
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Lieka 32 juodi ir 30 baltų langelių. Kadangi bet koks kauliukų rinkinys turi uždengti po lygiai abiejų spalvų langelių, toks padengimas yra neįmanomas.",
-          "penalty": 0.11
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Nuspalviname lentą šachmatiškai: 32 juodi ir 32 balti langeliai."
-        },
-        {
-          "text": "Priešingi kampiniai langeliai visada yra tos pačios spalvos (tarkime, balti)."
-        },
-        {
-          "text": "Pašalinus juos, lentoje lieka 32 juodi ir 30 baltų langelių."
-        },
-        {
-          "text": "Kadangi kiekvienas domino uždengia po vieną abiejų spalvų langelį, bet koks uždengimas uždengia vienodą skaičių juodų ir baltų langelių, todėl uždengti 32 juodų ir 30 baltų langelių neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-20-method-1",
-          "title": "Pagrindinis įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "parity"
-          ],
-          "steps": [
-            {
-              "title": "Lango spalvos nustatymas",
-              "action": "Kampiniai priešingi langeliai turi tą pačią spalvą. Tarkime, abu yra balti.",
-              "reason": "Pagal šachmatinį nuspalvinimą.",
-              "latex": "\\text{Išpjauti langeliai} = 2 \\text{ balti}",
-              "result": "Liko 32 juodi ir 30 baltų langelių."
-            },
-            {
-              "title": "Domino invariantas",
-              "action": "Kiekvienas domino kauliukas uždengia $1 \\text{ juodą } + 1 \\text{ baltą }$ langelį.",
-              "reason": "Nepriklausomai nuo padėties ant šachmatiškai nuspalvintos lentos.",
-              "latex": "D = B + J",
-              "result": "Uždengti langeliai turi turėti lygią abiejų spalvų proporciją."
-            },
-            {
-              "title": "Išvada",
-              "action": "Padengimas domino kauliukais reikalauja, kad uždengtų juodų ir baltų langelių skaičiai būtų lygūs, o kadangi $32 \\neq 30$, pilnas padengimas yra neįmanomas.",
-              "reason": "Atsiranda prieštaravimas su invarianto reikalavimu.",
-              "latex": "32 \\neq 30",
-              "result": "Padengimas neįmanomas."
-            }
-          ],
-          "finalAnswer": "Įrodyta naudojant lentos nuspalvinimo dviejomis spalvomis savybes."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-20-trap-1",
-          "title": "Bendro langelių skaičiaus klaida",
-          "wrongMove": "Manoma, kad jei bendras langelių skaičius yra lyginis ($64 - 2 = 62$), tai padengimas visada įmanomas.",
-          "whyTempting": "Mokiniai dažnai orientuojasi tik į plotą, pamiršdami figūrų formą ir spalvinį invariantą.",
-          "correction": "Lyginis langelių skaičius yra būtina, bet nepakankama sąlyga. Šiuo atveju spalvų disbalansas daro padengimą neįmanomą.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        },
-        {
-          "id": "ex-olimpiada-10-20-trap-2",
-          "title": "Kampų spalvos klaidingas nustatymas",
-          "wrongMove": "Teigiama, kad priešingi kampiniai langeliai yra skirtingų spalvų.",
-          "whyTempting": "Šoninis mąstymas: gretimi langeliai visada skirtingi, todėl mokiniai klaidingai ekstrapoliuoja tai kampams.",
-          "correction": "Šachmatų lentoje ($8 \\times 8$) tos pačios eilutės kampai yra skirtingi, tačiau įstrižai priešingi kampai visada yra tos pačios spalvos.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-        "Kokie buvo kritiniai sprendimo žingsniai?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-10-20-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampin...?",
-          "back": "Kiekvienas $2 \\times 1$ domino kauliukas visada uždengia tiksliai vieną juodą ir vieną baltą langelį. Kadangi išpjauti du tos pačios spalvos kampiniai langeliai, likusių juodų ir baltų langelių skaičiai skiriasi dviem, todėl pilnas padengimas neįmanomas.",
-          "conceptIds": [],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-01",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kiek yra keturženklių skaičių, kurių visi skaitmenys yra skirtingi ir nelyginiai?",
-      "answer": {
-        "kind": "numeric",
-        "value": 120,
-        "tolerance": 0
-      },
-      "answerText": "120",
-      "coreIdea": {
-        "title": "Daugybos taisyklė",
-        "text": "Nelyginiai skaitmenys yra {1, 3, 5, 7, 9} (iš viso 5). Kadangi skaitmenys turi būti skirtingi, renkamės po vieną be grąžinimo."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kokie yra nelyginiai skaitmenys?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Turime 5 galimus skaitmenis. Skaičius keturženklis, o visi skaitmenys turi būti skirtingi.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pirmą skaitmenį galime pasirinkti 5 būdais, antrą – 4, trečią – 3, ketvirtą – 2.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Nelyginių skaitmenų aibė: {1, 3, 5, 7, 9}. Elementų skaičius n = 5."
-        },
-        {
-          "text": "Pirmam skaitmeniui turime 5 variantus."
-        },
-        {
-          "text": "Antram skaitmeniui (skirtingam nuo pirmo) – 4 variantus."
-        },
-        {
-          "text": "Trečiam – 3 variantus, ketvirtam – 2 variantus."
-        },
-        {
-          "text": "Sandauga: $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-01-method-1",
-          "title": "Daugybos taisyklė",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "5 * 4 * 3 * 2 = 120.",
-              "reason": "Pasirenkame 4 elementus iš 5 be pasikartojimo (gretiniai).",
-              "latex": "A_5^4 = 120",
-              "result": "120"
-            }
-          ],
-          "finalAnswer": "120"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-02",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kiek skirtingų „žodžių“ (nebūtinai prasmingų) galima sudaryti sukeičiant raides žodyje „MATEMATIKA“?",
-      "answer": {
-        "kind": "numeric",
-        "value": 151200,
-        "tolerance": 0
-      },
-      "answerText": "151200",
-      "coreIdea": {
-        "title": "Kėliniai su pasikartojimais",
-        "text": "Žodyje yra 10 raidžių, tačiau kai kurios kartojasi: M(2 kartus), A(3), T(2), E(1), I(1), K(1). Naudojame formulę n! / (n1! * n2! * ...)."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Suskaičiuokite bendrą raidžių skaičių ir kiekvienos raidės pasikartojimo dažnį.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Iš viso 10 raidžių. Raidė M kartojasi 2 kartus, A – 3 kartus, T – 2 kartus.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Naudokite formulę: $10! / (2! \\cdot 3! \\cdot 2!)$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bendras raidžių skaičius n = 10."
-        },
-        {
-          "text": "Pasikartojimai: n(M)=2, n(A)=3, n(T)=2, kiti po 1."
-        },
-        {
-          "text": "Skaičiuojame: $10! / (2! \\cdot 3! \\cdot 2!) = 3628800 / (2 \\cdot 6 \\cdot 2) = 3628800 / 24 = 151200$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-02-method-1",
-          "title": "Kėliniai su pasikartojimais",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Formulės taikymas",
-              "action": "$10! / (2! 3! 2!) = 151200$.",
-              "reason": "Padalijame iš tapačių raidžių sukeitimų skaičiaus.",
-              "latex": "\\frac{10!}{2!3!2!} = 151200",
-              "result": "151200"
-            }
-          ],
-          "finalAnswer": "151200"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-03",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Krepšyje yra 10 skirtingų kamuoliukų. Keliais būdais galima ištraukti 3 kamuoliukus (tvarka nesvarbi)?",
-      "answer": {
-        "kind": "numeric",
-        "value": 120,
-        "tolerance": 0
-      },
-      "answerText": "120",
-      "coreIdea": {
-        "title": "Deriniai",
-        "text": "Kadangi tvarka nesvarbi, naudojame derinių formulę $C_n^k = \\frac{n!}{k!(n-k)!}$."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Ar tvarka svarbi? Ne, todėl naudojame derinius.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "method",
-          "text": "Apskaičiuokite $C_{10}^3$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "$C_{10}^3 = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 10 \\cdot 3 \\cdot 4 = 120$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-03-method-1",
-          "title": "Derinių formulė",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "(10 * 9 * 8) / (3 * 2 * 1) = 120.",
-              "reason": "Derinių n po k formulė.",
-              "latex": "\\binom{10}{3} = 120",
-              "result": "120"
-            }
-          ],
-          "finalAnswer": "120"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-04",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Klasėje yra 30 mokinių. 15 mokinių lanko krepšinį, 12 – futbolą, 10 – tinklinį. 5 mokiniai lanko krepšinį ir futbolą, 4 – futbolą ir tinklinį, 3 – krepšinį ir tinklinį. 2 mokiniai lanko visas tris sporto šakas. Kiek mokinių nelanko nė vienos iš šių sporto šakų?",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "answerText": "5",
-      "coreIdea": {
-        "title": "Įjungimo-išjungimo principas",
-        "text": "Norint rasti bent vieną šaką lankančių mokinių skaičių, reikia sudėti atskiras grupes, atimti jų porines sankirtas ir pridėti trigubą sankirtą."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Naudokite formulę: $|A \\cup B \\cup C| = |A| + |B| + |C| - (|A \\cap B| + |B \\cap C| + |C \\cap A|) + |A \\cap B \\cap C|$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Apskaičiuokite $|A \\cup B \\cup C|$ naudodami duotus skaičius.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Atimkite gautą skaičių iš bendro mokinių skaičiaus (30).",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Lankančių bent vieną šaką: $15 + 12 + 10 - (5 + 4 + 3) + 2$."
-        },
-        {
-          "text": "Skaičiuojame: $37 - 12 + 2 = 27$."
-        },
-        {
-          "text": "Nelankančių nė vienos: $30 - 27 = 3$."
-        },
-        {
-          "text": "Pataisa: $37 - 12 + 2 = 27$. O, palaukite, 37 - 12 = 25, 25 + 2 = 27. 30 - 27 = 3."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-04-method-1",
-          "title": "PIE formulė",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "15+12+10 - (5+4+3) + 2 = 27.",
-              "reason": "Įjungimo-išjungimo principas trims aibėms.",
-              "latex": "37 - 12 + 2 = 27",
-              "result": "27 mokiniai lanko bent vieną būrelį."
-            },
-            {
-              "title": "Atsakymas",
-              "action": "30 - 27 = 3.",
-              "reason": "Iš visų atimame bent vieną lankančius.",
-              "latex": "30-27=3",
-              "result": "3"
-            }
-          ],
-          "finalAnswer": "3"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-05",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad tarp bet kurių 6 žmonių visada atsiras arba 3 pažįstami tarpusavyje, arba 3 nepažįstami tarpusavyje.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta Ramzio teorijos savybė R(3,3)=6."
-      },
-      "answerText": "Įrodyta naudojant Dirichlė principą.",
-      "coreIdea": {
-        "title": "Dirichlė principas grafuose",
-        "text": "Pasirinkite vieną žmogų A. Iš likusių 5 žmonių, bent 3 turi būti arba jo pažįstami, arba nepažįstami (pagal Dirichlė principą, nes 5 = 2*2 + 1)."
-      },
-      "strategyTags": [
-        "pigeonhole-principle"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pasirinkite vieną žmogų A ir suskirstykite likusius 5 žmones į dvi grupes: pažįstami su A ir nepažįstami su A.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kadangi $5 = 2 \\cdot 2 + 1$, pagal Dirichlė principą bent vienoje grupėje bus bent 3 žmonės.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Tarkime, mokiniai B, C, D yra pažįstami su A. Jei bet kurie du iš jų pažįstami, turime 3 pažįstamus (su A). Jei nė vieni nepažįstami, turime 3 nepažįstamus (B, C, D).",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tegul žmogus A turi 5 kaimynus. Pagal Dirichlė principą, bent 3 yra jo pažįstami (arba 3 nepažįstami)."
-        },
-        {
-          "text": "Tarkime, B, C, D yra pažįstami su A."
-        },
-        {
-          "text": "Jei bet kuri pora iš {B, C, D} yra pažįstami (pvz., B ir C), tai {A, B, C} yra 3 tarpusavyje pažįstami."
-        },
-        {
-          "text": "Jei nė viena pora iš {B, C, D} nėra pažįstami, tai {B, C, D} yra 3 tarpusavyje nepažįstami."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-05-method-1",
-          "title": "Dirichlė principas",
-          "methodType": "main",
-          "strategyTags": [
-            "pigeonhole-principle"
-          ],
-          "steps": [
-            {
-              "title": "Grupavimo logika",
-              "action": "Iš A išeina 5 briaunos (pažįsta/nepažįsta). Bent 3 yra tos pačios spalvos.",
-              "reason": "Dirichlė principas (5 elementai, 2 stalčiai).",
-              "latex": "\\lceil 5/2 \\rceil = 3",
-              "result": "Gauta grupė iš 3 žmonių."
-            }
-          ],
-          "finalAnswer": "Įrodyta R(3,3)=6."
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-06",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Kvadrate, kurio kraštinė lygi 1, atsitiktinai parinkti 5 taškai. Įrodykite, kad bent du iš jų yra nutolę vienas nuo kito ne daugiau kaip per $\\sqrt{2}/2$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta taikant Dirichlė principą plotui."
-      },
-      "answerText": "Įrodyta padalijus kvadratą į 4 mažesnius kvadratus.",
-      "coreIdea": {
-        "title": "Kvadrato padalijimas",
-        "text": "Padalykite kvadratą $1 \\times 1$ į 4 mažesnius kvadratus $0.5 \\times 0.5$. Kadangi turime 5 taškus, bent 2 taškai pateks į tą patį mažą kvadratą."
-      },
-      "strategyTags": [
-        "pigeonhole-principle"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kaip galime padalyti kvadratą į 4 lygias dalis?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Koks yra didžiausias įmanomas atstumas tarp dviejų taškų kvadrate su kraštine 0.5?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Didžiausias atstumas yra kvadrato įstrižainė: $d = \\sqrt{0.5^2 + 0.5^2} = \\sqrt{0.5} = \\sqrt{2}/2$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Padalijame kvadratą į 4 mažus kvadratus, kurių kraštinė 0,5."
-        },
-        {
-          "text": "Pagal Dirichlė principą, bent 2 iš 5 taškų pateks į tą patį mažą kvadratą."
-        },
-        {
-          "text": "Atstumas tarp dviejų taškų mažame kvadrate neviršija jo įstrižainės ilgio."
-        },
-        {
-          "text": "Įstrižainės ilgis $L = \\sqrt{0,5^2 + 0,5^2} = \\sqrt{0,25 + 0,25} = \\sqrt{0,5} = \\frac{\\sqrt{2}}{2}$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-06-method-1",
-          "title": "Dirichlė principas plotui",
-          "methodType": "main",
-          "strategyTags": [
-            "pigeonhole-principle"
-          ],
-          "steps": [
-            {
-              "title": "Padalijimas",
-              "action": "Padalijame kvadratą į 4 kvadratus po 0.5x0.5.",
-              "reason": "Sukuriami 4 „narveliai“.",
-              "latex": "4 \\text{ kvadratai}",
-              "result": "Pagal DP bent 2 taškai viename narvelyje."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-07",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Keliais būdais galima išdalinti 10 identiškų obuolių 3 vaikams taip, kad kiekvienas vaikas gautų bent po vieną obuolį?",
-      "answer": {
-        "kind": "numeric",
-        "value": 36,
-        "tolerance": 0
-      },
-      "answerText": "36",
-      "coreIdea": {
-        "title": "Pertvarų metodas (Stars and Bars)",
-        "text": "Kadangi kiekvienas turi gauti bent po vieną, pirmiausia duodame po 1 obuolį (lieka 7). Tada 7 obuolius dalijame 3 vaikams be apribojimų, naudodami pertvaras."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pirmiausia duokite kiekvienam vaikui po vieną obuolį. Kiek obuolių liko?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Liko 7 obuoliai. Juos reikia padalyti 3 vaikams. Įsivaizduokite 7 obuolius eilėje ir 2 pertvaras tarp jų.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Naudokite formulę $C_{n-1}^{k-1}$, kur n – obuolių skaičius, k – vaikų skaičius.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Išdaliname po 1 obuolį: $10 - 3 = 7$ obuolių lieka."
-        },
-        {
-          "text": "Taikome pertvarų metodą: turime 7 objektus ir 2 pertvaras. Iš viso 9 pozicijos."
-        },
-        {
-          "text": "$C_9^2 = \\frac{9 \\cdot 8}{2 \\cdot 1} = 36$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-07-method-1",
-          "title": "Stars and Bars",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Formulės taikymas",
-              "action": "$C_{n-1}^{k-1} = C_9^2 = 36$.",
-              "reason": "Pasirenkame k-1 pertvarų vietas iš n-1 tarpų tarp obuolių.",
-              "latex": "\\binom{9}{2} = 36",
-              "result": "36"
-            }
-          ],
-          "finalAnswer": "36"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-08",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Keliais skirtingais būdais 6 žmonės gali susėsti prie apskrito stalo? Du būdai laikomi vienodais, jei vieną galima gauti iš kito pasukus stalą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 120,
-        "tolerance": 0
-      },
-      "answerText": "120",
-      "coreIdea": {
-        "title": "Rateliniai kėliniai",
-        "text": "Apskrito stalo atveju viena vieta yra fiksuota (kad būtų išvengta pasukimų skaičiavimo), todėl likusius n-1 žmones dėliojame eilėje."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Jei stalas būtų tiesus, būtų 6! būdų. Bet čia stalas apvalus.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "method",
-          "text": "Naudokite formulę (n-1)!",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Fiksuojame vieną žmogų bet kurioje vietoje."
-        },
-        {
-          "text": "Likusius 5 žmones galime susodinti $5!$ būdų."
-        },
-        {
-          "text": "$5! = 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 120$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-08-method-1",
-          "title": "Rateliniai kėliniai",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "(6-1)! = 120.",
-              "reason": "Vienas žmogus fiksuoja atskaitos tašką.",
-              "latex": "5! = 120",
-              "result": "120"
-            }
-          ],
-          "finalAnswer": "120"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-09",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Vakarėlyje dalyvavo 10 žmonių. Kiekvienas su kiekvienu pasisveikino paspausdamas ranką. Kiek iš viso buvo rankų paspaudimų?",
-      "answer": {
-        "kind": "numeric",
-        "value": 45,
-        "tolerance": 0
-      },
-      "answerText": "45",
-      "coreIdea": {
-        "title": "Rankų paspaudimo lema",
-        "text": "Tai ekvivalentu pilnojo grafo su 10 viršūnių briaunų skaičiui."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kiekvienas žmogus paspaudė ranką 9 kitiems.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Jei sudauginsime $10 \\cdot 9$, kiekvieną paspaudimą suskaičiuosime du kartus.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Vienas žmogus atlieka 9 paspaudimus. 10 žmonių atlieka $10 \\cdot 9 = 90$ paspaudimų veiksmų."
-        },
-        {
-          "text": "Kadangi viename paspaudime dalyvauja du žmonės, dalijame iš 2."
-        },
-        {
-          "text": "$90 / 2 = 45$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-09-method-1",
-          "title": "Grafų briaunos",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "$10 \\cdot 9 / 2 = 45$.",
-              "reason": "Tai derinių skaičius $C_{10}^2$.",
-              "latex": "\\frac{10 \\cdot 9}{2} = 45",
-              "result": "45"
-            }
-          ],
-          "finalAnswer": "45"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-10",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Keliais būdais galima nuspalvinti 5-kampės žvaigždės viršūnes 3 spalvomis taip, kad gretimos (sujungtos briauna) viršūnės būtų skirtingų spalvų? (Žvaigždė yra grafas, kurio viršūnės sujungtos ciklu).",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "answerText": "30",
-      "coreIdea": {
-        "title": "Chromatinis polinomas",
-        "text": "Ciklo $C_n$ spalvinimo būdų skaičius k spalvomis yra $(k-1)^n + (-1)^n(k-1)$."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Žymėkite spalvas 1, 2, 3. Pradėkite spalvinti nuo vienos viršūnės ir sekite apribojimus.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "method",
-          "text": "Naudokite formulę ciklui $C_5$ su $k=3$.",
-          "penalty": 0.11
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Formulė: $P(C_5, 3) = (3-1)^5 + (-1)^5(3-1)$."
-        },
-        {
-          "text": "Skaičiuojame: $2^5 - 2 = 32 - 2 = 30$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-10-method-1",
-          "title": "Chromatinis polinomas",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Formulės taikymas",
-              "action": "2^5 - 2 = 30.",
-              "reason": "Ciklo spalvinimo formulė.",
-              "latex": "(3-1)^5 + (-1)^5(3-1) = 30",
-              "result": "30"
-            }
-          ],
-          "finalAnswer": "30"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-11",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tinklelyje $5 \\times 4$ (5 langeliai į dešinę, 4 į viršų) reikia nukeliauti iš apatinio kairiojo kampo į viršutinį dešinįjį judant tik į dešinę arba į viršų. Kiek yra tokių maršrutų?",
-      "answer": {
-        "kind": "numeric",
-        "value": 126,
-        "tolerance": 0
-      },
-      "answerText": "126",
-      "coreIdea": {
-        "title": "Bijekcija į sekas",
-        "text": "Kiekvienas maršrutas yra seka iš 9 žingsnių: 5 'D' (dešinėn) ir 4 'V' (viršun). Visų būdų skaičius yra derinių $C_{n+m}^n$ skaičius."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kiek iš viso žingsnių reikia atlikti?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Turime 5+4 = 9 žingsnius. Iš jų turime pasirinkti, kada eiti į dešinę.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Žingsnių skaičius: 9. Dešinėn: 5. Viršun: 4."
-        },
-        {
-          "text": "$C_9^5 = \\frac{9 \\cdot 8 \\cdot 7 \\cdot 6}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 9 \\cdot 2 \\cdot 7 = 126$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-11-method-1",
-          "title": "Deriniai tinklelyje",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "$C_9^5 = 126$.",
-              "reason": "Pasirenkame 5 žingsnius dešinėn iš 9 galimų pozicijų.",
-              "latex": "\\binom{9}{5} = 126",
-              "result": "126"
-            }
-          ],
-          "finalAnswer": "126"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-14",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Žaidimas pradedamas su skaičiumi 100. Du žaidėjai pakaitomis atima bet kurį skaičiaus 100 daliklį (įskaitant 1, bet ne patį skaičių) iš esamo skaičiaus. Laimi tas, kuris gauna 0. Kas laimės – pirmasis ar antrasis žaidėjas?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Pirmasis žaidėjas turi laiminčią strategiją."
-      },
-      "answerText": "Pirmasis žaidėjas laimės išlaikydamas paritetą.",
-      "coreIdea": {
-        "title": "Paritetas ir strategija",
-        "text": "Stebėkite skaičiaus lyginumą. Jei skaičius yra lyginis, visi jo nelyginiai dalikliai paverčia jį nelyginiu, o lyginiai – palieka lyginį. Strategija: visada palikti oponentui nelyginį skaičių."
-      },
-      "strategyTags": [
-        "parity"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kas nutinka skaičiaus lyginumui atėmus daliklį?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nelyginio skaičiaus visi dalikliai yra nelyginiai. Atėmus nelyginį iš nelyginio visada gaunamas lyginis skaičius.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pradinis skaičius 100 yra lyginis. Pirmasis žaidėjas atima 1 (daliklis) ir palieka 99 (nelyginis)."
-        },
-        {
-          "text": "Visi 99 dalikliai yra nelyginiai. Antrasis žaidėjas atims nelyginį skaičių, todėl pirmasis gaus vėl lyginį skaičių."
-        },
-        {
-          "text": "Pirmasis žaidėjas visada galės atimti 1 ir palikti nelyginį skaičių antrajam."
-        },
-        {
-          "text": "Kadangi 0 yra lyginis, antrasis niekada negalės jo pasiekti iš nelyginio skaičiaus."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-14-method-1",
-          "title": "Laiminti strategija",
-          "methodType": "main",
-          "strategyTags": [
-            "parity"
-          ],
-          "steps": [
-            {
-              "title": "Pariteto valdymas",
-              "action": "Pirmasis žaidėjas visada palieka nelyginį skaičių.",
-              "reason": "Nelyginis skaičius niekada neturi lyginių daliklių, todėl oponentas visada grąžins lyginį skaičių.",
-              "latex": "100 \\to 99 \\to \\dots",
-              "result": "Pirmasis laimi."
-            }
-          ],
-          "finalAnswer": "Pirmasis žaidėjas laimės."
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-12",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Keliais būdais galima sudėti 3 poras skliaustelių taip, kad jie būtų taisyklingai suderinti (pvz., (()()) yra gerai, ())( – ne)?",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "answerText": "5",
-      "coreIdea": {
-        "title": "Katalano skaičiai",
-        "text": "Taisyklingų skliaustelių sekų skaičius su n porų skliaustelių yra n-tasis Katalano skaičius $C_n = \\frac{1}{n+1} \\binom{2n}{n}$."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Surašykite visas galimas sekas rankiniu būdu 3 poroms.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "method",
-          "text": "Naudokite Katalano skaičių formulę n=3.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sekos: ((())), (()()), (())(), ()(()), ()()(). Iš viso 5."
-        },
-        {
-          "text": "Formulė: $C_3 = \\frac{1}{4} \\binom{6}{3} = \\frac{1}{4} \\cdot 20 = 5$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-12-method-1",
-          "title": "Katalano formulė",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "1/4 * binom(6,3) = 5.",
-              "reason": "Katalano skaičių savybė skliausteliams.",
-              "latex": "C_3 = 5",
-              "result": "5"
-            }
-          ],
-          "finalAnswer": "5"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-13",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "hard",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Kombinatorika",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 75,
-      "statement": "Įrodykite tapatybę $n \\cdot 2^{n-1} = \\sum_{k=1}^n k \\binom{n}{k}$ naudodami dvigubą skaičiavimą (pasirinkite komitetą ir jo pirmininką).",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Įrodyta kombinatorinė tapatybė."
-      },
-      "answerText": "Įrodyta skaičiuojant komitetus su pirmininku dviem būdais.",
-      "coreIdea": {
-        "title": "Dvigubas skaičiavimas",
-        "text": "Skaičiuojame porų (S, p) skaičių, kur S yra poaibis iš n elementų, o p – tas elementas iš S (pirmininkas)."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pirmas būdas: pirmiausia pasirinkite pirmininką iš n žmonių. Kiek lieka galimybių sudaryti likusį komitetą?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Antras būdas: pirmiausia pasirinkite k dydžio komitetą, o tada iš jo išsirinkite pirmininką. Sumuokite per visus galimus k.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1 būdas: Pirmininką renkamės n būdais. Likusiems $n-1$ žmonėms yra $2^{n-1}$ būdų būti arba nebūti komitete. Iš viso $n \\cdot 2^{n-1}$."
-        },
-        {
-          "text": "2 būdas: Fiksuojame komiteto dydį k. Tokių komitetų yra $\\binom{n}{k}$. Kiekviename jų pirmininką renkamės k būdais. Sumuojame $k \\binom{n}{k}$ nuo k=1 iki n."
-        },
-        {
-          "text": "Kadangi skaičiuojame tą patį objektą, abiejų būdų rezultatai lygūs."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-13-method-1",
-          "title": "Komiteto rinkimas",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Būdas 1",
-              "action": "$n \\cdot 2^{n-1}$.",
-              "reason": "Pirmininkas pirmas, tada poaibis iš likusių.",
-              "latex": "n \\cdot 2^{n-1}",
-              "result": "Kairė pusė."
-            }
-          ],
-          "finalAnswer": "Įrodyta."
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-15",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Raskite narį, kuriame nėra $x$, reiškinio $(x^2 + 1/x)^{12}$ skleidinyje.",
-      "answer": {
-        "kind": "numeric",
-        "value": 495,
-        "tolerance": 0
-      },
-      "answerText": "495",
-      "coreIdea": {
-        "title": "Binomo formulė",
-        "text": "Bendras narys yra $T_{k+1} = \\binom{n}{k} a^{n-k} b^k$. Ieškome tokio k, kad x laipsnis būtų 0."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite bendrą narį: $\\binom{12}{k} (x^2)^{12-k} (x^{-1})^k$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Suprastinkite x laipsnį: $2(12-k) - k = 24 - 3k$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Sulyginkite laipsnį su 0 ir raskite k.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "$24 - 3k = 0 \\implies 3k = 24 \\implies k = 8$."
-        },
-        {
-          "text": "Reikiamas koeficientas: $\\binom{12}{8} = \\binom{12}{4} = \\frac{12 \\cdot 11 \\cdot 10 \\cdot 9}{4 \\cdot 3 \\cdot 2 \\cdot 1} = 11 \\cdot 5 \\cdot 9 = 495$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-15-method-1",
-          "title": "Binomo narys",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Laipsnio radimas",
-              "action": "24-3k=0.",
-              "reason": "x laipsnis turi būti nulis.",
-              "latex": "k=8",
-              "result": "k=8"
-            }
-          ],
-          "finalAnswer": "495"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-16",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kiek daugiausia briaunų gali turėti grafas su 6 viršūnėmis, jei jame nėra nė vieno trikampio (ciklo $C_3$)?",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "answerText": "9",
-      "coreIdea": {
-        "title": "Turano teorema",
-        "text": "Grafas be trikampių su didžiausiu briaunų skaičiumi yra pilnasis dvidalis grafas $K_{n/2, n/2}$ (Mantelio teorema)."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pabandykite padalyti viršūnes į dvi grupes ir jungti briaunomis tik tarp grupių.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Jei turime dvi grupes po 3 viršūnes, kiek briaunų galime nubrėžti?",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Padalijame 6 viršūnes į dvi dalis po 3."
-        },
-        {
-          "text": "Kiekviena viršūnė iš vienos dalies jungiama su visomis 3 viršūnėmis iš kitos dalies."
-        },
-        {
-          "text": "Iš viso briaunų: $3 \\cdot 3 = 9$."
-        },
-        {
-          "text": "Jei pridėtume bent vieną briauną dalies viduje, atsirastų trikampis."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-16-method-1",
-          "title": "Mantelio teorema",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "floor(6^2 / 4) = 9.",
-              "reason": "Didžiausias briaunų skaičius be trikampių.",
-              "latex": "\\lfloor n^2/4 \\rfloor = 9",
-              "result": "9"
-            }
-          ],
-          "finalAnswer": "9"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-17",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Keliais būdais galima nuspalvinti kvadrato viršūnes 2 spalvomis (juoda ir balta), jei pasukti kvadratai laikomi vienodais?",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "answerText": "6",
-      "coreIdea": {
-        "title": "Bernsaido lema",
-        "text": "Būdų skaičius lygus vidutiniam fiksacijos taškų skaičiui po visų simetrijos grupės veiksmų: $N = \\frac{1}{|G|} \\sum |fix(g)|$."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Išvardykite visas 4 kvadrato viršūnių simetrijas (posūkius): 0°, 90°, 180°, 270°.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "0° posūkis palieka visas $2^4 = 16$ spalvinimų. 90° posūkis reikalauja, kad visos viršūnės būtų vienodos (2 būdai).",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Grupė G: e (id), r (90°), r² (180°), r³ (270°). |G| = 4."
-        },
-        {
-          "text": "Fix(e) = $2^4 = 16$. Fix(r) = $2^1 = 2$ (visos viršūnės turi būti vienodos)."
-        },
-        {
-          "text": "Fix(r²) = $2^2 = 4$ (priešingos viršūnės poros turi būti vienodos). Fix(r³) = $2^1 = 2$."
-        },
-        {
-          "text": "Suma: $16 + 2 + 4 + 2 = 24$. Vidurkis: $24 / 4 = 6$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-17-method-1",
-          "title": "Burnside's Lemma",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Skaičiavimas",
-              "action": "(16+2+4+2)/4 = 6.",
-              "reason": "Bernsaido lemos taikymas posūkių grupei.",
-              "latex": "N=6",
-              "result": "6"
-            }
-          ],
-          "finalAnswer": "6"
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-comb-18",
-      "topicId": "olimpiada-10-kombinatorika",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laiptais galima kilti po 1 arba po 2 pakopas vienu metu. Keliais būdais galima užkilti į 6 pakopų laiptus?",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "answerText": "13",
-      "coreIdea": {
-        "title": "Rekurencija ir Fibonacci",
-        "text": "Tegul f(n) yra būdų skaičius n pakopoms. Paskutinis žingsnis buvo arba 1 pakopa (iš n-1), arba 2 pakopos (iš n-2). Todėl $f(n) = f(n-1) + f(n-2)$."
-      },
-      "strategyTags": [
-        "combinatorial-counting"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Apskaičiuokite f(1), f(2), f(3) ir pamatysite seką.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "f(1)=1, f(2)=2, f(3)=3, f(4)=5...",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "f(1) = 1 (1)"
-        },
-        {
-          "text": "f(2) = 2 (1+1, 2)"
-        },
-        {
-          "text": "f(3) = 3, f(4) = 5, f(5) = 8, f(6) = 13."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-comb-18-method-1",
-          "title": "Fibonacci seka",
-          "methodType": "main",
-          "strategyTags": [
-            "combinatorial-counting"
-          ],
-          "steps": [
-            {
-              "title": "Seka",
-              "action": "1, 2, 3, 5, 8, 13.",
-              "reason": "Kiekvienas narys yra dviejų ankstesnių suma.",
-              "latex": "F_{n+1}",
-              "result": "13"
-            }
-          ],
-          "finalAnswer": "13"
-        }
-      ]
-    }
-  ],
-  "tests": [
-    {
-      "id": "olimpiada-10-comb-test-1",
-      "title": "10 klasė: Kombinatorikos olimpiadinis testas",
-      "scope": "topic",
-      "topicIds": [
-        "olimpiada-10-kombinatorika"
-      ],
-      "exerciseIds": [
-        "ex-olimpiada-10-comb-02",
-        "ex-olimpiada-10-comb-04",
-        "ex-olimpiada-10-comb-07",
-        "ex-olimpiada-10-comb-09",
-        "ex-olimpiada-10-comb-16"
-      ],
-      "timeLimitSeconds": 3600,
+
       "masteryWeight": 2.0,
       "passingThreshold": 0.6
     }

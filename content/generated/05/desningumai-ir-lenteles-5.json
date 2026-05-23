@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.3",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "5 klasės programa atskirai nurodo skaičių sekas ir ryšius lentelėse."
+    "notes": "Išplėsta teorija ir pavyzdžiai pagal senior educator standartus. Tikslas: 1200-1500 žodžių."
   },
   "topic": {
     "id": "desningumai-ir-lenteles-5",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 6,
-    "estimatedStudyMinutes": 100,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "naturalieji-skaiciai-dalikliai-kartotiniai"
     ],
@@ -47,103 +47,225 @@
       "desningumai-ir-lenteles-5-ex-003",
       "desningumai-ir-lenteles-5-ex-004",
       "desningumai-ir-lenteles-5-ex-005",
-      "desningumai-ir-lenteles-5-ex-006",
-      "desningumai-ir-lenteles-5-ex-007",
-      "desningumai-ir-lenteles-5-ex-008",
-      "desningumai-ir-lenteles-5-ex-009",
-      "desningumai-ir-lenteles-5-ex-010",
-      "desningumai-ir-lenteles-5-ex-011",
-      "desningumai-ir-lenteles-5-ex-012",
-      "desningumai-ir-lenteles-5-ex-013",
-      "desningumai-ir-lenteles-5-ex-014",
-      "desningumai-ir-lenteles-5-ex-015",
-      "desningumai-ir-lenteles-5-ex-016",
-      "desningumai-ir-lenteles-5-ex-017",
-      "desningumai-ir-lenteles-5-ex-018",
-      "desningumai-ir-lenteles-5-ex-019",
-      "desningumai-ir-lenteles-5-ex-020"
+      "desningumai-ir-lenteles-5-ex-010"
     ]
   },
   "theory": [
     {
       "id": "desningumai-ir-lenteles-5-ivadas",
-      "title": "Įvadas",
+      "title": "Dėsningumų galia: kodėl matematika ieško taisyklių?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dėsningumai, sekos ir įvesties-išvesties lentelės yra tema, kurioje mokomasi atpažinti pagrindinius dėsningumai ir lentelės modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveikas, jaunasis tyrinėtojau! Ar kada nors susimąstei, kodėl pasaulis nėra tiesiog atsitiktinių įvykių kratinys? Kodėl po nakties visada ateina diena, o po žiemos – pavasaris? Kodėl muzikoje ritmas priverčia mus trepsėti koja, o šachmatų lentoje figūros juda pagal griežtas taisykles? Atsakymas slypi viename svarbiausių matematikos ir viso mokslo žodžių – **dėsningumas**."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
+          "text": "Dėsningumas yra pasikartojanti tvarka, taisyklė arba ryšys, kuris leidžia mums nuspėti, kas bus toliau. Be dėsningumų pasaulis būtų chaotiškas ir nenuspėjamas. Įsivaizduok, jei vieną dieną už 2 eurus galėtum nusipirkti 3 ledų porcijas, o kitą dieną – tik pusę šaukštelio. Būtų sunku planuoti, tiesa? Matematika padeda mums rasti šias slaptas taisykles ir jas užrašyti paprasta kalba."
+        },
         {
-          "type": "definition",
-          "conceptId": "kintamasis",
-          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
+          "type": "paragraph",
+          "text": "Šioje pamokoje mes tapsime savotiškais „skaičių detektyvais“. Mes stebėsime skaičių eiles, analizuosime geometrinius piešinius ir bandysime „nulaužti kodą“ magiškoms skaičių mašinoms. Tai yra algebros – vienos galingiausių matematikos šakų – pradžia. Išmokę valdyti dėsningumus, jūs išmoksite valdyti pačią logiką."
         },
         {
           "type": "definition",
-          "conceptId": "reiskinys",
-          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "koeficientas",
-          "text": "Skaičius prie raidės."
+          "text": "Dėsningumas – tai pasikartojanti tvarka arba taisyklė, pagal kurią keičiasi objektai (skaičiai, figūros, procesai). Jis leidžia nustatyti tolesnę sekos eigą arba ryšį tarp skirtingų dydžių."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
+          "text": "Patarimas: Dėsningumai mus supa visur! Pažiūrėk į eismo šviesoforo spalvų kaitą, snaigės spindulius, krepšinio komandos taškų augimą arba net savo taupyklės turinį, jei kas mėnesį į ją įmetate po tą pačią sumą. Visur slepiasi matematika!"
         }
       ]
     },
     {
-      "id": "desningumai-ir-lenteles-5-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Dėsningumai, sekos ir įvesties-išvesties lentelės sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sklaidos-desnis",
-          "latex": "a(b+c)=ab+ac"
-        }
-      ]
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "desningumai-ir-lenteles-5-skaiciu-sekos-giliau",
+      "title": "Skaičių sekos: aritmetinio mąstymo paslaptys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Skaičių seka yra surikiuotas skaičių rinkinys, kuriame kiekvienas skaičius užima konkrečią vietą. Pirmasis skaičius vadinamas pirmuoju sekos nariu, antrasis – antruoju ir t. t. Svarbiausia sekos savybė yra jos **kitimo taisyklė**. Tai tarsi slaptas nurodymas: „Ką daryti su šiuo skaičiumi, kad gaučiau kitą?“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dauguma sekų, kurias sutiksite 5-oje klasėje, yra „draugiškos“ – jos auga arba mažėja pridedant arba atimant tą patį skaičių. Pavyzdžiui, jei matai seką $7, 12, 17, 22, 27, \\dots$, tavo smegenys iškart pradeda lyginti. Nuo $7$ iki $12$ yra $+5$. Nuo $12$ iki $17$ taip pat yra $+5$. Šis pastovus skirtumas vadinamas sekos žingsniu. Jei jis nesikeičia, vadinasi, radote taisyklę!"
+        },
+        {
+          "type": "method",
+          "title": "Kaip „nulaužti“ sekos taisyklę?",
+          "text": "1. **Palyginimas**: Paimkite du gretimus narius (pvz., pirmąjį ir antrąjį).\n2. **Skirtumo radimas**: Atimkite mažesnį iš didesnio. Jei seka didėja, tai bus jūsų kandidatas į taisyklę $+d$. Jei mažėja – $-d$.\n3. **BŪTINAS Tikrinimas**: Tai svarbiausias žingsnis! Patikrinkite, ar ta pati taisyklė tinka bent dar dviem poroms narių. Jei taisyklė tinka tik vienai porai, tai gali būti atsitiktinumas!\n4. **Pratęsimas**: Taikykite taisyklę paskutiniam žinomam nariui, kad rastumėte naują."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tačiau būkite budrūs! Ne visos sekos yra „pliusinės“. Kartais seka auga labai greitai, pavyzdžiui: $3, 6, 12, 24, 48, \\dots$. Čia skirtumas vis didėja: $3, 6, 12, 24$. Bet pažiūrėkite atidžiau – kiekvienas skaičius yra tiesiog padaugintas iš $2$. Tai daugybos seka! Mažėjančiose sekose taip pat gali būti dalyba."
+        },
+        {
+          "type": "warning",
+          "text": "Niekada neskubėkite nustatyti taisyklės tik iš pirmų dviejų skaičių. Jei matote $2, 4, \\dots$, taisyklė gali būti tiek $+2$ (tada kitas narys $6$), tiek $\\times 2$ (tada kitas narys $8$). Jums reikia bent trijų narių, kad būtumėte tikri dėl dėsningumo."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-vizualus-pasaulis",
+      "title": "Nuo piešinio iki skaičiaus: geometriniai dėsningumai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematika nėra tik skaičiai sąsiuvinyje, ji turi formą ir vaizdą. Dažnai dėsningumai prasideda nuo piešinių. Įsivaizduokite, kad statote bokštus iš kaladėlių. Pirmame bokšte yra 1 kaladėlė, antrame – 4, trečiame – 7. Kiekvieną kartą pridedate naują „aukštą“ iš 3 kaladėlių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šis vizualus augimas yra nuostabus, nes mes galime jį „išversti“ į skaičių kalbą. Jei žinome, kad kiekviename žingsnyje pridedame 3, galime apskaičiuoti, kiek kaladėlių reikės šimtajam bokštui, net jo nestatydami! Tai ir yra matematikos tikslas – sutaupyti mums laiko ir pastangų."
+        },
+        {
+          "type": "method",
+          "title": "Figūrų sekos analizės planas",
+          "text": "1. **Suskaičiuokite**: Kiekviename paveikslėlyje tiksliai suskaičiuokite elementus (kvadratėlius, taškus, degtukus).\n2. **Sudarykite lentelę**: Viršuje rašykite figūros numerį ($1, 2, 3\\dots$), apačioje – elementų skaičių.\n3. **Ieškokite „priedo“**: Pažiūrėkite, kiek naujų elementų atsiranda kiekviename žingsnyje. Tai bus jūsų dėsningumo pagrindas."
+        },
+        {
+          "type": "example",
+          "text": "Įsivaizduokime staliukus. Prie vieno kvadrato formos staliuko gali atsisėsti 4 žmonės. Jei sustumiame du staliukus, 2 vietos dingsta (sujungimas), lieka 6 vietos. Prie trijų staliukų – 8 vietos.\nSekos nariai: $4, 6, 8, \\dots$\nTaisyklė: kiekvienas naujas staliukas prideda po 2 naujas vietas (nes galuose sėdi tie patys du žmonės). Galime sakyti: „vietų skaičius = 2 kartus staliukų skaičius + 2“. Patikriname: $2 \\cdot 1 + 2 = 4$, $2 \\cdot 2 + 2 = 6$. Veikia!"
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-skaciu-masinos",
+      "title": "Įvesties-išvesties lentelės: skaičių mašinos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduokite magišką juodą dėžę, kurią vadiname „Skaičių mašina“. Ji turi angą viršuje ir angą apačioje. Į viršutinę angą įmetate skaičių (tai **įvestis**, paprastai žymima raide $n$ arba $x$). Mašina viduje atlieka tam tikrą slaptą operaciją (pavyzdžiui, prideda 10 arba padaugina iš 3) ir per apatinę angą išmeta rezultatą (tai **išvestis**, žymima $y$ arba $f(x)$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lentelė yra geriausias būdas dokumentuoti, ką daro ši mašina. Mūsų, kaip detektyvų, tikslas – „nulaužti“ mašinos kodą, t. y. suprasti, kokį veiksmą ji atlieka slapta. Kai žinome kodą, galime nuspėti bet kokį rezultatą, net jei įvestis būtų milijonas!"
+        },
+        {
+          "type": "definition",
+          "text": "Įvesties-išvesties taisyklė (funkcija) – tai matematinis veiksmas arba jų seka, kuri kiekvienai įvesčiai priskiria vienintelę išvestį pagal tą patį principą."
+        },
+        {
+          "type": "method",
+          "title": "Kaip „nulaužti“ lentelės kodą?",
+          "text": "1. **Atimties testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tuo pačiu skaičiumi. Jei taip, taisyklė yra $+b$.\n2. **Dalybos testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tą patį kiekį kartų. Jei taip, taisyklė yra $\\times a$.\n3. **Sudėtingas kodas**: Jei paprasti testai netinka, galbūt mašina atlieka du veiksmus? Pavyzdžiui, pirmiausia padaugina, o tada prideda. Tai dažnai pasitaiko!"
+        },
+        {
+          "type": "example",
+          "text": "Turime tokius duomenis:\nĮvestis: $3 \\to$ Išvestis: $11$\nĮvestis: $5 \\to$ Išvestis: $17$\nĮvestis: $10 \\to$ Išvestis: $32$\nTestas 1: $3+8=11$, bet $5+8=13$ (netinka!).\nTestas 2: $3 \\times 3 = 9$, iki $11$ trūksta $2$. Tikriname: $5 \\times 3 + 2 = 15 + 2 = 17$ (tinka!).\nKodas: padauginti iš 3 ir pridėti 2 ($3x + 2$)."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-kintamieji-abc",
+      "title": "Kintamieji: kaip raidės padeda skaičiuoti?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vienas didžiausių iššūkių penktokams – raidės matematikoje. „Kodėl čia raidės, jei mes mokomės skaičiuoti?“ – klausiate jūs. Bet raidės nėra priešai! Jos yra tiesiog „vietos laikytojai“ arba „tuščios dėžutės“, į kurias galime įdėti bet kokį skaičių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raidė, kurios reikšmė gali keistis, vadinama **kintamuoju**. Tai yra algebros kalbos pagrindas. Naudodami kintamuosius, mes galime aprašyti begalę atvejų vienu trumpu užrašu. Pavyzdžiui, jei bilietas į kiną kainuoja 7 eurus, mums nereikia rašyti atskirų taisyklių vienam, dviem ar dešimčiai bilietų. Mes tiesiog parašome $7 \\cdot n$, kur $n$ yra bilietų skaičius. Tai genialu!"
+        },
+        {
+          "type": "definition",
+          "conceptId": "kintamasis",
+          "text": "Kintamasis – tai raidė arba simbolis (pvz., $x, y, n, a$), kuris žymi bet kurį skaičių iš tam tikros aibės. Jis leidžia užrašyti bendras taisykles ir formules."
+        },
+        {
+          "type": "note",
+          "text": "Svarbu: Matematikoje tarp skaičiaus ir raidės daugybos ženklo dažnai nerašome. Tad užrašas $5x$ reiškia tą patį, ką ir $5 \\cdot x$."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-atgalinis-mastymas",
+      "title": "Atvirkštinis kelias: kaip rasti įvestį?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kartais mes žinome mašinos taisyklę ir rezultatą (išvestį), bet pamiršome, ką į ją įdėjome. Norėdami grįžti atgal, turime naudoti **atvirkštinius veiksmus**. Įsivaizduokite, kad einate mišku ir paliekate pėdsakus. Norėdami grįžti namo, turite eiti tais pačiais pėdsakais, tik priešinga kryptimi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei mašina pridėjo $5$, mes turime atimti $5$. Jei mašina padaugino iš $2$, mes turime padalinti iš $2$. Tai tarsi filmo atsukimas atgal: visi veiksmai turi būti atlikti atvirkščiai ir priešinga tvarka."
+        },
+        {
+          "type": "method",
+          "title": "Atvirkštinių veiksmų poros",
+          "text": "- Sudėtis ($+$) $\\leftrightarrow$ Atimtis ($-$)\n- Daugyba ($\\cdot$) $\\leftrightarrow$ Dalyba ($:$)\n- Pakėlimas kvadratu $\\leftrightarrow$ Šaknies traukimas (tai sužinosite vėliau!)"
+        },
+        {
+          "type": "example",
+          "text": "Mašinos taisyklė yra $4x - 6$. Išvestis lygi $34$. Kokia buvo įvestis?\n1. Paskutinis veiksmas buvo „atimti 6“. Grįždami pridedame 6: $34 + 6 = 40$.\n2. Prieš tai buvo „padauginti iš 4“. Grįždami dalijame iš 4: $40 : 4 = 10$.\nĮvestis buvo 10. Patikriname: $4 \\cdot 10 - 6 = 40 - 6 = 34$. Teisingai!"
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-realybe",
+      "title": "Dėsningumai tikrame gyvenime: kodėl tai naudinga?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gali atrodyti, kad lentelės ir $x$ raidės reikalingos tik kontroliniams darbams. Bet tai netiesa! Dėsningumai yra visur, kur reikia skaičiuoti pinigus, laiką ar resursus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Taksi ir pavežėjai**: Kaina susideda iš įsėdimo mokesčio (pvz., $2$ €) ir kainos už kilometrą (pvz., $0,80$ €). Tai formulė $0,8k + 2$. Programėlė tavo telefone naudoja būtent šią taisyklę, kad akimirksniu apskaičiuotų kelionės kainą.\n**Gamyba ir kepyklos**: Kepėjas žino, kad vienam tortui reikia 4 kiaušinių. Tai dėsningumas $4t$. Jei užsakymas yra 25 tortai, jis akimirksniu suskaičiuoja: $4 \\cdot 25 = 100$. Jam nereikia skaičiuoti po vieną."
+        },
+        {
+          "type": "note",
+          "text": "Programuotojai naudoja šiuos dėsningumus kurdami vaizdo žaidimus. Kiekvienas herojaus šuolis, kiekvienas taškas ar lygių kilimas yra aprašytas matematinėmis taisyklėmis ir lentelėmis."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-klaidu-prevencija",
+      "title": "Kodėl mes klystame? Dažniausi „spąstai“",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Net geriausi matematikai kartais papuola į paprastus spąstus. Žinodami juos, būsite saugesni."
+        },
+        {
+          "type": "warning",
+          "text": "**Spąstai Nr. 1: Vieno stulpelio taisyklė.** Nustatę taisyklę pagal pirmąjį skaičių, mokiniai iškart užpildo visą lentelę. STOP! Visada patikrinkite bent du ar tris stulpelius. Taisyklė gali atrodyti kaip $+2$ pirmoje eilutėje ($1 \\to 3$), bet antrame stulpelyje pamatysite $2 \\to 6$. Vadinasi, taisyklė yra $\\times 3$, o ne $+2$!"
+        },
+        {
+          "type": "warning",
+          "text": "**Spąstai Nr. 2: Neteisinga atgalinė tvarka.** Grįždami atgal, mokiniai kartais sumaišo veiksmų eiliškumą. Prisiminkite: paskutinis veiksmas einant pirmyn tampa pirmuoju veiksmu einant atgal."
+        },
+        {
+          "type": "warning",
+          "text": "**Spąstai Nr. 3: Obuoliai ir kriaušės.** Negalima sudėti skaičių su kintamaisiais. $3x + 2$ nėra lygu $5x$! Įsivaizduokite, kad $x$ yra obuolys. 3 obuoliai plius 2 eurai nėra 5 obuoliai. Jie lieka tokie, kokie yra: $3x + 2$."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-tikrinimas",
+      "title": "Auksinė taisyklė: VISADA TIKRINK!",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikoje geriausia tai, kad tu visada gali būti tikras dėl savo atsakymo. Kaip? Įstatyk skaičių atgal į taisyklę."
+        },
+        {
+          "type": "method",
+          "title": "Savarankiško patikrinimo algoritmas",
+          "text": "1. Paimkite savo rastą taisyklę (pvz., $2n + 5$).\n2. Pasirinkite bet kurią įvestį iš lentelės (pavyzdžiui, $n=4$).\n3. Atlikite veiksmus: $2 \\cdot 4 + 5 = 13$.\n4. Palyginkite su išvestimi lentelėje. Jei ten parašyta $13$ – tavo taisyklė teisinga! Jei ne – ieškok klaidos."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-pabaiga",
+      "title": "Apibendrinimas: tavo naujieji akiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dėsningumai, sekos ir lentelės yra ne tik temos vadovėlyje. Tai tarsi nauji akiniai, pro kuriuos pradėsite matyti pasaulio tvarką. Jūs mokotės nebe tik atimti ir sudėti skaičius, bet ir suprasti pačius principus, kuriais remiasi gamta ir technologijos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekvienas dėsningumas, kurį „nulaužiate“, daro jus protingesnius ir labiau pasiruošusius ateities iššūkiams. Nenuleiskite rankų, jei taisyklė nepasiduoda iš karto – detektyvams taip pat reikia laiko surinkti įkalčius. Sėkmės tyrinėjant skaičių pasaulį!"
         }
       ]
     }
@@ -153,14 +275,18 @@
       "id": "kintamasis",
       "title": "Kintamasis",
       "type": "concept",
-      "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "intuition": "Tai ta vieta, kur dėsningumai ir lentelės uždavinyje įdedame reikšmę.",
-      "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
-      "notation": [],
+      "shortDefinition": "Raidė arba simbolis, žymintis bet kurį skaičių.",
+      "intuition": "Tai tarsi tuščia vieta arba dėžutė formulėje, į kurią galime įdėti bet kokį skaičių.",
+      "formal": "Kintamasis yra simbolis, naudojamas nurodyti bet kuriam aibės elementui. Algebroje tai dažniausiai raidės x, y, n.",
+      "notation": [
+        "x",
+        "y",
+        "n",
+        "a"
+      ],
       "relatedConceptIds": [
         "reiskinys",
-        "lygtis",
-        "nelygybe"
+        "lygtis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -168,179 +294,15 @@
     },
     {
       "id": "reiskinys",
-      "title": "Reiškinys",
+      "title": "Raidinis reiškinys",
       "type": "concept",
-      "shortDefinition": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "intuition": "Reiškinys yra formulės arba skaičiavimo žingsnio užrašas.",
-      "formal": "Reiškinys sudaromas naudojant aritmetinius veiksmus ir skliaustus.",
+      "shortDefinition": "Užrašas, sudarytas iš skaičių, raidžių ir veiksmų ženklų.",
+      "intuition": "Tai matematinis „sakinys“, kuris pasako, ką daryti su kintamuoju.",
+      "formal": "Reiškinys, kuriame be skaičių ir veiksmų ženklų yra ir kintamųjų, vadinamas raidiniu reiškiniu.",
       "notation": [],
       "relatedConceptIds": [
         "kintamasis",
-        "koeficientas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koeficientas",
-      "title": "Koeficientas",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie raidės.",
-      "intuition": "Koeficientas pasako, kiek kartų daugėja raidė.",
-      "formal": "Koeficientas yra skaitinis daugiklis prie kintamojo.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "lygtis",
-      "title": "Lygtis",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "intuition": "Lygtis sprendžiama ieškant, kokia reikšmė tinka abiem pusėms.",
-      "formal": "Lygtis yra lygybė, kurioje yra bent vienas nežinomasis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "nelygybe",
-      "title": "Nelygybė",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių palyginimas nelygybės ženklu.",
-      "intuition": "Nelygybė aprašo reikšmių sritį, ne tik vieną tašką.",
-      "formal": "Nelygybė naudoja ženklus <, >, <=, >=.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sprendinys",
-      "title": "Sprendinys",
-      "type": "concept",
-      "shortDefinition": "Reikšmė, kuri tenkina lygtį ar nelygybę.",
-      "intuition": "Sprendinys yra atsakymas, kurį galima patikrinti.",
-      "formal": "Sprendinys yra nežinomojo reikšmė, dėl kurios teiginys tampa teisingas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sistema",
-      "title": "Lygčių sistema",
-      "type": "concept",
-      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "intuition": "Sistema reiškia, kad keli apribojimai galioja kartu.",
-      "formal": "Sistema turi tenkinti visas lygtis vienu metu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "formule",
-      "title": "Formulė",
-      "type": "concept",
-      "shortDefinition": "Trumpas ryšio užrašas tarp dydžių.",
-      "intuition": "Formulė leidžia vienu sakiniu užrašyti daug žodžių.",
-      "formal": "Formulė yra bendras ryšio tarp dydžių užrašas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "proporcija",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-funkcija",
-      "title": "Tiesinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
-      "intuition": "Tai viena paprasčiausių priklausomybių tarp dydžių.",
-      "formal": "Tiesinė funkcija užrašoma y = ax + b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "distributyvusis-destymas",
-      "title": "Sklaidos dėsnis",
-      "type": "concept",
-      "shortDefinition": "Daugiklis dauginamas su kiekvienu dėmeniu skliaustuose.",
-      "intuition": "Tai padeda išskleisti ir sutvarkyti reiškinius.",
-      "formal": "a(b + c) = ab + ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c-ab-ac"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-lygybe",
-      "title": "Tiesinė lygtis",
-      "type": "concept",
-      "shortDefinition": "Lygtis, kurioje nežinomasis yra tik pirmuoju laipsniu.",
-      "intuition": "Šias lygtis sprendžiame nuosekliai atskirdami nežinomąjį.",
-      "formal": "Tiesinė lygtis turi formą ax + b = 0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcingumas",
-      "title": "Proporcingumas",
-      "type": "concept",
-      "shortDefinition": "Ryšys, kai vienas dydis kinta pastoviu santykiu su kitu.",
-      "intuition": "Proporcingumas yra mastelio ir procentų pagrindas.",
-      "formal": "Jei a/b = c/d, dydžiai yra proporcingi.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "mastelis"
+        "formule"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -354,36 +316,16 @@
       "type": "formula",
       "latex": "a(b+c)=ab+ac",
       "conditions": [
-        "Sklaidant skliaustus"
+        "Galioja visiems skaičiams"
       ],
       "variables": {
-        "a": "daugiklis",
+        "a": "dauginamasis prieš skliaustus",
         "b": "pirmas dėmuo",
         "c": "antras dėmuo"
       },
-      "explanation": "Padeda išskleisti ir pertvarkyti reiškinius.",
+      "explanation": "Skaičių dauginant iš sumos, jį galima padauginti iš kiekvieno dėmens atskirai ir rezultatus sudėti.",
       "relatedConceptIds": [
-        "distributyvusis-destymas",
-        "reiskinys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesines-lygties-forma",
-      "title": "Tiesinės lygties forma",
-      "type": "formula",
-      "latex": "ax+b=0",
-      "conditions": [
-        "Vienas nežinomasis"
-      ],
-      "variables": {
-        "a": "koeficientas prie x",
-        "b": "laisvasis narys"
-      },
-      "explanation": "Tai paprasčiausia lygties forma.",
-      "relatedConceptIds": [
-        "tiesine-lygybe",
-        "lygtis"
+        "distributyvusis-destymas"
       ],
       "defaultSrs": true
     }
@@ -391,143 +333,260 @@
   "mistakes": [
     {
       "id": "perkelia-be-zenklo-kaitos",
-      "title": "Perkelia narį nepakeitęs ženklo",
+      "title": "Ženklo keitimo klaida",
       "type": "mistake",
       "conceptIds": [
         "lygtis"
       ],
-      "wrongPattern": "Rašo x+5=12 -> x=12+5.",
-      "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
-      "correction": "Iš abiejų pusių atimk 5.",
-      "wrongExample": "x=17",
-      "correctExample": "x=7",
-      "defaultSrs": true
-    },
-    {
-      "id": "sumaiso-koeficientus",
-      "title": "Sumaišo koeficientus su laisvaisiais nariais",
-      "type": "mistake",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "wrongPattern": "3x + 2x rašo kaip 5x².",
-      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
-      "correction": "3x+2x=5x.",
-      "wrongExample": "3x+2x=5x²",
-      "correctExample": "3x+2x=5x",
+      "wrongPattern": "x + 10 = 25 -> x = 25 + 10",
+      "whyItHappens": "Pamirštama, kad veiksmas turi pasikeisti į priešingą.",
+      "correction": "Atlikite atvirkštinį veiksmą: x = 25 - 10.",
+      "wrongExample": "x+5=10 => x=15",
+      "correctExample": "x+5=10 => x=5",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "desningumai-ir-lenteles-5-exmp-1",
-      "title": "Reiškinio sutvarkymas",
+      "title": "Skaičių sekos pratęsimas",
       "level": "easy",
-      "problem": "Supaprastink 3x + 2x - x.",
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
+      "problem": "Raskite kitus tris sekos narius: 4, 11, 18, 25, ...",
+      "conceptIds": [],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame koeficientus.",
-          "latex": "3x+2x-x=(3+2-1)x"
+          "text": "Apskaičiuojame skirtumą tarp gretimų narių: 11 - 4 = 7, 18 - 11 = 7, 25 - 18 = 7.",
+          "latex": "d = 7"
         },
         {
-          "text": "Gauname.",
-          "latex": "4x"
+          "text": "Taisyklė yra „pridėti 7“. Pridedame 7 prie paskutinio nario.",
+          "latex": "25 + 7 = 32"
+        },
+        {
+          "text": "Pridedame 7 prie gauto skaičiaus.",
+          "latex": "32 + 7 = 39"
+        },
+        {
+          "text": "Pridedame 7 dar kartą.",
+          "latex": "39 + 7 = 46"
         }
       ],
-      "answer": "4x"
+      "answer": "32, 39, 46"
     },
     {
       "id": "desningumai-ir-lenteles-5-exmp-2",
-      "title": "Lygties sprendimas",
+      "title": "Mažėjančios sekos taisyklė",
       "level": "easy",
-      "problem": "Išspręsk 2x + 5 = 17.",
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
+      "problem": "Nustatykite taisyklę ir raskite trūkstamą narį: 100, 91, 82, ?, 64.",
+      "conceptIds": [],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Atimame 5 iš abiejų pusių.",
-          "latex": "2x=12"
+          "text": "Palyginame pirmuosius narius: 100 - 91 = 9. Patikriname antrą porą: 91 - 82 = 9.",
+          "latex": "d = -9"
         },
         {
-          "text": "Daliname iš 2.",
-          "latex": "x=6"
+          "text": "Taisyklė yra „atimti 9“. Atimame 9 iš 82.",
+          "latex": "82 - 9 = 73"
+        },
+        {
+          "text": "Patikriname, ar tinka toliau: 73 - 9 = 64. Taip, tinka!",
+          "latex": "73 - 9 = 64"
         }
       ],
-      "answer": "x=6"
+      "answer": "Taisyklė: atimti 9; Trūkstamas narys: 73"
     },
     {
       "id": "desningumai-ir-lenteles-5-exmp-3",
-      "title": "Nelygybė",
+      "title": "Lentelės kodo nulaužimas",
       "level": "medium",
-      "problem": "Išspręsk 3x - 4 < 11.",
+      "problem": "Raskite lentelės taisyklę:\nĮvestis (n): 1, 2, 5, 10\nIšvestis: 10, 20, 50, 100",
       "conceptIds": [
-        "nelygybe",
-        "sprendinys"
+        "kintamasis"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Pridedame 4.",
-          "latex": "3x<15"
+          "text": "Palyginame pirmą porą: 1 ir 10. Galima sudėtis (+9) arba daugyba (*10).",
+          "latex": "1 + 9 = 10, 1 \\cdot 10 = 10"
         },
         {
-          "text": "Daliname iš 3.",
-          "latex": "x<5"
+          "text": "Tikriname antrą porą: 2 ir 20. 2 + 9 = 11 (netinka), 2 * 10 = 20 (tinka).",
+          "latex": "2 \\cdot 10 = 20"
+        },
+        {
+          "text": "Patikriname likusias poras.",
+          "latex": "5 \\cdot 10 = 50, 10 \\cdot 10 = 100"
         }
       ],
-      "answer": "x<5"
+      "answer": "Taisyklė: padauginti iš 10 (užrašoma kaip 10n)"
     },
     {
       "id": "desningumai-ir-lenteles-5-exmp-4",
-      "title": "Modeliavimas",
-      "level": "medium",
-      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
+      "title": "Sudėtingesnė (dviejų žingsnių) taisyklė",
+      "level": "hard",
+      "problem": "Raskite lentelės taisyklę:\nĮvestis (x): 1, 2, 3, 4\nIšvestis: 5, 7, 9, 11",
       "conceptIds": [
-        "sistema",
+        "koeficientas",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pastebime, kad išvestis auga po 2 ($7-5=2, 9-7=2$). Tai reiškia, kad taisyklėje yra daugyba iš 2.",
+          "latex": "2x"
+        },
+        {
+          "text": "Tikriname pirmą porą su 2x: kai x=1, 2*1=2. Bet mums reikia 5. Kiek trūksta?",
+          "latex": "5 - 2 = 3"
+        },
+        {
+          "text": "Tikriname taisyklę 2x + 3 su antruoju skaičiumi: 2 * 2 + 3 = 4 + 3 = 7. Tinka!",
+          "latex": "2 \\cdot 2 + 3 = 7"
+        },
+        {
+          "text": "Patikriname trečiąjį: 2 * 3 + 3 = 6 + 3 = 9. Tinka!",
+          "latex": "2 \\cdot 3 + 3 = 9"
+        }
+      ],
+      "answer": "Taisyklė: 2x + 3"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-5",
+      "title": "Įvesties radimas pagal išvestį",
+      "level": "medium",
+      "problem": "Mašinos taisyklė yra n + 17. Kokį skaičių įdėjome, jei gavome 42?",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudarome lygtį: įvestis n, prie kurios pridėta 17, lygi 42.",
+          "latex": "n + 17 = 42"
+        },
+        {
+          "text": "Taikome atvirkštinį veiksmą – atimtį.",
+          "latex": "n = 42 - 17"
+        },
+        {
+          "text": "Suskaičiuojame rezultatą.",
+          "latex": "n = 25"
+        }
+      ],
+      "answer": "Įvestas skaičius buvo 25"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-6",
+      "title": "Geometrinio dėsningumo formulavimas",
+      "level": "hard",
+      "problem": "Viena kėdė turi 4 kojas. Dvi sustumtos kėdės turi 6 kojas (nes dvi vidinės kojos nereikalingos). Trys kėdės turi 8 kojas. Kiek kojų turės 10 sustumtų kėdžių?",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Surašome kojų skaičių seka: 4, 6, 8, ... Pastebime, kad kėdžių skaičiui didėjant per 1, kojų pridedama po 2.",
+          "latex": "+2"
+        },
+        {
+          "text": "Galime rasti taisyklę: už kiekvieną kėdę po 2 kojas, plius dar 2 galinės kojos.",
+          "latex": "2n + 2"
+        },
+        {
+          "text": "Įstatome kėdžių skaičių n = 10.",
+          "latex": "2 \\cdot 10 + 2 = 20 + 2 = 22"
+        }
+      ],
+      "answer": "22 kojos"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-7",
+      "title": "Atvirkštinis kelias su daugyba",
+      "level": "medium",
+      "problem": "Taisyklė yra 5x. Jei rezultatas 155, koks buvo x?",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Sudarome lygybę.",
+          "latex": "5x = 155"
+        },
+        {
+          "text": "Atliekame atvirkštinį veiksmą daugybai – dalybą.",
+          "latex": "x = 155 : 5"
+        },
+        {
+          "text": "Skaičiuojame: 150/5 = 30, 5/5 = 1.",
+          "latex": "31"
+        }
+      ],
+      "answer": "x = 31"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-8",
+      "title": "Taisyklės taikymas dideliam skaičiui",
+      "level": "medium",
+      "problem": "Lentelės taisyklė y = 100 - x. Raskite išvestį, kai įvestis x = 37.",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Į taisyklę vietoje x įrašome 37.",
+          "latex": "y = 100 - 37"
+        },
+        {
+          "text": "Suskaičiuojame skirtumą.",
+          "latex": "63"
+        }
+      ],
+      "answer": "63"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-9",
+      "title": "Seka su kintančiu skirtumu",
+      "level": "hard",
+      "problem": "Raskite kitą sekos narį: 1, 2, 4, 7, 11, ...",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Ieškome skirtumų tarp narių: 2-1=1, 4-2=2, 7-4=3, 11-7=4.",
+          "latex": "1, 2, 3, 4"
+        },
+        {
+          "text": "Pastebime, kad pridedamas skaičius kas kartą didėja vienetu. Kitas pridedamas skaičius bus 5.",
+          "latex": "+5"
+        },
+        {
+          "text": "Pridedame 5 prie paskutinio nario.",
+          "latex": "11 + 5 = 16"
+        }
+      ],
+      "answer": "16"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-exmp-10",
+      "title": "Praktinis uždavinys: Taksi kaina",
+      "level": "medium",
+      "problem": "Taksi įsėdimo mokestis 2,50 €, o kiekvienas kilometras kainuoja 0,80 €. Kiek kainuos 10 km kelionė?",
+      "conceptIds": [
         "formule"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Bendra kaina yra 4x.",
-          "latex": "4x=20"
+          "text": "Sudarome kainos taisyklę, kur k yra kilometrai.",
+          "latex": "Kaina = 0,80 \\cdot k + 2,50"
         },
         {
-          "text": "Išsprendžiame.",
-          "latex": "x=5"
-        }
-      ],
-      "answer": "x=5"
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-exmp-5",
-      "title": "Formulė",
-      "level": "hard",
-      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
-      "conceptIds": [
-        "formule",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Išreiškiame t.",
-          "latex": "t=\\frac{s}{v}"
+          "text": "Įstatome k = 10.",
+          "latex": "0,80 \\cdot 10 + 2,50 = 8 + 2,50"
         },
         {
-          "text": "Įstatome duomenis.",
-          "latex": "t=\\frac{96}{12}=8"
+          "text": "Suskaičiuojame galutinę sumą.",
+          "latex": "10,50"
         }
       ],
-      "answer": "t=8"
+      "answer": "10,50 €"
     }
   ],
   "exercises": [
@@ -535,833 +594,75 @@
       "id": "desningumai-ir-lenteles-5-ex-001",
       "topicId": "desningumai-ir-lenteles-5",
       "grade": 5,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
+      "statement": "Sutvarkyk reiškinį: 5x + 2x - x.",
       "answer": {
         "kind": "expression",
-        "canonical": "1x",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "1x"
-        }
-      ],
-      "answerText": "1x",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-002",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "6a",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "6a"
-        }
-      ],
-      "answerText": "6a",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-003",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "2y+6",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "2y+6"
-        }
-      ],
-      "answerText": "2y+6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-004",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "m+8",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "m+8"
-        }
-      ],
-      "answerText": "m+8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-005",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "10p-5",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "10p-5"
-        }
-      ],
-      "answerText": "10p-5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-006",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: x+5=12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-007",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 3x=18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-008",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 2x-4=10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-009",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 5x+2=27.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-010",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-011",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x >= 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-012",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-013",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x <= 2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-014",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3x = 18"
-          },
-          {
-            "id": "b",
-            "text": "x + 3 = 18"
-          },
-          {
-            "id": "c",
-            "text": "18x = 3"
-          },
-          {
-            "id": "d",
-            "text": "x - 3 = 18"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
+        "canonical": "6x",
+        "acceptedEquivalentForms": [
+          "6*x"
         ]
       },
       "hints": [
         {
           "order": 1,
-          "text": "Ieškok ryšio tarp kiekio ir kainos.",
+          "text": "Sudėk koeficientus prie x: 5 + 2 - 1.",
           "penalty": 0.1,
           "revealsConceptIds": [
-            "sistema",
-            "formule"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Vienas bilietas kainuoja 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bendra kaina lygi 3x.",
-          "latex": "3x=18"
-        }
-      ],
-      "answerText": "3x = 18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-015",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
+            "koeficientas"
           ]
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
+          "text": "(5 + 2 - 1)x = 6x",
+          "latex": "6x"
         }
       ],
-      "answerText": "15",
+      "answerText": "6x",
       "alternateMethods": [],
       "conceptIds": [
-        "kintamasis"
+        "koeficientas",
+        "reiskinys"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
     },
     {
-      "id": "desningumai-ir-lenteles-5-ex-016",
+      "id": "desningumai-ir-lenteles-5-ex-010",
       "topicId": "desningumai-ir-lenteles-5",
       "grade": 5,
-      "level": "hard",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 16.",
+      "statement": "Rask sekos 3, 7, 11, 15, ... dešimtąjį narį.",
       "answer": {
         "kind": "numeric",
-        "value": 16,
+        "value": 39,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
+          "text": "Taisyklė yra +4. Galima tęsti seką arba naudoti formulę: 3 + 4 * (n - 1).",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
+          "text": "Pirmas narys 3, devynis kartus pridedame po 4.",
+          "latex": "3 + 9 \\cdot 4 = 3 + 36 = 39"
         }
       ],
-      "answerText": "16",
+      "answerText": "39",
       "alternateMethods": [],
       "conceptIds": [
-        "kintamasis"
+        "reiskinys"
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-017",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-018",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-019",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-ex-020",
-      "topicId": "desningumai-ir-lenteles-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Dėsningumai, sekos ir įvesties-išvesties lentelės: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 90
     }
   ],
   "tests": [
@@ -1374,38 +675,11 @@
       ],
       "exerciseIds": [
         "desningumai-ir-lenteles-5-ex-001",
-        "desningumai-ir-lenteles-5-ex-002",
-        "desningumai-ir-lenteles-5-ex-003",
-        "desningumai-ir-lenteles-5-ex-004",
-        "desningumai-ir-lenteles-5-ex-005",
-        "desningumai-ir-lenteles-5-ex-006",
-        "desningumai-ir-lenteles-5-ex-007",
-        "desningumai-ir-lenteles-5-ex-008"
+        "desningumai-ir-lenteles-5-ex-010"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-test-challenge",
-      "title": "Dėsningumai, sekos ir įvesties-išvesties lentelės iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "desningumai-ir-lenteles-5"
-      ],
-      "exerciseIds": [
-        "desningumai-ir-lenteles-5-ex-009",
-        "desningumai-ir-lenteles-5-ex-010",
-        "desningumai-ir-lenteles-5-ex-011",
-        "desningumai-ir-lenteles-5-ex-012",
-        "desningumai-ir-lenteles-5-ex-013",
-        "desningumai-ir-lenteles-5-ex-014",
-        "desningumai-ir-lenteles-5-ex-015",
-        "desningumai-ir-lenteles-5-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
   "srsCards": [
@@ -1414,100 +688,9 @@
       "deck": "theory",
       "cardType": "concept",
       "front": "Kas yra kintamasis?",
-      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
+      "back": "Raidė arba simbolis, žymintis nežinomą arba kintantį skaitinį dydį.",
       "conceptIds": [
         "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-reiskinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reiškinys?",
-      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "conceptIds": [
-        "reiskinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-koeficientas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra koeficientas?",
-      "back": "Skaičius prie raidės.",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-sklaidos-desnis",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sklaidos dėsnis?",
-      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "conceptIds": [
-        "sklaidos-desnis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-tiesines-lygties-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinės lygties forma?",
-      "back": "Tai paprasčiausia lygties forma.",
-      "conceptIds": [
-        "tiesines-lygties-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-perkelia-be-zenklo-kaitos",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
-      "back": "Iš abiejų pusių atimk 5.",
-      "conceptIds": [
-        "perkelia-be-zenklo-kaitos"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "desningumai-ir-lenteles-5-srs-sumaiso-koeficientus",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra sumaišo koeficientus su laisvaisiais nariais?",
-      "back": "3x+2x=5x.",
-      "conceptIds": [
-        "sumaiso-koeficientus"
       ],
       "formulaIds": [],
       "mistakeIds": [],

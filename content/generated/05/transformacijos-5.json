@@ -1,18 +1,18 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
-    "textbook": "12_klase_teorija.pdf",
-    "notes": "Programa 5 klasėje įveda atspindį, centrinę simetriją, posūkį ir postūmį."
+    "textbook": "matematika_k12.pdf",
+    "notes": "Išplėsta teorija apie geometrines transformacijas, pritaikyta 5 klasės kursui (be sudėtingų formulių)."
   },
   "topic": {
-    "id": "transformacijos-5",
-    "title": "Transformacijos: atspindys, posūkis ir postūmis",
+    "id": "transformaciones-5",
+    "title": "Geometrinės transformacijos: atspindys, postūmis ir posūkis",
     "grade": 5,
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 8,
-    "estimatedStudyMinutes": 100,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "geometrijos-ir-matavimu-pradmenys"
     ],
@@ -20,30 +20,19 @@
       "transformacijos-ir-koordinates"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "atspindys-asine-simetrija",
+      "postumis",
+      "posukis",
+      "simetrijos-asis",
+      "figuru-lygumas",
+      "geometrine-transformacija",
+      "simetrija-gamtoje"
     ],
-    "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
-    ],
+    "formulaIds": [],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "atspindzio-krypties-klaida",
+      "posukio-centro-nepaisymas",
+      "simetrijos-asies-skaiciavimas"
     ],
     "exerciseIds": [
       "transformacijos-5-ex-001",
@@ -70,1503 +59,325 @@
   },
   "theory": [
     {
-      "id": "transformacijos-5-ivadas",
-      "title": "Įvadas",
+      "id": "trans-ivadas",
+      "title": "Geometrinės transformacijos: kas tai?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Transformacijos: atspindys, posūkis ir postūmis yra tema, kurioje mokomasi atpažinti pagrindinius elementarios transformacijos modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Geometrija nėra tik nejudančios figūros lape. Figūras galime judinti, sukti ir atspindėti – tai vadinama geometrinėmis transformacijomis. Svarbiausia taisyklė 5 klasėje: po šių transformacijų figūra nepasikeičia – jos kraštinės išlieka tokio pat ilgio, o kampai – tokio pat dydžio. Keičiasi tik figūros padėtis arba kryptis."
         },
         {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "type": "definition",
+          "text": "**Geometrinė transformacija** – tai taisyklė, pagal kurią kiekvienas plokštumos taškas perkeliamas į kitą vietą."
         }
       ]
     },
     {
-      "id": "transformacijos-5-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "atspindys-section",
+      "title": "Atspindys (Ašinė simetrija)",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
-        },
-        {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
-        }
-      ]
-    },
-    {
-      "id": "transformacijos-5-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Transformacijos: atspindys, posūkis ir postūmis sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Atspindys yra pati dažniausia transformacija, kurią matome kasdien veidrodyje arba žiūrėdami į ramų ežero vandenį. Šiai transformacijai atlikti mums reikia **simetrijos ašies** – tiesės, kuri veikia kaip veidrodis."
         },
         {
           "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "text": "Atspindžio savybė: kiekvienas figūros taškas ir jo atspindys yra nutolę nuo simetrijos ašies vienodu atstumu. Be to, jungiamoji atkarpa tarp taško ir jo atvaizdo yra statmena simetrijos ašiai."
         },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "transformacijos-5-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
         {
           "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "**Kaip nubraižyti atspindį?**\n1. Iš kiekvienos figūros viršūnės brėžkite statmenį į simetrijos ašį.\n2. Pratęskite tą statmenį į kitą ašies pusę tiek pat, koks atstumas buvo iki ašies.\n3. Pažymėkite naujus taškus ir juos sujunkite."
         }
       ]
     },
     {
-      "id": "transformacijos-5-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "postumis-section",
+      "title": "Postūmis (Lygiagretusis postūmis)",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Postūmis yra paprasčiausias figūros perstūmimas iš vienos vietos į kitą, jos nesukant ir neapverčiant. Įsivaizduokite šachmatų figūrą, slenkančią lenta, arba automobilį tiesiame kelyje."
+        },
+        {
+          "type": "definition",
+          "text": "**Postūmis** – tai transformacija, kai visi figūros taškai pastumiami ta pačia kryptimi ir tuo pačiu atstumu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brėžiant postūmį langelių popieriuje, patogiausia skaičiuoti langelius: pavyzdžiui, „3 langeliai į dešinę ir 2 langeliai į viršų“. Kiekviena viršūnė turi nukeliauti tą patį kelią."
+        }
+      ]
+    },
+    {
+      "id": "posukis-section",
+      "title": "Posūkis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Posūkis įvyksta tada, kai figūrą sukame aplink tam tikrą nejudantį tašką – **posūkio centrą**. Įsivaizduokite laikrodžio rodyklę arba besisukantį malūną."
+        },
+        {
+          "type": "paragraph",
+          "text": "Norint aprašyti posūkį, reikia žinoti tris dalykus:\n1. Posūkio centrą (tašką, apie kurį sukame).\n2. Posūkio kampą (pavyzdžiui, $90^\\circ$ arba $180^\\circ$).\n3. Posūkio kryptį (pagal laikrodžio rodyklę arba prieš ją)."
+        },
+        {
+          "type": "note",
+          "text": "$180^\\circ$ posūkis dar vadinamas **centrine simetrija**. Po tokio posūkio figūra atrodo „aukštyn kojom“."
+        }
+      ]
+    },
+    {
+      "id": "simetrija-aplink-mus",
+      "title": "Simetrija gamtoje ir aplinkoje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Simetrija sukuria harmonijos ir grožio pojūtį. Gamtoje ašinę simetriją matome drugeliuose, lapuose, žmogaus veide. Centrinę simetriją dažnai matome gėlių žieduose arba snaigėse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Architektūroje simetrija padeda pastatams išlaikyti pusiausvyrą. Pažvelkite į Gedimino pilį arba bažnyčių fasadus – dažniausiai jie turi aiškią simetrijos ašį."
+        }
+      ]
+    },
+    {
+      "id": "transformaciju-savybes",
+      "title": "Svarbiausios savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visos trys transformacijos (atspindys, postūmis, posūkis) išsaugo:\n– Atkarpos ilgį.\n– Kampo dydį.\n– Figūros plotą ir perimetrą.\nTai reiškia, kad pradinė figūra ir gautoji figūra yra **lygios**."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-trans",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atspindint figūrą, mokiniai dažnai ją tiesiog perstumia (padaro postūmį), bet neapverčia. Atsiminkite: atspindys visada „apverčia“ figūrą kaip veidrodis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kita klaida: neteisingas atstumas nuo ašies. Visada pasitikrinkite, ar taškas $A$ ir jo atvaizdas $A'$ yra vienodai toli nuo tiesės."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "atspindys-asine-simetrija",
+      "title": "Atspindys (Ašinė simetrija)",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
+      "shortDefinition": "Figūros apvertimas per tiesę (ašį).",
+      "intuition": "Tai figūros atvaizdas veidrodyje.",
+      "formal": "Transformacija, kurios metu kiekvienas taškas $P$ perkeliamas į tašką $P'$ taip, kad simetrijos ašis būtų atkarpos $PP'$ vidurio statmuo.",
       "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
-      ],
+      "relatedConceptIds": ["simetrijos-asis"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["transformacijos-5"],
       "defaultSrs": true
     },
     {
-      "id": "trikampis",
-      "title": "Trikampis",
+      "id": "postumis",
+      "title": "Postūmis",
       "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
+      "shortDefinition": "Figūros perstūmimas tam tikru atstumu ir kryptimi.",
+      "intuition": "Tarsi figūros čiuožimas ledu be jokio sukimo.",
+      "formal": "Plokštumos transformacija, kurios metu visi taškai pasislenka per tą patį vektorių.",
       "notation": [],
-      "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
+      "relatedConceptIds": ["geometrine-transformacija"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["transformacijos-5"],
       "defaultSrs": true
     },
     {
-      "id": "keturkampis",
-      "title": "Keturkampis",
+      "id": "posukis",
+      "title": "Posūkis",
       "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
+      "shortDefinition": "Figūros pasukimas aplink tašką tam tikru kampu.",
+      "intuition": "Kaip laikrodžio rodyklės judėjimas arba sukimasis ratu.",
+      "formal": "Transformacija, fiksuojanti vieną tašką (centrą) ir visus kitus taškus pasukanti pastoviu kampu.",
       "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
+      "relatedConceptIds": ["geometrine-transformacija"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["transformacijos-5"],
       "defaultSrs": true
     },
     {
-      "id": "perimetras",
-      "title": "Perimetras",
+      "id": "simetrijos-asis",
+      "title": "Simetrijos ašis",
       "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
+      "shortDefinition": "Tiesė, per kurią atliekamas atspindys.",
+      "intuition": "Tai 'veidrodžio' linija.",
+      "formal": "Tiesė, dalijanti figūrą į dvi dalis, kurios po atspindžio sutampa.",
       "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
+      "relatedConceptIds": ["atspindys-asine-simetrija"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["transformacijos-5"],
       "defaultSrs": true
     }
   ],
-  "formulas": [
-    {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
-      "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    }
-  ],
+  "formulas": [],
   "mistakes": [
     {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
+      "id": "atspindzio-krypties-klaida",
+      "title": "Atspindžio supainiojimas su postūmiu",
       "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "conceptIds": ["atspindys-asine-simetrija", "postumis"],
+      "wrongPattern": "Mokinys nupiešia tokią pačią figūrą kitoje ašies pusėje, bet jos neapverčia.",
+      "whyItHappens": "Pamirštama, kad veidrodis apverčia kairę ir dešinę puses.",
+      "correction": "Visada matuokite atstumą nuo kiekvieno taško iki ašies atskirai.",
+      "wrongExample": "Figūra 'L' lieka 'L' po atspindžio (turi tapti atvirkščia).",
+      "correctExample": "Figūra 'L' po atspindžio tampa '⅃'.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "transformacijos-5-exmp-1",
-      "title": "Perimetras",
+      "id": "ex-atspindys-taskas",
+      "title": "Taško atspindys",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
+      "problem": "Taškas A yra nutolęs nuo vertikalios simetrijos ašies per 4 langelius į kairę. Kur bus jo atspindys A'?",
+      "conceptIds": ["atspindys-asine-simetrija", "simetrijos-asis"],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Pagal atspindžio savybę, atvaizdas turi būti tokio pat atstumo kitoje ašies pusėje.",
+          "latex": ""
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Matuojame 4 langelius į dešinę nuo simetrijos ašies.",
+          "latex": ""
         }
       ],
-      "answer": "26"
+      "answer": "Taškas A' bus 4 langeliai į dešinę nuo ašies."
     },
     {
-      "id": "transformacijos-5-exmp-2",
-      "title": "Plotas",
+      "id": "ex-postumis-langeliais",
+      "title": "Postūmis langeliais",
       "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
+      "problem": "Pastumkite tašką B per 5 langelius į dešinę ir 2 langelius žemyn.",
+      "conceptIds": ["postumis"],
       "steps": [
         {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "text": "Nuo pradinio taško B skaičiuojame 5 žingsnius horizontaliai į dešinę.",
+          "latex": ""
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Tada nuo tos vietos skaičiuojame 2 žingsnius vertikaliai žemyn.",
+          "latex": ""
         }
       ],
-      "answer": "42"
+      "answer": "Nauja taško vieta."
     },
     {
-      "id": "transformacijos-5-exmp-3",
-      "title": "Pitagoro teorema",
+      "id": "ex-simetrijos-asies-skaicius",
+      "title": "Simetrijos ašių paieška",
       "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
+      "problem": "Kiek simetrijos ašių turi kvadratas?",
+      "conceptIds": ["simetrijos-asis"],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "text": "Kvadratą galima perlenkti per pusę vertikaliai ir horizontaliai (2 ašys).",
+          "latex": ""
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Taip pat jį galima perlenkti per įstrižaines (dar 2 ašys).",
+          "latex": "2 + 2 = 4"
         }
       ],
-      "answer": "10"
+      "answer": "4"
     },
     {
-      "id": "transformacijos-5-exmp-4",
-      "title": "Panašumas",
+      "id": "ex-posukis-90",
+      "title": "Posūkis 90 laipsnių kampu",
       "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
-      ],
-      "formulaIds": [],
+      "problem": "Atkarpa AB yra horizontali. Ją pasukame 90 laipsnių kampu apie tašką A pagal laikrodžio rodyklę. Kokia taps atkarpa?",
+      "conceptIds": ["posukis"],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Taškas A lieka vietoje, nes jis yra posūkio centras.",
+          "latex": ""
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Horizontali linija po 90 laipsnių posūkio tampa vertikali.",
+          "latex": ""
+        },
+        {
+          "text": "Kadangi sukame pagal laikrodžio rodyklę, taškas B „nukris“ žemyn.",
+          "latex": ""
         }
       ],
-      "answer": "10"
+      "answer": "Atkarpa taps vertikali, nukreipta žemyn nuo taško A."
     },
     {
-      "id": "transformacijos-5-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
-      "conceptIds": [
-        "koordinates",
-        "vektorius"
-      ],
-      "formulaIds": [],
+      "id": "ex-atspindys-trikampis",
+      "title": "Trikampio atspindys",
+      "level": "medium",
+      "problem": "Nubraižykite trikampio ABC atspindį tiesės l atžvilgiu.",
+      "conceptIds": ["atspindys-asine-simetrija"],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Kiekvienai viršūnei A, B, C surandame atitinkamus taškus A', B', C' kitoje tiesės pusėje tokiu pat atstumu.",
+          "latex": ""
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Sujungiame gautus taškus A', B' ir C' atkarpomis.",
+          "latex": ""
         }
       ],
-      "answer": "5"
-    }
-  ],
-  "exercises": [
+      "answer": "Trikampis A'B'C'"
+    },
     {
-      "id": "transformacijos-5-ex-001",
-      "topicId": "transformacijos-5",
-      "grade": 5,
+      "id": "ex-identifikavimas",
+      "title": "Transformacijos atpažinimas",
       "level": "easy",
-      "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
-      "hints": [
+      "problem": "Kokia transformacija pavaizduota, jei figūra tik pasislinko į šoną?",
+      "conceptIds": ["postumis"],
+      "steps": [
         {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "Jei figūra nepasikeitė, neapsivertė ir nepasuko, tai yra postūmis.",
+          "latex": ""
         }
       ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "answer": "Postūmis."
     },
     {
-      "id": "transformacijos-5-ex-002",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "transformacijos-5-ex-003",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "transformacijos-5-ex-004",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "transformacijos-5-ex-005",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "transformacijos-5-ex-006",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "transformacijos-5-ex-007",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "transformacijos-5-ex-008",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "transformacijos-5-ex-009",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-010",
-      "topicId": "transformacijos-5",
-      "grade": 5,
+      "id": "ex-asys-apskritimas",
+      "title": "Apskritimo simetrija",
       "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
+      "problem": "Kiek simetrijos ašių turi apskritimas?",
+      "conceptIds": ["simetrijos-asis"],
+      "steps": [
         {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
+          "text": "Apskritimą galima perlenkti per bet kurią tiesę, einančią per jo centrą (diametrą).",
+          "latex": ""
         },
         {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
+          "text": "Kadangi tiesių per centrą galima nubrėžti be galo daug, tai ir ašių yra begalybė.",
+          "latex": ""
         }
       ],
-      "solutionSteps": [
+      "answer": "Begalybę."
+    },
+    {
+      "id": "ex-centrine-simetrija",
+      "title": "Centrinė simetrija (180 laipsnių posūkis)",
+      "level": "hard",
+      "problem": "Kaip pasikeičia skaičius 6 po 180 laipsnių posūkio?",
+      "conceptIds": ["posukis"],
+      "steps": [
         {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
+          "text": "180 laipsnių posūkis apverčia figūrą aukštyn kojom ir kartu kairę su dešine.",
+          "latex": ""
         },
         {
-          "text": "x=12.",
-          "latex": "12"
+          "text": "Skaičius 6, apverstas aukštyn kojom, tampa panašus į 9.",
+          "latex": ""
         }
       ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "transformacijos-5-ex-011",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-012",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-013",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-014",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-015",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-016",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-017",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-018",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-019",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "transformacijos-5-ex-020",
-      "topicId": "transformacijos-5",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Transformacijos: atspindys, posūkis ir postūmis: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "transformacijos-5-test-topic",
-      "title": "Transformacijos: atspindys, posūkis ir postūmis testas",
-      "scope": "topic",
-      "topicIds": [
-        "transformacijos-5"
-      ],
-      "exerciseIds": [
-        "transformacijos-5-ex-001",
-        "transformacijos-5-ex-002",
-        "transformacijos-5-ex-003",
-        "transformacijos-5-ex-004",
-        "transformacijos-5-ex-005",
-        "transformacijos-5-ex-006",
-        "transformacijos-5-ex-007",
-        "transformacijos-5-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "transformacijos-5-test-challenge",
-      "title": "Transformacijos: atspindys, posūkis ir postūmis iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "transformacijos-5"
-      ],
-      "exerciseIds": [
-        "transformacijos-5-ex-009",
-        "transformacijos-5-ex-010",
-        "transformacijos-5-ex-011",
-        "transformacijos-5-ex-012",
-        "transformacijos-5-ex-013",
-        "transformacijos-5-ex-014",
-        "transformacijos-5-ex-015",
-        "transformacijos-5-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "transformacijos-5-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "transformacijos-5-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "answer": "Jis tampa skaičiumi 9 (jei šriftas standartinis)."
     }
   ]
 }

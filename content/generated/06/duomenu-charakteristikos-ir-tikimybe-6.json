@@ -65,84 +65,173 @@
   },
   "theory": [
     {
-      "id": "duomenu-charakteristikos-ir-tikimybe-6-ivadas",
-      "title": "Įvadas",
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-duomenu-analize",
+      "title": "Duomenų analizė: kam ji reikalinga?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Moda, mediana, dviejų etapų bandymai ir tikimybė yra tema, kurioje mokomasi atpažinti pagrindinius moda, mediana ir tikimybė modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Kasdien mes susiduriame su didžiuliais kiekiais informacijos: orų prognozėmis, sporto rezultatais, kainų pokyčiais parduotuvėse ar net savo pažymiais mokykloje. Visi šie faktai yra vadinami [[duomenys|duomenimis]]. Tačiau patys savaime skaičiai mums mažai ką sako – tam, kad juos suprastume, turime juos „įdarbinti“. Duomenų analizė padeda mums pamatyti dėsningumus ten, kur iš pirmo žvilgsnio atrodo tik skaičių chaosas."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "duomenu-charakteristikos-ir-tikimybe-6-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
-        },
-        {
-          "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
-        },
-        {
-          "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "text": "6-oje klasėje mes mokomės ne tik surinkti duomenis, bet ir juos apibūdinti naudojant specialius „matukus“: aritmetinį vidurkį, medianą ir modą. Šie dydžiai vadinami duomenų charakteristikomis, nes jie nusako pagrindines duomenų rinkinio savybes."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Prieš pradedant skaičiuoti, visada naudinga duomenis surikiuoti didėjimo tvarka. Tai padės išvengti klaidų ieškant medianos ir modos."
         }
       ]
     },
     {
-      "id": "duomenu-charakteristikos-ir-tikimybe-6-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-aritmetinis-vidurkis",
+      "title": "Aritmetinis vidurkis",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Moda, mediana, dviejų etapų bandymai ir tikimybė sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "definition",
+          "conceptId": "vidurkis",
+          "text": "Aritmetinis vidurkis yra visų duomenų rinkinio reikšmių suma, padalyta iš tų reikšmių kiekio."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Vidurkis yra bene dažniausiai naudojama charakteristika. Pavyzdžiui, kai mokytojas skaičiuoja jūsų trimestro pažymį, jis naudoja būtent aritmetinį vidurkį. Jis parodo, kokia būtų kiekviena reikšmė, jei visas jas „išlygintume“."
         },
         {
           "type": "formula",
           "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "duomenu-charakteristikos-ir-tikimybe-6-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
+          "latex": "\\bar{x} = \\frac{x_1 + x_2 + \\dots + x_n}{n}"
+        },
         {
           "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "text": "Norėdami rasti vidurkį: \n1. Sudėkite visus turimus skaičius.\n2. Gautą sumą padalykite iš skaičių kiekio."
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "Vidurkis gali būti apgaulingas, jei duomenų rinkinyje yra viena ar kelios reikšmės, kurios stipriai skiriasi nuo kitų (pavyzdžiui, labai didelis skaičius tarp mažų). Tokiu atveju vidurkis neparodys tikrojo vaizdo."
         }
       ]
     },
     {
-      "id": "duomenu-charakteristikos-ir-tikimybe-6-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-mediana",
+      "title": "Mediana – vidurio ieškotoja",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "mediana",
+          "text": "Mediana yra surikiuotų duomenų vidurinė reikšmė."
+        },
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduokite penkis draugus, sustojusius pagal ūgį. Tas draugas, kuris stovi lygiai per vidurį, atitinka medianą. Mediana yra labai naudinga, nes jai įtakos nedaro pavieniai „keisti“ skaičiai (labai dideli ar labai maži)."
+        },
+        {
+          "type": "method",
+          "text": "Kaip rasti medianą?\n1. BŪTINAI surikiuokite duomenis didėjimo tvarka.\n2. Jei duomenų kiekis yra nelyginis, mediana yra lygiai per vidurį esantis skaičius.\n3. Jei duomenų kiekis yra lyginis, mediana yra dviejų vidurinių skaičių aritmetinis vidurkis."
+        },
+        {
+          "type": "example",
+          "text": "Turime duomenis: 3, 10, 2, 8. \n1. Surikiuojame: 2, 3, 8, 10. \n2. Viduriniai skaičiai yra 3 ir 8. \n3. Mediana = $(3 + 8) : 2 = 5,5$."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-moda-ir-sklaida",
+      "title": "Moda ir duomenų sklaida",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "moda",
+          "text": "Moda yra dažniausiai duomenų rinkinyje pasikartojanti reikšmė."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moda parodo populiariausią pasirinkimą. Pavyzdžiui, jei klasėje paklaustume mokinių apie jų mėgstamiausią spalvą, moda būtų ta spalva, kurią paminėjo daugiausia vaikų. Duomenų rinkinys gali turėti vieną modą, kelias modas arba visai neturėti modos (jei visos reikšmės pasikartoja po lygiai kartų)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "sklaida",
+          "text": "Duomenų amplitudė (sklaida) yra skirtumas tarp didžiausios ir mažiausios duomenų reikšmės."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amplitudė parodo, kaip plačiai yra „išbarstyti“ jūsų duomenys. Jei visų mokinių pažymiai yra 7, 8 ir 9, tai amplitudė maža ($9 - 7 = 2$). Jei pažymiai svyruoja nuo 2 iki 10, amplitudė didelė ($10 - 2 = 8$)."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-tikimybe-ivadas",
+      "title": "Tikimybė: ar tai įvyks?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Gyvenime dažnai spėliojame: „ar rytoj lis?“, „kokia tikimybė, kad laimėsiu žaidime?“. Matematikoje šį spėjimą galime paversti tiksliu skaičiumi. Tikimybė matuojama nuo 0 iki 1 (arba nuo 0% iki 100%)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "tikimybe",
+          "text": "Įvykio tikimybė skaičiuojama palankių baigčių skaičių dalijant iš visų galimų baigčių skaičiaus."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tikimybes-formule",
+          "latex": "P(A) = \\frac{m}{n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Čia $m$ – palankios baigtys, $n$ – visos įmanomos baigtys. \n- Jei tikimybė lygi 0, įvykis yra negalimas (pvz., ištraukti žalią rutulį iš dėžės, kurioje tik raudoni).\n- Jei tikimybė lygi 1, įvykis yra būtinas (pvz., rytoj patekės saulė)."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-dvieju-etapu-bandymai",
+      "title": "Dviejų etapų bandymai ir galimybių medžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kartais atliekame ne vieną, o kelis veiksmus iš eilės. Pavyzdžiui, metame monetą du kartus arba traukiame du saldainius. Tokie bandymai vadinami daugiapakopiais (arba dviejų etapų)."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami suskaičiuoti visas galimybes dviejų etapų bandyme, patogiausia naudoti:\n1. Galimybių medį.\n2. Galimybių lentelę."
+        },
+        {
+          "type": "example",
+          "text": "Metame monetą du kartus. Galimos baigtys:\n1 metimas: Herbas (H) arba Skaičius (S).\n2 metimas: vėl H arba S.\nVisos baigtys: HH, HS, SH, SS. Iš viso 4 galimybės."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-priesingas-ivyki",
+      "title": "Priešingas įvykis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiekvienas įvykis turi savo „priešininką“ – įvykį, kuris reiškia, kad pirmasis įvykis neįvyko. Pavyzdžiui, jei įvykis A yra „iškrito šešetas“, tai priešingas įvykis $\\bar{A}$ yra „neiškritos šešetas“ (iškrito 1, 2, 3, 4 arba 5)."
+        },
+        {
+          "type": "property",
+          "text": "Įvykio ir jam priešingo įvykio tikimybių suma visada lygi 1: $P(A) + P(\\bar{A}) = 1$."
+        },
+        {
+          "type": "note",
+          "text": "Tai labai naudinga taisyklė! Jei sunku suskaičiuoti, kokia tikimybė, kad kas nors įvyks, kartais daug lengviau suskaičiuoti, kokia tikimybė, kad tai NEįvyks, ir atimti gautą skaičių iš vieneto."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-klaidos",
+      "title": "Dažnos klaidos ir kaip jų išvengti",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Nepamirškite surikiuoti skaičių prieš ieškodami medianos! Jei to nepadarysite, mediana bus tiesiog atsitiktinis skaičius iš vidurio, o tai klaidinga."
+        },
+        {
+          "type": "warning",
+          "text": "Tikimybė negali būti didesnė už 1 (arba 100%). Jei gavote atsakymą 1,5 arba 150%, kažkur padarėte klaidą."
+        },
+        {
+          "type": "method",
+          "text": "Visada patikrinkite, ar įvykių tikimybių suma sudaro visumą (1). Tai padės įsitikinti, kad nepraleidote jokių galimų baigčių."
         }
       ]
     }
@@ -350,12 +439,14 @@
       "id": "tikimybes-formule",
       "title": "Tikimybės formulė",
       "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
+      "latex": "P(A)=\\frac{m}{n}",
       "conditions": [
         "Baigtiniams eksperimentams"
       ],
       "variables": {
-        "A": "įvykis"
+        "A": "įvykis",
+        "m": "palankių baigčių skaičius",
+        "n": "visų galimų baigčių skaičius"
       },
       "explanation": "Palankių baigčių dalis iš visų baigčių.",
       "relatedConceptIds": [
@@ -382,14 +473,14 @@
     },
     {
       "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
+      "title": "Tikimybę laiko sveikuoju skaičiumi",
       "type": "mistake",
       "conceptIds": [
         "tikimybe"
       ],
       "wrongPattern": "Rašo 1 iš 6 kaip 6.",
       "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
+      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi (nuo 0 iki 1).",
       "wrongExample": "P=6",
       "correctExample": "P=1/6",
       "defaultSrs": true
@@ -398,101 +489,206 @@
   "workedExamples": [
     {
       "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-1",
-      "title": "Vidurkis",
+      "title": "Pažymių vidurkis",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Mokinys gavo šiuos pažymius: 7, 8, 10, 6, 9. Raskite jo pažymių vidurkį.",
       "conceptIds": [
         "vidurkis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "vidurkio-formule"
+      ],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Pirmiausia suskaičiuojame pažymių sumą.",
+          "latex": "7 + 8 + 10 + 6 + 9 = 40"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Suskaičiuojame, kiek pažymių yra (n = 5).",
+          "latex": "n = 5"
+        },
+        {
+          "text": "Sumą dalijame iš kiekio.",
+          "latex": "40 : 5 = 8"
         }
       ],
-      "answer": "20/3"
+      "answer": "8"
     },
     {
       "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-2",
-      "title": "Mediana",
+      "title": "Medianos radimas (nelyginis kiekis)",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Raskite medianą duomenų: 15, 2, 8, 12, 5.",
       "conceptIds": [
         "mediana"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
+          "text": "Pirmiausia surikiuojame duomenis didėjimo tvarka.",
+          "latex": "2, 5, 8, 12, 15"
         },
         {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
+          "text": "Randame vidurinę reikšmę. Kadangi skaičių yra 5, tai yra trečiasis skaičius.",
+          "latex": "8"
         }
       ],
-      "answer": "5"
+      "answer": "8"
     },
     {
       "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-3",
-      "title": "Tikimybė",
+      "title": "Tikimybė: kauliuko metimas",
       "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
+      "problem": "Kokia tikimybė, kad išmetus eilinį šešiasienį kauliuką, atvirs lyginis skaičius akių?",
       "conceptIds": [
         "tikimybe",
         "ivyki"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
       "steps": [
         {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Nustatome visas galimas baigtis metant kauliuką: {1, 2, 3, 4, 5, 6}. Jų yra 6.",
+          "latex": "n = 6"
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Nustatome palankias baigtis (lyginiai skaičiai): {2, 4, 6}. Jų yra 3.",
+          "latex": "m = 3"
+        },
+        {
+          "text": "Skaičiuojame tikimybę P = m/n.",
+          "latex": "P = \\frac{3}{6} = \\frac{1}{2} = 0,5"
         }
       ],
-      "answer": "1/6"
+      "answer": "0,5 (arba 1/2)"
     },
     {
       "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
+      "title": "Modos nustatymas",
+      "level": "easy",
+      "problem": "Apklausoje vaikai nurodė savo batų dydžius: 36, 38, 37, 36, 35, 36, 39, 36. Kokia yra šių duomenų moda?",
       "conceptIds": [
         "moda"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
+          "text": "Suskaičiuojame, kiek kartų pasikartoja kiekvienas dydis: 35 (1 k.), 36 (4 k.), 37 (1 k.), 38 (1 k.), 39 (1 k.).",
+          "latex": ""
+        },
+        {
+          "text": "Daugiausia kartų pasikartoja dydis 36.",
+          "latex": "36"
         }
       ],
-      "answer": "4"
+      "answer": "36"
     },
     {
       "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-5",
-      "title": "Sklaida",
-      "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "title": "Duomenų amplitudė",
+      "level": "medium",
+      "problem": "Oro temperatūra savaitę buvo: 18, 22, 15, 25, 20, 19, 21. Raskite temperatūrų amplitudę.",
       "conceptIds": [
         "sklaida"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Randame didžiausią temperatūrą.",
+          "latex": "max = 25"
+        },
+        {
+          "text": "Randame mažiausią temperatūrą.",
+          "latex": "min = 15"
+        },
+        {
+          "text": "Skaičiuojame skirtumą.",
+          "latex": "25 - 15 = 10"
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "10"
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-6",
+      "title": "Dviejų etapų bandymas: dvi monetos",
+      "level": "medium",
+      "problem": "Metamos dvi monetos. Kokia tikimybė, kad abi atvirs herbu?",
+      "conceptIds": [
+        "tikimybe",
+        "kombinatorika"
+      ],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Surašome visas galimas baigtis (H - herbas, S - skaičius): HH, HS, SH, SS. Jų yra 4.",
+          "latex": "n = 4"
+        },
+        {
+          "text": "Palankių baigčių yra tik viena (HH).",
+          "latex": "m = 1"
+        },
+        {
+          "text": "Skaičiuojame tikimybę.",
+          "latex": "P = \\frac{1}{4} = 0,25"
+        }
+      ],
+      "answer": "0,25"
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-7",
+      "title": "Mediana (lyginis kiekis)",
+      "level": "medium",
+      "problem": "Raskite medianą skaičių rinkinio: 4, 1, 9, 3, 7, 5.",
+      "conceptIds": [
+        "mediana"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Surikiuojame: 1, 3, 4, 5, 7, 9.",
+          "latex": ""
+        },
+        {
+          "text": "Skaičių kiekis n = 6 (lyginis). Viduriniai skaičiai yra trečias (4) ir ketvirtas (5).",
+          "latex": ""
+        },
+        {
+          "text": "Skaičiuojame jų vidurkį.",
+          "latex": "(4 + 5) : 2 = 4,5"
+        }
+      ],
+      "answer": "4,5"
+    },
+    {
+      "id": "duomenu-charakteristikos-ir-tikimybe-6-exmp-8",
+      "title": "Priešingas įvykis: kamuoliukų traukimas",
+      "level": "hard",
+      "problem": "Dėžėje yra 3 raudoni, 5 mėlyni ir 2 žali kamuoliukai. Atsitiktinai traukiamas vienas. Kokia tikimybė, kad ištrauktas kamuoliukas NEBUS žalias?",
+      "conceptIds": [
+        "tikimybe",
+        "ivyki"
+      ],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Suskaičiuojame visus kamuoliukus.",
+          "latex": "3 + 5 + 2 = 10"
+        },
+        {
+          "text": "Apskaičiuojame tikimybę ištraukti žalią (įvykis A).",
+          "latex": "P(A) = \\frac{2}{10} = 0,2"
+        },
+        {
+          "text": "Naudojame priešingo įvykio taisyklę.",
+          "latex": "P(\\bar{A}) = 1 - P(A) = 1 - 0,2 = 0,8"
+        }
+      ],
+      "answer": "0,8"
     }
   ],
   "exercises": [
@@ -500,7 +696,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-001",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask skaičių 4, 6, 8 vidurkį.",
       "answer": {
@@ -537,7 +733,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-002",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask medianą: 2, 9, 5, 1, 7.",
       "answer": {
@@ -574,7 +770,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-003",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
       "answer": {
@@ -630,7 +826,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-004",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
       "answer": {
@@ -674,7 +870,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-005",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
       "answer": {
@@ -711,7 +907,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-006",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 6.",
       "answer": {
@@ -748,7 +944,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-007",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 7.",
       "answer": {
@@ -785,7 +981,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-008",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 8.",
       "answer": {
@@ -822,7 +1018,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-009",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 9.",
       "answer": {
@@ -859,7 +1055,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-010",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 10.",
       "answer": {
@@ -896,7 +1092,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-011",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 11.",
       "answer": {
@@ -933,7 +1129,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-012",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 12.",
       "answer": {
@@ -970,7 +1166,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-013",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 13.",
       "answer": {
@@ -1007,7 +1203,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-014",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 14.",
       "answer": {
@@ -1044,7 +1240,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-015",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 15.",
       "answer": {
@@ -1081,7 +1277,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-016",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 16.",
       "answer": {
@@ -1118,7 +1314,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-017",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 17.",
       "answer": {
@@ -1155,7 +1351,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-018",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 18.",
       "answer": {
@@ -1192,7 +1388,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-019",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 19.",
       "answer": {
@@ -1229,7 +1425,7 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-ex-020",
       "topicId": "duomenu-charakteristikos-ir-tikimybe-6",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Moda, mediana, dviejų etapų bandymai ir tikimybė: papildomas uždavinys Nr. 20.",
       "answer": {
@@ -1403,8 +1599,8 @@
       "id": "duomenu-charakteristikos-ir-tikimybe-6-srs-tikimybe-ne-dalis",
       "deck": "practice",
       "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
+      "front": "Kas yra tikimybę laiko sveikuoju skaičiumi?",
+      "back": "Rašyk trupmena arba dešimtainiu skaičiumi (nuo 0 iki 1).",
       "conceptIds": [
         "tikimybe-ne-dalis"
       ],

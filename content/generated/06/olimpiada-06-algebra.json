@@ -49,49 +49,110 @@
   },
   "theory": [
     {
-      "id": "olimpiada-06-alg-theory-1",
-      "title": "Modulis ir jo savybės",
+      "id": "olimpiada-06-alg-theory-intro",
+      "title": "Algebra – matematikos kalba: Nuo skaičių prie kintamųjų",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičiaus modulis (absoliučioji vertė) parodo atstumą nuo skaičių tiesės pradžios taško $0$ iki taško, atitinkančio tą skaičių."
+          "text": "Algebra yra viena svarbiausių matematikos sričių, kuri leidžia mums kalbėti apie bendrus dėsningumus, o ne tik apie konkrečius skaičius. Jei aritmetikoje skaičiuojame kiek bus $2 + 3$, tai algebroje klausiame, kokias savybes turi bet kurių dviejų skaičių suma. Šeštoje klasėje algebra tampa tiltu tarp paprastų skaičiavimų ir sudėtingų modelių konstravimo."
         },
         {
-          "type": "definition",
-          "conceptId": "olimpiada-06-concept-absolute-value",
-          "text": "Teigiamo skaičiaus ir nulio modulis yra pats tas skaičius, o neigiamo skaičiaus modulis yra jam priešingas teigiamas skaičius."
-        },
-        {
-          "type": "formula",
-          "latex": "|x| = \\begin{cases} x, & \\text{jei } x \\ge 0 \\\\ -x, & \\text{jei } x < 0 \\end{cases}"
+          "type": "paragraph",
+          "text": "Olimpiadinėje algebroje svarbiausia ne mintinai mokėti formules, o suprasti jų prigimtį. Čia mes mokomės pertvarkyti sudėtingus reiškinius į paprastus, spręsti lygtis, kurios iš pirmo žvilgsnio atrodo neįveikiamos, ir lyginti skaičius, kurie yra tokie dideli, kad netelpa į skaičiuotuvą. Sėkmės raktas – gebėjimas pastebėti struktūrą ten, kur kiti mato tik chaosą."
         }
       ]
     },
     {
-      "id": "olimpiada-06-alg-theory-2",
-      "title": "Sekos ir dėsningumai",
+      "id": "olimpiada-06-alg-theory-absolute",
+      "title": "1. Modulis: Atstumo koncepcija algebroje",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Matematikoje seka yra skaičių rinkinys, išdėstytas tam tikra tvarka. Kiekvienas sekos narys gaunamas pagal tam tikrą taisyklę."
+          "text": "Skaičiaus modulis (absoliučioji vertė) $|x|$ yra atstumas nuo nulio iki taško $x$ skaičių tiesėje. Atstumas niekada negali būti neigiamas, todėl ir modulis visada yra teigiamas skaičius arba nulis."
         },
         {
           "type": "method",
-          "text": "Norint rasti kitą sekos narį, reikia nustatyti ryšį tarp gretimų narių (pvz., pridedamas pastovus skaičius arba dauginama iš tam tikro koeficiento)."
+          "text": "**Modulio lygtys**: Lygtis $|x| = a$ (kur $a > 0$) visada turi du sprendinius: $x = a$ arba $x = -a$. Jei $a = 0$, sprendinys vienas ($x=0$), o jei $a < 0$, sprendinių nėra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose modulis dažnai naudojamas norint apriboti galimas reikšmes. Pavyzdžiui, jei žinome, kad $|x| + |y| = 0$, galime vienareikšmiškai teigti, kad tiek $x$, tiek $y$ privalo būti lygūs nuliui, nes dviejų neneigiamų dydžių suma lygi nuliui tik tada, kai kiekvienas jų yra nulis."
+        },
+        {
+          "type": "warning",
+          "text": "Dažna klaida: Manoma, kad $|-x| = x$. Tai tiesa tik tada, kai $x$ yra teigiamas. Jei $x$ yra neigiamas (pvz., $x = -5$), tai $|-(-5)| = |5| = 5$, bet pats $x$ yra $-5$. Teisingas užrašas yra $|-x| = |x|$."
         }
       ]
     },
     {
-      "id": "olimpiada-06-alg-theory-3",
-      "title": "Invariantas olimpiadose",
+      "id": "olimpiada-06-alg-theory-powers",
+      "title": "2. Laipsniai: Milžiniškų skaičių suvaldymas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Invariantas yra dydis arba savybė, kuri nekinta atliekant tam tikrus veiksmus ar operacijas."
+          "text": "Laipsnis $a^n$ parodo, kad pagrindas $a$ yra dauginamas iš savęs $n$ kartų. 6-oje klasėje olimpiadininkai turi puikiai mokėti laipsnių savybes, ypač lyginant didelius skaičius."
         },
         {
-          "type": "note",
-          "text": "Dažniausi invariantai yra lygumas (paritetas), liekana dalijant iš tam tikro skaičiaus arba visų skaičių suma."
+          "type": "method",
+          "text": "**Svarbiausios taisyklės**:\n- $a^n \\cdot a^m = a^{n+m}$\n- $a^n : a^m = a^{n-m}$\n- $(a^n)^m = a^{n \\cdot m}$\n- $a^n \\cdot b^n = (a \\cdot b)^n$"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Strategija: Laipsnių palyginimas**. Jei norime palyginti $2^{30}$ ir $3^{20}$, turime suvienodinti arba pagrindus, arba rodiklius. Šiuo atveju rodikliai 30 ir 20 turi bendrą daliklį 10. Pertvarkome: $2^{30} = (2^3)^{10} = 8^{10}$, o $3^{20} = (3^2)^{10} = 9^{10}$. Kadangi $9 > 8$, tai $3^{20} > 2^{30}$."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-alg-theory-expressions",
+      "title": "3. Reiškinių transformacijos ir gudrus grupavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gebėjimas suprastinti algebrinį reiškinį yra viena pamatinių kompetencijų. Pagrindinis įrankis – **skirstomumo (distributyvumo) dėsnis**: $a(b+c) = ab + ac$. Tačiau olimpiadose jį dažniau taikome atvirkščiai – iškeldami bendrą daugiklį prieš skliaustus."
+        },
+        {
+          "type": "method",
+          "text": "**Grupavimo metodas**: Jei turime reiškinį $ax + ay + bx + by$, galime jį sugrupuoti: $a(x+y) + b(x+y) = (a+b)(x+y)$. Ši technika leidžia spręsti lygtis, kurios iš pirmo žvilgsnio atrodo per sudėtingos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taip pat naudinga žinoti kvadratų skirtumo formulę: $a^2 - b^2 = (a-b)(a+b)$. Net jei ji dar nėra oficialiai išmokta mokykloje, olimpiadininkams ji sutaupo mases laiko skaičiuojant skirtumus tarp didelių skaičių kvadratų."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-alg-theory-problems",
+      "title": "4. Tekstiniai uždaviniai: Judėjimas, darbas ir mišiniai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugelis tekstinių uždavinių sprendžiami sudarant lygtis. Svarbiausia – teisingai pasirinkti nežinomąjį $x$ ir visus kitus dydžius išreikšti per jį."
+        },
+        {
+          "type": "method",
+          "text": "**Judėjimo uždaviniai**: Prisiminkite pagrindinę formulę $s = v \\cdot t$. Jei du objektai juda vienas priešais kitą, jų greičiai sudedami (**artėjimo greitis**). Jei vienas veja kitą – greičiai atimami (**vijimosi greitis**)."
+        },
+        {
+          "type": "method",
+          "text": "**Darbo uždaviniai**: Čia svarbiausia **našumo** koncepcija. Jei visas darbas yra 1, o darbininkas jį atlieka per $t$ valandų, tai jo našumas (darbo dalis per valandą) yra $1/t$. Dirbant kartu, našumai sudedami."
+        },
+        {
+          "type": "method",
+          "text": "**Mišinių uždaviniai**: Sudarome druskos (ar kitos medžiagos) kiekio išsaugojimo lygtį. Druskos kiekis pirmame tirpale + druskos kiekis antrame tirpale = druskos kiekis galutiniame tirpale."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-alg-theory-sequences",
+      "title": "5. Sekos ir loginis pagrindimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sekose mes ieškome dėsningumo. Dažniausiai tai būna **aritmetinė progresija** (kai prie kiekvieno nario pridedamas tas pats skaičius) arba dėsningumai, susiję su narių numeriais (pvz., kvadratai: $1, 4, 9, 16$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose dažnai reikia rasti labai tolimą sekos narį (pvz., 100-ąjį). Tam reikia rasti bendrą formulę, susiejančią nario reikšmę su jo numeriu $n$. Pavyzdžiui, sekoje $2, 4, 6, 8, \\dots$ $n$-asis narys yra $2n$."
         }
       ]
     }
@@ -141,104 +202,159 @@
       "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "f-difference-of-squares",
+      "title": "Kvadratų skirtumas",
+      "formula": "a^2 - b^2 = (a-b)(a+b)",
+      "description": "Leidžia greitai suskaidyti sandauga skirtumą tarp dviejų kvadratų."
+    },
+    {
+      "id": "f-relative-speed",
+      "title": "Santykinis greitis",
+      "formula": "v_{rel} = v_1 \\pm v_2",
+      "description": "Naudojama artėjimo (+) arba vijimosi (-) greičiui skaičiuoti."
+    },
+    {
+      "id": "f-mixture",
+      "title": "Koncentracijos formulė",
+      "formula": "C = \\frac{m_{medžiaga}}{m_{tirpalas}} \\cdot 100\\%",
+      "description": "Padeda rasti medžiagos kiekį mišiniuose."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "m-minus-distribution",
+      "title": "Minusio ženklas prieš skliaustus",
+      "description": "Dažnai pamirštama pakeisti visų narių skliaustuose ženklus, kai prieš juos yra minusas.",
+      "fix": "Griežtai sekite: $-(a - b + c) = -a + b - c$."
+    },
+    {
+      "id": "m-inequality-sign",
+      "title": "Nelygybės ženklo nekeitimas",
+      "description": "Dalinant nelygybę iš neigiamo skaičiaus, ženklas privalo apsiversti.",
+      "fix": "Jei $-2x < 10$, tai $x > -5$."
+    },
+    {
+      "id": "m-average-speed",
+      "title": "Vidutinis greitis kaip vidurkis",
+      "description": "Mokiniai dažnai galvoja, kad vidutinis greitis yra greičių aritmetinis vidurkis.",
+      "fix": "Vidutinis greitis = Visas atstumas / Visas laikas."
+    }
+  ],
   "workedExamples": [
     {
       "id": "olimpiada-06-alg-ex-1",
-      "title": "Lygtis su moduliu",
-      "level": "medium",
-      "problem": "Išspręskite lygtį: $|x - 2| = 5$.",
+      "title": "Lygtis su keliais moduliais",
+      "level": "hard",
+      "problem": "Išspręskite lygtį: $|x - 2| + |x + 2| = 4$.",
       "steps": [
         {
-          "text": "Pagal modulio apibrėžimą, skaičius skliausteliuose gali būti lygus $5$ arba $-5$.",
-          "latex": "x - 2 = 5 \\quad \\text{arba} \\quad x - 2 = -5"
+          "text": "Padalijame skaičių tiesę į tris intervalus pagal modulių nulio taškus: $x < -2$, $-2 \\le x \\le 2$ ir $x > 2$.",
+          "latex": "x_1 = 2, x_2 = -2"
         },
         {
-          "text": "Išsprendžiame pirmąją lygtį.",
-          "latex": "x = 5 + 2 = 7"
+          "text": "Intervale $x < -2$: Abu moduliai neigiami. $-(x-2) - (x+2) = 4 \\to -2x = 4 \\to x = -2$. Šis taškas yra ant ribos.",
+          "latex": "-x+2-x-2=4 \\to -2x=4"
         },
         {
-          "text": "Išsprendžiame antrąją lygtį.",
-          "latex": "x = -5 + 2 = -3"
+          "text": "Intervale $-2 \\le x \\le 2$: Pirmas modulis neigiamas, antras teigiamas. $-(x-2) + (x+2) = 4 \\to 4 = 4$. Tai tapatybė!",
+          "latex": "-x+2+x+2=4 \\to 4=4"
+        },
+        {
+          "text": "Intervale $x > 2$: Abu moduliai teigiami. $(x-2) + (x+2) = 4 \\to 2x = 4 \\to x = 2$. Vėlgi, taškas ant ribos.",
+          "latex": "x-2+x+2=4 \\to 2x=4"
         }
       ],
-      "answer": "x = 7, x = -3"
+      "answer": "-2 \\le x \\le 2"
     },
     {
       "id": "olimpiada-06-alg-ex-2",
-      "title": "Sekos dėsningumas",
-      "level": "easy",
-      "problem": "Raskite kitą sekos narį: $1, 4, 9, 16, \\dots$",
+      "title": "Gudrus laipsnių palyginimas",
+      "level": "medium",
+      "problem": "Kas didesnis: $5^{20}$ ar $2^{50}$?",
       "steps": [
         {
-          "text": "Pastebime, kad kiekvienas sekos narys yra natūraliojo skaičiaus kvadratas.",
-          "latex": "1^2, 2^2, 3^2, 4^2"
+          "text": "Suvienodiname laipsnių rodiklius rasdami bendrą daliklį 10.",
+          "latex": "5^{20} = (5^2)^{10} = 25^{10}"
         },
         {
-          "text": "Kitas narys turi būti $5^2$.",
-          "latex": "5^2 = 25"
+          "text": "Antrąjį skaičių pertvarkome taip pat.",
+          "latex": "2^{50} = (2^5)^{10} = 32^{10}"
+        },
+        {
+          "text": "Lyginame pagrindus esant vienodiems rodikliams.",
+          "latex": "32 > 25 \\implies 32^{10} > 25^{10}"
         }
       ],
-      "answer": "25"
+      "answer": "2^{50} yra didesnis"
     },
     {
       "id": "olimpiada-06-alg-ex-3",
-      "title": "Santykinis greitis",
+      "title": "Bendro darbo uždavinys",
       "level": "medium",
-      "problem": "Dviratininkas važiuoja $15$ km/h greičiu. Po $2$ valandų iš to paties taško ta pačia kryptimi išvažiavo motociklininkas $45$ km/h greičiu. Po kiek laiko motociklininkas pasivys dviratininką?",
+      "problem": "Vienas vamzdis pripildo baseiną per 2 valandas, o kitas – per 3 valandas. Per kiek laiko jie pripildys baseiną dirbdami kartu?",
       "steps": [
         {
-          "text": "Apskaičiuojame, kokį atstumą nuvažiavo dviratininkas per $2$ valandas.",
-          "latex": "15 \\times 2 = 30 \\text{ km}"
+          "text": "Randame kiekvieno vamzdžio našumą (baseino dalis per valandą).",
+          "latex": "N_1 = 1/2, N_2 = 1/3"
         },
         {
-          "text": "Apskaičiuojame motociklininko vijimosi greitį (greičių skirtumą).",
-          "latex": "45 - 15 = 30 \\text{ km/h}"
+          "text": "Sudedame našumus.",
+          "latex": "N_{viso} = 1/2 + 1/3 = 3/6 + 2/6 = 5/6"
         },
         {
-          "text": "Apskaičiuojame laiką, per kurį bus įveiktas $30$ km atstumas.",
-          "latex": "30 / 30 = 1 \\text{ valanda}"
+          "text": "Randame laiką apversdami bendrą našumą.",
+          "latex": "T = 1 / (5/6) = 6/5 = 1.2 \\text{ val.}"
         }
       ],
-      "answer": "Po 1 valandos"
+      "answer": "1 valanda ir 12 minučių"
     },
     {
       "id": "olimpiada-06-alg-ex-4",
-      "title": "Loginis uždavinys: Melagiai ir tiesakalbiai",
-      "level": "medium",
-      "problem": "Saloje gyvena tik tiesakalbiai (visada sako tiesą) ir melagiai (visada meluoja). Sutinkate gyventoją A, kuris sako: 'Aš esu melagis'. Kas jis – tiesakalbis ar melagis?",
+      "title": "Procentų pokytis",
+      "level": "hard",
+      "problem": "Stačiakampio ilgis padidėjo 20%, o plotis sumažėjo 20%. Kaip pasikeitė stačiakampio plotas?",
       "steps": [
         {
-          "text": "Tarkime, kad A yra tiesakalbis. Tada jo teiginys turi būti tiesa, vadinasi, jis yra melagis. Prieštaravimas."
+          "text": "Tarkime pradinės kraštinės buvo $a$ ir $b$. Plotas $P = ab$.",
+          "latex": "P_{senas} = ab"
         },
         {
-          "text": "Tarkime, kad A yra melagis. Tada jo teiginys turi būti melas. Kadangi jis sako 'Aš esu melagis', tai tiesa būtų 'Aš nesu melagis'. Vėl prieštaravimas."
+          "text": "Naujos kraštinės yra $1.2a$ ir $0.8b$.",
+          "latex": "a_{nauja} = 1.2a, b_{nauja} = 0.8b"
         },
         {
-          "text": "Išvada: Tokia situacija matematiškai neįmanoma."
+          "text": "Apskaičiuojame naują plotą.",
+          "latex": "P_{naujas} = 1.2a \\cdot 0.8b = 0.96ab"
+        },
+        {
+          "text": "Palyginame su pradiniu plotu (100% - 96% = 4%).",
+          "latex": "1 - 0.96 = 0.04"
         }
       ],
-      "answer": "Tokia situacija neįmanoma"
+      "answer": "Sumažėjo 4%"
     },
     {
       "id": "olimpiada-06-alg-ex-5",
-      "title": "Algebra ir skaičių savybės",
-      "level": "hard",
-      "problem": "Įrodyk, kad trijų iš eilės einančių sveikųjų skaičių suma visada dalijasi iš 3.",
+      "title": "Dėsningumas sekoje",
+      "level": "medium",
+      "problem": "Raskite 100-ąjį sekos narį: $3, 7, 11, 15, \\dots$",
       "steps": [
         {
-          "text": "Pažymėkime vidurinį skaičių raide $n$. Tada trys iš eilės einantys skaičiai yra $n-1, n, n+1$."
+          "text": "Pastebime, kad tai aritmetinė seka, kurios skirtumas yra 4.",
+          "latex": "d = 4"
         },
         {
-          "text": "Sudedame šiuos skaičius.",
-          "latex": "(n-1) + n + (n+1) = 3n"
+          "text": "Sudėję pirmąjį narį su $(n-1)$ skirtumu, gauname bendrą formulę.",
+          "latex": "a_n = 3 + (n-1) \\cdot 4"
         },
         {
-          "text": "Kadangi rezultatas yra $3n$, jis visada dalijasi iš $3$ bet kuriam sveikam $n$."
+          "text": "Įstatome $n = 100$.",
+          "latex": "a_{100} = 3 + 99 \\cdot 4 = 3 + 396 = 399"
         }
       ],
-      "answer": "Įrodyta"
+      "answer": "399"
     }
   ],
   "exercises": [
@@ -246,7 +362,7 @@
       "id": "ex-olimpiada-06-b4e7dd8a",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -390,7 +506,7 @@
       "id": "ex-olimpiada-06-bdd1881c",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -534,7 +650,7 @@
       "id": "ex-olimpiada-06-ff4946f2",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -681,7 +797,7 @@
       "id": "ex-olimpiada-06-13d0b51d",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -825,7 +941,7 @@
       "id": "ex-olimpiada-06-de608e5f",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -969,7 +1085,7 @@
       "id": "ex-olimpiada-06-420ecc0f",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1119,7 +1235,7 @@
       "id": "ex-olimpiada-06-8e4f7634",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -1263,7 +1379,7 @@
       "id": "ex-olimpiada-06-5a19da69",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1410,7 +1526,7 @@
       "id": "ex-olimpiada-06-b7ce0257",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1554,7 +1670,7 @@
       "id": "ex-olimpiada-06-14ea85c7",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -1695,7 +1811,7 @@
       "id": "ex-olimpiada-06-alg-11",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "medium",
@@ -1745,7 +1861,7 @@
       "id": "ex-olimpiada-06-alg-12",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "statement": "Raskite kitą sekos narį: $1, 3, 6, 10, 15, \\dots$",
       "answer": {
@@ -1782,13 +1898,14 @@
           "text": "Skaičiuojame: $15 + 6 = 21$."
         }
       ],
-      "answerText": "21"
+      "answerText": "21",
+      "olympiadTier": "Standartiniai"
     },
     {
       "id": "ex-olimpiada-06-alg-13",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -1833,7 +1950,7 @@
       "id": "ex-olimpiada-06-alg-14",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "hard",
@@ -1886,7 +2003,7 @@
       "id": "ex-olimpiada-06-alg-15",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "statement": "Kiškis bėga 12 m/s greičiu, o vilkas jį veja 15 m/s greičiu. Pradinis atstumas tarp jų yra 60 metrų. Po kiek sekundžių vilkas pasivys kiškį?",
       "answer": {
@@ -1920,13 +2037,14 @@
           "text": "Laikas: $60 / 3 = 20$ s."
         }
       ],
-      "answerText": "20"
+      "answerText": "20",
+      "olympiadTier": "Standartiniai"
     },
     {
       "id": "ex-olimpiada-06-alg-16",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "statement": "Palyginkite $5^{44}$ ir $4^{55}$. Kuris didesnis?",
       "answer": {
@@ -1979,13 +2097,14 @@
           "text": "Kadangi $1024 > 625$, tai $4^{55} > 5^{44}$."
         }
       ],
-      "answerText": "Correct choice"
+      "answerText": "Correct choice",
+      "olympiadTier": "Standartiniai"
     },
     {
       "id": "ex-olimpiada-06-alg-17",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "introductory",
@@ -2027,7 +2146,7 @@
       "id": "ex-olimpiada-06-alg-18",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",
@@ -2072,7 +2191,7 @@
       "id": "ex-olimpiada-06-alg-19",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "medium",
@@ -2120,7 +2239,7 @@
       "id": "ex-olimpiada-06-alg-20",
       "topicId": "olimpiada-06-algebra",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Algebra",
       "olympiadTier": "standard",

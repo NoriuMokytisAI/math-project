@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Expanded Grade 8 Olympiad Geometry content."
+    "notes": "Expanded to 1300+ words with deep method notes and 5 worked examples."
   },
   "topic": {
     "id": "olimpiada-08-geometrija",
@@ -12,22 +12,27 @@
     "strand": "Geometrija",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
-      "olimpiada-08-concept-logic",
-      "olimpiada-08-concept-method",
+      "tasko-galia",
       "cevos-teorema",
       "menelajo-teorema",
-      "ptolemejo-teorema"
+      "ptolemejo-teorema",
+      "ibreztiniai-keturkampiai",
+      "oilerio-tiese"
     ],
     "formulaIds": [
       "herono-formule",
       "apibreztinis-spindulys-R",
-      "cevos-formule"
+      "cevos-formule",
+      "tasko-galios-formule"
     ],
-    "mistakeIds": [],
+    "mistakeIds": [
+      "menelajo-tvarkos-klaida",
+      "netinkamas-keturkampio-ibreztinumas"
+    ],
     "exerciseIds": [
       "ex-olimpiada-08-b12edc64",
       "ex-olimpiada-08-8f2f8e36",
@@ -53,84 +58,157 @@
   },
   "theory": [
     {
-      "id": "apskritimo-geometrija",
-      "title": "Apskritimo geometrija ir taško galia",
+      "id": "geo-8-theory-1",
+      "title": "Apskritimo geometrija: Nuo kampų iki taško galios",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geometrijoje ryšiai tarp kampų ir atkarpų apskritime leidžia įrodyti daugelį teoremų. Kampas tarp stygų arba liestinių yra susijęs su atitinkamų lankų dydžiais, o stygų susikirtimo taškas turi pastovią sandaugą."
+          "text": "8-os klasės olimpiadinė geometrija smarkiai išplečia žinias apie apskritimus. Be standartinių įbrėžtinių ir centrinių kampų, čia susiduriame su galingesnėmis metrinėmis savybėmis."
         },
         {
-          "type": "method",
-          "text": "Taško galios teorema teigia, kad jei dvi stygos $AB$ ir $CD$ susikerta taške $P$ apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$."
+          "type": "definition",
+          "title": "Taško galia apskritimo atžvilgiu",
+          "text": "Tarkime, turime apskritimą $\\omega$ ir tašką $P$. Jei per $P$ nubrėžiame bet kokią kirstinę, kertančią apskritimą taškuose $A$ ir $B$, tai sandauga $PA \\cdot PB$ (atsižvelgiant į kryptį) yra pastovi. Ši vertė vadinama taško $P$ galia."
+        },
+        {
+          "type": "strategy",
+          "title": "Trys galios atvejai",
+          "text": "1. **Stygų sankirta:** Jei $P$ yra apskritimo viduje, tai $PA \\cdot PB = PC \\cdot PD$. \n 2. **Kirstinių sankirta:** Jei $P$ yra išorėje, tai $PA \\cdot PB = PC \\cdot PD$. \n 3. **Liestinė ir kirstinė:** Jei $PT$ yra liestinė, o $PAB$ kirstinė, tai $PT^2 = PA \\cdot PB$."
         }
       ]
     },
     {
-      "id": "cevos-ir-menelajo-teoremos",
-      "title": "Trikampio čevianės",
+      "id": "geo-8-theory-2",
+      "title": "Trikampio čevianės: Čevos ir Menelajo teoremos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Čevos teorema: Trys čevianės $AD, BE, CF$ susikerta viename taške tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+          "text": "Čevianė – tai bet kokia atkarpa, jungianti trikampio viršūnę su priešingos kraštinės tašku (pvz., pusiaukraštinė, aukštinė, pusiaukampinė)."
+        },
+        {
+          "type": "theorem",
+          "title": "Čevos teorema",
+          "text": "Trikampio $ABC$ čevianės $AD, BE, CF$ susikerta viename taške tada ir tik tada, kai: \n $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "type": "theorem",
+          "title": "Menelajo teorema",
+          "text": "Tarkime, tiesė kerta trikampio $ABC$ kraštines (arba jų pratęsimus) taškuose $D, E, F$. Taškai $D, E, F$ yra vienoje tiesėje tada ir tik tada, kai: \n $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "type": "warning",
+          "text": "Atkreipkite dėmesį, kad formulės atrodo identiškai, tačiau Menelajo teoremoje vienas arba trys taškai būtinai turi gulėti ant kraštinių pratęsimų (išorėje)."
         }
       ]
     },
     {
-      "id": "ptolemejo-teorema-teorija",
-      "title": "Įbrėžtiniai keturkampiai",
+      "id": "geo-8-theory-3",
+      "title": "Įbrėžtiniai keturkampiai ir Ptolemėjo teorema",
       "blocks": [
         {
+          "type": "paragraph",
+          "text": "Keturkampis vadinamas įbrėžtiniu, jei apie jį galima apibrėžti apskritimą. Pagrindinis požymis: priešingų kampų suma lygi $180^\\circ$."
+        },
+        {
           "type": "theorem",
-          "text": "Ptolemėjo teorema: Į apskritimą įbrėžto keturkampio priešingų kraštinių sandaugų suma lygi jo įstrižainių sandaugai."
+          "title": "Ptolemėjo teorema",
+          "text": "Į apskritimą įbrėžto keturkampio priešingų kraštinių sandaugų suma lygi jo įstrižainių sandaugai: \n $AB \\cdot CD + BC \\cdot AD = AC \\cdot BD$."
+        },
+        {
+          "type": "strategy",
+          "title": "Simsonio tiesė",
+          "text": "Jei iš taško $P$, esančio ant trikampio apibrėžtinio apskritimo, nuleidžiame statmenis į trikampio kraštines, tai šių statmenų pagrindai guli vienoje tiesėje. Tai vadinama Simsonio tiese."
+        }
+      ]
+    },
+    {
+      "id": "geo-8-theory-4",
+      "title": "Išplėstinis plotų metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose dažnai neužtenka žinoti $S = \\frac{1}{2}ah$. Reikia naudoti formules, jungiančias plotą su kitais elementais."
+        },
+        {
+          "type": "formula",
+          "title": "Herono formulė",
+          "text": "$S = \\sqrt{p(p-a)(p-b)(p-c)}$, kur $p = \\frac{a+b+c}{2}$."
+        },
+        {
+          "type": "formula",
+          "title": "Plotas per spindulius",
+          "text": "$S = pr = \\frac{abc}{4R}$, kur $r$ – įbrėžtinio, o $R$ – apibrėžtinio apskritimo spindulys."
+        },
+        {
+          "type": "paragraph",
+          "text": "Šios formulės leidžia „susieti“ linijinius matmenis su ploto invariantu, o tai dažnai yra raktas į sudėtingus įrodymus."
+        }
+      ]
+    },
+    {
+      "id": "geo-8-theory-5",
+      "title": "Oilerio tiesė ir devynių taškų apskritimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiekviename trikampyje aukštinių susikirtimo taškas (ortocentras $H$), apibrėžtinio apskritimo centras $O$ ir pusiaukraštinių susikirtimo taškas (centroidas $G$) guli vienoje tiesėje. Ši tiesė vadinama Oilerio tiese."
+        },
+        {
+          "type": "strategy",
+          "title": "Atstumų santykis",
+          "text": "Svarbu atsiminti, kad taškas $G$ dalija atkarpą $HO$ santykiu $HG : GO = 2 : 1$. Tai leidžia perkelti geometrinį uždavinį į algebrinę santykių plokštumą."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "olimpiada-08-concept-logic",
-      "title": "Olimpiadinė logika",
+      "id": "tasko-galia",
+      "title": "Taško galia",
       "type": "concept",
-      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
-      "intuition": "Kūrybiškas mąstymas.",
-      "formal": "Griežtas loginis samprotavimas.",
+      "shortDefinition": "Atkarpų sandaugos pastovumas per tašką einančioms tiesėms apskritime.",
+      "intuition": "Matas, rodantis taško nuotolį nuo apskritimo geometrine prasme.",
       "relatedConceptIds": []
     },
     {
       "id": "cevos-teorema",
       "title": "Čevos teorema",
       "type": "theorem",
-      "shortDefinition": "Sąlyga čevianėms susikirsti.",
-      "intuition": "Proporcijų lygybė 1.",
-      "formal": "Atkarpų santykių sandauga.",
-      "relatedConceptIds": []
+      "shortDefinition": "Sąlyga, kada trys čevianės susikerta viename taške.",
+      "formal": "Atkarpų santykių sandauga lygi 1.",
+      "relatedConceptIds": [
+        "menelajo-teorema"
+      ]
     },
     {
       "id": "menelajo-teorema",
       "title": "Menelajo teorema",
       "type": "theorem",
-      "shortDefinition": "Sąlyga taškams būti vienoje tiesėje.",
-      "intuition": "Tiesė kerta trikampį.",
-      "formal": "Atkarpų santykių sandauga lygi 1.",
+      "shortDefinition": "Sąlyga, kada trys taškai ant trikampio kraštinių tiesių yra kolinearūs.",
       "relatedConceptIds": []
     },
     {
       "id": "ptolemejo-teorema",
       "title": "Ptolemėjo teorema",
       "type": "theorem",
-      "shortDefinition": "Įbrėžtinio keturkampio savybė.",
-      "intuition": "Kraštinių sandaugos lygi įstrižainių sandaugai.",
-      "formal": "AC*BD = AB*CD + BC*AD.",
+      "shortDefinition": "Ryšys tarp įbrėžtinio keturkampio įstrižainių ir kraštinių.",
+      "relatedConceptIds": [
+        "ibreztiniai-keturkampiai"
+      ]
+    },
+    {
+      "id": "ibreztiniai-keturkampiai",
+      "title": "Įbrėžtinis keturkampis",
+      "type": "concept",
+      "shortDefinition": "Keturkampis, kurio visos viršūnės yra ant vieno apskritimo.",
+      "intuition": "Kampų priešingose pusėse suma yra $180^\\circ$.",
       "relatedConceptIds": []
     },
     {
-      "id": "olimpiada-08-concept-method",
-      "title": "Įrodymo metodas",
+      "id": "oilerio-tiese",
+      "title": "Oilerio tiesė",
       "type": "concept",
-      "shortDefinition": "Griežtas pagrindimas.",
-      "intuition": "Loginė seka.",
-      "formal": "Dedukcija.",
+      "shortDefinition": "Tiesė, jungianti ortocentrą, centroidą ir apibrėžtinio apskritimo centrą.",
       "relatedConceptIds": []
     }
   ],
@@ -138,61 +216,150 @@
     {
       "id": "herono-formule",
       "title": "Herono formulė",
-      "latex": "S = \\sqrt{p(p-a)(p-b)(p-c)}",
-      "explanation": "Plotas per kraštines."
+      "formula": "$S = \\sqrt{p(p-a)(p-b)(p-c)}$",
+      "description": "Plotas per kraštines."
+    },
+    {
+      "id": "apibreztinis-spindulys-R",
+      "title": "Apibrėžtinio apskritimo spindulys",
+      "formula": "$R = \\frac{abc}{4S}$",
+      "description": "Ryšys tarp ploto, kraštinių ir spindulio."
+    },
+    {
+      "id": "tasko-galios-formule",
+      "title": "Taško galia",
+      "formula": "$P = d^2 - R^2$",
+      "description": "Taško galia per atstumą iki centro d ir spindulį R."
     }
   ],
-  "mistakes": [],
+  "mistakes": [
+    {
+      "id": "menelajo-tvarkos-klaida",
+      "title": "Neteisinga Menelajo viršūnių tvarka",
+      "description": "Supainiojami atkarpų santykiai rašant formulę.",
+      "remedy": "Visada rašykite cikliškai: $A \\to F \\to B \\to D \\to C \\to E \\to A$."
+    },
+    {
+      "id": "netinkamas-keturkampio-ibreztinumas",
+      "title": "Prielaida apie keturkampio įbrėžtinumą",
+      "description": "Taikoma Ptolemėjo teorema savavališkai pasirinktam keturkampiui.",
+      "remedy": "Pirmiausia įrodykite, kad kampų suma lygi $180^\\circ$ arba kampai, besiremiantys į tą pačią atkarpą, yra lygūs."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "Herono formulės taikymas",
-      "problem": "Kraštinės 13, 14, 15. Raskite plotą.",
-      "steps": [
-        {
-          "text": "p=21. S=84."
-        }
+      "id": "we-geo-8-1",
+      "title": "Taško galios taikymas",
+      "level": "medium",
+      "problem": "Dvi apskritimo stygos $AB$ ir $CD$ susikerta taške $P$. Žinoma, kad $AP=4, PB=6, CP=3$. Raskite atkarpos $PD$ ilgį.",
+      "conceptIds": [
+        "tasko-galia"
       ],
-      "answer": "84"
-    },
-    {
-      "title": "Panašumas",
-      "problem": "k=3, Sb=5. Raskite Sa.",
       "steps": [
         {
-          "text": "Sa = 3^2 * 5 = 45."
-        }
-      ],
-      "answer": "45"
-    },
-    {
-      "title": "Įbrėžtinis keturkampis",
-      "problem": "A=80. Raskite C.",
-      "steps": [
+          "text": "Pagal stygų sankirtos savybę (taško galią), $AP \\cdot PB = CP \\cdot PD$."
+        },
         {
-          "text": "C = 180-80 = 100."
-        }
-      ],
-      "answer": "100"
-    },
-    {
-      "title": "Čevos teoremos taikymas",
-      "problem": "AF/FB=1, BD/DC=2. Raskite CE/EA.",
-      "steps": [
+          "text": "Įstatome žinomas vertes: $4 \\cdot 6 = 3 \\cdot PD$."
+        },
         {
-          "text": "1 * 2 * CE/EA = 1 \\implies CE/EA = 0.5."
-        }
-      ],
-      "answer": "0.5"
-    },
-    {
-      "title": "Liestinė ir kirstinė",
-      "problem": "PT=4, PA=2. Raskite kirstinę PB.",
-      "steps": [
-        {
-          "text": "4^2 = 2 * PB \\implies 16 = 2 * PB \\implies PB = 8."
+          "text": "$24 = 3 \\cdot PD \\implies PD = 8$."
         }
       ],
       "answer": "8"
+    },
+    {
+      "id": "we-geo-8-2",
+      "title": "Čevos teoremos taikymas: Pusiaukraštinės",
+      "level": "easy",
+      "problem": "Įrodykite, kad trikampio pusiaukraštinės susikerta viename taške.",
+      "conceptIds": [
+        "cevos-teorema"
+      ],
+      "steps": [
+        {
+          "text": "Pusiaukraštinės dalija kraštines pusiau, todėl taškai $D, E, F$ yra vidurio taškai."
+        },
+        {
+          "text": "Atkarpų santykiai: $AF/FB = 1, BD/DC = 1, CE/EA = 1$."
+        },
+        {
+          "text": "Sandauga: $1 \\cdot 1 \\cdot 1 = 1$."
+        },
+        {
+          "text": "Pagal Čevos teoremą, kadangi sandauga lygi 1, pusiaukraštinės susikerta viename taške."
+        }
+      ],
+      "answer": "Įrodyta"
+    },
+    {
+      "id": "we-geo-8-3",
+      "title": "Ptolemėjo teorema lygiašonėje trapecijoje",
+      "level": "medium",
+      "problem": "Lygiašonės trapecijos kraštinės yra $a=5, b=5, c=5$ (šoninės ir trumpasis pagrindas), o ilgas pagrindas $d=11$. Raskite įstrižainę $x$.",
+      "conceptIds": [
+        "ptolemejo-teorema"
+      ],
+      "steps": [
+        {
+          "text": "Lygiašonė trapecija visada yra įbrėžtinis keturkampis."
+        },
+        {
+          "text": "Taikome Ptolemėjo teoremą: $x \\cdot x = 5 \\cdot 5 + 5 \\cdot 11$."
+        },
+        {
+          "text": "$x^2 = 25 + 55 = 80$."
+        },
+        {
+          "text": "$x = \\sqrt{80} = 4\\sqrt{5}$."
+        }
+      ],
+      "answer": "4\\sqrt{5}"
+    },
+    {
+      "id": "we-geo-8-4",
+      "title": "Herono formulė ir R radimas",
+      "level": "medium",
+      "problem": "Trikampio kraštinės yra 7, 8, 9. Raskite jo plotą ir apibrėžtinio apskritimo spindulį $R$.",
+      "conceptIds": [
+        "herono-formule"
+      ],
+      "steps": [
+        {
+          "text": "Pusperimetris $p = (7+8+9)/2 = 12$."
+        },
+        {
+          "text": "Plotas $S = \\sqrt{12(12-7)(12-8)(12-9)} = \\sqrt{12 \\cdot 5 \\cdot 4 \\cdot 3} = \\sqrt{720} = 12\\sqrt{5}$."
+        },
+        {
+          "text": "Spindulys $R = abc / (4S) = (7 \\cdot 8 \\cdot 9) / (4 \\cdot 12\\sqrt{5}) = 504 / (48\\sqrt{5}) = 10.5 / \\sqrt{5} = 2.1\\sqrt{5}$."
+        }
+      ],
+      "answer": "S=12√5, R=2.1√5"
+    },
+    {
+      "id": "we-geo-8-5",
+      "title": "Menelajo teorema ir santykių radimas",
+      "level": "hard",
+      "problem": "Trikampyje $ABC$ taškas $D$ yra kraštinėje $BC$ taip, kad $BD=2DC$. Taškas $E$ yra kraštinėje $AC$ taip, kad $AE=3EC$. Atkarpos $AD$ ir $BE$ susikerta taške $P$. Raskite santykį $AP:PD$.",
+      "conceptIds": [
+        "menelajo-teorema"
+      ],
+      "steps": [
+        {
+          "text": "Taikome Menelajo teoremą trikampiui $ADC$ ir tiesei $BPE$."
+        },
+        {
+          "text": "Formulė: $\\frac{AP}{PD} \\cdot \\frac{DB}{BC} \\cdot \\frac{CE}{EA} = 1$."
+        },
+        {
+          "text": "Žinome $DB = 2DC$, tad $BC = 3DC$. Santykis $DB/BC = 2/3$. Žinome $AE = 3EC$, tad $CE/EA = 1/3$."
+        },
+        {
+          "text": "$\\frac{AP}{PD} \\cdot \\frac{2}{3} \\cdot \\frac{1}{3} = 1 \\implies \\frac{AP}{PD} \\cdot \\frac{2}{9} = 1 \\implies \\frac{AP}{PD} = 4.5$."
+        }
+      ],
+      "answer": "9:2"
     }
   ],
   "exercises": [
@@ -200,7 +367,7 @@
       "id": "ex-olimpiada-08-b12edc64",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -218,7 +385,13 @@
       ],
       "solutionSteps": [
         {
-          "text": "C(4,6), r^2=25."
+          "text": "Vidurio taškas C = ((1+7)/2, (2+10)/2) = (4,6)."
+        },
+        {
+          "text": "Atstumas AC (spindulys) = sqrt((4-1)^2 + (6-2)^2) = sqrt(9+16) = 5."
+        },
+        {
+          "text": "Lygtis: (x-4)^2 + (y-6)^2 = 25."
         }
       ],
       "answerText": "(x-4)^2 + (y-6)^2 = 25"
@@ -227,7 +400,7 @@
       "id": "ex-olimpiada-08-8f2f8e36",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -255,7 +428,7 @@
       "id": "ex-olimpiada-08-22b2c6e7",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -283,7 +456,7 @@
       "id": "ex-olimpiada-08-cc8ac0d9",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -310,7 +483,7 @@
       "id": "ex-olimpiada-08-ca242a96",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -338,7 +511,7 @@
       "id": "ex-olimpiada-08-ed9ada96",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -366,7 +539,7 @@
       "id": "ex-olimpiada-08-c034e9e3",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -394,7 +567,7 @@
       "id": "ex-olimpiada-08-35696f22",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -422,7 +595,7 @@
       "id": "ex-olimpiada-08-9a9234f7",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -450,7 +623,7 @@
       "id": "ex-olimpiada-08-d789b136",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -478,7 +651,7 @@
       "id": "ex-olimpiada-08-ce546a26",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -506,7 +679,7 @@
       "id": "ex-olimpiada-08-geo-012",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -545,7 +718,7 @@
       "id": "ex-olimpiada-08-geo-013",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -573,7 +746,7 @@
       "id": "ex-olimpiada-08-geo-014",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -601,7 +774,7 @@
       "id": "ex-olimpiada-08-geo-015",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -629,7 +802,7 @@
       "id": "ex-olimpiada-08-geo-016",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -657,7 +830,7 @@
       "id": "ex-olimpiada-08-geo-017",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -685,7 +858,7 @@
       "id": "ex-olimpiada-08-geo-018",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -713,7 +886,7 @@
       "id": "ex-olimpiada-08-geo-019",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -741,7 +914,7 @@
       "id": "ex-olimpiada-08-geo-020",
       "topicId": "olimpiada-08-geometrija",
       "grade": 8,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "multipleChoice",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",

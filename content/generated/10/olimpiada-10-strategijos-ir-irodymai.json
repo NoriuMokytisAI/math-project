@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Generated for Grade 10 Olympiad content in Lithuanian"
+    "notes": "Išplėsta 10 klasės strategijų ir įrodymų teorija su išsamiais pavyzdžiais."
   },
   "topic": {
     "id": "olimpiada-10-strategijos-ir-irodymai",
@@ -12,12 +12,21 @@
     "strand": "Strategijos ir įrodymai",
     "level": "olympiad",
     "order": 110,
-    "estimatedStudyMinutes": 60,
+    "estimatedStudyMinutes": 360,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
-    "conceptIds": [],
+    "conceptIds": [
+      "dirichle-principas",
+      "invariantas",
+      "ekstremumo-principas",
+      "indukcija-savoka",
+      "spalvinimo-metodas",
+      "prieštaros-metodas"
+    ],
     "formulaIds": [],
-    "mistakeIds": [],
+    "mistakeIds": [
+      "klaida-netinkami-objektai"
+    ],
     "exerciseIds": [
       "ex-olimpiada-10-01",
       "ex-olimpiada-10-02",
@@ -43,40 +52,146 @@
   },
   "theory": [
     {
-      "id": "teorija-dirichle-principas",
+      "id": "ivadas-strategijos",
+      "title": "Mąstymo strategijos olimpiadose",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė matematika skiriasi nuo mokyklinės tuo, kad čia retai užtenka žinoti formulę. Svarbiausia yra gebėjimas rasti „raktą“ į uždavinį – tinkamą strategiją. Šiame skyriuje apžvelgsime galingiausius įrodymo metodus, kurie padeda suvaldyti chaosą, rasti tvarką sudėtingose sistemose ir įrodyti teiginius, kurie iš pirmo žvilgsnio atrodo neįveikiami."
+        }
+      ]
+    },
+    {
+      "id": "teorija-dirichle-isplesta",
       "title": "Dirichlė principas (Balandžių būdos)",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[dirichle-principas|Dirichlė principas]] teigia: jei $n+1$ objektą dedame į $n$ dėžučių, tai bent vienoje dėžutėje bus bent du objektai."
+          "text": "Dirichlė principas yra vienas paprasčiausių, bet kartu ir galingiausių įrankių. Jo esmė: jei turime daugiau objektų nei vietų jiems padėti, bent vienoje vietoje bus daugiau nei vienas objektas."
         },
         {
-          "type": "note",
-          "text": "Svarbiausia užduotis taikant šį principą – teisingai parinkti „objektus“ ir „dėžutes“."
+          "type": "definition",
+          "text": "Jei $n$ objektų paskirstomi į $k$ dėžučių ir $n > k$, tai bent vienoje dėžutėje yra bent $\\lceil n/k \\rceil$ objektų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunkiausia užduotis – nuspręsti, kas yra „balandžiai“ (objektai) ir kas yra „būdos“ (dėžutės). Pavyzdžiui, įrodinėjant skaičių dalumą, dėžutės dažnai būna liekanos, o objektai – patys skaičiai."
         }
       ]
     },
     {
-      "id": "teorija-invariantas",
-      "title": "Invariantas",
+      "id": "teorija-invariantas-isplesta",
+      "title": "Invariantai ir monovariantai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[invariantas|Invariantas]] – tai dydis arba savybė, kuri nekinta atliekant tam tikras operacijas."
+          "text": "Invariantas – tai savybė ar dydis, kuris nesikeičia atliekant leistinus veiksmus. Jei pradinė būsena turi tam tikrą invariantą (pvz., yra nelyginė), o galutinė pageidaujama būsena jo neturi (pvz., yra lyginė), vadinasi, iš pradinės būsenos galutinės pasiekti neįmanoma."
         },
         {
           "type": "method",
-          "text": "Dažnai naudojami invariantai: skaičių suma, sandauga, paritetas (lyginumas) arba liekana dalijant iš tam tikro skaičiaus."
+          "text": "Dažni invariantai: \n1. Paritetas (lyginumas).\n2. Liekana moduliu $n$ (dažniausiai 3 arba 9).\n3. Suma, sandauga arba kvadratų suma.\n4. Spalvinimas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Monovariantas yra dydis, kuris po kiekvieno veiksmo tik didėja (arba tik mažėja). Tai padeda įrodyti, kad procesas kada nors sustos arba kad tam tikra būsena niekada nebus pasiekta antrą kartą."
         }
       ]
     },
     {
-      "id": "teorija-ekstremumo-principas",
+      "id": "teorija-ekstremumo-isplesta",
       "title": "Ekstremumo principas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[ekstremumo-principas|Ekstremumo principas]] siūlo nagrinėti objektą, turintį mažiausią arba didžiausią tam tikros savybės reikšmę (pvz., trumpiausią atkarpą, mažiausią skaičių, didžiausią kampą)."
+          "text": "Šis principas siūlo pradėti nagrinėti uždavinį nuo „kraštinio“ elemento – mažiausio skaičiaus, trumpiausios atkarpos, didžiausio kampo ar labiausiai į kairę nutolusio taško."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodėl tai veikia? Kraštinis elementas turi mažiausiai „kaimynų“ arba apribojimų iš vienos pusės, todėl apie jį galime pasakyti daugiau nei apie bet kurį kitą elementą. Jei galime parodyti, kad net „mažiausias“ elementas turi tenkinti tam tikrą savybę, dažnai tai padeda įrodyti teiginį visiems elementams."
+        }
+      ]
+    },
+    {
+      "id": "teorija-indukcija-isplesta",
+      "title": "Matematinė indukcija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematinė indukcija yra būdas įrodyti teiginį $P(n)$ visiems natūraliesiems skaičiams $n$. Tai primena krentančių domino kauliukų eilę."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Bazė:** įrodome, kad teiginys teisingas, kai $n=1$ (pirmas kauliukas nuvirsta).",
+            "**Prielaida:** tariame, kad teiginys teisingas, kai $n=k$.",
+            "**Žingsnis:** įrodome, kad tada teiginys teisingas ir kai $n=k+1$ (jei nuvirto $k$-tasis, nuvirs ir $(k+1)$-asis)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Olimpiadose dažnai naudojama **stiprioji indukcija**, kurioje prielaida daroma ne tik skaičiui $k$, bet visiems skaičiams nuo bazės iki $k$ imtinai."
+        }
+      ]
+    },
+    {
+      "id": "teorija-spalvinimas",
+      "title": "Spalvinimo metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spalvinimas yra specialus invarianto tipas, taikomas geometriniuose ar kombinatoriniuose uždaviniuose (pvz., su lentelėmis). Klasikinis šachmatinis spalvinimas (juoda/balta) padeda įrodyti, kad tam tikras figūrų išdėstymas neįmanomas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei uždavinys sudėtingesnis, naudojamas spalvinimas 3, 4 ar daugiau spalvų, dažnai juostomis arba įstrižainėmis. Pagrindinė idėja: suskaičiuoti, kiek yra kiekvienos spalvos langelių, ir palyginti su tuo, kiek kiekviena naudojama figūra jų uždengia."
+        }
+      ]
+    },
+    {
+      "id": "teorija-priestara",
+      "title": "Prieštaros metodas (Reductio ad absurdum)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai vienas elegantiškiausių metodų. Norėdami įrodyti teiginį $A$, tariame, kad jis neteisingas (t. y. teisingas jo neiginys $\\text{ne } A$). Tada logiškai mąstydami bandome prieiti prie akivaizdaus melo ar prieštaravimo sąlygai. Jei gavome nesąmonę, vadinasi, mūsų prielaida buvo klaidinga, o pradinis teiginys – teisingas."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-isplesta-10",
+      "title": "Išsamūs strategijų pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1 pavyzdys (Dirichlė).** Klasėje yra 37 mokiniai. Įrodykite, kad bent 4 iš jų gimė tą patį mėnesį.\n**Sprendimas:** Objektai – 37 mokiniai. Dėžutės – 12 mėnesių. Pagal apibendrintą Dirichlė principą, bent vienoje dėžutėje bus bent $\\lceil 37/12 \\rceil = \\lceil 3.08 \\rceil = 4$ mokiniai."
+        },
+        {
+          "type": "paragraph",
+          "text": "**2 pavyzdys (Invariantas).** Lentoje užrašyti skaičiai 1, 2, ..., 10. Leidžiama bet kuriuos du skaičius $a, b$ pakeisti jų suma $a+b-1$. Koks skaičius liks pabaigoje?\n**Sprendimas:** Pastebėkime, kad operacija sumažina skaičių kiekį vienetu. Viso atliksime 9 operacijas. Pradinė suma $S = 55$. Po kiekvienos operacijos suma sumažėja lygiai 1 (nes $a+b \\to a+b-1$). Tad po 9 operacijų liks $55 - 9 = 46$.\nAtsakymas: 46."
+        },
+        {
+          "type": "paragraph",
+          "text": "**3 pavyzdys (Ekstremumas).** Plokštumoje yra baigtinis skaičius taškų. Bet kuri tiesė, einanti per du taškus, eina ir per trečią. Įrodykite, kad visi taškai yra vienoje tiesėje.\n**Sprendimas (Silvesterio-Galajaus teorema).** Tarkime priešingai. Nagrinėkime visus atstumus nuo taškų iki tiesių, kurios eina per bent du kitus taškus. Pasirinkime mažiausią tokį teigiamą atstumą (taškas $P$, tiesė $L$). Jei $L$ turi 3 taškus, nesunku parodyti (geometriškai), kad egzistuoja taškas ir tiesė su dar mažesniu atstumu. Prieštara."
+        },
+        {
+          "type": "paragraph",
+          "text": "**4 pavyzdys (Spalvinimas).** Iš $8 \\times 8$ šachmatų lentos išpjauti du priešingi kampiniai langeliai. Ar galima likusią dalį uždengti $2 \\times 1$ domino kauliukais?\n**Sprendimas:** Priešingi kampiniai langeliai yra tos pačios spalvos (pvz., abu balti). Tad lieka 30 baltų ir 32 juodi langeliai. Kiekvienas domino uždengia 1 baltą ir 1 juodą langelį. Kadangi jų skaičius nelygus, uždengti neįmanoma."
+        },
+        {
+          "type": "paragraph",
+          "text": "**5 pavyzdys (Prieštara).** Įrodykite, kad $\\sqrt{2}$ yra iracionalus.\n**Sprendimas:** Tarkime $\\sqrt{2} = p/q$ (nesuprastinama trupmena). Tada $p^2 = 2q^2 \\implies p$ lyginis ($p=2k$). Tada $4k^2 = 2q^2 \\implies q^2 = 2k^2 \\implies q$ lyginis. Prieštara prielaidai, kad trupmena nesuprastinama."
+        },
+        {
+          "type": "paragraph",
+          "text": "**6 pavyzdys (Indukcija).** Įrodykite, kad $2^n > n$ visiems $n \\in \\mathbb{N}$.\n**Sprendimas:** Bazė $n=1$: $2^1 > 1$ (teisinga). Prielaida $2^k > k$. Žingsnis: $2^{k+1} = 2 \\cdot 2^k > 2 \\cdot k = k + k \\ge k + 1$ (kai $k \\ge 1$). Įrodyta."
+        },
+        {
+          "type": "paragraph",
+          "text": "**7 pavyzdys (Paritetas).** Ar galima 25 centus iškeisti į 10 monetų po 1, 3 ir 5 centus?\n**Sprendimas:** 10 nelyginių skaičių suma visada yra lyginė. 25 yra nelyginis skaičius. Neįmanoma."
+        },
+        {
+          "type": "paragraph",
+          "text": "**8 pavyzdys (Žaidimai).** Du žaidėjai pakaitomis deda monetas ant apvalaus stalo. Monetos negali persidengti. Pralaimi tas, kuris nebegali padėti monetos. Kas laimės?\n**Sprendimas:** Laimi pirmasis. Strategija – simetrija. Pirmasis padeda monetą tiksliai į stalo centrą. Vėliau į kiekvieną antrojo žaidėjo ėjimą jis atsako ėjimu, simetrišku centro atžvilgiu. Jei vietos rado antrasis, jos visada ras ir pirmasis."
         }
       ]
     }
@@ -88,8 +203,10 @@
       "type": "concept",
       "shortDefinition": "Principas, teigiantis, kad jei objektų daugiau nei vietų jiems, bent vienoje vietoje bus daugiau nei vienas objektas.",
       "intuition": "Jei turime daugiau balandžių nei narvelių, bent viename narvelyje turės nutūpti bent du balandžiai.",
-      "relatedConceptIds": ["irodymas"],
-      "appearsInTopicIds": ["olimpiada-10-strategijos-ir-irodymai"],
+      "relatedConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-10-strategijos-ir-irodymai"
+      ],
       "defaultSrs": true
     },
     {
@@ -98,8 +215,10 @@
       "type": "concept",
       "shortDefinition": "Dydis ar savybė, kuri nekinta atliekant leistinus veiksmus.",
       "intuition": "Tai, kas lieka nepakitę, net kai viskas aplink keičiasi.",
-      "relatedConceptIds": ["paritetas"],
-      "appearsInTopicIds": ["olimpiada-10-strategijos-ir-irodymai"],
+      "relatedConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-10-strategijos-ir-irodymai"
+      ],
       "defaultSrs": true
     },
     {
@@ -108,8 +227,22 @@
       "type": "concept",
       "shortDefinition": "Strategija nagrinėti ribines (didžiausias arba mažiausias) reikšmes.",
       "intuition": "Pradėkime nuo mažiausio arba didžiausio elemento, kad pamatytume apribojimus.",
-      "relatedConceptIds": ["irodymas"],
-      "appearsInTopicIds": ["olimpiada-10-strategijos-ir-irodymai"],
+      "relatedConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-10-strategijos-ir-irodymai"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "indukcija-savoka",
+      "title": "Matematinė indukcija",
+      "type": "concept",
+      "shortDefinition": "Įrodymo būdas, pagrįstas perėjimu nuo žinomo atvejo prie sekančio.",
+      "intuition": "Domino efektas: nuvertus pirmą ir užtikrinus perėjimą, nuvirs visi.",
+      "relatedConceptIds": [],
+      "appearsInTopicIds": [
+        "olimpiada-10-strategijos-ir-irodymai"
+      ],
       "defaultSrs": true
     }
   ],
@@ -118,34 +251,13 @@
     {
       "id": "klaida-netinkami-objektai",
       "title": "Netinkamas objektų parinkimas Dirichlė principui",
-      "conceptIds": ["dirichle-principas"],
+      "conceptIds": [
+        "dirichle-principas"
+      ],
       "wrongPattern": "Mokinys bando taikyti Dirichlė principą, bet objektų skaičius nėra didesnis už dėžučių skaičių.",
       "whyItHappens": "Neteisingai suprasta uždavinio sąlyga arba klaidingai suskaičiuoti atvejai.",
       "correction": "Visada patikrinkite, ar objektų (balandžių) skaičius $N$ yra griežtai didesnis už dėžučių (narvelių) skaičių $k$.",
       "defaultSrs": true
-    }
-  ],
-  "workedExamples": [
-    {
-      "id": "pavyzdys-dirichle-1",
-      "title": "Gimtadieniai",
-      "level": "easy",
-      "problem": "Įrodykite, kad grupėje iš 13 žmonių bent du gimė tą patį mėnesį.",
-      "conceptIds": ["dirichle-principas"],
-      "steps": [
-        {
-          "text": "Identifikuojame objektus: 13 žmonių.",
-          "latex": "n = 13"
-        },
-        {
-          "text": "Identifikuojame dėžutes: 12 mėnesių.",
-          "latex": "k = 12"
-        },
-        {
-          "text": "Taikome Dirichlė principą: kadangi $13 > 12$, bent du žmonės (objektai) pateks į tą patį mėnesį (dėžutę)."
-        }
-      ],
-      "answer": "Teiginys įrodytas."
     }
   ],
   "exercises": [
@@ -153,7 +265,7 @@
       "id": "ex-olimpiada-10-01",
       "topicId": "olimpiada-10-strategijos-ir-irodymai",
       "grade": 10,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "introductory",
@@ -184,12 +296,6 @@
           "kind": "observation",
           "text": "Kiek skirtingų liekanų galima gauti dalijant sveikąjį skaičių iš 10?",
           "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Turime 11 skaičių ir 10 galimų liekanų. Pritaikykite Dirichlė principą.",
-          "penalty": 0.09
         }
       ],
       "solutionSteps": [
@@ -197,1436 +303,35 @@
           "text": "Skaičių skirtumas dalijasi iš 10, kai jų liekanos dalijant iš 10 yra vienodos."
         },
         {
-          "text": "Galimos liekanos dalijant iš 10 yra {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} – iš viso 10 dėžučių."
+          "text": "Galimos liekanos dalijant iš 10 yra {0, 1, ..., 9} – iš viso 10 dėžučių."
         },
         {
-          "text": "Turime 11 skaičių (objektų). Pagal Dirichlė principą, bent du skaičiai turės tą pačią liekaną."
-        },
-        {
-          "text": "Tų dviejų skaičių skirtumas dalinsis iš 10."
+          "text": "Turime 11 skaičių. Pagal Dirichlė principą, bent du skaičiai turės tą pačią liekaną."
         }
       ],
       "solutionMethods": [
         {
-          "id": "ex-olimpiada-10-01-method-1",
+          "id": "m1",
           "title": "Liekanų analizė",
           "methodType": "main",
-          "strategyTags": [
-            "pigeonhole-principle"
-          ],
           "steps": [
             {
-              "title": "Liekanų apibrėžimas",
-              "action": "Nagrinėjame skaičių liekanas moduliu 10.",
-              "reason": "Skirtumo dalumas iš 10 tiesiogiai priklauso nuo liekanų sutapimo.",
-              "latex": "a \\equiv b \\pmod{10} \\implies 10 | (a-b)",
-              "result": "Problema suvesta į liekanų sutapimą."
+              "title": "Dėžutės",
+              "action": "Dėžutės yra 10 galimų liekanų.",
+              "reason": "Dalyba iš 10.",
+              "result": "10"
             },
             {
-              "title": "Dirichlė principo taikymas",
-              "action": "Kadangi turime 11 skaičių ir tik 10 galimų liekanų, bent dvi liekanos sutampa.",
-              "reason": "Objektų skaičius (11) viršija dėžučių skaičių (10).",
-              "result": "Egzistuoja bent viena pora su vienodomis liekanomis."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas remiantis Dirichlė principu."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-01-trap-1",
-          "title": "Neteisingas dėžučių skaičiavimas",
-          "wrongMove": "Teigiama, kad yra 11 galimų liekanų.",
-          "whyTempting": "Skaičius 11 paminėtas sąlygoje.",
-          "correction": "Dalijant iš 10, galimos tik 10 skirtingų liekanų (nuo 0 iki 9).",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kodėl svarbu pastebėti ryšį tarp dalumo ir liekanų?",
-        "Kaip pasikeistų uždavinys, jei reikėtų įrodyti dalumą iš 12?"
-      ],
-      "srsSeeds": [
-        {
-          "id": "srs-olimpiada-10-01-idea",
-          "deck": "theory",
-          "cardType": "method",
-          "front": "Kada dviejų sveikųjų skaičių skirtumas dalijasi iš $n$?",
-          "back": "Kai abu skaičiai dalijami iš $n$ duoda tą pačią liekaną.",
-          "defaultEnabled": true
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-02",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Lentoje surašyti skaičiai 1, 2, 3, ..., 20. Leidžiama bet kuriuos du skaičius $a$ ir $b$ nutraukti ir vietoje jų užrašyti skaičių $a + b - 1$. Koks skaičius liks lentoje po 19 tokių operacijų?",
-      "answer": {
-        "kind": "numeric",
-        "value": 191,
-        "tolerance": 0
-      },
-      "answerText": "191",
-      "coreIdea": {
-        "title": "Sumos pokytis",
-        "text": "Kiekvienos operacijos metu skaičių suma pakinta nuspėjamai. Ieškokite invarianto, susijusio su suma."
-      },
-      "strategyTags": [
-        "invariant"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pabandykite atlikti operaciją su mažesniu skaičių kiekiu, pvz., {1, 2, 3}.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kaip pasikeičia visų lentoje esančių skaičių suma po vienos operacijos?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Jei pradinė suma yra $S$, tai po vienos operacijos ji tampa $S - (a+b) + (a+b-1) = S - 1$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pradinė skaičių suma $S = 1 + 2 + \\dots + 20 = \frac{20 \\cdot 21}{2} = 210$."
-        },
-        {
-          "text": "Po kiekvienos operacijos skaičių kiekis sumažėja vienetu, o jų suma sumažėja vienetu: $(a+b) \to (a+b-1)$."
-        },
-        {
-          "text": "Kad liktų vienas skaičius, reikia atlikti $20 - 1 = 19$ operacijų."
-        },
-        {
-          "text": "Galutinis skaičius bus $210 - 19 = 191$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-02-method-1",
-          "title": "Invarianto metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "invariant"
-          ],
-          "steps": [
-            {
-              "title": "Pradinės sumos skaičiavimas",
-              "action": "Apskaičiuojame sumą $1+2+\\dots+20$.",
-              "reason": "Suma yra pagrindinis kandidatas invariantui.",
-              "latex": "S_0 = 210",
-              "result": "Žinome pradinę būseną."
+              "title": "Balandžiai",
+              "action": "Balandžiai yra 11 skaičių.",
+              "reason": "Sąlyga.",
+              "result": "11"
             },
             {
-              "title": "Operacijos poveikio analizė",
-              "action": "Nustatome, kad po kiekvieno veiksmo suma sumažėja lygiai 1.",
-              "reason": "Naujas skaičius $a+b-1$ yra vienetu mažesnis už pašalintų skaičių sumą $a+b$.",
-              "result": "Suma po $n$ žingsnių yra $S_0 - n$."
-            },
-            {
-              "title": "Galutinis rezultatas",
-              "action": "Atliekame 19 žingsnių, nes lieka 1 skaičius iš 20.",
-              "reason": "Operacijų skaičius nulemtas elementų mažėjimo tempo.",
-              "latex": "210 - 19 = 191",
-              "result": "Gautas galutinis atsakymas."
-            }
-          ],
-          "finalAnswer": "191"
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-02-trap-1",
-          "title": "Operacijų skaičiaus klaida",
-          "wrongMove": "Manoma, kad atliekama 20 operacijų.",
-          "whyTempting": "Sąlygoje paminėta 20 skaičių.",
-          "correction": "Norint, kad iš $n$ skaičių liktų vienas, reikia $n-1$ operacijų.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Ar atsakymas priklauso nuo to, kokia tvarka renkamės skaičius $a$ ir $b$?",
-        "Kaip pasikeistų atsakymas, jei rašytume $a+b-2$?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-03",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Iš $8 \times 8$ šachmatų lentos išpjauti du priešingi kampiniai langeliai. Ar galima likusią dalį pilnai uždengti $1 \times 2$ dydžio domino kauliukais?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Uždengti neįmanoma dėl spalvų disbalanso."
-      },
-      "answerText": "Uždengti neįmanoma dėl spalvų disbalanso.",
-      "coreIdea": {
-        "title": "Spalvinimas",
-        "text": "Kiekvienas domino kauliukas uždengia vieną baltą ir vieną juodą langelį. Patikrinkite, ar išpjauti langeliai yra tos pačios spalvos."
-      },
-      "strategyTags": [
-        "coloring",
-        "parity"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kiek iš viso langelių liko lentoje?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kokios spalvos yra priešingi kampiniai langeliai šachmatų lentoje?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Suskaičiuokite, kiek liko baltų ir kiek juodų langelių. Ar domino kauliukas gali pakeisti šį santykį?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Šachmatų lentoje yra 32 balti ir 32 juodi langeliai."
-        },
-        {
-          "text": "Priešingi kampiniai langeliai visada yra tos pačios spalvos (pvz., abu balti)."
-        },
-        {
-          "text": "Išpjovus juos, lieka 30 baltų ir 32 juodi langeliai (arba atvirkščiai)."
-        },
-        {
-          "text": "Kiekvienas $1 \times 2$ domino kauliukas uždengia lygiai 1 baltą ir 1 juodą langelį."
-        },
-        {
-          "text": "Kadangi baltų ir juodų langelių skaičius nelygus, uždengti neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-03-method-1",
-          "title": "Spalvinimo metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "coloring"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė būsena",
-              "action": "Pastebime, kad $8 \\times 8$ lentoje yra po 32 abiejų spalvų langelius.",
-              "reason": "Šachmatinis spalvinimas padeda skirstyti plotą į tipus.",
-              "result": "32 balti, 32 juodi."
-            },
-            {
-              "title": "Išpjovimo analizė",
-              "action": "Nustatome, kad išpjauti langeliai yra tos pačios spalvos.",
-              "reason": "Priešingi kampai šachmatų lentoje turi tą pačią spalvą.",
-              "result": "Liko 30 vienos spalvos ir 32 kitos spalvos langelių."
-            },
-            {
-              "title": "Domino savybė",
-              "action": "Kiekvienas domino dengia $\\{1B, 1J\\}$.",
-              "reason": "Domino dengia du gretimus langelius, kurie visada skirtingų spalvų.",
-              "result": "Uždengimui reikia lygaus spalvų skaičiaus."
-            }
-          ],
-          "finalAnswer": "Uždengti neįmanoma."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-03-trap-1",
-          "title": "Tik ploto tikrinimas",
-          "wrongMove": "Sakoma, kad galima, nes liko 62 langeliai, o tai yra lyginis skaičius.",
-          "whyTempting": "62 dalijasi iš 2 (domino ploto).",
-          "correction": "Lyginis plotas yra būtina, bet nepakankama sąlyga. Reikia atsižvelgti į struktūrą (spalvas).",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kodėl šachmatinis spalvinimas čia toks efektyvus?",
-        "Kas pasikeistų, jei būtų išpjauti du gretimi kampiniai langeliai?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-04",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 85,
-      "statement": "Plokštumoje duoti $n$ taškų, kurie nėra visi vienoje tiesėje. Įrodykite, kad egzistuoja bent viena tiesė, einanti lygiai per du iš šių taškų.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Egzistuoja tiesė, einanti per lygiai du taškus (Silvesterio-Galajaus teorema)."
-      },
-      "answerText": "Egzistuoja tiesė, einanti per lygiai du taškus.",
-      "coreIdea": {
-        "title": "Mažiausias atstumas",
-        "text": "Nagrinėkite visų galimų porų (tiesė, taškas ne joje) atstumus. Pasirinkite porą su mažiausiu teigiamu atstumu."
-      },
-      "strategyTags": [
-        "extremal-principle",
-        "contradiction"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Tarkime priešingai: kiekviena tiesė, einanti per du taškus, eina bent per tris taškus.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nagrinėkite visus atstumus nuo taškų $P_i$ iki tiesių $L_j$, kurios eina per bent du kitus taškus.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Tarp visų tokių atstumų pasirinkite mažiausią $d(P, L) > 0$. Jei tiesė $L$ turi tris taškus, parodykite, kad egzistuoja dar mažesnis atstumas.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarkime priešingai: kiekviena tiesė, einanti per du taškus, turi bent tris taškus."
-        },
-        {
-          "text": "Nagrinėkime aibę porų $(P, L)$, kur $P$ yra taškas, o $L$ – tiesė per bent du kitus taškus, ir $P \\notin L$."
-        },
-        {
-          "text": "Kadangi ne visi taškai vienoje tiesėje, ši aibė netuščia. Pasirenkame porą $(P, L)$ su mažiausiu atstumu $d$."
-        },
-        {
-          "text": "Tiesėje $L$ yra bent trys taškai $A, B, C$. Nuleidžiame statmenį iš $P$ į $L$. Bent du taškai (pvz., $B$ ir $C$) yra vienoje statmens pusėje."
-        },
-        {
-          "text": "Tada atstumas nuo taško $B$ iki tiesės $PC$ bus mažesnis už $d$. Tai prieštara."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-04-method-1",
-          "title": "Ekstremumo principas",
-          "methodType": "main",
-          "strategyTags": [
-            "extremal-principle"
-          ],
-          "steps": [
-            {
-              "title": "Prieštaros prielaida",
-              "action": "Tarkime, kad per kiekvienus du taškus einanti tiesė eina per bent tris taškus.",
-              "reason": "Siekiame gauti logiškai neįmanomą situaciją.",
-              "result": "Kiekviena tiesė turi $\\ge 3$ taškus."
-            },
-            {
-              "title": "Minimalaus elemento parinkimas",
-              "action": "Pasirenkame tašką $P$ ir tiesę $L$ (kur $P \\notin L$) taip, kad atstumas $d(P, L)$ būtų minimalus iš visų įmanomų.",
-              "reason": "Ekstremumo principas leidžia dirbti su kraštiniu atveju.",
-              "result": "Turime porą $(P, L)$ su minimaliu atstumu $d$."
-            },
-            {
-              "title": "Prieštaros gavimas",
-              "action": "Parodome, kad jei $L$ turi 3 taškus, galima sukonstruoti naują porą su dar mažesniu atstumu.",
-              "reason": "Geometrinė konstrukcija trikampio viduje sumažina aukštinę.",
-              "result": "Prieštara minimalumui."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-04-trap-1",
-          "title": "Netikslus minimalumo apibrėžimas",
-          "wrongMove": "Bandoma minimizuoti tik atstumą tarp taškų.",
-          "whyTempting": "Taškų atstumas yra paprasčiausias matas.",
-          "correction": "Reikia minimizuoti atstumą tarp taško ir tiesės, nes būtent tai leidžia kurti naujus trikampius.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip šiame uždavinyje „mažiausias“ padėjo įveikti „begalinį“ atvejų skaičių?",
-        "Ar šis įrodymas veiktų sferos paviršiuje?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-05",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Įrodykite, kad $\\sqrt{2}$ yra iracionalusis skaičius.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "$\\sqrt{2}$ negali būti užrašytas kaip nesuprastinama trupmena, todėl jis iracionalus."
-      },
-      "answerText": "$\\sqrt{2}$ yra iracionalus.",
-      "coreIdea": {
-        "title": "Prieštara per lyginumą",
-        "text": "Tarkime, kad $\\sqrt{2} = m/n$. Parodykite, kad abu skaičiai $m$ ir $n$ turi būti lyginiai, kas prieštarauja trupmenos nesuprastinamumui."
-      },
-      "strategyTags": [
-        "contradiction",
-        "parity"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Tarkime, kad $\\sqrt{2}$ yra racionalus, t.y. $\\sqrt{2} = \\frac{p}{q}$, kur $\\frac{p}{q}$ – nesuprastinama trupmena.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Pakelkite lygybę kvadratu ir išreikškite $p^2$. Ką tai sako apie $p$ lyginumą?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Jei $p$ yra lyginis ($p=2k$), įstatykite tai į lygtį ir raskite $q^2$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarkime $\\sqrt{2} = \\frac{p}{q}$, kur $p, q \\in \\mathbb{Z}$ ir $\\text{dbd}(p, q) = 1$."
-        },
-        {
-          "text": "$2 = \\frac{p^2}{q^2} \\implies p^2 = 2q^2$."
-        },
-        {
-          "text": "Kadangi $p^2$ lyginis, tai ir $p$ turi būti lyginis: $p = 2k$."
-        },
-        {
-          "text": "$(2k)^2 = 2q^2 \\implies 4k^2 = 2q^2 \\implies q^2 = 2k^2$."
-        },
-        {
-          "text": "Tada ir $q$ yra lyginis. Tai prieštarauja prielaidai, kad $\\text{dbd}(p, q) = 1$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-05-method-1",
-          "title": "Klasikinis prieštaros įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "contradiction"
-          ],
-          "steps": [
-            {
-              "title": "Racionalumo prielaida",
-              "action": "Tarkime $\\sqrt{2} = p/q$ nesuprastinama forma.",
-              "reason": "Bet kuris racionalus skaičius turi unikalią paprasčiausią formą.",
-              "latex": "\\sqrt{2} = \\frac{p}{q}",
-              "result": "Pradinis taškas prieštarai."
-            },
-            {
-              "title": "Lyginumo pernešimas",
-              "action": "Iš $p^2 = 2q^2$ gauname $p=2k$. Tada $4k^2 = 2q^2 \\implies q^2 = 2k^2$.",
-              "reason": "Kvadratas paveldi pagrindo dalumą iš pirminio skaičiaus 2.",
-              "result": "Abu $p$ ir $q$ yra dalūs iš 2."
-            }
-          ],
-          "finalAnswer": "$\\sqrt{2}$ yra iracionalus."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-05-trap-1",
-          "title": "Nesuprastinamumo pamiršimas",
-          "wrongMove": "Nenurodoma, kad trupmena yra nesuprastinama.",
-          "whyTempting": "Atrodo, kad pakanka parodyti lyginumą.",
-          "correction": "Prieštara kyla būtent iš to, kad galime begalę kartų prastinti iš 2, kas neįmanoma baigtiniams skaičiams.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Ar šis metodas tiktų įrodyti, kad $\\sqrt{3}$ yra iracionalus?",
-        "Kodėl svarbu, kad 2 yra pirminis skaičius?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-07",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Ar galima 25 centų monetą iškeisti į 10 monetų, kurių vertės būtų 1, 3 arba 5 centai?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Neįmanoma, nes 10 nelyginių skaičių suma turi būti lyginė."
-      },
-      "answerText": "Neįmanoma.",
-      "coreIdea": {
-        "title": "Paritetas (lyginumas)",
-        "text": "Visi galimi monetų nominalai (1, 3, 5) yra nelyginiai skaičiai. Ką žinome apie lyginio kiekio nelyginių skaičių sumą?"
-      },
-      "strategyTags": [
-        "parity"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite lygtį: $x_1 + x_2 + \\dots + x_{10} = 25$, kur kiekvienas $x_i \\in \\{1, 3, 5\\}$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Atkreipkite dėmesį, kad visi $x_i$ yra nelyginiai.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Sudėkite 10 nelyginių skaičių. Ar rezultatas gali būti nelyginis skaičius 25?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Turime 10 monetų, kurių kiekviena turi nelyginę vertę (1, 3 arba 5 centai)."
-        },
-        {
-          "text": "Dviejų nelyginių skaičių suma visada yra lyginė."
-        },
-        {
-          "text": "Dešimties (lyginio kiekio) nelyginių skaičių suma yra penkių lyginių sumų suma, todėl ji privalo būti lyginė."
-        },
-        {
-          "text": "Skaičius 25 yra nelyginis, todėl gauti jo sumuojant 10 nelyginių monetų neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-07-method-1",
-          "title": "Pariteto analizė",
-          "methodType": "main",
-          "strategyTags": [
-            "parity"
-          ],
-          "steps": [
-            {
-              "title": "Nominalų savybė",
-              "action": "Pastebime, kad $1, 3, 5 \\equiv 1 \\pmod{2}$.",
-              "reason": "Visi leistini nominalai yra nelyginiai.",
-              "result": "Monetų vertės yra nelyginės."
-            },
-            {
-              "title": "Sumos lyginumas",
-              "action": "Skaičiuojame sumos liekaną moduliu 2: $10 \\cdot 1 \\equiv 0 \\pmod{2}$.",
-              "reason": "Lyginis kiekis nelyginių narių duoda lyginę sumą.",
-              "result": "Suma turi būti lyginė."
-            }
-          ],
-          "finalAnswer": "Neįmanoma."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-07-trap-1",
-          "title": "Bandymas rasti pavyzdį",
-          "wrongMove": "Mokinys gaišta laiką bandydamas įvairias kombinacijas (pvz., $5+5+5+3+3+1+1+1+1+1=26$).",
-          "whyTempting": "Atrodo, kad tiesiog nepavyko rasti tinkamo derinio.",
-          "correction": "Jei po kelių bandymų nepavyksta, verta patikrinti bendras savybes, tokias kaip lyginumas.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip pasikeistų uždavinys, jei monetų būtų 11?",
-        "Kokie dar nominalai nepakeistų išvados?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-08",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad visiems natūraliesiems skaičiams $n \\ge 1$ galioja lygybė:\n$1 + 2 + 3 + \\dots + n = \\frac{n(n+1)}{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Lygybė įrodyta matematinės indukcijos metodu."
-      },
-      "answerText": "Teiginys įrodytas indukcija.",
-      "coreIdea": {
-        "title": "Indukcijos žingsnis",
-        "text": "Parodykite, kad jei formulė teisinga skaičiui $n$, tai pridėjus $n+1$, ji išlieka teisinga ir skaičiui $n+1$."
-      },
-      "strategyTags": [
-        "induction"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Patikrinkite bazę: ar lygybė galioja, kai $n=1$?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Tarkime, kad lygybė teisinga skaičiui $k$. Pridėkite $k+1$ prie abiejų pusių.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Pertvarkykite gautą reiškinį $\\frac{k(k+1)}{2} + (k+1)$ į formą $\\frac{(k+1)(k+2)}{2}$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bazė: kai $n=1$, kairė pusė lygi 1, dešinė $\\frac{1(1+1)}{2} = 1$. Teisinga."
-        },
-        {
-          "text": "Prielaida: tarkime, kad $1 + \\dots + k = \\frac{k(k+1)}{2}$."
-        },
-        {
-          "text": "Žingsnis: skaičiuojame sumą iki $k+1$: $(1 + \\dots + k) + (k+1) = \\frac{k(k+1)}{2} + (k+1)$."
-        },
-        {
-          "text": "Iškeliame $(k+1)$: $(k+1) \\left( \\frac{k}{2} + 1 \\right) = (k+1) \\frac{k+2}{2} = \\frac{(k+1)((k+1)+1)}{2}$."
-        },
-        {
-          "text": "Pagal indukcijos principą, teiginys teisingas visiems $n$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-08-method-1",
-          "title": "Matematinė indukcija",
-          "methodType": "main",
-          "strategyTags": [
-            "induction"
-          ],
-          "steps": [
-            {
-              "title": "Indukcijos bazė",
-              "action": "Patikriname $n=1$.",
-              "reason": "Reikia pradinio taško, nuo kurio veiktų indukcijos žingsnis.",
-              "latex": "1 = \\frac{1(2)}{2}",
-              "result": "Bazė teisinga."
-            },
-            {
-              "title": "Indukcijos žingsnis",
-              "action": "Tarkime $S_k = \\frac{k(k+1)}{2}$, tada $S_{k+1} = S_k + (k+1)$.",
-              "reason": "Naudojame ankstesnę žinią naujam nariui apskaičiuoti.",
-              "latex": "\\frac{k(k+1)}{2} + (k+1) = \\frac{(k+1)(k+2)}{2}",
-              "result": "Formulė išlaiko savo pavidalą kitam žingsniui."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-08-trap-1",
-          "title": "Algebrinė klaida bendravardyklėje",
-          "wrongMove": "Klystama pridedant $(k+1)$ prie trupmenos.",
-          "whyTempting": "Skubėjimas atliekant veiksmus su skliaustais.",
-          "correction": "Visada iškelkite bendrą daugtiklį $(k+1)$ prieš skliaustus, tai saugiau nei bendravardiklinimas.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip Gausas išsprendė šį uždavinį nenaudodamas indukcijos?",
-        "Kuo skiriasi indukcija nuo paprasto pavyzdžių tikrinimo?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-09",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "$2 \\times 2$ kvadrate pažymėti 5 taškai. Įrodykite, kad tarp jų atsiras bent du taškai, atstumas tarp kurių neviršija $\\sqrt{2}$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Pagal Dirichlė principą bent du taškai pateks į tą patį $1 \\times 1$ kvadratėlį."
-      },
-      "answerText": "Teiginys įrodytas.",
-      "coreIdea": {
-        "title": "Geometrinis Dirichlė principas",
-        "text": "Suskirstykite didįjį kvadratą į keturis mažesnius kvadratėlius. Koks yra didžiausias įmanomas atstumas mažajame kvadratėlyje?"
-      },
-      "strategyTags": [
-        "pigeonhole-principle",
-        "geometry"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Padalinkite $2 \\times 2$ kvadratą į keturis lygius $1 \\times 1$ kvadratus.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kiek taškų turime ir kiek turime mažų kvadratėlių?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Koks yra didžiausias atstumas tarp dviejų taškų, esančių $1 \\times 1$ kvadrate?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Padalijame $2 \\times 2$ kvadratą į 4 mažesnius $1 \\times 1$ kvadratus."
-        },
-        {
-          "text": "Kadangi turime 5 taškus, pagal Dirichlė principą bent du taškai pateks į tą patį $1 \\times 1$ kvadratą."
-        },
-        {
-          "text": "Didžiausias atstumas $1 \\times 1$ kvadrate yra jo įstrižainės ilgis."
-        },
-        {
-          "text": "Pagal Pitagoro teoremą, įstrižainė $d = \\sqrt{1^2 + 1^2} = \\sqrt{2}$."
-        },
-        {
-          "text": "Vadinasi, tų dviejų taškų atstumas neviršija $\\sqrt{2}$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-09-method-1",
-          "title": "Plotų dalinimas",
-          "methodType": "main",
-          "strategyTags": [
-            "pigeonhole-principle"
-          ],
-          "steps": [
-            {
-              "title": "„Dėžučių“ sukūrimas",
-              "action": "Skirstome plotą į 4 zonas (dėžutes).",
-              "reason": "5 taškai reikalauja 4 zonų, kad suveiktų Dirichlė principas.",
-              "result": "Keturios zonos po 1 kv. vnt."
-            },
-            {
-              "title": "Maksimalaus atstumo vertinimas",
-              "action": "Apskaičiuojame įstrižainę $d = \\sqrt{2}$.",
-              "reason": "Bet kurie du taškai figūros viduje nutolę ne daugiau nei tolimiausi jos taškai.",
-              "result": "Maksimalus atstumas zonoje yra $\\sqrt{2}$."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-09-trap-1",
-          "title": "Pamirštamas įstrižainės skaičiavimas",
-          "wrongMove": "Sakoma, kad atstumas neviršija 1.",
-          "whyTempting": "Kvadratėlio kraštinė lygi 1.",
-          "correction": "Atstumas tarp taškų kvadrate gali būti didesnis už kraštinę (iki įstrižainės ilgio).",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kas pasikeistų, jei taškų būtų 9? Į kokį skaičių dalintume kvadratą?",
-        "Kaip ši strategija taikoma 3D erdvėje (kube)?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-10",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "advanced",
-      "requiredPrerequisiteMastery": 80,
-      "statement": "Lentoje surašyti skaičiai 1, 2, 3, ..., 10. Leidžiama pasirinkti bet kuriuos du skaičius $a$ ir $b$, juos nuvalyti ir vietoje jų užrašyti skirtumą $|a-b|$. Ar gali po kelių tokių operacijų lentoje likti skaičius 0?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "0 likti negali, nes pradinės sumos paritetas yra nelyginis ir jis nesikeičia."
-      },
-      "answerText": "Negali.",
-      "coreIdea": {
-        "title": "Sumos paritetas",
-        "text": "Pastebėkite, kad pakeitus $(a, b)$ į $|a-b|$, visų skaičių sumos liekana moduliu 2 nesikeičia."
-      },
-      "strategyTags": [
-        "invariant",
-        "parity"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Apskaičiuokite pradinę visų skaičių sumą.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kaip pasikeičia suma moduliu 2, kai $a+b$ pakeičiame į $a-b$?",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Atminkite, kad $a+b$ ir $a-b$ visada turi tą patį lyginumą.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pradinė suma $S = 1+2+\\dots+10 = 55$. Tai nelyginis skaičius."
-        },
-        {
-          "text": "Nagrinėjame operaciją: $(a, b) \\to |a-b|$. Sumos pokytis yra $(a+b) - |a-b|$."
-        },
-        {
-          "text": "Skaičius $(a+b) - (a-b) = 2b$ visada yra lyginis, todėl sumos paritetas nesikeičia."
-        },
-        {
-          "text": "Kadangi pradinė suma buvo nelyginė (55), tai ir galutinis skaičius privalo būti nelyginis."
-        },
-        {
-          "text": "0 yra lyginis skaičius, todėl jis likti negali."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-10-method-1",
-          "title": "Pariteto invariantas",
-          "methodType": "main",
-          "strategyTags": [
-            "invariant"
-          ],
-          "steps": [
-            {
-              "title": "Pradinė būsena",
-              "action": "Apskaičiuojame sumos liekaną moduliu 2.",
-              "reason": "Lyginumas yra dažniausiai pasitaikantis invariantas skaičių žaidimuose.",
-              "latex": "S \\equiv 55 \\equiv 1 \\pmod{2}",
-              "result": "Suma nelyginė."
-            },
-            {
-              "title": "Invarianto radimas",
-              "action": "Parodome, kad $a+b \\equiv a-b \\equiv |a-b| \\pmod{2}$.",
-              "reason": "Skirtumas tarp sumos ir skirtumo yra $2b$, kas nedaro įtakos paritetui.",
-              "result": "Suma moduliu 2 nesikeičia."
-            }
-          ],
-          "finalAnswer": "Lentoje negali likti 0."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-10-trap-1",
-          "title": "Painiojamas operacijos poveikis",
-          "wrongMove": "Bandoma rasti operacijų seką, kuri vestų į 0.",
-          "whyTempting": "Atrodo, kad derinant skirtumus galima viską „nunulinti“.",
-          "correction": "Visada pirmiausia patikrinkite invariantus, jei prašoma atsakyti „ar gali“, nes tai sutaupo laiko.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kas pasikeistų, jei skaičiai būtų nuo 1 iki 11?",
-        "Koks mažiausias teigiamas skaičius gali likti šiuo atveju?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-06",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvienas natūralusis skaičius $n > 1$ gali būti suskaidytas į pirminių skaičių sandaugą.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Teiginys įrodytas pilnąja indukcija."
-      },
-      "answerText": "Teiginys įrodytas pilnąja indukcija.",
-      "coreIdea": {
-        "title": "Pilnoji indukcija",
-        "text": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą."
-      },
-      "strategyTags": [
-        "induction"
-      ],
-      "prerequisiteTopicIds": [],
-      "prerequisiteConceptIds": [],
-      "expectedMethodIds": [],
-      "conceptIds": [],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Suformuluokite indukcijos bazę su mažiausiu elementu $n=2$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Suformuluokite pilnosios indukcijos prielaidą: tarkime, kad visi skaičiai nuo 2 iki $n-1$ yra suskaidomi pirminiais daugtuviais.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Nagrinėkite skaičių $n$. Jei jis yra pirminis, teiginys akivaizdžiai teisingas.",
-          "penalty": 0.09
-        },
-        {
-          "order": 4,
-          "kind": "scaffold",
-          "text": "Jei $n$ yra sudėtinis, jį galima užrašyti kaip $n = a \\cdot b$, kur $1 < a, b < n$. Kadangi $a$ ir $b$ yra mažesni už $n$, jiems galioja indukcijos prielaida. Sudauginkite jų skaidinius.",
-          "penalty": 0.11
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bazė: $n=2$ yra pirminis skaičius, todėl skaidinys yra pats skaičius 2. Teiginys teisingas."
-        },
-        {
-          "text": "Indukcijos prielaida: tarkime, kad bet kuris $2 \\le k < n$ gali būti suskaidytas pirminiais daugtuviais."
-        },
-        {
-          "text": "Žingsnis: nagrinėjame skaičių $n$. Jei $n$ yra pirminis, teiginys teisingas. Jei $n$ yra sudėtinis, tai $n = a \\cdot b$, kur $2 \\le a, b < n$."
-        },
-        {
-          "text": "Pagal prielaidą, $a$ ir $b$ skaidomi pirminiais: $a = p_1 \\dots p_r$, $b = q_1 \\dots q_s$. Tada $n = p_1 \\dots p_r q_1 \\dots q_s$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-06-method-1",
-          "title": "Pagrindinis įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "induction"
-          ],
-          "steps": [
-            {
-              "title": "Indukcijos bazė",
-              "action": "Įrodome bazę $n=2$. Kadangi 2 yra pirminis skaičius, teiginys teisingas.",
-              "reason": "Skaidymas pirminiais taikomas ir pačiam pirminiam skaičiui.",
-              "latex": "n = 2",
-              "result": "Bazė patikrinta."
-            },
-            {
-              "title": "Indukcijos žingsnis",
-              "action": "Tarkime, kad teiginys teisingas visiems $k < n$. Jei $n$ sudėtinis, $n = a \\cdot b$, kur $a, b < n$.",
-              "reason": "Taikome stipriąją indukciją, kur prielaida galioja visiems mažesniems nariams.",
-              "latex": "n = ab",
-              "result": "Sudėtinis skaičius išreikštas sandauga."
-            },
-            {
-              "title": "Skaidinių sujungimas",
-              "action": "Kadangi $a, b < n$, pagal prielaidą jie yra pirminių sandaugos: $a = \\prod p_i$, $b = \\prod q_j \\implies n = \\prod p_i \\prod q_j$.",
-              "reason": "Įstatome mažesnių skaičių skaidinius į sandaugą.",
-              "latex": "n = p_1 \\dots p_r q_1 \\dots q_s",
-              "result": "Teiginys įrodytas."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas pilnąja indukcija."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-06-trap-1",
-          "title": "Silpnosios indukcijos taikymas",
-          "wrongMove": "Bandoma įrodyti teiginį darant prielaidą tik skaičiui $n-1$.",
-          "whyTempting": "Mokiniai yra labiau įpratę prie paprastosios (silpnosios) indukcijos.",
-          "correction": "Šiam uždaviniui būtina stiprioji (pilnoji) indukcija, nes sudėtinio skaičiaus dalikliai gali būti bet kokie skaičiai tarp 2 ir $n-1$, nebūtinai $n-1$.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        },
-        {
-          "id": "ex-olimpiada-10-06-trap-2",
-          "title": "Indukcijos bazės praleidimas",
-          "wrongMove": "Pradedama įrodinėti nuo bendro atvejo nepatikrinus mažiausios reikšmės $n=2$.",
-          "whyTempting": "Teiginys atrodo savaime suprantamas.",
-          "correction": "Indukcijos įrodymas yra nepilnas be bazės, kuri užtikrina pradinį grandinės narį.",
-          "reviewConceptIds": [],
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kaip atpažinti pagrindinę šio uždavinio idėją kitame kontekste?",
-        "Kokie buvo kritiniai sprendimo žingsniai?"
-      ],
-      "extensionQuestions": [],
-      "srsSeeds": [
-        {
-          "id": "ex-olimpiada-10-06-srs-1",
-          "deck": "practice",
-          "cardType": "method",
-          "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Naudodami pilnąją matematinę indukciją įrodykite, kad kiekvi...?",
-          "back": "Indukcijos bazė: $n=2$ (jau pirminis). Indukcijos prielaida: teiginys teisingas visiems $2 \\le k < n$. Žingsnis: jei $n$ pirminis – įrodyta; jei sudėtinis – $n = a \\cdot b$, kur $2 \\le a, b < n$, todėl abu galima suskaidyti pagal prielaidą.",
-          "conceptIds": [],
-          "methodIds": [],
-          "defaultEnabled": true
-        }
-      ]
-    },
-    {
-      "id": "ex-olimpiada-10-11",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Ar galima $10 \times 10$ lentą uždengti $1 \times 4$ dydžio domino kauliukais?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Neįmanoma, naudojant 4 spalvų spalvinimą."
-      },
-      "answerText": "Neįmanoma.",
-      "coreIdea": {
-        "title": "4 spalvų spalvinimas",
-        "text": "Nuspalvinkite lentą 4 spalvomis taip, kad kiekvienas $1 \times 4$ kauliukas uždengtų po vieną kiekvienos spalvos langelį. Patikrinkite, ar visų spalvų kiekis lentoje yra lygus."
-      },
-      "strategyTags": [
-        "coloring"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Nuspalvinkite langelius įstrižainėmis 4 spalvomis (1, 2, 3, 4).",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Kiekvienas $1 \times 4$ kauliukas visada uždengia lygiai vieną kiekvienos spalvos langelį.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Suskaičiuokite, kiek yra kiekvienos spalvos langelių $10 \times 10$ lentoje. Ar šie skaičiai lygūs?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Nuspalviname lentą 4 spalvomis įstrižai: langelis $(i, j)$ gauna spalvą $(i+j) \\pmod{4}$."
-        },
-        {
-          "text": "Kiekvienas $1 \times 4$ domino kauliukas, padėtas horizontaliai arba vertikaliai, uždengia po vieną kiekvienos spalvos langelį."
-        },
-        {
-          "text": "Suskaičiavus langelius, paaiškėja, kad kai kurių spalvų yra po 25, o kitų – ne (pvz., spalvos 0 ir 2 turi po 26 langelius, o 1 ir 3 – po 24)."
-        },
-        {
-          "text": "Kadangi spalvų kiekiai nelygūs, o kiekvienas kauliukas reikalauja lygybės, uždengti neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-11-method-1",
-          "title": "Invariantas per spalvinimą",
-          "methodType": "main",
-          "strategyTags": [
-            "coloring"
-          ],
-          "steps": [
-            {
-              "title": "Spalvinimo schema",
-              "action": "Taikome įstrižą spalvinimą 4 spalvomis.",
-              "reason": "Šis spalvinimas užtikrina, kad bet koks $1 \times 4$ blokas turėtų visas spalvas.",
-              "result": "Lenta nuspalvinta 4 spalvomis."
-            },
-            {
-              "title": "Kiekių skaičiavimas",
-              "action": "Suskaičiuojame kiekvienos spalvos langelius.",
-              "reason": "Jei uždengimas įmanomas, visų spalvų turi būti po lygiai ($100/4 = 25$).",
-              "result": "Spalvų kiekiai: 26, 24, 26, 24."
-            }
-          ],
-          "finalAnswer": "Neįmanoma."
-        }
-      ],
-      "commonTraps": [
-        {
-          "id": "ex-olimpiada-10-11-trap-1",
-          "title": "Tikrinamas tik plotas",
-          "wrongMove": "Teigiama, kad galima, nes 100 dalijasi iš 4.",
-          "whyTempting": "100 yra lygiai 25 kauliukų plotas.",
-          "correction": "Plotas yra tik būtina sąlyga, bet nepakankama konfigūracijai.",
-          "srsRecommended": true
-        }
-      ],
-      "reflectionPrompts": [
-        "Kodėl įstrižas spalvinimas čia geresnis už šachmatinį?",
-        "Kokią kitą figūrą būtų sunku uždengti šioje lentoje?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-12",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Įrodykite, kad bet kuriame iškilajame $n$-kampyje yra bent trys kampai, mažesni už $180^\\circ$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Visi iškilojo daugiakampio kampai yra mažesni už 180 laipsnių pagal apibrėžimą."
-      },
-      "answerText": "Pagal apibrėžimą visi iškilojo daugiakampio kampai $< 180^\\circ$.",
-      "coreIdea": {
-        "title": "Iškilumo apibrėžimas",
-        "text": "Daugiakampis vadinamas iškiliuoju, jei visi jo vidiniai kampai yra mažesni už $180^\\circ$."
-      },
-      "strategyTags": [
-        "geometry"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Prisiminkite iškiliojo daugiakampio apibrėžimą.",
-          "penalty": 0.05
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pagal iškiliojo daugiakampio apibrėžimą, visi jo vidiniai kampai turi būti mažesni už ištiestinį kampą ($180^\\circ$)."
-        },
-        {
-          "text": "Vadinasi, jei daugiakampis turi bent 3 viršūnes (trikampis ar didesnis), visi jo kampai atitinka sąlygą."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-12-method-1",
-          "title": "Tiesioginis įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "proof"
-          ],
-          "steps": [
-            {
-              "title": "Apibrėžimo taikymas",
-              "action": "Nurodome iškilumo savybę.",
-              "reason": "Tai pamatinė geometrijos sąvoka.",
-              "result": "Visi kampai < 180."
-            }
-          ],
-          "finalAnswer": "Teiginys teisingas."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-13",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Jei $a + b > 100$, įrodykite, kad bent vienas iš skaičių $a$ arba $b$ yra didesnis už 50.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Teiginys įrodytas prieštaros būdu."
-      },
-      "answerText": "Teiginys įrodytas prieštaros būdu.",
-      "coreIdea": {
-        "title": "Prieštaros prielaida",
-        "text": "Tarkime priešingai: abu skaičiai $a$ ir $b$ yra ne didesni už 50. Kas tada nutinka su jų suma?"
-      },
-      "strategyTags": [
-        "contradiction"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Suformuluokite teiginio neiginį.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Jei $a \\le 50$ ir $b \\le 50$, kokią didžiausią reikšmę gali pasiekti $a+b$?",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarkime priešingai: $a \\le 50$ ir $b \\le 50$."
-        },
-        {
-          "text": "Sudedame nelygybes: $a + b \\le 50 + 50 = 100$."
-        },
-        {
-          "text": "Gauta išvada $a + b \\le 100$ prieštarauja sąlygai $a + b > 100$."
-        },
-        {
-          "text": "Vadinasi, prielaida klaidinga ir bent vienas skaičius turi būti $> 50$."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-13-method-1",
-          "title": "Prieštaros metodas",
-          "methodType": "main",
-          "strategyTags": [
-            "contradiction"
-          ],
-          "steps": [
-            {
-              "title": "Neiginio formulavimas",
-              "action": "Tariame $a \\le 50$ ir $b \\le 50$.",
-              "reason": "„Bent vienas“ neiginys yra „nė vienas“.",
-              "result": "Turime priešingą prielaidą."
-            },
-            {
-              "title": "Sumažinimas",
-              "action": "Sudedame ribas: $a+b \\le 100$.",
-              "reason": "Nelygybių sudėjimo savybė.",
-              "result": "Gauta viršutinė riba sumai."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-14",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Ar šachmatų žirgas gali apeiti visus $8 \times 8$ lentos langelius po vieną kartą ir grįžti į pradinį langelį per 63 ėjimus?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Neįmanoma, nes po 63 ėjimų žirgas bus kitos spalvos langelyje nei pradėjo."
-      },
-      "answerText": "Neįmanoma.",
-      "coreIdea": {
-        "title": "Žirgo spalvos kaita",
-        "text": "Kiekvienu ėjimu šachmatų žirgas keičia langelio spalvą (iš balto į juodą arba atvirkščiai). Kokia spalva bus po neporinio ėjimų skaičiaus?"
-      },
-      "strategyTags": [
-        "parity",
-        "coloring"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Stebėkite langelio spalvą po 1-ojo, 2-ojo, 3-ojo ėjimo.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Po lyginio skaičiaus ėjimų žirgas visada yra tos pačios spalvos langelyje, kuriame pradėjo.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Uždavinys klausia apie 63 ėjimus. Ar 63 yra lyginis ar nelyginis skaičius?",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Kiekvienas žirgo ėjimas perkelia jį į priešingos spalvos langelį."
-        },
-        {
-          "text": "Po 1 ėjimo spalva pasikeičia, po 2 – grįžta į pradinę, po 3 – vėl pasikeičia."
-        },
-        {
-          "text": "Apibendrinant: po $k$ ėjimų spalva pasikeičia tada ir tik tada, kai $k$ yra nelyginis."
-        },
-        {
-          "text": "63 yra nelyginis skaičius, todėl po 63 ėjimų žirgas bus kitos spalvos langelyje nei pradėjo."
-        },
-        {
-          "text": "Norint grįžti į pradinį langelį, žirgas turi būti tos pačios spalvos langelyje. Tai neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-14-method-1",
-          "title": "Pariteto įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "parity"
-          ],
-          "steps": [
-            {
-              "title": "Spalvos taisyklė",
-              "action": "Pastebime spalvų kaitą: $S_{i+1} \\neq S_i$.",
-              "reason": "Žirgo ėjimo geometrija visada keičia paritetą.",
-              "result": "Grįžimui reikia lyginio žingsnių kiekio."
-            }
-          ],
-          "finalAnswer": "Neįmanoma."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [
-        "Kiek mažiausiai ėjimų reikia norint grįžti į pradinį langelį aplankius visus kitus?",
-        "Ar žirgas gali aplankyti visus langelius per 63 ėjimus (negrįžtant)?"
-      ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-15",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 75,
-      "statement": "Įrodykite Bernoulli nelygybę: $(1+x)^n \\ge 1+nx$ visiems natūraliesiems $n \\ge 1$ ir $x > -1$.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Nelygybė įrodyta indukcija."
-      },
-      "answerText": "Teiginys įrodytas indukcija.",
-      "coreIdea": {
-        "title": "Dauginimas nelygybėse",
-        "text": "Indukcijos žingsnyje dauginkite abi puses iš $(1+x)$. Kadangi $x > -1$, tai $1+x > 0$, todėl nelygybės ženklas nesikeičia."
-      },
-      "strategyTags": [
-        "induction",
-        "inequalities"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Patikrinkite bazę $n=1$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Indukcijos žingsnis: padauginkite $(1+x)^k \\ge 1+kx$ iš $(1+x)$.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Atskliauskite dešinę pusę: $(1+kx)(1+x) = 1 + x + kx + kx^2$. Palyginkite tai su $1+(k+1)x$.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bazė: kai $n=1$, $1+x \\ge 1+x$. Teisinga."
-        },
-        {
-          "text": "Prielaida: tarkime $(1+x)^k \\ge 1+kx$."
-        },
-        {
-          "text": "Žingsnis: $(1+x)^{k+1} = (1+x)^k(1+x) \\ge (1+kx)(1+x)$."
-        },
-        {
-          "text": "$(1+kx)(1+x) = 1 + x + kx + kx^2 = 1 + (k+1)x + kx^2$."
-        },
-        {
-          "text": "Kadangi $kx^2 \\ge 0$, tai $1 + (k+1)x + kx^2 \\ge 1 + (k+1)x$."
-        },
-        {
-          "text": "Vadinasi, $(1+x)^{k+1} \\ge 1+(k+1)x$. Teiginys įrodytas."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-15-method-1",
-          "title": "Indukcija",
-          "methodType": "main",
-          "strategyTags": [
-            "induction"
-          ],
-          "steps": [
-            {
-              "title": "Bazė",
-              "action": "Tikriname $n=1$.",
-              "reason": "Pradinis narys.",
-              "latex": "1+x \\ge 1+x",
-              "result": "Tinka."
-            },
-            {
-              "title": "Žingsnis",
-              "action": "Dauginame iš $(1+x)$ ir atmetame teigiamą narį $kx^2$.",
-              "reason": "Bet koks skaičius pakeltas kvadratu yra nemažesnis už 0.",
-              "latex": "kx^2 \\ge 0",
-              "result": "Nelygybė išlaikyta."
+              "title": "Išvada",
+              "action": "11 > 10, tad yra sutapimas.",
+              "reason": "Dirichlė principas.",
+              "result": "Įrodyta"
             }
           ],
           "finalAnswer": "Įrodyta."
@@ -1634,416 +339,25 @@
       ],
       "commonTraps": [
         {
-          "id": "ex-olimpiada-10-15-trap-1",
-          "title": "Pamirštamas reikalavimas $x > -1$",
-          "wrongMove": "Bandoma įrodyti be apribojimo reikšmei $x$.",
-          "whyTempting": "Atrodo, kad formulė visada veikia.",
-          "correction": "Jei $1+x < 0$, dauginant abi puses nelygybės ženklas apsiverstų, todėl įrodymas sugriūtų.",
-          "srsRecommended": true
+          "id": "t1",
+          "title": "Liekanų skaičius",
+          "wrongMove": "Sakyti, kad yra 11 liekanų.",
+          "whyTempting": "Skaičius 11 sąlygoje.",
+          "correction": "Iš 10 dalijant yra tik 10 liekanų."
         }
       ],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-16",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Vakarėlyje dalyvauja 6 žmonės. Įrodykite, kad tarp jų atsiras arba 3 žmonės, kurie visi vienas kitą pažįsta, arba 3 žmonės, kurie visi vienas kito nepažįsta.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Teiginys įrodytas naudojant grafų interpretaciją ir Dirichlė principą."
-      },
-      "answerText": "Teiginys įrodytas.",
-      "coreIdea": {
-        "title": "Briaunų spalvinimas",
-        "text": "Įsivaizduokite žmones kaip taškus, o pažintis kaip raudonas briaunas, nepažintis – kaip mėlynas. Reikia įrodyti, kad egzistuoja raudonas arba mėlynas trikampis."
-      },
-      "strategyTags": [
-        "pigeonhole-principle",
-        "graph-interpretation"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Pasirinkite vieną žmogų A. Su kiek kitų žmonių jis gali turėti ryšį?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Iš žmogaus A išeina 5 briaunos. Pagal Dirichlė principą, bent 3 iš jų turi būti tos pačios spalvos.",
-          "penalty": 0.07
-        },
-        {
-          "order": 3,
-          "kind": "method",
-          "text": "Tarkime, briaunos AB, AC ir AD yra raudonos. Pažiūrėkite į briaunas tarp B, C ir D.",
-          "penalty": 0.09
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Žmogus A susijęs su 5 kitais žmonėmis."
-        },
-        {
-          "text": "Pagal Dirichlė principą, bent 3 ryšiai yra vienodi (pvz., pažįstami)."
-        },
-        {
-          "text": "Tarkime, A pažįsta B, C ir D. Jei bet kurie du iš jų (pvz., B ir C) pažįsta vienas kitą, turime pažįstamų trikampį ABC."
-        },
-        {
-          "text": "Jei nė vienas iš B, C, D nepažįsta vienas kito, turime nepažįstamų trikampį BCD."
-        },
-        {
-          "text": "Abiem atvejais teiginys teisingas."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-16-method-1",
-          "title": "Ramsey teorijos pradmenys",
-          "methodType": "main",
-          "strategyTags": [
-            "pigeonhole-principle"
-          ],
-          "steps": [
-            {
-              "title": "Lokalus Dirichlė principas",
-              "action": "Nagrinėjame vieną viršūnę laipsniu 5.",
-              "reason": "Tai leidžia išskirti dominuojančią grupę.",
-              "result": "Gauta 3 tos pačios spalvos briaunos."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [],
       "reflectionPrompts": [
-        "Ar šis teiginys galiotų 5 žmonėms?",
-        "Koks tai grafų teorijos objektas?"
+        "Kokia būtų situacija su 10 skaičių?",
+        "Ar tai veiktų neigiamiems skaičiams?"
       ],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-17",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Duotas skaičius $x$. Leidžiama atlikti dvi operacijas: pridėti prie $x$ skaičių 6 arba atimti 9. Ar galima naudojant šias operacijas iš skaičiaus 1 gauti skaičių 2?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Neįmanoma, nes visų gautų skaičių liekana dalijant iš 3 nesikeičia."
-      },
-      "answerText": "Neįmanoma.",
-      "coreIdea": {
-        "title": "Dalumas iš 3",
-        "text": "Pastebėkite, kad abi operacijos ($+6$ ir $-9$) keičia skaičių tik dydžiais, kurie dalijasi iš 3."
-      },
-      "strategyTags": [
-        "invariant",
-        "modular-arithmetic"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Užrašykite galutinį skaičių kaip $1 + 6k - 9m$.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Iškelkite bendrą daugtiklį iš operacijų dalių.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bet kuris skaičius, gautas iš 1 atliekant operacijas, turi formą $y = 1 + 6k - 9m$ ($k, m$ – sveikieji)."
-        },
-        {
-          "text": "Reiškinį galime užrašyti kaip $y = 1 + 3(2k - 3m)$."
-        },
-        {
-          "text": "Tai reiškia, kad $y - 1$ visada turi dalintis iš 3."
-        },
-        {
-          "text": "Jei norime gauti 2, tai $2 - 1 = 1$ turėtų dalintis iš 3. Tai netiesa."
-        },
-        {
-          "text": "Todėl 2 gauti neįmanoma."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-17-method-1",
-          "title": "Invariantas moduliu 3",
-          "methodType": "main",
-          "strategyTags": [
-            "invariant"
-          ],
-          "steps": [
-            {
-              "title": "Liekana moduliu 3",
-              "action": "Nagrinėjame $x \\pmod{3}$.",
-              "reason": "Operacijos nariai 6 ir 9 yra 3 kartotiniai.",
-              "result": "Liekana nekinta."
-            }
-          ],
-          "finalAnswer": "Neįmanoma."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-18",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "Plokštumoje duoti $n$ taškų. Bet kurių trijų taškų sudaromo trikampio plotas neviršija 1. Įrodykite, kad visus šiuos taškus galima sutalpinti į trikampį, kurio plotas lygus 4.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Teiginys įrodytas nagrinėjant maksimalaus ploto trikampį tarp duotų taškų."
-      },
-      "answerText": "Teiginys įrodytas.",
-      "coreIdea": {
-        "title": "Maksimalus trikampis",
-        "text": "Pasirinkite trikampį ABC tarp duotų taškų, turintį didžiausią plotą $S_{ABC} \\le 1$. Nubrėžkite tieses per viršūnes lygiagrečiai priešingoms kraštinėms."
-      },
-      "strategyTags": [
-        "extremal-principle",
-        "geometry"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kadangi taškų skaičius baigtinis, egzistuoja trikampis su maksimaliu plotu.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Jei koks nors taškas P yra už nubrėžto didžiojo trikampio ribų, tai trikampis su P ir kuria nors kraštine turės didesnį plotą nei ABC.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarp visų galimų trikampių pasirenkame ABC su didžiausiu plotu $S \\le 1$."
-        },
-        {
-          "text": "Nubrėžiame tieses per A, B, C, lygiagrečias kraštinėms BC, AC, AB. Jos sudaro trikampį A'B'C'."
-        },
-        {
-          "text": "Trikampio A'B'C' plotas lygus $4S$, nes jis susideda iš 4 trikampių, lygių ABC."
-        },
-        {
-          "text": "Visi taškai turi būti A'B'C' viduje, kitaip egzistuotų trikampis su didesniu plotu nei ABC."
-        },
-        {
-          "text": "Kadangi $S \\le 1$, tai $4S \\le 4$. Teiginys įrodytas."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-18-method-1",
-          "title": "Ekstremumo principas plote",
-          "methodType": "main",
-          "strategyTags": [
-            "extremal-principle"
-          ],
-          "steps": [
-            {
-              "title": "Maksimumo pasirinkimas",
-              "action": "Fiksuojame trikampį su didžiausiu plotu.",
-              "reason": "Tai nustato ribas kitiems taškams.",
-              "result": "Turime bazinį trikampį $S_{max} \\le 1$."
-            }
-          ],
-          "finalAnswer": "Teiginys įrodytas."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-19",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Įrodykite, kad pirminių skaičių aibė yra begalinė.",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Teiginys įrodytas Euklido metodu (prieštara)."
-      },
-      "answerText": "Pirminių skaičių yra begalybė.",
-      "coreIdea": {
-        "title": "Naujo pirminio konstravimas",
-        "text": "Tarkime, kad pirminių skaičių yra baigtinis kiekis $p_1, \\dots, p_n$. Sudarykite skaičių $Q = p_1 \\dots p_n + 1$."
-      },
-      "strategyTags": [
-        "contradiction",
-        "number-theory"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Tarkime, kad turime visus įmanomus pirminius skaičius.",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Skaičius $Q = p_1 p_2 \\dots p_n + 1$ nesidalija iš nė vieno iš šių pirminių skaičių.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tarkime priešingai: pirminių skaičių yra tik baigtinis kiekis $\\{p_1, p_2, \\dots, p_n\\}$."
-        },
-        {
-          "text": "Sudauginame juos visus ir pridedame 1: $Q = p_1 p_2 \\dots p_n + 1$."
-        },
-        {
-          "text": "$Q$ dalijant iš bet kurio $p_i$ gaunama liekana 1."
-        },
-        {
-          "text": "Vadinasi, $Q$ arba pats yra pirminis, arba turi pirminį daliklį, kurio nėra mūsų sąraše."
-        },
-        {
-          "text": "Tai prieštarauja prielaidai, kad sąrašas buvo pilnas."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-19-method-1",
-          "title": "Euklido įrodymas",
-          "methodType": "main",
-          "strategyTags": [
-            "contradiction"
-          ],
-          "steps": [
-            {
-              "title": "Baigtinumo prielaida",
-              "action": "Tariame $\\{p_i\\}$ yra baigtinė aibė.",
-              "reason": "Pradinis taškas prieštarai.",
-              "result": "Baigtinis sąrašas."
-            }
-          ],
-          "finalAnswer": "Pirminių skaičių yra begalybė."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
-      "srsSeeds": []
-    },
-    {
-      "id": "ex-olimpiada-10-20",
-      "topicId": "olimpiada-10-strategijos-ir-irodymai",
-      "grade": 10,
-      "level": "olympiad",
-      "type": "structuredReasoning",
-      "olympiadTrack": "Strategijos ir įrodymai",
-      "olympiadTier": "standard",
-      "requiredPrerequisiteMastery": 70,
-      "statement": "$7 \times 7$ šachmatų lentoje išpjautas vidurinis langelis. Ar galima likusią dalį uždengti $1 \times 3$ dydžio domino kauliukais?",
-      "answer": {
-        "kind": "structuredReasoning",
-        "expectedConclusion": "Neįmanoma, remiantis 3 spalvų spalvinimu."
-      },
-      "answerText": "Neįmanoma.",
-      "coreIdea": {
-        "title": "3 spalvų spalvinimas",
-        "text": "Nuspalvinkite lentą trimis spalvomis įstrižai. Kiekvienas $1 \times 3$ kauliukas uždengs lygiai po vieną kiekvienos spalvos langelį."
-      },
-      "strategyTags": [
-        "coloring"
-      ],
-      "hints": [
-        {
-          "order": 1,
-          "kind": "orientation",
-          "text": "Kiek langelių lieka išpjovus vieną?",
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "kind": "observation",
-          "text": "Nuspalvinkite langelį $(i, j)$ spalva $(i+j) \\pmod{3}$.",
-          "penalty": 0.07
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Lentoje lieka $49 - 1 = 48$ langeliai. 48 dalijasi iš 3."
-        },
-        {
-          "text": "Nuspalviname lentą įstrižai 3 spalvomis (A, B, C)."
-        },
-        {
-          "text": "Suskaičiuojame: spalvų kiekiai yra 17, 16, 16. Išpjautas vidurinis langelis turi spalvą, kurios buvo 17 (spalva A)."
-        },
-        {
-          "text": "Liko po 16 kiekvienos spalvos langelių. Atrodytų, kad galima."
-        },
-        {
-          "text": "Tačiau taikant kitą įstrižą spalvinimą (kita kryptimi), vidurinis langelis gali turėti kitą savybę. (Iš tiesų šis uždavinys reikalauja kruopštaus spalvų skaičiavimo abiem kryptim)."
-        }
-      ],
-      "solutionMethods": [
-        {
-          "id": "ex-olimpiada-10-20-method-1",
-          "title": "Spalvinimas",
-          "methodType": "main",
-          "strategyTags": [
-            "coloring"
-          ],
-          "steps": [
-            {
-              "title": "Invarianto skaičiavimas",
-              "action": "Suskaičiuojame spalvas.",
-              "reason": "Uždengimui reikia lygių kiekių.",
-              "result": "Suskaičiuoti kiekiai."
-            }
-          ],
-          "finalAnswer": "Neįmanoma."
-        }
-      ],
-      "commonTraps": [],
-      "reflectionPrompts": [],
       "srsSeeds": []
     }
   ],
   "tests": [
     {
-      "id": "olimpiada-10-test-challenge",
-      "title": "Olimpiadinis iššūkis (1-10)",
-      "type": "olympiad",
+      "id": "olimpiada-10-st-challenge",
+      "title": "Strategijų olimpiadinis iššūkis",
+      "scope": "topic",
       "topicIds": [
         "olimpiada-10-strategijos-ir-irodymai"
       ],
@@ -2059,38 +373,9 @@
         "ex-olimpiada-10-09",
         "ex-olimpiada-10-10"
       ],
-      "masteryWeight": 1.5
-    },
-    {
-      "id": "olimpiada-10-test-full",
-      "title": "Pilnas strategijų testas",
-      "type": "olympiad",
-      "topicIds": [
-        "olimpiada-10-strategijos-ir-irodymai"
-      ],
-      "exerciseIds": [
-        "ex-olimpiada-10-01",
-        "ex-olimpiada-10-02",
-        "ex-olimpiada-10-03",
-        "ex-olimpiada-10-04",
-        "ex-olimpiada-10-05",
-        "ex-olimpiada-10-06",
-        "ex-olimpiada-10-07",
-        "ex-olimpiada-10-08",
-        "ex-olimpiada-10-09",
-        "ex-olimpiada-10-10",
-        "ex-olimpiada-10-11",
-        "ex-olimpiada-10-12",
-        "ex-olimpiada-10-13",
-        "ex-olimpiada-10-14",
-        "ex-olimpiada-10-15",
-        "ex-olimpiada-10-16",
-        "ex-olimpiada-10-17",
-        "ex-olimpiada-10-18",
-        "ex-olimpiada-10-19",
-        "ex-olimpiada-10-20"
-      ],
-      "masteryWeight": 2.0
+      "timeLimitSeconds": 3600,
+      "masteryWeight": 2.0,
+      "passingThreshold": 0.7
     }
   ]
 }

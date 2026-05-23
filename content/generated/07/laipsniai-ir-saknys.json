@@ -2,8 +2,8 @@
   "contentVersion": "0.1.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
-    "textbook": "12_klase_teorija.pdf",
-    "notes": "Apima laipsniavimą, šaknis ir jų taisykles."
+    "textbook": "matematika_k12.pdf",
+    "notes": "7 klasės kursas: sveikojo skaičiaus kėlimas natūraliuoju laipsniu, laipsnių savybės, kvadratinė šaknis ir standartinė skaičiaus išraiška."
   },
   "topic": {
     "id": "laipsniai-ir-saknys",
@@ -12,7 +12,7 @@
     "strand": "Skaičiai ir skaičiavimai",
     "level": "curriculum",
     "order": 2,
-    "estimatedStudyMinutes": 170,
+    "estimatedStudyMinutes": 120,
     "prerequisiteTopicIds": [
       "sveikieji-racionalieji-skaiciai"
     ],
@@ -20,37 +20,25 @@
       "lygciu-ir-nelygybiu-sistemos"
     ],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
       "laipsnis",
-      "saknis",
+      "pagrindas",
       "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
-      "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "kvadratas",
+      "kubas",
+      "saknis",
+      "kvadratine-saknis",
+      "standartine-israiska"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "laipsniu-daugyba",
+      "laipsniu-dalyba",
+      "laipsnio-kelimas-laipsniu",
+      "sandaugos-laipsnis"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "rodikliu-daugyba-vietoj-sudeties",
+      "neigiamas-pagrindas-laipsnyje",
+      "saknies-traukimas-is-neigiamo"
     ],
     "exerciseIds": [
       "laipsniai-ir-saknys-ex-001",
@@ -77,629 +65,470 @@
   },
   "theory": [
     {
-      "id": "laipsniai-ir-saknys-ivadas",
-      "title": "Įvadas",
+      "id": "laipsnio-samprata",
+      "title": "Kas yra laipsnis?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Laipsniai ir šaknys yra tema, kurioje mokomasi atpažinti pagrindinius laipsniai ir šaknys modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Matematikoje dažnai tenka tą patį skaičių dauginti iš savęs daug kartų. Pavyzdžiui, užrašas $2 \\cdot 2 \\cdot 2 \\cdot 2 \\cdot 2$ užima daug vietos. Kad būtų patogiau, sugalvotas trumpesnis užrašas – laipsnis."
+        },
+        {
+          "type": "definition",
+          "conceptId": "laipsnis",
+          "text": "[[laipsnis|Laipsnis]] – tai sandaugos, susidedančios iš vienodų daugiklių, trumpas užrašas. Užrašas $a^n$ skaitomas: „$a$ pakelta $n$-tuoju laipsniu“."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "laipsniai-ir-saknys-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
-        },
-        {
-          "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
-        },
-        {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
+          "text": "Šiame užraše skaičius $a$ vadinamas [[pagrindas|pagrindu]] (skaičius, kurį dauginame), o skaičius $n$ – [[rodiklis|rodikliu]] (kiek kartų tą skaičių dauginame)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+          "text": "Svarbu: bet koks skaičius (išskyrus nulį) pakeltas nuliniu laipsniu yra lygus 1 ($a^0 = 1$), o pirmuoju laipsniu – pačiam sau ($a^1 = a$)."
         }
       ]
     },
     {
-      "id": "laipsniai-ir-saknys-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Laipsniai ir šaknys sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "laipsniai-ir-saknys-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "laipsniai-ir-saknys-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "kvadratas-ir-kubas",
+      "title": "Kvadratas ir kubas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Antrasis ir trečiasis laipsniai geometrijoje turi specialius pavadinimus, nes jie tiesiogiai susiję su figūrų matavimais."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kvadratas",
+          "text": "Skaičiaus [[kvadratas|kvadratas]] ($a^2$) yra to skaičiaus sandauga iš savęs. Geometrijoje tai atitinka kvadrato, kurio kraštinė $a$, plotą."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kubas",
+          "text": "Skaičiaus [[kubas|kubas]] ($a^3$) yra trijų vienodų skaičių sandauga. Geometrijoje tai atitinka kubo, kurio briauna $a$, tūrį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, $5^2 = 25$ (kvadratas), o $5^3 = 125$ (kubas)."
+        }
+      ]
+    },
+    {
+      "id": "laipsniu-savybes-daugyba-dalyba",
+      "title": "Veiksmai su laipsniais: daugyba ir dalyba",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausia taisyklė: veiksmai su laipsnių rodikliais atliekami tik tada, kai laipsnių **pagrindai yra vienodi**."
+        },
+        {
+          "type": "method",
+          "text": "1. Dauginant laipsnius su vienodais pagrindais, pagrindas paliekamas tas pats, o rodikliai sudedami.",
+          "latex": "a^m \\cdot a^n = a^{m+n}"
+        },
+        {
+          "type": "method",
+          "text": "2. Dalijant laipsnius su vienodais pagrindais, pagrindas lieka tas pats, o rodikliai atimami.",
+          "latex": "\\frac{a^m}{a^n} = a^{m-n}"
+        },
+        {
+          "type": "warning",
+          "text": "Niekada nesudėkite laipsnių rodiklių, jei pagrindai skirtingi! Pavyzdžiui, $2^3 \\cdot 3^2$ negalima suprastinti į vieną laipsnį."
+        }
+      ]
+    },
+    {
+      "id": "laipsnio-kelimas-laipsniu",
+      "title": "Laipsnio kėlimas laipsniu ir sandaugos laipsnis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ką daryti, jei laipsnį vėl reikia kelti laipsniu? Arba jei laipsniu keliame visą skliaustelį?"
+        },
+        {
+          "type": "formula",
+          "formulaId": "laipsnio-kelimas-laipsniu",
+          "latex": "(a^m)^n = a^{m \\cdot n}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Keliant laipsnį laipsniu, rodikliai sudauginami. O keliant sandaugą, laipsniu keliamas kiekvienas daugiklis atskirai:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "sandaugos-laipsnis",
+          "latex": "(a \\cdot b)^n = a^n \\cdot b^n"
+        }
+      ]
+    },
+    {
+      "id": "kvadratine-saknis",
+      "title": "Kvadratinė šaknis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šaknies traukimas yra veiksmas, atvirkštinis kėlimui kvadratu. Jei kėlimas kvadratu klausia „kiek bus 5 kvadratu?“, tai šaknis klausia „kokį skaičių pakėlę kvadratu gausime 25?“."
+        },
+        {
+          "type": "definition",
+          "conceptId": "kvadratine-saknis",
+          "text": "Skaičiaus $a$ [[kvadratine-saknis|kvadratinė šaknis]] ($\\sqrt{a}$) yra toks neneigiamas skaičius, kurį pakėlę kvadratu gauname $a$."
+        },
+        {
+          "type": "note",
+          "text": "Kadangi bet koks skaičius (tiek teigiamas, tiek neigiamas), pakeltas kvadratu, tampa teigiamu, kvadratinės šaknies iš neigiamo skaičiaus ištraukti realiųjų skaičių aibėje negalima."
+        }
+      ]
+    },
+    {
+      "id": "neigiamas-pagrindas",
+      "title": "Neigiamas pagrindas ir laipsnis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Keliant neigiamą skaičių laipsniu, rezultato ženklas priklauso nuo rodiklio lyginumo:"
+        },
+        {
+          "type": "method",
+          "text": "- Jei rodiklis yra **lyginis** (2, 4, 6...), rezultatas visada teigiamas: $(-3)^2 = 9$.\n- Jei rodiklis yra **nelyginis** (1, 3, 5...), rezultatas lieka neigiamas: $(-3)^3 = -27$."
+        },
+        {
+          "type": "warning",
+          "text": "Būkite atsargūs su skliausteliais! $-3^2$ reiškia $-(3 \\cdot 3) = -9$, o $(-3)^2$ reiškia $(-3) \\cdot (-3) = 9$."
+        }
+      ]
+    },
+    {
+      "id": "standartine-israiska",
+      "title": "Standartinė skaičiaus išraiška",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Moksle (ypač astronomijoje ar mikrobiologijoje) susiduriame su milžiniškais arba mikroskopiniais skaičiais. Juos patogiau užrašyti naudojant 10-ies laipsnį."
+        },
+        {
+          "type": "definition",
+          "conceptId": "standartine-israiska",
+          "text": "Skaičiaus [[standartine-israiska|standartinė išraiška]] yra pavidalas $a \\cdot 10^n$, kur $1 \\le a < 10$, o $n$ yra sveikasis skaičius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, atstumas nuo Žemės iki Saulės ($150\\,000\\,000$ km) standartine išraiška užrašomas kaip $1,5 \\cdot 10^8$ km."
+        }
+      ]
+    },
+    {
+      "id": "veiksmu-tvarka-laipsniai",
+      "title": "Veiksmų tvarka",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atsiradus laipsniams ir šaknims, mūsų įprasta veiksmų tvarka pasipildo nauju prioritetu."
+        },
+        {
+          "type": "method",
+          "text": "1. Veiksmai skliausteliuose.\n2. Kėlimas laipsniu ir šaknies traukimas.\n3. Daugyba ir dalyba.\n4. Sudėtis ir atimtis."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
-      "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai laipsniai ir šaknys temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "indukcija"
-      ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
-        "q"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "teorema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "laipsnis",
       "title": "Laipsnis",
       "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
+      "shortDefinition": "Kartotinė daugyba.",
+      "intuition": "Dauginame tą patį skaičių daug kartų.",
+      "formal": "Reiškinys a^n, kur a yra pagrindas, o n - rodiklis.",
+      "notation": [
+        "a^n"
+      ],
       "relatedConceptIds": [
-        "saknis",
+        "pagrindas",
         "rodiklis"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "laipsniai-ir-saknys"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "saknis",
-      "title": "Šaknis",
+      "id": "kvadratine-saknis",
+      "title": "Kvadratinė šaknis",
       "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
+      "shortDefinition": "Atvirkštinis veiksmas kvadratui.",
+      "intuition": "Koks skaičius padaugintas iš savęs duoda šitą?",
+      "formal": "Skaičius x, kuriam x^2 = a (x >= 0).",
+      "notation": [
+        "√a"
+      ],
       "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
+        "kvadratas"
       ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodiklis",
-      "title": "Rodiklis",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
+      "appearsInTopicIds": [
+        "laipsniai-ir-saknys"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmas",
-      "title": "Logaritmas",
-      "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestine",
-      "title": "Išvestinė",
-      "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
-      "relatedConceptIds": [
-        "integralas",
-        "isvestine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
+      "id": "laipsniu-daugyba",
+      "title": "Laipsnių daugyba",
       "type": "formula",
-      "latex": "a_n",
+      "latex": "a^m \\cdot a^n = a^{m+n}",
       "conditions": [
-        "Sekoms"
-      ],
-      "variables": {
-        "n": "indeksas"
-      },
-      "explanation": "Žymi n-tąjį sekos narį.",
-      "relatedConceptIds": [
-        "seka"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
-      "relatedConceptIds": [
-        "aritmetine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
-      "conditions": [
-        "Kai santykis pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
-      },
-      "explanation": "Naudojama augimui ir mažėjimui.",
-      "relatedConceptIds": [
-        "geometrine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\log_a b=c \\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
+        "Vienodi pagrindai"
       ],
       "variables": {
         "a": "pagrindas",
-        "b": "skaičius"
+        "m, n": "rodikliai"
       },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
+      "explanation": "Dauginant vienodus pagrindus, rodikliai sudedami.",
       "relatedConceptIds": [
-        "logaritmas"
+        "laipsnis"
       ],
       "defaultSrs": true
     },
     {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
+      "id": "laipsniu-dalyba",
+      "title": "Laipsnių dalyba",
       "type": "formula",
-      "latex": "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
+      "latex": "a^m : a^n = a^{m-n}",
       "conditions": [
-        "Stačiajame trikampyje"
+        "Vienodi pagrindai",
+        "a ≠ 0"
       ],
       "variables": {
-        "α": "kampas"
+        "a": "pagrindas",
+        "m, n": "rodikliai"
       },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
+      "explanation": "Dalijant vienodus pagrindus, rodikliai atimami.",
       "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
-      "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "laipsnis"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
-      "type": "mistake",
+      "id": "rodikliu-daugyba-vietoj-sudeties",
+      "title": "Rodiklių daugyba vietoj sudėties",
+      "topicId": "laipsniai-ir-saknys",
       "conceptIds": [
         "laipsnis"
       ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
+      "wrongPattern": "a^2 * a^3 = a^6",
+      "whyItHappens": "Mokinys supainioja daugybos taisyklę su kėlimo laipsniu taisykle.",
+      "correction": "Dauginant pagrindus, rodiklius reikia SUDĖTI.",
+      "exampleWrong": "2^2 * 2^3 = 2^6",
+      "exampleCorrect": "2^2 * 2^3 = 2^5 = 32",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
-      "type": "mistake",
+      "id": "neigiamas-pagrindas-laipsnyje",
+      "title": "Skliaustelių nepaisymas su neigiamais skaičiais",
+      "topicId": "laipsniai-ir-saknys",
       "conceptIds": [
-        "integralas"
+        "laipsnis"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
+      "wrongPattern": "-3^2 = 9",
+      "whyItHappens": "Mokinys mano, kad minusas visada panaikinamas kvadratu.",
+      "correction": "Be skliaustelių kvadratas galioja tik skaičiui, o ne minusui.",
+      "exampleWrong": "-3^2 = 9",
+      "exampleCorrect": "-3^2 = -9; (-3)^2 = 9",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "laipsniai-ir-saknys-exmp-1",
-      "title": "Seka",
+      "id": "lp-exmp-1",
+      "title": "Laipsnių daugyba ir dalyba",
       "level": "easy",
-      "problem": "Jei a_n=2n+1, rask a_4.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Įstatome n=4.",
-          "latex": "9"
-        }
-      ],
-      "answer": "9"
-    },
-    {
-      "id": "laipsniai-ir-saknys-exmp-2",
-      "title": "Laipsnis",
-      "level": "easy",
-      "problem": "Apskaičiuok 2^5.",
+      "problem": "Suprastinkite reiškinį: $3^7 \\cdot 3^5 : 3^8$.",
       "conceptIds": [
         "laipsnis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "32.",
-          "latex": "32"
+          "text": "Pirmiausia sudauginame laipsnius (sudedame rodiklius).",
+          "latex": "3^{7+5} = 3^{12}"
+        },
+        {
+          "text": "Tada padalijame (atimame rodiklius).",
+          "latex": "3^{12-8} = 3^4"
+        },
+        {
+          "text": "Apskaičiuojame galutinę reikšmę.",
+          "latex": "3^4 = 3 \\cdot 3 \\cdot 3 \\cdot 3 = 81"
         }
       ],
-      "answer": "32"
+      "answer": "81"
     },
     {
-      "id": "laipsniai-ir-saknys-exmp-3",
-      "title": "Logaritmas",
-      "level": "medium",
-      "problem": "Koks log_2 8?",
+      "id": "lp-exmp-2",
+      "title": "Neigiamo skaičiaus kėlimas laipsniu",
+      "level": "easy",
+      "problem": "Apskaičiuokite: $(-2)^4 + (-2)^3$.",
       "conceptIds": [
-        "logaritmas"
+        "laipsnis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3.",
-          "latex": "3"
+          "text": "Kelime lyginiu laipsniu (minusas dingsta).",
+          "latex": "(-2)^4 = 16"
+        },
+        {
+          "text": "Kelime nelyginiu laipsniu (minusas lieka).",
+          "latex": "(-2)^3 = -8"
+        },
+        {
+          "text": "Sudedame gautus rezultatus.",
+          "latex": "16 + (-8) = 8"
         }
       ],
-      "answer": "3"
+      "answer": "8"
     },
     {
-      "id": "laipsniai-ir-saknys-exmp-4",
-      "title": "Trigonometrinis santykis",
+      "id": "lp-exmp-3",
+      "title": "Kvadratinė šaknis reiškinyje",
       "level": "medium",
-      "problem": "Stačiajame trikampyje priešpriešinė 3, įžambinė 5. Rask sinusą.",
+      "problem": "Apskaičiuokite: $2 \\cdot \\sqrt{64} - 3^2$.",
       "conceptIds": [
-        "sinusas",
-        "kosinusas"
+        "kvadratine-saknis",
+        "kvadratas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3/5.",
-          "latex": "3/5"
+          "text": "Ištraukiame šaknį.",
+          "latex": "\\sqrt{64} = 8"
+        },
+        {
+          "text": "Pakeliame kvadratu.",
+          "latex": "3^2 = 9"
+        },
+        {
+          "text": "Atliekame daugybą ir atimtį pagal tvarką.",
+          "latex": "2 \\cdot 8 - 9 = 16 - 9 = 7"
         }
       ],
-      "answer": "3/5"
+      "answer": "7"
     },
     {
-      "id": "laipsniai-ir-saknys-exmp-5",
-      "title": "Integralas",
+      "id": "lp-exmp-4",
+      "title": "Laipsnio kėlimas laipsniu",
+      "level": "medium",
+      "problem": "Suprastinkite ir užrašykite vienu laipsniu: $(5^3)^4 \\cdot 5^2$.",
+      "conceptIds": [
+        "laipsnis"
+      ],
+      "steps": [
+        {
+          "text": "Pakeliame laipsnį laipsniu (dauginame rodiklius).",
+          "latex": "(5^3)^4 = 5^{12}"
+        },
+        {
+          "text": "Dauginame gautą rezultatą (sudedame rodiklius).",
+          "latex": "5^{12} \\cdot 5^2 = 5^{14}"
+        }
+      ],
+      "answer": "$5^{14}$"
+    },
+    {
+      "id": "lp-exmp-5",
+      "title": "Standartinė išraiška",
+      "level": "medium",
+      "problem": "Užrašykite skaičių $420\\,000$ standartine išraiška.",
+      "conceptIds": [
+        "standartine-israiska"
+      ],
+      "steps": [
+        {
+          "text": "Padedame kablelį po pirmo skaitmens, kad gautume skaičių tarp 1 ir 10.",
+          "latex": "4,2"
+        },
+        {
+          "text": "Suskaičiuojame, kiek vietų kablelis pasislinko į kairę.",
+          "latex": "\\text{Pasislinko 5 vietas.}"
+        },
+        {
+          "text": "Užrašome su 10-ies laipsniu.",
+          "latex": "4,2 \\cdot 10^5"
+        }
+      ],
+      "answer": "$4,2 \\cdot 10^5$"
+    },
+    {
+      "id": "lp-exmp-6",
+      "title": "Daugyba naudojant standartinę išraišką",
       "level": "hard",
-      "problem": "Rask ∫2x dx.",
+      "problem": "Apskaičiuokite sandaugą $(2 \\cdot 10^3) \\cdot (3 \\cdot 10^4)$ ir atsakymą pateikite standartine išraiška.",
       "conceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "standartine-israiska"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "x² + C.",
-          "latex": "x^2 + C"
+          "text": "Sudauginame skaičius prieš laipsnius.",
+          "latex": "2 \\cdot 3 = 6"
+        },
+        {
+          "text": "Sudauginame 10-ies laipsnius (sudedame rodiklius).",
+          "latex": "10^3 \\cdot 10^4 = 10^7"
+        },
+        {
+          "text": "Sujungiame į standartinę išraišką.",
+          "latex": "6 \\cdot 10^7"
         }
       ],
-      "answer": "x² + C"
+      "answer": "$6 \\cdot 10^7$"
+    },
+    {
+      "id": "lp-exmp-7",
+      "title": "Atvirkštinis uždavinys su kvadratu",
+      "level": "hard",
+      "problem": "Kvadrato plotas yra $144 \\text{ cm}^2$. Koks yra šio kvadrato perimetras?",
+      "conceptIds": [
+        "kvadratine-saknis"
+      ],
+      "steps": [
+        {
+          "text": "Randame kvadrato kraštinę ištraukę šaknį iš ploto.",
+          "latex": "a = \\sqrt{144} = 12 \\text{ cm}"
+        },
+        {
+          "text": "Apskaičiuojame perimetrą dauginant kraštinę iš 4.",
+          "latex": "P = 4 \\cdot 12 = 48 \\text{ cm}"
+        }
+      ],
+      "answer": "48 cm"
+    },
+    {
+      "id": "lp-exmp-8",
+      "title": "Sudėtingas reiškinys su trupmena",
+      "level": "hard",
+      "problem": "Apskaičiuokite: $\\frac{4^5 \\cdot 2^6}{8^4}$.",
+      "conceptIds": [
+        "laipsnis"
+      ],
+      "steps": [
+        {
+          "text": "Suvienodiname visus pagrindus (paverčiame į pagrindą 2).",
+          "latex": "4^5 = (2^2)^5 = 2^{10}; \\quad 8^4 = (2^3)^4 = 2^{12}"
+        },
+        {
+          "text": "Įrašome į pradinį reiškinį.",
+          "latex": "\\frac{2^{10} \\cdot 2^6}{2^{12}}"
+        },
+        {
+          "text": "Suprastiname skaitiklį.",
+          "latex": "\\frac{2^{16}}{2^{12}}"
+        },
+        {
+          "text": "Atimame rodiklius.",
+          "latex": "2^4 = 16"
+        }
+      ],
+      "answer": "16"
     }
   ],
   "exercises": [
@@ -707,527 +536,37 @@
       "id": "laipsniai-ir-saknys-ex-001",
       "topicId": "laipsniai-ir-saknys",
       "grade": 7,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskaičiuok a_3, kai a_n=2n+1.",
+      "statement": "Apskaičiuok 3 pakeltą 4-uoju laipsniu.",
       "answer": {
         "kind": "numeric",
-        "value": 7,
+        "value": 81,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Įstatyk n=3.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Daugink 3 * 3 * 3 * 3.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "a_3=7",
-          "latex": "7"
+          "text": "3*3=9, 9*3=27, 27*3=81.",
+          "latex": "3^4 = 81"
         }
       ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
+      "answerText": "81",
+      "estimatedSeconds": 30
     },
     {
       "id": "laipsniai-ir-saknys-ex-002",
       "topicId": "laipsniai-ir-saknys",
       "grade": 7,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 2.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-003",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 3.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-004",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-005",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-006",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-007",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-008",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-009",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-010",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-011",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-012",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-013",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-014",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-015",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 15.",
+      "statement": "Apskaičiuok: √49 + 2³.",
       "answer": {
         "kind": "numeric",
         "value": 15,
@@ -1236,218 +575,108 @@
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "√49 = 7. 2³ = 8.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
+          "text": "7 + 8 = 15.",
           "latex": "15"
         }
       ],
       "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 35
     },
     {
-      "id": "laipsniai-ir-saknys-ex-016",
+      "id": "laipsniai-ir-saknys-ex-003",
       "topicId": "laipsniai-ir-saknys",
       "grade": 7,
-      "level": "hard",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 16.",
+      "statement": "Suprastink 2^5 * 2^4 ir parašyk rodiklį n, jei rezultatas yra 2^n.",
       "answer": {
         "kind": "numeric",
-        "value": 16,
+        "value": 9,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Dauginant rodiklius reikia sudėti.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
+          "text": "5 + 4 = 9.",
+          "latex": "2^9"
         }
       ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "9",
+      "estimatedSeconds": 20
     },
     {
-      "id": "laipsniai-ir-saknys-ex-017",
+      "id": "laipsniai-ir-saknys-ex-004",
       "topicId": "laipsniai-ir-saknys",
       "grade": 7,
-      "level": "hard",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 17.",
+      "statement": "Kokia yra (-5)² reikšmė?",
       "answer": {
         "kind": "numeric",
-        "value": 17,
+        "value": 25,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Neigiamas skaičius kvadratu yra teigiamas.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
+          "text": "(-5) * (-5) = 25.",
+          "latex": "25"
         }
       ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "25",
+      "estimatedSeconds": 15
     },
     {
-      "id": "laipsniai-ir-saknys-ex-018",
+      "id": "laipsniai-ir-saknys-ex-005",
       "topicId": "laipsniai-ir-saknys",
       "grade": 7,
-      "level": "hard",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 18.",
+      "statement": "Apskaičiuok (2²)^3.",
       "answer": {
         "kind": "numeric",
-        "value": 18,
+        "value": 64,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Tai tas pats kas 2^6.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
+          "text": "2*3=6. 2^6 = 64.",
+          "latex": "64"
         }
       ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-019",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "laipsniai-ir-saknys-ex-020",
-      "topicId": "laipsniai-ir-saknys",
-      "grade": 7,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Laipsniai ir šaknys: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "64",
+      "estimatedSeconds": 40
     }
   ],
   "tests": [
     {
-      "id": "laipsniai-ir-saknys-test-topic",
-      "title": "Laipsniai ir šaknys testas",
+      "id": "laipsniai-ir-saknys-test-1",
+      "title": "Laipsniai ir šaknys: Pagrindai",
       "scope": "topic",
       "topicIds": [
         "laipsniai-ir-saknys"
@@ -1457,140 +686,45 @@
         "laipsniai-ir-saknys-ex-002",
         "laipsniai-ir-saknys-ex-003",
         "laipsniai-ir-saknys-ex-004",
-        "laipsniai-ir-saknys-ex-005",
-        "laipsniai-ir-saknys-ex-006",
-        "laipsniai-ir-saknys-ex-007",
-        "laipsniai-ir-saknys-ex-008"
+        "laipsniai-ir-saknys-ex-005"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "laipsniai-ir-saknys-test-challenge",
-      "title": "Laipsniai ir šaknys iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "laipsniai-ir-saknys"
-      ],
-      "exerciseIds": [
-        "laipsniai-ir-saknys-ex-009",
-        "laipsniai-ir-saknys-ex-010",
-        "laipsniai-ir-saknys-ex-011",
-        "laipsniai-ir-saknys-ex-012",
-        "laipsniai-ir-saknys-ex-013",
-        "laipsniai-ir-saknys-ex-014",
-        "laipsniai-ir-saknys-ex-015",
-        "laipsniai-ir-saknys-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "timeLimitSeconds": 1200
     }
   ],
   "srsCards": [
     {
-      "id": "laipsniai-ir-saknys-srs-seka",
+      "id": "srs-laipsniu-daugyba",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "laipsniai-ir-saknys-srs-aritmetine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "laipsniai-ir-saknys-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "laipsniai-ir-saknys-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "laipsniai-ir-saknys-srs-sekos-forma",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
+      "front": "Laipsnių daugyba: a^m * a^n",
+      "back": "a^{m+n}",
       "conceptIds": [
-        "sekos-forma"
+        "laipsnis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "laipsniai-ir-saknys-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
+      "id": "srs-laipsniu-dalyba",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
+      "front": "Laipsnių dalyba: a^m / a^n",
+      "back": "a^{m-n}",
       "conceptIds": [
-        "aritmetines-progresijos-formule"
+        "laipsnis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "laipsniai-ir-saknys-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
+      "id": "srs-kv-saknis",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kas yra kvadratinė šaknis?",
+      "back": "Skaičius, kurį pakėlus kvadratu gaunamas duotasis skaičius.",
       "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
+        "kvadratine-saknis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "laipsniai-ir-saknys-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

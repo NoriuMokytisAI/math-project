@@ -13,8 +13,13 @@
     "level": "curriculum",
     "order": 5,
     "estimatedStudyMinutes": 180,
-    "prerequisiteTopicIds": ["geometrijos-ir-matavimu-pradmenys", "transformacijos-ir-koordinates"],
-    "nextTopicIds": ["vektoriai-erdveje"],
+    "prerequisiteTopicIds": [
+      "geometrijos-ir-matavimu-pradmenys",
+      "transformacijos-ir-koordinates"
+    ],
+    "nextTopicIds": [
+      "vektoriai-erdveje"
+    ],
     "conceptIds": [
       "vektorius",
       "vektoriaus-modulis",
@@ -251,9 +256,18 @@
       "shortDefinition": "Kryptinė atkarpa, turinti ilgį ir kryptį.",
       "intuition": "Tai tarsi nurodymas: 'eik tiek metrų šia kryptimi'.",
       "formal": "Vektorius yra elementas vektorinėje erdvėje, geometriškai vaizduojamas kaip orientuota atkarpa.",
-      "notation": ["\\vec{a}", "\\vec{AB}"],
-      "relatedConceptIds": ["kryptis", "vektoriaus-modulis", "vektoriu-suma"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "\\vec{a}",
+        "\\vec{AB}"
+      ],
+      "relatedConceptIds": [
+        "kryptis",
+        "vektoriaus-modulis",
+        "vektoriu-suma"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -263,9 +277,16 @@
       "shortDefinition": "Vektoriaus ilgis.",
       "intuition": "Atstumas nuo vektoriaus pradžios iki pabaigos.",
       "formal": "Vektoriaus $\\vec{a}(x, y)$ modulis plokštumoje yra $|\\vec{a}| = \\sqrt{x^2 + y^2}$.",
-      "notation": ["|\\vec{a}|"],
-      "relatedConceptIds": ["vektorius", "skaliarine-sandauga"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "|\\vec{a}|"
+      ],
+      "relatedConceptIds": [
+        "vektorius",
+        "skaliarine-sandauga"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -275,9 +296,16 @@
       "shortDefinition": "Dviejų vektorių daugyba, kurios rezultatas yra skaičius.",
       "intuition": "Parodo, kiek vienas vektorius 'eina' kito vektoriaus kryptimi.",
       "formal": "Skaliarinė sandauga $\\vec{a} \\cdot \\vec{b}$ apibrėžiama kaip $|\\vec{a}||\\vec{b}|\\cos \\theta$.",
-      "notation": ["\\vec{a} \\cdot \\vec{b}"],
-      "relatedConceptIds": ["statmeni-vektoriai", "kampas-tarp-vektoriu"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "\\vec{a} \\cdot \\vec{b}"
+      ],
+      "relatedConceptIds": [
+        "statmeni-vektoriai",
+        "kampas-tarp-vektoriu"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -287,8 +315,13 @@
       "shortDefinition": "Vektoriai, esantys lygiagrečiose tiesėse arba vienoje tiesėje.",
       "intuition": "Vektoriai, kurie rodo ta pačia arba tiksliai priešinga kryptimi.",
       "formal": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra kolinearūs, jei $\\vec{a} = k\\vec{b}$, kur $k$ yra skaliaras.",
-      "relatedConceptIds": ["vektorius", "kryptis"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "vektorius",
+        "kryptis"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -298,9 +331,16 @@
       "shortDefinition": "Vektoriai, tarp kurių kampas yra 90 laipsnių.",
       "intuition": "Vektoriai, kurie sudaro statų kampą.",
       "formal": "Nenuliniai vektoriai $\\vec{a}$ ir $\\vec{b}$ yra statmeni tada ir tik tada, kai $\\vec{a} \\cdot \\vec{b} = 0$.",
-      "notation": ["\\vec{a} \\perp \\vec{b}"],
-      "relatedConceptIds": ["skaliarine-sandauga", "kampas-tarp-vektoriu"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "\\vec{a} \\perp \\vec{b}"
+      ],
+      "relatedConceptIds": [
+        "skaliarine-sandauga",
+        "kampas-tarp-vektoriu"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -310,9 +350,17 @@
       "shortDefinition": "Vektorius, kurio ilgis lygus 1.",
       "intuition": "Vektorius, rodantis tik kryptį be 'svorio'.",
       "formal": "Vektorius $\\vec{e}$ yra vienetinis, jei $|\\vec{e}| = 1$. Koordinačių ašių vienetiniai vektoriai žymimi $\\vec{i}(1, 0)$ ir $\\vec{j}(0, 1)$.",
-      "notation": ["\\vec{e}", "\\vec{i}", "\\vec{j}"],
-      "relatedConceptIds": ["vektoriaus-modulis"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "\\vec{e}",
+        "\\vec{i}",
+        "\\vec{j}"
+      ],
+      "relatedConceptIds": [
+        "vektoriaus-modulis"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -322,9 +370,15 @@
       "shortDefinition": "Vektorius, kurio pradžia ir pabaiga sutampa.",
       "intuition": "Vektorius, kuris niekur 'nejuda'.",
       "formal": "Vektorius, kurio visos koordinatės yra 0, žymimas $\\vec{0}$. Jo modulis yra 0.",
-      "notation": ["\\vec{0}"],
-      "relatedConceptIds": ["vektorius"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "notation": [
+        "\\vec{0}"
+      ],
+      "relatedConceptIds": [
+        "vektorius"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": false
     },
     {
@@ -333,8 +387,13 @@
       "type": "concept",
       "shortDefinition": "Vektoriaus orientacija erdvėje.",
       "intuition": "Kur vektorius 'žiūri'.",
-      "relatedConceptIds": ["vektorius", "kolinearus-vektoriai"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "vektorius",
+        "kolinearus-vektoriai"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": false
     },
     {
@@ -344,8 +403,13 @@
       "shortDefinition": "Vektorių sudėjimo operacija.",
       "intuition": "Bendras poslinkis atlikus du judesius iš eilės.",
       "formal": "Jei $\\vec{a}(x_1, y_1)$ ir $\\vec{b}(x_2, y_2)$, tai $\\vec{a}+\\vec{b} = (x_1+x_2, y_1+y_2)$.",
-      "relatedConceptIds": ["vektorius", "vektoriu-skirtumas"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "vektorius",
+        "vektoriu-skirtumas"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -355,8 +419,13 @@
       "shortDefinition": "Vektorių atimties operacija.",
       "intuition": "Poslinkis, kurį pridėjus prie antrojo vektoriaus, gaunamas pirmasis.",
       "formal": "Jei $\\vec{a}(x_1, y_1)$ ir $\\vec{b}(x_2, y_2)$, tai $\\vec{a}-\\vec{b} = (x_1-x_2, y_1-y_2)$.",
-      "relatedConceptIds": ["vektorius", "vektoriu-suma"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "vektorius",
+        "vektoriu-suma"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -366,8 +435,13 @@
       "shortDefinition": "Vektoriaus ilgio keitimas išlaikant arba pakeičiant kryptį priešinga.",
       "intuition": "Vektoriaus 'ištęsimas' arba 'suglaudimas'.",
       "formal": "Jei $\\vec{a}(x, y)$, tai $k\\vec{a} = (kx, ky)$.",
-      "relatedConceptIds": ["vektorius", "kolinearus-vektoriai"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "vektorius",
+        "kolinearus-vektoriai"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     },
     {
@@ -377,8 +451,13 @@
       "shortDefinition": "Kampas tarp dviejų iš vieno taško atidėtų vektorių.",
       "intuition": "Posūkio kampas nuo vienos krypties iki kitos.",
       "formal": "Kampas $\\phi \\in [0^\\circ; 180^\\circ]$.",
-      "relatedConceptIds": ["skaliarine-sandauga", "statmeni-vektoriai"],
-      "appearsInTopicIds": ["vektoriai-plokstumoje"],
+      "relatedConceptIds": [
+        "skaliarine-sandauga",
+        "statmeni-vektoriai"
+      ],
+      "appearsInTopicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "defaultSrs": true
     }
   ],
@@ -387,7 +466,9 @@
       "id": "vektoriaus-modulis-formule",
       "title": "Vektoriaus modulio formulė",
       "latex": "|\\vec{a}| = \\sqrt{x^2 + y^2}",
-      "conditions": ["Vektorius duotas koordinatėmis $\\vec{a}(x, y)$"],
+      "conditions": [
+        "Vektorius duotas koordinatėmis $\\vec{a}(x, y)$"
+      ],
       "variables": {
         "x": "vektoriaus abscisė (x koordinatė)",
         "y": "vektoriaus ordinatė (y koordinatė)",
@@ -400,7 +481,10 @@
       "id": "skaliarine-sandauga-koord",
       "title": "Skaliarinė sandauga koordinatėmis",
       "latex": "\\vec{a} \\cdot \\vec{b} = x_1 x_2 + y_1 y_2",
-      "conditions": ["$\\vec{a}=(x_1, y_1)$", "$\\vec{b}=(x_2, y_2)$"],
+      "conditions": [
+        "$\\vec{a}=(x_1, y_1)$",
+        "$\\vec{b}=(x_2, y_2)$"
+      ],
       "variables": {
         "x_1, y_1": "pirmojo vektoriaus koordinatės",
         "x_2, y_2": "antrojo vektoriaus koordinatės"
@@ -412,7 +496,10 @@
       "id": "kampas-tarp-vektoriu-formule",
       "title": "Kampas tarp vektorių",
       "latex": "\\cos \\phi = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}",
-      "conditions": ["$\\vec{a} \\neq \\vec{0}$", "$\\vec{b} \\neq \\vec{0}$"],
+      "conditions": [
+        "$\\vec{a} \\neq \\vec{0}$",
+        "$\\vec{b} \\neq \\vec{0}$"
+      ],
       "variables": {
         "\\phi": "kampas tarp vektorių",
         "\\vec{a} \\cdot \\vec{b}": "skaliarinė sandauga",
@@ -426,7 +513,9 @@
     {
       "id": "skaliarine-sandauga-kaip-vektorius",
       "title": "Skaliarinę sandaugą laiko vektoriumi",
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "wrongPattern": "Mokinys bando rašyti skaliarinės sandaugos rezultatą su koordinatėmis.",
       "whyItHappens": "Painioja su vektorių sudėtimi ar daugyba iš skaičiaus.",
       "correction": "Skaliarinė sandauga visada yra skaičius (skaliaras), o ne vektorius.",
@@ -437,7 +526,9 @@
     {
       "id": "vektoriu-atimties-kryptis",
       "title": "Neteisinga vektorių skirtumo kryptis",
-      "conceptIds": ["vektoriu-skirtumas"],
+      "conceptIds": [
+        "vektoriu-skirtumas"
+      ],
       "wrongPattern": "Brėžiant $\\vec{a}-\\vec{b}$, rodyklė nukreipiama į $\\vec{b}$.",
       "whyItHappens": "Nesuvokiama, kuris vektorius yra 'sumažinamas', o kuris 'atimančias'.",
       "correction": "Skirtumo $\\vec{a}-\\vec{b}$ rodyklė visada turi būti nukreipta į tą vektorių, iš kurio atimame (į $\\vec{a}$).",
@@ -448,7 +539,9 @@
     {
       "id": "modulio-skaiciavimo-klaida",
       "title": "Klaida skaičiuojant modulį su neigiamomis koordinatėmis",
-      "conceptIds": ["vektoriaus-modulis"],
+      "conceptIds": [
+        "vektoriaus-modulis"
+      ],
       "wrongPattern": "$|\\vec{a}| = \\sqrt{-2^2 + 3^2} = \\sqrt{-4 + 9}$",
       "whyItHappens": "Pamirštama, kad keliant neigiamą skaičių kvadratu, gaunamas teigiamas skaičius.",
       "correction": "Koordinatę $x$ keliant kvadratu, net jei ji neigiama, rezultatas $x^2$ yra $\\ge 0$.",
@@ -463,7 +556,10 @@
       "title": "Vektoriaus koordinačių ir modulio radimas",
       "level": "easy",
       "problem": "Raskite vektoriaus $\\vec{AB}$ koordinates ir ilgį, jei $A(2, -1)$ ir $B(5, 3)$.",
-      "conceptIds": ["vektorius", "vektoriaus-modulis"],
+      "conceptIds": [
+        "vektorius",
+        "vektoriaus-modulis"
+      ],
       "steps": [
         {
           "text": "Apskaičiuojame koordinates atimdami pradžios taško koordinates iš pabaigos taško koordinačių.",
@@ -481,7 +577,10 @@
       "title": "Vektorių sudėtis ir skaliarinė daugyba",
       "level": "medium",
       "problem": "Duoti vektoriai $\\vec{a}(2, -3)$ ir $\\vec{b}(1, 4)$. Raskite vektoriaus $\\vec{c} = 2\\vec{a} + 3\\vec{b}$ koordinates.",
-      "conceptIds": ["vektoriu-suma", "vektoriaus-daugyba-is-skaiciaus"],
+      "conceptIds": [
+        "vektoriu-suma",
+        "vektoriaus-daugyba-is-skaiciaus"
+      ],
       "steps": [
         {
           "text": "Padauginame vektorių $\\vec{a}$ iš 2.",
@@ -503,7 +602,10 @@
       "title": "Skaliarinė sandauga ir kampas",
       "level": "medium",
       "problem": "Apskaičiuokite skaliarinę sandaugą $\\vec{a} \\cdot \\vec{b}$, jei $|\\vec{a}|=4$, $|\\vec{b}|=5$ ir kampas tarp jų $\\alpha = 60^\\circ$.",
-      "conceptIds": ["skaliarine-sandauga", "kampas-tarp-vektoriu"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "kampas-tarp-vektoriu"
+      ],
       "steps": [
         {
           "text": "Naudojame geometrinį skaliarinės sandaugos apibrėžimą.",
@@ -521,7 +623,10 @@
       "title": "Statmenumo sąlygos taikymas",
       "level": "medium",
       "problem": "Su kuria m reikšme vektoriai $\\vec{a}(m, 4)$ ir $\\vec{b}(3, -6)$ yra statmeni?",
-      "conceptIds": ["statmeni-vektoriai", "skaliarine-sandauga"],
+      "conceptIds": [
+        "statmeni-vektoriai",
+        "skaliarine-sandauga"
+      ],
       "steps": [
         {
           "text": "Vektoriai are statmeni, kai jų skaliarinė sandauga lygi nuliui.",
@@ -539,14 +644,15 @@
       "title": "Kolinearumo sąlyga",
       "level": "hard",
       "problem": "Ar vektoriai $\\vec{a}(2, -3)$ ir $\\vec{b}(-4, 6)$ yra kolinearūs? Jei taip, kaip jie nukreipti?",
-      "conceptIds": ["kolinearus-vektoriai"],
+      "conceptIds": [
+        "kolinearus-vektoriai"
+      ],
       "steps": [
         {
           "text": "Tikriname koordinačių proporcingumą.",
           "latex": "\\frac{-4}{2} = -2; \\quad \\frac{6}{-3} = -2"
         },
         {
-          "text": "Kadangi santykiai lygūs ($k = -2$), vektoriai yra kolinearūs.",
           "text": "Kadangi $k < 0$, vektoriai yra nukreipti priešingomis kryptimis."
         }
       ],
@@ -558,603 +664,1006 @@
       "id": "vektoriai-plokstumoje-ex-001",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Raskite vektoriaus $\\vec{a}(8, 6)$ ilgį.",
-      "answer": { "kind": "numeric", "value": 10 },
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
       "answerText": "10",
       "hints": [
-        { "order": 1, "text": "Naudokite formulę $|\\vec{a}| = \\sqrt{x^2 + y^2}$." },
-        { "order": 2, "text": "Apskaičiuokite $\\sqrt{8^2 + 6^2}$." }
+        {
+          "order": 1,
+          "text": "Naudokite formulę $|\\vec{a}| = \\sqrt{x^2 + y^2}$."
+        },
+        {
+          "order": 2,
+          "text": "Apskaičiuokite $\\sqrt{8^2 + 6^2}$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "|\\vec{a}| = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = 10" }
+        {
+          "latex": "|\\vec{a}| = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = 10"
+        }
       ],
-      "conceptIds": ["vektoriaus-modulis"],
+      "conceptIds": [
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 40
     },
     {
       "id": "vektoriai-plokstumoje-ex-002",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kokia yra vektoriaus $\\vec{AB}$ koordinatė x, jei $A(1, 5)$ ir $B(4, 2)$?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "5" },
-          { "id": "b", "text": "3" },
-          { "id": "c", "text": "-3" },
-          { "id": "d", "text": "4" }
+          {
+            "id": "a",
+            "text": "5"
+          },
+          {
+            "id": "b",
+            "text": "3"
+          },
+          {
+            "id": "c",
+            "text": "-3"
+          },
+          {
+            "id": "d",
+            "text": "4"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "answerText": "3",
       "hints": [
-        { "order": 1, "text": "Vektoriaus koordinatė randama iš pabaigos taško atimant pradžios tašką: $x_B - x_A$." }
+        {
+          "order": 1,
+          "text": "Vektoriaus koordinatė randama iš pabaigos taško atimant pradžios tašką: $x_B - x_A$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "x = 4 - 1 = 3" }
+        {
+          "latex": "x = 4 - 1 = 3"
+        }
       ],
-      "conceptIds": ["vektorius"],
+      "conceptIds": [
+        "vektorius"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-003",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskaičiuokite vektorių $\\vec{a}(2, 5)$ ir $\\vec{b}(3, 1)$ sumos $\\vec{a}+\\vec{b}$ ordinatę (y koordinatę).",
-      "answer": { "kind": "numeric", "value": 6 },
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
       "answerText": "6",
       "hints": [
-        { "order": 1, "text": "Sudedant vektorius, sudedamos jų atitinkamos koordinatės." }
+        {
+          "order": 1,
+          "text": "Sudedant vektorius, sudedamos jų atitinkamos koordinatės."
+        }
       ],
       "solutionSteps": [
-        { "latex": "y = 5 + 1 = 6" }
+        {
+          "latex": "y = 5 + 1 = 6"
+        }
       ],
-      "conceptIds": ["vektoriu-suma"],
+      "conceptIds": [
+        "vektoriu-suma"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-004",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Duotas vektorius $\\vec{a}(4, -2)$. Raskite vektoriaus $3\\vec{a}$ pirmąją koordinatę.",
-      "answer": { "kind": "numeric", "value": 12 },
+      "answer": {
+        "kind": "numeric",
+        "value": 12
+      },
       "answerText": "12",
       "hints": [
-        { "order": 1, "text": "Dauginant vektorių iš skaičiaus, kiekviena koordinatė dauginama iš to skaičiaus." }
+        {
+          "order": 1,
+          "text": "Dauginant vektorių iš skaičiaus, kiekviena koordinatė dauginama iš to skaičiaus."
+        }
       ],
       "solutionSteps": [
-        { "latex": "x = 3 \\cdot 4 = 12" }
+        {
+          "latex": "x = 3 \\cdot 4 = 12"
+        }
       ],
-      "conceptIds": ["vektoriaus-daugyba-is-skaiciaus"],
+      "conceptIds": [
+        "vektoriaus-daugyba-is-skaiciaus"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-005",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskaičiuokite skaliarinę sandaugą $\\vec{a} \\cdot \\vec{b}$, jei $\\vec{a}(2, 3)$ ir $\\vec{b}(4, 1)$.",
-      "answer": { "kind": "numeric", "value": 11 },
+      "answer": {
+        "kind": "numeric",
+        "value": 11
+      },
       "answerText": "11",
       "hints": [
-        { "order": 1, "text": "Naudokite formulę $x_1 x_2 + y_1 y_2$." }
+        {
+          "order": 1,
+          "text": "Naudokite formulę $x_1 x_2 + y_1 y_2$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "2 \\cdot 4 + 3 \\cdot 1 = 8 + 3 = 11" }
+        {
+          "latex": "2 \\cdot 4 + 3 \\cdot 1 = 8 + 3 = 11"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "estimatedSeconds": 45
     },
     {
       "id": "vektoriai-plokstumoje-ex-006",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kuris iš šių vektorių yra vienetinis?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "$\\vec{a}(1, 1)$" },
-          { "id": "b", "text": "$\\vec{b}(0, 1)$" },
-          { "id": "c", "text": "$\\vec{c}(1, -1)$" },
-          { "id": "d", "text": "$\\vec{d}(0, 0)$" }
+          {
+            "id": "a",
+            "text": "$\\vec{a}(1, 1)$"
+          },
+          {
+            "id": "b",
+            "text": "$\\vec{b}(0, 1)$"
+          },
+          {
+            "id": "c",
+            "text": "$\\vec{c}(1, -1)$"
+          },
+          {
+            "id": "d",
+            "text": "$\\vec{d}(0, 0)$"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "answerText": "$\\vec{b}(0, 1)$",
       "hints": [
-        { "order": 1, "text": "Vienetinio vektoriaus ilgis turi būti lygus 1." }
+        {
+          "order": 1,
+          "text": "Vienetinio vektoriaus ilgis turi būti lygus 1."
+        }
       ],
       "solutionSteps": [
-        { "latex": "|(0, 1)| = \\sqrt{0^2 + 1^2} = 1" }
+        {
+          "latex": "|(0, 1)| = \\sqrt{0^2 + 1^2} = 1"
+        }
       ],
-      "conceptIds": ["vienetinis-vektorius"],
+      "conceptIds": [
+        "vienetinis-vektorius"
+      ],
       "estimatedSeconds": 40
     },
     {
       "id": "vektoriai-plokstumoje-ex-007",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Apskaičiuokite $|\\vec{a}|^2$, jei $\\vec{a}(3, -4)$.",
-      "answer": { "kind": "numeric", "value": 25 },
+      "answer": {
+        "kind": "numeric",
+        "value": 25
+      },
       "answerText": "25",
       "hints": [
-        { "order": 1, "text": "Vektoriaus modulio kvadratas lygus jo koordinačių kvadratų sumai." }
+        {
+          "order": 1,
+          "text": "Vektoriaus modulio kvadratas lygus jo koordinačių kvadratų sumai."
+        }
       ],
       "solutionSteps": [
-        { "latex": "3^2 + (-4)^2 = 9 + 16 = 25" }
+        {
+          "latex": "3^2 + (-4)^2 = 9 + 16 = 25"
+        }
       ],
-      "conceptIds": ["vektoriaus-modulis"],
+      "conceptIds": [
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-008",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Duotas $\\vec{a}(1, 2)$ ir $\\vec{b}(2, 3)$. Raskite vektoriaus $\\vec{a}-\\vec{b}$ abscisę.",
-      "answer": { "kind": "numeric", "value": -1 },
+      "answer": {
+        "kind": "numeric",
+        "value": -1
+      },
       "answerText": "-1",
       "hints": [
-        { "order": 1, "text": "Atimkite atitinkamas x koordinates." }
+        {
+          "order": 1,
+          "text": "Atimkite atitinkamas x koordinates."
+        }
       ],
       "solutionSteps": [
-        { "latex": "1 - 2 = -1" }
+        {
+          "latex": "1 - 2 = -1"
+        }
       ],
-      "conceptIds": ["vektoriu-skirtumas"],
+      "conceptIds": [
+        "vektoriu-skirtumas"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-009",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kokia yra kampo tarp statmenų vektorių kosinuso reikšmė?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "1" },
-          { "id": "b", "text": "-1" },
-          { "id": "c", "text": "0" },
-          { "id": "d", "text": "0,5" }
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "-1"
+          },
+          {
+            "id": "c",
+            "text": "0"
+          },
+          {
+            "id": "d",
+            "text": "0,5"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "answerText": "0",
       "hints": [
-        { "order": 1, "text": "Statmenų vektorių kampas yra $90^\\circ$." }
+        {
+          "order": 1,
+          "text": "Statmenų vektorių kampas yra $90^\\circ$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\cos 90^\\circ = 0" }
+        {
+          "latex": "\\cos 90^\\circ = 0"
+        }
       ],
-      "conceptIds": ["statmeni-vektoriai"],
+      "conceptIds": [
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 20
     },
     {
       "id": "vektoriai-plokstumoje-ex-010",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra priešpriešiai kolinearūs. Jų ilgiai yra 3 ir 5. Kam lygi jų skaliarinė sandauga?",
-      "answer": { "kind": "numeric", "value": -15 },
+      "answer": {
+        "kind": "numeric",
+        "value": -15
+      },
       "answerText": "-15",
       "hints": [
-        { "order": 1, "text": "Priešpriešių vektorių kampas yra $180^\\circ$." },
-        { "order": 2, "text": "$\\cos 180^\\circ = -1$." }
+        {
+          "order": 1,
+          "text": "Priešpriešių vektorių kampas yra $180^\\circ$."
+        },
+        {
+          "order": 2,
+          "text": "$\\cos 180^\\circ = -1$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "3 \\cdot 5 \\cdot (-1) = -15" }
+        {
+          "latex": "3 \\cdot 5 \\cdot (-1) = -15"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga", "kolinearus-vektoriai"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "kolinearus-vektoriai"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-011",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Raskite m reikšmę, su kuria vektoriai $\\vec{a}(m, 6)$ ir $\\vec{b}(2, -3)$ yra kolinearūs.",
-      "answer": { "kind": "numeric", "value": -4 },
+      "answer": {
+        "kind": "numeric",
+        "value": -4
+      },
       "answerText": "-4",
       "hints": [
-        { "order": 1, "text": "Kolinearių vektorių koordinačių santykiai yra lygūs: $m/2 = 6/(-3)$." }
+        {
+          "order": 1,
+          "text": "Kolinearių vektorių koordinačių santykiai yra lygūs: $m/2 = 6/(-3)$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\frac{m}{2} = \\frac{6}{-3} \\implies \\frac{m}{2} = -2 \\implies m = -4" }
+        {
+          "latex": "\\frac{m}{2} = \\frac{6}{-3} \\implies \\frac{m}{2} = -2 \\implies m = -4"
+        }
       ],
-      "conceptIds": ["kolinearus-vektoriai"],
+      "conceptIds": [
+        "kolinearus-vektoriai"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-012",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskaičiuokite vektoriaus $\\vec{a}-2\\vec{b}$ y koordinatę, jei $\\vec{a}(5, 4)$ ir $\\vec{b}(1, 3)$.",
-      "answer": { "kind": "numeric", "value": -2 },
+      "answer": {
+        "kind": "numeric",
+        "value": -2
+      },
       "answerText": "-2",
       "hints": [
-        { "order": 1, "text": "Pirmiausia raskite $2\\vec{b}$ y koordinatę, tada atimkite ją iš $\\vec{a}$ y koordinatės." }
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite $2\\vec{b}$ y koordinatę, tada atimkite ją iš $\\vec{a}$ y koordinatės."
+        }
       ],
       "solutionSteps": [
-        { "latex": "y = 4 - 2 \\cdot 3 = 4 - 6 = -2" }
+        {
+          "latex": "y = 4 - 2 \\cdot 3 = 4 - 6 = -2"
+        }
       ],
-      "conceptIds": ["vektoriu-skirtumas", "vektoriaus-daugyba-is-skaiciaus"],
+      "conceptIds": [
+        "vektoriu-skirtumas",
+        "vektoriaus-daugyba-is-skaiciaus"
+      ],
       "estimatedSeconds": 50
     },
     {
       "id": "vektoriai-plokstumoje-ex-013",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Raskite kampo tarp vektorių $\\vec{a}(1, 0)$ ir $\\vec{b}(1, 1)$ didumą laipsniais.",
-      "answer": { "kind": "numeric", "value": 45 },
+      "answer": {
+        "kind": "numeric",
+        "value": 45
+      },
       "answerText": "45",
       "hints": [
-        { "order": 1, "text": "Apskaičiuokite kosinusą pagal formulę." },
-        { "order": 2, "text": "$\\cos \\phi = \\frac{1 \\cdot 1 + 0 \\cdot 1}{1 \\cdot \\sqrt{2}} = \\frac{1}{\\sqrt{2}}$." }
+        {
+          "order": 1,
+          "text": "Apskaičiuokite kosinusą pagal formulę."
+        },
+        {
+          "order": 2,
+          "text": "$\\cos \\phi = \\frac{1 \\cdot 1 + 0 \\cdot 1}{1 \\cdot \\sqrt{2}} = \\frac{1}{\\sqrt{2}}$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\cos \\phi = \\frac{1}{\\sqrt{2}} \\implies \\phi = 45^\\circ" }
+        {
+          "latex": "\\cos \\phi = \\frac{1}{\\sqrt{2}} \\implies \\phi = 45^\\circ"
+        }
       ],
-      "conceptIds": ["kampas-tarp-vektoriu"],
+      "conceptIds": [
+        "kampas-tarp-vektoriu"
+      ],
       "estimatedSeconds": 90
     },
     {
       "id": "vektoriai-plokstumoje-ex-014",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskaičiuokite $(\\vec{a}+\\vec{b}) \\cdot \\vec{c}$, jei $\\vec{a}(1, 2)$, $\\vec{b}(3, 0)$ ir $\\vec{c}(2, -1)$.",
-      "answer": { "kind": "numeric", "value": 6 },
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
       "answerText": "6",
       "hints": [
-        { "order": 1, "text": "Pirmiausia sudėkite $\\vec{a}$ ir $\\vec{b}$, tada gautą vektorių skaliariškai padauginkite iš $\\vec{c}$." }
+        {
+          "order": 1,
+          "text": "Pirmiausia sudėkite $\\vec{a}$ ir $\\vec{b}$, tada gautą vektorių skaliariškai padauginkite iš $\\vec{c}$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\vec{a}+\\vec{b} = (4, 2); \\quad (4, 2) \\cdot (2, -1) = 4 \\cdot 2 + 2 \\cdot (-1) = 8 - 2 = 6" }
+        {
+          "latex": "\\vec{a}+\\vec{b} = (4, 2); \\quad (4, 2) \\cdot (2, -1) = 4 \\cdot 2 + 2 \\cdot (-1) = 8 - 2 = 6"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga", "vektoriu-suma"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "vektoriu-suma"
+      ],
       "estimatedSeconds": 70
     },
     {
       "id": "vektoriai-plokstumoje-ex-015",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Vektoriaus $\\vec{a}$ ilgis yra 6. Kam lygus skaliarinis kvadratas $\\vec{a}^2$?",
-      "answer": { "kind": "numeric", "value": 36 },
+      "answer": {
+        "kind": "numeric",
+        "value": 36
+      },
       "answerText": "36",
       "hints": [
-        { "order": 1, "text": "Prisiminkite, kad $\\vec{a}^2 = |\\vec{a}|^2$." }
+        {
+          "order": 1,
+          "text": "Prisiminkite, kad $\\vec{a}^2 = |\\vec{a}|^2$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "6^2 = 36" }
+        {
+          "latex": "6^2 = 36"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-016",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Taškai A(0,0), B(4,0), C(4,3) yra stačiojo trikampio viršūnės. Raskite vektoriaus $\\vec{AC}$ ilgį.",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "4" },
-          { "id": "b", "text": "3" },
-          { "id": "c", "text": "5" },
-          { "id": "d", "text": "7" }
+          {
+            "id": "a",
+            "text": "4"
+          },
+          {
+            "id": "b",
+            "text": "3"
+          },
+          {
+            "id": "c",
+            "text": "5"
+          },
+          {
+            "id": "d",
+            "text": "7"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "answerText": "5",
       "hints": [
-        { "order": 1, "text": "Raskite vektoriaus $\\vec{AC}$ koordinates." }
+        {
+          "order": 1,
+          "text": "Raskite vektoriaus $\\vec{AC}$ koordinates."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\vec{AC} = (4-0, 3-0) = (4, 3); \\quad |\\vec{AC}| = \\sqrt{4^2+3^2} = 5" }
+        {
+          "latex": "\\vec{AC} = (4-0, 3-0) = (4, 3); \\quad |\\vec{AC}| = \\sqrt{4^2+3^2} = 5"
+        }
       ],
-      "conceptIds": ["vektoriaus-modulis"],
+      "conceptIds": [
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 50
     },
     {
       "id": "vektoriai-plokstumoje-ex-017",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Apskaičiuokite $x$, jei vektoriai $\\vec{a}(x, 2)$ ir $\\vec{b}(3, -6)$ yra statmeni.",
-      "answer": { "kind": "numeric", "value": 4 },
+      "answer": {
+        "kind": "numeric",
+        "value": 4
+      },
       "answerText": "4",
       "hints": [
-        { "order": 1, "text": "Statmenų vektorių skaliarinė sandauga lygi 0." }
+        {
+          "order": 1,
+          "text": "Statmenų vektorių skaliarinė sandauga lygi 0."
+        }
       ],
       "solutionSteps": [
-        { "latex": "3x + 2 \\cdot (-6) = 0 \\implies 3x - 12 = 0 \\implies x = 4" }
+        {
+          "latex": "3x + 2 \\cdot (-6) = 0 \\implies 3x - 12 = 0 \\implies x = 4"
+        }
       ],
-      "conceptIds": ["statmeni-vektoriai"],
+      "conceptIds": [
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-018",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Duotas vienetinis vektorius $\\vec{e}(0.6, y)$. Raskite teigiamą y reikšmę.",
-      "answer": { "kind": "numeric", "value": 0.8 },
+      "answer": {
+        "kind": "numeric",
+        "value": 0.8
+      },
       "answerText": "0.8",
       "hints": [
-        { "order": 1, "text": "Vienetinio vektoriaus ilgis yra 1, tad $0.6^2 + y^2 = 1^2$." }
+        {
+          "order": 1,
+          "text": "Vienetinio vektoriaus ilgis yra 1, tad $0.6^2 + y^2 = 1^2$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "0.36 + y^2 = 1 \\implies y^2 = 0.64 \\implies y = 0.8" }
+        {
+          "latex": "0.36 + y^2 = 1 \\implies y^2 = 0.64 \\implies y = 0.8"
+        }
       ],
-      "conceptIds": ["vienetinis-vektorius"],
+      "conceptIds": [
+        "vienetinis-vektorius"
+      ],
       "estimatedSeconds": 80
     },
     {
       "id": "vektoriai-plokstumoje-ex-019",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ sudaro $120^\\circ$ kampą. $|\\vec{a}|=2, |\\vec{b}|=3$. Raskite $\\vec{a} \\cdot \\vec{b}$.",
-      "answer": { "kind": "numeric", "value": -3 },
+      "answer": {
+        "kind": "numeric",
+        "value": -3
+      },
       "answerText": "-3",
       "hints": [
-        { "order": 1, "text": "$\\cos 120^\\circ = -0,5$." }
+        {
+          "order": 1,
+          "text": "$\\cos 120^\\circ = -0,5$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "2 \\cdot 3 \\cdot (-0,5) = -3" }
+        {
+          "latex": "2 \\cdot 3 \\cdot (-0,5) = -3"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-020",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Duoti taškai $A(1, 2), B(3, 5), C(5, 8)$. Raskite vektoriaus $\\vec{AB}+\\vec{BC}$ ilgį.",
-      "answer": { "kind": "numeric", "value": 7.21, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 7.21,
+        "tolerance": 0.01
+      },
       "answerText": "7.21",
       "hints": [
-        { "order": 1, "text": "Pagal trikampio taisyklę $\\vec{AB}+\\vec{BC} = \\vec{AC}$." },
-        { "order": 2, "text": "Raskite $\\vec{AC}$ koordinates ir ilgį." }
+        {
+          "order": 1,
+          "text": "Pagal trikampio taisyklę $\\vec{AB}+\\vec{BC} = \\vec{AC}$."
+        },
+        {
+          "order": 2,
+          "text": "Raskite $\\vec{AC}$ koordinates ir ilgį."
+        }
       ],
       "solutionSteps": [
-        { "latex": "\\vec{AC} = (5-1, 8-2) = (4, 6); \\quad |\\vec{AC}| = \\sqrt{4^2+6^2} = \\sqrt{52} \\approx 7,21" }
+        {
+          "latex": "\\vec{AC} = (5-1, 8-2) = (4, 6); \\quad |\\vec{AC}| = \\sqrt{4^2+6^2} = \\sqrt{52} \\approx 7,21"
+        }
       ],
-      "conceptIds": ["vektoriu-suma", "vektoriaus-modulis"],
+      "conceptIds": [
+        "vektoriu-suma",
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 100
     },
     {
       "id": "vektoriai-plokstumoje-ex-021",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Apskaičiuokite $(\\vec{a}-\\vec{b})^2$, jei $|\\vec{a}|=5, |\\vec{b}|=2$ ir $\\vec{a} \\perp \\vec{b}$.",
-      "answer": { "kind": "numeric", "value": 29 },
+      "answer": {
+        "kind": "numeric",
+        "value": 29
+      },
       "answerText": "29",
       "hints": [
-        { "order": 1, "text": "Atskliauskite: $(\\vec{a}-\\vec{b})^2 = \\vec{a}^2 - 2\\vec{a}\\vec{b} + \\vec{b}^2$." },
-        { "order": 2, "text": "Kadangi $\\vec{a} \\perp \\vec{b}$, tai $\\vec{a}\\vec{b} = 0$." }
+        {
+          "order": 1,
+          "text": "Atskliauskite: $(\\vec{a}-\\vec{b})^2 = \\vec{a}^2 - 2\\vec{a}\\vec{b} + \\vec{b}^2$."
+        },
+        {
+          "order": 2,
+          "text": "Kadangi $\\vec{a} \\perp \\vec{b}$, tai $\\vec{a}\\vec{b} = 0$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "5^2 - 2 \\cdot 0 + 2^2 = 25 + 4 = 29" }
+        {
+          "latex": "5^2 - 2 \\cdot 0 + 2^2 = 25 + 4 = 29"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga", "statmeni-vektoriai"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 120
     },
     {
       "id": "vektoriai-plokstumoje-ex-022",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Raskite kampą tarp vektorių $\\vec{a}(3, -1)$ ir $\\vec{b}(1, 3)$ laipsniais.",
-      "answer": { "kind": "numeric", "value": 90 },
+      "answer": {
+        "kind": "numeric",
+        "value": 90
+      },
       "answerText": "90",
       "hints": [
-        { "order": 1, "text": "Apskaičiuokite jų skaliarinę sandaugą." }
+        {
+          "order": 1,
+          "text": "Apskaičiuokite jų skaliarinę sandaugą."
+        }
       ],
       "solutionSteps": [
-        { "latex": "3 \\cdot 1 + (-1) \\cdot 3 = 3 - 3 = 0. \\text{ Jei sandauga 0, kampas yra } 90^\\circ." }
+        {
+          "latex": "3 \\cdot 1 + (-1) \\cdot 3 = 3 - 3 = 0. \\text{ Jei sandauga 0, kampas yra } 90^\\circ."
+        }
       ],
-      "conceptIds": ["kampas-tarp-vektoriu", "statmeni-vektoriai"],
+      "conceptIds": [
+        "kampas-tarp-vektoriu",
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-023",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Apskaičiuokite $|2\\vec{a}+\\vec{b}|$, jei $|\\vec{a}|=3, |\\vec{b}|=4$ ir kampas tarp jų $60^\\circ$.",
-      "answer": { "kind": "numeric", "value": 8.72, "tolerance": 0.01 },
+      "answer": {
+        "kind": "numeric",
+        "value": 8.72,
+        "tolerance": 0.01
+      },
       "answerText": "8.72",
       "hints": [
-        { "order": 1, "text": "Pirmiausia raskite kvadrato reikšmę: $|2\\vec{a}+\\vec{b}|^2 = (2\\vec{a}+\\vec{b})^2$." },
-        { "order": 2, "text": "Atskliauskite: $4\\vec{a}^2 + 4\\vec{a}\\vec{b} + \\vec{b}^2$." }
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite kvadrato reikšmę: $|2\\vec{a}+\\vec{b}|^2 = (2\\vec{a}+\\vec{b})^2$."
+        },
+        {
+          "order": 2,
+          "text": "Atskliauskite: $4\\vec{a}^2 + 4\\vec{a}\\vec{b} + \\vec{b}^2$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "4 \\cdot 3^2 + 4 \\cdot (3 \\cdot 4 \\cdot 0,5) + 4^2 = 36 + 24 + 16 = 76; \\quad \\sqrt{76} \\approx 8,717" }
+        {
+          "latex": "4 \\cdot 3^2 + 4 \\cdot (3 \\cdot 4 \\cdot 0,5) + 4^2 = 36 + 24 + 16 = 76; \\quad \\sqrt{76} \\approx 8,717"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga", "vektoriaus-modulis"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 180
     },
     {
       "id": "vektoriai-plokstumoje-ex-024",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Duoti vektoriai $\\vec{a}(4, -3)$ ir $\\vec{b}(k, 8)$. Su kuria k reikšme vektoriai yra statmeni?",
-      "answer": { "kind": "numeric", "value": 6 },
+      "answer": {
+        "kind": "numeric",
+        "value": 6
+      },
       "answerText": "6",
       "hints": [
-        { "order": 1, "text": "Sąlyga: $4k + (-3) \\cdot 8 = 0$." }
+        {
+          "order": 1,
+          "text": "Sąlyga: $4k + (-3) \\cdot 8 = 0$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "4k - 24 = 0 \\implies k = 6" }
+        {
+          "latex": "4k - 24 = 0 \\implies k = 6"
+        }
       ],
-      "conceptIds": ["statmeni-vektoriai"],
+      "conceptIds": [
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-025",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Vektoriai $\\vec{a}$ ir $\\vec{b}$ yra tokie, kad $|\\vec{a}|=1, |\\vec{b}|=2$, o kampas tarp jų $120^\\circ$. Apskaičiuokite $(\\vec{a}+2\\vec{b}) \\cdot (2\\vec{a}-\\vec{b})$.",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "-1" },
-          { "id": "b", "text": "-2" },
-          { "id": "c", "text": "-9" },
-          { "id": "d", "text": "0" }
+          {
+            "id": "a",
+            "text": "-1"
+          },
+          {
+            "id": "b",
+            "text": "-2"
+          },
+          {
+            "id": "c",
+            "text": "-9"
+          },
+          {
+            "id": "d",
+            "text": "0"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "answerText": "-9",
       "hints": [
-        { "order": 1, "text": "Atskliauskite reiškinį kaip dvinarį." }
+        {
+          "order": 1,
+          "text": "Atskliauskite reiškinį kaip dvinarį."
+        }
       ],
       "solutionSteps": [
-        { "latex": "2\\vec{a}^2 - \\vec{a}\\vec{b} + 4\\vec{b}\\vec{a} - 2\\vec{b}^2 = 2\\vec{a}^2 + 3\\vec{a}\\vec{b} - 2\\vec{b}^2" },
-        { "latex": "2(1)^2 + 3(1 \\cdot 2 \\cdot (-0,5)) - 2(2)^2 = 2 - 3 - 8 = -9" }
+        {
+          "latex": "2\\vec{a}^2 - \\vec{a}\\vec{b} + 4\\vec{b}\\vec{a} - 2\\vec{b}^2 = 2\\vec{a}^2 + 3\\vec{a}\\vec{b} - 2\\vec{b}^2"
+        },
+        {
+          "latex": "2(1)^2 + 3(1 \\cdot 2 \\cdot (-0,5)) - 2(2)^2 = 2 - 3 - 8 = -9"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "estimatedSeconds": 200
     },
     {
       "id": "vektoriai-plokstumoje-ex-026",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Raskite vektoriaus $\\vec{a}(x, y)$ koordinates, jei jis kolinearus vektoriui $\\vec{b}(3, 4)$, nukreiptas ta pačia kryptimi ir jo ilgis yra 15. Įrašykite x koordinatę.",
-      "answer": { "kind": "numeric", "value": 9 },
+      "answer": {
+        "kind": "numeric",
+        "value": 9
+      },
       "answerText": "9",
       "hints": [
-        { "order": 1, "text": "Kadangi kolinearūs, tai $\\vec{a} = k\\vec{b}$. $|\\vec{b}| = 5$." },
-        { "order": 2, "text": "$k = 15 / 5 = 3$." }
+        {
+          "order": 1,
+          "text": "Kadangi kolinearūs, tai $\\vec{a} = k\\vec{b}$. $|\\vec{b}| = 5$."
+        },
+        {
+          "order": 2,
+          "text": "$k = 15 / 5 = 3$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "x = 3 \\cdot 3 = 9; \\quad y = 3 \\cdot 4 = 12" }
+        {
+          "latex": "x = 3 \\cdot 3 = 9; \\quad y = 3 \\cdot 4 = 12"
+        }
       ],
-      "conceptIds": ["kolinearus-vektoriai", "vektoriaus-modulis"],
+      "conceptIds": [
+        "kolinearus-vektoriai",
+        "vektoriaus-modulis"
+      ],
       "estimatedSeconds": 120
     },
     {
       "id": "vektoriai-plokstumoje-ex-027",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Duoti vektoriai $\\vec{a}(2, 1)$ ir $\\vec{b}(-1, 3)$. Raskite skaliarinę sandaugą $(2\\vec{a}-\\vec{b}) \\cdot \\vec{b}$.",
-      "answer": { "kind": "numeric", "value": -8 },
+      "answer": {
+        "kind": "numeric",
+        "value": -8
+      },
       "answerText": "-8",
       "hints": [
-        { "order": 1, "text": "Pirmiausia raskite vektorių $2\\vec{a}-\\vec{b}$." }
+        {
+          "order": 1,
+          "text": "Pirmiausia raskite vektorių $2\\vec{a}-\\vec{b}$."
+        }
       ],
       "solutionSteps": [
-        { "latex": "2\\vec{a} = (4, 2); \\quad 2\\vec{a}-\\vec{b} = (4-(-1), 2-3) = (5, -1)" },
-        { "latex": "(5, -1) \\cdot (-1, 3) = -5 - 3 = -8" }
+        {
+          "latex": "2\\vec{a} = (4, 2); \\quad 2\\vec{a}-\\vec{b} = (4-(-1), 2-3) = (5, -1)"
+        },
+        {
+          "latex": "(5, -1) \\cdot (-1, 3) = -5 - 3 = -8"
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "estimatedSeconds": 120
     },
     {
       "id": "vektoriai-plokstumoje-ex-028",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Kuri iš šių sąlygų garantuoja, kad vektoriai $\\vec{a}$ ir $\\vec{b}$ sudaro bukąjį kampą?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "$\\vec{a} \\cdot \\vec{b} > 0$" },
-          { "id": "b", "text": "$\\vec{a} \\cdot \\vec{b} = 0$" },
-          { "id": "c", "text": "$\\vec{a} \\cdot \\vec{b} < 0$" },
-          { "id": "d", "text": "$|\\vec{a}| < |\\vec{b}|$" }
+          {
+            "id": "a",
+            "text": "$\\vec{a} \\cdot \\vec{b} > 0$"
+          },
+          {
+            "id": "b",
+            "text": "$\\vec{a} \\cdot \\vec{b} = 0$"
+          },
+          {
+            "id": "c",
+            "text": "$\\vec{a} \\cdot \\vec{b} < 0$"
+          },
+          {
+            "id": "d",
+            "text": "$|\\vec{a}| < |\\vec{b}|$"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "answerText": "$\\vec{a} \\cdot \\vec{b} < 0$",
       "hints": [
-        { "order": 1, "text": "Buko kampas reiškia, kad kosinusas yra neigiamas." }
+        {
+          "order": 1,
+          "text": "Buko kampas reiškia, kad kosinusas yra neigiamas."
+        }
       ],
       "solutionSteps": [
-        { "text": "Kadangi $|\\vec{a}|$ ir $|\\vec{b}|$ visada teigiami, skaliarinės sandaugos ženklas sutampa su kosinuso ženklu." }
+        {
+          "text": "Kadangi $|\\vec{a}|$ ir $|\\vec{b}|$ visada teigiami, skaliarinės sandaugos ženklas sutampa su kosinuso ženklu."
+        }
       ],
-      "conceptIds": ["skaliarine-sandauga", "kampas-tarp-vektoriu"],
+      "conceptIds": [
+        "skaliarine-sandauga",
+        "kampas-tarp-vektoriu"
+      ],
       "estimatedSeconds": 60
     },
     {
       "id": "vektoriai-plokstumoje-ex-029",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Raskite vektoriaus $\\vec{a}(3, -4)$ projekciją į vektoriaus $\\vec{i}(1, 0)$ kryptį (tai tiesiog x koordinatė).",
-      "answer": { "kind": "numeric", "value": 3 },
+      "answer": {
+        "kind": "numeric",
+        "value": 3
+      },
       "answerText": "3",
       "hints": [
-        { "order": 1, "text": "Projekcija į x ašį yra vektoriaus x koordinatė." }
+        {
+          "order": 1,
+          "text": "Projekcija į x ašį yra vektoriaus x koordinatė."
+        }
       ],
       "solutionSteps": [
-        { "text": "Vektoriaus (3, -4) pirmoji koordinatė yra 3." }
+        {
+          "text": "Vektoriaus (3, -4) pirmoji koordinatė yra 3."
+        }
       ],
-      "conceptIds": ["vektorius"],
+      "conceptIds": [
+        "vektorius"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "vektoriai-plokstumoje-ex-030",
       "topicId": "vektoriai-plokstumoje",
       "grade": 11,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Raskite kampo tarp vektorių $\\vec{a}(4, 3)$ ir $\\vec{b}(3, -4)$ didumą laipsniais.",
-      "answer": { "kind": "numeric", "value": 90 },
+      "answer": {
+        "kind": "numeric",
+        "value": 90
+      },
       "answerText": "90",
       "hints": [
-        { "order": 1, "text": "Tikrinkite skaliarinę sandaugą." }
+        {
+          "order": 1,
+          "text": "Tikrinkite skaliarinę sandaugą."
+        }
       ],
       "solutionSteps": [
-        { "latex": "4 \\cdot 3 + 3 \\cdot (-4) = 12 - 12 = 0" }
+        {
+          "latex": "4 \\cdot 3 + 3 \\cdot (-4) = 12 - 12 = 0"
+        }
       ],
-      "conceptIds": ["kampas-tarp-vektoriu", "statmeni-vektoriai"],
+      "conceptIds": [
+        "kampas-tarp-vektoriu",
+        "statmeni-vektoriai"
+      ],
       "estimatedSeconds": 40
     }
   ],
@@ -1163,7 +1672,9 @@
       "id": "vektoriai-plokstumoje-test-1",
       "title": "Vektoriai plokštumoje: Pagrindinis testas",
       "scope": "topic",
-      "topicIds": ["vektoriai-plokstumoje"],
+      "topicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "exerciseIds": [
         "vektoriai-plokstumoje-ex-001",
         "vektoriai-plokstumoje-ex-003",
@@ -1182,7 +1693,9 @@
       "id": "vektoriai-plokstumoje-challenge",
       "title": "Vektoriai: Iššūkis",
       "scope": "topic",
-      "topicIds": ["vektoriai-plokstumoje"],
+      "topicIds": [
+        "vektoriai-plokstumoje"
+      ],
       "exerciseIds": [
         "vektoriai-plokstumoje-ex-021",
         "vektoriai-plokstumoje-ex-023",
@@ -1202,7 +1715,9 @@
       "cardType": "concept",
       "front": "Kas yra vektorius?",
       "back": "Kryptinė atkarpa, turinti ilgį ir kryptį.",
-      "conceptIds": ["vektorius"],
+      "conceptIds": [
+        "vektorius"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1211,8 +1726,12 @@
       "cardType": "formula",
       "front": "Kaip apskaičiuojamas vektoriaus $\\vec{a}(x, y)$ ilgis?",
       "back": "$|\\vec{a}| = \\sqrt{x^2 + y^2}$",
-      "conceptIds": ["vektoriaus-modulis"],
-      "formulaIds": ["vektoriaus-modulis-formule"],
+      "conceptIds": [
+        "vektoriaus-modulis"
+      ],
+      "formulaIds": [
+        "vektoriaus-modulis-formule"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1221,7 +1740,9 @@
       "cardType": "concept",
       "front": "Parašykite geometrinį skaliarinės sandaugos apibrėžimą.",
       "back": "$\\vec{a} \\cdot \\vec{b} = |\\vec{a}| \\cdot |\\vec{b}| \\cdot \\cos \\phi$",
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1230,7 +1751,10 @@
       "cardType": "method",
       "front": "Kada du nenuliniai vektoriai yra statmeni?",
       "back": "Kai jų skaliarinė sandauga lygi nuliui ($\\vec{a} \\cdot \\vec{b} = 0$).",
-      "conceptIds": ["statmeni-vektoriai", "skaliarine-sandauga"],
+      "conceptIds": [
+        "statmeni-vektoriai",
+        "skaliarine-sandauga"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1239,7 +1763,9 @@
       "cardType": "method",
       "front": "Kokia yra vektorių $(x_1, y_1)$ ir $(x_2, y_2)$ kolinearumo sąlyga koordinatėmis?",
       "back": "Atitinkamos koordinatės turi būti proporcingos: $x_1/x_2 = y_1/y_2$.",
-      "conceptIds": ["kolinearus-vektoriai"],
+      "conceptIds": [
+        "kolinearus-vektoriai"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1248,7 +1774,9 @@
       "cardType": "formula",
       "front": "Kam lygus vektoriaus skaliarinis kvadratas $\\vec{a}^2$?",
       "back": "Vektoriaus modulio kvadratui: $\\vec{a}^2 = |\\vec{a}|^2$.",
-      "conceptIds": ["skaliarine-sandauga"],
+      "conceptIds": [
+        "skaliarine-sandauga"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1257,7 +1785,9 @@
       "cardType": "concept",
       "front": "Koks vektorius vadinamas vienetiniu?",
       "back": "Vektorius, kurio ilgis (modulis) lygus 1.",
-      "conceptIds": ["vienetinis-vektorius"],
+      "conceptIds": [
+        "vienetinis-vektorius"
+      ],
       "defaultEnabled": true
     },
     {
@@ -1266,8 +1796,12 @@
       "cardType": "mistake",
       "front": "Į kurią pusę nukreipta vektorių skirtumo $\\vec{a}-\\vec{b}$ rodyklė?",
       "back": "Į vektorių $\\vec{a}$ (tą, iš kurio atimame).",
-      "conceptIds": ["vektoriu-skirtumas"],
-      "mistakeIds": ["vektoriu-atimties-kryptis"],
+      "conceptIds": [
+        "vektoriu-skirtumas"
+      ],
+      "mistakeIds": [
+        "vektoriu-atimties-kryptis"
+      ],
       "defaultEnabled": true
     }
   ]

@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olimpiadinės matematikos gidas",
-    "notes": "Papildyta 9 klasės olimpiadinė geometrija: panašumas, apskritimai, teoremos."
+    "notes": "Deeply expanded theory and worked examples for Grade 9 Olympiad Geometry"
   },
   "topic": {
     "id": "olimpiada-09-geometrija",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "olympiad",
     "order": 100,
-    "estimatedStudyMinutes": 180,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"
     ],
@@ -23,7 +23,9 @@
       "olimpiada-09-concept-panasumas",
       "olimpiada-09-concept-apskritimo-galia",
       "olimpiada-09-concept-ibreztinis-keturkampis",
-      "olimpiada-09-concept-ptolemy"
+      "olimpiada-09-concept-ptolemy",
+      "concept-triangle-centers",
+      "concept-radical-axis"
     ],
     "formulaIds": [
       "olimpiada-09-formula-heron",
@@ -55,45 +57,102 @@
   },
   "theory": [
     {
-      "id": "ol-09-geo-theory-1",
-      "title": "Geometriniai įrodymai ir trigonometrija",
+      "id": "theory-geo-olympiad-perspective",
+      "title": "Olimpiadinės geometrijos filosofija",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geometrijos uždaviniuose svarbu ne tik apskaičiuoti dydžius, bet ir įrodyti taškų kolinearumą, tiesių susikirtimą ar atkarpų lygybę."
+          "text": "Olimpiadinė geometrija 9 klasėje smarkiai skiriasi nuo mokyklinio kurso. Čia mažiau dėmesio skiriama tiesioginiam skaičiavimui ir daugiau – figūrų savybių įrodymui bei paslėptų struktūrų aptikimui. Pagrindinis olimpiadininko uždavinys yra pamatyti tai, ko nėra brėžinyje: papildomą apskritimą, einantį per keturis taškus, panašius trikampius, kurių viršūnės išsimėčiusios po visą brėžinį, arba simetrijos ašį, kuri viską supaprastina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sėkmingas sprendimas prasideda nuo tikslaus brėžinio. Nors įrodymui brėžinys nėra formalus pagrindas, jis leidžia formuluoti hipotezes (pvz., „atrodo, kad šie trys taškai yra vienoje tiesėje“ arba „šie kampai lygūs“). Olimpiadose dažnai naudojami du pagrindiniai keliai: sintetinis (grynai geometrinis įrodymas) ir skaičiuojamasis (trigonometrija, koordinačių metodas, plotų santykiai)."
+        }
+      ]
+    },
+    {
+      "id": "theory-geo-triangle-centers",
+      "title": "Trikampio centrai ir Oilerio tiesė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiekvienas trikampis turi keturis „klasikinius“ centrus, kurių sąveika yra daugelio uždavinių šerdis."
+        },
+        {
+          "type": "definitionCallout",
+          "text": "1. **Centroidas ($G$):** Pusiaukraštinių sankirta. Jis dalija kiekvieną pusiaukraštinę santykiu $2:1$ skaičiuojant nuo viršūnės.\n2. **Ortocentras ($H$):** Aukštinių sankirta.\n3. **Apibrėžtinio apskritimo centras ($O$):** Kraštinių vidurio statmenų sankirta.\n4. **Įbrėžtinio apskritimo centras ($I$):** Pusiaukampinių sankirta."
         },
         {
           "type": "method",
-          "text": "Taikykite Čevos ir Menelajaus teoremas, kai reikia rasti santykius trikampio kraštinėse arba įrodyti, kad trys tiesės kertasi viename taške."
+          "text": "Strategija: Naudokite Oilerio tiesės savybę. Taškai $H, G$ ir $O$ visada yra vienoje tiesėje (jei trikampis nėra lygiakraštis), o $G$ dalija atkarpą $HO$ santykiu $HG:GO = 2:1$. Tai leidžia susieti aukštines su vidurio statmenimis."
         }
       ]
     },
     {
-      "id": "ol-09-geo-theory-2",
-      "title": "Trikampių panašumas ir plotai",
+      "id": "theory-geo-cyclic-quads",
+      "title": "Cikliškumas – raktas į kampų lygybę",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du trikampiai yra panašūs, jei jų kampai atitinkamai lygūs, o kraštinės proporcingos. Svarbu atsiminti, kad panašiųjų trikampių plotų santykis lygus panašumo koeficiento kvadratui."
+          "text": "Svarbiausias olimpiadinės geometrijos įrankis yra įbrėžtinis keturkampis (cikliškas keturkampis). Jei pavyksta įrodyti, kad keturi taškai priklauso vienam apskritimui, atsiveria daugybė lygių kampų."
         },
         {
-          "type": "property",
-          "text": "Jei trikampis $ABC$ panašus į trikampį $DEF$ su koeficientu $k$, tai $S_{ABC} / S_{DEF} = k^2$."
+          "type": "method",
+          "text": "Kaip atpažinti cikliškumą?\n1. Priešingų kampų suma lygi $180^\\circ$.\n2. Išorinis kampas lygus vidiniam priešingam kampui.\n3. Atkarpa $AB$ „matoma“ iš taškų $C$ ir $D$ tuo pačiu kampu (t. y. $\\angle ACB = \\angle ADB$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pastebėję cikliškumą, galime „perkelti“ kampus iš vienos brėžinio vietos į kitą. Tai vadinama „kampų vaikymusi“ (angl. *angle chasing*)."
         }
       ]
     },
     {
-      "id": "ol-09-geo-theory-3",
-      "title": "Apskritimo savybės ir galia",
+      "id": "theory-geo-ceva-menelaus",
+      "title": "Galingosios teoremos: Čeva ir Menelajus",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Apskritimo geometrijoje dažnai naudojamos kampų savybės (įbrėžtiniai, centriniai kampai) ir taško galios teorema."
+          "text": "Šios dvi teoremos yra pagrindiniai įrankiai dirbant su santykiais ir kolinearumu."
         },
         {
-          "type": "theorem",
-          "conceptId": "olimpiada-09-concept-apskritimo-galia",
-          "text": "Taško galia apskritimo atžvilgiu yra nekintantis dydis, lygus atkarpų sandaugai bet kuriai per tą tašką einančiai kertamajai."
+          "type": "method",
+          "text": "Čevos teorema naudojama, kai trys tiesės (cevianai) kertasi viename taške. Tai leidžia susieti kraštinių atkarpų santykius.\nMenelajaus teorema naudojama, kai viena tiesė kerta trikampio kraštines (arba jų tęsinius). Tai geriausias būdas įrodyti, kad trys taškai yra vienoje tiesėje."
+        },
+        {
+          "type": "warningCallout",
+          "text": "Svarbu: Taikydami šias teoremas, visada sekite viršūnes „ratu“ viena kryptimi, kad nesupainiotumėte skaitiklio su vardikliu."
+        }
+      ]
+    },
+    {
+      "id": "theory-geo-power-of-point",
+      "title": "Apskritimo galia ir radikali ašis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taško galia apskritimo atžvilgiu yra skaičius $P = d^2 - R^2$. Geometriškai tai lygu bet kurios per tą tašką einančios kertamosios atkarpų sandaugai."
+        },
+        {
+          "type": "method",
+          "text": "Radikali ašis: Tai aibė taškų, kurių galios dviejų apskritimų atžvilgiu yra lygios. Ši aibė visada yra tiesė, statmena apskritimų centrus jungiančiai tiesei. Jei du apskritimai kertasi, jų radikali ašis yra bendra styga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trys apskritimai turi tris radikalias ašis, kurios visos kertasi viename taške (radikaliame centre) arba yra lygiagrečios. Tai galingas metodas įrodyti, kad trys tiesės kertasi viename taške."
+        }
+      ]
+    },
+    {
+      "id": "theory-geo-area-method",
+      "title": "Plotų metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plotų metodas leidžia geometrines problemas paversti algebrinėmis lygtimis. Pagrindinė idėja: trikampių, turinčių bendrą aukštinę, plotų santykis lygus jų pagrindų santykiui."
+        },
+        {
+          "type": "method",
+          "text": "Naudojant plotus galima įrodyti Menelajaus ar Čevos teoremas, taip pat rasti taško padėtį trikampio viduje. Pavyzdžiui, jei taškas $P$ yra trikampio $ABC$ viduje, tai taško $P$ atstumų iki kraštinių ir atitinkamų aukštinių santykių suma visada lygi 1."
         }
       ]
     }
@@ -104,8 +163,6 @@
       "title": "Čevos teorema",
       "type": "concept",
       "shortDefinition": "Trikampio kraštinių atkarpų santykių sandauga, kai trys tiesės kertasi viename taške.",
-      "intuition": "Sąlyga, kada trys tiesės, einančios per trikampio viršūnes, kertasi viename taške.",
-      "formal": "Trikampio $ABC$ kraštinėse pažymėti taškai $D$, $E$, $F$. Tiesės $AD$, $BE$, $CF$ kertasi viename taške tada ir tik tada, kai $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$.",
       "relatedConceptIds": [
         "olimpiada-09-concept-menelaus"
       ]
@@ -115,8 +172,6 @@
       "title": "Menelajaus teorema",
       "type": "concept",
       "shortDefinition": "Sąlyga, kada trys taškai ant trikampio kraštinių (ar jų tęsinių) yra vienoje tiesėje.",
-      "intuition": "Jei tiesė kerta trikampį, ji padalija kraštines taip, kad jų santykių sandauga lygi 1.",
-      "formal": "Taškai $F \\in AB$, $E \\in AC$ ir $D \\in BC$ (tęsinyje) yra vienoje tiesėje tada ir tik tada, kai $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.",
       "relatedConceptIds": [
         "olimpiada-09-concept-ceva"
       ]
@@ -126,8 +181,6 @@
       "title": "Trikampių panašumas",
       "type": "concept",
       "shortDefinition": "Trikampių savybė, kai jų kampai lygūs, o kraštinės proporcingos.",
-      "intuition": "Vienas trikampis yra kito trikampio padidinta arba sumažinta kopija.",
-      "formal": "Trikampiai $ABC$ ir $A'B'C'$ yra panašūs ($ABC \\sim A'B'C'$), jei $\\angle A = \\angle A'$, $\\angle B = \\angle B'$, $\\angle C = \\angle C'$ ir $AB/A'B' = BC/B'C' = AC/A'C' = k$.",
       "relatedConceptIds": []
     },
     {
@@ -135,8 +188,6 @@
       "title": "Taško galia apskritimo atžvilgiu",
       "type": "concept",
       "shortDefinition": "Dydis $PA \\cdot PB$, kuris nekinta visoms kertamosioms per tašką $P$.",
-      "intuition": "Jei iš taško $P$ nubrėšime dvi kertamąsias, kertančias apskritimą taškuose $A, B$ ir $C, D$, tai $PA \\cdot PB = PC \\cdot PD$.",
-      "formal": "Taško $P$ galia apskritimo, kurio spindulys $R$ ir centras $O$, atžvilgiu yra $d^2 - R^2$, kur $d = OP$.",
       "relatedConceptIds": []
     },
     {
@@ -144,8 +195,6 @@
       "title": "Įbrėžtinis keturkampis",
       "type": "concept",
       "shortDefinition": "Keturkampis, kurio visos viršūnės priklauso vienam apskritimui.",
-      "intuition": "Keturkampį galima įbrėžti į apskritimą tada ir tik tada, kai jo priešingų kampų suma lygi $180^\\circ$.",
-      "formal": "Keturkampis $ABCD$ yra įbrėžtinis tada ir tik tada, kai $\\angle A + \\angle C = \\angle B + \\angle D = 180^\\circ$.",
       "relatedConceptIds": [
         "olimpiada-09-concept-ptolemy"
       ]
@@ -155,10 +204,24 @@
       "title": "Ptolemėjo teorema",
       "type": "concept",
       "shortDefinition": "Ryšys tarp įbrėžtinio keturkampio kraštinių ir įstrižainių.",
-      "intuition": "Įstrižainių sandauga lygi priešingų kraštinių sandaugų sumai.",
-      "formal": "Įbrėžtiniam keturkampiui $ABCD$ galioja: $AC \\cdot BD = AB \\cdot CD + BC \\cdot AD$.",
       "relatedConceptIds": [
         "olimpiada-09-concept-ibreztinis-keturkampis"
+      ]
+    },
+    {
+      "id": "concept-triangle-centers",
+      "title": "Trikampio centrai",
+      "type": "concept",
+      "shortDefinition": "Ypatingi taškai trikampyje: centroidas, ortocentras, apibrėžtinio ir įbrėžtinio apskritimų centrai.",
+      "relatedConceptIds": []
+    },
+    {
+      "id": "concept-radical-axis",
+      "title": "Radikali ašis",
+      "type": "concept",
+      "shortDefinition": "Tiesė, kurios kiekvieno taško galios dviejų apskritimų atžvilgiu yra lygios.",
+      "relatedConceptIds": [
+        "olimpiada-09-concept-apskritimo-galia"
       ]
     }
   ],
@@ -184,96 +247,50 @@
       "explanation": "Herono formulės apibendrinimas įbrėžtiniams keturkampiams."
     }
   ],
-  "mistakes": [],
+  "mistakes": [
+    {
+      "id": "mistake-drawing-assumption",
+      "title": "Pasitikėjimas brėžinio „akivaizdumu“",
+      "description": "Mokiniai daro išvadą, kad trys taškai yra vienoje tiesėje tik todėl, kad jie taip atrodo brėžinyje.",
+      "prevention": "Visada naudokite Menelajaus teoremą arba kampų sumos metodą kolinearumui įrodyti."
+    },
+    {
+      "id": "mistake-cyclic-quad-order",
+      "title": "Neteisinga taškų tvarka įbrėžtiniame keturkampyje",
+      "description": "Taikant Ptolemėjo teoremą kraštinės sumaišomos su įstrižainėmis.",
+      "prevention": "Aiškiai įvardinkite priešingas kraštines ir įstrižaines prieš rašydami formulę."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "Čevos teoremos taikymas",
-      "problem": "Trikampio $ABC$ kraštinėse parinkti taškai $D$, $E$, $F$ taip, kad $AD$, $BE$, $CF$ kertasi taške $P$. Žinoma, kad $BD = DC$ ir $AE = 2EC$. Raskite santykį $AF/FB$.",
-      "steps": [
-        {
-          "text": "Pritaikome Čevos teoremą trikampiui $ABC$: $\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$."
-        },
-        {
-          "text": "Kadangi $BD = DC$, tai $\\frac{BD}{DC} = 1$. Kadangi $AE = 2EC$, tai $\\frac{CE}{EA} = \\frac{1}{2}$."
-        },
-        {
-          "text": "Įrašome šias vertes į lygtį: $1 \\cdot \\frac{1}{2} \\cdot \\frac{AF}{FB} = 1$."
-        },
-        {
-          "text": "Iš čia gauname $\\frac{AF}{FB} = 2$."
-        }
-      ],
-      "answer": "$2$"
+      "id": "we-geo-angle-chasing",
+      "title": "Kampų „vaikymasis“ įbrėžtiniame keturkampyje",
+      "content": "Tegul $ABCD$ yra įbrėžtinis keturkampis. Įstrižainės $AC$ ir $BD$ kertasi taške $P$. Žinoma, kad $\\angle ABC = 110^\\circ$ ir $\\angle ACB = 30^\\circ$. Raskite $\\angle APD$.\n\n**Sprendimas:**\n1. Kadangi keturkampis įbrėžtinis, kampai besiremiantys į tą patį lanką yra lygūs.\n2. $\\angle ADB = \\angle ACB = 30^\\circ$ (remiasi į lanką $AB$).\n3. Trikampyje $ABC$ kampas $\\angle BAC = 180^\\circ - 110^\\circ - 30^\\circ = 40^\\circ$.\n4. $\\angle BDC = \\angle BAC = 40^\\circ$ (remiasi į lanką $BC$).\n5. Tada visas kampas $\\angle ADC = \\angle ADB + \\angle BDC = 30^\\circ + 40^\\circ = 70^\\circ$.\n6. Įbrėžtiniame keturkampyje $\\angle ADC + \\angle ABC = 70^\\circ + 110^\\circ = 180^\\circ$ (patikrinimas - teisinga).\n7. $\\angle CAD = \\angle CBD$ (remiasi į lanką $CD$).\n8. Trikampyje $APD$ kampas $\\angle APD = 180^\\circ - (\\angle PAD + \\angle ADP)$. Tačiau geriau pastebėti, kad $\\angle APD$ yra trikampio $BPC$ išorinis kampas.\n9. Atsakymas: $\\angle APD = 70^\\circ$ (naudojant panašius trikampius $APB \\sim DPC$).",
+      "explanation": "Šis pavyzdys rodo, kaip įbrėžtinio keturkampio savybės leidžia „perkelti“ kampus po visą brėžinį."
     },
     {
-      "title": "Panašių trikampių plotų santykis",
-      "problem": "Trikampiai $ABC$ ir $DEF$ yra panašūs. $AB = 4$ cm, $DE = 6$ cm. Trikampio $ABC$ plotas lygus 16 $\\text{cm}^2$. Raskite trikampio $DEF$ plotą.",
-      "steps": [
-        {
-          "text": "Randame panašumo koeficientą $k = DE / AB = 6 / 4 = 1,5$."
-        },
-        {
-          "text": "Panašių trikampių plotų santykis lygus $k^2$."
-        },
-        {
-          "text": "Vadinasi, $S_{DEF} = S_{ABC} \\cdot k^2 = 16 \\cdot (1,5)^2$."
-        },
-        {
-          "text": "Apskaičiuojame: $16 \\cdot 2,25 = 36$ $\\text{cm}^2$."
-        }
-      ],
-      "answer": "36 $\\text{cm}^2$"
+      "id": "we-geo-simson-line-intro",
+      "title": "Simpsono tiesės idėja",
+      "content": "Iš taško $P$, esančio ant trikampio $ABC$ apibrėžtinio apskritimo, nuleisti statmenys $PX, PY, PZ$ į kraštines. Įrodykite, kad $X, Y, Z$ yra vienoje tiesėje.\n\n**Sprendimas (eskizas):**\n1. Tai klasikinė teorema. Įrodymui naudojame keturis cikliškus keturkampius, kurie susidaro dėl statmenų kampų.\n2. Parodome, kad $\\angle PXZ + \\angle PXY = 180^\\circ$, kas reiškia, kad taškai yra vienoje tiesėje.\n3. Ši tiesė vadinama Simpsono tiese.",
+      "explanation": "Tai puikus pavyzdys, kaip taškų kolinearumas įrodomas per kampų lygybes cikliškuose keturkampiuose."
     },
     {
+      "id": "we-geo-power-of-point-solve",
       "title": "Taško galios taikymas",
-      "problem": "Iš taško $P$, esančio už apskritimo, nubrėžta liestinė $PT$ ir kertamoji $PAB$, einanti per apskritimo centrą. $PT = 12$, $PA = 8$. Raskite apskritimo spindulį $R$.",
-      "steps": [
-        {
-          "text": "Pagal taško galios teoremą, $PT^2 = PA \\cdot PB$."
-        },
-        {
-          "text": "Žinome $PT = 12$ ir $PA = 8$. Apskaičiuojame $PB$: $144 = 8 \\cdot PB \\implies PB = 18$."
-        },
-        {
-          "text": "Atkarpa $AB$ yra apskritimo skersmuo, todėl $AB = PB - PA = 18 - 8 = 10$."
-        },
-        {
-          "text": "Spindulys $R = AB / 2 = 10 / 2 = 5$."
-        }
-      ],
-      "answer": "$R = 5$"
+      "content": "Dvi stygos $AB$ ir $CD$ kertasi taške $M$ apskritimo viduje. $AM=4, MB=6, CM=3$. Raskite $MD$.\n\n**Sprendimas:**\n1. Pagal taško galios teoremą (susikertančių stygų savybę), $AM \\cdot MB = CM \\cdot MD$.\n2. $4 \\cdot 6 = 3 \\cdot MD$.\n3. $24 = 3 \\cdot MD$.\n4. $MD = 8$.\n\n**Atsakymas:** 8.",
+      "explanation": "Taško galia yra viena paprasčiausių, bet dažniausiai naudojamų savybių olimpiadose."
     },
     {
-      "title": "Įbrėžtinio keturkampio kampai",
-      "problem": "Keturkampis $ABCD$ įbrėžtas į apskritimą. Kampas $A$ lygus $85^\\circ$, o kampas $B$ lygus $110^\\circ$. Raskite kampų $C$ ir $D$ didumą.",
-      "steps": [
-        {
-          "text": "Įbrėžtinio keturkampio priešingų kampų suma lygi $180^\\circ$."
-        },
-        {
-          "text": "Apskaičiuojame kampą $C$: $\\angle C = 180^\\circ - \\angle A = 180^\\circ - 85^\\circ = 95^\\circ$."
-        },
-        {
-          "text": "Apskaičiuojame kampą $D$: $\\angle D = 180^\\circ - \\angle B = 180^\\circ - 110^\\circ = 70^\\circ$."
-        }
-      ],
-      "answer": "$\\angle C = 95^\\circ, \\angle D = 70^\\circ$"
+      "id": "we-geo-ceva-application",
+      "title": "Čevos teoremos taikymas santykiams",
+      "content": "Trikampio $ABC$ pusiaukampinė $AD$, aukštinė $BE$ ir pusiaukraštinė $CF$ kertasi viename taške. Įrodykite ryšį tarp kraštinių.\n\n**Sprendimas:**\n1. Pagal Čevos teoremą: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.\n2. Pusiaukraštinė reiškia $AF = FB$, tad $\\frac{AF}{FB} = 1$.\n3. Pusiaukampinė reiškia $\\frac{BD}{DC} = \\frac{AB}{AC}$ (pusiaukampinės teorema).\n4. Aukštinė trikampyje su kampu $C$ duoda $CE = BC \\cos C$ ir $EA = AC - BC \\cos C$ (arba per panašumą).\n5. Įstatę šias vertes gauname lygtį, siejančią kraštines $a, b, c$.",
+      "explanation": "Čevos teorema sujungia skirtingas trikampio linijas į vieną algebrinę sąlygą."
     },
     {
-      "title": "Trikampio ploto skaičiavimas su sinusu",
-      "problem": "Trikampio dvi kraštinės yra 5 cm ir 8 cm, o kampas tarp jų - $45^\\circ$. Raskite trikampio plotą.",
-      "steps": [
-        {
-          "text": "Naudojame formulę $S = \\frac{1}{2} ab \\sin C$."
-        },
-        {
-          "text": "Įstatome reikšmes: $S = \\frac{1}{2} \\cdot 5 \\cdot 8 \\cdot \\sin 45^\\circ$."
-        },
-        {
-          "text": "Apskaičiuojame: $S = 20 \\cdot \\frac{\\sqrt{2}}{2} = 10\\sqrt{2} \\approx 14,14$ $\\text{cm}^2$."
-        }
-      ],
-      "answer": "$10\\sqrt{2} \\approx 14,14$ $\\text{cm}^2$"
+      "id": "we-geo-euler-line-calc",
+      "title": "Oilerio tiesės taikymas",
+      "content": "Trikampio ortocentras yra taške $(0, 0)$, o apibrėžtinio apskritimo centras yra taške $(3, 6)$. Raskite centroido koordinates.\n\n**Sprendimas:**\n1. Oilerio tiesėje taškai išsidėstę tvarka $H, G, O$.\n2. Žinome, kad $HG:GO = 2:1$.\n3. Naudojame atkarpos dalijimo santykiu formulę: $G = \\frac{1 \\cdot H + 2 \\cdot O}{3}$.\n4. $G_x = (1 \\cdot 0 + 2 \\cdot 3) / 3 = 2$.\n5. $G_y = (1 \\cdot 0 + 2 \\cdot 6) / 3 = 4$.\n\n**Atsakymas:** $(2, 4)$.",
+      "explanation": "Geometrinė savybė $HG:GO = 2:1$ leidžia lengvai rasti vieną iš centrų žinant kitus du."
     }
   ],
   "exercises": [
@@ -281,7 +298,7 @@
       "id": "ex-olimpiada-09-14",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -419,7 +436,7 @@
       "id": "ex-olimpiada-09-15",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -530,7 +547,7 @@
           "deck": "practice",
           "cardType": "method",
           "front": "Kokia yra pagrindinė strategija sprendžiant uždavinį: Trikampyje $ABC$ kampas $A = 30^\\circ$, o prieš jį esanti kr...?",
-          "back": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampyje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$.",
+          "back": "Apibendrinta sinusų teorema teigia, kad bet kuriame trikampje santykis tarp kraštinės ir prieš ją esančio kampo sinuso yra lygus apibrėžto apskritimo skersmeniui: $\\frac{a}{\\sin A} = 2R$.",
           "conceptIds": [],
           "methodIds": [],
           "defaultEnabled": true
@@ -541,7 +558,7 @@
       "id": "ex-olimpiada-09-16",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -682,7 +699,7 @@
       "id": "ex-olimpiada-09-17",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -820,7 +837,7 @@
       "id": "ex-olimpiada-09-18",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -942,7 +959,7 @@
       "id": "ex-olimpiada-09-19",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1072,7 +1089,7 @@
       "id": "ex-ol-09-geo-01",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1154,7 +1171,7 @@
       "id": "ex-ol-09-geo-02",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1217,7 +1234,7 @@
       "id": "ex-ol-09-geo-03",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1275,7 +1292,7 @@
       "id": "ex-ol-09-geo-04",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1341,7 +1358,7 @@
       "id": "ex-ol-09-geo-05",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1390,7 +1407,7 @@
       "id": "ex-ol-09-geo-06",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1433,7 +1450,7 @@
       "id": "ex-ol-09-geo-07",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1485,7 +1502,7 @@
       "id": "ex-ol-09-geo-08",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -1531,7 +1548,7 @@
       "id": "ex-ol-09-geo-09",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "advanced",
@@ -1597,7 +1614,7 @@
       "id": "ex-ol-09-geo-10",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "selection",
@@ -1646,7 +1663,7 @@
       "id": "ex-ol-09-geo-11",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "selection",
@@ -1692,7 +1709,7 @@
       "id": "ex-ol-09-geo-12",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "selection",
@@ -1737,7 +1754,7 @@
       "id": "ex-ol-09-geo-13",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1777,7 +1794,7 @@
       "id": "ex-ol-09-geo-14",
       "topicId": "olimpiada-09-geometrija",
       "grade": 9,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",

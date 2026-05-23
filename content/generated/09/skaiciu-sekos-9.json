@@ -1,56 +1,43 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "9 klasės programa seką apibrėžia kaip funkciją ir nagrinėja n-tojo nario bei rekurentinius aprašus."
+    "notes": "Išsami skaičių sekų ir progresijų teorija 9 klasei."
   },
   "topic": {
     "id": "skaiciu-sekos-9",
-    "title": "Skaičių sekos ir rekurentiniai aprašai",
+    "title": "Skaičių sekos",
     "grade": 9,
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
-    "order": 3,
-    "estimatedStudyMinutes": 130,
+    "order": 6,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
-      "desningumai-ir-lenteles-5"
+      "lygtys-nelygybes-ir-raidiniai-reiskiniai",
+      "funkcijos-ir-ju-savybes"
     ],
-    "nextTopicIds": [
-      "sekos-ir-indukcija"
-    ],
+    "nextTopicIds": [],
     "conceptIds": [
       "seka",
+      "sekos-narys",
+      "n-ojo-nario-formule",
       "aritmetine-progresija",
       "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
-      "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "progresijos-skirtumas",
+      "progresijos-vardiklis",
+      "n-nariu-suma"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "aritmetines-progresijos-n-narys",
+      "aritmetines-progresijos-suma",
+      "geometrines-progresijos-n-narys",
+      "geometrines-progresijos-suma"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "n-sumaiso-su-an",
+      "d-zenklo-klaida",
+      "q-laipsnio-klaida"
     ],
     "exerciseIds": [
       "skaiciu-sekos-9-ex-001",
@@ -77,100 +64,392 @@
   },
   "theory": [
     {
-      "id": "skaiciu-sekos-9-ivadas",
-      "title": "Įvadas",
+      "id": "sekos-ivadas",
+      "title": "1. Sekos: Tvarka skaičių pasaulyje",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičių sekos ir rekurentiniai aprašai yra tema, kurioje mokomasi atpažinti pagrindinius skaičių sekos modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveiki atvykę į temą, kurioje mokysimės atpažinti dėsningumus skaičių eilėse. Kas yra skaičių seka? Tai tiesiog skaičiai, surašyti tam tikra tvarka. Tačiau matematikoje mus domina ne bet kokios eilės, o tos, kurios turi aiškią taisyklę."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
+          "text": "Sekos supa mus visur: dienų skaičius mėnesiuose, laiptelių aukštis, palūkanų augimas banke ar net triušių dauginimasis (garsioji Fibonačio seka). Supratę sekų dėsnius, galime prognozuoti ateitį – sužinoti, koks skaičius bus 100-oje ar 1000-oje vietoje, neatliekant tūkstančio skaičiavimų."
         }
       ]
     },
     {
-      "id": "skaiciu-sekos-9-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "sekos-savoka-ir-zymejimas",
+      "title": "2. Sekos sąvoka, narys ir numeris",
       "blocks": [
         {
           "type": "definition",
           "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
+          "text": "Skaičių seka – tai funkcija, kurios apibrėžimo sritis yra natūraliųjų skaičių aibė $\\{1, 2, 3, ...\\}$."
         },
         {
-          "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
-        },
-        {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
+          "type": "paragraph",
+          "text": "Sekos skaičiai vadinami **sekos nariais**. Kiekvienas narys turi savo vietą – **numerį**. Numeris visada yra teigiamas sveikasis skaičius ($n = 1, 2, 3, ...$)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+          "text": "**Žymėjimas:** Seką paprastai žymime skliausteliuose $(a_n)$.\n- $a_1$ – pirmasis narys,\n- $a_2$ – antrasis narys,\n- $a_n$ – bendrasis (arba $n$-asis) sekos narys."
         }
       ]
     },
     {
-      "id": "skaiciu-sekos-9-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Skaičių sekos ir rekurentiniai aprašai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "skaiciu-sekos-9-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "skaiciu-sekos-9-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "n-ojo-nario-formule-teorija",
+      "title": "3. Bendrojo ($n$-ojo) nario formulė",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Tai pati patogiausia sekos išraiška. Ji leidžia rasti bet kurį sekos narį žinant tik jo numerį $n$. Pvz., jei $a_n = 2n + 5$, tai šimtoji reikšmė bus $a_{100} = 2 \\cdot 100 + 5 = 205$."
+        },
+        {
+          "type": "method",
+          "text": "**Rekurentinis būdas:** Tai kitas būdas aprašyti seką, kai naujas narys nurodomas per prieš jį einančius narius (pvz., $a_{n+1} = a_n + 3$). Kad galėtume juo naudotis, privalome žinoti bent pirmąjį narį."
         }
       ]
+    },
+    {
+      "id": "aritmetine-progresija-teorija",
+      "title": "4. Aritmetinė progresija: Pastovus augimas sumuojant",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "aritmetine-progresija",
+          "text": "Aritmetinė progresija – tai seka, kurios kiekvienas narys (pradedant antruoju) skiriasi nuo prieš jį einančio narių tuo pačiu pastoviu skaičiumi $d$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "progresijos-skirtumas",
+          "text": "Skaičius $d$ vadinamas aritmetinės progresijos skirtumu. $d = a_{n+1} - a_n$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui: $2, 5, 8, 11, ...$ Čia $a_1 = 2$, o $d = 3$. Jei $d > 0$, seka didėja. Jei $d < 0$, seka mažėja."
+        }
+      ]
+    },
+    {
+      "id": "aritmetines-progresijos-formules",
+      "title": "5. Svarbiausios aritmetinės progresijos formulės",
+      "blocks": [
+        {
+          "type": "formula",
+          "formulaId": "aritmetines-progresijos-n-narys",
+          "latex": "a_n = a_1 + (n - 1)d"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė paaiškina: kad pasiektume $n$-ąją vietą, prie pirmo nario turime pridėti skirtumą $d$ lygiai $n-1$ kartą."
+        },
+        {
+          "type": "formula",
+          "formulaId": "aritmetines-progresijos-suma",
+          "latex": "S_n = \\frac{a_1 + a_n}{2} \\cdot n \\quad \\text{arba} \\quad S_n = \\frac{2a_1 + (n-1)d}{2} \\cdot n"
+        },
+        {
+          "type": "note",
+          "text": "**Gauso idėja:** Sumos formulė pagrįsta pastebėjimu, kad pirmas ir paskutinis nariai, antras ir priešpaskutinis (ir t.t.) nariai porose duoda tą pačią sumą."
+        }
+      ]
+    },
+    {
+      "id": "geometrine-progresija-teorija",
+      "title": "6. Geometrinė progresija: Eksponentinis augimas dauginant",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "geometrine-progresija",
+          "text": "Geometrinė progresija – tai seka, kurios kiekvienas narys (pradedant antruoju) gaunamas prieš jį einantį narį dauginant iš to paties pastovaus skaičiaus $q$ ($q \neq 0, q \neq 1$)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "progresijos-vardiklis",
+          "text": "Skaičius $q$ vadinamas geometrinės progresijos vardikliu. $q = b_{n+1} / b_n$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui: $3, 6, 12, 24, ...$ Čia $b_1 = 3$, o $q = 2$. Šios sekos auga kur kas sparčiau nei aritmetinės."
+        }
+      ]
+    },
+    {
+      "id": "geometrines-progresijos-formules",
+      "title": "7. Svarbiausios geometrinės progresijos formulės",
+      "blocks": [
+        {
+          "type": "formula",
+          "formulaId": "geometrines-progresijos-n-narys",
+          "latex": "b_n = b_1 \\cdot q^{n-1}"
+        },
+        {
+          "type": "formula",
+          "formulaId": "geometrines-progresijos-suma",
+          "latex": "S_n = \\frac{b_1(q^n - 1)}{q - 1}"
+        }
+      ]
+    },
+    {
+      "id": "skaiciu-sekos-strategija",
+      "title": "8. Sprendimo strategija: Kaip atpažinti ir spręsti?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. **Atpažinkite tipą:** Ar skirtumas tarp narių pastovus (Aritmetinė), ar santykis pastovus (Geometrinė)?\n2. **Užrašykite žinomus dydžius:** Kas yra $a_1$, $d$ (arba $q$), $n$?\n3. **Parinkite formulę:** Jei reikia rasti narį – $n$-ojo nario formulė; jei bendrą kiekį – sumos formulė.\n4. **Sudarykite lygtį:** Dažnai teks rasti $n$ arba $d$, žinant kitus narius."
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-sekos",
+      "title": "9. Dažnos klaidos ir perspėjimai",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Klaida: Sumaišomas numeris $n$ su nario reikšme $a_n$. $n$ visada yra natūralusis skaičius (vieta), o $a_n$ gali būti bet koks skaičius (rezultatas)."
+        },
+        {
+          "type": "warning",
+          "text": "Klaida: $d$ ženklo klaida. Jei seka mažėja ($10, 7, 4...$), tai $d = -3$, o ne $3$."
+        },
+        {
+          "type": "warning",
+          "text": "Klaida: Geometrinėje progresijoje pamirštama kelti laipsniu $n-1$, o ne $n$."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-sekos",
+      "title": "10. Išsamūs pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sutvirtinkime žinias spręsdami uždavinius."
+        }
+      ]
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "sekos-ex-1",
+      "title": "N-ojo nario radimas pagal formulę",
+      "level": "easy",
+      "problem": "Seka duota formule $a_n = n^2 + 2n$. Raskite penktąjį šios sekos narį.",
+      "conceptIds": [
+        "n-ojo-nario-formule"
+      ],
+      "steps": [
+        {
+          "text": "Vietoje $n$ įstatome numerį 5.",
+          "latex": "a_5 = 5^2 + 2 \\cdot 5"
+        },
+        {
+          "text": "Suskaičiuojame kvadratus ir sandaugas.",
+          "latex": "a_5 = 25 + 10 = 35"
+        }
+      ],
+      "answer": "35"
+    },
+    {
+      "id": "sekos-ex-2",
+      "title": "Aritmetinės progresijos skirtumas",
+      "level": "easy",
+      "problem": "Duota aritmetinė progresija: $7, 11, 15, ...$ Raskite jos skirtumą $d$ ir 10-ąjį narį.",
+      "conceptIds": [
+        "aritmetine-progresija",
+        "progresijos-skirtumas"
+      ],
+      "steps": [
+        {
+          "text": "Randame skirtumą atimdami pirmą narį iš antro.",
+          "latex": "d = 11 - 7 = 4"
+        },
+        {
+          "text": "Taikome $n$-ojo nario formulę $a_{10} = a_1 + 9d$.",
+          "latex": "a_{10} = 7 + 9 \\cdot 4 = 7 + 36 = 43"
+        }
+      ],
+      "answer": "d = 4; a10 = 43"
+    },
+    {
+      "id": "sekos-ex-3",
+      "title": "Aritmetinės progresijos sumos skaičiavimas",
+      "level": "medium",
+      "problem": "Apskaičiuokite visų dviženklių skaičių, kurie dalijasi iš 5, sumą.",
+      "conceptIds": [
+        "aritmetine-progresija",
+        "n-nariu-suma"
+      ],
+      "steps": [
+        {
+          "text": "Nustatome progresiją: $10, 15, 20, ..., 95$. Čia $a_1=10, d=5, a_n=95$.",
+          "latex": "a_1 = 10, \\quad a_n = 95, \\quad d = 5"
+        },
+        {
+          "text": "Randame narių skaičių $n$: $95 = 10 + (n-1) \\cdot 5$.",
+          "latex": "85 = (n-1) \\cdot 5 \\Rightarrow n-1 = 17 \\Rightarrow n = 18"
+        },
+        {
+          "text": "Suskaičiuojame sumą $S_{18} = \\frac{a_1 + a_n}{2} \\cdot n$.",
+          "latex": "S_{18} = \\frac{10 + 95}{2} \\cdot 18 = 105 \\cdot 9 = 945"
+        }
+      ],
+      "answer": "945"
+    },
+    {
+      "id": "sekos-ex-4",
+      "title": "Geometrinės progresijos vardiklis",
+      "level": "easy",
+      "problem": "Geometrinės progresijos pirmasis narys $b_1 = 2$, o vardiklis $q = 3$. Raskite ketvirtąjį narį.",
+      "conceptIds": [
+        "geometrine-progresija",
+        "progresijos-vardiklis"
+      ],
+      "steps": [
+        {
+          "text": "Taikome formulę $b_4 = b_1 \\cdot q^3$.",
+          "latex": "b_4 = 2 \\cdot 3^3"
+        },
+        {
+          "text": "Suskaičiuojame laipsnį: $3^3 = 27$.",
+          "latex": "b_4 = 2 \\cdot 27 = 54"
+        }
+      ],
+      "answer": "54"
+    },
+    {
+      "id": "sekos-ex-5",
+      "title": "Geometrinės progresijos suma",
+      "level": "medium",
+      "problem": "Apskaičiuokite pirmų šešių geometrinės progresijos $1, 2, 4, 8, ...$ narių sumą.",
+      "conceptIds": [
+        "geometrine-progresija",
+        "n-nariu-suma"
+      ],
+      "steps": [
+        {
+          "text": "Nustatome $b_1 = 1, q = 2, n = 6$.",
+          "latex": "b_1 = 1, \\quad q = 2"
+        },
+        {
+          "text": "Taikome sumos formulę $S_6 = \\frac{b_1(q^6 - 1)}{q - 1}$.",
+          "latex": "S_6 = \\frac{1(2^6 - 1)}{2 - 1}"
+        },
+        {
+          "text": "Suskaičiuojame: $2^6 = 64$.",
+          "latex": "S_6 = 64 - 1 = 63"
+        }
+      ],
+      "answer": "63"
+    },
+    {
+      "id": "sekos-ex-6",
+      "title": "Aritmetinės progresijos nario numerio radimas",
+      "level": "hard",
+      "problem": "Kelintas aritmetinės progresijos $a_n = 3n - 5$ narys lygus 100?",
+      "conceptIds": [
+        "n-ojo-nario-formule"
+      ],
+      "steps": [
+        {
+          "text": "Sudarome lygtį: bendrąją formulę prilyginame 100.",
+          "latex": "3n - 5 = 100"
+        },
+        {
+          "text": "Sprendžiame tiesinę lygtį.",
+          "latex": "3n = 105"
+        },
+        {
+          "text": "Randame n.",
+          "latex": "n = 35"
+        }
+      ],
+      "answer": "35-as narys"
+    },
+    {
+      "id": "sekos-ex-7",
+      "title": "Sistema progresijoms spręsti",
+      "level": "hard",
+      "problem": "Aritmetinės progresijos $a_2 + a_5 = 20$ ir $a_3 = 7$. Raskite $a_1$ ir $d$.",
+      "conceptIds": [
+        "aritmetine-progresija"
+      ],
+      "steps": [
+        {
+          "text": "Visus narius išreiškiame per $a_1$ ir $d$.",
+          "latex": "a_2 = a_1 + d; \\quad a_5 = a_1 + 4d; \\quad a_3 = a_1 + 2d"
+        },
+        {
+          "text": "Sudarome sistemą.",
+          "latex": "\\begin{cases} (a_1+d) + (a_1+4d) = 20 \\\\ a_1 + 2d = 7 \\end{cases}"
+        },
+        {
+          "text": "Supaprastiname: $2a_1 + 5d = 20$ ir $a_1 = 7 - 2d$.",
+          "latex": "2(7 - 2d) + 5d = 20"
+        },
+        {
+          "text": "Sprendžiame: $14 - 4d + 5d = 20 \\Rightarrow d = 6$.",
+          "latex": "d = 6; \\quad a_1 = 7 - 2 \\cdot 6 = -5"
+        }
+      ],
+      "answer": "a1 = -5, d = 6"
+    },
+    {
+      "id": "sekos-ex-8",
+      "title": "Geometrinės progresijos praktinis taikymas",
+      "level": "hard",
+      "problem": "Bakterijų skaičius dubenėlyje kas valandą padvigubėja. Pradžioje buvo 100 bakterijų. Kiek jų bus po 10 valandų?",
+      "conceptIds": [
+        "geometrine-progresija"
+      ],
+      "steps": [
+        {
+          "text": "Tai geometrinė progresija. $b_1 = 100$ (pradinis kiekis), $q = 2$.",
+          "latex": "b_1 = 100, \\quad q = 2"
+        },
+        {
+          "text": "Dėmesio: po 1 valandos bus $b_2$, po 2 valandų $b_3$. Po 10 valandų bus $b_{11}$.",
+          "latex": "b_{11} = b_1 \\cdot q^{10}"
+        },
+        {
+          "text": "Suskaičiuojame: $2^{10} = 1024$.",
+          "latex": "b_{11} = 100 \\cdot 1024 = 102400"
+        }
+      ],
+      "answer": "102400 bakterijų"
     }
   ],
   "concepts": [
     {
       "id": "seka",
-      "title": "Seka",
+      "title": "Skaičių seka",
       "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai skaičių sekos temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
+      "shortDefinition": "Sunumeruotas skaičių rinkinys.",
+      "intuition": "Skaičių eilė, kurioje kiekvienas stovi savo eilės vietoje.",
+      "formal": "Funkcija, kurios argumentas yra natūralusis skaičius.",
+      "notation": [
+        "(a_n)"
+      ],
       "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
+        "sekos-narys",
+        "n-ojo-nario-formule"
+      ],
+      "prerequisiteConceptIds": [],
+      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "sekos-narys",
+      "title": "Sekos narys",
+      "type": "concept",
+      "shortDefinition": "Konkretus skaičius sekoje.",
+      "intuition": "Vienas elementas iš skaičių eilės.",
+      "formal": "Sekos funkcijos reikšmė f(n) = a_n.",
+      "notation": [
+        "a_n"
+      ],
+      "relatedConceptIds": [
+        "seka"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -180,17 +459,17 @@
       "id": "aritmetine-progresija",
       "title": "Aritmetinė progresija",
       "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
+      "shortDefinition": "Seka su pastoviu skirtumu d.",
+      "intuition": "Laiptai: kiekvienas laiptelis pakyla tuo pačiu aukščiu.",
+      "formal": "Seka, kurioje a_{n+1} = a_n + d visiems n.",
+      "notation": [
+        "d"
+      ],
       "relatedConceptIds": [
-        "seka",
-        "indukcija"
+        "progresijos-skirtumas",
+        "n-nariu-suma"
       ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
+      "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
@@ -198,242 +477,15 @@
       "id": "geometrine-progresija",
       "title": "Geometrinė progresija",
       "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
+      "shortDefinition": "Seka su pastoviu vardikliu q.",
+      "intuition": "Sniego gniūžtė: skaičiai didėja (arba mažėja) kartais.",
+      "formal": "Seka, kurioje b_{n+1} = b_n * q visiems n.",
+      "notation": [
         "q"
       ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
       "relatedConceptIds": [
-        "seka",
-        "teorema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsnis",
-      "title": "Laipsnis",
-      "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknis",
-      "title": "Šaknis",
-      "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodiklis",
-      "title": "Rodiklis",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmas",
-      "title": "Logaritmas",
-      "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestine",
-      "title": "Išvestinė",
-      "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
-      "relatedConceptIds": [
-        "integralas",
-        "isvestine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
+        "progresijos-vardiklis",
+        "n-nariu-suma"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -442,1173 +494,72 @@
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
+      "id": "aritmetines-progresijos-n-narys",
+      "title": "Aritmetinės progresijos n-asis narys",
       "type": "formula",
-      "latex": "a_n",
-      "conditions": [
-        "Sekoms"
-      ],
+      "latex": "a_n = a_1 + (n-1)d",
+      "conditions": [],
       "variables": {
-        "n": "indeksas"
+        "a1": "pirmasis narys",
+        "d": "skirtumas",
+        "n": "nario numeris"
       },
-      "explanation": "Žymi n-tąjį sekos narį.",
-      "relatedConceptIds": [
-        "seka"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
+      "explanation": "Leidžia rasti bet kurį narį, žinant pirmąjį ir skirtumą.",
       "relatedConceptIds": [
         "aritmetine-progresija"
       ],
       "defaultSrs": true
     },
     {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
+      "id": "geometrines-progresijos-n-narys",
+      "title": "Geometrinės progresijos n-asis narys",
       "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
-      "conditions": [
-        "Kai santykis pastovus"
-      ],
+      "latex": "b_n = b_1 \\cdot q^{n-1}",
+      "conditions": [],
       "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
+        "b1": "pirmasis narys",
+        "q": "vardiklis",
+        "n": "nario numeris"
       },
-      "explanation": "Naudojama augimui ir mažėjimui.",
+      "explanation": "Leidžia rasti bet kurį narį, žinant pirmąjį ir vardiklį.",
       "relatedConceptIds": [
         "geometrine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\log_a b=c \\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
-      },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
-      "relatedConceptIds": [
-        "logaritmas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\sin\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
-      "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
-      "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
+      "id": "n-sumaiso-su-an",
+      "title": "Sumaišo numerį su nario reikšme",
       "type": "mistake",
       "conceptIds": [
-        "laipsnis"
+        "seka",
+        "sekos-narys"
       ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
+      "wrongPattern": "Užduotyje 'raskite dešimtą narį' įstatymo n=43 (reikšmę) vietoje n=10.",
+      "whyItHappens": "Nesuprantama skirtis tarp vietos eilėje (n) ir toje vietoje esančio skaičiaus (an).",
+      "correction": "Numeris n visada yra eilės numeris (1, 2, 3...).",
+      "wrongExample": "a_n = 2*43 + 1",
+      "correctExample": "a_10 = 2*10 + 1",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
+      "id": "d-zenklo-klaida",
+      "title": "Skirtumo d ženklo klaida",
       "type": "mistake",
       "conceptIds": [
-        "integralas"
+        "aritmetine-progresija"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
+      "wrongPattern": "Seka 10, 8, 6... skirtumą d užrašo kaip 2.",
+      "whyItHappens": "Imamas skirtumas tarp didesnio ir mažesnio skaičiaus, o ne tarp sekančio ir ankstesnio.",
+      "correction": "Visada d = a2 - a1. Jei seka mažėja, d yra neigiamas.",
+      "wrongExample": "d = 2",
+      "correctExample": "d = -2",
       "defaultSrs": true
     }
   ],
-  "workedExamples": [
-    {
-      "id": "skaiciu-sekos-9-exmp-1",
-      "title": "Seka",
-      "level": "easy",
-      "problem": "Jei a_n=2n+1, rask a_4.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Įstatome n=4.",
-          "latex": "a_4=9"
-        }
-      ],
-      "answer": "9"
-    },
-    {
-      "id": "skaiciu-sekos-9-exmp-2",
-      "title": "Progresija",
-      "level": "easy",
-      "problem": "Jei a1=4 ir d=3, rask a5.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame formulę.",
-          "latex": "a_5=16"
-        }
-      ],
-      "answer": "16"
-    },
-    {
-      "id": "skaiciu-sekos-9-exmp-3",
-      "title": "Indukcija",
-      "level": "medium",
-      "problem": "Ką tikriname indukcijos pradžioje?",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pradinį teiginį.",
-          "latex": "bazė"
-        }
-      ],
-      "answer": "pradinis teiginys"
-    },
-    {
-      "id": "skaiciu-sekos-9-exmp-4",
-      "title": "Geometrinė progresija",
-      "level": "medium",
-      "problem": "Jei q=2, kiek kartų padidėja seka?",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Kiekvienas narys dvigubėja.",
-          "latex": "2"
-        }
-      ],
-      "answer": "2 kartus"
-    },
-    {
-      "id": "skaiciu-sekos-9-exmp-5",
-      "title": "Formulė",
-      "level": "hard",
-      "problem": "Užrašyk bendrąją aritmetinės progresijos formulę.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame a_n=a_1+(n-1)d.",
-          "latex": "a_n=a_1+(n-1)d"
-        }
-      ],
-      "answer": "a_n=a_1+(n-1)d"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "skaiciu-sekos-9-ex-001",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei a_n=2n-1, rask a_1.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "a_1=3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-002",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei a_n=2n-1, rask a_2.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "a_2=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-003",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei a_n=2n-1, rask a_3.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "a_3=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-004",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei a_n=2n-1, rask a_4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "a_4=9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-005",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei a_n=2n-1, rask a_5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "a_5=11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-006",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Aritmetinėje progresijoje a1=4, d=3. Rask a5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok a_n=a_1+(n-1)d.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "aritmetine-progresija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4+4·3.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-007",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Koks yra indukcijos pirmas žingsnis?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Įrodyti viską vienu sakiniu"
-          },
-          {
-            "id": "b",
-            "text": "Patikrinti pradinį teiginį"
-          },
-          {
-            "id": "c",
-            "text": "Iš karto skaičiuoti integralą"
-          },
-          {
-            "id": "d",
-            "text": "Atsitiktinai pasirinkti pavyzdį"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Reikia pradžios.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "indukcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pirmiausia tikrinamas pradinis atvejis.",
-          "latex": "bazė"
-        }
-      ],
-      "answerText": "Patikrinti pradinį teiginį",
-      "alternateMethods": [],
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-008",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-009",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-010",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-011",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-012",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-013",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-014",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-015",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-016",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-017",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-018",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-019",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "skaiciu-sekos-9-ex-020",
-      "topicId": "skaiciu-sekos-9",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Skaičių sekos ir rekurentiniai aprašai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "skaiciu-sekos-9-test-topic",
-      "title": "Skaičių sekos ir rekurentiniai aprašai testas",
-      "scope": "topic",
-      "topicIds": [
-        "skaiciu-sekos-9"
-      ],
-      "exerciseIds": [
-        "skaiciu-sekos-9-ex-001",
-        "skaiciu-sekos-9-ex-002",
-        "skaiciu-sekos-9-ex-003",
-        "skaiciu-sekos-9-ex-004",
-        "skaiciu-sekos-9-ex-005",
-        "skaiciu-sekos-9-ex-006",
-        "skaiciu-sekos-9-ex-007",
-        "skaiciu-sekos-9-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "skaiciu-sekos-9-test-challenge",
-      "title": "Skaičių sekos ir rekurentiniai aprašai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "skaiciu-sekos-9"
-      ],
-      "exerciseIds": [
-        "skaiciu-sekos-9-ex-009",
-        "skaiciu-sekos-9-ex-010",
-        "skaiciu-sekos-9-ex-011",
-        "skaiciu-sekos-9-ex-012",
-        "skaiciu-sekos-9-ex-013",
-        "skaiciu-sekos-9-ex-014",
-        "skaiciu-sekos-9-ex-015",
-        "skaiciu-sekos-9-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "skaiciu-sekos-9-srs-seka",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-aritmetine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-sekos-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
-      "conceptIds": [
-        "sekos-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
-      "conceptIds": [
-        "aritmetines-progresijos-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
-      "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "skaiciu-sekos-9-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "exercises": [],
+  "tests": [],
+  "srsCards": []
 }

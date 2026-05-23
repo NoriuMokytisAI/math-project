@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "10 klasės programa aprašo dispersiją, standartinį nuokrypį, skirstinius, normalųjį skirstinį ir statistinį patikimumą."
+    "notes": "10 klasės programa aprašo dispersiją, standartinį nuokrypį, skirstinius, normalųjį skirstinį ir statistinį patikimumą. Išsamus teorinis papildymas."
   },
   "topic": {
     "id": "duomenu-sklaida-skirstiniai-ir-patikimumas",
@@ -12,7 +12,7 @@
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 7,
-    "estimatedStudyMinutes": 150,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "sklaidos-diagramos-ir-koreliacija"
     ],
@@ -27,18 +27,23 @@
       "mediana",
       "moda",
       "sklaida",
-      "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "dispersija",
+      "standartinis-nuokrypis",
+      "normalusis-skirstinis",
+      "statistinis-patikimumas",
+      "pasikliautinasis-intervalas",
+      "populiacija"
     ],
     "formulaIds": [
       "vidurkio-formule",
-      "tikimybes-formule"
+      "dispersijos-formule",
+      "standartinio-nuokrypio-formule",
+      "imties-paklaidos-formule"
     ],
     "mistakeIds": [
       "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "nuokrypis-be-saknies",
+      "painioja-mediana-su-vidurkiu"
     ],
     "exerciseIds": [
       "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-001",
@@ -65,84 +70,183 @@
   },
   "theory": [
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ivadas",
-      "title": "Įvadas",
+      "id": "statistines-charakteristikos",
+      "title": "Centrinės tendencijos matai: Vidurkis, Mediana, Moda",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Duomenų sklaida, skirstiniai ir statistinis patikimumas yra tema, kurioje mokomasi atpažinti pagrindinius sklaida, skirstiniai ir patikimumas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Statistika prasideda nuo noro suprasti didelį kiekį duomenų naudojant vos kelis skaičius. Centrinės tendencijos matai parodo, aplink kokią reikšmę telkiasi duomenys."
         },
         {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
+          "type": "definition",
+          "conceptId": "vidurkis",
+          "text": "Aritmetinis vidurkis (žymimas $\\bar{x}$) yra visų duomenų suma, padalyta iš jų kiekio $n$: $\\bar{x} = \\frac{\\sum x_i}{n}$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "mediana",
+          "text": "Mediana – tai vidurinė surikiuotos duomenų sekos reikšmė. Jei duomenų kiekis lyginis, mediana yra dviejų vidurinių reikšmių vidurkis."
+        },
+        {
+          "type": "definition",
+          "conceptId": "moda",
+          "text": "Moda – dažniausiai duomenų rinkinyje pasikartojanti reikšmė. Rinkinys gali turėti vieną modą, kelias modas arba neturėti nė vienos."
+        },
+        {
+          "type": "note",
+          "text": "Vidurkis yra jautrus 'iškritėliams' (labai didelėms arba mažoms reikšmėms), o mediana – ne. Todėl, pavyzdžiui, šalies gyventojų pajamoms vertinti dažnai geriau tinka mediana."
         }
       ]
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "duomenu-sklaida",
+      "title": "Duomenų sklaidos matai: Plotis ir Dispersija",
       "blocks": [
         {
+          "type": "paragraph",
+          "text": "Vien tik vidurkio nepakanka apibūdinti duomenims. Pavyzdžiui, skaičių rinkinių $\\{50, 50, 50\\}$ ir $\\{0, 50, 100\\}$ vidurkiai yra vienodi (50), tačiau jų sklaida visiškai skirtinga. Sklaidos matai parodo, kiek duomenys yra 'išsibarstę' nuo centro."
+        },
+        {
           "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "conceptId": "sklaida",
+          "text": "Duomenų sklaida (variacija) nusako duomenų išsisklaidymo mastą aplink vidurkį."
+        },
+        {
+          "type": "method",
+          "text": "Paprasčiausias sklaidos matas yra **variacijos mojis** (plotis) – tai skirtumas tarp didžiausios ir mažiausios duomenų reikšmės: $R = x_{max} - x_{min}$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "dispersija",
+          "text": "Dispersija ($s^2$) yra vidutinis kvadratinis nuokrypis nuo vidurkio. Ji apskaičiuojama sudedant kiekvieno duomenio ir vidurkio skirtumo kvadratus ir padalijant iš duomenų kiekio."
+        },
+        {
+          "type": "formula",
+          "formulaId": "dispersijos-formule",
+          "latex": "s^2 = \\frac{\\sum (x_i - \\bar{x})^2}{n}"
+        }
+      ]
+    },
+    {
+      "id": "standartinis-nuokrypis-teorija",
+      "title": "Standartinis nuokrypis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dispersija yra puikus matas, tačiau jos vienetai yra kvadratiniai (pavyzdžiui, jei matuojame ūgį centimetrais, dispersija bus kvadratiniais centimetrais). Kad grįžtume prie pradinių vienetų, traukiame kvadratinę šaknį."
+        },
+        {
+          "type": "definition",
+          "conceptId": "standartinis-nuokrypis",
+          "text": "Standartinis nuokrypis (žymimas $s$ arba graikiška raide $\\sigma$) yra kvadratinė šaknis iš dispersijos: $s = \\sqrt{s^2}$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "standartinio-nuokrypio-formule",
+          "latex": "s = \\sqrt{\\frac{\\sum (x_i - \\bar{x})^2}{n}}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mažas standartinis nuokrypis rodo, kad duomenys yra susitelkę arti vidurkio (tikslumas), o didelis – kad duomenys stipriai išsibarstę (mažas prognozuojamumas)."
+        }
+      ]
+    },
+    {
+      "id": "normalusis-skirstinis-gausas",
+      "title": "Normalusis skirstinis (Gauso kreivė)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugelis gamtinių ir socialinių reiškinių (ūgis, intelekto koeficientas, paklaidos gamyboje) pasiskirsto pagal tam tikrą dėsnį, vadinamą normaliuoju skirstiniu. Jo grafikas yra simetriškas, varpo formos."
+        },
+        {
+          "type": "definition",
+          "conceptId": "normalusis-skirstinis",
+          "text": "Normalusis skirstinis – tai teorinis modelis, kurio vidurkis, mediana ir moda sutampa."
+        },
+        {
+          "type": "method",
+          "text": "Galiūnų taisyklė (68-95-99,7 taisyklė):\n1. Apie 68% duomenų patenka į intervalą $(\\bar{x} - s; \\bar{x} + s)$.\n2. Apie 95% duomenų patenka į intervalą $(\\bar{x} - 2s; \\bar{x} + 2s)$.\n3. Apie 99,7% duomenų patenka į intervalą $(\\bar{x} - 3s; \\bar{x} + 3s)$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai reiškia, kad reikšmė, nutolusi nuo vidurkio daugiau nei per 3 standartinius nuokrypius, yra laikoma itin reta (anomalija)."
+        }
+      ]
+    },
+    {
+      "id": "imtis-ir-populiacija",
+      "title": "Imtis, populiacija ir statistinis patikimumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mes retai galime ištirti visus objektus (populiaciją). Pavyzdžiui, norėdami sužinoti visų Lietuvos dešimtokų nuomonę, apklausiame tik dalį jų."
+        },
+        {
+          "type": "definition",
+          "conceptId": "populiacija",
+          "text": "Visi tiriamieji objektai (pvz., visi šalies gyventojai)."
         },
         {
           "type": "definition",
           "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
+          "text": "Atsitiktinai parinkta populiacijos dalis, kuri turi reprezentuoti visumą."
         },
         {
           "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "conceptId": "statistinis-patikimumas",
+          "text": "Tikimybė, kad išvados, padarytos remiantis imtimi, yra teisingos ir visai populiacijai."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Kuo didesnė imtis, tuo mažesnė paklaida ir didesnis patikimumas. Tačiau svarbu ne tik dydis, bet ir atsitiktinumas – imtis negali būti šališka."
         }
       ]
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Duomenų sklaida, skirstiniai ir statistinis patikimumas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "pasikliautinasis-intervalas-ivadas",
+      "title": "Pasikliautinasis intervalas ir paklaida",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Skelbiant apklausų rezultatus (pvz., rinkimų prognozes), visada pridedama paklaida, pavyzdžiui, $45\\% \\pm 3\\%$. Tai reiškia, kad tikroji reikšmė greičiausiai yra tarp 42% ir 48%."
+        },
+        {
+          "type": "definition",
+          "conceptId": "pasikliautinasis-intervalas",
+          "text": "Reikšmių intervalas, kuriame su tam tikra tikimybe (dažniausiai 95%) yra tikroji populiacijos charakteristika."
+        },
+        {
+          "type": "formula",
+          "formulaId": "imties-paklaidos-formule",
+          "latex": "E \\approx \\frac{1}{\\sqrt{n}}",
+          "text": "Apytikslė maksimali imties paklaida (kai $n$ – apklaustųjų skaičius)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, jei apklausėme 1000 žmonių, paklaida bus apie $1 / \\sqrt{1000} \\approx 0,0316$ arba 3,2%."
+        }
+      ]
+    },
+    {
+      "id": "interpretavimo-klaidos",
+      "title": "Interpretavimo klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Koreliacija nėra priežastingumas! Jei du dalykai kinta kartu (pvz., ledų pardavimas ir skendimų skaičius vasarą), tai nereiškia, kad vienas sukelia kitą. Abu juos gali veikti trečias veiksnys – karštis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitos dažnos klaidos:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Vidurkio taikymas stipriai asimetriškiems duomenims.",
+            "Išvadų darymas iš per mažos imties.",
+            "Grafinis manipuliavimas (ne nuo nulio prasidedanti ašis, klaidinantys masteliai)."
+          ]
         }
       ]
     }
@@ -155,217 +259,107 @@
       "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
       "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
       "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
-      "notation": [],
       "relatedConceptIds": [
         "imtis",
-        "vidurkis",
-        "tikimybe"
+        "vidurkis"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "defaultSrs": true
+    },
+    {
+      "id": "dispersija",
+      "title": "Dispersija",
+      "type": "concept",
+      "shortDefinition": "Nuokrypių nuo vidurkio kvadratų vidurkis.",
+      "intuition": "Matas, parodantis duomenų sklaidos intensyvumą.",
+      "formal": "$s^2 = \\frac{1}{n} \\sum (x_i - \\bar{x})^2$.",
+      "relatedConceptIds": [
+        "standartinis-nuokrypis",
+        "vidurkis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "standartinis-nuokrypis",
+      "title": "Standartinis nuokrypis",
+      "type": "concept",
+      "shortDefinition": "Kvadratinė šaknis iš dispersijos.",
+      "intuition": "Vidutinis atstumas, kuriuo duomenys nutolę nuo vidurkio.",
+      "notation": [
+        "s",
+        "\\sigma"
+      ],
+      "relatedConceptIds": [
+        "dispersija",
+        "normalusis-skirstinis"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "normalusis-skirstinis",
+      "title": "Normalusis skirstinis",
+      "type": "concept",
+      "shortDefinition": "Varpo formos tikimybių pasiskirstymas.",
+      "intuition": "Dauguma reikšmių yra centre, o kraštuose – vis mažiau.",
+      "relatedConceptIds": [
+        "vidurkis",
+        "standartinis-nuokrypis"
+      ],
       "defaultSrs": true
     },
     {
       "id": "imtis",
       "title": "Imtis",
       "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
+      "shortDefinition": "Populiacijos poaibis.",
+      "intuition": "Maža grupė, kurią tiriame, kad suprastume visą didelę grupę.",
       "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+        "populiacija",
+        "statistinis-patikimumas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koreliacija",
-      "title": "Koreliacija",
-      "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
       "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
-      "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
+      "title": "Aritmetinio vidurkio formulė",
+      "latex": "\\bar{x} = \\frac{x_1 + x_2 + ... + x_n}{n}",
       "variables": {
-        "n": "reikšmių skaičius"
+        "x_i": "duomenų reikšmės",
+        "n": "duomenų kiekis"
       },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
-      "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
+      "explanation": "Sudedame visus skaičius ir padaliname iš jų kiekio.",
       "defaultSrs": true
     },
     {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
+      "id": "dispersijos-formule",
+      "title": "Dispersijos formulė",
+      "latex": "s^2 = \\frac{(x_1-\\bar{x})^2 + ... + (x_n-\\bar{x})^2}{n}",
+      "explanation": "Vidutinis nuokrypių kvadratų vidurkis.",
+      "defaultSrs": true
+    },
+    {
+      "id": "standartinio-nuokrypio-formule",
+      "title": "Standartinio nuokrypio formulė",
+      "latex": "s = \\sqrt{\\frac{\\sum (x_i - \\bar{x})^2}{n}}",
+      "explanation": "Apskaičiuojama traukiant šaknį iš dispersijos.",
       "defaultSrs": true
     }
   ],
   "mistakes": [
+    {
+      "id": "nuokrypis-be-saknies",
+      "title": "Pamiršta ištraukti šaknį",
+      "conceptIds": [
+        "standartinis-nuokrypis"
+      ],
+      "wrongPattern": "Apskaičiuoja dispersiją ir vadina ją standartiniu nuokrypiu.",
+      "whyItHappens": "Formulės yra panašios, mokinys pamiršta paskutinį žingsnį.",
+      "correction": "Visada prisiminkite: $s = \\sqrt{s^2}$.",
+      "wrongExample": "s^2 = 16, mokinys sako, kad nuokrypis 16.",
+      "correctExample": "s^2 = 16, vadinasi s = 4.",
+      "defaultSrs": true
+    },
     {
       "id": "vidurkis-be-suma",
       "title": "Vidurkį skaičiuoja be sumos",
@@ -379,120 +373,186 @@
       "wrongExample": "Vidurkis = 4/3",
       "correctExample": "Vidurkis = (4+6+8)/3",
       "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
-      "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-exmp-1",
-      "title": "Vidurkis",
+      "id": "vidurkis-mediana-example",
+      "title": "Vidurkio ir medianos radimas",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Duoti kontrolinio darbo balai: 4, 7, 8, 5, 10, 8, 2. Raskite vidurkį, medianą ir modą.",
       "conceptIds": [
-        "vidurkis"
+        "vidurkis",
+        "mediana",
+        "moda"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Randame vidurkį: sudedame balus ir daliname iš 7.",
+          "latex": "\\bar{x} = \\frac{4+7+8+5+10+8+2}{7} = \\frac{44}{7} \\approx 6,29"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Surikiuojame duomenis medianai: 2, 4, 5, 7, 8, 8, 10."
+        },
+        {
+          "text": "Vidurinė reikšmė (ketvirtoji) yra 7. Mediana = 7."
+        },
+        {
+          "text": "Daugiausia kartų (du) pasikartoja 8. Moda = 8."
         }
       ],
-      "answer": "20/3"
+      "answer": "Vidurkis ~6,29; Mediana 7; Moda 8"
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-exmp-2",
-      "title": "Mediana",
+      "id": "dispersija-nuokrypis-example",
+      "title": "Dispersijos ir nuokrypio skaičiavimas",
+      "level": "medium",
+      "problem": "Raskite rinkinio $\\{2, 4, 6, 8\\}$ standartinį nuokrypį.",
+      "conceptIds": [
+        "dispersija",
+        "standartinis-nuokrypis"
+      ],
+      "steps": [
+        {
+          "text": "Randame vidurkį.",
+          "latex": "\\bar{x} = (2+4+6+8)/4 = 5"
+        },
+        {
+          "text": "Randame kiekvieno skaičiaus nuokrypį nuo vidurkio kvadratu.",
+          "latex": "(2-5)^2=9, (4-5)^2=1, (6-5)^2=1, (8-5)^2=9"
+        },
+        {
+          "text": "Sudedame kvadratus ir daliname iš kiekio (randame dispersiją).",
+          "latex": "s^2 = (9+1+1+9)/4 = 20/4 = 5"
+        },
+        {
+          "text": "Traukiame šaknį standartiniam nuokrypiui.",
+          "latex": "s = \\sqrt{5} \\approx 2,24"
+        }
+      ],
+      "answer": "2,24"
+    },
+    {
+      "id": "normalusis-skirstinis-pavyzdys",
+      "title": "Normaliojo skirstinio taisyklė",
+      "level": "medium",
+      "problem": "Moterų ūgio vidurkis yra 168 cm, o standartinis nuokrypis 6 cm. Kokia tikimybė, kad atsitiktinai parinktos moters ūgis bus tarp 162 cm ir 174 cm?",
+      "conceptIds": [
+        "normalusis-skirstinis"
+      ],
+      "steps": [
+        {
+          "text": "Atstumas nuo vidurkio iki 162 ir 174 yra lygiai 6 cm, t. y. vienas standartinis nuokrypis."
+        },
+        {
+          "text": "Pagal 68-95-99,7 taisyklę, į intervalą $(\\bar{x}-s; \\bar{x}+s)$ patenka apie 68% duomenų."
+        }
+      ],
+      "answer": "Apie 68%"
+    },
+    {
+      "id": "imties-paklaida-example",
+      "title": "Imties paklaidos skaičiavimas",
+      "level": "medium",
+      "problem": "Sociologai apklausė 400 mokinių. Kokia yra apytikslė šios apklausos paklaida?",
+      "conceptIds": [
+        "pasikliautinasis-intervalas"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame formulę $E = 1 / \\sqrt{n}$.",
+          "latex": "E = 1 / \\sqrt{400}"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "E = 1 / 20 = 0,05"
+        }
+      ],
+      "answer": "5%"
+    },
+    {
+      "id": "mediana-lyginis-example",
+      "title": "Mediana esant lyginiam duomenų kiekiui",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Raskite rinkinio $\\{1, 5, 8, 10, 12, 20\\}$ medianą.",
       "conceptIds": [
         "mediana"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
+          "text": "Duomenys jau surikiuoti. Kiekis n = 6 (lyginis)."
         },
         {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
-        }
-      ],
-      "answer": "5"
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-exmp-3",
-      "title": "Tikimybė",
-      "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Imame dvi vidurines reikšmes: 8 ir 10."
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Apskaičiuojame jų vidurkį.",
+          "latex": "(8+10)/2 = 9"
         }
       ],
-      "answer": "1/6"
+      "answer": "9"
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
-        }
-      ],
-      "answer": "4"
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-exmp-5",
-      "title": "Sklaida",
+      "id": "lyginimas-sklaida-example",
+      "title": "Duomenų rinkinių palyginimas",
       "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "problem": "Krepšininkas A pelnė: 10, 10, 10, 10 taškų. Krepšininkas B pelnė: 0, 0, 20, 20 taškų. Palyginkite jų žaidimo stabilumą.",
       "conceptIds": [
-        "sklaida"
+        "sklaida",
+        "standartinis-nuokrypis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Abiejų vidurkis yra 10 taškų."
+        },
+        {
+          "text": "Krepšininko A nuokrypis s = 0 (visos reikšmės vienodos). Jis labai stabilus."
+        },
+        {
+          "text": "Krepšininko B dispersija $s^2 = ((0-10)^2 \\cdot 2 + (20-10)^2 \\cdot 2)/4 = (100+100+100+100)/4 = 100$. Nuokrypis s = 10. Jis labai nestabilus."
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "Krepšininkas A yra stabilesnis"
+    },
+    {
+      "id": "paklaidos-intervalas-example",
+      "title": "Pasikliautinojo intervalo interpretavimas",
+      "level": "medium",
+      "problem": "Apklausa rodo, kad 60% rinkėjų palaiko kandidatą, o paklaida yra 4%. Kokiame intervale yra tikrasis palaikymas?",
+      "conceptIds": [
+        "pasikliautinasis-intervalas"
+      ],
+      "steps": [
+        {
+          "text": "Atimame paklaidą: 60% - 4% = 56%."
+        },
+        {
+          "text": "Pridedame paklaidą: 60% + 4% = 64%."
+        }
+      ],
+      "answer": "[56%; 64%]"
+    },
+    {
+      "id": "mojis-ir-vidurkis-example",
+      "title": "Mojio įtaka",
+      "level": "easy",
+      "problem": "Rinkinyje $\\{1, 2, 3, 100\\}$ raskite moji ir nuspręskite, ar vidurkis gerai reprezentuoja duomenis.",
+      "conceptIds": [
+        "sklaida",
+        "vidurkis"
+      ],
+      "steps": [
+        {
+          "text": "Mojis $R = 100 - 1 = 99$."
+        },
+        {
+          "text": "Vidurkis $\\bar{x} = 106/4 = 26,5$."
+        },
+        {
+          "text": "Pastebime, kad 3 iš 4 skaičių yra daug mažesni už vidurkį. Vidurkis čia prastas matas dėl 'iškritėlio' 100."
+        }
+      ],
+      "answer": "R = 99, vidurkis prastai reprezentuoja"
     }
   ],
   "exercises": [
@@ -500,7 +560,7 @@
       "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-001",
       "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask skaičių 4, 6, 8 vidurkį.",
       "answer": {
@@ -524,20 +584,16 @@
           "latex": "18/3=6"
         }
       ],
-      "answerText": "6",
-      "alternateMethods": [],
       "conceptIds": [
         "vidurkis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "estimatedSeconds": 35
     },
     {
       "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-002",
       "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Rask medianą: 2, 9, 5, 1, 7.",
       "answer": {
@@ -561,20 +617,16 @@
           "latex": "5"
         }
       ],
-      "answerText": "5",
-      "alternateMethods": [],
       "conceptIds": [
         "mediana"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "estimatedSeconds": 35
     },
     {
       "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-003",
       "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
       "answer": {
@@ -617,656 +669,16 @@
           "latex": "3"
         }
       ],
-      "answerText": "3",
-      "alternateMethods": [],
       "conceptIds": [
         "moda"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "estimatedSeconds": 35
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-004",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-005",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-006",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-007",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-008",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-009",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-010",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-011",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-012",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-013",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-014",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-015",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-016",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-017",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-018",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-019",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-020",
-      "topicId": "duomenu-sklaida-skirstiniai-ir-patikimumas",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų sklaida, skirstiniai ir statistinis patikimumas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
     }
   ],
   "tests": [
     {
       "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-test-topic",
-      "title": "Duomenų sklaida, skirstiniai ir statistinis patikimumas testas",
+      "title": "Duomenų sklaida ir patikimumas testas",
       "scope": "topic",
       "topicIds": [
         "duomenu-sklaida-skirstiniai-ir-patikimumas"
@@ -1274,142 +686,45 @@
       "exerciseIds": [
         "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-001",
         "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-002",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-003",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-004",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-005",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-006",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-007",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-008"
+        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-003"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-test-challenge",
-      "title": "Duomenų sklaida, skirstiniai ir statistinis patikimumas iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "duomenu-sklaida-skirstiniai-ir-patikimumas"
-      ],
-      "exerciseIds": [
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-009",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-010",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-011",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-012",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-013",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-014",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-015",
-        "duomenu-sklaida-skirstiniai-ir-patikimumas-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
   "srsCards": [
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-duomenys",
+      "id": "srs-dispersija",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
+      "front": "Kas yra dispersija?",
+      "back": "Nuokrypių nuo vidurkio kvadratų vidurkis.",
       "conceptIds": [
-        "duomenys"
+        "dispersija"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-imtis",
+      "id": "srs-nuokrypis",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
+      "front": "Kaip iš dispersijos gauti standartinį nuokrypį?",
+      "back": "Ištraukti kvadratinę šaknį.",
       "conceptIds": [
-        "imtis"
+        "standartinis-nuokrypis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-daznis",
+      "id": "srs-68-rule",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
+      "front": "Kiek procentų duomenų patenka į 1 standartinį nuokrypį nuo vidurkio normaliajame skirstinyje?",
+      "back": "Apie 68%.",
       "conceptIds": [
-        "daznis"
+        "normalusis-skirstinis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-vidurkio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenu-sklaida-skirstiniai-ir-patikimumas-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "IV gimnazijos programa išskiria prizmes, piramides, ritinius, kūgius, rutulius, pjūvius, paviršiaus plotus ir tūrius."
+    "notes": "Išsamus briaunainių ir sukinių kursas: paviršiai, tūriai, pjūviai."
   },
   "topic": {
     "id": "briaunainiai-sukiniai-ir-pjuviai",
@@ -18,1552 +18,865 @@
     ],
     "nextTopicIds": [],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "prizme",
+      "lygiagretisienis",
+      "piramide",
+      "nupjautine-piramide",
+      "ritinys",
+      "kugis",
+      "nupjautinis-kugis",
+      "rutulys",
+      "sfera",
+      "pavirsiaus-plotas",
+      "turis",
+      "pjuvis",
+      "asius-pjuvis",
+      "apotema"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "prizmes-turis",
+      "piramides-turis",
+      "ritinio-turis",
+      "kugio-turis",
+      "rutulio-turis",
+      "rutulio-pavirsiaus-plotas",
+      "ritinio-soninis-plotas",
+      "kugio-soninis-plotas"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "supainioja-aukstine-ir-apotema",
+      "pamirsta-dvi-pagrindu-ploto-dalis-prizmeje",
+      "laipsnis-turiui-ir-plotui",
+      "pjuvio-formos-nepaisymas"
     ],
     "exerciseIds": [
-      "briaunainiai-sukiniai-ir-pjuviai-ex-001",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-002",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-003",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-004",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-005",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-006",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-007",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-008",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-009",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-010",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-011",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-012",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-013",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-014",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-015",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-016",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-017",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-018",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-019",
-      "briaunainiai-sukiniai-ir-pjuviai-ex-020"
+      "briaun-ex-001",
+      "briaun-ex-002",
+      "briaun-ex-003",
+      "briaun-ex-004",
+      "briaun-ex-005",
+      "briaun-ex-006",
+      "briaun-ex-007",
+      "briaun-ex-008",
+      "briaun-ex-009",
+      "briaun-ex-010",
+      "briaun-ex-011",
+      "briaun-ex-012",
+      "briaun-ex-013",
+      "briaun-ex-014",
+      "briaun-ex-015",
+      "briaun-ex-016",
+      "briaun-ex-017",
+      "briaun-ex-018",
+      "briaun-ex-019",
+      "briaun-ex-020"
     ]
   },
   "theory": [
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ivadas",
-      "title": "Įvadas",
+      "id": "erdvines-figuros-intro",
+      "title": "Erdvės geometrija: nuo plokštumos prie tūrio",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai yra tema, kurioje mokomasi atpažinti pagrindinius briaunainiai, sukiniai ir pjūviai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Mokydamiesi stereometrijos (erdvės geometrijos), peržengiame dvimatį popieriaus lapą ir pradedame nagrinėti kūnus, užimančius vietą erdvėje. Visas šias figuras galime suskirstyti į dvi dideles grupes: **briaunainius** (kurių paviršius sudarytas tik iš daugiakampių) ir **sukinius** (kurie gaunami sukant plokščią figūrą apie ašį)."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "Kiekvieną erdvės kūną apibūdiname dviem pagrindiniais matais:\n1. **Paviršiaus plotu ($S$)** – kiek „popieriaus“ reikėtų kūno išklotinei apvynioti.\n2. **Tūriu ($V$)** – kiek kūnas užima vietos arba kiek „vandens“ jame tilptų."
         }
       ]
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "prizmes-deep",
+      "title": "Prizmės ir lygiagretisieniai",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "conceptId": "prizme",
+          "text": "[[prizme|Prizmė]] – tai briaunainis, kurio du lygiagretūs pagrindai yra lygūs daugiakampiai, o šoninės sienos – lygiagretainiai."
         },
         {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
-        }
-      ]
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Jei prizmės šoninės briaunos yra statmenos pagrindams, prizmė vadinama **stačiąja**. Jei prizmė yra stačioji ir jos pagrindas – taisyklingasis daugiakampis, ji vadinama **taisyklingąja**."
         },
         {
           "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
+          "formulaId": "prizmes-turis",
+          "latex": "V = S_{pagr} \\cdot H"
+        },
+        {
+          "type": "paragraph",
+          "text": "Paviršiaus plotas susideda iš šoninio paviršiaus ir dviejų pagrindų:\n$S_{pav} = S_{šon} + 2S_{pagr}$. Stačiosios prizmės $S_{šon} = P_{pagr} \\cdot H$."
+        },
+        {
+          "type": "note",
+          "text": "**Stačiakampis lygiagretisienis** yra specialus prizmės atvejis, kurio visos sienos – stačiakampiai. Jo įstrižainė $d$ randama pagal „erdvinę Pitagoro teoremą“: $d^2 = a^2 + b^2 + c^2$."
         }
       ]
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-strategija",
-      "title": "Sprendimo strategija",
+      "id": "piramides-deep",
+      "title": "Piramidės: viršūnė ir pagrindas",
       "blocks": [
         {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "type": "definition",
+          "conceptId": "piramide",
+          "text": "[[piramide|Piramidė]] – tai briaunainis, kurio pagrindas yra daugiakampis, o šoninės sienos – trikampiai, turintys bendrą viršūnę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Taisyklingojoje piramidėje visos šoninės sienos yra lygiašoniai trikampiai. Jų aukštinė vadinama [[apotema|apotema]] ($h_a$)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "piramides-turis",
+          "latex": "V = \\frac{1}{3} S_{pagr} \\cdot H"
         },
         {
           "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "text": "**Svarbu:** Nepainiokite piramidės aukštinės $H$ (atstumas nuo viršūnės iki centro) su apotema $h_a$ (šoninės sienos trikampio aukštinė). Jos sudaro statųjį trikampį kartu su pagrindo įbrėžtinio apskritimo spinduliu."
         }
       ]
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "sukiniai-ritinys-kugis",
+      "title": "Sukiniai: Ritinys ir Kūgis",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Sukiniai gaunami sukant plokštumos figūrą apie ašį. Jei sukame stačiakampį apie jo kraštinę, gauname [[ritinys|ritinį]]. Jei sukame statųjį trikampį apie jo statinį – [[kugis|kūgį]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Ritinio charakteristikos:**\n- $S_{šon} = 2\\pi RH$\n- $V = \\pi R^2 H$"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Kūgio charakteristikos:**\n- $S_{šon} = \\pi R l$ (kur $l$ – sudaromoji)\n- $V = \\frac{1}{3} \\pi R^2 H$"
+        },
+        {
+          "type": "method",
+          "text": "**Ašinis pjūvis:** Tai pjūvis, einantis per kūno sukimosi ašį. Ritinio ašinis pjūvis yra stačiakampis, kūgio – lygiašonis trikampis, kurio pagrindas lygus $2R$."
+        }
+      ]
+    },
+    {
+      "id": "rutulys-sfera-deep",
+      "title": "Rutulys ir Sfera",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sukdami pusapskritimį apie jo skersmenį, gauname sferą (paviršių) ir rutulį (kūną)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "rutulio-pavirsiaus-plotas",
+          "latex": "S = 4\\pi R^2"
+        },
+        {
+          "type": "formula",
+          "formulaId": "rutulio-turis",
+          "latex": "V = \\frac{4}{3} \\pi R^3"
+        },
+        {
+          "type": "property",
+          "text": "Bet koks pjūvis plokštuma, kertantis rutulį, visada yra **skritulys**. Jei plokštuma eina per centrą, pjūvis vadinamas didžiuoju skrituliu."
+        }
+      ]
+    },
+    {
+      "id": "pjuviai-ir-proporcijos",
+      "title": "Pjūviai ir panašumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai kūną kertame plokštuma, lygiagrečia pagrindui, gauname figūrą, panašią į pagrindą. Pavyzdžiui, nupjautinis kūgis arba piramidė."
+        },
+        {
+          "type": "property",
+          "text": "**Tūrių santykis:** Jei dviejų kūnų linijiniai matmenys (kraštinės, aukštinės) skiriasi $k$ kartų, tai jų plotai skiriasi $k^2$ kartų, o tūriai – $k^3$ kartų."
+        },
+        {
+          "type": "note",
+          "text": "Pavyzdžiui, jei piramidės aukštinė padidės 2 kartus, jos tūris padidės $2^3 = 8$ kartus, jei pagrindas išliks panašus."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "prizme",
+      "title": "Prizmė",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
+      "shortDefinition": "Briaunainis su dviem lygiais lygiagrečiais pagrindais.",
+      "intuition": "Tarsi ištemptas daugiakampis į viršų.",
+      "formal": "Daugiasienis, kurio dvi sienos yra lygūs daugiakampiai, esantys lygiagrečiose plokštumose.",
       "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
+        "lygiagretisienis",
+        "turis"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "trikampis",
-      "title": "Trikampis",
+      "id": "piramide",
+      "title": "Piramidė",
       "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
+      "shortDefinition": "Briaunainis su vienu pagrindu ir bendra viršūne.",
+      "intuition": "Egipto piramidės forma.",
+      "formal": "Daugiasienis, kurio viena siena yra daugiakampis, o kitos – trikampiai su bendra viršūne.",
       "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
+        "apotema",
+        "turis"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "keturkampis",
-      "title": "Keturkampis",
+      "id": "ritinys",
+      "title": "Ritinys",
       "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
+      "shortDefinition": "Sukinys, gaunamas sukant stačiakampį.",
+      "intuition": "Kaip konservų skardinė ar vamzdis.",
+      "formal": "Kūnas, apribotas sukimosi paviršiumi ir dviem lygiagrečiomis plokštumomis.",
       "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
+        "asius-pjuvis",
+        "turis"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "perimetras",
-      "title": "Perimetras",
+      "id": "kugis",
+      "title": "Kūgis",
       "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
+      "shortDefinition": "Sukinys, gaunamas sukant statųjį trikampį.",
+      "intuition": "Kaip ledų vaflis ar gimtadienio kepurė.",
+      "formal": "Kūnas, gautas sukant statųjį trikampį aplink vieną jo statinį.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
+        "sudaromoji",
+        "turis"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "plotas",
-      "title": "Plotas",
+      "id": "rutulys",
+      "title": "Rutulys",
       "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
+      "shortDefinition": "Erdvės dalis, apribota sfera.",
+      "intuition": "Kaip boulingo kamuolys ar planeta.",
+      "formal": "Aibė visų erdvės taškų, kurių atstumas iki centro neviršija R.",
       "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
+        "sfera",
+        "didysis-skritulys"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "apskritimas",
-      "title": "Apskritimas",
+      "id": "apotema",
+      "title": "Apotema",
       "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
+      "shortDefinition": "Taisyklingosios piramidės šoninės sienos aukštinė.",
+      "intuition": "Kelias nuo viršūnės iki pagrindo briaunos vidurio per paviršių.",
+      "formal": "Taisyklingosios piramidės šoninės sienos (lygiašonio trikampio) aukštinė.",
       "relatedConceptIds": [
-        "skritulys",
-        "kampas"
+        "piramide"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
+      "appearsInTopicIds": [
+        "briaunainiai-sukiniai-ir-pjuviai"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
-      "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
+      "id": "prizmes-turis",
+      "title": "Prizmės tūris",
+      "latex": "V = S_{pagr} \\cdot H",
       "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
+        "S_pagr": "pagrindo plotas",
+        "H": "aukštinė"
       },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
+      "explanation": "Tūris randamas pagrindo plotą dauginant iš kūno aukštinės.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
+        "prizme"
       ],
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
+      "id": "piramides-turis",
+      "title": "Piramidės tūris",
+      "latex": "V = \\frac{1}{3} S_{pagr} \\cdot H",
       "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
+        "S_pagr": "pagrindo plotas",
+        "H": "aukštinė"
       },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
+      "explanation": "Piramidės tūris visada yra tris kartus mažesnis už tokio pat pagrindo ir aukštinės prizmės tūrį.",
       "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
+        "piramide"
       ],
       "defaultSrs": true
     },
     {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
+      "id": "ritinio-turis",
+      "title": "Ritinio tūris",
+      "latex": "V = \\pi R^2 H",
       "variables": {
-        "r": "spindulys"
+        "R": "spindulys",
+        "H": "aukštinė"
       },
-      "explanation": "Ilgis aplink apskritimą.",
+      "explanation": "Randamas skritulio plotą dauginant iš aukštinės.",
       "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "ritinys"
       ],
       "defaultSrs": true
     },
     {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
+      "id": "rutulio-turis",
+      "title": "Rutulio tūris",
+      "latex": "V = \\frac{4}{3} \\pi R^3",
       "variables": {
-        "r": "spindulys"
+        "R": "rutulio spindulys"
       },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
+      "explanation": "Rutulio tūris priklauso tik nuo spindulio kubo.",
       "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "rutulys"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
-      "type": "mistake",
+      "id": "supainioja-aukstine-ir-apotema",
+      "title": "Aukštinės ir apotemos painiojimas",
       "conceptIds": [
-        "perimetras",
-        "plotas"
+        "piramide",
+        "apotema"
       ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
+      "wrongPattern": "Tūrio formulėje naudoja apotemą vietoje aukštinės.",
+      "whyItHappens": "Abi jos yra aukštinės, bet skirtingų objektų (viso kūno vs vienos sienos).",
+      "correction": "Prisiminkite: tūriui reikia statmens į pagrindą (H), o paviršiaus plotui – sienos aukštinės (apotemos).",
+      "wrongExample": "V = 1/3 * S_pagr * h_a",
+      "correctExample": "V = 1/3 * S_pagr * H",
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
+      "id": "pamirsta-dvi-pagrindu-ploto-dalis-prizmeje",
+      "title": "Pamirštamas antras pagrindas prizmėje",
       "conceptIds": [
-        "pitagoro-teorema"
+        "prizme",
+        "pavirsiaus-plotas"
       ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "wrongPattern": "S_pav = S_son + S_pagr",
+      "whyItHappens": "Analogiškai piramidei, mokiniai pamiršta, kad prizmė turi du lygiagrečius pagrindus.",
+      "correction": "Visada S_pav (prizmės) = S_son + 2*S_pagr.",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-exmp-1",
-      "title": "Perimetras",
+      "id": "briaun-worked-1",
+      "title": "Taisyklingoji keturkampė prizmė",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
+      "problem": "Taisyklingosios keturkampės prizmės pagrindo briauna 4 cm, o aukštinė 6 cm. Raskite tūrį ir paviršiaus plotą.",
       "conceptIds": [
-        "perimetras"
+        "prizme"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Pagrindo plotas (kvadratas): $S_{pagr} = 4^2 = 16$ cm².",
+          "latex": "16"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Tūris: $V = S_{pagr} \\cdot H = 16 \\cdot 6 = 96$ cm³.",
+          "latex": "96"
+        },
+        {
+          "text": "Šoninis plotas: $P_{pagr} \\cdot H = (4 \\cdot 4) \\cdot 6 = 16 \\cdot 6 = 96$ cm².",
+          "latex": "96"
+        },
+        {
+          "text": "Visas plotas: $S_{pav} = 96 + 2 \\cdot 16 = 96 + 32 = 128$ cm².",
+          "latex": "128"
         }
       ],
-      "answer": "26"
+      "answer": "V=96 cm³, S=128 cm²"
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-exmp-2",
-      "title": "Plotas",
+      "id": "briaun-worked-2",
+      "title": "Stačiakampio lygiagretisienio įstrižainė",
       "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
+      "problem": "Stačiakampio lygiagretisienio matmenys: 3, 4 ir 12. Raskite jo didžiąją įstrižainę.",
       "conceptIds": [
-        "plotas",
-        "keturkampis"
+        "lygiagretisienis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "text": "Taikome erdvinę Pitagoro teoremą.",
+          "latex": "d^2 = 3^2 + 4^2 + 12^2"
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Apskaičiuojame kvadratus: $9 + 16 + 144 = 169$.",
+          "latex": "169"
+        },
+        {
+          "text": "Traukiame šaknį.",
+          "latex": "d = \\sqrt{169} = 13"
         }
       ],
-      "answer": "42"
+      "answer": "13"
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-exmp-3",
-      "title": "Pitagoro teorema",
+      "id": "briaun-worked-3",
+      "title": "Taisyklingoji piramidė (Aukštinė)",
       "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
+      "problem": "Taisyklingosios keturkampės piramidės pagrindo briauna 10, o apotema 13. Raskite piramidės aukštinę H.",
       "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
+        "piramide",
+        "apotema"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "text": "Atstumas nuo pagrindo centro iki briaunos vidurio yra pusė briaunos: $r = 10 / 2 = 5$.",
+          "latex": "5"
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Sudarytas statusis trikampis: statiniai H ir r, įžambinė apotema $h_a$.",
+          "latex": "H^2 + 5^2 = 13^2"
+        },
+        {
+          "text": "Skaičiuojame: $H^2 = 169 - 25 = 144$.",
+          "latex": "H = \\sqrt{144} = 12"
         }
       ],
-      "answer": "10"
+      "answer": "H = 12"
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-exmp-4",
-      "title": "Panašumas",
+      "id": "briaun-worked-4",
+      "title": "Ritinio ašinis pjūvis",
       "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
+      "problem": "Ritinio ašinis pjūvis yra kvadratas, kurio plotas 36 cm². Raskite ritinio tūrį.",
       "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
+        "ritinys",
+        "asius-pjuvis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Ašinis pjūvis yra stačiakampis (čia kvadratas) su kraštinėmis $2R$ ir $H$.",
+          "latex": "2R = H"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Kvadrato kraštinė: $a = \\sqrt{36} = 6$. Vadinasi $H = 6$ ir $2R = 6$.",
+          "latex": "H=6, R=3"
+        },
+        {
+          "text": "Tūris: $V = \\pi R^2 H = \\pi \\cdot 3^2 \\cdot 6$.",
+          "latex": "54\\pi"
         }
       ],
-      "answer": "10"
+      "answer": "54π cm³"
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-exmp-5",
-      "title": "Koordinatės",
+      "id": "briaun-worked-5",
+      "title": "Rutulio ir tūrio santykis",
       "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
+      "problem": "Rutulys įbrėžtas į ritinį (liečia pagrindus ir šoninį paviršių). Raskite rutulio ir ritinio tūrių santykį.",
       "conceptIds": [
-        "koordinates",
-        "vektorius"
+        "rutulys",
+        "ritinys"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Rutulio spindulys R. Ritinio spindulys taip pat R, o aukštinė $H = 2R$.",
+          "latex": "H = 2R"
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Rutulio tūris: $V_1 = \\frac{4}{3} \\pi R^3$.",
+          "latex": "\\frac{4}{3} \\pi R^3"
+        },
+        {
+          "text": "Ritinio tūris: $V_2 = \\pi R^2 (2R) = 2 \\pi R^3$.",
+          "latex": "2 \\pi R^3"
+        },
+        {
+          "text": "Santykis: $V_1 / V_2 = (4/3) / 2 = 2/3$.",
+          "latex": "2:3"
+        }
+      ],
+      "answer": "2:3"
+    },
+    {
+      "id": "briaun-worked-6",
+      "title": "Kūgio išklotinė",
+      "level": "hard",
+      "problem": "Kūgio sudaromoji lygi 10, o šoninio paviršiaus plotas $60\\pi$. Raskite kūgio aukštinę.",
+      "conceptIds": [
+        "kugis"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame formulę $S_{šon} = \\pi R l$.",
+          "latex": "60\\pi = \\pi \\cdot R \\cdot 10"
+        },
+        {
+          "text": "Randame spindulį: $R = 6$.",
+          "latex": "R = 6"
+        },
+        {
+          "text": "Pagal Pitagorą: $H^2 + R^2 = l^2$.",
+          "latex": "H^2 + 6^2 = 10^2"
+        },
+        {
+          "text": "Skaičiuojame: $H^2 = 100 - 36 = 64$.",
+          "latex": "H = 8"
+        }
+      ],
+      "answer": "8"
+    },
+    {
+      "id": "briaun-worked-7",
+      "title": "Tūrių santykis",
+      "level": "medium",
+      "problem": "Du rutuliai yra panašūs, jų paviršiaus plotų santykis 4:9. Koks jų tūrių santykis?",
+      "conceptIds": [
+        "rutulys"
+      ],
+      "steps": [
+        {
+          "text": "Plotų santykis yra $k^2 = 4/9$.",
+          "latex": "k^2 = \\frac{4}{9}"
+        },
+        {
+          "text": "Linijinis koeficientas $k = \\sqrt{4/9} = 2/3$.",
+          "latex": "k = \\frac{2}{3}"
+        },
+        {
+          "text": "Tūrių santykis yra $k^3 = (2/3)^3 = 8/27$.",
+          "latex": "8:27"
+        }
+      ],
+      "answer": "8:27"
+    },
+    {
+      "id": "briaun-worked-8",
+      "title": "Prizmės pjūvis",
+      "level": "hard",
+      "problem": "Kubo briauna lygi a. Per kubo briauną ir priešingos sienos briaunos vidurį išvestas pjūvis. Raskite pjūvio plotą.",
+      "conceptIds": [
+        "prizme",
+        "pjuvis"
+      ],
+      "steps": [
+        {
+          "text": "Pjūvis yra stačiakampis, kurio viena kraštinė a, o kita – trikampio įžambinė.",
+          "latex": "\\text{pjūvis}"
+        },
+        {
+          "text": "Trikampio statiniai yra a ir a/2. Įžambinė $x = \\sqrt{a^2 + (a/2)^2} = \\sqrt{5a^2/4} = a\\sqrt{5}/2$.",
+          "latex": "\\frac{a\\sqrt{5}}{2}"
+        },
+        {
+          "text": "Pjūvio plotas: $a \\cdot (a\\sqrt{5}/2) = a^2\\sqrt{5}/2$.",
+          "latex": "\\frac{a^2\\sqrt{5}}{2}"
+        }
+      ],
+      "answer": "a²√5 / 2"
+    },
+    {
+      "id": "briaun-worked-9",
+      "title": "Nupjautinis kūgis",
+      "level": "hard",
+      "problem": "Nupjautinio kūgio spinduliai yra 3 ir 6, o aukštinė 4. Raskite sudaromąją l.",
+      "conceptIds": [
+        "nupjautinis-kugis"
+      ],
+      "steps": [
+        {
+          "text": "Ašiniame pjūvyje turime stačiąją trapeziją.",
+          "latex": "\\text{trapezija}"
+        },
+        {
+          "text": "Statinis prie pagrindo lygus spindulių skirtumui: $6 - 3 = 3$.",
+          "latex": "3"
+        },
+        {
+          "text": "Pagal Pitagorą: $l^2 = H^2 + (R-r)^2 = 4^2 + 3^2$.",
+          "latex": "25"
+        },
+        {
+          "text": "Sudaromoji $l = 5$.",
+          "latex": "5"
         }
       ],
       "answer": "5"
+    },
+    {
+      "id": "briaun-worked-10",
+      "title": "Sferos plotas",
+      "level": "easy",
+      "problem": "Rutulio tūris yra $36\\pi$. Raskite jo paviršiaus plotą.",
+      "conceptIds": [
+        "rutulys",
+        "sfera"
+      ],
+      "steps": [
+        {
+          "text": "$\frac{4}{3}\\pi R^3 = 36\\pi \\Rightarrow R^3 = 27$.",
+          "latex": "R=3"
+        },
+        {
+          "text": "$S = 4\\pi R^2 = 4\\pi \\cdot 3^2$.",
+          "latex": "36\\pi"
+        }
+      ],
+      "answer": "36π"
     }
   ],
   "exercises": [
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-001",
+      "id": "briaun-ex-001",
       "topicId": "briaunainiai-sukiniai-ir-pjuviai",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
+      "statement": "Kubo briauna 3. Raskite jo tūrį.",
       "answer": {
         "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
+        "value": 27
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "Kubo tūris V = a³.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
+          "text": "3 * 3 * 3 = 27.",
+          "latex": "27"
         }
       ],
-      "answerText": "32",
-      "alternateMethods": [],
+      "answerText": "27",
       "conceptIds": [
-        "perimetras"
+        "prizme",
+        "turis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "estimatedSeconds": 20
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-002",
+      "id": "briaun-ex-002",
       "topicId": "briaunainiai-sukiniai-ir-pjuviai",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
+      "statement": "Kubo briauna 2. Raskite jo viso paviršiaus plotą.",
       "answer": {
         "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
+        "value": 24
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "Kubas turi 6 lygias sienas (kvadratus).",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
+          "text": "Vienos sienos plotas 2*2=4. Viso 6 * 4 = 24.",
           "latex": "24"
         }
       ],
       "answerText": "24",
-      "alternateMethods": [],
       "conceptIds": [
-        "perimetras"
+        "prizme",
+        "pavirsiaus-plotas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "estimatedSeconds": 25
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-003",
+      "id": "briaun-ex-003",
       "topicId": "briaunainiai-sukiniai-ir-pjuviai",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
+      "statement": "Ritinio pagrindo spindulys 2, aukštinė 5. Raskite tūrį (atsakymą dalinkite iš pi).",
       "answer": {
         "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
+        "value": 20
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "V = pi * R² * H.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
+          "text": "pi * 2^2 * 5 = 20pi.",
+          "latex": "20\\pi"
         }
       ],
       "answerText": "20",
-      "alternateMethods": [],
       "conceptIds": [
-        "perimetras"
+        "ritinys",
+        "turis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "briaun-ex-004",
+      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "statement": "Rutulio spindulys padidėjo 2 kartus. Kiek kartų padidėjo jo tūris?",
+      "answer": {
+        "kind": "numeric",
+        "value": 8
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Tūris priklauso nuo spindulio kubo.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "2^3 = 8.",
+          "latex": "8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "rutulys",
+        "turis"
+      ],
+      "estimatedSeconds": 30
+    },
+    {
+      "id": "briaun-ex-005",
+      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "statement": "Taisyklingosios keturkampės piramidės tūris 100, pagrindo plotas 30. Raskite piramidės aukštinę.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "V = 1/3 * S_pagr * H.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "100 = 1/3 * 30 * H => 100 = 10H => H = 10.",
+          "latex": "10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "piramide",
+        "turis"
+      ],
       "estimatedSeconds": 40
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-004",
+      "id": "briaun-ex-006",
       "topicId": "briaunainiai-sukiniai-ir-pjuviai",
       "grade": 12,
-      "level": "easy",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
+      "statement": "Kūgio sudaromoji 5, spindulys 3. Raskite kūgio tūrį (atsakymą dalinkite iš pi).",
       "answer": {
         "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
+        "value": 12
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
+          "text": "Pirmiausia raskite aukštinę H pagal Pitagorą.",
+          "penalty": 0.1
         },
         {
           "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "H² + 3² = 5².",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-005",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-006",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-007",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-008",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-009",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-010",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
+          "text": "H = 4. V = 1/3 * pi * 3^2 * 4 = 12pi.",
+          "latex": "12\\pi"
         }
       ],
       "answerText": "12",
-      "alternateMethods": [],
       "conceptIds": [
-        "pitagoro-teorema"
+        "kugis",
+        "turis"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-011",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-012",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-013",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-014",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-015",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-016",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-017",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-018",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-019",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-ex-020",
-      "topicId": "briaunainiai-sukiniai-ir-pjuviai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 60
     }
   ],
   "tests": [
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-test-topic",
-      "title": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai testas",
+      "id": "briaun-test-1",
+      "title": "Briaunainių charakteristikos",
       "scope": "topic",
       "topicIds": [
         "briaunainiai-sukiniai-ir-pjuviai"
       ],
       "exerciseIds": [
-        "briaunainiai-sukiniai-ir-pjuviai-ex-001",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-002",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-003",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-004",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-005",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-006",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-007",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-008"
+        "briaun-ex-001",
+        "briaun-ex-002",
+        "briaun-ex-005"
       ],
+      "timeLimitSeconds": 1200,
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-test-challenge",
-      "title": "Briaunainiai, sukiniai, pjūviai, paviršiaus plotai ir tūriai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "briaunainiai-sukiniai-ir-pjuviai"
-      ],
-      "exerciseIds": [
-        "briaunainiai-sukiniai-ir-pjuviai-ex-009",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-010",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-011",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-012",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-013",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-014",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-015",
-        "briaunainiai-sukiniai-ir-pjuviai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.75
     }
   ],
   "srsCards": [
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-kampas",
+      "id": "srs-prizme-vol",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-trikampio-plotas",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
+      "front": "Prizmės tūrio formulė?",
+      "back": "V = S_pagr * H",
       "conceptIds": [
-        "trikampio-plotas"
+        "prizme"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-pitagoro-formule",
-      "deck": "practice",
+      "id": "srs-piramide-vol",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
+      "front": "Piramidės tūrio formulė?",
+      "back": "V = 1/3 * S_pagr * H",
       "conceptIds": [
-        "pitagoro-formule"
+        "piramide"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "briaunainiai-sukiniai-ir-pjuviai-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

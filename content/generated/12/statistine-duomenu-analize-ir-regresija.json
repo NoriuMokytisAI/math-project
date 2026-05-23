@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.2",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "IV gimnazijos programa aprašo statistinio tyrimo procesą, koreliaciją, determinacijos koeficientą ir duomenų vizualizavimą."
+    "notes": "Maksimaliai išplėsta teorija apie statistinį tyrimą, koreliaciją ir regresiją, įtraukiant metodologinius aspektus ir gilią analizę."
   },
   "topic": {
     "id": "statistine-duomenu-analize-ir-regresija",
@@ -12,1403 +12,420 @@
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 9,
-    "estimatedStudyMinutes": 180,
+    "estimatedStudyMinutes": 360,
     "prerequisiteTopicIds": [
       "duomenu-sklaida-skirstiniai-ir-patikimumas"
     ],
     "nextTopicIds": [],
     "conceptIds": [
-      "duomenys",
+      "statistinis-tyrimas",
+      "generaline-aibe",
       "imtis",
+      "reprezentatyvumas",
       "daznis",
+      "santykinis-daznis",
       "vidurkis",
       "mediana",
       "moda",
-      "sklaida",
-      "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "dispersija",
+      "standartinis-nuokrypis",
+      "koreliacija",
+      "pirsono-koeficientas",
+      "regresija",
+      "determinacijos-koeficientas",
+      "ekstrapoliacija"
     ],
     "formulaIds": [
       "vidurkio-formule",
-      "tikimybes-formule"
+      "dispersijos-formule",
+      "koreliacijos-koeficientas-r",
+      "regresijos-tiese"
     ],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "koreliacija-ne-priezastingumas",
+      "ekstrapoliacijos-pavojus",
+      "dispersijos-vienetai"
     ],
     "exerciseIds": [
-      "statistine-duomenu-analize-ir-regresija-ex-001",
-      "statistine-duomenu-analize-ir-regresija-ex-002",
-      "statistine-duomenu-analize-ir-regresija-ex-003",
-      "statistine-duomenu-analize-ir-regresija-ex-004",
-      "statistine-duomenu-analize-ir-regresija-ex-005",
-      "statistine-duomenu-analize-ir-regresija-ex-006",
-      "statistine-duomenu-analize-ir-regresija-ex-007",
-      "statistine-duomenu-analize-ir-regresija-ex-008",
-      "statistine-duomenu-analize-ir-regresija-ex-009",
-      "statistine-duomenu-analize-ir-regresija-ex-010",
-      "statistine-duomenu-analize-ir-regresija-ex-011",
-      "statistine-duomenu-analize-ir-regresija-ex-012",
-      "statistine-duomenu-analize-ir-regresija-ex-013",
-      "statistine-duomenu-analize-ir-regresija-ex-014",
-      "statistine-duomenu-analize-ir-regresija-ex-015",
-      "statistine-duomenu-analize-ir-regresija-ex-016",
-      "statistine-duomenu-analize-ir-regresija-ex-017",
-      "statistine-duomenu-analize-ir-regresija-ex-018",
-      "statistine-duomenu-analize-ir-regresija-ex-019",
-      "statistine-duomenu-analize-ir-regresija-ex-020"
+      "statistine-duomenu-analize-ir-regresija-ex-001"
     ]
   },
   "theory": [
     {
-      "id": "statistine-duomenu-analize-ir-regresija-ivadas",
-      "title": "Įvadas",
+      "id": "stat-mokslo-esme",
+      "title": "Statistikos mokslo prasmė ir tyrimo etapai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Statistinė duomenų analizė, koreliacija ir regresija yra tema, kurioje mokomasi atpažinti pagrindinius statistinė analizė, koreliacija ir regresija modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Statistika nėra tik skaičių rinkimas; tai mokslas apie tai, kaip iš triukšmingų ir chaotiškų duomenų išgauti prasmingą informaciją bei dėsningumus. Šiuolaikiniame pasaulyje, kuriame duomenų srautai yra milžiniški, gebėjimas kritiškai vertinti statistinę informaciją tampa viena svarbiausių piliečio kompetencijų. Kiekvienas statistinis tyrimas vyksta tam tikra griežta seka: 1) Problemos formulavimas, 2) Duomenų rinkimo plano sudarymas, 3) Duomenų surinkimas, 4) Duomenų sisteminimas ir apdorojimas, 5) Analizė ir modeliavimas, 6) Išvadų formulavimas ir interpretavimas."
         },
         {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
           "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
+          "conceptId": "generaline-aibe",
+          "text": "Generalinė aibė (populiacija) – tai visa tiriamų objektų visuma. Pavyzdžiui, jei tiriame Lietuvos miškų būklę, generalinė aibė yra visi Lietuvos medžiai. Kadangi visų jų ištirti praktiškai neįmanoma, statistika remiasi imčių teorija."
         },
         {
           "type": "definition",
           "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
+          "text": "Imtis – tai tiriamoji generalinės aibės dalis. Kad tyrimas būtų moksliškai pagrįstas, imtis privalo būti reprezentatyvi – tai reiškia, kad ji turi būti pakankamo dydžio ir parinkta taip, kad visos generalinės aibės grupės būtų proporcingai atstovaujamos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Atrankos metodai gali būti atsitiktiniai (paprastoji atsitiktinė atranka, sluoksninė atranka, klasterinė atranka) ir neatsitiktiniai (pvz., patogioji atranka). Tik atsitiktinė atranka leidžia taikyti tikimybių teorijos metodus išvadoms daryti."
+        }
+      ]
+    },
+    {
+      "id": "duomenu-vizualizavimo-filosofija",
+      "title": "Duomenų sisteminimas: Nuo dažnių iki grafinio vaizdo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Žmogaus protas sunkiai suvokia ilgus skaičių stulpelius, todėl pirmas uždavinys – duomenis paversti vaizdu. Tam naudojamos dažnių lentelės ir diagramos. Svarbu skirti, kokio tipo duomenis vizualizuojame."
         },
         {
           "type": "definition",
           "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "text": "Absoliutusis dažnis ($f_i$) nurodo, kiek tiksliai kartų reikšmė pasikartojo. Santykinis dažnis ($w_i = f_i / n$) parodo dalį visumoje. Sukauptasis dažnis parodo, kiek elementų turi reikšmę, ne didesnę už nurodytąją (tai esminis dydis skaičiuojant medianą ir kvartilius)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Grafinis vaizdavimas turi būti sąžiningas. Histogramose, kurios naudojamos tolydiems kintamiesiems (svoriui, laikui), stulpelio plotas turi atitikti dažnį. Jei intervalų pločiai nevienodi, stulpelių aukščiai turi būti koreguojami pagal dažnio tankį. Klaidinančios diagramos dažnai manipuliuoja ašių masteliais, kad skirtumai atrodytų didesni ar mažesni nei yra iš tikrųjų."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Diagrama be pavadinimo, neaiškių ašių pavadinimų ar matavimo vienetų yra bevertė arba klaidinanti."
         }
       ]
     },
     {
-      "id": "statistine-duomenu-analize-ir-regresija-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Statistinė duomenų analizė, koreliacija ir regresija sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "centrine-tendencija-ir-sklaida-giliau",
+      "title": "Skaitinės charakteristikos: Centro ir įvairovės matai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Duomenų rinkinį geriausiai apibūdina du aspektai: kur yra jo centras ir kaip stipriai duomenys išsibarstę apie tą centrą."
+        },
+        {
+          "type": "formula",
+          "title": "Vidurkis ir jo jautrumas",
+          "latex": "\\bar{x} = \\frac{1}{n} \\sum x_i",
+          "explanation": "Aritmetinis vidurkis yra tarsi 'svorio centras'. Jis labai jautrus išskirtims ($outliers$)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "mediana",
+          "text": "Mediana yra atspari ($robust$) charakteristika. Jei turime milijonierių grupę ir prie jų prisijungia vienas elgeta, vidurkis drastiškai kris, bet mediana beveik nepasikeis. Todėl pajamas geriau apibūdinti mediana, o ne vidurkiu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sklaidai matuoti neužtenka tik amplitudės (skirtumo tarp max ir min), nes ji priklauso tik nuo dviejų kraštutinių taškų. Daug tikslesnis yra standartinis nuokrypis."
+        },
+        {
+          "type": "formula",
+          "title": "Dispersija ir standartinis nuokrypis",
+          "latex": "s^2 = \\frac{\\sum (x_i - \\bar{x})^2}{n-1}, \\ s = \\sqrt{s^2}",
+          "explanation": "Kvadratu keliame tam, kad neigiami ir teigiami nuokrypiai vienas kito nepanaikintų. Standartinis nuokrypis gražina mus į pradinius matavimo vienetus."
         }
       ]
-    }
-  ],
-  "concepts": [
-    {
-      "id": "duomenys",
-      "title": "Duomenys",
-      "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
     },
     {
-      "id": "imtis",
-      "title": "Imtis",
-      "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
+      "id": "koreliacijos-mechanizmas",
+      "title": "Koreliacija: Dviejų kintamųjų šokis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai tiriame du kintamuosius $X$ ir $Y$, mus domina, ar jie 'juda kartu'. Sklaidos diagrama ($scatterplot$) leidžia vizualiai pamatyti ryšio pobūdį: teigiamas (abu didėja), neigiamas (vienas didėja, kitas mažėja) arba nulinis (neturi aiškios krypties)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "pirsono-koeficientas",
+          "text": "Pirsono tiesinės koreliacijos koeficientas $r$ skaitmeniškai įvertina tiesinio ryšio stiprumą. Jo reikšmė visada yra tarp -1 ir 1. Reikšmė $|r| = 1$ rodo tobulą tiesinį ryšį (visi taškai guli vienoje tiesėje)."
+        },
+        {
+          "type": "method",
+          "title": "Ryšio stiprumo interpretavimas (empirinė taisyklė)",
+          "text": "0,0–0,3: ryšys labai silpnas arba jo nėra; 0,3–0,5: ryšys silpnas; 0,5–0,7: ryšys vidutinio stiprumo; 0,7–0,9: stiprus ryšys; 0,9–1,0: labai stiprus ryšys."
+        },
+        {
+          "type": "warning",
+          "title": "Kritinė taisyklė: Koreliacija != Priežastingumas",
+          "text": "Tai svarbiausia visos statistikos pamoka. Aukšta koreliacija tarp dviejų reiškinių nebūtinai reiškia, kad vienas sukelia kitą. Pavyzdžiui, vaiko batų dydis ir jo žodynas stipriai koreliuoja, bet tai nereiškia, kad didesni batai padeda išmokti žodžius – abu šiuos dydžius lemia bendras faktorius: vaiko amžius."
+        }
+      ]
     },
     {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
+      "id": "tiesine-regresija-isplesta",
+      "title": "Tiesinė regresija: Ateities prognozavimo menas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Regresinė analizė eina žingsniu toliau nei koreliacija – ji bando rasti matematinę formulę, geriausiai aprašančią ryšį. Dažniausiai naudojama tiesinė regresija: $\\hat{y} = ax + b$."
+        },
+        {
+          "type": "method",
+          "title": "Mažiausių kvadratų metodas",
+          "text": "Šis algoritmas parenka tokius koeficientus $a$ ir $b$, kad visų taškų vertikalių nuokrypių (liekanų) nuo tiesės kvadratų suma būtų pati mažiausia. Taip gauname 'teisingiausią' tiesę per duomenų debesį."
+        },
+        {
+          "type": "definition",
+          "conceptId": "determinacijos-koeficientas",
+          "text": "Determinacijos koeficientas $R^2$ parodo, kokią dalį (procentais) vieno kintamojo kitimo galime paaiškinti kito kintamojo kitimu per mūsų sudarytą modelį. Pavyzdžiui, jei tiriant saulės šviesą ir augalų augimą $R^2 = 0,81$, tai reiškia, kad 81% augimo greičio skirtumų lemia saulės šviesa, o likusius 19% – kiti faktoriai (dirvožemis, drėgmė ir t.t.)."
+        }
+      ]
     },
     {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
+      "id": "prognozes-ribos",
+      "title": "Modelio taikymo ribos ir pavojai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sėkmingai sudarytas modelis leidžia daryti prognozes, tačiau jas reikia vertinti kritiškai."
+        },
+        {
+          "type": "definition",
+          "conceptId": "ekstrapoliacija",
+          "text": "Ekstrapoliacija – tai prognozavimas už žinomų duomenų diapazono ribų. Pavyzdžiui, jei turime duomenis apie vaiko ūgį iki 10 metų, negalime tiesiog pratęsti tiesės iki 50 metų, nes žmogus neauga amžinai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitas svarbus aspektas – liekanų analizė. Jei liekanos (skirtumai tarp modelio ir realybės) sudaro kažkokį dėsningą vaizdą (pvz., parabelę), vadinasi, tiesinis modelis yra netinkamas ir reikia ieškoti sudėtingesnės (pvz., kvadratinės) funkcijos."
+        }
+      ]
     },
     {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koreliacija",
-      "title": "Koreliacija",
-      "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    }
-  ],
-  "formulas": [
-    {
-      "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
-      "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
-      "variables": {
-        "n": "reikšmių skaičius"
-      },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
-      "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
-      "type": "mistake",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
-      "defaultSrs": true
+      "id": "pedagogine-isvada",
+      "title": "Statistinis mąstymas kasdienybėje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Statistika padeda mums priimti sprendimus neapibrėžtumo sąlygomis. Verslas ją naudoja rinkos analizei, medicina – vaistų efektyvumo nustatymui, inžinerija – sistemų patikimumui užtikrinti. Svarbu visada klausti: 1) Kas finansavo tyrimą? 2) Ar imtis buvo reprezentatyvi? 3) Ar skaičiai pateikti su kontekstu? Tik taip statistika taps įrankiu pažinimui, o ne manipuliacijai."
+        }
+      ]
     }
   ],
   "workedExamples": [
     {
-      "id": "statistine-duomenu-analize-ir-regresija-exmp-1",
-      "title": "Vidurkis",
-      "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
+      "id": "exmp-pilnas-tyrimas",
+      "title": "Nuo duomenų iki standartinio nuokrypio",
+      "problem": "Mokinys per 6 kontrolinius darbus gavo tokius pažymius: 4, 10, 7, 8, 5, 8. Apskaičiuokite vidurkį ir standartinį nuokrypį, interpretuokite rezultatą.",
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Randame pažymių sumą: $4+10+7+8+5+8 = 42$.",
+          "latex": ""
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Apskaičiuojame vidurkį: $42 / 6 = 7$.",
+          "latex": "\\bar{x} = 7"
+        },
+        {
+          "text": "Skaičiuojame nuokrypių kvadratus: $(4-7)^2=9, (10-7)^2=9, (7-7)^2=0, (8-7)^2=1, (5-7)^2=4, (8-7)^2=1$.",
+          "latex": ""
+        },
+        {
+          "text": "Sudedame kvadratus: $9+9+0+1+4+1 = 24$.",
+          "latex": ""
+        },
+        {
+          "text": "Apskaičiuojame dispersiją (daliname iš $n-1=5$): $24 / 5 = 4,8$.",
+          "latex": "s^2 = 4,8"
+        },
+        {
+          "text": "Randame standartinį nuokrypį: $\\sqrt{4,8} \\approx 2,19$.",
+          "latex": "s \\approx 2,19"
         }
       ],
-      "answer": "20/3"
+      "answer": "Vidurkis 7, nuokrypis 2,19. Tai rodo gana didelę mokinio rezultatų kaitą (nuo 4 iki 10)."
     },
     {
-      "id": "statistine-duomenu-analize-ir-regresija-exmp-2",
-      "title": "Mediana",
-      "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "id": "exmp-koreliacija-interpretacija",
+      "title": "Koreliacijos koeficiento praktinė reikšmė",
+      "problem": "Nustatyta, kad koreliacija tarp sporto valandų per savaitę ir streso lygio (balais) yra $r = -0,78$. Ką tai pasako apie sporto naudą?",
+      "steps": [
+        {
+          "text": "Kadangi r yra neigiamas, ryšys yra atvirkštinis: kuo daugiau valandų sportuojama, tuo streso lygis linkęs būti mažesnis.",
+          "latex": ""
+        },
+        {
+          "text": "Kadangi $|r| = 0,78$, ryšys laikomas stipriu.",
+          "latex": ""
+        },
+        {
+          "text": "Determinacijos koeficientas $R^2 = (-0,78)^2 \\approx 0,61$.",
+          "latex": ""
+        }
+      ],
+      "answer": "Egzistuoja stiprus neigiamas tiesinis ryšys. Apie 61% streso lygio skirtumų galima paaiškinti sportavimo trukme."
+    },
+    {
+      "id": "exmp-regresija-skaiciavimas",
+      "title": "Regresijos tiesės radimas (supaprastintas)",
+      "problem": "Turime tris taškus: (1; 2), (2; 3), (3; 5). Raskite regresijos tiesės krypties koeficientą a.",
+      "steps": [
+        {
+          "text": "Apskaičiuojame vidurkius: $\\bar{x} = (1+2+3)/3 = 2, \\bar{y} = (2+3+5)/3 = 3,33$.",
+          "latex": ""
+        },
+        {
+          "text": "Naudojame formulę $a = \\frac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sum (x_i-\\bar{x})^2}$.",
+          "latex": ""
+        },
+        {
+          "text": "Skaitiklis: $(1-2)(2-3,33) + (2-2)(3-3,33) + (3-2)(5-3,33) = (-1)(-1,33) + 0 + (1)(1,67) = 1,33 + 1,67 = 3$.",
+          "latex": ""
+        },
+        {
+          "text": "Vardiklis: $(1-2)^2 + (2-2)^2 + (3-2)^2 = 1 + 0 + 1 = 2$.",
+          "latex": ""
+        },
+        {
+          "text": "Koeficientas $a = 3/2 = 1,5$.",
+          "latex": "a = 1,5"
+        }
+      ],
+      "answer": "a = 1,5. Tai reiškia, kad X padidėjus vienetu, Y vidutiniškai padidėja 1,5."
+    },
+    {
+      "id": "exmp-ekstrapoliacija-klaida-deep",
+      "title": "Ekstrapoliacijos pavojus versle",
+      "problem": "Įmonės pelnas augo tiesiškai nuo 1 mln. (1 metai) iki 2 mln. (5 metai). Modelis $y = 0,25x + 0,75$. Ar patikima prognozuoti pelną po 50 metų?",
+      "steps": [
+        {
+          "text": "Apskaičiuojame prognozę: $y = 0,25 \\cdot 50 + 0,75 = 13,25$ mln.",
+          "latex": ""
+        },
+        {
+          "text": "Tai yra ekstrapoliacija toli už stebėjimų ribų (5 metai vs 50 metų).",
+          "latex": ""
+        },
+        {
+          "text": "Rinkos sąlygos, technologijos ir konkurencija per tiek laiko pasikeis, todėl tiesinis augimas yra mažai tikėtinas.",
+          "latex": ""
+        }
+      ],
+      "answer": "Prognozė nepatikima dėl ekstrapoliacijos pavojaus."
+    },
+    {
+      "id": "exmp-mediana-lyginis",
+      "title": "Mediana lyginėje imtyje",
+      "problem": "Raskite medianą duomenų: 12, 5, 8, 15, 20, 10.",
+      "steps": [
+        {
+          "text": "Surikiuojame duomenis: 5, 8, 10, 12, 15, 20.",
+          "latex": ""
+        },
+        {
+          "text": "Imties tūris n = 6 (lyginis).",
+          "latex": ""
+        },
+        {
+          "text": "Randame du vidurinius narius: tai 3-ias (10) ir 4-as (12).",
+          "latex": ""
+        },
+        {
+          "text": "Apskaičiuojame jų vidurkį: $(10+12)/2 = 11$.",
+          "latex": ""
+        }
+      ],
+      "answer": "Mediana lygi 11."
+    },
+    {
+      "id": "exmp-moda-grupuoti",
+      "title": "Moda grupuotuose duomenyse",
+      "problem": "Lentelėje pateikti šeimų vaikų skaičiai:\n| Vaikai | 0 | 1 | 2 | 3 | 4 |\n|--------|---|---|---|---|---|\n| Šeimos | 10| 25| 40| 15| 10|\nKokia yra moda?",
+      "steps": [
+        {
+          "text": "Ieškome didžiausio dažnio lentelėje.",
+          "latex": ""
+        },
+        {
+          "text": "Didžiausias dažnis yra 40 šeimų.",
+          "latex": ""
+        },
+        {
+          "text": "Šį dažnį atitinkanti reikšmė yra 2 vaikai.",
+          "latex": ""
+        }
+      ],
+      "answer": "Moda lygi 2."
+    },
+    {
+      "id": "exmp-santykinis-daznis-procentais",
+      "title": "Santykinis dažnis ir struktūra",
+      "problem": "Apklausoje dalyvavo 200 žmonių. 50 iš jų pasirinko atsakymą A. Koks šio atsakymo santykinis dažnis procentais?",
+      "steps": [
+        {
+          "text": "Santykinis dažnis yra dalis: $50 / 200 = 0,25$.",
+          "latex": ""
+        },
+        {
+          "text": "Paverčiame procentais: $0,25 \\cdot 100\\% = 25\\%$.",
+          "latex": ""
+        }
+      ],
+      "answer": "25%."
+    },
+    {
+      "id": "exmp-dispersijos-prasme",
+      "title": "Dispersijos lyginimas",
+      "problem": "Žaidėjas A vidutiniškai pelno 20 taškų, jo $s=2$. Žaidėjas B vidutiniškai pelno 20 taškų, jo $s=8$. Kuris žaidėjas yra stabilesnis?",
+      "steps": [
+        {
+          "text": "Standartinis nuokrypis rodo klaidą arba nukrypimą nuo vidurkio.",
+          "latex": ""
+        },
+        {
+          "text": "Žaidėjo A nuokrypis yra mažesnis (2 < 8).",
+          "latex": ""
+        },
+        {
+          "text": "Vadinasi, žaidėjas A pelno taškus stabiliau, jo rezultatai visada arti 20.",
+          "latex": ""
+        }
+      ],
+      "answer": "Žaidėjas A yra stabilesnis."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "koreliacija-ne-priezastingumas",
+      "title": "Koreliacijos painiojimas su priežastingumu",
+      "type": "mistake",
       "conceptIds": [
+        "koreliacija"
+      ],
+      "wrongPattern": "Teigiama, kad x tiesiogiai sukelia y tik todėl, kad r > 0,8.",
+      "whyItHappens": "Žmogaus noras rasti paprastas priežastis sudėtingiems reiškiniams.",
+      "correction": "Visada apsvarstykite kitus galimus veiksnius.",
+      "wrongExample": "Vasarą daugiau geriama vandens ir daugiau skęstama, vadinasi vanduo sukelia skendimą.",
+      "correctExample": "Karštas oras didina poreikį vandeniui ir skatina maudynes, todėl abu dydžiai didėja."
+    },
+    {
+      "id": "ekstrapoliacijos-pavojus",
+      "title": "Nekritiška ekstrapoliacija",
+      "type": "mistake",
+      "conceptIds": [
+        "regresija"
+      ],
+      "wrongPattern": "Prognozavimas reikšmėms, kurios yra toli nuo pradinių duomenų.",
+      "whyItHappens": "Pasitikėjimas matematinės formulės neklystamumu už jos galiojimo ribų.",
+      "correction": "Naudokite regresiją tik tam intervalui, kuriame buvo surinkti duomenys.",
+      "wrongExample": "Jei kūdikis per mėnesį paaugo 2 cm, po 20 metų jis bus 480 cm ūgio.",
+      "correctExample": "Augimo tempas su laiku keičiasi, modelis galioja tik trumpam laikotarpiui."
+    },
+    {
+      "id": "vidurkis-netinka-skirstiniams-su-iskirtim",
+      "title": "Netinkamas vidurkio naudojimas",
+      "type": "mistake",
+      "conceptIds": [
+        "vidurkis",
         "mediana"
       ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
-        },
-        {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
-        }
-      ],
-      "answer": "5"
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-exmp-3",
-      "title": "Tikimybė",
-      "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
-        },
-        {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
-        }
-      ],
-      "answer": "1/6"
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
-        }
-      ],
-      "answer": "4"
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-exmp-5",
-      "title": "Sklaida",
-      "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
-        }
-      ],
-      "answer": "B turi didesnę sklaidą"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-001",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask skaičių 4, 6, 8 vidurkį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame ir dalijame.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "vidurkis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4+6+8=18.",
-          "latex": "18/3=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-002",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-003",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-004",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-005",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-006",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-007",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-008",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-009",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-010",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-011",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-012",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-013",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-014",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-015",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-016",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-017",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-018",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-019",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-ex-020",
-      "topicId": "statistine-duomenu-analize-ir-regresija",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Statistinė duomenų analizė, koreliacija ir regresija: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-test-topic",
-      "title": "Statistinė duomenų analizė, koreliacija ir regresija testas",
-      "scope": "topic",
-      "topicIds": [
-        "statistine-duomenu-analize-ir-regresija"
-      ],
-      "exerciseIds": [
-        "statistine-duomenu-analize-ir-regresija-ex-001",
-        "statistine-duomenu-analize-ir-regresija-ex-002",
-        "statistine-duomenu-analize-ir-regresija-ex-003",
-        "statistine-duomenu-analize-ir-regresija-ex-004",
-        "statistine-duomenu-analize-ir-regresija-ex-005",
-        "statistine-duomenu-analize-ir-regresija-ex-006",
-        "statistine-duomenu-analize-ir-regresija-ex-007",
-        "statistine-duomenu-analize-ir-regresija-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-test-challenge",
-      "title": "Statistinė duomenų analizė, koreliacija ir regresija iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "statistine-duomenu-analize-ir-regresija"
-      ],
-      "exerciseIds": [
-        "statistine-duomenu-analize-ir-regresija-ex-009",
-        "statistine-duomenu-analize-ir-regresija-ex-010",
-        "statistine-duomenu-analize-ir-regresija-ex-011",
-        "statistine-duomenu-analize-ir-regresija-ex-012",
-        "statistine-duomenu-analize-ir-regresija-ex-013",
-        "statistine-duomenu-analize-ir-regresija-ex-014",
-        "statistine-duomenu-analize-ir-regresija-ex-015",
-        "statistine-duomenu-analize-ir-regresija-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-duomenys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-vidurkio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "statistine-duomenu-analize-ir-regresija-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
+      "wrongPattern": "Naudojamas vidurkis apibūdinti algoms įmonėje, kurioje direktorius uždirba 100 kartų daugiau nei darbininkai.",
+      "whyItHappens": "Vidurkis yra labiausiai žinoma charakteristika, todėl taikoma aklai.",
+      "correction": "Esant didelėms išskirtims, naudokite medianą.",
+      "wrongExample": "Vidutinė alga Lietuvoje yra X, todėl visi tiek gauna.",
+      "correctExample": "Mediana geriau parodo, kiek uždirba 'vidurinis' žmogus, nes vidurkį pakelia keli milijonieriai."
     }
   ]
 }

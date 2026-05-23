@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "matematika_k12.pdf",
-    "notes": "Apima 6 klasės geometrijos kursą: trikampių braižymą, egzistavimo taisyklę ir lygumo požymius."
+    "notes": "Išplėsta teorija: 10 skyrių, 8 pavyzdžiai, gilus lygumo požymių ir braižymo technikos nagrinėjimas."
   },
   "topic": {
     "id": "trikampiu-lygumas-ir-braizymas",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 3,
-    "estimatedStudyMinutes": 200,
+    "estimatedStudyMinutes": 300,
     "prerequisiteTopicIds": [
       "geometrijos-ir-matavimu-pradmenys"
     ],
@@ -27,7 +27,8 @@
       "kkp-pozymis",
       "kpk-pozymis",
       "braizymas-skriestuvu",
-      "braizymas-matlankiu"
+      "braizymas-matlankiu",
+      "staciojo-trikampio-lygumas"
     ],
     "formulaIds": [],
     "mistakeIds": [
@@ -36,79 +37,233 @@
       "atitinkamu-elementu-painiojimas"
     ],
     "exerciseIds": [
-      "tl-ex-1", "tl-ex-2", "tl-ex-3", "tl-ex-4", "tl-ex-5", "tl-ex-6",
-      "tl-ex-7", "tl-ex-8", "tl-ex-9", "tl-ex-10", "tl-ex-11", "tl-ex-12",
-      "tl-ex-13", "tl-ex-14", "tl-ex-15", "tl-ex-16", "tl-ex-17", "tl-ex-18",
-      "tl-ex-19", "tl-ex-20"
+      "tl-ex-1",
+      "tl-ex-2",
+      "tl-ex-3",
+      "tl-ex-4",
+      "tl-ex-5",
+      "tl-ex-6",
+      "tl-ex-7",
+      "tl-ex-8",
+      "tl-ex-9",
+      "tl-ex-10",
+      "tl-ex-11",
+      "tl-ex-12",
+      "tl-ex-13",
+      "tl-ex-14",
+      "tl-ex-15",
+      "tl-ex-16",
+      "tl-ex-17",
+      "tl-ex-18",
+      "tl-ex-19",
+      "tl-ex-20"
     ]
   },
   "theory": [
     {
-      "id": "tl-lygumas",
-      "title": "Kada trikampiai yra lygūs?",
+      "id": "tl-intro",
+      "title": "Įžanga: Kodėl svarbus trikampių lygumas?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geometrijoje dvi figūros vadinamos lygiomis, jei uždėtos viena ant kitos jos visiškai sutampa."
+          "text": "Trikampis yra viena svarbiausių figūrų geometrijoje. Bet kokį daugiakampį galime suskaidyti į trikampius, todėl suprasdami jų savybes, galime suprasti ir sudėtingesnes figūras. Trikampių lygumas leidžia mums perkelti žinias iš vienos vietos į kitą: jei žinome, kad du trikampiai yra identiški (lygūs), mums nereikia matuoti visų antrojo trikampio dalių – mes jau jas žinome iš pirmojo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kasdienybėje trikampių lygumas naudojamas architektūroje, inžinerijoje (pavyzdžiui, tiltų konstrukcijose) ir net gaminant detales, kurios turi būti identiškos. Šiame skyriuje išmoksime ne tik atpažinti lygius trikampius, bet ir patiems juos tiksliai nubraižyti naudojant paprasčiausius įrankius."
+        }
+      ]
+    },
+    {
+      "id": "tl-nelygybe-detaliai",
+      "title": "Trikampio egzistavimo paslaptis: Trikampio nelygybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prieš pradedant kalbėti apie lygumą, turime įsitikinti, ar trikampis apskritai gali egzistuoti. Įsivaizduokite tris pagaliukus. Ar visada iš jų galite sudėti trikampį? Atsakymas – ne."
+        },
+        {
+          "type": "definition",
+          "conceptId": "trikampio-nelygybe",
+          "text": "Trikampio nelygybė teigia, kad bet kurių dviejų trikampio kraštinių ilgių suma turi būti didesnė už trečiosios kraštinės ilgį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei turime kraštines $a, b, c$, turi galioti šios trys sąlygos:"
+        },
+        {
+          "type": "formula",
+          "latex": "a + b > c, \\quad a + c > b, \\quad b + c > a"
+        },
+        {
+          "type": "note",
+          "text": "Intuicija: trumpiausias atstumas tarp dviejų taškų yra tiesė. Jei keliaujate iš taško A į tašką B per tašką C (dviem kraštinėmis), tas kelias turi būti ilgesnis nei tiesiai iš A į B."
+        },
+        {
+          "type": "warning",
+          "text": "Jei kraštinių suma lygi trečiajai (pvz., $2+3=5$), trikampio nesudarysite – gausite tiesiog tiesės atkarpą."
+        }
+      ]
+    },
+    {
+      "id": "tl-lygumas-apibrezimas",
+      "title": "Kas yra lygūs trikampiai?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrijoje žodis „lygus“ reiškia „identiškas visomis prasmėmis“. Du trikampiai yra lygūs, jei juos uždėjus vieną ant kito jie visiškai sutaptų."
         },
         {
           "type": "definition",
           "conceptId": "lygus-trikampiai",
-          "text": "Trikampiai yra lygūs, jei jų [[atitinkami-elementai|atitinkamos kraštinės]] ir atitinkami kampai yra lygūs."
+          "text": "Trikampiai vadinami lygiais, jei jų atitinkamos kraštinės yra lygios ir jų atitinkami kampai yra lygūs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svarbu suprasti terminą [[atitinkami-elementai|atitinkami elementai]]. Tai elementai (kraštinės arba kampai), kurie sutampa po figūrų sujungimo. Jei $\\Delta ABC = \\Delta A'B'C'$, tai:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Kraštinė $AB$ atitinka $A'B'$ ir yra jai lygi.",
+            "Kraštinė $BC$ atitinka $B'C'$ ir yra jai lygi.",
+            "Kraštinė $AC$ atitinka $A'C'$ ir yra jai lygi.",
+            "Kampas $\\angle A$ atitinka $\\angle A'$, $\\angle B$ atitinka $\\angle B'$, o $\\angle C$ atitinka $\\angle C'$."
+          ]
         },
         {
           "type": "note",
-          "text": "Jei trikampis ABC lygus trikampiui A'B'C', tai rašoma ∆ABC = ∆A'B'C'."
+          "text": "Užrašant lygumą $\\Delta ABC = \\Delta KMN$, raidžių tvarka yra kritiškai svarbi. Pirmoji raidė $A$ atitinka pirmąją raidę $K$, antroji $B$ – antrąją $M$ ir t.t."
         }
       ]
     },
     {
-      "id": "tl-nelygybe",
-      "title": "Ar trikampis visada egzistuoja?",
-      "blocks": [
-        {
-          "type": "property",
-          "text": "[[trikampio-nelygybe|Trikampio nelygybė]]: bet kurių dviejų trikampio kraštinių suma visada turi būti didesnė už trečiąją kraštinę."
-        },
-        {
-          "type": "example",
-          "text": "Iš atkarpų 2 cm, 3 cm ir 10 cm trikampio nubraižyti nepavyks, nes 2 + 3 < 10 (jos tiesiog nesusisieks)."
-        }
-      ]
-    },
-    {
-      "id": "tl-pozymiai",
-      "title": "Trikampių lygumo požymiai",
+      "id": "tl-kkp-skyrius",
+      "title": "Pirmasis požymis: Kraštinė-Kampas-Kraštinė (KKP)",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nebūtina matuoti visų 6 elementų, kad įsitikintume lygumu. Pakanka žinoti 3 tam tikrus elementus:"
+          "text": "Mums nebūtina matuoti visų 6 elementų (3 kraštinių ir 3 kampų), kad įrodytume lygumą. Pakanka žinoti tik tam tikrus 3 elementus."
         },
         {
           "type": "method",
-          "text": "1. [[kkk-pozymis|KKK (Kraštinė-Kraštinė-Kraštinė)]]: jei vieno trikampio trys kraštinės lygios kito trikampio trims kraštinėms."
+          "conceptId": "kkp-pozymis",
+          "text": "Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra atitinkamai lygūs kito trikampio dviem kraštinėms ir kampui tarp jų, tai tokie trikampiai yra lygūs."
         },
         {
-          "type": "method",
-          "text": "2. [[kkp-pozymis|KKP (Kraštinė-Kampas-Kraštinė)]]: jei du trikampiai turi po dvi lygias kraštines ir lygų kampą tarp jų."
+          "type": "paragraph",
+          "text": "Įsivaizduokite: turite dvi nustatyto ilgio lazdeles ir jas sujungiate tam tikru kampu. Trečioji kraštinė, jungianti laisvus lazdelių galus, gali būti tik vieno konkretaus ilgio. Todėl visas trikampis yra „užrakintas“ ir negali būti kitoks."
         },
         {
-          "type": "method",
-          "text": "3. [[kpk-pozymis|KPK (Kampas-Kraštinė-Kampas)]]: jei du trikampiai turi po lygią kraštinę ir po du lygius prie jos esančius kampus."
+          "type": "warning",
+          "text": "Klaida: mokiniai dažnai pamiršta, kad kampas PRIVALO būti tarp tų dviejų kraštinių. Jei kampas yra ne tarp jų, trikampiai gali ir nebūti lygūs."
         }
       ]
     },
     {
-      "id": "tl-braizymas",
-      "title": "Kaip nubraižyti trikampį?",
+      "id": "tl-kpk-skyrius",
+      "title": "Antrasis požymis: Kampas-Kraštinė-Kampas (KPK)",
+      "blocks": [
+        {
+          "type": "method",
+          "conceptId": "kpk-pozymis",
+          "text": "Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem prie jos esantiems kampams, tai tokie trikampiai yra lygūs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vizualizacija: padėkite ant stalo nustatyto ilgio pagrindą (kraštinę). Iš abiejų jo galų nubrėžkite spindulius nurodytais kampais. Šie spinduliai susikirs tik viename konkrečiame taške. Jūs neturite laisvės sukurti kitokio trikampio."
+        },
+        {
+          "type": "note",
+          "text": "Šis požymis labai naudingas, kai negalime išmatuoti atstumo tiesiogiai (pvz., atstumo iki kito upės kranto), bet galime išmatuoti kampus iš savo pusės."
+        }
+      ]
+    },
+    {
+      "id": "tl-kkk-skyrius",
+      "title": "Trečiasis požymis: Kraštinė-Kraštinė-Kraštinė (KKK)",
+      "blocks": [
+        {
+          "type": "method",
+          "conceptId": "kkk-pozymis",
+          "text": "Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms, tai tokie trikampiai yra lygūs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tai pats stipriausias trikampio standumo įrodymas. Jei turime tris sutvirtintas kraštines, trikampio formos pakeisti neįmanoma (priešingai nei keturkampio, kurį galime „sulankstyti“ į lygiagretį). Būtent todėl trikampės konstrukcijos naudojamos tiltuose ir kranuose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jei žinome visas kraštines, kampai susiformuoja automatiškai ir negali keistis."
+        }
+      ]
+    },
+    {
+      "id": "tl-braizymas-technika",
+      "title": "Trikampių braižymo technikos",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Braižymui naudojame liniuotę, [[braizymas-matlankiu|matlankį]] (kampams) ir [[braizymas-skriestuvu|skriestuvą]] (kraštinėms pernešti)."
+          "text": "Norint tiksliai nubraižyti trikampį, neužtenka tik liniuotės. Mums reikia įrankių kampams ir spinduliams perkelti."
         },
         {
           "type": "method",
-          "text": "Braižymas pagal 3 kraštines: 1. Nubrėžiame pagrindą. 2. Skriestuvu iš galų brėžiame lankus, kurių spinduliai lygūs kitoms kraštinėms. 3. Lankų susikirtimo taškas yra trečioji viršūnė."
+          "text": "Braižymas pagal 3 kraštines (SSS):",
+          "steps": [
+            "1. Liniuote nubrėžiame ilgiausią kraštinę $AB$.",
+            "2. Skriestuvu išmatuojame antrosios kraštinės ilgį.",
+            "3. Įsmeigiame skriestuvą į tašką $A$ ir nubrėžiame lanką.",
+            "4. Skriestuvu išmatuojame trečiosios kraštinės ilgį, įsmeigiame į tašką $B$ ir nubrėžiame antrą lanką.",
+            "5. Lankų susikirtimo taškas $C$ yra trečioji viršūnė. Sujungiame $AC$ ir $BC$."
+          ]
+        },
+        {
+          "type": "method",
+          "text": "Braižymas pagal kraštinę ir du kampus (KPK):",
+          "steps": [
+            "1. Nubrėžiame duotą kraštinę $AB$.",
+            "2. Matlankiu prie viršūnės $A$ atidedame pirmąjį kampą ir nubrėžiame spindulį.",
+            "3. Matlankiu prie viršūnės $B$ atidedame antrąjį kampą ir nubrėžiame kitą spindulį.",
+            "4. Spindulių susikirtimo taškas yra viršūnė $C$."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tl-stacieji",
+      "title": "Specialus atvejis: Stačiųjų trikampių lygumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kadangi statieji trikampiai jau turi vieną garantuotą elementą – statųjį kampą ($90^{\\circ}$), jų lygumui įrodyti kartais užtenka dar mažiau duomenų."
+        },
+        {
+          "type": "note",
+          "text": "Pavyzdžiui, jei lygūs du statieji trikampiai turi lygias įžambines ir po vieną lygią kraštinę (statinį), jie bus lygūs. Tai išplaukia iš Pitagoro teoremos, kurią mokysitės vėliau, bet dabar svarbu suprasti, kad statusis kampas supaprastina užduotį."
+        }
+      ]
+    },
+    {
+      "id": "tl-klaidos",
+      "title": "Dažniausios klaidos: Kaip nesuklysti?",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Klaidingas elementų atitikimas:** Žiūrima ne į formą, o į tai, kaip trikampis pasuktas. Visada ieškokite kraštinių tarp tų pačių kampų.",
+            "**KKP požymis su kampu ne tarp kraštinių:** Jei turite dvi kraštines ir kampą ne tarp jų, trikampiai gali būti skirtingi (vadinama dviprasmiškuoju atveju).",
+            "**Trikampio nelygybės ignoravimas:** Bandoma skaičiuoti trikampio elementus, nors jis net negali egzistuoti (pvz., kraštinės 2, 2, 5)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tl-praktika",
+      "title": "Taikymas praktikoje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampių lygumas naudojamas ne tik sąsiuvinyje. Inžinieriai naudoja šiuos principus tikrindami, ar gaminamos detalės yra identiškos. Geodezininkai matuoja sklypų ribas naudodami KPK požymį, kai negali praeiti pro kliūtį (pvz., tankų krūmą ar pelkę)."
         }
       ]
     }
@@ -119,12 +274,18 @@
       "title": "Lygūs trikampiai",
       "type": "concept",
       "shortDefinition": "Trikampiai, kurie visiškai sutampa juos uždėjus vieną ant kito.",
-      "intuition": "Tai tarsi du identiški blynai.",
+      "intuition": "Tai tarsi du identiški blynai arba kopijos.",
       "formal": "Du trikampiai vadinami lygiais, jei egzistuoja atitiktis tarp jų viršūnių tokia, kad visos atitinkamos kraštinės ir kampai būtų lygūs.",
-      "notation": ["∆ABC = ∆A'B'C'"],
-      "relatedConceptIds": ["atitinkami-elementai"],
+      "notation": [
+        "∆ABC = ∆A'B'C'"
+      ],
+      "relatedConceptIds": [
+        "atitinkami-elementai"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
@@ -132,25 +293,33 @@
       "title": "Atitinkami elementai",
       "type": "concept",
       "shortDefinition": "Kraštinės arba kampai, esantys tose pačiose vietose lyginamuose trikampiuose.",
-      "intuition": "Tai elementai-dvyniai.",
-      "formal": "Elementai, kurie sutampa trikampius uždėjus vieną ant kito.",
+      "intuition": "Tai elementai-dvyniai, kurie sutampa figūras sudėjus.",
+      "formal": "Elementai, kurie sutampa trikampius uždėjus vieną ant kito po galimo posūkio ar apvertimo.",
       "notation": [],
-      "relatedConceptIds": ["lygus-trikampiai"],
+      "relatedConceptIds": [
+        "lygus-trikampiai"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
       "id": "trikampio-nelygybe",
       "title": "Trikampio nelygybė",
       "type": "theorem",
-      "shortDefinition": "Taisyklė: a + b > c.",
-      "intuition": "Kelias aplinkui (per dvi kraštines) visada turi būti ilgesnis už tiesų kelią.",
-      "formal": "Bet kurio trikampio bet kurių dviejų kraštinių ilgių suma yra didesnė už trečiosios kraštinės ilgį.",
-      "notation": ["a + b > c"],
+      "shortDefinition": "Taisyklė: bet kurių dviejų kraštinių suma > trečia.",
+      "intuition": "Kelias aplinkui visada turi būti ilgesnis už tiesų kelią.",
+      "formal": "Bet kurio trikampio bet kurių dviejų kraštinių ilgių suma yra griežtai didesnė už trečiosios kraštinės ilgį.",
+      "notation": [
+        "a + b > c"
+      ],
       "relatedConceptIds": [],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
@@ -160,10 +329,18 @@
       "shortDefinition": "Lygumas pagal tris kraštines.",
       "intuition": "Jei visos lazdelės vienodos, trikampis susidės tik vienu būdu.",
       "formal": "Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms, tai tokie trikampiai yra lygūs.",
-      "notation": ["KKK"],
-      "relatedConceptIds": ["lygus-trikampiai"],
-      "prerequisiteConceptIds": ["lygus-trikampiai"],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "notation": [
+        "KKK"
+      ],
+      "relatedConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "prerequisiteConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
@@ -171,12 +348,20 @@
       "title": "KKP požymis",
       "type": "theorem",
       "shortDefinition": "Lygumas pagal dvi kraštines ir kampą tarp jų.",
-      "intuition": "Jei žinai dvi kraštines ir kaip stipriai jos 'išskėstos', trečia kraštinė užsidarys pati.",
+      "intuition": "Dvi kraštinės ir 'išskėtimo' kampas nulemia visą trikampį.",
       "formal": "Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra atitinkamai lygūs kito trikampio dviem kraštinėms ir kampui tarp jų, tai tokie trikampiai yra lygūs.",
-      "notation": ["KKP"],
-      "relatedConceptIds": ["lygus-trikampiai"],
-      "prerequisiteConceptIds": ["lygus-trikampiai"],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "notation": [
+        "KKP"
+      ],
+      "relatedConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "prerequisiteConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
@@ -184,38 +369,37 @@
       "title": "KPK požymis",
       "type": "theorem",
       "shortDefinition": "Lygumas pagal kraštinę ir du kampus prie jos.",
-      "intuition": "Jei turi pagrindą ir žinai, kokiu kampu kyla sienos, viršūnė susitiks tik viename taške.",
+      "intuition": "Žinant pagrindą ir sienų kilimo kampus, viršūnė nustatoma tiksliai.",
       "formal": "Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem prie jos esantiems kampams, tai tokie trikampiai yra lygūs.",
-      "notation": ["KPK"],
-      "relatedConceptIds": ["lygus-trikampiai"],
-      "prerequisiteConceptIds": ["lygus-trikampiai"],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "notation": [
+        "KPK"
+      ],
+      "relatedConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "prerequisiteConceptIds": [
+        "lygus-trikampiai"
+      ],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "braizymas-skriestuvu",
-      "title": "Braižymas skriestuvu",
-      "type": "method",
-      "shortDefinition": "Skriestuvo naudojimas kraštinių ilgiams atidėti.",
-      "intuition": "Skriestuvas padeda 'nukopijuoti' ilgį.",
-      "formal": "Apskritimo lanko braižymas nurodytu spinduliu siekiant rasti geometrinę vietą taškų, nutolusių nuo centro nurodytu atstumu.",
+      "id": "staciojo-trikampio-lygumas",
+      "title": "Stačiojo trikampio lygumas",
+      "type": "concept",
+      "shortDefinition": "Specialūs lygumo atvejai trikampiams su stačiuoju kampu.",
+      "intuition": "Status kampas jau yra vienas iš reikiamų 3 elementų.",
+      "formal": "Specialūs teoremų atvejai, pvz., pagal įžambinę ir statinį.",
       "notation": [],
-      "relatedConceptIds": [],
+      "relatedConceptIds": [
+        "lygus-trikampiai"
+      ],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
-      "defaultSrs": false
-    },
-    {
-      "id": "braizymas-matlankiu",
-      "title": "Braižymas matlankiu",
-      "type": "method",
-      "shortDefinition": "Kampų matavimas ir braižymas.",
-      "intuition": "Matlankis padeda tiksliai pasukti kraštinę.",
-      "formal": "Kampo didumo laipsniais nustatymas arba nurodyto didumo kampo atidėjimas brėžinyje.",
-      "notation": ["°"],
-      "relatedConceptIds": [],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": ["trikampiu-lygumas-ir-braizymas"],
+      "appearsInTopicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
       "defaultSrs": false
     }
   ],
@@ -225,10 +409,12 @@
       "id": "nelygybes-ignoravimas",
       "title": "Bando braižyti neįmanomą trikampį",
       "topicId": "trikampiu-lygumas-ir-braizymas",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "wrongPattern": "Mano, kad trikampis su kraštinėmis 1, 1, 5 egzistuoja.",
       "whyItHappens": "Pamirštama patikrinti, ar suma viršija trečią kraštinę.",
-      "correction": "Visada patikrink: a + b > c.",
+      "correction": "Visada patikrink: a + b > c. Dviejų trumpiausių kraštinių suma turi būti didesnė už ilgiausią.",
       "wrongExample": "Kraštinės: 2, 2, 4.",
       "correctExample": "2 + 2 = 4 (nėra daugiau už 4), tad trikampis neegzistuoja.",
       "defaultSrs": true
@@ -237,10 +423,12 @@
       "id": "neteisingas-pozymio-taikymas",
       "title": "Kampas ne tarp kraštinių",
       "topicId": "trikampiu-lygumas-ir-braizymas",
-      "conceptIds": ["kkp-pozymis"],
+      "conceptIds": [
+        "kkp-pozymis"
+      ],
       "wrongPattern": "Taikomas KKP požymis, kai kampas yra ne tarp lygių kraštinių.",
       "whyItHappens": "Mokinys tiesiog ieško bet kokių 2 kraštinių ir bet kokio kampo.",
-      "correction": "KKP požymiui kampas PRIVALO būti tarp duotų kraštinių.",
+      "correction": "KKP požymiui kampas PRIVALO būti tarp duotų kraštinių (jungti jas).",
       "defaultSrs": true
     }
   ],
@@ -250,106 +438,194 @@
       "title": "Trikampio egzistavimo tikrinimas",
       "level": "easy",
       "problem": "Ar egzistuoja trikampis, kurio kraštinės yra 5 cm, 7 cm ir 10 cm?",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "steps": [
         {
-          "text": "Tikriname sumą: 5 + 7 = 12.",
+          "text": "Randame ilgiausią kraštinę. Tai yra 10 cm.",
+          "latex": "c = 10"
+        },
+        {
+          "text": "Sudedame dvi trumpesnes kraštines: 5 + 7 = 12.",
+          "latex": "5 + 7 = 12"
+        },
+        {
+          "text": "Lyginame sumą su ilgiausia kraštine. Kadangi $12 > 10$, sąlyga tenkinama.",
           "latex": "12 > 10"
-        },
-        {
-          "text": "Tikriname kitas poras: 5 + 10 = 15 (> 7) ir 7 + 10 = 17 (> 5).",
-          "latex": "15 > 7, 17 > 5"
-        },
-        {
-          "text": "Kadangi visos sąlygos tenkinamos, trikampis egzistuoja.",
-          "latex": ""
         }
       ],
       "answer": "Taip, egzistuoja."
     },
     {
       "id": "tl-exmp-2",
-      "title": "Lygumo įrodymas",
+      "title": "Lygumo įrodymas pagal KKK",
       "level": "easy",
-      "problem": "Trikampio ABC kraštinės lygios 3, 4, 5. Trikampio DEF kraštinės taip pat lygios 3, 4, 5. Ar jie lygūs?",
-      "conceptIds": ["kkk-pozymis"],
+      "problem": "Trikampio ABC kraštinės lygios 3 cm, 4 cm, 5 cm. Trikampio DEF kraštinės taip pat lygios 3 cm, 4 cm, 5 cm. Ar jie lygūs?",
+      "conceptIds": [
+        "kkk-pozymis"
+      ],
       "steps": [
         {
-          "text": "Matome, kad visos trys kraštinės yra atitinkamai lygios.",
-          "latex": "AB=DE=3, BC=EF=4, AC=DF=5"
+          "text": "Surašome atitinkamas kraštines: AB=DE=3, BC=EF=4, AC=DF=5.",
+          "latex": "AB=DE, BC=EF, AC=DF"
         },
         {
-          "text": "Taikome KKK požymį.",
-          "latex": "KKK"
+          "text": "Kadangi visos trys kraštinės yra atitinkamai lygios, galime taikyti KKK požymį.",
+          "latex": "\\text{KKK požymis}"
         }
       ],
-      "answer": "Taip, pagal KKK požymį."
+      "answer": "Taip, trikampiai lygūs pagal KKK požymį."
     },
     {
       "id": "tl-exmp-3",
-      "title": "Braižymo eiga (SSS)",
+      "title": "Braižymo eiga (KKK)",
       "level": "medium",
-      "problem": "Aprašyk, kaip nubraižyti trikampį su kraštinėmis 6, 6, 6.",
-      "conceptIds": ["braizymas-skriestuvu"],
+      "problem": "Aprašykite žingsnius, kaip skriestuvu ir liniuote nubraižyti trikampį su kraštinėmis 6, 8 ir 10.",
+      "conceptIds": [
+        "braizymas-skriestuvu"
+      ],
       "steps": [
         {
-          "text": "Nubrėžk 6 cm atkarpą AB.",
+          "text": "Liniuote nubrėžiame atkarpą $AB = 10$ cm.",
           "latex": ""
         },
         {
-          "text": "Skriestuvu išmatuok 6 cm, įsmeik į A ir nubrėžk lanką.",
+          "text": "Skriestuvu išmatuojame 6 cm atstumą, įstatome adatą į tašką $A$ ir nubrėžiame lanką virš atkarpos.",
           "latex": ""
         },
         {
-          "text": "Tą patį padaryk iš taško B.",
+          "text": "Skriestuvu išmatuojame 8 cm atstumą, įstatome adatą į tašką $B$ ir nubrėžiame lanką, kad jis susikirstų su pirmuoju.",
           "latex": ""
         },
         {
-          "text": "Sujunk A ir B su lankų susikirtimo tašku C.",
+          "text": "Sankirtos tašką pažymime $C$ ir sujungiame su $A$ bei $B$.",
           "latex": ""
         }
       ],
-      "answer": "Gaunamas lygiakraštis trikampis."
+      "answer": "Nubraižytas statusis trikampis (nes $6^2+8^2=10^2$)."
     },
     {
       "id": "tl-exmp-4",
-      "title": "Nežinomo kampo radimas",
+      "title": "Atitinkamų kampų radimas",
       "level": "medium",
-      "problem": "Trikampiai ABC ir KMN yra lygūs. Kampas A lygus 40°. Kokį kampą atitinka kampas K?",
-      "conceptIds": ["atitinkami-elementai"],
+      "problem": "Žinoma, kad $\\Delta ABC = \\Delta KMN$. Kampas $A = 40^{\\circ}$, kampas $N = 75^{\\circ}$. Raskite kampą $B$.",
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "steps": [
         {
-          "text": "Užraše ∆ABC = ∆KMN raidžių eilės tvarka rodo atitiktį.",
-          "latex": "A \\leftrightarrow K, B \\leftrightarrow M, C \\leftrightarrow N"
+          "text": "Pagal užrašą nustatome atitiktis: $A \\leftrightarrow K, B \\leftrightarrow M, C \\leftrightarrow N$.",
+          "latex": ""
         },
         {
-          "text": "Kampas A atitinka kampą K.",
-          "latex": "\\angle A = \\angle K = 40^{\\circ}"
+          "text": "Tada $\\angle C = \\angle N = 75^{\\circ}$.",
+          "latex": "\\angle C = 75^{\\circ}"
+        },
+        {
+          "text": "Trikampio kampų suma yra $180^{\\circ}$, tad $\\angle B = 180^{\\circ} - (40^{\\circ} + 75^{\\circ}) = 65^{\\circ}$.",
+          "latex": "\\angle B = 180^{\\circ} - 115^{\\circ} = 65^{\\circ}"
         }
       ],
-      "answer": "40°"
+      "answer": "65°"
     },
     {
       "id": "tl-exmp-5",
-      "title": "Sudėtingas atvejis: nelygybė su x",
+      "title": "Kraštinės apribojimai (Nelygybė)",
       "level": "hard",
-      "problem": "Trikampio dvi kraštinės yra 4 cm ir 9 cm. Kokia gali būti trečioji kraštinė (sveikasis skaičius), kad ji būtų kuo didesnė?",
-      "conceptIds": ["trikampio-nelygybe"],
+      "problem": "Trikampio dvi kraštinės yra 4 cm ir 9 cm. Koks gali būti trečiosios kraštinės ilgis $x$ (sveikasis skaičius), kad trikampis būtų lygiašonis?",
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "steps": [
         {
-          "text": "Turi galioti: 4 + 9 > x.",
-          "latex": "13 > x"
+          "text": "Lygiašonis trikampis turi turėti dvi lygias kraštines. Galimi variantai: $x=4$ arba $x=9$.",
+          "latex": ""
         },
         {
-          "text": "Didžiausias sveikasis skaičius, mažesnis už 13, yra 12.",
-          "latex": "x = 12"
+          "text": "Tikriname $x=4$: ar $4+4 > 9$? Ne, $8 < 9$. Šis trikampis neegzistuoja.",
+          "latex": "4+4 \\ngtr 9"
         },
         {
-          "text": "Tikriname kitą pusę: 4 + x > 9 -> x > 5. 12 tinka.",
-          "latex": "4 + 12 = 16 > 9"
+          "text": "Tikriname $x=9$: ar $4+9 > 9$? Taip, $13 > 9$. Šis trikampis egzistuoja.",
+          "latex": "13 > 9"
         }
       ],
-      "answer": "12 cm"
+      "answer": "9 cm"
+    },
+    {
+      "id": "tl-exmp-6",
+      "title": "Lygumo įrodymas paveikslėlyje",
+      "level": "medium",
+      "problem": "Keturkampio $ABCD$ priešingos kraštinės $AB=CD$ ir $BC=DA$. Įrodykite, kad $\\Delta ABC = \\Delta CDA$.",
+      "conceptIds": [
+        "kkk-pozymis"
+      ],
+      "steps": [
+        {
+          "text": "Lyginame trikampius $ABC$ ir $CDA$. Duota, kad $AB=CD$ ir $BC=DA$.",
+          "latex": "AB=CD, BC=DA"
+        },
+        {
+          "text": "Kraštinė $AC$ yra bendra abiems trikampiams.",
+          "latex": "AC = AC"
+        },
+        {
+          "text": "Pagal tris lygias kraštines (KKK požymį), trikampiai yra lygūs.",
+          "latex": "\\text{KKK}"
+        }
+      ],
+      "answer": "Trikampiai lygūs pagal KKK požymį."
+    },
+    {
+      "id": "tl-exmp-7",
+      "title": "KPK požymio taikymas",
+      "level": "medium",
+      "problem": "Atkarpos $AB$ ir $CD$ susikerta taške $O$, kuris yra jų vidurio taškas. Įrodykite, kad $\\Delta AOC = \\Delta BOD$.",
+      "conceptIds": [
+        "kpk-pozymis",
+        "kkp-pozymis"
+      ],
+      "steps": [
+        {
+          "text": "Kadangi $O$ yra vidurio taškas, tai $AO=OB$ ir $CO=OD$.",
+          "latex": "AO=OB, CO=OD"
+        },
+        {
+          "text": "Kampai $\\angle AOC$ ir $\\angle BOD$ yra kryžminiai, todėl jie lygūs.",
+          "latex": "\\angle AOC = \\angle BOD"
+        },
+        {
+          "text": "Turime dvi kraštines ir kampą tarp jų, todėl taikome KKP požymį.",
+          "latex": "\\text{KKP}"
+        }
+      ],
+      "answer": "Trikampiai lygūs pagal KKP požymį."
+    },
+    {
+      "id": "tl-exmp-8",
+      "title": "Perimetro radimas per lygumą",
+      "level": "hard",
+      "problem": "$\\Delta ABC = \\Delta KMN$. Žinoma, kad $AB=7$, $MN=10$, o trikampio $ABC$ perimetras yra 25. Raskite $AC$.",
+      "conceptIds": [
+        "lygus-trikampiai",
+        "atitinkami-elementai"
+      ],
+      "steps": [
+        {
+          "text": "Iš lygumo seka, kad atitinkamos kraštinės lygios: $BC=MN=10$.",
+          "latex": "BC = 10"
+        },
+        {
+          "text": "Trikampio $ABC$ perimetras $P = AB + BC + AC$.",
+          "latex": "25 = 7 + 10 + AC"
+        },
+        {
+          "text": "Apskaičiuojame $AC = 25 - 17 = 8$.",
+          "latex": "AC = 8"
+        }
+      ],
+      "answer": "8"
     }
   ],
   "exercises": [
@@ -357,54 +633,97 @@
       "id": "tl-ex-1",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Ar galima nubraižyti trikampį, kurio kraštinės 1 cm, 2 cm, 3 cm?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "Taip" },
-          { "id": "b", "text": "Ne" }
+          {
+            "id": "a",
+            "text": "Taip"
+          },
+          {
+            "id": "b",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Patikrink sumą: 1 + 2.", "penalty": 0.1 },
-        { "order": 2, "text": "Suma turi būti griežtai DIDĖSNĖ už 3.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Patikrink sumą: 1 + 2.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Suma turi būti griežtai DIDĖSNĖ už 3.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "1 + 2 = 3. 3 nėra daugiau už 3, todėl kraštinės susiguls į vieną liniją.", "latex": "1+2=3 \\ngtr 3" }
+        {
+          "text": "1 + 2 = 3. 3 nėra daugiau už 3, todėl kraštinės susiguls į vieną liniją.",
+          "latex": "1+2=3 \\ngtr 3"
+        }
       ],
       "answerText": "Ne",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "formulaIds": [],
-      "mistakeIds": ["nelygybes-ignoravimas"],
+      "mistakeIds": [
+        "nelygybes-ignoravimas"
+      ],
       "estimatedSeconds": 30
     },
     {
       "id": "tl-ex-2",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Ką reiškia KKK požymis?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "Kampas-Kampas-Kampas" },
-          { "id": "b", "text": "Kraštinė-Kraštinė-Kraštinė" },
-          { "id": "c", "text": "Kampas-Kraštinė-Kampas" }
+          {
+            "id": "a",
+            "text": "Kampas-Kampas-Kampas"
+          },
+          {
+            "id": "b",
+            "text": "Kraštinė-Kraštinė-Kraštinė"
+          },
+          {
+            "id": "c",
+            "text": "Kampas-Kraštinė-Kampas"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "K raidė šiame skyriuje reiškia kraštinę.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "K raidė šiame skyriuje reiškia kraštinę.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "KKK reiškia trijų kraštinių lygumą.", "latex": "" }
+        {
+          "text": "KKK reiškia trijų kraštinių lygumą.",
+          "latex": ""
+        }
       ],
       "answerText": "Kraštinė-Kraštinė-Kraštinė",
-      "conceptIds": ["kkk-pozymis"],
+      "conceptIds": [
+        "kkk-pozymis"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 20
@@ -413,19 +732,36 @@
       "id": "tl-ex-3",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Trikampio kraštinės yra 5, 5 ir x. Koks mažiausias galimas sveikasis skaičius x?",
-      "answer": { "kind": "numeric", "value": 1, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "x + 5 turi būti daugiau už 5.", "penalty": 0.1 },
-        { "order": 2, "text": "Net 1 tinka: 1 + 5 = 6, o 6 > 5.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "x + 5 turi būti daugiau už 5.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Net 1 tinka: 1 + 5 = 6, o 6 > 5.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Kadangi x + 5 > 5, x turi būti daugiau už 0. Mažiausias sveikasis - 1.", "latex": "x > 0" }
+        {
+          "text": "Kadangi x + 5 > 5, x turi būti daugiau už 0. Mažiausias sveikasis - 1.",
+          "latex": "x > 0"
+        }
       ],
       "answerText": "1",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -434,26 +770,46 @@
       "id": "tl-ex-4",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Trikampis ABC lygus trikampiui XYZ. AB = 10. Kuri kraštinė XYZ trikampyje taip pat lygi 10?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "XY" },
-          { "id": "b", "text": "YZ" },
-          { "id": "c", "text": "XZ" }
+          {
+            "id": "a",
+            "text": "XY"
+          },
+          {
+            "id": "b",
+            "text": "YZ"
+          },
+          {
+            "id": "c",
+            "text": "XZ"
+          }
         ],
-        "correctChoiceIds": ["a"]
+        "correctChoiceIds": [
+          "a"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Žiūrėk į raidžių eiliškumą: AB yra pirma ir antra raidės.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Žiūrėk į raidžių eiliškumą: AB yra pirma ir antra raidės.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "AB atitinka XY.", "latex": "AB \\leftrightarrow XY" }
+        {
+          "text": "AB atitinka XY.",
+          "latex": "AB \\leftrightarrow XY"
+        }
       ],
       "answerText": "XY",
-      "conceptIds": ["atitinkami-elementai"],
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 25
@@ -462,26 +818,46 @@
       "id": "tl-ex-5",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kurį įrankį naudojame brėžti apskritimo lankams nustatant trečią viršūnę?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "Matlankį" },
-          { "id": "b", "text": "Skriestuvą" },
-          { "id": "c", "text": "Gulsčiuką" }
+          {
+            "id": "a",
+            "text": "Matlankį"
+          },
+          {
+            "id": "b",
+            "text": "Skriestuvą"
+          },
+          {
+            "id": "c",
+            "text": "Gulsčiuką"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Šis įrankis turi adatą ir pieštuką.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Šis įrankis turi adatą ir pieštuką.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Skriestuvas naudojamas spinduliams (kraštinėms) atidėti.", "latex": "" }
+        {
+          "text": "Skriestuvas naudojamas spinduliams (kraštinėms) atidėti.",
+          "latex": ""
+        }
       ],
       "answerText": "Skriestuvą",
-      "conceptIds": ["braizymas-skriestuvu"],
+      "conceptIds": [
+        "braizymas-skriestuvu"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 20
@@ -490,27 +866,51 @@
       "id": "tl-ex-6",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Duota: AB=DE, AC=DF, ∠A=∠D. Pagal kurį požymį trikampiai lygūs?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "KKK" },
-          { "id": "b", "text": "KKP" },
-          { "id": "c", "text": "KPK" }
+          {
+            "id": "a",
+            "text": "KKK"
+          },
+          {
+            "id": "b",
+            "text": "KKP"
+          },
+          {
+            "id": "c",
+            "text": "KPK"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Yra dvi kraštinės ir vienas kampas.", "penalty": 0.1 },
-        { "order": 2, "text": "Kampas A yra tarp kraštinių AB ir AC.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Yra dvi kraštinės ir vienas kampas.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Kampas A yra tarp kraštinių AB ir AC.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Dvi kraštinės ir kampas tarp jų - tai KKP požymis.", "latex": "KKP" }
+        {
+          "text": "Dvi kraštinės ir kampas tarp jų - tai KKP požymis.",
+          "latex": "KKP"
+        }
       ],
       "answerText": "KKP",
-      "conceptIds": ["kkp-pozymis"],
+      "conceptIds": [
+        "kkp-pozymis"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -519,19 +919,36 @@
       "id": "tl-ex-7",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Trikampio kraštinės yra 7, 8 ir x. Kokia DIDŽIAUSIA galima sveikoji x reikšmė?",
-      "answer": { "kind": "numeric", "value": 14, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "7 + 8 turi būti daugiau už x.", "penalty": 0.1 },
-        { "order": 2, "text": "15 > x. Koks didžiausias sveikasis skaičius mažesnis už 15?", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "7 + 8 turi būti daugiau už x.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "15 > x. Koks didžiausias sveikasis skaičius mažesnis už 15?",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "x < 7 + 8 = 15. Tad x = 14.", "latex": "x < 15" }
+        {
+          "text": "x < 7 + 8 = 15. Tad x = 14.",
+          "latex": "x < 15"
+        }
       ],
       "answerText": "14",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
@@ -540,26 +957,46 @@
       "id": "tl-ex-8",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Trikampiai ABC ir KMN lygūs. ∠B = 50°, ∠C = 60°. Kiek laipsnių turi ∠M?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "50°" },
-          { "id": "b", "text": "60°" },
-          { "id": "c", "text": "70°" }
+          {
+            "id": "a",
+            "text": "50°"
+          },
+          {
+            "id": "b",
+            "text": "60°"
+          },
+          {
+            "id": "c",
+            "text": "70°"
+          }
         ],
-        "correctChoiceIds": ["a"]
+        "correctChoiceIds": [
+          "a"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "B atitinka M.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "B atitinka M.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Kadangi ∆ABC = ∆KMN, tai ∠B = ∠M = 50°.", "latex": "50^{\\circ}" }
+        {
+          "text": "Kadangi ∆ABC = ∆KMN, tai ∠B = ∠M = 50°.",
+          "latex": "50^{\\circ}"
+        }
       ],
       "answerText": "50°",
-      "conceptIds": ["atitinkami-elementai"],
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -568,26 +1005,47 @@
       "id": "tl-ex-9",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Ar pakanka žinoti visus tris trikampio kampus, kad pasakytume, jog trikampiai lygūs?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "Taip" },
-          { "id": "b", "text": "Ne" }
+          {
+            "id": "a",
+            "text": "Taip"
+          },
+          {
+            "id": "b",
+            "text": "Ne"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Pagalvok apie mažą ir didelį lygiakraščius trikampius.", "penalty": 0.1 },
-        { "order": 2, "text": "Jų kampai vienodi (60°), bet dydžiai skiriasi.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Pagalvok apie mažą ir didelį lygiakraščius trikampius.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Jų kampai vienodi (60°), bet dydžiai skiriasi.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Kampų lygumo nepakanka, reikia bent vienos kraštinės lygumo.", "latex": "" }
+        {
+          "text": "Kampų lygumo nepakanka, reikia bent vienos kraštinės lygumo.",
+          "latex": ""
+        }
       ],
       "answerText": "Ne",
-      "conceptIds": ["lygus-trikampiai"],
+      "conceptIds": [
+        "lygus-trikampiai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
@@ -596,18 +1054,31 @@
       "id": "tl-ex-10",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Trikampio kraštinė yra 10 cm, o prie jos esantys kampai 30° ir 30°. Kokia yra kita kraštinė, jei trikampis lygiašonis?",
-      "answer": { "kind": "numeric", "value": 10, "tolerance": 100 },
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 100
+      },
       "hints": [
-        { "order": 1, "text": "Jei kampai prie pagrindo lygūs, tai šoninės kraštinės lygios.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Jei kampai prie pagrindo lygūs, tai šoninės kraštinės lygios.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Uždavinyje klaidinga prielaida apie 10 kaip pagrindą? Jei tai lygiašonis, kampai prie pagrindo 30, tad šoninės lygios. Skaičiavimas reikalautų daugiau duomenų, bet čia tikrinamas supratimas.", "latex": "" }
+        {
+          "text": "Uždavinyje klaidinga prielaida apie 10 kaip pagrindą? Jei tai lygiašonis, kampai prie pagrindo 30, tad šoninės lygios. Skaičiavimas reikalautų daugiau duomenų, bet čia tikrinamas supratimas.",
+          "latex": ""
+        }
       ],
       "answerText": "10",
-      "conceptIds": ["atitinkami-elementai"],
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 60
@@ -616,26 +1087,46 @@
       "id": "tl-ex-11",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Turime kraštinę AB ir kampus ∠A, ∠B. Pagal kurį požymį nubraižysime trikampį?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "KKK" },
-          { "id": "b", "text": "KKP" },
-          { "id": "c", "text": "KPK" }
+          {
+            "id": "a",
+            "text": "KKK"
+          },
+          {
+            "id": "b",
+            "text": "KKP"
+          },
+          {
+            "id": "c",
+            "text": "KPK"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Turime vieną kraštinę ir du kampus.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Turime vieną kraštinę ir du kampus.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Kampas-Kraštinė-Kampas (KPK) yra tinkamas požymis.", "latex": "KPK" }
+        {
+          "text": "Kampas-Kraštinė-Kampas (KPK) yra tinkamas požymis.",
+          "latex": "KPK"
+        }
       ],
       "answerText": "KPK",
-      "conceptIds": ["kpk-pozymis"],
+      "conceptIds": [
+        "kpk-pozymis"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -644,19 +1135,36 @@
       "id": "tl-ex-12",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Trikampis ABC lygus XYZ. AB=5, BC=6, AC=7. Koks XYZ perimetras?",
-      "answer": { "kind": "numeric", "value": 18, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Lygūs trikampiai turi vienodus perimetrus.", "penalty": 0.1 },
-        { "order": 2, "text": "Sudėk 5, 6 ir 7.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Lygūs trikampiai turi vienodus perimetrus.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Sudėk 5, 6 ir 7.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "5 + 6 + 7 = 18.", "latex": "18" }
+        {
+          "text": "5 + 6 + 7 = 18.",
+          "latex": "18"
+        }
       ],
       "answerText": "18",
-      "conceptIds": ["lygus-trikampiai"],
+      "conceptIds": [
+        "lygus-trikampiai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -665,28 +1173,55 @@
       "id": "tl-ex-13",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Trikampio dvi kraštinės lygios 3 cm ir 3 cm. Kokia gali būti trečioji, kad trikampis būtų bukasis?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "1 cm" },
-          { "id": "b", "text": "3 cm" },
-          { "id": "c", "text": "5 cm" },
-          { "id": "d", "text": "6 cm" }
+          {
+            "id": "a",
+            "text": "1 cm"
+          },
+          {
+            "id": "b",
+            "text": "3 cm"
+          },
+          {
+            "id": "c",
+            "text": "5 cm"
+          },
+          {
+            "id": "d",
+            "text": "6 cm"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Kraštinė turi būti mažesnė už 3+3=6.", "penalty": 0.1 },
-        { "order": 2, "text": "Bukajam trikampiui viena kraštinė turi būti gerokai ilgesnė.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Kraštinė turi būti mažesnė už 3+3=6.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Bukajam trikampiui viena kraštinė turi būti gerokai ilgesnė.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "6 netinka (nėra trikampis). 1, 3 tiktų smailiajam/lygiakraščiui. 5 yra pakankamai ilga, kad kampas būtų bukas.", "latex": "x < 6" }
+        {
+          "text": "6 netinka (nėra trikampis). 1, 3 tiktų smailiajam/lygiakraščiui. 5 yra pakankamai ilga, kad kampas būtų bukas.",
+          "latex": "x < 6"
+        }
       ],
       "answerText": "5 cm",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 60
@@ -695,19 +1230,36 @@
       "id": "tl-ex-14",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Trikampio perimetras 20 cm. Viena kraštinė 9 cm. Koks mažiausias sveikasis skaičius gali būti kita kraštinė?",
-      "answer": { "kind": "numeric", "value": 2, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Likusių dviejų suma yra 11.", "penalty": 0.1 },
-        { "order": 2, "text": "9 + x turi būti daugiau už y (trečiąją).", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Likusių dviejų suma yra 11.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "9 + x turi būti daugiau už y (trečiąją).",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "x + y = 11. Taip pat x + 9 > y. Pakaitaliojus: x + 9 > 11 - x -> 2x > 2 -> x > 1. Mažiausias sveikasis yra 2.", "latex": "x > 1" }
+        {
+          "text": "x + y = 11. Taip pat x + 9 > y. Pakaitaliojus: x + 9 > 11 - x -> 2x > 2 -> x > 1. Mažiausias sveikasis yra 2.",
+          "latex": "x > 1"
+        }
       ],
       "answerText": "2",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 70
@@ -716,46 +1268,82 @@
       "id": "tl-ex-15",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Ar lygūs trikampiai, jei jų du kampai lygūs ir viena kraštinė lygi, bet ji yra ne toje pačioje vietoje?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "Taip, visada" },
-          { "id": "b", "text": "Ne būtinai" }
+          {
+            "id": "a",
+            "text": "Taip, visada"
+          },
+          {
+            "id": "b",
+            "text": "Ne būtinai"
+          }
         ],
-        "correctChoiceIds": ["b"]
+        "correctChoiceIds": [
+          "b"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "KPK požymis reikalauja, kad kraštinė būtų tarp tų pačių kampų.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "KPK požymis reikalauja, kad kraštinė būtų tarp tų pačių kampų.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Jei kraštinės nėra atitinkamos, trikampiai gali būti skirtingų dydžių.", "latex": "" }
+        {
+          "text": "Jei kraštinės nėra atitinkamos, trikampiai gali būti skirtingų dydžių.",
+          "latex": ""
+        }
       ],
       "answerText": "Ne būtinai",
-      "conceptIds": ["atitinkami-elementai"],
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "formulaIds": [],
-      "mistakeIds": ["atitinkamu-elementu-painiojimas"],
+      "mistakeIds": [
+        "atitinkamu-elementu-painiojimas"
+      ],
       "estimatedSeconds": 50
     },
     {
       "id": "tl-ex-16",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Trikampio kraštinės sutinka kaip 3:4:5. Perimetras 24 cm. Rask ilgiausią kraštinę.",
-      "answer": { "kind": "numeric", "value": 10, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "3x + 4x + 5x = 24.", "penalty": 0.1 },
-        { "order": 2, "text": "12x = 24 -> x = 2.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "3x + 4x + 5x = 24.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "12x = 24 -> x = 2.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Kraštinės: 6, 8, 10. Ilgiausia - 10.", "latex": "5 \\cdot 2 = 10" }
+        {
+          "text": "Kraštinės: 6, 8, 10. Ilgiausia - 10.",
+          "latex": "5 \\cdot 2 = 10"
+        }
       ],
       "answerText": "10",
-      "conceptIds": ["lygus-trikampiai"],
+      "conceptIds": [
+        "lygus-trikampiai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 50
@@ -764,26 +1352,46 @@
       "id": "tl-ex-17",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Kiek skirtingų (nelygių) trikampių galima nubraižyti iš 3 duotų kraštinių (jei jie egzistuoja)?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "1" },
-          { "id": "b", "text": "2" },
-          { "id": "c", "text": "Begalę" }
+          {
+            "id": "a",
+            "text": "1"
+          },
+          {
+            "id": "b",
+            "text": "2"
+          },
+          {
+            "id": "c",
+            "text": "Begalę"
+          }
         ],
-        "correctChoiceIds": ["a"]
+        "correctChoiceIds": [
+          "a"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "KKK požymis sako, kad 3 kraštinės vienareikšmiškai apibrėžia trikampį.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "KKK požymis sako, kad 3 kraštinės vienareikšmiškai apibrėžia trikampį.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Tik vieną, nes visi kiti bus jam lygūs.", "latex": "" }
+        {
+          "text": "Tik vieną, nes visi kiti bus jam lygūs.",
+          "latex": ""
+        }
       ],
       "answerText": "1",
-      "conceptIds": ["kkk-pozymis"],
+      "conceptIds": [
+        "kkk-pozymis"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
@@ -792,18 +1400,31 @@
       "id": "tl-ex-18",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Lygiašonio trikampio šoninė kraštinė 5, o kampas tarp jų 60°. Kokia yra trečia kraštinė?",
-      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Jei lygiašonis trikampis turi 60° kampą viršūnėje, jis tampa lygiakraščiu.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Jei lygiašonis trikampis turi 60° kampą viršūnėje, jis tampa lygiakraščiu.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Visi kampai bus po 60°, tad kraštinės bus 5, 5, 5.", "latex": "5" }
+        {
+          "text": "Visi kampai bus po 60°, tad kraštinės bus 5, 5, 5.",
+          "latex": "5"
+        }
       ],
       "answerText": "5",
-      "conceptIds": ["atitinkami-elementai"],
+      "conceptIds": [
+        "atitinkami-elementai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
@@ -812,26 +1433,46 @@
       "id": "tl-ex-19",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Kuris derinys NEGARANTUOJA trikampių lygumo?",
       "answer": {
         "kind": "choice",
         "choices": [
-          { "id": "a", "text": "KKK" },
-          { "id": "b", "text": "KKP" },
-          { "id": "c", "text": "KK (dvi kraštinės)" }
+          {
+            "id": "a",
+            "text": "KKK"
+          },
+          {
+            "id": "b",
+            "text": "KKP"
+          },
+          {
+            "id": "c",
+            "text": "KK (dvi kraštinės)"
+          }
         ],
-        "correctChoiceIds": ["c"]
+        "correctChoiceIds": [
+          "c"
+        ]
       },
       "hints": [
-        { "order": 1, "text": "Reikia bent 3 elementų.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Reikia bent 3 elementų.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Dvi kraštinės gali turėti bet kokį kampą tarp savęs.", "latex": "" }
+        {
+          "text": "Dvi kraštinės gali turėti bet kokį kampą tarp savęs.",
+          "latex": ""
+        }
       ],
       "answerText": "KK",
-      "conceptIds": ["lygus-trikampiai"],
+      "conceptIds": [
+        "lygus-trikampiai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -840,18 +1481,31 @@
       "id": "tl-ex-20",
       "topicId": "trikampiu-lygumas-ir-braizymas",
       "grade": 6,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Rask trikampio kraštinę x, jei žinoma, kad jis lygus trikampiui su kraštinėmis 3, 4, 5, o x yra ilgiausios kraštinės pusė.",
-      "answer": { "kind": "numeric", "value": 2.5, "tolerance": 0 },
+      "answer": {
+        "kind": "numeric",
+        "value": 2.5,
+        "tolerance": 0
+      },
       "hints": [
-        { "order": 1, "text": "Ilgiausia kraštinė yra 5.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "text": "Ilgiausia kraštinė yra 5.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "5 / 2 = 2,5.", "latex": "2,5" }
+        {
+          "text": "5 / 2 = 2,5.",
+          "latex": "2,5"
+        }
       ],
       "answerText": "2,5",
-      "conceptIds": ["lygus-trikampiai"],
+      "conceptIds": [
+        "lygus-trikampiai"
+      ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 30
@@ -862,8 +1516,17 @@
       "id": "tl-test-1",
       "title": "Trikampių braižymas ir nelygybė",
       "scope": "topic",
-      "topicIds": ["trikampiu-lygumas-ir-braizymas"],
-      "exerciseIds": ["tl-ex-1", "tl-ex-3", "tl-ex-5", "tl-ex-7", "tl-ex-13", "tl-ex-14"],
+      "topicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
+      "exerciseIds": [
+        "tl-ex-1",
+        "tl-ex-3",
+        "tl-ex-5",
+        "tl-ex-7",
+        "tl-ex-13",
+        "tl-ex-14"
+      ],
       "timeLimitSeconds": 1200,
       "masteryWeight": 1.0,
       "passingThreshold": 0.7
@@ -872,8 +1535,19 @@
       "id": "tl-test-2",
       "title": "Trikampių lygumo požymiai",
       "scope": "topic",
-      "topicIds": ["trikampiu-lygumas-ir-braizymas"],
-      "exerciseIds": ["tl-ex-2", "tl-ex-4", "tl-ex-6", "tl-ex-8", "tl-ex-11", "tl-ex-15", "tl-ex-17", "tl-ex-19"],
+      "topicIds": [
+        "trikampiu-lygumas-ir-braizymas"
+      ],
+      "exerciseIds": [
+        "tl-ex-2",
+        "tl-ex-4",
+        "tl-ex-6",
+        "tl-ex-8",
+        "tl-ex-11",
+        "tl-ex-15",
+        "tl-ex-17",
+        "tl-ex-19"
+      ],
       "timeLimitSeconds": 1800,
       "masteryWeight": 1.5,
       "passingThreshold": 0.7
@@ -886,7 +1560,9 @@
       "cardType": "formula",
       "front": "Kokia yra trikampio nelygybės taisyklė?",
       "back": "a + b > c (bet kurių dviejų kraštinių suma didesnė už trečiąją).",
-      "conceptIds": ["trikampio-nelygybe"],
+      "conceptIds": [
+        "trikampio-nelygybe"
+      ],
       "defaultEnabled": true
     },
     {
@@ -895,7 +1571,9 @@
       "cardType": "theorem",
       "front": "Ką sako KKK lygumo požymis?",
       "back": "Trikampiai lygūs, jei visos trys jų kraštinės yra atitinkamai lygios.",
-      "conceptIds": ["kkk-pozymis"],
+      "conceptIds": [
+        "kkk-pozymis"
+      ],
       "defaultEnabled": true
     },
     {
@@ -904,7 +1582,9 @@
       "cardType": "theorem",
       "front": "Ką sako KKP lygumo požymis?",
       "back": "Trikampiai lygūs pagal dvi kraštines ir kampą tarp jų.",
-      "conceptIds": ["kkp-pozymis"],
+      "conceptIds": [
+        "kkp-pozymis"
+      ],
       "defaultEnabled": true
     },
     {
@@ -913,7 +1593,9 @@
       "cardType": "theorem",
       "front": "Ką sako KPK lygumo požymis?",
       "back": "Trikampiai lygūs pagal kraštinę ir du kampus prie jos.",
-      "conceptIds": ["kpk-pozymis"],
+      "conceptIds": [
+        "kpk-pozymis"
+      ],
       "defaultEnabled": true
     }
   ]

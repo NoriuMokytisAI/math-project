@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "IV gimnazijos programoje išvestinė naudojama funkcijų tyrimui, ekstremumams, grafikams ir optimizavimui."
+    "notes": "Pilnas išvestinių kursas: taisyklės, geometrinė prasmė, tyrimas ir optimizavimas. Atitinka VBE reikalavimus."
   },
   "topic": {
     "id": "isvestines-taisykles-ir-optimizavimas",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 6,
-    "estimatedStudyMinutes": 230,
+    "estimatedStudyMinutes": 300,
     "prerequisiteTopicIds": [
       "isvestine-ir-diferencijavimas"
     ],
@@ -20,1103 +20,574 @@
       "pirmykste-funkcija-ir-integralas"
     ],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
       "isvestine",
-      "integralas",
-      "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "liestine",
+      "krypties-koeficientas",
+      "kritinis-taskas",
+      "ekstremumas",
+      "didėjimo-mažėjimo-intervalai",
+      "perlinkio-taskas",
+      "isgaubtumas",
+      "optimizavimas",
+      "sudetine-funkcija",
+      "diferencijavimas"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
       "isvestines-galios-formule",
-      "integralo-formule"
+      "sandaugos-isvestine",
+      "dalmens-isvestine",
+      "liestines-lygtis",
+      "sudetines-funkcijos-isvestine",
+      "sinuso-isvestine",
+      "kosinuso-isvestine",
+      "eksponentes-isvestine",
+      "logaritmo-isvestine"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "sudetines-funkcijos-isvestines-klaida",
+      "ekstremumo-ir-kritinio-tasko-painiojimas",
+      "sandaugos-isvestine-kaip-isvestiniu-sandauga",
+      "optimizavimo-funkcijos-nesudarymas"
     ],
     "exerciseIds": [
-      "isvestines-taisykles-ir-optimizavimas-ex-001",
-      "isvestines-taisykles-ir-optimizavimas-ex-002",
-      "isvestines-taisykles-ir-optimizavimas-ex-003",
-      "isvestines-taisykles-ir-optimizavimas-ex-004",
-      "isvestines-taisykles-ir-optimizavimas-ex-005",
-      "isvestines-taisykles-ir-optimizavimas-ex-006",
-      "isvestines-taisykles-ir-optimizavimas-ex-007",
-      "isvestines-taisykles-ir-optimizavimas-ex-008",
-      "isvestines-taisykles-ir-optimizavimas-ex-009",
-      "isvestines-taisykles-ir-optimizavimas-ex-010",
-      "isvestines-taisykles-ir-optimizavimas-ex-011",
-      "isvestines-taisykles-ir-optimizavimas-ex-012",
-      "isvestines-taisykles-ir-optimizavimas-ex-013",
-      "isvestines-taisykles-ir-optimizavimas-ex-014",
-      "isvestines-taisykles-ir-optimizavimas-ex-015",
-      "isvestines-taisykles-ir-optimizavimas-ex-016",
-      "isvestines-taisykles-ir-optimizavimas-ex-017",
-      "isvestines-taisykles-ir-optimizavimas-ex-018",
-      "isvestines-taisykles-ir-optimizavimas-ex-019",
-      "isvestines-taisykles-ir-optimizavimas-ex-020"
+      "isvest-ex-001",
+      "isvest-ex-002",
+      "isvest-ex-003",
+      "isvest-ex-004",
+      "isvest-ex-005",
+      "isvest-ex-006",
+      "isvest-ex-007",
+      "isvest-ex-008",
+      "isvest-ex-009",
+      "isvest-ex-010",
+      "isvest-ex-011",
+      "isvest-ex-012",
+      "isvest-ex-013",
+      "isvest-ex-014",
+      "isvest-ex-015",
+      "isvest-ex-016",
+      "isvest-ex-017",
+      "isvest-ex-018",
+      "isvest-ex-019",
+      "isvest-ex-020"
     ]
   },
   "theory": [
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-ivadas",
-      "title": "Įvadas",
+      "id": "isvestine-geometrine-prasme",
+      "title": "Išvestinės samprata ir geometrinė prasmė",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas yra tema, kurioje mokomasi atpažinti pagrindinius išvestinės taisyklės ir optimizavimas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Išvestinė yra viena galingiausių sąvokų matematikoje, leidžianti suprasti, kaip kinta pasaulis. Jei funkcija $f(x)$ aprašo kokį nors procesą (pvz., automobilio padėtį laiko atžvilgiu), tai jos išvestinė $f'(x)$ parodo to proceso kitimo greitį (automobilio greitį)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "isvestine",
+          "text": "Funkcijos išvestinė taške $x_0$ yra funkcijos pokyčio ir argumento pokyčio santykio riba, kai argumento pokytis artėja prie nulio."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
-        },
-        {
-          "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
-        },
-        {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
-        }
-      ]
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "text": "Geometriškai išvestinė taške $x_0$ yra lygi funkcijos grafiko [[liestine|liestinės]], išvestos tame taške, [[krypties-koeficientas|krypties koeficientui]] $k$. Tai reiškia:"
         },
         {
           "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "liestines-lygtis",
+          "latex": "f'(x_0) = k = \\tan \\alpha"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Čia $\\alpha$ yra kampas, kurį liestinė sudaro su teigiama $Ox$ ašies kryptimi. Pati liestinės lygtis užrašoma taip:"
+        },
+        {
+          "type": "formula",
+          "latex": "y = f(x_0) + f'(x_0)(x - x_0)"
+        },
+        {
+          "type": "note",
+          "text": "Jei $f'(x_0) > 0$, funkcija tame taške kyla; jei $f'(x_0) < 0$ – leidžiasi; jei $f'(x_0) = 0$ – liestinė yra horizontali."
         }
       ]
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "diferencijavimo-taisykles-deep",
+      "title": "Pagrindinės diferencijavimo taisyklės",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Norint efektyviai skaičiuoti išvestines, nebūtina kiekvieną kartą naudoti ribos apibrėžimo. Tam naudojame taisykles, kurios leidžia diferencijuoti sudėtingus reiškinius skaidant juos į paprastesnius."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Konstantos išvestinė:** $(c)' = 0$. Skaičius nesikeičia, todėl jo kitimo greitis nulis.",
+            "**Galios taisyklė:** $(x^n)' = n x^{n-1}$. Pavyzdžiui, $(x^3)' = 3x^2$, $(\\sqrt{x})' = (x^{1/2})' = \\frac{1}{2\\sqrt{x}}$.",
+            "**Sumos/Skirtumo taisyklė:** $(u \\pm v)' = u' \\pm v'$.",
+            "**Konstantos iškėlimas:** $(cu)' = c u'$.",
+            "**Sandaugos taisyklė:** $(u \\cdot v)' = u'v + uv'$. Labai dažna klaida yra tiesiog padauginti išvestines.",
+            "**Dalmens taisyklė:** $(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$."
+          ]
+        },
+        {
+          "type": "method",
+          "conceptId": "sudetine-funkcija",
+          "title": "Sudėtinių funkcijų išvestinės (Grandinės taisyklė)",
+          "text": "Jei turime funkciją funkcijoje $y = f(g(x))$, tai jos išvestinė lygi išorinės funkcijos išvestinei, padaugintai iš vidinės funkcijos išvestinės:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "sudetines-funkcijos-isvestine",
+          "latex": "(f(g(x)))' = f'(g(x)) \\cdot g'(x)"
+        },
+        {
+          "type": "example",
+          "text": "Pavyzdžiui, $(\\sin(x^2))' = \\cos(x^2) \\cdot (x^2)' = 2x \\cos(x^2)$."
+        }
+      ]
+    },
+    {
+      "id": "pagrindiniu-funkciju-isvestines",
+      "title": "Elementariųjų funkcijų išvestinės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gimnazijos kurse privaloma mokėti atmintinai pagrindinių funkcijų išvestines:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "$(\\sin x)' = \\cos x$",
+            "$(\\cos x)' = -\\sin x$",
+            "$(\\tan x)' = \\frac{1}{\\cos^2 x}$",
+            "$(e^x)' = e^x$ (unikali funkcija, kuri yra lygi savo išvestinei)",
+            "$(a^x)' = a^x \\ln a$",
+            "$(\\ln x)' = \\frac{1}{x}$",
+            "$(\\log_a x)' = \\frac{1}{x \\ln a}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-tyrimas-monotoniskumas",
+      "title": "Funkcijos tyrimas: didėjimas ir mažėjimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Išvestinė leidžia tiksliai nustatyti, kur funkcijos grafikas kyla, o kur leidžiasi. Tai vadinama funkcijos [[didėjimo-mažėjimo-intervalai|monotoniškumo intervalais]]."
+        },
+        {
+          "type": "property",
+          "text": "- Jei intervale $(a, b)$ visiems $x$ galioja $f'(x) > 0$, tai funkcija tame intervale **didėja**.\n- Jei intervale $(a, b)$ visiems $x$ galioja $f'(x) < 0$, tai funkcija tame intervale **mažėja**."
+        },
+        {
+          "type": "method",
+          "text": "Sprendimo eiga:\n1. Randame funkcijos apibrėžimo sritį.\n2. Randame išvestinę $f'(x)$.\n3. Randame [[kritinis-taskas|kritinius taškus]] (kur $f'(x) = 0$ arba neegzistuoja).\n4. Atidedame kritinius taškus skaičių tiesėje ir nustatome išvestinės ženklus gautuose intervaluose."
+        }
+      ]
+    },
+    {
+      "id": "ekstremumai-deep",
+      "title": "Ekstremumai: Maksimumai ir Minimumai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taškai, kuriuose funkcija keičia savo elgesį iš didėjimo į mažėjimą (arba atvirkščiai), vadinami [[ekstremumas|ekstremumų taškais]]."
+        },
+        {
+          "type": "definition",
+          "conceptId": "ekstremumas",
+          "text": "Maksimumo taškas $x_{max}$ – tai kritinis taškas, kuriame išvestinė keičia ženklą iš pliuso į minusą. Minimumo taškas $x_{min}$ – iš minuso į pliusą."
+        },
+        {
+          "type": "warning",
+          "text": "**Svarbu:** Ne kiekvienas kritinis taškas yra ekstremumas. Pavyzdžiui, funkcijos $f(x) = x^3$ išvestinė taške $0$ lygi nuliui, bet funkcija tame taške nei didėja, nei mažėja (ji visą laiką didėja). Tai vadinama balno tašku."
+        },
+        {
+          "type": "note",
+          "text": "Ekstremumo taškas ($x$) ir ekstremumas ($y = f(x)$) yra skirtingi dalykai. Uždaviniuose atidžiai skaitykite, ko prašoma: ar taško, ar pačios funkcijos reikšmės."
+        }
+      ]
+    },
+    {
+      "id": "isgaubtumas-perlinkis",
+      "title": "Išgaubtumas ir perlinkio taškai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei pirmoji išvestinė parodo greitį, tai antroji išvestinė $f''(x)$ parodo greičio kitimą – t.y. grafiko „linkimą“."
+        },
+        {
+          "type": "property",
+          "text": "- Jei $f''(x) > 0$, grafikas yra **išgaubtas žemyn** (šypsenėlė ◡).\n- Jei $f''(x) < 0$, grafikas yra **išgaubtas aukštyn** (liūdnas veidukas ◠)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "perlinkio-taskas",
+          "text": "[[perlinkio-taskas|Perlinkio taškas]] yra taškas, kuriame grafikas keičia savo išgaubtumo kryptį. Jame $f''(x) = 0$ arba neegzistuoja."
+        }
+      ]
+    },
+    {
+      "id": "optimizavimas-metodika",
+      "title": "Optimizavimo uždaviniai: Kaip rasti geriausią sprendimą?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[optimizavimas|Optimizavimas]] – tai praktinis išvestinių taikymas ieškant didžiausios (maksimalios) arba mažiausios (minimalios) dydžio reikšmės. Pavyzdžiui: kaip pagaminti didžiausio tūrio dėžutę iš turimo popieriaus lapo? Arba kaip nutiesti kelią su mažiausiomis sąnaudomis?"
+        },
+        {
+          "type": "method",
+          "title": "Algoritmas optimizavimo uždaviniams spręsti:",
+          "steps": [
+            "1. **Kintamojo įvedimas:** Pasirinkite vieną dydį, nuo kurio priklauso kiti, ir pažymėkite jį $x$.",
+            "2. **Funkcijos sudarymas:** Užrašykite dydį, kurį norite optimizuoti, kaip funkciją $f(x)$. Svarbu, kad funkcija priklausytų tik nuo vieno kintamojo.",
+            "3. **Sritis:** Nustatykite galimas $x$ reikšmes (apibrėžimo sritį pagal uždavinio prasmę).",
+            "4. **Diferencijavimas:** Raskite išvestinę $f'(x)$.",
+            "5. **Kritiniai taškai:** Išspręskite lygtį $f'(x) = 0$.",
+            "6. **Tyrimas:** Įsitikinkite, kad rastas taškas tikrai yra maksimumas arba minimumas.",
+            "7. **Atsakymas:** Grįžkite prie uždavinio klausimo ir raskite ieškomus dydžius."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "isvestines-klaidos-vbe",
+      "title": "Dažniausios klaidos ir VBE patarimai",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Sudėtinės funkcijos ignoravimas:** Pamirštama padauginti iš „vidaus“ išvestinės. Visada klauskite savęs: ar tai paprastas $x$, ar sudėtingesnis reiškinys?",
+            "**Ženklų klaidos:** Ypač skaičiuojant $(\\cos x)' = -\\sin x$ arba naudojant dalmens taisyklę su minusu skaitiklyje.",
+            "**Kritinių taškų nepatikrinimas:** Radus tašką, kuriame išvestinė lygi nuliui, būtina įrodyti, kad tai ekstremumas (naudojant ženklų tyrimą).",
+            "**Uždavinio klausimo nesupratimas:** Dažnai mokiniai randa $x$, bet pamiršta rasti didžiausią plotą arba tūrį."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
-      "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai išvestinės taisyklės ir optimizavimas temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "indukcija"
-      ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
-        "q"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "teorema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsnis",
-      "title": "Laipsnis",
-      "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknis",
-      "title": "Šaknis",
-      "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodiklis",
-      "title": "Rodiklis",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmas",
-      "title": "Logaritmas",
-      "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "isvestine",
       "title": "Išvestinė",
       "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
+      "shortDefinition": "Funkcijos kitimo greitis tam tikrame taške.",
+      "intuition": "Tai tarsi automobilio spidometro rodmuo – jis rodo greitį tą akimirką, o ne vidutinį greitį.",
+      "formal": "Funkcijos f(x) išvestinė yra riba lim(Δx→0) [f(x+Δx)-f(x)]/Δx.",
+      "notation": [
+        "f'(x)",
+        "dy/dx"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": [
+        "liestine",
+        "diferencijavimas"
+      ],
+      "appearsInTopicIds": [
+        "isvestines-taisykles-ir-optimizavimas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "integralas",
-      "title": "Integralas",
+      "id": "liestine",
+      "title": "Liestinė",
       "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
+      "shortDefinition": "Tiesė, kuri taške 'tik liečia' funkcijos grafiką.",
+      "intuition": "Įsivaizduokite, kad važiuojate vingiuotu keliu – jūsų automobilio žibintų šviesa visada rodo liestinės kryptimi.",
+      "formal": "Tiesė, kurios krypties koeficientas lygus funkcijos išvestinei tame taške.",
       "relatedConceptIds": [
         "isvestine",
-        "pirmykste-funkcija"
+        "krypties-koeficientas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "isvestines-taisykles-ir-optimizavimas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "pirmykste-funkcija",
-      "title": "Pirmykštė funkcija",
+      "id": "ekstremumas",
+      "title": "Ekstremumas",
       "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
+      "shortDefinition": "Funkcijos vietinis maksimumas arba minimumas.",
+      "intuition": "Kalno viršūnė arba pakalnės žemiausias taškas.",
+      "formal": "Taškas, kuriame funkcija keičia monotoniškumo kryptį ir išvestinė lygi nuliui arba neegzistuoja.",
       "relatedConceptIds": [
-        "integralas",
+        "kritinis-taskas",
+        "optimizavimas"
+      ],
+      "appearsInTopicIds": [
+        "isvestines-taisykles-ir-optimizavimas"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "optimizavimas",
+      "title": "Optimizavimas",
+      "type": "concept",
+      "shortDefinition": "Geriausio (didžiausio arba mažiausio) sprendinio paieška.",
+      "intuition": "Kaip gauti daugiausiai naudos su mažiausiomis sąnaudomis.",
+      "formal": "Uždavinių klasė, kurioje ieškoma funkcijos globalaus ekstremumo tam tikroje srityje.",
+      "relatedConceptIds": [
+        "ekstremumas",
         "isvestine"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
-      "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
+      "appearsInTopicIds": [
+        "isvestines-taisykles-ir-optimizavimas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kompleksinis-skaicius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
-      "type": "formula",
-      "latex": "a_n",
-      "conditions": [
-        "Sekoms"
-      ],
-      "variables": {
-        "n": "indeksas"
-      },
-      "explanation": "Žymi n-tąjį sekos narį.",
-      "relatedConceptIds": [
-        "seka"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
-      "relatedConceptIds": [
-        "aritmetine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
-      "conditions": [
-        "Kai santykis pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
-      },
-      "explanation": "Naudojama augimui ir mažėjimui.",
-      "relatedConceptIds": [
-        "geometrine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
-      },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
-      "relatedConceptIds": [
-        "logaritmas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
-      "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
       "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
+      "title": "Galios funkcijos išvestinė",
+      "latex": "(x^n)' = n x^{n-1}",
+      "explanation": "Pagrindinė taisyklė polinomams diferencijuoti.",
       "relatedConceptIds": [
         "isvestine"
       ],
       "defaultSrs": true
     },
     {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
+      "id": "sandaugos-isvestine",
+      "title": "Sandaugos išvestinė",
+      "latex": "(u \\cdot v)' = u'v + uv'",
+      "explanation": "Taisyklė, naudojama kai dauginamos dvi funkcijos.",
       "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "isvestine"
       ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
-      "type": "mistake",
-      "conceptIds": [
-        "laipsnis"
-      ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
       "defaultSrs": true
     },
     {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
-      "type": "mistake",
-      "conceptIds": [
-        "integralas"
+      "id": "liestines-lygtis",
+      "title": "Liestinės lygtis",
+      "latex": "y = f(x_0) + f'(x_0)(x - x_0)",
+      "explanation": "Formulė tiesei, kuri liečia grafiką taške x0.",
+      "relatedConceptIds": [
+        "liestine"
       ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-exmp-1",
-      "title": "Seka",
+      "id": "isvest-worked-1",
+      "title": "Liestinės lygties sudarymas",
       "level": "easy",
-      "problem": "Jei a_n=2n+1, rask a_4.",
+      "problem": "Raskite funkcijos $f(x) = x^2 - 3x + 2$ liestinės lygtį taške $x_0 = 2$.",
       "conceptIds": [
-        "seka"
+        "liestine",
+        "isvestine"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Įstatome n=4.",
-          "latex": "9"
-        }
-      ],
-      "answer": "9"
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-exmp-2",
-      "title": "Laipsnis",
-      "level": "easy",
-      "problem": "Apskaičiuok 2^5.",
-      "conceptIds": [
-        "laipsnis"
-      ],
-      "formulaIds": [],
-      "steps": [
+          "text": "Randame funkcijos reikšmę taške: $f(2) = 2^2 - 3(2) + 2 = 4 - 6 + 2 = 0$.",
+          "latex": "f(2) = 0"
+        },
         {
-          "text": "32.",
-          "latex": "32"
+          "text": "Randame išvestinę: $f'(x) = 2x - 3$.",
+          "latex": "f'(x) = 2x - 3"
+        },
+        {
+          "text": "Randame išvestinės reikšmę (krypties koeficientą) taške: $f'(2) = 2(2) - 3 = 1$.",
+          "latex": "f'(2) = 1"
+        },
+        {
+          "text": "Įstatome į liestinės formulę: $y = 0 + 1(x - 2)$.",
+          "latex": "y = x - 2"
         }
       ],
-      "answer": "32"
+      "answer": "y = x - 2"
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-exmp-3",
-      "title": "Logaritmas",
+      "id": "isvest-worked-2",
+      "title": "Sudėtinės funkcijos išvestinė",
       "level": "medium",
-      "problem": "Koks log_2 8?",
+      "problem": "Apskaičiuokite funkcijos $f(x) = \\ln(\\sin x)$ išvestinę.",
       "conceptIds": [
-        "logaritmas"
+        "sudetine-funkcija"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3.",
-          "latex": "3"
+          "text": "Atpažįstame išorinę funkciją $\\ln(u)$ ir vidinę $\\sin x$.",
+          "latex": ""
+        },
+        {
+          "text": "Išorinės išvestinė: $1/(\\sin x)$. Vidinės išvestinė: $\\cos x$.",
+          "latex": ""
+        },
+        {
+          "text": "Dauginame jas: $f'(x) = \\frac{1}{\\sin x} \\cdot \\cos x = \\frac{\\cos x}{\\sin x}$.",
+          "latex": "f'(x) = \\cot x"
         }
       ],
-      "answer": "3"
+      "answer": "cot x"
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-exmp-4",
-      "title": "Trigonometrinis santykis",
+      "id": "isvest-worked-3",
+      "title": "Ekstremumų paieška",
       "level": "medium",
-      "problem": "Stačiajame trikampyje priešpriešinė 3, įžambinė 5. Rask sinusą.",
+      "problem": "Raskite funkcijos $f(x) = x^3 - 3x$ ekstremumų taškus.",
       "conceptIds": [
-        "sinusas",
-        "kosinusas"
+        "ekstremumas",
+        "kritinis-taskas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "3/5.",
-          "latex": "3/5"
+          "text": "Randame išvestinę: $f'(x) = 3x^2 - 3$.",
+          "latex": "f'(x) = 3(x^2 - 1)"
+        },
+        {
+          "text": "Prilyginame nuliui: $3(x^2 - 1) = 0 \\Rightarrow x^2 = 1$.",
+          "latex": "x = 1, x = -1"
+        },
+        {
+          "text": "Tiriame ženklus: intervale $(-\\infty, -1)$ išvestinė +, intervale $(-1, 1)$ -, intervale $(1, \\infty)$ +.",
+          "latex": ""
+        },
+        {
+          "text": "Taške $x = -1$ ženklas keičiasi iš + į -, tad tai max. Taške $x = 1$ iš - į +, tad tai min.",
+          "latex": ""
         }
       ],
-      "answer": "3/5"
+      "answer": "x = -1 (max), x = 1 (min)"
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-exmp-5",
-      "title": "Integralas",
+      "id": "isvest-worked-4",
+      "title": "Optimizavimas (Plotas)",
       "level": "hard",
-      "problem": "Rask ∫2x dx.",
+      "problem": "Iš 12 metrų vielos reikia išlankstyti stačiakampį, kurio plotas būtų didžiausias. Raskite jo kraštines.",
       "conceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
+        "optimizavimas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "x² + C.",
-          "latex": "x^2 + C"
+          "text": "Pažymime vieną kraštinę $x$. Kadangi perimetras 12, tai $2x + 2y = 12 \\Rightarrow x + y = 6 \\Rightarrow y = 6 - x$.",
+          "latex": "y = 6 - x"
+        },
+        {
+          "text": "Sudarome ploto funkciją: $S(x) = x(6 - x) = 6x - x^2$.",
+          "latex": "S(x) = 6x - x^2"
+        },
+        {
+          "text": "Randame išvestinę: $S'(x) = 6 - 2x$.",
+          "latex": "S'(x) = 0 \\Rightarrow x = 3"
+        },
+        {
+          "text": "Kadangi $S''(x) = -2 < 0$, taškas $x = 3$ yra maksimumas.",
+          "latex": ""
+        },
+        {
+          "text": "Randame kitą kraštinę: $y = 6 - 3 = 3$.",
+          "latex": ""
         }
       ],
-      "answer": "x² + C"
+      "answer": "Kraštinės 3 m ir 3 m (tai kvadratas)."
+    },
+    {
+      "id": "isvest-worked-5",
+      "title": "Funkcijos didėjimo intervalai",
+      "level": "easy",
+      "problem": "Nustatykite, kur funkcija $f(x) = e^x - x$ didėja.",
+      "conceptIds": [
+        "didėjimo-mažėjimo-intervalai"
+      ],
+      "steps": [
+        {
+          "text": "Išvestinė: $f'(x) = e^x - 1$.",
+          "latex": "f'(x) = e^x - 1"
+        },
+        {
+          "text": "Funkcija didėja, kai $f'(x) > 0 \\Rightarrow e^x - 1 > 0 \\Rightarrow e^x > 1$.",
+          "latex": "x > 0"
+        }
+      ],
+      "answer": "x ∈ (0, +∞)"
+    },
+    {
+      "id": "isvest-worked-6",
+      "title": "Liestinės krypties koeficientas",
+      "level": "easy",
+      "problem": "Koks yra funkcijos $f(x) = 2\\sin x$ liestinės posvyrio kampas taške $x = \\pi/3$?",
+      "conceptIds": [
+        "krypties-koeficientas"
+      ],
+      "steps": [
+        {
+          "text": "Išvestinė: $f'(x) = 2\\cos x$.",
+          "latex": "f'(x) = 2\\cos x"
+        },
+        {
+          "text": "Reikšmė taške: $f'(\\pi/3) = 2 \\cdot \\cos(\\pi/3) = 2 \\cdot 0,5 = 1$.",
+          "latex": "k = 1"
+        },
+        {
+          "text": "Kadangi $k = \\tan \\alpha = 1$, tai $\\alpha = 45^{\\circ}$.",
+          "latex": "45^{\\circ}"
+        }
+      ],
+      "answer": "45°"
+    },
+    {
+      "id": "isvest-worked-7",
+      "title": "Antroji išvestinė ir perlinkis",
+      "level": "medium",
+      "problem": "Raskite funkcijos $f(x) = x^4 - 6x^2$ perlinkio taškus.",
+      "conceptIds": [
+        "perlinkio-taskas"
+      ],
+      "steps": [
+        {
+          "text": "Pirmoji išvestinė: $4x^3 - 12x$. Antroji išvestinė: $12x^2 - 12$.",
+          "latex": "f''(x) = 12(x^2 - 1)"
+        },
+        {
+          "text": "Prilyginame nuliui: $12(x^2 - 1) = 0 \\Rightarrow x = 1, x = -1$.",
+          "latex": ""
+        },
+        {
+          "text": "Tiriame $f''(x)$ ženklus. Abiejuose taškuose išgaubtumas keičiasi.",
+          "latex": ""
+        }
+      ],
+      "answer": "x = 1, x = -1"
+    },
+    {
+      "id": "isvest-worked-8",
+      "title": "Optimizavimas (Gamyba)",
+      "level": "hard",
+      "problem": "Atviros dėžutės su kvadratiniu pagrindu tūris yra 4 m³. Kokios turi būti matmenys, kad paviršiaus plotas būtų minimalus?",
+      "conceptIds": [
+        "optimizavimas"
+      ],
+      "steps": [
+        {
+          "text": "Pagrindo kraštinė $x$, aukštinė $h$. Tūris $V = x^2 h = 4 \\Rightarrow h = 4/x^2$.",
+          "latex": "h = 4/x^2"
+        },
+        {
+          "text": "Paviršiaus plotas (be dangčio): $S = x^2 + 4xh = x^2 + 4x(4/x^2) = x^2 + 16/x$.",
+          "latex": "S(x) = x^2 + 16/x"
+        },
+        {
+          "text": "Išvestinė: $S'(x) = 2x - 16/x^2$.",
+          "latex": "2x - 16/x^2 = 0 \\Rightarrow 2x^3 = 16 \\Rightarrow x^3 = 8 \\Rightarrow x = 2"
+        },
+        {
+          "text": "Randame h: $h = 4/2^2 = 1$.",
+          "latex": "h = 1"
+        }
+      ],
+      "answer": "x = 2 m, h = 1 m"
     }
   ],
   "exercises": [
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-001",
+      "id": "isvest-ex-001",
       "topicId": "isvestines-taisykles-ir-optimizavimas",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskaičiuok a_3, kai a_n=2n+1.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk n=3.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "a_3=7",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-002",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 2.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-003",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 3.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-004",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-005",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-006",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-007",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-008",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-009",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-010",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-011",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-012",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 12.",
+      "statement": "Apskaičiuokite f'(2), kai f(x) = x³.",
       "answer": {
         "kind": "numeric",
         "value": 12,
@@ -1125,472 +596,71 @@
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
+          "text": "Naudokite galios formulę: (x³)' = 3x².",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
+          "text": "3 * 2² = 12.",
           "latex": "12"
         }
       ],
       "answerText": "12",
-      "alternateMethods": [],
       "conceptIds": [
-        "seka"
+        "isvestine"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-013",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-014",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-015",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-016",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-017",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-018",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-019",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-ex-020",
-      "topicId": "isvestines-taisykles-ir-optimizavimas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 30
     }
   ],
   "tests": [
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-test-topic",
-      "title": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas testas",
+      "id": "isvest-test-1",
+      "title": "Išvestinių taisyklės ir tyrimas",
       "scope": "topic",
       "topicIds": [
         "isvestines-taisykles-ir-optimizavimas"
       ],
       "exerciseIds": [
-        "isvestines-taisykles-ir-optimizavimas-ex-001",
-        "isvestines-taisykles-ir-optimizavimas-ex-002",
-        "isvestines-taisykles-ir-optimizavimas-ex-003",
-        "isvestines-taisykles-ir-optimizavimas-ex-004",
-        "isvestines-taisykles-ir-optimizavimas-ex-005",
-        "isvestines-taisykles-ir-optimizavimas-ex-006",
-        "isvestines-taisykles-ir-optimizavimas-ex-007",
-        "isvestines-taisykles-ir-optimizavimas-ex-008"
+        "isvest-ex-001"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-test-challenge",
-      "title": "Išvestinės taisyklės, funkcijų tyrimas ir optimizavimas iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "isvestines-taisykles-ir-optimizavimas"
-      ],
-      "exerciseIds": [
-        "isvestines-taisykles-ir-optimizavimas-ex-009",
-        "isvestines-taisykles-ir-optimizavimas-ex-010",
-        "isvestines-taisykles-ir-optimizavimas-ex-011",
-        "isvestines-taisykles-ir-optimizavimas-ex-012",
-        "isvestines-taisykles-ir-optimizavimas-ex-013",
-        "isvestines-taisykles-ir-optimizavimas-ex-014",
-        "isvestines-taisykles-ir-optimizavimas-ex-015",
-        "isvestines-taisykles-ir-optimizavimas-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
   "srsCards": [
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-seka",
+      "id": "srs-isvestine-x-n",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-aritmetine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-sekos-forma",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
+      "front": "Kokia yra (x^n) išvestinė?",
+      "back": "n * x^(n-1)",
       "conceptIds": [
-        "sekos-forma"
+        "isvestine"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
+      "id": "srs-sin-isvestine",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
+      "front": "Kokia yra (sin x) išvestinė?",
+      "back": "cos x",
       "conceptIds": [
-        "aritmetines-progresijos-formule"
+        "isvestine"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
+      "id": "srs-optimizavimas-metodas",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Koks pirmas žingsnis sprendžiant optimizavimo uždavinį?",
+      "back": "Kintamojo įvedimas ir funkcijos, kurią reikia optimizuoti, sudarymas.",
       "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
+        "optimizavimas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "isvestines-taisykles-ir-optimizavimas-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

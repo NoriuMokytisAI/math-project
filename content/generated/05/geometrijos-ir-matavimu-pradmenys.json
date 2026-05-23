@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.3",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Matuojami ilgiai, kampai, perimetrai ir plotai."
+    "notes": "Išplėsta geometrijos teorija 5 klasei. Tikslas: 1200-1500 žodžių."
   },
   "topic": {
     "id": "geometrijos-ir-matavimu-pradmenys",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 3,
-    "estimatedStudyMinutes": 150,
+    "estimatedStudyMinutes": 200,
     "prerequisiteTopicIds": [
       "naturalieji-skaiciai-dalikliai-kartotiniai"
     ],
@@ -27,127 +27,257 @@
       "plotas",
       "apskritimas",
       "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
       "simetrija",
-      "koordinates",
-      "vektorius"
+      "koordinates"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "trikampio-plotas"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "perimetra-supainioja-su-ploto-formule"
     ],
     "exerciseIds": [
-      "geometrijos-ir-matavimu-pradmenys-ex-001",
-      "geometrijos-ir-matavimu-pradmenys-ex-002",
-      "geometrijos-ir-matavimu-pradmenys-ex-003",
-      "geometrijos-ir-matavimu-pradmenys-ex-004",
-      "geometrijos-ir-matavimu-pradmenys-ex-005",
-      "geometrijos-ir-matavimu-pradmenys-ex-006",
-      "geometrijos-ir-matavimu-pradmenys-ex-007",
-      "geometrijos-ir-matavimu-pradmenys-ex-008",
-      "geometrijos-ir-matavimu-pradmenys-ex-009",
-      "geometrijos-ir-matavimu-pradmenys-ex-010",
-      "geometrijos-ir-matavimu-pradmenys-ex-011",
-      "geometrijos-ir-matavimu-pradmenys-ex-012",
-      "geometrijos-ir-matavimu-pradmenys-ex-013",
-      "geometrijos-ir-matavimu-pradmenys-ex-014",
-      "geometrijos-ir-matavimu-pradmenys-ex-015",
-      "geometrijos-ir-matavimu-pradmenys-ex-016",
-      "geometrijos-ir-matavimu-pradmenys-ex-017",
-      "geometrijos-ir-matavimu-pradmenys-ex-018",
-      "geometrijos-ir-matavimu-pradmenys-ex-019",
-      "geometrijos-ir-matavimu-pradmenys-ex-020"
+      "geometrijos-ir-matavimu-pradmenys-ex-001"
     ]
   },
   "theory": [
     {
       "id": "geometrijos-ir-matavimu-pradmenys-ivadas",
-      "title": "Įvadas",
+      "title": "Geometrija: pasaulio formų kalba",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geometrijos ir matavimų pradmenys yra tema, kurioje mokomasi atpažinti pagrindinius kampai, trikampiai ir plotai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveikas, jaunasis geometre! Ar kada nors susimąstei, kodėl medžių kamienai yra apvalūs, bičių koriai – šešiakampiai, o Egipto piramidės turi tokią tobulą formą? Viskas mūsų visatoje turi formą, o mokslas, kuris tas formas tiria, vadinamas **geometrija**. Šis žodis kilęs iš senovės graikų kalbos ir reiškia „žemės matavimas“. Prieš tūkstančius metų senovės Egipto gyventojams po kiekvieno Nilo potvynio tekdavo iš naujo išmatuoti savo laukų ribas – taip gimė pirmosios taisyklės apie taškus, linijas ir figūras."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "Šiame skyriuje mes mokysimės ne tik matyti pasaulį per geometrines formas, bet ir tas formas valdyti. Mes sužinosime, kuo skiriasi atkarpa nuo spindulio, kodėl kampai matuojami laipsniais ir kaip apskaičiuoti, kiek dažų reikės kambario sienai nudažyti arba kiek tvorelės – tavo sodybos kiemui aptverti. Geometrija yra vizualioji matematika, todėl ji lavina vaizduotę ir loginį mąstymą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geometrija yra visur: nuo tavo sąsiuvinio langelio iki sudėtingiausių kosminių laivų konstrukcijų. Išmokę šiuos pagrindus, jūs pradedate matyti tvarką ten, kur kiti mato tik vaizdus. Pasiruoškite paimti liniuotes, skriestuvus ir matlankius – mes pradedame kelionę į formų pasaulį!"
+        },
+        {
+          "type": "definition",
+          "text": "Geometrija – tai matematikos šaka, tirianti erdvines formas (taškus, tieses, plokštumas, kūnus) ir jų tarpusavio santykius, tokius kaip atstumas, plotas ir tūris."
         }
       ]
     },
     {
-      "id": "geometrijos-ir-matavimu-pradmenys-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "geometrijos-ir-matavimu-pradmenys-elementai",
+      "title": "Geometrijos abėcėlė: taškas, tiesė, spindulys, atkarpa",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "type": "paragraph",
+          "text": "Visas geometrijos pasaulis, kad ir koks sudėtingas jis atrodytų, yra pastatytas iš keturių paprasčiausių „plytų“."
         },
         {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
+          "type": "paragraph",
+          "text": "**Taškas** – tai pati mažiausia geometrijos dalelė. Jis neturi nei ilgio, nei pločio, nei aukščio. Taškas tiesiog nurodo vietą erdvėje. Žymime jį didžiąja lotyniška raide (pvz., $A, B, C$). Įsivaizduok tai kaip žymę žemėlapyje."
         },
         {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
+          "type": "paragraph",
+          "text": "**Tiesė** – tai begalinė linija, neturinti nei pradžios, nei pabaigos. Per vieną tašką galima nubrėžti begalę tiesių, bet per du taškus – tik vieną vienintelę tiesę. Tiesę žymime mažąja raide ($a, b$) arba nurodydami du jos taškus ($AB$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Spindulys** – tai tiesės dalis, turinti pradžią, bet neturinti pabaigos. Įsivaizduok saulės spindulį arba lazerio šviesą."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Atkarpa** – tai tiesės dalis, apribota dviem taškais. Atkarpa yra tai, ką mes galime išmatuoti liniuote. Ji turi konkretų ilgį. Tai yra pagrindinis statybinis blokas visoms kitoms figūroms."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
+          "text": "Svarbu: Brėžiant geometrijoje, tavo pieštukas turi būti labai aštriai nusmailintas. Net milimetro paklaida gali lemti neteisingą perimetro ar ploto atsakymą!"
         }
       ]
     },
     {
-      "id": "geometrijos-ir-matavimu-pradmenys-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Geometrijos ir matavimų pradmenys sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "geometrijos-ir-matavimu-pradmenys-kampai-giliau",
+      "title": "Kampai: posūkio ir krypties matas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kai du spinduliai išeina iš to paties taško, jie sudaro **kampą**. Bendras taškas vadinamas kampo **viršūne**, o spinduliai – kampo **kraštinėmis**. Kampo dydis priklauso ne nuo kraštinių ilgio, o nuo to, kaip plačiai jos „išskėstos“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kampus mes matuojame laipsniais ($^\\circ$). Šis matavimo vienetas atsirado senovės Babilone. Įsivaizduok pilną apsisukimą aplink savo ašį – tai yra $360^\\circ$. Kodėl 360? Nes senovės žmonės manė, kad metai turi 360 dienų, tad viena diena – tai vienas laipsnis žemės kelyje aplink saulę."
+        },
+        {
+          "type": "method",
+          "title": "Kampų šeima",
+          "text": "- **Statusis kampas** ($90^\\circ$): tai kampas, kurį matai kiekviename savo sąsiuvinio kampe arba tarp sienos ir grindų.\n- **Smailusis kampas** (nuo $0^\\circ$ iki $90^\\circ$): siauresnis už statųjį. Įsivaizduok vos pradarą snapą.\n- **Bukasis kampas** (nuo $90^\\circ$ iki $180^\\circ$): platesnis už statųjį. Įsivaizduok plačiai atvertą vėduoklę.\n- **Ištiestinis kampas** ($180^\\circ$): tai tiesi linija. Du spinduliai žiūri į priešingas puses."
+        },
+        {
+          "type": "note",
+          "text": "Matavimo paslaptis: Naudodami matlankį, visada įsitikinkite, kad jo centras tiksliai sutampa su kampo viršūne, o viena kraštinė eina tiesiai per nulio žymę. Žiūrėkite į tą skalę (vidinę ar išorinę), kurioje nulis sutampa su jūsų kraštine."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-perimetras-giliau",
+      "title": "Perimetras: figūros pakraštys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduokite, kad turite skruzdėlytę, kuri nori apeiti aplink tavo sąsiuvinį, kol sugrįžta į pradinį tašką. Kelias, kurį ji nuėjo, yra **perimetras**. Kitaip tariant, perimetras yra figūros „rėmelio“ ilgis."
+        },
+        {
+          "type": "definition",
+          "conceptId": "perimetras",
+          "text": "Perimetras ($P$) – tai uždaros plokščios figūros visų kraštinių ilgių suma. Matuojamas ilgio vienetais (mm, cm, m, km)."
+        },
+        {
+          "type": "method",
+          "title": "Pagrindinės formulės (kad nereikėtų skaičiuoti po vieną)",
+          "text": "- **Kvadrato**: $P = 4a$ (nes visos 4 kraštinės vienodos).\n- **Stačiakampio**: $P = 2(a + b)$ arba $P = 2a + 2b$ (nes priešingos kraštinės lygios).\n- **Taisyklingojo šešiakampio**: $P = 6a$."
+        },
+        {
+          "type": "warning",
+          "text": "Vienetų spąstai! Jei stačiakampio ilgis duotas centimetrais, o plotis milimetrais – taisyklė Nr. 1: Pirmiausia SUVENODINK vienetus. Tik tada galima sudėti skaičius. Negalima prie 5 eurų pridėti 10 dolerių ir sakyti, kad turi 15. Tas pats ir su centimetrais!"
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-plotas-giliau",
+      "title": "Plotas: figūros paviršiaus dydis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei perimetras yra linija (virvelė), tai **plotas** yra paviršius. Įsivaizduokite, kad norite nudažyti stalą arba iškloti kambarį plytelėmis. Plotas parodo, kiek standartinių kvadratėlių (pvz., $1 \\text{ cm} \\times 1 \\text{ cm}$) telpa figūros viduje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Plotas matuojamas kvadratiniais vienetais: $\\text{cm}^2, \\text{m}^2, \\text{km}^2$. Mažas dvejetukas viršuje rodo, kad skaičiuojame du matmenis – ilgį ir plotį."
+        },
+        {
+          "type": "definition",
+          "conceptId": "plotas",
+          "text": "Plotas ($S$) – tai plokščios figūros užimamas paviršiaus dydis. Stačiakampio plotas apskaičiuojamas sudauginus jo ilgį ir plotį."
+        },
+        {
+          "type": "formula",
+          "latex": "S = a \\cdot b"
+        },
+        {
+          "type": "note",
+          "text": "Įdomu: Ar žinojai, kad ūkininkų laukai matuojami „arais“ (a) ir „hektarais“ (ha)? 1 aras – tai kvadratas, kurio kraštinė yra 10 metrų. 1 hektaras – tai 100 arų arba kvadratas $100 \\times 100$ metrų."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-trikampiai",
+      "title": "Trikampiai: tvirčiausia pasaulio figūra",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampis yra paprasčiausia daugiašonė figūra, turinti 3 viršūnes, 3 kraštines ir 3 kampus. Inžinieriai dievina trikampius, nes tai yra pati tvirčiausia figūra – jei pasigaminsite trikampį iš lazdelių, jo neįmanoma pajudinti nekeičiant kraštinių ilgio (kitaip nei kvadrato, kurį galima „sukreivinti“ į rombą)."
+        },
+        {
+          "type": "method",
+          "title": "Trikampių klasifikacija",
+          "text": "**Pagal kraštines:**\n- **Lygiakraštis**: visi šonai vienodi (kaip kelio ženklas).\n- **Lygiašonis**: du šonai vienodi, o pagrindas kitoks.\n- **Įvairiakraštis**: visi šonai skirtingi.\n**Pagal kampus:**\n- **Stačiakampis**: turi vieną tobulą $90^\\circ$ kampą.\n- **Smailiašonis**: visi kampai siauri.\n- **Bukasis**: turi vieną plačiai atvertą kampą."
+        },
+        {
+          "type": "note",
+          "text": "Stebuklingas skaičius: Jei sudėtum visus bet kurio pasaulio trikampio vidinius kampus, visada, be jokių išimčių, gautum lygiai $180^\\circ$. Tai kosminė taisyklė!"
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-apskritimas-skritulys",
+      "title": "Apskritimas ir skritulys: tobula kreivė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai figūros, kurios neturi kampų. Jas brėžiame naudodami skriestuvą. Bet ar žinote, kuo skiriasi apskritimas nuo skritulio? Mokiniai dažnai juos painioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Apskritimas** – tai tik pati linija. Įsivaizduokite lanką, žiedą ar tuščią baranką.\n**Skritulys** – tai visas paviršius viduje. Įsivaizduokite monetą, picą ar saulės diską."
+        },
+        {
+          "type": "method",
+          "title": "Svarbiausi matai",
+          "text": "- **Centras ($O$)**: taškas pačiame viduryje.\n- **Spindulys ($r$)**: atstumas nuo centro iki bet kurio krašto. Visi spinduliai yra lygūs!\n- **Skersmuo ($d$)**: tiesi linija, jungianti du kraštus ir einanti per centrą. Jis visada lygus dviem spinduliams ($d = 2r$)."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-erdvines",
+      "title": "Iš popieriaus į erdvę: kūnai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iki šiol kalbėjome apie plokščias figūras, kurias galime nupiešti ant popieriaus. Bet mes gyvename 3D pasaulyje! Čia daiktai turi ne tik ilgį ir plotį, bet ir gylį (aukštį). Penktoje klasėje susipažįstame su dviem svarbiausiais kūnais."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Stačiakampis gretasienis**: Tai tavo vadovėlis, batų dėžutė ar kambarį primenanti forma. Jis turi 6 sienas (visos – stačiakampiai), 12 briaunų ir 8 viršūnes."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Kubas**: Tai ypatingas gretasienis, kurio visos sienos yra vienodi kvadratai. Įsivaizduok žaidimo kauliuką arba cukraus gabalėlį."
+        },
+        {
+          "type": "note",
+          "text": "Erdvinis matymas: Pabandykite suskaičiuoti savo kambario kampus (viršūnes). Jų turėtų būti 8 (4 palubėje ir 4 ant grindų)."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-simetrija",
+      "title": "Simetrija: grožio ir harmonijos paslaptis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gamta dievina tvarką. Jei drugelio sparną perlenktume per pusę, abi pusės sutaptų. Tai vadinama **ašine simetrija**."
+        },
+        {
+          "type": "definition",
+          "text": "Ašinė simetrija – tai savybė, kai figūrą galima perlenkti per tiesę (simetrijos ašį) taip, kad abi dalys visiškai uždengtų viena kitą."
+        },
+        {
+          "type": "example",
+          "text": "Žmogaus veidas yra (beveik) simetriškas. Raidė A turi vieną simetrijos ašį, o raidė O – net dvi. Kvadratas turi 4 simetrijos ašis, o skritulys – begalybę (kiekviena tiesė per centrą yra simetrijos ašis)."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-klaidos",
+      "title": "Kodėl geometrija kartais „paveda“? (Spąstų žemėlapis)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Štai kur dažniausiai „paslysta“ penktokai:"
+        },
+        {
+          "type": "warning",
+          "text": "**P vs S**: Perimetras yra suma (pliusai), Plotas yra sandauga (daugyba). Perimetras matuoja atstumą APLINK, o plotas – VIETĄ viduje. Nesumaišykite formulių!"
+        },
+        {
+          "type": "warning",
+          "text": "**Matlankio skalė**: Matlankis turi dvi skales (nuo kairės ir nuo dešinės). Prieš rašydami atsakymą, pažiūrėkite į savo kampą akimis: ar jis smailas? Jei smailas, jis negali būti $110^\\circ$. Tikriausiai pasirinkote ne tą skalę."
+        },
+        {
+          "type": "warning",
+          "text": "**Vienetai kvadratu**: Plotas visada rašomas su mažas dvejetuku ($\\text{cm}^2$). Jei parašysite tiesiog cm, mokytojas manys, kad matuojate ilgį, o ne paviršių."
+        }
+      ]
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-pabaiga",
+      "title": "Apibendrinimas: tavo geometrinė ateitis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geometrija yra nuostabus mokslas, nes jis leidžia mums kurti. Architektai naudoja ją statydami dangoraižius, drabužių dizaineriai – kirpdami audinius, o kompiuterinių žaidimų kūrėjai – piešdami 3D pasaulius."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiekvienas taškas ir kiekviena linija, kurią nubrėžiate šiandien, yra tavo didelių ateities projektų pradžia. Mokykis matyti formas, matuoti tiksliai ir mąstyti erdviškai. Sėkmės braižant ir atrandant!"
         }
       ]
     }
@@ -157,225 +287,15 @@
       "id": "kampas",
       "title": "Kampas",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
+      "shortDefinition": "Dviejų spindulių, išeinančių iš vieno taško, sudaryta figūra.",
+      "intuition": "Įsivaizduok, kaip plačiai atidarai žirkles.",
+      "formal": "Kampas yra plokštumos dalis, apribota dviem spinduliais su bendra pradžia.",
+      "notation": [
+        "\\angle ABC",
+        "\\alpha"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trikampis",
-      "title": "Trikampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
       "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
         "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -384,77 +304,21 @@
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
+      "id": "staciakampio-plotas",
+      "title": "Stačiakampio plotas",
       "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
+      "latex": "S = a \\cdot b",
       "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
+        "a, b - kraštinės"
       ],
       "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
+        "S": "plotas",
+        "a": "ilgis",
+        "b": "plotis"
       },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
+      "explanation": "Sudauginkite dvi gretimas stačiakampio kraštines.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "plotas"
       ],
       "defaultSrs": true
     }
@@ -462,143 +326,222 @@
   "mistakes": [
     {
       "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
+      "title": "Perimetras ar plotas?",
       "type": "mistake",
       "conceptIds": [
         "perimetras",
         "plotas"
       ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "wrongPattern": "Stačiakampio perimetras P = a * b.",
+      "whyItHappens": "Mokinys pamiršta, kad perimetras yra suma, o plotas - sandauga.",
+      "correction": "P = 2(a + b).",
+      "wrongExample": "P = 5 * 4 = 20 cm",
+      "correctExample": "P = 2 * (5 + 4) = 18 cm",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "geometrijos-ir-matavimu-pradmenys-exmp-1",
-      "title": "Perimetras",
+      "title": "Atkarpos ilgio skaičiavimas",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
+      "problem": "Atkarpa AB susideda iš trijų dalių: AC=4 cm, CD=25 mm, DB=3 cm. Koks bendras atkarpos AB ilgis milimetrais?",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Visas dalis paverčiame į milimetrus: 4 cm = 40 mm, 3 cm = 30 mm.",
+          "latex": "40, 25, 30"
+        },
+        {
+          "text": "Sudedame dalis.",
+          "latex": "40 + 25 + 30 = 95"
+        }
+      ],
+      "answer": "95 mm"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-2",
+      "title": "Stačiakampio perimetras",
+      "level": "easy",
+      "problem": "Stačiakampio ilgis 12 cm, o plotis 8 cm. Raskite perimetrą.",
       "conceptIds": [
         "perimetras"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Naudojame perimetro formulę P = 2(a+b).",
+          "latex": "2 \\cdot (12 + 8)"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Suskaičiuojame sumą skliaustuose ir padauginame.",
+          "latex": "2 \\cdot 20 = 40"
         }
       ],
-      "answer": "26"
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-exmp-2",
-      "title": "Plotas",
-      "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
-        },
-        {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
-        }
-      ],
-      "answer": "42"
+      "answer": "40 cm"
     },
     {
       "id": "geometrijos-ir-matavimu-pradmenys-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
+      "title": "Kvadrato plotas",
+      "level": "easy",
+      "problem": "Kvadrato kraštinė 9 cm. Koks jo plotas?",
       "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
+        "plotas"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "staciakampio-plotas"
+      ],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
-        },
-        {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Dauginame kraštinę iš savęs.",
+          "latex": "9 \\cdot 9 = 81"
         }
       ],
-      "answer": "10"
+      "answer": "81 cm²"
     },
     {
       "id": "geometrijos-ir-matavimu-pradmenys-exmp-4",
-      "title": "Panašumas",
+      "title": "Kampo radimas",
       "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
+      "problem": "Ištiestinis kampas padalintas į dvi dalis. Viena dalis lygi $75^\\circ$. Kokia yra kita dalis?",
       "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
+        "kampas"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Ištiestinis kampas lygus $180^\\circ$.",
+          "latex": "180"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Atimame žinomą dalį.",
+          "latex": "180 - 75 = 105"
         }
       ],
-      "answer": "10"
+      "answer": "105°"
     },
     {
       "id": "geometrijos-ir-matavimu-pradmenys-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
+      "title": "Spindulys ir skersmuo",
+      "level": "easy",
+      "problem": "Apskritimo spindulys yra 6,5 cm. Koks yra skersmuo?",
       "conceptIds": [
-        "koordinates",
-        "vektorius"
+        "apskritimas"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
-        },
-        {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Skersmuo yra dvigubas spindulys.",
+          "latex": "6,5 \\cdot 2 = 13"
         }
       ],
-      "answer": "5"
+      "answer": "13 cm"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-6",
+      "title": "Sudėtinės figūros plotas",
+      "level": "hard",
+      "problem": "Stačiakampis perpjautas į du vienodus kvadratus. Kvadrato kraštinė 5 cm. Koks buvo stačiakampio plotas?",
+      "conceptIds": [
+        "plotas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Vieno kvadrato plotas yra 5*5=25.",
+          "latex": "25"
+        },
+        {
+          "text": "Stačiakampį sudaro du tokie kvadratai.",
+          "latex": "25 \\cdot 2 = 50"
+        }
+      ],
+      "answer": "50 cm²"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-7",
+      "title": "Kubo briaunos",
+      "level": "medium",
+      "problem": "Kubo visų briaunų ilgių suma yra 72 cm. Koks vienos briaunos ilgis?",
+      "conceptIds": [],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Kubas turi 12 lygių briaunų.",
+          "latex": "12"
+        },
+        {
+          "text": "Sumą dalijame iš briaunų skaičiaus.",
+          "latex": "72 : 12 = 6"
+        }
+      ],
+      "answer": "6 cm"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-8",
+      "title": "Trikampio perimetras",
+      "level": "medium",
+      "problem": "Lygiašonio trikampio šoninė kraštinė 10 cm, o perimetras 32 cm. Koks pagrindo ilgis?",
+      "conceptIds": [
+        "perimetras"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Lygiašonis trikampis turi 2 lygias šonines kraštines (10 cm + 10 cm).",
+          "latex": "20"
+        },
+        {
+          "text": "Iš viso perimetro atimame šonus.",
+          "latex": "32 - 20 = 12"
+        }
+      ],
+      "answer": "12 cm"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-9",
+      "title": "Atvirkštinis ploto uždavinys",
+      "level": "hard",
+      "problem": "Stačiakampio plotas 48 cm², o jo ilgis 8 cm. Koks stačiakampio plotis?",
+      "conceptIds": [
+        "plotas"
+      ],
+      "formulaIds": [
+        "staciakampio-plotas"
+      ],
+      "steps": [
+        {
+          "text": "Iš formulės S = a * b, b = S / a.",
+          "latex": "b = 48 : 8"
+        },
+        {
+          "text": "Suskaičiuojame.",
+          "latex": "6"
+        }
+      ],
+      "answer": "6 cm"
+    },
+    {
+      "id": "geometrijos-ir-matavimu-pradmenys-exmp-10",
+      "title": "Kambario sienų plotas",
+      "level": "hard",
+      "problem": "Kambario sienos yra 4 m ilgio ir 3 m aukščio. Kambaryje yra 4 tokios sienos. Kiek m² tapetų reikia (nevertinant durų ir langų)?",
+      "conceptIds": [
+        "plotas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Vienos sienos plotas: 4 * 3 = 12.",
+          "latex": "12"
+        },
+        {
+          "text": "Keturių sienų plotas: 12 * 4 = 48.",
+          "latex": "48"
+        }
+      ],
+      "answer": "48 m²"
     }
   ],
   "exercises": [
@@ -606,93 +549,9 @@
       "id": "geometrijos-ir-matavimu-pradmenys-ex-001",
       "topicId": "geometrijos-ir-matavimu-pradmenys",
       "grade": 5,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
-      ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-002",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-003",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
+      "statement": "Kvadratas turi 5 cm kraštinę. Rask jo perimetrą.",
       "answer": {
         "kind": "numeric",
         "value": 20,
@@ -701,872 +560,35 @@
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "P = 4 * 5",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
+          "text": "4 * 5 = 20",
           "latex": "20"
         }
       ],
       "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-004",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-005",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-006",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-007",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-008",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-009",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-010",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-011",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-012",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-013",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-014",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-015",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-016",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-017",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-018",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-019",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-ex-020",
-      "topicId": "geometrijos-ir-matavimu-pradmenys",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Geometrijos ir matavimų pradmenys: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 30
     }
   ],
   "tests": [
     {
       "id": "geometrijos-ir-matavimu-pradmenys-test-topic",
-      "title": "Geometrijos ir matavimų pradmenys testas",
+      "title": "Geometrijos testas",
       "scope": "topic",
       "topicIds": [
         "geometrijos-ir-matavimu-pradmenys"
       ],
       "exerciseIds": [
-        "geometrijos-ir-matavimu-pradmenys-ex-001",
-        "geometrijos-ir-matavimu-pradmenys-ex-002",
-        "geometrijos-ir-matavimu-pradmenys-ex-003",
-        "geometrijos-ir-matavimu-pradmenys-ex-004",
-        "geometrijos-ir-matavimu-pradmenys-ex-005",
-        "geometrijos-ir-matavimu-pradmenys-ex-006",
-        "geometrijos-ir-matavimu-pradmenys-ex-007",
-        "geometrijos-ir-matavimu-pradmenys-ex-008"
+        "geometrijos-ir-matavimu-pradmenys-ex-001"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-test-challenge",
-      "title": "Geometrijos ir matavimų pradmenys iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "geometrijos-ir-matavimu-pradmenys"
-      ],
-      "exerciseIds": [
-        "geometrijos-ir-matavimu-pradmenys-ex-009",
-        "geometrijos-ir-matavimu-pradmenys-ex-010",
-        "geometrijos-ir-matavimu-pradmenys-ex-011",
-        "geometrijos-ir-matavimu-pradmenys-ex-012",
-        "geometrijos-ir-matavimu-pradmenys-ex-013",
-        "geometrijos-ir-matavimu-pradmenys-ex-014",
-        "geometrijos-ir-matavimu-pradmenys-ex-015",
-        "geometrijos-ir-matavimu-pradmenys-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
-  "srsCards": [
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "geometrijos-ir-matavimu-pradmenys-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "srsCards": []
 }

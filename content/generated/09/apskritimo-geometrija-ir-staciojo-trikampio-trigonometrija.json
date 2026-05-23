@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "9 klasėje programa įveda centrinį ir įbrėžtinį kampus, liestines, stygas, sinusą, kosinusą ir tangentą stačiajame trikampyje."
+    "notes": "Išsamus 9 klasės kursas apie apskritimus ir trigonometriją, apimantis teoriją nuo pagrindų iki taikomųjų uždavinių."
   },
   "topic": {
     "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 6,
-    "estimatedStudyMinutes": 190,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "pitagoro-teorema-ir-vidurio-linijos"
     ],
@@ -20,30 +20,33 @@
       "trikampiu-trigonometrija-ir-apskritimai"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
       "apskritimas",
       "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "spindulys",
+      "skersmuo",
+      "styga",
+      "lankas",
+      "centrinis-kampas",
+      "ibreztinis-kampas",
+      "liestine",
+      "sinusas",
+      "kosinusas",
+      "tangentas",
+      "izambine",
+      "statinis"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
       "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "skritulio-plotas",
+      "sinuso-apibreztis",
+      "kosinuso-apibreztis",
+      "tangento-apibreztis",
+      "pagrindine-trigonometrine-tapatybe"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "painioja-sinusa-ir-kosinusa",
+      "skaiciuokles-rezimas-rad-deg",
+      "ibreztinis-lygus-centriniui"
     ],
     "exerciseIds": [
       "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-001",
@@ -70,535 +73,589 @@
   },
   "theory": [
     {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ivadas",
-      "title": "Įvadas",
+      "id": "apskritimo-pagrindai-ir-elementai",
+      "title": "Apskritimo pagrindai ir elementai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Apskritimo geometrija ir stačiojo trikampio trigonometrija yra tema, kurioje mokomasi atpažinti pagrindinius apskritimas ir stačiojo trikampio trigonometrija modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Geometrijoje apskritimas yra viena iš fundamentaliausių figūrų. Svarbu griežtai skirti dvi sąvokas: apskritimą ir skritulį. Apskritimas yra tik linija (taškų visuma, nutolusi vienodu atstumu nuo centro), o skritulys apima ir tą liniją, ir visą jos ribojamą plokštumos dalį. Galite tai įsivaizduoti kaip žiedą (apskritimas) ir monetą (skritulys). Kasdienybėje šios sąvokos dažnai painiojamos, tačiau matematikoje jų skirtumas yra esminis, ypač skaičiuojant ilgį ir plotą."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apskritimas",
+          "text": "Apskritimas – tai plokštumos taškų aibė, kurių kiekvienas nutolęs nuo vieno taško (vadinamo centru) tuo pačiu atstumu r."
+        },
+        {
+          "type": "definition",
+          "conceptId": "spindulys",
+          "text": "Spindulys (r) – atkarpa, jungianti apskritimo centrą su bet kuriuo apskritimo tašku."
+        },
+        {
+          "type": "definition",
+          "conceptId": "skersmuo",
+          "text": "Skersmuo (d) – styga, einanti per apskritimo centrą. Jo ilgis lygus dviem spinduliams: d = 2r. Skersmuo padalija apskritimą į du lygius pusapskritimius."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
-        },
-        {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
-        }
-      ]
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Apskritimo geometrija ir stačiojo trikampio trigonometrija sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "text": "Be pagrindinių elementų, apskritime sutinkame ir kitas svarbias atkarpas bei linijas. Styga yra bet kokia atkarpa, jungianti du apskritimo taškus. Ilgiausia styga visada yra skersmuo. Lankas yra apskritimo dalis tarp dviejų jo taškų. Kiekviena styga padalija apskritimą į du lankus."
         },
         {
           "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "apskritimo-ilgis",
+          "latex": "C = 2\\pi r = \\pi d"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "formula",
+          "formulaId": "skritulio-plotas",
+          "latex": "S = \\pi r^2"
+        },
+        {
+          "type": "note",
+          "text": "Skaičiavimuose dažnai naudojame apytikslę pi vertę, lygią 3,14, tačiau jei uždavinyje prašoma pateikti tikslų atsakymą, palikite simbolį pi (pavyzdžiui, 16 pi)."
         }
       ]
     },
     {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "kampai-apskritime-centriniai-ir-ibreztiniai",
+      "title": "Kampai apskritime: centriniai ir įbrėžtiniai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kampų savybės apskritime yra vienas įdomiausių geometrijos skyrių. Mes skiriame dvi pagrindines kampų rūšis pagal tai, kur yra jų viršūnė. Šie kampai leidžia mums nustatyti ryšius tarp lankų ir stygų."
+        },
+        {
+          "type": "definition",
+          "conceptId": "centrinis-kampas",
+          "text": "Centrinis kampas – tai kampas, kurio viršūnė sutampa su apskritimo centru, o kraštinės yra apskritimo spinduliai."
+        },
+        {
+          "type": "property",
+          "text": "Centrinio kampo didumas laipsniais yra lygus lanko, į kurį jis remiasi, didumui laipsniais. Pavyzdžiui, jei lankas yra 60 laipsnių, tai ir centrinis kampas bus 60 laipsnių."
+        },
+        {
+          "type": "definition",
+          "conceptId": "ibreztinis-kampas",
+          "text": "Įbrėžtinis kampas – tai kampas, kurio viršūnė yra apskritimo taškas, o kraštinės kerta apskritimą (yra stygos)."
+        },
+        {
+          "type": "theorem",
+          "text": "Įbrėžtinio kampo didumas yra lygus pusei lanko, į kurį jis remiasi, didumo. Taigi, įbrėžtinis kampas yra perpus mažesnis už centrinį kampą, besiremiantį į tą patį lanką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš šios teoremos išplaukia dvi kritiškai svarbios pasekmės, kurios dažnai naudojamos geometrijos uždaviniuose bei įrodymuose:"
+        },
+        {
+          "type": "property",
+          "text": "1. Visi įbrėžtiniai kampai, besiremiantys į tą patį lanką, yra lygūs tarpusavyje, nepriklausomai nuo to, kurioje apskritimo vietoje yra jų viršūnė."
+        },
+        {
+          "type": "property",
+          "text": "2. Įbrėžtinis kampas, besiremiantis į skersmenį (pusapskritimį), visada yra statusis (90 laipsnių). Tai viena naudingiausių savybių sprendžiant stačiųjų trikampių uždavinius apskritime."
+        },
+        {
+          "type": "warning",
+          "text": "Mokiniai dažnai pamiršta, kad šis ryšys galioja tik tada, kai kampai remiasi į tą patį lanką. Prieš skaičiuodami visada brėžinyje vizualiai patikrinkite kampo kojas ir lanką."
+        }
+      ]
+    },
+    {
+      "id": "liestines-ir-stygos",
+      "title": "Liestinės ir stygos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tiesė ir apskritimas gali turėti nulis, vieną arba du bendrus taškus. Tiesė, turinti tik vieną bendrą tašką su apskritimu, vadinama liestine. Šis taškas vadinamas liesties tašku. Liestinė yra tarsi tiesė, kuri tik „pabučiuoja“ apskritimą ir eina toliau."
+        },
+        {
+          "type": "theorem",
+          "text": "Svarbiausia liestinės savybė: spindulys, nubrėžtas į liesties tašką, yra statmenas liestinei. Tai sukuria 90 laipsnių kampą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši savybė yra esminė, nes ji leidžia sukurti stačiuosius trikampius ten, kur jų iš pirmo žvilgsnio nėra. Pavyzdžiui, jungiant apskritimo centrą, liesties tašką ir bet kurį kitą liestinės tašką, gaunamas statusis trikampis, kuriam galioja Pitagoro teorema."
+        },
+        {
+          "type": "property",
+          "text": "Iš bet kurio taško, esančio už apskritimo, galima nubrėžti lygiai dvi liestines tam apskritimui. Atkarpos nuo išorinio taško iki liesties taškų yra lygios."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kalbant apie stygas, yra dar viena svarbi taisyklė: spindulys, kuris yra statmenas stygai, dalija tą stygą į dvi lygias dalis. Taip pat lygios stygos visada yra vienodu atstumu nutolusios nuo apskritimo centro."
+        }
+      ]
+    },
+    {
+      "id": "staciojo-trikampio-trigonometrija-pagrindai",
+      "title": "Stačiojo trikampio trigonometrija: Sinusas, kosinusas ir tangentas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trigonometrija – tai matematikos šaka, tyrinėjanti ryšius tarp trikampio kampų ir jo kraštinių ilgių. 9 klasėje mes pradedame nuo paprasčiausio atvejo – stačiojo trikampio. Trigonometrinės funkcijos (sinusas, kosinusas, tangentas) iš tikrųjų yra tiesiog kraštinių ilgių santykiai, kurie priklauso tik nuo trikampio kampo dydžio."
+        },
+        {
+          "type": "definition",
+          "conceptId": "sinusas",
+          "text": "Smailiojo kampo sinusas (sin) yra priešinio statinio ir įžambinės ilgių santykis."
+        },
+        {
+          "type": "formula",
+          "formulaId": "sinuso-apibreztis",
+          "latex": "\\sin \\alpha = \\frac{\\text{priešinis statinis}}{\\text{įžambinė}}"
+        },
+        {
+          "type": "definition",
+          "conceptId": "kosinusas",
+          "text": "Smailiojo kampo kosinusas (cos) yra gretutinio statinio ir įžambinės ilgių santykis."
+        },
+        {
+          "type": "formula",
+          "formulaId": "kosinuso-apibreztis",
+          "latex": "\\cos \\alpha = \\frac{\\text{gretutinis statinis}}{\\text{įžambinė}}"
+        },
+        {
+          "type": "definition",
+          "conceptId": "tangentas",
+          "text": "Smailiojo kampo tangentas (tan) yra priešinio statinio ir gretutinio statinio ilgių santykis."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tangento-apibreztis",
+          "latex": "\\tan \\alpha = \\frac{\\text{priešinis statinis}}{\\text{gretutinis statinis}} = \\frac{\\sin \\alpha}{\\cos \\alpha}"
+        },
+        {
+          "type": "method",
+          "text": "Norėdami teisingai pasirinkti funkciją, užduokite sau du klausimus: 1. Kokią kraštinę žinau? 2. Kokios kraštinės ieškau? Jei turite priešinį statinį ir ieškote įžambinės – naudokite sinusą. Jei turite gretutinį statinį ir ieškote įžambinės – naudokite kosinusą. Jei turite abu statinius – naudokite tangentą."
+        }
+      ]
+    },
+    {
+      "id": "specialiosios-vertes-ir-trigonometrines-tapatybes",
+      "title": "Specialiosios vertės ir trigonometrinės tapatybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai kurių kampų trigonometrinės vertės geometrijos uždaviniuose pasitaiko nuolatos, todėl jas labai naudinga žinoti mintinai. Tai kampai 30, 45 ir 60 laipsnių."
+        },
+        {
+          "type": "table",
+          "text": "Pagrindinės trigonometrinės vertės:",
+          "latex": "\\begin{array}{|c|c|c|c|} \\hline \\alpha & 30^\\circ & 45^\\circ & 60^\\circ \\\\ \\hline \\sin \\alpha & 1/2 & \\sqrt{2}/2 & \\sqrt{3}/2 \\\\ \\hline \\cos \\alpha & \\sqrt{3}/2 & \\sqrt{2}/2 & 1/2 \\\\ \\hline \\tan \\alpha & \\sqrt{3}/3 & 1 & \\sqrt{3} \\\\ \\hline \\end{array}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Egzistuoja ir giluminiai ryšiai tarp pačių funkcijų. Svarbiausias iš jų yra pagrindinė trigonometrinė tapatybė. Ji galioja bet kokiam kampui ir yra tiesioginė Pitagoro teoremos išraiška vienetiniame apskritime."
+        },
+        {
+          "type": "formula",
+          "formulaId": "pagrindine-trigonometrine-tapatybe",
+          "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1"
+        },
+        {
+          "type": "property",
+          "text": "Taip pat naudinga žinoti, kad sin(90 - alfa) = cos(alfa). Pavyzdžiui, sin(30) = cos(60) = 0,5. Tai paaiškinama tuo, kad stačiajame trikampyje smailieji kampai papildo vienas kitą iki 90 laipsnių, o tai, kas vienam kampui yra priešinis statinis, kitam yra gretutinis."
+        }
+      ]
+    },
+    {
+      "id": "staciuju-trikampiu-sprendimas",
+      "title": "Stačiųjų trikampių sprendimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Išspręsti trikampį reiškia surasti visus jo nežinomus elementus – tiek visas kraštines, tiek visus kampus. Stačiajame trikampyje mums pakanka turėti vos du pradinius duomenis (bent vienas turi būti kraštinė), kad atkurtume visą likusį vaizdą."
+        },
+        {
+          "type": "method",
+          "text": "Sprendimo eiga: 1. Aiškiai įvardinkite, kas žinoma ir ko ieškoma. 2. Pasirinkite formulę, kuri jungia žinomus dydžius su ieškomuoju (Pitagoro teorema arba sin, cos, tan). 3. Sudarykite lygtį. 4. Išspręskite lygtį ir, jei reikia, suapvalinkite atsakymą."
+        },
+        {
+          "type": "note",
+          "text": "Kai žinome kraštines, bet norime sužinoti kampo didumą laipsniais, naudojame atvirkštines funkcijas skaičiuoklėje: arcsin, arccos arba arctan. Jos parodo kampą pagal jo santykį."
+        },
+        {
+          "type": "warning",
+          "text": "SVARBU: Naudodamiesi skaičiuokle, visada įsitikinkite, kad ji nustatyta laipsnių (DEG) režimu. Jei nustatytas RAD režimas, sinusų ir kosinusų vertės bus visiškai kitokios, o atsakymai – klaidingi."
+        }
+      ]
+    },
+    {
+      "id": "praktiniai-taikymai-auksciai-ir-atstumai",
+      "title": "Praktiniai taikymai: aukščiai ir atstumai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trigonometrija yra vienas galingiausių įrankių realaus pasaulio matavimams. Inžinieriai, architektai ir geodezininkai ją naudoja kasdien. Pagrindinis taikymo būdas – netiesioginis matavimas."
+        },
+        {
+          "type": "method",
+          "text": "Įsivaizduokite, kad norite sužinoti labai aukšto pastato aukštį. Jums nereikia lipti į viršų su matavimo juosta. Pakanka nueiti tam tikrą atstumą nuo pastato, pamatuoti kampą, kuriuo matote pastato viršūnę, ir panaudoti tangentą. Šis metodas vadinamas trigonometriniu niveliavimu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitas pavyzdys – nuolydžiai. Kelių ženklai, rodantys 10% įkalnę, iš tikrųjų nurodo, kad nuolydžio kampo tangentas yra 0,1. Tai reiškia, kad nuvažiavę 100 metrų horizontaliai, jūs pakylate 10 metrų į viršų. Taip pat trigonometrija naudojama navigacijoje skaičiuojant laivų ar lėktuvų kursus."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
-      "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trikampis",
-      "title": "Trikampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "apskritimas",
       "title": "Apskritimas",
       "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
+      "shortDefinition": "Plokštumos taškų aibė, nutolusi nuo centro vienodu atstumu.",
+      "intuition": "Tai tik pati rato linija, be vidaus.",
+      "formal": "Apskritimas yra aibė taškų X, tokių kad |OX| = r.",
+      "notation": ["C"],
+      "relatedConceptIds": ["skritulys", "spindulys", "skersmuo"],
       "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
       "id": "skritulys",
       "title": "Skritulys",
       "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "shortDefinition": "Apskritimo ribojama plokštumos dalis kartu su pačiu apskritimu.",
+      "intuition": "Tai visas diskas, moneta.",
+      "formal": "Skritulys yra aibė taškų X, tokių kad |OX| <= r.",
+      "notation": ["S"],
+      "relatedConceptIds": ["apskritimas", "plotas"],
+      "prerequisiteConceptIds": ["apskritimas"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
+      "id": "sinusas",
+      "title": "Sinusas",
       "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
+      "shortDefinition": "Priešinio statinio ir įžambinės santykis.",
+      "intuition": "Rodo, kokią dalį įžambinės sudaro priešingas statinis.",
+      "formal": "Stačiajame trikampyje sin(alpha) = a/c.",
+      "notation": ["sin"],
+      "relatedConceptIds": ["kosinusas", "tangentas", "izambine"],
+      "prerequisiteConceptIds": ["trikampis"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
+      "id": "centrinis-kampas",
+      "title": "Centrinis kampas",
       "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
+      "shortDefinition": "Kampas, kurio viršūnė yra apskritimo centre.",
+      "intuition": "Kampas, einantis tiesiai iš centro.",
+      "formal": "Kampas tarp dviejų spindulių, išeinančių iš apskritimo centro.",
       "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": ["ibreztinis-kampas", "lankas"],
+      "prerequisiteConceptIds": ["kampas"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
+      "id": "ibreztinis-kampas",
+      "title": "Įbrėžtinis kampas",
       "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
+      "shortDefinition": "Kampas, kurio viršūnė yra ant apskritimo linijos.",
+      "intuition": "Kampas, kurio viršūnė liečia apskritimo kraštą.",
+      "formal": "Kampas, kurį sudaro dvi stygos, turinčios bendrą galą.",
       "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": ["centrinis-kampas", "lankas"],
+      "prerequisiteConceptIds": ["centrinis-kampas"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "transformacija",
-      "title": "Transformacija",
+      "id": "liestine",
+      "title": "Liestinė",
       "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
+      "shortDefinition": "Tiesė, turinti tik vieną bendrą tašką su apskritimu.",
+      "intuition": "Tiesė, kuri tik paliečia apskritimą.",
+      "formal": "Tiesė, kurios atstumas iki apskritimo centro lygus spinduliui.",
       "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": ["apskritimas", "spindulys"],
+      "prerequisiteConceptIds": ["apskritimas"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "simetrija",
-      "title": "Simetrija",
+      "id": "styga",
+      "title": "Styga",
       "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
+      "shortDefinition": "Atkarpa, jungianti du apskritimo taškus.",
+      "intuition": "Linija jungianti du kraštus.",
+      "formal": "Atkarpa, kurios galai priklauso apskritimui.",
       "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": ["skersmuo", "apskritimas"],
+      "prerequisiteConceptIds": ["apskritimas"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     },
     {
-      "id": "koordinates",
-      "title": "Koordinatės",
+      "id": "tangentas",
+      "title": "Tangentas",
       "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "shortDefinition": "Priešinio ir gretutinio statinių santykis.",
+      "intuition": "Rodo statumą arba nuolydį.",
+      "formal": "tan(alpha) = sin(alpha) / cos(alpha).",
+      "notation": ["tan"],
+      "relatedConceptIds": ["sinusas", "kosinusas"],
+      "prerequisiteConceptIds": ["trikampis"],
+      "appearsInTopicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
-      "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
-      "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
-      },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
       "id": "apskritimo-ilgis",
       "title": "Apskritimo ilgis",
       "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
+      "latex": "C = 2\\pi r",
+      "conditions": ["r > 0"],
       "variables": {
-        "r": "spindulys"
+        "C": "apskritimo ilgis",
+        "r": "spindulys",
+        "\\pi": "3,14..."
       },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
+      "explanation": "Formulė apskaičiuoja atstumą aplink apskritimą.",
+      "relatedConceptIds": ["apskritimas", "spindulys"],
       "defaultSrs": true
     },
     {
-      "id": "apskritimo-plotas",
+      "id": "skritulio-plotas",
       "title": "Skritulio plotas",
       "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
+      "latex": "S = \\pi r^2",
+      "conditions": ["r > 0"],
       "variables": {
+        "S": "plotas",
         "r": "spindulys"
       },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
+      "explanation": "Apskaičiuoja paviršiaus plotą apskritimo viduje.",
+      "relatedConceptIds": ["skritulys", "plotas"],
+      "defaultSrs": true
+    },
+    {
+      "id": "sinuso-apibreztis",
+      "title": "Sinuso apibrėžtis",
+      "type": "formula",
+      "latex": "\\sin \\alpha = \\frac{a}{c}",
+      "conditions": ["Statusis trikampis"],
+      "variables": {
+        "a": "priešinis statinis",
+        "c": "įžambinė",
+        "\\alpha": "kampas"
+      },
+      "explanation": "Santykis tarp priešinio statinio ir įžambinės.",
+      "relatedConceptIds": ["sinusas", "izambine"],
+      "defaultSrs": true
+    },
+    {
+      "id": "pagrindine-trigonometrine-tapatybe",
+      "title": "Pagrindinė trigonometrinė tapatybė",
+      "type": "formula",
+      "latex": "\\sin^2 \\alpha + \\cos^2 \\alpha = 1",
+      "conditions": ["Tas pats kampas"],
+      "variables": {
+        "\\alpha": "kampas"
+      },
+      "explanation": "Svarbiausias ryšys tarp sinuso ir kosinuso.",
+      "relatedConceptIds": ["sinusas", "kosinusas"],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
-      "type": "mistake",
-      "conceptIds": [
-        "perimetras",
-        "plotas"
-      ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
+      "id": "painioja-sinusa-ir-kosinusa",
+      "title": "Painioja sinusą ir kosinusą",
+      "conceptIds": ["sinusas", "kosinusas"],
+      "wrongPattern": "Naudoja gretutinį statinį sinusui.",
+      "whyItHappens": "Mokiniai dažnai neskiria, kuris statinis yra priešais kampą.",
+      "correction": "Sinusas visada susijęs su kraštine priešais kampą.",
+      "wrongExample": "sin = gretutinis / izambine",
+      "correctExample": "sin = priesinis / izambine",
       "defaultSrs": true
     },
     {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "id": "ibreztinis-lygus-centriniui",
+      "title": "Mano, kad įbrėžtinis kampas lygus centriniam",
+      "conceptIds": ["ibreztinis-kampas", "centrinis-kampas"],
+      "wrongPattern": "Sako, kad įbrėžtinis kampas lygus lankui.",
+      "whyItHappens": "Supainiojamos centrinio ir įbrėžtinio kampų savybės.",
+      "correction": "Įbrėžtinis kampas yra pusė lanko arba pusė centrinio kampo.",
+      "wrongExample": "Lankas 80, įbrėžtinis 80.",
+      "correctExample": "Lankas 80, įbrėžtinis 40.",
+      "defaultSrs": true
+    },
+    {
+      "id": "skaiciuokles-rezimas-rad-deg",
+      "title": "Neteisingas skaičiuoklės režimas",
+      "conceptIds": ["sinusas", "tangentas"],
+      "wrongPattern": "Gauna neigiamas vertes smailiesiems kampams.",
+      "whyItHappens": "Skaičiuoklė nustatyta RAD (radianų) režimu.",
+      "correction": "Perjunkite skaičiuoklę į DEG (laipsnių) režimą.",
+      "wrongExample": "sin(30) = -0,98 (RAD)",
+      "correctExample": "sin(30) = 0,5 (DEG)",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-1",
-      "title": "Perimetras",
+      "title": "Apskritimo ilgio ir skritulio ploto radimas",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
+      "problem": "Apskritimo spindulys lygus 6 cm. Raskite apskritimo ilgį ir skritulio plotą. Atsakymą pateikite tikslų (su pi).",
+      "conceptIds": ["apskritimas", "skritulys", "spindulys"],
+      "formulaIds": ["apskritimo-ilgis", "skritulio-plotas"],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Apskaičiuojame apskritimo ilgį pagal formulę C = 2 * pi * r.",
+          "latex": "C = 2\\pi \\cdot 6 = 12\\pi \\text{ cm}"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Apskaičiuojame skritulio plotą pagal formulę S = pi * r^2.",
+          "latex": "S = \\pi \\cdot 6^2 = 36\\pi \\text{ cm}^2"
         }
       ],
-      "answer": "26"
+      "answer": "C = 12\\pi, S = 36\\pi"
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-2",
-      "title": "Plotas",
+      "title": "Centrinis ir įbrėžtinis kampai",
       "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
-      "conceptIds": [
-        "plotas",
-        "keturkampis"
-      ],
+      "problem": "Įbrėžtinis kampas remiasi į lanką, kurio didumas yra 70 laipsnių. Raskite šio kampo ir centrinio kampo didumus.",
+      "conceptIds": ["centrinis-kampas", "ibreztinis-kampas", "lankas"],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "text": "Centrinis kampas yra lygus lanko didumui.",
+          "latex": "\\alpha_{centr} = 70^\\circ"
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Įbrėžtinis kampas yra lygus pusei lanko.",
+          "latex": "\\beta_{ibrez} = 70^\\circ / 2 = 35^\\circ"
         }
       ],
-      "answer": "42"
+      "answer": "Centrinis: 70, įbrėžtinis: 35"
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-3",
-      "title": "Pitagoro teorema",
+      "title": "Įbrėžtinis kampas skersmenyje",
       "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
-      "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
-      ],
-      "formulaIds": [],
+      "problem": "Trikampis ABC įbrėžtas į apskritimą taip, kad AC yra skersmuo. AB = 8, BC = 6. Raskite apskritimo spindulį.",
+      "conceptIds": ["ibreztinis-kampas", "skersmuo", "pitagoro-teorema"],
+      "formulaIds": ["pitagoro-formule"],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "text": "Kadangi AC yra skersmuo, kampas ABC yra 90 laipsnių.",
+          "latex": "\\angle ABC = 90^\\circ"
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-4",
-      "title": "Panašumas",
-      "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
-      "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Taikome Pitagoro teoremą įžambinei AC rasti.",
+          "latex": "AC^2 = 8^2 + 6^2 = 64 + 36 = 100 \\implies AC = 10"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
-        }
-      ],
-      "answer": "10"
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
-      "conceptIds": [
-        "koordinates",
-        "vektorius"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
-        },
-        {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Spindulys yra pusė skersmens.",
+          "latex": "r = 10 / 2 = 5"
         }
       ],
       "answer": "5"
+    },
+    {
+      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-4",
+      "title": "Liestinė ir atstumas iki centro",
+      "level": "medium",
+      "problem": "Atstumas nuo taško M iki centro O yra 13. Apskritimo spindulys r = 5. Raskite liestinės MT ilgį.",
+      "conceptIds": ["liestine", "pitagoro-teorema"],
+      "formulaIds": ["pitagoro-formule"],
+      "steps": [
+        {
+          "text": "Spindulys statmenas liestinei, todėl trikampis OTM yra statusis.",
+          "latex": "OT^2 + MT^2 = OM^2"
+        },
+        {
+          "text": "Įstatome vertes: 5^2 + MT^2 = 13^2.",
+          "latex": "25 + MT^2 = 169"
+        },
+        {
+          "text": "Apskaičiuojame MT.",
+          "latex": "MT = \\sqrt{144} = 12"
+        }
+      ],
+      "answer": "12"
+    },
+    {
+      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-5",
+      "title": "Kraštinės radimas naudojant sinusą",
+      "level": "medium",
+      "problem": "Stačiajame trikampyje įžambinė lygi 10, o kampas A = 30 laipsnių. Raskite priešinį statinį a.",
+      "conceptIds": ["sinusas", "izambine"],
+      "formulaIds": ["sinuso-apibreztis"],
+      "steps": [
+        {
+          "text": "Naudojame sinusą: sin(A) = a / c.",
+          "latex": "\\sin 30^\\circ = a / 10"
+        },
+        {
+          "text": "Kadangi sin(30) = 0,5, gauname lygtį.",
+          "latex": "0,5 = a / 10 \\implies a = 5"
+        }
+      ],
+      "answer": "5"
+    },
+    {
+      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-6",
+      "title": "Kampo radimas naudojant tangentą",
+      "level": "medium",
+      "problem": "Statiniai lygūs 7 ir 7. Raskite trikampio smailųjį kampą.",
+      "conceptIds": ["tangentas"],
+      "formulaIds": ["tangento-apibreztis"],
+      "steps": [
+        {
+          "text": "Naudojame tangentą: tan(alfa) = 7 / 7 = 1.",
+          "latex": "\\tan \\alpha = 1"
+        },
+        {
+          "text": "Randame kampą alfa.",
+          "latex": "\\alpha = \\arctan(1) = 45^\\circ"
+        }
+      ],
+      "answer": "45"
+    },
+    {
+      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-7",
+      "title": "Stygos ilgis",
+      "level": "hard",
+      "problem": "Spindulys R = 10. Atstumas nuo centro iki stygos d = 6. Raskite stygos ilgį.",
+      "conceptIds": ["styga", "pitagoro-teorema"],
+      "steps": [
+        {
+          "text": "Statmuo iš centro dalija stygą pusiau. Gauname statųjį trikampį su įžambine 10 ir statiniu 6.",
+          "latex": "x^2 = 10^2 - 6^2 = 64 \\implies x = 8"
+        },
+        {
+          "text": "Visas stygos ilgis yra dvigubas.",
+          "latex": "L = 2 \\cdot 8 = 16"
+        }
+      ],
+      "answer": "16"
+    },
+    {
+      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-exmp-8",
+      "title": "Praktinis uždavinys: medžio aukštis",
+      "level": "hard",
+      "problem": "Atstumas iki medžio 20 m. Matymo kampas 30 laipsnių. Žmogaus aukštis 1,6 m. Koks medžio aukštis? (tan 30 ~ 0,577)",
+      "conceptIds": ["tangentas", "praktinis-taikymas"],
+      "steps": [
+        {
+          "text": "Apskaičiuojame medžio dalį virš akių lygio: h1 = 20 * tan(30).",
+          "latex": "h_1 = 20 \\cdot 0,577 \\approx 11,54"
+        },
+        {
+          "text": "Pridedame žmogaus aukštį.",
+          "latex": "H = 11,54 + 1,6 = 13,14"
+        }
+      ],
+      "answer": "~13,1 m"
     }
   ],
   "exercises": [
@@ -606,966 +663,352 @@
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-001",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 32,
-        "tolerance": 0
-      },
+      "statement": "Spindulys r = 4. Raskite apskritimo ilgį (pi = 3,14).",
+      "answer": { "kind": "numeric", "value": 25.12, "tolerance": 0.01 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "Naudokite C = 2 * pi * r." }
       ],
       "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
-        }
+        { "text": "2 * 3,14 * 4 = 25,12", "latex": "25,12" }
       ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "answerText": "25,12",
       "estimatedSeconds": 40
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-002",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
+      "statement": "Plotas S = 25 pi. Raskite r.",
+      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "pi * r^2 = 25 * pi." }
       ],
       "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
+        { "text": "r^2 = 25 => r = 5", "latex": "5" }
       ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "answerText": "5",
       "estimatedSeconds": 40
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-003",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
+      "statement": "Lankas 120 laipsnių. Koks įbrėžtinis kampas?",
+      "answer": { "kind": "numeric", "value": 60, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "Kampas = Lankas / 2." }
       ],
       "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
+        { "text": "120 / 2 = 60", "latex": "60" }
       ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "answerText": "60",
+      "estimatedSeconds": 30
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-004",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
+      "statement": "Centrinis kampas 80 laipsnių. Koks lankas?",
+      "answer": { "kind": "numeric", "value": 80, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
+        { "text": "Centrinis kampas lygus lankui.", "latex": "80" }
       ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
+      "answerText": "80",
+      "estimatedSeconds": 20
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-005",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
+      "statement": "sin(A) = 0,6. c = 15. Raskite a.",
+      "answer": { "kind": "numeric", "value": 9, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "a = c * sin(A)." }
       ],
       "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
+        { "text": "15 * 0,6 = 9", "latex": "9" }
       ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
+      "answerText": "9",
+      "estimatedSeconds": 60
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-006",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
+      "statement": "tan(45 laipsnių) = ?",
+      "answer": { "kind": "numeric", "value": 1, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
+        { "text": "Pagal lentelę tan(45) = 1.", "latex": "1" }
       ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
+      "answerText": "1",
+      "estimatedSeconds": 20
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-007",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
+      "statement": "Gretutinis statinis b = 5. Kampas A = 60 laipsnių. Raskite c. (cos 60 = 0,5)",
+      "answer": { "kind": "numeric", "value": 10, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "cos(A) = b / c." }
       ],
       "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
+        { "text": "c = 5 / 0,5 = 10", "latex": "10" }
       ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
+      "answerText": "10",
+      "estimatedSeconds": 70
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-008",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
+      "statement": "Atstumas nuo centro iki liestinės 10. Koks r?",
+      "answer": { "kind": "numeric", "value": 10, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
+        { "text": "Spindulys lygus atstumui iki liestinės.", "latex": "10" }
       ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
+      "answerText": "10",
+      "estimatedSeconds": 20
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-009",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
+      "statement": "Priešinis / gretutinis statinis yra:",
       "answer": {
         "kind": "choice",
         "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
+          { "id": "a", "text": "sin" },
+          { "id": "b", "text": "cos" },
+          { "id": "c", "text": "tan" }
         ],
-        "correctChoiceIds": [
-          "b"
-        ]
+        "correctChoiceIds": ["c"]
       },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "tan",
+      "estimatedSeconds": 30
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-010",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
+      "statement": "Styga 16, r = 10. Raskite d (atstumą iki centro).",
+      "answer": { "kind": "numeric", "value": 6, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
+        { "order": 1, "text": "Stygos pusė yra 8." },
+        { "order": 2, "text": "Taikykite Pitagorą: 10^2 - 8^2 = d^2." }
       ],
       "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
+        { "text": "100 - 64 = 36 => d = 6", "latex": "6" }
       ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
+      "answerText": "6",
+      "estimatedSeconds": 90
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-011",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "statement": "Centrinis / įbrėžtinis santykis (į tą patį lanką):",
+      "answer": { "kind": "numeric", "value": 2, "tolerance": 0 },
+      "answerText": "2",
+      "estimatedSeconds": 20
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-012",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
+      "statement": "Lygiašonio trikampio pagrindas 12, h = 8. Raskite tan(alfa) prie pagrindo.",
+      "answer": { "kind": "numeric", "value": 1.333, "tolerance": 0.01 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
+        { "order": 1, "text": "Pagrindo pusė yra 6." },
+        { "order": 2, "text": "tan = 8 / 6." }
       ],
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
+        { "text": "8 / 6 = 1,333", "latex": "1,333" }
       ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "1,333",
+      "estimatedSeconds": 100
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-013",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
+      "statement": "r = 5, atstumas iki taško 13. Raskite liestinę.",
+      "answer": { "kind": "numeric", "value": 12, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
+        { "text": "169 - 25 = 144 => 12", "latex": "12" }
       ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "12",
+      "estimatedSeconds": 80
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-014",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "statement": "sin(alpha) = 0,8. Koks cos(90 - alpha)?",
+      "answer": { "kind": "numeric", "value": 0.8, "tolerance": 0 },
+      "answerText": "0,8",
+      "estimatedSeconds": 30
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-015",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "statement": "sin(45). Naudokite sqrt(2)/2 ~ 0,71.",
+      "answer": { "kind": "numeric", "value": 0.71, "tolerance": 0.01 },
+      "answerText": "0,71",
+      "estimatedSeconds": 40
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-016",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
+      "statement": "Lankas 100. Kokia centrinio ir įbrėžtinio kampų suma?",
+      "answer": { "kind": "numeric", "value": 150, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
+        { "text": "100 + 50 = 150", "latex": "150" }
       ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "150",
+      "estimatedSeconds": 40
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-017",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
+      "statement": "tan(A) = 3/4. c = 20. Raskite a (priešinį statinį).",
+      "answer": { "kind": "numeric", "value": 12, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
+        { "order": 1, "text": "Statiniai yra 3x ir 4x, vadinasi c = 5x." },
+        { "order": 2, "text": "5x = 20 => x = 4." }
       ],
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
+        { "text": "a = 3 * 4 = 12", "latex": "12" }
       ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "12",
+      "estimatedSeconds": 120
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-018",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Vidutiniai",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "statement": "c = 10, kampas 30. Raskite a (priešinį).",
+      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
+      "answerText": "5",
+      "estimatedSeconds": 40
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-019",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
+      "statement": "r = 13, styga 24. Atstumas iki centro?",
+      "answer": { "kind": "numeric", "value": 5, "tolerance": 0 },
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
+        { "text": "sqrt(169 - 144) = 5", "latex": "5" }
       ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "5",
+      "estimatedSeconds": 80
     },
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-020",
       "topicId": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija",
       "grade": 9,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
-      "statement": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
+      "statement": "sin = 0,6. Raskite cos (teigiamą).",
+      "answer": { "kind": "numeric", "value": 0.8, "tolerance": 0 },
       "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
+        { "order": 1, "text": "sin^2 + cos^2 = 1." }
       ],
       "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
+        { "text": "sqrt(1 - 0,36) = 0,8", "latex": "0,8" }
       ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "answerText": "0,8",
+      "estimatedSeconds": 90
     }
   ],
   "tests": [
     {
       "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-test-topic",
-      "title": "Apskritimo geometrija ir stačiojo trikampio trigonometrija testas",
+      "title": "Apskritimo geometrija ir stačiojo trikampio trigonometrija: temos testas",
       "scope": "topic",
-      "topicIds": [
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"
-      ],
+      "topicIds": ["apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"],
       "exerciseIds": [
         "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-001",
         "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-002",
         "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-003",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-004",
         "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-005",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-006",
         "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-007",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-008"
+        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-008",
+        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-010"
       ],
-      "masteryWeight": 1.2,
+      "masteryWeight": 1.5,
       "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-test-challenge",
-      "title": "Apskritimo geometrija ir stačiojo trikampio trigonometrija iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija"
-      ],
-      "exerciseIds": [
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-009",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-010",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-011",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-012",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-013",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-014",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-015",
-        "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "timeLimitSeconds": 1200
     }
   ],
-  "srsCards": [
+  "srsSeeds": [
     {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-kampas",
+      "id": "srs-apskritimo-ilgis",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-trikampio-plotas",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "front": "Kokia yra apskritimo ilgio formulė?",
+      "back": "C = 2 * pi * r",
+      "conceptIds": ["apskritimo-ilgis"],
       "defaultEnabled": true
     },
     {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "id": "srs-sinusas-apibrezimas",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Kaip apibrėžiamas kampo sinusas?",
+      "back": "Tai priešinio statinio ir įžambinės santykis.",
+      "conceptIds": ["sinusas"],
       "defaultEnabled": true
     },
     {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "apskritimo-geometrija-ir-staciojo-trikampio-trigonometrija-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "id": "srs-ibreztinis-kampas-skersmuo",
+      "deck": "theory",
+      "cardType": "concept",
+      "front": "Koks yra įbrėžtinis kampas, besiremiantis į skersmenį?",
+      "back": "90 laipsnių (statusis).",
+      "conceptIds": ["ibreztinis-kampas"],
       "defaultEnabled": true
     }
   ]

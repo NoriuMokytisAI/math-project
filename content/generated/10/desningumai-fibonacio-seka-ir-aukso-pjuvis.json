@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "10 klasės programa nagrinėja Fibonačio seką, aukso pjūvį ir jų savybes dėsningumų skyriuje."
+    "notes": "10 klasės programa nagrinėja Fibonačio seką, aukso pjūvį ir jų savybes dėsningumų skyriuje. Išsamus teorinis papildymas."
   },
   "topic": {
     "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 2,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [
       "skaiciu-sekos-9"
     ],
@@ -27,7 +27,10 @@
       "rekurentine-formule",
       "aukso-pjuvio-skaicius",
       "aukso-pjuvio-seka",
-      "proporcingoji-dalyba"
+      "proporcingoji-dalyba",
+      "binet-formule",
+      "aukso-staciakampis",
+      "aukso-spirale"
     ],
     "formulaIds": [
       "fibonacio-formule",
@@ -64,68 +67,177 @@
   "theory": [
     {
       "id": "fibonacio-seka-ivadas",
-      "title": "Fibonačio seka",
+      "title": "Kas yra Fibonačio seka?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fibonačio seka yra viena garsiausių matematinių sekų, kurioje kiekvienas narys (nuo trečiojo) yra lygus dviejų prieš jį einančių narių sumai."
+          "text": "Fibonačio seka yra viena labiausiai paplitusių ir įdomiausių skaičių sekų gamtoje ir matematikoje. Ji pavadinta italų matematiko Leonardo iš Pizos (žinomo kaip Fibonačis) vardu, kuris ją aprašė savo 1202 m. knygoje „Liber Abaci“. Ši seka pasižymi tuo, kad kiekvienas jos narys, pradedant trečiuoju, yra lygus dviejų prieš jį einančių narių sumai."
         },
         {
           "type": "definition",
           "conceptId": "fibonacio-seka",
-          "text": "Seka $1, 1, 2, 3, 5, 8, 13, 21, ...$, kurioje $F_1=1$, $F_2=1$ ir $F_n = F_{n-1} + F_{n-2}$."
+          "text": "Fibonačio seka vadiname seką $F_1, F_2, F_3, ...$, kurioje pirmieji du nariai lygūs 1 ($F_1=1, F_2=1$), o kiekvienas kitas narys apskaičiuojamas pagal rekurentinę formulę: $F_n = F_{n-1} + F_{n-2}$, kai $n \\geq 3$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pirmieji dešimt sekos narių yra: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55$. Nors šiuolaikinėje matematikoje seka dažnai pradedama nuo $0$ ($F_0=0$), mokyklinėje programoje dažniausiai pradedame nuo vieneto."
         },
         {
           "type": "note",
-          "text": "Kartais seka pradedama nuo 0, bet mokyklinėje programoje dažniausiai nuo 1."
+          "text": "Fibonačis šią seką atrado spręsdamas idealizuotą triušių dauginimosi uždavinį: kiek porų triušių bus po metų, jei kiekvieną mėnesį pora atsiveda naują porą, o triušiai pradeda daugintis nuo antro mėnesio?"
+        }
+      ]
+    },
+    {
+      "id": "rekurentinis-rysys",
+      "title": "Rekurentinis ryšys ir savybės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rekurentinė formulė (lot. *recurrere* – bėgti atgal) reiškia, kad norint sužinoti dabartinį narį, turime žinoti ankstesnius. Tai nėra pati patogiausia formulė, jei norime sužinoti, pavyzdžiui, 100-ąjį narį, nes turėtume apskaičiuoti visus 99 narius prieš tai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tačiau Fibonačio seka turi daugybę nuostabių savybių:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bet kurių dviejų gretimų narių didžiausias bendrasis daliklis (DBD) visada yra 1. Tai reiškia, kad jie yra tarpusavyje pirminiai.",
+            "Kas trečias sekos narys yra lyginis ($2, 8, 34, ...$).",
+            "Kas ketvirtas narys dalijasi iš 3 ($3, 21, 144, ...$).",
+            "Suma pirmųjų $n$ narių: $F_1 + F_2 + ... + F_n = F_{n+2} - 1$."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dar viena įdomi savybė yra Fibonačio narių kvadratų suma: $F_1^2 + F_2^2 + ... + F_n^2 = F_n \\cdot F_{n+1}$. Geometriškai tai galima pavaizduoti kaip stačiakampį, sudarytą iš kvadratų, kurių kraštinės yra Fibonačio skaičiai."
         }
       ]
     },
     {
       "id": "aukso-pjuvis-ivadas",
-      "title": "Aukso pjūvis",
+      "title": "Aukso pjūvis – dieviškoji proporcija",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aukso pjūvis (arba dieviškoji proporcija) yra toks atkarpos padalijimas į dvi dalis, kai ilgesnės dalies santykis su trumpesne yra lygus visos atkarpos santykiui su ilgesne dalimi."
+          "text": "Aukso pjūvis, dar vadinamas dieviškąja proporcija, yra iracionalusis skaičius, žymimas graikiška raide $\\phi$ (fi). Jis atsiranda dalijant atkarpą į dvi dalis taip, kad visos atkarpos santykis su ilgesniąja dalimi būtų lygus ilgesniosios dalies santykiui su trumpesniąja."
+        },
+        {
+          "type": "definition",
+          "conceptId": "aukso-pjuvis",
+          "text": "Atkarpa padalyta aukso pjūviu, jei tenkinama proporcija: $\\frac{a+b}{a} = \\frac{a}{b} = \\phi$, kur $a$ – ilgesnioji dalis, $b$ – trumpesnioji dalis."
         },
         {
           "type": "formula",
           "formulaId": "aukso-pjuvio-reiksme",
-          "latex": "\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1,618"
+          "latex": "\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1,6180339887..."
         },
         {
           "type": "paragraph",
-          "text": "Šis skaičius žymimas graikiška raide $\\phi$ (fi)."
+          "text": "Skaičius $\\phi$ yra vienintelis teigiamas skaičius, kuriam galioja lygybė: $\\phi^2 = \\phi + 1$. Tai reiškia, kad norint skaičių $\\phi$ pakelti kvadratu, tereikia prie jo pridėti vienetą. Be to, $\\frac{1}{\\phi} = \\phi - 1 \\approx 0,618$."
         }
       ]
     },
     {
-      "id": "fibonacio-ir-aukso-pjuvio-rysys",
+      "id": "aukso-pjuvio-ir-fibonacio-rysys",
       "title": "Fibonačio sekos ir Aukso pjūvio ryšys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Didėjant narių skaičiui, dviejų gretimų Fibonačio sekos narių santykis $\\frac{F_{n+1}}{F_n}$ artėja prie aukso pjūvio reikšmės $\\phi$."
+          "text": "Nors Fibonačio seka susideda iš sveikųjų skaičių, o aukso pjūvis yra iracionalusis skaičius, jie yra neatsiejami. Jei paimsime du gretimus Fibonačio sekos narius ir padalinsime didesnį iš mažesnio, gautas santykis $\\frac{F_{n+1}}{F_n}$ bus labai artimas $\\phi$."
         },
         {
-          "type": "method",
-          "text": "Aukso pjūvio seką sudaro laipsniai: $\\phi, \\phi^2, \\phi^3, ...$, kur kiekvienas narys taip pat tenkina sąryšį $\\phi^n = \\phi^{n-1} + \\phi^{n-2}$."
+          "type": "list",
+          "items": [
+            "$\\frac{1}{1} = 1$",
+            "$\\frac{2}{1} = 2$",
+            "$\\frac{3}{2} = 1,5$",
+            "$\\frac{5}{3} \\approx 1,667$",
+            "$\\frac{8}{5} = 1,6$",
+            "$\\frac{13}{8} = 1,625$",
+            "$\\frac{21}{13} \\approx 1,615$"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuo toliau einame seka, tuo šis santykis tampa tikslesnis. Matematikoje tai užrašoma kaip riba: $\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi$."
+        },
+        {
+          "type": "note",
+          "text": "Yra net tiesioginė formulė $n$-tajam Fibonačio nariui rasti be ankstesnių narių, vadinama Binet formule: $F_n = \\frac{\\phi^n - (1-\\phi)^n}{\\sqrt{5}}$."
         }
       ]
     },
     {
-      "id": "proporcingoji-dalyba",
-      "title": "Proporcingoji dalyba",
+      "id": "aukso-staciakampis-ir-spirale",
+      "title": "Aukso stačiakampis ir Aukso spiralė",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dažnai uždaviniuose reikia padalinti skaičių ar dydį į dalis, kurios būtų proporcingos tam tikriems skaičiams."
+          "text": "Aukso stačiakampis yra toks stačiakampis, kurio kraštinių santykis lygus $\\phi$. Manoma, kad tai yra estetiškai maloniausia akiai proporcija, todėl ji dažnai naudojama architektūroje (Partenonas) ir dizaine (banko kortelės)."
         },
         {
-          "type": "definition",
-          "conceptId": "proporcingoji-dalyba",
-          "text": "Dydžio padalijimas į dalis pagal santykį $a:b:c$."
+          "type": "method",
+          "text": "Jei iš aukso stačiakampio atpjausime kvadratą, likusi dalis vėl bus aukso stačiakampis. Kartojant šį procesą begalę kartų ir brėžiant apskritimo lankus kiekviename kvadrate, gaunama **aukso spiralė** (arba logaritminė spiralė)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši spiralė labai dažnai sutinkama gamtoje: nautilo kriauklėse, saulėgrąžų žiedynuose, galaktikų vijose ir net uraganų formose. Fibonačio skaičiai taip pat pasireiškia augalų lapų išsidėstyme (filotaksė) – tai padeda augalui gauti maksimalų kiekį saulės šviesos ir lietaus."
+        }
+      ]
+    },
+    {
+      "id": "proporcingoji-dalyba-detaliai",
+      "title": "Proporcingoji dalyba ir Aukso pjūvis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proporcingoji dalyba – tai skaičiaus ar dydžio padalijimas į dalis, kurios būtų proporcingos nurodytiems skaičiams. Tai bazinis matematikos įrankis, taikomas versle (pelno dalybos), chemijoje (mišinių sudėtis) ir mene."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami padalinti skaičių $S$ santykiu $x:y$: \n1. Sudėkite santykio dalis: $x + y = N$ (iš viso dalių). \n2. Raskite vienos dalies vertę: $V = S / N$. \n3. Padauginkite dalis iš vienos dalies vertės: $A = x \\cdot V, B = y \\cdot V$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aukso pjūvis yra specifinis proporcingosios dalybos atvejis, kai dalijame santykiu $\\phi:1$ arba apytiksliai $1,618:1$."
+        }
+      ]
+    },
+    {
+      "id": "fibonacio-gamtoje",
+      "title": "Dėsningumai aplink mus",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dėsningumai yra matematikos kalba, kuria aprašoma visata. Fibonačio seka nėra tik sausi skaičiai vadovėlyje. Pavyzdžiui, daugelis gėlių turi būtent Fibonačio skaičiaus žiedlapių kiekį: lelijos (3), vėdrynai (5), pentiniai (8), medetkos (13), astrai (21), ramunės (34, 55, 89)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kankorėžių ir ananasų žvynelių eilės taip pat sudaro sraigtines linijas, kurių skaičiai visada yra Fibonačio skaičiai. Kodėl gamta naudoja šiuos skaičius? Atsakymas slypi efektyvume – šios proporcijos leidžia objektams augti išlaikant tą pačią formą ir optimaliai užpildant erdvę."
+        }
+      ]
+    },
+    {
+      "id": "klaidos-ir-patarimai",
+      "title": "Dažnos klaidos ir patarimai",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Nepamirškite, kad $\\phi$ yra iracionalusis skaičius. Skaičiavimuose naudojant $1,62$ vietoj $1,618$ klaida gali sukaupti nemažą paklaidą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pagrindinės klaidos sprendžiant uždavinius:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fibonačio sekos nariai pradedami ne nuo tų skaičių (visada pasitikrinkite sąlygą).",
+            "Aukso pjūvio formulėje sumaišoma ilgesnioji ir trumpesnioji dalis.",
+            "Proporcingoje dalyboje pamirštama sudėti santykio dalis ir dalijama iš kiekvienos atskirai."
+          ]
         }
       ]
     }
@@ -143,7 +255,8 @@
       ],
       "relatedConceptIds": [
         "rekurentine-formule",
-        "aukso-pjuvis"
+        "aukso-pjuvis",
+        "binet-formule"
       ],
       "prerequisiteConceptIds": [
         "skaiciu-sekos-9"
@@ -164,7 +277,8 @@
       ],
       "relatedConceptIds": [
         "aukso-pjuvio-skaicius",
-        "fibonacio-seka"
+        "fibonacio-seka",
+        "aukso-staciakampis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
@@ -192,81 +306,32 @@
       "defaultSrs": true
     },
     {
-      "id": "proporcingoji-dalyba",
-      "title": "Proporcingoji dalyba",
-      "type": "method",
-      "shortDefinition": "Dydžio skirstymas dalimis, kurios proporcingos nurodytiems skaičiams.",
-      "intuition": "Jei daliname santykiu 2:3, tai viena dalis gaus 2 'porcijas', kita 3.",
+      "id": "binet-formule",
+      "title": "Binet formulė",
+      "type": "formula",
+      "shortDefinition": "Formulė n-tajam Fibonačio nariui rasti tiesiogiai per $\\phi$.",
+      "latex": "F_n = \\frac{\\phi^n - (1-\\phi)^n}{\\sqrt{5}}",
       "relatedConceptIds": [
+        "fibonacio-seka",
         "aukso-pjuvis"
       ],
-      "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
         "desningumai-fibonacio-seka-ir-aukso-pjuvis"
-      ],
-      "defaultSrs": true
+      ]
     },
     {
-      "id": "rekurentine-formule",
-      "title": "Rekurentinė formulė",
-      "type": "notation",
-      "shortDefinition": "Taisyklė, apibrėžianti sekos narį per prieš jį einančius narius.",
-      "intuition": "Žingsnis po žingsnio taisyklė.",
-      "relatedConceptIds": [
-        "fibonacio-seka"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sekos-desningumas",
-      "title": "Sekos dėsningumas",
+      "id": "aukso-staciakampis",
+      "title": "Aukso stačiakampis",
       "type": "concept",
-      "shortDefinition": "Taisyklė, pagal kurią sudaromi sekos nariai.",
-      "intuition": "Logika, jungianti skaičius į eilę.",
-      "relatedConceptIds": [
-        "fibonacio-seka"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aukso-pjuvio-seka",
-      "title": "Aukso pjūvio seka",
-      "type": "concept",
-      "shortDefinition": "Seka, sudaryta iš aukso pjūvio skaičiaus $\\phi$ laipsnių.",
-      "intuition": "Seka $\\phi^1, \\phi^2, \\phi^3, ...$, kurios nariai turi panašias savybes kaip Fibonačio seka.",
-      "formal": "$a_n = \\phi^n$.",
+      "shortDefinition": "Stačiakampis, kurio kraštinių santykis yra $\\phi$.",
+      "intuition": "Stačiakampis, kuris išlaiko savo proporcijas atpjovus kvadratą.",
       "relatedConceptIds": [
         "aukso-pjuvis",
-        "fibonacio-seka"
+        "aukso-spirale"
       ],
-      "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
         "desningumai-fibonacio-seka-ir-aukso-pjuvis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "skaiciaus-skaidymas-proporcingai",
-      "title": "Skaičiaus skaidymas proporcingai",
-      "type": "method",
-      "shortDefinition": "Skaičiaus padalinimas į dalis pagal nurodytą santykį.",
-      "intuition": "Sudedame dalis, randame vienos dalies vertę.",
-      "relatedConceptIds": [
-        "proporcingoji-dalyba"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "desningumai-fibonacio-seka-ir-aukso-pjuvis"
-      ],
-      "defaultSrs": true
+      ]
     }
   ],
   "formulas": [
@@ -472,6 +537,98 @@
         }
       ],
       "answer": "Įrodyta"
+    },
+    {
+      "id": "fibonacio-suma-example",
+      "title": "Fibonačio narių suma",
+      "level": "medium",
+      "problem": "Apskaičiuokite pirmųjų 8 Fibonačio sekos narių sumą nenaudodami tiesioginio sudėjimo, žinodami, kad $F_{10} = 55$.",
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame sumos savybę: $F_1 + F_2 + ... + F_n = F_{n+2} - 1$."
+        },
+        {
+          "text": "Mūsų atveju $n=8$, todėl suma lygi $F_{8+2} - 1 = F_{10} - 1$."
+        },
+        {
+          "text": "Įstatome žinomą reikšmę.",
+          "latex": "55 - 1 = 54"
+        }
+      ],
+      "answer": "54"
+    },
+    {
+      "id": "aukso-staciakampis-example",
+      "title": "Aukso stačiakampio kraštinė",
+      "level": "medium",
+      "problem": "Aukso stačiakampio ilgesnioji kraštinė yra 12 cm. Raskite trumpesnę kraštinę ir stačiakampio plotą.",
+      "conceptIds": [
+        "aukso-staciakampis"
+      ],
+      "steps": [
+        {
+          "text": "Kraštinių santykis yra $\\phi \\approx 1,618$. Trumpesnė kraštinė $b = a / \\phi$.",
+          "latex": "b = 12 / 1,618 \\approx 7,416 \\text{ cm}"
+        },
+        {
+          "text": "Apskaičiuojame plotą $S = a \\cdot b$.",
+          "latex": "S = 12 \\cdot 7,416 \\approx 88,99 \\text{ cm}^2"
+        }
+      ],
+      "answer": "7,42 cm; 89 cm^2"
+    },
+    {
+      "id": "misri-proporcija-example",
+      "title": "Trisluoksnė proporcingoji dalyba",
+      "level": "hard",
+      "problem": "Padalinkite skaičių 180 į tris dalis, kurios būtų proporcingos pirmiesiems trims Fibonačio skaičiams: 1, 1 ir 2.",
+      "conceptIds": [
+        "proporcingoji-dalyba"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendrą dalių skaičių.",
+          "latex": "1 + 1 + 2 = 4"
+        },
+        {
+          "text": "Randame vienos dalies vertę.",
+          "latex": "180 / 4 = 45"
+        },
+        {
+          "text": "Randame visas tris dalis.",
+          "latex": "1 \\cdot 45 = 45, \\quad 1 \\cdot 45 = 45, \\quad 2 \\cdot 45 = 90"
+        }
+      ],
+      "answer": "45, 45 ir 90"
+    },
+    {
+      "id": "fibonacio-kvadratai-example",
+      "title": "Kvadratų sumos savybė",
+      "level": "hard",
+      "problem": "Patikrinkite savybę $F_1^2 + F_2^2 + F_3^2 + F_4^2 = F_4 \\cdot F_5$.",
+      "conceptIds": [
+        "fibonacio-seka"
+      ],
+      "steps": [
+        {
+          "text": "Randame pirmuosius penkis narius: 1, 1, 2, 3, 5."
+        },
+        {
+          "text": "Apskaičiuojame kairę pusę.",
+          "latex": "1^2 + 1^2 + 2^2 + 3^2 = 1 + 1 + 4 + 9 = 15"
+        },
+        {
+          "text": "Apskaičiuojame dešinę pusę.",
+          "latex": "F_4 \\cdot F_5 = 3 \\cdot 5 = 15"
+        },
+        {
+          "text": "Kairė pusė lygi dešinei."
+        }
+      ],
+      "answer": "Savybė pasitvirtino (15 = 15)"
     }
   ],
   "exercises": [
@@ -479,7 +636,7 @@
       "id": "fibonacio-ex-001",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Tęskite Fibonačio seką: 1, 1, 2, 3, 5, 8, ... Koks kitas narys?",
       "answer": {
@@ -515,7 +672,7 @@
       "id": "fibonacio-ex-002",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Kokia yra Fibonačio sekos narių 8 ir 13 suma?",
       "answer": {
@@ -545,7 +702,7 @@
       "id": "fibonacio-ex-003",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "multipleChoice",
       "statement": "Kuris iš šių skaičių NĖRA Fibonačio sekos narys (pradedant 1, 1)?",
       "answer": {
@@ -594,7 +751,7 @@
       "id": "fibonacio-ex-004",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Padalinkite 100 į dvi dalis santykiu 1:4. Kokia yra mažesnioji dalis?",
       "answer": {
@@ -633,7 +790,7 @@
       "id": "fibonacio-ex-005",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Padalinkite 50 į dvi dalis santykiu 2:3. Kokia yra didesnioji dalis?",
       "answer": {
@@ -669,7 +826,7 @@
       "id": "fibonacio-ex-006",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Fibonačio seka: 1, 1, 2, 3, 5, 8, 13, 21. Koks yra 9-asis narys?",
       "answer": {
@@ -699,7 +856,7 @@
       "id": "fibonacio-ex-007",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Raskite x, jei skaičiai x, 15, 24 yra iš eilės einantys Fibonačio sekos nariai.",
       "answer": {
@@ -729,7 +886,7 @@
       "id": "fibonacio-ex-008",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Aukso pjūvio skaičius $\\phi$ yra apytiksliai 1,618. Kokia yra $\\phi^2$ apytikslė reikšmė (suapvalinkite iki tūkstantųjų)?",
       "answer": {
@@ -757,7 +914,7 @@
       "id": "fibonacio-ex-009",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "multipleChoice",
       "statement": "Jei atkarpa padalinta aukso pjūviu, koks yra visos atkarpos ir ilgesnės dalies santykis?",
       "answer": {
@@ -806,7 +963,7 @@
       "id": "fibonacio-ex-010",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Skaičių 120 padalinkite į tris dalis santykiu 1:2:3. Kokia yra didžiausia dalis?",
       "answer": {
@@ -842,7 +999,7 @@
       "id": "fibonacio-ex-011",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kokia yra Fibonačio sekos narių $F_1 + F_2 + F_3 + F_4 + F_5$ suma?",
       "answer": {
@@ -872,7 +1029,7 @@
       "id": "fibonacio-ex-012",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Stačiakampio kraštinės santykis yra aukso pjūvis. Jei trumpesnė kraštinė yra 5 cm, kokia yra ilgesnė kraštinė (naudokite $\\phi=1,618$)?",
       "answer": {
@@ -902,7 +1059,7 @@
       "id": "fibonacio-ex-013",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Raskite Fibonačio sekos narių skirtumą $F_{10} - F_8$.",
       "answer": {
@@ -942,7 +1099,7 @@
       "id": "fibonacio-ex-014",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Kiek yra Fibonačio sekos narių tarp 10 ir 100?",
       "answer": {
@@ -972,7 +1129,7 @@
       "id": "fibonacio-ex-015",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "medium",
+      "level": "Vidutiniai",
       "type": "numericInput",
       "statement": "Padalinkite 210 santykiu 3:4:7. Kokia yra vidurinioji dalis (atitinkanti 4)?",
       "answer": {
@@ -1003,7 +1160,7 @@
       "id": "fibonacio-ex-016",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Apskaičiuokite $F_{12}$, jei $F_{10}=55$ ir $F_{11}=89$.",
       "answer": {
@@ -1033,7 +1190,7 @@
       "id": "fibonacio-ex-017",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "multipleChoice",
       "statement": "Kokia yra tiksli $\\frac{1}{\\phi}$ reikšmė?",
       "answer": {
@@ -1080,7 +1237,7 @@
       "id": "fibonacio-ex-018",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Raskite Fibonačio sekos narį $F_n$, jei $F_{n-2}=144$ ir $F_n=377$. Koks yra $F_{n-1}$?",
       "answer": {
@@ -1110,7 +1267,7 @@
       "id": "fibonacio-ex-019",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Aukso pjūvio sekoje $a_n = \\phi^n$. Kokia yra reikšmė $\\phi^4 - \\phi^3$?",
       "answer": {
@@ -1142,7 +1299,7 @@
       "id": "fibonacio-ex-020",
       "topicId": "desningumai-fibonacio-seka-ir-aukso-pjuvis",
       "grade": 10,
-      "level": "hard",
+      "level": "Sunkūs",
       "type": "numericInput",
       "statement": "Seka prasideda $x, y, x+y, ...$ Jei 4-asis narys yra 7, o 5-asis 11, raskite $x$.",
       "answer": {

@@ -69,84 +69,144 @@
   },
   "theory": [
     {
-      "id": "sveikieji-racionalieji-skaiciai-ivadas",
-      "title": "Įvadas",
+      "id": "sveikieji-racionalieji-skaiciai-neigiami",
+      "title": "Pasaulis žemiau nulio: neigiami skaičiai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sveikieji ir racionalieji skaičiai yra tema, kurioje mokomasi atpažinti pagrindinius neigiami ir racionalieji skaičiai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[skaicius|Skaičius]], [[naturalieji-skaiciai|Natūralieji skaičiai]], [[sveikieji-skaiciai|Sveikieji skaičiai]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "skaicius",
-          "text": "Skaičius aprašo kiekybę ar tvarką neigiami ir racionalieji skaičiai uždaviniuose."
-        },
-        {
-          "type": "definition",
-          "conceptId": "naturalieji-skaiciai",
-          "text": "Skaičiai, kuriais skaičiuojame objektus ir tvarką."
+          "text": "Iki šiol matematikoje nulis atrodė kaip pati mažiausia riba. Tačiau realybėje dažnai susiduriame su dydžiais, kurie yra dar mažesni už nulį. Pagalvokite apie oro temperatūrą žiemą ($-10^{\\circ}C$), skolas bankui arba pastato rūsio aukštus ($-1$ aukštas). Šiems dydžiams aprašyti naudojame neigiamus skaičius."
         },
         {
           "type": "definition",
           "conceptId": "sveikieji-skaiciai",
-          "text": "Natūralieji skaičiai, jų priešingieji ir nulis."
+          "text": "Sveikieji skaičiai – tai natūralieji skaičiai ($1, 2, 3 \\dots$), jiems priešingi neigiami skaičiai ($-1, -2, -3 \\dots$) ir nulis ($0$)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[skaicius|Skaičius]] ir [[racionalieji-skaiciai|Racionalieji skaičiai]]."
+          "text": "Skaičių tiesėje neigiami skaičiai rašomi į kairę nuo nulio. Kuo skaičius toliau į kairę, tuo jis yra mažesnis."
         }
       ]
     },
     {
-      "id": "sveikieji-racionalieji-skaiciai-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Sveikieji ir racionalieji skaičiai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[sveikieji-skaiciai|Sveikieji skaičiai]] ar [[racionalieji-skaiciai|Racionalieji skaičiai]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "procento-formule",
-          "latex": "x\\% = \\frac{x}{100}"
-        }
-      ]
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "sveikieji-racionalieji-skaiciai-modulis",
+      "title": "Modulis: koks atstumas iki nulio?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kartais mums nesvarbu, ar skaičius teigiamas, ar neigiamas – mums rūpi tik jo „dydis“ arba atstumas nuo nulio. Pavyzdžiui, jei nuėjote 5 žingsnius į priekį arba 5 žingsnius atgal, abiem atvejais nuėjote tą patį atstumą."
+        },
+        {
+          "type": "definition",
+          "text": "Skaičiaus modulis – tai atstumas nuo skaičių tiesės pradžios taško (nulio) iki taško, atitinkančio tą skaičių. Modulis žymimas dviem brūkšneliais: $|x|$."
+        },
+        {
+          "type": "property",
+          "text": "Skaičiaus modulis niekada negali būti neigiamas! \n- $|5| = 5$\n- $|-5| = 5$\n- $|0| = 0$"
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-palyginimas",
+      "title": "Skaičių palyginimas",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Lyginant skaičius, galioja šios taisyklės:\n1. Bet kuris teigiamas skaičius yra didesnis už nulį ir už bet kurį neigiamą skaičių.\n2. Nulis yra didesnis už bet kurį neigiamą skaičių.\n3. Iš dviejų neigiamų skaičių didesnis yra tas, kurio modulis MAŽESNIS (kuris yra arčiau nulio)."
+        },
+        {
+          "type": "example",
+          "text": "Palyginkime $-10$ ir $-2$. Nors skaičius 10 didesnis už 2, tačiau temperatūra $-2^{\\circ}C$ yra šiltesnė (aukštesnė) už $-10^{\\circ}C$. Todėl $-2 > -10$."
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-sudetis-atimtis",
+      "title": "Sudėtis ir atimtis su neigiamais skaičiais",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sudėtį ir atimtį patogiausia įsivaizduoti kaip judėjimą skaičių tiese arba kaip pinigų ir skolų valdymą."
+        },
+        {
+          "type": "method",
+          "text": "Taisyklės:\n1. **Sudėdami du neigiamus skaičius**, sudėkite jų modulius ir priekyje parašykite minusą: $-3 + (-2) = -5$.\n2. **Sudėdami skirtingų ženklų skaičius**, iš didesnio modulio atimkite mažesnį ir parašykite to skaičiaus ženklą, kurio modulis buvo didesnis: $-7 + 10 = 3$; $5 + (-8) = -3$.\n3. **Atimti skaičių** reiškia pridėti jam priešingą skaičių: $5 - (-3) = 5 + 3 = 8$."
+        },
+        {
+          "type": "warning",
+          "text": "Du minusai šalia vienas kito pavirsta pliusu! $a - (-b) = a + b$."
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-daugyba-dalyba",
+      "title": "Daugyba ir dalyba: ženklų taisyklės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugyboje ir dalyboje galioja labai paprasta „draugų ir priešų“ taisyklė."
+        },
+        {
+          "type": "property",
+          "text": "- $(+) \\cdot (+) = (+)$ (Pliusas iš pliuso bus pliusas)\n- $(-) \\cdot (-) = (+)$ (Minusis iš minuso bus pliusas)\n- $(+) \\cdot (-) = (-)$ (Pliusas iš minuso bus minusas)\n- $(-) \\cdot (+) = (-)$ (Minusis iš pliuso bus minusas)"
+        },
+        {
+          "type": "note",
+          "text": "Trumpai tariant: jei ženklai vienodi – gauname pliusą, jei ženklai skirtingi – gauname minusą."
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-racionalieji",
+      "title": "Racionalieji skaičiai",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "racionalieji-skaiciai",
+          "text": "Racionalusis skaičius – tai bet koks skaičius, kurį galima užrašyti paprastąja trupmena $\\frac{m}, {n}$ (čia $m$ – sveikasis skaičius, $n$ – natūralusis)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Racionalieji skaičiai apima ne tik sveikuosius skaičius, bet ir visas teigiamas bei neigiamas trupmenas ir dešimtainius skaičius. Pavyzdžiui: $0,5$, $-\\frac{3}, {4}$, $2\\frac{1}, {3}$, $-10$."
+        },
+        {
+          "type": "method",
+          "text": "Skaičiuodami su racionaliaisiais skaičiais, taikome tas pačias ženklų taisykles kaip ir sveikiesiems skaičiams, tačiau nepamirštame bendravardiklinimo taisyklių trupmenoms."
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-apvalinimas",
+      "title": "Apvalinimas ir įvertinimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kasdienybėje mums ne visada reikia tikslių skaičių. Dažnai pakanka pasakyti „apie 50“ arba „beveik 2 eurai“. Tam naudojame [[apvalinimas|apvalinimą]]."
+        },
+        {
+          "type": "method",
+          "text": "Apvalinimo taisyklė:\n1. Pažiūrėkite į skaitmenį, esantį už apvalinimo skyriaus.\n2. Jei tas skaitmuo yra **0, 1, 2, 3 arba 4**, apvalinimo skyriaus skaitmens nekeiskite.\n3. Jei tas skaitmuo yra **5, 6, 7, 8 arba 9**, apvalinimo skyriaus skaitmenį padidinkite vienetu."
+        },
+        {
+          "type": "example",
+          "text": "Suapvalinkime iki dešimtųjų:\n- $12,43 \\approx 12,4$ (nes 3 yra mažiau už 5)\n- $12,47 \\approx 12,5$ (nes 7 yra daugiau už 5)"
+        }
+      ]
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-klaidos",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Painiojamas neigiamų skaičių didumas. Prisiminkite: $-100$ yra DAUG MAŽIAU už $-1$."
+        },
+        {
+          "type": "warning",
+          "text": "Klaidos su moduliais: $|-5| + |-3|$ NĖRA $|-8|$. Skaičiuojame atskirai: $5 + 3 = 8$."
+        },
+        {
+          "type": "warning",
+          "text": "Daugybos ženklai: nepamirškite, kad dauginant neigiamą skaičių iš teigiamo, rezultatas VISADA bus neigiamas."
         }
       ]
     }
@@ -175,7 +235,7 @@
       "type": "concept",
       "shortDefinition": "Skaičiai, kuriais skaičiuojame objektus ir tvarką.",
       "intuition": "Tai pirmas sluoksnis neigiami ir racionalieji skaičiai temose.",
-      "formal": "Natūralieji skaičiai yra 0, 1, 2, 3, ...",
+      "formal": "Natūralieji skaičiai yra $1, 2, 3, \\dots$ (kartais priskiriamas ir 0).",
       "notation": [
         "N"
       ],
@@ -195,7 +255,7 @@
       "title": "Sveikieji skaičiai",
       "type": "concept",
       "shortDefinition": "Natūralieji skaičiai, jų priešingieji ir nulis.",
-      "intuition": "Tai leidžia skaičiuoti ir į minusinę pusę.",
+      "intuition": "Tai leidžia skaičiuoti ir į minusinę pusę, pavyzdžiui, skolas.",
       "formal": "Sveikųjų skaičių aibė žymima Z.",
       "notation": [
         "Z"
@@ -422,7 +482,7 @@
       "id": "procento-formule",
       "title": "Procento formulė",
       "type": "formula",
-      "latex": "x\\% = \\frac{x}{100}",
+      "latex": "x\\% = \\frac{x}, {100}",
       "conditions": [
         "Skaičiuojant procentus"
       ],
@@ -440,7 +500,7 @@
       "id": "santykio-formule",
       "title": "Santykio užrašas",
       "type": "formula",
-      "latex": "a:b = \\frac{a}{b}",
+      "latex": "a:b = \\frac{a}, {b}",
       "conditions": [
         "Lyginant dydžius"
       ],
@@ -509,1203 +569,160 @@
   "workedExamples": [
     {
       "id": "sveikieji-racionalieji-skaiciai-exmp-1",
-      "title": "Skaičiaus įvertinimas",
+      "title": "Sveikųjų skaičių sudėtis",
       "level": "easy",
-      "problem": "Sveikieji ir racionalieji skaičiai: rask 15 % nuo 80.",
+      "problem": "Apskaičiuokite: $-5 + 8$.",
       "conceptIds": [
-        "procentas",
-        "santykis"
+        "sveikieji-skaiciai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "15 % reiškia 15/100.",
-          "latex": "80 \\cdot \\frac{15}{100}"
+          "text": "Kadangi ženklai skirtingi, iš didesnio modulio atimame mažesnį.",
+          "latex": "|8| - |-5| = 8 - 5 = 3"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "12"
+          "text": "Paliekame skaičiaus 8 ženklą (pliusą).",
+          "latex": "3"
         }
       ],
-      "answer": "12"
+      "answer": "3"
     },
     {
       "id": "sveikieji-racionalieji-skaiciai-exmp-2",
-      "title": "Santykio supaprastinimas",
+      "title": "Neigiamų skaičių atimtis",
       "level": "easy",
-      "problem": "Supaprastink santykį 18:24.",
+      "problem": "Apskaičiuokite: $-3 - 4$.",
       "conceptIds": [
-        "santykis",
-        "proporcija"
+        "sveikieji-skaiciai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Padalijame abu narius iš 6.",
-          "latex": "18:24 = 3:4"
+          "text": "Abu skaičiai yra neigiami, todėl juos sudedame ir rašome minusą.",
+          "latex": "-(3 + 4) = -7"
         }
       ],
-      "answer": "3:4"
+      "answer": "-7"
     },
     {
       "id": "sveikieji-racionalieji-skaiciai-exmp-3",
-      "title": "Trupmena į procentus",
+      "title": "Atimtis su dviem minusais",
       "level": "medium",
-      "problem": "Paversk 3/4 procentais.",
+      "problem": "Apskaičiuokite: $10 - (-6)$.",
       "conceptIds": [
-        "trupmena",
-        "procentas"
+        "sveikieji-skaiciai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Padaliname skaitiklį iš vardiklio.",
-          "latex": "\\frac{3}{4}=0.75"
-        },
-        {
-          "text": "Padauginame iš 100 %.",
-          "latex": "0.75=75\\%"
+          "text": "Du minusai šalia pavirsta pliusu.",
+          "latex": "10 + 6 = 16"
         }
       ],
-      "answer": "75%"
+      "answer": "16"
     },
     {
       "id": "sveikieji-racionalieji-skaiciai-exmp-4",
-      "title": "Daliklių paieška",
+      "title": "Daugybos ženklų taisyklė",
       "level": "medium",
-      "problem": "Išvardyk 12 daliklius.",
+      "problem": "Apskaičiuokite: $(-4) \\cdot (-7)$.",
       "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
+        "sveikieji-skaiciai"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Ieškome porų, kurių sandauga 12.",
-          "latex": "1\\cdot12, 2\\cdot6, 3\\cdot4"
-        },
-        {
-          "text": "Parašome daliklius.",
-          "latex": "1, 2, 3, 4, 6, 12"
+          "text": "Minusis padaugintas iš minuso duoda pliusą.",
+          "latex": "4 \\cdot 7 = 28"
         }
       ],
-      "answer": "1, 2, 3, 4, 6, 12"
+      "answer": "28"
     },
     {
       "id": "sveikieji-racionalieji-skaiciai-exmp-5",
-      "title": "Apvalinimas",
+      "title": "Skaičių moduliai",
+      "level": "easy",
+      "problem": "Apskaičiuokite reikšmę: $|-12| - |7|$.",
+      "conceptIds": [
+        "sveikieji-skaiciai"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Randame skaičių modulius.",
+          "latex": "|-12| = 12; |7| = 7"
+        },
+        {
+          "text": "Atimame gautas reikšmes.",
+          "latex": "12 - 7 = 5"
+        }
+      ],
+      "answer": "5"
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-exmp-6",
+      "title": "Racionaliųjų skaičių daugyba",
+      "level": "medium",
+      "problem": "Apskaičiuokite: $-0,5 \\cdot 4$.",
+      "conceptIds": [
+        "racionalieji-skaiciai"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Dauginame neigiamą skaičių iš teigiamo (rezultatas neigiamas).",
+          "latex": "-(0,5 \\cdot 4) = -2"
+        }
+      ],
+      "answer": "-2"
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-exmp-7",
+      "title": "Trupmenų sudėtis",
       "level": "hard",
-      "problem": "Suapvalink 19.86 iki vienetų.",
+      "problem": "Apskaičiuokite: $-\\frac{1}, {2} + \\frac{1}, {4}$.",
+      "conceptIds": [
+        "trupmena"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Suvienodiname vardiklius.",
+          "latex": "-\\frac{2}, {4} + \\frac{1}, {4}"
+        },
+        {
+          "text": "Sudedame (iš didesnio modulio atimame mažesnį).",
+          "latex": "-(\\frac{2}, {4} - \\frac{1}, {4}) = -\\frac{1}, {4}"
+        }
+      ],
+      "answer": "-1/4"
+    },
+    {
+      "id": "sveikieji-racionalieji-skaiciai-exmp-8",
+      "title": "Apvalinimas iki šimtųjų",
+      "level": "medium",
+      "problem": "Suapvalinkite skaičių 15,678 iki šimtųjų dalių.",
       "conceptIds": [
         "apvalinimas"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Žiūrime į dešimtąsias.",
-          "latex": "19.86"
+          "text": "Šimtųjų skyriuje yra skaitmuo 7.",
+          "latex": ""
         },
         {
-          "text": "Kadangi 0.86 >= 0.5, keliame į viršų.",
-          "latex": "20"
+          "text": "Už jo eina skaitmuo 8 (daugiau už 5), todėl 7 didiname vienetu.",
+          "latex": "15,68"
         }
       ],
-      "answer": "20"
+      "answer": "15,68"
     }
   ],
   "exercises": [
     {
-      "id": "sveikieji-racionalieji-skaiciai-ex-001",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 12 ir 15?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a1",
-            "text": "12"
-          },
-          {
-            "id": "b1",
-            "text": "13"
-          },
-          {
-            "id": "c1",
-            "text": "16"
-          }
-        ],
-        "correctChoiceIds": [
-          "a1"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tikriname dalumą.",
-          "latex": "12 \\mid 12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-002",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 18 ir 24?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a2",
-            "text": "18"
-          },
-          {
-            "id": "b2",
-            "text": "19"
-          },
-          {
-            "id": "c2",
-            "text": "25"
-          }
-        ],
-        "correctChoiceIds": [
-          "a2"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tikriname dalumą.",
-          "latex": "18 \\mid 18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-003",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 36 ir 48?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a3",
-            "text": "36"
-          },
-          {
-            "id": "b3",
-            "text": "37"
-          },
-          {
-            "id": "c3",
-            "text": "49"
-          }
-        ],
-        "correctChoiceIds": [
-          "a3"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tikriname dalumą.",
-          "latex": "36 \\mid 36"
-        }
-      ],
-      "answerText": "36",
-      "alternateMethods": [],
-      "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-004",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 45 ir 60?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a4",
-            "text": "45"
-          },
-          {
-            "id": "b4",
-            "text": "46"
-          },
-          {
-            "id": "c4",
-            "text": "61"
-          }
-        ],
-        "correctChoiceIds": [
-          "a4"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tikriname dalumą.",
-          "latex": "45 \\mid 45"
-        }
-      ],
-      "answerText": "45",
-      "alternateMethods": [],
-      "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-005",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "multipleChoice",
-      "statement": "Kuris skaičius dalijasi iš 72 ir 90?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a5",
-            "text": "72"
-          },
-          {
-            "id": "b5",
-            "text": "73"
-          },
-          {
-            "id": "c5",
-            "text": "91"
-          }
-        ],
-        "correctChoiceIds": [
-          "a5"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į dalumo požymius.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "dalikliai",
-            "pirminis-skaicius"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Pabandyk padalyti be liekanos.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Tikriname dalumą.",
-          "latex": "72 \\mid 72"
-        }
-      ],
-      "answerText": "72",
-      "alternateMethods": [],
-      "conceptIds": [
-        "dalikliai",
-        "pirminis-skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-006",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 24 kartotinį, didesnį už 24.",
-      "answer": {
-        "kind": "numeric",
-        "value": 48,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "48"
-        }
-      ],
-      "answerText": "48",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-007",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 36 kartotinį, didesnį už 36.",
-      "answer": {
-        "kind": "numeric",
-        "value": 72,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "72"
-        }
-      ],
-      "answerText": "72",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-008",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 48 kartotinį, didesnį už 48.",
-      "answer": {
-        "kind": "numeric",
-        "value": 96,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "96"
-        }
-      ],
-      "answerText": "96",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-009",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 60 kartotinį, didesnį už 60.",
-      "answer": {
-        "kind": "numeric",
-        "value": 120,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "120"
-        }
-      ],
-      "answerText": "120",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-010",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išvardyk vieną 72 kartotinį, didesnį už 72.",
-      "answer": {
-        "kind": "numeric",
-        "value": 144,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kartotinis yra n·k.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kartotiniai"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Paimk k=2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dauginame iš 2.",
-          "latex": "144"
-        }
-      ],
-      "answerText": "144",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kartotiniai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-011",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 1/2 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "50\\%",
-        "acceptedEquivalentForms": [
-          "50%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "1/2 = 50%"
-        }
-      ],
-      "answerText": "50%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-012",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 3/4 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "75\\%",
-        "acceptedEquivalentForms": [
-          "75%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "3/4 = 75%"
-        }
-      ],
-      "answerText": "75%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-013",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 2/5 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "40\\%",
-        "acceptedEquivalentForms": [
-          "40%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "2/5 = 40%"
-        }
-      ],
-      "answerText": "40%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-014",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 7/10 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "70\\%",
-        "acceptedEquivalentForms": [
-          "70%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "7/10 = 70%"
-        }
-      ],
-      "answerText": "70%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-015",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "expressionInput",
-      "statement": "Paversk trupmeną 9/20 procentais.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "45\\%",
-        "acceptedEquivalentForms": [
-          "45%"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalyk skaitiklį iš vardiklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "trupmena",
-            "procentas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Padaugink iš 100.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Dalijame ir dauginame iš 100.",
-          "latex": "9/20 = 45%"
-        }
-      ],
-      "answerText": "45%",
-      "alternateMethods": [],
-      "conceptIds": [
-        "trupmena",
-        "procentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-016",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 18:24. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "18:24 = 3:4"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-017",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 30:45. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 15.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "30:45 = 2:3"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-018",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 42:56. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 14.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "42:56 = 3:4"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-019",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 64:80. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 16.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "64:80 = 4:5"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-ex-020",
-      "topicId": "sveikieji-racionalieji-skaiciai",
-      "grade": 6,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Sutrumpink santykį 84:96. Užrašyk pirmąjį nario skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Padalink abu skaičius iš bendro daliklio.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "santykis",
-            "proporcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Didžiausias bendras daliklis yra 12.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Daliname iš BDK.",
-          "latex": "84:96 = 7:8"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "santykis",
-        "proporcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    }
-  ],
-  "tests": [
-    {
-      "id": "sveikieji-racionalieji-skaiciai-test-topic",
-      "title": "Sveikieji ir racionalieji skaičiai testas",
-      "scope": "topic",
-      "topicIds": [
-        "sveikieji-racionalieji-skaiciai"
-      ],
-      "exerciseIds": [
-        "sveikieji-racionalieji-skaiciai-ex-001",
-        "sveikieji-racionalieji-skaiciai-ex-002",
-        "sveikieji-racionalieji-skaiciai-ex-003",
-        "sveikieji-racionalieji-skaiciai-ex-004",
-        "sveikieji-racionalieji-skaiciai-ex-005",
-        "sveikieji-racionalieji-skaiciai-ex-006",
-        "sveikieji-racionalieji-skaiciai-ex-007",
-        "sveikieji-racionalieji-skaiciai-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-test-challenge",
-      "title": "Sveikieji ir racionalieji skaičiai iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "sveikieji-racionalieji-skaiciai"
-      ],
-      "exerciseIds": [
-        "sveikieji-racionalieji-skaiciai-ex-009",
-        "sveikieji-racionalieji-skaiciai-ex-010",
-        "sveikieji-racionalieji-skaiciai-ex-011",
-        "sveikieji-racionalieji-skaiciai-ex-012",
-        "sveikieji-racionalieji-skaiciai-ex-013",
-        "sveikieji-racionalieji-skaiciai-ex-014",
-        "sveikieji-racionalieji-skaiciai-ex-015",
-        "sveikieji-racionalieji-skaiciai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-skaicius",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra skaičius?",
-      "back": "Skaičius aprašo kiekybę ar tvarką neigiami ir racionalieji skaičiai uždaviniuose.",
-      "conceptIds": [
-        "skaicius"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-naturalieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra natūralieji skaičiai?",
-      "back": "Skaičiai, kuriais skaičiuojame objektus ir tvarką.",
-      "conceptIds": [
-        "naturalieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-sveikieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra sveikieji skaičiai?",
-      "back": "Natūralieji skaičiai, jų priešingieji ir nulis.",
-      "conceptIds": [
-        "sveikieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-racionalieji-skaiciai",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra racionalieji skaičiai?",
-      "back": "Skaičiai, užrašomi trupmena p/q.",
-      "conceptIds": [
-        "racionalieji-skaiciai"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-procento-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra procento formulė?",
-      "back": "Padeda iš procentų pereiti į trupmeną.",
-      "conceptIds": [
-        "procento-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-santykio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra santykio užrašas?",
-      "back": "Santykį galima užrašyti trupmena.",
-      "conceptIds": [
-        "santykio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "sveikieji-racionalieji-skaiciai-srs-painioja-procenta-su-daiktu",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra painioja procentą su kiekiu?",
-      "back": "15 % = 0.15 arba 15/100.",
-      "conceptIds": [
-        "painioja-procenta-su-daiktu"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
+      "id": "sveikieji-racionalieji-skaiciai-ex-001"},
     {
       "id": "sveikieji-racionalieji-skaiciai-srs-santykiu-nesupratimas",
       "deck": "practice",
@@ -1713,7 +730,7 @@
       "front": "Kas yra santykį supainioja su skirtumu?",
       "back": "Naudok dalybą arba trupmeną.",
       "conceptIds": [
-        "santykiu-nesupratimas"
+        "santykis"
       ],
       "formulaIds": [],
       "mistakeIds": [],

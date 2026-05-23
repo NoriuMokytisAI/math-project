@@ -1,5 +1,5 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "matematika_k12.pdf",
@@ -40,7 +40,8 @@
     ],
     "mistakeIds": [
       "painioja-aukstine-su-apotema",
-      "pamirsta-du-pagrindus-prizmeje"
+      "pamirsta-du-pagrindus-prizmeje",
+      "laipsnio-klaida-turyje"
     ],
     "exerciseIds": [
       "3d-ex-001",
@@ -67,96 +68,188 @@
   },
   "theory": [
     {
-      "id": "erdves-figuru-ivadas",
+      "id": "erdves-figuros-ivadas",
       "title": "Erdvės figūros ir tūrio samprata",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Erdvės figūros (kūnai) turi ne tik paviršiaus plotą, bet ir [[turis|tūrį]] – erdvės dalį, kurią jos užima. Tūris matuojamas kubiniais vienetais (cm³, m³)."
+          "text": "Geometrija neapsiriboja tik plokščiomis figūromis lape. Supančiame pasaulyje mus supa trimačiai kūnai, užimantys tam tikrą erdvę. Ši erdvės dalis vadinama kūno tūriu."
         },
+        {
+          "type": "definition",
+          "conceptId": "turis",
+          "text": "[[turis|Tūris]] – tai geometrinio kūno užimamos erdvės dalies dydis. Jis matuojamas kubiniais vienetais: $mm^3$, $cm^3$, $dm^3$ (litrais), $m^3$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kitas svarbus matmuo yra viso paviršiaus plotas. Įsivaizduokite, kiek popieriaus prireiktų norint kūną visiškai suvynioti arba kiek dažų prireiktų jį nudažyti iš visų pusių."
+        }
+      ]
+    },
+    {
+      "id": "staciosios-prizmes",
+      "title": "Prizmės: tūris ir paviršiaus plotas",
+      "blocks": [
         {
           "type": "definition",
           "conceptId": "stacioji-prizme",
-          "text": "[[stacioji-prizme|Stačioji prizmė]] – tai kūnas, kurio šoninės briaunos yra statmenos pagrindams. Jos tūris lygus pagrindo ploto ir aukštinės sandaugai."
+          "text": "[[stacioji-prizme|Stačioji prizmė]] – tai daugiasienis, kurio du pagrindai yra lygūs daugiakampiai, o šoninės sienos yra stačiakampiai, statmeni pagrindams."
         },
         {
           "type": "formula",
+          "title": "Prizmės tūrio formulė",
           "formulaId": "prizmes-turio-formule",
           "latex": "V = S_{\\text{pagr}} \\cdot H"
-        }
-      ]
-    },
-    {
-      "id": "piramides-teorija",
-      "title": "Taisyklingoji piramidė",
-      "blocks": [
+        },
         {
-          "type": "paragraph",
-          "text": "[[taisyklingoji-piramide|Taisyklingoji piramidė]] turi pagrindą (taisyklingąjį daugiakampį) ir viršūnę. Svarbu skirti piramidės [[aukstine|aukštinę]] H ir šoninės sienos aukštinę – [[apotema|apotemą]] h_a."
+          "type": "method",
+          "title": "Visas paviršiaus plotas",
+          "text": "Norėdami rasti visą prizmės plotą, turime sudėti šoninio paviršiaus plotą ir dviejų pagrindų plotus."
+        },
+        {
+          "type": "formula",
+          "latex": "S_{\\text{visas}} = S_{\\text{šon}} + 2 \\cdot S_{\\text{pagr}}"
         },
         {
           "type": "note",
-          "text": "Piramidės tūris yra tris kartus mažesnis už tokio pat pagrindo ir aukštinės prizmės tūrį."
+          "text": "Šoninis plotas $S_{\\text{šon}} = P_{\\text{pagr}} \\cdot H$, kur $P$ – pagrindo perimetras."
+        }
+      ]
+    },
+    {
+      "id": "taisyklingoji-piramide-teorija",
+      "title": "Piramidės: tūris ir apotema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Piramidė skiriasi nuo prizmės tuo, kad ji turi tik vieną pagrindą, o visos šoninės sienos susitinka viename taške – viršūnėje."
         },
         {
           "type": "formula",
+          "title": "Piramidės tūris",
           "formulaId": "piramides-turio-formule",
           "latex": "V = \\frac{1}{3} S_{\\text{pagr}} \\cdot H"
+        },
+        {
+          "type": "definition",
+          "conceptId": "apotema",
+          "text": "[[apotema|Apotema]] ($h_a$) – tai taisyklingosios piramidės šoninės sienos (trikampio) aukštinė, nuleista iš viršūnės į pagrindo kraštinę."
+        },
+        {
+          "type": "method",
+          "title": "Piramidės paviršiaus plotas",
+          "text": "Kadangi piramidė turi tik vieną pagrindą: $S_{\\text{visas}} = S_{\\text{šon}} + S_{\\text{pagr}}$. Čia taisyklingosios piramidės $S_{\\text{šon}} = \\frac{1}{2} P_{\\text{pagr}} \\cdot h_a$."
         }
       ]
     },
     {
-      "id": "ritinys-ir-kugis",
-      "title": "Ritinys ir kūgis",
+      "id": "ritinys-teorija",
+      "title": "Sukiniai: Ritinys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[ritinys|Ritinio]] pagrindas yra skritulys. [[kugis|Kūgio]] pagrindas taip pat skritulys, bet jis baigiasi viršūne."
+          "text": "Ritinys gaunamas sukant stačiakampį aplink vieną jo kraštinę. Jo pagrindai yra skrituliai."
         },
         {
           "type": "formula",
+          "title": "Ritinio tūris",
           "formulaId": "ritinio-turio-formule",
-          "latex": "V_{\\text{rit}} = \\pi r^2 H"
-        },
-        {
-          "type": "formula",
-          "formulaId": "kugio-turio-formule",
-          "latex": "V_{\\text{kūg}} = \\frac{1}{3} \\pi r^2 H"
+          "latex": "V = \\pi r^2 H"
         },
         {
           "type": "paragraph",
-          "text": "Kūgio šoninė atkarpa, jungianti viršūnę su apskritimo tašku, vadinama [[sudaromoji|sudaromąja]] (l)."
+          "text": "Ritinio paviršiaus plotas susideda iš ištiesto šono (kuris yra stačiakampis $2\\pi r \\times H$) ir dviejų skritulių."
+        },
+        {
+          "type": "formula",
+          "latex": "S_{\\text{visas}} = 2\\pi r H + 2\\pi r^2 = 2\\pi r(H + r)"
         }
       ]
     },
     {
-      "id": "sfera-ir-rutulys",
-      "title": "Sfera ir rutulys",
+      "id": "kugis-teorija",
+      "title": "Sukiniai: Kūgis",
       "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kūgis gaunamas sukant statųjį trikampį aplink jo statinį. Jis panašus į piramidę, bet jo pagrindas – skritulys."
+        },
+        {
+          "type": "formula",
+          "title": "Kūgio tūris",
+          "formulaId": "kugio-turio-formule",
+          "latex": "V = \\frac{1}{3} \\pi r^2 H"
+        },
+        {
+          "type": "definition",
+          "conceptId": "sudaromoji",
+          "text": "[[sudaromoji|Sudaromoji]] ($l$) – atkarpa, jungianti kūgio viršūnę su bet kuriuo pagrindo apskritimo tašku."
+        },
+        {
+          "type": "formula",
+          "title": "Kūgio šoninis plotas",
+          "latex": "S_{\\text{šon}} = \\pi r l"
+        }
+      ]
+    },
+    {
+      "id": "rutulys-ir-sfera-teorija",
+      "title": "Rutulys ir sfera",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rutulys yra visiškai apvali erdvės figūra. Svarbu skirti pačią figūrą nuo jos paviršiaus."
+        },
         {
           "type": "definition",
           "conceptId": "sfera",
-          "text": "[[sfera|Sfera]] yra rutulio paviršius (tarsi krepšinio kamuolio oda), o rutulys apima ir vidų."
+          "text": "[[sfera|Sfera]] – tai rutulio paviršius. Galima įsivaizduoti kaip tuščią muilo burbulą."
         },
         {
           "type": "formula",
-          "formulaId": "sferos-ploto-formule",
-          "latex": "S = 4\\pi r^2"
-        },
-        {
-          "type": "formula",
+          "title": "Rutulio tūris",
           "formulaId": "sferos-turio-formule",
           "latex": "V = \\frac{4}{3} \\pi r^3"
+        },
+        {
+          "type": "formula",
+          "title": "Sferos plotas",
+          "formulaId": "sferos-ploto-formule",
+          "latex": "S = 4\\pi r^2"
         }
       ]
     },
     {
-      "id": "pitagoro-taikymas-3d",
+      "id": "pitagoras-erdveje",
       "title": "Pitagoro teoremos taikymas erdvėje",
       "blocks": [
         {
           "type": "method",
-          "text": "Erdvės figūrose dažnai reikia rasti aukštinę arba sudaromąją naudojant Pitagoro teoremą. Pvz., kūgyje: r² + H² = l²."
+          "text": "Daugumoje erdvės uždavinių Pitagoro teorema yra pagrindinis įrankis rasti nežinomus matmenis."
+        },
+        {
+          "type": "paragraph",
+          "text": "1. **Kūgyje:** aukštinė $H$, spindulys $r$ ir sudaromoji $l$ sudaro statųjį trikampį: $H^2 + r^2 = l^2$.\n2. **Piramidėje:** aukštinė $H$, atstumas nuo centro iki kraštinės vidurio ir apotema $h_a$ sudaro statųjį trikampį.\n3. **Gretasienyje:** įstrižainė $d$ randama pagal formulę $d^2 = a^2 + b^2 + c^2$."
+        }
+      ]
+    },
+    {
+      "id": "erdves-figuru-klaidos",
+      "title": "Dažniausios klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "title": "Vienetų sumaišymas",
+          "text": "Visada patikrinkite, ar visi matmenys (r, H, a) yra tų pačių vienetų (pvz., visi cm arba visi m). Rezultatas tūriui visada bus kubinis ($^3$), o plotui – kvadratinis ($^2$)."
+        },
+        {
+          "type": "warning",
+          "title": "Du pagrindai vs Vienas pagrindas",
+          "text": "Dažnai mokiniai skaičiuodami prizmės plotą pamiršta padauginti pagrindą iš 2, arba skaičiuodami piramidę prideda antrą pagrindą, kurio nėra."
+        },
+        {
+          "type": "note",
+          "text": "Jei uždavinyje π reikšmė nenurodyta, atsakymą galima palikti su simboliu π (pvz., $25\\pi$)."
         }
       ]
     }
@@ -182,10 +275,10 @@
     },
     {
       "id": "taisyklingoji-piramide",
-      "title": "Taisyklingoji piramidė",
+      "title": "Taisyklingoji piramide",
       "type": "concept",
-      "shortDefinition": "Piramidė, kurios pagrindas – taisyklingasis daugiakampis, o viršūnė projektuojasi į jo centrą.",
-      "intuition": "Egipto piramidė.",
+      "shortDefinition": "Piramidė su taisyklinguoju pagrindu ir į jo centrą projektuojama viršūne.",
+      "intuition": "Garsiosios Egipto piramidės.",
       "formal": "Piramidė, kurios pagrindas yra taisyklingasis daugiakampis, o visos šoninės briaunos lygios.",
       "notation": [],
       "relatedConceptIds": [
@@ -199,146 +292,18 @@
       "defaultSrs": true
     },
     {
-      "id": "ritinys",
-      "title": "Ritinys",
-      "type": "concept",
-      "shortDefinition": "Kūnas, kurio pagrindai yra skrituliai.",
-      "intuition": "Konservų dėžutė ar klijų tūbelė.",
-      "formal": "Sukinys, gautas sukant stačiakampį aplink vieną jo kraštinę.",
-      "notation": [],
-      "relatedConceptIds": [
-        "turis",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [
-        "apskritimas-ir-skritulys"
-      ],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "kugis",
-      "title": "Kūgis",
-      "type": "concept",
-      "shortDefinition": "Kūnas, turintis skritulio formos pagrindą ir viršūnę.",
-      "intuition": "Ledų vafliukas ar eismo kūgis.",
-      "formal": "Sukinys, gautas sukant statųjį trikampį aplink vieną jo statinį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sudaromoji",
-        "aukstine"
-      ],
-      "prerequisiteConceptIds": [
-        "apskritimas-ir-skritulys"
-      ],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sfera",
-      "title": "Sfera",
-      "type": "concept",
-      "shortDefinition": "Visi erdvės taškai, nutolę nuo centro vienodu atstumu.",
-      "intuition": "Burbulo paviršius.",
-      "formal": "Paviršius, sudarytas iš visų erdvės taškų, nutolusių nuo taško O atstumu r.",
-      "notation": [],
-      "relatedConceptIds": [
-        "turis",
-        "spindulys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
       "id": "turis",
       "title": "Tūris",
       "type": "concept",
-      "shortDefinition": "Dydis, nusakantis kūno užimamą erdvę.",
-      "intuition": "Kiek vandens telpa viduje.",
-      "formal": "Erdvės dalies, kurią užima kūnas, skaitinė charakteristika.",
+      "shortDefinition": "Kūno užimamos erdvės kiekis.",
+      "intuition": "Kiek vandens telpa kūno viduje.",
+      "formal": "Skaitinė reikšmė, nusakanti trimačio objekto užimamą erdvę.",
       "notation": [
         "V"
       ],
       "relatedConceptIds": [
         "pavirsiaus-plotas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apotema",
-      "title": "Apotema",
-      "type": "concept",
-      "shortDefinition": "Taisyklingosios piramidės šoninės sienos aukštinė.",
-      "intuition": "Atstumas nuo viršūnės iki pagrindo kraštinės vidurio.",
-      "formal": "Taisyklingosios piramidės šoninės sienos (trikampio) aukštinė, nuleista iš viršūnės.",
-      "notation": [
-        "h_a"
-      ],
-      "relatedConceptIds": [
-        "taisyklingoji-piramide",
-        "aukstine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sudaromoji",
-      "title": "Sudaromoji",
-      "type": "concept",
-      "shortDefinition": "Atkarpa, jungianti kūgio viršūnę su pagrindo apskritimo tašku.",
-      "intuition": "Kūgio 'šonas'.",
-      "formal": "Atkarpa, kuri sukdamasi aplink ašį sudaro kūgio šoninį paviršių.",
-      "notation": [
-        "l"
-      ],
-      "relatedConceptIds": [
-        "kugis",
-        "aukstine"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pavirsiaus-plotas",
-      "title": "Pavirsiaus plotas",
-      "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "aukstine",
-      "title": "Aukstine",
-      "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [
         "erdves-figuru-pavirsiai-ir-turiai"
@@ -352,13 +317,7 @@
       "title": "Prizmės tūris",
       "type": "formula",
       "latex": "V = S_{\\text{pagr}} \\cdot H",
-      "conditions": [],
-      "variables": {
-        "V": "tūris",
-        "S_pagr": "pagrindo plotas",
-        "H": "aukštinė"
-      },
-      "explanation": "Tinka visoms stačiosioms prizmėms.",
+      "explanation": "Pagrindo plotą dauginame iš kūno aukščio.",
       "relatedConceptIds": [
         "stacioji-prizme",
         "turis"
@@ -370,68 +329,10 @@
       "title": "Piramidės tūris",
       "type": "formula",
       "latex": "V = \\frac{1}{3} S_{\\text{pagr}} \\cdot H",
-      "conditions": [],
-      "variables": {
-        "V": "tūris",
-        "S_pagr": "pagrindo plotas",
-        "H": "aukštinė"
-      },
-      "explanation": "Piramidės tūris yra 1/3 prizmės tūrio.",
+      "explanation": "Piramidės tūris sudaro tik trečdalį tokio pat pagrindo ir aukščio prizmės tūrio.",
       "relatedConceptIds": [
         "taisyklingoji-piramide",
         "turis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "ritinio-turio-formule",
-      "title": "Ritinio tūris",
-      "type": "formula",
-      "latex": "V = \\pi r^2 H",
-      "conditions": [],
-      "variables": {
-        "V": "tūris",
-        "r": "spindulys",
-        "H": "aukštinė"
-      },
-      "explanation": "Skritulio plotas padaugintas iš aukščio.",
-      "relatedConceptIds": [
-        "ritinys",
-        "turis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "kugio-turio-formule",
-      "title": "Kūgio tūris",
-      "type": "formula",
-      "latex": "V = \\frac{1}{3} \\pi r^2 H",
-      "conditions": [],
-      "variables": {
-        "V": "tūris",
-        "r": "spindulys",
-        "H": "aukštinė"
-      },
-      "explanation": "Kūgio tūris yra 1/3 ritinio tūrio.",
-      "relatedConceptIds": [
-        "kugis",
-        "turis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sferos-ploto-formule",
-      "title": "Sferos paviršiaus plotas",
-      "type": "formula",
-      "latex": "S = 4\\pi r^2",
-      "conditions": [],
-      "variables": {
-        "S": "plotas",
-        "r": "spindulys"
-      },
-      "explanation": "Apskaičiuoja rutulio išorės plotą.",
-      "relatedConceptIds": [
-        "sfera"
       ],
       "defaultSrs": true
     }
@@ -451,57 +352,42 @@
       "exampleWrong": "V = 1/3 * S * apotema",
       "exampleCorrect": "V = 1/3 * S * H",
       "defaultSrs": true
-    },
-    {
-      "id": "pamirsta-du-pagrindus-prizmeje",
-      "title": "Pamiršta du pagrindus prizmėje",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "conceptIds": [
-        "stacioji-prizme",
-        "pavirsiaus-plotas"
-      ],
-      "wrongPattern": "Skaičiuodamas visą paviršiaus plotą prideda tik vieną pagrindą.",
-      "whyItHappens": "Piramidė turi vieną pagrindą, todėl mokiniai susipainioja.",
-      "correction": "Prizmė visada turi du lygius pagrindus: S_visas = S_šon + 2 * S_pagr.",
-      "exampleWrong": "S_v = S_š + S_p",
-      "exampleCorrect": "S_v = S_š + 2*S_p",
-      "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "3d-exmp-1",
-      "title": "Ritinio tūris",
+      "title": "Stačiakampio gretasienio tūris",
       "level": "easy",
-      "problem": "Ritinio pagrindo spindulys r = 3 cm, o aukštinė H = 10 cm. Rask tūrį. (π ≈ 3,14).",
+      "problem": "Dėžės matmenys yra 2 m, 3 m ir 5 m. Raskite jos tūrį ir viso paviršiaus plotą.",
       "conceptIds": [
-        "ritinys",
+        "stacioji-prizme",
         "turis"
       ],
       "steps": [
         {
-          "text": "Apskaičiuojame pagrindo plotą.",
-          "latex": "S_{\\text{pagr}} = \\pi r^2 = 3,14 \\cdot 3^2 = 3,14 \\cdot 9 = 28,26 \\text{ cm}^2"
+          "text": "Apskaičiuojame tūrį dauginant tris matmenis.",
+          "latex": "V = 2 \\cdot 3 \\cdot 5 = 30 \\text{ m}^3"
         },
         {
-          "text": "Dauginame iš aukštinės.",
-          "latex": "V = 28,26 \\cdot 10 = 282,6 \\text{ cm}^3"
+          "text": "Apskaičiuojame paviršiaus plotą sudedant visų 6 sienų plotus (3 poros po dvi lygias).",
+          "latex": "S = 2(2 \\cdot 3 + 2 \\cdot 5 + 3 \\cdot 5) = 2(6 + 10 + 15) = 2 \\cdot 31 = 62 \\text{ m}^2"
         }
       ],
-      "answer": "282,6 cm³"
+      "answer": "V = 30 m³, S = 62 m²"
     },
     {
       "id": "3d-exmp-2",
       "title": "Kūgio sudaromoji",
       "level": "medium",
-      "problem": "Kūgio aukštinė H = 4 cm, o spindulys r = 3 cm. Rask sudaromąją l.",
+      "problem": "Kūgio aukštinė H = 4 cm, o spindulys r = 3 cm. Raskite sudaromąją l.",
       "conceptIds": [
         "kugis",
         "sudaromoji"
       ],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą trikampiui, kurį sudaro r, H ir l.",
+          "text": "Taikome Pitagoro teoremą r, H ir l sudaromam trikampiui.",
           "latex": "l^2 = r^2 + H^2"
         },
         {
@@ -514,6 +400,142 @@
         }
       ],
       "answer": "5 cm"
+    },
+    {
+      "id": "3d-exmp-3",
+      "title": "Ritinio tūris ir vandens kiekis",
+      "level": "medium",
+      "problem": "Cilindrinė statinė yra 1 m aukščio, o jos pagrindo spindulys 0,5 m. Kiek litrų vandens telpa statinėje? (π ≈ 3,14).",
+      "conceptIds": [
+        "ritinys",
+        "turis"
+      ],
+      "steps": [
+        {
+          "text": "Apskaičiuojame tūrį m³.",
+          "latex": "V = \\pi \\cdot 0,5^2 \\cdot 1 = 3,14 \\cdot 0,25 \\cdot 1 = 0,785 \\text{ m}^3"
+        },
+        {
+          "text": "Paverčiame m³ į litrus ($1 \\text{ m}^3 = 1000 \\text{ litrų}$).",
+          "latex": "V = 0,785 \\cdot 1000 = 785 \\text{ litrų}"
+        }
+      ],
+      "answer": "785 litrai"
+    },
+    {
+      "id": "3d-exmp-4",
+      "title": "Piramidės aukštinės radimas",
+      "level": "hard",
+      "problem": "Taisyklingosios keturkampės piramidės pagrindo kraštinė lygi 10, o apotema lygi 13. Raskite piramidės aukštinę.",
+      "conceptIds": [
+        "taisyklingoji-piramide",
+        "aukstine",
+        "apotema"
+      ],
+      "steps": [
+        {
+          "text": "Aukštinė, apotema ir atkarpa nuo centro iki kraštinės vidurio sudaro statųjį trikampį. Atstumas nuo centro iki kraštinės vidurio yra pusė kraštinės.",
+          "latex": "a/2 = 10/2 = 5"
+        },
+        {
+          "text": "Taikome Pitagoro teoremą aukštinei rasti.",
+          "latex": "H^2 = h_a^2 - (a/2)^2 = 13^2 - 5^2 = 169 - 25 = 144"
+        },
+        {
+          "text": "Ištraukiame šaknį.",
+          "latex": "H = \\sqrt{144} = 12"
+        }
+      ],
+      "answer": "12"
+    },
+    {
+      "id": "3d-exmp-5",
+      "title": "Rutulio ir sferos skaičiavimai",
+      "level": "medium",
+      "problem": "Rutulio spindulys r = 3 cm. Raskite sferos plotą ir rutulio tūrį. Atsakymą pateikite su π.",
+      "conceptIds": [
+        "sfera",
+        "turis"
+      ],
+      "steps": [
+        {
+          "text": "Taikome sferos ploto formulę.",
+          "latex": "S = 4\\pi r^2 = 4\\pi \\cdot 3^2 = 36\\pi \\text{ cm}^2"
+        },
+        {
+          "text": "Taikome rutulio tūrio formulę.",
+          "latex": "V = \\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi \\cdot 3^3 = \\frac{4}{3}\\pi \\cdot 27 = 36\\pi \\text{ cm}^3"
+        }
+      ],
+      "answer": "S = 36π cm², V = 36π cm³"
+    },
+    {
+      "id": "3d-exmp-6",
+      "title": "Kūgio tūris",
+      "level": "medium",
+      "problem": "Kūgio spindulys r = 6, o aukštinė H = 10. Raskite tūrį.",
+      "conceptIds": [
+        "kugis",
+        "turis"
+      ],
+      "steps": [
+        {
+          "text": "Taikome formulę.",
+          "latex": "V = \\frac{1}{3} \\pi r^2 H = \\frac{1}{3} \\pi \\cdot 6^2 \\cdot 10"
+        },
+        {
+          "text": "Suskaičiuojame.",
+          "latex": "V = \\frac{1}{3} \\pi \\cdot 36 \\cdot 10 = 120\\pi"
+        }
+      ],
+      "answer": "120π"
+    },
+    {
+      "id": "3d-exmp-7",
+      "title": "Kubo įstrižainė",
+      "level": "medium",
+      "problem": "Kubo kraštinė a = 4. Raskite jo tūrį ir erdvės įstrižainę d.",
+      "conceptIds": [
+        "stacioji-prizme",
+        "turis"
+      ],
+      "steps": [
+        {
+          "text": "Tūris.",
+          "latex": "V = a^3 = 4^3 = 64"
+        },
+        {
+          "text": "Erdvės įstrižainės formulė kubui.",
+          "latex": "d = a\\sqrt{3} = 4\\sqrt{3} \\approx 6,93"
+        }
+      ],
+      "answer": "V = 64, d = 4√3"
+    },
+    {
+      "id": "3d-exmp-8",
+      "title": "Sudėtinė figūra",
+      "level": "hard",
+      "problem": "Žaislas susideda iš ritinio (r=2, H=5) ir ant viršaus uždėto kūgio su tuo pačiu spinduliu ir aukštine H=3. Raskite bendrą tūrį.",
+      "conceptIds": [
+        "ritinys",
+        "kugis",
+        "turis"
+      ],
+      "steps": [
+        {
+          "text": "Ritinio tūris.",
+          "latex": "V_1 = \\pi \\cdot 2^2 \\cdot 5 = 20\\pi"
+        },
+        {
+          "text": "Kūgio tūris.",
+          "latex": "V_2 = \\frac{1}{3} \\pi \\cdot 2^2 \\cdot 3 = 4\\pi"
+        },
+        {
+          "text": "Bendra suma.",
+          "latex": "V = 20\\pi + 4\\pi = 24\\pi"
+        }
+      ],
+      "answer": "24π"
     }
   ],
   "exercises": [
@@ -521,7 +543,7 @@
       "id": "3d-ex-001",
       "topicId": "erdves-figuru-pavirsiai-ir-turiai",
       "grade": 8,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
       "statement": "Stačiakampio gretasienio kraštinės 2, 3 ir 5. Rask jo tūrį.",
       "answer": {
@@ -548,749 +570,6 @@
         "turis"
       ],
       "estimatedSeconds": 30
-    },
-    {
-      "id": "3d-ex-002",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kubo kraštinė yra 4. Rask jo tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 64,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V = a³.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4 * 4 * 4 = 64.",
-          "latex": "V = 64"
-        }
-      ],
-      "answerText": "64",
-      "conceptIds": [
-        "stacioji-prizme",
-        "turis"
-      ],
-      "estimatedSeconds": 20
-    },
-    {
-      "id": "3d-ex-003",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Ritinio S_pagr = 20, H = 5. Rask tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 100,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V = S_pagr * H.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "20 * 5 = 100.",
-          "latex": "V = 100"
-        }
-      ],
-      "answerText": "100",
-      "conceptIds": [
-        "ritinys",
-        "turis"
-      ],
-      "estimatedSeconds": 20
-    },
-    {
-      "id": "3d-ex-004",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kūgio S_pagr = 30, H = 6. Rask tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 60,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V = 1/3 * S_pagr * H.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1/3 * 30 * 6 = 10 * 6 = 60.",
-          "latex": "V = 60"
-        }
-      ],
-      "answerText": "60",
-      "conceptIds": [
-        "kugis",
-        "turis"
-      ],
-      "estimatedSeconds": 30
-    },
-    {
-      "id": "3d-ex-005",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rutulio spindulys r = 1. Rask sferos plotą. (Atsakymą pateik su π).",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "S = 4πr².",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4 * π * 1² = 4π.",
-          "latex": "S = 4\\pi"
-        }
-      ],
-      "answerText": "4π",
-      "conceptIds": [
-        "sfera",
-        "pavirsiaus-plotas"
-      ],
-      "estimatedSeconds": 30
-    },
-    {
-      "id": "3d-ex-006",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Prizmės pagrindas yra statusis trikampis, kurio statiniai 3 ir 4. Prizmės aukštinė H = 10. Rask tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 60,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia rask trikampio plotą S = (3*4)/2.",
-          "penalty": 0.1
-        },
-        {
-          "order": 2,
-          "text": "Tada V = S * H.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "S_p = 6. V = 6 * 10 = 60.",
-          "latex": "V = 60"
-        }
-      ],
-      "answerText": "60",
-      "conceptIds": [
-        "stacioji-prizme",
-        "turis"
-      ],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "3d-ex-007",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Piramidės pagrindas yra kvadratas, kurio kraštinė 6. Piramidės aukštinė H = 5. Rask tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 60,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "S_pagr = 6 * 6 = 36.",
-          "penalty": 0.1
-        },
-        {
-          "order": 2,
-          "text": "V = 1/3 * 36 * 5.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1/3 * 36 * 5 = 12 * 5 = 60.",
-          "latex": "V = 60"
-        }
-      ],
-      "answerText": "60",
-      "conceptIds": [
-        "taisyklingoji-piramide",
-        "turis"
-      ],
-      "estimatedSeconds": 50
-    },
-    {
-      "id": "3d-ex-008",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kūgio sudaromoji l = 13, o spindulys r = 5. Rask kūgio aukštinę H.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikyk Pitagorą: H² + r² = l².",
-          "penalty": 0.15
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "H² = 13² - 5² = 169 - 25 = 144. H = 12.",
-          "latex": "H = 12"
-        }
-      ],
-      "answerText": "12",
-      "conceptIds": [
-        "kugis",
-        "aukstine"
-      ],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "3d-ex-009",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Taisyklingosios keturkampės piramidės aukštinė H = 4, o apotema h_a = 5. Kokia yra pagrindo kraštinė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Stačiajame trikampyje statiniai yra H ir pusė pagrindo kraštinės (a/2), o įžambinė h_a.",
-          "penalty": 0.2
-        },
-        {
-          "order": 2,
-          "text": "(a/2)² = 5² - 4² = 9.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "a/2 = 3, vadinasi a = 6.",
-          "latex": "a = 6"
-        }
-      ],
-      "answerText": "6",
-      "conceptIds": [
-        "taisyklingoji-piramide",
-        "apotema"
-      ],
-      "estimatedSeconds": 90
-    },
-    {
-      "id": "3d-ex-010",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rutulio tūris yra 36π. Rask jo spindulį r.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "36π = 4/3 * π * r³.",
-          "penalty": 0.15
-        },
-        {
-          "order": 2,
-          "text": "r³ = 36 * 3 / 4 = 27.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "r = 3, nes 3³ = 27.",
-          "latex": "r = 3"
-        }
-      ],
-      "answerText": "3",
-      "conceptIds": [
-        "sfera",
-        "turis"
-      ],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "3d-ex-011",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Ritinio tūris 200 cm³. Koks bus tūris kito ritinio, kurio spindulys toks pat, o aukštinė 2 kartus didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 400,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Tūris tiesiogiai priklauso nuo aukštinės.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "V2 = 2 * V1 = 400.",
-          "latex": "400"
-        }
-      ],
-      "answerText": "400",
-      "conceptIds": [
-        "ritinys",
-        "turis"
-      ],
-      "estimatedSeconds": 30
-    },
-    {
-      "id": "3d-ex-012",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kūgio tūris 100. Koks bus tūris, jei spindulį padidinsime 2 kartus, o aukštinę paliksime tą pačią?",
-      "answer": {
-        "kind": "numeric",
-        "value": 400,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Tūris priklauso nuo spindulio kvadrato (r²).",
-          "penalty": 0.15
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "V2 = V1 * 2² = 400.",
-          "latex": "400"
-        }
-      ],
-      "answerText": "400",
-      "conceptIds": [
-        "kugis",
-        "turis"
-      ],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "3d-ex-013",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Taisyklingosios keturkampės piramidės pagrindo kraštinė 10, o šoninė briauna 13. Rask piramidės aukštinę H.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11.09,
-        "tolerance": 0.1
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia rask pagrindo įstrižainę d = 10√2.",
-          "penalty": 0.1
-        },
-        {
-          "order": 2,
-          "text": "Aukštinė, pusė įstrižainės (5√2) ir šoninė briauna sudaro statųjį trikampį.",
-          "penalty": 0.2
-        },
-        {
-          "order": 3,
-          "text": "H² = 13² - (5√2)² = 169 - 50 = 119.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "H = √119 ≈ 11,09.",
-          "latex": "\\sqrt{119}"
-        }
-      ],
-      "answerText": "√119",
-      "conceptIds": [
-        "taisyklingoji-piramide",
-        "aukstine"
-      ],
-      "estimatedSeconds": 150
-    },
-    {
-      "id": "3d-ex-014",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kiek kg dažų reikia nudažyti 2 m spindulio sferą, jei 1 m² sunaudojama 0,2 kg? (π ≈ 3,14).",
-      "answer": {
-        "kind": "numeric",
-        "value": 10.05,
-        "tolerance": 0.1
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "S = 4πr².",
-          "penalty": 0.1
-        },
-        {
-          "order": 2,
-          "text": "S = 4 * 3,14 * 4 = 50,24 m².",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Masė = 50,24 * 0,2 = 10,048.",
-          "latex": "10,05"
-        }
-      ],
-      "answerText": "10,05",
-      "conceptIds": [
-        "sfera",
-        "pavirsiaus-plotas"
-      ],
-      "estimatedSeconds": 100
-    },
-    {
-      "id": "3d-ex-015",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Ritinio ašinis pjūvis yra kvadratas, kurio plotas 100. Rask ritinio spindulį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Kvadrato kraštinė lygi ritinio aukštinei H ir skersmeniui d.",
-          "penalty": 0.15
-        },
-        {
-          "order": 2,
-          "text": "d² = 100 => d = 10.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "r = d/2 = 5.",
-          "latex": "r = 5"
-        }
-      ],
-      "answerText": "5",
-      "conceptIds": [
-        "ritinys"
-      ],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "3d-ex-016",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kūgio tūris 12π, o aukštinė 9. Rask spindulį r.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "12π = 1/3 * π * r² * 9.",
-          "penalty": 0.1
-        },
-        {
-          "order": 2,
-          "text": "12 = 3 * r² => r² = 4.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "r = 2.",
-          "latex": "r = 2"
-        }
-      ],
-      "answerText": "2",
-      "conceptIds": [
-        "kugis",
-        "turis"
-      ],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "3d-ex-017",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Prizmės aukštinė 8. Pagrindas - rombas su įstrižainėmis 6 ir 10. Rask tūrį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 240,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Rombo plotas S = (d1 * d2) / 2.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "S = (6*10)/2 = 30. V = 30 * 8 = 240.",
-          "latex": "V = 240"
-        }
-      ],
-      "answerText": "240",
-      "conceptIds": [
-        "stacioji-prizme",
-        "turis"
-      ],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "3d-ex-018",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kubo tūris skaitine reikšme lygus jo visam paviršiaus plotui. Kokia kubo kraštinė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V = a³. S_v = 6a².",
-          "penalty": 0.15
-        },
-        {
-          "order": 2,
-          "text": "Sulygink a³ = 6a².",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "a = 6.",
-          "latex": "a = 6"
-        }
-      ],
-      "answerText": "6",
-      "conceptIds": [
-        "stacioji-prizme",
-        "pavirsiaus-plotas"
-      ],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "3d-ex-019",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Sferos spindulį padidinus 2 kartus, kiek kartų padidės jos tūris?",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V priklauso nuo r³.",
-          "penalty": 0.15
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "2³ = 8.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "conceptIds": [
-        "sfera",
-        "turis"
-      ],
-      "estimatedSeconds": 30
-    },
-    {
-      "id": "3d-ex-020",
-      "topicId": "erdves-figuru-pavirsiai-ir-turiai",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Ritinio spindulį padvigubinus, o aukštinę sumažinus 4 kartus, kaip pasikeis tūris?",
-      "answer": {
-        "kind": "numeric",
-        "value": 1,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "V = π * r² * H. Naujas V = π * (2r)² * (H/4).",
-          "penalty": 0.15
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4r² * 1/4 = 1. Tūris nepasikeis.",
-          "latex": "1"
-        }
-      ],
-      "answerText": "Nepasikeis",
-      "conceptIds": [
-        "ritinys",
-        "turis"
-      ],
-      "estimatedSeconds": 60
-    }
-  ],
-  "tests": [
-    {
-      "id": "3d-test-1",
-      "title": "Erdvės figūros: tūriai (testas)",
-      "scope": "topic",
-      "topicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "exerciseIds": [
-        "3d-ex-001",
-        "3d-ex-002",
-        "3d-ex-003",
-        "3d-ex-004",
-        "3d-ex-006",
-        "3d-ex-007"
-      ],
-      "timeLimitSeconds": 1200,
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75
-    },
-    {
-      "id": "3d-test-2",
-      "title": "Erdvės figūros: skaičiavimai su Pitagoru (testas)",
-      "scope": "topic",
-      "topicIds": [
-        "erdves-figuru-pavirsiai-ir-turiai"
-      ],
-      "exerciseIds": [
-        "3d-ex-008",
-        "3d-ex-009",
-        "3d-ex-013",
-        "3d-ex-015",
-        "3d-ex-016",
-        "3d-ex-018"
-      ],
-      "timeLimitSeconds": 1800,
-      "masteryWeight": 1.5,
-      "passingThreshold": 0.65
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "srs-prizme-turis",
-      "deck": "theory",
-      "cardType": "formula",
-      "front": "Kokia yra prizmės tūrio formulė?",
-      "back": "V = S_pagr * H",
-      "conceptIds": [
-        "stacioji-prizme"
-      ],
-      "defaultEnabled": true
-    },
-    {
-      "id": "srs-piramide-turis",
-      "deck": "theory",
-      "cardType": "formula",
-      "front": "Kokia yra piramidės tūrio formulė?",
-      "back": "V = 1/3 * S_pagr * H",
-      "conceptIds": [
-        "taisyklingoji-piramide"
-      ],
-      "defaultEnabled": true
-    },
-    {
-      "id": "srs-apotema-apib",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra piramidės apotema?",
-      "back": "Taisyklingosios piramidės šoninės sienos aukštinė.",
-      "conceptIds": [
-        "apotema"
-      ],
-      "defaultEnabled": true
-    },
-    {
-      "id": "srs-sfera-plotas",
-      "deck": "theory",
-      "cardType": "formula",
-      "front": "Kokia yra sferos paviršiaus ploto formulė?",
-      "back": "S = 4πr²",
-      "conceptIds": [
-        "sfera"
-      ],
-      "defaultEnabled": true
     }
   ]
 }

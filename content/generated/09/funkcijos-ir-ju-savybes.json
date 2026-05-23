@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Funkcijos, grafikai, apibrėžimo ir reikšmių sritys."
+    "notes": "Išsami funkcijų ir jų savybių teorija 9 klasei."
   },
   "topic": {
     "id": "funkcijos-ir-ju-savybes",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 1,
-    "estimatedStudyMinutes": 190,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
       "lygtys-nelygybes-ir-raidiniai-reiskiniai"
     ],
@@ -28,21 +28,17 @@
       "funkcijos-nulis",
       "didejimas",
       "mazejimas",
-      "kvadratine-funkcija",
-      "parabole",
-      "virsune",
-      "simetrijos-asis",
-      "diskriminantas",
-      "saknys"
+      "pastovumo-intervalai",
+      "lyginumas"
     ],
     "formulaIds": [
       "funkcijos-zymejimas",
-      "virsunes-formule",
-      "diskriminanto-formule"
+      "tiesine-funkcija-formule"
     ],
     "mistakeIds": [
       "x-y-sumaiso",
-      "apibrezimo-srities-neziuri"
+      "apibrezimo-srities-neziuri",
+      "intervalai-su-y"
     ],
     "exerciseIds": [
       "funkcijos-ir-ju-savybes-ex-001",
@@ -70,86 +66,391 @@
   },
   "theory": [
     {
-      "id": "funkcijos-ir-ju-savybes-ivadas",
-      "title": "Įvadas",
+      "id": "funkcijos-ivadas-pasaulis",
+      "title": "1. Įvadas į funkcijų pasaulį: kodėl tai svarbu?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Funkcijos ir jų savybės yra tema, kurioje mokomasi atpažinti pagrindinius funkcijos modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveiki atvykę į vieną svarbiausių matematikos temų! Funkcija nėra tik sausa formulė vadovėlyje. Tai galingas įrankis, leidžiantis aprašyti, kaip kinta pasaulis. Kiekvieną kartą, kai sakote „kuo daugiau dirbu, tuo daugiau uždirbu“ arba „kuo greičiau važiuoju, tuo greičiau pasiekiu tikslą“, jūs kalbate apie funkcinę priklausomybę."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[funkcija|Funkcija]], [[argumentas|Argumentas]], [[apibrezimo-sritis|Apibrėžimo sritis]] ir uždavinių sprendimo."
+          "text": "Matematikoje funkcija padeda susieti du kintamuosius dydžius taip, kad vienas iš jų (priklausomasis) visiškai priklausytų nuo kito (nepriklausomojo). Be funkcijų negalėtume prognozuoti orų, skaičiuoti planetų orbitų ar net suprasti, kaip plinta virusai. Šiame skyriuje išmoksime ne tik skaičiuoti reikšmes, bet ir „skaityti“ funkcijų grafikus kaip pasakojimus apie kintančius dydžius."
         }
       ]
     },
     {
-      "id": "funkcijos-ir-ju-savybes-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "funkcijos-pagrindines-savokos",
+      "title": "2. Pagrindinės sąvokos: Argumentas, Reikšmė ir Taisyklė",
       "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Įsivaizduokite funkciją kaip „stebuklingą mašiną“. Jūs įmetate į ją skaičių (įvestį), mašina atlieka tam tikrą veiksmą (taisyklę) ir išmeta rezultatą (išvestį)."
+        },
         {
           "type": "definition",
           "conceptId": "funkcija",
-          "text": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę."
+          "text": "Funkcija – tai taisyklė (atitiktis), pagal kurią kiekvienai nepriklausomojo kintamojo $x$ reikšmei priskiriama vienintelė priklausomojo kintamojo $y$ reikšmė."
         },
         {
           "type": "definition",
           "conceptId": "argumentas",
-          "text": "Nepriklausomas kintamasis."
+          "text": "Argumentas ($x$) – tai nepriklausomas kintamasis, kurio reikšmes mes pasirenkame patys arba jos yra duotos."
         },
         {
-          "type": "definition",
-          "conceptId": "apibrezimo-sritis",
-          "text": "Visų leistinų argumentų aibė."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[funkcija|Funkcija]] ir [[reiksmiu-sritis|Reikšmių sritis]]."
-        }
-      ]
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Funkcijos ir jų savybės sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[apibrezimo-sritis|Apibrėžimo sritis]] ar [[reiksmiu-sritis|Reikšmių sritis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Svarbiausias žodis apibrėžime yra **vienintelė**. Jei tam pačiam $x$ galime gauti kelis skirtingus $y$, tai nėra funkcija! Pavyzdžiui, žmogaus ūgis yra jo amžiaus funkcija (konkrečiu momentu žmogus turi tik vieną ūgį), bet žmogaus batai nėra jo ūgio funkcija (du žmonės su tuo pačiu ūgiu gali avėti skirtingo dydžio batus)."
         },
         {
           "type": "formula",
           "formulaId": "funkcijos-zymejimas",
-          "latex": "y=f(x)"
-        }
-      ]
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "latex": "y = f(x)"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Čia $f$ yra funkcijos vardas (kaip pavadinimas), $x$ – argumentas, o $f(x)$ – funkcijos reikšmė taške $x$."
         }
       ]
     },
     {
-      "id": "funkcijos-ir-ju-savybes-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "apibrezimo-ir-reiksmiu-sritys",
+      "title": "3. Funkcijos apibrėžimo ir reikšmių sritys: kur funkcija „gyvena“?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Ne kiekvienas skaičius gali būti įvestas į bet kurią funkciją. Pavyzdžiui, negalime dalinti iš nulio arba traukti kvadratinės šaknies iš neigiamo skaičiaus (realiųjų skaičių aibėje)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apibrezimo-sritis",
+          "text": "Apibrėžimo sritis ($D(f)$ arba $D_f$) – tai visų galimų argumento $x$ reikšmių aibė, su kuriomis funkcijos taisyklė turi prasmę."
+        },
+        {
+          "type": "definition",
+          "conceptId": "reiksmiu-sritis",
+          "text": "Reikšmių sritis ($E(f)$ arba $E_f$) – tai visų galimų funkcijos reikšmių $y$ aibė, kurias funkcija „išmeta“ kaip rezultatą."
+        },
+        {
+          "type": "note",
+          "text": "Ieškodami $D(f)$, visada žiūrėkite į du „pavojus“: 1) Vardiklis negali būti lygus 0. 2) Pošaknis (lyginio laipsnio) negali būti neigiamas."
         }
       ]
+    },
+    {
+      "id": "funkcijos-reiskimo-budai",
+      "title": "4. Keturi funkcijos reiškimo būdai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Matematikai naudoja keturis pagrindinius būdus funkcijai aprašyti. Kiekvienas jų turi savo privalumų:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Analitinis (Formulė):** Pvz., $f(x) = 2x + 3$. Tai tiksliausias būdas, leidžiantis suskaičiuoti reikšmę bet kuriam $x$.",
+            "**Lentelė:** Patogu, kai turime nedaug duomenų, pavyzdžiui, temperatūros matavimus kas valandą.",
+            "**Grafinis:** Leidžia pamatyti funkcijos „elgesį“ akimirksniu (didėjimą, mažėjimą, ekstremumus).",
+            "**Žodinis:** Pvz., „Kiekvienam skaičiui priskiriame jo kvadratą, padidintą vienetu“ ($f(x) = x^2 + 1$)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-grafikas-ir-testas",
+      "title": "5. Funkcijos grafikas ir „Vertikalios tiesės testas“",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Grafikas yra visų taškų $(x, y)$ visuma, kur $y = f(x)$. Kaip žinoti, ar nubrėžta kreivė yra funkcija?"
+        },
+        {
+          "type": "method",
+          "text": "**Vertikalios tiesės testas:** Jei bet kuri vertikali tiesė, nubrėžta per grafiko sritį, kerta grafiką **ne daugiau kaip viename taške**, tai ši kreivė yra funkcijos grafikas. Jei nors viena tiesė kerta grafiką dviejuose ar daugiau taškų – tai nėra funkcija (nes vienam $x$ tektų kelios $y$ reikšmės)."
+        }
+      ]
+    },
+    {
+      "id": "funkciju-savybes-nuodugniai",
+      "title": "6. Funkcijų savybės: ką sako grafikas?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Analizuodami funkciją, mes ieškome specialių taškų ir intervalų:"
+        },
+        {
+          "type": "definition",
+          "conceptId": "funkcijos-nulis",
+          "text": "Funkcijos nuliai – tai argumento $x$ reikšmės, su kuriomis $f(x) = 0$. Grafiškai tai taškai, kuriuose grafikas kerta $Ox$ ašį."
+        },
+        {
+          "type": "property",
+          "text": "**Pastovumo intervalai:** Tai intervalai, kuriuose funkcija įgyja tik teigiamas ($f(x) > 0$) arba tik neigiamas ($f(x) < 0$) reikšmes."
+        },
+        {
+          "type": "definition",
+          "conceptId": "didejimas",
+          "text": "Funkcija vadinama didėjančia intervale, jei didesniam argumentui $x_2 > x_1$ atitinka didesnė reikšmė $f(x_2) > f(x_1)$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "mazejimas",
+          "text": "Funkcija vadinama mažėjančia intervale, jei didesniam argumentui $x_2 > x_1$ atitinka mažesnė reikšmė $f(x_2) < f(x_1)$."
+        }
+      ]
+    },
+    {
+      "id": "sprendimo-strategija-funkcijos",
+      "title": "7. Sprendimo strategija: kaip nepasiklysti?",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "1. **Identifikuokite kintamuosius:** Kas yra $x$ (priežastis), o kas $y$ (pasekmė)?\n2. **Raskite apibrėžimo sritį:** Ar yra x reikšmių, kurios „sugadintų“ skaičiavimą?\n3. **Suskaičiuokite kontrolinius taškus:** Raskite nulių taškus ir sankirtą su $Oy$ ašimi ($x=0$).\n4. **Nupieškite eskizą:** Sujunkite taškus atsižvelgdami į funkcijos tipą (tiesė, parabolė ir kt.).\n5. **Pasitikrinkite:** Ar gautas rezultatas logiškas? Ar $y$ reikšmės atitinka $E(f)$?"
+        }
+      ]
+    },
+    {
+      "id": "daznos-klaidos-funkcijos",
+      "title": "8. Dažnos klaidos ir kaip jų išvengti",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Klaida Nr. 1: Intervalų žymėjimas per $y$. Didėjimo/mažėjimo ir pastovumo intervalus visada rašome pagal $x$ reikšmes, o ne pagal tai, kokiame aukštyje ($y$) yra grafikas!"
+        },
+        {
+          "type": "warning",
+          "text": "Klaida Nr. 2: Supainiojami $f(a)=b$ ir taškas $(a, b)$. Prisiminkite: skliausteliuose visada sėdi $x$, o už lygybės ženklo – $y$."
+        },
+        {
+          "type": "warning",
+          "text": "Klaida Nr. 3: Apibrėžimo srities ignoravimas. Jei turite trupmeną, vardiklis negali būti nulis. Visada tai patikrinkite prieš spręsdami lygtį $f(x)=0$."
+        }
+      ]
+    },
+    {
+      "id": "pavyzdziai-isplestiniai",
+      "title": "9. Išsamūs pavyzdžiai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šioje dalyje išnagrinėsime 8 pavyzdžius nuo paprasčiausių iki sudėtingų."
+        }
+      ]
+    }
+  ],
+  "workedExamples": [
+    {
+      "id": "funkc-ex-1",
+      "title": "Reikšmės apskaičiavimas",
+      "level": "easy",
+      "problem": "Duota funkcija $f(x) = \frac{3x - 1}{x + 2}$. Apskaičiuokite $f(4)$.",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "steps": [
+        {
+          "text": "Vietoje kiekvieno $x$ formulėje įrašome skaičių 4.",
+          "latex": "f(4) = \\frac{3 \\cdot 4 - 1}{4 + 2}"
+        },
+        {
+          "text": "Atliekame veiksmus skaitiklyje ir vardiklyje.",
+          "latex": "f(4) = \\frac{12 - 1}{6} = \\frac{11}{6}"
+        },
+        {
+          "text": "Išskiriame sveikąją dalį.",
+          "latex": "f(4) = 1\\frac{5}{6}"
+        }
+      ],
+      "answer": "1\\frac{5}{6}"
+    },
+    {
+      "id": "funkc-ex-2",
+      "title": "Argumento radimas pagal reikšmę",
+      "level": "easy",
+      "problem": "Su kuria $x$ reikšme funkcijos $f(x) = 5x - 7$ reikšmė lygi 13?",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "steps": [
+        {
+          "text": "Sudarome lygtį: funkcijos formulę prilyginame duotai reikšmei.",
+          "latex": "5x - 7 = 13"
+        },
+        {
+          "text": "Perkeliame laisvąjį narį į dešinę pusę pakeisdami ženklą.",
+          "latex": "5x = 13 + 7"
+        },
+        {
+          "text": "Suskaičiuojame sumą.",
+          "latex": "5x = 20"
+        },
+        {
+          "text": "Padalijame iš koeficiento prie $x$.",
+          "latex": "x = 4"
+        }
+      ],
+      "answer": "4"
+    },
+    {
+      "id": "funkc-ex-3",
+      "title": "Apibrėžimo srities nustatymas",
+      "level": "medium",
+      "problem": "Raskite funkcijos $f(x) = \\sqrt{2x - 10}$ apibrėžimo sritį.",
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "steps": [
+        {
+          "text": "Kvadratinė šaknis turi prasmę tik tada, kai pošaknis yra neigiamas.",
+          "latex": "2x - 10 \\ge 0"
+        },
+        {
+          "text": "Išsprendžiame tiesinę nelygybę.",
+          "latex": "2x \\ge 10"
+        },
+        {
+          "text": "Padalijame iš 2.",
+          "latex": "x \\ge 5"
+        },
+        {
+          "text": "Užrašome intervalu.",
+          "latex": "D(f) = [5; +\\infty)"
+        }
+      ],
+      "answer": "[5; +\\infty)"
+    },
+    {
+      "id": "funkc-ex-4",
+      "title": "Sudėtinė apibrėžimo sritis",
+      "level": "medium",
+      "problem": "Raskite funkcijos $g(x) = \frac{5}{x^2 - 9}$ apibrėžimo sritį.",
+      "conceptIds": [
+        "apibrezimo-sritis"
+      ],
+      "steps": [
+        {
+          "text": "Trupmena turi prasmę, kai jos vardiklis nelygus nuliui.",
+          "latex": "x^2 - 9 \\neq 0"
+        },
+        {
+          "text": "Išskaidome kvadratų skirtumą arba sprendžiame lygtį.",
+          "latex": "(x-3)(x+3) \\neq 0"
+        },
+        {
+          "text": "Nustatome „draudžiamas“ reikšmes.",
+          "latex": "x \\neq 3 \\text{ ir } x \\neq -3"
+        },
+        {
+          "text": "Užrašome aibę.",
+          "latex": "D(g) = (-\\infty; -3) \\cup (-3; 3) \\cup (3; +\\infty)"
+        }
+      ],
+      "answer": "R\\setminus\\{-3; 3\\}"
+    },
+    {
+      "id": "funkc-ex-5",
+      "title": "Funkcijos nuliai",
+      "level": "medium",
+      "problem": "Raskite funkcijos $f(x) = x^2 - 5x + 6$ nulius.",
+      "conceptIds": [
+        "funkcijos-nulis"
+      ],
+      "steps": [
+        {
+          "text": "Funkcijos nuliai randami prilyginant funkciją nuliui.",
+          "latex": "x^2 - 5x + 6 = 0"
+        },
+        {
+          "text": "Sprendžiame kvadratinę lygtį naudodami diskriminantą arba Vijeto teoremą.",
+          "latex": "D = (-5)^2 - 4 \\cdot 1 \\cdot 6 = 25 - 24 = 1"
+        },
+        {
+          "text": "Apskaičiuojame šaknis.",
+          "latex": "x_1 = \\frac{5 - 1}{2} = 2, \\quad x_2 = \\frac{5 + 1}{2} = 3"
+        }
+      ],
+      "answer": "2 ir 3"
+    },
+    {
+      "id": "funkc-ex-6",
+      "title": "Sankirtos taškai",
+      "level": "medium",
+      "problem": "Raskite funkcijos $f(x) = 2x - 8$ grafiko sankirtos taškus su koordinačių ašimis.",
+      "conceptIds": [
+        "grafikas",
+        "funkcijos-nulis"
+      ],
+      "steps": [
+        {
+          "text": "Sankirta su $Oy$ ašimi: įrašome $x = 0$.",
+          "latex": "f(0) = 2 \\cdot 0 - 8 = -8 \\Rightarrow (0; -8)"
+        },
+        {
+          "text": "Sankirta su $Ox$ ašimi: prilyginame funkciją nuliui ($y = 0$).",
+          "latex": "2x - 8 = 0 \\Rightarrow 2x = 8 \\Rightarrow x = 4 \\Rightarrow (4; 0)"
+        }
+      ],
+      "answer": "(0; -8) ir (4; 0)"
+    },
+    {
+      "id": "funkc-ex-7",
+      "title": "Savybių nustatymas iš grafiko",
+      "level": "hard",
+      "problem": "Tiesė eina per taškus $A(-2; 5)$ ir $B(4; -7)$. Raskite funkcijos nulį.",
+      "conceptIds": [
+        "funkcija",
+        "grafikas",
+        "funkcijos-nulis"
+      ],
+      "steps": [
+        {
+          "text": "Sudarome tiesės lygtį $y = ax + b$. Įrašome taškų koordinates.",
+          "latex": "\\begin{cases} 5 = -2a + b \\\\ -7 = 4a + b \\end{cases}"
+        },
+        {
+          "text": "Atimame pirmą lygtį iš antros.",
+          "latex": "-7 - 5 = 4a - (-2a) \\Rightarrow -12 = 6a \\Rightarrow a = -2"
+        },
+        {
+          "text": "Randame $b$ reikšmę.",
+          "latex": "5 = -2(-2) + b \\Rightarrow 5 = 4 + b \\Rightarrow b = 1"
+        },
+        {
+          "text": "Tiesės lygtis yra $y = -2x + 1$. Randame nulį ($y=0$).",
+          "latex": "-2x + 1 = 0 \\Rightarrow 2x = 1 \\Rightarrow x = 0,5"
+        }
+      ],
+      "answer": "0,5"
+    },
+    {
+      "id": "funkc-ex-8",
+      "title": "Tekstinis uždavinys (Modeliavimas)",
+      "level": "hard",
+      "problem": "Vandens bakas pildomas pastoviu greičiu. Po 2 minučių bake buvo 15 litrų, o po 5 minučių – 30 litrų. Užrašykite vandens kiekio $V(t)$ priklausomybę nuo laiko $t$ (minutėmis) ir apskaičiuokite, kiek litrų buvo bake pradžioje.",
+      "conceptIds": [
+        "funkcija",
+        "tiesine-funkcija"
+      ],
+      "steps": [
+        {
+          "text": "Kadangi pildymo greitis pastovus, priklausomybė tiesinė: $V(t) = at + b$.",
+          "latex": "V(2) = 15, \\quad V(5) = 30"
+        },
+        {
+          "text": "Apskaičiuojame kitimo greitį $a$ (nuolydį).",
+          "latex": "a = \\frac{V(5) - V(2)}{5 - 2} = \\frac{30 - 15}{3} = 5 \\text{ l/min}"
+        },
+        {
+          "text": "Randame pradinį kiekį $b$.",
+          "latex": "15 = 5 \\cdot 2 + b \\Rightarrow 15 = 10 + b \\Rightarrow b = 5"
+        },
+        {
+          "text": "Užrašome funkciją.",
+          "latex": "V(t) = 5t + 5"
+        }
+      ],
+      "answer": "V(t) = 5t + 5; pradžioje buvo 5 litrai"
     }
   ],
   "concepts": [
@@ -158,9 +459,9 @@
       "title": "Funkcija",
       "type": "concept",
       "shortDefinition": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "intuition": "Tai pagrindinis funkcijos modelis.",
-      "formal": "Funkcija yra atvaizdis, kiekvienam x priskiriantis vienintelį f(x).",
-      "notation": [],
+      "intuition": "Tai kaip receptas: įdedi ingredientus (x), gauni patiekalą (y). Vienas receptas visada duoda tą patį rezultatą.",
+      "formal": "Funkcija f iš aibės X į aibę Y yra taisyklė, pagal kurią kiekvienas x iš X yra susietas su vieninteliu y iš Y.",
+      "notation": ["y = f(x)", "f: X -> Y"],
       "relatedConceptIds": [
         "argumentas",
         "grafikas",
@@ -175,9 +476,9 @@
       "title": "Argumentas",
       "type": "concept",
       "shortDefinition": "Nepriklausomas kintamasis.",
-      "intuition": "Tai įvestis, kurią duodame funkcijai.",
-      "formal": "Argumentas yra funkcijos įvesties kintamasis.",
-      "notation": [],
+      "intuition": "Tai, ką tu kontroliuoji arba pasirenki įvesti į funkciją.",
+      "formal": "Kintamasis, kurio reikšmės sudaro funkcijos apibrėžimo sritį.",
+      "notation": ["x"],
       "relatedConceptIds": [
         "funkcija",
         "reiksmiu-sritis"
@@ -191,16 +492,14 @@
       "title": "Apibrėžimo sritis",
       "type": "concept",
       "shortDefinition": "Visų leistinų argumentų aibė.",
-      "intuition": "Tai visi x, kuriuos funkcija priima.",
-      "formal": "Apibrėžimo sritis D(f) yra visų leistinų x aibė.",
-      "notation": [],
+      "intuition": "Visi skaičiai, kuriuos „leidžiama“ įstatyti į funkciją, kad gautume prasmingą atsakymą.",
+      "formal": "Aibė D(f) = {x | f(x) yra apibrėžtas}.",
+      "notation": ["D(f)", "D_f"],
       "relatedConceptIds": [
         "funkcija",
         "grafikas"
       ],
-      "prerequisiteConceptIds": [
-        "d-f"
-      ],
+      "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
@@ -209,16 +508,14 @@
       "title": "Reikšmių sritis",
       "type": "concept",
       "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
-      "intuition": "Tai visi galimi y atsakymai.",
-      "formal": "Reikšmių sritis yra funkcijos galimų reikšmių aibė.",
-      "notation": [],
+      "intuition": "Visi galimi rezultatai, kuriuos funkcija gali pasiekti.",
+      "formal": "Aibė E(f) = {f(x) | x priklauso D(f)}.",
+      "notation": ["E(f)", "E_f"],
       "relatedConceptIds": [
         "funkcija",
         "grafikas"
       ],
-      "prerequisiteConceptIds": [
-        "e-f"
-      ],
+      "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
@@ -227,8 +524,8 @@
       "title": "Grafikas",
       "type": "concept",
       "shortDefinition": "Taškų rinkinys koordinačių plokštumoje.",
-      "intuition": "Grafikas leidžia funkciją pamatyti akimis.",
-      "formal": "Funkcijos grafikas yra visų taškų (x, f(x)) aibė.",
+      "intuition": "Funkcijos „portretas“, leidžiantis pamatyti jos elgesį vizualiai.",
+      "formal": "Aibė G = {(x, f(x)) | x priklauso D(f)}.",
       "notation": [],
       "relatedConceptIds": [
         "funkcija",
@@ -245,8 +542,8 @@
       "title": "Funkcijos nulis",
       "type": "concept",
       "shortDefinition": "Argumentas, kuriam funkcijos reikšmė lygi nuliui.",
-      "intuition": "Tai vieta, kur grafikas susiduria su x ašimi.",
-      "formal": "x0 yra nulis, jei f(x0)=0.",
+      "intuition": "Vieta, kur grafikas kerta arba liečia horizontaliąją x ašį.",
+      "formal": "x0 yra f nulis, jei f(x0) = 0.",
       "notation": [],
       "relatedConceptIds": [
         "grafikas",
@@ -261,8 +558,8 @@
       "title": "Didėjimas",
       "type": "concept",
       "shortDefinition": "Kai didesniam argumentui atitinka didesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas kyla.",
-      "formal": "Funkcija didėja intervale, jei x1 < x2 implikuoja f(x1) < f(x2).",
+      "intuition": "Žiūrint iš kairės į dešinę, grafikas „lipa į kalną“.",
+      "formal": "Funkcija f didėja intervale (a, b), jei x1 < x2 => f(x1) < f(x2).",
       "notation": [],
       "relatedConceptIds": [
         "mazejimas",
@@ -277,8 +574,8 @@
       "title": "Mažėjimas",
       "type": "concept",
       "shortDefinition": "Kai didesniam argumentui atitinka mažesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas leidžiasi.",
-      "formal": "Funkcija mažėja intervale, jei x1 < x2 implikuoja f(x1) > f(x2).",
+      "intuition": "Žiūrint iš kairės į dešinę, grafikas „leidžiasi žemyn“.",
+      "formal": "Funkcija f mažėja intervale (a, b), jei x1 < x2 => f(x1) > f(x2).",
       "notation": [],
       "relatedConceptIds": [
         "didejimas",
@@ -289,100 +586,27 @@
       "defaultSrs": true
     },
     {
-      "id": "kvadratine-funkcija",
-      "title": "Kvadratinė funkcija",
+      "id": "pastovumo-intervalai",
+      "title": "Pastovumo intervalai",
       "type": "concept",
-      "shortDefinition": "Funkcija su x² nariu.",
-      "intuition": "Tai parabolės istorija.",
-      "formal": "Kvadratinė funkcija yra f(x)=ax²+bx+c, kur a!=0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "parabole",
-        "virsune",
-        "diskriminantas"
-      ],
+      "shortDefinition": "Intervalai, kuriuose funkcija yra tik teigiama arba tik neigiama.",
+      "intuition": "Grafiko dalys, kurios yra virš x ašies arba po ja.",
+      "formal": "Intervalai, kuriuose f(x) > 0 arba f(x) < 0 visiems x iš to intervalo.",
+      "notation": ["f(x) > 0", "f(x) < 0"],
+      "relatedConceptIds": ["funkcijos-nulis"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "parabole",
-      "title": "Parabolė",
+      "id": "lyginumas",
+      "title": "Lyginumas ir nelyginumas",
       "type": "concept",
-      "shortDefinition": "Kvadratinės funkcijos grafikas.",
-      "intuition": "U formos arba apversta U forma.",
-      "formal": "Parabolė yra kvadratinės funkcijos grafikas.",
+      "shortDefinition": "Funkcijos grafiko simetriškumas.",
+      "intuition": "Lyginė funkcija simetriška y ašies atžvilgiu (veidrodis), nelyginė – koordinačių pradžios taško atžvilgiu.",
+      "formal": "Lyginė: f(-x) = f(x). Nelyginė: f(-x) = -f(x).",
       "notation": [],
-      "relatedConceptIds": [
-        "kvadratine-funkcija",
-        "virsune"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "virsune",
-      "title": "Viršūnė",
-      "type": "concept",
-      "shortDefinition": "Aukščiausias arba žemiausias parabolės taškas.",
-      "intuition": "Tai parabolės lūžio vieta.",
-      "formal": "Viršūnė yra taškas, kuriame kvadratinė funkcija pasiekia ekstremumą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "parabole",
-        "simetrijos-asis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrijos-asis",
-      "title": "Simetrijos ašis",
-      "type": "concept",
-      "shortDefinition": "Tiesė, dalijanti parabolę į dvi vienodas dalis.",
-      "intuition": "Tai parabolės veidrodis.",
-      "formal": "Parabolės simetrijos ašis yra x=-b/(2a).",
-      "notation": [],
-      "relatedConceptIds": [
-        "virsune",
-        "parabole"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "diskriminantas",
-      "title": "Diskriminantas",
-      "type": "concept",
-      "shortDefinition": "Dydis, nusakantis kvadratinės lygties nulių skaičių.",
-      "intuition": "Jis sako, ar parabolė kirs ašį.",
-      "formal": "D=b²-4ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknys",
-        "kvadratine-funkcija"
-      ],
-      "prerequisiteConceptIds": [
-        "d"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknys",
-      "title": "Šaknys",
-      "type": "concept",
-      "shortDefinition": "Lygties sprendiniai.",
-      "intuition": "Šaknys yra ten, kur funkcija lygi nuliui.",
-      "formal": "Kvadratinės lygties šaknys yra sprendiniai, gaunami pagal diskriminantą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcijos-nulis",
-        "diskriminantas"
-      ],
+      "relatedConceptIds": ["grafikas"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -391,17 +615,18 @@
   "formulas": [
     {
       "id": "funkcijos-zymejimas",
-      "title": "Funkcijos žymėjimas",
+      "title": "Funkcijos bendrasis žymėjimas",
       "type": "formula",
-      "latex": "y=f(x)",
+      "latex": "y = f(x)",
       "conditions": [
-        "Kai pateikiama priklausomybė"
+        "Visiems funkcinio ryšio atvejams"
       ],
       "variables": {
-        "x": "argumentas",
-        "y": "reikšmė"
+        "x": "nepriklausomas kintamasis (argumentas)",
+        "y": "priklausomas kintamasis (reikšmė)",
+        "f": "funkcijos pavadinimas"
       },
-      "explanation": "Žymi, kad y priklauso nuo x.",
+      "explanation": "Nusako, kad dydis y priklauso nuo dydžio x pagal taisyklę f.",
       "relatedConceptIds": [
         "funkcija",
         "argumentas"
@@ -409,41 +634,18 @@
       "defaultSrs": true
     },
     {
-      "id": "virsunes-formule",
-      "title": "Viršūnės x koordinatė",
+      "id": "tiesine-funkcija-formule",
+      "title": "Tiesinė funkcija",
       "type": "formula",
-      "latex": "x_v=-\\frac{b}{2a}",
-      "conditions": [
-        "Kvadratinė funkcija"
-      ],
+      "latex": "y = ax + b",
+      "conditions": [],
       "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas"
+        "a": "krypties koeficientas (nuolydis)",
+        "b": "laisvasis narys (sankirta su Oy ašimi)"
       },
-      "explanation": "Padeda rasti parabolės simetrijos ašį.",
+      "explanation": "Paprasčiausia funkcija, kurios grafikas yra tiesė.",
       "relatedConceptIds": [
-        "virsune",
-        "kvadratine-funkcija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "diskriminanto-formule",
-      "title": "Diskriminantas",
-      "type": "formula",
-      "latex": "D=b^2-4ac",
-      "conditions": [
-        "Kvadratinė lygtis"
-      ],
-      "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas",
-        "c": "laisvasis narys"
-      },
-      "explanation": "Nusako realių šaknų skaičių.",
-      "relatedConceptIds": [
-        "diskriminantas",
-        "saknys"
+        "grafikas"
       ],
       "defaultSrs": true
     }
@@ -451,1132 +653,50 @@
   "mistakes": [
     {
       "id": "x-y-sumaiso",
-      "title": "Supainioja x ir y",
+      "title": "Supainioja x ir y (argumentą ir reikšmę)",
       "type": "mistake",
       "conceptIds": [
         "funkcija",
         "argumentas"
       ],
-      "wrongPattern": "f(2)=5 supranta kaip x=5.",
-      "whyItHappens": "f(2)=5 reiškia, kad kai x=2, funkcijos reikšmė yra 5.",
-      "correction": "x yra įvestis, y yra rezultatas.",
-      "wrongExample": "x=5",
-      "correctExample": "x=2, y=5",
+      "wrongPattern": "Užduotyje 'raskite f(5)' bando spręsti lygtį f(x)=5.",
+      "whyItHappens": "Neatpažįstama simbolika: skaičius skliausteliuose visada yra x.",
+      "correction": "f(5) reiškia 'koks bus y, kai x=5?'. f(x)=5 reiškia 'koks turi būti x, kad y būtų 5?'.",
+      "wrongExample": "f(5) -> 2x+3=5",
+      "correctExample": "f(5) -> 2(5)+3",
       "defaultSrs": true
     },
     {
       "id": "apibrezimo-srities-neziuri",
-      "title": "Neišsiaiškina apibrėžimo srities",
+      "title": "Pamiršta apibrėžimo sritį",
       "type": "mistake",
       "conceptIds": [
         "apibrezimo-sritis"
       ],
-      "wrongPattern": "Skaičiuoja 1/(x-2) ties x=2.",
-      "whyItHappens": "Vardiklis negali būti nulis.",
-      "correction": "Patikrink, kur reiškinys neapibrėžtas.",
-      "wrongExample": "x=2 tinka",
-      "correctExample": "x=2 netinka",
+      "wrongPattern": "Sprendžia lygtį su x vardiklyje ir gauna sprendinį, kuris paverčia vardiklį nuliu.",
+      "whyItHappens": "Skubėjimas atlikti veiksmus nepatikrinus loginių apribojimų.",
+      "correction": "Prieš bet kokį skaičiavimą nustatykite, kur funkcija neegzistuoja.",
+      "wrongExample": "f(x)=1/x; f(0)=nežinau (bando dalinti)",
+      "correctExample": "f(x)=1/x; x negali būti 0.",
+      "defaultSrs": true
+    },
+    {
+      "id": "intervalai-su-y",
+      "title": "Intervalus nurodo pagal y ašį",
+      "type": "mistake",
+      "conceptIds": [
+        "didejimas",
+        "pastovumo-intervalai"
+      ],
+      "wrongPattern": "Rašo, kad funkcija didėja intervale [1; 5], nes grafikas pakilo nuo aukščio 1 iki 5.",
+      "whyItHappens": "Vizualus dėmesys nukrypsta į vertikalų judėjimą.",
+      "correction": "Savybių intervalai (didėjimas, mažėjimas, teigiamumas) visada nurodomi pagal x ašį.",
+      "wrongExample": "Didėja, kai y yra nuo 1 iki 5.",
+      "correctExample": "Didėja intervale x priklauso (2; 4).",
       "defaultSrs": true
     }
   ],
-  "workedExamples": [
-    {
-      "id": "funkcijos-ir-ju-savybes-exmp-1",
-      "title": "Reikšmės radimas",
-      "level": "easy",
-      "problem": "Jei f(x)=2x+1, rask f(4).",
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Įrašome 4.",
-          "latex": "f(4)=2\\cdot4+1"
-        },
-        {
-          "text": "Apskaičiuojame.",
-          "latex": "9"
-        }
-      ],
-      "answer": "9"
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-exmp-2",
-      "title": "Nulis",
-      "level": "easy",
-      "problem": "Rask funkcijos f(x)=x-7 nulį.",
-      "conceptIds": [
-        "funkcijos-nulis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Sprendžiame f(x)=0.",
-          "latex": "x-7=0"
-        },
-        {
-          "text": "Gauname.",
-          "latex": "x=7"
-        }
-      ],
-      "answer": "7"
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-exmp-3",
-      "title": "Apibrėžimo sritis",
-      "level": "medium",
-      "problem": "Kokia yra f(x)=1/(x-2) apibrėžimo sritis?",
-      "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Vardiklis negali būti 0.",
-          "latex": "x-2\\neq 0"
-        },
-        {
-          "text": "Todėl x negali būti 2.",
-          "latex": "D(f)=\\mathbb{R}\\setminus\\{2\\}"
-        }
-      ],
-      "answer": "R\\{2}"
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-exmp-4",
-      "title": "Didėjimas",
-      "level": "medium",
-      "problem": "Jei f(x)=3x-5, ar funkcija didėja?",
-      "conceptIds": [
-        "didejimas",
-        "mazejimas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Nuolydis teigiamas.",
-          "latex": "3>0"
-        },
-        {
-          "text": "Funkcija didėja.",
-          "latex": "taip"
-        }
-      ],
-      "answer": "taip"
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-exmp-5",
-      "title": "Grafikas",
-      "level": "hard",
-      "problem": "Tiesė kerta y ašį taške (0; -2) ir turi nuolydį 4. Užrašyk lygtį.",
-      "conceptIds": [
-        "kvadratine-funkcija",
-        "grafikas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Tiesės lygtis y=ax+b.",
-          "latex": "y=4x-2"
-        }
-      ],
-      "answer": "y=4x-2"
-    }
-  ],
-  "exercises": [
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-001",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(2).",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(2)=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-002",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(3).",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(3)=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-003",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(4).",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(4)=9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-004",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(5).",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(5)=11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-005",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(6).",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(6)=13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-006",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask funkcijos f(x)=x-8 nulį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Lygybė lygi nuliui.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcijos-nulis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "x-8=0.",
-          "latex": "x=8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcijos-nulis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-007",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri iš šių funkcijų didėja?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "y=-2x+1"
-          },
-          {
-            "id": "b",
-            "text": "y=3x-4"
-          },
-          {
-            "id": "c",
-            "text": "y=-x-7"
-          },
-          {
-            "id": "d",
-            "text": "y=5-x"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į teigiamą koeficientą prie x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "didejimas",
-            "mazejimas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Teigiamas nuolydis reiškia didėjimą.",
-          "latex": "y=3x-4"
-        }
-      ],
-      "answerText": "y=3x-4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "didejimas",
-        "mazejimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-008",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia yra f(x)=1/(x-2) apibrėžimo srities draudžiama reikšmė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Vardiklis negali būti nulis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "apibrezimo-sritis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "x negali būti 2.",
-          "latex": "x\\neq2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 50
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-009",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "expressionInput",
-      "statement": "Tiesės grafikas eina per tašką (0; -3) ir turi nuolydį 2. Užrašyk lygtį.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "y=2x-3",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok y=ax+b.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kvadratine-funkcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "b yra -3.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įrašome nuolydį ir kirtimą.",
-          "latex": "y=2x-3"
-        }
-      ],
-      "answerText": "y=2x-3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kvadratine-funkcija",
-        "grafikas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 80
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-010",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-011",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-012",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-013",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-014",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-015",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-016",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-017",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-018",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-019",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-ex-020",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Funkcijos ir jų savybės: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "olympiad-grade9-functions",
-      "topicId": "funkcijos-ir-ju-savybes",
-      "grade": 9,
-      "level": "olympiad",
-      "type": "numericInput",
-      "olympiadTrack": "Algebra",
-      "olympiadTier": "introductory",
-      "requiredPrerequisiteMastery": 50,
-      "statement": "Funkcija f(x), apibrėžta visiems sveikiesiems skaičiams x, tenkina sąlygą f(x + 1) = f(x) + 2. Žinoma, kad f(1) = 3. Raskite f(100) reikšmę.",
-      "answer": {
-        "kind": "numeric",
-        "value": 201,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pastebėkite, kad f(x) yra aritmetinė progresija. Pabandykite apskaičiuoti pirmąsias reikšmes: f(2), f(3) ir t.t.",
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ],
-          "penalty": 0.05
-        },
-        {
-          "order": 2,
-          "text": "f(2) = f(1) + 2 = 3 + 2 = 5. f(3) = f(2) + 2 = 5 + 2 = 7. Koks yra bendras dėsningumas?",
-          "penalty": 0.05
-        },
-        {
-          "order": 3,
-          "text": "Kiekvieną kartą padidinus argumentą 1 vienetu, funkcijos reikšmė padidėja 2. Todėl f(n) = f(1) + 2 * (n - 1).",
-          "penalty": 0.1
-        },
-        {
-          "order": 4,
-          "text": "Įstatykite n = 100 į formulę f(100) = f(1) + 2 * 99 ir apskaičiuokite atsakymą.",
-          "penalty": 0.1
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Pagal duotą sąjungą f(x + 1) = f(x) + 2, kiekviename žingsnyje funkcijos reikšmė padidėja pastoviu dydžiu d = 2. Tai yra aritmetinės progresijos apibrėžimas."
-        },
-        {
-          "text": "Apskaičiuokime kelias pirmąsias reikšmes: f(1) = 3, f(2) = f(1) + 2 = 5, f(3) = f(2) + 2 = 7, f(4) = f(3) + 2 = 9."
-        },
-        {
-          "text": "Matome dėsningumą: f(x) = f(1) + 2 * (x - 1) visiems sveikiesiems skaičiams x >= 1."
-        },
-        {
-          "text": "Įstatome x = 100: f(100) = 3 + 2 * (100 - 1) = 3 + 2 * 99 = 3 + 198 = 201."
-        }
-      ],
-      "answerText": "201",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 150
-    }
-  ],
-  "tests": [
-    {
-      "id": "funkcijos-ir-ju-savybes-test-topic",
-      "title": "Funkcijos ir jų savybės testas",
-      "scope": "topic",
-      "topicIds": [
-        "funkcijos-ir-ju-savybes"
-      ],
-      "exerciseIds": [
-        "funkcijos-ir-ju-savybes-ex-001",
-        "funkcijos-ir-ju-savybes-ex-002",
-        "funkcijos-ir-ju-savybes-ex-003",
-        "funkcijos-ir-ju-savybes-ex-004",
-        "funkcijos-ir-ju-savybes-ex-005",
-        "funkcijos-ir-ju-savybes-ex-006",
-        "funkcijos-ir-ju-savybes-ex-007",
-        "funkcijos-ir-ju-savybes-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-test-challenge",
-      "title": "Funkcijos ir jų savybės iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "funkcijos-ir-ju-savybes"
-      ],
-      "exerciseIds": [
-        "funkcijos-ir-ju-savybes-ex-009",
-        "funkcijos-ir-ju-savybes-ex-010",
-        "funkcijos-ir-ju-savybes-ex-011",
-        "funkcijos-ir-ju-savybes-ex-012",
-        "funkcijos-ir-ju-savybes-ex-013",
-        "funkcijos-ir-ju-savybes-ex-014",
-        "funkcijos-ir-ju-savybes-ex-015",
-        "funkcijos-ir-ju-savybes-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-funkcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra funkcija?",
-      "back": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-argumentas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra argumentas?",
-      "back": "Nepriklausomas kintamasis.",
-      "conceptIds": [
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-apibrezimo-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra apibrėžimo sritis?",
-      "back": "Visų leistinų argumentų aibė.",
-      "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-reiksmiu-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reikšmių sritis?",
-      "back": "Visų galimų funkcijos reikšmių aibė.",
-      "conceptIds": [
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-funkcijos-zymejimas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra funkcijos žymėjimas?",
-      "back": "Žymi, kad y priklauso nuo x.",
-      "conceptIds": [
-        "funkcijos-zymejimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-virsunes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra viršūnės x koordinatė?",
-      "back": "Padeda rasti parabolės simetrijos ašį.",
-      "conceptIds": [
-        "virsunes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-x-y-sumaiso",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra supainioja x ir y?",
-      "back": "x yra įvestis, y yra rezultatas.",
-      "conceptIds": [
-        "x-y-sumaiso"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "funkcijos-ir-ju-savybes-srs-apibrezimo-srities-neziuri",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra neišsiaiškina apibrėžimo srities?",
-      "back": "Patikrink, kur reiškinys neapibrėžtas.",
-      "conceptIds": [
-        "apibrezimo-srities-neziuri"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "exercises": [],
+  "tests": [],
+  "srsCards": []
 }

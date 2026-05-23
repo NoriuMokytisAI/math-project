@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.3",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "5 klasės programoje atskirai aprašomi kelio, laiko, greičio ir metrinių vienetų uždaviniai."
+    "notes": "Išplėsta judėjimo uždavinių ir matavimo vienetų teorija 5 klasei. Tikslas: 1200-1500 žodžių."
   },
   "topic": {
     "id": "judejimo-uzdaviniai-ir-matavimo-vienetai",
@@ -12,7 +12,7 @@
     "strand": "Geometrija ir matavimai",
     "level": "curriculum",
     "order": 7,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 200,
     "prerequisiteTopicIds": [
       "trupmenos-procentai-santykiai"
     ],
@@ -20,362 +20,255 @@
       "geometrijos-ir-matavimu-pradmenys"
     ],
     "conceptIds": [
-      "kampas",
-      "trikampis",
-      "keturkampis",
-      "perimetras",
-      "plotas",
-      "apskritimas",
-      "skritulys",
-      "pitagoro-teorema",
-      "panasus-trikampiai",
-      "talio-teorema",
-      "transformacija",
-      "simetrija",
-      "koordinates",
-      "vektorius"
+      "greitis",
+      "laikas",
+      "kelias",
+      "vidutinis-greitis",
+      "santykis",
+      "proporcija"
     ],
     "formulaIds": [
-      "trikampio-plotas",
-      "pitagoro-formule",
-      "apskritimo-ilgis",
-      "apskritimo-plotas"
+      "judejimo-formule",
+      "greicio-formule",
+      "laiko-formule"
     ],
     "mistakeIds": [
-      "perimetra-supainioja-su-ploto-formule",
-      "pitagoro-teorema-netaikoma-ne-staciajame"
+      "vienetu-nesuderinimas",
+      "sumaiso-veiksmus-judejime"
     ],
     "exerciseIds": [
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-002",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-003",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-004",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-005",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-006",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-007",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-008",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-009",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-010",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-011",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-012",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-013",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-014",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-015",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-016",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-017",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-018",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-019",
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-020"
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001"
     ]
   },
   "theory": [
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ivadas",
-      "title": "Įvadas",
+      "title": "Judėjimas aplink mus: kodėl matematika skuba?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kelias, laikas, greitis ir matavimo vienetai yra tema, kurioje mokomasi atpažinti pagrindinius judėjimo uždaviniai ir matavimo vienetai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveikas, jaunasis keliautojau! Ar kada nors sėdėjai automobilyje ir žiūrėjai pro langą, kaip pro šalį skrieja medžiai, namai ir kiti automobiliai? O gal skubėjai į mokyklą ir skaičiavai minutes, baimindamasis pavėluoti? Viskas mūsų visatoje juda. Žemė sukasi aplink savo ašį milžinišku greičiu, kraujas teka tavo gyslomis, o planetos skrieja aplink saulę. Judėjimas yra pati gyvybė, o matematika leidžia mums šį nuolatinį vyksmą „sustabdyti“ ir aprašyti tiksliais skaičiais."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kampas|Kampas]], [[trikampis|Trikampis]], [[keturkampis|Keturkampis]] ir uždavinių sprendimo."
+          "text": "Sprendžiant judėjimo uždavinius, mes mokomės planuoti svarbiausius dalykus savo gyvenime. Ar spėsiu į autobusą, jei eisiu lėtai? Kiek laiko užtruks kelionė iki pajūrio? Koks greitas turi būti lėktuvas, kad nuskristų į kitą žemyną per 10 valandų? Atsakymai į šiuos klausimus remiasi trimis pagrindiniais dydžiais: **keliu**, **laiku** ir **greičiu**. Šiame skyriuje mes išmoksime jų slaptą ryšį, kuris leis mums valdyti ne tik skaičius, bet ir savo laiką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pasiruošk tapti eismo reguliuotoju, lėktuvo pilotu ar tiesiog labai protingu pėsčiuoju. Judėjimo matematika yra viena praktiškiausių sričių, kurios tau prireiks kiekvieną dieną."
+        },
+        {
+          "type": "definition",
+          "text": "Mechaninis judėjimas – tai kūno padėties kitimas kitų kūnų atžvilgiu per tam tikrą laiką. Svarbiausia taisyklė: judėjimas visada matuojamas lyginant su kažkuo (pvz., tavo judėjimas lyginant su nejudančiu šaligatviu)."
         }
       ]
     },
     {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-dydziai",
+      "title": "Trys pagrindiniai herojai: Kelias, Laikas ir Greitis",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "kampas",
-          "text": "Dviejų spindulių arba tiesių susikirtimo dydis."
+          "type": "paragraph",
+          "text": "Kad suprastume bet kokią kelionę – ar tai būtų sraigės šliaužimas, ar šviesos greitis kosmosu – mums reikia trijų dydžių."
         },
         {
-          "type": "definition",
-          "conceptId": "trikampis",
-          "text": "Figūra iš trijų kraštinių ir trijų kampų."
+          "type": "paragraph",
+          "text": "**Kelias ($s$)**: Tai visas atstumas, kurį įveikia kūnas. Mes jį matuojame milimetrais, centimetrais, metrais arba kilometrais. Tai atsakymas į klausimą „kiek toli?“ arba „koks atstumas?“. Fizikoje kelias žymimas raide $s$ (nuo lotyniško žodžio *spatium*)."
         },
         {
-          "type": "definition",
-          "conceptId": "keturkampis",
-          "text": "Figūra iš keturių kraštinių."
+          "type": "paragraph",
+          "text": "**Laikas ($t$)**: Tai trukmė, kurią kūnas juda. Matuojame sekundėmis, minutėmis, valandomis, o kartais ir paromis ar metais. Tai atsakymas į klausimą „kiek ilgai?“ arba „per kiek laiko?“. Žymime raide $t$ (*tempus*)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Greitis ($v$)**: Tai pats įdomiausias ir „matematiškiausias“ dydis. Jis parodo, kokį kelią kūnas nueina per VIENĄ laiko vienetą (pvz., per 1 valandą ar per 1 sekundę). Greitis pasako, kaip sparčiai vyksta judėjimas. Žymime raide $v$ (*velocitas*)."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kampas|Kampas]] ir [[perimetras|Perimetras]]."
+          "text": "Įdomu: Greičio matavimo vienetas visada susideda iš dviejų dalių: kelio dalies ir laiko dalies (pvz., $\text{km/h}$ skaitome kaip „kilometrai per valandą“)."
         }
       ]
     },
     {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Kelias, laikas, greitis ir matavimo vienetai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[keturkampis|Keturkampis]] ar [[perimetras|Perimetras]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "trikampio-plotas",
-          "latex": "S=\\frac{ah}{2}"
-        }
-      ]
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-vienetai-giliau",
+      "title": "Matavimo vienetų derinimas: „matematinė higiena“",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Sprendžiant judėjimo uždavinius, dydžiai privalo „kalbėtis“ ta pačia kalba. Tai pati svarbiausia taisyklė! Jei tavo greitis nurodytas kilometrais per valandą ($\text{km/h}$), o laikas – minutėmis, tu negali jų tiesiog sudauginti. Rezultatas bus visiškas jovalas."
+        },
+        {
+          "type": "method",
+          "title": "Suderintų vienetų poros (visada naudok jas!)",
+          "text": "- Jei kelias $\text{km}$ ir laikas $\text{val (h)} \\to$ greitis privalo būti $\text{km/h}$.\n- Jei kelias $\text{m}$ ir laikas $\text{sek (s)} \\to$ greitis privalo būti $\text{m/s}$."
+        },
+        {
+          "type": "method",
+          "title": "Konvertavimo atmintinė",
+          "text": "- $1 \\text{ km} = 1000 \\text{ m}$\n- $1 \\text{ val.} = 60 \\text{ min.} = 3600 \\text{ s}$\n- $1 \\text{ min.} = 60 \\text{ s}$"
+        },
+        {
+          "type": "warning",
+          "text": "DĖMESIO: $1,5$ valandos NĖRA 1 valanda ir 5 minutės. Tai viena dažniausių klaidų! $1,5$ valandos reiškia 1 valandą ir PUSĘ kitos valandos, t. y. 1 valandą 30 minučių. Visada prisimink, kad valandą sudaro 60 dalių, o ne 100."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-formule",
+      "title": "Magiškasis ryšys: Pagrindinė formulė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visas judėjimo paslaptis saugo viena paprasta lygybė. Jei eini 5 km/h greičiu ir eini 2 valandas, tai nueisi $5+5=10$ km. Matome, kad kelias yra lygus greičio ir laiko sandaugai."
+        },
+        {
+          "type": "formula",
+          "formulaId": "judejimo-formule",
+          "latex": "s = v \\cdot t"
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš šios „motininės“ formulės galime gauti kitas dvi, naudodami daugybos ir dalybos ryšį:\n1. **Greitis** yra kelias, padalintas iš laiko: $v = s : t$.\n2. **Laikas** yra kelias, padalintas iš greičio: $t = s : v$."
+        },
+        {
+          "type": "method",
+          "title": "Magiškasis trikampis (tavo slaptas ginklas)",
+          "text": "Nupiešk trikampį ir padalink jį horizontalia linija per vidurį, o apatinę dalį – vertikalia. Viršuje įrašyk $s$, apačioje – $v$ ir $t$.\n- Nori rasti $s$? Uždenk jį pirštu. Matai $v$ ir $t$ greta – vadinasi, DAUGINK.\n- Nori rasti $v$? Uždenk jį. Matai $s$ virš $t$ – vadinasi, DALINK.\n- Nori rasti $t$? Uždenk jį. Matai $s$ virš $v$ – vadinasi, DALINK."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-priespriesiais",
+      "title": "Kai juda du: artėjimas ir tolimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gyvenime retai judame vieni. Dažnai kelyje susitinkame su kitais. Kai du objektai juda vienas link kito, atstumas tarp jų tirpsta daug greičiau, nei juda kiekvienas iš jų. Tai vadiname **artėjimo greičiu**."
+        },
+        {
+          "type": "method",
+          "title": "Judėjimas priešpriešiais (artėjimas)",
+          "text": "Jei du objektai juda vienas priešais kitą, jų bendras artėjimo greitis yra lygus jų greičių SUMAI: $v_{art} = v_1 + v_2$."
+        },
+        {
+          "type": "method",
+          "title": "Judėjimas į priešingas puses (tolimas)",
+          "text": "Jei du objektai startuoja iš tos pačios vietos ir tolsta, jų tolimo greitis taip pat lygus SUMAI: $v_{tol} = v_1 + v_2$."
+        },
+        {
+          "type": "example",
+          "text": "Tu eini pas draugą 4 km/h greičiu, o draugas eina pas tave 5 km/h greičiu. Jūs artėjate vienas prie kito 9 km/h greičiu. Jei atstumas tarp jūsų 18 km, susitiksite po $18 : 9 = 2$ valandų."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-vejimasis",
+      "title": "Vejimasis: lenktynių matematika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O kas, jei abu objektai juda ta pačia kryptimi? Pavyzdžiui, policija vejasi nusikaltėlį. Atstumas mažės TIK TADA, jei besivejantis juda greičiau. Šiuo atveju artėjimo greitis bus greičių SKIRTUMAS."
+        },
+        {
+          "type": "method",
+          "title": "Vejimosi taisyklė",
+          "text": "Kai greitesnis objektas vejasi lėtesnį, jų artėjimo greitis yra: $v_{art} = v_{greitesnis} - v_{letesnis}$."
+        },
+        {
+          "type": "example",
+          "text": "Lapė bėga 15 m/s greičiu, o kiškis bėga ta pačia kryptimi 12 m/s greičiu. Lapė kiekvieną sekundę priartėja prie kiškio per $15 - 12 = 3$ metrus."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-vidutinis-giliau",
+      "title": "Vidutinis greitis: kelionės realybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikrame gyvenime niekas nejuda idealiai vienodai. Automobilis sustoja prie šviesoforo, pėsčiasis sulėtėja lipdamas į kalną, o dviratininkas sustoja atsigerti vandens. Todėl dažniausiai kalbame apie **vidutinį greitį**."
+        },
+        {
+          "type": "definition",
+          "conceptId": "vidutinis-greitis",
+          "text": "Vidutinis greitis – tai visas nuvažiuotas kelias, padalytas iš viso tam sugaišto laiko (įskaitant ir visus sustojimus, pertraukas bei poilsį)."
+        },
+        {
+          "type": "warning",
+          "text": "SVARBIAUSI SPĄSTAI: Vidutinis greitis NĖRA greičių vidurkis! Jei pusę kelio važiavai 100 km/h, o kitą pusę 0 km/h (stovėjai), tavo vidutinis greitis nebus 50 km/h. Visada skaičiuok pagal formulę: $V_{vid} = S_{visas} : T_{visas}$."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-vandenyje",
+      "title": "Judėjimas upėje: kai vanduo padeda arba trukdo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai plaukiame valtimi ar kateriu upėje, mus veikia vandens srovė. Tai tarsi nematomas stūmimas arba stabdymas."
+        },
+        {
+          "type": "method",
+          "title": "Dvi plaukimo kryptys",
+          "text": "- **Pasroviui**: Srovė stumia tave į nugarą, todėl greičiai susideda: $v_{pasroviui} = v_{valties} + v_{sroves}$.\n- **Prieš srovę**: Srovė tave stabdo, stumia atgal, todėl greičiai atimami: $v_{pries} = v_{valties} - v_{sroves}$."
+        },
+        {
+          "type": "note",
+          "text": "Įsidėmėk: Jei valtis plūduriuoja ežere (stovintis vanduo), ji juda savo greičiu. Jei rąstas plaukia upe, jis juda tiesiog srovės greičiu, nes savo variklio neturi."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-klaidos",
+      "title": "Klaidų „archyvas“: pasimokyk iš kitų",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sprendžiant šiuos uždavinius, penktokai dažnai papuola į tuos pačius spąstus. Štai jie:"
+        },
+        {
+          "type": "warning",
+          "text": "**Sustojimų pamiršimas**: Jei mokinys 2 valandas važiavo ir 1 valandą ilsėjosi, visas laikas yra 3 valandos. Daugelis pamiršta pridėti poilsio laiką ir gauna klaidingą vidutinį greitį."
+        },
+        {
+          "type": "warning",
+          "text": "**Logikos nebuvimas**: Jei gavai, kad pėsčiasis eina 200 km/h greičiu – sustok! Tai lėktuvo greitis. Visada pagalvok, ar tavo gautas skaičius yra realus."
+        },
+        {
+          "type": "warning",
+          "text": "**Matavimo vienetų „kokteilis“**: Negalima metrus dalinti iš valandų ir gauti kilometrų. Prieš pradedant bet kokį skaičiavimą, suvienodink visus matavimo vienetus."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-pabaiga",
+      "title": "Apibendrinimas: laikas startuoti!",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Judėjimo uždaviniai moko mus ne tik spręsti lygtis, bet ir geriau suprasti mus supantį dinamišką pasaulį. Mokėdami apskaičiuoti laiką, atstumą ir greitį, jūs būsite geresni keliautojai, atsakingesni vairuotojai ateityje ir tiesiog protingesni žmonės."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nuo šiol, kai važiuosite automobiliu ar eisite pasivaikščioti, pabandykite mintyse įvertinti savo greitį ir nuspėti, kada pasieksite tikslą. Tai geriausia treniruotė tavo smegenims! Sėkmės skriejant per matematikos ir gyvenimo kelius!"
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kampas",
-      "title": "Kampas",
+      "id": "greitis",
+      "title": "Greitis",
       "type": "concept",
-      "shortDefinition": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "intuition": "Kampai aprašo krypties pokytį.",
-      "formal": "Kampas matuojamas laipsniais arba radianais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "transformacija"
+      "shortDefinition": "Kelias nuveitas per laiko vienetą.",
+      "intuition": "Tai parodo, kaip greitai kūnas juda. Jei eini greitai, per minutę nueini daug metrų.",
+      "formal": "Greitis yra fizinis dydis, apibūdinantis kūno padėties kitimo spartą.",
+      "notation": [
+        "v"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "trikampis",
-      "title": "Trikampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "intuition": "Trikampis yra daugelio geometrijos teoremų pradžia.",
-      "formal": "Trikampis yra daugiakampis su trimis viršūnėmis.",
-      "notation": [],
       "relatedConceptIds": [
-        "kampas",
-        "pitagoro-teorema",
-        "panasus-trikampiai"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "keturkampis",
-      "title": "Keturkampis",
-      "type": "concept",
-      "shortDefinition": "Figūra iš keturių kraštinių.",
-      "intuition": "Keturkampių savybės padeda skaičiuoti plotus ir kampus.",
-      "formal": "Keturkampis turi keturias kraštines ir keturis kampus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "lygiagretainis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "perimetras",
-      "title": "Perimetras",
-      "type": "concept",
-      "shortDefinition": "Kraštinių ilgių suma.",
-      "intuition": "Perimetras atsako, kiek reikia tvorelės ar krašto juostos.",
-      "formal": "Perimetras yra figūros kraštinių ilgių suma.",
-      "notation": [],
-      "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "plotas",
-      "title": "Plotas",
-      "type": "concept",
-      "shortDefinition": "Plokščios figūros paviršiaus dydis.",
-      "intuition": "Plotas sako, kiek vietos figūra užima.",
-      "formal": "Plotas matuojamas kvadratiniais vienetais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "perimetras",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimas",
-      "title": "Apskritimas",
-      "type": "concept",
-      "shortDefinition": "Taškų aibė, nutolusi nuo centro vienodu atstumu.",
-      "intuition": "Apskritimas yra rato kraštas.",
-      "formal": "Apskritimas sudarytas iš taškų, kurių atstumas iki centro yra pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "skritulys",
-        "kampas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "skritulys",
-      "title": "Skritulys",
-      "type": "concept",
-      "shortDefinition": "Apskritimo vidus kartu su kraštu.",
-      "intuition": "Skritulys yra visas apskritimo užimamas plotas.",
-      "formal": "Skritulys yra plokštumos dalis, apribota apskritimu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "apskritimas",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema",
-      "title": "Pitagoro teorema",
-      "type": "concept",
-      "shortDefinition": "Ryšys stačiajame trikampyje.",
-      "intuition": "Ji leidžia rasti neaiškų kraštinę iš dviejų žinomų.",
-      "formal": "Stačiajame trikampyje a² + b² = c².",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "saknis"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "panasus-trikampiai",
-      "title": "Panašūs trikampiai",
-      "type": "concept",
-      "shortDefinition": "Vienodų kampų, bet kitokio dydžio trikampiai.",
-      "intuition": "Panašumas reiškia tą pačią formą ir kitokį mastelį.",
-      "formal": "Panašiuose trikampiuose atitinkami kampai lygūs, o kraštinės proporcingos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "trikampis",
-        "proporcija",
-        "mastelis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "talio-teorema",
-      "title": "Talio teorema",
-      "type": "concept",
-      "shortDefinition": "Lygiagrečių tiesių ir proporcijų ryšys.",
-      "intuition": "Tai labai patogus mastelio įrankis.",
-      "formal": "Lygiagretės tiesės sukuria proporcingas atkarpas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "panasus-trikampiai",
-        "proporcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "transformacija",
-      "title": "Transformacija",
-      "type": "concept",
-      "shortDefinition": "Figūros padėties, dydžio ar krypties keitimas.",
-      "intuition": "Transformacijos leidžia geometriją matyti judant.",
-      "formal": "Transformacija yra taisyklė, paverčianti vieną figūrą kita.",
-      "notation": [],
-      "relatedConceptIds": [
-        "simetrija",
-        "koordinates"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrija",
-      "title": "Simetrija",
-      "type": "concept",
-      "shortDefinition": "Figūros savybė sutapti su savimi po pokyčio.",
-      "intuition": "Simetrija padeda atpažinti dėsningumus.",
-      "formal": "Figūra yra simetriška, jei egzistuoja ją į save paverčianti transformacija.",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "apskritimas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koordinates",
-      "title": "Koordinatės",
-      "type": "concept",
-      "shortDefinition": "Skaičiai, nusakantys taško padėtį plokštumoje.",
-      "intuition": "Koordinatės leidžia geometriją perkelti į skaičius.",
-      "formal": "Taško padėtis aprašoma pora (x; y).",
-      "notation": [],
-      "relatedConceptIds": [
-        "transformacija",
-        "vektorius"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vektorius",
-      "title": "Vektorius",
-      "type": "concept",
-      "shortDefinition": "Nukreipta atkarpa.",
-      "intuition": "Vektorius rodo ir ilgį, ir kryptį.",
-      "formal": "Vektorius turi moduli, kryptį ir pojūtį, kur keliauja.",
-      "notation": [],
-      "relatedConceptIds": [
-        "koordinates",
-        "transformacija"
+        "kelias",
+        "laikas"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -384,221 +277,270 @@
   ],
   "formulas": [
     {
-      "id": "trikampio-plotas",
-      "title": "Trikampio plotas",
+      "id": "judejimo-formule",
+      "title": "Kelio formulė",
       "type": "formula",
-      "latex": "S=\\frac{ah}{2}",
+      "latex": "s = v \\cdot t",
       "conditions": [
-        "Kai žinomas pagrindas ir aukštinė"
+        "v - pastovus greitis"
       ],
       "variables": {
-        "a": "pagrindas",
-        "h": "aukštinė"
+        "s": "kelias",
+        "v": "greitis",
+        "t": "laikas"
       },
-      "explanation": "Naudojama daugelyje ploto uždavinių.",
+      "explanation": "Norėdami sužinoti atstumą, dauginame greitį iš sugaišto laiko.",
       "relatedConceptIds": [
-        "plotas",
-        "trikampis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-formule",
-      "title": "Pitagoro formulė",
-      "type": "formula",
-      "latex": "a^2+b^2=c^2",
-      "conditions": [
-        "Stačiasis trikampis"
-      ],
-      "variables": {
-        "a": "statinis",
-        "b": "statinis",
-        "c": "įžambinė"
-      },
-      "explanation": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "relatedConceptIds": [
-        "pitagoro-teorema",
-        "saknis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-ilgis",
-      "title": "Apskritimo ilgis",
-      "type": "formula",
-      "latex": "C=2\\pi r",
-      "conditions": [
-        "Apskritimas"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Ilgis aplink apskritimą.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "apskritimo-plotas",
-      "title": "Skritulio plotas",
-      "type": "formula",
-      "latex": "S=\\pi r^2",
-      "conditions": [
-        "Skritulys"
-      ],
-      "variables": {
-        "r": "spindulys"
-      },
-      "explanation": "Skritulio plotas priklauso nuo spindulio kvadrato.",
-      "relatedConceptIds": [
-        "apskritimas",
-        "skritulys"
+        "greitis",
+        "laikas"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perimetra-supainioja-su-ploto-formule",
-      "title": "Perimetrą supainioja su plotu",
+      "id": "vienetu-nesuderinimas",
+      "title": "Km ir Minutės",
       "type": "mistake",
       "conceptIds": [
-        "perimetras",
-        "plotas"
+        "greitis"
       ],
-      "wrongPattern": "Stačiakampiui parašo a·b vietoje 2(a+b).",
-      "whyItHappens": "Perimetras yra kraštinių suma, plotas - paviršiaus dydis.",
-      "correction": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "wrongExample": "P=8·5",
-      "correctExample": "P=2(8+5)",
-      "defaultSrs": true
-    },
-    {
-      "id": "pitagoro-teorema-netaikoma-ne-staciajame",
-      "title": "Pitagoro teoremą taiko ne stačiajame trikampyje",
-      "type": "mistake",
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "wrongPattern": "Skačiuoja bet kuriame trikampyje.",
-      "whyItHappens": "Teorema galioja tik stačiajame trikampyje.",
-      "correction": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "wrongExample": "a²+b²=c² visur",
-      "correctExample": "a²+b²=c² stačiajame trikampyje",
+      "wrongPattern": "s = 60 km/h * 15 min = 900 km",
+      "whyItHappens": "Mokinys tiesiog sudaugina skaičius nepavertęs vienetų.",
+      "correction": "Paverskite 15 min į 0,25 h arba 1/4 h.",
+      "wrongExample": "60 * 15",
+      "correctExample": "60 * 0,25 = 15 km",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-1",
-      "title": "Perimetras",
+      "title": "Paprastas kelio radimas",
       "level": "easy",
-      "problem": "Stačiakampio kraštinės yra 8 ir 5. Rask perimetrą.",
+      "problem": "Dviratininkas važiuoja 18 km/h greičiu. Kokį kelią jis nuvažiuos per 4 valandas?",
       "conceptIds": [
-        "perimetras"
+        "kelias"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "judejimo-formule"
+      ],
       "steps": [
         {
-          "text": "Perimetras yra kraštinių suma.",
-          "latex": "P=2(8+5)"
+          "text": "Išsirašome duomenis: v = 18 km/h, t = 4 h.",
+          "latex": "v=18, t=4"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "26"
+          "text": "Dauginame greitį iš laiko.",
+          "latex": "18 \\cdot 4 = 72"
         }
       ],
-      "answer": "26"
+      "answer": "72 km"
     },
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-2",
-      "title": "Plotas",
+      "title": "Greičio apskaičiavimas",
       "level": "easy",
-      "problem": "Trikampio pagrindas 12, aukštinė 7. Rask plotą.",
+      "problem": "Lėktuvas nuskriejo 1200 km per 2 valandas. Kokiu greičiu jis skrido?",
       "conceptIds": [
-        "plotas",
-        "keturkampis"
+        "greitis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "greicio-formule"
+      ],
       "steps": [
         {
-          "text": "Naudojame trikampio ploto formulę.",
-          "latex": "S=\\frac{1}{2}ah"
+          "text": "Naudojame formulę v = s : t.",
+          "latex": "1200 : 2"
         },
         {
-          "text": "Įstatome.",
-          "latex": "S=\\frac{1}{2}\\cdot12\\cdot7=42"
+          "text": "Atliekame dalybą.",
+          "latex": "600"
         }
       ],
-      "answer": "42"
+      "answer": "600 km/h"
     },
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-3",
-      "title": "Pitagoro teorema",
-      "level": "medium",
-      "problem": "Stačiajame trikampyje kraštinės yra 6 ir 8. Rask įžambinę.",
+      "title": "Laiko apskaičiavimas",
+      "level": "easy",
+      "problem": "Pėsčiasis eina 4 km/h greičiu. Per kiek laiko jis nueis 14 km?",
       "conceptIds": [
-        "pitagoro-teorema",
-        "keturkampis"
+        "laikas"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "laiko-formule"
+      ],
       "steps": [
         {
-          "text": "Taikome Pitagoro teoremą.",
-          "latex": "c^2=6^2+8^2"
+          "text": "Naudojame formulę t = s : v.",
+          "latex": "14 : 4"
         },
         {
-          "text": "Randame c.",
-          "latex": "c=\\sqrt{100}=10"
+          "text": "Atliekame dalybą: 14/4 = 7/2 = 3,5.",
+          "latex": "3,5"
         }
       ],
-      "answer": "10"
+      "answer": "3,5 valandos (arba 3 val. 30 min.)"
     },
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-4",
-      "title": "Panašumas",
+      "title": "Vienetų derinimas (metrai ir minutės)",
       "level": "medium",
-      "problem": "Dviejų panašių trikampių kraštinių santykis 2:5. Jei mažesnioji kraštinė 4, kokia atitinkama didesnioji?",
+      "problem": "Bėgikas bėga 5 m/s greičiu. Kokį kelią jis nubėgs per 2 minutes?",
       "conceptIds": [
-        "panasus-trikampiai",
-        "talio-teorema"
+        "kelias"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Padauginame iš 5/2.",
-          "latex": "4\\cdot\\frac{5}{2}"
+          "text": "Suderiname vienetus: paverčiame 2 minutes į sekundes.",
+          "latex": "2 \\cdot 60 = 120 \\text{ s}"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "10"
+          "text": "Dauginame greitį iš sekundžių.",
+          "latex": "5 \\cdot 120 = 600"
         }
       ],
-      "answer": "10"
+      "answer": "600 metrų"
     },
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-5",
-      "title": "Koordinatės",
-      "level": "hard",
-      "problem": "Rask atstumą tarp taškų A(1,2) ir B(4,6).",
+      "title": "Judėjimas priešpriešiais",
+      "level": "medium",
+      "problem": "Iš dviejų kaimų, tarp kurių yra 45 km, vienas priešais kitą išėjo du broliai. Vieno greitis 4 km/h, kito – 5 km/h. Po kiek laiko jie susitiks?",
       "conceptIds": [
-        "koordinates",
-        "vektorius"
+        "laikas"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Naudojame atstumo formulę.",
-          "latex": "d=\\sqrt{(4-1)^2+(6-2)^2}"
+          "text": "Randame artėjimo greitį (sudedame greičius).",
+          "latex": "4 + 5 = 9 \\text{ km/h}"
         },
         {
-          "text": "Skaičiuojame.",
-          "latex": "d=\\sqrt{25}=5"
+          "text": "Daliname visą atstumą iš artėjimo greičio.",
+          "latex": "45 : 9 = 5"
         }
       ],
-      "answer": "5"
+      "answer": "Po 5 valandų"
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-6",
+      "title": "Vejimasis",
+      "level": "hard",
+      "problem": "Dviratininkas išvažiavo 10 km/h greičiu. Po valandos iš to paties taško išvažiavo motociklininkas 30 km/h greičiu. Po kiek laiko jis pasivys dviratininką?",
+      "conceptIds": [
+        "laikas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Po 1 valandos dviratininkas jau buvo nuvažiavęs 10 km atstumą.",
+          "latex": "10 \\text{ km}"
+        },
+        {
+          "text": "Randame artėjimo (vejimosi) greitį: 30 - 10 = 20 km/h.",
+          "latex": "20"
+        },
+        {
+          "text": "Daliname esamą atstumą iš vejimosi greičio.",
+          "latex": "10 : 20 = 0,5"
+        }
+      ],
+      "answer": "Po 0,5 valandos (arba 30 min.) nuo motociklininko starto."
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-7",
+      "title": "Plaukimas upe",
+      "level": "medium",
+      "problem": "Katerio savasis greitis 25 km/h, o upės srovės greitis 3 km/h. Kokį atstumą kateris nuplauks per 2 valandas plaukdamas PRIEŠ srovę?",
+      "conceptIds": [
+        "kelias"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Randame greitį prieš srovę (atimame srovę).",
+          "latex": "25 - 3 = 22 \\text{ km/h}"
+        },
+        {
+          "text": "Dauginame iš laiko.",
+          "latex": "22 \\cdot 2 = 44"
+        }
+      ],
+      "answer": "44 km"
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-8",
+      "title": "Vidutinis greitis",
+      "level": "hard",
+      "problem": "Automobilis 3 valandas važiavo 60 km/h greičiu ir 2 valandas – 90 km/h greičiu. Koks vidutinis greitis?",
+      "conceptIds": [
+        "vidutinis-greitis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Randame visą kelią: (3 * 60) + (2 * 90) = 180 + 180 = 360 km.",
+          "latex": "360"
+        },
+        {
+          "text": "Randame visą laiką: 3 + 2 = 5 valandos.",
+          "latex": "5"
+        },
+        {
+          "text": "Daliname visą kelią iš viso laiko.",
+          "latex": "360 : 5 = 72"
+        }
+      ],
+      "answer": "72 km/h"
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-9",
+      "title": "Susitikimas (tolimas)",
+      "level": "medium",
+      "problem": "Du pėstieji išėjo iš tos pačios vietos priešingomis kryptimis. Vieno greitis 4 km/h, kito – 6 km/h. Koks atstumas tarp jų bus po 3 valandų?",
+      "conceptIds": [
+        "kelias"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Randame tolimo greitį (sudedame).",
+          "latex": "4 + 6 = 10 \\text{ km/h}"
+        },
+        {
+          "text": "Dauginame iš laiko.",
+          "latex": "10 \\cdot 3 = 30"
+        }
+      ],
+      "answer": "30 km"
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-exmp-10",
+      "title": "Kelių dalių kelionė",
+      "level": "hard",
+      "problem": "Mokinys iki stotelės ėjo 10 min 3 km/h greičiu, o tada 20 min važiavo autobusu 45 km/h greičiu. Kiek kilometrų jis įveikė?",
+      "conceptIds": [
+        "kelias"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pirma dalis: 10 min = 1/6 val. Kelias: 3 * (1/6) = 0,5 km.",
+          "latex": "0,5"
+        },
+        {
+          "text": "Antra dalis: 20 min = 1/3 val. Kelias: 45 * (1/3) = 15 km.",
+          "latex": "15"
+        },
+        {
+          "text": "Sudedame abu kelius.",
+          "latex": "15,5"
+        }
+      ],
+      "answer": "15,5 km"
     }
   ],
   "exercises": [
@@ -606,967 +548,46 @@
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001",
       "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
       "grade": 5,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Stačiakampio kraštinės 7 ir 9. Rask perimetrą.",
+      "statement": "Automobilis važiuoja 70 km/h greičiu. Kiek km jis nuvažiuos per 3 valandas?",
       "answer": {
         "kind": "numeric",
-        "value": 32,
+        "value": 210,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
+          "text": "Daugink 70 iš 3.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "32"
+          "text": "70 * 3 = 210",
+          "latex": "210"
         }
       ],
-      "answerText": "32",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
+      "answerText": "210",
       "estimatedSeconds": 40
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-002",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Kvadrato kraštinė 6. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 24,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "24"
-        }
-      ],
-      "answerText": "24",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-003",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Trikampio kraštinės 5, 7 ir 8. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-004",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Lygiagretainio kraštinės 8 ir 5. Rask perimetrą.",
-      "answer": {
-        "kind": "numeric",
-        "value": 26,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame kraštines.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "perimetras"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Stačiakampiui dauginu iš 2.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame perimetrą.",
-          "latex": "26"
-        }
-      ],
-      "answerText": "26",
-      "alternateMethods": [],
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-005",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Stačiakampis 8x5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 40,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "40"
-        }
-      ],
-      "answerText": "40",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-006",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Trikampis pagrindas 10, aukštinė 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 30,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "30"
-        }
-      ],
-      "answerText": "30",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-007",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Kvadratas kraštinė 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 49,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "49"
-        }
-      ],
-      "answerText": "49",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-008",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Rask plotą: Apskritimas r=5, pi~3.14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 78.5,
-        "tolerance": 0.01
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą formulę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "plotas",
-            "apskritimas"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Plotas matuojamas kvadratiniais vienetais.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Taikome formulę.",
-          "latex": "78.5"
-        }
-      ],
-      "answerText": "78.5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "plotas",
-        "apskritimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 65
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-009",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri kraštinė stačiajame trikampyje yra įžambinė?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Trumpiausia"
-          },
-          {
-            "id": "b",
-            "text": "Priešinga stačiajam kampui"
-          },
-          {
-            "id": "c",
-            "text": "Kraštinė prie pagrindo"
-          },
-          {
-            "id": "d",
-            "text": "Bet kuri"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ji yra prieš stačiajį kampą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įžambinė yra prieš 90° kampą.",
-          "latex": "įžambinė"
-        }
-      ],
-      "answerText": "Priešinga stačiajam kampui",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-010",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Stačiajame trikampyje vienas statinis 9, įžambinė 15. Rask kitą statinį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Taikome Pitagoro teoremą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pitagoro-teorema"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Skaičiuojame 15²-9².",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "c²=a²+b².",
-          "latex": "15^2=9^2+x^2"
-        },
-        {
-          "text": "x=12.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pitagoro-teorema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 95
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-011",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-012",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-013",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-014",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-015",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-016",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-017",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-018",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-019",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-020",
-      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kelias, laikas, greitis ir matavimo vienetai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kampas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
     }
   ],
   "tests": [
     {
       "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-test-topic",
-      "title": "Kelias, laikas, greitis ir matavimo vienetai testas",
+      "title": "Judėjimo uždavinių testas",
       "scope": "topic",
       "topicIds": [
         "judejimo-uzdaviniai-ir-matavimo-vienetai"
       ],
       "exerciseIds": [
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-002",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-003",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-004",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-005",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-006",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-007",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-008"
+        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-test-challenge",
-      "title": "Kelias, laikas, greitis ir matavimo vienetai iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "judejimo-uzdaviniai-ir-matavimo-vienetai"
-      ],
-      "exerciseIds": [
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-009",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-010",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-011",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-012",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-013",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-014",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-015",
-        "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
-  "srsCards": [
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-kampas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kampas?",
-      "back": "Dviejų spindulių arba tiesių susikirtimo dydis.",
-      "conceptIds": [
-        "kampas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-trikampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra trikampis?",
-      "back": "Figūra iš trijų kraštinių ir trijų kampų.",
-      "conceptIds": [
-        "trikampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-keturkampis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra keturkampis?",
-      "back": "Figūra iš keturių kraštinių.",
-      "conceptIds": [
-        "keturkampis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-perimetras",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra perimetras?",
-      "back": "Kraštinių ilgių suma.",
-      "conceptIds": [
-        "perimetras"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-trikampio-plotas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra trikampio plotas?",
-      "back": "Naudojama daugelyje ploto uždavinių.",
-      "conceptIds": [
-        "trikampio-plotas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-pitagoro-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra pitagoro formulė?",
-      "back": "Ryšys tarp stačiojo trikampio kraštinių.",
-      "conceptIds": [
-        "pitagoro-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-perimetra-supainioja-su-ploto-formule",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perimetrą supainioja su plotu?",
-      "back": "Atskirk, ar reikia kraštinių sumos, ar užimamo ploto.",
-      "conceptIds": [
-        "perimetra-supainioja-su-ploto-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-srs-pitagoro-teorema-netaikoma-ne-staciajame",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pitagoro teoremą taiko ne stačiajame trikampyje?",
-      "back": "Pirmiausia patikrink, ar yra 90° kampas.",
-      "conceptIds": [
-        "pitagoro-teorema-netaikoma-ne-staciajame"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "srsCards": []
 }

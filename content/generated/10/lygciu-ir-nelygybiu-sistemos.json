@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Eliminacija, įstatymas, grafinis sprendimas."
+    "notes": "10 klasės programa apima nelinearines lygčių sistemas ir kvadratinių nelygybių sistemas."
   },
   "topic": {
     "id": "lygciu-ir-nelygybiu-sistemos",
@@ -12,32 +12,29 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 1,
-    "estimatedStudyMinutes": 190,
+    "estimatedStudyMinutes": 240,
     "prerequisiteTopicIds": [
-      "kvadratine-funkcija-ir-lygtys"
+      "tiesiniu-lygciu-sistemos-8",
+      "kvadratines-nelygybes"
     ],
-    "nextTopicIds": [
-      "statistika-tikimybe-ir-vektoriai"
-    ],
+    "nextTopicIds": [],
     "conceptIds": [
-      "lygtis",
-      "nelygybe",
-      "sprendinys",
-      "sistema",
-      "tiesine-funkcija",
-      "veiksmai-su-lygtimis",
-      "tiesine-lygybe",
-      "rodikliu-nelygybe",
-      "modeliavimas",
-      "grafine-sistema"
+      "nelinearine-lygciu-sistema",
+      "nelygybiu-sistema",
+      "sistemos-sankirta",
+      "keitimo-budas-nelinearinis",
+      "grafinis-sistemu-vaizdavimas",
+      "tieses-ir-paraboles-sankirta",
+      "bendras-sprendinys"
     ],
     "formulaIds": [
-      "tiesines-sistemos-bendrumas",
-      "eliminacijos-principas"
+      "apskritimo-lygtis-pagrindine",
+      "paraboles-lygtis-standartine"
     ],
     "mistakeIds": [
-      "sistema-vienu-kintamuoju",
-      "eliminacija-be-patikros"
+      "pamirstas-zenklas-nelygybiu-sankirtoje",
+      "tik-viena-kintamojo-pora-rasta",
+      "skaiciavimo-klaidos-istatant-kvadrata"
     ],
     "exerciseIds": [
       "lygciu-ir-nelygybiu-sistemos-ex-001",
@@ -49,258 +46,102 @@
       "lygciu-ir-nelygybiu-sistemos-ex-007",
       "lygciu-ir-nelygybiu-sistemos-ex-008",
       "lygciu-ir-nelygybiu-sistemos-ex-009",
-      "lygciu-ir-nelygybiu-sistemos-ex-010",
-      "lygciu-ir-nelygybiu-sistemos-ex-011",
-      "lygciu-ir-nelygybiu-sistemos-ex-012",
-      "lygciu-ir-nelygybiu-sistemos-ex-013",
-      "lygciu-ir-nelygybiu-sistemos-ex-014",
-      "lygciu-ir-nelygybiu-sistemos-ex-015",
-      "lygciu-ir-nelygybiu-sistemos-ex-016",
-      "lygciu-ir-nelygybiu-sistemos-ex-017",
-      "lygciu-ir-nelygybiu-sistemos-ex-018",
-      "lygciu-ir-nelygybiu-sistemos-ex-019",
-      "lygciu-ir-nelygybiu-sistemos-ex-020"
+      "lygciu-ir-nelygybiu-sistemos-ex-010"
     ]
   },
   "theory": [
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-ivadas",
-      "title": "Įvadas",
+      "id": "lygciu-sistemos-ivadas-detalus",
+      "title": "1. Įvadas į sudėtingesnes sistemas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lygčių ir nelygybių sistemos yra tema, kurioje mokomasi atpažinti pagrindinius sistemos ir modeliavimas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Aštuntoje klasėje mokėtės spręsti dviejų tiesių sankirtas. Tačiau realiame pasaulyje trajektorijos nebūna tik tiesios. Pavyzdžiui, kur susitiks tiesiai važiuojantis automobilis ir ratu skriejantis palydovo signalas? Arba kada tiesus kelias taps liestiniu parabolinei kalvai? Tam reikalingos sistemos, kuriose bent viena lygtis yra kvadratinė."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[lygtis|Lygtis]], [[nelygybe|Nelygybė]], [[sprendinys|Sprendinys]] ir uždavinių sprendimo."
+          "text": "Taip pat nagrinėsime nelygybių sistemas, kurios leidžia nustatyti bendrą „saugumo zoną“ arba sritį, kurioje galioja keli apribojimai vienu metu."
         }
       ]
     },
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "nelinearines-lygciu-sistemos",
+      "title": "2. Lygčių sistemos: Tiesė ir Parabolė",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "lygtis",
-          "text": "Lygybė su nežinomuoju."
+          "type": "paragraph",
+          "text": "Dažniausiai sutinkama sistema susideda iš vienos pirmojo laipsnio (tiesinės) lygties ir vienos antrojo laipsnio (kvadratinės) lygties."
         },
         {
-          "type": "definition",
-          "conceptId": "nelygybe",
-          "text": "Ryšys su <, >, <= arba >=."
-        },
-        {
-          "type": "definition",
-          "conceptId": "sprendinys",
-          "text": "Reikšmė, tenkinanti lygtį."
+          "type": "method",
+          "title": "Sprendimo strategija: Keitimo būdas",
+          "text": "1. Iš **tiesinės** lygties išreikškite vieną kintamąjį (kuris turi paprastesnį koeficientą).\n2. Gautą išraišką įstatykite į **kvadratinę** lygtį.\n3. Išspręskite gautą kvadratinę lygtį su vienu kintamuoju (naudodami diskriminantą ar Vieto teoremą).\n4. Radę $x$ reikšmes (gali būti dvi, viena arba nė vienos), apskaičiuokite atitinkamas $y$ reikšmes."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[lygtis|Lygtis]] ir [[sistema|Sistema]]."
+          "text": "Geometriškai tai reiškia tiesės ir parabolės sankirtą. Gali būti 2 taškai (D > 0), 1 taškas - liestinė (D = 0) arba tiesė nepereina per parabolę (D < 0)."
         }
       ]
     },
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Lygčių ir nelygybių sistemos sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[sprendinys|Sprendinys]] ar [[sistema|Sistema]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "tiesines-sistemos-bendrumas",
-          "latex": "\\begin{cases} ax+by=c \\\\ dx+ey=f \\end{cases}"
-        }
-      ]
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "nelygybiu-sistemos-teorija",
+      "title": "3. Nelygybių sistemos: Bendrų sprendinių paieška",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Nelygybių sistemos sprendimas skiriasi nuo lygčių tuo, kad čia mes neieškome taškų, o ieškome **bendro intervalo**."
+        },
+        {
+          "type": "method",
+          "text": "1. Išspręskite kiekvieną sistemos nelygybę atskirai.\n2. Kiekvienos nelygybės sprendinius pavaizduokite toje pačioje skaičių tiesėje (naudokite skirtingą braižymą: brūkšniavimą į skirtingas puses arba skirtingas spalvas).\n3. Suraskite sritį, kurioje intervalai **persidengia** (sankirta).\n4. Atsakymą užrašykite intervalu arba pasakykite, kad sprendinių nėra, jei intervalai nesusitinka."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-klaidos",
+      "title": "4. Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Nepilnas atsakymas: Radus $x_1$ ir $x_2$, mokiniai dažnai pamiršta rasti atitinkamus $y_1$ ir $y_2$. Atsakymas visada turi būti porų rinkinys: $(x_1; y_1)$ ir $(x_2; y_2)$."
+        },
+        {
+          "type": "warning",
+          "text": "Kėlimas kvadratu: Įstatydami išraišką (pvz., $y = x+1$) į kvadratinę lygtį vietoj $y^2$, nepamirškite, kad $(x+1)^2 = x^2 + 2x + 1$, o ne $x^2 + 1$!"
+        },
+        {
+          "type": "warning",
+          "text": "Sankirta vs Sąjunga: Nelygybių sistemoje ieškome TIK tos dalies, kuri tinka abiem. Jei viena nelygybė sako $x > 5$, o kita $x < 2$, sistema sprendinių neturi."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "lygtis",
-      "title": "Lygtis",
+      "id": "nelinearine-lygciu-sistema",
+      "title": "Nelinearinė lygčių sistema",
       "type": "concept",
-      "shortDefinition": "Lygybė su nežinomuoju.",
-      "intuition": "Lygtis turi būti tikrinama abiejose pusėse.",
-      "formal": "Lygtis yra lygybė su bent vienu nežinomuoju.",
+      "shortDefinition": "Sistema, kurioje yra bent viena ne pirmojo laipsnio lygtis.",
+      "intuition": "Kreivių susikirtimas plokštumoje.",
+      "formal": "Lygčių rinkinys, kurio bendrieji sprendiniai gali būti ne vienas taškas.",
       "notation": [],
       "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
+        "keitimo-budas-nelinearinis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "nelygybe",
-      "title": "Nelygybė",
+      "id": "nelygybiu-sistema",
+      "title": "Nelygybių sistema",
       "type": "concept",
-      "shortDefinition": "Ryšys su <, >, <= arba >=.",
-      "intuition": "Nelygybė aprašo sritį, o ne vieną skaičių.",
-      "formal": "Nelygybė lygina du reiškinius nelygybės ženklais.",
+      "shortDefinition": "Kelių apribojimų rinkinys kintamajam.",
+      "intuition": "Bendros erdvės paieška tarp kelių taisyklių.",
+      "formal": "Sprendinių aibė, lygi visų sistemos nelygybių sprendinių aibių sankirtai.",
       "notation": [],
       "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sprendinys",
-      "title": "Sprendinys",
-      "type": "concept",
-      "shortDefinition": "Reikšmė, tenkinanti lygtį.",
-      "intuition": "Patikrinimas yra svarbiausias žingsnis.",
-      "formal": "Sprendinys padaro lygtį ar nelygybę teisingą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sistema",
-      "title": "Sistema",
-      "type": "concept",
-      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "intuition": "Sistema reiškia, kad visi reikalavimai galioja kartu.",
-      "formal": "Sprendinys turi tenkinti visas sistemos lygtis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-funkcija",
-      "title": "Tiesinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
-      "intuition": "Sistema dažnai reiškia tiesių susikirtimą.",
-      "formal": "Tiesinė funkcija rašoma y=ax+b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "veiksmai-su-lygtimis",
-      "title": "Veiksmai su lygtimis",
-      "type": "concept",
-      "shortDefinition": "Lygties pertvarkymas išlaikant lygybę.",
-      "intuition": "Galima pridėti, atimti, dauginti ar dalyti abi puses tuo pačiu skaičiumi.",
-      "formal": "Lygtį galima pertvarkyti ekvivalentiškais veiksmais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-lygybe",
-      "title": "Tiesinė lygtis",
-      "type": "concept",
-      "shortDefinition": "Lygtis su pirmojo laipsnio nežinomuoju.",
-      "intuition": "Tai pagrindinė vieno nežinomojo lygtis.",
-      "formal": "Tiesinė lygtis turi formą ax+b=0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodikliu-nelygybe",
-      "title": "Rodyklinė nelygybė",
-      "type": "concept",
-      "shortDefinition": "Nelygybė, kai reikia saugoti ženklų kryptį.",
-      "intuition": "Svarbu, kad dauginant iš neigiamo skaičiaus ženklas apsiverčia.",
-      "formal": "Dauginant ar dalijant iš neigiamo skaičiaus nelygybės ženklas pasikeičia.",
-      "notation": [],
-      "relatedConceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "modeliavimas",
-      "title": "Modeliavimas",
-      "type": "concept",
-      "shortDefinition": "Realaus teksto vertimas į lygtį ar sistemą.",
-      "intuition": "Tai žingsnis nuo istorijos prie matematikos.",
-      "formal": "Modeliavimas reiškia situacijos užrašymą matematiniais ryšiais.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "grafine-sistema",
-      "title": "Grafinė sistema",
-      "type": "concept",
-      "shortDefinition": "Lygčių sistema, sprendžiama grafiškai.",
-      "intuition": "Tai tiesių arba kreivių susikirtimas.",
-      "formal": "Sistema sprendžiama radus bendrus grafiko taškus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sistema",
-        "grafikas"
+        "sistemos-sankirta"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -309,176 +150,241 @@
   ],
   "formulas": [
     {
-      "id": "tiesines-sistemos-bendrumas",
-      "title": "Tiesinių lygčių sistemos idėja",
+      "id": "apskritimo-lygtis-pagrindine",
+      "title": "Apskritimo lygtis",
       "type": "formula",
-      "latex": "\\begin{cases} ax+by=c \\\\ dx+ey=f \\end{cases}",
+      "latex": "x^2 + y^2 = R^2",
       "conditions": [
-        "Kai yra du apribojimai"
+        "Centras taške (0;0)"
       ],
       "variables": {
-        "x": "pirmas nežinomasis",
-        "y": "antras nežinomasis"
+        "R": "spindulys"
       },
-      "explanation": "Sistema aprašo bendrą sprendinį.",
+      "explanation": "Dažnai naudojama sudėtingesnėse sistemose kartu su tiesėmis.",
       "relatedConceptIds": [
-        "sistema",
-        "tiesine-funkcija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "eliminacijos-principas",
-      "title": "Eliminacijos principas",
-      "type": "formula",
-      "latex": "(1)+(2)",
-      "conditions": [
-        "Kai sudėjus gaunamas vienas kintamasis"
-      ],
-      "variables": {
-        "x": "nežinomasis"
-      },
-      "explanation": "Sudėdami arba atimdami lygtis galime pašalinti vieną kintamąjį.",
-      "relatedConceptIds": [
-        "sistema",
-        "veiksmai-su-lygtimis"
+        "nelinearine-lygciu-sistema"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "sistema-vienu-kintamuoju",
-      "title": "Sistemoje ieško tik vieno skaičiaus",
+      "id": "tik-viena-kintamojo-pora-rasta",
+      "title": "Rasta tik viena sprendinių pora",
       "type": "mistake",
       "conceptIds": [
-        "sistema"
+        "nelinearine-lygciu-sistema"
       ],
-      "wrongPattern": "Bando tik vieną lygtį spręsti atskirai.",
-      "whyItHappens": "Sistema reiškia bendrą kelių lygčių sprendinį.",
-      "correction": "Spręsk abi lygtis kartu.",
-      "wrongExample": "x=5",
-      "correctExample": "x=5, y=3",
-      "defaultSrs": true
-    },
-    {
-      "id": "eliminacija-be-patikros",
-      "title": "Eliminavęs kintamąjį pamiršta patikrinti",
-      "type": "mistake",
-      "conceptIds": [
-        "veiksmai-su-lygtimis"
-      ],
-      "wrongPattern": "Iš karto pasitiki tarpiniu skaičiumi.",
-      "whyItHappens": "Visada verta įstatyti atsakymą atgal.",
-      "correction": "Patikrink sprendinį abiejose lygtėse.",
-      "wrongExample": "Be patikros",
-      "correctExample": "Su patikra",
+      "wrongPattern": "Išsprendžia x^2=4 ir paima tik x=2.",
+      "whyItHappens": "Pamirštama neigiama šaknis.",
+      "correction": "Kvadratinė lygtis sistemoje dažniausiai duoda dvi reikšmes.",
+      "wrongExample": "x=2, y=3",
+      "correctExample": "(2; 3) ir (-2; -1)",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-exmp-1",
-      "title": "Sistema",
+      "id": "sistemos-exmp-1",
+      "title": "Tiesė ir Parabolė (2 taškai)",
       "level": "easy",
-      "problem": "Išspręsk sistemą x+y=10, x-y=2.",
+      "problem": "Išspręskite sistemą: $\\begin{cases} y = x^2 - 4 \\\\ y = x + 2 \\end{cases}$",
       "conceptIds": [
-        "sistema"
+        "nelinearine-lygciu-sistema"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame lygtis.",
-          "latex": "2x=12"
+          "text": "Sulyginame y išraiškas.",
+          "latex": "x^2 - 4 = x + 2"
         },
         {
-          "text": "Gauname.",
-          "latex": "x=6"
-        }
-      ],
-      "answer": "x=6"
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-exmp-2",
-      "title": "Įstatymas",
-      "level": "easy",
-      "problem": "Jei x=4 ir 3x+2y=16, rask y.",
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Įstatome x.",
-          "latex": "12+2y=16"
+          "text": "Perkeliame viską į kairę pusę.",
+          "latex": "x^2 - x - 6 = 0"
         },
         {
-          "text": "Gauname.",
-          "latex": "y=2"
+          "text": "Randame šaknis (pagal Vietą).",
+          "latex": "x_1 = 3, \\quad x_2 = -2"
+        },
+        {
+          "text": "Apskaičiuojame y įstatydami į tiesės lygtį.",
+          "latex": "y_1 = 3 + 2 = 5; \\quad y_2 = -2 + 2 = 0"
         }
       ],
-      "answer": "2"
+      "answer": "(3; 5) ir (-2; 0)"
     },
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-exmp-3",
-      "title": "Grafinis sprendimas",
+      "id": "sistemos-exmp-2",
+      "title": "Sistemos liestinė (1 taškas)",
       "level": "medium",
-      "problem": "Ką reiškia tiesių susikirtimo taškas?",
+      "problem": "Išspręskite: $\\begin{cases} y = x^2 + 1 \\\\ y = 2x \\end{cases}$",
       "conceptIds": [
-        "tiesine-funkcija",
-        "grafine-sistema"
+        "nelinearine-lygciu-sistema"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Tai bendras abiejų lygčių sprendinys.",
-          "latex": "susikirtimas"
-        }
-      ],
-      "answer": "bendras sprendinys"
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-exmp-4",
-      "title": "Eliminacija",
-      "level": "medium",
-      "problem": "Sistemoje x+y=8 ir x-y=2 rask y.",
-      "conceptIds": [
-        "veiksmai-su-lygtimis"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Atimame antrą lygtį iš pirmos.",
-          "latex": "2y=6"
+          "text": "Sulyginame.",
+          "latex": "x^2 + 1 = 2x \\Rightarrow x^2 - 2x + 1 = 0"
         },
         {
-          "text": "Gauname.",
-          "latex": "y=3"
+          "text": "Atpažįstame pilną kvadratą.",
+          "latex": "(x - 1)^2 = 0 \\Rightarrow x = 1"
+        },
+        {
+          "text": "Randame y.",
+          "latex": "y = 2(1) = 2"
         }
       ],
-      "answer": "3"
+      "answer": "(1; 2)"
     },
     {
-      "id": "lygciu-ir-nelygybiu-sistemos-exmp-5",
-      "title": "Modeliavimas",
+      "id": "sistemos-exmp-3",
+      "title": "Apskritimas ir tiesė",
       "level": "hard",
-      "problem": "Du bilietai ir vienas saldainis kainuoja 11 eurų, o trys bilietai ir vienas saldainis – 17 eurų. Kiek kainuoja bilietas?",
+      "problem": "Išspręskite: $\\begin{cases} x^2 + y^2 = 25 \\\\ y = x - 7 \\end{cases}$",
       "conceptIds": [
-        "modeliavimas"
+        "nelinearine-lygciu-sistema"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudarykime sistemą.",
-          "latex": "\\begin{cases} 2b+s=11 \\\\ 3b+s=17 \\end{cases}"
+          "text": "Įstatome y išraišką į pirmą lygtį.",
+          "latex": "x^2 + (x - 7)^2 = 25"
         },
         {
-          "text": "Atimame.",
-          "latex": "b=6"
+          "text": "Atskliaudžiame.",
+          "latex": "x^2 + x^2 - 14x + 49 = 25"
+        },
+        {
+          "text": "Sutvarkome lygtį.",
+          "latex": "2x^2 - 14x + 24 = 0 \\Rightarrow x^2 - 7x + 12 = 0"
+        },
+        {
+          "text": "Šaknys: x1 = 3, x2 = 4.",
+          "latex": "y_1 = 3 - 7 = -4; \\quad y_2 = 4 - 7 = -3"
         }
       ],
-      "answer": "6"
+      "answer": "(3; -4) ir (4; -3)"
+    },
+    {
+      "id": "sistemos-exmp-4",
+      "title": "Tiesinių nelygybių sistema",
+      "level": "easy",
+      "problem": "Išspręskite: $\\begin{cases} 2x > 4 \\\\ x + 3 < 10 \\end{cases}$",
+      "conceptIds": [
+        "nelygybiu-sistema"
+      ],
+      "steps": [
+        {
+          "text": "Sprendžiame pirmąją: x > 2."
+        },
+        {
+          "text": "Sprendžiame antrąją: x < 7."
+        },
+        {
+          "text": "Ieškome sankirtos: skaičiai didesni už 2, bet mažesni už 7.",
+          "latex": "x \\in (2; 7)"
+        }
+      ],
+      "answer": "(2; 7)"
+    },
+    {
+      "id": "sistemos-exmp-5",
+      "title": "Kvadratinė ir tiesinė nelygybė",
+      "level": "medium",
+      "problem": "Išspręskite: $\\begin{cases} x^2 - 9 \\le 0 \\\\ x > 1 \\end{cases}$",
+      "conceptIds": [
+        "nelygybiu-sistema"
+      ],
+      "steps": [
+        {
+          "text": "Pirma nelygybė: x^2 <= 9 => x ∈ [-3; 3].",
+          "latex": "x \\in [-3; 3]"
+        },
+        {
+          "text": "Antra nelygybė: x > 1.",
+          "latex": "x \\in (1; +\\infty)"
+        },
+        {
+          "text": "Sankirta: intervalas nuo 1 iki 3.",
+          "latex": "x \\in (1; 3]"
+        }
+      ],
+      "answer": "(1; 3]"
+    },
+    {
+      "id": "sistemos-exmp-6",
+      "title": "Dvi kvadratinės nelygybės",
+      "level": "hard",
+      "problem": "Išspręskite: $\\begin{cases} x^2 > 1 \\\\ x^2 \\le 4 \\end{cases}$",
+      "conceptIds": [
+        "nelygybiu-sistema"
+      ],
+      "steps": [
+        {
+          "text": "Pirma: x ∈ (-∞; -1) ∪ (1; +∞).",
+          "latex": "x \\in (-\\infty; -1) \\cup (1; +\\infty)"
+        },
+        {
+          "text": "Antra: x ∈ [-2; 2].",
+          "latex": "x \\in [-2; 2]"
+        },
+        {
+          "text": "Sankirta: du maži intervalai.",
+          "latex": "x \\in [-2; -1) \\cup (1; 2]"
+        }
+      ],
+      "answer": "[-2; -1) U (1; 2]"
+    },
+    {
+      "id": "sistemos-exmp-7",
+      "title": "Sprendinių skaičius (Grafinis)",
+      "level": "medium",
+      "problem": "Kiek sprendinių turi sistema $\\begin{cases} y = x^2 + 5 \\\\ y = 1 \\end{cases}$?",
+      "conceptIds": [
+        "grafinis-sistemu-vaizdavimas"
+      ],
+      "steps": [
+        {
+          "text": "Parabolės viršūnė yra (0; 5) ir ji atsiveria į viršų.",
+          "latex": "y_{min} = 5"
+        },
+        {
+          "text": "Tiesė y = 1 eina žemiau parabolės žemiausio taško.",
+          "latex": "1 < 5"
+        },
+        {
+          "text": "Tiesė ir parabolė nesusikerta.",
+          "latex": "0"
+        }
+      ],
+      "answer": "Nėra sprendinių."
+    },
+    {
+      "id": "sistemos-exmp-8",
+      "title": "Tekstinis uždavinys",
+      "level": "hard",
+      "problem": "Stačiakampio perimetras 20 cm, o plotas 24 cm². Raskite jo kraštines.",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema"
+      ],
+      "steps": [
+        {
+          "text": "Tegul kraštinės yra a ir b. Sudarome sistemą.",
+          "latex": "\\begin{cases} 2(a + b) = 20 \\\\ a \\cdot b = 24 \\end{cases} \\Rightarrow \\begin{cases} a + b = 10 \\\\ ab = 24 \\end{cases}"
+        },
+        {
+          "text": "Išreiškiame b = 10 - a ir įstatome.",
+          "latex": "a(10 - a) = 24 \\Rightarrow 10a - a^2 = 24 \\Rightarrow a^2 - 10a + 24 = 0"
+        },
+        {
+          "text": "Šaknys pagal Vietą: 4 ir 6.",
+          "latex": "a_1 = 4, \\quad a_2 = 6"
+        },
+        {
+          "text": "Jei a = 4, tai b = 6. Jei a = 6, tai b = 4.",
+          "latex": "(4; 6)"
+        }
+      ],
+      "answer": "4 cm ir 6 cm."
     }
   ],
   "exercises": [
@@ -486,920 +392,37 @@
       "id": "lygciu-ir-nelygybiu-sistemos-ex-001",
       "topicId": "lygciu-ir-nelygybiu-sistemos",
       "grade": 10,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Išspręsk sistemą ir rask x: x+y=10, x-y=2.",
+      "statement": "Kiek bendrų taškų turi parabolė y = x² ir tiesė y = -1?",
       "answer": {
         "kind": "numeric",
-        "value": 6,
+        "value": 0,
         "tolerance": 0
       },
       "hints": [
         {
           "order": 1,
-          "text": "Pritaikyk atimties arba įstatymo būdą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "tiesine-funkcija"
-          ]
+          "text": "Pabandykite sulyginti lygtis: x² = -1.",
+          "penalty": 0
         }
       ],
       "solutionSteps": [
         {
-          "text": "Randame x.",
-          "latex": "x=6"
+          "text": "x² negali būti lygus neigiamam skaičiui. Sankirtos nėra.",
+          "latex": "0"
         }
       ],
-      "answerText": "6",
+      "answerText": "0",
       "alternateMethods": [],
       "conceptIds": [
-        "sistema",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-002",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk sistemą ir rask x: 2x+y=11, x+y=8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pritaikyk atimties arba įstatymo būdą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "tiesine-funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame x.",
-          "latex": "x=3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-003",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk sistemą ir rask x: x+2y=13, x-y=1.",
-      "answer": {
-        "kind": "numeric",
-        "value": 3,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pritaikyk atimties arba įstatymo būdą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "tiesine-funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame x.",
-          "latex": "x=3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-004",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei 3x + 2y = 16 ir x = 4, kiek lygu y?",
-      "answer": {
-        "kind": "numeric",
-        "value": -2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3·4+2y=16.",
-          "latex": "y=-2"
-        }
-      ],
-      "answerText": "-2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-005",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuris metodas dažniausiai tinka lygčių sistemai su x+y=8 ir x-y=2?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "Daugyba iš nulio"
-          },
-          {
-            "id": "b",
-            "text": "Sudėtis arba atimtis"
-          },
-          {
-            "id": "c",
-            "text": "Šaknijimas"
-          },
-          {
-            "id": "d",
-            "text": "Logaritmavimas"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Vienas kintamasis išnyks sudėjus.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tiesine-funkcija",
-            "modeliavimas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sudedant lygtis eliminuojamas y.",
-          "latex": "sudėtis"
-        }
-      ],
-      "answerText": "Sudėtis arba atimtis",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tiesine-funkcija",
-        "modeliavimas"
+        "tieses-ir-paraboles-sankirta"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 40
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-006",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-007",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-008",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-009",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-010",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-011",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-012",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-013",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-014",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-015",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-016",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-017",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-018",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-019",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-ex-020",
-      "topicId": "lygciu-ir-nelygybiu-sistemos",
-      "grade": 10,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Lygčių ir nelygybių sistemos: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
     }
   ],
-  "tests": [
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-test-topic",
-      "title": "Lygčių ir nelygybių sistemos testas",
-      "scope": "topic",
-      "topicIds": [
-        "lygciu-ir-nelygybiu-sistemos"
-      ],
-      "exerciseIds": [
-        "lygciu-ir-nelygybiu-sistemos-ex-001",
-        "lygciu-ir-nelygybiu-sistemos-ex-002",
-        "lygciu-ir-nelygybiu-sistemos-ex-003",
-        "lygciu-ir-nelygybiu-sistemos-ex-004",
-        "lygciu-ir-nelygybiu-sistemos-ex-005",
-        "lygciu-ir-nelygybiu-sistemos-ex-006",
-        "lygciu-ir-nelygybiu-sistemos-ex-007",
-        "lygciu-ir-nelygybiu-sistemos-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-test-challenge",
-      "title": "Lygčių ir nelygybių sistemos iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "lygciu-ir-nelygybiu-sistemos"
-      ],
-      "exerciseIds": [
-        "lygciu-ir-nelygybiu-sistemos-ex-009",
-        "lygciu-ir-nelygybiu-sistemos-ex-010",
-        "lygciu-ir-nelygybiu-sistemos-ex-011",
-        "lygciu-ir-nelygybiu-sistemos-ex-012",
-        "lygciu-ir-nelygybiu-sistemos-ex-013",
-        "lygciu-ir-nelygybiu-sistemos-ex-014",
-        "lygciu-ir-nelygybiu-sistemos-ex-015",
-        "lygciu-ir-nelygybiu-sistemos-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Lygybė su nežinomuoju.",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-nelygybe",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra nelygybė?",
-      "back": "Ryšys su <, >, <= arba >=.",
-      "conceptIds": [
-        "nelygybe"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-sprendinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra sprendinys?",
-      "back": "Reikšmė, tenkinanti lygtį.",
-      "conceptIds": [
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-sistema",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra sistema?",
-      "back": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "conceptIds": [
-        "sistema"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-tiesines-sistemos-bendrumas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinių lygčių sistemos idėja?",
-      "back": "Sistema aprašo bendrą sprendinį.",
-      "conceptIds": [
-        "tiesines-sistemos-bendrumas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-eliminacijos-principas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra eliminacijos principas?",
-      "back": "Sudėdami arba atimdami lygtis galime pašalinti vieną kintamąjį.",
-      "conceptIds": [
-        "eliminacijos-principas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-sistema-vienu-kintamuoju",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra sistemoje ieško tik vieno skaičiaus?",
-      "back": "Spręsk abi lygtis kartu.",
-      "conceptIds": [
-        "sistema-vienu-kintamuoju"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "lygciu-ir-nelygybiu-sistemos-srs-eliminacija-be-patikros",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra eliminavęs kintamąjį pamiršta patikrinti?",
-      "back": "Patikrink sprendinį abiejose lygtėse.",
-      "conceptIds": [
-        "eliminacija-be-patikros"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "tests": [],
+  "srsCards": []
 }

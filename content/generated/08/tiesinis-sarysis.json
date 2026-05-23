@@ -3,46 +3,43 @@
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "8 klasėje programa tiesinį sąryšį sieja su lentelėmis, taškais ir tiesės grafiku."
+    "notes": "8 klasės programa orientuota į tiesinę funkciją y=kx+b, jos grafiką, koeficientų prasmę ir praktinį taikymą."
   },
   "topic": {
     "id": "tiesinis-sarysis",
-    "title": "Tiesinis sąryšis ir tiesės grafikas",
+    "title": "Tiesinis sąryšis ir tiesinė funkcija",
     "grade": 8,
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 7,
-    "estimatedStudyMinutes": 130,
+    "estimatedStudyMinutes": 200,
     "prerequisiteTopicIds": [
       "tiesioginis-proporcingumas"
     ],
     "nextTopicIds": [
-      "funkcijos-ir-ju-savybes"
+      "tiesiniu-lygciu-sistemos-8"
     ],
     "conceptIds": [
-      "funkcija",
-      "argumentas",
-      "apibrezimo-sritis",
-      "reiksmiu-sritis",
-      "grafikas",
-      "funkcijos-nulis",
-      "didejimas",
-      "mazejimas",
-      "kvadratine-funkcija",
-      "parabole",
-      "virsune",
-      "simetrijos-asis",
-      "diskriminantas",
-      "saknys"
+      "kintamasis",
+      "priklausomas-kintamasis",
+      "nepriklausomas-kintamasis",
+      "tiesinis-sarysis",
+      "tiesine-funkcija",
+      "krypties-koeficientas",
+      "laisvasis-narys",
+      "tieses-grafikas",
+      "funkcijos-reiksme",
+      "funkcijos-nulis"
     ],
     "formulaIds": [
-      "funkcijos-zymejimas",
-      "virsunes-formule",
-      "diskriminanto-formule"
+      "tiesines-funkcijos-lygtis",
+      "krypties-koeficientas-per-taskus",
+      "tiesioginis-proporcingumas-formule"
     ],
     "mistakeIds": [
-      "x-y-sumaiso",
-      "apibrezimo-srities-neziuri"
+      "k-ir-b-sumaisymas",
+      "tasko-priklausomumo-tikrinimas",
+      "neigiamas-krypties-koeficientas-grafike"
     ],
     "exerciseIds": [
       "tiesinis-sarysis-ex-001",
@@ -54,333 +51,262 @@
       "tiesinis-sarysis-ex-007",
       "tiesinis-sarysis-ex-008",
       "tiesinis-sarysis-ex-009",
-      "tiesinis-sarysis-ex-010",
-      "tiesinis-sarysis-ex-011",
-      "tiesinis-sarysis-ex-012",
-      "tiesinis-sarysis-ex-013",
-      "tiesinis-sarysis-ex-014",
-      "tiesinis-sarysis-ex-015",
-      "tiesinis-sarysis-ex-016",
-      "tiesinis-sarysis-ex-017",
-      "tiesinis-sarysis-ex-018",
-      "tiesinis-sarysis-ex-019",
-      "tiesinis-sarysis-ex-020"
+      "tiesinis-sarysis-ex-010"
     ]
   },
   "theory": [
     {
-      "id": "tiesinis-sarysis-ivadas",
-      "title": "Įvadas",
+      "id": "tiesinis-sarysis-ivadas-detalus",
+      "title": "Kas yra kintamieji ir sąryšiai?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tiesinis sąryšis ir tiesės grafikas yra tema, kurioje mokomasi atpažinti pagrindinius tiesinis sąryšis modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Kasdieniniame gyvenime daugybė dalykų priklauso vienas nuo kito. Pavyzdžiui, kuo daugiau kilometrų nuvažiuoja automobilis, tuo daugiau degalų jis sunaudoja. Kuo ilgiau dega žvakė, tuo trumpesnė ji tampa. Matematikoje tokios priklausomybės vadinamos **sąryšiais**."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[funkcija|Funkcija]], [[argumentas|Argumentas]], [[apibrezimo-sritis|Apibrėžimo sritis]] ir uždavinių sprendimo."
+          "text": "Svarbiausia suprasti du kintamuosius: [[nepriklausomas-kintamasis|nepriklausomą kintamąjį]] (dažniausiai žymimą $x$), kurį mes patys pasirenkame, ir [[priklausomas-kintamasis|priklausomą kintamąjį]] (žymimą $y$), kurio reikšmė priklauso nuo pasirinkto $x$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "tiesinis-sarysis",
+          "text": "[[tiesinis-sarysis|Tiesinis sąryšis]] – tai tokia priklausomybė tarp dviejų kintamųjų, kurią grafiškai vaizduoja tiesė, o matematiškai aprašo lygtis, kurioje kintamasis $x$ yra pirmojo laipsnio."
         }
       ]
     },
     {
-      "id": "tiesinis-sarysis-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "tiesine-funkcija-formule",
+      "title": "Tiesinės funkcijos lygtis",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "funkcija",
-          "text": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę."
-        },
-        {
-          "type": "definition",
-          "conceptId": "argumentas",
-          "text": "Nepriklausomas kintamasis."
-        },
-        {
-          "type": "definition",
-          "conceptId": "apibrezimo-sritis",
-          "text": "Visų leistinų argumentų aibė."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[funkcija|Funkcija]] ir [[reiksmiu-sritis|Reikšmių sritis]]."
-        }
-      ]
-    },
-    {
-      "id": "tiesinis-sarysis-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Tiesinis sąryšis ir tiesės grafikas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[apibrezimo-sritis|Apibrėžimo sritis]] ar [[reiksmiu-sritis|Reikšmių sritis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Tiesinė funkcija yra dažniausiai sutinkamas tiesinio sąryšio pavidalas."
         },
         {
           "type": "formula",
-          "formulaId": "funkcijos-zymejimas",
-          "latex": "y=f(x)"
-        }
-      ]
-    },
-    {
-      "id": "tiesinis-sarysis-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "tiesines-funkcijos-lygtis",
+          "latex": "y = kx + b"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Čia $x$ ir $y$ yra kintamieji, o $k$ ir $b$ – skaičiai, kurie turi labai svarbias reikšmes:"
+        },
+        {
+          "type": "definition",
+          "conceptId": "krypties-koeficientas",
+          "text": "[[krypties-koeficientas|Krypties koeficientas]] ($k$) rodo tiesės pasvirimą. Jei $k > 0$, funkcija didėja (tiesė kyla į viršų). Jei $k < 0$, funkcija mažėja (tiesė leidžiasi žemyn). Jei $k = 0$, tiesė yra horizontali."
+        },
+        {
+          "type": "definition",
+          "conceptId": "laisvasis-narys",
+          "text": "[[laisvasis-narys|Laisvasis narys]] ($b$) rodo tašką, kuriame tiesė kerta $OY$ ašį (ordinačių ašį). Šio taško koordinatės visada yra $(0; b)$."
         }
       ]
     },
     {
-      "id": "tiesinis-sarysis-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "tiesinis-sarysis-grafikas",
+      "title": "Kaip nubraižyti tiesę?",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Geometrijoje žinome, kad per du taškus galima nubrėžti vienintelę tiesę. Todėl norint nubraižyti tiesinės funkcijos grafiką, pakanka rasti tik **du** jos taškus."
+        },
+        {
+          "type": "method",
+          "text": "1. Pasirenkame dvi laisvas $x$ reikšmes (pvz., $x=0$ ir $x=2$). 2. Įstatome jas į funkcijos lygtį ir apskaičiuojame atitinkamas $y$ reikšmes. 3. Gautus taškus pažymime koordinačių plokštumoje. 4. Per šiuos taškus nubrėžiame tiesę."
+        },
+        {
+          "type": "note",
+          "text": "Patogiausia vieną tašką rinktis ten, kur $x=0$ (tai bus laisvasis narys $b$), o kitą – bet kokį nedidelį sveikąjį skaičių."
+        }
+      ]
+    },
+    {
+      "id": "tiesinis-sarysis-proporcingumas",
+      "title": "Tiesioginis proporcingumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai specialus tiesinės funkcijos atvejis, kai tiesė eina per koordinačių pradžios tašką $(0; 0)$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tiesioginis-proporcingumas-formule",
+          "latex": "y = kx \\quad (b=0)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tokioje funkcijoje santykis $\\frac{y}{x}$ visada yra pastovus ir lygus $k$."
+        }
+      ]
+    },
+    {
+      "id": "tiesinis-sarysis-nulis",
+      "title": "Funkcijos nulis ir kirtimo taškai",
+      "blocks": [
+        {
+          "type": "definition",
+          "conceptId": "funkcijos-nulis",
+          "text": "[[funkcijos-nulis|Funkcijos nulis]] – tai argumento $x$ reikšmė, su kuria $y=0$. Grafiškai tai taškas, kuriame tiesė kerta $OX$ (abscisių) ašį."
+        },
+        {
+          "type": "method",
+          "text": "Norėdami rasti sankirtos su $OX$ ašimi tašką, lygtyje $y = kx + b$ vietoj $y$ įrašome $0$ ir išsprendžiame lygtį: $kx + b = 0$."
+        }
+      ]
+    },
+    {
+      "id": "tiesinis-sarysis-lygtis-is-tasku",
+      "title": "Tiesės lygties sudarymas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei žinome du taškus $A(x_1; y_1)$ ir $B(x_2; y_2)$, kuriais eina tiesė, galime apskaičiuoti krypties koeficientą $k$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "krypties-koeficientas-per-taskus",
+          "latex": "k = \\frac{y_2 - y_1}{x_2 - x_1}"
+        },
+        {
+          "type": "paragraph",
+          "text": "Radus $k$, laisvąjį narį $b$ randame į bendrąją lygtį įstatę vieno iš taškų koordinates."
+        }
+      ]
+    },
+    {
+      "id": "tiesinis-sarysis-klaidos",
+      "title": "Dažnos klaidos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Nesuimaisykite: krypties koeficientas $k$ visada stovi prie $x$. Jei lygtis užrašyta $y = 5 - 2x$, tai $k = -2$, o $b = 5$."
+        },
+        {
+          "type": "warning",
+          "text": "Tikrinant, ar taškas priklauso tiesei, būtina įstatyti abi koordinates ($x$ ir $y$). Jei gaunama teisinga lygybė, taškas priklauso."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "funkcija",
-      "title": "Funkcija",
+      "id": "kintamasis",
+      "title": "Kintamasis",
       "type": "concept",
-      "shortDefinition": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "intuition": "Tai pagrindinis tiesinis sąryšis modelis.",
-      "formal": "Funkcija yra atvaizdis, kiekvienam x priskiriantis vienintelį f(x).",
-      "notation": [],
+      "shortDefinition": "Dydis, kuris gali įgyti įvairias reikšmes.",
+      "intuition": "Tai tarsi tuščia dėžutė, į kurią galime įdėti bet kokį skaičių.",
+      "formal": "Simbolis, žymintis bet kurį aibės elementą.",
+      "notation": [
+        "x, y, t"
+      ],
       "relatedConceptIds": [
-        "argumentas",
-        "grafikas",
-        "apibrezimo-sritis"
+        "nepriklausomas-kintamasis",
+        "priklausomas-kintamasis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "argumentas",
-      "title": "Argumentas",
+      "id": "nepriklausomas-kintamasis",
+      "title": "Argumentas (nepriklausomas kintamasis)",
       "type": "concept",
-      "shortDefinition": "Nepriklausomas kintamasis.",
-      "intuition": "Tai įvestis, kurią duodame funkcijai.",
-      "formal": "Argumentas yra funkcijos įvesties kintamasis.",
-      "notation": [],
+      "shortDefinition": "Kintamasis, kurio reikšmes renkamės patys.",
+      "intuition": "Tai priežastis. Pvz., laikas, kurį dirbame.",
+      "formal": "Kintamasis, nuo kurio reikšmių priklauso kito kintamojo reikšmės.",
+      "notation": [
+        "x"
+      ],
       "relatedConceptIds": [
-        "funkcija",
-        "reiksmiu-sritis"
+        "priklausomas-kintamasis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "apibrezimo-sritis",
-      "title": "Apibrėžimo sritis",
+      "id": "priklausomas-kintamasis",
+      "title": "Funkcijos reikšmė (priklausomas kintamasis)",
       "type": "concept",
-      "shortDefinition": "Visų leistinų argumentų aibė.",
-      "intuition": "Tai visi x, kuriuos funkcija priima.",
-      "formal": "Apibrėžimo sritis D(f) yra visų leistinų x aibė.",
-      "notation": [],
+      "shortDefinition": "Kintamasis, kurio reikšmė apskaičiuojama pagal formulę.",
+      "intuition": "Tai pasekmė. Pvz., uždarbis, kuris priklauso nuo laiko.",
+      "formal": "Kintamasis, kurio kiekviena reikšmė vienareikšmiškai nustatoma pagal argumento reikšmę.",
+      "notation": [
+        "y, f(x)"
+      ],
       "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [
-        "d-f"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "reiksmiu-sritis",
-      "title": "Reikšmių sritis",
-      "type": "concept",
-      "shortDefinition": "Visų galimų funkcijos reikšmių aibė.",
-      "intuition": "Tai visi galimi y atsakymai.",
-      "formal": "Reikšmių sritis yra funkcijos galimų reikšmių aibė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [
-        "e-f"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "grafikas",
-      "title": "Grafikas",
-      "type": "concept",
-      "shortDefinition": "Taškų rinkinys koordinačių plokštumoje.",
-      "intuition": "Grafikas leidžia funkciją pamatyti akimis.",
-      "formal": "Funkcijos grafikas yra visų taškų (x, f(x)) aibė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "funkcijos-nulis",
-        "didejimas",
-        "mazejimas"
+        "nepriklausomas-kintamasis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "funkcijos-nulis",
-      "title": "Funkcijos nulis",
+      "id": "tiesine-funkcija",
+      "title": "Tiesinė funkcija",
       "type": "concept",
-      "shortDefinition": "Argumentas, kuriam funkcijos reikšmė lygi nuliui.",
-      "intuition": "Tai vieta, kur grafikas susiduria su x ašimi.",
-      "formal": "x0 yra nulis, jei f(x0)=0.",
-      "notation": [],
+      "shortDefinition": "Funkcija, išreškiama pavidalu y = kx + b.",
+      "intuition": "Tai paprasčiausia priklausomybė, kuriai augant vienam dydžiui, kitas kinta proporcingai.",
+      "formal": "Funkcija f(x) = kx + b, kur k ir b yra realieji skaičiai.",
+      "notation": [
+        "y = kx + b"
+      ],
       "relatedConceptIds": [
-        "grafikas",
-        "saknys"
+        "krypties-koeficientas",
+        "laisvasis-narys",
+        "tieses-grafikas"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "didejimas",
-      "title": "Didėjimas",
+      "id": "krypties-koeficientas",
+      "title": "Krypties koeficientas",
       "type": "concept",
-      "shortDefinition": "Kai didesniam argumentui atitinka didesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas kyla.",
-      "formal": "Funkcija didėja intervale, jei x1 < x2 implikuoja f(x1) < f(x2).",
-      "notation": [],
+      "shortDefinition": "Skaičius k tiesinės funkcijos formulėje.",
+      "intuition": "Jis rodo, kaip sparčiai tiesė kyla arba leidžiasi.",
+      "formal": "Koeficientas, lygus tiesės ir teigiamosios OX ašies krypties kampo tangentui.",
+      "notation": [
+        "k"
+      ],
       "relatedConceptIds": [
-        "mazejimas",
-        "grafikas"
+        "tiesine-funkcija",
+        "laisvasis-narys"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "mazejimas",
-      "title": "Mažėjimas",
+      "id": "laisvasis-narys",
+      "title": "Laisvasis narys",
       "type": "concept",
-      "shortDefinition": "Kai didesniam argumentui atitinka mažesnė reikšmė.",
-      "intuition": "Judant į dešinę grafikas leidžiasi.",
-      "formal": "Funkcija mažėja intervale, jei x1 < x2 implikuoja f(x1) > f(x2).",
-      "notation": [],
+      "shortDefinition": "Skaičius b tiesinės funkcijos formulėje.",
+      "intuition": "Tai tiesės „starto pozicija“ ant vertikalios ašies.",
+      "formal": "Funkcijos reikšmė f(0).",
+      "notation": [
+        "b"
+      ],
       "relatedConceptIds": [
-        "didejimas",
-        "grafikas"
+        "tiesine-funkcija",
+        "krypties-koeficientas"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "kvadratine-funkcija",
-      "title": "Kvadratinė funkcija",
+      "id": "tieses-grafikas",
+      "title": "Tiesės grafikas",
       "type": "concept",
-      "shortDefinition": "Funkcija su x² nariu.",
-      "intuition": "Tai parabolės istorija.",
-      "formal": "Kvadratinė funkcija yra f(x)=ax²+bx+c, kur a!=0.",
+      "shortDefinition": "Tiesinės funkcijos vaizdas koordinačių plokštumoje.",
+      "intuition": "Tai begalinė tiesi linija.",
+      "formal": "Visų taškų (x, kx+b) aibė.",
       "notation": [],
       "relatedConceptIds": [
-        "parabole",
-        "virsune",
-        "diskriminantas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "parabole",
-      "title": "Parabolė",
-      "type": "concept",
-      "shortDefinition": "Kvadratinės funkcijos grafikas.",
-      "intuition": "U formos arba apversta U forma.",
-      "formal": "Parabolė yra kvadratinės funkcijos grafikas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kvadratine-funkcija",
-        "virsune"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "virsune",
-      "title": "Viršūnė",
-      "type": "concept",
-      "shortDefinition": "Aukščiausias arba žemiausias parabolės taškas.",
-      "intuition": "Tai parabolės lūžio vieta.",
-      "formal": "Viršūnė yra taškas, kuriame kvadratinė funkcija pasiekia ekstremumą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "parabole",
-        "simetrijos-asis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "simetrijos-asis",
-      "title": "Simetrijos ašis",
-      "type": "concept",
-      "shortDefinition": "Tiesė, dalijanti parabolę į dvi vienodas dalis.",
-      "intuition": "Tai parabolės veidrodis.",
-      "formal": "Parabolės simetrijos ašis yra x=-b/(2a).",
-      "notation": [],
-      "relatedConceptIds": [
-        "virsune",
-        "parabole"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "diskriminantas",
-      "title": "Diskriminantas",
-      "type": "concept",
-      "shortDefinition": "Dydis, nusakantis kvadratinės lygties nulių skaičių.",
-      "intuition": "Jis sako, ar parabolė kirs ašį.",
-      "formal": "D=b²-4ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknys",
-        "kvadratine-funkcija"
-      ],
-      "prerequisiteConceptIds": [
-        "d"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknys",
-      "title": "Šaknys",
-      "type": "concept",
-      "shortDefinition": "Lygties sprendiniai.",
-      "intuition": "Šaknys yra ten, kur funkcija lygi nuliui.",
-      "formal": "Kvadratinės lygties šaknys yra sprendiniai, gaunami pagal diskriminantą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcijos-nulis",
-        "diskriminantas"
+        "tiesine-funkcija"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -389,199 +315,290 @@
   ],
   "formulas": [
     {
-      "id": "funkcijos-zymejimas",
-      "title": "Funkcijos žymėjimas",
+      "id": "tiesines-funkcijos-lygtis",
+      "title": "Tiesinės funkcijos lygtis",
       "type": "formula",
-      "latex": "y=f(x)",
-      "conditions": [
-        "Kai pateikiama priklausomybė"
-      ],
+      "latex": "y = kx + b",
+      "conditions": [],
       "variables": {
-        "x": "argumentas",
-        "y": "reikšmė"
+        "k": "krypties koeficientas",
+        "b": "laisvasis narys"
       },
-      "explanation": "Žymi, kad y priklauso nuo x.",
+      "explanation": "Pagrindinė formulė tiesiniam sąryšiui aprašyti.",
       "relatedConceptIds": [
-        "funkcija",
-        "argumentas"
+        "tiesine-funkcija"
       ],
       "defaultSrs": true
     },
     {
-      "id": "virsunes-formule",
-      "title": "Viršūnės x koordinatė",
+      "id": "krypties-koeficientas-per-taskus",
+      "title": "Krypties koeficientas per du taškus",
       "type": "formula",
-      "latex": "x_v=-\\frac{b}{2a}",
+      "latex": "k = \\frac{y_2 - y_1}{x_2 - x_1}",
       "conditions": [
-        "Kvadratinė funkcija"
+        "x1 != x2"
       ],
       "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas"
+        "x1, y1": "pirmo taško koordinatės",
+        "x2, y2": "antro taško koordinatės"
       },
-      "explanation": "Padeda rasti parabolės simetrijos ašį.",
+      "explanation": "Leidžia apskaičiuoti nuolydį žinant bet kuriuos du tiesės taškus.",
       "relatedConceptIds": [
-        "virsune",
-        "kvadratine-funkcija"
+        "krypties-koeficientas"
       ],
       "defaultSrs": true
     },
     {
-      "id": "diskriminanto-formule",
-      "title": "Diskriminantas",
+      "id": "tiesioginis-proporcingumas-formule",
+      "title": "Tiesioginis proporcingumas",
       "type": "formula",
-      "latex": "D=b^2-4ac",
-      "conditions": [
-        "Kvadratinė lygtis"
-      ],
+      "latex": "y = kx",
+      "conditions": [],
       "variables": {
-        "a": "x² koeficientas",
-        "b": "x koeficientas",
-        "c": "laisvasis narys"
+        "k": "proporcingumo koeficientas"
       },
-      "explanation": "Nusako realių šaknų skaičių.",
+      "explanation": "Specialus atvejis, kai tiesė eina per (0;0).",
       "relatedConceptIds": [
-        "diskriminantas",
-        "saknys"
+        "tiesine-funkcija"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "x-y-sumaiso",
-      "title": "Supainioja x ir y",
+      "id": "k-ir-b-sumaisymas",
+      "title": "Koeficientų k ir b sumaišymas",
       "type": "mistake",
       "conceptIds": [
-        "funkcija",
-        "argumentas"
+        "tiesine-funkcija"
       ],
-      "wrongPattern": "f(2)=5 supranta kaip x=5.",
-      "whyItHappens": "f(2)=5 reiškia, kad kai x=2, funkcijos reikšmė yra 5.",
-      "correction": "x yra įvestis, y yra rezultatas.",
-      "wrongExample": "x=5",
-      "correctExample": "x=2, y=5",
+      "wrongPattern": "y = 3 + 2x laikoma, kad k=3, b=2",
+      "whyItHappens": "Mokinys mano, kad k yra pirmas skaičius formulėje.",
+      "correction": "k visada yra daugyklis prie x.",
+      "wrongExample": "y = 4 - 2x => k=4",
+      "correctExample": "y = 4 - 2x => k=-2, b=4",
       "defaultSrs": true
     },
     {
-      "id": "apibrezimo-srities-neziuri",
-      "title": "Neišsiaiškina apibrėžimo srities",
+      "id": "tasko-priklausomumo-tikrinimas",
+      "title": "Klaidingas taško priklausomumo tiesei tikrinimas",
       "type": "mistake",
       "conceptIds": [
-        "apibrezimo-sritis"
+        "tieses-grafikas"
       ],
-      "wrongPattern": "Skaičiuoja 1/(x-2) ties x=2.",
-      "whyItHappens": "Vardiklis negali būti nulis.",
-      "correction": "Patikrink, kur reiškinys neapibrėžtas.",
-      "wrongExample": "x=2 tinka",
-      "correctExample": "x=2 netinka",
+      "wrongPattern": "Įstato tik x ir žiūri, ar y sutampa, bet daro skaičiavimo klaidų.",
+      "whyItHappens": "Neatidumas arba lygties sprendimo spragos.",
+      "correction": "Gauta lygybė turi būti tapatybė (pvz., 5 = 5).",
+      "wrongExample": "5 = 2*2 + 3 => 5 = 7 (taškas priklauso)",
+      "correctExample": "5 = 2*1 + 3 => 5 = 5 (taškas priklauso)",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "tiesinis-sarysis-exmp-1",
-      "title": "Reikšmės radimas",
+      "title": "Funkcijos reikšmės skaičiavimas",
       "level": "easy",
-      "problem": "Jei f(x)=2x+1, rask f(4).",
+      "problem": "Duota tiesinė funkcija $y = -3x + 5$. Apskaičiuokite $y$ reikšmę, kai $x = 4$.",
       "conceptIds": [
-        "funkcija",
-        "argumentas"
+        "priklausomas-kintamasis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "tiesines-funkcijos-lygtis"
+      ],
       "steps": [
         {
-          "text": "Įrašome 4.",
-          "latex": "f(4)=2\\cdot4+1"
+          "text": "Į funkcijos formulę vietoje x įstatome skaičių 4.",
+          "latex": "y = -3 \\cdot 4 + 5"
         },
         {
-          "text": "Apskaičiuojame.",
-          "latex": "9"
+          "text": "Atliekame daugybą.",
+          "latex": "y = -12 + 5"
+        },
+        {
+          "text": "Atliekame sudėtį.",
+          "latex": "y = -7"
+        }
+      ],
+      "answer": "-7"
+    },
+    {
+      "id": "tiesinis-sarysis-exmp-2",
+      "title": "Argumento radimas",
+      "level": "easy",
+      "problem": "Su kuria $x$ reikšme funkcijos $y = 2x - 8$ reikšmė lygi $10$?",
+      "conceptIds": [
+        "nepriklausomas-kintamasis"
+      ],
+      "formulaIds": [
+        "tiesines-funkcijos-lygtis"
+      ],
+      "steps": [
+        {
+          "text": "Vietoj y įrašome 10 ir sudarome lygtį.",
+          "latex": "10 = 2x - 8"
+        },
+        {
+          "text": "Perkeliame laisvąjį narį į kairę pusę su priešingu ženklu.",
+          "latex": "10 + 8 = 2x"
+        },
+        {
+          "text": "Sudedame ir padalijame iš 2.",
+          "latex": "18 = 2x \\Rightarrow x = 9"
         }
       ],
       "answer": "9"
     },
     {
-      "id": "tiesinis-sarysis-exmp-2",
-      "title": "Nulis",
+      "id": "tiesinis-sarysis-exmp-3",
+      "title": "Grafiko braižymas (taškai)",
       "level": "easy",
-      "problem": "Rask funkcijos f(x)=x-7 nulį.",
+      "problem": "Raskite du taškus tiesei $y = 0,5x - 1$ nubraižyti.",
+      "conceptIds": [
+        "tieses-grafikas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pasirenkame x = 0.",
+          "latex": "y = 0,5 \\cdot 0 - 1 = -1 \\Rightarrow (0; -1)"
+        },
+        {
+          "text": "Pasirenkame x = 4 (kad gautume sveikąjį skaičių).",
+          "latex": "y = 0,5 \\cdot 4 - 1 = 2 - 1 = 1 \\Rightarrow (4; 1)"
+        }
+      ],
+      "answer": "(0; -1) ir (4; 1)"
+    },
+    {
+      "id": "tiesinis-sarysis-exmp-4",
+      "title": "Koeficientų nustatymas",
+      "level": "medium",
+      "problem": "Nurodykite funkcijos $y = 10 - x$ krypties koeficientą ir laisvąjį narį. Ar ši funkcija didėja, ar mažėja?",
+      "conceptIds": [
+        "krypties-koeficientas",
+        "laisvasis-narys"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Pertvarkome lygtį į standartinį pavidalą y = kx + b.",
+          "latex": "y = -1x + 10"
+        },
+        {
+          "text": "Matome koeficientus.",
+          "latex": "k = -1, b = 10"
+        },
+        {
+          "text": "Kadangi k < 0, funkcija yra mažėjanti.",
+          "latex": "-1 < 0"
+        }
+      ],
+      "answer": "k = -1, b = 10; mažėja."
+    },
+    {
+      "id": "tiesinis-sarysis-exmp-5",
+      "title": "Funkcijos nulio radimas",
+      "level": "medium",
+      "problem": "Raskite funkcijos $y = 4x + 12$ nulį.",
       "conceptIds": [
         "funkcijos-nulis"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Sprendžiame f(x)=0.",
-          "latex": "x-7=0"
+          "text": "Funkcijos nulis yra taškas, kuriame y = 0.",
+          "latex": "0 = 4x + 12"
         },
         {
-          "text": "Gauname.",
-          "latex": "x=7"
+          "text": "Išsprendžiame lygtį.",
+          "latex": "-12 = 4x \\Rightarrow x = -3"
         }
       ],
-      "answer": "7"
+      "answer": "-3"
     },
     {
-      "id": "tiesinis-sarysis-exmp-3",
-      "title": "Apibrėžimo sritis",
+      "id": "tiesinis-sarysis-exmp-6",
+      "title": "Taško priklausomumas",
       "level": "medium",
-      "problem": "Kokia yra f(x)=1/(x-2) apibrėžimo sritis?",
+      "problem": "Ar taškas $M(-2; 7)$ priklauso tiesei $y = -2x + 3$?",
       "conceptIds": [
-        "apibrezimo-sritis"
+        "tieses-grafikas"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Vardiklis negali būti 0.",
-          "latex": "x-2\\neq 0"
+          "text": "Įstatome x = -2 ir y = 7 į lygtį.",
+          "latex": "7 = -2 \\cdot (-2) + 3"
         },
         {
-          "text": "Todėl x negali būti 2.",
-          "latex": "D(f)=\\mathbb{R}\\setminus\\{2\\}"
-        }
-      ],
-      "answer": "R\\{2}"
-    },
-    {
-      "id": "tiesinis-sarysis-exmp-4",
-      "title": "Didėjimas",
-      "level": "medium",
-      "problem": "Jei f(x)=3x-5, ar funkcija didėja?",
-      "conceptIds": [
-        "didejimas",
-        "mazejimas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Nuolydis teigiamas.",
-          "latex": "3>0"
+          "text": "Apskaičiuojame dešinę pusę.",
+          "latex": "7 = 4 + 3 \\Rightarrow 7 = 7"
         },
         {
-          "text": "Funkcija didėja.",
-          "latex": "taip"
+          "text": "Kadangi gavome teisingą lygybę, taškas priklauso.",
+          "latex": "7=7"
         }
       ],
-      "answer": "taip"
+      "answer": "Taip, priklauso."
     },
     {
-      "id": "tiesinis-sarysis-exmp-5",
-      "title": "Grafikas",
+      "id": "tiesinis-sarysis-exmp-7",
+      "title": "Lygties sudarymas per du taškus",
       "level": "hard",
-      "problem": "Tiesė kerta y ašį taške (0; -2) ir turi nuolydį 4. Užrašyk lygtį.",
+      "problem": "Sudarykite tiesės lygtį, jei ji eina per taškus $A(1; 5)$ ir $B(3; 9)$.",
       "conceptIds": [
-        "kvadratine-funkcija",
-        "grafikas"
+        "tiesine-funkcija"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "krypties-koeficientas-per-taskus"
+      ],
       "steps": [
         {
-          "text": "Tiesės lygtis y=ax+b.",
-          "latex": "y=4x-2"
+          "text": "Apskaičiuojame k.",
+          "latex": "k = \\frac{9 - 5}{3 - 1} = \\frac{4}{2} = 2"
+        },
+        {
+          "text": "Į lygtį y = 2x + b įstatome taško A koordinates.",
+          "latex": "5 = 2 \\cdot 1 + b"
+        },
+        {
+          "text": "Randame b.",
+          "latex": "5 = 2 + b \\Rightarrow b = 3"
+        },
+        {
+          "text": "Užrašome galutinę lygtį.",
+          "latex": "y = 2x + 3"
         }
       ],
-      "answer": "y=4x-2"
+      "answer": "y = 2x + 3"
+    },
+    {
+      "id": "tiesinis-sarysis-exmp-8",
+      "title": "Praktinis uždavinys",
+      "level": "hard",
+      "problem": "Žvakės ilgis pradžioje buvo 20 cm. Kas valandą ji sutrumpėja po 2 cm. Užrašykite žvakės ilgio L priklausomybę nuo degimo laiko t.",
+      "conceptIds": [
+        "tiesinis-sarysis"
+      ],
+      "formulaIds": [
+        "tiesines-funkcijos-lygtis"
+      ],
+      "steps": [
+        {
+          "text": "Pradinis ilgis yra laisvasis narys b.",
+          "latex": "b = 20"
+        },
+        {
+          "text": "Sutrumpėjimas rodo krypties koeficientą. Kadangi ilgis mažėja, k yra neigiamas.",
+          "latex": "k = -2"
+        },
+        {
+          "text": "Sudome lygtį naudodami kintamuosius L ir t.",
+          "latex": "L(t) = -2t + 20"
+        }
+      ],
+      "answer": "L = -2t + 20"
     }
   ],
   "exercises": [
@@ -589,299 +606,9 @@
       "id": "tiesinis-sarysis-ex-001",
       "topicId": "tiesinis-sarysis",
       "grade": 8,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(2).",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(2)=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "tiesinis-sarysis-ex-002",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(3).",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(3)=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "tiesinis-sarysis-ex-003",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(4).",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(4)=9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "tiesinis-sarysis-ex-004",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(5).",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(5)=11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "tiesinis-sarysis-ex-005",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Jei f(x)=2x+1, rask f(6).",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Įstatyk x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija",
-            "argumentas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Skaičiuojame.",
-          "latex": "f(6)=13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija",
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "tiesinis-sarysis-ex-006",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask funkcijos f(x)=x-8 nulį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Lygybė lygi nuliui.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcijos-nulis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "x-8=0.",
-          "latex": "x=8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcijos-nulis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "tiesinis-sarysis-ex-007",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri iš šių funkcijų didėja?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "y=-2x+1"
-          },
-          {
-            "id": "b",
-            "text": "y=3x-4"
-          },
-          {
-            "id": "c",
-            "text": "y=-x-7"
-          },
-          {
-            "id": "d",
-            "text": "y=5-x"
-          }
-        ],
-        "correctChoiceIds": [
-          "b"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į teigiamą koeficientą prie x.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "didejimas",
-            "mazejimas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Teigiamas nuolydis reiškia didėjimą.",
-          "latex": "y=3x-4"
-        }
-      ],
-      "answerText": "y=3x-4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "didejimas",
-        "mazejimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-008",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia yra f(x)=1/(x-2) apibrėžimo srities draudžiama reikšmė?",
+      "statement": "Raskite funkcijos y = 5x - 10 nulį.",
       "answer": {
         "kind": "numeric",
         "value": 2,
@@ -890,627 +617,68 @@
       "hints": [
         {
           "order": 1,
-          "text": "Vardiklis negali būti nulis.",
-          "penalty": 0.1,
+          "text": "Funkcijos nulis randamas, kai y = 0.",
+          "penalty": 0,
           "revealsConceptIds": [
-            "apibrezimo-sritis"
+            "funkcijos-nulis"
           ]
         }
       ],
       "solutionSteps": [
         {
-          "text": "x negali būti 2.",
-          "latex": "x\\neq2"
+          "text": "0 = 5x - 10 => 10 = 5x => x = 2",
+          "latex": "x=2"
         }
       ],
       "answerText": "2",
       "alternateMethods": [],
       "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 50
-    },
-    {
-      "id": "tiesinis-sarysis-ex-009",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "expressionInput",
-      "statement": "Tiesės grafikas eina per tašką (0; -3) ir turi nuolydį 2. Užrašyk lygtį.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "y=2x-3",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Naudok y=ax+b.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kvadratine-funkcija"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "b yra -3.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įrašome nuolydį ir kirtimą.",
-          "latex": "y=2x-3"
-        }
-      ],
-      "answerText": "y=2x-3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kvadratine-funkcija",
-        "grafikas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 80
-    },
-    {
-      "id": "tiesinis-sarysis-ex-010",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
+        "funkcijos-nulis"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
     },
     {
-      "id": "tiesinis-sarysis-ex-011",
+      "id": "tiesinis-sarysis-ex-002",
       "topicId": "tiesinis-sarysis",
       "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
+      "level": "Lengvi",
+      "type": "multipleChoice",
+      "statement": "Kokia yra tiesės y = -4x + 7 kryptis?",
+      "options": [
+        "Didėjanti",
+        "Mažėjanti",
+        "Horizontali",
+        "Vertikali"
+      ],
+      "answer": "Mažėjanti",
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
+          "text": "Žiūrėkite į koeficientą k.",
+          "penalty": 0,
           "revealsConceptIds": [
-            "funkcija"
+            "krypties-koeficientas"
           ]
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
+          "text": "Kadangi k = -4, o -4 < 0, funkcija mažėja.",
+          "latex": "k < 0"
         }
       ],
-      "answerText": "11",
+      "answerText": "Mažėjanti",
       "alternateMethods": [],
       "conceptIds": [
-        "funkcija"
+        "krypties-koeficientas"
       ],
       "formulaIds": [],
       "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-012",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-013",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-014",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-015",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-016",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-017",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-018",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-019",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "tiesinis-sarysis-ex-020",
-      "topicId": "tiesinis-sarysis",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Tiesinis sąryšis ir tiesės grafikas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 30
     }
   ],
-  "tests": [
-    {
-      "id": "tiesinis-sarysis-test-topic",
-      "title": "Tiesinis sąryšis ir tiesės grafikas testas",
-      "scope": "topic",
-      "topicIds": [
-        "tiesinis-sarysis"
-      ],
-      "exerciseIds": [
-        "tiesinis-sarysis-ex-001",
-        "tiesinis-sarysis-ex-002",
-        "tiesinis-sarysis-ex-003",
-        "tiesinis-sarysis-ex-004",
-        "tiesinis-sarysis-ex-005",
-        "tiesinis-sarysis-ex-006",
-        "tiesinis-sarysis-ex-007",
-        "tiesinis-sarysis-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "tiesinis-sarysis-test-challenge",
-      "title": "Tiesinis sąryšis ir tiesės grafikas iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "tiesinis-sarysis"
-      ],
-      "exerciseIds": [
-        "tiesinis-sarysis-ex-009",
-        "tiesinis-sarysis-ex-010",
-        "tiesinis-sarysis-ex-011",
-        "tiesinis-sarysis-ex-012",
-        "tiesinis-sarysis-ex-013",
-        "tiesinis-sarysis-ex-014",
-        "tiesinis-sarysis-ex-015",
-        "tiesinis-sarysis-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "tiesinis-sarysis-srs-funkcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra funkcija?",
-      "back": "Taisyklė, kuri kiekvienam argumentui priskiria vieną reikšmę.",
-      "conceptIds": [
-        "funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-argumentas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra argumentas?",
-      "back": "Nepriklausomas kintamasis.",
-      "conceptIds": [
-        "argumentas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-apibrezimo-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra apibrėžimo sritis?",
-      "back": "Visų leistinų argumentų aibė.",
-      "conceptIds": [
-        "apibrezimo-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-reiksmiu-sritis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reikšmių sritis?",
-      "back": "Visų galimų funkcijos reikšmių aibė.",
-      "conceptIds": [
-        "reiksmiu-sritis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-funkcijos-zymejimas",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra funkcijos žymėjimas?",
-      "back": "Žymi, kad y priklauso nuo x.",
-      "conceptIds": [
-        "funkcijos-zymejimas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-virsunes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra viršūnės x koordinatė?",
-      "back": "Padeda rasti parabolės simetrijos ašį.",
-      "conceptIds": [
-        "virsunes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-x-y-sumaiso",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra supainioja x ir y?",
-      "back": "x yra įvestis, y yra rezultatas.",
-      "conceptIds": [
-        "x-y-sumaiso"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "tiesinis-sarysis-srs-apibrezimo-srities-neziuri",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra neišsiaiškina apibrėžimo srities?",
-      "back": "Patikrink, kur reiškinys neapibrėžtas.",
-      "conceptIds": [
-        "apibrezimo-srities-neziuri"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "tests": [],
+  "srsCards": []
 }

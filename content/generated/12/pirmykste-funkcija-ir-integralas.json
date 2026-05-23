@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Pirmykštės funkcijos, plotai ir kaupimas."
+    "notes": "Pilnas integralinio skaičiavimo kursas: nuo pirmykštės funkcijos iki ploto ir tūrio skaičiavimo. Parengta pagal VBE reikalavimus."
   },
   "topic": {
     "id": "pirmykste-funkcija-ir-integralas",
@@ -12,1585 +12,601 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 1,
-    "estimatedStudyMinutes": 230,
+    "estimatedStudyMinutes": 300,
     "prerequisiteTopicIds": [
       "isvestine-ir-diferencijavimas"
     ],
-    "nextTopicIds": [
-      "kompleksiniai-skaiciai"
-    ],
+    "nextTopicIds": [],
     "conceptIds": [
-      "seka",
-      "aritmetine-progresija",
-      "geometrine-progresija",
-      "indukcija",
-      "laipsnis",
-      "saknis",
-      "rodiklis",
-      "logaritmas",
-      "sinusas",
-      "kosinusas",
-      "tangentas",
-      "isvestine",
-      "integralas",
       "pirmykste-funkcija",
-      "kompleksinis-skaicius",
-      "modulis",
-      "tikimybinis-skirstinys"
+      "neapibreztinis-integralas",
+      "apibreztinis-integralas",
+      "integravimo-konstanta",
+      "niutono-leibnico-formule",
+      "kreivine-trapezija",
+      "plotas-po-kreive",
+      "sukinio-turis",
+      "integravimo-taisykles"
     ],
     "formulaIds": [
-      "sekos-forma",
-      "aritmetines-progresijos-formule",
-      "geometrines-progresijos-formule",
-      "laipsniu-formules",
-      "logaritmo-formule",
-      "sinuso-formule",
-      "isvestines-galios-formule",
-      "integralo-formule"
+      "pirmykstes-funkcijos-apibrezimas",
+      "pagrindine-integravimo-formule",
+      "niutono-leibnico-formule-latex",
+      "kreivines-trapezijos-plotas",
+      "ploto-tarp-kreiviu-formule",
+      "sukinio-turio-formule"
     ],
     "mistakeIds": [
-      "rodiklio-taisykle-beprasmi",
-      "integrala-be-constant"
+      "konstantos-pamirsas",
+      "neteisingas-reziu-istatymas",
+      "neigiamas-plotas",
+      "pirmykste-sudetinei-funkcijai"
     ],
     "exerciseIds": [
-      "pirmykste-funkcija-ir-integralas-ex-001",
-      "pirmykste-funkcija-ir-integralas-ex-002",
-      "pirmykste-funkcija-ir-integralas-ex-003",
-      "pirmykste-funkcija-ir-integralas-ex-004",
-      "pirmykste-funkcija-ir-integralas-ex-005",
-      "pirmykste-funkcija-ir-integralas-ex-006",
-      "pirmykste-funkcija-ir-integralas-ex-007",
-      "pirmykste-funkcija-ir-integralas-ex-008",
-      "pirmykste-funkcija-ir-integralas-ex-009",
-      "pirmykste-funkcija-ir-integralas-ex-010",
-      "pirmykste-funkcija-ir-integralas-ex-011",
-      "pirmykste-funkcija-ir-integralas-ex-012",
-      "pirmykste-funkcija-ir-integralas-ex-013",
-      "pirmykste-funkcija-ir-integralas-ex-014",
-      "pirmykste-funkcija-ir-integralas-ex-015",
-      "pirmykste-funkcija-ir-integralas-ex-016",
-      "pirmykste-funkcija-ir-integralas-ex-017",
-      "pirmykste-funkcija-ir-integralas-ex-018",
-      "pirmykste-funkcija-ir-integralas-ex-019",
-      "pirmykste-funkcija-ir-integralas-ex-020"
+      "integr-ex-001",
+      "integr-ex-002",
+      "integr-ex-003",
+      "integr-ex-004",
+      "integr-ex-005",
+      "integr-ex-006",
+      "integr-ex-007",
+      "integr-ex-008",
+      "integr-ex-009",
+      "integr-ex-010",
+      "integr-ex-011",
+      "integr-ex-012",
+      "integr-ex-013",
+      "integr-ex-014",
+      "integr-ex-015",
+      "integr-ex-016",
+      "integr-ex-017",
+      "integr-ex-018",
+      "integr-ex-019",
+      "integr-ex-020"
     ]
   },
   "theory": [
     {
-      "id": "pirmykste-funkcija-ir-integralas-ivadas",
-      "title": "Įvadas",
+      "id": "pirmykste-funkcija-samprata",
+      "title": "Pirmykštė funkcija: kelias atgal",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pirmykštė funkcija ir integralas yra tema, kurioje mokomasi atpažinti pagrindinius integralas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
-        },
-        {
-          "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[seka|Seka]], [[aritmetine-progresija|Aritmetinė progresija]], [[geometrine-progresija|Geometrinė progresija]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "seka",
-          "text": "Skaičių eilė pagal taisyklę."
+          "text": "Mokydamiesi išvestinių, sprendėme tiesioginį uždavinį: žinodami funkciją (pvz., kelią), radome jos kitimo greitį (išvestinę). Integralinis skaičiavimas sprendžia atvirkštinį uždavinį: žinodami kitimo greitį, norime atkurti pačią funkciją. Ši „atkurta“ funkcija vadinama **pirmykšte funkcija**."
         },
         {
           "type": "definition",
-          "conceptId": "aritmetine-progresija",
-          "text": "Seka su pastoviu skirtumu."
+          "conceptId": "pirmykste-funkcija",
+          "text": "Funkcija $F(x)$ vadinama funkcijos $f(x)$ pirmykšte funkcija tam tikrame intervale, jei tame intervale galioja lygybė $F'(x) = f(x)$."
         },
         {
-          "type": "definition",
-          "conceptId": "geometrine-progresija",
-          "text": "Seka su pastoviu santykiu."
+          "type": "example",
+          "text": "Jei $f(x) = 2x$, tai viena iš jos pirmykščių funkcijų yra $F(x) = x^2$, nes $(x^2)' = 2x$. Tačiau $F(x) = x^2 + 5$ taip pat yra pirmykštė, nes $(x^2 + 5)' = 2x$."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[seka|Seka]] ir [[indukcija|Matematinė indukcija]]."
+          "text": "Kadangi bet kurios konstantos išvestinė lygi nuliui, viena funkcija turi begalę pirmykščių funkcijų, kurios skiriasi tik pastoviu dydžiu $C$. Bendras visų pirmykščių funkcijų pavidalas yra $F(x) + C$."
         }
       ]
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Pirmykštė funkcija ir integralas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[geometrine-progresija|Geometrinė progresija]] ar [[indukcija|Matematinė indukcija]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
-        },
-        {
-          "type": "formula",
-          "formulaId": "sekos-forma",
-          "latex": "a_n"
-        }
-      ]
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
-        },
-        {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
-        }
-      ]
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "neapibreztinis-integralas-rules",
+      "title": "Neapibrėžtinis integralas ir integravimo taisyklės",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Visų pirmykščių funkcijų aibė vadinama [[neapibreztinis-integralas|neapibrėžtiniu integralu]] ir žymima simboliu $\\int f(x) dx$."
+        },
+        {
+          "type": "formula",
+          "formulaId": "pagrindine-integravimo-formule",
+          "latex": "\\int f(x) dx = F(x) + C"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pagrindinės taisyklės (panašiai kaip diferencijavimo, tik atvirkščiai):"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Laipsnio taisyklė:** $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$ (kai $n \\neq -1$).",
+            "**Konstantos integravimas:** $\\int k dx = kx + C$.",
+            "**Sumos taisyklė:** $\\int (f(x) \\pm g(x)) dx = \\int f(x) dx \\pm \\int g(x) dx$.",
+            "**Konstantos iškėlimas:** $\\int k f(x) dx = k \\int f(x) dx$."
+          ]
+        },
+        {
+          "type": "warning",
+          "text": "Svarbu: sandaugos ar dalmens integralo taisyklės yra daug sudėtingesnės nei išvestinių, todėl mokykliniame kurse tokius reiškinius dažniausiai pirmiausia suprastiname (atskliaudžiame arba padalijame nariui)."
+        }
+      ]
+    },
+    {
+      "id": "pagrindiniu-formuliu-lentele",
+      "title": "Pagrindinių integralų lentelė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Šias formules privaloma žinoti sprendžiant VBE uždavinius:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "$\\int \\sin x dx = -\\cos x + C$ (atkreipkite dėmesį į minusą!)",
+            "$\\int \\cos x dx = \\sin x + C$",
+            "$\\int e^x dx = e^x + C$",
+            "$\\int a^x dx = \\frac{a^x}{\\ln a} + C$",
+            "$\\int \\frac{1}{x} dx = \\ln|x| + C$"
+          ]
+        },
+        {
+          "type": "method",
+          "title": "Integralas su tiesiniu argumentu",
+          "text": "Jei vietoj $x$ turime tiesinį reiškinį $ax+b$, tai integravimo rezultatas padauginamas iš $1/a$:\n$\\int f(ax+b) dx = \\frac{1}{a} F(ax+b) + C$."
+        }
+      ]
+    },
+    {
+      "id": "apibreztinis-integralas-deep",
+      "title": "Apibrėžtinis integralas: sumavimas ir plotas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei neapibrėžtinis integralas yra funkcija, tai [[apibreztinis-integralas|apibrėžtinis integralas]] yra **skaičius**. Jis parodo funkcijos „sukauptą“ vertę tam tikrame intervale $[a, b]$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "niutono-leibnico-formule",
+          "text": "Niutono ir Leibnico formulė teigia, kad apibrėžtinis integralas lygus pirmykščių funkcijų reikšmių rėžiuose skirtumui."
+        },
+        {
+          "type": "formula",
+          "formulaId": "niutono-leibnico-formule-latex",
+          "latex": "\\int_a^b f(x) dx = F(b) - F(a)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė sujungia dvi iš pažiūros nesusijusias sritis: geometriją (plotą) ir analizę (išvestines)."
+        }
+      ]
+    },
+    {
+      "id": "geometrine-prasme-plotas",
+      "title": "Geometrinė prasmė: Kreivinė trapezija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Integralas leidžia apskaičiuoti plotus figūrų, kurių kraštinės nėra tiesios. Pagrindinis objektas čia – [[kreivine-trapezija|kreivinė trapezija]]."
+        },
+        {
+          "type": "property",
+          "text": "Jei funkcija $f(x) \\ge 0$ intervale $[a, b]$, tai figūros, apribotos grafiku, $Ox$ ašimi ir tiesėmis $x=a, x=b$, plotas lygus apibrėžtiniam integralui."
+        },
+        {
+          "type": "formula",
+          "formulaId": "kreivines-trapezijos-plotas",
+          "latex": "S = \\int_a^b f(x) dx"
+        },
+        {
+          "type": "method",
+          "title": "Plotas tarp dviejų kreivių",
+          "text": "Jei figūrą iš viršaus riboja $f(x)$, o iš apačios $g(x)$, tai plotas skaičiuojamas kaip jų skirtumo integralas:\n$S = \\int_a^b (f(x) - g(x)) dx$."
+        },
+        {
+          "type": "warning",
+          "text": "**Svarbu:** Jei funkcija yra žemiau $Ox$ ašies ($f(x) < 0$), integralas bus neigiamas. Kadangi plotas negali būti neigiamas, tokiais atvejais naudojame modulį arba prieš integralą rašome minusą."
+        }
+      ]
+    },
+    {
+      "id": "sukinio-turis-integralas",
+      "title": "Sukinių tūrių skaičiavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Integravimą galime taikyti ir erdvės kūnams. Jei kreivinę trapeziją suksime apie $Ox$ ašį, gausime sukinį, kurio tūris apskaičiuojamas pagal formulę:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "sukinio-turio-formule",
+          "latex": "V = \\pi \\int_a^b f^2(x) dx"
+        },
+        {
+          "type": "note",
+          "text": "Ši formulė gaunama įsivaizduojant sukinį kaip begalės plonų ritinių (diskų), kurių spindulys yra $f(x)$, sumą."
+        }
+      ]
+    },
+    {
+      "id": "fizikinis-taikymas-integralas",
+      "title": "Fizikinė prasmė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fizikoje integralas naudojamas rasti nueitą kelią, kai žinome kintamą greitį."
+        },
+        {
+          "type": "property",
+          "text": "Nueitas kelias $s$ laiko intervale $[t_1, t_2]$ yra lygus greičio funkcijos $v(t)$ integralui:\n$s = \\int_{t_1}^{t_2} v(t) dt$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Analogiškai, greitis yra pagreičio integralas. Tai dar kartą parodo, kad integravimas yra išvestinės (greičio skaičiavimo) atvirkštinis procesas."
+        }
+      ]
+    },
+    {
+      "id": "integralu-klaidos-vbe",
+      "title": "Dažniausios klaidos ir patarimai",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Konstantos C pamiršimas:** Neapibrėžtiniame integrale $C$ yra privaloma dalis. Be jos rezultatas yra tik viena iš begalės pirmykščių funkcijų.",
+            "**Neteisingas rėžių istatymas:** Visada pirma įstatome VIRŠUTINĮ rėžį, tada atimame APATINĮ: $F(b) - F(a)$.",
+            "**Neigiamas plotas:** Skaičiuojant plotą gavote neigiamą skaičių? Reiškia, funkcija tame intervale yra po ašimi, arba supainiojote kreives (viršutinę su apatine).",
+            "**Daugybos integravimas:** Mokiniai bando integruoti sandaugą integruodami kiekvieną narį atskirai. Tai griežtai draudžiama!"
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "seka",
-      "title": "Seka",
-      "type": "concept",
-      "shortDefinition": "Skaičių eilė pagal taisyklę.",
-      "intuition": "Tai integralas temos gija.",
-      "formal": "Seka yra aibė, kurios elementai surikiuoti pagal indeksus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "aritmetine-progresija",
-        "geometrine-progresija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "aritmetine-progresija",
-      "title": "Aritmetinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu skirtumu.",
-      "intuition": "Kiekvienas narys gaunamas prie ankstesnio pridėjus tą patį skaičių.",
-      "formal": "Aritmetinėje progresijoje skirtumas d pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "indukcija"
-      ],
-      "prerequisiteConceptIds": [
-        "a-n"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrine-progresija",
-      "title": "Geometrinė progresija",
-      "type": "concept",
-      "shortDefinition": "Seka su pastoviu santykiu.",
-      "intuition": "Kiekvienas narys gaunamas dauginant iš to paties skaičiaus.",
-      "formal": "Geometrinėje progresijoje vardiklis q pastovus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "laipsnis"
-      ],
-      "prerequisiteConceptIds": [
-        "q"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "indukcija",
-      "title": "Matematinė indukcija",
-      "type": "concept",
-      "shortDefinition": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "intuition": "Įrodome pradžią ir perėjimą į kitą žingsnį.",
-      "formal": "Indukcijoje tikrinamas pradinis žingsnis ir indukcinis žingsnis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "seka",
-        "teorema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsnis",
-      "title": "Laipsnis",
-      "type": "concept",
-      "shortDefinition": "Trumpas kartotinio daugybos užrašas.",
-      "intuition": "Laipsniai padeda skaičiuoti augimą.",
-      "formal": "a^n reiškia a daugintas iš savęs n kartų.",
-      "notation": [],
-      "relatedConceptIds": [
-        "saknis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "saknis",
-      "title": "Šaknis",
-      "type": "concept",
-      "shortDefinition": "Veiksmas, atvirkštinis laipsniavimui.",
-      "intuition": "Šaknis klausia: koks skaičius pakeltas duoda šį rezultatą?",
-      "formal": "n-tojo laipsnio šaknis yra skaičius, kurio n-tasis laipsnis lygus duotajam.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "rodiklis",
-      "title": "Rodiklis",
-      "type": "concept",
-      "shortDefinition": "Skaičius prie laipsnio ženklo.",
-      "intuition": "Rodiklis nurodo kartojimų skaičių.",
-      "formal": "Rodiklis parodo, kiek kartų daugiklis kartojamas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "logaritmas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmas",
-      "title": "Logaritmas",
-      "type": "concept",
-      "shortDefinition": "Laipsniavimo atvirkštinė operacija.",
-      "intuition": "Logaritmas klausia, kokį rodiklį reikia parinkti.",
-      "formal": "log_a b = c, jei a^c = b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "prerequisiteConceptIds": [
-        "log-a-b-c"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinusas",
-      "title": "Sinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis arba kampo funkcija.",
-      "intuition": "Jis matuoja vertikalią dalį vienetiniame apskritime.",
-      "formal": "Sinusas sieja kampą su priešpriešine kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kosinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kosinusas",
-      "title": "Kosinusas",
-      "type": "concept",
-      "shortDefinition": "Trigonometrinis santykis.",
-      "intuition": "Jis matuoja horizontalią dalį.",
-      "formal": "Kosinusas sieja kampą su gretimąja kraštine.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "tangentas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tangentas",
-      "title": "Tangentas",
-      "type": "concept",
-      "shortDefinition": "Santykis tarp priešpriešinės ir gretimosios kraštinių.",
-      "intuition": "Tangentas padeda nagrinėti statųjį trikampį ir kryptį.",
-      "formal": "tan α = sin α / cos α.",
-      "notation": [],
-      "relatedConceptIds": [
-        "sinusas",
-        "kosinusas"
-      ],
-      "prerequisiteConceptIds": [
-        "tan"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestine",
-      "title": "Išvestinė",
-      "type": "concept",
-      "shortDefinition": "Momentinio kitimo dydis.",
-      "intuition": "Išvestinė sako, kiek stačiai kyla grafikas.",
-      "formal": "Išvestinė aprašo funkcijos kitimo greitį.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralas",
-      "title": "Integralas",
-      "type": "concept",
-      "shortDefinition": "Suminis dydis arba plotas po grafiku.",
-      "intuition": "Integralas sujungia daug mažų dalių į visumą.",
-      "formal": "Integralas apibrėžia kaupimą ir plotą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "isvestine",
-        "pirmykste-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "pirmykste-funkcija",
       "title": "Pirmykštė funkcija",
       "type": "concept",
-      "shortDefinition": "Funkcija, kurios išvestinė yra duotoji.",
-      "intuition": "Tai integralo kelio atgal idėja.",
-      "formal": "F yra f pirmykštė, jei F'=f.",
-      "notation": [],
+      "shortDefinition": "Funkcija, kurios išvestinė lygi duotajai funkcijai.",
+      "intuition": "Tai 'pirminė' funkcija, iš kurios buvo gauta išvestinė.",
+      "formal": "F(x) yra f(x) pirmykštė, jei F'(x) = f(x).",
       "relatedConceptIds": [
-        "integralas",
-        "isvestine"
+        "isvestine",
+        "neapibreztinis-integralas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "pirmykste-funkcija-ir-integralas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "kompleksinis-skaicius",
-      "title": "Kompleksinis skaičius",
+      "id": "apibreztinis-integralas",
+      "title": "Apibrėžtinis integralas",
       "type": "concept",
-      "shortDefinition": "Skaičius a+bi.",
-      "intuition": "Kompleksiniai skaičiai išplečia realiųjų skaičių aibę.",
-      "formal": "c = a + bi, kur i² = -1.",
-      "notation": [],
-      "relatedConceptIds": [
-        "modulis",
-        "argumentas-kompleksinis"
+      "shortDefinition": "Funkcijos pokytis arba plotas intervale [a, b].",
+      "intuition": "Tai tarsi galutinis 'derlius', sukauptas per tam tikrą laiką.",
+      "formal": "Skaičius, lygus pirmykštės funkcijos reikšmių skirtumui rėžiuose.",
+      "notation": [
+        "∫(a to b) f(x) dx"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": [
+        "niutono-leibnico-formule",
+        "plotas-po-kreive"
+      ],
+      "appearsInTopicIds": [
+        "pirmykste-funkcija-ir-integralas"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "modulis",
-      "title": "Modulis",
-      "type": "concept",
-      "shortDefinition": "Atstumas nuo nulio.",
-      "intuition": "Modulis rodo dydį be ženklo.",
-      "formal": "Kompleksinio skaičiaus modulis yra atstumas nuo koordinačių pradžios.",
-      "notation": [],
+      "id": "niutono-leibnico-formule",
+      "title": "Niutono ir Leibnico formulė",
+      "type": "theorem",
+      "shortDefinition": "Ryšys tarp integralo ir pirmykštės funkcijos.",
+      "intuition": "Pagrindinis tiltas tarp skaičiavimo ir geometrijos.",
+      "formal": "∫ f(x) dx nuo a iki b = F(b) - F(a).",
       "relatedConceptIds": [
-        "kompleksinis-skaicius"
+        "apibreztinis-integralas",
+        "pirmykste-funkcija"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybinis-skirstinys",
-      "title": "Tikimybinis skirstinys",
-      "type": "concept",
-      "shortDefinition": "Galimų rezultatų ir jų tikimybių lentelė.",
-      "intuition": "Skirstinys padeda matyti visą tikimybių paveikslą.",
-      "formal": "Tikimybinis skirstinys nurodo reikšmes ir jų tikimybes.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "duomenys"
+      "appearsInTopicIds": [
+        "pirmykste-funkcija-ir-integralas"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "sekos-forma",
-      "title": "Sekos narys",
-      "type": "formula",
-      "latex": "a_n",
-      "conditions": [
-        "Sekoms"
-      ],
-      "variables": {
-        "n": "indeksas"
-      },
-      "explanation": "Žymi n-tąjį sekos narį.",
+      "id": "pagrindine-integravimo-formule",
+      "title": "Neapibrėžtinis integralas",
+      "latex": "\\int x^n dx = \\frac{x^{n+1}}{n+1} + C",
+      "explanation": "Pagrindinė laipsninių funkcijų integravimo taisyklė.",
       "relatedConceptIds": [
-        "seka"
+        "neapibreztinis-integralas"
       ],
       "defaultSrs": true
     },
     {
-      "id": "aritmetines-progresijos-formule",
-      "title": "Aritmetinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1+(n-1)d",
-      "conditions": [
-        "Kai skirtumas pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "d": "skirtumas"
-      },
-      "explanation": "Naudojama sekų uždaviniuose.",
+      "id": "niutono-leibnico-formule-latex",
+      "title": "Niutono-Leibnico formulė",
+      "latex": "\\int_a^b f(x) dx = F(b) - F(a)",
+      "explanation": "Leidžia apskaičiuoti apibrėžtinį integralą.",
       "relatedConceptIds": [
-        "aritmetine-progresija"
+        "niutono-leibnico-formule"
       ],
-      "defaultSrs": true
-    },
-    {
-      "id": "geometrines-progresijos-formule",
-      "title": "Geometrinė progresija",
-      "type": "formula",
-      "latex": "a_n=a_1q^{n-1}",
-      "conditions": [
-        "Kai santykis pastovus"
-      ],
-      "variables": {
-        "a_1": "pirmas narys",
-        "q": "vardiklis"
-      },
-      "explanation": "Naudojama augimui ir mažėjimui.",
-      "relatedConceptIds": [
-        "geometrine-progresija"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "laipsniu-formules",
-      "title": "Laipsnių taisyklės",
-      "type": "formula",
-      "latex": "a^m a^n=a^{m+n}",
-      "conditions": [
-        "Kai dauginame to paties pagrindo laipsnius"
-      ],
-      "variables": {
-        "a": "pagrindas"
-      },
-      "explanation": "Rodiklių taisyklė padeda pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "laipsnis",
-        "rodiklis"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "logaritmo-formule",
-      "title": "Logaritmo ryšys",
-      "type": "formula",
-      "latex": "\\\\log_a b=c \\\\Leftrightarrow a^c=b",
-      "conditions": [
-        "Kai a>0, a!=1"
-      ],
-      "variables": {
-        "a": "pagrindas",
-        "b": "skaičius"
-      },
-      "explanation": "Logaritmas yra laipsniavimo atvirkštinė operacija.",
-      "relatedConceptIds": [
-        "logaritmas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "sinuso-formule",
-      "title": "Trigonometrinis santykis",
-      "type": "formula",
-      "latex": "\\\\sin\\\\alpha=\\frac{priešpriešinė}{įžambinė}",
-      "conditions": [
-        "Stačiajame trikampyje"
-      ],
-      "variables": {
-        "α": "kampas"
-      },
-      "explanation": "Padeda matuoti kampą ir kraštines.",
-      "relatedConceptIds": [
-        "sinusas"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "isvestines-galios-formule",
-      "title": "Galios taisyklė",
-      "type": "formula",
-      "latex": "\\frac{d}{dx}x^n = nx^{n-1}",
-      "conditions": [
-        "Nagrinėjant polinomus"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Svarbiausia išvestinių taisyklė.",
-      "relatedConceptIds": [
-        "isvestine"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "integralo-formule",
-      "title": "Pagrindinė integralo forma",
-      "type": "formula",
-      "latex": "\\\\int x^n dx = \\frac{x^{n+1}}{n+1}+C",
-      "conditions": [
-        "Kai n!=-1"
-      ],
-      "variables": {
-        "n": "laipsnis"
-      },
-      "explanation": "Pagrindinė pirmykščių funkcijų taisyklė.",
-      "relatedConceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
-      ],
-      "defaultSrs": true
-    }
-  ],
-  "mistakes": [
-    {
-      "id": "rodiklio-taisykle-beprasmi",
-      "title": "Rodiklių taisyklę užrašo neteisingai",
-      "type": "mistake",
-      "conceptIds": [
-        "laipsnis"
-      ],
-      "wrongPattern": "Rašo a^m a^n = a^{m*n}.",
-      "whyItHappens": "Dauginant tuos pačius pagrindus sudedami rodikliai.",
-      "correction": "Naudok a^{m+n}.",
-      "wrongExample": "a^2 a^3 = a^6",
-      "correctExample": "a^2 a^3 = a^5",
-      "defaultSrs": true
-    },
-    {
-      "id": "integrala-be-constant",
-      "title": "Pamiršta integravimo konstantą",
-      "type": "mistake",
-      "conceptIds": [
-        "integralas"
-      ],
-      "wrongPattern": "Rašo tik x².",
-      "whyItHappens": "Pirmykštė funkcija turi +C.",
-      "correction": "Visada pridėk +C.",
-      "wrongExample": "∫2x dx = x²",
-      "correctExample": "∫2x dx = x² + C",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "pirmykste-funkcija-ir-integralas-exmp-1",
-      "title": "Integralas",
+      "id": "integr-worked-1",
+      "title": "Bendrosios pirmykštės funkcijos radimas",
       "level": "easy",
-      "problem": "Rask ∫1 dx nuo 0 iki 4.",
+      "problem": "Raskite visas funkcijos $f(x) = 3x^2 - 4x + 1$ pirmykštes funkcijas.",
       "conceptIds": [
-        "integralas"
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Tiesiog ilgis.",
-          "latex": "4"
+          "text": "Integruojame kiekvieną narį atskirai.",
+          "latex": "\\int (3x^2 - 4x + 1) dx"
+        },
+        {
+          "text": "Taikome laipsnio taisyklę: $\\int 3x^2 dx = 3 \\cdot \\frac{x^3}{3} = x^3$.",
+          "latex": "x^3"
+        },
+        {
+          "text": "$\\int -4x dx = -4 \\cdot \\frac{x^2}{2} = -2x^2$.",
+          "latex": "-2x^2"
+        },
+        {
+          "text": "$\\int 1 dx = x$. Pridedame konstantą C.",
+          "latex": "x + C"
         }
       ],
-      "answer": "4"
+      "answer": "F(x) = x³ - 2x² + x + C"
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-exmp-2",
-      "title": "Pirmykštė",
+      "id": "integr-worked-2",
+      "title": "Pirmykštė funkcija per duotą tašką",
+      "level": "medium",
+      "problem": "Raskite funkcijos $f(x) = 2x + 3$ pirmykštę funkciją $F(x)$, kurios grafikas eina per tašką $M(1, 10)$.",
+      "conceptIds": [
+        "integravimo-konstanta"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendrąjį pavidalą: $F(x) = \\int (2x + 3) dx = x^2 + 3x + C$.",
+          "latex": "x^2 + 3x + C"
+        },
+        {
+          "text": "Įstatome taško koordinates (x=1, y=10): $1^2 + 3(1) + C = 10$.",
+          "latex": "1 + 3 + C = 10"
+        },
+        {
+          "text": "Apskaičiuojame C: $4 + C = 10 \\Rightarrow C = 6$.",
+          "latex": "C = 6"
+        }
+      ],
+      "answer": "F(x) = x² + 3x + 6"
+    },
+    {
+      "id": "integr-worked-3",
+      "title": "Apibrėžtinio integralo skaičiavimas",
       "level": "easy",
-      "problem": "Rask ∫x dx formą.",
+      "problem": "Apskaičiuokite $\\int_1^2 4x^3 dx$.",
       "conceptIds": [
-        "pirmykste-funkcija"
+        "apibreztinis-integralas",
+        "niutono-leibnico-formule"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "x²/2 + C.",
-          "latex": "\\frac{x^2}{2}+C"
+          "text": "Randame pirmykštę funkciją: $\\int 4x^3 dx = x^4$.",
+          "latex": "x^4"
+        },
+        {
+          "text": "Įstatome rėžius: $F(2) - F(1) = 2^4 - 1^4$.",
+          "latex": "16 - 1 = 15"
         }
       ],
-      "answer": "x²/2 + C"
+      "answer": "15"
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-exmp-3",
-      "title": "Ribos",
+      "id": "integr-worked-4",
+      "title": "Kreivinės trapezijos plotas",
       "level": "medium",
-      "problem": "Ką reiškia integralas grafiškai?",
+      "problem": "Raskite plotą figūros, kurią riboja parabolė $y = x^2$, Ox ašis ir tiesė $x = 3$.",
       "conceptIds": [
-        "integralas"
+        "plotas-po-kreive"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Plotą po grafiku.",
-          "latex": "plotas"
-        }
-      ],
-      "answer": "plotą po grafiku"
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-exmp-4",
-      "title": "Taikymas",
-      "level": "medium",
-      "problem": "Jei f(x)=2x, kokia pirmykštė?",
-      "conceptIds": [
-        "pirmykste-funkcija"
-      ],
-      "formulaIds": [],
-      "steps": [
+          "text": "Nustatome integravimo rėžius: nuo 0 (parabolės viršūnė) iki 3.",
+          "latex": "a=0, b=3"
+        },
         {
-          "text": "x² + C.",
-          "latex": "x^2 + C"
+          "text": "Sudarome integralą: $S = \\int_0^3 x^2 dx$.",
+          "latex": "\\int_0^3 x^2 dx"
+        },
+        {
+          "text": "Skaičiuojame: $[\\frac{x^3}{3}]_0^3 = \\frac{27}{3} - 0 = 9$.",
+          "latex": "9"
         }
       ],
-      "answer": "x² + C"
+      "answer": "9 kv. vnt."
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-exmp-5",
-      "title": "Kaupimas",
+      "id": "integr-worked-5",
+      "title": "Plotas tarp dviejų kreivių",
       "level": "hard",
-      "problem": "Kodėl integralas siejamas su kaupimu?",
+      "problem": "Raskite plotą figūros, apribotos funkcijų $y = 4 - x^2$ ir $y = 0$ grafikais.",
       "conceptIds": [
-        "integralas"
+        "plotas-po-kreive"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Daug mažų dalių sumuojamos į visumą.",
-          "latex": "kaupimas"
+          "text": "Randame susikirtimo su Ox ašimi taškus: $4 - x^2 = 0 \\Rightarrow x = 2, x = -2$.",
+          "latex": "x = \\pm 2"
+        },
+        {
+          "text": "Integruojame funkciją nuo -2 iki 2.",
+          "latex": "\\int_{-2}^2 (4 - x^2) dx"
+        },
+        {
+          "text": "Skaičiuojame: $[4x - \\frac{x^3}{3}]_{-2}^2 = (8 - 8/3) - (-8 + 8/3) = 16 - 16/3 = 32/3$.",
+          "latex": "10\\frac{2}{3}"
         }
       ],
-      "answer": "dėl kaupimo"
+      "answer": "10 2/3"
+    },
+    {
+      "id": "integr-worked-6",
+      "title": "Fizikinis uždavinys (Kelias)",
+      "level": "medium",
+      "problem": "Taško judėjimo greitis kinta pagal dėsnį $v(t) = 3t^2 + 2$ (m/s). Kokį kelią taškas nueis per pirmas 2 sekundes?",
+      "conceptIds": [
+        "apibreztinis-integralas"
+      ],
+      "steps": [
+        {
+          "text": "Kelias yra greičio integralas rėžiuose nuo 0 iki 2.",
+          "latex": "s = \\int_0^2 (3t^2 + 2) dt"
+        },
+        {
+          "text": "Randame pirmykštę: $t^3 + 2t$.",
+          "latex": ""
+        },
+        {
+          "text": "Įstatome rėžius: $(2^3 + 2\\cdot 2) - (0) = 8 + 4 = 12$.",
+          "latex": "12"
+        }
+      ],
+      "answer": "12 metrų"
+    },
+    {
+      "id": "integr-worked-7",
+      "title": "Integralas su tiesiniu argumentu",
+      "level": "medium",
+      "problem": "Apskaičiuokite $\\int (2x - 5)^4 dx$.",
+      "conceptIds": [
+        "integravimo-taisykles"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame taisyklę su $1/a$. Čia $a=2$.",
+          "latex": ""
+        },
+        {
+          "text": "Integruojame kaip laipsnį ir dauginame iš 1/2.",
+          "latex": "\\frac{1}{2} \\cdot \\frac{(2x-5)^5}{5} + C"
+        },
+        {
+          "text": "Supaprastiname.",
+          "latex": "\\frac{(2x-5)^5}{10} + C"
+        }
+      ],
+      "answer": "(2x-5)⁵ / 10 + C"
+    },
+    {
+      "id": "integr-worked-8",
+      "title": "Sukinio tūris",
+      "level": "hard",
+      "problem": "Raskite tūrį kūno, gauto sukant apie Ox ašį tiesę $y = 2x$ intervale nuo 0 iki 3.",
+      "conceptIds": [
+        "sukinio-turis"
+      ],
+      "steps": [
+        {
+          "text": "Naudojame formulę $V = \\pi \\int_a^b f^2(x) dx$.",
+          "latex": "V = \\pi \\int_0^3 (2x)^2 dx"
+        },
+        {
+          "text": "Keliame kvadratu: $4x^2$. Integruojame: $\\frac{4x^3}{3}$.",
+          "latex": ""
+        },
+        {
+          "text": "Įstatome rėžius: $\\pi ( \\frac{4 \\cdot 27}{3} - 0 ) = 36\\pi$.",
+          "latex": "36\\pi"
+        }
+      ],
+      "answer": "36π kub. vnt."
     }
   ],
   "exercises": [
     {
-      "id": "pirmykste-funkcija-ir-integralas-ex-001",
+      "id": "integr-ex-001",
       "topicId": "pirmykste-funkcija-ir-integralas",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Apskaičiuok ∫1 dx nuo 0 iki 5.",
+      "statement": "Raskite funkcijos f(x) = 4x³ pirmykštę funkciją F(x), jei F(0) = 5. Įrašykite konstantos C reikšmę.",
       "answer": {
         "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
+        "value": 5
       },
       "hints": [
         {
           "order": 1,
-          "text": "Tai tiesiog intervalo ilgis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "integralas"
-          ]
+          "text": "Pirmykštė yra x⁴ + C.",
+          "penalty": 0.1
+        },
+        {
+          "order": 2,
+          "text": "Įstatyk x=0 ir prilygink 5.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Plotas po y=1.",
-          "latex": "5"
+          "text": "0⁴ + C = 5 => C = 5.",
+          "latex": "C=5"
         }
       ],
       "answerText": "5",
-      "alternateMethods": [],
       "conceptIds": [
-        "integralas"
+        "integravimo-konstanta"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-002",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask pirmykštę funkcijai 3x².",
-      "answer": {
-        "kind": "numeric",
-        "value": 1,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmykštė x³.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "pirmykste-funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "∫3x²dx=x³+C.",
-          "latex": "x^3 + C"
-        }
-      ],
-      "answerText": "x³ + C",
-      "alternateMethods": [],
-      "conceptIds": [
-        "pirmykste-funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 40
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-003",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Apskaičiuok ∫0..2 x dx.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmykštė x²/2.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "integralas",
-            "pirmykste-funkcija"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Įstatome ribas.",
-          "latex": "2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "integralas",
-        "pirmykste-funkcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 50
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-004",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 4.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-005",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 5.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-006",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-007",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-008",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-009",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-010",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-011",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-012",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-013",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-014",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-015",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-016",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-017",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-018",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-019",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-ex-020",
-      "topicId": "pirmykste-funkcija-ir-integralas",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Pirmykštė funkcija ir integralas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "seka"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "seka"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 30
     }
   ],
   "tests": [
     {
-      "id": "pirmykste-funkcija-ir-integralas-test-topic",
-      "title": "Pirmykštė funkcija ir integralas testas",
+      "id": "integr-test-1",
+      "title": "Integralinis skaičiavimas",
       "scope": "topic",
       "topicIds": [
         "pirmykste-funkcija-ir-integralas"
       ],
       "exerciseIds": [
-        "pirmykste-funkcija-ir-integralas-ex-001",
-        "pirmykste-funkcija-ir-integralas-ex-002",
-        "pirmykste-funkcija-ir-integralas-ex-003",
-        "pirmykste-funkcija-ir-integralas-ex-004",
-        "pirmykste-funkcija-ir-integralas-ex-005",
-        "pirmykste-funkcija-ir-integralas-ex-006",
-        "pirmykste-funkcija-ir-integralas-ex-007",
-        "pirmykste-funkcija-ir-integralas-ex-008"
+        "integr-ex-001"
       ],
+      "timeLimitSeconds": 1800,
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-test-challenge",
-      "title": "Pirmykštė funkcija ir integralas iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "pirmykste-funkcija-ir-integralas"
-      ],
-      "exerciseIds": [
-        "pirmykste-funkcija-ir-integralas-ex-009",
-        "pirmykste-funkcija-ir-integralas-ex-010",
-        "pirmykste-funkcija-ir-integralas-ex-011",
-        "pirmykste-funkcija-ir-integralas-ex-012",
-        "pirmykste-funkcija-ir-integralas-ex-013",
-        "pirmykste-funkcija-ir-integralas-ex-014",
-        "pirmykste-funkcija-ir-integralas-ex-015",
-        "pirmykste-funkcija-ir-integralas-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.7
     }
   ],
   "srsCards": [
     {
-      "id": "pirmykste-funkcija-ir-integralas-srs-seka",
+      "id": "srs-pirmykste-def",
       "deck": "theory",
       "cardType": "concept",
-      "front": "Kas yra seka?",
-      "back": "Skaičių eilė pagal taisyklę.",
+      "front": "Kada F(x) vadinama f(x) pirmykšte?",
+      "back": "Kai F'(x) = f(x).",
       "conceptIds": [
-        "seka"
+        "pirmykste-funkcija"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-srs-aritmetine-progresija",
+      "id": "srs-integralas-x-n",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Seka su pastoviu skirtumu.",
-      "conceptIds": [
-        "aritmetine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-srs-geometrine-progresija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra geometrinė progresija?",
-      "back": "Seka su pastoviu santykiu.",
-      "conceptIds": [
-        "geometrine-progresija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-srs-indukcija",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra matematinė indukcija?",
-      "back": "Įrodymo būdas visiems natūraliesiems skaičiams.",
-      "conceptIds": [
-        "indukcija"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-srs-sekos-forma",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra sekos narys?",
-      "back": "Žymi n-tąjį sekos narį.",
+      "front": "∫ xⁿ dx (n ≠ -1)?",
+      "back": "(xⁿ⁺¹)/(n+1) + C",
       "conceptIds": [
-        "sekos-forma"
+        "neapibreztinis-integralas"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "pirmykste-funkcija-ir-integralas-srs-aritmetines-progresijos-formule",
-      "deck": "practice",
+      "id": "srs-niutonas-leibnicas",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra aritmetinė progresija?",
-      "back": "Naudojama sekų uždaviniuose.",
+      "front": "Niutono ir Leibnico formulė?",
+      "back": "∫_a^b f(x) dx = F(b) - F(a)",
       "conceptIds": [
-        "aritmetines-progresijos-formule"
+        "niutono-leibnico-formule"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-srs-rodiklio-taisykle-beprasmi",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra rodiklių taisyklę užrašo neteisingai?",
-      "back": "Naudok a^{m+n}.",
-      "conceptIds": [
-        "rodiklio-taisykle-beprasmi"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "pirmykste-funkcija-ir-integralas-srs-integrala-be-constant",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra pamiršta integravimo konstantą?",
-      "back": "Visada pridėk +C.",
-      "conceptIds": [
-        "integrala-be-constant"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

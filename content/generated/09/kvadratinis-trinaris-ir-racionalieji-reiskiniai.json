@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.2",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "9 klasės programa aprašo kvadratinio trinario skaidymą ir trupmeninių racionaliųjų reiškinių apibrėžimo sritį."
+    "notes": "Išsami kvadratinio trinario ir racionalųiųjų reiškinių teorija 9 klasei. Išplėsta versija."
   },
   "topic": {
     "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
@@ -12,7 +12,7 @@
     "strand": "Modeliai ir sąryšiai",
     "level": "curriculum",
     "order": 4,
-    "estimatedStudyMinutes": 170,
+    "estimatedStudyMinutes": 280,
     "prerequisiteTopicIds": [
       "daugianariai-ir-greitosios-daugybos-formules"
     ],
@@ -20,26 +20,28 @@
       "racionaliosios-lygtys"
     ],
     "conceptIds": [
-      "kintamasis",
-      "reiskinys",
-      "koeficientas",
-      "lygtis",
-      "nelygybe",
-      "sprendinys",
-      "sistema",
-      "formule",
-      "tiesine-funkcija",
-      "distributyvusis-destymas",
-      "tiesine-lygybe",
-      "proporcingumas"
+      "kvadratinis-trinaris",
+      "trinario-saknys",
+      "skaidymas-dauginamaisiais",
+      "racionalusis-reiskinys",
+      "apibrezimo-sritis-trr",
+      "prastinimas",
+      "bendravardiklinimas",
+      "vietos-teorema",
+      "diskriminantas"
     ],
     "formulaIds": [
-      "sklaidos-desnis",
-      "tiesines-lygties-forma"
+      "trinario-skaidymas",
+      "diskriminantas-formule",
+      "vietos-formules",
+      "kvadratu-skirtumas",
+      "sumos-kvadratas"
     ],
     "mistakeIds": [
-      "perkelia-be-zenklo-kaitos",
-      "sumaiso-koeficientus"
+      "zenklo-klaida-skaidant",
+      "prastinimas-per-pliusa",
+      "apibrezimo-srities-pamirsimas",
+      "vietos-teoremos-zenklai"
     ],
     "exerciseIds": [
       "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001",
@@ -49,299 +51,421 @@
       "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-005",
       "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-006",
       "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-007",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-008",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-009",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-010",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-011",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-012",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-013",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-014",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-015",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-016",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-017",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-018",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-019",
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-020"
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-008"
     ]
   },
   "theory": [
     {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ivadas",
-      "title": "Įvadas",
+      "id": "kvadratinis-trinaris-ivadas-isplestas",
+      "title": "1. Įvadas: Algebros įrankiai sudėtingam pasauliui",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai yra tema, kurioje mokomasi atpažinti pagrindinius kvadratinis trinaris ir racionalieji reiškiniai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveiki atvykę į devintos klasės algebros širdį. Iki šiol matematika galėjo atrodyti kaip paprastų lygčių ir skaičių rinkinys, tačiau dabar mes žengiame į lygį, kur išmoksite valdyti sudėtingas struktūras. Kodėl tai svarbu? Gamtoje beveik niekas nejuda tiese – kamuolys skrieja parabole, planetos juda orbitomis, o tilto arkos turi specifines kreives. Visus šiuos reiškinius aprašo kvadratiniai reiškiniai."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
+          "text": "Šioje pamokoje mes nagrinėsime du pagrindinius blokus: **kvadratinį trinarį** (kaip jį išardyti į dalis) ir **trupmeninius racionaliuosius reiškinius** (kaip su jais atlikti veiksmus). Įsivaizduokite kvadratinį trinarį kaip sudėtingą Lego konstrukciją, o skaidymą dauginamaisiais – kaip šios konstrukcijos išardymą į pagrindines kaladėles. Kai mokėsite tai daryti, sudėtingiausios algebros trupmenos taps paprastais, lengvai suprastinamais reiškiniais."
         }
       ]
     },
     {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "kvadratinis-trinaris-struktura",
+      "title": "2. Kvadratinis trinaris: Kas jis toks?",
       "blocks": [
         {
           "type": "definition",
-          "conceptId": "kintamasis",
-          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
+          "conceptId": "kvadratinis-trinaris",
+          "text": "[[kvadratinis-trinaris|Kvadratinis trinaris]] yra reiškinys, turintis pavidalą $ax^2 + bx + c$. Čia $x$ yra kintamasis, o skaičiai $a, b$ ir $c$ vadinami koeficientais. Svarbiausia sąlyga: $a \\neq 0$ (kitaip tai nebebūtų kvadratinis trinaris, o tik tiesinis reiškinys)."
         },
         {
-          "type": "definition",
-          "conceptId": "reiskinys",
-          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
-        },
-        {
-          "type": "definition",
-          "conceptId": "koeficientas",
-          "text": "Skaičius prie raidės."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
+          "type": "paragraph",
+          "text": "Kiekvienas koeficientas turi savo „vaidmenį“:\n- **$a$ (vyriausiasis koeficientas)**: Jis lemia, ar trinario grafikas (parabolė) bus atviras į viršų ($a > 0$), ar į apačią ($a < 0$). Taip pat jis nustato, kiek „siaura“ ar „plati“ bus ši forma.\n- **$b$ (vidurinis koeficientas)**: Kartu su $a$ jis nustato, kurioje vietoje bus reiškinio viršūnė (didžiausia ar mažiausia vertė).\n- **$c$ (laisvasis narys)**: Tai vertė, kurią gausime, kai $x = 0$. Grafiškai tai taškas, kuriame grafikas kerta vertikaliąją $OY$ ašį."
         }
       ]
     },
     {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "trinario-saknys-ir-diskriminantas",
+      "title": "3. Trinario šaknys ir paslaptingasis Diskriminantas",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Norėdami „išardyti“ trinarį, pirmiausia turime rasti jo silpniausias vietas – nulių taškus, dar vadinamus šaknimis."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "definition",
+          "conceptId": "trinario-saknys",
+          "text": "[[trinario-saknys|Trinario šaknys]] yra tokios kintamojo $x$ reikšmės, su kuriomis visas reiškinys tampa lygus nuliui: $ax^2 + bx + c = 0$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kad sužinotume, ar šaknų apskritai yra, naudojame **diskriminantą** (žymimą raide $D$)."
         },
         {
           "type": "formula",
-          "formulaId": "sklaidos-desnis",
-          "latex": "a(b+c)=ab+ac"
-        }
-      ]
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "diskriminantas-formule",
+          "latex": "D = b^2 - 4ac"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Diskriminantas yra tarsi trinario „rentgenas“:\n1. Jei $D > 0$: Trinaris turi **dvi skirtingas** realiąsias šaknis $x_1$ ir $x_2$. Tai reiškia, kad jį galima pilnai išskaidyti į du skirtingus skliaustus.\n2. Jei $D = 0$: Trinaris turi **vieną kartotinę** šaknį (arba dvi sutampančias). Tai reiškia, kad trinaris yra „pilnas kvadratas“ (pvz., $(x-3)^2$).\n3. Jei $D < 0$: Trinaris **neturi** realiųjų šaknų. Jis niekada netampa lygus nuliui. Tokių trinarių realiujų skaičių srityje išskaidyti į tiesinius dauginamuosius neįmanoma."
         }
       ]
     },
     {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "skaidymas-dauginamaisiais-metodika",
+      "title": "4. Skaidymas dauginamaisiais: Pagrindinė formulė",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Skaidymas dauginamaisiais yra algebros „magija“, leidžianti sudėtingą sumą paversti paprasta sandauga. Kodėl tai naudinga? Nes su sandaugomis dirbti daug lengviau – jas galima prastinti trupmenose."
+        },
+        {
+          "type": "theorem",
+          "text": "Jei kvadratinis trinaris $ax^2 + bx + c$ turi šaknis $x_1$ ir $x_2$, tai jis visada gali būti užrašytas taip:"
+        },
+        {
+          "type": "formula",
+          "formulaId": "trinario-skaidymas",
+          "latex": "ax^2 + bx + c = a(x - x_1)(x - x_2)"
+        },
+        {
+          "type": "warning",
+          "text": "Nepamirškite koeficiento **$a$**! Tai dažniausia klaida kontroliniuose darbuose. Jei pradinio trinario priekyje stovi skaičius (pvz., $2x^2...$), tas pats skaičius privalo atsidurti ir prieš skliaustus."
+        }
+      ]
+    },
+    {
+      "id": "vietos-teorema-teorija",
+      "title": "5. Vieto teorema: Greitasis būdas rasti šaknis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ne visada būtina skaičiuoti diskriminantą. Jei trinaris yra **paprastasis** (kai $a = 1$), galime naudoti prancūzų matematiko Fransua Vieto atrastas formules."
+        },
+        {
+          "type": "formula",
+          "formulaId": "vietos-formules",
+          "latex": "\\begin{cases} x_1 + x_2 = -b \\\\ x_1 \\cdot x_2 = c \\end{cases}"
+        },
+        {
+          "type": "method",
+          "text": "Pavyzdžiui, trinaryje $x^2 - 5x + 6$, mes ieškome dviejų skaičių, kurių sandauga yra $6$, o suma yra $5$ (priešingas koeficientui $b$). Tai skaičiai $2$ ir $3$."
+        }
+      ]
+    },
+    {
+      "id": "racionalieji-reiskiniai-detaliau",
+      "title": "6. Trupmeniniai racionalieji reiškiniai: Algebrinės trupmenos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai pradedame dalinti vieną reiškinį iš kito, gauname racionaliąsias trupmenas. Jos panašios į paprastas trupmenas (kaip $\frac{3}{4}$), tik jose „gyvena“ kintamieji."
+        },
+        {
+          "type": "definition",
+          "conceptId": "racionalusis-reiskinys",
+          "text": "[[racionalusis-reiskinys|Racionalusis reiškinys]] – tai dviejų daugianarių santykis. Tai gali būti paprastas skaičius, kintamasis arba sudėtinga trupmena, kurios vardiklyje yra $x$."
+        },
+        {
+          "type": "definition",
+          "conceptId": "apibrezimo-sritis-trr",
+          "text": "**Apibrėžimo sritis (D)**: Tai visos leistinos $x$ reikšmės. Kadangi dalyba iš nulio neįmanoma, mes privalome išmesti visas reikšmes, kurios paverčia vardiklį nuliu."
+        },
+        {
+          "type": "method",
+          "text": "Kaip rasti apibrėžimo sritį? \n1. Paimkite reiškinio vardiklį.\n2. Prilyginkite jį nuliui.\n3. Išspręskite gautą lygtį.\n4. Atsakyme parašykite: $x \\in \\mathbb{R}$, išskyrus rastus skaičius."
+        }
+      ]
+    },
+    {
+      "id": "prastinimas-ir-veiksmai",
+      "title": "7. Veiksmai su trupmenomis: Prastinimas, Daugyba, Sudėtis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Darbas su racionaliaisiais reiškiniais reikalauja kantrybės ir tvarkos. Čia galioja tos pačios taisyklės kaip ir skaičiams."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Prastinimas**: Tai svarbiausias veiksmas. Norėdami suprastinti trupmeną, privalome skaitiklį ir vardiklį išskaidyti dauginamaisiais. Tik tada, kai turime sandaugas, galime nubraukti vienodus narius."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Sudėtis ir atimtis**: Čia susiduriame su didžiausiu iššūkiu – bendruoju vardikliu. \n- Jei vardikliai vienodi: tiesiog sudedame skaitiklius.\n- Jei vardikliai skirtingi: privalome rasti **Mažiausią Bendrąjį Vardiklį (MBV)**. MBV turi savyje sutalpinti visus vardikliuose esančius dauginamuosius su didžiausiais jų laipsniais."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Daugyba ir dalyba**: Tai lengviausi veiksmai. Dauginant trupmenas, skaitikliai dauginami su skaitikliais, o vardikliai – su vardikliais. Dalijant – pirmoji trupmena dauginama iš apverstos antrosios."
+        }
+      ]
+    },
+    {
+      "id": "racionalieji-klaidos-prevencija",
+      "title": "8. Dažnos klaidos ir kaip jų išvengti",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "**Baisioji klaida**: Prastinimas per sudėtį. Jei turite $\\frac{x+2}{x+3}$, NEGALIMA nubraukti $x$. Tai tas pats, kas sakyti $\\frac{10+2}{10+3} = \\frac{2}{3}$, kas akivaizdžiai neteisinga ($12/13 \\neq 2/3$)."
+        },
+        {
+          "type": "warning",
+          "text": "**Minusų pavojus**: Kai atimate trupmeną $\\frac{A}{B} - \\frac{x-5}{C}$, minusas priklauso visam skaitikliui $x-5$. Tai reiškia, kad skliaustai atsidarys kaip $-x + 5$."
+        },
+        {
+          "type": "note",
+          "text": "Visada prieš pradėdami veiksmus pasitikrinkite, ar negalima ko nors iškelti prieš skliaustus. Tai sutaupys marios laiko!"
         }
       ]
     }
   ],
+  "workedExamples": [
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-1",
+      "title": "Trinario skaidymas (a=1)",
+      "level": "easy",
+      "problem": "Išskaidykite kvadratinį trinarį $x^2 - 8x + 12$ dauginamaisiais.",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "skaidymas-dauginamaisiais"
+      ],
+      "formulaIds": [
+        "trinario-skaidymas",
+        "diskriminantas-formule"
+      ],
+      "steps": [
+        {
+          "text": "Randame diskriminantą.",
+          "latex": "D = (-8)^2 - 4 \\cdot 1 \\cdot 12 = 64 - 48 = 16"
+        },
+        {
+          "text": "Apskaičiuojame šaknis.",
+          "latex": "x_1 = \\frac{8 - 4}{2} = 2, \\quad x_2 = \\frac{8 + 4}{2} = 6"
+        },
+        {
+          "text": "Įstatome į skaidymo formulę.",
+          "latex": "(x - 2)(x - 6)"
+        }
+      ],
+      "answer": "(x - 2)(x - 6)"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-2",
+      "title": "Trinario skaidymas (a ≠ 1)",
+      "level": "medium",
+      "problem": "Išskaidykite $3x^2 - 5x - 2$.",
+      "conceptIds": [
+        "skaidymas-dauginamaisiais"
+      ],
+      "formulaIds": [
+        "trinario-skaidymas"
+      ],
+      "steps": [
+        {
+          "text": "Randame šaknis naudodami diskriminantą: D = 25 - 4*3*(-2) = 25 + 24 = 49.",
+          "latex": "x_1 = \\frac{5-7}{6} = -\\frac{1}{3}, \\quad x_2 = \\frac{5+7}{6} = 2"
+        },
+        {
+          "text": "Taikome formulę su a=3.",
+          "latex": "3(x - (-1/3))(x - 2) = 3(x + 1/3)(x - 2)"
+        },
+        {
+          "text": "Dauginame 3 iš pirmo skliausto.",
+          "latex": "(3x + 1)(x - 2)"
+        }
+      ],
+      "answer": "(3x + 1)(x - 2)"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-3",
+      "title": "Apibrėžimo srities nustatymas",
+      "level": "easy",
+      "problem": "Raskite reiškinio $\\frac{2x}{x^2 - 25}$ leistinąsias reikšmes.",
+      "conceptIds": [
+        "apibrezimo-sritis-trr"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Vardiklis negali būti 0.",
+          "latex": "x^2 - 25 \\neq 0"
+        },
+        {
+          "text": "Sprendžiame lygtį x² = 25.",
+          "latex": "x \\neq 5, \\quad x \\neq -5"
+        }
+      ],
+      "answer": "x \u2208 R, išskyrus 5 ir -5"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-4",
+      "title": "Trupmenos prastinimas",
+      "level": "medium",
+      "problem": "Suprastinkite: $\\frac{x^2 - 4x + 4}{x^2 - 4}$.",
+      "conceptIds": [
+        "prastinimas"
+      ],
+      "formulaIds": [
+        "kvadratu-skirtumas",
+        "sumos-kvadratas"
+      ],
+      "steps": [
+        {
+          "text": "Atpažįstame greitosios daugybos formules.",
+          "latex": "\\text{Skaitiklis: } (x-2)^2, \\quad \\text{Vardiklis: } (x-2)(x+2)"
+        },
+        {
+          "text": "Suprastiname bendrą skliaustą (x-2).",
+          "latex": "\\frac{(x-2)(x-2)}{(x-2)(x+2)} = \\frac{x-2}{x+2}"
+        }
+      ],
+      "answer": "\\frac{x-2}{x+2}"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-5",
+      "title": "Daugyba ir prastinimas",
+      "level": "medium",
+      "problem": "Sudauginkite: $\\frac{5a}{a+2} \\cdot \\frac{a^2-4}{10a^2}$.",
+      "conceptIds": [
+        "prastinimas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Išskaidome a²-4.",
+          "latex": "\\frac{5a}{a+2} \\cdot \\frac{(a-2)(a+2)}{10a^2}"
+        },
+        {
+          "text": "Suprastiname (a+2) ir koeficientus 5 bei 10, taip pat kintamąjį a.",
+          "latex": "\\frac{1}{1} \\cdot \\frac{a-2}{2a} = \\frac{a-2}{2a}"
+        }
+      ],
+      "answer": "\\frac{a-2}{2a}"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-6",
+      "title": "Sudėtis su skirtingais vardikliais",
+      "level": "hard",
+      "problem": "Sudėkite: $\\frac{x}{x-1} + \\frac{2}{x}$.",
+      "conceptIds": [
+        "bendravardiklinimas"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Bendras vardiklis yra x(x-1).",
+          "latex": "V_{bendras} = x(x-1)"
+        },
+        {
+          "text": "Praplečiame trupmenas.",
+          "latex": "\\frac{x \\cdot x}{x(x-1)} + \\frac{2 \\cdot (x-1)}{x(x-1)}"
+        },
+        {
+          "text": "Sudedame skaitiklius.",
+          "latex": "\\frac{x^2 + 2x - 2}{x(x-1)}"
+        }
+      ],
+      "answer": "\\frac{x^2+2x-2}{x^2-x}"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-7",
+      "title": "Sudėtingas trinario skaidymas prastinimui",
+      "level": "hard",
+      "problem": "Suprastinkite $\\frac{2x^2 - 5x + 2}{x^2 - 4}$.",
+      "conceptIds": [
+        "skaidymas-dauginamaisiais",
+        "prastinimas"
+      ],
+      "steps": [
+        {
+          "text": "Randame skaitiklio šaknis: D = 25 - 16 = 9. x1 = 0,5, x2 = 2.",
+          "latex": "2x^2 - 5x + 2 = 2(x - 0,5)(x - 2) = (2x - 1)(x - 2)"
+        },
+        {
+          "text": "Išskaidome vardiklį.",
+          "latex": "x^2 - 4 = (x - 2)(x + 2)"
+        },
+        {
+          "text": "Suprastiname (x-2).",
+          "latex": "\\frac{(2x-1)(x-2)}{(x-2)(x+2)} = \\frac{2x-1}{x+2}"
+        }
+      ],
+      "answer": "\\frac{2x-1}{x+2}"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-8",
+      "title": "Veiksmų eilės tvarka",
+      "level": "hard",
+      "problem": "Apskaičiuokite: $(\\frac{1}{x} - \\frac{1}{y}) : \\frac{y-x}{xy}$.",
+      "conceptIds": [
+        "racionalusis-reiskinys"
+      ],
+      "steps": [
+        {
+          "text": "Atliekame veiksmą skliaustuose (bendravardiklinimas).",
+          "latex": "\\frac{y-x}{xy}"
+        },
+        {
+          "text": "Daliname gautą rezultatą iš antros trupmenos.",
+          "latex": "\\frac{y-x}{xy} \\cdot \\frac{xy}{y-x}"
+        },
+        {
+          "text": "Suprastiname visus narius.",
+          "latex": "1"
+        }
+      ],
+      "answer": "1"
+    }
+  ],
   "concepts": [
     {
-      "id": "kintamasis",
-      "title": "Kintamasis",
+      "id": "kvadratinis-trinaris",
+      "title": "Kvadratinis trinaris",
       "type": "concept",
-      "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "intuition": "Tai ta vieta, kur kvadratinis trinaris ir racionalieji reiškiniai uždavinyje įdedame reikšmę.",
-      "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
+      "shortDefinition": "Reiškinys ax² + bx + c.",
+      "intuition": "Daugianaris, kurio didžiausias laipsnis yra 2. Tai algebros „darbinis arkliukas“.",
+      "formal": "ax² + bx + c, kur a, b, c priklauso R ir a ≠ 0.",
       "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "lygtis",
-        "nelygybe"
-      ],
+      "relatedConceptIds": ["trinario-saknys", "skaidymas-dauginamaisiais"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "reiskinys",
-      "title": "Reiškinys",
+      "id": "trinario-saknys",
+      "title": "Trinario šaknys",
       "type": "concept",
-      "shortDefinition": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "intuition": "Reiškinys yra formulės arba skaičiavimo žingsnio užrašas.",
-      "formal": "Reiškinys sudaromas naudojant aritmetinius veiksmus ir skliaustus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kintamasis",
-        "koeficientas"
-      ],
+      "shortDefinition": "x reikšmės, su kuriomis trinaris lygus 0.",
+      "intuition": "Vietos, kur parabolė kirstų horizontalę, jei ją nupieštume.",
+      "formal": "Lygties ax² + bx + c = 0 sprendiniai.",
+      "notation": ["x1, x2"],
+      "relatedConceptIds": ["diskriminantas"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "koeficientas",
-      "title": "Koeficientas",
+      "id": "skaidymas-dauginamaisiais",
+      "title": "Skaidymas dauginamaisiais",
       "type": "concept",
-      "shortDefinition": "Skaičius prie raidės.",
-      "intuition": "Koeficientas pasako, kiek kartų daugėja raidė.",
-      "formal": "Koeficientas yra skaitinis daugiklis prie kintamojo.",
+      "shortDefinition": "Sumos pavertimas sandauga.",
+      "intuition": "Sudėtingo daikto išardymas į paprastas detales, kurias lengviau valdyti.",
+      "formal": "ax² + bx + c = a(x - x1)(x - x2).",
       "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "tiesine-funkcija"
-      ],
+      "relatedConceptIds": ["prastinimas"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "lygtis",
-      "title": "Lygtis",
+      "id": "racionalusis-reiskinys",
+      "title": "Trupmeninis racionalusis reiškinys",
       "type": "concept",
-      "shortDefinition": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "intuition": "Lygtis sprendžiama ieškant, kokia reikšmė tinka abiem pusėms.",
-      "formal": "Lygtis yra lygybė, kurioje yra bent vienas nežinomasis.",
+      "shortDefinition": "Trupmena, kurios vardiklyje yra kintamasis.",
+      "intuition": "Algebrinė trupmena, kurios „apačia“ gali keistis.",
+      "formal": "P(x) / Q(x), kur Q(x) ≠ 0.",
       "notation": [],
-      "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "nelygybe",
-      "title": "Nelygybė",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių palyginimas nelygybės ženklu.",
-      "intuition": "Nelygybė aprašo reikšmių sritį, ne tik vieną tašką.",
-      "formal": "Nelygybė naudoja ženklus <, >, <=, >=.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sprendinys",
-      "title": "Sprendinys",
-      "type": "concept",
-      "shortDefinition": "Reikšmė, kuri tenkina lygtį ar nelygybę.",
-      "intuition": "Sprendinys yra atsakymas, kurį galima patikrinti.",
-      "formal": "Sprendinys yra nežinomojo reikšmė, dėl kurios teiginys tampa teisingas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sistema",
-      "title": "Lygčių sistema",
-      "type": "concept",
-      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "intuition": "Sistema reiškia, kad keli apribojimai galioja kartu.",
-      "formal": "Sistema turi tenkinti visas lygtis vienu metu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "formule",
-      "title": "Formulė",
-      "type": "concept",
-      "shortDefinition": "Trumpas ryšio užrašas tarp dydžių.",
-      "intuition": "Formulė leidžia vienu sakiniu užrašyti daug žodžių.",
-      "formal": "Formulė yra bendras ryšio tarp dydžių užrašas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "proporcija",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-funkcija",
-      "title": "Tiesinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
-      "intuition": "Tai viena paprasčiausių priklausomybių tarp dydžių.",
-      "formal": "Tiesinė funkcija užrašoma y = ax + b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "distributyvusis-destymas",
-      "title": "Sklaidos dėsnis",
-      "type": "concept",
-      "shortDefinition": "Daugiklis dauginamas su kiekvienu dėmeniu skliaustuose.",
-      "intuition": "Tai padeda išskleisti ir sutvarkyti reiškinius.",
-      "formal": "a(b + c) = ab + ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c-ab-ac"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-lygybe",
-      "title": "Tiesinė lygtis",
-      "type": "concept",
-      "shortDefinition": "Lygtis, kurioje nežinomasis yra tik pirmuoju laipsniu.",
-      "intuition": "Šias lygtis sprendžiame nuosekliai atskirdami nežinomąjį.",
-      "formal": "Tiesinė lygtis turi formą ax + b = 0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcingumas",
-      "title": "Proporcingumas",
-      "type": "concept",
-      "shortDefinition": "Ryšys, kai vienas dydis kinta pastoviu santykiu su kitu.",
-      "intuition": "Proporcingumas yra mastelio ir procentų pagrindas.",
-      "formal": "Jei a/b = c/d, dydžiai yra proporcingi.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "mastelis"
-      ],
+      "relatedConceptIds": ["apibrezimo-sritis-trr"],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
@@ -349,185 +473,47 @@
   ],
   "formulas": [
     {
-      "id": "sklaidos-desnis",
-      "title": "Sklaidos dėsnis",
+      "id": "trinario-skaidymas",
+      "title": "Kvadratinio trinario skaidymas",
       "type": "formula",
-      "latex": "a(b+c)=ab+ac",
+      "latex": "ax^2 + bx + c = a(x - x_1)(x - x_2)",
       "conditions": [
-        "Sklaidant skliaustus"
+        "D >= 0"
       ],
       "variables": {
-        "a": "daugiklis",
-        "b": "pirmas dėmuo",
-        "c": "antras dėmuo"
+        "x1, x2": "trinario šaknys",
+        "a": "koeficientas prie x²"
       },
-      "explanation": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "relatedConceptIds": [
-        "distributyvusis-destymas",
-        "reiskinys"
-      ],
+      "explanation": "Leidžia užrašyti sumą kaip sandaugą, naudojant jos šaknis.",
+      "relatedConceptIds": ["skaidymas-dauginamaisiais"],
       "defaultSrs": true
     },
     {
-      "id": "tiesines-lygties-forma",
-      "title": "Tiesinės lygties forma",
+      "id": "diskriminantas-formule",
+      "title": "Diskriminantas",
       "type": "formula",
-      "latex": "ax+b=0",
-      "conditions": [
-        "Vienas nežinomasis"
-      ],
+      "latex": "D = b^2 - 4ac",
+      "conditions": [],
       "variables": {
-        "a": "koeficientas prie x",
-        "b": "laisvasis narys"
+        "a, b, c": "koeficientai"
       },
-      "explanation": "Tai paprasčiausia lygties forma.",
-      "relatedConceptIds": [
-        "tiesine-lygybe",
-        "lygtis"
-      ],
+      "explanation": "Nurodo šaknų skaičių ir padeda jas rasti.",
+      "relatedConceptIds": ["trinario-saknys"],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perkelia-be-zenklo-kaitos",
-      "title": "Perkelia narį nepakeitęs ženklo",
+      "id": "zenklo-klaida-skaidant",
+      "title": "Ženklo klaida skaidant dauginamaisiais",
       "type": "mistake",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "wrongPattern": "Rašo x+5=12 -> x=12+5.",
-      "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
-      "correction": "Iš abiejų pusių atimk 5.",
-      "wrongExample": "x=17",
-      "correctExample": "x=7",
+      "conceptIds": ["skaidymas-dauginamaisiais"],
+      "wrongPattern": "x² - 5x + 6 turi šaknis 2 ir 3, rašo (x+2)(x+3).",
+      "whyItHappens": "Pamirštama, kad formulėje yra minusas: (x - x1).",
+      "correction": "Visada rašykite (x - [šaknis]). Jei šaknis neigiama, gausis (x + skaičius).",
+      "wrongExample": "(x+2)(x+3)",
+      "correctExample": "(x-2)(x-3)",
       "defaultSrs": true
-    },
-    {
-      "id": "sumaiso-koeficientus",
-      "title": "Sumaišo koeficientus su laisvaisiais nariais",
-      "type": "mistake",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "wrongPattern": "3x + 2x rašo kaip 5x².",
-      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
-      "correction": "3x+2x=5x.",
-      "wrongExample": "3x+2x=5x²",
-      "correctExample": "3x+2x=5x",
-      "defaultSrs": true
-    }
-  ],
-  "workedExamples": [
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-1",
-      "title": "Reiškinio sutvarkymas",
-      "level": "easy",
-      "problem": "Supaprastink 3x + 2x - x.",
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Sudedame koeficientus.",
-          "latex": "3x+2x-x=(3+2-1)x"
-        },
-        {
-          "text": "Gauname.",
-          "latex": "4x"
-        }
-      ],
-      "answer": "4x"
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-2",
-      "title": "Lygties sprendimas",
-      "level": "easy",
-      "problem": "Išspręsk 2x + 5 = 17.",
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Atimame 5 iš abiejų pusių.",
-          "latex": "2x=12"
-        },
-        {
-          "text": "Daliname iš 2.",
-          "latex": "x=6"
-        }
-      ],
-      "answer": "x=6"
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-3",
-      "title": "Nelygybė",
-      "level": "medium",
-      "problem": "Išspręsk 3x - 4 < 11.",
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Pridedame 4.",
-          "latex": "3x<15"
-        },
-        {
-          "text": "Daliname iš 3.",
-          "latex": "x<5"
-        }
-      ],
-      "answer": "x<5"
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-4",
-      "title": "Modeliavimas",
-      "level": "medium",
-      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Bendra kaina yra 4x.",
-          "latex": "4x=20"
-        },
-        {
-          "text": "Išsprendžiame.",
-          "latex": "x=5"
-        }
-      ],
-      "answer": "x=5"
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-exmp-5",
-      "title": "Formulė",
-      "level": "hard",
-      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
-      "conceptIds": [
-        "formule",
-        "tiesine-funkcija"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Išreiškiame t.",
-          "latex": "t=\\frac{s}{v}"
-        },
-        {
-          "text": "Įstatome duomenis.",
-          "latex": "t=\\frac{96}{12}=8"
-        }
-      ],
-      "answer": "t=8"
     }
   ],
   "exercises": [
@@ -535,336 +521,9 @@
       "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001",
       "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
       "grade": 9,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "1x",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "1x"
-        }
-      ],
-      "answerText": "1x",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-002",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "6a",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "6a"
-        }
-      ],
-      "answerText": "6a",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-003",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "2y+6",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "2y+6"
-        }
-      ],
-      "answerText": "2y+6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-004",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "m+8",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "m+8"
-        }
-      ],
-      "answerText": "m+8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-005",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "10p-5",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "10p-5"
-        }
-      ],
-      "answerText": "10p-5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-006",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Išspręsk lygtį: x+5=12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-007",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 3x=18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-008",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 2x-4=10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-009",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 5x+2=27.",
+      "statement": "Raskite kvadratinio trinario x² - 5x + 6 šaknų sumą.",
       "answer": {
         "kind": "numeric",
         "value": 5,
@@ -873,645 +532,29 @@
       "hints": [
         {
           "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
+          "text": "Galite rasti šaknis arba naudoti Vieto teoremą (suma = -b/a).",
+          "penalty": 0,
           "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
+            "vietos-teorema"
           ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
         }
       ],
       "solutionSteps": [
         {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=5"
+          "text": "x₁=2, x₂=3. Suma = 2+3=5.",
+          "latex": "2+3=5"
         }
       ],
       "answerText": "5",
       "alternateMethods": [],
       "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-010",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-011",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x >= 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-012",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-013",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x <= 2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-014",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3x = 18"
-          },
-          {
-            "id": "b",
-            "text": "x + 3 = 18"
-          },
-          {
-            "id": "c",
-            "text": "18x = 3"
-          },
-          {
-            "id": "d",
-            "text": "x - 3 = 18"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok ryšio tarp kiekio ir kainos.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "formule"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Vienas bilietas kainuoja 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bendra kaina lygi 3x.",
-          "latex": "3x=18"
-        }
-      ],
-      "answerText": "3x = 18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-015",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-016",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-017",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-018",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-019",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-020",
-      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
-      "grade": 9,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
+        "trinario-saknys"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
     }
   ],
-  "tests": [
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-test-topic",
-      "title": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai testas",
-      "scope": "topic",
-      "topicIds": [
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai"
-      ],
-      "exerciseIds": [
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-002",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-003",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-004",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-005",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-006",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-007",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-test-challenge",
-      "title": "Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai"
-      ],
-      "exerciseIds": [
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-009",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-010",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-011",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-012",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-013",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-014",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-015",
-        "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-kintamasis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kintamasis?",
-      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-reiskinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reiškinys?",
-      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "conceptIds": [
-        "reiskinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-koeficientas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra koeficientas?",
-      "back": "Skaičius prie raidės.",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-sklaidos-desnis",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sklaidos dėsnis?",
-      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "conceptIds": [
-        "sklaidos-desnis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-tiesines-lygties-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinės lygties forma?",
-      "back": "Tai paprasčiausia lygties forma.",
-      "conceptIds": [
-        "tiesines-lygties-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-perkelia-be-zenklo-kaitos",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
-      "back": "Iš abiejų pusių atimk 5.",
-      "conceptIds": [
-        "perkelia-be-zenklo-kaitos"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-srs-sumaiso-koeficientus",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra sumaišo koeficientus su laisvaisiais nariais?",
-      "back": "3x+2x=5x.",
-      "conceptIds": [
-        "sumaiso-koeficientus"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "tests": [],
+  "srsCards": []
 }

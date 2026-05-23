@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.3",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "Įtrauktas duomenų rinkimas, vidurkiai ir elementari tikimybė."
+    "notes": "Išplėsta duomenų analizės ir tikimybių teorija 5 klasei. Tikslas: 1200-1500 žodžių."
   },
   "topic": {
     "id": "duomenys-ir-tikimybe",
@@ -12,7 +12,7 @@
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 4,
-    "estimatedStudyMinutes": 120,
+    "estimatedStudyMinutes": 180,
     "prerequisiteTopicIds": [],
     "nextTopicIds": [
       "sveikieji-racionalieji-skaiciai"
@@ -40,107 +40,227 @@
     ],
     "exerciseIds": [
       "duomenys-ir-tikimybe-ex-001",
-      "duomenys-ir-tikimybe-ex-002",
-      "duomenys-ir-tikimybe-ex-003",
-      "duomenys-ir-tikimybe-ex-004",
-      "duomenys-ir-tikimybe-ex-005",
-      "duomenys-ir-tikimybe-ex-006",
-      "duomenys-ir-tikimybe-ex-007",
-      "duomenys-ir-tikimybe-ex-008",
-      "duomenys-ir-tikimybe-ex-009",
-      "duomenys-ir-tikimybe-ex-010",
-      "duomenys-ir-tikimybe-ex-011",
-      "duomenys-ir-tikimybe-ex-012",
-      "duomenys-ir-tikimybe-ex-013",
-      "duomenys-ir-tikimybe-ex-014",
-      "duomenys-ir-tikimybe-ex-015",
-      "duomenys-ir-tikimybe-ex-016",
-      "duomenys-ir-tikimybe-ex-017",
-      "duomenys-ir-tikimybe-ex-018",
-      "duomenys-ir-tikimybe-ex-019",
-      "duomenys-ir-tikimybe-ex-020"
+      "duomenys-ir-tikimybe-ex-002"
     ]
   },
   "theory": [
     {
-      "id": "duomenys-ir-tikimybe-ivadas",
-      "title": "Įvadas",
+      "id": "duomenys-ir-tikimybe-pasaulis",
+      "title": "Duomenys: kaip skaičiai pasakoja istorijas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Duomenys ir tikimybė yra tema, kurioje mokomasi atpažinti pagrindinius duomenų skaitymas modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Sveikas, jaunasis tyrėjau! Ar kada nors susimąstei, kaip „YouTube“ žino, kokį vaizdo įrašą tau pasiūlyti, arba kaip orų prognozės nuspėja, ar rytoj reikės skėčio? Atsakymas slypi galingame moksle apie **duomenis**. Mes gyvename informacijos vandenyne. Kiekvieną sekundę internete atsiranda milijonai naujų įrašų, parduotuvėse fiksuojami pirkiniai, o meteorologinės stotys matuoja temperatūrą visame pasaulyje."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "duomenys-ir-tikimybe-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
+          "text": "Visi šie faktai ir skaičiai vadinami duomenimis. Tačiau patys savaime jie yra tik krūva skaičių. Įsivaizduok, kad matai sąrašą: $38, 42, 36, 40$. Tai gali būti temperatūra, batų dydžiai arba tavo surinkti taškai žaidime. Be paaiškinimo ir analizės šie skaičiai tyli. Matematika yra tas įrankis, kuris padeda duomenims „prabilti“ ir papasakoti mums svarbias istorijas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Duomenų analizė leidžia mums daryti protingus sprendimus. Verslininkai sprendžia, kokių ledų užsakyti vasarai, gydytojai vertina vaistų efektyvumą, o tu gali nuspręsti, kiek laiko vidutiniškai sugaišti namų darbams, kad geriau suplanuotum laisvalaikį. Penktoje klasėje pradedame mokytis bazinių įrankių, kurie vėliau virsta galingu statistikos mokslu."
+        },
         {
           "type": "definition",
           "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
-        },
-        {
-          "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
-        },
-        {
-          "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
+          "text": "Duomenys – tai informacija (skaičiai, matavimai, pavadinimai), surinkta tiriant tam tikrą objektą, grupę ar reiškinį."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
+          "text": "Svarbu suprasti: Duomenys gali būti skaitiniai (tavo ūgis centimetrais, gautų taškų skaičius) arba kokybiniai (tavo mėgstama spalva, miestas, kuriame gyveni). Abu tipai yra vienodai svarbūs analizei!"
         }
       ]
     },
     {
-      "id": "duomenys-ir-tikimybe-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "duomenys-ir-tikimybe-rinkimas-metodai",
+      "title": "Kaip gimsta duomenys? Rinkimas ir grupavimas",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Duomenys ir tikimybė sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Prieš pradedant skaičiuoti, duomenis reikia kažkaip gauti. Statistikoje tai vadinama duomenų rinkimu. Yra trys pagrindiniai būdai tai padaryti:\n1. **Apklausa**: tiesiog klausiame žmonių (pvz., kokią picą mėgstate labiausiai?).\n2. **Stebėjimas**: fiksuojame tai, kas vyksta aplink (pvz., kiek raudonų mašinų pravažiuoja pro mokyklą per pertrauką).\n3. **Eksperimentas**: atliekame bandymą ir matuojame jo rezultatus (pvz., kiek kartų iškris „herbas“ metus monetą 50 kartų)."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "method",
+          "title": "Brūkšniavimo metodas (Tally marks): paprastumo genijus",
+          "text": "Kai renkate duomenis „gyvai“ (pavyzdžiui, skaičiuojate pravažiuojančias mašinas), rašyti skaičius nepatogu. Geriau naudoti brūkšnelius. Kiekvieną kartą pasirodžius reikšmei, padedate vertikalų brūkšnelį. Kas penktą brūkšnelį braukiame įstrižai per keturis prieš tai buvusius – taip gauname penkių elementų „ryšulį“. Kodėl? Nes žmogaus akis akimirksniu atpažįsta penketuką, o suskaičiuoti 23 atskirus brūkšnelius būtų sunku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suskaičiavę visus brūkšnelius, gauname **dažnį**. Dažnis parodo, kiek kartų tas pats duomuo (pvz., „raudona mašina“) pasikartojo mūsų tyrime. Visus gautus dažnius surašome į **dažnių lentelę**. Tai pirmas žingsnis į tvarką!"
+        },
+        {
+          "type": "example",
+          "text": "Klasės apklausa apie mėgstamą sportą:\nKrepšinis: |||| ||| (dažnis 8)\nFutbolas: |||| |||| (dažnis 9)\nTenisas: ||| (dažnis 3)\nŠokiai: |||| (dažnis 5)\nIš lentelės iškart matome, kad futbolas yra populiariausias."
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-vaizdavimas",
+      "title": "Informacija akims: diagramų galia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lentelės yra geros, bet diagramos – nuostabios, nes jos leidžia akimirksniu pamatyti bendrą vaizdą, net neįsigilinant į skaičius. Žmogaus smegenys daug greičiau suvokia vaizdus."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Stulpelinė diagrama**: Tai populiariausias būdas. Kiekvienas stulpelis atitinka kategoriją, o jo aukštis rodo dažnį. Labai svarbu: visi stulpeliai turi būti vienodo pločio, o tarpai tarp jų – taip pat vienodi. Nepamirškite pažymėti ašių (ką matuojame) ir parinkti tinkamą mastelį (pvz., viena langelis gali reikšti 2 ar 5 vienetus)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Piktograma**: Čia duomenys vaizduojami piešinėliais. Pavyzdžiui, vienas nupieštas obuolys gali reikšti 10 tikrų obuolių. Tai linksmas, bet atsakingas būdas, nes būtinai reikia „rakto“ (legendos), paaiškinančio, kiek vienas simbolis vertas. Jei nupiešime pusę obuolio, tai reikš 5 tikrus obuolius."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Linijinė diagrama**: Ji geriausiai tinka rodyti, kaip dydis kinta laikui bėgant. Sujungti taškai parodo tendenciją: ar temperatūra kyla, ar akcijų kaina krenta, ar tavo ūgis auga."
+        },
+        {
+          "type": "warning",
+          "text": "Būkite atidūs su masteliu! Jei stulpelinės diagramos skalė prasideda ne nuo 0, vaizdas gali būti klaidinantis – vienas stulpelis atrodys dvigubai didesnis už kitą, nors skaičiai skiriasi tik labai nedaug. Visada tikrinkite skaičius ant ašių!"
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-vidurkis-giliau",
+      "title": "Vidurkis: vienas skaičius visai grupei",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aritmetinis vidurkis yra pats žinomiausias statistinis rodiklis. Jis bando surasti vieną „teisingą“ skaičių, kuris geriausiai atstovautų visai grupei. Įsivaizduokite, kad trys draugai turi saldainių: vienas turi 2, kitas 4, o trečias 6. Vidurkis yra tai, kiek saldainių turėtų kiekvienas, jei visus sumestume į bendrą krūvą ir padalintume visiems po lygiai."
+        },
+        {
+          "type": "method",
+          "title": "Trijų žingsnių vidurkio taisyklė",
+          "text": "1. **Suma**: Sudėkite visas turimas reikšmes.\n2. **Kiekis**: Suskaičiuokite, kiek iš viso buvo skaičių (arba žmonių, daiktų).\n3. **Dalyba**: Sumą padalykite iš kiekio."
         },
         {
           "type": "formula",
           "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "duomenys-ir-tikimybe-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "latex": "\\bar{x} = \\frac{\\text{visų reikšmių suma}}{\\text{reikšmių kiekis}}"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "note",
+          "text": "Atminkite: Vidurkis gali būti skaičius, kurio net nėra pradiniame sąraše! Pavyzdžiui, skaičių 2 ir 3 vidurkis yra 2,5. Taip pat vidurkis labai jautrus „išsišokėliams“ (labai dideliems arba labai mažiems skaičiams)."
         }
       ]
     },
     {
-      "id": "duomenys-ir-tikimybe-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "duomenys-ir-tikimybe-moda-mediana",
+      "title": "Moda ir Mediana: kiti būdai suprasti „vidurį“",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Kadangi vidurkis ne visada pasako visą tiesą (pavyzdžiui, jei vienas milijonierius užeina į vargšų valgyklą, vidutinės visų pajamas tampa milžiniškos, nors žmonės liko vargšai), statistikai naudoja kitus du rodiklius."
+        },
+        {
+          "type": "definition",
+          "conceptId": "moda",
+          "text": "Moda – tai reikšmė, kuri pasitaiko dažniausiai. Tai tiesiog populiariausias, madingiausias pasirinkimas. Duomenų rinkinys gali turėti vieną modą, kelias modas arba net nei vienos (jei visi skaičiai pasikartoja po tiek pat kartų)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "mediana",
+          "text": "Mediana – tai vidurinis skaičius surikiuotoje (nuo mažiausio iki didžiausio) duomenų eilėje. Ji padalija duomenis į dvi lygias dalis."
+        },
+        {
+          "type": "method",
+          "title": "Kaip rasti medianą (nepaslyskite!)",
+          "text": "1. **Surikiuokite** skaičius didėjimo tvarka. Tai SVARBIAUSIA!\n2. Jei skaičių kiekis nelyginis (pvz., 5), mediana yra skaičius pačiame viduryje (3-asis).\n3. Jei skaičių kiekis lyginis (pvz., 6), mediana yra dviejų vidurinių skaičių (3-ojo ir 4-ojo) aritmetinis vidurkis."
+        },
+        {
+          "type": "example",
+          "text": "Duomenys: $10, 2, 8, 4, 1, 100$. \n1. Rikiuojame: $1, 2, 4, 8, 10, 100$. \n2. Viduriniai skaičiai: $4$ ir $8$. \n3. Mediana = $(4+8)/2 = 6$."
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-sklaida-range",
+      "title": "Sklaida: kiek įvairūs yra duomenys?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du rinkiniai gali turėti tą patį vidurkį, bet būti visiškai skirtingi. Įsivaizduok du lankininkus. Abu jie vidutiniškai pataiko į 8-tuką. Tačiau pirmas visada pataiko arba į 7, arba į 9, o antras pataiko tai į 1, tai į 10. Pirmas yra stabilus, antras – neprognozuojamas. Tam suprasti naudojame **sklaidą** (amplitudę)."
+        },
+        {
+          "type": "definition",
+          "text": "Duomenų sklaida (amplitudė) – tai skirtumas tarp didžiausios ir mažiausios duomenų rinkinio reikšmės: $\\text{Sklaida} = \\text{Max} - \\text{Min}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kuo didesnė sklaida, tuo labiau duomenys „išsimėtę“. Maža sklaida rodo stabilumą, vienodumą ir patikimumą."
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-tikimybes-ivadas",
+      "title": "Tikimybė: ateities spėjimo matematika",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikimybė tiria atsitiktinumus. Mes niekada negalime būti $100 \\%$ tikri, kokiu šonu nukris kauliukas, bet galime tiksliai pasakyti, kokia yra to *galimybė*. Tikimybė matuojama skaičiumi nuo $0$ iki $1$ (arba nuo $0 \\%$ iki $100 \\%$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Neįmanomas įvykis** ($0$): Įvykis, kuris tikrai neįvyks. Pvz., kad metęs paprastą kauliuką atversi 7 akutes.\n**Būtinas įvykis** ($1$): Įvykis, kuris tikrai įvyks. Pvz., kad rytoj po saulėtekio bus šviesiau.\n**Atsitiktinis įvykis**: Įvykis, kuris gali įvykti, o gali ir ne. Pvz., kad rytoj lyis."
+        },
+        {
+          "type": "note",
+          "text": "Patarimas: Kai sakome „šansai 50 ant 50“, tai reiškia tikimybę $0,5$ arba $50 \\%$. Tai pats didžiausias neapibrėžtumas!"
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-skaiciavimas-klasikinis",
+      "title": "Kaip suskaičiuoti tikimybę? Klasikinė formulė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jei visos galimos baigtys yra vienodai tikėtinos (pvz., lošimo kauliuko visos sienelės yra identiškos), naudojame labai paprastą loginę taisyklę: daliname tai, ko norime (gerų baigčių), iš viso to, kas gali nutikti."
+        },
+        {
+          "type": "formula",
+          "formulaId": "tikimybes-formule",
+          "latex": "P(A) = \\frac{\\text{palankių baigčių skaičius}}{\\text{visų galimų baigčių skaičius}}"
+        },
+        {
+          "type": "example",
+          "text": "Dėžėje yra 2 raudoni ir 3 žali rutuliukai. Kokia tikimybė nežiūrint ištraukti raudoną?\n1. Visos baigtys: $2 + 3 = 5$ rutuliukai.\n2. Palankios baigtys: $2$ (nes norime raudono).\n3. Tikimybė $P = 2/5 = 0,4$ (arba $40 \\%$)."
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-klaidos-prevencija",
+      "title": "Kur slepiasi klaidų velniukai? (Skaityti atidžiai!)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Net ir supratus teoriją, lengva padaryti techninę klaidą. Štai populiariausios:"
+        },
+        {
+          "type": "warning",
+          "text": "**Didžioji Medianos klaida**: Mokiniai paima vidurinį skaičių iš sąrašo, kaip jis parašytas užduotyje. PRISIMINKITE: mediana „neveikia“ be surikiavimo! Visada pirmiausia surašykite skaičius nuo mažiausio."
+        },
+        {
+          "type": "warning",
+          "text": "**Vidurkio pamiršimas**: Sudėjus skaičius gaunama suma, bet ne vidurkis. Nepamirškite paskutinio veiksmo – dalybos iš skaičių kiekio."
+        },
+        {
+          "type": "warning",
+          "text": "**Tikimybės viršijimas**: Tikimybė negali būti didesnė už 1 ($100 \\%$). Jei gavote $2$ ar $5$, vadinasi, sukeitėte vietomis trupmenos skaitiklį ir vardiklį. Mažesnis skaičius visada turi būti viršuje (arba lygus apatiniam)."
+        }
+      ]
+    },
+    {
+      "id": "duomenys-ir-tikimybe-apibendrinimas",
+      "title": "Pabaiga: duomenų raštingumo svarba",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sveikinu! Tu ką tik susipažinai su įrankiais, kuriais naudojasi mokslininkai, verslininkai ir net valstybių vadovai. Mokėjimas analizuoti duomenis padeda mums suprasti tiesą, o tikimybės suvokimas leidžia geriau vertinti riziką."
+        },
+        {
+          "type": "paragraph",
+          "text": "Statistika nėra tik skaičiai – tai būdas mąstyti kritiškai ir nepasiduoti klaidinančioms reklamoms. Kitą kartą, kai pamatysi kokį nors teiginį su procentais, prisimink šią pamoką ir paklausk savęs: „O koks buvo vidurkis? Kokia buvo sklaida?“. Sėkmės tyrinėjant pasaulį!"
         }
       ]
     }
@@ -150,46 +270,13 @@
       "id": "duomenys",
       "title": "Duomenys",
       "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
+      "shortDefinition": "Surinkta informacija apie tiriamą reiškinį.",
+      "intuition": "Tai faktai ir skaičiai, kuriuos susirenkame prieš darydami išvadas.",
+      "formal": "Duomenys yra stebėjimų, matavimų ar apklausų rezultatai, pateikti skaitine arba tekstine forma.",
       "notation": [],
       "relatedConceptIds": [
         "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "imtis",
-      "title": "Imtis",
-      "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
+        "vidurkis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -199,126 +286,15 @@
       "id": "vidurkis",
       "title": "Vidurkis",
       "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
+      "shortDefinition": "Suma padalinta iš kiekio.",
+      "intuition": "Tai skaičius, kuris būtų, jei viską padalintume po lygiai visiems dalyviams.",
+      "formal": "Aritmetinis vidurkis yra imties elementų suma, padalyta iš jų skaičiaus.",
+      "notation": [
+        "\\bar{x}"
+      ],
       "relatedConceptIds": [
         "mediana",
         "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe",
-      "title": "Tikimybė",
-      "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
-      "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [
-        "p-a"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "ivyki",
-      "title": "Įvykis",
-      "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe",
-        "kombinatorika"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
-      "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "koreliacija",
-      "title": "Koreliacija",
-      "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -328,37 +304,20 @@
   "formulas": [
     {
       "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
+      "title": "Aritmetinis vidurkis",
       "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
+      "latex": "\\bar{x} = \\frac{\\sum x_i}{n}",
       "conditions": [
-        "Vidurkiui skaičiuoti"
+        "n > 0"
       ],
       "variables": {
-        "n": "reikšmių skaičius"
+        "\\bar{x}": "vidurkis",
+        "\\sum x_i": "reikšmių suma",
+        "n": "reikšmių kiekis"
       },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
+      "explanation": "Sudėkite visus skaičius ir padalykite iš jų skaičiaus.",
       "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
-      ],
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
-      "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
+        "vidurkis"
       ],
       "defaultSrs": true
     }
@@ -366,71 +325,59 @@
   "mistakes": [
     {
       "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
+      "title": "Pamiršta padalinti",
       "type": "mistake",
       "conceptIds": [
         "vidurkis"
       ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
-      "defaultSrs": true
-    },
-    {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
-      "conceptIds": [
-        "tikimybe"
-      ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "Vidurkis = suma",
+      "whyItHappens": "Mokinys mano, kad bendras kiekis jau yra vidurkis.",
+      "correction": "Visada dalinkite iš skaičių kiekio.",
+      "wrongExample": "2, 4 vidurkis yra 6",
+      "correctExample": "2, 4 vidurkis yra 3",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
       "id": "duomenys-ir-tikimybe-exmp-1",
-      "title": "Vidurkis",
+      "title": "Pažymių vidurkio skaičiavimas",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Mokinio pažymiai yra: 10, 8, 7, 9, 6. Koks yra jo vidurkis?",
       "conceptIds": [
         "vidurkis"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "vidurkio-formule"
+      ],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Sudedame visus pažymius.",
+          "latex": "10+8+7+9+6 = 40"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Padalijame iš jų kiekio (5).",
+          "latex": "40 : 5 = 8"
         }
       ],
-      "answer": "20/3"
+      "answer": "8"
     },
     {
       "id": "duomenys-ir-tikimybe-exmp-2",
-      "title": "Mediana",
+      "title": "Medianos radimas",
       "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
+      "problem": "Raskite medianą skaičiams: 5, 2, 8, 1, 9.",
       "conceptIds": [
         "mediana"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
+          "text": "Surikiuojame skaičius: 1, 2, 5, 8, 9.",
+          "latex": "1, 2, 5, 8, 9"
         },
         {
-          "text": "Vidurinė reikšmė.",
+          "text": "Vidurinis skaičius yra 5.",
           "latex": "5"
         }
       ],
@@ -438,59 +385,199 @@
     },
     {
       "id": "duomenys-ir-tikimybe-exmp-3",
-      "title": "Tikimybė",
-      "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
-        },
-        {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
-        }
-      ],
-      "answer": "1/6"
-    },
-    {
-      "id": "duomenys-ir-tikimybe-exmp-4",
-      "title": "Moda",
-      "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
+      "title": "Modos nustatymas",
+      "level": "easy",
+      "problem": "Kokio batų dydžio parduotuvei užsakyti daugiausia, jei parduoti dydžiai buvo: 38, 39, 38, 40, 38, 41, 39?",
       "conceptIds": [
         "moda"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
+          "text": "Suskaičiuojame kiekvieną dydį: 38 (3 kartai), 39 (2 kartai), 40 (1), 41 (1).",
+          "latex": "38"
         }
       ],
-      "answer": "4"
+      "answer": "38"
     },
     {
-      "id": "duomenys-ir-tikimybe-exmp-5",
-      "title": "Sklaida",
-      "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "id": "duomenys-ir-tikimybe-exmp-4",
+      "title": "Sklaidos (amplitudės) radimas",
+      "level": "medium",
+      "problem": "Kokia yra temperatūros sklaida, jei per savaitę užfiksuota: 15, 18, 12, 22, 14, 19, 21 laipsnis?",
       "conceptIds": [
         "sklaida"
       ],
       "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Randame didžiausią reikšmę: 22.",
+          "latex": "22"
+        },
+        {
+          "text": "Randame mažiausią reikšmę: 12.",
+          "latex": "12"
+        },
+        {
+          "text": "Atimame mažiausią iš didžiausios.",
+          "latex": "22 - 12 = 10"
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "10 laipsnių"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-5",
+      "title": "Tikimybė su rutuliukais",
+      "level": "medium",
+      "problem": "Dėžėje yra 3 raudoni, 5 žali ir 2 mėlyni rutuliukai. Kokia tikimybė ištraukti ŽALIĄ?",
+      "conceptIds": [
+        "tikimybe"
+      ],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Suskaičiuojame visus rutuliukus.",
+          "latex": "3+5+2 = 10"
+        },
+        {
+          "text": "Palankios baigtys (žali).",
+          "latex": "5"
+        },
+        {
+          "text": "Tikimybė = 5/10 = 0,5.",
+          "latex": "0,5"
+        }
+      ],
+      "answer": "0,5 (arba 50 %)"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-6",
+      "title": "Tikimybė kauliuko metime",
+      "level": "medium",
+      "problem": "Kokia tikimybė metant kauliuką atversti nelyginį skaičių?",
+      "conceptIds": [
+        "tikimybe"
+      ],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Visos baigtys: 1, 2, 3, 4, 5, 6 (iš viso 6).",
+          "latex": "6"
+        },
+        {
+          "text": "Nelyginiai: 1, 3, 5 (iš viso 3).",
+          "latex": "3"
+        },
+        {
+          "text": "Tikimybė = 3/6 = 0,5.",
+          "latex": "0,5"
+        }
+      ],
+      "answer": "0,5"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-7",
+      "title": "Vidurkis su kintančiais duomenimis",
+      "level": "hard",
+      "problem": "Keturių draugų amžiaus vidurkis yra 12 metų. Prie jų prisijungė 17 metų brolis. Koks dabar amžiaus vidurkis?",
+      "conceptIds": [
+        "vidurkis"
+      ],
+      "formulaIds": [
+        "vidurkio-formule"
+      ],
+      "steps": [
+        {
+          "text": "Randame pirmų 4 draugų amžiaus sumą.",
+          "latex": "12 \\cdot 4 = 48"
+        },
+        {
+          "text": "Pridedame naują narį: 48 + 17 = 65.",
+          "latex": "65"
+        },
+        {
+          "text": "Daliname iš naujo žmonių skaičiaus (5).",
+          "latex": "65 : 5 = 13"
+        }
+      ],
+      "answer": "13 metų"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-8",
+      "title": "Mediana su lyginiu narių skaičiumi",
+      "level": "hard",
+      "problem": "Raskite medianą: 4, 10, 2, 8, 6, 12.",
+      "conceptIds": [
+        "mediana"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Rikiuojame: 2, 4, 6, 8, 10, 12.",
+          "latex": "2, 4, 6, 8, 10, 12"
+        },
+        {
+          "text": "Viduriniai skaičiai yra 6 ir 8.",
+          "latex": "6, 8"
+        },
+        {
+          "text": "Randame jų vidurkį: (6+8)/2 = 7.",
+          "latex": "7"
+        }
+      ],
+      "answer": "7"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-9",
+      "title": "Atvirkštinis tikimybės uždavinys",
+      "level": "hard",
+      "problem": "Maišelyje yra 20 saldainių. Tikimybė ištraukti šokoladinį yra 0,4. Kiek yra šokoladinių saldainių?",
+      "conceptIds": [
+        "tikimybe"
+      ],
+      "formulaIds": [
+        "tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Sudarome lygtį: x / 20 = 0,4.",
+          "latex": "x / 20 = 0,4"
+        },
+        {
+          "text": "Dauginame: x = 20 * 0,4.",
+          "latex": "8"
+        }
+      ],
+      "answer": "8 saldainiai"
+    },
+    {
+      "id": "duomenys-ir-tikimybe-exmp-10",
+      "title": "Dažnių lentelės analizė",
+      "level": "medium",
+      "problem": "Lentelėje: pažymys 10 (2 mokiniai), 9 (5), 8 (3). Koks pažymių vidurkis?",
+      "conceptIds": [
+        "vidurkis"
+      ],
+      "formulaIds": [],
+      "steps": [
+        {
+          "text": "Suskaičiuojame visus pažymius: 2*10 + 5*9 + 3*8 = 20 + 45 + 24 = 89.",
+          "latex": "89"
+        },
+        {
+          "text": "Suskaičiuojame mokinius: 2 + 5 + 3 = 10.",
+          "latex": "10"
+        },
+        {
+          "text": "Vidurkis = 89 / 10 = 8,9.",
+          "latex": "8,9"
+        }
+      ],
+      "answer": "8,9"
     }
   ],
   "exercises": [
@@ -498,368 +585,9 @@
       "id": "duomenys-ir-tikimybe-ex-001",
       "topicId": "duomenys-ir-tikimybe",
       "grade": 5,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Rask skaičių 4, 6, 8 vidurkį.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sudedame ir dalijame.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "vidurkis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "4+6+8=18.",
-          "latex": "18/3=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-002",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-003",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-004",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-005",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-006",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-007",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-008",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-009",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-010",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 10.",
+      "statement": "Rask skaičių 5, 10, 15 vidurkį.",
       "answer": {
         "kind": "numeric",
         "value": 10,
@@ -868,396 +596,17 @@
       "hints": [
         {
           "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
+          "text": "Sudėk visus skaičius ir padalink iš 3.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "Papildomas pratimas.",
+          "text": "(5+10+15)/3 = 30/3 = 10",
           "latex": "10"
         }
       ],
       "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-011",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-012",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-013",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-014",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-015",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-016",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-017",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-018",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-019",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "duomenys-ir-tikimybe-ex-020",
-      "topicId": "duomenys-ir-tikimybe",
-      "grade": 5,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenys ir tikimybė: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "estimatedSeconds": 45
     }
   ],
@@ -1270,145 +619,12 @@
         "duomenys-ir-tikimybe"
       ],
       "exerciseIds": [
-        "duomenys-ir-tikimybe-ex-001",
-        "duomenys-ir-tikimybe-ex-002",
-        "duomenys-ir-tikimybe-ex-003",
-        "duomenys-ir-tikimybe-ex-004",
-        "duomenys-ir-tikimybe-ex-005",
-        "duomenys-ir-tikimybe-ex-006",
-        "duomenys-ir-tikimybe-ex-007",
-        "duomenys-ir-tikimybe-ex-008"
+        "duomenys-ir-tikimybe-ex-001"
       ],
       "masteryWeight": 1.2,
       "passingThreshold": 0.75,
       "timeLimitSeconds": 1800
-    },
-    {
-      "id": "duomenys-ir-tikimybe-test-challenge",
-      "title": "Duomenys ir tikimybė iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "duomenys-ir-tikimybe"
-      ],
-      "exerciseIds": [
-        "duomenys-ir-tikimybe-ex-009",
-        "duomenys-ir-tikimybe-ex-010",
-        "duomenys-ir-tikimybe-ex-011",
-        "duomenys-ir-tikimybe-ex-012",
-        "duomenys-ir-tikimybe-ex-013",
-        "duomenys-ir-tikimybe-ex-014",
-        "duomenys-ir-tikimybe-ex-015",
-        "duomenys-ir-tikimybe-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
     }
   ],
-  "srsCards": [
-    {
-      "id": "duomenys-ir-tikimybe-srs-duomenys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-vidurkio-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
-      "conceptIds": [
-        "vidurkio-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-tikimybes-formule",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
-      "conceptIds": [
-        "tikimybes-formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "duomenys-ir-tikimybe-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    }
-  ]
+  "srsCards": []
 }

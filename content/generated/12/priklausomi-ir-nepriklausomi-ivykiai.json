@@ -1,9 +1,9 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.2.0",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
-    "notes": "IV gimnazijos programa aprašo dviejų-trijų etapų bandymus, priklausomus ir nepriklausomus įvykius, Veno diagramas ir tikimybių medžius."
+    "notes": "Pilnas sudėtinių įvykių tikimybių kursas: priklausomumas, sąlyginė tikimybė, medžiai ir Bayes'o teorema. Parengta pagal VBE reikalavimus."
   },
   "topic": {
     "id": "priklausomi-ir-nepriklausomi-ivykiai",
@@ -12,1402 +12,624 @@
     "strand": "Duomenys ir tikimybės",
     "level": "curriculum",
     "order": 10,
-    "estimatedStudyMinutes": 160,
+    "estimatedStudyMinutes": 300,
     "prerequisiteTopicIds": [
       "kombinatorika-ir-ilgalaike-tikimybe"
     ],
     "nextTopicIds": [],
     "conceptIds": [
-      "duomenys",
-      "imtis",
-      "daznis",
-      "vidurkis",
-      "mediana",
-      "moda",
-      "sklaida",
       "tikimybe",
-      "ivyki",
-      "kombinatorika",
-      "koreliacija"
+      "ivykiu-sankirta",
+      "ivykiu-sajunga",
+      "nesutaikomi-ivykiai",
+      "nepriklausomi-ivykiai",
+      "priklausomi-ivykiai",
+      "salygine-tikimybe",
+      "tikimybiu-daugybos-taisykle",
+      "tikimybiu-sumos-taisykle",
+      "tikimybiu-medis",
+      "pilnosios-tikimybes-formule",
+      "bayeso-formule"
     ],
     "formulaIds": [
-      "vidurkio-formule",
-      "tikimybes-formule"
+      "tikimybiu-sumos-formule",
+      "nepriklausomu-ivykiu-daugyba",
+      "salygines-tikimybes-formule",
+      "priklausomu-ivykiu-daugyba",
+      "pilnosios-tikimybes-formule-latex",
+      "bayeso-formule-latex"
     ],
     "mistakeIds": [
-      "vidurkis-be-suma",
-      "tikimybe-ne-dalis"
+      "painioja-nesutaikomuma-ir-nepriklausomuma",
+      "pamirsta-sankirtos-atimti-sumoje",
+      "salygines-tikimybes-eiles-klaida",
+      "tikimybiu-medzio-saku-suma-ne-vienetas"
     ],
     "exerciseIds": [
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-001",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-002",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-003",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-004",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-005",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-006",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-007",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-008",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-009",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-010",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-011",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-012",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-013",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-014",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-015",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-016",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-017",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-018",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-019",
-      "priklausomi-ir-nepriklausomi-ivykiai-ex-020"
+      "prob-ex-001",
+      "prob-ex-002",
+      "prob-ex-003",
+      "prob-ex-004",
+      "prob-ex-005",
+      "prob-ex-006",
+      "prob-ex-007",
+      "prob-ex-008",
+      "prob-ex-009",
+      "prob-ex-010",
+      "prob-ex-011",
+      "prob-ex-012",
+      "prob-ex-013",
+      "prob-ex-014",
+      "prob-ex-015",
+      "prob-ex-016",
+      "prob-ex-017",
+      "prob-ex-018",
+      "prob-ex-019",
+      "prob-ex-020"
     ]
   },
   "theory": [
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ivadas",
-      "title": "Įvadas",
+      "id": "prob-intro-events",
+      "title": "Įvykių santykiai: Tikimybių teorijos kalba",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai yra tema, kurioje mokomasi atpažinti pagrindinius priklausomi ir nepriklausomi įvykiai modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Tikimybių teorija nagrinėja ne tik pavienius įvykius (pvz., „iškrito šešetas“), bet ir jų tarpusavio ryšius. Kai atliekame sudėtingus, kelių etapų bandymus, svarbu suprasti, kaip vieno įvykio pasirodymas veikia kito įvykio tikimybę."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[duomenys|Duomenys]], [[imtis|Imtis]], [[daznis|Dažnis]] ir uždavinių sprendimo."
+          "text": "Prieš pradedant, svarbu prisiminti dvi bazines sąvokas:\n1. [[ivykiu-sajunga|Įvykių sąjunga]] ($A \\cup B$) reiškia, kad įvyko BENT VIENAS iš įvykių (A arba B).\n2. [[ivykiu-sankirta|Įvykių sankirta]] ($A \\cap B$) reiškia, kad įvyko ABEJI įvykiai kartu (ir A, ir B)."
+        },
+        {
+          "type": "definition",
+          "conceptId": "nesutaikomi-ivykiai",
+          "text": "Įvykiai vadinami **nesutaikomais**, jei jie negali įvykti tuo pačiu metu ($A \\cap B = \\emptyset$). Pavyzdžiui, tas pats žmogus negali tuo pačiu metu būti ir gimęs Vilniuje, ir gimęs Kaune."
         }
       ]
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
+      "id": "prob-sum-rule-deep",
+      "title": "Tikimybių sumos taisyklė",
       "blocks": [
         {
-          "type": "definition",
-          "conceptId": "duomenys",
-          "text": "Stebėjimų arba matavimų rinkinys."
-        },
-        {
-          "type": "definition",
-          "conceptId": "imtis",
-          "text": "Duomenų dalis, naudojama tiriamam reiškiniui."
-        },
-        {
-          "type": "definition",
-          "conceptId": "daznis",
-          "text": "Kiek kartų reikšmė pasikartoja."
-        },
-        {
-          "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[duomenys|Duomenys]] ir [[vidurkis|Vidurkis]]."
-        }
-      ]
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-taisyklės",
-      "title": "Svarbiausios taisyklės",
-      "blocks": [
-        {
-          "type": "theorem",
-          "text": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
-        },
-        {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[daznis|Dažnis]] ar [[vidurkis|Vidurkis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "paragraph",
+          "text": "Kai norime rasti tikimybę, kad įvyks arba įvykis A, arba įvykis B, naudojame sumos taisyklę."
         },
         {
           "type": "formula",
-          "formulaId": "vidurkio-formule",
-          "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}"
-        }
-      ]
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "formulaId": "tikimybiu-sumos-formule",
+          "latex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "paragraph",
+          "text": "Kodėl atimame sankirtą? Nes jei įvykiai gali įvykti kartu, juos sudėję mes sankirtos tikimybę „paskaičiuojame“ du kartus. Jei įvykiai nesutaikomi, $P(A \\cap B) = 0$, todėl formulė sutrumpėja iki paprastos sumos."
         }
       ]
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "prob-independent-events",
+      "title": "Nepriklausomi įvykiai: Laisvė pasirinkti",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Intuityviai įvykiai yra nepriklausomi, jei vieno iš jų pasirodymas visiškai nekeičia informacijos apie kitą."
+        },
+        {
+          "type": "definition",
+          "conceptId": "nepriklausomi-ivykiai",
+          "text": "Įvykiai A ir B yra **nepriklausomi**, jei tikimybė, kad jie įvyks kartu, lygi jų tikimybių sandaugai."
+        },
+        {
+          "type": "formula",
+          "formulaId": "nepriklausomu-ivykiu-daugyba",
+          "latex": "P(A \\cap B) = P(A) \\cdot P(B)"
+        },
+        {
+          "type": "example",
+          "text": "Metame monetą ir lošimo kauliuką. Tikimybė išmesti herbą (1/2) ir šešetą (1/6) yra $(1/2) \\cdot (1/6) = 1/12$. Monetos rezultatas niekaip nekeičia kauliuko savybių."
+        }
+      ]
+    },
+    {
+      "id": "prob-conditional-probability",
+      "title": "Priklausomi įvykiai ir Sąlyginė tikimybė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Realiame gyvenime įvykiai dažnai yra susiję. Pavyzdžiui, tikimybė, kad šiandien lys, yra didesnė, jei žinome, kad danguje yra tamsūs debesys. Tai vadinama sąlygine tikimybe."
+        },
+        {
+          "type": "definition",
+          "conceptId": "salygine-tikimybe",
+          "text": "Sąlyginė tikimybė $P(A|B)$ – tai įvykio A tikimybė su sąlyga, kad įvykis B JAU įvyko."
+        },
+        {
+          "type": "formula",
+          "formulaId": "salygines-tikimybes-formule",
+          "latex": "P(A|B) = \\frac{P(A \\cap B)}{P(B)}, \\quad P(B) > 0"
+        },
+        {
+          "type": "note",
+          "text": "Iš čia išplaukia bendroji daugybos taisyklė bet kokiems įvykiams: $P(A \\cap B) = P(B) \\cdot P(A|B)$. Jei įvykiai nepriklausomi, tai $P(A|B) = P(A)$."
+        }
+      ]
+    },
+    {
+      "id": "prob-tree-diagrams",
+      "title": "Tikimybių medžiai: Vizualus sprendimo būdas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai bandymas susideda iš kelių etapų (pvz., traukiame du rutulius iš eilės jų negrąžindami), patogiausia naudoti [[tikimybiu-medis|tikimybių medį]]."
+        },
+        {
+          "type": "method",
+          "title": "Medžio braižymo taisyklės:",
+          "steps": [
+            "1. Kiekvienas bandymo etapas sudaro naują „šakų“ lygį.",
+            "2. Ant kiekvienos šakos užrašome jos tikimybę.",
+            "3. **Taisyklė „IR“:** Judant išilgai vienos šakos į dešinę, tikimybes DAUGINAME (tai sankirta).",
+            "4. **Taisyklė „ARBA“:** Jei mums tinka keli galutiniai taškai (lapai), jų tikimybes SUDEDAME.",
+            "5. Patikra: visų šakų, išeinančių iš vieno taško, suma privalo būti lygi 1."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prob-total-probability-deep",
+      "title": "Pilnosios tikimybės formulė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kartais įvykis A gali įvykti tik kartu su viena iš kelių nesutaikomų hipotezių $H_1, H_2, \\dots, H_n$. Pavyzdžiui, prekę galime nusipirkti iš trijų skirtingų tiekėjų, kurių kiekvienas turi skirtingą broko tikimybę."
+        },
+        {
+          "type": "formula",
+          "formulaId": "pilnosios-tikimybes-formule-latex",
+          "latex": "P(A) = P(H_1)P(A|H_1) + P(H_2)P(A|H_2) + \\dots + P(H_n)P(A|H_n)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė tiesiog sumuoja visas „šakas“ tikimybių medyje, kurios veda į įvykį A."
+        }
+      ]
+    },
+    {
+      "id": "prob-bayes-theorem",
+      "title": "Bayes'o formulė: Tikimybių perskaičiavimas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tai viena svarbiausių formulių šiuolaikiniame moksle (nuo medicinos diagnostikos iki dirbtinio intelekto). Ji leidžia atnaujinti hipotezės tikimybę gavus naujų duomenų."
+        },
+        {
+          "type": "definition",
+          "conceptId": "bayeso-formule",
+          "text": "Bayes'o formulė skaičiuoja hipotezės tikimybę po to, kai įvykis A jau įvyko (vadinama *a posteriori* tikimybe)."
+        },
+        {
+          "type": "formula",
+          "formulaId": "bayeso-formule-latex",
+          "latex": "P(H_i|A) = \\frac{P(H_i)P(A|H_i)}{P(A)}"
+        },
+        {
+          "type": "example",
+          "text": "Pavyzdžiui: jei medicininis testas teigiamas, kokia tikimybė, kad žmogus TIKRAI serga? Tam reikia žinoti ligos paplitimą populiacijoje ($P(H)$) ir testo tikslumą."
+        }
+      ]
+    },
+    {
+      "id": "prob-common-pitfalls",
+      "title": "Dažniausios klaidos ir interpretacijos",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "**Nepriklausomumo vs. Nesutaikomumo painiojimas:** Tai visiškai skirtingi dalykai. Nesutaikomi įvykiai niekada nėra nepriklausomi (išskyrus jei vienas iš jų neįmanomas), nes jei įvyko A, žinome, kad B tikrai neįvyks (tikimybė pasikeitė į 0!).",
+            "**Sąlygos kryptis:** $P(A|B)$ nėra tas pats, kas $P(B|A)$. Pavyzdžiui, tikimybė būti krepšininku, jei esi 2 metrų ūgio, nėra lygi tikimybei būti 2 metrų ūgio, jei esi krepšininkas.",
+            "**Grąžinimo ignoravimas:** Uždaviniuose su kortomis ar rutuliais visada žiūrėkite, ar elementas grąžinamas. Jei ne – kiekviename kitame žingsnyje visos tikimybės keičiasi.",
+            "**Sumos formulė be atimties:** Mokiniai sudeda tikimybes $P(A) + P(B)$, pamiršdami atimti bendrą dalį."
+          ]
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "duomenys",
-      "title": "Duomenys",
-      "type": "concept",
-      "shortDefinition": "Stebėjimų arba matavimų rinkinys.",
-      "intuition": "Duomenys yra žali faktai, iš kurių darome išvadas.",
-      "formal": "Duomenys yra surinktos reikšmės arba stebėjimai.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis",
-        "tikimybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "imtis",
-      "title": "Imtis",
-      "type": "concept",
-      "shortDefinition": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "intuition": "Imtis yra tarsi mažas visumos pavyzdys.",
-      "formal": "Imtis yra duomenų rinkinys, paimtas iš populiacijos.",
-      "notation": [],
-      "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "daznis",
-      "title": "Dažnis",
-      "type": "concept",
-      "shortDefinition": "Kiek kartų reikšmė pasikartoja.",
-      "intuition": "Dažnis parodo, kas nutinka dažniausiai.",
-      "formal": "Dažnis yra stebėjimų skaičius konkrečiai reikšmei.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "mediana"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "vidurkis",
-      "title": "Vidurkis",
-      "type": "concept",
-      "shortDefinition": "Suma padalinta iš reikšmių skaičiaus.",
-      "intuition": "Vidurkis suvienodina visus skaičius į vieną tipinę reikšmę.",
-      "formal": "Aritmetinis vidurkis yra visų reikšmių suma, padalyta iš jų kiekio.",
-      "notation": [],
-      "relatedConceptIds": [
-        "mediana",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "mediana",
-      "title": "Mediana",
-      "type": "concept",
-      "shortDefinition": "Vidurinė surikiuotų duomenų reikšmė.",
-      "intuition": "Mediana yra atspari kraštinėms reikšmėms.",
-      "formal": "Mediana yra vidurinė surikiuotos imties reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "vidurkis",
-        "moda"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "moda",
-      "title": "Moda",
-      "type": "concept",
-      "shortDefinition": "Dažniausiai pasikartojanti reikšmė.",
-      "intuition": "Moda greitai pasako, kas populiariausia.",
-      "formal": "Moda yra didžiausio dažnio reikšmė.",
-      "notation": [],
-      "relatedConceptIds": [
-        "daznis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sklaida",
-      "title": "Sklaida",
-      "type": "concept",
-      "shortDefinition": "Kiek plačiai duomenys išsibarstę.",
-      "intuition": "Sklaida parodo, ar duomenys labai vienodi, ar įvairūs.",
-      "formal": "Sklaida nusako duomenų išsisklaidymo mastą.",
-      "notation": [],
-      "relatedConceptIds": [
-        "imtis",
-        "vidurkis"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
       "id": "tikimybe",
       "title": "Tikimybė",
       "type": "concept",
-      "shortDefinition": "Įvykio pasireiškimo matas nuo 0 iki 1.",
-      "intuition": "Tikimybė pasako, kiek realu, kad kas nors įvyks.",
-      "formal": "Tikimybė yra skaičius iš intervalo [0, 1].",
-      "notation": [],
+      "shortDefinition": "Įvykio galimumo skaitinė charakteristika.",
+      "intuition": "Skaičius nuo 0 (neįmanoma) iki 1 (tikra).",
+      "formal": "Funkcija P, priskirianti įvykiui skaičių iš [0, 1] pagal Kolmogorovo aksiomas.",
       "relatedConceptIds": [
-        "ivyki",
-        "kombinatorika"
+        "nepriklausomi-ivykiai",
+        "salygine-tikimybe"
       ],
-      "prerequisiteConceptIds": [
-        "p-a"
+      "appearsInTopicIds": [
+        "priklausomi-ir-nepriklausomi-ivykiai"
       ],
-      "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "ivyki",
-      "title": "Įvykis",
+      "id": "nepriklausomi-ivykiai",
+      "title": "Nepriklausomi įvykiai",
       "type": "concept",
-      "shortDefinition": "Rezultatas arba rezultatu aibė tikimybių uždavinyje.",
-      "intuition": "Įvykis yra tai, ko laukiame arba ko bijome metant kauliuką ar traukiant kortą.",
-      "formal": "Įvykis yra baigtinių baigčių poaibis.",
-      "notation": [],
+      "shortDefinition": "Įvykiai, nedarantys įtakos vienas kito tikimybei.",
+      "intuition": "Vieno įvykio baigtis nieko nepasako apie kitą.",
+      "formal": "A ir B nepriklausomi, jei P(A ∩ B) = P(A)P(B).",
       "relatedConceptIds": [
         "tikimybe",
-        "kombinatorika"
+        "salygine-tikimybe"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "priklausomi-ir-nepriklausomi-ivykiai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "kombinatorika",
-      "title": "Kombinatorika",
+      "id": "salygine-tikimybe",
+      "title": "Sąlyginė tikimybė",
       "type": "concept",
-      "shortDefinition": "Skaičiavimas, kiek yra galimų variantų.",
-      "intuition": "Kombinatorika padeda suskaičiuoti pasirinkimų skaičių.",
-      "formal": "Kombinatorika tiria pasirinkimų, išdėstymų ir kombinacijų skaičių.",
-      "notation": [],
-      "relatedConceptIds": [
-        "tikimybe"
+      "shortDefinition": "Įvykio tikimybė esant papildomai informacijai.",
+      "intuition": "Tikimybės perskaičiavimas, kai dalis tiesos jau žinoma.",
+      "formal": "P(A|B) = P(A ∩ B) / P(B).",
+      "notation": [
+        "P(A|B)"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "relatedConceptIds": [
+        "priklausomi-ivykiai",
+        "bayeso-formule"
+      ],
+      "appearsInTopicIds": [
+        "priklausomi-ir-nepriklausomi-ivykiai"
+      ],
       "defaultSrs": true
     },
     {
-      "id": "koreliacija",
-      "title": "Koreliacija",
+      "id": "tikimybiu-medis",
+      "title": "Tikimybių medis",
       "type": "concept",
-      "shortDefinition": "Dviejų kintamųjų ryšys.",
-      "intuition": "Koreliacija parodo, kaip vienas dydis juda kartu su kitu.",
-      "formal": "Koreliacija nusako statistinį ryšį tarp dydžių.",
-      "notation": [],
+      "shortDefinition": "Grafinis kelių etapų bandymų vaizdavimas.",
+      "intuition": "Žemėlapis, rodantis visus galimus bandymo kelius.",
+      "formal": "Orientuotas grafas, kurio briaunoms priskirtos tikimybės.",
       "relatedConceptIds": [
-        "duomenys",
-        "sklaida"
+        "pilnosios-tikimybes-formule",
+        "salygine-tikimybe"
       ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
+      "appearsInTopicIds": [
+        "priklausomi-ir-nepriklausomi-ivykiai"
+      ],
       "defaultSrs": true
     }
   ],
   "formulas": [
     {
-      "id": "vidurkio-formule",
-      "title": "Vidurkio formulė",
-      "type": "formula",
-      "latex": "\\bar{x}=\\frac{x_1+\\cdots+x_n}{n}",
-      "conditions": [
-        "Vidurkiui skaičiuoti"
-      ],
-      "variables": {
-        "n": "reikšmių skaičius"
-      },
-      "explanation": "Vidurkis yra suma padalinta iš kiekio.",
+      "id": "tikimybiu-sumos-formule",
+      "title": "Įvykių sąjungos tikimybė",
+      "latex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+      "explanation": "Naudojama skaičiuojant 'arba' tipo įvykius.",
       "relatedConceptIds": [
-        "vidurkis",
-        "duomenys"
+        "tikimybiu-sumos-taisykle"
       ],
       "defaultSrs": true
     },
     {
-      "id": "tikimybes-formule",
-      "title": "Tikimybės formulė",
-      "type": "formula",
-      "latex": "P(A)=\\frac{palankios}{visos}",
-      "conditions": [
-        "Baigtiniams eksperimentams"
-      ],
-      "variables": {
-        "A": "įvykis"
-      },
-      "explanation": "Palankių baigčių dalis iš visų baigčių.",
+      "id": "salygines-tikimybes-formule",
+      "title": "Sąlyginės tikimybės formulė",
+      "latex": "P(A|B) = \\frac{P(A \\cap B)}{P(B)}",
+      "explanation": "Pagrindinė formulė priklausomiems įvykiams tirti.",
       "relatedConceptIds": [
-        "tikimybe",
-        "ivyki"
+        "salygine-tikimybe"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "pilnosios-tikimybes-formule-latex",
+      "title": "Pilnosios tikimybės formulė",
+      "latex": "P(A) = \\sum P(H_i)P(A|H_i)",
+      "explanation": "Suskaičiuoja bendrą įvykio tikimybę per visas hipotezes.",
+      "relatedConceptIds": [
+        "pilnosios-tikimybes-formule"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "vidurkis-be-suma",
-      "title": "Vidurkį skaičiuoja be sumos",
-      "type": "mistake",
+      "id": "painioja-nesutaikomuma-ir-nepriklausomuma",
+      "title": "Painioja nesutaikomumą su nepriklausomumu",
       "conceptIds": [
-        "vidurkis"
+        "nesutaikomi-ivykiai",
+        "nepriklausomi-ivykiai"
       ],
-      "wrongPattern": "Daliną iš skaičių kiekio, bet nesudeda.",
-      "whyItHappens": "Vidurkis visada prasideda nuo sumos.",
-      "correction": "Pirmiausia sudėk visus duomenis.",
-      "wrongExample": "Vidurkis = 4/3",
-      "correctExample": "Vidurkis = (4+6+8)/3",
+      "wrongPattern": "Mano, kad jei įvykiai nesutaikomi, jie yra nepriklausomi.",
+      "whyItHappens": "Žodžiai skamba panašiai (abu reiškia 'atskirumą').",
+      "correction": "Nesutaikomi = negali įvykti kartu. Nepriklausomi = nekeičia vienas kito tikimybės.",
       "defaultSrs": true
     },
     {
-      "id": "tikimybe-ne-dalis",
-      "title": "Tikimybę laiko procentais be dalies",
-      "type": "mistake",
+      "id": "pamirsta-sankirtos-atimti-sumoje",
+      "title": "Pamiršta atimti sankirtą sumos formulėje",
       "conceptIds": [
-        "tikimybe"
+        "tikimybiu-sumos-taisykle"
       ],
-      "wrongPattern": "Rašo 1 iš 6 kaip 6.",
-      "whyItHappens": "Tikimybė yra palankių baigčių dalis iš visų baigčių.",
-      "correction": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "wrongExample": "P=6",
-      "correctExample": "P=1/6",
+      "wrongPattern": "P(A arba B) = P(A) + P(B).",
+      "whyItHappens": "Pamirštama, kad įvykiai gali turėti bendrų baigčių.",
+      "correction": "Visada patikrinkite, ar įvykiai sutaikomi. Jei taip – atimkite P(A ir B).",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-exmp-1",
-      "title": "Vidurkis",
+      "id": "prob-worked-1",
+      "title": "Nepriklausomų įvykių daugyba",
       "level": "easy",
-      "problem": "Rask skaičių 4, 6, 10 vidurkį.",
+      "problem": "Šaulys pataiko į taikinį su tikimybe 0,7, o kitas šaulys – su 0,8. Jie abu šauna po vieną kartą. Kokia tikimybė, kad abu pataikys?",
       "conceptIds": [
-        "vidurkis"
+        "nepriklausomi-ivykiai"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame duomenis.",
-          "latex": "4+6+10=20"
+          "text": "Įvykiai A (pirmas pataiko) ir B (antras pataiko) yra nepriklausomi.",
+          "latex": "P(A) = 0,7, P(B) = 0,8"
         },
         {
-          "text": "Padaliname iš 3.",
-          "latex": "20/3"
+          "text": "Naudojame sandaugos taisyklę: $P(A \\cap B) = P(A) \\cdot P(B)$.",
+          "latex": "0,7 \\cdot 0,8 = 0,56"
         }
       ],
-      "answer": "20/3"
+      "answer": "0,56"
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-exmp-2",
-      "title": "Mediana",
-      "level": "easy",
-      "problem": "Rask medianą duomenų 3, 9, 2, 7, 5.",
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "steps": [
-        {
-          "text": "Surikiuojame.",
-          "latex": "2, 3, 5, 7, 9"
-        },
-        {
-          "text": "Vidurinė reikšmė.",
-          "latex": "5"
-        }
-      ],
-      "answer": "5"
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-exmp-3",
-      "title": "Tikimybė",
+      "id": "prob-worked-2",
+      "title": "Priklausomi įvykiai (Rutuliai)",
       "level": "medium",
-      "problem": "Kauliuko iškritimo 6 tikimybė?",
+      "problem": "Dėžėje yra 5 balti ir 3 juodi rutuliai. Atsitiktinai traukiami du rutuliai iš eilės be grąžinimo. Kokia tikimybė, kad abu bus balti?",
       "conceptIds": [
-        "tikimybe",
-        "ivyki"
+        "priklausomi-ivykiai",
+        "tikimybiu-medis"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Palanki baigtis viena.",
-          "latex": "P=\\frac{1}{6}"
+          "text": "Pirmo balto rutulio tikimybė: 5 balti iš 8.",
+          "latex": "P(B_1) = 5/8"
         },
         {
-          "text": "Visos baigtys šešios.",
-          "latex": "\\frac{1}{6}"
+          "text": "Antro balto rutulio tikimybė, jei pirmas buvo baltas: liko 4 balti iš 7.",
+          "latex": "P(B_2|B_1) = 4/7"
+        },
+        {
+          "text": "Dauginame: $5/8 \\cdot 4/7 = 20/56 = 5/14$.",
+          "latex": "5/14"
         }
       ],
-      "answer": "1/6"
+      "answer": "5/14"
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-exmp-4",
-      "title": "Moda",
+      "id": "prob-worked-3",
+      "title": "Sąlyginė tikimybė (Kauliukas)",
       "level": "medium",
-      "problem": "Rask modą: 2, 4, 4, 5, 7, 4, 8.",
+      "problem": "Metamas lošimo kauliukas. Žinoma, kad iškrito lyginis skaičius. Kokia tikimybė, kad tas skaičius yra 6?",
       "conceptIds": [
-        "moda"
+        "salygine-tikimybe"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Pasikartoja daugiausia 4.",
-          "latex": "4"
+          "text": "Sąlyga B: {2, 4, 6}. Jų yra 3. Įvykis A: {6}.",
+          "latex": "P(B) = 3/6 = 0,5"
+        },
+        {
+          "text": "Sankirta A ir B: tik skaičius 6. $P(A \\cap B) = 1/6$.",
+          "latex": "1/6"
+        },
+        {
+          "text": "Taikome formulę: $P(A|B) = (1/6) / (3/6) = 1/3$.",
+          "latex": "1/3"
         }
       ],
-      "answer": "4"
+      "answer": "1/3"
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-exmp-5",
-      "title": "Sklaida",
+      "id": "prob-worked-4",
+      "title": "Tikimybių medis (Gamyba)",
+      "level": "medium",
+      "problem": "Gamykloje 60% detalių pagamina I staklės, o 40% – II staklės. I staklių broko tikimybė 0,02, o II – 0,03. Raskite tikimybę, kad atsitiktinai paimta detalė yra brokuota.",
+      "conceptIds": [
+        "tikimybiu-medis",
+        "pilnosios-tikimybes-formule"
+      ],
+      "steps": [
+        {
+          "text": "Medžio šakos: I staklės (0,6) -> Brokas (0,02); II staklės (0,4) -> Brokas (0,03).",
+          "latex": ""
+        },
+        {
+          "text": "Pirmas kelias: $0,6 \\cdot 0,02 = 0,012$.",
+          "latex": "0,012"
+        },
+        {
+          "text": "Antras kelias: $0,4 \\cdot 0,03 = 0,012$.",
+          "latex": "0,012"
+        },
+        {
+          "text": "Sudedame abu kelius.",
+          "latex": "0,012 + 0,012 = 0,024"
+        }
+      ],
+      "answer": "0,024"
+    },
+    {
+      "id": "prob-worked-5",
+      "title": "Bayes'o formulė (Diagnostika)",
       "level": "hard",
-      "problem": "Palygink duomenų aibes A: 5, 5, 5, 5 ir B: 1, 3, 5, 7.",
+      "problem": "Liga serga 1% žmonių. Testas parodo teigiamą rezultatą 99% sergančiųjų ir 5% sveikųjų. Žmogaus testas teigiamas. Kokia tikimybė, kad jis serga?",
       "conceptIds": [
-        "sklaida"
+        "bayeso-formule"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Abi turi tą patį vidurkį, bet B labiau išsibarstę.",
-          "latex": "B turi didesnę sklaidą"
+          "text": "Hipotezės: S (serga, 0,01), N (neserga, 0,99). Įvykis T+ (teigiamas).",
+          "latex": ""
+        },
+        {
+          "text": "Randame pilnąją tikimybę P(T+): $0,01 \\cdot 0,99 + 0,99 \\cdot 0,05 = 0,0099 + 0,0495 = 0,0594$.",
+          "latex": "0,0594"
+        },
+        {
+          "text": "Taikome Bayes'ą: $P(S|T+) = (0,01 \\cdot 0,99) / 0,0594$.",
+          "latex": "0,0099 / 0,0594 \\approx 0,1667"
         }
       ],
-      "answer": "B turi didesnę sklaidą"
+      "answer": "~0,17 (tik 17%!)"
+    },
+    {
+      "id": "prob-worked-6",
+      "title": "Sumos taisyklė (Kortos)",
+      "level": "easy",
+      "problem": "Iš 52 kortų traukiama viena. Kokia tikimybė, kad ji yra arba tūzas, arba širdis?",
+      "conceptIds": [
+        "tikimybiu-sumos-taisykle"
+      ],
+      "steps": [
+        {
+          "text": "P(Tūzas) = 4/52. P(Širdis) = 13/52.",
+          "latex": ""
+        },
+        {
+          "text": "Yra viena bendra korta – širdžių tūzas. P(Abu) = 1/52.",
+          "latex": ""
+        },
+        {
+          "text": "Suma: $4/52 + 13/52 - 1/52 = 16/52 = 4/13$.",
+          "latex": "4/13"
+        }
+      ],
+      "answer": "4/13"
+    },
+    {
+      "id": "prob-worked-7",
+      "title": "Bent vieno pataikymo tikimybė",
+      "level": "medium",
+      "problem": "Du šauliai šauna po kartą. Pataikymo tikimybės 0,6 ir 0,9. Kokia tikimybė, kad BENT VIENAS pataikys?",
+      "conceptIds": [
+        "nepriklausomi-ivykiai"
+      ],
+      "steps": [
+        {
+          "text": "Lengviau skaičiuoti per priešingą įvykį: abu nepataiko.",
+          "latex": ""
+        },
+        {
+          "text": "Q1 = 0,4; Q2 = 0,1. P(abu nepataiko) = $0,4 \\cdot 0,1 = 0,04$.",
+          "latex": "0,04"
+        },
+        {
+          "text": "P(bent vienas) = $1 - 0,04 = 0,96$.",
+          "latex": "0,96"
+        }
+      ],
+      "answer": "0,96"
+    },
+    {
+      "id": "prob-worked-8",
+      "title": "Priklausomumo įrodymas",
+      "level": "hard",
+      "problem": "Metami du kauliukai. A: 'suma lygi 7'. B: 'pirmas kauliukas išmetė 3'. Ar įvykiai nepriklausomi?",
+      "conceptIds": [
+        "nepriklausomi-ivykiai"
+      ],
+      "steps": [
+        {
+          "text": "P(A) = 6/36 = 1/6 (baigtys 1-6, 2-5, 3-4, 4-3, 5-2, 6-1).",
+          "latex": "1/6"
+        },
+        {
+          "text": "P(B) = 6/36 = 1/6 (baigtys (3,1)...(3,6)).",
+          "latex": "1/6"
+        },
+        {
+          "text": "P(A ir B): tik viena baigtis (3, 4). P(A ir B) = 1/36.",
+          "latex": "1/36"
+        },
+        {
+          "text": "Tikriname: ar $1/6 \\cdot 1/6 = 1/36$? Taip. Įvykiai nepriklausomi.",
+          "latex": "\\text{nepriklausomi}"
+        }
+      ],
+      "answer": "Taip, nepriklausomi."
     }
   ],
   "exercises": [
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-001",
+      "id": "prob-ex-001",
       "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
       "grade": 12,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "numericInput",
-      "statement": "Rask skaičių 4, 6, 8 vidurkį.",
+      "statement": "Moneta metama 2 kartus. Kokia tikimybė, kad abu kartus atsivers skaičius?",
       "answer": {
         "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
+        "value": 0.25
       },
       "hints": [
         {
           "order": 1,
-          "text": "Sudedame ir dalijame.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "vidurkis"
-          ]
+          "text": "Įvykiai nepriklausomi. Padauginkite 0.5 iš 0.5.",
+          "penalty": 0.1
         }
       ],
       "solutionSteps": [
         {
-          "text": "4+6+8=18.",
-          "latex": "18/3=6"
+          "text": "0.5 * 0.5 = 0.25.",
+          "latex": "0.25"
         }
       ],
-      "answerText": "6",
-      "alternateMethods": [],
+      "answerText": "0.25",
       "conceptIds": [
-        "vidurkis"
+        "nepriklausomi-ivykiai"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-002",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Rask medianą: 2, 9, 5, 1, 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Surikiuok duomenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "mediana"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "1,2,5,7,9.",
-          "latex": "5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "mediana"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-003",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "multipleChoice",
-      "statement": "Kuri reikšmė yra moda duomenų 3, 3, 4, 5, 3, 6?",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3"
-          },
-          {
-            "id": "b",
-            "text": "4"
-          },
-          {
-            "id": "c",
-            "text": "5"
-          },
-          {
-            "id": "d",
-            "text": "6"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok dažniausiai pasikartojančios reikšmės.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "moda"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "3 kartojasi tris kartus.",
-          "latex": "3"
-        }
-      ],
-      "answerText": "3",
-      "alternateMethods": [],
-      "conceptIds": [
-        "moda"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 35
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-004",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Kokia tikimybė ištraukti širdį iš 52 kortų kaladės?",
-      "answer": {
-        "kind": "numeric",
-        "value": 0.25,
-        "tolerance": 0.0001
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Širdžių yra 13.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "tikimybe",
-            "ivyki"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "13 iš 52.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "P=13/52.",
-          "latex": "\\frac{1}{4}"
-        }
-      ],
-      "answerText": "1/4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "tikimybe",
-        "ivyki"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 55
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-005",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Duomenų aibės A: 2, 2, 2, 2 ir B: 0, 2, 4, 6. Kurios sklaida didesnė?",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Žiūrėk į išsibarstymą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sklaida"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "B yra labiau išsibarstę.",
-          "latex": "B"
-        }
-      ],
-      "answerText": "B",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sklaida"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-006",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 6.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-007",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 7.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-008",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 8.",
-      "answer": {
-        "kind": "numeric",
-        "value": 8,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "8"
-        }
-      ],
-      "answerText": "8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-009",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 9.",
-      "answer": {
-        "kind": "numeric",
-        "value": 9,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "9"
-        }
-      ],
-      "answerText": "9",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-010",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 10,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "10"
-        }
-      ],
-      "answerText": "10",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-011",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 11.",
-      "answer": {
-        "kind": "numeric",
-        "value": 11,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "11"
-        }
-      ],
-      "answerText": "11",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-012",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 12,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "12"
-        }
-      ],
-      "answerText": "12",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-013",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 13.",
-      "answer": {
-        "kind": "numeric",
-        "value": 13,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "13"
-        }
-      ],
-      "answerText": "13",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-014",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 14.",
-      "answer": {
-        "kind": "numeric",
-        "value": 14,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "14"
-        }
-      ],
-      "answerText": "14",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-015",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-016",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-017",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-018",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-019",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-ex-020",
-      "topicId": "priklausomi-ir-nepriklausomi-ivykiai",
-      "grade": 12,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "duomenys"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
+      "estimatedSeconds": 20
     }
   ],
   "tests": [
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-test-topic",
-      "title": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai testas",
+      "id": "prob-test-1",
+      "title": "Sudėtinių įvykių tikimybės",
       "scope": "topic",
       "topicIds": [
         "priklausomi-ir-nepriklausomi-ivykiai"
       ],
       "exerciseIds": [
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-001",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-002",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-003",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-004",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-005",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-006",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-007",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-008"
+        "prob-ex-001"
       ],
+      "timeLimitSeconds": 1500,
       "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-test-challenge",
-      "title": "Priklausomi ir nepriklausomi įvykiai, tikimybių medžiai iššūkis",
-      "scope": "olympiad",
-      "topicIds": [
-        "priklausomi-ir-nepriklausomi-ivykiai"
-      ],
-      "exerciseIds": [
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-009",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-010",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-011",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-012",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-013",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-014",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-015",
-        "priklausomi-ir-nepriklausomi-ivykiai-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
+      "passingThreshold": 0.75
     }
   ],
   "srsCards": [
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-duomenys",
+      "id": "srs-prob-indep-def",
       "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra duomenys?",
-      "back": "Stebėjimų arba matavimų rinkinys.",
-      "conceptIds": [
-        "duomenys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-imtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra imtis?",
-      "back": "Duomenų dalis, naudojama tiriamam reiškiniui.",
-      "conceptIds": [
-        "imtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-daznis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra dažnis?",
-      "back": "Kiek kartų reikšmė pasikartoja.",
-      "conceptIds": [
-        "daznis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-vidurkis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra vidurkis?",
-      "back": "Suma padalinta iš reikšmių skaičiaus.",
-      "conceptIds": [
-        "vidurkis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-vidurkio-formule",
-      "deck": "practice",
       "cardType": "formula",
-      "front": "Kas yra vidurkio formulė?",
-      "back": "Vidurkis yra suma padalinta iš kiekio.",
+      "front": "Kokia yra nepriklausomų įvykių sandaugos formulė?",
+      "back": "P(A ∩ B) = P(A) * P(B)",
       "conceptIds": [
-        "vidurkio-formule"
+        "nepriklausomi-ivykiai"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     },
     {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-tikimybes-formule",
-      "deck": "practice",
+      "id": "srs-prob-cond-def",
+      "deck": "theory",
       "cardType": "formula",
-      "front": "Kas yra tikimybės formulė?",
-      "back": "Palankių baigčių dalis iš visų baigčių.",
+      "front": "Sąlyginės tikimybės P(A|B) formulė?",
+      "back": "P(A|B) = P(A ∩ B) / P(B)",
       "conceptIds": [
-        "tikimybes-formule"
+        "salygine-tikimybe"
       ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-vidurkis-be-suma",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra vidurkį skaičiuoja be sumos?",
-      "back": "Pirmiausia sudėk visus duomenis.",
-      "conceptIds": [
-        "vidurkis-be-suma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "priklausomi-ir-nepriklausomi-ivykiai-srs-tikimybe-ne-dalis",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra tikimybę laiko procentais be dalies?",
-      "back": "Rašyk trupmena arba dešimtainiu skaičiumi.",
-      "conceptIds": [
-        "tikimybe-ne-dalis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
       "defaultEnabled": true
     }
   ]

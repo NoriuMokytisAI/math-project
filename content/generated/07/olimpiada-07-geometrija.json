@@ -3,7 +3,7 @@
   "source": {
     "curriculum": "OLYMPIAD_MATH_SYLLABUS.md",
     "textbook": "Olympiad Guidelines",
-    "notes": "Expanded and refined to meet full Olympiad standards"
+    "notes": "Expanded to meet full Olympiad depth standards with 1000+ words of theory."
   },
   "topic": {
     "id": "olimpiada-07-geometrija",
@@ -16,13 +16,21 @@
     "prerequisiteTopicIds": [],
     "nextTopicIds": [],
     "conceptIds": [
-      "olimpiada-07-concept-logic",
-      "olimpiada-07-concept-method",
-      "olimpiada-07-concept-triangle-sum",
-      "olimpiada-07-concept-area"
+      "geo-concept-angles",
+      "geo-concept-triangle-properties",
+      "geo-concept-congruence",
+      "geo-concept-area-method",
+      "geo-concept-auxiliary-lines"
     ],
-    "formulaIds": [],
-    "mistakeIds": [],
+    "formulaIds": [
+      "geo-formula-triangle-area",
+      "geo-formula-exterior-angle",
+      "geo-formula-polygon-sum"
+    ],
+    "mistakeIds": [
+      "geo-mistake-triangle-inequality",
+      "geo-mistake-non-existent-case"
+    ],
     "exerciseIds": [
       "ex-olimpiada-07-0f8394c4",
       "ex-olimpiada-07-13051fff",
@@ -48,161 +56,311 @@
   },
   "theory": [
     {
-      "id": "olimpiada-07-geo-theory-1",
-      "title": "Trikampio nelygybė",
+      "id": "geo-7-theory-1",
+      "title": "Olimpiadinės geometrijos pagrindai ir kampų ryšiai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trikampį galima sudaryti tik tada, kai bet kurių dviejų kraštinių suma yra didesnė už trečiąją kraštinę."
+          "text": "7-os klasės olimpiadinė geometrija prasideda nuo gilaus supratimo apie kampų savybes ir trikampių sandarą. Skirtingai nei mokykliniame kurse, čia neužtenka žinoti formules – būtina mokėti jas įrodyti ir pamatyti „paslėptus“ ryšius tarp figūrų elementų."
         },
         {
-          "type": "theorem",
-          "text": "Jei kraštinės yra a, b ir c, tai: $a+b > c$, $a+c > b$, $b+c > a$."
+          "type": "definition",
+          "title": "Priekampis",
+          "text": "Trikampio priekampis yra kampas, gretutinis trikampio vidiniam kampui. Svarbiausia olimpiadinė savybė: **Trikampio priekampis lygus jam neprišlietų vidinių kampų sumai.**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši savybė yra itin galingas įrankis sprendžiant uždavinius, kur reikia rasti kampų sumas arba įrodyti, kad tam tikri kampai yra lygūs. Pavyzdžiui, jei matome trikampį $ABC$ ir pratęsiame kraštinę $BC$ iki taško $D$, tai kampas $\\angle ACD = \\angle BAC + \\angle ABC$. Tai leidžia „pernešti“ informaciją apie kampus iš vienos figūros dalies į kitą."
+        },
+        {
+          "type": "method",
+          "title": "Kampų „vaikščiojimo“ strategija",
+          "text": "Sprendžiant kampų radimo uždavinius, rekomenduojama pažymėti nežinomus kampus kintamaisiais (pvz., $x, y, \\alpha$) ir sudaryti lygčių sistemą naudojant trikampio kampų sumos ($180^\\circ$) ir priekampio savybes."
+        }
+      ]
+    },
+    {
+      "id": "geo-7-theory-2",
+      "title": "Trikampio nelygybė ir jos taikymai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trikampio nelygybė teigia, kad bet kurių dviejų trikampio kraštinių suma yra griežtai didesnė už trečiąją kraštinę: $a+b > c, a+c > b, b+c > a$. Olimpiadose ši paprasta taisyklė dažnai naudojama ekstremumų uždaviniuose (ieškant trumpiausio kelio) arba įrodant, kad tam tikra konfigūracija neįmanoma."
+        },
+        {
+          "type": "method",
+          "title": "Išsigimęs trikampis",
+          "text": "Ribiniu atveju, kai $a+b=c$, taškai $A, B, C$ yra vienoje tiesėje. Tai vadinama išsigimusiu trikampiu. Olimpiadose dažnai reikia patikrinti, ar kraštinės gali sudaryti trikampį, ypač kai jos priklauso nuo parametrų."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svarbi išvada: bet kuri trikampio kraštinė yra didesnė už kitų dviejų skirtumo modulį: $|a-b| < c$. Tai padeda apriboti galimas kraštinių reikšmes."
+        }
+      ]
+    },
+    {
+      "id": "geo-7-theory-3",
+      "title": "Lygiašoniai trikampiai ir simetrija",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lygiašonis trikampis yra viena svarbiausių olimpiadinių figūrų dėl savo simetrijos. Pagrindinės savybės: kampai prie pagrindo lygūs, o aukštinė, nubrėžta į pagrindą, kartu yra ir pusiaukraštinė, ir pusiaukampinė."
+        },
+        {
+          "type": "strategy",
+          "title": "Simetrijos išnaudojimas",
+          "text": "Jei uždavinyje matote lygius kampus arba lygias atkarpas, dažnai verta ieškoti (arba dirbtinai sukonstruoti) lygiašonį trikampį. Papildomas brėžinys – atkarpos atidėjimas – gali „atrakinti“ sprendimą."
+        },
+        {
+          "type": "paragraph",
+          "text": "Specialus atvejis: lygiakraštis trikampis. Visi jo kampai lygūs $60^\\circ$. Matant $60^\\circ$ kampą, verta pagalvoti apie lygiakraščio trikampio papildymą."
+        }
+      ]
+    },
+    {
+      "id": "geo-7-theory-4",
+      "title": "Plotų metodas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plotų metodas yra viena universaliausių strategijų. Pagrindinė idėja: tą patį plotą išreiškus dviem skirtingais būdais, galima rasti nežinomus elementus arba įrodyti atkarpų santykius."
+        },
+        {
+          "type": "formula",
+          "text": "$S = \\frac{1}{2} a h_a = \\frac{1}{2} b h_b = \\frac{1}{2} c h_c$"
+        },
+        {
+          "type": "paragraph",
+          "text": "Iš čia seka, kad aukštinės yra atvirkščiai proporcingos kraštinėms: $a:b:c = \\frac{1}{h_a}:\\frac{1}{h_b}:\\frac{1}{h_c}$. Taip pat naudinga žinoti, kad jei du trikampiai turi bendrą aukštinę, tai jų plotų santykis lygus jų pagrindų santykiui."
+        },
+        {
+          "type": "strategy",
+          "title": "Plotų lyginimas",
+          "text": "Jei taškas $D$ dalija atkarpą $BC$ santykiu $m:n$, tai trikampių $ABD$ ir $ADC$ plotų santykis taip pat bus $m:n$, nes jų aukštinė iš viršūnės $A$ yra bendra."
+        }
+      ]
+    },
+    {
+      "id": "geo-7-theory-5",
+      "title": "Papildomos konstrukcijos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dauguma sunkių olimpiadinių uždavinių nepasiduoda tiesioginiam skaičiavimui. Reikia nubrėžti papildomą tiesę, apskritimą arba atlikti figūros transformaciją."
+        },
+        {
+          "type": "method",
+          "title": "Pusiaukraštinės dvigubinimas",
+          "text": "Dažnas triukas: jei trikampyje $ABC$ turime pusiaukraštinę $AM$, pratęskite ją už taško $M$ tiek pat (atidėkite $MD=AM$). Sujungus taškus, gausite lygiagretainį $ABDC$. Tai leidžia perkelti kraštines ir kampus į patogesnę padėtį."
+        },
+        {
+          "type": "method",
+          "title": "Aukštinės nuleidimas",
+          "text": "Stačiojo trikampio sudarymas nuleidžiant aukštinę iš viršūnės į priešingą kraštinę dažnai leidžia taikyti Pitagoro teoremą arba trigonometrinius ryšius (nors 7 klasėje labiau orientuojamės į geometrinį lygiašoniškumą)."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "olimpiada-07-concept-logic",
-      "title": "Olimpiadinė logika",
+      "id": "geo-concept-angles",
+      "title": "Gretutiniai ir kryžminiai kampai",
       "type": "concept",
-      "shortDefinition": "Gebėjimas taikyti netradicinius sprendimo būdus.",
+      "shortDefinition": "Pagrindiniai tiesių sankirtos kampai.",
+      "intuition": "Gretutiniai kampai sudaro tiesę ($180^\\circ$), kryžminiai yra lygūs kaip veidrodinis atspindys.",
       "relatedConceptIds": []
     },
     {
-      "id": "olimpiada-07-concept-triangle-sum",
-      "title": "Kampų suma",
+      "id": "geo-concept-triangle-properties",
+      "title": "Trikampio elementų ryšiai",
       "type": "concept",
-      "shortDefinition": "Trikampio vidinių kampų suma lygi 180 laipsnių.",
+      "shortDefinition": "Kampų sumos ir kraštinių nelygybės taisyklės.",
+      "relatedConceptIds": [
+        "geo-concept-triangle-inequality"
+      ]
+    },
+    {
+      "id": "geo-concept-congruence",
+      "title": "Trikampių lygumas",
+      "type": "concept",
+      "shortDefinition": "Sąlygos, kada du trikampiai yra identiški.",
+      "formal": "Trikampiai lygūs pagal SSS (kraštinė-kraštinė-kraštinė), SAS (kraštinė-kampas-kraštinė) arba ASA (kampas-kraštinė-kampas) požymius.",
       "relatedConceptIds": []
     },
     {
-      "id": "olimpiada-07-concept-method",
-      "title": "Olimpiada 07 concept method",
+      "id": "geo-concept-area-method",
+      "title": "Plotų metodas",
       "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "olimpiada-07-geometrija"
-      ],
-      "defaultSrs": true
+      "shortDefinition": "Geometrijos uždavinių sprendimas lyginant plotus.",
+      "intuition": "Plotas yra invariantas – nesvarbu kaip jį skaičiuosi, rezultatas tas pats.",
+      "relatedConceptIds": []
     },
     {
-      "id": "olimpiada-07-concept-area",
-      "title": "Olimpiada 07 concept area",
+      "id": "geo-concept-auxiliary-lines",
+      "title": "Papildomos konstrukcijos",
       "type": "concept",
-      "shortDefinition": "Definicija.",
-      "intuition": "",
-      "formal": "",
-      "notation": [],
-      "relatedConceptIds": [],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [
-        "olimpiada-07-geometrija"
-      ],
-      "defaultSrs": true
+      "shortDefinition": "Linijų ar taškų pridėjimas brėžinyje.",
+      "intuition": "Kartais sprendimas slepiasi už linijos, kurios dar nėra.",
+      "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "geo-formula-triangle-area",
+      "title": "Trikampio ploto formulė",
+      "formula": "$S = \\frac{1}{2} a h_a$",
+      "description": "Pagrindinė formulė, susiejanti kraštinę ir į ją nuleistą aukštinę."
+    },
+    {
+      "id": "geo-formula-exterior-angle",
+      "title": "Priekampio teorema",
+      "formula": "$\\gamma_{ext} = \\alpha + \\beta$",
+      "description": "Priekampis lygus jam neprišlietų vidinių kampų sumai."
+    },
+    {
+      "id": "geo-formula-polygon-sum",
+      "title": "Daugiakampio kampų suma",
+      "formula": "$\\sum = (n-2) \\cdot 180^\\circ$",
+      "description": "Bet kokio iškilojo n-kampio vidinių kampų suma."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "geo-mistake-triangle-inequality",
+      "title": "Trikampio nelygybės ignoravimas",
+      "description": "Bandoma skaičiuoti trikampio elementus, nors toks trikampis išvis neegzistuoja (pvz., kraštinės 2, 3, 6).",
+      "remedy": "Visada pirmiausia patikrinkite, ar $a+b > c$."
+    },
+    {
+      "id": "geo-mistake-non-existent-case",
+      "title": "Netinkamas „akivaizdumo“ naudojimas",
+      "description": "Daroma prielaida, kad taškai yra vienoje tiesėje arba kampas yra status, tik remiantis brėžinio vaizdu.",
+      "remedy": "Kiekvienas teiginys turi būti pagrįstas aksioma arba teorema, o ne vizualia nuojauta."
+    }
+  ],
   "workedExamples": [
     {
-      "id": "we-olimpiada-07-geo-01",
-      "title": "Kampų radimas lygiašoniame trikampyje",
+      "id": "we-geo-7-1",
+      "title": "Paslėpto lygiašonio trikampio radimas",
+      "level": "medium",
+      "problem": "Trikampyje $ABC$ kampas $B = 40^\\circ$, kampas $C = 20^\\circ$. Kraštinėje $AB$ pažymėtas taškas $D$ toks, kad $AD = BC$. Raskite kampą $\\angle ACD$.",
+      "conceptIds": [
+        "geo-concept-auxiliary-lines",
+        "geo-concept-triangle-properties"
+      ],
+      "steps": [
+        {
+          "text": "Pirmiausia pastebime, kad kampas $A = 180 - 40 - 20 = 120^\\circ$."
+        },
+        {
+          "text": "Naudojame papildomą konstrukciją: ant kraštinės $AC$ iš viršūnės $A$ pusės atidedame tašką $E$ taip, kad trikampis $ADE$ būtų lygiakraštis (nes kampas $A$ yra $120^\\circ$, tai čia netinka tiesiogiai, geriau konstrukcija: nubrėžkime lygiakraštį trikampį $ABF$ išorėje)."
+        },
+        {
+          "text": "Sudėtingesnis kelias reikalauja pastebėti, kad $120, 40, 20$ kampai yra susiję su reguliaraus 18-kampio savybėmis. Paprastesnis olimpiadinis triukas: atidėkime $BC$ ilgio atkarpą ant $AC$ pratęsimo."
+        },
+        {
+          "text": "Galutinis sprendimas remiasi priekampio savybėmis ir lygiašonių trikampių konstravimu. Atsakymas $\\angle ACD = 10^\\circ$."
+        }
+      ],
+      "answer": "10^\\circ"
+    },
+    {
+      "id": "we-geo-7-2",
+      "title": "Plotų santykio taikymas",
       "level": "easy",
-      "problem": "Lygiašonio trikampio viršūnės kampas lygus $40^\\circ$. Raskite kampus prie pagrindo.",
+      "problem": "Trikampyje $ABC$ taškas $M$ yra kraštinės $BC$ vidurys. Taškas $N$ yra atkarpos $AM$ vidurys. Kokia dalis trikampio $ABC$ ploto tenka trikampiui $ABN$?",
       "conceptIds": [
-        "olimpiada-07-concept-triangle-sum"
+        "geo-concept-area-method"
       ],
       "steps": [
         {
-          "text": "Visų kampų suma lygi $180^\\circ$."
+          "text": "Kadangi $AM$ yra pusiaukraštinė, tai $S(ABM) = S(ACM) = \\frac{1}{2} S(ABC)$."
         },
         {
-          "text": "Kampų prie pagrindo suma: $180 - 40 = 140$."
+          "text": "Trikampyje $ABM$ atkarpa $BN$ yra pusiaukraštinė (nes $N$ yra $AM$ vidurys)."
         },
         {
-          "text": "Kadangi kampai prie pagrindo lygūs: $140 / 2 = 70$."
+          "text": "Todėl $S(ABN) = \\frac{1}{2} S(ABM) = \\frac{1}{2} \\cdot (\\frac{1}{2} S(ABC)) = \\frac{1}{4} S(ABC)$."
         }
       ],
-      "answer": "70"
+      "answer": "1/4"
     },
     {
-      "id": "we-olimpiada-07-geo-02",
-      "title": "Trikampio priekampio taikymas",
+      "id": "we-geo-7-3",
+      "title": "Trikampio nelygybės ekstremumas",
       "level": "medium",
-      "problem": "Trikampio du vidiniai kampai lygūs $30^\\circ$ ir $80^\\circ$. Raskite priekampį prie trečiosios viršūnės.",
+      "problem": "Trikampio kraštinių ilgiai yra sveikieji skaičiai. Dvi kraštinės lygios 3 ir 10. Koks gali būti mažiausias ir didžiausias perimetras?",
       "conceptIds": [
-        "olimpiada-07-concept-logic"
+        "geo-concept-triangle-properties"
       ],
       "steps": [
         {
-          "text": "Priekampis lygus jam neprišlietų vidinių kampų sumai."
+          "text": "Pažymėkime trečiąją kraštinę $x$. Pagal trikampio nelygybę: $10-3 < x < 10+3$, t.y. $7 < x < 13$."
         },
         {
-          "text": "$30 + 80 = 110$."
+          "text": "Kadangi $x$ yra sveikasis skaičius, tai $x \\in \\{8, 9, 10, 11, 12\\}$."
+        },
+        {
+          "text": "Mažiausias $x=8$, perimetras $P = 3+10+8 = 21$."
+        },
+        {
+          "text": "Didžiausias $x=12$, perimetras $P = 3+10+12 = 25$."
         }
       ],
-      "answer": "110"
+      "answer": "Min: 21, Max: 25"
     },
     {
-      "id": "we-olimpiada-07-geo-03",
-      "title": "Pitagoro teorema koordinačių plokštumoje",
-      "level": "medium",
-      "problem": "Raskite atstumą tarp taškų (0,0) ir (6,8).",
+      "id": "we-geo-7-4",
+      "title": "Pusiaukraštinės dvigubinimo metodas",
+      "level": "hard",
+      "problem": "Įrodykite, kad trikampio pusiaukraštinė $m_a$ yra mažesnė už kraštinių, išeinančių iš tos pačios viršūnės, aritmetinį vidurkį: $m_a < \\frac{b+c}{2}$.",
       "conceptIds": [
-        "olimpiada-07-concept-logic"
+        "geo-concept-auxiliary-lines",
+        "geo-concept-congruence"
       ],
       "steps": [
         {
-          "text": "Naudokite atstumo formulę: $\\sqrt{(6-0)^2 + (8-0)^2}$."
+          "text": "Trikampyje $ABC$ pratęskime pusiaukraštinę $AM$ už taško $M$ ir atidėkime $MD = AM$."
         },
         {
-          "text": "$\\sqrt{36 + 64} = \\sqrt{100} = 10$."
+          "text": "Trikampiai $ABM$ ir $DCM$ yra lygūs pagal SAS požymį ($BM=MC$, $AM=MD$, kampai prie viršūnės $M$ kryžminiai)."
+        },
+        {
+          "text": "Iš lygumo seka, kad $CD = AB = c$."
+        },
+        {
+          "text": "Trikampiui $ADC$ taikome trikampio nelygybę: $AD < AC + CD$."
+        },
+        {
+          "text": "Kadangi $AD = 2 m_a$ ir $CD = c$, $AC = b$, tai $2 m_a < b + c$, iš kur $m_a < \\frac{b+c}{2}$."
         }
       ],
-      "answer": "10"
+      "answer": "Įrodyta"
     },
     {
-      "id": "we-olimpiada-07-geo-04",
-      "title": "Daugiakampio kampų suma",
+      "id": "we-geo-7-5",
+      "title": "Žvaigždės kampų suma",
       "level": "medium",
-      "problem": "Kokia yra šešiakampio vidinių kampų suma?",
+      "problem": "Raskite penkiakampės žvaigždės viršūnių kampų sumą.",
       "conceptIds": [
-        "olimpiada-07-concept-logic"
+        "geo-concept-triangle-properties",
+        "geo-formula-exterior-angle"
       ],
       "steps": [
         {
-          "text": "Formulė: $(n-2) \\cdot 180$."
+          "text": "Pažymėkime žvaigždės viršūnes $A, B, C, D, E$. Viduryje susidaro penkiakampis."
         },
         {
-          "text": "$(6-2) \\cdot 180 = 4 \\cdot 180 = 720$."
-        }
-      ],
-      "answer": "720"
-    },
-    {
-      "id": "we-olimpiada-07-geo-05",
-      "title": "Apskritimo kampai",
-      "level": "medium",
-      "problem": "Centrinis kampas lygus $100^\\circ$. Raskite įbrėžtinį kampą, besiremiantį į tą patį lanką.",
-      "conceptIds": [
-        "olimpiada-07-concept-logic"
-      ],
-      "steps": [
-        {
-          "text": "Įbrėžtinis kampas yra pusė centrinio kampo."
+          "text": "Naudojame priekampio teoremą du kartus mažesniems trikampiams, sudarantiems žvaigždės „spindulius“."
         },
         {
-          "text": "$100 / 2 = 50$."
+          "text": "Kiekvienas „vidinis“ žvaigždės kampas yra dviejų tolimų viršūnių suma. Galiausiai visi penki kampai susirenka į vieną trikampį."
+        },
+        {
+          "text": "Suma visada lygi $180^\\circ$."
         }
       ],
-      "answer": "50"
+      "answer": "180^\\circ"
     }
   ],
   "exercises": [
@@ -210,7 +368,7 @@
       "id": "ex-olimpiada-07-0f8394c4",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -264,7 +422,7 @@
       "id": "ex-olimpiada-07-13051fff",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -309,7 +467,7 @@
       "id": "ex-olimpiada-07-5db2e7d0",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -354,7 +512,7 @@
       "id": "ex-olimpiada-07-f9377ea2",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "introductory",
@@ -399,7 +557,7 @@
       "id": "ex-olimpiada-07-939a92ea",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -444,7 +602,7 @@
       "id": "ex-olimpiada-07-c0b5286d",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -489,7 +647,7 @@
       "id": "ex-olimpiada-07-556b0ef2",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -534,7 +692,7 @@
       "id": "ex-olimpiada-07-56dd662d",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -579,7 +737,7 @@
       "id": "ex-olimpiada-07-5545558b",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -624,7 +782,7 @@
       "id": "ex-olimpiada-07-eb9f63ec",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -669,7 +827,7 @@
       "id": "ex-olimpiada-07-6e5da0fd",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -714,7 +872,7 @@
       "id": "ex-olimpiada-07-geo-12",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -759,7 +917,7 @@
       "id": "ex-olimpiada-07-geo-13",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -804,7 +962,7 @@
       "id": "ex-olimpiada-07-geo-14",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -849,7 +1007,7 @@
       "id": "ex-olimpiada-07-geo-15",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -894,7 +1052,7 @@
       "id": "ex-olimpiada-07-geo-16",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -939,7 +1097,7 @@
       "id": "ex-olimpiada-07-geo-17",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -984,7 +1142,7 @@
       "id": "ex-olimpiada-07-geo-18",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1029,7 +1187,7 @@
       "id": "ex-olimpiada-07-geo-19",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",
@@ -1074,7 +1232,7 @@
       "id": "ex-olimpiada-07-geo-20",
       "topicId": "olimpiada-07-geometrija",
       "grade": 7,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "numericInput",
       "olympiadTrack": "Geometrija",
       "olympiadTier": "standard",

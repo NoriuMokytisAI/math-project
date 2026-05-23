@@ -1,5 +1,5 @@
 {
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.1",
   "source": {
     "curriculum": "matematikaPrograma.txt",
     "textbook": "12_klase_teorija.pdf",
@@ -20,26 +20,24 @@
       "kvadratinis-trinaris-ir-racionalieji-reiskiniai"
     ],
     "conceptIds": [
-      "kintamasis",
-      "reiskinys",
+      "vienanaris",
+      "daugianaris",
       "koeficientas",
-      "lygtis",
-      "nelygybe",
-      "sprendinys",
-      "sistema",
-      "formule",
-      "tiesine-funkcija",
-      "distributyvusis-destymas",
-      "tiesine-lygybe",
-      "proporcingumas"
+      "laipsnis",
+      "panasus-nariai",
+      "greitosios-daugybos-formules",
+      "skaidymas-dauginamaisiais"
     ],
     "formulaIds": [
-      "sklaidos-desnis",
-      "tiesines-lygties-forma"
+      "sumos-kvadratas",
+      "skirtumo-kvadratas",
+      "kvadratu-skirtumas",
+      "sklaidos-desnis"
     ],
     "mistakeIds": [
-      "perkelia-be-zenklo-kaitos",
-      "sumaiso-koeficientus"
+      "zenklu-klaidos-skliaustuose",
+      "formules-sumaisymas",
+      "kvadrato-pamirsymas"
     ],
     "exerciseIds": [
       "daugianariai-ir-greitosios-daugybos-formules-ex-001",
@@ -66,116 +64,235 @@
   },
   "theory": [
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ivadas",
-      "title": "Įvadas",
+      "id": "vienanariai-ir-daugianariai-ivadas",
+      "title": "Vienanariai ir jų standartinė išraiška",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Daugianariai, greitosios daugybos formulės ir skaidymas yra tema, kurioje mokomasi atpažinti pagrindinius daugianariai ir formulės modelius ir juos taikyti skaičiavimuose, tekste bei brėžiniuose."
+          "text": "Algebra prasideda nuo paprasčiausių raidinių reiškinių, kurie vadinami vienanariais. Suprasti vienanarius yra būtina, norint sėkmingai dirbti su sudėtingesnėmis konstrukcijomis – daugianariais."
+        },
+        {
+          "type": "definition",
+          "conceptId": "vienanaris",
+          "text": "[[vienanaris|Vienanaris]] – tai reiškinys, susidedantis iš skaičių, raidžių (kintamųjų) ir jų laipsnių sandaugos."
         },
         {
           "type": "paragraph",
-          "text": "Šioje temoje svarbiausia nuolat matyti ryšį tarp sąvokų [[kintamasis|Kintamasis]], [[reiskinys|Reiškinys]], [[koeficientas|Koeficientas]] ir uždavinių sprendimo."
-        }
-      ]
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-svarbiausios-savokos",
-      "title": "Svarbiausios sąvokos",
-      "blocks": [
-        {
-          "type": "definition",
-          "conceptId": "kintamasis",
-          "text": "Raidė, žyminti nežinomą arba kintantį dydį."
+          "text": "Vienanario pavyzdžiai: $5x$, $-2a^2b$, $x^3$, $7$. Atkreipkite dėmesį, kad net ir vienas skaičius arba viena raidė yra laikomi vienanariais."
         },
         {
-          "type": "definition",
-          "conceptId": "reiskinys",
-          "text": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų."
+          "type": "method",
+          "title": "Vienanario standartinė išraiška",
+          "text": "Vienanaris yra standartinės išraiškos, kai: 1) pirmas parašytas vienintelis skaitinis daugiklis (koeficientas); 2) kintamieji surašyti abėcėlės tvarka; 3) vienodos raidės pakeistos jų laipsniu."
         },
         {
-          "type": "definition",
-          "conceptId": "koeficientas",
-          "text": "Skaičius prie raidės."
+          "type": "example",
+          "text": "Vienanarį $2a \\cdot 3b \\cdot a$ sutvarkykime iki standartinės išraiškos: $2 \\cdot 3 \\cdot a \\cdot a \\cdot b = 6a^2b$."
         },
         {
           "type": "note",
-          "text": "Jei sprendžiant kyla abejonė, pirmiausia tikrink, ar aiškiai supranti [[kintamasis|Kintamasis]] ir [[lygtis|Lygtis]]."
+          "text": "Vienanario laipsnis yra visų jo kintamųjų laipsnių rodiklių suma. Pavyzdžiui, $6a^2b^1$ laipsnis yra $2 + 1 = 3$."
         }
       ]
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-taisyklės",
-      "title": "Svarbiausios taisyklės",
+      "id": "daugianariai-savoka-ir-laipsnis",
+      "title": "Daugianariai: sąvoka ir laipsnis",
       "blocks": [
         {
-          "type": "theorem",
-          "text": "Daugianariai, greitosios daugybos formulės ir skaidymas sprendimuose visada pirmiausia atskirk duomenis nuo ieškomo dydžio, o tada pasirink tinkamą modelį."
+          "type": "paragraph",
+          "text": "Kai sudedame arba atimame kelis vienanarius, gauname sudėtingesnį reiškinį."
         },
         {
-          "type": "property",
-          "text": "Jei užduotyje pasirodo [[koeficientas|Koeficientas]] ar [[lygtis|Lygtis]], dažnai verta rašyti ryšį simboliais prieš skaičiuojant."
+          "type": "definition",
+          "conceptId": "daugianaris",
+          "text": "[[daugianaris|Daugianaris]] – tai kelių vienanarių algebrainė suma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daugianariai skirstomi pagal narių skaičių: dvinaris ($x+y$), trinaris ($a^2+2ab+b^2$) ir t. t. Bendru atveju juos visus vadiname daugianariais."
+        },
+        {
+          "type": "note",
+          "text": "Daugianario laipsniu vadinamas didžiausias jį sudarančių vienanarių laipsnis (kai daugianaris yra sutvarkytas)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, daugianario $3x^4 - 2x^2 + 5$ laipsnis yra 4, nes didžiausias nario laipsnis yra $x^4$."
+        }
+      ]
+    },
+    {
+      "id": "veiksmai-su-daugianariais-sudetis",
+      "title": "Veiksmai su daugianariais: sudėtis ir atimtis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sudedant arba atimant daugianarius, svarbiausia taisyklė yra **panašių narių sutraukimas**."
+        },
+        {
+          "type": "definition",
+          "conceptId": "panasus-nariai",
+          "text": "[[panasus-nariai|Panašūs nariai]] – tai vienanariai, kurie turi visiškai tokią pačią raidinę dalį."
+        },
+        {
+          "type": "method",
+          "title": "Skliaustų atvėrimas",
+          "text": "1) Jei prieš skliaustus yra pliusas (+), skliaustus tiesiog panaikiname, o narių ženklų nekeičiame. 2) Jei prieš skliaustus yra minusas (-), panaikinę skliaustus, visų narių ženklus pakeičiame priešingais."
+        },
+        {
+          "type": "warning",
+          "text": "Minusis prieš skliaustus yra viena dažniausių klaidų vietų. Būkite labai atidūs keisdami kiekvieno nario ženklą!"
+        },
+        {
+          "type": "example",
+          "text": "$(3x^2 - 5x) - (x^2 - 2x + 1) = 3x^2 - 5x - x^2 + 2x - 1 = 2x^2 - 3x - 1$."
+        }
+      ]
+    },
+    {
+      "id": "daugianariu-daugyba",
+      "title": "Daugianarių daugyba",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugianarių daugyba remiasi sklaidos (distributyvumo) dėsniu."
+        },
+        {
+          "type": "method",
+          "title": "Vienanario daugyba iš daugianario",
+          "text": "Vienanarį padauginame iš kiekvieno daugianario nario."
         },
         {
           "type": "formula",
           "formulaId": "sklaidos-desnis",
-          "latex": "a(b+c)=ab+ac"
-        }
-      ]
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-strategija",
-      "title": "Sprendimo strategija",
-      "blocks": [
-        {
-          "type": "method",
-          "text": "1. Perskaityk užduotį ir pažymėk, kokie dydžiai žinomi. 2. Nustatyk, kuri sąvoka čia svarbiausia. 3. Užrašyk veiksmus arba ryšį. 4. Patikrink rezultatą kitaip arba atgaliniu skaičiavimu."
+          "latex": "a(b + c) = ab + ac"
         },
         {
-          "type": "warning",
-          "text": "Dažna klaida yra imti skaičiuoti per anksti ir neįvardyti, ką reiškia gauta reikšmė."
+          "type": "method",
+          "title": "Daugianario daugyba iš daugianario",
+          "text": "Kiekvieną pirmojo daugianario narį padauginame iš kiekvieno antrojo daugianario nario ir gautus rezultatus sudedame."
+        },
+        {
+          "type": "example",
+          "text": "$(x + 2)(y - 3) = x \\cdot y + x \\cdot (-3) + 2 \\cdot y + 2 \\cdot (-3) = xy - 3x + 2y - 6$."
         }
       ]
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-rysys",
-      "title": "Ryšys su kitomis temomis",
+      "id": "greitosios-daugybos-formules-kvadratai",
+      "title": "Greitosios daugybos formulės: Sumos ir skirtumo kvadratas",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ši tema remiasi ankstesnėmis žiniomis iš kitų metų: skaičiavimu, reiškinių pertvarkymu, figūrų savybėmis ar duomenų skaitymu. Ji ruošia kelią tolimesnėms temoms, kuriose reikia daugiau bendro modelio ir tikslesnio argumentavimo."
+          "text": "Yra atvejų, kai daugianarius dauginti galima daug greičiau, naudojant specialias formules."
+        },
+        {
+          "type": "formula",
+          "title": "Sumos kvadratas",
+          "formulaId": "sumos-kvadratas",
+          "latex": "(a + b)^2 = a^2 + 2ab + b^2"
+        },
+        {
+          "type": "formula",
+          "title": "Skirtumo kvadratas",
+          "formulaId": "skirtumo-kvadratas",
+          "latex": "(a - b)^2 = a^2 - 2ab + b^2"
+        },
+        {
+          "type": "note",
+          "text": "Sumos kvadratas yra lygus pirmo nario kvadratui, pridėjus dvigubą pirmo ir antro narių sandaugą ir pridėjus antro nario kvadratą."
+        },
+        {
+          "type": "warning",
+          "text": "Klaida: $(a+b)^2 = a^2 + b^2$. Tai neteisinga! Visada pamirštamas vidurinis narys $2ab$."
+        }
+      ]
+    },
+    {
+      "id": "greitosios-daugybos-formules-skirtumas",
+      "title": "Greitosios daugybos formulės: Kvadratų skirtumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dar viena labai svarbi formulė padeda sudauginti dviejų narių skirtumą iš jų sumos."
+        },
+        {
+          "type": "formula",
+          "title": "Kvadratų skirtumas",
+          "formulaId": "kvadratu-skirtumas",
+          "latex": "(a - b)(a + b) = a^2 - b^2"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši formulė veikia ir atgal: pamatę dviejų kvadratų skirtumą, galime jį išskaidyti į du skliaustus."
+        },
+        {
+          "type": "example",
+          "text": "$x^2 - 16 = x^2 - 4^2 = (x - 4)(x + 4)$."
+        }
+      ]
+    },
+    {
+      "id": "daugianariu-skaidymas-dauginamaisiais",
+      "title": "Daugianarių skaidymas dauginamaisiais",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skaidymas dauginamaisiais yra veiksmas, priešingas skliaustų atvėrimui. Mes norime daugianarį paversti sandauga."
+        },
+        {
+          "type": "method",
+          "title": "Iškėlimas prieš skliaustus",
+          "text": "Randame didžiausią bendrąjį daliklį visiems nariams (tiek skaičių, tiek raidžių) ir jį iškeliame."
+        },
+        {
+          "type": "example",
+          "text": "$6x^2 + 9x = 3x(2x + 3)$. Čia $3x$ yra bendras daugiklis."
+        },
+        {
+          "type": "method",
+          "title": "Grupavimo būdas",
+          "text": "Jei bendro daugiklio visiems nariams nėra, narius sugrupuojame poromis taip, kad kiekviena pora turėtų bendrą daugiklį. Iškėlę juos, tikimės gauti vienodus skliaustus."
+        },
+        {
+          "type": "example",
+          "text": "$ax + ay + bx + by = a(x+y) + b(x+y) = (x+y)(a+b)$."
+        }
+      ]
+    },
+    {
+      "id": "daugianariai-klaidos-ir-patarimai",
+      "title": "Dažniausios klaidos ir patarimai",
+      "blocks": [
+        {
+          "type": "warning",
+          "title": "Ženklų painiojimas",
+          "text": "Dauginant neigiamą skaičių iš neigiamo, gaunamas teigiamas. Pvz.: $-2(-x+3) = 2x - 6$."
+        },
+        {
+          "type": "warning",
+          "title": "Netinkamas laipsnių kėlimas",
+          "text": "Keliant vienanarį kvadratu, reikia pakelti KIEKVIENĄ jo dalį: $(3x)^2 = 3^2 \\cdot x^2 = 9x^2$ (o ne $3x^2$)."
+        },
+        {
+          "type": "note",
+          "text": "Visada patikrinkite skaidymą vėl sudaugindami skliaustus – turite gauti pradinį reiškinį."
         }
       ]
     }
   ],
   "concepts": [
     {
-      "id": "kintamasis",
-      "title": "Kintamasis",
+      "id": "vienanaris",
+      "title": "Vienanaris",
       "type": "concept",
-      "shortDefinition": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "intuition": "Tai ta vieta, kur daugianariai ir formulės uždavinyje įdedame reikšmę.",
-      "formal": "Kintamasis yra simbolis, kurio reikšmė gali keistis.",
+      "shortDefinition": "Reiškinys, sudarytas iš skaičių ir raidžių sandaugos.",
+      "intuition": "Tai viena matematinė 'plyta'.",
+      "formal": "Vienanaris yra skaičių, kintamųjų ir jų laipsnių sandauga.",
       "notation": [],
       "relatedConceptIds": [
-        "reiskinys",
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "reiskinys",
-      "title": "Reiškinys",
-      "type": "concept",
-      "shortDefinition": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "intuition": "Reiškinys yra formulės arba skaičiavimo žingsnio užrašas.",
-      "formal": "Reiškinys sudaromas naudojant aritmetinius veiksmus ir skliaustus.",
-      "notation": [],
-      "relatedConceptIds": [
-        "kintamasis",
+        "daugianaris",
         "koeficientas"
       ],
       "prerequisiteConceptIds": [],
@@ -183,164 +300,31 @@
       "defaultSrs": true
     },
     {
-      "id": "koeficientas",
-      "title": "Koeficientas",
+      "id": "daugianaris",
+      "title": "Daugianaris",
       "type": "concept",
-      "shortDefinition": "Skaičius prie raidės.",
-      "intuition": "Koeficientas pasako, kiek kartų daugėja raidė.",
-      "formal": "Koeficientas yra skaitinis daugiklis prie kintamojo.",
+      "shortDefinition": "Kelių vienanarių algebrainė suma.",
+      "intuition": "Matematinė 'siena', sumūryta iš vienanarių.",
+      "formal": "Daugianaris yra baigtinė vienanarių suma.",
       "notation": [],
       "relatedConceptIds": [
-        "reiskinys",
-        "tiesine-funkcija"
+        "vienanaris",
+        "laipsnis"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
       "defaultSrs": true
     },
     {
-      "id": "lygtis",
-      "title": "Lygtis",
+      "id": "panasus-nariai",
+      "title": "Panašūs nariai",
       "type": "concept",
-      "shortDefinition": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "intuition": "Lygtis sprendžiama ieškant, kokia reikšmė tinka abiem pusėms.",
-      "formal": "Lygtis yra lygybė, kurioje yra bent vienas nežinomasis.",
+      "shortDefinition": "Vienanariai su vienoda raidine dalimi.",
+      "intuition": "Tai tos pačios rūšies daiktai (pvz., visi obuoliai).",
+      "formal": "Vienanariai, kurių kintamieji ir jų laipsniai sutampa.",
       "notation": [],
       "relatedConceptIds": [
-        "sprendinys",
-        "sistema"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "nelygybe",
-      "title": "Nelygybė",
-      "type": "concept",
-      "shortDefinition": "Dviejų reiškinių palyginimas nelygybės ženklu.",
-      "intuition": "Nelygybė aprašo reikšmių sritį, ne tik vieną tašką.",
-      "formal": "Nelygybė naudoja ženklus <, >, <=, >=.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sprendinys",
-      "title": "Sprendinys",
-      "type": "concept",
-      "shortDefinition": "Reikšmė, kuri tenkina lygtį ar nelygybę.",
-      "intuition": "Sprendinys yra atsakymas, kurį galima patikrinti.",
-      "formal": "Sprendinys yra nežinomojo reikšmė, dėl kurios teiginys tampa teisingas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "sistema",
-      "title": "Lygčių sistema",
-      "type": "concept",
-      "shortDefinition": "Kelios lygtys su tais pačiais nežinomaisiais.",
-      "intuition": "Sistema reiškia, kad keli apribojimai galioja kartu.",
-      "formal": "Sistema turi tenkinti visas lygtis vienu metu.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "nelygybe",
-        "tiesine-funkcija"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "formule",
-      "title": "Formulė",
-      "type": "concept",
-      "shortDefinition": "Trumpas ryšio užrašas tarp dydžių.",
-      "intuition": "Formulė leidžia vienu sakiniu užrašyti daug žodžių.",
-      "formal": "Formulė yra bendras ryšio tarp dydžių užrašas.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "proporcija",
-        "plotas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-funkcija",
-      "title": "Tiesinė funkcija",
-      "type": "concept",
-      "shortDefinition": "Funkcija, kurios grafikas yra tiesė.",
-      "intuition": "Tai viena paprasčiausių priklausomybių tarp dydžių.",
-      "formal": "Tiesinė funkcija užrašoma y = ax + b.",
-      "notation": [],
-      "relatedConceptIds": [
-        "funkcija",
-        "grafikas"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "distributyvusis-destymas",
-      "title": "Sklaidos dėsnis",
-      "type": "concept",
-      "shortDefinition": "Daugiklis dauginamas su kiekvienu dėmeniu skliaustuose.",
-      "intuition": "Tai padeda išskleisti ir sutvarkyti reiškinius.",
-      "formal": "a(b + c) = ab + ac.",
-      "notation": [],
-      "relatedConceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "prerequisiteConceptIds": [
-        "a-b-c-ab-ac"
-      ],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "tiesine-lygybe",
-      "title": "Tiesinė lygtis",
-      "type": "concept",
-      "shortDefinition": "Lygtis, kurioje nežinomasis yra tik pirmuoju laipsniu.",
-      "intuition": "Šias lygtis sprendžiame nuosekliai atskirdami nežinomąjį.",
-      "formal": "Tiesinė lygtis turi formą ax + b = 0.",
-      "notation": [],
-      "relatedConceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "prerequisiteConceptIds": [],
-      "appearsInTopicIds": [],
-      "defaultSrs": true
-    },
-    {
-      "id": "proporcingumas",
-      "title": "Proporcingumas",
-      "type": "concept",
-      "shortDefinition": "Ryšys, kai vienas dydis kinta pastoviu santykiu su kitu.",
-      "intuition": "Proporcingumas yra mastelio ir procentų pagrindas.",
-      "formal": "Jei a/b = c/d, dydžiai yra proporcingi.",
-      "notation": [],
-      "relatedConceptIds": [
-        "proporcija",
-        "mastelis"
+        "daugianaris"
       ],
       "prerequisiteConceptIds": [],
       "appearsInTopicIds": [],
@@ -349,185 +333,231 @@
   ],
   "formulas": [
     {
-      "id": "sklaidos-desnis",
-      "title": "Sklaidos dėsnis",
+      "id": "sumos-kvadratas",
+      "title": "Sumos kvadratas",
       "type": "formula",
-      "latex": "a(b+c)=ab+ac",
-      "conditions": [
-        "Sklaidant skliaustus"
-      ],
-      "variables": {
-        "a": "daugiklis",
-        "b": "pirmas dėmuo",
-        "c": "antras dėmuo"
-      },
-      "explanation": "Padeda išskleisti ir pertvarkyti reiškinius.",
+      "latex": "(a + b)^2 = a^2 + 2ab + b^2",
+      "explanation": "Sumos kvadratas yra lygus narių kvadratų sumai, pridėjus dvigubą jų sandaugą.",
       "relatedConceptIds": [
-        "distributyvusis-destymas",
-        "reiskinys"
+        "greitosios-daugybos-formules"
       ],
       "defaultSrs": true
     },
     {
-      "id": "tiesines-lygties-forma",
-      "title": "Tiesinės lygties forma",
+      "id": "skirtumo-kvadratas",
+      "title": "Skirtumo kvadratas",
       "type": "formula",
-      "latex": "ax+b=0",
-      "conditions": [
-        "Vienas nežinomasis"
-      ],
-      "variables": {
-        "a": "koeficientas prie x",
-        "b": "laisvasis narys"
-      },
-      "explanation": "Tai paprasčiausia lygties forma.",
+      "latex": "(a - b)^2 = a^2 - 2ab + b^2",
+      "explanation": "Skirtumo kvadratas skiriasi nuo sumos kvadrato tik ženklu prieš dvigubą sandaugą.",
       "relatedConceptIds": [
-        "tiesine-lygybe",
-        "lygtis"
+        "greitosios-daugybos-formules"
+      ],
+      "defaultSrs": true
+    },
+    {
+      "id": "kvadratu-skirtumas",
+      "title": "Kvadratų skirtumas",
+      "type": "formula",
+      "latex": "a^2 - b^2 = (a - b)(a + b)",
+      "explanation": "Padeda išskaidyti dviejų kvadratų skirtumą į du sandaugos skliaustus.",
+      "relatedConceptIds": [
+        "greitosios-daugybos-formules"
       ],
       "defaultSrs": true
     }
   ],
   "mistakes": [
     {
-      "id": "perkelia-be-zenklo-kaitos",
-      "title": "Perkelia narį nepakeitęs ženklo",
+      "id": "kvadrato-pamirsymas",
+      "title": "Pamirštama pakelti koeficientą kvadratu",
       "type": "mistake",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "wrongPattern": "Rašo x+5=12 -> x=12+5.",
-      "whyItHappens": "Perkeliant narį veiksmas keičiasi į priešingą.",
-      "correction": "Iš abiejų pusių atimk 5.",
-      "wrongExample": "x=17",
-      "correctExample": "x=7",
-      "defaultSrs": true
-    },
-    {
-      "id": "sumaiso-koeficientus",
-      "title": "Sumaišo koeficientus su laisvaisiais nariais",
-      "type": "mistake",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "wrongPattern": "3x + 2x rašo kaip 5x².",
-      "whyItHappens": "Koeficientai sudedami, o x laipsnis nesikeičia.",
-      "correction": "3x+2x=5x.",
-      "wrongExample": "3x+2x=5x²",
-      "correctExample": "3x+2x=5x",
+      "wrongPattern": "$(2x)^2 = 2x^2$",
+      "whyItHappens": "Mokinys galvoja, kad kvadratas taikomas tik raidei.",
+      "correction": "Kvadratu keliami visi vienanario daugikliai.",
+      "wrongExample": "$(3a)^2 = 3a^2$",
+      "correctExample": "$(3a)^2 = 9a^2$",
       "defaultSrs": true
     }
   ],
   "workedExamples": [
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-exmp-1",
-      "title": "Reiškinio sutvarkymas",
+      "id": "daugianariai-exmp-1",
+      "title": "Vienanario daugyba iš daugianario",
       "level": "easy",
-      "problem": "Supaprastink 3x + 2x - x.",
+      "problem": "Padauginkite: $3x(2x - 4)$.",
       "conceptIds": [
-        "reiskinys",
-        "koeficientas"
+        "vienanaris",
+        "daugianaris"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Sudedame koeficientus.",
-          "latex": "3x+2x-x=(3+2-1)x"
+          "text": "Dauginame $3x$ iš pirmo nario $2x$.",
+          "latex": "3x \\cdot 2x = 6x^2"
         },
         {
-          "text": "Gauname.",
-          "latex": "4x"
+          "text": "Dauginame $3x$ iš antro nario $-4$.",
+          "latex": "3x \\cdot (-4) = -12x"
+        },
+        {
+          "text": "Surašome rezultatą.",
+          "latex": "6x^2 - 12x"
         }
       ],
-      "answer": "4x"
+      "answer": "6x^2 - 12x"
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-exmp-2",
-      "title": "Lygties sprendimas",
+      "id": "daugianariai-exmp-2",
+      "title": "Daugianarių atimtis",
       "level": "easy",
-      "problem": "Išspręsk 2x + 5 = 17.",
+      "problem": "Suprastinkite: $(5a - 3) - (2a + 7)$.",
       "conceptIds": [
-        "lygtis",
-        "sprendinys"
+        "daugianaris",
+        "panasus-nariai"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Atimame 5 iš abiejų pusių.",
-          "latex": "2x=12"
+          "text": "Atskliaudžiame keisdami ženklus antrame skliauste.",
+          "latex": "5a - 3 - 2a - 7"
         },
         {
-          "text": "Daliname iš 2.",
-          "latex": "x=6"
+          "text": "Sutraukiame panašiuosius narius.",
+          "latex": "(5a - 2a) + (-3 - 7) = 3a - 10"
         }
       ],
-      "answer": "x=6"
+      "answer": "3a - 10"
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-exmp-3",
-      "title": "Nelygybė",
+      "id": "daugianariai-exmp-3",
+      "title": "Daugianarių daugyba",
       "level": "medium",
-      "problem": "Išspręsk 3x - 4 < 11.",
+      "problem": "Padauginkite: $(x + 3)(x - 5)$.",
       "conceptIds": [
-        "nelygybe",
-        "sprendinys"
+        "daugianaris"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Pridedame 4.",
-          "latex": "3x<15"
+          "text": "Dauginame narį po nario (kiekvieną su kiekvienu).",
+          "latex": "x^2 - 5x + 3x - 15"
         },
         {
-          "text": "Daliname iš 3.",
-          "latex": "x<5"
+          "text": "Sutraukiame panašiuosius narius.",
+          "latex": "x^2 - 2x - 15"
         }
       ],
-      "answer": "x<5"
+      "answer": "x^2 - 2x - 15"
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-exmp-4",
-      "title": "Modeliavimas",
+      "id": "daugianariai-exmp-4",
+      "title": "Sumos kvadrato formulė",
       "level": "medium",
-      "problem": "Bilietas kainuoja 4 eurus. Užrašyk lygtį, kai x bilietų kaina yra 20 eurų.",
+      "problem": "Išskleiskite: $(2x + 3)^2$.",
       "conceptIds": [
-        "sistema",
-        "formule"
+        "greitosios-daugybos-formules"
       ],
-      "formulaIds": [],
+      "formulaIds": [
+        "sumos-kvadratas"
+      ],
       "steps": [
         {
-          "text": "Bendra kaina yra 4x.",
-          "latex": "4x=20"
+          "text": "Taikome formulę $(a+b)^2 = a^2 + 2ab + b^2$, kur $a=2x$ ir $b=3$.",
+          "latex": "(2x)^2 + 2 \\cdot 2x \\cdot 3 + 3^2"
         },
         {
-          "text": "Išsprendžiame.",
-          "latex": "x=5"
+          "text": "Apskaičiuojame kiekvieną dėmenį.",
+          "latex": "4x^2 + 12x + 9"
         }
       ],
-      "answer": "x=5"
+      "answer": "4x^2 + 12x + 9"
     },
     {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-exmp-5",
-      "title": "Formulė",
+      "id": "daugianariai-exmp-5",
+      "title": "Skirtumo kvadrato formulė",
+      "level": "medium",
+      "problem": "Išskleiskite: $(y - 4)^2$.",
+      "conceptIds": [
+        "greitosios-daugybos-formules"
+      ],
+      "formulaIds": [
+        "skirtumo-kvadratas"
+      ],
+      "steps": [
+        {
+          "text": "Taikome formulę $(a-b)^2 = a^2 - 2ab + b^2$.",
+          "latex": "y^2 - 2 \\cdot y \\cdot 4 + 4^2"
+        },
+        {
+          "text": "Supaprastiname.",
+          "latex": "y^2 - 8y + 16"
+        }
+      ],
+      "answer": "y^2 - 8y + 16"
+    },
+    {
+      "id": "daugianariai-exmp-6",
+      "title": "Kvadratų skirtumo formulė",
+      "level": "medium",
+      "problem": "Padauginkite: $(5 - z)(5 + z)$.",
+      "conceptIds": [
+        "greitosios-daugybos-formules"
+      ],
+      "formulaIds": [
+        "kvadratu-skirtumas"
+      ],
+      "steps": [
+        {
+          "text": "Taikome formulę $(a-b)(a+b) = a^2 - b^2$.",
+          "latex": "5^2 - z^2"
+        },
+        {
+          "text": "Apskaičiuojame.",
+          "latex": "25 - z^2"
+        }
+      ],
+      "answer": "25 - z^2"
+    },
+    {
+      "id": "daugianariai-exmp-7",
+      "title": "Iškėlimas prieš skliaustus",
+      "level": "medium",
+      "problem": "Išskaidykite dauginamaisiais: $12a^3 - 8a^2$.",
+      "conceptIds": [
+        "skaidymas-dauginamaisiais"
+      ],
+      "steps": [
+        {
+          "text": "Randame bendrą skaitinį daliklį (4) ir raidžių daliklį ($a^2$).",
+          "latex": "4a^2"
+        },
+        {
+          "text": "Iškeliame bendrą daugiklį.",
+          "latex": "4a^2(3a - 2)"
+        }
+      ],
+      "answer": "4a^2(3a - 2)"
+    },
+    {
+      "id": "daugianariai-exmp-8",
+      "title": "Grupavimo būdas",
       "level": "hard",
-      "problem": "Jei s = vt, rask t, kai s=96 ir v=12.",
+      "problem": "Išskaidykite: $xy - 2y + 3x - 6$.",
       "conceptIds": [
-        "formule",
-        "tiesine-funkcija"
+        "skaidymas-dauginamaisiais"
       ],
-      "formulaIds": [],
       "steps": [
         {
-          "text": "Išreiškiame t.",
-          "latex": "t=\\frac{s}{v}"
+          "text": "Grupuojame pirmus du ir paskutinius du narius.",
+          "latex": "(xy - 2y) + (3x - 6)"
         },
         {
-          "text": "Įstatome duomenis.",
-          "latex": "t=\\frac{96}{12}=8"
+          "text": "Iškeliame bendrus daugiklius iš kiekvienos grupės.",
+          "latex": "y(x - 2) + 3(x - 2)"
+        },
+        {
+          "text": "Iškeliame bendrą skliaustą $(x-2)$.",
+          "latex": "(x - 2)(y + 3)"
         }
       ],
-      "answer": "t=8"
+      "answer": "(x - 2)(y + 3)"
     }
   ],
   "exercises": [
@@ -535,7 +565,7 @@
       "id": "daugianariai-ir-greitosios-daugybos-formules-ex-001",
       "topicId": "daugianariai-ir-greitosios-daugybos-formules",
       "grade": 8,
-      "level": "easy",
+      "level": "Lengvi",
       "type": "expressionInput",
       "statement": "Sutvarkyk reiškinį: 2x+3x-4x.",
       "answer": {
@@ -549,969 +579,24 @@
           "text": "Sujunk panašius dėmenis.",
           "penalty": 0.1,
           "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
+            "panasus-nariai"
           ]
         }
       ],
       "solutionSteps": [
         {
           "text": "Sujungiame panašius narius.",
-          "latex": "1x"
+          "latex": "x"
         }
       ],
-      "answerText": "1x",
+      "answerText": "x",
       "alternateMethods": [],
       "conceptIds": [
-        "reiskinys",
-        "koeficientas"
+        "panasus-nariai"
       ],
       "formulaIds": [],
       "mistakeIds": [],
       "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-002",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 7a-2a+a.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "6a",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "6a"
-        }
-      ],
-      "answerText": "6a",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-003",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 5y+2-3y+4.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "2y+6",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "2y+6"
-        }
-      ],
-      "answerText": "2y+6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-004",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 4m-3m+8.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "m+8",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "m+8"
-        }
-      ],
-      "answerText": "m+8",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-005",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "expressionInput",
-      "statement": "Sutvarkyk reiškinį: 9p-4+p-1.",
-      "answer": {
-        "kind": "expression",
-        "canonical": "10p-5",
-        "acceptedEquivalentForms": []
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Sujunk panašius dėmenis.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "reiskinys",
-            "koeficientas"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Sujungiame panašius narius.",
-          "latex": "10p-5"
-        }
-      ],
-      "answerText": "10p-5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "reiskinys",
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-006",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: x+5=12.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-007",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 3x=18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 6,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=6"
-        }
-      ],
-      "answerText": "6",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-008",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 2x-4=10.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-009",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "easy",
-      "type": "numericInput",
-      "statement": "Išspręsk lygtį: 5x+2=27.",
-      "answer": {
-        "kind": "numeric",
-        "value": 5,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Perkelk pastovius narius į kitą pusę.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "lygtis",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Atskirk x.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Atliekame atvirkštinius veiksmus.",
-          "latex": "x=5"
-        }
-      ],
-      "answerText": "5",
-      "alternateMethods": [],
-      "conceptIds": [
-        "lygtis",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 60
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-010",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: x-3<4. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 7,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 7"
-        }
-      ],
-      "answerText": "7",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-011",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 2x+1>=9. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x >= 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-012",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 5-x>1. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 4,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x < 4"
-        }
-      ],
-      "answerText": "4",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-013",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Išspręsk nelygybę: 3x-6<=0. Užrašyk ribinį skaičių.",
-      "answer": {
-        "kind": "numeric",
-        "value": 2,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pirmiausia pertvarkyk kaip lygtį.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "nelygybe",
-            "sprendinys"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Jei daugini iš neigiamo, ženklas apsiverčia.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Randame ribinį tašką.",
-          "latex": "x <= 2"
-        }
-      ],
-      "answerText": "2",
-      "alternateMethods": [],
-      "conceptIds": [
-        "nelygybe",
-        "sprendinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 75
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-014",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "multipleChoice",
-      "statement": "Kuris užrašas geriausiai modeliuoja: 'už tris bilietus sumokėta 18 eurų'? ",
-      "answer": {
-        "kind": "choice",
-        "choices": [
-          {
-            "id": "a",
-            "text": "3x = 18"
-          },
-          {
-            "id": "b",
-            "text": "x + 3 = 18"
-          },
-          {
-            "id": "c",
-            "text": "18x = 3"
-          },
-          {
-            "id": "d",
-            "text": "x - 3 = 18"
-          }
-        ],
-        "correctChoiceIds": [
-          "a"
-        ]
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Ieškok ryšio tarp kiekio ir kainos.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "sistema",
-            "formule"
-          ]
-        },
-        {
-          "order": 2,
-          "text": "Vienas bilietas kainuoja 6.",
-          "penalty": 0.12
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Bendra kaina lygi 3x.",
-          "latex": "3x=18"
-        }
-      ],
-      "answerText": "3x = 18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "sistema",
-        "formule"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 70
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-015",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "medium",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 15.",
-      "answer": {
-        "kind": "numeric",
-        "value": 15,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "15"
-        }
-      ],
-      "answerText": "15",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-016",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 16.",
-      "answer": {
-        "kind": "numeric",
-        "value": 16,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "16"
-        }
-      ],
-      "answerText": "16",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-017",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 17.",
-      "answer": {
-        "kind": "numeric",
-        "value": 17,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "17"
-        }
-      ],
-      "answerText": "17",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-018",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 18.",
-      "answer": {
-        "kind": "numeric",
-        "value": 18,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "18"
-        }
-      ],
-      "answerText": "18",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-019",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 19.",
-      "answer": {
-        "kind": "numeric",
-        "value": 19,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "19"
-        }
-      ],
-      "answerText": "19",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-ex-020",
-      "topicId": "daugianariai-ir-greitosios-daugybos-formules",
-      "grade": 8,
-      "level": "hard",
-      "type": "numericInput",
-      "statement": "Daugianariai, greitosios daugybos formulės ir skaidymas: papildomas uždavinys Nr. 20.",
-      "answer": {
-        "kind": "numeric",
-        "value": 20,
-        "tolerance": 0
-      },
-      "hints": [
-        {
-          "order": 1,
-          "text": "Pasirink tinkamą metodą.",
-          "penalty": 0.1,
-          "revealsConceptIds": [
-            "kintamasis"
-          ]
-        }
-      ],
-      "solutionSteps": [
-        {
-          "text": "Papildomas pratimas.",
-          "latex": "20"
-        }
-      ],
-      "answerText": "20",
-      "alternateMethods": [],
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "estimatedSeconds": 45
-    }
-  ],
-  "tests": [
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-test-topic",
-      "title": "Daugianariai, greitosios daugybos formulės ir skaidymas testas",
-      "scope": "topic",
-      "topicIds": [
-        "daugianariai-ir-greitosios-daugybos-formules"
-      ],
-      "exerciseIds": [
-        "daugianariai-ir-greitosios-daugybos-formules-ex-001",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-002",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-003",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-004",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-005",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-006",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-007",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-008"
-      ],
-      "masteryWeight": 1.2,
-      "passingThreshold": 0.75,
-      "timeLimitSeconds": 1800
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-test-challenge",
-      "title": "Daugianariai, greitosios daugybos formulės ir skaidymas iššūkis",
-      "scope": "topic",
-      "topicIds": [
-        "daugianariai-ir-greitosios-daugybos-formules"
-      ],
-      "exerciseIds": [
-        "daugianariai-ir-greitosios-daugybos-formules-ex-009",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-010",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-011",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-012",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-013",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-014",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-015",
-        "daugianariai-ir-greitosios-daugybos-formules-ex-016"
-      ],
-      "masteryWeight": 1.6,
-      "passingThreshold": 0.65,
-      "timeLimitSeconds": 2400
-    }
-  ],
-  "srsCards": [
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-kintamasis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra kintamasis?",
-      "back": "Raidė, žyminti nežinomą arba kintantį dydį.",
-      "conceptIds": [
-        "kintamasis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-reiskinys",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra reiškinys?",
-      "back": "Matematinis užrašas iš skaičių, kintamųjų ir veiksmų.",
-      "conceptIds": [
-        "reiskinys"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-koeficientas",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra koeficientas?",
-      "back": "Skaičius prie raidės.",
-      "conceptIds": [
-        "koeficientas"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-lygtis",
-      "deck": "theory",
-      "cardType": "concept",
-      "front": "Kas yra lygtis?",
-      "back": "Dviejų reiškinių lygybė su nežinomuoju.",
-      "conceptIds": [
-        "lygtis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-sklaidos-desnis",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra sklaidos dėsnis?",
-      "back": "Padeda išskleisti ir pertvarkyti reiškinius.",
-      "conceptIds": [
-        "sklaidos-desnis"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-tiesines-lygties-forma",
-      "deck": "practice",
-      "cardType": "formula",
-      "front": "Kas yra tiesinės lygties forma?",
-      "back": "Tai paprasčiausia lygties forma.",
-      "conceptIds": [
-        "tiesines-lygties-forma"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-perkelia-be-zenklo-kaitos",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra perkelia narį nepakeitęs ženklo?",
-      "back": "Iš abiejų pusių atimk 5.",
-      "conceptIds": [
-        "perkelia-be-zenklo-kaitos"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
-    },
-    {
-      "id": "daugianariai-ir-greitosios-daugybos-formules-srs-sumaiso-koeficientus",
-      "deck": "practice",
-      "cardType": "mistake",
-      "front": "Kas yra sumaišo koeficientus su laisvaisiais nariais?",
-      "back": "3x+2x=5x.",
-      "conceptIds": [
-        "sumaiso-koeficientus"
-      ],
-      "formulaIds": [],
-      "mistakeIds": [],
-      "defaultEnabled": true
     }
   ]
 }

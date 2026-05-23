@@ -46,45 +46,120 @@
   },
   "theory": [
     {
-      "title": "Pirminiai skaičiai – aritmetikos statybiniai blokai",
+      "id": "olimpiada-06-num-theory-intro",
+      "title": "Skaičių teorija: Matematikos atomai ir dėsningumai",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičių teorijoje visi teigiami sveikieji skaičiai gali būti išreikšti kaip pirminių skaičių sandaugos. Tai leidžia lengvai analizuoti dalumą, didžiausius bendrus daliklius (DBD) ir mažiausius bendrus kartotinius (MBK)."
+          "text": "Skaičių teorija yra viena seniausių ir giliausių matematikos sričių, tirianti natūraliųjų skaičių savybes. Šeštoje klasėje mes ne tik skaičiuojame, bet ir pradedame suprasti vidinę skaičių sandarą. Kodėl vieni skaičiai yra 'tvirti' (pirminiai), o kiti – 'trapūs' (sudėtiniai)? Kodėl liekanos kartojasi tam tikrais ciklais?"
         },
         {
           "type": "paragraph",
-          "text": "Norėdami rasti skaičiaus daliklių skaičių, išskaidykite jį pirminiais daugikliais: $n = p_1^{a_1} p_2^{a_2} \\dots p_k^{a_k}$. Skirtingų daliklių skaičius lygus: $(a_1 + 1)(a_2 + 1) \\dots (a_k + 1)$."
-        },
-        {
-          "type": "method",
-          "text": "Pavyzdžiui, skaičius $72 = 2^3 \\times 3^2$ turi $(3+1)(2+1) = 4 \\times 3 = 12$ daliklių. Šis metodas padeda išvengti ilgų sąrašų rašymo ranka."
+          "text": "Olimpiadinėje skaičių teorijoje svarbiausia yra gebėjimas pamatyti skaičių kaip objektą su savo 'genetiniu kodu' (pirminių daugiklių rinkiniu). Šiame skyriuje mokysimės iššifruoti šiuos kodus, valdyti didelius kartotinius ir spręsti uždavinius, kuriuose skaičiai slepiasi po raidėmis."
         }
       ]
     },
     {
-      "title": "Kombinatorikos formulės: kėliniai ir deriniai",
+      "id": "olimpiada-06-num-theory-prime",
+      "title": "1. Pirminiai skaičiai ir Aritmetikos pagrindinė teorema",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "6 klasėje susipažinsime su svarbiomis kombinatorikos sąvokomis:\n- **Kėliniai (Faktorialas)**: būdų išrikiuoti $n$ skirtingų objektų skaičius yra $n! = n \\times (n-1) \\dots \\times 1$.\n- **Deriniai**: būdų pasirinkti $k$ objektų iš $n$ objektų aibės, neatsižvelgiant į tvarką, skaičius užrašomas formule: $C_n^k = \\frac{n!}{k!(n-k)!}$."
+          "text": "Pirminis skaičius turi lygiai du daliklius: 1 ir patį save. Skaičius 1 nėra nei pirminis, nei sudėtinis. Tai labai svarbu!"
         },
         {
-          "type": "warning",
-          "text": "Visada atskirkite, ar tvarka yra svarbi! Jei renkame komandos prezidentą ir pavaduotoją – tvarka svarbi (kėliniai). Jei tiesiog du komandos narius – tvarka nesvarbi (deriniai)."
+          "type": "method",
+          "text": "**Aritmetikos pagrindinė teorema**: Kiekvieną natūralųjį skaičių, didesnį už 1, galima vieninteliu būdu išskaidyti pirminių skaičių sandauga. Tai skaičiaus 'pasas'."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pavyzdžiui, $120 = 2^3 \\cdot 3^1 \\cdot 5^1$. Žvelgdami į šią išraišką, mes iškart matome viską apie skaičiaus dalumą: jis dalijasi iš 8, iš 15, bet nesidalija iš 9 (nes trūksta dar vieno trejeto) ar iš 7."
         }
       ]
     },
     {
-      "title": "Pitagoro teorema ir geometrinės figūros",
+      "id": "olimpiada-06-num-theory-divisors",
+      "title": "2. Daliklių skaičiavimo paslaptys",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geometrijos olimpiadose statusis trikampis yra viena dažniausių figūrų. Pitagoro teorema leidžia rasti kraštinių ilgius."
+          "text": "Kaip rasti, kiek daliklių turi skaičius, jo net neišrašant? Tam padeda kombinatorinis mąstymas."
         },
         {
           "type": "method",
-          "text": "Pitagoro teorema teigia: $\\mathbf{a^2 + b^2 = c^2}$, kur $a$ ir $b$ yra statiniai, o $c$ – įžambinė. Dažniausiai olimpiadose naudojami sveikieji skaičiai, vadinami Pitagoro trejetais: $(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$."
+          "text": "**Daliklių skaičiaus formulė**: Jei skaičius išskaidytas pavidalu $n = p_1^{a_1} p_2^{a_2} \\dots$, tai visų jo natūraliųjų daliklių skaičius lygus $(a_1 + 1)(a_2 + 1) \\dots$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kodėl pridedame 1? Nes kiekvieną pirminį daugiklį mes galime pasirinkti paimti 0, 1, 2... iki $a$ kartų. Šis metodas nepakeičiamas olimpiadose, kai skaičiai tampa labai dideli."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-num-theory-gcd-lcm",
+      "title": "3. DBD ir MBK: Bendrumo paieška",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Didžiausias bendras daliklis (DBD) ir mažiausias bendras kartotinis (MBK) yra du svarbiausi įrankiai dirbant su skaičių poromis."
+        },
+        {
+          "type": "method",
+          "text": "**Ryšys tarp DBD ir MBK**: Bet kuriems dviem natūraliesiems skaičiams $a$ ir $b$ galioja lygybė: $a \\cdot b = DBD(a, b) \\cdot MBK(a, b)$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši savybė leidžia rasti vieną dydį, jei žinome kitus tris. Pavyzdžiui, jei žinome DBD ir patį skaičių sandaugą, MBK randame tiesiog padaliję."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-num-theory-remainders",
+      "title": "4. Liekanos ir periodiškumas",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daugelyje olimpiadinių uždavinių klausiama apie paskutinį skaitmenį arba liekaną. Svarbiausia taisyklė: liekanų savybės leidžia mums 'numesti' didžiulius skaičius ir dirbti tik su jų liekanomis."
+        },
+        {
+          "type": "method",
+          "text": "**Paskutinio skaitmens ciklas**: Keliant skaičių laipsniu, paskutinis skaitmuo visada kartojasi tam tikru periodu. Pavyzdžiui, 2-eto laipsnių galai: 2, 4, 8, 6... (periodas 4). 3-eto galai: 3, 9, 7, 1... (periodas 4)."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Strategija: Liekanų aritmetika**. Sumos liekana lygi liekanų sumai, o sandaugos liekana – liekanų sandaugai. Tai leidžia apskaičiuoti liekaną net ir labai sudėtingiems reiškiniams."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-num-theory-powers",
+      "title": "5. Tikslieji kvadratai ir kubai",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tikslusis kvadratas yra skaičius, gautas natūralųjį skaičių padauginus iš savęs. Kaip jį atpažinti iš pirminių daugiklių?"
+        },
+        {
+          "type": "method",
+          "text": "**Struktūra**: Skaičius yra tikslusis kvadratas tada ir tik tada, kai jo pirminio išskaidymo visi laipsnio rodikliai yra **lyginiai skaičiai**. Tiksliojo kubo atveju rodikliai turi dalintis iš 3."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ši savybė padeda spręsti uždavinius, kur klausiama: 'iš kokio mažiausio skaičiaus reikia padauginti $X$, kad gautume kvadratą?'. Mes tiesiog papildome esamus nelyginius laipsnius iki lyginių."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-num-theory-diophantine",
+      "title": "6. Paprastosios diofantinės lygtys",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diofantinės lygtys – tai lygtys, kurių sprendinių ieškome tik sveikųjų skaičių aibėje. Dažniausiai jos sprendžiamos analizuojant dalumą."
+        },
+        {
+          "type": "method",
+          "text": "**Išraiškos analizė**: Pvz., lygtyje $3x + 5y = 17$, galime pastebėti, kad $3x$ turi būti lygu $17 - 5y$. Tikriname $y$ reikšmes: jei $y=1, 17-5=12$ (dalijasi iš 3, tinka!). Jei $y=2, 17-10=7$ (netinka)."
         }
       ]
     }
@@ -109,93 +184,149 @@
       "relatedConceptIds": []
     }
   ],
-  "formulas": [],
-  "mistakes": [],
+  "formulas": [
+    {
+      "id": "f-divisors-count",
+      "title": "Daliklių skaičius",
+      "formula": "N = (a_1+1)(a_2+1)\\dots",
+      "description": "Būdų sudaryti daliklį skaičius."
+    },
+    {
+      "id": "f-gcd-lcm-relation",
+      "title": "DBD ir MBK ryšys",
+      "formula": "a \\cdot b = DBD(a,b) \\cdot MBK(a,b)",
+      "description": "Pagrindinė dviejų skaičių santykio savybė."
+    },
+    {
+      "id": "f-sum-of-divisors",
+      "title": "Daliklių suma",
+      "formula": "S = \\frac{p_1^{a_1+1}-1}{p_1-1} \\cdot \\frac{p_2^{a_2+1}-1}{p_2-1} \\dots",
+      "description": "Visų natūraliųjų skaičiaus daliklių suma."
+    }
+  ],
+  "mistakes": [
+    {
+      "id": "m-one-is-prime",
+      "title": "1 laikymas pirminiu",
+      "description": "Dažnai galvojama, kad 1 yra pirminis skaičius.",
+      "fix": "Prisiminkite: pirminis skaičius privalo turėti LYGIAI DU daliklius. 1 turi tik vieną."
+    },
+    {
+      "id": "m-even-primes",
+      "title": "Manymas, kad visi pirminiai nelyginiai",
+      "description": "Pamirštamas skaičius 2.",
+      "fix": "Skaičius 2 yra vienintelis lyginis pirminis skaičius. Jis itin svarbus uždaviniuose apie sumas."
+    },
+    {
+      "id": "m-last-digit-overflow",
+      "title": "Paskutinio skaitmens klaida",
+      "description": "Manymas, kad paskutinis skaitmuo priklauso nuo skaičiaus dydžio, o ne nuo laipsnio liekanos.",
+      "fix": "Naudokite periodiškumo taisyklę (ciklus)."
+    }
+  ],
   "workedExamples": [
     {
-      "title": "1 Pavyzdys: Sandaugos dalikliai",
-      "problem": "Raskite dviejų natūraliųjų skaičių, kurių sandauga lygi $1000$ ir nei vienas iš jų nesibaigia nuliu, sumą.",
+      "id": "ol-6-num-ex-1",
+      "title": "Mažiausio kartotinio radimas",
+      "problem": "Raskite mažiausią natūralųjį skaičių, kuris dalijasi iš visų skaičių nuo 1 iki 10.",
       "steps": [
         {
-          "text": "Išskaidome skaičių $1000$ pirminiais daugikliais: $1000 = 10^3 = (2 \\times 5)^3 = 2^3 \\times 5^3$."
+          "text": "Mums reikia rasti $MBK(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)$."
         },
         {
-          "text": "Tarkime, šie du skaičiai yra $A$ ir $B$. Kadangi $A \\times B = 2^3 \\times 5^3$, tai jų pirminiai daugikliai gali būti tik $2$ ir $5$."
+          "text": "Surašome kiekvieno skaičiaus pirminį išskaidymą: $2=2, 3=3, 4=2^2, 5=5, 6=2 \\cdot 3, 7=7, 8=2^3, 9=3^2, 10=2 \\cdot 5$."
         },
         {
-          "text": "Jeigu kuris nors iš skaičių $A$ arba $B$ turėtų savo sudėtyje ir daugiklį $2$, ir daugiklį $5$, tai šis skaičius dalytųsi iš $10$ ir todėl baigtųsi nuliu. Kadangi sąlyga tai draudžia, vienas iš skaičių turi turėti tik daugiklius $2$, o kitas – tik daugiklius $5$."
+          "text": "MBK imame kiekvieną pirminį daugiklį su didžiausiu pasirodžiusiu rodikliu."
         },
         {
-          "text": "Vadinasi, vienas skaičius yra $2^3 = 8$, o kitas – $5^3 = 125$."
+          "text": "Daugikliai: $2^3$ (iš 8), $3^2$ (iš 9), $5^1$ (iš 5 ar 10), $7^1$ (iš 7)."
         },
         {
-          "text": "Šie skaičiai nesibaigia nuliu, o jų sandauga lygi $1000$. Jų suma yra $8 + 125 = 133$."
+          "text": "Skaičiuojame: $8 \\times 9 \\times 5 \\times 7 = 72 \\times 35 = 2520$."
         }
       ],
-      "answer": "$133$"
+      "answer": "2520"
     },
     {
-      "title": "2 Pavyzdys: Laipsnių palyginimas",
-      "problem": "Palyginkite skaičius $2^{300}$ ir $3^{200}$. Kuri reikšmė didesnė?",
+      "id": "ol-6-num-ex-2",
+      "title": "Daliklių savybė",
+      "problem": "Skaičius $n$ turi lygiai 3 daliklius. Ką galite pasakyti apie šį skaičių?",
       "steps": [
         {
-          "text": "Norėdami palyginti šiuos du skaičius, pabandykime suvienodinti jų rodiklius."
+          "text": "Pagal daliklių skaičiaus formulę $(a_1+1)(a_2+1)\\dots = 3$."
         },
         {
-          "text": "Pastebime, kad rodikliai $300$ ir $200$ abu dalijasi iš $100$."
+          "text": "Kadangi 3 yra pirminis skaičius, jis negali būti išskaidytas į daugiklius (išskyrus $3 \\times 1$)."
         },
         {
-          "text": "Pertvarkome pirmąjį skaičių: $2^{300} = (2^3)^{100} = 8^{100}$."
+          "text": "Tai reiškia, kad skaičius $n$ turi tik vieną pirminį daugiklį $p$, kurio laipsnis $a_1$ yra toks, kad $a_1 + 1 = 3$."
         },
         {
-          "text": "Pertvarkome antrąjį skaičių: $3^{200} = (3^2)^{100} = 9^{100}$."
+          "text": "Vadinasi, $a_1 = 2$."
         },
         {
-          "text": "Kadangi pagrindas $9$ yra didesnis už $8$, tai $9^{100} > 8^{100}$, vadinasi, $3^{200} > 2^{300}$."
+          "text": "Išvada: skaičius $n$ yra bet kurio pirminio skaičiaus kvadratas ($n = p^2$). Pavyzdžiui, $4, 9, 25, 49 \\dots$"
         }
       ],
-      "answer": "$3^{200}$ yra didesnis."
+      "answer": "n yra pirminio skaičiaus kvadratas"
     },
     {
-      "title": "4 Pavyzdys: Skaitmenų rikiavimas",
-      "problem": "Kiek skirtingų penkiaženklių skaičių galima sudaryti iš skaitmenų $1, 2, 3, 4, 5$, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą, o skaičius turi būti lyginis?",
+      "id": "ol-6-num-ex-3",
+      "title": "Paskutinis skaitmuo",
+      "problem": "Koks yra skaičiaus $3^{100} + 4^{100}$ paskutinis skaitmuo?",
       "steps": [
         {
-          "text": "Penkiaženklis skaičius turi būti lyginis, todėl jo paskutinis skaitmuo turi būti lyginis."
+          "text": "Rasime $3^{100}$ galą. 3-eto ciklas: 3, 9, 7, 1 (ilgis 4). Kadangi 100 dalijasi iš 4, galas bus 1."
         },
         {
-          "text": "Mūsų turimoje aibėje $\\{1, 2, 3, 4, 5\\}$ lyginiams skaičiams tinka tik $2$ arba $4$. Vadinasi, paskutinę poziciją galime užpildyti $2$ būdais."
+          "text": "Rasime $4^{100}$ galą. 4-eto ciklas: 4, 6 (ilgis 2). Kadangi 100 dalijasi iš 2, galas bus 6."
         },
         {
-          "text": "Likusios keturios pozicijos gali būti užpildytos bet kokia tvarka keturiais likusiais skaitmenimis."
-        },
-        {
-          "text": "Būdų skaičius išdėstyti likusius $4$ skaitmenis yra $4! = 4 \\times 3 \\times 2 \\times 1 = 24$ būdai."
-        },
-        {
-          "text": "Bendrai galimų skaičių yra $2 \\times 24 = 48$."
+          "text": "Sudedame galus: $1 + 6 = 7$."
         }
       ],
-      "answer": "$48$"
+      "answer": "7"
     },
     {
-      "title": "5 Pavyzdys: Dirichlė principas",
-      "problem": "Dėžėje yra $12$ juodų ir $12$ baltų kojinių. Koks yra mažiausias kojinių skaičius, kurį reikia ištraukti nežiūrint, kad būtume visiškai tikri, jog turime bent vieną vienodos spalvos porą?",
+      "id": "ol-6-num-ex-4",
+      "title": "Papildymas iki kvadrato",
+      "problem": "Iš kokio mažiausio natūraliojo skaičiaus reikia padauginti 540, kad gautume tikslųjį kvadratą?",
       "steps": [
         {
-          "text": "Ieškome 'stalčių' šioje situacijoje. Stalčiai yra dvi spalvos: juoda ir balta. Iš viso $m = 2$ stalčiai."
+          "text": "Skaidome 540: $540 = 54 \\times 10 = 6 \\times 9 \\times 2 \\times 5 = 2 \\times 3 \\times 3^2 \\times 2 \\times 5 = 2^2 \\times 3^3 \\times 5^1$."
         },
         {
-          "text": "Jei ištrauksime tik $2$ kojines, jos gali būti skirtingų spalvų (viena juoda, viena balta). Poros neturėsime."
+          "text": "Tikriname laipsnius: 2 yra lyginis (tinka), 3 yra nelyginis (reikia dar vieno trejeto), 1 yra nelyginis (reikia dar vieno penketo)."
         },
         {
-          "text": "Jei ištrauksime $3$ kojines, tai pagal Dirichlė principą, kadangi objektų skaičius ($3$) yra didesnis už stalčių skaičių ($2$), bent du objektai pateks į tą patį stalčių. Tai reiškia, kad bent dvi kojinės bus tos pačios spalvos."
-        },
-        {
-          "text": "Vadinasi, mažiausiai reikia ištraukti $3$ kojines."
+          "text": "Reikiamas daugiklis: $3 \\times 5 = 15$."
         }
       ],
-      "answer": "$3$ kojines"
+      "answer": "15"
+    },
+    {
+      "id": "ol-6-num-ex-5",
+      "title": "Liekanos dalijant iš 9",
+      "problem": "Įrodykite, kad bet kuris skaičius ir jo skaitmenų suma turi tą pačią liekaną dalijant iš 9.",
+      "steps": [
+        {
+          "text": "Užrašykime skaičių $n = 100a + 10b + c$."
+        },
+        {
+          "text": "Pastebėkime, kad $10^k - 1$ visada dalijasi iš 9 ($9, 99, 999 \\dots$)."
+        },
+        {
+          "text": "Pertvarkome: $n = (99a + a) + (9b + b) + c = (99a + 9b) + (a + b + c)$."
+        },
+        {
+          "text": "Pirmoji dalis $(99a + 9b)$ dalijasi iš 9 be liekanos."
+        },
+        {
+          "text": "Todėl viso skaičiaus liekana priklauso tik nuo antrosios dalies $(a+b+c)$, kuri yra skaitmenų suma."
+        }
+      ],
+      "answer": "Įrodyta"
     }
   ],
   "exercises": [
@@ -203,7 +334,7 @@
       "id": "ex-olimpiada-06-9af12ecd",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
@@ -347,7 +478,7 @@
       "id": "ex-olimpiada-06-3e3ce5c2",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
@@ -491,7 +622,7 @@
       "id": "ex-olimpiada-06-15b5cb2b",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -635,7 +766,7 @@
       "id": "ex-olimpiada-06-72644951",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -782,7 +913,7 @@
       "id": "ex-olimpiada-06-95300ab8",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
@@ -923,7 +1054,7 @@
       "id": "ex-olimpiada-06-2eaeade9",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -1070,7 +1201,7 @@
       "id": "ex-olimpiada-06-f2a0c71a",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -1217,7 +1348,7 @@
       "id": "ex-olimpiada-06-69e93b63",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
@@ -1361,23 +1492,47 @@
       "id": "ex-olimpiada-06-n1",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
       "statement": "Skaičius $572x$ dalijasi iš 4. Kokia gali būti skaitmens $x$ reikšmė?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Skaitmuo $x$ gali būti 0, 4 arba 8." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaitmuo $x$ gali būti 0, 4 arba 8."
+      },
       "answerText": "0, 4, 8",
-      "coreIdea": { "title": "Dalumo iš 4 požymis", "text": "Skaičius dalijasi iš 4, jei jo paskutiniai du skaitmenys sudaro skaičių, dalų iš 4." },
-      "strategyTags": ["dalumas"],
+      "coreIdea": {
+        "title": "Dalumo iš 4 požymis",
+        "text": "Skaičius dalijasi iš 4, jei jo paskutiniai du skaitmenys sudaro skaičių, dalų iš 4."
+      },
+      "strategyTags": [
+        "dalumas"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pažiūrėkite į paskutinius du skaitmenis: $2x$.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kokie dviženkliai skaičiai, prasidedantys dvejetu, dalijasi iš 4?", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pažiūrėkite į paskutinius du skaitmenis: $2x$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kokie dviženkliai skaičiai, prasidedantys dvejetu, dalijasi iš 4?",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Pagal dalumo požymį, skaičius $2x$ turi dalytis iš 4." },
-        { "text": "Tikriname galimybes: 20 dalijasi (x=0), 24 dalijasi (x=4), 28 dalijasi (x=8)." },
-        { "text": "Kiti variantai (21, 22, 23, 25, 26, 27, 29) netinka." }
+        {
+          "text": "Pagal dalumo požymį, skaičius $2x$ turi dalytis iš 4."
+        },
+        {
+          "text": "Tikriname galimybes: 20 dalijasi (x=0), 24 dalijasi (x=4), 28 dalijasi (x=8)."
+        },
+        {
+          "text": "Kiti variantai (21, 22, 23, 25, 26, 27, 29) netinka."
+        }
       ],
       "solutionMethods": [
         {
@@ -1385,7 +1540,12 @@
           "title": "Požymio taikymas",
           "methodType": "main",
           "steps": [
-            { "title": "Tikrinimas", "action": "Išbandome visus $x \\in \\{0..9\\}$.", "reason": "Paskutiniai du skaitmenys lemia dalumą iš 4.", "result": "{0, 4, 8}" }
+            {
+              "title": "Tikrinimas",
+              "action": "Išbandome visus $x \\in \\{0..9\\}$.",
+              "reason": "Paskutiniai du skaitmenys lemia dalumą iš 4.",
+              "result": "{0, 4, 8}"
+            }
           ],
           "finalAnswer": "0, 4, 8"
         }
@@ -1395,24 +1555,50 @@
       "id": "ex-olimpiada-06-n2",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "advanced",
       "statement": "Raskite skaitmenį $a$, jei žinoma, kad penkiaženklis skaičius $7a312$ dalijasi iš 11.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Skaitmuo $a$ yra 0." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaitmuo $a$ yra 0."
+      },
       "answerText": "0",
-      "coreIdea": { "title": "Dalumo iš 11 požymis", "text": "Skaičiaus skaitmenų, stovinčių nelyginėse vietose, sumos ir skaitmenų, stovinčių lyginėse vietose, sumos skirtumas turi dalytis iš 11." },
-      "strategyTags": ["dalumas"],
+      "coreIdea": {
+        "title": "Dalumo iš 11 požymis",
+        "text": "Skaičiaus skaitmenų, stovinčių nelyginėse vietose, sumos ir skaitmenų, stovinčių lyginėse vietose, sumos skirtumas turi dalytis iš 11."
+      },
+      "strategyTags": [
+        "dalumas"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Suskaičiuokite sumą $S_1 = 7 + 3 + 2$ ir $S_2 = a + 1$.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Skirtumas $S_1 - S_2$ turi būti 0 arba 11.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Suskaičiuokite sumą $S_1 = 7 + 3 + 2$ ir $S_2 = a + 1$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Skirtumas $S_1 - S_2$ turi būti 0 arba 11.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Nelyginių vietų suma: $7 + 3 + 2 = 12$." },
-        { "text": "Lyginių vietų suma: $a + 1$." },
-        { "text": "Skirtumas: $12 - (a + 1) = 11 - a$." },
-        { "text": "Kad $11 - a$ dalytųsi iš 11, $a$ turi būti 0 (nes $11-0=11$) arba 11 (neįmanoma, nes $a$ yra skaitmuo)." }
+        {
+          "text": "Nelyginių vietų suma: $7 + 3 + 2 = 12$."
+        },
+        {
+          "text": "Lyginių vietų suma: $a + 1$."
+        },
+        {
+          "text": "Skirtumas: $12 - (a + 1) = 11 - a$."
+        },
+        {
+          "text": "Kad $11 - a$ dalytųsi iš 11, $a$ turi būti 0 (nes $11-0=11$) arba 11 (neįmanoma, nes $a$ yra skaitmuo)."
+        }
       ],
       "solutionMethods": [
         {
@@ -1420,7 +1606,12 @@
           "title": "Kaitomų sumų metodas",
           "methodType": "main",
           "steps": [
-            { "title": "Lygties sudarymas", "action": "Sprendžiame $11 - a = 11k$.", "reason": "Dalumo iš 11 taisyklė.", "result": "a = 0" }
+            {
+              "title": "Lygties sudarymas",
+              "action": "Sprendžiame $11 - a = 11k$.",
+              "reason": "Dalumo iš 11 taisyklė.",
+              "result": "a = 0"
+            }
           ],
           "finalAnswer": "0"
         }
@@ -1430,23 +1621,47 @@
       "id": "ex-olimpiada-06-n3",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Raskite mažiausią natūralųjį skaičių, iš kurio padauginus 180, gautume tikslųjį kvadratą.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Mažiausias toks skaičius yra 5." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Mažiausias toks skaičius yra 5."
+      },
       "answerText": "5",
-      "coreIdea": { "title": "Lyginiai laipsniai", "text": "Tiksliojo kvadrato pirminio išskaidymo visi rodikliai yra lyginiai skaičiai." },
-      "strategyTags": ["kvadratai-kubai"],
+      "coreIdea": {
+        "title": "Lyginiai laipsniai",
+        "text": "Tiksliojo kvadrato pirminio išskaidymo visi rodikliai yra lyginiai skaičiai."
+      },
+      "strategyTags": [
+        "kvadratai-kubai"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Išskaidykite 180 pirminiais daugikliais.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "$180 = 2^2 \\times 3^2 \\times 5^1$. Kurių daugiklių laipsnis nelyginis?", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Išskaidykite 180 pirminiais daugikliais.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$180 = 2^2 \\times 3^2 \\times 5^1$. Kurių daugiklių laipsnis nelyginis?",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Skaidome: $180 = 18 \\times 10 = 2 \\times 3^2 \\times 2 \\times 5 = 2^2 \\times 3^2 \\times 5^1$." },
-        { "text": "Dvejeto laipsnis lygus (2), trejeto lygus (2), penketo – nelyginis (1)." },
-        { "text": "Kad visi būtų lyginiai, reikia dar vieno penketo: $180 \\times 5 = 900 = 30^2$." }
+        {
+          "text": "Skaidome: $180 = 18 \\times 10 = 2 \\times 3^2 \\times 2 \\times 5 = 2^2 \\times 3^2 \\times 5^1$."
+        },
+        {
+          "text": "Dvejeto laipsnis lygus (2), trejeto lygus (2), penketo – nelyginis (1)."
+        },
+        {
+          "text": "Kad visi būtų lyginiai, reikia dar vieno penketo: $180 \\times 5 = 900 = 30^2$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1454,7 +1669,12 @@
           "title": "Laipsnių papildymas",
           "methodType": "main",
           "steps": [
-            { "title": "Skaidymas", "action": "Gauname $2^2 \\cdot 3^2 \\cdot 5^1$.", "reason": "Analizuojame struktūrą.", "result": "Trūksta 5-eto." }
+            {
+              "title": "Skaidymas",
+              "action": "Gauname $2^2 \\cdot 3^2 \\cdot 5^1$.",
+              "reason": "Analizuojame struktūrą.",
+              "result": "Trūksta 5-eto."
+            }
           ],
           "finalAnswer": "5"
         }
@@ -1464,23 +1684,48 @@
       "id": "ex-olimpiada-06-n4",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
       "statement": "Įrodykite, kad bet kurių dviejų iš eilės einančių natūraliųjų skaičių $n$ ir $n+1$ didžiausias bendrasis daliklis yra 1.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Skaičiai yra pirminiai tarpusavyje, DBD(n, n+1) = 1." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaičiai yra pirminiai tarpusavyje, DBD(n, n+1) = 1."
+      },
       "answerText": "Įrodyta",
-      "coreIdea": { "title": "Daliklio savybė", "text": "Jei skaičius $d$ dalija $n$ ir $n+1$, tai jis dalija ir jų skirtumą." },
-      "strategyTags": ["dbd-mbk", "proof"],
+      "coreIdea": {
+        "title": "Daliklio savybė",
+        "text": "Jei skaičius $d$ dalija $n$ ir $n+1$, tai jis dalija ir jų skirtumą."
+      },
+      "strategyTags": [
+        "dbd-mbk",
+        "proof"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Tarkime, kad bendras daliklis yra $d$.", "penalty": 0.05 },
-        { "order": 2, "kind": "method", "text": "Jei $d$ dalija $A$ ir $B$, tai $d$ dalija $B - A$.", "penalty": 0.1 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Tarkime, kad bendras daliklis yra $d$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "method",
+          "text": "Jei $d$ dalija $A$ ir $B$, tai $d$ dalija $B - A$.",
+          "penalty": 0.1
+        }
       ],
       "solutionSteps": [
-        { "text": "Tegul $d$ yra bendras $n$ ir $n+1$ daliklis." },
-        { "text": "Tada $d$ turi dalyti jų skirtumą: $(n+1) - n = 1$." },
-        { "text": "Vienintelis teigiamas skaičiaus 1 daliklis yra 1. Vadinasi, $d=1$." }
+        {
+          "text": "Tegul $d$ yra bendras $n$ ir $n+1$ daliklis."
+        },
+        {
+          "text": "Tada $d$ turi dalyti jų skirtumą: $(n+1) - n = 1$."
+        },
+        {
+          "text": "Vienintelis teigiamas skaičiaus 1 daliklis yra 1. Vadinasi, $d=1$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1488,7 +1733,12 @@
           "title": "Skirtumo metodas",
           "methodType": "main",
           "steps": [
-            { "title": "Atimtis", "action": "Apskaičiuojame $(n+1)-n$.", "reason": "Bendras daliklis dalija skirtumą.", "result": "1" }
+            {
+              "title": "Atimtis",
+              "action": "Apskaičiuojame $(n+1)-n$.",
+              "reason": "Bendras daliklis dalija skirtumą.",
+              "result": "1"
+            }
           ],
           "finalAnswer": "Įrodyta"
         }
@@ -1498,23 +1748,47 @@
       "id": "ex-olimpiada-06-n5",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Raskite skaičiaus $10^{10} - 1$ skaitmenų sumą.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Skaitmenų suma lygi 90." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaitmenų suma lygi 90."
+      },
       "answerText": "90",
-      "coreIdea": { "title": "Skaičiaus struktūra", "text": "Atėmus 1 iš laipsnio $10^n$, gaunamas skaičius, susidedantis tik iš devynetų." },
-      "strategyTags": ["skaitmenys"],
+      "coreIdea": {
+        "title": "Skaičiaus struktūra",
+        "text": "Atėmus 1 iš laipsnio $10^n$, gaunamas skaičius, susidedantis tik iš devynetų."
+      },
+      "strategyTags": [
+        "skaitmenys"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pabandykite su mažesniais laipsniais: $10^2 - 1 = 99$, $10^3 - 1 = 999$.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Kiek devynetų bus skaičiuje $10^{10} - 1$?", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pabandykite su mažesniais laipsniais: $10^2 - 1 = 99$, $10^3 - 1 = 999$.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Kiek devynetų bus skaičiuje $10^{10} - 1$?",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "$10^{10}$ yra vienetas su 10 nulių." },
-        { "text": "$10^{10} - 1 = 9999999999$ (dešimt devynetų)." },
-        { "text": "Skaitmenų suma: $10 \\times 9 = 90$." }
+        {
+          "text": "$10^{10}$ yra vienetas su 10 nulių."
+        },
+        {
+          "text": "$10^{10} - 1 = 9999999999$ (dešimt devynetų)."
+        },
+        {
+          "text": "Skaitmenų suma: $10 \\times 9 = 90$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1522,7 +1796,12 @@
           "title": "Modelio nustatymas",
           "methodType": "main",
           "steps": [
-            { "title": "Skaičiavimas", "action": "Dauginame 9 iš 10.", "reason": "Skaičių sudaro 10 devynetų.", "result": "90" }
+            {
+              "title": "Skaičiavimas",
+              "action": "Dauginame 9 iš 10.",
+              "reason": "Skaičių sudaro 10 devynetų.",
+              "result": "90"
+            }
           ],
           "finalAnswer": "90"
         }
@@ -1532,23 +1811,47 @@
       "id": "ex-olimpiada-06-n6",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
       "statement": "Dvyniai pirminiai skaičiai – tai pora pirminių skaičių, kurių skirtumas lygus 2. Išvardinkite visas tokias poras tarp 1 ir 50.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Poros yra: (3,5), (5,7), (11,13), (17,19), (29,31), (41,43)." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Poros yra: (3,5), (5,7), (11,13), (17,19), (29,31), (41,43)."
+      },
       "answerText": "(3,5), (5,7), (11,13), (17,19), (29,31), (41,43)",
-      "coreIdea": { "title": "Pirminių skaičių sąrašas", "text": "Išrašykite pirminius skaičius ir raskite tuos, kurie skiriasi per 2." },
-      "strategyTags": ["pirminiai-skaiciai"],
+      "coreIdea": {
+        "title": "Pirminių skaičių sąrašas",
+        "text": "Išrašykite pirminius skaičius ir raskite tuos, kurie skiriasi per 2."
+      },
+      "strategyTags": [
+        "pirminiai-skaiciai"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Pirmiausia surašykite visus pirminius iki 50.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Pirminiai iki 50: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Pirmiausia surašykite visus pirminius iki 50.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Pirminiai iki 50: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Sąrašas: 3 ir 5 (skirtumas 2), 5 ir 7 (skirtumas 2)." },
-        { "text": "Toliau: 11 ir 13, 17 ir 19." },
-        { "text": "Galiausiai: 29 ir 31, 41 ir 43." }
+        {
+          "text": "Sąrašas: 3 ir 5 (skirtumas 2), 5 ir 7 (skirtumas 2)."
+        },
+        {
+          "text": "Toliau: 11 ir 13, 17 ir 19."
+        },
+        {
+          "text": "Galiausiai: 29 ir 31, 41 ir 43."
+        }
       ],
       "solutionMethods": [
         {
@@ -1556,7 +1859,12 @@
           "title": "Atrankos metodas",
           "methodType": "main",
           "steps": [
-            { "title": "Paieška", "action": "Tikriname pirminių skaičių seką.", "reason": "Sąvokos apibrėžimas.", "result": "6 poros." }
+            {
+              "title": "Paieška",
+              "action": "Tikriname pirminių skaičių seką.",
+              "reason": "Sąvokos apibrėžimas.",
+              "result": "6 poros."
+            }
           ],
           "finalAnswer": "(3,5), (5,7), (11,13), (17,19), (29,31), (41,43)"
         }
@@ -1566,26 +1874,56 @@
       "id": "ex-olimpiada-06-n7",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "advanced",
       "statement": "Kokia yra liekana dalijant $2^{10}$ iš 3?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Liekana lygi 1." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Liekana lygi 1."
+      },
       "answerText": "1",
-      "coreIdea": { "title": "Liekanų periodiškumas", "text": "Stebėkite liekanų seką: $2^1 / 3$, $2^2 / 3$, $2^3 / 3$..." },
-      "strategyTags": ["modular-arithmetic"],
+      "coreIdea": {
+        "title": "Liekanų periodiškumas",
+        "text": "Stebėkite liekanų seką: $2^1 / 3$, $2^2 / 3$, $2^3 / 3$..."
+      },
+      "strategyTags": [
+        "modular-arithmetic"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Apskaičiuokite pirmąsias liekanas dalijant iš 3.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "$2^1 \\equiv 2 \\pmod 3$, $2^2 = 4 \\equiv 1 \\pmod 3$, $2^3 = 8 \\equiv 2 \\pmod 3$.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Apskaičiuokite pirmąsias liekanas dalijant iš 3.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2^1 \\equiv 2 \\pmod 3$, $2^2 = 4 \\equiv 1 \\pmod 3$, $2^3 = 8 \\equiv 2 \\pmod 3$.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "$2^1 = 2$, liekana 2." },
-        { "text": "$2^2 = 4$, liekana 1." },
-        { "text": "$2^3 = 8$, liekana 2." },
-        { "text": "$2^4 = 16$, liekana 1." },
-        { "text": "Pastebime dėsningumą: nelyginiams laipsniams liekana 2, lyginiams – 1." },
-        { "text": "Kadangi 10 yra lyginis skaičius, liekana bus 1." }
+        {
+          "text": "$2^1 = 2$, liekana 2."
+        },
+        {
+          "text": "$2^2 = 4$, liekana 1."
+        },
+        {
+          "text": "$2^3 = 8$, liekana 2."
+        },
+        {
+          "text": "$2^4 = 16$, liekana 1."
+        },
+        {
+          "text": "Pastebime dėsningumą: nelyginiams laipsniams liekana 2, lyginiams – 1."
+        },
+        {
+          "text": "Kadangi 10 yra lyginis skaičius, liekana bus 1."
+        }
       ],
       "solutionMethods": [
         {
@@ -1593,7 +1931,12 @@
           "title": "Liekanų sekos analizė",
           "methodType": "main",
           "steps": [
-            { "title": "Dėsningumas", "action": "Randame periodą (2, 1).", "reason": "Laipsnių liekanos kartojasi.", "result": "1" }
+            {
+              "title": "Dėsningumas",
+              "action": "Randame periodą (2, 1).",
+              "reason": "Laipsnių liekanos kartojasi.",
+              "result": "1"
+            }
           ],
           "finalAnswer": "1"
         }
@@ -1603,25 +1946,53 @@
       "id": "ex-olimpiada-06-n8",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Raskite skaičiaus 2025 pirminių daugiklių išskaidymą ir nurodykite didžiausią pirminį daugiklį.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Išskaidymas: $3^4 \\times 5^2$. Didžiausias pirminis daugiklis yra 5." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Išskaidymas: $3^4 \\times 5^2$. Didžiausias pirminis daugiklis yra 5."
+      },
       "answerText": "5",
-      "coreIdea": { "title": "Skaidymas", "text": "Skaičius baigiasi 5, todėl jis dalijasi iš 5 (arba net iš 25)." },
-      "strategyTags": ["pirminiai-daugikliai"],
+      "coreIdea": {
+        "title": "Skaidymas",
+        "text": "Skaičius baigiasi 5, todėl jis dalijasi iš 5 (arba net iš 25)."
+      },
+      "strategyTags": [
+        "pirminiai-daugikliai"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Padalykite 2025 iš 25.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "$2025 = 25 \\times 81$.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Padalykite 2025 iš 25.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "$2025 = 25 \\times 81$.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "$2025 = 25 \\times 81$." },
-        { "text": "$25 = 5 \\times 5 = 5^2$." },
-        { "text": "$81 = 9 \\times 9 = 3^2 \\times 3^2 = 3^4$." },
-        { "text": "Iš viso: $3^4 \\times 5^2$." },
-        { "text": "Pirminiai daugikliai yra 3 ir 5. Didžiausias yra 5." }
+        {
+          "text": "$2025 = 25 \\times 81$."
+        },
+        {
+          "text": "$25 = 5 \\times 5 = 5^2$."
+        },
+        {
+          "text": "$81 = 9 \\times 9 = 3^2 \\times 3^2 = 3^4$."
+        },
+        {
+          "text": "Iš viso: $3^4 \\times 5^2$."
+        },
+        {
+          "text": "Pirminiai daugikliai yra 3 ir 5. Didžiausias yra 5."
+        }
       ],
       "solutionMethods": [
         {
@@ -1629,7 +2000,12 @@
           "title": "Nuoseklus skaidymas",
           "methodType": "main",
           "steps": [
-            { "title": "Faktorizacija", "action": "Skaidome iki pirminių.", "reason": "Daugiklių taisyklė.", "result": "5" }
+            {
+              "title": "Faktorizacija",
+              "action": "Skaidome iki pirminių.",
+              "reason": "Daugiklių taisyklė.",
+              "result": "5"
+            }
           ],
           "finalAnswer": "5"
         }
@@ -1639,22 +2015,41 @@
       "id": "ex-olimpiada-06-n9",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Kiek skirtingų daliklių turi skaičius 60?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Skaičius 60 turi 12 daliklių." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Skaičius 60 turi 12 daliklių."
+      },
       "answerText": "12",
-      "coreIdea": { "title": "Daliklių skaičiaus formulė", "text": "Išskaidykite pirminiais ir sudauginkite (laipsnis + 1)." },
-      "strategyTags": ["daliklių-skaičius"],
+      "coreIdea": {
+        "title": "Daliklių skaičiaus formulė",
+        "text": "Išskaidykite pirminiais ir sudauginkite (laipsnis + 1)."
+      },
+      "strategyTags": [
+        "daliklių-skaičius"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "$60 = 2^2 \\times 3^1 \\times 5^1$.", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "$60 = 2^2 \\times 3^1 \\times 5^1$.",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "$60 = 4 \\times 15 = 2^2 \\times 3^1 \\times 5^1$." },
-        { "text": "Rodikliai: 2, 1, 1." },
-        { "text": "Daliklių skaičius: $(2+1) \\times (1+1) \\times (1+1) = 3 \\times 2 \\times 2 = 12$." }
+        {
+          "text": "$60 = 4 \\times 15 = 2^2 \\times 3^1 \\times 5^1$."
+        },
+        {
+          "text": "Rodikliai: 2, 1, 1."
+        },
+        {
+          "text": "Daliklių skaičius: $(2+1) \\times (1+1) \\times (1+1) = 3 \\times 2 \\times 2 = 12$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1662,7 +2057,12 @@
           "title": "Formulės taikymas",
           "methodType": "main",
           "steps": [
-            { "title": "Skaičiavimas", "action": "3 * 2 * 2.", "reason": "Kombinatorinė daliklių taisyklė.", "result": "12" }
+            {
+              "title": "Skaičiavimas",
+              "action": "3 * 2 * 2.",
+              "reason": "Kombinatorinė daliklių taisyklė.",
+              "result": "12"
+            }
           ],
           "finalAnswer": "12"
         }
@@ -1672,22 +2072,41 @@
       "id": "ex-olimpiada-06-n10",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Du autobusai iš stoties išvyksta tuo pačiu metu. Pirmasis grįžta į stotį kas 45 minutes, o antrasis – kas 60 minučių. Po kiek laiko jie vėl susitiks stotyje?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Autobusai susitiks po 180 minučių (arba 3 valandų)." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Autobusai susitiks po 180 minučių (arba 3 valandų)."
+      },
       "answerText": "180",
-      "coreIdea": { "title": "MBK taikymas", "text": "Ieškome mažiausio bendro kartotinio skaičiams 45 ir 60." },
-      "strategyTags": ["dbd-mbk"],
+      "coreIdea": {
+        "title": "MBK taikymas",
+        "text": "Ieškome mažiausio bendro kartotinio skaičiams 45 ir 60."
+      },
+      "strategyTags": [
+        "dbd-mbk"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Surašykite 45 ir 60 kartotinius.", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Surašykite 45 ir 60 kartotinius.",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "$45 = 3^2 \\times 5$." },
-        { "text": "$60 = 2^2 \\times 3 \\times 5$." },
-        { "text": "$MBK(45, 60) = 2^2 \\times 3^2 \\times 5 = 4 \\times 9 \\times 5 = 180$." }
+        {
+          "text": "$45 = 3^2 \\times 5$."
+        },
+        {
+          "text": "$60 = 2^2 \\times 3 \\times 5$."
+        },
+        {
+          "text": "$MBK(45, 60) = 2^2 \\times 3^2 \\times 5 = 4 \\times 9 \\times 5 = 180$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1695,7 +2114,12 @@
           "title": "MBK radimas",
           "methodType": "main",
           "steps": [
-            { "title": "Skaičiavimas", "action": "Apskaičiuojame MBK.", "reason": "Bendra laiko akimirka.", "result": "180" }
+            {
+              "title": "Skaičiavimas",
+              "action": "Apskaičiuojame MBK.",
+              "reason": "Bendra laiko akimirka.",
+              "result": "180"
+            }
           ],
           "finalAnswer": "180"
         }
@@ -1705,20 +2129,35 @@
       "id": "ex-olimpiada-06-n11",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "introductory",
       "statement": "Raskite visų skaičiaus 12 daliklių sumą.",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Daliklių suma lygi 28." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Daliklių suma lygi 28."
+      },
       "answerText": "28",
-      "coreIdea": { "title": "Sąrašo sudarymas", "text": "Išrašykite visus daliklius ir juos sudėkite." },
-      "strategyTags": ["daliklių-suma"],
+      "coreIdea": {
+        "title": "Sąrašo sudarymas",
+        "text": "Išrašykite visus daliklius ir juos sudėkite."
+      },
+      "strategyTags": [
+        "daliklių-suma"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Dalikliai yra 1, 2, 3, 4, 6, 12.", "penalty": 0.05 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Dalikliai yra 1, 2, 3, 4, 6, 12.",
+          "penalty": 0.05
+        }
       ],
       "solutionSteps": [
-        { "text": "Sudedame: $1 + 2 + 3 + 4 + 6 + 12 = 28$." }
+        {
+          "text": "Sudedame: $1 + 2 + 3 + 4 + 6 + 12 = 28$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1726,7 +2165,12 @@
           "title": "Tiesioginis sumavimas",
           "methodType": "main",
           "steps": [
-            { "title": "Sumavimas", "action": "1+2+3+4+6+12.", "reason": "Visų daliklių įtraukimas.", "result": "28" }
+            {
+              "title": "Sumavimas",
+              "action": "1+2+3+4+6+12.",
+              "reason": "Visų daliklių įtraukimas.",
+              "result": "28"
+            }
           ],
           "finalAnswer": "28"
         }
@@ -1736,23 +2180,47 @@
       "id": "ex-olimpiada-06-n12",
       "topicId": "olimpiada-06-skaiciu-teorija",
       "grade": 6,
-      "level": "olympiad",
+      "level": "Standartiniai",
       "type": "structuredReasoning",
       "olympiadTrack": "Skaičių teorija",
       "olympiadTier": "standard",
       "statement": "Kiek yra triženklių skaičių, kurie dalijasi ir iš 3, ir iš 5?",
-      "answer": { "kind": "structuredReasoning", "expectedConclusion": "Yra 60 tokių skaičių." },
+      "answer": {
+        "kind": "structuredReasoning",
+        "expectedConclusion": "Yra 60 tokių skaičių."
+      },
       "answerText": "60",
-      "coreIdea": { "title": "Kartotinis", "text": "Jei skaičius dalijasi iš 3 ir 5, jis turi dalytis iš jų MBK, t.y. iš 15." },
-      "strategyTags": ["dalumas"],
+      "coreIdea": {
+        "title": "Kartotinis",
+        "text": "Jei skaičius dalijasi iš 3 ir 5, jis turi dalytis iš jų MBK, t.y. iš 15."
+      },
+      "strategyTags": [
+        "dalumas"
+      ],
       "hints": [
-        { "order": 1, "kind": "orientation", "text": "Raskite mažiausią ir didžiausią triženklį skaičių, dalų iš 15.", "penalty": 0.05 },
-        { "order": 2, "kind": "observation", "text": "Mažiausias yra 105, didžiausias 990.", "penalty": 0.08 }
+        {
+          "order": 1,
+          "kind": "orientation",
+          "text": "Raskite mažiausią ir didžiausią triženklį skaičių, dalų iš 15.",
+          "penalty": 0.05
+        },
+        {
+          "order": 2,
+          "kind": "observation",
+          "text": "Mažiausias yra 105, didžiausias 990.",
+          "penalty": 0.08
+        }
       ],
       "solutionSteps": [
-        { "text": "Skaičiai turi dalytis iš $3 \\times 5 = 15$." },
-        { "text": "Seka: 105, 120, ..., 990." },
-        { "text": "Kiekis: $(990 - 105) / 15 + 1 = 885 / 15 + 1 = 59 + 1 = 60$." }
+        {
+          "text": "Skaičiai turi dalytis iš $3 \\times 5 = 15$."
+        },
+        {
+          "text": "Seka: 105, 120, ..., 990."
+        },
+        {
+          "text": "Kiekis: $(990 - 105) / 15 + 1 = 885 / 15 + 1 = 59 + 1 = 60$."
+        }
       ],
       "solutionMethods": [
         {
@@ -1760,7 +2228,12 @@
           "title": "Aritmetinė progresija",
           "methodType": "main",
           "steps": [
-            { "title": "Kiekio radimas", "action": "(Max - Min) / Žingsnis + 1.", "reason": "Elementų skaičius sekoje.", "result": "60" }
+            {
+              "title": "Kiekio radimas",
+              "action": "(Max - Min) / Žingsnis + 1.",
+              "reason": "Elementų skaičius sekoje.",
+              "result": "60"
+            }
           ],
           "finalAnswer": "60"
         }
@@ -1772,7 +2245,9 @@
       "id": "olimpiada-06-skaiciu-teorija-test-1",
       "title": "Skaičių teorijos iššūkis (6 klasė)",
       "scope": "topic",
-      "topicIds": ["olimpiada-06-skaiciu-teorija"],
+      "topicIds": [
+        "olimpiada-06-skaiciu-teorija"
+      ],
       "exerciseIds": [
         "ex-olimpiada-06-9af12ecd",
         "ex-olimpiada-06-3e3ce5c2",
