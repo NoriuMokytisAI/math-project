@@ -35,7 +35,15 @@
     "mistakeIds": [],
     "exerciseIds": [
       "olimpiada-10-skaiciu-teorija-ex-olimpiada-10-01",
-      "ex-olimpiada-10-06"
+      "ex-olimpiada-10-06",
+      "olimpiada-10-skaiciu-teorija-auto-001",
+      "olimpiada-10-skaiciu-teorija-auto-002",
+      "olimpiada-10-skaiciu-teorija-auto-003",
+      "olimpiada-10-skaiciu-teorija-auto-004",
+      "olimpiada-10-skaiciu-teorija-auto-005",
+      "olimpiada-10-skaiciu-teorija-auto-006",
+      "olimpiada-10-skaiciu-teorija-auto-007",
+      "olimpiada-10-skaiciu-teorija-auto-008"
     ]
   },
   "theory": [
@@ -83,7 +91,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Funkcijos $\\phi(n)$ skaičiavimo taisyklės:\n1. Jei $p$ pirminis, $\\phi(p) = p-1$.\n2. Jei $n = p^k$, $\\phi(n) = p^k - p^{k-1} = p^k(1 - 1/p)$.\n3. Funkcija yra multiplikatyvi: jei $\\text{DBD}(m, n) = 1$, tai $\\phi(mn) = \\phi(m)\\phi(n)$.\n\nBendra formulė: $\\phi(n) = n \\prod_{p|n} (1 - 1/p)$."
+          "text": "Funkcijos $\\phi(n)$ skaičiavimo taisyklės: 1. Jei $p$ pirminis, $\\phi(p) = p-1$. 2. Jei $n = p^k$, $\\phi(n) = p^k - p^{k-1} = p^k(1 - 1/p)$. 3. Funkcija yra multiplikatyvi: jei $\\text{DBD}(m, n) = 1$, tai $\\phi(mn) = \\phi(m)\\phi(n)$. Bendra formulė: $\\phi(n) = n \\prod_{p|n} (1 - 1/p)$."
         }
       ]
     },
@@ -97,7 +105,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Sistema:\n$x \\equiv a_1 \\pmod{m_1}$\n$x \\equiv a_2 \\pmod{m_2}$\n...\n$x \\equiv a_k \\pmod{m_k}$\nturi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$, jei visi $m_i$ yra poromis pirminiai."
+          "text": "Sistema: $x \\equiv a_1 \\pmod{m_1}$ $x \\equiv a_2 \\pmod{m_2}$ ... $x \\equiv a_k \\pmod{m_k}$ turi vienintelį sprendinį moduliu $M = m_1 m_2 \\dots m_k$, jei visi $m_i$ yra poromis pirminiai."
         }
       ]
     },
@@ -111,7 +119,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Pitagoro trejetai: lygties $x^2 + y^2 = z^2$ sprendiniai natūraliaisiais skaičiais. Visi primityvūs trejetai (kurie neturi bendro daliklio) gali būti išreikšti formulėmis:\n$x = m^2 - n^2, y = 2mn, z = m^2 + n^2$,\nkur $m > n > 0$, $\\text{DBD}(m, n) = 1$ ir vienas iš jų lyginis, kitas nelyginis."
+          "text": "Pitagoro trejetai: lygties $x^2 + y^2 = z^2$ sprendiniai natūraliaisiais skaičiais. Visi primityvūs trejetai (kurie neturi bendro daliklio) gali būti išreikšti formulėmis: $x = m^2 - n^2, y = 2mn, z = m^2 + n^2$, kur $m > n > 0$, $\\text{DBD}(m, n) = 1$ ir vienas iš jų lyginis, kitas nelyginis."
         },
         {
           "type": "paragraph",
@@ -158,35 +166,35 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1 pavyzdys (MFT).** Įrodykite, kad $n^{13} - n$ dalijasi iš 2, 3, 5, 7 ir 13 bet kuriam natūraliajam $n$.\n**Sprendimas:** Pagal MFT, $n^{13} \\equiv n \\pmod{13}$, tad dalijasi iš 13. Taip pat $n^{13} - n = n(n^{12}-1)$. Kadangi $12$ dalijasi iš $\\phi(2)=1, \\phi(3)=2, \\phi(5)=4, \\phi(7)=6$, tai pagal MFT (arba Oilerio teoremą) $n^{\\phi(p)} \\equiv 1 \\pmod p$, kai $\\text{DBD}(n,p)=1$. Jei $p|n$, tai akivaizdu. Visais atvejais reiškinys dalijasi iš visų paminėtų pirminių."
+          "text": "**1 pavyzdys (MFT).** Įrodykite, kad $n^{13} - n$ dalijasi iš 2, 3, 5, 7 ir 13 bet kuriam natūraliajam $n$. **Sprendimas:** Pagal MFT, $n^{13} \\equiv n \\pmod{13}$, tad dalijasi iš 13. Taip pat $n^{13} - n = n(n^{12}-1)$. Kadangi $12$ dalijasi iš $\\phi(2)=1, \\phi(3)=2, \\phi(5)=4, \\phi(7)=6$, tai pagal MFT (arba Oilerio teoremą) $n^{\\phi(p)} \\equiv 1 \\pmod p$, kai $\\text{DBD}(n,p)=1$. Jei $p|n$, tai akivaizdu. Visais atvejais reiškinys dalijasi iš visų paminėtų pirminių."
         },
         {
           "type": "paragraph",
-          "text": "**2 pavyzdys (CRT).** Raskite mažiausią $n$, kuriam $n \\equiv 1 \\pmod 3, n \\equiv 2 \\pmod 4, n \\equiv 3 \\pmod 5$.\n**Sprendimas:** Iš $n \\equiv 2 \\pmod 4$ ir $n \\equiv 3 \\pmod 5$ gauname $n = 20k + 18$ (nes $18 \\equiv 2 \\pmod 4$ ir $18 \\equiv 3 \\pmod 5$).\nTikriname $20k + 18 \\equiv 1 \\pmod 3 \\implies 2k + 0 \\equiv 1 \\pmod 3 \\implies k=2$.\n$n = 20(2) + 18 = 58$.\nAtsakymas: 58."
+          "text": "**2 pavyzdys (CRT).** Raskite mažiausią $n$, kuriam $n \\equiv 1 \\pmod 3, n \\equiv 2 \\pmod 4, n \\equiv 3 \\pmod 5$. **Sprendimas:** Iš $n \\equiv 2 \\pmod 4$ ir $n \\equiv 3 \\pmod 5$ gauname $n = 20k + 18$ (nes $18 \\equiv 2 \\pmod 4$ ir $18 \\equiv 3 \\pmod 5$). Tikriname $20k + 18 \\equiv 1 \\pmod 3 \\implies 2k + 0 \\equiv 1 \\pmod 3 \\implies k=2$. $n = 20(2) + 18 = 58$. Atsakymas: 58."
         },
         {
           "type": "paragraph",
-          "text": "**3 pavyzdys (Oileris).** Raskite $7^{100}$ paskutinius du skaitmenis.\n**Sprendimas:** Reikia rasti $7^{100} \\pmod{100}$.\n$\\phi(100) = 100(1-1/2)(1-1/5) = 40$.\nPagal Oilerio teoremą $7^{40} \\equiv 1 \\pmod{100}$.\n$7^{100} = (7^{40})^2 \\cdot 7^{20} = 1^2 \\cdot (7^4)^5 = (2401)^5 \\equiv 1^5 \\equiv 1 \\pmod{100}$.\nAtsakymas: 01."
+          "text": "**3 pavyzdys (Oileris).** Raskite $7^{100}$ paskutinius du skaitmenis. **Sprendimas:** Reikia rasti $7^{100} \\pmod{100}$. $\\phi(100) = 100(1-1/2)(1-1/5) = 40$. Pagal Oilerio teoremą $7^{40} \\equiv 1 \\pmod{100}$. $7^{100} = (7^{40})^2 \\cdot 7^{20} = 1^2 \\cdot (7^4)^5 = (2401)^5 \\equiv 1^5 \\equiv 1 \\pmod{100}$. Atsakymas: 01."
         },
         {
           "type": "paragraph",
-          "text": "**4 pavyzdys (Pelio lygtis).** Raskite mažiausią natūralųjį sprendinį $x^2 - 8y^2 = 1$.\n**Sprendimas:** $\\sqrt{8} \\approx 2.82$. Tikriname $y=1: x^2 = 1+8=9, x=3$. Sprendinys $(3,1)$.\nPatikriname: $3^2 - 8(1)^2 = 9-8=1$.\nAtsakymas: $(3,1)$."
+          "text": "**4 pavyzdys (Pelio lygtis).** Raskite mažiausią natūralųjį sprendinį $x^2 - 8y^2 = 1$. **Sprendimas:** $\\sqrt{8} \\approx 2.82$. Tikriname $y=1: x^2 = 1+8=9, x=3$. Sprendinys $(3,1)$. Patikriname: $3^2 - 8(1)^2 = 9-8=1$. Atsakymas: $(3,1)$."
         },
         {
           "type": "paragraph",
-          "text": "**5 pavyzdys (Diofantas).** Išspręskite lygtį $3x + 5y = 7$ sveikaisiais skaičiais.\n**Sprendimas:** Vienas sprendinys matomas: $x=4, y=-1$ ($12-5=7$).\nBendrasis sprendinys: $x = 4 + 5k, y = -1 - 3k$ bet kuriam sveikajam $k$."
+          "text": "**5 pavyzdys (Diofantas).** Išspręskite lygtį $3x + 5y = 7$ sveikaisiais skaičiais. **Sprendimas:** Vienas sprendinys matomas: $x=4, y=-1$ ($12-5=7$). Bendrasis sprendinys: $x = 4 + 5k, y = -1 - 3k$ bet kuriam sveikajam $k$."
         },
         {
           "type": "paragraph",
-          "text": "**6 pavyzdys (LTE).** Įrodykite, kad $2^{3^n} + 1$ dalijasi iš $3^{n+1}$, bet ne iš $3^{n+2}$.\n**Sprendimas:** Taikome LTE pirminiui $p=3$. $2^{3^n} + 1 = 2^{3^n} - (-1)^{3^n}$.\n$v_3(2^{3^n} - (-1)^{3^n}) = v_3(2 - (-1)) + v_3(3^n) = v_3(3) + n = 1 + n = n+1$.\nTai reiškia, kad didžiausias 3 laipsnis yra $3^{n+1}$."
+          "text": "**6 pavyzdys (LTE).** Įrodykite, kad $2^{3^n} + 1$ dalijasi iš $3^{n+1}$, bet ne iš $3^{n+2}$. **Sprendimas:** Taikome LTE pirminiui $p=3$. $2^{3^n} + 1 = 2^{3^n} - (-1)^{3^n}$. $v_3(2^{3^n} - (-1)^{3^n}) = v_3(2 - (-1)) + v_3(3^n) = v_3(3) + n = 1 + n = n+1$. Tai reiškia, kad didžiausias 3 laipsnis yra $3^{n+1}$."
         },
         {
           "type": "paragraph",
-          "text": "**7 pavyzdys (Eilė).** Raskite skaičiaus 2 eilę moduliu 17.\n**Sprendimas:** $\\phi(17)=16$. Eilė turi būti 16 daliklis: 1, 2, 4, 8, 16.\n$2^1=2, 2^2=4, 2^4=16 \\equiv -1, 2^8 \\equiv (-1)^2 = 1$.\nEilė lygi 8."
+          "text": "**7 pavyzdys (Eilė).** Raskite skaičiaus 2 eilę moduliu 17. **Sprendimas:** $\\phi(17)=16$. Eilė turi būti 16 daliklis: 1, 2, 4, 8, 16. $2^1=2, 2^2=4, 2^4=16 \\equiv -1, 2^8 \\equiv (-1)^2 = 1$. Eilė lygi 8."
         },
         {
           "type": "paragraph",
-          "text": "**8 pavyzdys (Kvadratinės liekanos).** Nustatykite, ar $x^2 \\equiv 2 \\pmod{31}$ turi sprendinių.\n**Sprendimas:** Naudojame Legendre simbolį $\\left(\\frac{2}{31}\\right)$.\nSavybė: $\\left(\\frac{2}{p}\\right) = 1$, jei $p \\equiv 1, 7 \\pmod 8$.\n$31 = 3 \\cdot 8 + 7$. Kadangi $31 \\equiv 7 \\pmod 8$, tai $\\left(\\frac{2}{31}\\right) = 1$.\nAtsakymas: Taip, sprendinių yra."
+          "text": "**8 pavyzdys (Kvadratinės liekanos).** Nustatykite, ar $x^2 \\equiv 2 \\pmod{31}$ turi sprendinių. **Sprendimas:** Naudojame Legendre simbolį $\\left(\\frac{2}{31}\\right)$. Savybė: $\\left(\\frac{2}{p}\\right) = 1$, jei $p \\equiv 1, 7 \\pmod 8$. $31 = 3 \\cdot 8 + 7$. Kadangi $31 \\equiv 7 \\pmod 8$, tai $\\left(\\frac{2}{31}\\right) = 1$. Atsakymas: Taip, sprendinių yra."
         }
       ]
     },
@@ -202,6 +210,76 @@
             "**Pelio lygtis:** Tikima, kad bet kuriam $D$ lygtis $x^2-Dy^2=-1$ turi sprendinių (ji turi ne visada, skirtingai nei $x^2-Dy^2=1$).",
             "**CRT modulių tarpusavio pirminumas:** CRT taikoma moduliams, kurie turi bendrų daliklių, neperskaičiavus sistemos."
           ]
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Skaičių teorija“ 10 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema, Kinų liekanų teorema, Diofanto lygtys ir Pelio lygtis. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Skaičių teorija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Išskaidyk skaičius į paprastesnes dalis: pirminius daugiklius, liekanas pagal pasirinktą modulį, bendrus daliklius arba santykio vienetus. Jei sąlyga kalba apie visus skaičius, ieškok invariantų ir draudžiamų liekanų; jei prašo rasti skaičių, kurk jį nuo dalumo sąlygų ir tik tada tikrink dydį. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Skaičių teorija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tikrink, ar rezultatas tenkina visas dalumo sąlygas, ar nepamiršta nulio, neigiamų reikšmių arba natūraliųjų skaičių apribojimo. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
         }
       ]
     }
@@ -446,6 +524,950 @@
       "conceptIds": [
         "olimpiada-10-concept-quad-reciprocity"
       ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-001",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite skaičiaus $13\\cdot 4$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "13\\cdot4\\equiv 7 \\pmod 9"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-001-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "13\\cdot4\\equiv 7 \\pmod 9",
+              "result": "Liekana yra 7."
+            }
+          ],
+          "finalAnswer": "7"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-001-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-001",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-002",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite skaičiaus $14\\cdot 5$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "14\\cdot5\\equiv 7 \\pmod 9"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-002-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "14\\cdot5\\equiv 7 \\pmod 9",
+              "result": "Liekana yra 7."
+            }
+          ],
+          "finalAnswer": "7"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-002-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-002",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-003",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite skaičiaus $15\\cdot 6$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "15\\cdot6\\equiv 0 \\pmod 9"
+        }
+      ],
+      "answerText": "0",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-003-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "15\\cdot6\\equiv 0 \\pmod 9",
+              "result": "Liekana yra 0."
+            }
+          ],
+          "finalAnswer": "0"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-003-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-003",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-004",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite skaičiaus $16\\cdot 3$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "16\\cdot3\\equiv 3 \\pmod 9"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-004-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "16\\cdot3\\equiv 3 \\pmod 9",
+              "result": "Liekana yra 3."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-004-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-004",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-005",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite skaičiaus $17\\cdot 4$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "17\\cdot4\\equiv 5 \\pmod 9"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-005-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "17\\cdot4\\equiv 5 \\pmod 9",
+              "result": "Liekana yra 5."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-005-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-005",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-006",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite skaičiaus $18\\cdot 5$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "18\\cdot5\\equiv 0 \\pmod 9"
+        }
+      ],
+      "answerText": "0",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-006-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "18\\cdot5\\equiv 0 \\pmod 9",
+              "result": "Liekana yra 0."
+            }
+          ],
+          "finalAnswer": "0"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-006-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-006",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-007",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite skaičiaus $19\\cdot 6$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "19\\cdot6\\equiv 6 \\pmod 9"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-007-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "19\\cdot6\\equiv 6 \\pmod 9",
+              "result": "Liekana yra 6."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-007-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-007",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-auto-008",
+      "topicId": "olimpiada-10-skaiciu-teorija",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite skaičiaus $20\\cdot 3$ liekaną dalijant iš 9. Sprendimą pagrįskite liekanomis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pakeičiame skaičius jų liekanomis moduliu 9. Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+          "latex": "20\\cdot3\\equiv 6 \\pmod 9"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Skaičių teorija",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "modular-arithmetic",
+        "remainders"
+      ],
+      "prerequisiteTopicIds": [
+        "olimpiada-07-skaiciu-teorija"
+      ],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-quad-reciprocity",
+        "olimpiada-10-concept-gaussian-integers"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-008-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "modular-arithmetic",
+            "remainders"
+          ],
+          "steps": [
+            {
+              "title": "Liekanų daugyba",
+              "action": "Pakeičiame skaičius jų liekanomis moduliu 9.",
+              "reason": "Sandaugos liekana priklauso tik nuo daugiklių liekanų.",
+              "latex": "20\\cdot3\\equiv 6 \\pmod 9",
+              "result": "Liekana yra 6."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-skaiciu-teorija-auto-008-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-quad-reciprocity"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-skaiciu-teorija-auto-008",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Skaičių teorija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
     }
   ],
   "tests": [
@@ -463,5 +1485,122 @@
       "masteryWeight": 1.5
     }
   ],
-  "mistakes": []
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "id": "olimpiada-10-skaiciu-teorija-worked-olympiad-1",
+      "title": "Pirmo pastebėjimo išgryninimas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-worked-olympiad-2",
+      "title": "Atvejų skaidymas be dubliavimo: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Raskite liekaną, kurią gauname dalydami $2^{100}$ iš 13.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-worked-olympiad-3",
+      "title": "Įrodymo žingsnių pagrindimas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-worked-olympiad-4",
+      "title": "Dažnos klaidos taisymas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Raskite liekaną, kurią gauname dalydami $2^{100}$ iš 13.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-10-skaiciu-teorija-worked-olympiad-5",
+      "title": "Metodo perkėlimas į sunkesnę situaciją: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Nustatykite, ar egzistuoja toks sveikasis skaičius $x$, kad $x^2 \\equiv 3 \\pmod{11}$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Kvadratinio abipusiškumo dėsnis, Gauso sveikieji skaičiai, Mažoji Fermo teorema, Oilerio teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    }
+  ]
 }

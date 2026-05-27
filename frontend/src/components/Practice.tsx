@@ -22,10 +22,12 @@ export const Practice: React.FC<PracticeProps> = ({
   const activeTopicId = topicId || state.activeTopicId || Object.keys(topics)[0];
   const topic = topics[activeTopicId];
   const isOlympiad = topic?.level === 'olympiad' || state.profile.libraryToggle === 'olympiad';
-  const currentPool = allExercises.filter((ex) => 
-    ex.topicId === activeTopicId && 
-    (isOlympiad ? ex.level === 'olympiad' : ex.level !== 'olympiad')
-  );
+  const currentPool = allExercises.filter((ex) => {
+    if (ex.topicId !== activeTopicId) return false;
+    const exerciseIsOlympiad = ex.level === 'olympiad' || Boolean(ex.olympiadTrack || ex.olympiadTier);
+    if (topic?.level === 'olympiad') return true;
+    return isOlympiad ? exerciseIsOlympiad : !exerciseIsOlympiad;
+  });
   const solvedIds = useMemo(
     () => new Set(state.attempts.filter((attempt) => attempt.correct).map((attempt) => attempt.exerciseId)),
     [state.attempts]
@@ -123,7 +125,7 @@ export const Practice: React.FC<PracticeProps> = ({
     exercise.selectableTitle || (exercise as any).title || `Uždavinys ${index + 1}`;
 
   const getExercisePreview = (exercise: Exercise) =>
-    exercise.statementPreview || exercise.statement.replace(/\s+/g, " ").slice(0, 180);
+    exercise.statement.replace(/\s+/g, " ");
 
   const difficultyOptions = Array.from(new Set(currentPool.map(getDifficultyKey)));
   const filteredPool = currentPool.filter((exercise) => {
@@ -392,7 +394,9 @@ export const Practice: React.FC<PracticeProps> = ({
                 >
                   <span className="eyebrow">{exercise.strand} • {getDifficultyLabel(getDifficultyKey(exercise))}</span>
                   <strong>{getExerciseTitle(exercise, indexInTopic)}</strong>
-                  <span className="exercise-selection-preview">{getExercisePreview(exercise)}</span>
+                  <span className="exercise-selection-preview">
+                    <MathText text={getExercisePreview(exercise)} onConceptClick={(id) => navigate("glossary", id)} />
+                  </span>
                   <span className="exercise-selection-meta">
                     <span>{solved ? "Išspręsta" : "Dar neišspręsta"}</span>
                     {exercise.estimatedSeconds && <span>~{Math.max(1, Math.round(exercise.estimatedSeconds / 60))} min.</span>}

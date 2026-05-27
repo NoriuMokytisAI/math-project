@@ -197,7 +197,7 @@
         },
         {
           "type": "method",
-          "text": "Norėdami padalinti skaičių $S$ santykiu $x:y$: \n1. Sudėkite santykio dalis: $x + y = N$ (iš viso dalių). \n2. Raskite vienos dalies vertę: $V = S / N$. \n3. Padauginkite dalis iš vienos dalies vertės: $A = x \\cdot V, B = y \\cdot V$."
+          "text": "Norėdami padalinti skaičių $S$ santykiu $x:y$: 1. Sudėkite santykio dalis: $x + y = N$ (iš viso dalių). 2. Raskite vienos dalies vertę: $V = S / N$. 3. Padauginkite dalis iš vienos dalies vertės: $A = x \\cdot V, B = y \\cdot V$."
         },
         {
           "type": "paragraph",
@@ -238,6 +238,76 @@
             "Aukso pjūvio formulėje sumaišoma ilgesnioji ir trumpesnioji dalis.",
             "Proporcingoje dalyboje pamirštama sudėti santykio dalis ir dalijama iš kiekvienos atskirai."
           ]
+        }
+      ]
+    },
+    {
+      "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Dėsningumai: Fibonačio seka ir Aukso pjūvis“ 10 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: sąlygos perskaitymas, ryšių tarp dydžių atpažinimas, tinkamo metodo pasirinkimas ir savikontrolė. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Fibonačio seka, Aukso pjūvis, Aukso pjūvio skaičius, Binet formulė, Aukso stačiakampis, Skaičiaus Skaidymas Proporcingai ir Sekos Desningumas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Dėsningumai: Fibonačio seka ir Aukso pjūvis“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Uždavinį suskaidyk į duomenis, tikslą ir apribojimus. Užrašyk, ką žinai, kokį dydį reikia rasti arba įrodyti, ir pasirink mažiausiai rizikingą kelią: formulę, lentelę, brėžinį, atvejus arba algebrinį pertvarkymą. Po kiekvieno žingsnio tikrink, ar jis iš tiesų remiasi sąlyga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Tęskite Fibonačio seką: 1, 1, 2, 3, 5, 8, ... Koks kitas narys?“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-fibonacio-seka-ir-aukso-pjuvis-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Pabaigoje palygink atsakymą su sąlyga, vienetais ir sveiku protu: ar dydis nėra per didelis, ar ženklas teisingas, ar įrodymas apima visus atvejus. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Dėsningumai: Fibonačio seka ir Aukso pjūvis“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -335,10 +405,10 @@
     },
     {
       "id": "skaiciaus-skaidymas-proporcingai",
-      "title": "Skaiciaus Skaidymas Proporcingai",
+      "title": "Skaičiaus Skaidymas Proporcingai",
       "type": "concept",
-      "shortDefinition": "S?voka ?Skaiciaus Skaidymas Proporcingai? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Skaičiaus Skaidymas Proporcingai“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -346,17 +416,17 @@
       "id": "sekos-desningumas",
       "title": "Sekos Desningumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sekos Desningumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sekos Desningumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "rekurentine-formule",
-      "title": "Rekurentine Formule",
+      "title": "Rekurentine Formulė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Rekurentine Formule? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Rekurentine Formulė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -364,8 +434,8 @@
       "id": "aukso-pjuvio-seka",
       "title": "Aukso Pjuvio Seka",
       "type": "concept",
-      "shortDefinition": "S?voka ?Aukso Pjuvio Seka? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Aukso Pjuvio Seka“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -373,8 +443,8 @@
       "id": "proporcingoji-dalyba",
       "title": "Proporcingoji Dalyba",
       "type": "concept",
-      "shortDefinition": "S?voka ?Proporcingoji Dalyba? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Proporcingoji Dalyba“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -382,8 +452,8 @@
       "id": "aukso-spirale",
       "title": "Aukso Spirale",
       "type": "concept",
-      "shortDefinition": "S?voka ?Aukso Spirale? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Aukso Spirale“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }

@@ -37,7 +37,16 @@
       "sumaiso-veiksmus-judejime"
     ],
     "exerciseIds": [
-      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001"
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-ex-001",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-001",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-002",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-003",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-004",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-005",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-006",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-007",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-008",
+      "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-009"
     ]
   },
   "theory": [
@@ -85,7 +94,7 @@
         },
         {
           "type": "note",
-          "text": "Įdomu: Greičio matavimo vienetas visada susideda iš dviejų dalių: kelio dalies ir laiko dalies (pvz., $\text{km/h}$ skaitome kaip „kilometrai per valandą“)."
+          "text": "Įdomu: Greičio matavimo vienetas visada susideda iš dviejų dalių: kelio dalies ir laiko dalies (pvz., $ ext{km/h}$ skaitome kaip „kilometrai per valandą“)."
         }
       ]
     },
@@ -95,17 +104,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sprendžiant judėjimo uždavinius, dydžiai privalo „kalbėtis“ ta pačia kalba. Tai pati svarbiausia taisyklė! Jei tavo greitis nurodytas kilometrais per valandą ($\text{km/h}$), o laikas – minutėmis, tu negali jų tiesiog sudauginti. Rezultatas bus visiškas jovalas."
+          "text": "Sprendžiant judėjimo uždavinius, dydžiai privalo „kalbėtis“ ta pačia kalba. Tai pati svarbiausia taisyklė! Jei tavo greitis nurodytas kilometrais per valandą ($ ext{km/h}$), o laikas – minutėmis, tu negali jų tiesiog sudauginti. Rezultatas bus visiškas jovalas."
         },
         {
           "type": "method",
           "title": "Suderintų vienetų poros (visada naudok jas!)",
-          "text": "- Jei kelias $\text{km}$ ir laikas $\text{val (h)} \\to$ greitis privalo būti $\text{km/h}$.\n- Jei kelias $\text{m}$ ir laikas $\text{sek (s)} \\to$ greitis privalo būti $\text{m/s}$."
+          "text": "- Jei kelias $ ext{km}$ ir laikas $ ext{val (h)} \\to$ greitis privalo būti $ ext{km/h}$. - Jei kelias $ ext{m}$ ir laikas $ ext{sek (s)} \\to$ greitis privalo būti $ ext{m/s}$."
         },
         {
           "type": "method",
           "title": "Konvertavimo atmintinė",
-          "text": "- $1 \\text{ km} = 1000 \\text{ m}$\n- $1 \\text{ val.} = 60 \\text{ min.} = 3600 \\text{ s}$\n- $1 \\text{ min.} = 60 \\text{ s}$"
+          "text": "- $1 \\text{ km} = 1000 \\text{ m}$ - $1 \\text{ val.} = 60 \\text{ min.} = 3600 \\text{ s}$ - $1 \\text{ min.} = 60 \\text{ s}$"
         },
         {
           "type": "warning",
@@ -128,12 +137,12 @@
         },
         {
           "type": "paragraph",
-          "text": "Iš šios „motininės“ formulės galime gauti kitas dvi, naudodami daugybos ir dalybos ryšį:\n1. **Greitis** yra kelias, padalintas iš laiko: $v = s : t$.\n2. **Laikas** yra kelias, padalintas iš greičio: $t = s : v$."
+          "text": "Iš šios „motininės“ formulės galime gauti kitas dvi, naudodami daugybos ir dalybos ryšį: 1. **Greitis** yra kelias, padalintas iš laiko: $v = s : t$. 2. **Laikas** yra kelias, padalintas iš greičio: $t = s : v$."
         },
         {
           "type": "method",
           "title": "Magiškasis trikampis (tavo slaptas ginklas)",
-          "text": "Nupiešk trikampį ir padalink jį horizontalia linija per vidurį, o apatinę dalį – vertikalia. Viršuje įrašyk $s$, apačioje – $v$ ir $t$.\n- Nori rasti $s$? Uždenk jį pirštu. Matai $v$ ir $t$ greta – vadinasi, DAUGINK.\n- Nori rasti $v$? Uždenk jį. Matai $s$ virš $t$ – vadinasi, DALINK.\n- Nori rasti $t$? Uždenk jį. Matai $s$ virš $v$ – vadinasi, DALINK."
+          "text": "Nupiešk trikampį ir padalink jį horizontalia linija per vidurį, o apatinę dalį – vertikalia. Viršuje įrašyk $s$, apačioje – $v$ ir $t$. - Nori rasti $s$? Uždenk jį pirštu. Matai $v$ ir $t$ greta – vadinasi, DAUGINK. - Nori rasti $v$? Uždenk jį. Matai $s$ virš $t$ – vadinasi, DALINK. - Nori rasti $t$? Uždenk jį. Matai $s$ virš $v$ – vadinasi, DALINK."
         }
       ]
     },
@@ -210,7 +219,7 @@
         {
           "type": "method",
           "title": "Dvi plaukimo kryptys",
-          "text": "- **Pasroviui**: Srovė stumia tave į nugarą, todėl greičiai susideda: $v_{pasroviui} = v_{valties} + v_{sroves}$.\n- **Prieš srovę**: Srovė tave stabdo, stumia atgal, todėl greičiai atimami: $v_{pries} = v_{valties} - v_{sroves}$."
+          "text": "- **Pasroviui**: Srovė stumia tave į nugarą, todėl greičiai susideda: $v_{pasroviui} = v_{valties} + v_{sroves}$. - **Prieš srovę**: Srovė tave stabdo, stumia atgal, todėl greičiai atimami: $v_{pries} = v_{valties} - v_{sroves}$."
         },
         {
           "type": "note",
@@ -253,6 +262,76 @@
           "text": "Nuo šiol, kai važiuosite automobiliu ar eisite pasivaikščioti, pabandykite mintyse įvertinti savo greitį ir nuspėti, kada pasieksite tikslą. Tai geriausia treniruotė tavo smegenims! Sėkmės skriejant per matematikos ir gyvenimo kelius!"
         }
       ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Kelias, laikas, greitis ir matavimo vienetai“ 5 klasės kurse priklauso sričiai „Geometrija ir matavimai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Greitis, Laikas, Kelias, Vidutinis Greitis, Santykis, Proporcija ir Kelio formulė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Kelias, laikas, greitis ir matavimo vienetai“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Automobilis važiuoja 70 km/h greičiu. Kiek km jis nuvažiuos per 3 valandas?“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Kelias, laikas, greitis ir matavimo vienetai“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -278,8 +357,8 @@
       "id": "laikas",
       "title": "Laikas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Laikas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Laikas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -287,8 +366,8 @@
       "id": "kelias",
       "title": "Kelias",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kelias? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kelias“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -296,8 +375,8 @@
       "id": "vidutinis-greitis",
       "title": "Vidutinis Greitis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Vidutinis Greitis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Vidutinis Greitis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -305,8 +384,8 @@
       "id": "santykis",
       "title": "Santykis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Santykis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Santykis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -314,8 +393,8 @@
       "id": "proporcija",
       "title": "Proporcija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Proporcija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Proporcija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -620,6 +699,366 @@
       "conceptIds": [
         "greitis"
       ]
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-001",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 4 cm ir 6 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(4+6)=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-002",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 5 cm ir 7 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 24,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(5+7)=24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-003",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 6 cm ir 8 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(6+8)=28"
+        }
+      ],
+      "answerText": "28",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-004",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 7 cm ir 9 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 32,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(7+9)=32"
+        }
+      ],
+      "answerText": "32",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-005",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 8 cm ir 10 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(8+10)=36"
+        }
+      ],
+      "answerText": "36",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-006",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 9 cm ir 11 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(9+11)=40"
+        }
+      ],
+      "answerText": "40",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-007",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 10 cm ir 12 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 44,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(10+12)=44"
+        }
+      ],
+      "answerText": "44",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-008",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 11 cm ir 13 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 48,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(11+13)=48"
+        }
+      ],
+      "answerText": "48",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "judejimo-uzdaviniai-ir-matavimo-vienetai-auto-009",
+      "topicId": "judejimo-uzdaviniai-ir-matavimo-vienetai",
+      "grade": 5,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 12 cm ir 14 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 52,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(12+14)=52"
+        }
+      ],
+      "answerText": "52",
+      "conceptIds": [
+        "greitis",
+        "laikas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [

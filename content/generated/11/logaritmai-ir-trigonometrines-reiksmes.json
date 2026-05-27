@@ -50,7 +50,16 @@
       "log-base-negative"
     ],
     "exerciseIds": [
-      "logaritmai-ir-trigonometrines-reiksmes-ex-001"
+      "logaritmai-ir-trigonometrines-reiksmes-ex-001",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-001",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-002",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-003",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-004",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-005",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-006",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-007",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-008",
+      "logaritmai-ir-trigonometrines-reiksmes-auto-009"
     ]
   },
   "theory": [
@@ -192,7 +201,7 @@
         },
         {
           "type": "method",
-          "text": "**Taisyklė:**\n1. Nustatykite, kuriame ketvirtyje yra kampas ir koks ten pradinės funkcijos ženklas.\n2. Jei naudojate $\\pi \\pm \\alpha$ arba $2\\pi \\pm \\alpha$, funkcija nesikeičia.\n3. Jei naudojate $\\pi/2 \\pm \\alpha$ arba $3\\pi/2 \\pm \\alpha$, funkcija keičiasi į kofunkciją (sin $\\leftrightarrow$ cos, tan $\\leftrightarrow$ cot)."
+          "text": "**Taisyklė:** 1. Nustatykite, kuriame ketvirtyje yra kampas ir koks ten pradinės funkcijos ženklas. 2. Jei naudojate $\\pi \\pm \\alpha$ arba $2\\pi \\pm \\alpha$, funkcija nesikeičia. 3. Jei naudojate $\\pi/2 \\pm \\alpha$ arba $3\\pi/2 \\pm \\alpha$, funkcija keičiasi į kofunkciją (sin $\\leftrightarrow$ cos, tan $\\leftrightarrow$ cot)."
         }
       ]
     },
@@ -216,7 +225,7 @@
         },
         {
           "type": "note",
-          "text": "Iš šių formulių išplaukia, kad $\tan \\alpha \\cdot \\cot \\alpha = 1$."
+          "text": "Iš šių formulių išplaukia, kad $ an \\alpha \\cdot \\cot \\alpha = 1$."
         }
       ]
     },
@@ -246,6 +255,76 @@
             "III ketvirtis (180–270°): tik $\\tan$ ir $\\cot$ teigiami.",
             "IV ketvirtis (270–360°): tik $\\cos$ teigiamas."
           ]
+        }
+      ]
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Logaritmai ir trigonometrinės reikšmės“ 11 klasės kurse priklauso sričiai „Skaičiai ir skaičiavimai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Logaritmas, Radianas, Vienetinis apskritimas, Redukcija, Pagrindinis Logaritmų Tapatumas, Sinusas ir Kosinusas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Logaritmai ir trigonometrinės reikšmės“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Apskaičiuokite log_2 8.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Logaritmai ir trigonometrinės reikšmės“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -313,10 +392,10 @@
     },
     {
       "id": "pagrindinis-logaritmu-tapatumas",
-      "title": "Pagrindinis Logaritmu Tapatumas",
+      "title": "Pagrindinis Logaritmų Tapatumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pagrindinis Logaritmu Tapatumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Pagrindinis Logaritmų Tapatumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -324,8 +403,8 @@
       "id": "sinusas",
       "title": "Sinusas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sinusas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sinusas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -333,8 +412,8 @@
       "id": "kosinusas",
       "title": "Kosinusas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kosinusas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kosinusas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -342,8 +421,8 @@
       "id": "tangentas",
       "title": "Tangentas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tangentas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tangentas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -351,17 +430,17 @@
       "id": "kotangentas",
       "title": "Kotangentas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kotangentas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kotangentas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "atvirkstine-trigonometrine-reiksme",
-      "title": "Atvirkstine Trigonometrine Reiksme",
+      "title": "Atvirkstine Trigonometrinė Reikšmė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Atvirkstine Trigonometrine Reiksme? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Atvirkstine Trigonometrinė Reikšmė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -369,8 +448,8 @@
       "id": "pagrindo-keitimas",
       "title": "Pagrindo Keitimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pagrindo Keitimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Pagrindo Keitimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -551,11 +630,11 @@
       "steps": [
         {
           "text": "Naudojame pagrindinę tapatybę.",
-          "latex": "\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - 0{\n}6^2 = 1 - 0{\n}36 = 0{\n}64"
+          "latex": "\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = 1 - 0{ }6^2 = 1 - 0{ }36 = 0{ }64"
         },
         {
           "text": "Traukiame šaknį. Kadangi I ketvirtis, sinusas teigiamas.",
-          "latex": "\\sin \\alpha = \\sqrt{0{\n}64} = 0{\n}8"
+          "latex": "\\sin \\alpha = \\sqrt{0{ }64} = 0{ }8"
         }
       ],
       "answer": "0.8"
@@ -632,6 +711,366 @@
       ],
       "estimatedSeconds": 20,
       "difficulty": "medium"
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-001",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 0^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 0^\\circ=0$.",
+          "latex": "\\sin 0^\\circ=0"
+        }
+      ],
+      "answerText": "0",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-002",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 30^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 30^\\circ=0,5$.",
+          "latex": "\\sin 30^\\circ=0.5"
+        }
+      ],
+      "answerText": "0,5",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-003",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 45^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.707,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 45^\\circ=0,707$.",
+          "latex": "\\sin 45^\\circ=0.707"
+        }
+      ],
+      "answerText": "0,707",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-004",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 60^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.866,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 60^\\circ=0,866$.",
+          "latex": "\\sin 60^\\circ=0.866"
+        }
+      ],
+      "answerText": "0,866",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-005",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 90^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 1,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 90^\\circ=1$.",
+          "latex": "\\sin 90^\\circ=1"
+        }
+      ],
+      "answerText": "1",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-006",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 0^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 0^\\circ=0$.",
+          "latex": "\\sin 0^\\circ=0"
+        }
+      ],
+      "answerText": "0",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-007",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 30^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 30^\\circ=0,5$.",
+          "latex": "\\sin 30^\\circ=0.5"
+        }
+      ],
+      "answerText": "0,5",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-008",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 45^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.707,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 45^\\circ=0,707$.",
+          "latex": "\\sin 45^\\circ=0.707"
+        }
+      ],
+      "answerText": "0,707",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "logaritmai-ir-trigonometrines-reiksmes-auto-009",
+      "topicId": "logaritmai-ir-trigonometrines-reiksmes",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $\\sin 60^\\circ$ reikšmę. Atsakymą pateikite iki trijų skaitmenų po kablelio, jei reikia.",
+      "answer": {
+        "kind": "numeric",
+        "value": 0.866,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Prisiminkite pagrindinių kampų sinusų lentelę.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kampai 0°, 30°, 45°, 60°, 90° turi standartines reikšmes.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Iš standartinių reikšmių lentelės $\\sin 60^\\circ=0,866$.",
+          "latex": "\\sin 60^\\circ=0.866"
+        }
+      ],
+      "answerText": "0,866",
+      "conceptIds": [
+        "logaritmas",
+        "pagrindinis-logaritmu-tapatumas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [

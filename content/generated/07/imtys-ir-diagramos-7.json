@@ -45,7 +45,12 @@
       "imtys-ir-diagramos-7-ex-002",
       "imtys-ir-diagramos-7-ex-003",
       "imtys-ir-diagramos-7-ex-004",
-      "imtys-ir-diagramos-7-ex-005"
+      "imtys-ir-diagramos-7-ex-005",
+      "imtys-ir-diagramos-7-auto-001",
+      "imtys-ir-diagramos-7-auto-002",
+      "imtys-ir-diagramos-7-auto-003",
+      "imtys-ir-diagramos-7-auto-004",
+      "imtys-ir-diagramos-7-auto-005"
     ]
   },
   "theory": [
@@ -125,7 +130,7 @@
         },
         {
           "type": "method",
-          "text": "1. [[vidurkis|Vidurkis]]: visų reikšmių suma padalinta iš jų skaičiaus.\n2. [[mediana|Mediana]]: vidurinė reikšmė surikiuotoje (nuo mažiausios iki didžiausios) duomenų eilėje.\n3. [[moda|Moda]]: dažniausiai pasikartojanti reikšmė."
+          "text": "1. [[vidurkis|Vidurkis]]: visų reikšmių suma padalinta iš jų skaičiaus. 2. [[mediana|Mediana]]: vidurinė reikšmė surikiuotoje (nuo mažiausios iki didžiausios) duomenų eilėje. 3. [[moda|Moda]]: dažniausiai pasikartojanti reikšmė."
         },
         {
           "type": "note",
@@ -143,7 +148,7 @@
         },
         {
           "type": "method",
-          "text": "Braižant stulpelinę diagramą:\n- Horizantalioje ašyje žymimos kategorijos.\n- Vertikalioje ašyje žymimas dažnis arba procentinė dalis.\n- Stulpelių plotis turi būti vienodas, o tarpai tarp jų – taip pat vienodi."
+          "text": "Braižant stulpelinę diagramą: - Horizantalioje ašyje žymimos kategorijos. - Vertikalioje ašyje žymimas dažnis arba procentinė dalis. - Stulpelių plotis turi būti vienodas, o tarpai tarp jų – taip pat vienodi."
         }
       ]
     },
@@ -186,7 +191,91 @@
       "blocks": [
         {
           "type": "method",
-          "text": "1. **Surikiuokite**: Pirmas žingsnis visada turėtų būti duomenų surikiavimas didėjimo tvarka.\n2. **Suskaičiuokite**: Raskite bendrą kiekį $n$ ir dažnius.\n3. **Pasirinkite įrankį**: Jei reikia lyginti kiekius – braižykite stulpelius, jei reikia rodyti dalis nuo visumos – skritulį."
+          "text": "1. **Surikiuokite**: Pirmas žingsnis visada turėtų būti duomenų surikiavimas didėjimo tvarka. 2. **Suskaičiuokite**: Raskite bendrą kiekį $n$ ir dažnius. 3. **Pasirinkite įrankį**: Jei reikia lyginti kiekius – braižykite stulpelius, jei reikia rodyti dalis nuo visumos – skritulį."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Imtys, duomenų analizė ir diagramos“ 7 klasės kurse priklauso sričiai „Duomenys ir tikimybės“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: duomenų rinkinio struktūra, skaitinės charakteristikos, tikimybės modelis ir išvadų patikimumas. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Imtis, Dažnis, Generalinė visuma, Reprezentatyvumas, Santykinis dažnis, Vidurkis ir Mediana. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Imtys, duomenų analizė ir diagramos“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Rask vidurkį skaičių: 2, 4, 9.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Imtys, duomenų analizė ir diagramos“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-gilinimas-papildomas-praktine-schema-1",
+      "title": "Praktinė sprendimo schema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temoje „Imtys, duomenų analizė ir diagramos“ mokymasis tampa tvirtas tada, kai mokinys geba atpažinti tą pačią idėją skirtinguose formatuose: žodiniame uždavinyje, lentelėje, formulėje, brėžinyje arba teste. Jeigu sąlyga skamba taip: „Rask vidurkį skaičių: 2, 4, 9.“, pirmiausia reikia ne skaičiuoti, o nuspręsti, kokią informaciją ji duoda. Tada pasirenkamas metodas: Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai. Galiausiai atsakymas tikrinamas ne iš atminties, o pagal pradinę sąlygą. Taip išvengiama situacijos, kai veiksmai atlikti teisingai, bet sprendžiamas ne tas klausimas."
+        },
+        {
+          "type": "note",
+          "text": "Savikontrolė: Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą."
         }
       ]
     }
@@ -233,10 +322,10 @@
     },
     {
       "id": "generaline-visuma",
-      "title": "Generaline Visuma",
+      "title": "Generalinė visuma",
       "type": "concept",
-      "shortDefinition": "S?voka ?Generaline Visuma? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Generalinė visuma“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -244,17 +333,17 @@
       "id": "reprezentatyvumas",
       "title": "Reprezentatyvumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Reprezentatyvumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Reprezentatyvumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "santykinis-daznis",
-      "title": "Santykinis Daznis",
+      "title": "Santykinis dažnis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Santykinis Daznis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Santykinis dažnis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -262,8 +351,8 @@
       "id": "vidurkis",
       "title": "Vidurkis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Vidurkis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Vidurkis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -271,8 +360,8 @@
       "id": "mediana",
       "title": "Mediana",
       "type": "concept",
-      "shortDefinition": "S?voka ?Mediana? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Mediana“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -280,26 +369,26 @@
       "id": "moda",
       "title": "Moda",
       "type": "concept",
-      "shortDefinition": "S?voka ?Moda? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Moda“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "skrituline-diagrama",
-      "title": "Skrituline Diagrama",
+      "title": "Skritulinė diagrama",
       "type": "concept",
-      "shortDefinition": "S?voka ?Skrituline Diagrama? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Skritulinė diagrama“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "stulpeline-diagrama",
-      "title": "Stulpeline Diagrama",
+      "title": "Stulpelinė diagrama",
       "type": "concept",
-      "shortDefinition": "S?voka ?Stulpeline Diagrama? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Stulpelinė diagrama“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -689,6 +778,206 @@
       "conceptIds": [
         "generaline-visuma"
       ]
+    },
+    {
+      "id": "imtys-ir-diagramos-7-auto-001",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $1, 3, 5, 7$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 16, reikšmių skaičius 4.",
+          "latex": "\frac{16}{4}=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "generaline-visuma",
+        "imtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "imtys-ir-diagramos-7-auto-002",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $2, 4, 6, 8$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 20, reikšmių skaičius 4.",
+          "latex": "\frac{20}{4}=5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "generaline-visuma",
+        "imtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "imtys-ir-diagramos-7-auto-003",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $3, 5, 7, 9$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 24, reikšmių skaičius 4.",
+          "latex": "\frac{24}{4}=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "generaline-visuma",
+        "imtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "imtys-ir-diagramos-7-auto-004",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $4, 6, 8, 10$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 28, reikšmių skaičius 4.",
+          "latex": "\frac{28}{4}=7"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "generaline-visuma",
+        "imtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "imtys-ir-diagramos-7-auto-005",
+      "topicId": "imtys-ir-diagramos-7",
+      "grade": 7,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $5, 7, 9, 11$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 32, reikšmių skaičius 4.",
+          "latex": "\frac{32}{4}=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "generaline-visuma",
+        "imtis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [

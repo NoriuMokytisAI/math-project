@@ -56,7 +56,15 @@
     ],
     "exerciseIds": [
       "isvestine-ir-diferencijavimas-ex-001",
-      "isvestine-ir-diferencijavimas-ex-002"
+      "isvestine-ir-diferencijavimas-ex-002",
+      "isvestine-ir-diferencijavimas-auto-001",
+      "isvestine-ir-diferencijavimas-auto-002",
+      "isvestine-ir-diferencijavimas-auto-003",
+      "isvestine-ir-diferencijavimas-auto-004",
+      "isvestine-ir-diferencijavimas-auto-005",
+      "isvestine-ir-diferencijavimas-auto-006",
+      "isvestine-ir-diferencijavimas-auto-007",
+      "isvestine-ir-diferencijavimas-auto-008"
     ]
   },
   "theory": [
@@ -279,7 +287,77 @@
         },
         {
           "type": "method",
-          "text": "**Sprendimo žingsniai:**\n1. Sudarykite funkciją, kurios didžiausią ar mažiausią reikšmę norite rasti.\n2. Išreikškite viską vienu kintamuoju.\n3. Raskite tos funkcijos išvestinę.\n4. Prilyginkite išvestinę nuliui ir raskite kritinius taškus.\n5. Patikrinkite, kuris taškas atitinka uždavinio sąlygą (naudodami antrąją išvestinę arba ženklų tyrimą)."
+          "text": "**Sprendimo žingsniai:** 1. Sudarykite funkciją, kurios didžiausią ar mažiausią reikšmę norite rasti. 2. Išreikškite viską vienu kintamuoju. 3. Raskite tos funkcijos išvestinę. 4. Prilyginkite išvestinę nuliui ir raskite kritinius taškus. 5. Patikrinkite, kuris taškas atitinka uždavinio sąlygą (naudodami antrąją išvestinę arba ženklų tyrimą)."
+        }
+      ]
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Išvestinė ir diferencijavimas“ 11 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Išvestinė, Diferencijavimas, Liestinė, Ekstremumas, Grandininė taisyklė (Sudėtinės funkcijos išvestinė), Nuolydis ir Momentinis Greitis. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Išvestinė ir diferencijavimas“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Apskaičiuokite f'(2), kai f(x) = x³.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Išvestinė ir diferencijavimas“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -376,8 +454,8 @@
       "id": "nuolydis",
       "title": "Nuolydis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Nuolydis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Nuolydis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -385,8 +463,8 @@
       "id": "momentinis-greitis",
       "title": "Momentinis Greitis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Momentinis Greitis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Momentinis Greitis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -394,8 +472,8 @@
       "id": "maksimumas",
       "title": "Maksimumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Maksimumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Maksimumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -403,35 +481,35 @@
       "id": "minimumas",
       "title": "Minimumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Minimumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Minimumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "kritis-taskas",
-      "title": "Kritis Taskas",
+      "title": "Kritis Taškas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kritis Taskas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kritis Taškas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "isgaubtumas",
-      "title": "Isgaubtumas",
+      "title": "Išgaubtumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Isgaubtumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Išgaubtumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "perlinkio-taskas",
-      "title": "Perlinkio Taskas",
+      "title": "Perlinkio Taškas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Perlinkio Taskas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Perlinkio Taškas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -784,6 +862,398 @@
       ],
       "estimatedSeconds": 20,
       "difficulty": "medium"
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-001",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=2x^2+12x$ išvestinės reikšmę taške $x=2$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=4x+12$.",
+          "latex": "f'(x)=4x+12"
+        },
+        {
+          "text": "Įstatę $x=2$ gauname 20.",
+          "latex": "f'(2)=4\\cdot2+12=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-002",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=3x^2+13x$ išvestinės reikšmę taške $x=3$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 31,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=6x+13$.",
+          "latex": "f'(x)=6x+13"
+        },
+        {
+          "text": "Įstatę $x=3$ gauname 31.",
+          "latex": "f'(3)=6\\cdot3+13=31"
+        }
+      ],
+      "answerText": "31",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-003",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=4x^2+14x$ išvestinės reikšmę taške $x=4$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 46,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=8x+14$.",
+          "latex": "f'(x)=8x+14"
+        },
+        {
+          "text": "Įstatę $x=4$ gauname 46.",
+          "latex": "f'(4)=8\\cdot4+14=46"
+        }
+      ],
+      "answerText": "46",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-004",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=1x^2+15x$ išvestinės reikšmę taške $x=5$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=2x+15$.",
+          "latex": "f'(x)=2x+15"
+        },
+        {
+          "text": "Įstatę $x=5$ gauname 25.",
+          "latex": "f'(5)=2\\cdot5+15=25"
+        }
+      ],
+      "answerText": "25",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-005",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=2x^2+16x$ išvestinės reikšmę taške $x=1$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=4x+16$.",
+          "latex": "f'(x)=4x+16"
+        },
+        {
+          "text": "Įstatę $x=1$ gauname 20.",
+          "latex": "f'(1)=4\\cdot1+16=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-006",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=3x^2+17x$ išvestinės reikšmę taške $x=2$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 29,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=6x+17$.",
+          "latex": "f'(x)=6x+17"
+        },
+        {
+          "text": "Įstatę $x=2$ gauname 29.",
+          "latex": "f'(2)=6\\cdot2+17=29"
+        }
+      ],
+      "answerText": "29",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-007",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=4x^2+18x$ išvestinės reikšmę taške $x=3$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 42,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=8x+18$.",
+          "latex": "f'(x)=8x+18"
+        },
+        {
+          "text": "Įstatę $x=3$ gauname 42.",
+          "latex": "f'(3)=8\\cdot3+18=42"
+        }
+      ],
+      "answerText": "42",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "isvestine-ir-diferencijavimas-auto-008",
+      "topicId": "isvestine-ir-diferencijavimas",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Išvestinė ir diferencijavimas“ raskite funkcijos $f(x)=1x^2+19x$ išvestinės reikšmę taške $x=4$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 27,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=2x+19$.",
+          "latex": "f'(x)=2x+19"
+        },
+        {
+          "text": "Įstatę $x=4$ gauname 27.",
+          "latex": "f'(4)=2\\cdot4+19=27"
+        }
+      ],
+      "answerText": "27",
+      "conceptIds": [
+        "isvestine",
+        "diferencijavimas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
     }
   ],
   "tests": [

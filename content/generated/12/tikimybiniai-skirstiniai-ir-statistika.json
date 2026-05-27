@@ -39,7 +39,18 @@
       "vilties-ir-vidurkio-painiojimas",
       "normaliojo-simetrijos-nepaisymas"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "tikimybiniai-skirstiniai-ir-statistika-auto-001",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-002",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-003",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-004",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-005",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-006",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-007",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-008",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-009",
+      "tikimybiniai-skirstiniai-ir-statistika-auto-010"
+    ]
   },
   "theory": [
     {
@@ -53,7 +64,7 @@
         {
           "type": "definition",
           "conceptId": "atsitiktinis-dydis",
-          "text": "Atsitiktiniai dydžiai skirstomi į dvi dideles grupes:\n- **Diskretieji**: jų reikšmės yra atskiri taškai (skaičiuojame: 0, 1, 2...).\n- **Tolydieji**: jų reikšmės užpildo visą intervalą (matuojame: svoris, temperatūra, laikas)."
+          "text": "Atsitiktiniai dydžiai skirstomi į dvi dideles grupes: - **Diskretieji**: jų reikšmės yra atskiri taškai (skaičiuojame: 0, 1, 2...). - **Tolydieji**: jų reikšmės užpildo visą intervalą (matuojame: svoris, temperatūra, laikas)."
         },
         {
           "type": "paragraph",
@@ -163,6 +174,76 @@
           "text": "Tikimybių teorija gimė iš azartinių lošimų analizės, kai Blaise'as Pascalis ir Pierre'as de Fermat susirašinėjo spręsdami problemą apie tai, kaip teisingai padalyti prizą nutraukus žaidimą. Vėliau Karlas Frydrichas Gaussas, tirdamas planetų orbitas, pastebėjo matavimų klaidų dėsningumą, kuris šiandien vadinamas Gauso skirstiniu."
         }
       ]
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Tikimybiniai skirstiniai ir statistika“ 12 klasės kurse priklauso sričiai „Duomenys ir tikimybės“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: duomenų rinkinio struktūra, skaitinės charakteristikos, tikimybės modelis ir išvadų patikimumas. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Atsitiktinis Dydis, Skirstinio Lentele, Matematine Viltis, Dispersija, Bernulio Bandymai, Binominis Skirstinys ir Normalusis Skirstinys. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Tikimybiniai skirstiniai ir statistika“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Tikimybiniai skirstiniai ir statistika“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Tikimybiniai skirstiniai ir statistika“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
     }
   ],
   "workedExamples": [
@@ -209,7 +290,7 @@
     {
       "id": "exmp-dispersija-pilna",
       "title": "Dispersijos radimas iš lentelės",
-      "problem": "Atsitiktinio dydžio skirstinys:\n| x | 0 | 1 |\n|---|---|---|\n| p | 0,4| 0,6|\nApskaičiuokite E(X) ir D(X).",
+      "problem": "Atsitiktinio dydžio skirstinys: | x | 0 | 1 | |---|---|---| | p | 0,4| 0,6| Apskaičiuokite E(X) ir D(X).",
       "steps": [
         {
           "text": "Viltis: $0\\cdot 0,4 + 1\\cdot 0,6 = 0,6$.",
@@ -348,8 +429,8 @@
       "id": "atsitiktinis-dydis",
       "title": "Atsitiktinis Dydis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Atsitiktinis Dydis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Atsitiktinis Dydis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -357,8 +438,8 @@
       "id": "skirstinio-lentele",
       "title": "Skirstinio Lentele",
       "type": "concept",
-      "shortDefinition": "S?voka ?Skirstinio Lentele? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Skirstinio Lentele“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -366,8 +447,8 @@
       "id": "matematine-viltis",
       "title": "Matematine Viltis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Matematine Viltis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Matematine Viltis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -375,8 +456,8 @@
       "id": "dispersija",
       "title": "Dispersija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Dispersija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Dispersija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -384,8 +465,8 @@
       "id": "bernulio-bandymai",
       "title": "Bernulio Bandymai",
       "type": "concept",
-      "shortDefinition": "S?voka ?Bernulio Bandymai? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Bernulio Bandymai“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -393,8 +474,8 @@
       "id": "binominis-skirstinys",
       "title": "Binominis Skirstinys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Binominis Skirstinys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Binominis Skirstinys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -402,30 +483,431 @@
       "id": "normalusis-skirstinys",
       "title": "Normalusis Skirstinys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Normalusis Skirstinys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Normalusis Skirstinys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "didziuju-skaiciu-desnis",
-      "title": "Didziuju Skaiciu Desnis",
+      "title": "Didžiųjų skaičių dėsnis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Didziuju Skaiciu Desnis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Didžiųjų skaičių dėsnis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "pasikliautinis-intervalas",
-      "title": "Pasikliautinis Intervalas",
+      "title": "Pasikliautinis intervalas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pasikliautinis Intervalas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Pasikliautinis intervalas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
   ],
   "formulas": [],
-  "exercises": []
+  "exercises": [
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-001",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $1, 3, 5, 7$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 16, reikšmių skaičius 4.",
+          "latex": "\frac{16}{4}=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-002",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $2, 4, 6, 8$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 20, reikšmių skaičius 4.",
+          "latex": "\frac{20}{4}=5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-003",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $3, 5, 7, 9$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 24, reikšmių skaičius 4.",
+          "latex": "\frac{24}{4}=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-004",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $4, 6, 8, 10$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 28, reikšmių skaičius 4.",
+          "latex": "\frac{28}{4}=7"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-005",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $5, 7, 9, 11$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 32, reikšmių skaičius 4.",
+          "latex": "\frac{32}{4}=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-006",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $6, 8, 10, 12$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 36, reikšmių skaičius 4.",
+          "latex": "\frac{36}{4}=9"
+        }
+      ],
+      "answerText": "9",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-007",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $7, 9, 11, 13$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 40, reikšmių skaičius 4.",
+          "latex": "\frac{40}{4}=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-008",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $8, 10, 12, 14$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 44, reikšmių skaičius 4.",
+          "latex": "\frac{44}{4}=11"
+        }
+      ],
+      "answerText": "11",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-009",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $9, 11, 13, 15$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 48, reikšmių skaičius 4.",
+          "latex": "\frac{48}{4}=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "tikimybiniai-skirstiniai-ir-statistika-auto-010",
+      "topicId": "tikimybiniai-skirstiniai-ir-statistika",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $10, 12, 14, 16$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 52, reikšmių skaičius 4.",
+          "latex": "\frac{52}{4}=13"
+        }
+      ],
+      "answerText": "13",
+      "conceptIds": [
+        "atsitiktinis-dydis",
+        "skirstinio-lentele"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ]
 }

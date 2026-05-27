@@ -73,7 +73,7 @@
         },
         {
           "type": "method",
-          "text": "Strategija: Ieškokite tokių reikšmių, kurios supaprastintų lygtį. Dažniausi pasirinkimai yra:\n1. $x = 0$ arba $y = 0$: tai dažnai leidžia rasti $f(0)$ arba supaprastinti narius.\n2. $x = y$ arba $x = -y$: gali padėti rasti ryšį tarp $f(x)$ ir $f(-x)$ (lyginumas).\n3. Tokios reikšmės, kad argumentas taptų konstanta, pvz., jei turime $f(x+y)$, galime bandyti parinkti $y$ taip, kad $x+y=0$."
+          "text": "Strategija: Ieškokite tokių reikšmių, kurios supaprastintų lygtį. Dažniausi pasirinkimai yra: 1. $x = 0$ arba $y = 0$: tai dažnai leidžia rasti $f(0)$ arba supaprastinti narius. 2. $x = y$ arba $x = -y$: gali padėti rasti ryšį tarp $f(x)$ ir $f(-x)$ (lyginumas). 3. Tokios reikšmės, kad argumentas taptų konstanta, pvz., jei turime $f(x+y)$, galime bandyti parinkti $y$ taip, kad $x+y=0$."
         },
         {
           "type": "paragraph",
@@ -91,7 +91,7 @@
         },
         {
           "type": "method",
-          "text": "Košy lygties sprendimo žingsniai:\n1. **Nulinis taškas:** Įstatome $x=0, y=0 \\implies f(0)=0$.\n2. **Neigiami skaičiai:** Įstatome $y=-x \\implies f(x) + f(-x) = f(0) = 0 \\implies f(-x) = -f(x)$ (nelyginumas).\n3. **Indukcija natūraliesiems skaičiams:** $f(2x) = f(x+x) = 2f(x)$, bendruoju atveju $f(nx) = nf(x)$ visam $n \\in \\mathbb{N}$.\n4. **Racionalieji skaičiai:** Parodome, kad $f(1/n) = f(1)/n$, iš kur $f(m/n) = (m/n)f(1)$. Taigi $f(q) = cq$ visiems $q \\in \\mathbb{Q}$, kur $c = f(1)$.\n5. **Perėjimas prie realiųjų skaičių:** Norint teigti, kad $f(x) = cx$ visiems $x \\in \\mathbb{R}$, būtina viena iš papildomų sąlygų: $f$ yra tolydi, $f$ yra monotoniška arba $f$ yra apribota bent viename intervale."
+          "text": "Košy lygties sprendimo žingsniai: 1. **Nulinis taškas:** Įstatome $x=0, y=0 \\implies f(0)=0$. 2. **Neigiami skaičiai:** Įstatome $y=-x \\implies f(x) + f(-x) = f(0) = 0 \\implies f(-x) = -f(x)$ (nelyginumas). 3. **Indukcija natūraliesiems skaičiams:** $f(2x) = f(x+x) = 2f(x)$, bendruoju atveju $f(nx) = nf(x)$ visam $n \\in \\mathbb{N}$. 4. **Racionalieji skaičiai:** Parodome, kad $f(1/n) = f(1)/n$, iš kur $f(m/n) = (m/n)f(1)$. Taigi $f(q) = cq$ visiems $q \\in \\mathbb{Q}$, kur $c = f(1)$. 5. **Perėjimas prie realiųjų skaičių:** Norint teigti, kad $f(x) = cx$ visiems $x \\in \\mathbb{R}$, būtina viena iš papildomų sąlygų: $f$ yra tolydi, $f$ yra monotoniška arba $f$ yra apribota bent viename intervale."
         }
       ]
     },
@@ -146,6 +146,76 @@
         {
           "type": "paragraph",
           "text": "Simetrija gali būti ne tik taško ar ašies atžvilgiu. Funkcinėje lygtyje $f(x, y) = f(y, x)$ vadinama simetrine. Jei pati lygtis yra simetrinė kintamųjų $x$ ir $y$ atžvilgiu, tai ir bet koks rastas sprendinys turi išlikti nepakitęs sukeitus $x$ ir $y$ (arba mums tai padeda rasti prieštarą parinkus nesimetrinį sprendinį)."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-funkcijos-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Funkcijos“ 9 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-funkcijos-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Apibrėžimo sritis, Reikšmių sritis, Funkcinės lygtys, Periodiškumas, Injektyvumas ir surjektyvumas ir Fiksuotieji taškai. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Funkcijos“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-funkcijos-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-funkcijos-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Raskite visas tolydžiąsias funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, kurios visiems realiesiems skaičiams $x, y$ tenkina lygtį $f(x+y) = f(x) + f(y)$.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Funkcijos“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-funkcijos-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
         }
       ]
     }
@@ -213,31 +283,31 @@
     {
       "id": "we-functions-fe-linear",
       "title": "Funkcinė lygtis su kintamųjų sukeitimu",
-      "content": "Raskite visas funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias lygtį $2f(x) + f(1-x) = x^2$.\n\n**Sprendimas:**\nŠi lygtis turi du „nežinomuosius“: $f(x)$ ir $f(1-x)$. Galime sukurti lygčių sistemą pasinaudodami kintamųjų sukeitimo triuku.\n\n1. Pradinė lygtis: $2f(x) + f(1-x) = x^2$.\n2. Vietoje $x$ įstatome $1-x$: $2f(1-x) + f(1-(1-x)) = (1-x)^2$, kas supaprastėja iki $2f(1-x) + f(x) = (1-x)^2$.\n3. Turime sistemą:\n   (1) $2f(x) + f(1-x) = x^2$\n   (2) $f(x) + 2f(1-x) = (1-x)^2$\n4. Iš antrosios lygties išreiškiame $f(1-x) = \\frac{(1-x)^2 - f(x)}{2}$ ir įstatome į pirmąją:\n   $2f(x) + \\frac{(1-x)^2 - f(x)}{2} = x^2$\n5. Padauginame iš 2: $4f(x) + (1-x)^2 - f(x) = 2x^2$.\n6. $3f(x) = 2x^2 - (1-2x+x^2) = x^2 + 2x - 1$.\n7. Atsakymas: $f(x) = \\frac{x^2+2x-1}{3}$.\n\n**Strategija:** Jei lygtis sieja $f(x)$ ir $f(g(x))$, kur $g(g(x)) = x$, visada galime sudaryti $2 \\times 2$ sistemą.",
+      "content": "Raskite visas funkcijas $f: \\mathbb{R} \\to \\mathbb{R}$, tenkinančias lygtį $2f(x) + f(1-x) = x^2$. **Sprendimas:** Ši lygtis turi du „nežinomuosius“: $f(x)$ ir $f(1-x)$. Galime sukurti lygčių sistemą pasinaudodami kintamųjų sukeitimo triuku. 1. Pradinė lygtis: $2f(x) + f(1-x) = x^2$. 2. Vietoje $x$ įstatome $1-x$: $2f(1-x) + f(1-(1-x)) = (1-x)^2$, kas supaprastėja iki $2f(1-x) + f(x) = (1-x)^2$. 3. Turime sistemą: (1) $2f(x) + f(1-x) = x^2$ (2) $f(x) + 2f(1-x) = (1-x)^2$ 4. Iš antrosios lygties išreiškiame $f(1-x) = \\frac{(1-x)^2 - f(x)}{2}$ ir įstatome į pirmąją: $2f(x) + \\frac{(1-x)^2 - f(x)}{2} = x^2$ 5. Padauginame iš 2: $4f(x) + (1-x)^2 - f(x) = 2x^2$. 6. $3f(x) = 2x^2 - (1-2x+x^2) = x^2 + 2x - 1$. 7. Atsakymas: $f(x) = \\frac{x^2+2x-1}{3}$. **Strategija:** Jei lygtis sieja $f(x)$ ir $f(g(x))$, kur $g(g(x)) = x$, visada galime sudaryti $2 \\times 2$ sistemą.",
       "explanation": "Šis pavyzdys demonstruoja, kaip viena lygtis gali virsti sistema, jei argumentai sudaro „uždarą ratą“."
     },
     {
       "id": "we-functions-periodicity",
       "title": "Paslėpto periodo radimas",
-      "content": "Funkcija tenkina lygybę $f(x+1) = \\frac{1+f(x)}{1-f(x)}$. Įrodykite, kad funkcija yra periodinė.\n\n**Sprendimas:**\nApskaičiuokime kelias sekančias reikšmes:\n$f(x+2) = f((x+1)+1) = \\frac{1+f(x+1)}{1-f(x+1)} = \\frac{1 + \\frac{1+f(x)}{1-f(x)}}{1 - \\frac{1+f(x)}{1-f(x)}}$.\nSupaprastiname trupmeną padaugindami skaitiklį ir vardiklį iš $1-f(x)$:\n$f(x+2) = \\frac{1-f(x)+1+f(x)}{1-f(x)-(1+f(x))} = \\frac{2}{-2f(x)} = -\\frac{1}{f(x)}$.\n\nTęsiame toliau:\n$f(x+4) = f((x+2)+2) = -\\frac{1}{f(x+2)} = -\\frac{1}{-1/f(x)} = f(x)$.\n\nKadangi $f(x+4) = f(x)$, funkcija yra periodinė su periodu $T=4$.\n\n**Strategija:** Iteratyvus skaičiavimas yra geriausias būdas aptikti periodiškumą.",
+      "content": "Funkcija tenkina lygybę $f(x+1) = \\frac{1+f(x)}{1-f(x)}$. Įrodykite, kad funkcija yra periodinė. **Sprendimas:** Apskaičiuokime kelias sekančias reikšmes: $f(x+2) = f((x+1)+1) = \\frac{1+f(x+1)}{1-f(x+1)} = \\frac{1 + \\frac{1+f(x)}{1-f(x)}}{1 - \\frac{1+f(x)}{1-f(x)}}$. Supaprastiname trupmeną padaugindami skaitiklį ir vardiklį iš $1-f(x)$: $f(x+2) = \\frac{1-f(x)+1+f(x)}{1-f(x)-(1+f(x))} = \\frac{2}{-2f(x)} = -\\frac{1}{f(x)}$. Tęsiame toliau: $f(x+4) = f((x+2)+2) = -\\frac{1}{f(x+2)} = -\\frac{1}{-1/f(x)} = f(x)$. Kadangi $f(x+4) = f(x)$, funkcija yra periodinė su periodu $T=4$. **Strategija:** Iteratyvus skaičiavimas yra geriausias būdas aptikti periodiškumą.",
       "explanation": "Dažnai periodas pasirodo ne iškart, o po 2, 4 ar net 8 žingsnių."
     },
     {
       "id": "we-functions-monotonicity-solve",
       "title": "Monotoniškumo taikymas lygtyse",
-      "content": "Išspręskite lygtį $x^5 + x^3 + x = 42$.\n\n**Sprendimas:**\n1. Pastebime, kad kairioji pusė yra funkcija $f(x) = x^5 + x^3 + x$.\n2. Kadangi $x^5, x^3$ ir $x$ yra visos didėjančios funkcijos realiųjų skaičių aibėje, jų suma $f(x)$ taip pat yra griežtai didėjanti funkcija.\n3. Griežtai monotoniška funkcija kiekvieną reikšmę įgyja ne daugiau kaip vieną kartą.\n4. Spėjame sprendinį: jei $x=2$, tai $2^5 + 2^3 + 2 = 32 + 8 + 2 = 42$.\n5. Kadangi $f(2)=42$ ir funkcija yra griežtai didėjanti, kitų sprendinių egzistuoti negali.\n\n**Atsakymas:** $x=2$.",
+      "content": "Išspręskite lygtį $x^5 + x^3 + x = 42$. **Sprendimas:** 1. Pastebime, kad kairioji pusė yra funkcija $f(x) = x^5 + x^3 + x$. 2. Kadangi $x^5, x^3$ ir $x$ yra visos didėjančios funkcijos realiųjų skaičių aibėje, jų suma $f(x)$ taip pat yra griežtai didėjanti funkcija. 3. Griežtai monotoniška funkcija kiekvieną reikšmę įgyja ne daugiau kaip vieną kartą. 4. Spėjame sprendinį: jei $x=2$, tai $2^5 + 2^3 + 2 = 32 + 8 + 2 = 42$. 5. Kadangi $f(2)=42$ ir funkcija yra griežtai didėjanti, kitų sprendinių egzistuoti negali. **Atsakymas:** $x=2$.",
       "explanation": "Monotoniškumas leidžia įrodyti sprendinio vienatį be sudėtingų algebrinių pertvarkių."
     },
     {
       "id": "we-functions-fixed-points-find",
       "title": "Fiksuotojo taško radimas ir taikymas",
-      "content": "Raskite visus taškus, kuriuose funkcijos $f(x) = \\frac{x^2+2}{3}$ grafikas kerta tiesę $y=x$.\n\n**Sprendimas:**\nReikia išspręsti lygtį $f(x) = x$:\n$\\frac{x^2+2}{3} = x \\implies x^2 + 2 = 3x \\implies x^2 - 3x + 2 = 0$.\nSprendžiame kvadratinę lygtį: $D = 9 - 8 = 1$. $x_1 = 1, x_2 = 2$.\nTai yra funkcijos fiksuotieji taškai. Jie svarbūs tiriant sekas $x_{n+1} = f(x_n)$.",
+      "content": "Raskite visus taškus, kuriuose funkcijos $f(x) = \\frac{x^2+2}{3}$ grafikas kerta tiesę $y=x$. **Sprendimas:** Reikia išspręsti lygtį $f(x) = x$: $\\frac{x^2+2}{3} = x \\implies x^2 + 2 = 3x \\implies x^2 - 3x + 2 = 0$. Sprendžiame kvadratinę lygtį: $D = 9 - 8 = 1$. $x_1 = 1, x_2 = 2$. Tai yra funkcijos fiksuotieji taškai. Jie svarbūs tiriant sekas $x_{n+1} = f(x_n)$.",
       "explanation": "Fiksuotieji taškai parodo, kur funkcija „nepakeičia“ argumento."
     },
     {
       "id": "we-functions-range-estimation",
       "title": "Reikšmių srities radimas naudojant įvertinimą",
-      "content": "Raskite funkcijos $f(x) = \\frac{x}{x^2+1}$ reikšmių sritį.\n\n**Sprendimas:**\n1. Pažymėkime $y = \\frac{x}{x^2+1}$. Reikia rasti visas $y$ reikšmes, kurioms egzistuoja realusis $x$.\n2. Padauginame iš vardiklio: $y(x^2+1) = x \\implies yx^2 - x + y = 0$.\n3. Jei $y=0$, tai $x=0$, tad 0 priklauso reikšmių sričiai.\n4. Jei $y \\neq 0$, turime kvadratinę lygtį $x$ atžvilgiu. Kad egzistuotų realusis $x$, diskriminantas turi būti neneigiamas:\n   $D = (-1)^2 - 4(y)(y) = 1 - 4y^2 \\ge 0$.\n5. Sprendžiame nelygybę: $4y^2 \\le 1 \\implies y^2 \\le 1/4 \\implies -1/2 \\le y \\le 1/2$.\n6. Atsakymas: $y \\in [-0.5, 0.5]$.\n\n**Strategija:** Reikšmių srities radimas dažnai suvedamas į sąlygą, kad atitinkama lygtis turi sprendinių.",
+      "content": "Raskite funkcijos $f(x) = \\frac{x}{x^2+1}$ reikšmių sritį. **Sprendimas:** 1. Pažymėkime $y = \\frac{x}{x^2+1}$. Reikia rasti visas $y$ reikšmes, kurioms egzistuoja realusis $x$. 2. Padauginame iš vardiklio: $y(x^2+1) = x \\implies yx^2 - x + y = 0$. 3. Jei $y=0$, tai $x=0$, tad 0 priklauso reikšmių sričiai. 4. Jei $y \\neq 0$, turime kvadratinę lygtį $x$ atžvilgiu. Kad egzistuotų realusis $x$, diskriminantas turi būti neneigiamas: $D = (-1)^2 - 4(y)(y) = 1 - 4y^2 \\ge 0$. 5. Sprendžiame nelygybę: $4y^2 \\le 1 \\implies y^2 \\le 1/4 \\implies -1/2 \\le y \\le 1/2$. 6. Atsakymas: $y \\in [-0.5, 0.5]$. **Strategija:** Reikšmių srities radimas dažnai suvedamas į sąlygą, kad atitinkama lygtis turi sprendinių.",
       "explanation": "Šis metodas (diskriminanto metodas) yra standartinis sprendžiant trupmenines-racionaliąsias funkcijas."
     }
   ],

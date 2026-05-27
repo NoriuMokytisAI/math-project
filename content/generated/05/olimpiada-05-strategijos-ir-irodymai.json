@@ -79,7 +79,7 @@
         },
         {
           "type": "method",
-          "text": "**Pariteto taisyklės**:\n- Sudėtis/Atimtis: $L \\pm L = L, N \\pm N = L, L \\pm N = N$.\n- Daugyba: $L \\times \\text{bet kas} = L, N \\times N = N$."
+          "text": "**Pariteto taisyklės**: - Sudėtis/Atimtis: $L \\pm L = L, N \\pm N = L, L \\pm N = N$. - Daugyba: $L \\times \\text{bet kas} = L, N \\times N = N$."
         },
         {
           "type": "paragraph",
@@ -115,7 +115,7 @@
         },
         {
           "type": "example",
-          "text": "Uždavinys: Klasėje yra 13 vaikų. Įrodykite, kad bent du gimė tą patį mėnesį.\nAnalizė: Vaikai yra „balandžiai“ (13), o mėnesiai – „narveliai“ (12). Kadangi balandžių daugiau nei narvelių, bent du vaikai patenka į tą patį mėnesį."
+          "text": "Uždavinys: Klasėje yra 13 vaikų. Įrodykite, kad bent du gimė tą patį mėnesį. Analizė: Vaikai yra „balandžiai“ (13), o mėnesiai – „narveliai“ (12). Kadangi balandžių daugiau nei narvelių, bent du vaikai patenka į tą patį mėnesį."
         },
         {
           "type": "paragraph",
@@ -166,6 +166,90 @@
         {
           "type": "paragraph",
           "text": "Pavyzdžiui, jei įtariame, kad Jonas sako tiesą, bet iš to išplaukia, kad jis tuo pačiu metu meluoja – vadinasi, mūsų pradinė mintis apie Jono sąžiningumą buvo neteisinga."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Strategijos ir įrodymai“ 5 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: invariantas, kraštinis atvejis, priešingybė, konstrukcija, simetrija ir sistemingas atvejų skaidymas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Olimpiadinė logika ir dedukcija, Matematinio įrodymo samprata, Lyginumas (Paritetas), Invariantas, Dirichlė principas, Spalvinimo metodas ir Ėjimas nuo galo. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Strategijos ir įrodymai“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Uždavinį suskaidyk į duomenis, tikslą ir apribojimus. Užrašyk, ką žinai, kokį dydį reikia rasti arba įrodyti, ir pasirink mažiausiai rizikingą kelią: formulę, lentelę, brėžinį, atvejus arba algebrinį pertvarkymą. Po kiekvieno žingsnio tikrink, ar jis iš tiesų remiasi sąlyga. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu leidžiama nutrinti bet kuriuos du skaičius ir vietoje jų užrašyti jų skirtumo absoliutų dydį. Ar po kelių tokių ėjimų len“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Strategijos ir įrodymai“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Pabaigoje palygink atsakymą su sąlyga, vienetais ir sveiku protu: ar dydis nėra per didelis, ar ženklas teisingas, ar įrodymas apima visus atvejus. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti invariantas, kraštinis atvejis, priešingybė, konstrukcija, simetrija ir sistemingas atvejų skaidymas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-strategijos-ir-irodymai-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Strategijos ir įrodymai“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra sąlygos perskaitymas, ryšių tarp dydžių atpažinimas, tinkamo metodo pasirinkimas ir savikontrolė. Jei pavyzdys prasideda taip: „Ant lentos užrašyti skaičiai nuo $1$ iki $21$. Vienu ėjimu leidžiama nutrinti bet kuriuos du skaičius ir vietoje jų užrašyti jų skirtumo absoliutų dydį. Ar po kelių tokių ėjimų len“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
         }
       ]
     }
@@ -269,27 +353,27 @@
     {
       "title": "Paritetas ir monetos",
       "statement": "Ant stalo guli 9 monetos. 5 iš jų guli herbu į viršų, o 4 - skaičiumi. Ar galima, apverčiant lygiai po dvi bet kurias monetas vienu metu, pasiekti, kad visos monetos gulėtų herbu į viršų?",
-      "solution": "Analizuojame **invariantą** - skaičiumi į viršų gulinčių monetų paritetą.\n1. Pradinė būsena: 4 monetos guli skaičiumi į viršų. Tai **lyginis** skaičius.\n2. Galimi veiksmai apverčiant 2 monetas:\n   - Apverčiame 2 herbus $\\to$ jie tampa 2 skaičiais. Skaičių kiekis padidėja 2.\n   - Apverčiame 2 skaičius $\\to$ jie tampa 2 herbais. Skaičių kiekis sumažėja 2.\n   - Apverčiame 1 herbą ir 1 skaičių $\\to$ herbas tampa skaičiumi, o skaičius - herbu. Skaičių kiekis nesikeičia.\n3. Išvada: Visi įmanomi veiksmai skaičių kiekį pakeičia lyginiu skaičiumi (0, +2 arba -2). Vadinasi, skaičių kiekio **paritetas nesikeičia**.\n4. Norimas tikslas: 9 herbai, t. y. 0 skaičių. 0 yra lyginis skaičius.\n5. Kadangi pradinė būsena (4) ir tikslo būsena (0) abi yra lyginės, tai atrodo įmanoma. Tačiau, jei būtų buvę 5 skaičiai (nelyginis), pasiekti 0 (lyginį) būtų neįmanoma.\nŠiuo atveju atsakymas yra TAIP, tai įmanoma.\n\n**Atsakymas:** Taip."
+      "solution": "Analizuojame **invariantą** - skaičiumi į viršų gulinčių monetų paritetą. 1. Pradinė būsena: 4 monetos guli skaičiumi į viršų. Tai **lyginis** skaičius. 2. Galimi veiksmai apverčiant 2 monetas: - Apverčiame 2 herbus $\\to$ jie tampa 2 skaičiais. Skaičių kiekis padidėja 2. - Apverčiame 2 skaičius $\\to$ jie tampa 2 herbais. Skaičių kiekis sumažėja 2. - Apverčiame 1 herbą ir 1 skaičių $\\to$ herbas tampa skaičiumi, o skaičius - herbu. Skaičių kiekis nesikeičia. 3. Išvada: Visi įmanomi veiksmai skaičių kiekį pakeičia lyginiu skaičiumi (0, +2 arba -2). Vadinasi, skaičių kiekio **paritetas nesikeičia**. 4. Norimas tikslas: 9 herbai, t. y. 0 skaičių. 0 yra lyginis skaičius. 5. Kadangi pradinė būsena (4) ir tikslo būsena (0) abi yra lyginės, tai atrodo įmanoma. Tačiau, jei būtų buvę 5 skaičiai (nelyginis), pasiekti 0 (lyginį) būtų neįmanoma. Šiuo atveju atsakymas yra TAIP, tai įmanoma. **Atsakymas:** Taip."
     },
     {
       "title": "Dirichlė principas ir skaičiai",
       "statement": "Pasirinkite bet kuriuos 6 skaičius iš aibės {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. Įrodykite, kad tarp jų tikrai bus du skaičiai, kurių suma lygi 11.",
-      "solution": "Sudarome „narvelius“ iš skaičių porų, kurių suma yra 11:\n- {1, 10}\n- {2, 9}\n- {3, 8}\n- {4, 7}\n- {5, 6}\n\nIš viso turime **5 narvelius**. Mes renkamės **6 skaičius** („balandžius“).\nKadangi balandžių (6) yra daugiau nei narvelių (5), pagal Dirichlė principą bent du skaičiai pateks į tą patį narvelį. O kadangi kiekvienas narvelis sudarytas iš skaičių poros, kurios suma lygi 11, tai pasirinktoje grupėje tikrai bus tokia pora.\n\n**Atsakymas:** Įrodyta."
+      "solution": "Sudarome „narvelius“ iš skaičių porų, kurių suma yra 11: - {1, 10} - {2, 9} - {3, 8} - {4, 7} - {5, 6} Iš viso turime **5 narvelius**. Mes renkamės **6 skaičius** („balandžius“). Kadangi balandžių (6) yra daugiau nei narvelių (5), pagal Dirichlė principą bent du skaičiai pateks į tą patį narvelį. O kadangi kiekvienas narvelis sudarytas iš skaičių poros, kurios suma lygi 11, tai pasirinktoje grupėje tikrai bus tokia pora. **Atsakymas:** Įrodyta."
     },
     {
       "title": "Ėjimas nuo galo su skaičiais",
       "statement": "Marius sugalvojo skaičių. Jį padvigubino, tada pridėjo 10, gautą rezultatą padalino iš 4 ir galiausiai atėmė 2. Marius gavo skaičių 5. Kokį skaičių jis sugalvojo?",
-      "solution": "Taikome ėjimo nuo galo strategiją, keisdami veiksmus priešingais:\n1. Galutinis rezultatas: **5**\n2. Atvirkštinis veiksmas atimčiai 2: $5 + 2 = 7$\n3. Atvirkštinis veiksmas dalybai iš 4: $7 \\times 4 = 28$\n4. Atvirkštinis veiksmas sudėčiai 10: $28 - 10 = 18$\n5. Atvirkštinis veiksmas daugybai iš 2: $18 : 2 = 9$\n\nPatikrinimas: $9 \\times 2 = 18 \\to 18 + 10 = 28 \\to 28 : 4 = 7 \\to 7 - 2 = 5$. Tinka.\n\n**Atsakymas:** 9."
+      "solution": "Taikome ėjimo nuo galo strategiją, keisdami veiksmus priešingais: 1. Galutinis rezultatas: **5** 2. Atvirkštinis veiksmas atimčiai 2: $5 + 2 = 7$ 3. Atvirkštinis veiksmas dalybai iš 4: $7 \\times 4 = 28$ 4. Atvirkštinis veiksmas sudėčiai 10: $28 - 10 = 18$ 5. Atvirkštinis veiksmas daugybai iš 2: $18 : 2 = 9$ Patikrinimas: $9 \\times 2 = 18 \\to 18 + 10 = 28 \\to 28 : 4 = 7 \\to 7 - 2 = 5$. Tinka. **Atsakymas:** 9."
     },
     {
       "title": "Spalvinimas ir domino",
       "statement": "Iš $8 \\times 8$ lentelės (64 langeliai) išpjauti du priešingi kampiniai langeliai. Ar galima likusią 62 langelių dalį uždengti $1 \\times 2$ domino kauliukais?",
-      "solution": "Naudojame šachmatinio spalvinimo invariantą.\n1. Įprastoje $8 \\times 8$ lentelėje yra 32 balti ir 32 juodi langeliai.\n2. Priešingi kampiniai langeliai visada yra **tos pačios spalvos** (pvz., abu balti).\n3. Išpjovus du baltus langelius, lieka: 30 baltų ir 32 juodi langeliai.\n4. Kiekvienas domino kauliukas visada uždengia **vieną baltą ir vieną juodą** langelį.\n5. Kad uždengtume visą plotą, mums reikėtų 31 domino kauliuko, kurie iš viso uždengtų 31 baltą ir 31 juodą langelį.\n6. Kadangi mūsų lentelėje baltų ir juodų langelių skaičius nesutampa (30 prieš 32), uždengti neįmanoma.\n\n**Atsakymas:** Ne."
+      "solution": "Naudojame šachmatinio spalvinimo invariantą. 1. Įprastoje $8 \\times 8$ lentelėje yra 32 balti ir 32 juodi langeliai. 2. Priešingi kampiniai langeliai visada yra **tos pačios spalvos** (pvz., abu balti). 3. Išpjovus du baltus langelius, lieka: 30 baltų ir 32 juodi langeliai. 4. Kiekvienas domino kauliukas visada uždengia **vieną baltą ir vieną juodą** langelį. 5. Kad uždengtume visą plotą, mums reikėtų 31 domino kauliuko, kurie iš viso uždengtų 31 baltą ir 31 juodą langelį. 6. Kadangi mūsų lentelėje baltų ir juodų langelių skaičius nesutampa (30 prieš 32), uždengti neįmanoma. **Atsakymas:** Ne."
     },
     {
       "title": "Logika: Riteriai ir melagiai",
       "statement": "Kelyje susitinkate du žmones, A ir B. Žinote, kad vienas jų visada sako tiesą, o kitas visada meluoja. A sako: „Bent vienas iš mūsų yra melagis“. Kas yra A ir kas yra B?",
-      "solution": "Išnagrinėkime atvejus pagal tai, kas yra A:\n- **Tarkime, kad A sako tiesą (A yra riteris).** Tada tai, ką jis pasakė, turi būti tiesa. Jis pasakė, kad bent vienas iš jų yra melagis. Kadangi A nėra melagis, vadinasi, melagis turi būti B. Ši situacija neturi prieštaravimų.\n- **Tarkime, kad A meluoja (A yra melagis).** Tada tai, ką jis pasakė, turi būti melas. Jis pasakė, kad bent vienas iš jų yra melagis. Bet jei A yra melagis, tai teiginys „bent vienas yra melagis“ yra gryna tiesa! Melagis negali sakyti tiesos. Prieštaravimas.\n\nIšvada: A būtinai sako tiesą (yra riteris), o B yra melagis.\n\n**Atsakymas:** A - riteris, B - melagis."
+      "solution": "Išnagrinėkime atvejus pagal tai, kas yra A: - **Tarkime, kad A sako tiesą (A yra riteris).** Tada tai, ką jis pasakė, turi būti tiesa. Jis pasakė, kad bent vienas iš jų yra melagis. Kadangi A nėra melagis, vadinasi, melagis turi būti B. Ši situacija neturi prieštaravimų. - **Tarkime, kad A meluoja (A yra melagis).** Tada tai, ką jis pasakė, turi būti melas. Jis pasakė, kad bent vienas iš jų yra melagis. Bet jei A yra melagis, tai teiginys „bent vienas yra melagis“ yra gryna tiesa! Melagis negali sakyti tiesos. Prieštaravimas. Išvada: A būtinai sako tiesą (yra riteris), o B yra melagis. **Atsakymas:** A - riteris, B - melagis."
     }
   ],
   "exercises": [
@@ -783,7 +867,7 @@
       "olympiadTrack": "Strategijos ir įrodymai",
       "olympiadTier": "standard",
       "requiredPrerequisiteMastery": 60,
-      "statement": "Ar galima $5 \\times 5$ kvadratų lentelę pilnai uždengti $1 \times 2$ domino kauliukais?",
+      "statement": "Ar galima $5 \\times 5$ kvadratų lentelę pilnai uždengti $1 imes 2$ domino kauliukais?",
       "answer": {
         "kind": "choice",
         "choices": [

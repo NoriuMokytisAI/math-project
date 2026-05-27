@@ -3097,11 +3097,20 @@ summary {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.45;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.exercise-selection-preview .katex {
+  font-size: 1em;
+  line-height: 1;
+}
+
+.exercise-selection-preview .math-inline-container {
+  white-space: nowrap;
 }
 
 .exercise-selection-meta {

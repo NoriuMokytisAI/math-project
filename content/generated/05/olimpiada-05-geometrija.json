@@ -52,32 +52,102 @@
     {
       "id": "geo-intro",
       "title": "Kas yra olimpiadinė geometrija?",
-      "content": "Sveiki atvykę į geometrijos pasaulį! Penktos klasės olimpiadose geometrija nėra vien tik mokėjimas naudotis liniuote ar žinoti, kas yra kvadratas. Tai gebėjimas **matyti** tai, kas neparašyta sąlygoje, ir **atpažinti struktūrą** ten, kur kiti mato tik linijų kratinį.\n\nPagrindinis skirtumas tarp paprastų uždavinių ir olimpiadinių yra tas, kad olimpiadose jums retai bus pateikta paruošta formulė. Jums patiems reikės susikurti sprendimo kelią, dažnai naudojant pagalbines linijas, figūrų perstūmimus ar net „veidrodinį mąstymą“. Šioje pamokoje apžvelgsime pagrindines strategijas, kurios padės įveikti net sudėtingiausius geometrijos iššūkius."
+      "content": "Sveiki atvykę į geometrijos pasaulį! Penktos klasės olimpiadose geometrija nėra vien tik mokėjimas naudotis liniuote ar žinoti, kas yra kvadratas. Tai gebėjimas **matyti** tai, kas neparašyta sąlygoje, ir **atpažinti struktūrą** ten, kur kiti mato tik linijų kratinį. Pagrindinis skirtumas tarp paprastų uždavinių ir olimpiadinių yra tas, kad olimpiadose jums retai bus pateikta paruošta formulė. Jums patiems reikės susikurti sprendimo kelią, dažnai naudojant pagalbines linijas, figūrų perstūmimus ar net „veidrodinį mąstymą“. Šioje pamokoje apžvelgsime pagrindines strategijas, kurios padės įveikti net sudėtingiausius geometrijos iššūkius."
     },
     {
       "id": "geo-visual",
       "title": "Geometrinė intuicija ir vizualizacija",
-      "content": "Vienas svarbiausių įrankių olimpiadininko arsenale yra **vizualizacija**. Tai gebėjimas mintyse pasukti figūrą, ją perpjauti ar sujungti su kita.\n\n**Strategija: Pagalbinės linijos.** Dažnai uždavinys atrodo neišsprendžiamas, nes mums trūksta informacijos. Nubrėžę vieną papildomą liniją (pavyzdžiui, sujungę dvi viršūnes arba pratęsę kraštinę iki susikirtimo), galime pamatyti pažįstamas figūras – stačiakampius ar lygius trikampius.\n\n**Strategija: „Nekintamumo“ paieška.** Keičiant figūros formą (pavyzdžiui, lankstant popierių), kai kurios savybės nesikeičia. Plotas paprastai išlieka toks pat, jei nieko neišmetame, o kampai tarp linijų gali išlikti lygūs dėl simetrijos. Mokėjimas atskirti, kas keičiasi, o kas ne, yra raktas į sėkmę."
+      "content": "Vienas svarbiausių įrankių olimpiadininko arsenale yra **vizualizacija**. Tai gebėjimas mintyse pasukti figūrą, ją perpjauti ar sujungti su kita. **Strategija: Pagalbinės linijos.** Dažnai uždavinys atrodo neišsprendžiamas, nes mums trūksta informacijos. Nubrėžę vieną papildomą liniją (pavyzdžiui, sujungę dvi viršūnes arba pratęsę kraštinę iki susikirtimo), galime pamatyti pažįstamas figūras – stačiakampius ar lygius trikampius. **Strategija: „Nekintamumo“ paieška.** Keičiant figūros formą (pavyzdžiui, lankstant popierių), kai kurios savybės nesikeičia. Plotas paprastai išlieka toks pat, jei nieko neišmetame, o kampai tarp linijų gali išlikti lygūs dėl simetrijos. Mokėjimas atskirti, kas keičiasi, o kas ne, yra raktas į sėkmę."
     },
     {
       "id": "geo-area-perimeter",
       "title": "Sudėtinių figūrų perimetras ir plotas",
-      "content": "Olimpiadinės figūros dažnai primena laiptus, raides arba keistus dantračius. Kaip rasti jų perimetrą ar plotą neskaičiuojant kiekvienos mažos atkarpos atskirai?\n\n**1. Skaidymo metodas.** Jei figūra yra sudėtinga, supjaustykite ją į paprastas dalis: stačiakampius, kvadratus ar trikampius. Visos figūros plotas bus lygus jos dalių plotų sumai: $S_{\\text{viso}} = S_1 + S_2 + \\dots + S_n$.\n\n**2. Papildymo (stačiakampio rėmo) metodas.** Kartais lengviau ne skaidyti figūrą, o „įdėti“ ją į didelį stačiakampį. Tada figūros plotas bus lygus didžiojo stačiakampio plotui minus „tuščių“ kampų plotai. Šis metodas ypač naudingas skaičiuojant „laiptuotų“ figūrų plotą.\n\n**3. Perimetro perstūmimo taisyklė.** Įsivaizduokite laiptuotą figūrą. Jei visas „vidines“ laiptelių atkarpas pastumtume į išorę, dažnai gautume paprastą stačiakampį. Tai reiškia, kad tokios figūros perimetras yra lygus stačiakampio, į kurį ji telpa, perimetrui. Svarbu: tai galioja tik jei figūra neturi „įdubimų“ (vidinių kampų, kurie neatsiremia į išorinį rėmą)."
+      "content": "Olimpiadinės figūros dažnai primena laiptus, raides arba keistus dantračius. Kaip rasti jų perimetrą ar plotą neskaičiuojant kiekvienos mažos atkarpos atskirai? **1. Skaidymo metodas.** Jei figūra yra sudėtinga, supjaustykite ją į paprastas dalis: stačiakampius, kvadratus ar trikampius. Visos figūros plotas bus lygus jos dalių plotų sumai: $S_{\\text{viso}} = S_1 + S_2 + \\dots + S_n$. **2. Papildymo (stačiakampio rėmo) metodas.** Kartais lengviau ne skaidyti figūrą, o „įdėti“ ją į didelį stačiakampį. Tada figūros plotas bus lygus didžiojo stačiakampio plotui minus „tuščių“ kampų plotai. Šis metodas ypač naudingas skaičiuojant „laiptuotų“ figūrų plotą. **3. Perimetro perstūmimo taisyklė.** Įsivaizduokite laiptuotą figūrą. Jei visas „vidines“ laiptelių atkarpas pastumtume į išorę, dažnai gautume paprastą stačiakampį. Tai reiškia, kad tokios figūros perimetras yra lygus stačiakampio, į kurį ji telpa, perimetrui. Svarbu: tai galioja tik jei figūra neturi „įdubimų“ (vidinių kampų, kurie neatsiremia į išorinį rėmą)."
     },
     {
       "id": "geo-angles",
       "title": "Kampų medžioklė ir laikrodžiai",
-      "content": "Kampai olimpiadose slepiasi visur. Penktoje klasėje svarbiausia suprasti tris dalykus:\n\n1.  **Gretimi kampai:** Jų suma visada lygi $180^\\circ$. Jei žinote vieną, žinote ir kitą: $\\alpha + \\beta = 180^\\circ$.\n2.  **Kryžminiai kampai:** Kai dvi tiesės susikerta, priešpriešiais esantys kampai yra lygūs.\n3.  **Trikampio kampų suma:** Nors tai dažniau mokomasi vėliau, olimpiadose tai bazinis faktas – bet kokio trikampio vidinių kampų suma yra $180^\\circ$.\n\n**Laikrodžio rodyklių kampai.** Tai klasikinė tema. Prisiminkite:\n- Ciferblatas yra apskritimas, turintis $360^\\circ$.\n- Kiekviena valandos padala (nuo 1 iki 2, nuo 2 iki 3 ir t.t.) atitinka $30^\\circ$ ($360 / 12 = 30$).\n- **Svarbiausia gudrybė:** Valandinė rodyklė nestovi vietoje, kol minutinė juda! Per vieną minutę minutinė rodyklė pasislenka $6^\\circ$ ($360 / 60$), o valandinė – tik $0.5^\\circ$ ($30 / 60$). Šis mažas poslinkis dažnai yra uždavinio „kabliukas“."
+      "content": "Kampai olimpiadose slepiasi visur. Penktoje klasėje svarbiausia suprasti tris dalykus: 1. **Gretimi kampai:** Jų suma visada lygi $180^\\circ$. Jei žinote vieną, žinote ir kitą: $\\alpha + \\beta = 180^\\circ$. 2. **Kryžminiai kampai:** Kai dvi tiesės susikerta, priešpriešiais esantys kampai yra lygūs. 3. **Trikampio kampų suma:** Nors tai dažniau mokomasi vėliau, olimpiadose tai bazinis faktas – bet kokio trikampio vidinių kampų suma yra $180^\\circ$. **Laikrodžio rodyklių kampai.** Tai klasikinė tema. Prisiminkite: - Ciferblatas yra apskritimas, turintis $360^\\circ$. - Kiekviena valandos padala (nuo 1 iki 2, nuo 2 iki 3 ir t.t.) atitinka $30^\\circ$ ($360 / 12 = 30$). - **Svarbiausia gudrybė:** Valandinė rodyklė nestovi vietoje, kol minutinė juda! Per vieną minutę minutinė rodyklė pasislenka $6^\\circ$ ($360 / 60$), o valandinė – tik $0.5^\\circ$ ($30 / 60$). Šis mažas poslinkis dažnai yra uždavinio „kabliukas“."
     },
     {
       "id": "geo-counting",
       "title": "Sistemingas figūrų skaičiavimas",
-      "content": "„Kiek trikampių matote šiame brėžinyje?“ – tai klausimas, kuriame mokiniai dažniausiai daro klaidų dėl skubėjimo. Kad nepasiklystumėte, naudokite **metodinį žymėjimą**.\n\n**Žingsniai:**\n1.  Suskirstykite brėžinį į mažiausias „elementariąsias“ dalis ir jas sunumeruokite (1, 2, 3...).\n2.  Skaičiuokite trikampius (ar kitas figūras) pagal tai, iš kiek dalių jie sudaryti:\n    - Tik iš vienos dalies: (1), (2), (3)...\n    - Iš dviejų dalių derinių: (1+2), (2+3)...\n    - Iš trijų dalių derinių ir t.t.\n3.  Surašykite visus derinius sąraše. Taip nieko nepraleisite ir nieko nesuskaičiuosite du kartus."
+      "content": "„Kiek trikampių matote šiame brėžinyje?“ – tai klausimas, kuriame mokiniai dažniausiai daro klaidų dėl skubėjimo. Kad nepasiklystumėte, naudokite **metodinį žymėjimą**. **Žingsniai:** 1. Suskirstykite brėžinį į mažiausias „elementariąsias“ dalis ir jas sunumeruokite (1, 2, 3...). 2. Skaičiuokite trikampius (ar kitas figūras) pagal tai, iš kiek dalių jie sudaryti: - Tik iš vienos dalies: (1), (2), (3)... - Iš dviejų dalių derinių: (1+2), (2+3)... - Iš trijų dalių derinių ir t.t. 3. Surašykite visus derinius sąraše. Taip nieko nepraleisite ir nieko nesuskaičiuosite du kartus."
     },
     {
       "id": "geo-symmetry",
       "title": "Simetrija ir karpymai",
-      "content": "Simetrija padeda spręsti uždavinius, kuriuose reikia rasti trumpiausią kelią arba suprasti, kas nutiks perkirpus sulankstytą popierių.\n\n**Karpymai (Tangramų logika).** Kai figūra sukarpoma ir sudėliojama nauja, jos **plotas nesikeičia**. Tai vadinama plotų tverme. Tačiau **perimetras gali pasikeisti** dramatiškai! Kiekvienas naujas pjūvis sukuria dvi naujas kraštines, kurios anksčiau buvo figūros viduje. \n\n**Simetrijos ašys.** Taisyklingosios figūros turi tiek simetrijos ašių, kiek turi kraštinių (pvz., kvadratas – 4, lygiakraštis trikampis – 3). Olimpiadose dažnai klausiama apie raidžių simetriją ar skaičių atspindžius. Pavyzdžiui, skaičius 808 veidrodyje atrodo taip pat, o 106 – jau nebe."
+      "content": "Simetrija padeda spręsti uždavinius, kuriuose reikia rasti trumpiausią kelią arba suprasti, kas nutiks perkirpus sulankstytą popierių. **Karpymai (Tangramų logika).** Kai figūra sukarpoma ir sudėliojama nauja, jos **plotas nesikeičia**. Tai vadinama plotų tverme. Tačiau **perimetras gali pasikeisti** dramatiškai! Kiekvienas naujas pjūvis sukuria dvi naujas kraštines, kurios anksčiau buvo figūros viduje. **Simetrijos ašys.** Taisyklingosios figūros turi tiek simetrijos ašių, kiek turi kraštinių (pvz., kvadratas – 4, lygiakraštis trikampis – 3). Olimpiadose dažnai klausiama apie raidžių simetriją ar skaičių atspindžius. Pavyzdžiui, skaičius 808 veidrodyje atrodo taip pat, o 106 – jau nebe."
+    },
+    {
+      "id": "olimpiada-05-geometrija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Geometrija“ 5 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-geometrija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Olimpiadinė logika ir dedukcija, Matematinio įrodymo samprata, Skaidymo strategija, Papildymo strategija, Geometrijos strategija: simetrija, Geometrijos strategija: skaičiavimas ir Laikrodžio rodyklių greičiai. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Geometrija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-geometrija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-geometrija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Tiesėje pažymėti $5$ skirtingi taškai. Kiek skirtingų atkarpų, kurių galai yra šie pažymėti taškai, galima rasti šioje tiesėje?“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Geometrija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-geometrija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -119,19 +189,19 @@
     },
     {
       "id": "geo-strat-zsymetrija",
-      "title": "Geo Strat Zsymetrija",
+      "title": "Geometrijos strategija: simetrija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Geo Strat Zsymetrija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Geometrijos strategija: simetrija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "geo-strat-skaiciavimas",
-      "title": "Geo Strat Skaiciavimas",
+      "title": "Geometrijos strategija: skaičiavimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Geo Strat Skaiciavimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Geometrijos strategija: skaičiavimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }

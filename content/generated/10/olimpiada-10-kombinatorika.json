@@ -28,7 +28,16 @@
     "formulaIds": [],
     "mistakeIds": [],
     "exerciseIds": [
-      "ex-olimpiada-10-19"
+      "ex-olimpiada-10-19",
+      "olimpiada-10-kombinatorika-auto-001",
+      "olimpiada-10-kombinatorika-auto-002",
+      "olimpiada-10-kombinatorika-auto-003",
+      "olimpiada-10-kombinatorika-auto-004",
+      "olimpiada-10-kombinatorika-auto-005",
+      "olimpiada-10-kombinatorika-auto-006",
+      "olimpiada-10-kombinatorika-auto-007",
+      "olimpiada-10-kombinatorika-auto-008",
+      "olimpiada-10-kombinatorika-auto-009"
     ]
   },
   "theory": [
@@ -127,6 +136,104 @@
           "text": "Katalano skaičiai $C_n = \\frac{1}, {n+1} \\binom{2n}, {n}$ atsiranda dešimtyse skirtingų kontekstų: taisyklingos skliaustelių sekos, trikampių trianguliacijos, maršrutai tinklelyje po įstrižaine. Sunkiausia dalis olimpiadoje – pamatyti, kad uždavinys iš tiesų skaičiuoja būtent šiuos objektus."
         }
       ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Kombinatorika“ 10 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: atvejų medis, invariantas, kraštinis elementas, Dirichlė principas, konstrukcija ir dvigubas skaičiavimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Oilerio formulė plokštiesiems grafams, Deriniai, Kėliniai su pasikartojimais, Įjungimo-išjungimo principas, Katalano skaičiai, Generuojančios funkcijos ir Rekurentiniai sąryšiai. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Kombinatorika“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Nuspręsk, ar objektus rikiuoji, renkiesi, daliji į atvejus, ar konstruoji pavyzdį. Aiškiai aprašyk pirmą pasirinkimą, kiek galimybių lieka po jo, ir kur gali atsirasti dubliavimas. Jei uždavinys įrodymo tipo, bandyk kraštinį elementą, paritetą, invariantą arba piešinį kaip grafą. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Olimpiadinis uždavinys iš temos „Kombinatorika“ paprastai slepia vieną pagrindinę idėją, kurią reikia pastebėti prieš skaičiuojant.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Kombinatorika“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Palygink atsakymą su mažesniu modeliu, patikrink, ar atvejai nesikerta ir ar jų sąjunga apima visas galimybes. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti atvejų medis, invariantas, kraštinis elementas, Dirichlė principas, konstrukcija ir dvigubas skaičiavimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Kombinatorika“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra atvejų skaidymas, pasirinkimų medis, invariantai, konstrukcija ir skaičiavimo dubliavimo kontrolė. Jei pavyzdys prasideda taip: „uždavinys iš temos „Kombinatorika““, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-olimpiadinis-papildomas-grieztumo-kriterijai-2",
+      "title": "Griežtumo kriterijai pilname sprendime",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Kombinatorika“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Oilerio formulė plokštiesiems grafams, Deriniai, Kėliniai su pasikartojimais, Įjungimo-išjungimo principas, Katalano skaičiai, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -206,31 +313,31 @@
     {
       "id": "we-comb-recurrence-tiling",
       "title": "Stačiakampio padengimas domino",
-      "content": "Keliais būdais galima uždengti $2 \\times n$ stačiakampį $1 \\times 2$ domino kauliukais?\n\n**Sprendimas:**\n1. Tegul $a_n$ yra būdų skaičius.\n2. Paskutinis stulpelis gali būti užpildytas dviem būdais:\n   - Vienu vertikaliu domino kauliuku. Tada likęs plotas yra $2 \\times (n-1)$, kurį uždengti yra $a_{n-1}$ būdų.\n   - Dviem horizontaliais domino kauliukais. Tada likęs plotas yra $2 \\times (n-2)$, kurį uždengti yra $a_{n-2}$ būdų.\n3. Gauname rekurentinį sąryšį $a_n = a_{n-1} + a_{n-2}$.\n4. Pradinės sąlygos: $a_1=1$ (vienas vertikalus), $a_2=2$ (du vertikalūs arba du horizontalūs).\n5. Tai Fibonačio seka. $a_n = F_{n+1}$.\n\n**Atsakymas:** $F_{n+1}$.",
+      "content": "Keliais būdais galima uždengti $2 \\times n$ stačiakampį $1 \\times 2$ domino kauliukais? **Sprendimas:** 1. Tegul $a_n$ yra būdų skaičius. 2. Paskutinis stulpelis gali būti užpildytas dviem būdais: - Vienu vertikaliu domino kauliuku. Tada likęs plotas yra $2 \\times (n-1)$, kurį uždengti yra $a_{n-1}$ būdų. - Dviem horizontaliais domino kauliukais. Tada likęs plotas yra $2 \\times (n-2)$, kurį uždengti yra $a_{n-2}$ būdų. 3. Gauname rekurentinį sąryšį $a_n = a_{n-1} + a_{n-2}$. 4. Pradinės sąlygos: $a_1=1$ (vienas vertikalus), $a_2=2$ (du vertikalūs arba du horizontalūs). 5. Tai Fibonačio seka. $a_n = F_{n+1}$. **Atsakymas:** $F_{n+1}$.",
       "explanation": "Paskutinio žingsnio analizė yra standartinis kelias į rekurenciją."
     },
     {
       "id": "we-comb-generating-sums",
       "title": "Suma naudojant generuojančias funkcijas",
-      "content": "Keliais būdais galima gauti sumą 10 naudojant tik skaičius 1, 2 ir 3, jei tvarka svarbi?\n\n**Sprendimas:**\n1. Kiekvienas pasirinkimas (1, 2 arba 3) atitinka polinomą $P(x) = x^1 + x^2 + x^3$.\n2. Jei naudojame $k$ skaičių, būdų skaičius yra koeficientas prie $x^{10}$ funkcijoje $(x+x^2+x^3)^k$.\n3. Kadangi $k$ gali būti bet koks, nagrinėjame sumą $S(x) = 1 + P(x) + P(x)^2 + \\dots = \\frac{1}, {1 - (x+x^2+x^3)}$.\n4. Išskleidę šią eilutę, rasime reikiamą koeficientą. (Praktikoje tai dažnai virsta rekurencija $a_n = a_{n-1} + a_{n-2} + a_{n-3}$).\n\n**Atsakymas:** Skaičiuojama per koeficientą.",
+      "content": "Keliais būdais galima gauti sumą 10 naudojant tik skaičius 1, 2 ir 3, jei tvarka svarbi? **Sprendimas:** 1. Kiekvienas pasirinkimas (1, 2 arba 3) atitinka polinomą $P(x) = x^1 + x^2 + x^3$. 2. Jei naudojame $k$ skaičių, būdų skaičius yra koeficientas prie $x^{10}$ funkcijoje $(x+x^2+x^3)^k$. 3. Kadangi $k$ gali būti bet koks, nagrinėjame sumą $S(x) = 1 + P(x) + P(x)^2 + \\dots = \\frac{1}, {1 - (x+x^2+x^3)}$. 4. Išskleidę šią eilutę, rasime reikiamą koeficientą. (Praktikoje tai dažnai virsta rekurencija $a_n = a_{n-1} + a_{n-2} + a_{n-3}$). **Atsakymas:** Skaičiuojama per koeficientą.",
       "explanation": "Generuojančios funkcijos leidžia užkoduoti pasirinkimų taisykles algebrinėje formoje."
     },
     {
       "id": "we-comb-graph-planar-bound",
       "title": "Ekstremalus briaunų skaičius plokštumoje",
-      "content": "Įrodykite, kad grafas su 5 viršūnėmis, kuriame kiekviena viršūnė sujungta su kiekviena kita ($K_5$), nėra plokščiasis.\n\n**Sprendimas:**\n1. Plokščiajam sujungtam grafui galioja $E \\le 3V - 6$ (nes kiekviena sritis apribota bent 3 briaunomis).\n2. Grafui $K_5$: $V = 5$, briaunų skaičius $E = \\binom{5}, {2} = 10$.\n3. Tikriname nelygybę: $10 \\le 3(5) - 6 = 9$.\n4. $10 \\le 9$ yra neteisinga, todėl grafas negali būti plokščiasis.\n\n**Atsakymas:** Įrodyta.",
+      "content": "Įrodykite, kad grafas su 5 viršūnėmis, kuriame kiekviena viršūnė sujungta su kiekviena kita ($K_5$), nėra plokščiasis. **Sprendimas:** 1. Plokščiajam sujungtam grafui galioja $E \\le 3V - 6$ (nes kiekviena sritis apribota bent 3 briaunomis). 2. Grafui $K_5$: $V = 5$, briaunų skaičius $E = \\binom{5}, {2} = 10$. 3. Tikriname nelygybę: $10 \\le 3(5) - 6 = 9$. 4. $10 \\le 9$ yra neteisinga, todėl grafas negali būti plokščiasis. **Atsakymas:** Įrodyta.",
       "explanation": "Oilerio formulė leidžia nustatyti geometrinius apribojimus abstraktiems ryšiams."
     },
     {
       "id": "we-comb-catalan-paths",
       "title": "Maršrutai po įstrižaine",
-      "content": "Kiek yra būdų nukeliauti iš $(0,0)$ į $(n,n)$ judant tik į dešinę ir į viršų taip, kad maršrutas niekada nepakiltų virš tiesės $y=x$?\n\n**Sprendimas:**\n1. Visų maršrutų be apribojimų yra $\\binom{2n}, {n}$.\n2. Naudojame „atspindžio principą“: kiekvienas „blogas“ maršrutas (kuris paliečia $y=x+1$) gali būti unikaliai susietas su maršrutu iš $(-1, 1)$ į $(n,n)$.\n3. „Blogų“ maršrutų skaičius yra $\\binom{2n}, {n-1}$.\n4. „Gerų“ maršrutų skaičius $C_n = \\binom{2n}, {n} - \\binom{2n}, {n-1} = \\frac{1}, {n+1} \\binom{2n}, {n}$.\n\n**Atsakymas:** $C_n$.",
+      "content": "Kiek yra būdų nukeliauti iš $(0,0)$ į $(n,n)$ judant tik į dešinę ir į viršų taip, kad maršrutas niekada nepakiltų virš tiesės $y=x$? **Sprendimas:** 1. Visų maršrutų be apribojimų yra $\\binom{2n}, {n}$. 2. Naudojame „atspindžio principą“: kiekvienas „blogas“ maršrutas (kuris paliečia $y=x+1$) gali būti unikaliai susietas su maršrutu iš $(-1, 1)$ į $(n,n)$. 3. „Blogų“ maršrutų skaičius yra $\\binom{2n}, {n-1}$. 4. „Gerų“ maršrutų skaičius $C_n = \\binom{2n}, {n} - \\binom{2n}, {n-1} = \\frac{1}, {n+1} \\binom{2n}, {n}$. **Atsakymas:** $C_n$.",
       "explanation": "Bijekcija su atspindžiu yra vienas elegantiškiausių kombinatorikos įrodymų."
     },
     {
       "id": "we-comb-inclusion-exclusion-complex",
       "title": "Netvarkos (Derangements)",
-      "content": "Kiek yra būdų sudėlioti $n$ laiškų į $n$ vokų taip, kad nė vienas laiškas nepatektų į savo voką?\n\n**Sprendimas:**\n1. Naudojame įjungimo-išjungimo principą.\n2. Bendras permutacijų skaičius $n!$.\n3. Atimame tas, kur bent 1 laiškas savo vietoje, pridedame tas, kur bent 2, ir t. t.\n4. Formulė: $D_n = n! (1 - \\frac{1}, {1!} + \\frac{1}, {2!} - \\dots + \\frac{(-1)^n}, {n!})$.\n\n**Atsakymas:** $D_n$.",
+      "content": "Kiek yra būdų sudėlioti $n$ laiškų į $n$ vokų taip, kad nė vienas laiškas nepatektų į savo voką? **Sprendimas:** 1. Naudojame įjungimo-išjungimo principą. 2. Bendras permutacijų skaičius $n!$. 3. Atimame tas, kur bent 1 laiškas savo vietoje, pridedame tas, kur bent 2, ir t. t. 4. Formulė: $D_n = n! (1 - \\frac{1}, {1!} + \\frac{1}, {2!} - \\dots + \\frac{(-1)^n}, {n!})$. **Atsakymas:** $D_n$.",
       "explanation": "Šis uždavinys rodo, kaip PIE metodas suvaldo sudėtingus apribojimus."
     }
   ],
@@ -239,7 +346,7 @@
       "id": "ex-olimpiada-10-19",
       "topicId": "olimpiada-10-kombinatorika",
       "grade": 10,
-      "masteryWeight": 2.0,
+      "masteryWeight": 2,
       "passingThreshold": 0.6,
       "answer": {
         "kind": "structuredReasoning",
@@ -253,6 +360,1050 @@
       "difficulty": "medium",
       "conceptIds": [
         "olimpiada-10-concept-euler-formula-planar"
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-001",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Yra 4 skirtingi marškinėliai ir 3 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "4\\cdot3=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-001-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "4\\cdot3=12",
+              "result": "Galima sudaryti 12 porų."
+            }
+          ],
+          "finalAnswer": "12"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-001-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-001",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-002",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Yra 5 skirtingi marškinėliai ir 4 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "5\\cdot4=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-002-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "5\\cdot4=20",
+              "result": "Galima sudaryti 20 porų."
+            }
+          ],
+          "finalAnswer": "20"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-002-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-002",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-003",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Yra 6 skirtingi marškinėliai ir 2 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "6\\cdot2=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-003-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "6\\cdot2=12",
+              "result": "Galima sudaryti 12 porų."
+            }
+          ],
+          "finalAnswer": "12"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-003-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-003",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-004",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Yra 3 skirtingi marškinėliai ir 3 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "3\\cdot3=9"
+        }
+      ],
+      "answerText": "9",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-004-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "3\\cdot3=9",
+              "result": "Galima sudaryti 9 porų."
+            }
+          ],
+          "finalAnswer": "9"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-004-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-004",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-005",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Yra 4 skirtingi marškinėliai ir 4 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 16,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "4\\cdot4=16"
+        }
+      ],
+      "answerText": "16",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-005-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "4\\cdot4=16",
+              "result": "Galima sudaryti 16 porų."
+            }
+          ],
+          "finalAnswer": "16"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-005-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-005",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-006",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Yra 5 skirtingi marškinėliai ir 2 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "5\\cdot2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-006-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "5\\cdot2=10",
+              "result": "Galima sudaryti 10 porų."
+            }
+          ],
+          "finalAnswer": "10"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-006-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-006",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-007",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Yra 6 skirtingi marškinėliai ir 3 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "6\\cdot3=18"
+        }
+      ],
+      "answerText": "18",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-007-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "6\\cdot3=18",
+              "result": "Galima sudaryti 18 porų."
+            }
+          ],
+          "finalAnswer": "18"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-007-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-007",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-008",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Yra 3 skirtingi marškinėliai ir 4 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "3\\cdot4=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-008-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "3\\cdot4=12",
+              "result": "Galima sudaryti 12 porų."
+            }
+          ],
+          "finalAnswer": "12"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-008-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-008",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-10-kombinatorika-auto-009",
+      "topicId": "olimpiada-10-kombinatorika",
+      "grade": 10,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Yra 4 skirtingi marškinėliai ir 2 skirtingos kepurės. Kiek skirtingų aprangos porų galima sudaryti? Pagrįskite daugybos taisykle.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure. Nepriklausomi pasirinkimai dauginami.",
+          "latex": "4\\cdot2=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Kombinatorika",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "multiplication-principle",
+        "counting"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-10-concept-euler-formula-planar",
+        "concept-deriniai"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-009-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "multiplication-principle",
+            "counting"
+          ],
+          "steps": [
+            {
+              "title": "Daugybos taisyklė",
+              "action": "Kiekvieną marškinėlių pasirinkimą galima derinti su kiekviena kepure.",
+              "reason": "Nepriklausomi pasirinkimai dauginami.",
+              "latex": "4\\cdot2=8",
+              "result": "Galima sudaryti 8 porų."
+            }
+          ],
+          "finalAnswer": "8"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-10-kombinatorika-auto-009-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-10-concept-euler-formula-planar"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-10-kombinatorika-auto-009",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Kombinatorika“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
       ]
     }
   ]

@@ -44,7 +44,16 @@
       "vietos-teoremos-zenklai"
     ],
     "exerciseIds": [
-      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001"
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-ex-001",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-001",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-002",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-003",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-004",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-005",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-006",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-007",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-008",
+      "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-009"
     ]
   },
   "theory": [
@@ -73,7 +82,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kiekvienas koeficientas turi savo „vaidmenį“:\n- **$a$ (vyriausiasis koeficientas)**: Jis lemia, ar trinario grafikas (parabolė) bus atviras į viršų ($a > 0$), ar į apačią ($a < 0$). Taip pat jis nustato, kiek „siaura“ ar „plati“ bus ši forma.\n- **$b$ (vidurinis koeficientas)**: Kartu su $a$ jis nustato, kurioje vietoje bus reiškinio viršūnė (didžiausia ar mažiausia vertė).\n- **$c$ (laisvasis narys)**: Tai vertė, kurią gausime, kai $x = 0$. Grafiškai tai taškas, kuriame grafikas kerta vertikaliąją $OY$ ašį."
+          "text": "Kiekvienas koeficientas turi savo „vaidmenį“: - **$a$ (vyriausiasis koeficientas)**: Jis lemia, ar trinario grafikas (parabolė) bus atviras į viršų ($a > 0$), ar į apačią ($a < 0$). Taip pat jis nustato, kiek „siaura“ ar „plati“ bus ši forma. - **$b$ (vidurinis koeficientas)**: Kartu su $a$ jis nustato, kurioje vietoje bus reiškinio viršūnė (didžiausia ar mažiausia vertė). - **$c$ (laisvasis narys)**: Tai vertė, kurią gausime, kai $x = 0$. Grafiškai tai taškas, kuriame grafikas kerta vertikaliąją $OY$ ašį."
         }
       ]
     },
@@ -101,7 +110,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Diskriminantas yra tarsi trinario „rentgenas“:\n1. Jei $D > 0$: Trinaris turi **dvi skirtingas** realiąsias šaknis $x_1$ ir $x_2$. Tai reiškia, kad jį galima pilnai išskaidyti į du skirtingus skliaustus.\n2. Jei $D = 0$: Trinaris turi **vieną kartotinę** šaknį (arba dvi sutampančias). Tai reiškia, kad trinaris yra „pilnas kvadratas“ (pvz., $(x-3)^2$).\n3. Jei $D < 0$: Trinaris **neturi** realiųjų šaknų. Jis niekada netampa lygus nuliui. Tokių trinarių realiujų skaičių srityje išskaidyti į tiesinius dauginamuosius neįmanoma."
+          "text": "Diskriminantas yra tarsi trinario „rentgenas“: 1. Jei $D > 0$: Trinaris turi **dvi skirtingas** realiąsias šaknis $x_1$ ir $x_2$. Tai reiškia, kad jį galima pilnai išskaidyti į du skirtingus skliaustus. 2. Jei $D = 0$: Trinaris turi **vieną kartotinę** šaknį (arba dvi sutampančias). Tai reiškia, kad trinaris yra „pilnas kvadratas“ (pvz., $(x-3)^2$). 3. Jei $D < 0$: Trinaris **neturi** realiųjų šaknų. Jis niekada netampa lygus nuliui. Tokių trinarių realiujų skaičių srityje išskaidyti į tiesinius dauginamuosius neįmanoma."
         }
       ]
     },
@@ -153,7 +162,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kai pradedame dalinti vieną reiškinį iš kito, gauname racionaliąsias trupmenas. Jos panašios į paprastas trupmenas (kaip $\frac{3}{4}$), tik jose „gyvena“ kintamieji."
+          "text": "Kai pradedame dalinti vieną reiškinį iš kito, gauname racionaliąsias trupmenas. Jos panašios į paprastas trupmenas (kaip $ rac{3}{4}$), tik jose „gyvena“ kintamieji."
         },
         {
           "type": "definition",
@@ -167,7 +176,7 @@
         },
         {
           "type": "method",
-          "text": "Kaip rasti apibrėžimo sritį? \n1. Paimkite reiškinio vardiklį.\n2. Prilyginkite jį nuliui.\n3. Išspręskite gautą lygtį.\n4. Atsakyme parašykite: $x \\in \\mathbb{R}$, išskyrus rastus skaičius."
+          "text": "Kaip rasti apibrėžimo sritį? 1. Paimkite reiškinio vardiklį. 2. Prilyginkite jį nuliui. 3. Išspręskite gautą lygtį. 4. Atsakyme parašykite: $x \\in \\mathbb{R}$, išskyrus rastus skaičius."
         }
       ]
     },
@@ -185,7 +194,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Sudėtis ir atimtis**: Čia susiduriame su didžiausiu iššūkiu – bendruoju vardikliu. \n- Jei vardikliai vienodi: tiesiog sudedame skaitiklius.\n- Jei vardikliai skirtingi: privalome rasti **Mažiausią Bendrąjį Vardiklį (MBV)**. MBV turi savyje sutalpinti visus vardikliuose esančius dauginamuosius su didžiausiais jų laipsniais."
+          "text": "**Sudėtis ir atimtis**: Čia susiduriame su didžiausiu iššūkiu – bendruoju vardikliu. - Jei vardikliai vienodi: tiesiog sudedame skaitiklius. - Jei vardikliai skirtingi: privalome rasti **Mažiausią Bendrąjį Vardiklį (MBV)**. MBV turi savyje sutalpinti visus vardikliuose esančius dauginamuosius su didžiausiais jų laipsniais."
         },
         {
           "type": "paragraph",
@@ -208,6 +217,76 @@
         {
           "type": "note",
           "text": "Visada prieš pradėdami veiksmus pasitikrinkite, ar negalima ko nors iškelti prieš skliaustus. Tai sutaupys marios laiko!"
+        }
+      ]
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai“ 9 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kvadratinis trinaris, Trinario šaknys, Skaidymas dauginamaisiais, Trupmeninis racionalusis reiškinys, Apibrėžimo Sritis Trr, Prastinimas ir Bendravardiklinimas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Išskaidyk skaičius į paprastesnes dalis: pirminius daugiklius, liekanas pagal pasirinktą modulį, bendrus daliklius arba santykio vienetus. Jei sąlyga kalba apie visus skaičius, ieškok invariantų ir draudžiamų liekanų; jei prašo rasti skaičių, kurk jį nuo dalumo sąlygų ir tik tada tikrink dydį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Raskite kvadratinio trinario x² - 5x + 6 šaknų sumą.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tikrink, ar rezultatas tenkina visas dalumo sąlygas, ar nepamiršta nulio, neigiamų reikšmių arba natūraliųjų skaičių apribojimo. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Kvadratinis trinaris ir trupmeniniai racionalieji reiškiniai“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -476,10 +555,10 @@
     },
     {
       "id": "apibrezimo-sritis-trr",
-      "title": "Apibrezimo Sritis Trr",
+      "title": "Apibrėžimo Sritis Trr",
       "type": "concept",
-      "shortDefinition": "S?voka ?Apibrezimo Sritis Trr? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Apibrėžimo Sritis Trr“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -487,8 +566,8 @@
       "id": "prastinimas",
       "title": "Prastinimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Prastinimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Prastinimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -496,8 +575,8 @@
       "id": "bendravardiklinimas",
       "title": "Bendravardiklinimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Bendravardiklinimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Bendravardiklinimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -505,8 +584,8 @@
       "id": "vietos-teorema",
       "title": "Vietos Teorema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Vietos Teorema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Vietos Teorema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -514,8 +593,8 @@
       "id": "diskriminantas",
       "title": "Diskriminantas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Diskriminantas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Diskriminantas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -609,6 +688,402 @@
       "mistakeIds": [],
       "estimatedSeconds": 45,
       "difficulty": "medium"
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-001",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-002",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-003",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-004",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-6x+8=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-2)(x-4)$.",
+          "latex": "x^2-6x+8=(x-2)(x-4)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-005",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-9x+18=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-3)(x-6)$.",
+          "latex": "x^2-9x+18=(x-3)(x-6)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-006",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--2)(x--1)$.",
+          "latex": "x^2+3x+2=(x--2)(x--1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-007",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-008",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kvadratinis-trinaris-ir-racionalieji-reiskiniai-auto-009",
+      "topicId": "kvadratinis-trinaris-ir-racionalieji-reiskiniai",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratinis-trinaris",
+        "trinario-saknys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [],

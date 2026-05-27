@@ -70,7 +70,7 @@
         {
           "type": "method",
           "title": "Skaidymo strategijos",
-          "text": "1. **Grupavimas:** narių sujungimas į poras ar grupes, turinčias bendrą daugiklį. \n 2. **Sutrumpinto dauginimo formulės:** ne tik žinoti $(a+b)^2$, bet ir mokėti atpažinti jas atvirkštine tvarka. \n 3. **Sumanus pridėjimas ir atėmimas:** pavyzdžiui, pridėjus ir atėmus $2x^2$, reiškinį $x^4 + 4$ galima paversti $(x^2+2)^2 - 4x^2$, o tai jau yra kvadratų skirtumas."
+          "text": "1. **Grupavimas:** narių sujungimas į poras ar grupes, turinčias bendrą daugiklį. 2. **Sutrumpinto dauginimo formulės:** ne tik žinoti $(a+b)^2$, bet ir mokėti atpažinti jas atvirkštine tvarka. 3. **Sumanus pridėjimas ir atėmimas:** pavyzdžiui, pridėjus ir atėmus $2x^2$, reiškinį $x^4 + 4$ galima paversti $(x^2+2)^2 - 4x^2$, o tai jau yra kvadratų skirtumas."
         },
         {
           "type": "paragraph",
@@ -89,7 +89,7 @@
         {
           "type": "theorem",
           "title": "Vijeto teorema",
-          "text": "Jei $x_1$ ir $x_2$ yra lygties $ax^2 + bx + c = 0$ šaknys, tai: \n $x_1 + x_2 = -\\frac{b}{a}$ \n $x_1 x_2 = \\frac{c}{a}$"
+          "text": "Jei $x_1$ ir $x_2$ yra lygties $ax^2 + bx + c = 0$ šaknys, tai: $x_1 + x_2 = -\\frac{b}{a}$ $x_1 x_2 = \\frac{c}{a}$"
         },
         {
           "type": "strategy",
@@ -133,7 +133,7 @@
         {
           "type": "strategy",
           "title": "Kada taikyti AM-GM?",
-          "text": "1. Kai reikia įrodyti, kad suma yra didesnė už tam tikrą konstantą. \n 2. Kai reikia rasti funkcijos mažiausią reikšmę (ekstremumą). \n 3. Lygybė galioja tada ir tik tada, kai $a=b$."
+          "text": "1. Kai reikia įrodyti, kad suma yra didesnė už tam tikrą konstantą. 2. Kai reikia rasti funkcijos mažiausią reikšmę (ekstremumą). 3. Lygybė galioja tada ir tik tada, kai $a=b$."
         },
         {
           "type": "paragraph",
@@ -153,6 +153,104 @@
           "type": "method",
           "title": "Nulinių taškų metodas",
           "text": "Raskite visus taškus, kuriuose po moduliu esantys reiškiniai lygūs nuliui. Šie taškai suskirsto tiesę į intervalus. Kiekviename intervale „nuimkite“ modulio ženklus pagal apibrėžimą: $|f(x)| = f(x)$, jei $f(x) \\ge 0$, ir $|f(x)| = -f(x)$, jei $f(x) < 0$."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Algebra“ 8 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Vijeto teorema, Skaidymas dauginamaisiais, Diofanto lygtys, AM-GM nelygybė, Modulis ir intervalai, Simetriniai reiškiniai ir 08 klasės olimpiadinė sąvoka loginis metodas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Algebra“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Nustatykite lygties $x^2 - 6x + 9 = 0$ šaknų skaičių ir jas raskite.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Algebra“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Algebra“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei pavyzdys prasideda taip: „Nustatykite lygties $x^2 - 6x + 9 = 0$ šaknų skaičių ir jas raskite.“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-08-algebra-olimpiadinis-papildomas-grieztumo-kriterijai-2",
+      "title": "Griežtumo kriterijai pilname sprendime",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Algebra“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Vijeto teorema, Skaidymas dauginamaisiais, Diofanto lygtys, AM-GM nelygybė, Modulis ir intervalai, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
         }
       ]
     }
@@ -197,19 +295,19 @@
     },
     {
       "id": "simetriniai-reiskiniai",
-      "title": "Simetriniai Reiskiniai",
+      "title": "Simetriniai reiškiniai",
       "type": "concept",
-      "shortDefinition": "S?voka ?Simetriniai Reiskiniai? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Simetriniai reiškiniai“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-08-concept-logic",
-      "title": "Olimpiada 08 Concept Logic",
+      "title": "08 klasės olimpiadinė sąvoka loginis metodas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Olimpiada 08 Concept Logic? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda spr?sti susijusius u?davinius.",
+      "shortDefinition": "Sąvoka „08 klasės olimpiadinė sąvoka loginis metodas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda spręsti susijusius uždavinius.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -300,7 +398,7 @@
           "text": "Kadangi $x, y$ yra sveikieji, skliausteliuose esantys skaičiai yra skaičiaus 4 dalikliai. Galimos poros $(x-1, y+3)$ yra: $(1,4), (4,1), (2,2), (-1,-4), (-4,-1), (-2,-2)$."
         },
         {
-          "text": "Sprendžiame kiekvieną sistemą: \n 1) $x-1=1, y+3=4 \\implies (2,1)$ \n 2) $x-1=4, y+3=1 \\implies (5,-2)$ \n 3) $x-1=2, y+3=2 \\implies (3,-1)$ \n 4) $x-1=-1, y+3=-4 \\implies (0,-7)$ \n 5) $x-1=-4, y+3=-1 \\implies (-3,-4)$ \n 6) $x-1=-2, y+3=-2 \\implies (-1,-5)$."
+          "text": "Sprendžiame kiekvieną sistemą: 1) $x-1=1, y+3=4 \\implies (2,1)$ 2) $x-1=4, y+3=1 \\implies (5,-2)$ 3) $x-1=2, y+3=2 \\implies (3,-1)$ 4) $x-1=-1, y+3=-4 \\implies (0,-7)$ 5) $x-1=-4, y+3=-1 \\implies (-3,-4)$ 6) $x-1=-2, y+3=-2 \\implies (-1,-5)$."
         }
       ],
       "answer": "(2,1), (5,-2), (3,-1), (0,-7), (-3,-4), (-1,-5)"
@@ -1086,7 +1184,7 @@
         "ex-olimpiada-08-ef659ec4",
         "ex-olimpiada-08-alg-020"
       ],
-      "masteryWeight": 2.0
+      "masteryWeight": 2
     }
   ]
 }

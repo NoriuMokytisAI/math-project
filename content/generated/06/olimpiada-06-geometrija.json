@@ -72,7 +72,7 @@
         },
         {
           "type": "method",
-          "text": "**Kampų poros**:\n- **Gretiniai kampai**: jų suma visada lygi $180^\\circ$.\n- **Kryžminiai kampai**: jie visada yra lygūs.\n- **Kampai prie lygiagrečių tiesių**: jei dvi lygiagrečias tieses kerta trečioji, tai atitinkamieji ir priešpriešiniai vidaus kampai yra lygūs, o vienašaliai vidaus kampai sudaro $180^\\circ$."
+          "text": "**Kampų poros**: - **Gretiniai kampai**: jų suma visada lygi $180^\\circ$. - **Kryžminiai kampai**: jie visada yra lygūs. - **Kampai prie lygiagrečių tiesių**: jei dvi lygiagrečias tieses kerta trečioji, tai atitinkamieji ir priešpriešiniai vidaus kampai yra lygūs, o vienašaliai vidaus kampai sudaro $180^\\circ$."
         },
         {
           "type": "paragraph",
@@ -165,6 +165,90 @@
           "text": "Teorema: $a^2 + b^2 = c^2$. Statinių kvadratų suma lygi įžambinės kvadratui. Dažniausiai naudojami 'Pitagoro trejetai': $(3, 4, 5)$, $(6, 8, 10)$, $(5, 12, 13)$."
         }
       ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Geometrija“ 6 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kryžminiai ir gretiniai kampai, Trikampio nelygybė, Simetrijos ašis, 06 klasės olimpiadinė sąvoka loginis metodas, 06 klasės olimpiadinė sąvoka metodas, Apskritimo ilgis ir Trikampio plotas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Geometrija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Geometrija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-06-geometrija-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Geometrija“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Jei pavyzdys prasideda taip: „Į kvadratą, kurio kraštinė lygi $10$ cm, įbrėžtas apskritimas. Apskaičiuokite kvadrato dalies, esančios už apskritimo ribų, plotą (atsakymą išreikškite per $\\pi$).“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -197,19 +281,19 @@
     },
     {
       "id": "olimpiada-06-concept-logic",
-      "title": "Olimpiada 06 Concept Logic",
+      "title": "06 klasės olimpiadinė sąvoka loginis metodas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Olimpiada 06 Concept Logic? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „06 klasės olimpiadinė sąvoka loginis metodas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "olimpiada-06-concept-method",
-      "title": "Olimpiada 06 Concept Method",
+      "title": "06 klasės olimpiadinė sąvoka metodas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Olimpiada 06 Concept Method? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „06 klasės olimpiadinė sąvoka metodas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -1164,7 +1248,7 @@
         {
           "order": 4,
           "kind": "scaffold",
-          "text": "Detalus atlikimas: 1. Atspindime $A(2, -3)$ x ašies atžvilgiu: gauname tašką $B(2, 3)$.\n2. Atliekame postūmį taškui $B$...",
+          "text": "Detalus atlikimas: 1. Atspindime $A(2, -3)$ x ašies atžvilgiu: gauname tašką $B(2, 3)$. 2. Atliekame postūmį taškui $B$...",
           "penalty": 0.12
         }
       ],

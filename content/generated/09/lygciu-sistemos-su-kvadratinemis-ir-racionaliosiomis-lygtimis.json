@@ -35,7 +35,18 @@
       "pasaliniai-sprendiniai",
       "blogas-keitinys"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-001",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-002",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-003",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-004",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-005",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-006",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-007",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-008",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-009",
+      "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-010"
+    ]
   },
   "theory": [
     {
@@ -62,7 +73,7 @@
         },
         {
           "type": "method",
-          "text": "**Keitimo būdo žingsniai:**\n1. Iš paprastesnės (dažniausiai tiesinės) lygties išreikškite vieną kintamąjį per kitą (pvz., $y = ...$ arba $x = ...$).\n2. Gautą išraišką įrašykite į **kitą** lygtį vietoj to kintamojo.\n3. Išspręskite gautą vieno kintamojo lygtį (ji dažnai bus kvadratinė arba racionalioji).\n4. Rastas reikšmes įstatykite į išraišką (iš 1 žingsnio) ir suraskite kito kintamojo reikšmes."
+          "text": "**Keitimo būdo žingsniai:** 1. Iš paprastesnės (dažniausiai tiesinės) lygties išreikškite vieną kintamąjį per kitą (pvz., $y = ...$ arba $x = ...$). 2. Gautą išraišką įrašykite į **kitą** lygtį vietoj to kintamojo. 3. Išspręskite gautą vieno kintamojo lygtį (ji dažnai bus kvadratinė arba racionalioji). 4. Rastas reikšmes įstatykite į išraišką (iš 1 žingsnio) ir suraskite kito kintamojo reikšmes."
         }
       ]
     },
@@ -140,7 +151,7 @@
         },
         {
           "type": "method",
-          "text": "**Modeliavimo planas:**\n1. Pasirinkite, ką žymėsite $x$ ir $y$ (pvz., stačiakampio kraštinės).\n2. Pagal užduoties sąlygas sudarykite dvi lygtis (pvz., viena apie plotą $x \\cdot y = S$, kita apie perimetrą $2(x+y) = P$).\n3. Išspręskite sistemą keitimo būdu.\n4. Atsirinkite tik prasmingus sprendinius (pvz., kraštinės ilgis negali būti neigiamas)."
+          "text": "**Modeliavimo planas:** 1. Pasirinkite, ką žymėsite $x$ ir $y$ (pvz., stačiakampio kraštinės). 2. Pagal užduoties sąlygas sudarykite dvi lygtis (pvz., viena apie plotą $x \\cdot y = S$, kita apie perimetrą $2(x+y) = P$). 3. Išspręskite sistemą keitimo būdu. 4. Atsirinkite tik prasmingus sprendinius (pvz., kraštinės ilgis negali būti neigiamas)."
         }
       ]
     },
@@ -150,7 +161,7 @@
       "blocks": [
         {
           "type": "method",
-          "text": "1. **Analizė:** Kuri lygtis paprastesnė? Kurį kintamąjį lengviau išreikšti?\n2. **Išreiškimas:** Išreikškite kintamąjį (stebėkite ženklus!).\n3. **Įstatymas:** Įstatykite į kitą lygtį (nepamirškite skliaustų keliant kvadratu!).\n4. **Kvadratinės lygties sprendimas:** Raskite $x_1$ ir $x_2$.\n5. **Atgalinis radimas:** Suskaičiuokite atitinkamus $y_1$ ir $y_2$.\n6. **Tikrinimas:** Įstatykite abu taškus į pradinę sistemą."
+          "text": "1. **Analizė:** Kuri lygtis paprastesnė? Kurį kintamąjį lengviau išreikšti? 2. **Išreiškimas:** Išreikškite kintamąjį (stebėkite ženklus!). 3. **Įstatymas:** Įstatykite į kitą lygtį (nepamirškite skliaustų keliant kvadratu!). 4. **Kvadratinės lygties sprendimas:** Raskite $x_1$ ir $x_2$. 5. **Atgalinis radimas:** Suskaičiuokite atitinkamus $y_1$ ir $y_2$. 6. **Tikrinimas:** Įstatykite abu taškus į pradinę sistemą."
         }
       ]
     },
@@ -181,6 +192,76 @@
           "text": "Išmokime taikyti teoriją praktiškai."
         }
       ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Lygčių sistemos su kvadratinėmis ir racionaliosiomis lygtimis“ 9 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Lygčių sistema, Sistemos sprendinys, Keitimo būdas (Substitucija), Sudeties Budas, Grafinis Budas, Racionalioji Lygtis ir Kvadratine Lygtis. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Lygčių sistemos su kvadratinėmis ir racionaliosiomis lygtimis“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Lygčių sistemos su kvadratinėmis ir racionaliosiomis lygtimis“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Lygčių sistemos su kvadratinėmis ir racionaliosiomis lygtimis“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
     }
   ],
   "workedExamples": [
@@ -188,7 +269,7 @@
       "id": "sist-ex-1",
       "title": "Tiesinė ir kvadratinė sistema",
       "level": "easy",
-      "problem": "Išspręskite sistemą:\n$$\\begin{cases} y - x = 2 \\\\ y = x^2 \\end{cases}$$",
+      "problem": "Išspręskite sistemą: $$\\begin{cases} y - x = 2 \\\\ y = x^2 \\end{cases}$$",
       "conceptIds": [
         "lygciu-sistema",
         "keitimo-budas"
@@ -221,7 +302,7 @@
       "id": "sist-ex-2",
       "title": "Sistemos su sandauga",
       "level": "medium",
-      "problem": "Išspręskite sistemą:\n$$\\begin{cases} x + y = 7 \\\\ xy = 12 \\end{cases}$$",
+      "problem": "Išspręskite sistemą: $$\\begin{cases} x + y = 7 \\\\ xy = 12 \\end{cases}$$",
       "conceptIds": [
         "lygciu-sistema",
         "keitimo-budas"
@@ -258,7 +339,7 @@
       "id": "sist-ex-3",
       "title": "Racionalioji sistema",
       "level": "medium",
-      "problem": "Išspręskite sistemą:\n$$\\begin{cases} y = \\frac{6}{x} \\\\ y = x + 1 \\end{cases}$$",
+      "problem": "Išspręskite sistemą: $$\\begin{cases} y = \\frac{6}{x} \\\\ y = x + 1 \\end{cases}$$",
       "conceptIds": [
         "racionalioji-lygtis",
         "grafinis-budas"
@@ -323,7 +404,7 @@
       "id": "sist-ex-5",
       "title": "Sistema su x² ir y²",
       "level": "hard",
-      "problem": "Išspręskite sistemą:\n$$\\begin{cases} x^2 + y^2 = 25 \\\\ x - y = 1 \\end{cases}$$",
+      "problem": "Išspręskite sistemą: $$\\begin{cases} x^2 + y^2 = 25 \\\\ x - y = 1 \\end{cases}$$",
       "conceptIds": [
         "keitimo-budas"
       ],
@@ -359,7 +440,7 @@
       "id": "sist-ex-6",
       "title": "Sprendinių skaičius (su parametru)",
       "level": "hard",
-      "problem": "Su kuria k reikšme sistema turi tik vieną sprendinį?\n$$\\begin{cases} y = x^2 \\\\ y = 2x + k \\end{cases}$$",
+      "problem": "Su kuria k reikšme sistema turi tik vieną sprendinį? $$\\begin{cases} y = x^2 \\\\ y = 2x + k \\end{cases}$$",
       "conceptIds": [
         "diskriminantas-formule"
       ],
@@ -383,7 +464,7 @@
       "id": "sist-ex-7",
       "title": "Sudėties būdas sistemose",
       "level": "hard",
-      "problem": "Išspręskite sistemą:\n$$\\begin{cases} x^2 + y = 10 \\\\ x^2 - y = 8 \\end{cases}$$",
+      "problem": "Išspręskite sistemą: $$\\begin{cases} x^2 + y = 10 \\\\ x^2 - y = 8 \\end{cases}$$",
       "conceptIds": [
         "sudeties-budas"
       ],
@@ -495,8 +576,8 @@
       "id": "sudeties-budas",
       "title": "Sudeties Budas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sudeties Budas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sudeties Budas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -504,8 +585,8 @@
       "id": "grafinis-budas",
       "title": "Grafinis Budas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Grafinis Budas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Grafinis Budas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -513,8 +594,8 @@
       "id": "racionalioji-lygtis",
       "title": "Racionalioji Lygtis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Racionalioji Lygtis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Racionalioji Lygtis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -522,8 +603,8 @@
       "id": "kvadratine-lygtis",
       "title": "Kvadratine Lygtis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kvadratine Lygtis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kvadratine Lygtis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -577,7 +658,448 @@
       "defaultSrs": true
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-001",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-002",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-003",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-004",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-6x+8=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-2)(x-4)$.",
+          "latex": "x^2-6x+8=(x-2)(x-4)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-005",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-9x+18=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-3)(x-6)$.",
+          "latex": "x^2-9x+18=(x-3)(x-6)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-006",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--2)(x--1)$.",
+          "latex": "x^2+3x+2=(x--2)(x--1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-007",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-008",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-009",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis-auto-010",
+      "topicId": "lygciu-sistemos-su-kvadratinemis-ir-racionaliosiomis-lygtimis",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-6x+8=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-2)(x-4)$.",
+          "latex": "x^2-6x+8=(x-2)(x-4)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "lygciu-sistema",
+        "sistemos-sprendinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ],
   "tests": [],
   "srsCards": []
 }

@@ -37,7 +37,16 @@
       "skaiciavimo-klaidos-istatant-kvadrata"
     ],
     "exerciseIds": [
-      "lygciu-ir-nelygybiu-sistemos-ex-001"
+      "lygciu-ir-nelygybiu-sistemos-ex-001",
+      "lygciu-ir-nelygybiu-sistemos-auto-001",
+      "lygciu-ir-nelygybiu-sistemos-auto-002",
+      "lygciu-ir-nelygybiu-sistemos-auto-003",
+      "lygciu-ir-nelygybiu-sistemos-auto-004",
+      "lygciu-ir-nelygybiu-sistemos-auto-005",
+      "lygciu-ir-nelygybiu-sistemos-auto-006",
+      "lygciu-ir-nelygybiu-sistemos-auto-007",
+      "lygciu-ir-nelygybiu-sistemos-auto-008",
+      "lygciu-ir-nelygybiu-sistemos-auto-009"
     ]
   },
   "theory": [
@@ -66,7 +75,7 @@
         {
           "type": "method",
           "title": "Sprendimo strategija: Keitimo būdas",
-          "text": "1. Iš **tiesinės** lygties išreikškite vieną kintamąjį (kuris turi paprastesnį koeficientą).\n2. Gautą išraišką įstatykite į **kvadratinę** lygtį.\n3. Išspręskite gautą kvadratinę lygtį su vienu kintamuoju (naudodami diskriminantą ar Vieto teoremą).\n4. Radę $x$ reikšmes (gali būti dvi, viena arba nė vienos), apskaičiuokite atitinkamas $y$ reikšmes."
+          "text": "1. Iš **tiesinės** lygties išreikškite vieną kintamąjį (kuris turi paprastesnį koeficientą). 2. Gautą išraišką įstatykite į **kvadratinę** lygtį. 3. Išspręskite gautą kvadratinę lygtį su vienu kintamuoju (naudodami diskriminantą ar Vieto teoremą). 4. Radę $x$ reikšmes (gali būti dvi, viena arba nė vienos), apskaičiuokite atitinkamas $y$ reikšmes."
         },
         {
           "type": "note",
@@ -84,7 +93,7 @@
         },
         {
           "type": "method",
-          "text": "1. Išspręskite kiekvieną sistemos nelygybę atskirai.\n2. Kiekvienos nelygybės sprendinius pavaizduokite toje pačioje skaičių tiesėje (naudokite skirtingą braižymą: brūkšniavimą į skirtingas puses arba skirtingas spalvas).\n3. Suraskite sritį, kurioje intervalai **persidengia** (sankirta).\n4. Atsakymą užrašykite intervalu arba pasakykite, kad sprendinių nėra, jei intervalai nesusitinka."
+          "text": "1. Išspręskite kiekvieną sistemos nelygybę atskirai. 2. Kiekvienos nelygybės sprendinius pavaizduokite toje pačioje skaičių tiesėje (naudokite skirtingą braižymą: brūkšniavimą į skirtingas puses arba skirtingas spalvas). 3. Suraskite sritį, kurioje intervalai **persidengia** (sankirta). 4. Atsakymą užrašykite intervalu arba pasakykite, kad sprendinių nėra, jei intervalai nesusitinka."
         }
       ]
     },
@@ -103,6 +112,90 @@
         {
           "type": "warning",
           "text": "Sankirta vs Sąjunga: Nelygybių sistemoje ieškome TIK tos dalies, kuri tinka abiem. Jei viena nelygybė sako $x > 5$, o kita $x < 2$, sistema sprendinių neturi."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Lygčių ir nelygybių sistemos“ 10 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Nelinearinė lygčių sistema, Nelygybių sistema, Sistemos Sankirta, Keitimo Budas Nelinearinis, Grafinis Sistemu Vaizdavimas, Tieses Ir Paraboles Sankirta ir Bendras Sprendinys. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Lygčių ir nelygybių sistemos“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Kiek bendrų taškų turi parabolė y = x² ir tiesė y = -1?“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Lygčių ir nelygybių sistemos“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-gilinimas-papildomas-praktine-schema-1",
+      "title": "Praktinė sprendimo schema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temoje „Lygčių ir nelygybių sistemos“ mokymasis tampa tvirtas tada, kai mokinys geba atpažinti tą pačią idėją skirtinguose formatuose: žodiniame uždavinyje, lentelėje, formulėje, brėžinyje arba teste. Jeigu sąlyga skamba taip: „Kiek bendrų taškų turi parabolė y = x² ir tiesė y = -1?“, pirmiausia reikia ne skaičiuoti, o nuspręsti, kokią informaciją ji duoda. Tada pasirenkamas metodas: Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Galiausiai atsakymas tikrinamas ne iš atminties, o pagal pradinę sąlygą. Taip išvengiama situacijos, kai veiksmai atlikti teisingai, bet sprendžiamas ne tas klausimas."
+        },
+        {
+          "type": "note",
+          "text": "Savikontrolė: Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas."
         }
       ]
     }
@@ -142,8 +235,8 @@
       "id": "sistemos-sankirta",
       "title": "Sistemos Sankirta",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sistemos Sankirta? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sistemos Sankirta“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -151,8 +244,8 @@
       "id": "keitimo-budas-nelinearinis",
       "title": "Keitimo Budas Nelinearinis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Keitimo Budas Nelinearinis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Keitimo Budas Nelinearinis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -160,8 +253,8 @@
       "id": "grafinis-sistemu-vaizdavimas",
       "title": "Grafinis Sistemu Vaizdavimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Grafinis Sistemu Vaizdavimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Grafinis Sistemu Vaizdavimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -169,8 +262,8 @@
       "id": "tieses-ir-paraboles-sankirta",
       "title": "Tieses Ir Paraboles Sankirta",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tieses Ir Paraboles Sankirta? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tieses Ir Paraboles Sankirta“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -178,8 +271,8 @@
       "id": "bendras-sprendinys",
       "title": "Bendras Sprendinys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Bendras Sprendinys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Bendras Sprendinys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -458,6 +551,366 @@
       "mistakeIds": [],
       "estimatedSeconds": 40,
       "difficulty": "medium"
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-001",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x-3$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=2\\cdot3-3=3"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-002",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x-2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=3\\cdot4-2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-003",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x-1$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=4\\cdot5-1=19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-004",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+0$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=5\\cdot2+0=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-005",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+1$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=1\\cdot3+1=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-006",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x+2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=2\\cdot4+2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-007",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x+3$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=3\\cdot5+3=18"
+        }
+      ],
+      "answerText": "18",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-008",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x+4$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=4\\cdot2+4=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "lygciu-ir-nelygybiu-sistemos-auto-009",
+      "topicId": "lygciu-ir-nelygybiu-sistemos",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+5$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=5\\cdot3+5=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "nelinearine-lygciu-sistema",
+        "nelygybiu-sistema"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [],

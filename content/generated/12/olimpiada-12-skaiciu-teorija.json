@@ -72,6 +72,146 @@
           "text": "Sprendiniai randami nagrinėjant skaičiaus $\\sqrt{D}$ grandininę trupmeną."
         }
       ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Skaičių teorija“ 12 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas ir Olimpiada 12 concept pell equation. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Skaičių teorija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Išskaidyk skaičius į paprastesnes dalis: pirminius daugiklius, liekanas pagal pasirinktą modulį, bendrus daliklius arba santykio vienetus. Jei sąlyga kalba apie visus skaičius, ieškok invariantų ir draudžiamų liekanų; jei prašo rasti skaičių, kurk jį nuo dalumo sąlygų ir tik tada tikrink dydį. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Skaičių teorija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tikrink, ar rezultatas tenkina visas dalumo sąlygas, ar nepamiršta nulio, neigiamų reikšmių arba natūraliųjų skaičių apribojimo. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Skaičių teorija“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Jei pavyzdys prasideda taip: „Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-papildomas-grieztumo-kriterijai-2",
+      "title": "Griežtumo kriterijai pilname sprendime",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Skaičių teorija“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-papildomas-refleksija-3",
+      "title": "Refleksija po išspręsto uždavinio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baigus uždavinį mokymasis dar nesibaigia. Mokinys turėtų atsakyti į keturis klausimus: kokia buvo pirmoji naudinga idėja, kuri sąlyga buvo lemiama, kokia klaida būtų buvusi labiausiai tikėtina ir kokį panašų uždavinį dabar būtų verta spręsti. Temai „Skaičių teorija“ ypač svarbu atskirti metodą nuo paviršiaus: skaičiai, raidės ar brėžinio forma gali keistis, bet tas pats principas išlieka. Tokia refleksija leidžia iš vieno uždavinio gauti ne vieną pažymėtą atsakymą, o naują sprendimo įrankį."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-papildomas-strategijos-pasirinkimas-4",
+      "title": "Strategijos pasirinkimo treniruotė (2 dalis)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Skaičių teorija“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Jei pavyzdys prasideda taip: „Jei $a, b \\in \\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-olimpiadinis-papildomas-grieztumo-kriterijai-5",
+      "title": "Griežtumo kriterijai pilname sprendime (2 dalis)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Skaičių teorija“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -95,7 +235,7 @@
     },
     {
       "id": "olimpiada-12-concept-quadratic-reciprocity",
-      "title": "Olimpiada 12 concept quadratic reciprocity",
+      "title": "Olimpiada 12 concept kvadratinis abipusiškumas",
       "type": "concept",
       "shortDefinition": "Definicija.",
       "intuition": "",
@@ -139,6 +279,98 @@
         }
       ],
       "answer": "\\frac{2^n + 2\\cos(n\\pi/3)}{3}"
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-worked-olympiad-1",
+      "title": "Pirmo pastebėjimo išgryninimas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Tegu $K = \\mathbb{Q}(\\sqrt{2})$. Raskite šio lauko sveikųjų skaičių žiedą $\\mathcal{O}_K$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-worked-olympiad-2",
+      "title": "Atvejų skaidymas be dubliavimo: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Raskite eliptinės kreivės $y^2 = x^3 + x + 1$ taškų skaičių virš lauko $\\mathbb{F}_3$ (įskaitant begalybės tašką).",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-worked-olympiad-3",
+      "title": "Įrodymo žingsnių pagrindimas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Raskite natūraliųjų skaičių sprendinių skaičių lygčiai $x^2 - y^2 = 2026$.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-skaiciu-teorija-worked-olympiad-4",
+      "title": "Dažnos klaidos taisymas: Skaičių teorija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Skaičių teorija“ ir išnagrinėk tokį uždavinio branduolį: Jei $a, b \\in \\mathbb{N}$ ir $ab+1$ dalija $a^2+b^2$, koks yra teigiamas skaičius $k = \\frac{a^2+b^2}{ab+1}$? Užrašykite atsakymą kaip matematinę sąvoką.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Vijetos šuolis, LTE (Lifting The Exponent) lema, Olimpiada 12 concept kvadratinis abipusiškumas, Olimpiada 12 concept pell equation."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
     }
   ],
   "exercises": [
@@ -203,7 +435,7 @@
               "title": "Analizė",
               "action": "Taikome kvadratinių laukų klasifikaciją.",
               "reason": "Sveikųjų skaičių žiedas nustatomas pagal liekanas mod 4.",
-              "result": "Gauta reikšmė $\\mathbb{Z}[\\sqrt{2}]$. ",
+              "result": "Gauta reikšmė $\\mathbb{Z}[\\sqrt{2}]$.",
               "latex": ""
             }
           ],

@@ -47,7 +47,15 @@
     ],
     "exerciseIds": [
       "lygios-ir-panasios-figuros-ex-001",
-      "lygios-ir-panasios-figuros-srs-pitagoro-teorema-netaikoma-ne-staciajame"
+      "lygios-ir-panasios-figuros-srs-pitagoro-teorema-netaikoma-ne-staciajame",
+      "lygios-ir-panasios-figuros-auto-001",
+      "lygios-ir-panasios-figuros-auto-002",
+      "lygios-ir-panasios-figuros-auto-003",
+      "lygios-ir-panasios-figuros-auto-004",
+      "lygios-ir-panasios-figuros-auto-005",
+      "lygios-ir-panasios-figuros-auto-006",
+      "lygios-ir-panasios-figuros-auto-007",
+      "lygios-ir-panasios-figuros-auto-008"
     ]
   },
   "theory": [
@@ -79,7 +87,7 @@
         },
         {
           "type": "theorem",
-          "text": "Trys pagrindiniai trikampių lygumo požymiai:\n1. **K-K-K (Kraštinė-Kraštinė-Kraštinė):** Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms.\n2. **K-S-K (Kampas-Sutampanti kraštinė-Kampas):** Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem kampams.\n3. **S-K-S (Sutampanti kraštinė-Kampas-Sutampanti kraštinė):** Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra lygūs kito trikampio dviem kraštinėms ir kampui tarp jų."
+          "text": "Trys pagrindiniai trikampių lygumo požymiai: 1. **K-K-K (Kraštinė-Kraštinė-Kraštinė):** Jei vieno trikampio trys kraštinės yra atitinkamai lygios kito trikampio trims kraštinėms. 2. **K-S-K (Kampas-Sutampanti kraštinė-Kampas):** Jei vieno trikampio kraštinė ir du prie jos esantys kampai yra atitinkamai lygūs kito trikampio kraštinei ir dviem kampams. 3. **S-K-S (Sutampanti kraštinė-Kampas-Sutampanti kraštinė):** Jei vieno trikampio dvi kraštinės ir kampas tarp jų yra lygūs kito trikampio dviem kraštinėms ir kampui tarp jų."
         }
       ]
     },
@@ -124,7 +132,7 @@
         },
         {
           "type": "method",
-          "text": "Kaip skaičiuoti su masteliu:\n- Norėdami rasti tikrąjį atstumą: atstumą žemėlapyje padauginkite iš mastelio skaičiaus.\n- Norėdami rasti atstumą žemėlapyje: tikrąjį atstumą padalykite iš mastelio skaičiaus."
+          "text": "Kaip skaičiuoti su masteliu: - Norėdami rasti tikrąjį atstumą: atstumą žemėlapyje padauginkite iš mastelio skaičiaus. - Norėdami rasti atstumą žemėlapyje: tikrąjį atstumą padalykite iš mastelio skaičiaus."
         }
       ]
     },
@@ -138,7 +146,7 @@
         },
         {
           "type": "definition",
-          "text": "1. **Aukštinė** – statmuo, nuleistas iš viršūnės į priešingą kraštinę.\n2. **Pusiaukraštinė** – atkarpa, jungianti viršūnę su priešingos kraštinės viduriu.\n3. **Pusiaukampinė** – spindulys (arba atkarpa), dalijantis kampą į dvi lygias dalis."
+          "text": "1. **Aukštinė** – statmuo, nuleistas iš viršūnės į priešingą kraštinę. 2. **Pusiaukraštinė** – atkarpa, jungianti viršūnę su priešingos kraštinės viduriu. 3. **Pusiaukampinė** – spindulys (arba atkarpa), dalijantis kampą į dvi lygias dalis."
         },
         {
           "type": "note",
@@ -156,7 +164,7 @@
         },
         {
           "type": "property",
-          "text": "- **Perimetras** padidėja lygiai $k$ kartų.\n- **Plotas** padidėja $k^2$ kartų!"
+          "text": "- **Perimetras** padidėja lygiai $k$ kartų. - **Plotas** padidėja $k^2$ kartų!"
         },
         {
           "type": "example",
@@ -179,6 +187,76 @@
         {
           "type": "method",
           "text": "Tikrindami trikampių lygumą, visada žiūrėkite, ar kampas yra BŪTENT tarp tų dviejų kraštinių (S-K-S požymis). Jei kampas bus ne tarp jų, trikampiai gali būti ir nelygūs."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Lygios ir panašios figūros, mastelis ir trikampių lygumas“ 6 klasės kurse priklauso sričiai „Geometrija ir matavimai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kampas, Trikampis, Keturkampis, Perimetras, Plotas, Apskritimas ir Skritulys. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Lygios ir panašios figūros, mastelis ir trikampių lygumas“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Lygios ir panašios figūros, mastelis ir trikampių lygumas“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Lygios ir panašios figūros, mastelis ir trikampių lygumas“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -416,8 +494,8 @@
       "id": "pitagoro-teorema-netaikoma-ne-staciajame",
       "title": "Pitagoro Teorema Netaikoma Ne Staciajame",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pitagoro Teorema Netaikoma Ne Staciajame? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda spr?sti susijusius u?davinius.",
+      "shortDefinition": "Sąvoka „Pitagoro Teorema Netaikoma Ne Staciajame“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda spręsti susijusius uždavinius.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -757,6 +835,326 @@
         }
       ],
       "difficulty": "medium"
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-001",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 4 cm ir 6 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(4+6)=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-002",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 5 cm ir 7 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 24,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(5+7)=24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-003",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 6 cm ir 8 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(6+8)=28"
+        }
+      ],
+      "answerText": "28",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-004",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 7 cm ir 9 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 32,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(7+9)=32"
+        }
+      ],
+      "answerText": "32",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-005",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 8 cm ir 10 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(8+10)=36"
+        }
+      ],
+      "answerText": "36",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-006",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 9 cm ir 11 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(9+11)=40"
+        }
+      ],
+      "answerText": "40",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-007",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 10 cm ir 12 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 44,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(10+12)=44"
+        }
+      ],
+      "answerText": "44",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "lygios-ir-panasios-figuros-auto-008",
+      "topicId": "lygios-ir-panasios-figuros",
+      "grade": 6,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 11 cm ir 13 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 48,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(11+13)=48"
+        }
+      ],
+      "answerText": "48",
+      "conceptIds": [
+        "kampas",
+        "trikampis"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
     }
   ]
 }

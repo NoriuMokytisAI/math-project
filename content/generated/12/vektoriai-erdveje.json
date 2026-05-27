@@ -41,7 +41,18 @@
       "skaliarines-sandaugos-zenklo-klaida",
       "komplanarumo-salygos-nepaisymas"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "vektoriai-erdveje-auto-001",
+      "vektoriai-erdveje-auto-002",
+      "vektoriai-erdveje-auto-003",
+      "vektoriai-erdveje-auto-004",
+      "vektoriai-erdveje-auto-005",
+      "vektoriai-erdveje-auto-006",
+      "vektoriai-erdveje-auto-007",
+      "vektoriai-erdveje-auto-008",
+      "vektoriai-erdveje-auto-009",
+      "vektoriai-erdveje-auto-010"
+    ]
   },
   "theory": [
     {
@@ -54,7 +65,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kiekviena ašių pora nustato koordinatinę plokštumą:\n- **Oxy** ($z=0$): horizontalioji plokštuma.\n- **Oxz** ($y=0$): vertikalioji 'šoninė' plokštuma.\n- **Oyz** ($x=0$): vertikalioji 'frontalinė' plokštuma."
+          "text": "Kiekviena ašių pora nustato koordinatinę plokštumą: - **Oxy** ($z=0$): horizontalioji plokštuma. - **Oxz** ($y=0$): vertikalioji 'šoninė' plokštuma. - **Oyz** ($x=0$): vertikalioji 'frontalinė' plokštuma."
         },
         {
           "type": "note",
@@ -157,6 +168,90 @@
         {
           "type": "paragraph",
           "text": "Šiuolaikinė vektorių teorija susiformavo tik XIX a. pabaigoje. Iki tol matematikai naudojo sudėtingus 'kvaternijonus', kuriuos išrado Williamas Rowanas Hamiltonas. Vėliau Josiah Willardas Gibbsas ir Oliveris Heaviside'as supaprastino šią sistemą iki mums įprastų vektorių su trimis koordinatėmis, nes tai buvo daug patogiau fizikams, tiriantiems elektromagnetizmą."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Vektoriai erdvėje“ 12 klasės kurse priklauso sričiai „Geometrija ir matavimai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Stačiakampė koordinačių sistema erdvėje, Bazinis Vektorius, Vektoriaus modulis erdvėje, Skaliarinė vektorių sandauga erdvėje, Krypties kosinusai, Kolinearumas ir Komplanarumas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Vektoriai erdvėje“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Vektoriai erdvėje“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Vektoriai erdvėje“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
+    },
+    {
+      "id": "vektoriai-erdveje-gilinimas-papildomas-praktine-schema-1",
+      "title": "Praktinė sprendimo schema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temoje „Vektoriai erdvėje“ mokymasis tampa tvirtas tada, kai mokinys geba atpažinti tą pačią idėją skirtinguose formatuose: žodiniame uždavinyje, lentelėje, formulėje, brėžinyje arba teste. Jeigu sąlyga skamba taip: „uždavinys iš temos „Vektoriai erdvėje““, pirmiausia reikia ne skaičiuoti, o nuspręsti, kokią informaciją ji duoda. Tada pasirenkamas metodas: Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis. Galiausiai atsakymas tikrinamas ne iš atminties, o pagal pradinę sąlygą. Taip išvengiama situacijos, kai veiksmai atlikti teisingai, bet sprendžiamas ne tas klausimas."
+        },
+        {
+          "type": "note",
+          "text": "Savikontrolė: Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu."
         }
       ]
     }
@@ -350,10 +445,10 @@
   "concepts": [
     {
       "id": "staciakampe-koordinaciu-sistema-erdveje",
-      "title": "Staciakampe Koordinaciu Sistema Erdveje",
+      "title": "Stačiakampė koordinačių sistema erdvėje",
       "type": "concept",
-      "shortDefinition": "S?voka ?Staciakampe Koordinaciu Sistema Erdveje? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Stačiakampė koordinačių sistema erdvėje“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -361,35 +456,35 @@
       "id": "bazinis-vektorius",
       "title": "Bazinis Vektorius",
       "type": "concept",
-      "shortDefinition": "S?voka ?Bazinis Vektorius? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Bazinis Vektorius“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "vektoriaus-modulis-erdveje",
-      "title": "Vektoriaus Modulis Erdveje",
+      "title": "Vektoriaus modulis erdvėje",
       "type": "concept",
-      "shortDefinition": "S?voka ?Vektoriaus Modulis Erdveje? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Vektoriaus modulis erdvėje“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "skaliarine-vektoriu-sandauga-erdveje",
-      "title": "Skaliarine Vektoriu Sandauga Erdveje",
+      "title": "Skaliarinė vektorių sandauga erdvėje",
       "type": "concept",
-      "shortDefinition": "S?voka ?Skaliarine Vektoriu Sandauga Erdveje? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Skaliarinė vektorių sandauga erdvėje“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "krypties-kosinusai",
-      "title": "Krypties Kosinusai",
+      "title": "Krypties kosinusai",
       "type": "concept",
-      "shortDefinition": "S?voka ?Krypties Kosinusai? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Krypties kosinusai“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -397,8 +492,8 @@
       "id": "kolinearumas",
       "title": "Kolinearumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kolinearumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kolinearumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -406,30 +501,431 @@
       "id": "komplanarumas",
       "title": "Komplanarumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Komplanarumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Komplanarumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "projekcija-vektoriaus",
-      "title": "Projekcija Vektoriaus",
+      "title": "Vektoriaus projekcija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Projekcija Vektoriaus? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Vektoriaus projekcija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "sferos-lygtis",
-      "title": "Sferos Lygtis",
+      "title": "Sferos lygtis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sferos Lygtis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sferos lygtis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
   ],
   "formulas": [],
-  "exercises": []
+  "exercises": [
+    {
+      "id": "vektoriai-erdveje-auto-001",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 4 cm ir 6 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(4+6)=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "vektoriai-erdveje-auto-002",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 5 cm ir 7 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 24,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(5+7)=24"
+        }
+      ],
+      "answerText": "24",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "vektoriai-erdveje-auto-003",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 6 cm ir 8 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 28,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(6+8)=28"
+        }
+      ],
+      "answerText": "28",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "vektoriai-erdveje-auto-004",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 7 cm ir 9 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 32,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(7+9)=32"
+        }
+      ],
+      "answerText": "32",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "vektoriai-erdveje-auto-005",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 8 cm ir 10 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(8+10)=36"
+        }
+      ],
+      "answerText": "36",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "vektoriai-erdveje-auto-006",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 9 cm ir 11 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(9+11)=40"
+        }
+      ],
+      "answerText": "40",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "vektoriai-erdveje-auto-007",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 10 cm ir 12 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 44,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(10+12)=44"
+        }
+      ],
+      "answerText": "44",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "vektoriai-erdveje-auto-008",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 11 cm ir 13 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 48,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(11+13)=48"
+        }
+      ],
+      "answerText": "48",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "vektoriai-erdveje-auto-009",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 12 cm ir 14 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 52,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(12+14)=52"
+        }
+      ],
+      "answerText": "52",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "vektoriai-erdveje-auto-010",
+      "topicId": "vektoriai-erdveje",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Stačiakampio kraštinės yra 13 cm ir 15 cm. Raskite jo perimetrą.",
+      "answer": {
+        "kind": "numeric",
+        "value": 56,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Stačiakampio perimetras yra dviguba ilgio ir pločio suma.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Sudėkite kraštines ir padauginkite iš 2.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Naudojame formulę $P=2(a+b)$.",
+          "latex": "P=2(13+15)=56"
+        }
+      ],
+      "answerText": "56",
+      "conceptIds": [
+        "staciakampe-koordinaciu-sistema-erdveje",
+        "bazinis-vektorius"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ]
 }

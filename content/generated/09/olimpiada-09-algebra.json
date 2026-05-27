@@ -34,7 +34,16 @@
       "daugianario-laipsnio-klaida"
     ],
     "exerciseIds": [
-      "ex-olimpiada-09-01"
+      "ex-olimpiada-09-01",
+      "olimpiada-09-algebra-auto-001",
+      "olimpiada-09-algebra-auto-002",
+      "olimpiada-09-algebra-auto-003",
+      "olimpiada-09-algebra-auto-004",
+      "olimpiada-09-algebra-auto-005",
+      "olimpiada-09-algebra-auto-006",
+      "olimpiada-09-algebra-auto-007",
+      "olimpiada-09-algebra-auto-008",
+      "olimpiada-09-algebra-auto-009"
     ]
   },
   "theory": [
@@ -54,7 +63,7 @@
         {
           "type": "method",
           "title": "Vietos formulės n-tojo laipsnio daugianariui",
-          "text": "Daugianariui $P(x) = a_n x^n + a_{n-1} x^{n-1} + \\dots + a_0$ su šaknimis $x_1, \\dots, x_n$ galioja: \n 1. $\\sum x_i = -a_{n-1}/a_n$ \n 2. $\\sum x_i x_j = a_{n-2}/a_n$ \n 3. $\\prod x_i = (-1)^n a_0/a_n$."
+          "text": "Daugianariui $P(x) = a_n x^n + a_{n-1} x^{n-1} + \\dots + a_0$ su šaknimis $x_1, \\dots, x_n$ galioja: 1. $\\sum x_i = -a_{n-1}/a_n$ 2. $\\sum x_i x_j = a_{n-2}/a_n$ 3. $\\prod x_i = (-1)^n a_0/a_n$."
         }
       ]
     },
@@ -74,7 +83,7 @@
         {
           "type": "formula",
           "title": "Trijų kubų sumos tapatybė",
-          "text": "$a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$. \n Svarbi išvada: jei $a+b+c=0$, tai $a^3+b^3+c^3 = 3abc$."
+          "text": "$a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$. Svarbi išvada: jei $a+b+c=0$, tai $a^3+b^3+c^3 = 3abc$."
         }
       ]
     },
@@ -132,6 +141,118 @@
           "text": "Jei bendrąjį narį galime užrašyti kaip $a_n = f(n+1) - f(n)$, tai visa suma virs $f(N+1) - f(1)$. Panašiai veikia ir sandaugos, kur nariai susiprastina per dalybą."
         }
       ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Algebra“ 9 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Daugianarių teorija, AM-GM nelygybė (n kintamųjų), Cauchy-Schwarz nelygybė, Kompleksinių skaičių plokštuma, Teleskopinės sumos, Funkcines Lygtys Pagrindai ir Sophie Germain tapatybė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Algebra“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Išskaidykite daugiklį reiškinį $x^3 + y^3 + z^3 - 3xyz$.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Algebra“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Algebra“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei pavyzdys prasideda taip: „Išskaidykite daugiklį reiškinį $x^3 + y^3 + z^3 - 3xyz$.“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-papildomas-grieztumo-kriterijai-2",
+      "title": "Griežtumo kriterijai pilname sprendime",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Algebra“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Daugianarių teorija, AM-GM nelygybė (n kintamųjų), Cauchy-Schwarz nelygybė, Kompleksinių skaičių plokštuma, Teleskopinės sumos, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-olimpiadinis-papildomas-refleksija-3",
+      "title": "Refleksija po išspręsto uždavinio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baigus uždavinį mokymasis dar nesibaigia. Mokinys turėtų atsakyti į keturis klausimus: kokia buvo pirmoji naudinga idėja, kuri sąlyga buvo lemiama, kokia klaida būtų buvusi labiausiai tikėtina ir kokį panašų uždavinį dabar būtų verta spręsti. Temai „Algebra“ ypač svarbu atskirti metodą nuo paviršiaus: skaičiai, raidės ar brėžinio forma gali keistis, bet tas pats principas išlieka. Tokia refleksija leidžia iš vieno uždavinio gauti ne vieną pažymėtą atsakymą, o naują sprendimo įrankį."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -174,8 +295,8 @@
       "id": "funkcines-lygtys-pagrindai",
       "title": "Funkcines Lygtys Pagrindai",
       "type": "concept",
-      "shortDefinition": "S?voka ?Funkcines Lygtys Pagrindai? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Funkcines Lygtys Pagrindai“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -369,6 +490,1140 @@
       ],
       "conceptIds": [
         "daugianariu-teorema"
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-001",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $5x+3=18$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "5x=15,\\quad x=3"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 5 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-001-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "5x=15,\\quad x=3",
+              "result": "$x=3$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 5 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-001-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-001",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-002",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $6x+3=27$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "6x=24,\\quad x=4"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 6 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-002-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "6x=24,\\quad x=4",
+              "result": "$x=4$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 6 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-002-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-002",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-003",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $7x+3=38$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "7x=35,\\quad x=5"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 7 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-003-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "7x=35,\\quad x=5",
+              "result": "$x=5$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 7 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-003-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-003",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-004",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $8x+3=51$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "8x=48,\\quad x=6"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 8 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-004-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "8x=48,\\quad x=6",
+              "result": "$x=6$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 8 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-004-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-004",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-005",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $9x+3=21$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "9x=18,\\quad x=2"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 9 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-005-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "9x=18,\\quad x=2",
+              "result": "$x=2$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 9 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-005-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-005",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-006",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $10x+3=33$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "10x=30,\\quad x=3"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 10 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-006-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "10x=30,\\quad x=3",
+              "result": "$x=3$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 10 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-006-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-006",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-007",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $11x+3=47$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "11x=44,\\quad x=4"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 11 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-007-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "11x=44,\\quad x=4",
+              "result": "$x=4$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 11 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-007-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-007",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-008",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $12x+3=63$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "12x=60,\\quad x=5"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 12 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-008-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "12x=60,\\quad x=5",
+              "result": "$x=5$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 12 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-008-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-008",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-algebra-auto-009",
+      "topicId": "olimpiada-09-algebra",
+      "grade": 9,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $13x+3=81$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "13x=78,\\quad x=6"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 13 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "daugianariu-teorema",
+        "am-gm-nelygybe-n"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-09-algebra-auto-009-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "13x=78,\\quad x=6",
+              "result": "$x=6$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 13 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-09-algebra-auto-009-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "daugianariu-teorema"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-09-algebra-auto-009",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
       ]
     }
   ],

@@ -39,7 +39,15 @@
     ],
     "exerciseIds": [
       "ex-olimpiada-05-b95502c0",
-      "ex-olimpiada-05-b53ec404"
+      "ex-olimpiada-05-b53ec404",
+      "olimpiada-05-algebra-auto-001",
+      "olimpiada-05-algebra-auto-002",
+      "olimpiada-05-algebra-auto-003",
+      "olimpiada-05-algebra-auto-004",
+      "olimpiada-05-algebra-auto-005",
+      "olimpiada-05-algebra-auto-006",
+      "olimpiada-05-algebra-auto-007",
+      "olimpiada-05-algebra-auto-008"
     ]
   },
   "theory": [
@@ -49,27 +57,97 @@
     },
     {
       "title": "I. Raidiniai reiškiniai ir kintamieji: mąstymas „dėžutėmis“",
-      "content": "Įsivaizduokite, kad kintamasis (paprastai žymimas $x$) yra tarsi uždaryta dėžutė, kurioje slepiasi kažkoks skaičius. Mes nežinome, kas ten viduje, bet galime su ta dėžute atlikti veiksmus: pridėti prie jos kitas dėžutes, padauginti jas ar atimti skaičius.\n\nOlimpiadose dažnai susiduriame su uždaviniais, kuriuose nežinomų dydžių yra keli. Pavyzdžiui: „Jonas turi $x$ saldainių, o Petras – 3 saldainiais daugiau“. Algebriškai tai užrašome kaip $x + 3$. Jei kartu jie turi 15 saldainių, galime sudaryti lygtį: $x + (x + 3) = 15$. Svarbiausia taisyklė – visada aiškiai įvardinkite, ką žymite raide $x$. Dažniausiai patogiausia $x$ žymėti mažiausią nežinomą dydį.\n\n**Strateginis patarimas:** Jei uždavinyje kalbama apie amžių, atminkite, kad praėjus metams, visų žmonių amžius padidėja vienodai. Jei šiandien tėvui yra $T$, o sūnui $S$, tai po $n$ metų tėvui bus $T+n$, o sūnui $S+n$. Jų amžiaus skirtumas $(T+n) - (S+n) = T-S$ išlieka toks pat visą gyvenimą!"
+      "content": "Įsivaizduokite, kad kintamasis (paprastai žymimas $x$) yra tarsi uždaryta dėžutė, kurioje slepiasi kažkoks skaičius. Mes nežinome, kas ten viduje, bet galime su ta dėžute atlikti veiksmus: pridėti prie jos kitas dėžutes, padauginti jas ar atimti skaičius. Olimpiadose dažnai susiduriame su uždaviniais, kuriuose nežinomų dydžių yra keli. Pavyzdžiui: „Jonas turi $x$ saldainių, o Petras – 3 saldainiais daugiau“. Algebriškai tai užrašome kaip $x + 3$. Jei kartu jie turi 15 saldainių, galime sudaryti lygtį: $x + (x + 3) = 15$. Svarbiausia taisyklė – visada aiškiai įvardinkite, ką žymite raide $x$. Dažniausiai patogiausia $x$ žymėti mažiausią nežinomą dydį. **Strateginis patarimas:** Jei uždavinyje kalbama apie amžių, atminkite, kad praėjus metams, visų žmonių amžius padidėja vienodai. Jei šiandien tėvui yra $T$, o sūnui $S$, tai po $n$ metų tėvui bus $T+n$, o sūnui $S+n$. Jų amžiaus skirtumas $(T+n) - (S+n) = T-S$ išlieka toks pat visą gyvenimą!"
     },
     {
       "title": "II. Atbulinės eigos metodas (ėjimas nuo galo)",
-      "content": "Daugelyje olimpiadinių uždavinių aprašoma veiksmų grandinė, kurią atlikus gaunamas galutinis rezultatas. Reikia rasti pradinį skaičių. Tokiais atvejais geriausia strategija – „atbulinės eigos“ metodas.\n\nVeikimo principas paprastas: pradedame nuo galutinio rezultato ir atliekame visus veiksmus priešinga tvarka, naudodami priešingas operacijas:\n- Sudėtį keičiame atimtimi ($+$ $\\to$ $-$).\n- Atimtį keičiame sudėtimi ($-$ $\\to$ $+$).\n- Daugybą keičiame dalyba ($\\times$ $\\to$ $:$).\n- Dalybą keičiame daugyba ($:$ $\\to$ $\\times$).\n\n*Pavyzdys:* Sugalvojau skaičių, jį padvigubinau, pridėjau 10 ir gavau 50. Koks skaičius? Einame atgal: 50 minus 10 yra 40, 40 padalinta iš 2 yra 20. Pradinis skaičius buvo 20. Būkite atidūs su veiksmų tvarka! Atbulinė eiga reikalauja, kad paskutinis atliktas veiksmas būtų „atšauktas“ pirmiausia."
+      "content": "Daugelyje olimpiadinių uždavinių aprašoma veiksmų grandinė, kurią atlikus gaunamas galutinis rezultatas. Reikia rasti pradinį skaičių. Tokiais atvejais geriausia strategija – „atbulinės eigos“ metodas. Veikimo principas paprastas: pradedame nuo galutinio rezultato ir atliekame visus veiksmus priešinga tvarka, naudodami priešingas operacijas: - Sudėtį keičiame atimtimi ($+$ $\\to$ $-$). - Atimtį keičiame sudėtimi ($-$ $\\to$ $+$). - Daugybą keičiame dalyba ($\\times$ $\\to$ $:$). - Dalybą keičiame daugyba ($:$ $\\to$ $\\times$). *Pavyzdys:* Sugalvojau skaičių, jį padvigubinau, pridėjau 10 ir gavau 50. Koks skaičius? Einame atgal: 50 minus 10 yra 40, 40 padalinta iš 2 yra 20. Pradinis skaičius buvo 20. Būkite atidūs su veiksmų tvarka! Atbulinė eiga reikalauja, kad paskutinis atliktas veiksmas būtų „atšauktas“ pirmiausia."
     },
     {
       "title": "III. Sekos ir dėsningumai: detektyvo darbas",
-      "content": "Sekos yra skaičių rinkiniai, išrikiuoti pagal tam tikrą taisyklę. Olimpiadose taisyklė gali būti paslėpta. Dažniausi sekų tipai:\n1. **Aritmetinė seka:** Kiekvienas narys gaunamas pridedant tą patį skaičių (pvz., $2, 5, 8, 11, \\dots$ – čia pridedama po 3).\n2. **Geometrinė seka:** Kiekvienas narys gaunamas dauginant iš to paties skaičiaus (pvz., $1, 2, 4, 8, 16, \\dots$ – čia dauginama iš 2).\n3. **Fibonačio tipo sekos:** Narys yra dviejų prieš tai ėjusių narių suma ($1, 1, 2, 3, 5, 8, \\dots$).\n4. **Kombinuotos taisyklės:** Pvz., padauginti iš 2 ir pridėti 1.\n\nKaip rasti taisyklę? Pirmiausia surašykite skirtumus tarp gretimų narių. Jei skirtumai vienodi – tai aritmetinė seka. Jei skirtumai patys sudaro seką (pvz., auga kaip $2, 4, 6, 8$), tai rodo sudėtingesnį dėsningumą. Taip pat verta patikrinti, ar skaičiai nėra kvadratų seka ($1, 4, 9, 16, 25, \\dots$)."
+      "content": "Sekos yra skaičių rinkiniai, išrikiuoti pagal tam tikrą taisyklę. Olimpiadose taisyklė gali būti paslėpta. Dažniausi sekų tipai: 1. **Aritmetinė seka:** Kiekvienas narys gaunamas pridedant tą patį skaičių (pvz., $2, 5, 8, 11, \\dots$ – čia pridedama po 3). 2. **Geometrinė seka:** Kiekvienas narys gaunamas dauginant iš to paties skaičiaus (pvz., $1, 2, 4, 8, 16, \\dots$ – čia dauginama iš 2). 3. **Fibonačio tipo sekos:** Narys yra dviejų prieš tai ėjusių narių suma ($1, 1, 2, 3, 5, 8, \\dots$). 4. **Kombinuotos taisyklės:** Pvz., padauginti iš 2 ir pridėti 1. Kaip rasti taisyklę? Pirmiausia surašykite skirtumus tarp gretimų narių. Jei skirtumai vienodi – tai aritmetinė seka. Jei skirtumai patys sudaro seką (pvz., auga kaip $2, 4, 6, 8$), tai rodo sudėtingesnį dėsningumą. Taip pat verta patikrinti, ar skaičiai nėra kvadratų seka ($1, 4, 9, 16, 25, \\dots$)."
     },
     {
       "title": "IV. Gauso suma ir aritmetinių sekų gudrybės",
-      "content": "Legendinis matematikas Karlas Frydrichas Gausas dar būdamas vaikas sugalvojo, kaip greitai sudėti skaičius nuo 1 iki 100. Jis pastebėjo, kad sudėjus skaičius poromis iš kraštų, gaunama ta pati suma:\n$1 + 100 = 101$\n$2 + 99 = 101$\n$3 + 98 = 101$\nKadangi skaičių yra 100, tai porų bus 50. Vadinasi, suma lygi $50 \\times 101 = 5050$.\n\nŠi formulė galioja bet kokiai aritmetinei sekai. Sumą galime rasti taip: sudėkite pirmąjį ir paskutinįjį narius, gautą sumą padauginkite iš narių skaičiaus ir padalinkite iš 2.\n$$S = \\frac{(a_1 + a_n) \\times n}{2}$$\nTai ypač naudinga uždaviniuose apie laiptus, plytas, ar valandų mušimą (pvz., kiek kartų laikrodis sumuša per parą)."
+      "content": "Legendinis matematikas Karlas Frydrichas Gausas dar būdamas vaikas sugalvojo, kaip greitai sudėti skaičius nuo 1 iki 100. Jis pastebėjo, kad sudėjus skaičius poromis iš kraštų, gaunama ta pati suma: $1 + 100 = 101$ $2 + 99 = 101$ $3 + 98 = 101$ Kadangi skaičių yra 100, tai porų bus 50. Vadinasi, suma lygi $50 \\times 101 = 5050$. Ši formulė galioja bet kokiai aritmetinei sekai. Sumą galime rasti taip: sudėkite pirmąjį ir paskutinįjį narius, gautą sumą padauginkite iš narių skaičiaus ir padalinkite iš 2. $$S = \\frac{(a_1 + a_n) \\times n}{2}$$ Tai ypač naudinga uždaviniuose apie laiptus, plytas, ar valandų mušimą (pvz., kiek kartų laikrodis sumuša per parą)."
     },
     {
       "title": "V. Judėjimo, darbo ir santykinio greičio uždaviniai",
-      "content": "Penktokų olimpiadose judėjimo uždaviniai dažnai reikalauja suprasti **santykinį greitį**.\n- Jei du objektai juda vienas priešais kitą, jų **artėjimo greitis** yra greičių suma: $v_{art} = v_1 + v_2$.\n- Jei vienas objektas vejasi kitą, **artėjimo greitis** yra greičių skirtumas: $v_{art} = v_{greitas} - v_{letas}$.\n\n**Darbo uždaviniai** sprendžiami panašiai kaip judėjimo. Visas darbas (pvz., iškasta duobė, nudažyta tvora) laikomas vienetu (1) arba tam tikru dalių skaičiumi. Svarbiausia rasti **darbo našumą** – kokią dalį darbo žmogus ar mašina atlieka per 1 laiko vienetą (valandą, dieną). Jei du žmonės dirba kartu, jų našumai sudedami."
+      "content": "Penktokų olimpiadose judėjimo uždaviniai dažnai reikalauja suprasti **santykinį greitį**. - Jei du objektai juda vienas priešais kitą, jų **artėjimo greitis** yra greičių suma: $v_{art} = v_1 + v_2$. - Jei vienas objektas vejasi kitą, **artėjimo greitis** yra greičių skirtumas: $v_{art} = v_{greitas} - v_{letas}$. **Darbo uždaviniai** sprendžiami panašiai kaip judėjimo. Visas darbas (pvz., iškasta duobė, nudažyta tvora) laikomas vienetu (1) arba tam tikru dalių skaičiumi. Svarbiausia rasti **darbo našumą** – kokią dalį darbo žmogus ar mašina atlieka per 1 laiko vienetą (valandą, dieną). Jei du žmonės dirba kartu, jų našumai sudedami."
     },
     {
       "title": "VI. Tekstiniai modeliai ir „prieš-po“ metodas",
-      "content": "Kai kurie uždaviniai aprašo būsenas, kurios keičiasi. Pvz.: „Dėžėje buvo du kartus daugiau obuolių nei krepšyje. Iš dėžės paėmus 5, o į krepšį įdėjus 3, abiejose vietose pasidarė po lygiai“.\n\nTokiems uždaviniams spręsti geriausia braižyti lentelę arba schemas:\n1. **Pradinė būsena:** Krepšys $= x$, Dėžė $= 2x$.\n2. **Pokytis:** Krepšys $+ 3$, Dėžė $- 5$.\n3. **Gautoji lygybė:** $x + 3 = 2x - 5$.\n\nSprendžiant lygti, nukeliame nežinomuosius į vieną pusę, o skaičius į kitą: $3 + 5 = 2x - x$, vadinasi $x = 8$. Pradžioje krepšyje buvo 8 obuoliai, o dėžėje 16."
+      "content": "Kai kurie uždaviniai aprašo būsenas, kurios keičiasi. Pvz.: „Dėžėje buvo du kartus daugiau obuolių nei krepšyje. Iš dėžės paėmus 5, o į krepšį įdėjus 3, abiejose vietose pasidarė po lygiai“. Tokiems uždaviniams spręsti geriausia braižyti lentelę arba schemas: 1. **Pradinė būsena:** Krepšys $= x$, Dėžė $= 2x$. 2. **Pokytis:** Krepšys $+ 3$, Dėžė $- 5$. 3. **Gautoji lygybė:** $x + 3 = 2x - 5$. Sprendžiant lygti, nukeliame nežinomuosius į vieną pusę, o skaičius į kitą: $3 + 5 = 2x - x$, vadinasi $x = 8$. Pradžioje krepšyje buvo 8 obuoliai, o dėžėje 16."
+    },
+    {
+      "id": "olimpiada-05-algebra-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Algebra“ 5 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kintamasis kaip nežinoma vertė, Atbulinės eigos metodas, Gauso sumos principas, Darbo našumas, Aritmetinės progresijos pradmenys, Santykinis Greitis ir Aritmetinės sekos sumos formulė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Algebra“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Šiuo metu tėvui yra $36$ metai, o jo sūnui – $8$ metai. Po kiek metų tėvas bus lygiai $3$ kartus vyresnis už sūnų?“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Algebra“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti skaidymas į sandaugą, pakeitinys, simetrija, monotonija, diskriminantas, ribos ir nelygybių stiprinimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
     }
   ],
   "concepts": [
@@ -113,10 +191,10 @@
     },
     {
       "id": "aritmetine-progresija-pradmenys",
-      "title": "Aritmetine Progresija Pradmenys",
+      "title": "Aritmetinės progresijos pradmenys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Aritmetine Progresija Pradmenys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Aritmetinės progresijos pradmenys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -124,8 +202,8 @@
       "id": "santykinis-greitis",
       "title": "Santykinis Greitis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Santykinis Greitis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Santykinis Greitis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -526,6 +604,1038 @@
       ],
       "conceptIds": [
         "kintamasis-kaip-deze"
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-001",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $5x+3=18$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "5x=15,\\quad x=3"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 5 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-001-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "5x=15,\\quad x=3",
+              "result": "$x=3$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 5 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-001-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-001",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-002",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $6x+3=27$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "6x=24,\\quad x=4"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 6 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-002-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "6x=24,\\quad x=4",
+              "result": "$x=4$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 6 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-002-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-002",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-003",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $7x+3=38$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "7x=35,\\quad x=5"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 7 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-003-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "7x=35,\\quad x=5",
+              "result": "$x=5$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 7 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-003-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-003",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-004",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $8x+3=51$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "8x=48,\\quad x=6"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 8 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-004-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "8x=48,\\quad x=6",
+              "result": "$x=6$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 8 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "6"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-004-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-004",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-005",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $9x+3=21$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "9x=18,\\quad x=2"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 9 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-005-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "9x=18,\\quad x=2",
+              "result": "$x=2$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 9 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "2"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-005-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-005",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-006",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $10x+3=33$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "10x=30,\\quad x=3"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 10 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-006-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "10x=30,\\quad x=3",
+              "result": "$x=3$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 10 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "3"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-006-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-006",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-007",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $11x+3=47$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "11x=44,\\quad x=4"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 11 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-007-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "11x=44,\\quad x=4",
+              "result": "$x=4$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 11 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "4"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-007-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-007",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-algebra-auto-008",
+      "topicId": "olimpiada-05-algebra",
+      "grade": 5,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Raskite natūralųjį skaičių $x$, jei $12x+3=63$. Pateikite trumpą įrodymą, kad rastas skaičius vienintelis.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Atimame 3 ir padalijame iš koeficiento. Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+          "latex": "12x=60,\\quad x=5"
+        },
+        {
+          "text": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį. Koeficientas 12 nėra nulis.",
+          "latex": ""
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Algebra",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "algebraic-representation",
+        "proof"
+      ],
+      "prerequisiteTopicIds": [
+        "naturalieji-skaiciai-dalikliai-kartotiniai",
+        "trupmenos-procentai-santykiai"
+      ],
+      "prerequisiteConceptIds": [
+        "kintamasis-kaip-deze",
+        "atbulines-eigos-metodas"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-05-algebra-auto-008-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "algebraic-representation",
+            "proof"
+          ],
+          "steps": [
+            {
+              "title": "Lygties pertvarkymas",
+              "action": "Atimame 3 ir padalijame iš koeficiento.",
+              "reason": "Atliekame ekvivalenčius veiksmus, todėl sprendinių aibė nesikeičia.",
+              "latex": "12x=60,\\quad x=5",
+              "result": "$x=5$."
+            },
+            {
+              "title": "Vieninteliškumas",
+              "action": "Pastebime, kad tiesinė lygtis su nenuliniu koeficientu turi vieną sprendinį.",
+              "reason": "Koeficientas 12 nėra nulis.",
+              "result": "Kito natūraliojo sprendinio nėra."
+            }
+          ],
+          "finalAnswer": "5"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-05-algebra-auto-008-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "kintamasis-kaip-deze"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-05-algebra-auto-008",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Algebra“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
       ]
     }
   ]

@@ -149,7 +149,7 @@
         },
         {
           "type": "property",
-          "text": "Svarbios matematinės vilties savybės:\n1. $E(c) = c$ (pastovaus dydžio viltis lygi jam pačiam).\n2. $E(cX) = cE(X)$ (konstantą galima iškelti).\n3. $E(X + Y) = E(X) + E(Y)$ (sumos viltis lygi vilčių sumai, net jei dydžiai priklausomi!).\n4. $E(X + b) = E(X) + b$."
+          "text": "Svarbios matematinės vilties savybės: 1. $E(c) = c$ (pastovaus dydžio viltis lygi jam pačiam). 2. $E(cX) = cE(X)$ (konstantą galima iškelti). 3. $E(X + Y) = E(X) + E(Y)$ (sumos viltis lygi vilčių sumai, net jei dydžiai priklausomi!). 4. $E(X + b) = E(X) + b$."
         }
       ]
     },
@@ -243,11 +243,11 @@
         },
         {
           "type": "property",
-          "text": "**Trijų sigmų taisyklė:**\n1. Intervalas $[\\mu - \\sigma, \\mu + \\sigma]$ apima ~68% duomenų.\n2. Intervalas $[\\mu - 2\\sigma, \\mu + 2\\sigma]$ apima ~95% duomenų.\n3. Intervalas $[\\mu - 3\\sigma, \\mu + 3\\sigma]$ apima ~99,7% duomenų."
+          "text": "**Trijų sigmų taisyklė:** 1. Intervalas $[\\mu - \\sigma, \\mu + \\sigma]$ apima ~68% duomenų. 2. Intervalas $[\\mu - 2\\sigma, \\mu + 2\\sigma]$ apima ~95% duomenų. 3. Intervalas $[\\mu - 3\\sigma, \\mu + 3\\sigma]$ apima ~99,7% duomenų."
         },
         {
           "type": "paragraph",
-          "text": "Pavyzdžiui, jei vyrų ūgio vidurkis 180 cm, o $\\sigma = 10$ cm, tai 68% vyrų bus tarp 170 ir 190 cm ūgio, o virš 200 cm ($\\mu + 2\\sigma$) bus tik apie 2,3% (nes $(100 - 95)/2 = 2,5$). "
+          "text": "Pavyzdžiui, jei vyrų ūgio vidurkis 180 cm, o $\\sigma = 10$ cm, tai 68% vyrų bus tarp 170 ir 190 cm ūgio, o virš 200 cm ($\\mu + 2\\sigma$) bus tik apie 2,3% (nes $(100 - 95)/2 = 2,5$)."
         }
       ]
     },
@@ -261,7 +261,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Kaip keičiasi charakteristikos?\n- Vidurkis kinta tiesiškai: $E(5X - 100) = 5E(X) - 100$.\n- Dispersija kinta kvadratu, o pastovus dėmuo išnyksta: $Var(5X - 100) = 5^2 Var(X) = 25 Var(X)$."
+          "text": "Kaip keičiasi charakteristikos? - Vidurkis kinta tiesiškai: $E(5X - 100) = 5E(X) - 100$. - Dispersija kinta kvadratu, o pastovus dėmuo išnyksta: $Var(5X - 100) = 5^2 Var(X) = 25 Var(X)$."
         },
         {
           "type": "note",
@@ -281,6 +281,76 @@
             "**Normaliojo skirstinio ribos:** Painiojami procentai. Reikia atidžiai žiūrėti, ar klausiama „tarp rėžių“, ar „virš rėžio“.",
             "**Nepriklausomumo prielaida:** Bernulio formulę galima taikyti tik tada, kai bandymai yra nepriklausomi (pvz., traukiant rutulius ir juos GRĄŽINANT). Jei negrąžiname, tikimybė kinta ir Bernulio modelis nebegalioja."
           ]
+        }
+      ]
+    },
+    {
+      "id": "atsitiktiniai-dydziai-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Atsitiktiniai dydžiai ir jų skirstiniai“ 12 klasės kurse priklauso sričiai „Duomenys ir tikimybės“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: duomenų rinkinio struktūra, skaitinės charakteristikos, tikimybės modelis ir išvadų patikimumas. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "atsitiktiniai-dydziai-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Atsitiktinis dydis, Diskretusis atsitiktinis dydis, Skirstinio lentelė, Matematinė viltis, Dispersija, Standartinis nuokrypis ir Normalusis skirstinys. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Atsitiktiniai dydžiai ir jų skirstiniai“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "atsitiktiniai-dydziai-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "atsitiktiniai-dydziai-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Skirstinio lentelėje p1=0.2, p2=0.5. Kokia turi būti p3 reikšmė, kad tai būtų pilnas skirstinys?“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "atsitiktiniai-dydziai-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Atsitiktiniai dydžiai ir jų skirstiniai“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -441,10 +511,10 @@
     },
     {
       "id": "gauso-kreive",
-      "title": "Gauso Kreive",
+      "title": "Gauso Kreivė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Gauso Kreive? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Gauso Kreivė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -452,8 +522,8 @@
       "id": "tikimybinis-skirstinys",
       "title": "Tikimybinis Skirstinys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tikimybinis Skirstinys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tikimybinis Skirstinys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }

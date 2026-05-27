@@ -40,7 +40,18 @@
       "apibrezimo-srities-neziuri",
       "intervalai-su-y"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "funkcijos-ir-ju-savybes-auto-001",
+      "funkcijos-ir-ju-savybes-auto-002",
+      "funkcijos-ir-ju-savybes-auto-003",
+      "funkcijos-ir-ju-savybes-auto-004",
+      "funkcijos-ir-ju-savybes-auto-005",
+      "funkcijos-ir-ju-savybes-auto-006",
+      "funkcijos-ir-ju-savybes-auto-007",
+      "funkcijos-ir-ju-savybes-auto-008",
+      "funkcijos-ir-ju-savybes-auto-009",
+      "funkcijos-ir-ju-savybes-auto-010"
+    ]
   },
   "theory": [
     {
@@ -182,7 +193,7 @@
       "blocks": [
         {
           "type": "method",
-          "text": "1. **Identifikuokite kintamuosius:** Kas yra $x$ (priežastis), o kas $y$ (pasekmė)?\n2. **Raskite apibrėžimo sritį:** Ar yra x reikšmių, kurios „sugadintų“ skaičiavimą?\n3. **Suskaičiuokite kontrolinius taškus:** Raskite nulių taškus ir sankirtą su $Oy$ ašimi ($x=0$).\n4. **Nupieškite eskizą:** Sujunkite taškus atsižvelgdami į funkcijos tipą (tiesė, parabolė ir kt.).\n5. **Pasitikrinkite:** Ar gautas rezultatas logiškas? Ar $y$ reikšmės atitinka $E(f)$?"
+          "text": "1. **Identifikuokite kintamuosius:** Kas yra $x$ (priežastis), o kas $y$ (pasekmė)? 2. **Raskite apibrėžimo sritį:** Ar yra x reikšmių, kurios „sugadintų“ skaičiavimą? 3. **Suskaičiuokite kontrolinius taškus:** Raskite nulių taškus ir sankirtą su $Oy$ ašimi ($x=0$). 4. **Nupieškite eskizą:** Sujunkite taškus atsižvelgdami į funkcijos tipą (tiesė, parabolė ir kt.). 5. **Pasitikrinkite:** Ar gautas rezultatas logiškas? Ar $y$ reikšmės atitinka $E(f)$?"
         }
       ]
     },
@@ -213,6 +224,76 @@
           "text": "Šioje dalyje išnagrinėsime 8 pavyzdžius nuo paprasčiausių iki sudėtingų."
         }
       ]
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Funkcijos ir jų savybės“ 9 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Funkcija, Argumentas, Apibrėžimo sritis, Reikšmių sritis, Grafikas, Funkcijos nulis ir Didėjimas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Funkcijos ir jų savybės“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Funkcijos ir jų savybės“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Funkcijos ir jų savybės“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
     }
   ],
   "workedExamples": [
@@ -220,7 +301,7 @@
       "id": "funkc-ex-1",
       "title": "Reikšmės apskaičiavimas",
       "level": "easy",
-      "problem": "Duota funkcija $f(x) = \frac{3x - 1}{x + 2}$. Apskaičiuokite $f(4)$.",
+      "problem": "Duota funkcija $f(x) = rac{3x - 1}{x + 2}$. Apskaičiuokite $f(4)$.",
       "conceptIds": [
         "funkcija",
         "argumentas"
@@ -302,7 +383,7 @@
       "id": "funkc-ex-4",
       "title": "Sudėtinė apibrėžimo sritis",
       "level": "medium",
-      "problem": "Raskite funkcijos $g(x) = \frac{5}{x^2 - 9}$ apibrėžimo sritį.",
+      "problem": "Raskite funkcijos $g(x) = rac{5}{x^2 - 9}$ apibrėžimo sritį.",
       "conceptIds": [
         "apibrezimo-sritis"
       ],
@@ -692,7 +773,408 @@
       "defaultSrs": true
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-001",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x-3$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=2\\cdot3-3=3"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-002",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x-2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=3\\cdot4-2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-003",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x-1$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=4\\cdot5-1=19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-004",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+0$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=5\\cdot2+0=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-005",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+1$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=1\\cdot3+1=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-006",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x+2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=2\\cdot4+2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-007",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x+3$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=3\\cdot5+3=18"
+        }
+      ],
+      "answerText": "18",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-008",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x+4$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=4\\cdot2+4=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-009",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+5$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=5\\cdot3+5=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "funkcijos-ir-ju-savybes-auto-010",
+      "topicId": "funkcijos-ir-ju-savybes",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+6$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=1\\cdot4+6=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "funkcija",
+        "argumentas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ],
   "tests": [],
   "srsCards": []
 }

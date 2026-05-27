@@ -43,7 +43,16 @@
       "pirmykste-sudetinei-funkcijai"
     ],
     "exerciseIds": [
-      "integr-ex-001"
+      "integr-ex-001",
+      "pirmykste-funkcija-ir-integralas-auto-001",
+      "pirmykste-funkcija-ir-integralas-auto-002",
+      "pirmykste-funkcija-ir-integralas-auto-003",
+      "pirmykste-funkcija-ir-integralas-auto-004",
+      "pirmykste-funkcija-ir-integralas-auto-005",
+      "pirmykste-funkcija-ir-integralas-auto-006",
+      "pirmykste-funkcija-ir-integralas-auto-007",
+      "pirmykste-funkcija-ir-integralas-auto-008",
+      "pirmykste-funkcija-ir-integralas-auto-009"
     ]
   },
   "theory": [
@@ -123,7 +132,7 @@
         {
           "type": "method",
           "title": "Integralas su tiesiniu argumentu",
-          "text": "Jei vietoj $x$ turime tiesinį reiškinį $ax+b$, tai integravimo rezultatas padauginamas iš $1/a$:\n$\\int f(ax+b) dx = \\frac{1}{a} F(ax+b) + C$."
+          "text": "Jei vietoj $x$ turime tiesinį reiškinį $ax+b$, tai integravimo rezultatas padauginamas iš $1/a$: $\\int f(ax+b) dx = \\frac{1}{a} F(ax+b) + C$."
         }
       ]
     },
@@ -171,7 +180,7 @@
         {
           "type": "method",
           "title": "Plotas tarp dviejų kreivių",
-          "text": "Jei figūrą iš viršaus riboja $f(x)$, o iš apačios $g(x)$, tai plotas skaičiuojamas kaip jų skirtumo integralas:\n$S = \\int_a^b (f(x) - g(x)) dx$."
+          "text": "Jei figūrą iš viršaus riboja $f(x)$, o iš apačios $g(x)$, tai plotas skaičiuojamas kaip jų skirtumo integralas: $S = \\int_a^b (f(x) - g(x)) dx$."
         },
         {
           "type": "warning",
@@ -208,7 +217,7 @@
         },
         {
           "type": "property",
-          "text": "Nueitas kelias $s$ laiko intervale $[t_1, t_2]$ yra lygus greičio funkcijos $v(t)$ integralui:\n$s = \\int_{t_1}^{t_2} v(t) dt$."
+          "text": "Nueitas kelias $s$ laiko intervale $[t_1, t_2]$ yra lygus greičio funkcijos $v(t)$ integralui: $s = \\int_{t_1}^{t_2} v(t) dt$."
         },
         {
           "type": "paragraph",
@@ -228,6 +237,76 @@
             "**Neigiamas plotas:** Skaičiuojant plotą gavote neigiamą skaičių? Reiškia, funkcija tame intervale yra po ašimi, arba supainiojote kreives (viršutinę su apatine).",
             "**Daugybos integravimas:** Mokiniai bando integruoti sandaugą integruodami kiekvieną narį atskirai. Tai griežtai draudžiama!"
           ]
+        }
+      ]
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Pirmykštė funkcija ir integralas“ 12 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Pirmykštė funkcija, Apibrėžtinis integralas, Niutono ir Leibnico formulė, Neapibrėžtinis integralas, Integravimo konstanta, Kreivinė trapecija ir Plotas Po Kreivė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Pirmykštė funkcija ir integralas“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Raskite funkcijos f(x) = 4x³ pirmykštę funkciją F(x), jei F(0) = 5. Įrašykite konstantos C reikšmę.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Pirmykštė funkcija ir integralas“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -286,55 +365,55 @@
     },
     {
       "id": "neapibreztinis-integralas",
-      "title": "Neapibreztinis Integralas",
+      "title": "Neapibrėžtinis integralas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Neapibreztinis Integralas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Neapibrėžtinis integralas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "integravimo-konstanta",
-      "title": "Integravimo Konstanta",
+      "title": "Integravimo konstanta",
       "type": "concept",
-      "shortDefinition": "S?voka ?Integravimo Konstanta? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Integravimo konstanta“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "kreivine-trapezija",
-      "title": "Kreivine Trapezija",
+      "title": "Kreivinė trapecija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kreivine Trapezija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kreivinė trapecija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "plotas-po-kreive",
-      "title": "Plotas Po Kreive",
+      "title": "Plotas Po Kreivė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Plotas Po Kreive? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Plotas Po Kreivė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "sukinio-turis",
-      "title": "Sukinio Turis",
+      "title": "Sukinio tūris",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sukinio Turis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sukinio tūris“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "integravimo-taisykles",
-      "title": "Integravimo Taisykles",
+      "title": "Integravimo Taisyklės",
       "type": "concept",
-      "shortDefinition": "S?voka ?Integravimo Taisykles? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Integravimo Taisyklės“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -593,6 +672,447 @@
       ],
       "estimatedSeconds": 30,
       "difficulty": "medium"
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-001",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=4x+3$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=2x^2+3x+C$.",
+          "latex": "F(x)=2x^2+3x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=2+3=5$.",
+          "latex": "2+3=5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-002",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=6x+4$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=3x^2+4x+C$.",
+          "latex": "F(x)=3x^2+4x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=3+4=7$.",
+          "latex": "3+4=7"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-003",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=8x+5$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=4x^2+5x+C$.",
+          "latex": "F(x)=4x^2+5x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=4+5=9$.",
+          "latex": "4+5=9"
+        }
+      ],
+      "answerText": "9",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-004",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=10x+2$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=5x^2+2x+C$.",
+          "latex": "F(x)=5x^2+2x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=5+2=7$.",
+          "latex": "5+2=7"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-005",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=2x+3$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=1x^2+3x+C$.",
+          "latex": "F(x)=1x^2+3x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=1+3=4$.",
+          "latex": "1+3=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-006",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=4x+4$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=2x^2+4x+C$.",
+          "latex": "F(x)=2x^2+4x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=2+4=6$.",
+          "latex": "2+4=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-007",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=6x+5$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=3x^2+5x+C$.",
+          "latex": "F(x)=3x^2+5x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=3+5=8$.",
+          "latex": "3+5=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-008",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=8x+2$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=4x^2+2x+C$.",
+          "latex": "F(x)=4x^2+2x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=4+2=6$.",
+          "latex": "4+2=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "pirmykste-funkcija-ir-integralas-auto-009",
+      "topicId": "pirmykste-funkcija-ir-integralas",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite $F(1)-F(0)$, jei $F'(x)=10x+3$ ir $F(0)=0$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Skirtumas $F(1)-F(0)$ lygus plotui po išvestinės grafiku nuo 0 iki 1.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Raskite pirmykštę funkciją.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Įstatykite ribas 1 ir 0.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Pirmykštė gali būti $F(x)=5x^2+3x+C$.",
+          "latex": "F(x)=5x^2+3x+C"
+        },
+        {
+          "text": "Todėl $F(1)-F(0)=5+3=8$.",
+          "latex": "5+3=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "pirmykste-funkcija",
+        "neapibreztinis-integralas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [

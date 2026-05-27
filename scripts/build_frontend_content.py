@@ -286,11 +286,16 @@ def render_content() -> str:
             answer_value, accepted_answers, answer_tolerance, choices = answer_data(ex.get("answer"))
             concepts_for_exercise = ex.get("conceptIds") or ex.get("concepts") or []
             difficulty = exercise_difficulty(ex)
+            is_olympiad_exercise = (
+                topic.get("level") == "olympiad"
+                or ex.get("level") == "olympiad"
+                or bool(ex.get("olympiadTrack") or ex.get("olympiadTier"))
+            )
             ex_obj = {
                 "id": ex.get("id", "missing-id"),
                 "topicId": ex.get("topicId", topic["id"]),
                 "type": ex.get("type", "numeric"),
-                "level": ex.get("level", "curriculum"),
+                "level": "olympiad" if is_olympiad_exercise else ex.get("level", "curriculum"),
                 "difficulty": difficulty,
                 "statement": ex.get("statement", ""),
                 "statementPreview": ex.get("statementPreview") or statement_preview(ex.get("statement", "")),
@@ -306,7 +311,7 @@ def render_content() -> str:
                 "alternate": " ".join(text_value(method) for method in ex.get("alternateMethods", [])) or "",
                 "estimatedSeconds": ex.get("estimatedSeconds", 60),
             }
-            if ex.get("level") == "olympiad":
+            if is_olympiad_exercise:
                 ex_obj.update({
                     "olympiadTrack": ex.get("olympiadTrack"),
                     "olympiadTier": ex.get("olympiadTier") or difficulty,

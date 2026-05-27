@@ -41,7 +41,16 @@
       "skliausteliu-zenklai-intervale"
     ],
     "exerciseIds": [
-      "kvadratines-nelygybes-ex-001"
+      "kvadratines-nelygybes-ex-001",
+      "kvadratines-nelygybes-auto-001",
+      "kvadratines-nelygybes-auto-002",
+      "kvadratines-nelygybes-auto-003",
+      "kvadratines-nelygybes-auto-004",
+      "kvadratines-nelygybes-auto-005",
+      "kvadratines-nelygybes-auto-006",
+      "kvadratines-nelygybes-auto-007",
+      "kvadratines-nelygybes-auto-008",
+      "kvadratines-nelygybes-auto-009"
     ]
   },
   "theory": [
@@ -75,7 +84,7 @@
         {
           "type": "method",
           "title": "Sprendimo algoritmas",
-          "text": "1. **Raskite šaknis**: Išspręskite lygtį $ax^2 + bx + c = 0$. Tai bus taškai, kuriuose parabolė kerta $OX$ ašį.\n2. **Nustatykite šakų kryptį**: Pažiūrėkite į koeficientą $a$. Jei $a > 0$, šakos kyla į viršų (šypsenėlė). Jei $a < 0$, šakos leidžiasi žemyn (liūdnas veidas).\n3. **Nubraižykite eskizą**: Užtenka pasižymėti $OX$ ašį, šaknis ant jos ir apytikslę parabolės formą.\n4. **Išrinkite sritį**: \n   - Jei nelygybė $> 0$ arba $\\ge 0$, ieškome dalies virš $OX$ ašies.\n   - Jei nelygybė $< 0$ arba $\\le 0$, ieškome dalies po $OX$ ašimi."
+          "text": "1. **Raskite šaknis**: Išspręskite lygtį $ax^2 + bx + c = 0$. Tai bus taškai, kuriuose parabolė kerta $OX$ ašį. 2. **Nustatykite šakų kryptį**: Pažiūrėkite į koeficientą $a$. Jei $a > 0$, šakos kyla į viršų (šypsenėlė). Jei $a < 0$, šakos leidžiasi žemyn (liūdnas veidas). 3. **Nubraižykite eskizą**: Užtenka pasižymėti $OX$ ašį, šaknis ant jos ir apytikslę parabolės formą. 4. **Išrinkite sritį**: - Jei nelygybė $> 0$ arba $\\ge 0$, ieškome dalies virš $OX$ ašies. - Jei nelygybė $< 0$ arba $\\le 0$, ieškome dalies po $OX$ ašimi."
         }
       ]
     },
@@ -89,7 +98,7 @@
         },
         {
           "type": "method",
-          "text": "1. Išskaidykite trinarį dauginamaisiais: $a(x-x_1)(x-x_2)$.\n2. Atidėkite taškus $x_1$ ir $x_2$ skaičių tiesėje.\n3. Tiesė pasidalins į 3 intervalus.\n4. Iš kiekvieno intervalo paimkite bet kokį skaičių, įstatykite į trinarį ir nustatykite ženklą (+ arba -).\n5. Pasirinkite intervalus, atitinkančius nelygybės ženklą."
+          "text": "1. Išskaidykite trinarį dauginamaisiais: $a(x-x_1)(x-x_2)$. 2. Atidėkite taškus $x_1$ ir $x_2$ skaičių tiesėje. 3. Tiesė pasidalins į 3 intervalus. 4. Iš kiekvieno intervalo paimkite bet kokį skaičių, įstatykite į trinarį ir nustatykite ženklą (+ arba -). 5. Pasirinkite intervalus, atitinkančius nelygybės ženklą."
         }
       ]
     },
@@ -121,6 +130,90 @@
         {
           "type": "warning",
           "text": "Skliaustų tipas: griežtoms nelygybėms ($>, <$) naudojame paprastus skliaustus $( )$, o taškai brėžinyje yra „tušti“. Negriežtoms ($\\ge, \\le$) – laužtinius $[ ]$, o taškai „pilni“."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Kvadratinės nelygybės“ 10 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kvadratine Nelygybė, Paraboles Metodas, Intervalu Metodas, Posaknio Zenklas, Griežtoji Nelygybė, Negriežtoji Nelygybė ir Tuščia Aibė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Kvadratinės nelygybės“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Kokia yra mažiausia sveikoji x reikšmė, tenkinanti nelygybę x² - 9 \\u2le 0?“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Kvadratinės nelygybės“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
+    },
+    {
+      "id": "kvadratines-nelygybes-gilinimas-papildomas-praktine-schema-1",
+      "title": "Praktinė sprendimo schema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temoje „Kvadratinės nelygybės“ mokymasis tampa tvirtas tada, kai mokinys geba atpažinti tą pačią idėją skirtinguose formatuose: žodiniame uždavinyje, lentelėje, formulėje, brėžinyje arba teste. Jeigu sąlyga skamba taip: „Kokia yra mažiausia sveikoji x reikšmė, tenkinanti nelygybę x² - 9 \\u2le 0?“, pirmiausia reikia ne skaičiuoti, o nuspręsti, kokią informaciją ji duoda. Tada pasirenkamas metodas: Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Galiausiai atsakymas tikrinamas ne iš atminties, o pagal pradinę sąlygą. Taip išvengiama situacijos, kai veiksmai atlikti teisingai, bet sprendžiamas ne tas klausimas."
+        },
+        {
+          "type": "note",
+          "text": "Savikontrolė: Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas."
         }
       ]
     }
@@ -335,6 +428,402 @@
       "mistakeIds": [],
       "estimatedSeconds": 45,
       "difficulty": "medium"
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-001",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-002",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-003",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-004",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-6x+8=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-2)(x-4)$.",
+          "latex": "x^2-6x+8=(x-2)(x-4)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-005",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-9x+18=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-3)(x-6)$.",
+          "latex": "x^2-9x+18=(x-3)(x-6)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-006",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--2)(x--1)$.",
+          "latex": "x^2+3x+2=(x--2)(x--1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-007",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2+0x-1=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x--1)(x-1)$.",
+          "latex": "x^2+0x-1=(x--1)(x-1)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-008",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+0=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-0)(x-3)$.",
+          "latex": "x^2-3x+0=(x-0)(x-3)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kvadratines-nelygybes-auto-009",
+      "topicId": "kvadratines-nelygybes",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Kiek realiųjų sprendinių turi lygtis $x^2-3x+2=0$?",
+      "answer": {
+        "kind": "numeric",
+        "value": 2,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pagalvokite, ar trinarį galima išskaidyti į daugiklius.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Jei gaunate du skirtingus tiesinius daugiklius, yra du sprendiniai.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Trinaris išskaidomas į $(x-1)(x-2)$.",
+          "latex": "x^2-3x+2=(x-1)(x-2)"
+        },
+        {
+          "text": "Skirtingų šaknų skaičius yra 2.",
+          "latex": "2"
+        }
+      ],
+      "answerText": "2",
+      "conceptIds": [
+        "kvadratine-nelygybe",
+        "paraboles-metodas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [],
@@ -342,10 +831,10 @@
   "concepts": [
     {
       "id": "kvadratine-nelygybe",
-      "title": "Kvadratine Nelygybe",
+      "title": "Kvadratine Nelygybė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kvadratine Nelygybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kvadratine Nelygybė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -353,8 +842,8 @@
       "id": "paraboles-metodas",
       "title": "Paraboles Metodas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Paraboles Metodas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Paraboles Metodas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -362,8 +851,8 @@
       "id": "intervalu-metodas",
       "title": "Intervalu Metodas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Intervalu Metodas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Intervalu Metodas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -371,26 +860,26 @@
       "id": "posaknio-zenklas",
       "title": "Posaknio Zenklas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Posaknio Zenklas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Posaknio Zenklas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "griežtoji-nelygybe",
-      "title": "Griežtoji Nelygybe",
+      "title": "Griežtoji Nelygybė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Griežtoji Nelygybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Griežtoji Nelygybė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "negriežtoji-nelygybe",
-      "title": "Negriežtoji Nelygybe",
+      "title": "Negriežtoji Nelygybė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Negriežtoji Nelygybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Negriežtoji Nelygybė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -398,8 +887,8 @@
       "id": "tuščia-aibė",
       "title": "Tuščia Aibė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tuščia Aibė? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tuščia Aibė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -407,8 +896,8 @@
       "id": "visų-realiųjų-skaičių-aibė",
       "title": "Visų Realiųjų Skaičių Aibė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Visų Realiųjų Skaičių Aibė? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Visų Realiųjų Skaičių Aibė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }

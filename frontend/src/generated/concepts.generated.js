@@ -427,8 +427,8 @@ export const concepts = {
   "vidurkis": {
     "title": "Vidurkis",
     "type": "concept",
-    "definition": "S?voka ?Vidurkis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vidurkis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -445,8 +445,8 @@ export const concepts = {
   "imtis": {
     "title": "Imtis",
     "type": "concept",
-    "definition": "S?voka ?Imtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Imtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -459,10 +459,10 @@ export const concepts = {
     ]
   },
   "daznis": {
-    "title": "Daznis",
+    "title": "Dažnis",
     "type": "concept",
-    "definition": "S?voka ?Daznis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dažnis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -477,8 +477,8 @@ export const concepts = {
   "mediana": {
     "title": "Mediana",
     "type": "concept",
-    "definition": "S?voka ?Mediana? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Mediana“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -494,8 +494,8 @@ export const concepts = {
   "moda": {
     "title": "Moda",
     "type": "concept",
-    "definition": "S?voka ?Moda? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Moda“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -510,8 +510,8 @@ export const concepts = {
   "sklaida": {
     "title": "Sklaida",
     "type": "concept",
-    "definition": "S?voka ?Sklaida? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sklaida“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -579,8 +579,8 @@ export const concepts = {
   "koreliacija": {
     "title": "Koreliacija",
     "type": "concept",
-    "definition": "S?voka ?Koreliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Koreliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1024,8 +1024,8 @@ export const concepts = {
   "laikas": {
     "title": "Laikas",
     "type": "concept",
-    "definition": "S?voka ?Laikas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Laikas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1035,8 +1035,8 @@ export const concepts = {
   "kelias": {
     "title": "Kelias",
     "type": "concept",
-    "definition": "S?voka ?Kelias? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kelias“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1046,8 +1046,8 @@ export const concepts = {
   "vidutinis-greitis": {
     "title": "Vidutinis Greitis",
     "type": "concept",
-    "definition": "S?voka ?Vidutinis Greitis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vidutinis Greitis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1190,8 +1190,8 @@ export const concepts = {
   "skaidymas-pirminiais-daugikliais": {
     "title": "Skaidymas Pirminiais Daugikliais",
     "type": "concept",
-    "definition": "S?voka ?Skaidymas Pirminiais Daugikliais? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaidymas Pirminiais Daugikliais“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1272,10 +1272,10 @@ export const concepts = {
     ]
   },
   "aritmetine-progresija-pradmenys": {
-    "title": "Aritmetine Progresija Pradmenys",
+    "title": "Aritmetinės progresijos pradmenys",
     "type": "concept",
-    "definition": "S?voka ?Aritmetine Progresija Pradmenys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Aritmetinės progresijos pradmenys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1285,8 +1285,8 @@ export const concepts = {
   "santykinis-greitis": {
     "title": "Santykinis Greitis",
     "type": "concept",
-    "definition": "S?voka ?Santykinis Greitis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Santykinis Greitis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1388,10 +1388,10 @@ export const concepts = {
     ]
   },
   "geo-strat-zsymetrija": {
-    "title": "Geo Strat Zsymetrija",
+    "title": "Geometrijos strategija: simetrija",
     "type": "concept",
-    "definition": "S?voka ?Geo Strat Zsymetrija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Geometrijos strategija: simetrija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1399,10 +1399,10 @@ export const concepts = {
     ]
   },
   "geo-strat-skaiciavimas": {
-    "title": "Geo Strat Skaiciavimas",
+    "title": "Geometrijos strategija: skaičiavimas",
     "type": "concept",
-    "definition": "S?voka ?Geo Strat Skaiciavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Geometrijos strategija: skaičiavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1801,10 +1801,10 @@ export const concepts = {
     ]
   },
   "simboliu-reiksmes": {
-    "title": "Simboliu Reiksmes",
+    "title": "Simboliu Reikšmės",
     "type": "concept",
-    "definition": "S?voka ?Simboliu Reiksmes? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Simboliu Reikšmės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1812,10 +1812,10 @@ export const concepts = {
     ]
   },
   "dideli-skaiciai-romeniski": {
-    "title": "Dideli Skaiciai Romeniski",
+    "title": "Dideli Skaičiai Romeniski",
     "type": "concept",
-    "definition": "S?voka ?Dideli Skaiciai Romeniski? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dideli Skaičiai Romeniski“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1823,10 +1823,10 @@ export const concepts = {
     ]
   },
   "skaiciu-konvertavimas": {
-    "title": "Skaiciu Konvertavimas",
+    "title": "Skaičių Konvertavimas",
     "type": "concept",
-    "definition": "S?voka ?Skaiciu Konvertavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaičių Konvertavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1899,10 +1899,10 @@ export const concepts = {
     ]
   },
   "simetrijos-asis": {
-    "title": "Simetrijos Asis",
+    "title": "Simetrijos Ašis",
     "type": "concept",
-    "definition": "S?voka ?Simetrijos Asis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Simetrijos Ašis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1914,8 +1914,8 @@ export const concepts = {
   "figuru-lygumas": {
     "title": "Figuru Lygumas",
     "type": "concept",
-    "definition": "S?voka ?Figuru Lygumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Figuru Lygumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1925,8 +1925,8 @@ export const concepts = {
   "geometrine-transformacija": {
     "title": "Geometrine Transformacija",
     "type": "concept",
-    "definition": "S?voka ?Geometrine Transformacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Geometrine Transformacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1936,8 +1936,8 @@ export const concepts = {
   "simetrija-gamtoje": {
     "title": "Simetrija Gamtoje",
     "type": "concept",
-    "definition": "S?voka ?Simetrija Gamtoje? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Simetrija Gamtoje“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1978,8 +1978,8 @@ export const concepts = {
   "skaitiklis-vardiklis": {
     "title": "Skaitiklis Vardiklis",
     "type": "concept",
-    "definition": "S?voka ?Skaitiklis Vardiklis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaitiklis Vardiklis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1989,8 +1989,8 @@ export const concepts = {
   "dalies-radimas": {
     "title": "Dalies Radimas",
     "type": "concept",
-    "definition": "S?voka ?Dalies Radimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dalies Radimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -1998,10 +1998,10 @@ export const concepts = {
     ]
   },
   "konvertavimas-skaiciu": {
-    "title": "Konvertavimas Skaiciu",
+    "title": "Konvertavimas Skaičių",
     "type": "concept",
-    "definition": "S?voka ?Konvertavimas Skaiciu? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Konvertavimas Skaičių“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2608,8 +2608,8 @@ export const concepts = {
   "tiesinis-grafikas": {
     "title": "Tiesinis Grafikas",
     "type": "concept",
-    "definition": "S?voka ?Tiesinis Grafikas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tiesinis Grafikas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2645,10 +2645,10 @@ export const concepts = {
     ]
   },
   "koordinaciu-plokstuma": {
-    "title": "Koordinaciu Plokstuma",
+    "title": "Koordinačių Plokštuma",
     "type": "concept",
-    "definition": "S?voka ?Koordinaciu Plokstuma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Koordinačių Plokštuma“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2786,10 +2786,10 @@ export const concepts = {
     ]
   },
   "braizymas-skriestuvu": {
-    "title": "Braizymas Skriestuvu",
+    "title": "Braižymas Skriestuvu",
     "type": "concept",
-    "definition": "S?voka ?Braizymas Skriestuvu? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Braižymas Skriestuvu“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2797,10 +2797,10 @@ export const concepts = {
     ]
   },
   "braizymas-matlankiu": {
-    "title": "Braizymas Matlankiu",
+    "title": "Braižymas Matlankiu",
     "type": "concept",
-    "definition": "S?voka ?Braizymas Matlankiu? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Braižymas Matlankiu“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2836,8 +2836,8 @@ export const concepts = {
   "spindulys": {
     "title": "Spindulys",
     "type": "concept",
-    "definition": "S?voka ?Spindulys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Spindulys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2848,8 +2848,8 @@ export const concepts = {
   "skersmuo": {
     "title": "Skersmuo",
     "type": "concept",
-    "definition": "S?voka ?Skersmuo? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skersmuo“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -2887,8 +2887,8 @@ export const concepts = {
   "lankas": {
     "title": "Lankas",
     "type": "concept",
-    "definition": "S?voka ?Lankas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lankas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3150,8 +3150,8 @@ export const concepts = {
   "pajamos": {
     "title": "Pajamos",
     "type": "concept",
-    "definition": "S?voka ?Pajamos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pajamos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3159,10 +3159,10 @@ export const concepts = {
     ]
   },
   "islaidos": {
-    "title": "Islaidos",
+    "title": "Išlaidos",
     "type": "concept",
-    "definition": "S?voka ?Islaidos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Išlaidos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3184,10 +3184,10 @@ export const concepts = {
     ]
   },
   "indelis": {
-    "title": "Indelis",
+    "title": "Indėlis",
     "type": "concept",
-    "definition": "S?voka ?Indelis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Indėlis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3197,8 +3197,8 @@ export const concepts = {
   "paskola": {
     "title": "Paskola",
     "type": "concept",
-    "definition": "S?voka ?Paskola? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Paskola“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3230,10 +3230,10 @@ export const concepts = {
     ]
   },
   "generaline-visuma": {
-    "title": "Generaline Visuma",
+    "title": "Generalinė visuma",
     "type": "concept",
-    "definition": "S?voka ?Generaline Visuma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Generalinė visuma“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3243,8 +3243,8 @@ export const concepts = {
   "reprezentatyvumas": {
     "title": "Reprezentatyvumas",
     "type": "concept",
-    "definition": "S?voka ?Reprezentatyvumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Reprezentatyvumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3253,10 +3253,10 @@ export const concepts = {
     ]
   },
   "santykinis-daznis": {
-    "title": "Santykinis Daznis",
+    "title": "Santykinis dažnis",
     "type": "concept",
-    "definition": "S?voka ?Santykinis Daznis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Santykinis dažnis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3266,10 +3266,10 @@ export const concepts = {
     ]
   },
   "skrituline-diagrama": {
-    "title": "Skrituline Diagrama",
+    "title": "Skritulinė diagrama",
     "type": "concept",
-    "definition": "S?voka ?Skrituline Diagrama? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skritulinė diagrama“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3277,10 +3277,10 @@ export const concepts = {
     ]
   },
   "stulpeline-diagrama": {
-    "title": "Stulpeline Diagrama",
+    "title": "Stulpelinė diagrama",
     "type": "concept",
-    "definition": "S?voka ?Stulpeline Diagrama? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Stulpelinė diagrama“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3336,8 +3336,8 @@ export const concepts = {
   "pagrindas": {
     "title": "Pagrindas",
     "type": "concept",
-    "definition": "S?voka ?Pagrindas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pagrindas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3364,8 +3364,8 @@ export const concepts = {
   "kvadratas": {
     "title": "Kvadratas",
     "type": "concept",
-    "definition": "S?voka ?Kvadratas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kvadratas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3376,8 +3376,8 @@ export const concepts = {
   "kubas": {
     "title": "Kubas",
     "type": "concept",
-    "definition": "S?voka ?Kubas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kubas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3402,10 +3402,10 @@ export const concepts = {
     ]
   },
   "standartine-israiska": {
-    "title": "Standartine Israiska",
+    "title": "Standartinė išraiška",
     "type": "concept",
-    "definition": "S?voka ?Standartine Israiska? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Standartinė išraiška“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3507,10 +3507,10 @@ export const concepts = {
     ]
   },
   "kryzminiai-kampai": {
-    "title": "Kryzminiai Kampai",
+    "title": "Kryžminiai Kampai",
     "type": "concept",
-    "definition": "S?voka ?Kryzminiai Kampai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kryžminiai Kampai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3520,8 +3520,8 @@ export const concepts = {
   "atitinkamieji-kampai": {
     "title": "Atitinkamieji Kampai",
     "type": "concept",
-    "definition": "S?voka ?Atitinkamieji Kampai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atitinkamieji Kampai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3529,10 +3529,10 @@ export const concepts = {
     ]
   },
   "staciakampis": {
-    "title": "Staciakampis",
+    "title": "Stačiakampis",
     "type": "concept",
-    "definition": "S?voka ?Staciakampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Stačiakampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3542,8 +3542,8 @@ export const concepts = {
   "rombas": {
     "title": "Rombas",
     "type": "concept",
-    "definition": "S?voka ?Rombas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Rombas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -3553,8 +3553,8 @@ export const concepts = {
   "trapecija": {
     "title": "Trapecija",
     "type": "concept",
-    "definition": "S?voka ?Trapecija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trapecija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4062,8 +4062,8 @@ export const concepts = {
   "gretiniai-savoka": {
     "title": "Gretiniai Savoka",
     "type": "concept",
-    "definition": "S?voka ?Gretiniai Savoka? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Gretiniai Savoka“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4073,8 +4073,8 @@ export const concepts = {
   "invariantas-savoka": {
     "title": "Invariantas Savoka",
     "type": "concept",
-    "definition": "S?voka ?Invariantas Savoka? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Invariantas Savoka“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4248,8 +4248,8 @@ export const concepts = {
   "izambine": {
     "title": "Izambine",
     "type": "concept",
-    "definition": "S?voka ?Izambine? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Izambine“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4258,10 +4258,10 @@ export const concepts = {
     ]
   },
   "lygiasonis-trikampis": {
-    "title": "Lygiasonis Trikampis",
+    "title": "Lygiašonis Trikampis",
     "type": "concept",
-    "definition": "S?voka ?Lygiasonis Trikampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lygiašonis Trikampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4269,10 +4269,10 @@ export const concepts = {
     ]
   },
   "lygiakrastis-trikampis": {
-    "title": "Lygiakrastis Trikampis",
+    "title": "Lygiakraštis Trikampis",
     "type": "concept",
-    "definition": "S?voka ?Lygiakrastis Trikampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lygiakraštis Trikampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4280,10 +4280,10 @@ export const concepts = {
     ]
   },
   "staciųjų-trikampiu-savybes": {
-    "title": "Staciųjų Trikampiu Savybes",
+    "title": "Staciųjų Trikampių Savybes",
     "type": "concept",
-    "definition": "S?voka ?Staciųjų Trikampiu Savybes? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Staciųjų Trikampių Savybes“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4293,8 +4293,8 @@ export const concepts = {
   "statinis": {
     "title": "Statinis",
     "type": "concept",
-    "definition": "S?voka ?Statinis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Statinis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4303,10 +4303,10 @@ export const concepts = {
     ]
   },
   "pitagoro-skaiciai": {
-    "title": "Pitagoro Skaiciai",
+    "title": "Pitagoro Skaičiai",
     "type": "concept",
-    "definition": "S?voka ?Pitagoro Skaiciai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pitagoro Skaičiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4355,10 +4355,10 @@ export const concepts = {
     ]
   },
   "greitosios-daugybos-formules": {
-    "title": "Greitosios Daugybos Formules",
+    "title": "Greitosios Daugybos Formulės",
     "type": "concept",
-    "definition": "S?voka ?Greitosios Daugybos Formules? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Greitosios Daugybos Formulės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4368,8 +4368,8 @@ export const concepts = {
   "skaidymas-dauginamaisiais": {
     "title": "Skaidymas Dauginamaisiais",
     "type": "concept",
-    "definition": "S?voka ?Skaidymas Dauginamaisiais? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaidymas Dauginamaisiais“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4456,10 +4456,10 @@ export const concepts = {
     ]
   },
   "turis": {
-    "title": "Turis",
+    "title": "Tūris",
     "type": "concept",
-    "definition": "S?voka ?Turis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tūris“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4500,8 +4500,8 @@ export const concepts = {
   "sfera": {
     "title": "Sfera",
     "type": "concept",
-    "definition": "S?voka ?Sfera? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sfera“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4510,10 +4510,10 @@ export const concepts = {
     ]
   },
   "pavirsiaus-plotas": {
-    "title": "Pavirsiaus Plotas",
+    "title": "Paviršiaus Plotas",
     "type": "concept",
-    "definition": "S?voka ?Pavirsiaus Plotas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Paviršiaus Plotas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4538,8 +4538,8 @@ export const concepts = {
   "sudaromoji": {
     "title": "Sudaromoji",
     "type": "concept",
-    "definition": "S?voka ?Sudaromoji? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sudaromoji“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4547,10 +4547,10 @@ export const concepts = {
     ]
   },
   "aukstine": {
-    "title": "Aukstine",
+    "title": "Aukštinė",
     "type": "concept",
-    "definition": "S?voka ?Aukstine? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Aukštinė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4613,10 +4613,10 @@ export const concepts = {
     ]
   },
   "sudetines-palukanos": {
-    "title": "Sudetines Palukanos",
+    "title": "Sudėtinės Palūkanos",
     "type": "concept",
-    "definition": "S?voka ?Sudetines Palukanos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sudėtinės Palūkanos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4626,8 +4626,8 @@ export const concepts = {
   "kreditas": {
     "title": "Kreditas",
     "type": "concept",
-    "definition": "S?voka ?Kreditas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kreditas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4637,8 +4637,8 @@ export const concepts = {
   "lizingas": {
     "title": "Lizingas",
     "type": "concept",
-    "definition": "S?voka ?Lizingas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lizingas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4648,8 +4648,8 @@ export const concepts = {
   "infliacija": {
     "title": "Infliacija",
     "type": "concept",
-    "definition": "S?voka ?Infliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Infliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4708,8 +4708,8 @@ export const concepts = {
   "intervalinis-grupavimas": {
     "title": "Intervalinis Grupavimas",
     "type": "concept",
-    "definition": "S?voka ?Intervalinis Grupavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Intervalinis Grupavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4717,10 +4717,10 @@ export const concepts = {
     ]
   },
   "sukauptasis-daznis": {
-    "title": "Sukauptasis Daznis",
+    "title": "Sukauptasis Dažnis",
     "type": "concept",
-    "definition": "S?voka ?Sukauptasis Daznis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sukauptasis Dažnis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4730,8 +4730,8 @@ export const concepts = {
   "interkvartilinis-plotis": {
     "title": "Interkvartilinis Plotis",
     "type": "concept",
-    "definition": "S?voka ?Interkvartilinis Plotis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Interkvartilinis Plotis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4739,10 +4739,10 @@ export const concepts = {
     ]
   },
   "dezute-su-usais": {
-    "title": "Dezute Su Usais",
+    "title": "Dėžutė Su Ūsais",
     "type": "concept",
-    "definition": "S?voka ?Dezute Su Usais? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dėžutė Su Ūsais“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4822,10 +4822,10 @@ export const concepts = {
     ]
   },
   "simetriniai-reiskiniai": {
-    "title": "Simetriniai Reiskiniai",
+    "title": "Simetriniai reiškiniai",
     "type": "concept",
-    "definition": "S?voka ?Simetriniai Reiskiniai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Simetriniai reiškiniai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4833,10 +4833,10 @@ export const concepts = {
     ]
   },
   "olimpiada-08-concept-logic": {
-    "title": "Olimpiada 08 Concept Logic",
+    "title": "08 klasės olimpiadinė sąvoka loginis metodas",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 08 Concept Logic? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda spr?sti susijusius u?davinius.",
+    "definition": "Sąvoka „08 klasės olimpiadinė sąvoka loginis metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda spręsti susijusius uždavinius.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4912,10 +4912,10 @@ export const concepts = {
     ]
   },
   "menelajo-teorema": {
-    "title": "Menelajo Teorema",
+    "title": "Menelajaus Teorema",
     "type": "concept",
-    "definition": "S?voka ?Menelajo Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Menelajaus Teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4924,10 +4924,10 @@ export const concepts = {
     ]
   },
   "ptolemejo-teorema": {
-    "title": "Ptolemejo Teorema",
+    "title": "Ptolemėjo Teorema",
     "type": "concept",
-    "definition": "S?voka ?Ptolemejo Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ptolemėjo Teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -4991,9 +4991,9 @@ export const concepts = {
     ]
   },
   "menelajo-tvarkos-klaida": {
-    "title": "Neteisinga Menelajo viršūnių tvarka",
+    "title": "Neteisinga Menelajaus viršūnių tvarka",
     "type": "mistake",
-    "definition": "Neteisinga Menelajo viršūnių tvarka",
+    "definition": "Neteisinga Menelajaus viršūnių tvarka",
     "intuition": "",
     "formal": "",
     "related": [],
@@ -5068,10 +5068,10 @@ export const concepts = {
     ]
   },
   "dirichle-principas-isplestas": {
-    "title": "Dirichle Principas Isplestas",
+    "title": "Dirichlė Principas Isplestas",
     "type": "concept",
-    "definition": "S?voka ?Dirichle Principas Isplestas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dirichlė Principas Isplestas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5189,10 +5189,10 @@ export const concepts = {
     ]
   },
   "skaiciavimo-sistemos": {
-    "title": "Skaiciavimo Sistemos",
+    "title": "Skaičiavimo Sistemos",
     "type": "concept",
-    "definition": "S?voka ?Skaiciavimo Sistemos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaičiavimo Sistemos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5200,10 +5200,10 @@ export const concepts = {
     ]
   },
   "diofanto-lygtys-nt": {
-    "title": "Diofanto Lygtys Nt",
+    "title": "Diofanto Lygtys skaičių teorijos",
     "type": "concept",
-    "definition": "S?voka ?Diofanto Lygtys Nt? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Diofanto Lygtys skaičių teorijos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5291,10 +5291,10 @@ export const concepts = {
     ]
   },
   "panasumo-koeficientas": {
-    "title": "Panasumo Koeficientas",
+    "title": "Panašumo Koeficientas",
     "type": "concept",
-    "definition": "S?voka ?Panasumo Koeficientas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Panašumo Koeficientas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5303,10 +5303,10 @@ export const concepts = {
     ]
   },
   "atitinkamos-krastines": {
-    "title": "Atitinkamos Krastines",
+    "title": "Atitinkamos Kraštinės",
     "type": "concept",
-    "definition": "S?voka ?Atitinkamos Krastines? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atitinkamos Kraštinės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5314,10 +5314,10 @@ export const concepts = {
     ]
   },
   "trikampiu-panasumo-pozymiai": {
-    "title": "Trikampiu Panasumo Pozymiai",
+    "title": "Trikampių Panašumo Požymiai",
     "type": "concept",
-    "definition": "S?voka ?Trikampiu Panasumo Pozymiai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trikampių Panašumo Požymiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5328,8 +5328,8 @@ export const concepts = {
   "proporcingos-atkarpos": {
     "title": "Proporcingos Atkarpos",
     "type": "concept",
-    "definition": "S?voka ?Proporcingos Atkarpos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Proporcingos Atkarpos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5352,8 +5352,8 @@ export const concepts = {
   "plotu-santykis": {
     "title": "Plotu Santykis",
     "type": "concept",
-    "definition": "S?voka ?Plotu Santykis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Plotu Santykis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5395,10 +5395,10 @@ export const concepts = {
     ]
   },
   "izambines-pusiaukrastine": {
-    "title": "Izambines Pusiaukrastine",
+    "title": "Įžambinės Pusiaukraštinė",
     "type": "concept",
-    "definition": "S?voka ?Izambines Pusiaukrastine? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Įžambinės Pusiaukraštinė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5406,10 +5406,10 @@ export const concepts = {
     ]
   },
   "staciojo-trikampio-savybes": {
-    "title": "Staciojo Trikampio Savybes",
+    "title": "Stačiojo Trikampio Savybes",
     "type": "concept",
-    "definition": "S?voka ?Staciojo Trikampio Savybes? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Stačiojo Trikampio Savybes“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5419,8 +5419,8 @@ export const concepts = {
   "geometrinis-vidurkis": {
     "title": "Geometrinis Vidurkis",
     "type": "concept",
-    "definition": "S?voka ?Geometrinis Vidurkis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Geometrinis Vidurkis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5504,10 +5504,10 @@ export const concepts = {
     ]
   },
   "skaiciu-aibiu-sankirta": {
-    "title": "Skaiciu Aibiu Sankirta",
+    "title": "Skaičių Aibių Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Skaiciu Aibiu Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaičių Aibių Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5515,10 +5515,10 @@ export const concepts = {
     ]
   },
   "skaiciu-aibiu-sajunga": {
-    "title": "Skaiciu Aibiu Sajunga",
+    "title": "Skaičių Aibių Sąjunga",
     "type": "concept",
-    "definition": "S?voka ?Skaiciu Aibiu Sajunga? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaičių Aibių Sąjunga“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5632,8 +5632,8 @@ export const concepts = {
   "krypties-koeficientas": {
     "title": "Krypties Koeficientas",
     "type": "concept",
-    "definition": "S?voka ?Krypties Koeficientas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Krypties Koeficientas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5671,8 +5671,8 @@ export const concepts = {
   "tiesinis-sarysis": {
     "title": "Tiesinis Sarysis",
     "type": "concept",
-    "definition": "S?voka ?Tiesinis Sarysis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tiesinis Sarysis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5680,10 +5680,10 @@ export const concepts = {
     ]
   },
   "funkcijos-reiksme": {
-    "title": "Funkcijos Reiksme",
+    "title": "Funkcijos Reikšmė",
     "type": "concept",
-    "definition": "S?voka ?Funkcijos Reiksme? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Funkcijos Reikšmė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5816,8 +5816,8 @@ export const concepts = {
   "sudeties-budas": {
     "title": "Sudeties Budas",
     "type": "concept",
-    "definition": "S?voka ?Sudeties Budas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sudeties Budas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5828,8 +5828,8 @@ export const concepts = {
   "grafinis-budas": {
     "title": "Grafinis Budas",
     "type": "concept",
-    "definition": "S?voka ?Grafinis Budas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Grafinis Budas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5840,8 +5840,8 @@ export const concepts = {
   "ekvivalentus-pertvarkiai": {
     "title": "Ekvivalentus Pertvarkiai",
     "type": "concept",
-    "definition": "S?voka ?Ekvivalentus Pertvarkiai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ekvivalentus Pertvarkiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5849,10 +5849,10 @@ export const concepts = {
     ]
   },
   "tiesiu-sankirta": {
-    "title": "Tiesiu Sankirta",
+    "title": "Tiesių Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Tiesiu Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tiesių Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5860,10 +5860,10 @@ export const concepts = {
     ]
   },
   "begalybe-sprendiniu": {
-    "title": "Begalybe Sprendiniu",
+    "title": "Begalybe Sprendinių",
     "type": "concept",
-    "definition": "S?voka ?Begalybe Sprendiniu? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Begalybe Sprendinių“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5871,10 +5871,10 @@ export const concepts = {
     ]
   },
   "nera-sprendiniu": {
-    "title": "Nera Sprendiniu",
+    "title": "Nera Sprendinių",
     "type": "concept",
-    "definition": "S?voka ?Nera Sprendiniu? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Nera Sprendinių“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -5990,8 +5990,8 @@ export const concepts = {
   "simetrijos-centras": {
     "title": "Simetrijos Centras",
     "type": "concept",
-    "definition": "S?voka ?Simetrijos Centras? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Simetrijos Centras“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6079,8 +6079,8 @@ export const concepts = {
   "projekcija": {
     "title": "Projekcija",
     "type": "concept",
-    "definition": "S?voka ?Projekcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Projekcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6089,10 +6089,10 @@ export const concepts = {
     ]
   },
   "vektoriu-sudetis": {
-    "title": "Vektoriu Sudetis",
+    "title": "Vektorių Sudėtis",
     "type": "concept",
-    "definition": "S?voka ?Vektoriu Sudetis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vektorių Sudėtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6100,10 +6100,10 @@ export const concepts = {
     ]
   },
   "vektoriu-atimtis": {
-    "title": "Vektoriu Atimtis",
+    "title": "Vektorių Atimtis",
     "type": "concept",
-    "definition": "S?voka ?Vektoriu Atimtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vektorių Atimtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6126,10 +6126,10 @@ export const concepts = {
     ]
   },
   "trikampio-taisykle": {
-    "title": "Trikampio Taisykle",
+    "title": "Trikampio Taisyklė",
     "type": "concept",
-    "definition": "S?voka ?Trikampio Taisykle? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trikampio Taisyklė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6137,10 +6137,10 @@ export const concepts = {
     ]
   },
   "lygiagretainio-taisykle": {
-    "title": "Lygiagretainio Taisykle",
+    "title": "Lygiagretainio Taisyklė",
     "type": "concept",
-    "definition": "S?voka ?Lygiagretainio Taisykle? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lygiagretainio Taisyklė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6150,8 +6150,8 @@ export const concepts = {
   "vaizdas-is-priekio": {
     "title": "Vaizdas Is Priekio",
     "type": "concept",
-    "definition": "S?voka ?Vaizdas Is Priekio? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vaizdas Is Priekio“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6159,10 +6159,10 @@ export const concepts = {
     ]
   },
   "vaizdas-is-virsaus": {
-    "title": "Vaizdas Is Virsaus",
+    "title": "Vaizdas Is Viršaus",
     "type": "concept",
-    "definition": "S?voka ?Vaizdas Is Virsaus? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vaizdas Is Viršaus“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6170,10 +6170,10 @@ export const concepts = {
     ]
   },
   "vaizdas-is-sono": {
-    "title": "Vaizdas Is Sono",
+    "title": "Vaizdas Is Šono",
     "type": "concept",
-    "definition": "S?voka ?Vaizdas Is Sono? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vaizdas Is Šono“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6235,8 +6235,8 @@ export const concepts = {
   "sinusas": {
     "title": "Sinusas",
     "type": "concept",
-    "definition": "S?voka ?Sinusas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sinusas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6309,8 +6309,8 @@ export const concepts = {
   "tangentas": {
     "title": "Tangentas",
     "type": "concept",
-    "definition": "S?voka ?Tangentas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tangentas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6325,8 +6325,8 @@ export const concepts = {
   "kosinusas": {
     "title": "Kosinusas",
     "type": "concept",
-    "definition": "S?voka ?Kosinusas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kosinusas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6426,8 +6426,8 @@ export const concepts = {
   "argumentas": {
     "title": "Argumentas",
     "type": "concept",
-    "definition": "S?voka ?Argumentas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Argumentas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6604,8 +6604,8 @@ export const concepts = {
   "diskriminantas": {
     "title": "Diskriminantas",
     "type": "concept",
-    "definition": "S?voka ?Diskriminantas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Diskriminantas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6629,10 +6629,10 @@ export const concepts = {
     ]
   },
   "kvadratine-nelygybe": {
-    "title": "Kvadratine Nelygybe",
+    "title": "Kvadratine Nelygybė",
     "type": "concept",
-    "definition": "S?voka ?Kvadratine Nelygybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kvadratine Nelygybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6656,10 +6656,10 @@ export const concepts = {
     ]
   },
   "saknys": {
-    "title": "Saknys",
+    "title": "Šaknys",
     "type": "concept",
-    "definition": "S?voka ?Saknys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Šaknys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6800,10 +6800,10 @@ export const concepts = {
     ]
   },
   "apibrezimo-sritis-trr": {
-    "title": "Apibrezimo Sritis Trr",
+    "title": "Apibrėžimo Sritis Trr",
     "type": "concept",
-    "definition": "S?voka ?Apibrezimo Sritis Trr? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Apibrėžimo Sritis Trr“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6813,8 +6813,8 @@ export const concepts = {
   "prastinimas": {
     "title": "Prastinimas",
     "type": "concept",
-    "definition": "S?voka ?Prastinimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Prastinimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6824,8 +6824,8 @@ export const concepts = {
   "bendravardiklinimas": {
     "title": "Bendravardiklinimas",
     "type": "concept",
-    "definition": "S?voka ?Bendravardiklinimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bendravardiklinimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6835,8 +6835,8 @@ export const concepts = {
   "vietos-teorema": {
     "title": "Vietos Teorema",
     "type": "concept",
-    "definition": "S?voka ?Vietos Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vietos Teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6872,8 +6872,8 @@ export const concepts = {
   "racionalioji-lygtis": {
     "title": "Racionalioji Lygtis",
     "type": "concept",
-    "definition": "S?voka ?Racionalioji Lygtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Racionalioji Lygtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6883,8 +6883,8 @@ export const concepts = {
   "kvadratine-lygtis": {
     "title": "Kvadratine Lygtis",
     "type": "concept",
-    "definition": "S?voka ?Kvadratine Lygtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kvadratine Lygtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -6975,8 +6975,8 @@ export const concepts = {
   "funkcines-lygtys-pagrindai": {
     "title": "Funkcines Lygtys Pagrindai",
     "type": "concept",
-    "definition": "S?voka ?Funkcines Lygtys Pagrindai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Funkcines Lygtys Pagrindai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7570,10 +7570,10 @@ export const concepts = {
     ]
   },
   "n-ojo-nario-formule": {
-    "title": "N Ojo Nario Formule",
+    "title": "N Ojo Nario Formulė",
     "type": "concept",
-    "definition": "S?voka ?N Ojo Nario Formule? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „N Ojo Nario Formulė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7583,8 +7583,8 @@ export const concepts = {
   "progresijos-skirtumas": {
     "title": "Progresijos Skirtumas",
     "type": "concept",
-    "definition": "S?voka ?Progresijos Skirtumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Progresijos Skirtumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7594,8 +7594,8 @@ export const concepts = {
   "progresijos-vardiklis": {
     "title": "Progresijos Vardiklis",
     "type": "concept",
-    "definition": "S?voka ?Progresijos Vardiklis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Progresijos Vardiklis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7605,8 +7605,8 @@ export const concepts = {
   "n-nariu-suma": {
     "title": "N Nariu Suma",
     "type": "concept",
-    "definition": "S?voka ?N Nariu Suma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „N Nariu Suma“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7696,8 +7696,8 @@ export const concepts = {
   "teigiama-koreliacija": {
     "title": "Teigiama Koreliacija",
     "type": "concept",
-    "definition": "S?voka ?Teigiama Koreliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Teigiama Koreliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7707,8 +7707,8 @@ export const concepts = {
   "neigiama-koreliacija": {
     "title": "Neigiama Koreliacija",
     "type": "concept",
-    "definition": "S?voka ?Neigiama Koreliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Neigiama Koreliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7718,8 +7718,8 @@ export const concepts = {
   "koreliacijos-koeficientas": {
     "title": "Koreliacijos Koeficientas",
     "type": "concept",
-    "definition": "S?voka ?Koreliacijos Koeficientas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Koreliacijos Koeficientas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7729,8 +7729,8 @@ export const concepts = {
   "regresijos-tiese": {
     "title": "Regresijos Tiese",
     "type": "concept",
-    "definition": "S?voka ?Regresijos Tiese? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Regresijos Tiese“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7740,8 +7740,8 @@ export const concepts = {
   "interpoliacija": {
     "title": "Interpoliacija",
     "type": "concept",
-    "definition": "S?voka ?Interpoliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Interpoliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7751,8 +7751,8 @@ export const concepts = {
   "ekstrapoliacija": {
     "title": "Ekstrapoliacija",
     "type": "concept",
-    "definition": "S?voka ?Ekstrapoliacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ekstrapoliacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7859,10 +7859,10 @@ export const concepts = {
     ]
   },
   "skaiciaus-skaidymas-proporcingai": {
-    "title": "Skaiciaus Skaidymas Proporcingai",
+    "title": "Skaičiaus Skaidymas Proporcingai",
     "type": "concept",
-    "definition": "S?voka ?Skaiciaus Skaidymas Proporcingai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaičiaus Skaidymas Proporcingai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7872,8 +7872,8 @@ export const concepts = {
   "sekos-desningumas": {
     "title": "Sekos Desningumas",
     "type": "concept",
-    "definition": "S?voka ?Sekos Desningumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sekos Desningumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7881,10 +7881,10 @@ export const concepts = {
     ]
   },
   "rekurentine-formule": {
-    "title": "Rekurentine Formule",
+    "title": "Rekurentine Formulė",
     "type": "concept",
-    "definition": "S?voka ?Rekurentine Formule? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Rekurentine Formulė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7894,8 +7894,8 @@ export const concepts = {
   "aukso-pjuvio-seka": {
     "title": "Aukso Pjuvio Seka",
     "type": "concept",
-    "definition": "S?voka ?Aukso Pjuvio Seka? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Aukso Pjuvio Seka“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7905,8 +7905,8 @@ export const concepts = {
   "proporcingoji-dalyba": {
     "title": "Proporcingoji Dalyba",
     "type": "concept",
-    "definition": "S?voka ?Proporcingoji Dalyba? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Proporcingoji Dalyba“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7916,8 +7916,8 @@ export const concepts = {
   "aukso-spirale": {
     "title": "Aukso Spirale",
     "type": "concept",
-    "definition": "S?voka ?Aukso Spirale? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Aukso Spirale“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -7992,8 +7992,8 @@ export const concepts = {
   "dispersija": {
     "title": "Dispersija",
     "type": "concept",
-    "definition": "S?voka ?Dispersija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dispersija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8006,8 +8006,8 @@ export const concepts = {
   "standartinis-nuokrypis": {
     "title": "Standartinis Nuokrypis",
     "type": "concept",
-    "definition": "S?voka ?Standartinis Nuokrypis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Standartinis Nuokrypis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8033,8 +8033,8 @@ export const concepts = {
   "statistinis-patikimumas": {
     "title": "Statistinis Patikimumas",
     "type": "concept",
-    "definition": "S?voka ?Statistinis Patikimumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Statistinis Patikimumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8044,8 +8044,8 @@ export const concepts = {
   "pasikliautinasis-intervalas": {
     "title": "Pasikliautinasis Intervalas",
     "type": "concept",
-    "definition": "S?voka ?Pasikliautinasis Intervalas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pasikliautinasis Intervalas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8055,8 +8055,8 @@ export const concepts = {
   "populiacija": {
     "title": "Populiacija",
     "type": "concept",
-    "definition": "S?voka ?Populiacija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Populiacija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8128,10 +8128,10 @@ export const concepts = {
     ]
   },
   "pusiaukrastine": {
-    "title": "Pusiaukrastine",
+    "title": "Pusiaukraštinė",
     "type": "concept",
-    "definition": "S?voka ?Pusiaukrastine? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pusiaukraštinė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8141,8 +8141,8 @@ export const concepts = {
   "pusiaukampine": {
     "title": "Pusiaukampine",
     "type": "concept",
-    "definition": "S?voka ?Pusiaukampine? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pusiaukampine“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8152,8 +8152,8 @@ export const concepts = {
   "pusiaukrastiniu-sankirta": {
     "title": "Pusiaukrastiniu Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Pusiaukrastiniu Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pusiaukrastiniu Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8163,8 +8163,8 @@ export const concepts = {
   "pusiaukampiniu-savybe": {
     "title": "Pusiaukampiniu Savybe",
     "type": "concept",
-    "definition": "S?voka ?Pusiaukampiniu Savybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pusiaukampiniu Savybe“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8174,8 +8174,8 @@ export const concepts = {
   "perimetru-santykis": {
     "title": "Perimetru Santykis",
     "type": "concept",
-    "definition": "S?voka ?Perimetru Santykis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Perimetru Santykis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8185,8 +8185,8 @@ export const concepts = {
   "metriniai-sarysiai": {
     "title": "Metriniai Sarysiai",
     "type": "concept",
-    "definition": "S?voka ?Metriniai Sarysiai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Metriniai Sarysiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8266,8 +8266,8 @@ export const concepts = {
   "apibreztinis-daugiakampis": {
     "title": "Apibreztinis Daugiakampis",
     "type": "concept",
-    "definition": "S?voka ?Apibreztinis Daugiakampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Apibreztinis Daugiakampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8277,8 +8277,8 @@ export const concepts = {
   "ibreztinis-apskritimas": {
     "title": "Ibreztinis Apskritimas",
     "type": "concept",
-    "definition": "S?voka ?Ibreztinis Apskritimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ibreztinis Apskritimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8288,8 +8288,8 @@ export const concepts = {
   "apibreztinis-apskritimas": {
     "title": "Apibreztinis Apskritimas",
     "type": "concept",
-    "definition": "S?voka ?Apibreztinis Apskritimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Apibreztinis Apskritimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8299,8 +8299,8 @@ export const concepts = {
   "ibreztinio-apskritimo-centras": {
     "title": "Ibreztinio Apskritimo Centras",
     "type": "concept",
-    "definition": "S?voka ?Ibreztinio Apskritimo Centras? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ibreztinio Apskritimo Centras“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8310,8 +8310,8 @@ export const concepts = {
   "apibreztinio-apskritimo-centras": {
     "title": "Apibreztinio Apskritimo Centras",
     "type": "concept",
-    "definition": "S?voka ?Apibreztinio Apskritimo Centras? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Apibreztinio Apskritimo Centras“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8321,8 +8321,8 @@ export const concepts = {
   "ibreztinis-keturkampis": {
     "title": "Ibreztinis Keturkampis",
     "type": "concept",
-    "definition": "S?voka ?Ibreztinis Keturkampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ibreztinis Keturkampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8332,8 +8332,8 @@ export const concepts = {
   "apibreztinis-keturkampis": {
     "title": "Apibreztinis Keturkampis",
     "type": "concept",
-    "definition": "S?voka ?Apibreztinis Keturkampis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Apibreztinis Keturkampis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8343,8 +8343,8 @@ export const concepts = {
   "sinusu-teorema-R": {
     "title": "Sinusu Teorema R",
     "type": "concept",
-    "definition": "S?voka ?Sinusu Teorema R? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sinusu Teorema R“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8415,8 +8415,8 @@ export const concepts = {
   "perstatos": {
     "title": "Perstatos",
     "type": "concept",
-    "definition": "S?voka ?Perstatos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Perstatos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8424,10 +8424,10 @@ export const concepts = {
     ]
   },
   "klasikine-tikimybe": {
-    "title": "Klasikine Tikimybe",
+    "title": "Klasikine Tikimybė",
     "type": "concept",
-    "definition": "S?voka ?Klasikine Tikimybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Klasikine Tikimybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8435,10 +8435,10 @@ export const concepts = {
     ]
   },
   "ilgalaike-tikimybe": {
-    "title": "Ilgalaike Tikimybe",
+    "title": "Ilgalaike Tikimybė",
     "type": "concept",
-    "definition": "S?voka ?Ilgalaike Tikimybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ilgalaike Tikimybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8446,10 +8446,10 @@ export const concepts = {
     ]
   },
   "priesingas-ivyki": {
-    "title": "Priesingas Ivyki",
+    "title": "Priešingas įvykis",
     "type": "concept",
-    "definition": "S?voka ?Priesingas Ivyki? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Priešingas įvykis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8459,8 +8459,8 @@ export const concepts = {
   "baigtis": {
     "title": "Baigtis",
     "type": "concept",
-    "definition": "S?voka ?Baigtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Baigtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8495,8 +8495,8 @@ export const concepts = {
   "paraboles-metodas": {
     "title": "Paraboles Metodas",
     "type": "concept",
-    "definition": "S?voka ?Paraboles Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Paraboles Metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8506,8 +8506,8 @@ export const concepts = {
   "intervalu-metodas": {
     "title": "Intervalu Metodas",
     "type": "concept",
-    "definition": "S?voka ?Intervalu Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Intervalu Metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8517,8 +8517,8 @@ export const concepts = {
   "posaknio-zenklas": {
     "title": "Posaknio Zenklas",
     "type": "concept",
-    "definition": "S?voka ?Posaknio Zenklas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Posaknio Zenklas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8526,10 +8526,10 @@ export const concepts = {
     ]
   },
   "griežtoji-nelygybe": {
-    "title": "Griežtoji Nelygybe",
+    "title": "Griežtoji Nelygybė",
     "type": "concept",
-    "definition": "S?voka ?Griežtoji Nelygybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Griežtoji Nelygybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8537,10 +8537,10 @@ export const concepts = {
     ]
   },
   "negriežtoji-nelygybe": {
-    "title": "Negriežtoji Nelygybe",
+    "title": "Negriežtoji Nelygybė",
     "type": "concept",
-    "definition": "S?voka ?Negriežtoji Nelygybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Negriežtoji Nelygybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8550,8 +8550,8 @@ export const concepts = {
   "tuščia-aibė": {
     "title": "Tuščia Aibė",
     "type": "concept",
-    "definition": "S?voka ?Tuščia Aibė? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tuščia Aibė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8561,8 +8561,8 @@ export const concepts = {
   "visų-realiųjų-skaičių-aibė": {
     "title": "Visų Realiųjų Skaičių Aibė",
     "type": "concept",
-    "definition": "S?voka ?Visų Realiųjų Skaičių Aibė? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Visų Realiųjų Skaičių Aibė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8598,8 +8598,8 @@ export const concepts = {
   "sistemos-sankirta": {
     "title": "Sistemos Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Sistemos Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sistemos Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8609,8 +8609,8 @@ export const concepts = {
   "keitimo-budas-nelinearinis": {
     "title": "Keitimo Budas Nelinearinis",
     "type": "concept",
-    "definition": "S?voka ?Keitimo Budas Nelinearinis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Keitimo Budas Nelinearinis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8620,8 +8620,8 @@ export const concepts = {
   "grafinis-sistemu-vaizdavimas": {
     "title": "Grafinis Sistemu Vaizdavimas",
     "type": "concept",
-    "definition": "S?voka ?Grafinis Sistemu Vaizdavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Grafinis Sistemu Vaizdavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8631,8 +8631,8 @@ export const concepts = {
   "tieses-ir-paraboles-sankirta": {
     "title": "Tieses Ir Paraboles Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Tieses Ir Paraboles Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tieses Ir Paraboles Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8642,8 +8642,8 @@ export const concepts = {
   "bendras-sprendinys": {
     "title": "Bendras Sprendinys",
     "type": "concept",
-    "definition": "S?voka ?Bendras Sprendinys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bendras Sprendinys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8745,10 +8745,10 @@ export const concepts = {
     ]
   },
   "olimpiada-10-concept-symmetric-polynomials": {
-    "title": "Olimpiada 10 Concept Symmetric Polynomials",
+    "title": "10 klasės olimpiadinė sąvoka Symmetric Polynomials",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 10 Concept Symmetric Polynomials? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „10 klasės olimpiadinė sąvoka Symmetric Polynomials“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -8991,10 +8991,10 @@ export const concepts = {
     ]
   },
   "olimpiada-10-concept-rearrangement": {
-    "title": "Olimpiada 10 Concept Rearrangement",
+    "title": "10 klasės olimpiadinė sąvoka Rearrangement",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 10 Concept Rearrangement? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „10 klasės olimpiadinė sąvoka Rearrangement“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9002,10 +9002,10 @@ export const concepts = {
     ]
   },
   "olimpiada-10-concept-chebyshev": {
-    "title": "Olimpiada 10 Concept Chebyshev",
+    "title": "10 klasės olimpiadinė sąvoka Chebyshev",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 10 Concept Chebyshev? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „10 klasės olimpiadinė sąvoka Chebyshev“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9013,10 +9013,10 @@ export const concepts = {
     ]
   },
   "olimpiada-10-concept-muirhead": {
-    "title": "Olimpiada 10 Concept Muirhead",
+    "title": "10 klasės olimpiadinė sąvoka Muirhead",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 10 Concept Muirhead? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „10 klasės olimpiadinė sąvoka Muirhead“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9024,10 +9024,10 @@ export const concepts = {
     ]
   },
   "concept-normalization": {
-    "title": "Concept Normalization",
+    "title": "sąvoka Normalization",
     "type": "concept",
-    "definition": "S?voka ?Concept Normalization? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „sąvoka Normalization“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9208,8 +9208,8 @@ export const concepts = {
   "spalvinimo-metodas": {
     "title": "Spalvinimo Metodas",
     "type": "concept",
-    "definition": "S?voka ?Spalvinimo Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Spalvinimo Metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9219,8 +9219,8 @@ export const concepts = {
   "prieštaros-metodas": {
     "title": "Prieštaros Metodas",
     "type": "concept",
-    "definition": "S?voka ?Prieštaros Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Prieštaros Metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9266,10 +9266,10 @@ export const concepts = {
     ]
   },
   "pasaline-saknis": {
-    "title": "Pasaline Saknis",
+    "title": "Pasaline Šaknis",
     "type": "concept",
-    "definition": "S?voka ?Pasaline Saknis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pasaline Šaknis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9279,8 +9279,8 @@ export const concepts = {
   "bendravardiklinimas-lygtyse": {
     "title": "Bendravardiklinimas Lygtyse",
     "type": "concept",
-    "definition": "S?voka ?Bendravardiklinimas Lygtyse? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bendravardiklinimas Lygtyse“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9290,8 +9290,8 @@ export const concepts = {
   "proporcijos-savybe": {
     "title": "Proporcijos Savybe",
     "type": "concept",
-    "definition": "S?voka ?Proporcijos Savybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Proporcijos Savybe“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9818,8 +9818,8 @@ export const concepts = {
   "begalybe": {
     "title": "Begalybe",
     "type": "concept",
-    "definition": "S?voka ?Begalybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Begalybe“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9829,8 +9829,8 @@ export const concepts = {
   "konvergavimas": {
     "title": "Konvergavimas",
     "type": "concept",
-    "definition": "S?voka ?Konvergavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Konvergavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -9979,8 +9979,8 @@ export const concepts = {
   "diferencijavimas": {
     "title": "Diferencijavimas",
     "type": "concept",
-    "definition": "S?voka ?Diferencijavimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Diferencijavimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10019,8 +10019,8 @@ export const concepts = {
   "nuolydis": {
     "title": "Nuolydis",
     "type": "concept",
-    "definition": "S?voka ?Nuolydis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Nuolydis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10030,8 +10030,8 @@ export const concepts = {
   "momentinis-greitis": {
     "title": "Momentinis Greitis",
     "type": "concept",
-    "definition": "S?voka ?Momentinis Greitis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Momentinis Greitis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10041,8 +10041,8 @@ export const concepts = {
   "maksimumas": {
     "title": "Maksimumas",
     "type": "concept",
-    "definition": "S?voka ?Maksimumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Maksimumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10052,8 +10052,8 @@ export const concepts = {
   "minimumas": {
     "title": "Minimumas",
     "type": "concept",
-    "definition": "S?voka ?Minimumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Minimumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10061,10 +10061,10 @@ export const concepts = {
     ]
   },
   "kritis-taskas": {
-    "title": "Kritis Taskas",
+    "title": "Kritis Taškas",
     "type": "concept",
-    "definition": "S?voka ?Kritis Taskas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kritis Taškas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10072,10 +10072,10 @@ export const concepts = {
     ]
   },
   "isgaubtumas": {
-    "title": "Isgaubtumas",
+    "title": "Išgaubtumas",
     "type": "concept",
-    "definition": "S?voka ?Isgaubtumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Išgaubtumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10084,10 +10084,10 @@ export const concepts = {
     ]
   },
   "perlinkio-taskas": {
-    "title": "Perlinkio Taskas",
+    "title": "Perlinkio Taškas",
     "type": "concept",
-    "definition": "S?voka ?Perlinkio Taskas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Perlinkio Taškas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10229,8 +10229,8 @@ export const concepts = {
   "periodiskumas": {
     "title": "Periodiskumas",
     "type": "concept",
-    "definition": "S?voka ?Periodiskumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Periodiskumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10241,8 +10241,8 @@ export const concepts = {
   "saknies-funkcija": {
     "title": "Saknies Funkcija",
     "type": "concept",
-    "definition": "S?voka ?Saknies Funkcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Saknies Funkcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10250,10 +10250,10 @@ export const concepts = {
     ]
   },
   "trigonometrine-funkcija": {
-    "title": "Trigonometrine Funkcija",
+    "title": "Trigonometrinė Funkcija",
     "type": "concept",
-    "definition": "S?voka ?Trigonometrine Funkcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trigonometrinė Funkcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10263,8 +10263,8 @@ export const concepts = {
   "asimpote": {
     "title": "Asimpote",
     "type": "concept",
-    "definition": "S?voka ?Asimpote? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Asimpote“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10274,8 +10274,8 @@ export const concepts = {
   "atvirkstine-funkcija": {
     "title": "Atvirkstine Funkcija",
     "type": "concept",
-    "definition": "S?voka ?Atvirkstine Funkcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atvirkstine Funkcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10303,8 +10303,8 @@ export const concepts = {
   "skaicius-e": {
     "title": "Skaicius E",
     "type": "concept",
-    "definition": "S?voka ?Skaicius E? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaicius E“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10314,8 +10314,8 @@ export const concepts = {
   "vienetinis-apskritimas": {
     "title": "Vienetinis Apskritimas",
     "type": "concept",
-    "definition": "S?voka ?Vienetinis Apskritimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vienetinis Apskritimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10377,8 +10377,8 @@ export const concepts = {
   "redukcija": {
     "title": "Redukcija",
     "type": "concept",
-    "definition": "S?voka ?Redukcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Redukcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10387,10 +10387,10 @@ export const concepts = {
     ]
   },
   "pagrindinis-logaritmu-tapatumas": {
-    "title": "Pagrindinis Logaritmu Tapatumas",
+    "title": "Pagrindinis Logaritmų Tapatumas",
     "type": "concept",
-    "definition": "S?voka ?Pagrindinis Logaritmu Tapatumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pagrindinis Logaritmų Tapatumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10400,8 +10400,8 @@ export const concepts = {
   "kotangentas": {
     "title": "Kotangentas",
     "type": "concept",
-    "definition": "S?voka ?Kotangentas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kotangentas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10409,10 +10409,10 @@ export const concepts = {
     ]
   },
   "atvirkstine-trigonometrine-reiksme": {
-    "title": "Atvirkstine Trigonometrine Reiksme",
+    "title": "Atvirkstine Trigonometrinė Reikšmė",
     "type": "concept",
-    "definition": "S?voka ?Atvirkstine Trigonometrine Reiksme? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atvirkstine Trigonometrinė Reikšmė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10422,8 +10422,8 @@ export const concepts = {
   "pagrindo-keitimas": {
     "title": "Pagrindo Keitimas",
     "type": "concept",
-    "definition": "S?voka ?Pagrindo Keitimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pagrindo Keitimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10596,7 +10596,7 @@ export const concepts = {
     ]
   },
   "olimpiada-11-concept-menelaus": {
-    "title": "Menelajo teorema",
+    "title": "Menelajaus teorema",
     "type": "concept",
     "definition": "Sąlyga, kad trys taškai ant trikampio kraštinių (ar jų tęsinių) būtų vienoje tiesėje.",
     "intuition": "Jei tiesė kerta trikampį, atkarpų santykių sandauga yra 1.",
@@ -10734,10 +10734,10 @@ export const concepts = {
     ]
   },
   "olimpiada-11-concept-recurrence-relations": {
-    "title": "Olimpiada 11 Concept Recurrence Relations",
+    "title": "11 klasės olimpiadinė sąvoka rekurenčiosios lygybės",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 11 Concept Recurrence Relations? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „11 klasės olimpiadinė sąvoka rekurenčiosios lygybės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10745,10 +10745,10 @@ export const concepts = {
     ]
   },
   "olimpiada-11-concept-ramsey-theory": {
-    "title": "Olimpiada 11 Concept Ramsey Theory",
+    "title": "11 klasės olimpiadinė sąvoka Ramsey teorija",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 11 Concept Ramsey Theory? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „11 klasės olimpiadinė sąvoka Ramsey teorija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -10963,8 +10963,8 @@ export const concepts = {
   "tikimybinis-skirstinys": {
     "title": "Tikimybinis Skirstinys",
     "type": "concept",
-    "definition": "S?voka ?Tikimybinis Skirstinys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tikimybinis Skirstinys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11319,8 +11319,8 @@ export const concepts = {
   "atsitiktinis-dydis": {
     "title": "Atsitiktinis Dydis",
     "type": "concept",
-    "definition": "S?voka ?Atsitiktinis Dydis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atsitiktinis Dydis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11345,8 +11345,8 @@ export const concepts = {
   "skirstinio-lentele": {
     "title": "Skirstinio Lentele",
     "type": "concept",
-    "definition": "S?voka ?Skirstinio Lentele? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skirstinio Lentele“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11357,8 +11357,8 @@ export const concepts = {
   "matematine-viltis": {
     "title": "Matematine Viltis",
     "type": "concept",
-    "definition": "S?voka ?Matematine Viltis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Matematine Viltis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11369,8 +11369,8 @@ export const concepts = {
   "normalusis-skirstinys": {
     "title": "Normalusis Skirstinys",
     "type": "concept",
-    "definition": "S?voka ?Normalusis Skirstinys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Normalusis Skirstinys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11381,8 +11381,8 @@ export const concepts = {
   "bernulio-bandymai": {
     "title": "Bernulio Bandymai",
     "type": "concept",
-    "definition": "S?voka ?Bernulio Bandymai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bernulio Bandymai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11393,8 +11393,8 @@ export const concepts = {
   "binominis-skirstinys": {
     "title": "Binominis Skirstinys",
     "type": "concept",
-    "definition": "S?voka ?Binominis Skirstinys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Binominis Skirstinys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11403,10 +11403,10 @@ export const concepts = {
     ]
   },
   "gauso-kreive": {
-    "title": "Gauso Kreive",
+    "title": "Gauso Kreivė",
     "type": "concept",
-    "definition": "S?voka ?Gauso Kreive? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Gauso Kreivė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11508,8 +11508,8 @@ export const concepts = {
   "lygiagretisienis": {
     "title": "Lygiagretisienis",
     "type": "concept",
-    "definition": "S?voka ?Lygiagretisienis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Lygiagretisienis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11517,10 +11517,10 @@ export const concepts = {
     ]
   },
   "nupjautine-piramide": {
-    "title": "Nupjautine Piramide",
+    "title": "Nupjautine Piramidė",
     "type": "concept",
-    "definition": "S?voka ?Nupjautine Piramide? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Nupjautine Piramidė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11528,10 +11528,10 @@ export const concepts = {
     ]
   },
   "nupjautinis-kugis": {
-    "title": "Nupjautinis Kugis",
+    "title": "Nupjautinis kūgis",
     "type": "concept",
-    "definition": "S?voka ?Nupjautinis Kugis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Nupjautinis kūgis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11539,10 +11539,10 @@ export const concepts = {
     ]
   },
   "pjuvis": {
-    "title": "Pjuvis",
+    "title": "Pjūvis",
     "type": "concept",
-    "definition": "S?voka ?Pjuvis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pjūvis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11550,10 +11550,10 @@ export const concepts = {
     ]
   },
   "asius-pjuvis": {
-    "title": "Asius Pjuvis",
+    "title": "Ašinis pjūvis",
     "type": "concept",
-    "definition": "S?voka ?Asius Pjuvis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ašinis pjūvis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11628,10 +11628,10 @@ export const concepts = {
     ]
   },
   "kritinis-taskas": {
-    "title": "Kritinis Taskas",
+    "title": "Kritinis Taškas",
     "type": "concept",
-    "definition": "S?voka ?Kritinis Taskas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kritinis Taškas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11641,8 +11641,8 @@ export const concepts = {
   "didėjimo-mažėjimo-intervalai": {
     "title": "Didėjimo Mažėjimo Intervalai",
     "type": "concept",
-    "definition": "S?voka ?Didėjimo Mažėjimo Intervalai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Didėjimo Mažėjimo Intervalai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11650,10 +11650,10 @@ export const concepts = {
     ]
   },
   "sudetine-funkcija": {
-    "title": "Sudetine Funkcija",
+    "title": "Sudėtinė Funkcija",
     "type": "concept",
-    "definition": "S?voka ?Sudetine Funkcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sudėtinė Funkcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11866,8 +11866,8 @@ export const concepts = {
   "realioji-dalis": {
     "title": "Realioji Dalis",
     "type": "concept",
-    "definition": "S?voka ?Realioji Dalis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Realioji Dalis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11877,8 +11877,8 @@ export const concepts = {
   "menamoji-dalis": {
     "title": "Menamoji Dalis",
     "type": "concept",
-    "definition": "S?voka ?Menamoji Dalis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Menamoji Dalis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11886,10 +11886,10 @@ export const concepts = {
     ]
   },
   "kompleksine-plokstuma": {
-    "title": "Kompleksine Plokstuma",
+    "title": "Kompleksine Plokštuma",
     "type": "concept",
-    "definition": "S?voka ?Kompleksine Plokstuma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kompleksine Plokštuma“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11897,10 +11897,10 @@ export const concepts = {
     ]
   },
   "trigonometrine-forma": {
-    "title": "Trigonometrine Forma",
+    "title": "Trigonometrinė Forma",
     "type": "concept",
-    "definition": "S?voka ?Trigonometrine Forma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trigonometrinė Forma“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11908,10 +11908,10 @@ export const concepts = {
     ]
   },
   "muavro-formule": {
-    "title": "Muavro Formule",
+    "title": "Muavro Formulė",
     "type": "concept",
-    "definition": "S?voka ?Muavro Formule? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Muavro Formulė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -11919,10 +11919,10 @@ export const concepts = {
     ]
   },
   "n-tojo-laipsnio-saknis": {
-    "title": "N Tojo Laipsnio Saknis",
+    "title": "n-tojo Laipsnio Šaknis",
     "type": "concept",
-    "definition": "S?voka ?N Tojo Laipsnio Saknis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „n-tojo Laipsnio Šaknis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12040,10 +12040,10 @@ export const concepts = {
     ]
   },
   "ceva-teorema": {
-    "title": "Ceva Teorema",
+    "title": "Čevos Teorema",
     "type": "concept",
-    "definition": "S?voka ?Ceva Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Čevos Teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12051,10 +12051,10 @@ export const concepts = {
     ]
   },
   "inversija-savoka": {
-    "title": "Inversija Savoka",
+    "title": "Inversijos sąvoka",
     "type": "concept",
-    "definition": "S?voka ?Inversija Savoka? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Inversijos sąvoka“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12062,10 +12062,10 @@ export const concepts = {
     ]
   },
   "pascal-teorema": {
-    "title": "Pascal Teorema",
+    "title": "Paskalio teorema",
     "type": "concept",
-    "definition": "S?voka ?Pascal Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Paskalio teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12117,10 +12117,10 @@ export const concepts = {
     ]
   },
   "olimpiada-12-concept-burnside-lemma": {
-    "title": "Olimpiada 12 Concept Burnside Lemma",
+    "title": "12 klasės olimpiadinė sąvoka Burnside lema",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 12 Concept Burnside Lemma? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „12 klasės olimpiadinė sąvoka Burnside lema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12128,10 +12128,10 @@ export const concepts = {
     ]
   },
   "olimpiada-12-concept-inclusion-exclusion-derangements": {
-    "title": "Olimpiada 12 Concept Inclusion Exclusion Derangements",
+    "title": "12 klasės olimpiadinė sąvoka įtraukimo ir atmetimo principas deriniams be fiksuotų taškų",
     "type": "concept",
-    "definition": "S?voka ?Olimpiada 12 Concept Inclusion Exclusion Derangements? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „12 klasės olimpiadinė sąvoka įtraukimo ir atmetimo principas deriniams be fiksuotų taškų“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12139,10 +12139,10 @@ export const concepts = {
     ]
   },
   "remzio-teorija": {
-    "title": "Remzio Teorija",
+    "title": "Ramsey teorija",
     "type": "concept",
-    "definition": "S?voka ?Remzio Teorija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ramsey teorija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12150,10 +12150,10 @@ export const concepts = {
     ]
   },
   "turano-teorema": {
-    "title": "Turano Teorema",
+    "title": "Turano teorema",
     "type": "concept",
-    "definition": "S?voka ?Turano Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Turano teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12161,10 +12161,10 @@ export const concepts = {
     ]
   },
   "sprague-grundy-teorema": {
-    "title": "Sprague Grundy Teorema",
+    "title": "Sprague-Grundy teorema",
     "type": "concept",
-    "definition": "S?voka ?Sprague Grundy Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sprague-Grundy teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12194,7 +12194,7 @@ export const concepts = {
     ]
   },
   "olimpiada-12-concept-quadratic-reciprocity": {
-    "title": "Olimpiada 12 concept quadratic reciprocity",
+    "title": "Olimpiada 12 concept kvadratinis abipusiškumas",
     "type": "concept",
     "definition": "Definicija.",
     "intuition": "",
@@ -12244,10 +12244,10 @@ export const concepts = {
     ]
   },
   "neapibreztinis-integralas": {
-    "title": "Neapibreztinis Integralas",
+    "title": "Neapibrėžtinis integralas",
     "type": "concept",
-    "definition": "S?voka ?Neapibreztinis Integralas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Neapibrėžtinis integralas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12255,10 +12255,10 @@ export const concepts = {
     ]
   },
   "integravimo-konstanta": {
-    "title": "Integravimo Konstanta",
+    "title": "Integravimo konstanta",
     "type": "concept",
-    "definition": "S?voka ?Integravimo Konstanta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Integravimo konstanta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12266,10 +12266,10 @@ export const concepts = {
     ]
   },
   "kreivine-trapezija": {
-    "title": "Kreivine Trapezija",
+    "title": "Kreivinė trapecija",
     "type": "concept",
-    "definition": "S?voka ?Kreivine Trapezija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kreivinė trapecija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12277,10 +12277,10 @@ export const concepts = {
     ]
   },
   "plotas-po-kreive": {
-    "title": "Plotas Po Kreive",
+    "title": "Plotas Po Kreivė",
     "type": "concept",
-    "definition": "S?voka ?Plotas Po Kreive? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Plotas Po Kreivė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12288,10 +12288,10 @@ export const concepts = {
     ]
   },
   "sukinio-turis": {
-    "title": "Sukinio Turis",
+    "title": "Sukinio tūris",
     "type": "concept",
-    "definition": "S?voka ?Sukinio Turis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sukinio tūris“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12299,10 +12299,10 @@ export const concepts = {
     ]
   },
   "integravimo-taisykles": {
-    "title": "Integravimo Taisykles",
+    "title": "Integravimo Taisyklės",
     "type": "concept",
-    "definition": "S?voka ?Integravimo Taisykles? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Integravimo Taisyklės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12378,10 +12378,10 @@ export const concepts = {
     ]
   },
   "ivykiu-sankirta": {
-    "title": "Ivykiu Sankirta",
+    "title": "Įvykių Sankirta",
     "type": "concept",
-    "definition": "S?voka ?Ivykiu Sankirta? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Įvykių Sankirta“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12389,10 +12389,10 @@ export const concepts = {
     ]
   },
   "ivykiu-sajunga": {
-    "title": "Ivykiu Sajunga",
+    "title": "Įvykių Sąjunga",
     "type": "concept",
-    "definition": "S?voka ?Ivykiu Sajunga? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Įvykių Sąjunga“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12400,10 +12400,10 @@ export const concepts = {
     ]
   },
   "nesutaikomi-ivykiai": {
-    "title": "Nesutaikomi Ivykiai",
+    "title": "Nesutaikomi įvykiai",
     "type": "concept",
-    "definition": "S?voka ?Nesutaikomi Ivykiai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Nesutaikomi įvykiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12411,10 +12411,10 @@ export const concepts = {
     ]
   },
   "priklausomi-ivykiai": {
-    "title": "Priklausomi Ivykiai",
+    "title": "Priklausomi įvykiai",
     "type": "concept",
-    "definition": "S?voka ?Priklausomi Ivykiai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Priklausomi įvykiai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12422,10 +12422,10 @@ export const concepts = {
     ]
   },
   "tikimybiu-daugybos-taisykle": {
-    "title": "Tikimybiu Daugybos Taisykle",
+    "title": "Tikimybių Daugybos Taisyklė",
     "type": "concept",
-    "definition": "S?voka ?Tikimybiu Daugybos Taisykle? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tikimybių Daugybos Taisyklė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12433,10 +12433,10 @@ export const concepts = {
     ]
   },
   "tikimybiu-sumos-taisykle": {
-    "title": "Tikimybiu Sumos Taisykle",
+    "title": "Tikimybių Sumos Taisyklė",
     "type": "concept",
-    "definition": "S?voka ?Tikimybiu Sumos Taisykle? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tikimybių Sumos Taisyklė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12444,10 +12444,10 @@ export const concepts = {
     ]
   },
   "pilnosios-tikimybes-formule": {
-    "title": "Pilnosios Tikimybes Formule",
+    "title": "Pilnosios Tikimybes Formulė",
     "type": "concept",
-    "definition": "S?voka ?Pilnosios Tikimybes Formule? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pilnosios Tikimybes Formulė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12455,10 +12455,10 @@ export const concepts = {
     ]
   },
   "bayeso-formule": {
-    "title": "Bayeso Formule",
+    "title": "Bayeso Formulė",
     "type": "concept",
-    "definition": "S?voka ?Bayeso Formule? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bayeso Formulė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12532,10 +12532,10 @@ export const concepts = {
     ]
   },
   "statistinis-tyrimas": {
-    "title": "Statistinis Tyrimas",
+    "title": "Statistinis tyrimas",
     "type": "concept",
-    "definition": "S?voka ?Statistinis Tyrimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Statistinis tyrimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12543,10 +12543,10 @@ export const concepts = {
     ]
   },
   "generaline-aibe": {
-    "title": "Generaline Aibe",
+    "title": "Generalinė aibė",
     "type": "concept",
-    "definition": "S?voka ?Generaline Aibe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Generalinė aibė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12556,8 +12556,8 @@ export const concepts = {
   "pirsono-koeficientas": {
     "title": "Pirsono Koeficientas",
     "type": "concept",
-    "definition": "S?voka ?Pirsono Koeficientas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pirsono Koeficientas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12567,8 +12567,8 @@ export const concepts = {
   "regresija": {
     "title": "Regresija",
     "type": "concept",
-    "definition": "S?voka ?Regresija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Regresija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12578,8 +12578,8 @@ export const concepts = {
   "determinacijos-koeficientas": {
     "title": "Determinacijos Koeficientas",
     "type": "concept",
-    "definition": "S?voka ?Determinacijos Koeficientas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Determinacijos Koeficientas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12616,8 +12616,8 @@ export const concepts = {
   "stereometrijos-aksiomos": {
     "title": "Stereometrijos Aksiomos",
     "type": "concept",
-    "definition": "S?voka ?Stereometrijos Aksiomos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Stereometrijos Aksiomos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12625,10 +12625,10 @@ export const concepts = {
     ]
   },
   "prasilenkiancios-tieses": {
-    "title": "Prasilenkiancios Tieses",
+    "title": "Prasilenkiančios tiesės",
     "type": "concept",
-    "definition": "S?voka ?Prasilenkiancios Tieses? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Prasilenkiančios tiesės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12638,8 +12638,8 @@ export const concepts = {
   "tieses-ir-plokstumos-statmenumas": {
     "title": "Tieses Ir Plokstumos Statmenumas",
     "type": "concept",
-    "definition": "S?voka ?Tieses Ir Plokstumos Statmenumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Tieses Ir Plokstumos Statmenumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12647,10 +12647,10 @@ export const concepts = {
     ]
   },
   "triju-statmenu-teorema": {
-    "title": "Triju Statmenu Teorema",
+    "title": "Trijų statmenų teorema",
     "type": "concept",
-    "definition": "S?voka ?Triju Statmenu Teorema? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trijų statmenų teorema“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12658,10 +12658,10 @@ export const concepts = {
     ]
   },
   "dvisienis-kampas": {
-    "title": "Dvisienis Kampas",
+    "title": "Dvisienis kampas",
     "type": "concept",
-    "definition": "S?voka ?Dvisienis Kampas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Dvisienis kampas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12671,8 +12671,8 @@ export const concepts = {
   "atstumas-tarp-prasilenkiančiųjų": {
     "title": "Atstumas Tarp Prasilenkiančiųjų",
     "type": "concept",
-    "definition": "S?voka ?Atstumas Tarp Prasilenkiančiųjų? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Atstumas Tarp Prasilenkiančiųjų“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12682,8 +12682,8 @@ export const concepts = {
   "ortogonalioji-projekcija": {
     "title": "Ortogonalioji Projekcija",
     "type": "concept",
-    "definition": "S?voka ?Ortogonalioji Projekcija? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Ortogonalioji Projekcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12704,10 +12704,10 @@ export const concepts = {
     ]
   },
   "didziuju-skaiciu-desnis": {
-    "title": "Didziuju Skaiciu Desnis",
+    "title": "Didžiųjų skaičių dėsnis",
     "type": "concept",
-    "definition": "S?voka ?Didziuju Skaiciu Desnis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Didžiųjų skaičių dėsnis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12715,10 +12715,10 @@ export const concepts = {
     ]
   },
   "pasikliautinis-intervalas": {
-    "title": "Pasikliautinis Intervalas",
+    "title": "Pasikliautinis intervalas",
     "type": "concept",
-    "definition": "S?voka ?Pasikliautinis Intervalas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pasikliautinis intervalas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12739,10 +12739,10 @@ export const concepts = {
     ]
   },
   "ark-funkcijos": {
-    "title": "Ark Funkcijos",
+    "title": "Arkinės funkcijos",
     "type": "concept",
-    "definition": "S?voka ?Ark Funkcijos? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Arkinės funkcijos“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12750,10 +12750,10 @@ export const concepts = {
     ]
   },
   "homogenines-lygtys": {
-    "title": "Homogenines Lygtys",
+    "title": "Homogeninės lygtys",
     "type": "concept",
-    "definition": "S?voka ?Homogenines Lygtys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Homogeninės lygtys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12763,8 +12763,8 @@ export const concepts = {
   "universalusis-pakeitimas": {
     "title": "Universalusis Pakeitimas",
     "type": "concept",
-    "definition": "S?voka ?Universalusis Pakeitimas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Universalusis Pakeitimas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12772,10 +12772,10 @@ export const concepts = {
     ]
   },
   "trigonometrines-nelygybes": {
-    "title": "Trigonometrines Nelygybes",
+    "title": "Trigonometrinės nelygybės",
     "type": "concept",
-    "definition": "S?voka ?Trigonometrines Nelygybes? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trigonometrinės nelygybės“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12783,10 +12783,10 @@ export const concepts = {
     ]
   },
   "papildomo-kampo-metodas": {
-    "title": "Papildomo Kampo Metodas",
+    "title": "Papildomo kampo metodas",
     "type": "concept",
-    "definition": "S?voka ?Papildomo Kampo Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Papildomo kampo metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12794,10 +12794,10 @@ export const concepts = {
     ]
   },
   "grafinis-metodas": {
-    "title": "Grafinis Metodas",
+    "title": "Grafinis metodas",
     "type": "concept",
-    "definition": "S?voka ?Grafinis Metodas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Grafinis metodas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12820,8 +12820,8 @@ export const concepts = {
   "radianai": {
     "title": "Radianai",
     "type": "concept",
-    "definition": "S?voka ?Radianai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Radianai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12831,8 +12831,8 @@ export const concepts = {
   "laipsniai": {
     "title": "Laipsniai",
     "type": "concept",
-    "definition": "S?voka ?Laipsniai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Laipsniai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12840,10 +12840,10 @@ export const concepts = {
     ]
   },
   "pagrindine-tapatybe": {
-    "title": "Pagrindine Tapatybe",
+    "title": "Pagrindinė Tapatybė",
     "type": "concept",
-    "definition": "S?voka ?Pagrindine Tapatybe? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Pagrindinė Tapatybė“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12851,10 +12851,10 @@ export const concepts = {
     ]
   },
   "trigonometrine-lygtis": {
-    "title": "Trigonometrine Lygtis",
+    "title": "Trigonometrinė Lygtis",
     "type": "concept",
-    "definition": "S?voka ?Trigonometrine Lygtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Trigonometrinė Lygtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12862,10 +12862,10 @@ export const concepts = {
     ]
   },
   "bendrasis-sprendinys": {
-    "title": "Bendrasis Sprendinys",
+    "title": "Bendrasis sprendinys",
     "type": "concept",
-    "definition": "S?voka ?Bendrasis Sprendinys? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bendrasis sprendinys“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12899,10 +12899,10 @@ export const concepts = {
     ]
   },
   "staciakampe-koordinaciu-sistema-erdveje": {
-    "title": "Staciakampe Koordinaciu Sistema Erdveje",
+    "title": "Stačiakampė koordinačių sistema erdvėje",
     "type": "concept",
-    "definition": "S?voka ?Staciakampe Koordinaciu Sistema Erdveje? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Stačiakampė koordinačių sistema erdvėje“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12912,8 +12912,8 @@ export const concepts = {
   "bazinis-vektorius": {
     "title": "Bazinis Vektorius",
     "type": "concept",
-    "definition": "S?voka ?Bazinis Vektorius? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Bazinis Vektorius“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12921,10 +12921,10 @@ export const concepts = {
     ]
   },
   "vektoriaus-modulis-erdveje": {
-    "title": "Vektoriaus Modulis Erdveje",
+    "title": "Vektoriaus modulis erdvėje",
     "type": "concept",
-    "definition": "S?voka ?Vektoriaus Modulis Erdveje? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vektoriaus modulis erdvėje“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12932,10 +12932,10 @@ export const concepts = {
     ]
   },
   "skaliarine-vektoriu-sandauga-erdveje": {
-    "title": "Skaliarine Vektoriu Sandauga Erdveje",
+    "title": "Skaliarinė vektorių sandauga erdvėje",
     "type": "concept",
-    "definition": "S?voka ?Skaliarine Vektoriu Sandauga Erdveje? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Skaliarinė vektorių sandauga erdvėje“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12943,10 +12943,10 @@ export const concepts = {
     ]
   },
   "krypties-kosinusai": {
-    "title": "Krypties Kosinusai",
+    "title": "Krypties kosinusai",
     "type": "concept",
-    "definition": "S?voka ?Krypties Kosinusai? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Krypties kosinusai“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12956,8 +12956,8 @@ export const concepts = {
   "kolinearumas": {
     "title": "Kolinearumas",
     "type": "concept",
-    "definition": "S?voka ?Kolinearumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Kolinearumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12967,8 +12967,8 @@ export const concepts = {
   "komplanarumas": {
     "title": "Komplanarumas",
     "type": "concept",
-    "definition": "S?voka ?Komplanarumas? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Komplanarumas“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12976,10 +12976,10 @@ export const concepts = {
     ]
   },
   "projekcija-vektoriaus": {
-    "title": "Projekcija Vektoriaus",
+    "title": "Vektoriaus projekcija",
     "type": "concept",
-    "definition": "S?voka ?Projekcija Vektoriaus? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Vektoriaus projekcija“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [
@@ -12987,10 +12987,10 @@ export const concepts = {
     ]
   },
   "sferos-lygtis": {
-    "title": "Sferos Lygtis",
+    "title": "Sferos lygtis",
     "type": "concept",
-    "definition": "S?voka ?Sferos Lygtis? naudojama ?ioje temoje.",
-    "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+    "definition": "Sąvoka „Sferos lygtis“ naudojama šioje temoje.",
+    "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
     "formal": "",
     "related": [],
     "topics": [

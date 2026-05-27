@@ -135,7 +135,105 @@
         },
         {
           "type": "method",
-          "text": "Pagrindinės savybės:\n1. **Rankų paspaudimo lema:** Viršūnių laipsnių (iš jų išeinančių briaunų) suma lygi $2 \times$ briaunų skaičius. Vadinasi, nelyginį laipsnį turinčių viršūnių skaičius visada lyginis.\n2. **Rišlumas:** Ar iš bet kurios viršūnės galima pasiekti bet kurią kitą?\n3. **Pilnieji grafai:** Kiekviena viršūnė sujungta su kiekviena kita ($C_n^2$ briaunų)."
+          "text": "Pagrindinės savybės: 1. **Rankų paspaudimo lema:** Viršūnių laipsnių (iš jų išeinančių briaunų) suma lygi $2 imes$ briaunų skaičius. Vadinasi, nelyginį laipsnį turinčių viršūnių skaičius visada lyginis. 2. **Rišlumas:** Ar iš bet kurios viršūnės galima pasiekti bet kurią kitą? 3. **Pilnieji grafai:** Kiekviena viršūnė sujungta su kiekviena kita ($C_n^2$ briaunų)."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Kombinatorika“ 9 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: tikimybinis modelis, atvejų skaidymas, kombinatorinis skaičiavimas, sąlyginė tikimybė ir priešingo įvykio metodas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Daugybos taisyklė, Kėliniai, Gretiniai, Deriniai, Dirichlė principas, Inkliuzijos-ekskliuzijos principas ir Invariantas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Kombinatorika“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutrinti ir vietoj jų užrašyti skaičių $a+b-1$. Žin“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Kombinatorika“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti tikimybinis modelis, atvejų skaidymas, kombinatorinis skaičiavimas, sąlyginė tikimybė ir priešingo įvykio metodas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Kombinatorika“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra duomenų rinkinio struktūra, skaitinės charakteristikos, tikimybės modelis ir išvadų patikimumas. Jei pavyzdys prasideda taip: „Ant lentos užrašyti skaičiai $1, 2, \\dots, 20$. Vienu ėjimu leidžiama pasirinkti bet kuriuos du lentos skaičius $a$ ir $b$, juos nutrinti ir vietoj jų užrašyti skaičių $a+b-1$. Žin“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-kombinatorika-olimpiadinis-papildomas-grieztumo-kriterijai-2",
+      "title": "Griežtumo kriterijai pilname sprendime",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadiniame sprendime nepakanka gauti teisingą skaičių ar gražią lygybę. Reikia parodyti, kad nėra praleistų atvejų, kad visi pertvarkymai ekvivalentūs, o pasirinkta konstrukcija tikrai egzistuoja. Temai „Kombinatorika“ tai reiškia: kiekvieną kartą, kai panaudojama sąvoka Daugybos taisyklė, Kėliniai, Gretiniai, Deriniai, Dirichlė principas, šalia turi atsirasti trumpas pagrindimas. Jei sprendimas priklauso nuo brėžinio, nurodyk, kuri savybė nepriklauso nuo piešinio tikslumo. Jei sprendimas priklauso nuo algebrinio pertvarkymo, patikrink apribojimus. Jei remiesi atvejais, parašyk, kodėl jie visi ir nesikerta."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
         }
       ]
     }
@@ -241,31 +339,31 @@
     {
       "id": "we-comb-pigeonhole-geom",
       "title": "Dirichlė principas geometrijoje",
-      "content": "Kvadrate, kurio kraštinė yra 1, pažymėtas 51 taškas. Įrodykite, kad tarp jų yra trys taškai, patenkantys į skritulį, kurio spindulys $1/7$.\n\n**Sprendimas:**\n1. Padalinkime kvadratą į $5 \\times 5 = 25$ mažus kvadratus, kurių kraštinė $1/5 = 0,2$.\n2. Turime 51 tašką (objektai) ir 25 mažus kvadratus (dėžutės).\n3. Pagal apibendrintą Dirichlė principą, kadangi $51 > 2 \\times 25$, bent viename mažame kvadrate bus bent 3 taškai.\n4. Kiekvienas mažas kvadratas $0,2 \\times 0,2$ telpa į skritulį, kurio skersmuo lygus kvadrato įstrižainei $d = \\sqrt{0,2^2 + 0,2^2} = \\sqrt{0,08} \\approx 0,2828$.\n5. Mūsų skritulio spindulys $R = 1/7 \\approx 0,1428$, tad skersmuo $D = 2/7 \\approx 0,2857$.\n6. Kadangi kvadrato įstrižainė ($0,2828$) yra mažesnė už skritulio skersmenį ($0,2857$), visas mažas kvadratas su 3 taškais telpa į nurodytą skritulį.\n\n**Atsakymas:** Įrodyta.",
+      "content": "Kvadrate, kurio kraštinė yra 1, pažymėtas 51 taškas. Įrodykite, kad tarp jų yra trys taškai, patenkantys į skritulį, kurio spindulys $1/7$. **Sprendimas:** 1. Padalinkime kvadratą į $5 \\times 5 = 25$ mažus kvadratus, kurių kraštinė $1/5 = 0,2$. 2. Turime 51 tašką (objektai) ir 25 mažus kvadratus (dėžutės). 3. Pagal apibendrintą Dirichlė principą, kadangi $51 > 2 \\times 25$, bent viename mažame kvadrate bus bent 3 taškai. 4. Kiekvienas mažas kvadratas $0,2 \\times 0,2$ telpa į skritulį, kurio skersmuo lygus kvadrato įstrižainei $d = \\sqrt{0,2^2 + 0,2^2} = \\sqrt{0,08} \\approx 0,2828$. 5. Mūsų skritulio spindulys $R = 1/7 \\approx 0,1428$, tad skersmuo $D = 2/7 \\approx 0,2857$. 6. Kadangi kvadrato įstrižainė ($0,2828$) yra mažesnė už skritulio skersmenį ($0,2857$), visas mažas kvadratas su 3 taškais telpa į nurodytą skritulį. **Atsakymas:** Įrodyta.",
       "explanation": "Šis pavyzdys rodo, kaip diskretusis Dirichlė principas naudojamas nepertraukiamose geometrinėse erdvėse."
     },
     {
       "id": "we-comb-invariant-parity",
       "title": "Invarianto metodas su lentelėmis",
-      "content": "8x8 lentelėje vienas langelis nuspalvintas juodai, visi kiti - baltai. Vieno ėjimo metu leidžiama pasirinkti bet kurį 2x2 kvadratą ir jame pakeisti visų langelių spalvas į priešingas. Ar galima pasiekti, kad visi langeliai taptų balti?\n\n**Sprendimas:**\n1. Pažymėkime juodų langelių skaičių kaip $J$.\n2. Ištirkime, kaip kinta $J$ pakeitus spalvas 2x2 kvadrate. Jei kvadrate buvo $k$ juodų langelių ($k \\in \\{0, 1, 2, 3, 4\\}$), tai po pakeitimo juose bus $4-k$ juodų langelių.\n3. Pokytis $\\Delta J = (4-k) - k = 4 - 2k = 2(2-k)$.\n4. Pastebime, kad pokytis visada yra lyginis skaičius. Vadinasi, juodų langelių skaičiaus lyginumas yra invariantas.\n5. Pradžioje $J=1$ (nelyginis). Pabaigoje norime $J=0$ (lyginis).\n6. Kadangi lyginumas negali pasikeisti, nulinės būsenos pasiekti neįmanoma.\n\n**Atsakymas:** Negalima.",
+      "content": "8x8 lentelėje vienas langelis nuspalvintas juodai, visi kiti - baltai. Vieno ėjimo metu leidžiama pasirinkti bet kurį 2x2 kvadratą ir jame pakeisti visų langelių spalvas į priešingas. Ar galima pasiekti, kad visi langeliai taptų balti? **Sprendimas:** 1. Pažymėkime juodų langelių skaičių kaip $J$. 2. Ištirkime, kaip kinta $J$ pakeitus spalvas 2x2 kvadrate. Jei kvadrate buvo $k$ juodų langelių ($k \\in \\{0, 1, 2, 3, 4\\}$), tai po pakeitimo juose bus $4-k$ juodų langelių. 3. Pokytis $\\Delta J = (4-k) - k = 4 - 2k = 2(2-k)$. 4. Pastebime, kad pokytis visada yra lyginis skaičius. Vadinasi, juodų langelių skaičiaus lyginumas yra invariantas. 5. Pradžioje $J=1$ (nelyginis). Pabaigoje norime $J=0$ (lyginis). 6. Kadangi lyginumas negali pasikeisti, nulinės būsenos pasiekti neįmanoma. **Atsakymas:** Negalima.",
       "explanation": "Lyginumo invariantas yra vienas dažniausių ginklų sprendžiant uždavinius apie operacijų sekas."
     },
     {
       "id": "we-comb-graph-degrees",
       "title": "Rankų paspaudimo lema turnyruose",
-      "content": "Šachmatų turnyre dalyvauja 10 žaidėjų. Įrodykite, kad negali būti taip, jog 9 žaidėjai sužaidė po 3 partijas, o vienas - 4.\n\n**Sprendimas:**\n1. Atvaizduokime žaidėjus kaip grafo viršūnes, o sužaistas partijas kaip briaunas.\n2. Suskaičiuokime visų viršūnių laipsnių sumą $S$.\n3. $S = 9 \\times 3 + 1 \\times 4 = 27 + 4 = 31$.\n4. Pagal rankų paspaudimo lemą, laipsnių suma visada lygi dvigubam briaunų skaičiui ($S = 2E$), todėl ji privalo būti lyginė.\n5. Kadangi 31 yra nelyginis skaičius, tokia situacija neįmanoma.\n\n**Atsakymas:** Įrodyta.",
+      "content": "Šachmatų turnyre dalyvauja 10 žaidėjų. Įrodykite, kad negali būti taip, jog 9 žaidėjai sužaidė po 3 partijas, o vienas - 4. **Sprendimas:** 1. Atvaizduokime žaidėjus kaip grafo viršūnes, o sužaistas partijas kaip briaunas. 2. Suskaičiuokime visų viršūnių laipsnių sumą $S$. 3. $S = 9 \\times 3 + 1 \\times 4 = 27 + 4 = 31$. 4. Pagal rankų paspaudimo lemą, laipsnių suma visada lygi dvigubam briaunų skaičiui ($S = 2E$), todėl ji privalo būti lyginė. 5. Kadangi 31 yra nelyginis skaičius, tokia situacija neįmanoma. **Atsakymas:** Įrodyta.",
       "explanation": "Tai tiesioginis grafo viršūnių laipsnių savybės taikymas."
     },
     {
       "id": "we-comb-inclusion-exclusion-3",
       "title": "Trijų aibių inkliuzija-ekskliuzija",
-      "content": "Grupėje yra 100 studentų. 50 mokosi anglų kalbą, 40 - vokiečių, 30 - prancūzų. 20 mokosi anglų ir vokiečių, 15 - anglų ir prancūzų, 10 - vokiečių ir prancūzų. 5 mokosi visas tris. Kiek studentų nesimoko nei vienos kalbos?\n\n**Sprendimas:**\n1. Naudojame formulę $|A \\cup V \\cup P| = |A| + |V| + |P| - (|A\\cap V| + |A\\cap P| + |V\\cap P|) + |A\\cap V\\cap P|$.\n2. $|A \\cup V \\cup P| = 50 + 40 + 30 - (20 + 15 + 10) + 5$.\n3. $|A \\cup V \\cup P| = 120 - 45 + 5 = 80$.\n4. Studentai, kurie nesimoko nieko: $100 - 80 = 20$.\n\n**Atsakymas:** 20.",
+      "content": "Grupėje yra 100 studentų. 50 mokosi anglų kalbą, 40 - vokiečių, 30 - prancūzų. 20 mokosi anglų ir vokiečių, 15 - anglų ir prancūzų, 10 - vokiečių ir prancūzų. 5 mokosi visas tris. Kiek studentų nesimoko nei vienos kalbos? **Sprendimas:** 1. Naudojame formulę $|A \\cup V \\cup P| = |A| + |V| + |P| - (|A\\cap V| + |A\\cap P| + |V\\cap P|) + |A\\cap V\\cap P|$. 2. $|A \\cup V \\cup P| = 50 + 40 + 30 - (20 + 15 + 10) + 5$. 3. $|A \\cup V \\cup P| = 120 - 45 + 5 = 80$. 4. Studentai, kurie nesimoko nieko: $100 - 80 = 20$. **Atsakymas:** 20.",
       "explanation": "Užduotis moko teisingai skaičiuoti persidengiančias grupes."
     },
     {
       "id": "we-comb-game-symmetry",
       "title": "Simetrijos strategija žaidimuose",
-      "content": "Du žaidėjai pakaitomis deda monetas ant apvalaus stalo. Monetas dėti galima tik į laisvą vietą, jos negali persidengti. Pralaimi tas, kuris nebegali padėti monetos. Įrodykite, kad pirmasis žaidėjas visada gali laimėti.\n\n**Sprendimas:**\n1. Pirmasis žaidėjas savo pirmąją monetą padeda tiksliai į stalo centrą.\n2. Po bet kokio antrojo žaidėjo ėjimo, pirmasis atsako simetrišku ėjimu centro atžvilgiu.\n3. Kadangi stalas yra simetriškas centro atžvilgiu, o centras jau užimtas, jei antrasis žaidėjas randa laisvą vietą savo monetai, tai simetriška vieta taip pat visada bus laisva pirmajam.\n4. Taigi, pirmasis žaidėjas visada turės paskutinį žodį.\n\n**Atsakymas:** Laimėjimo strategija rasta.",
+      "content": "Du žaidėjai pakaitomis deda monetas ant apvalaus stalo. Monetas dėti galima tik į laisvą vietą, jos negali persidengti. Pralaimi tas, kuris nebegali padėti monetos. Įrodykite, kad pirmasis žaidėjas visada gali laimėti. **Sprendimas:** 1. Pirmasis žaidėjas savo pirmąją monetą padeda tiksliai į stalo centrą. 2. Po bet kokio antrojo žaidėjo ėjimo, pirmasis atsako simetrišku ėjimu centro atžvilgiu. 3. Kadangi stalas yra simetriškas centro atžvilgiu, o centras jau užimtas, jei antrasis žaidėjas randa laisvą vietą savo monetai, tai simetriška vieta taip pat visada bus laisva pirmajam. 4. Taigi, pirmasis žaidėjas visada turės paskutinį žodį. **Atsakymas:** Laimėjimo strategija rasta.",
       "explanation": "Simetrija yra viena galingiausių idėjų baigtinių žaidimų teorijoje."
     }
   ],

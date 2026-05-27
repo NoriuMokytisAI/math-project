@@ -92,7 +92,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Pavyzdžiui, sudarant visus galimus triženklius skaičius iš skaitmenų 1, 2, 3 (nenaudojant tų pačių skaitmenų), rašykime juos taip:\n1. Pradedame mažiausiu šimtu: 123, 132.\n2. Tada einame prie kito skaitmens šimtuose: 213, 231.\n3. Galiausiai: 312, 321.\nŠitaip mes turime aiškią struktūrą ir matome, kad nieko nepraleidome."
+          "text": "Pavyzdžiui, sudarant visus galimus triženklius skaičius iš skaitmenų 1, 2, 3 (nenaudojant tų pačių skaitmenų), rašykime juos taip: 1. Pradedame mažiausiu šimtu: 123, 132. 2. Tada einame prie kito skaitmens šimtuose: 213, 231. 3. Galiausiai: 312, 321. Šitaip mes turime aiškią struktūrą ir matome, kad nieko nepraleidome."
         },
         {
           "type": "paragraph",
@@ -172,7 +172,77 @@
         },
         {
           "type": "paragraph",
-          "text": "Pavyzdžiui, kiek yra dviženklių skaičių, turinčių bent vieną skaitmenį 1? \n- Visi dviženkliai: 90 skaičių.\n- Neturintys nė vieno vieneto: dešimtyse gali būti (2-9, t.y. 8 variantai), vienetuose (0, 2-9, t.y. 9 variantai). Iš viso $8 \\times 9 = 72$.\n- Atsakymas: $90 - 72 = 18$."
+          "text": "Pavyzdžiui, kiek yra dviženklių skaičių, turinčių bent vieną skaitmenį 1? - Visi dviženkliai: 90 skaičių. - Neturintys nė vieno vieneto: dešimtyse gali būti (2-9, t.y. 8 variantai), vienetuose (0, 2-9, t.y. 9 variantai). Iš viso $8 \\times 9 = 72$. - Atsakymas: $90 - 72 = 18$."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-kombinatorika-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Kombinatorika“ 5 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: atvejų medis, invariantas, kraštinis elementas, Dirichlė principas, konstrukcija ir dvigubas skaičiavimas. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-kombinatorika-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Olimpiadinė logika ir dedukcija, Matematinio įrodymo samprata, Dirichlė (balandžių narvelių) principas, Sudėties taisyklė, Daugybos taisyklė ir Rankų paspaudimo formulė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Kombinatorika“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-kombinatorika-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Nuspręsk, ar objektus rikiuoji, renkiesi, daliji į atvejus, ar konstruoji pavyzdį. Aiškiai aprašyk pirmą pasirinkimą, kiek galimybių lieka po jo, ir kur gali atsirasti dubliavimas. Jei uždavinys įrodymo tipo, bandyk kraštinį elementą, paritetą, invariantą arba piešinį kaip grafą. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-kombinatorika-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Kiek yra triženklių skaičių, kurių visi skaitmenys yra skirtingi ir nelyginiai?“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Kombinatorika“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-kombinatorika-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Palygink atsakymą su mažesniu modeliu, patikrink, ar atvejai nesikerta ir ar jų sąjunga apima visas galimybes. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti atvejų medis, invariantas, kraštinis elementas, Dirichlė principas, konstrukcija ir dvigubas skaičiavimas, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
         }
       ]
     }
@@ -253,27 +323,27 @@
     {
       "title": "Skaitmenų perstatymas",
       "statement": "Kiek skirtingų keturženklių skaičių galima sudaryti naudojant skaitmenis 0, 1, 2, 3, jei kiekvienas skaitmuo naudojamas lygiai vieną kartą?",
-      "solution": "Naudojame daugybos taisyklę su apribojimu:\n1. Tūkstančių skaitmuo: gali būti 1, 2 arba 3 (0 negali būti pradžioje). Turime **3 pasirinkimus**.\n2. Šimtų skaitmuo: gali būti bet kuris iš likusių 3 skaitmenų (įskaitant 0, kurio nenaudojome pradžioje). Turime **3 pasirinkimus**.\n3. Dešimčių skaitmuo: lieka 2 nepanaudoti skaitmenys. Turime **2 pasirinkimus**.\n4. Vienetų skaitmuo: lieka **1 pasirinkimas**.\n\nBendras skaičius: $3 \\times 3 \\times 2 \\times 1 = 18$.\n\n**Atsakymas:** 18."
+      "solution": "Naudojame daugybos taisyklę su apribojimu: 1. Tūkstančių skaitmuo: gali būti 1, 2 arba 3 (0 negali būti pradžioje). Turime **3 pasirinkimus**. 2. Šimtų skaitmuo: gali būti bet kuris iš likusių 3 skaitmenų (įskaitant 0, kurio nenaudojome pradžioje). Turime **3 pasirinkimus**. 3. Dešimčių skaitmuo: lieka 2 nepanaudoti skaitmenys. Turime **2 pasirinkimus**. 4. Vienetų skaitmuo: lieka **1 pasirinkimas**. Bendras skaičius: $3 \\times 3 \\times 2 \\times 1 = 18$. **Atsakymas:** 18."
     },
     {
       "title": "Turnyro partijos",
       "statement": "Šachmatų turnyre dalyvauja 6 žaidėjai. Kiekvienas su kiekvienu sužaidžia po vieną partiją. Kiek iš viso partijų bus sužaista?",
-      "solution": "Tai klasikinis „kiekvienas su kiekvienu“ uždavinys.\n- Pirmas žaidėjas sužaidžia su 5 kitais.\n- Antras žaidėjas sužaidžia su 4 naujais (su pirmu jau sužaidė).\n- Trečias žaidėjas – su 3 naujais.\n- Ketvirtas – su 2 naujais.\n- Penktas – su 1 nauju.\n- Šeštas jau su visais sužaidė.\n\nSuma: $5 + 4 + 3 + 2 + 1 = 15$.\nArba pagal formulę: $\\frac{6 \\times (6-1)}{2} = \\frac{30}{2} = 15$.\n\n**Atsakymas:** 15."
+      "solution": "Tai klasikinis „kiekvienas su kiekvienu“ uždavinys. - Pirmas žaidėjas sužaidžia su 5 kitais. - Antras žaidėjas sužaidžia su 4 naujais (su pirmu jau sužaidė). - Trečias žaidėjas – su 3 naujais. - Ketvirtas – su 2 naujais. - Penktas – su 1 nauju. - Šeštas jau su visais sužaidė. Suma: $5 + 4 + 3 + 2 + 1 = 15$. Arba pagal formulę: $\\frac{6 \\times (6-1)}{2} = \\frac{30}{2} = 15$. **Atsakymas:** 15."
     },
     {
       "title": "Spalvotos kojinės",
       "statement": "Dėžėje yra 10 juodų ir 10 mėlynų kojinių. Jos visos sumaišytos. Kambaryje tamsu, todėl spalvų nematyti. Kiek mažiausiai kojinių reikia ištraukti, kad būtume tikri, jog turime bent vieną tos pačios spalvos porą?",
-      "solution": "Taikome Dirichlė principą.\n- „Narveliai“ yra spalvos: Juoda ir Mėlyna (2 narveliai).\n- Kad būtume tikri, jog viename narvelyje atsidurs bent 2 kojinės, mums reikia turėti daugiau „balandžių“ nei narvelių.\n- $2 + 1 = 3$ kojinės.\n\nPaaiškinimas: jei ištrauksime 2 kojines, jos gali būti skirtingų spalvų (viena juoda, viena mėlyna). Trečioji ištraukta kojinė būtinai sutaps su viena iš pirmųjų dviejų.\n\n**Atsakymas:** 3."
+      "solution": "Taikome Dirichlė principą. - „Narveliai“ yra spalvos: Juoda ir Mėlyna (2 narveliai). - Kad būtume tikri, jog viename narvelyje atsidurs bent 2 kojinės, mums reikia turėti daugiau „balandžių“ nei narvelių. - $2 + 1 = 3$ kojinės. Paaiškinimas: jei ištrauksime 2 kojines, jos gali būti skirtingų spalvų (viena juoda, viena mėlyna). Trečioji ištraukta kojinė būtinai sutaps su viena iš pirmųjų dviejų. **Atsakymas:** 3."
     },
     {
       "title": "Vėliavų spalvinimas",
       "statement": "Turime 3 spalvas: raudoną, žalią ir geltoną. Kiek yra būdų nuspalvinti trijų horizontalių juostų vėliavą, jei gretimos juostos turi būti skirtingų spalvų, o spalvos gali kartotis?",
-      "solution": "Taikome daugybos taisyklę žingsnis po žingsnio:\n1. Viršutinė juosta: Galime rinktis bet kurią iš **3 spalvų**.\n2. Vidurinė juosta: Ji turi skirtis nuo viršutinės, todėl turime **2 pasirinkimus** (bet kuri spalva, išskyrus tą, kurią panaudojome viršuje).\n3. Apatinė juosta: Ji turi skirtis tik nuo vidurinės juostos. Spalva gali būti tokia pati kaip viršutinės, bet kitokia nei vidurinės. Tad vėl turime **2 pasirinkimus**.\n\nIš viso: $3 \\times 2 \\times 2 = 12$.\n\n**Atsakymas:** 12."
+      "solution": "Taikome daugybos taisyklę žingsnis po žingsnio: 1. Viršutinė juosta: Galime rinktis bet kurią iš **3 spalvų**. 2. Vidurinė juosta: Ji turi skirtis nuo viršutinės, todėl turime **2 pasirinkimus** (bet kuri spalva, išskyrus tą, kurią panaudojome viršuje). 3. Apatinė juosta: Ji turi skirtis tik nuo vidurinės juostos. Spalva gali būti tokia pati kaip viršutinės, bet kitokia nei vidurinės. Tad vėl turime **2 pasirinkimus**. Iš viso: $3 \\times 2 \\times 2 = 12$. **Atsakymas:** 12."
     },
     {
       "title": "Suma lygi 5",
       "statement": "Kiek yra triženklių skaičių, kurių skaitmenų suma lygi 5?",
-      "solution": "Čia geriausia taikyti sisteminį išrašymą pagal pirmąjį skaitmenį:\n- Jei šimtai yra **1**: likusių skaitmenų suma turi būti 4. Poros (dešimtys, vienetai): (0,4), (1,3), (2,2), (3,1), (4,0). Iš viso **5 variantai**.\n- Jei šimtai yra **2**: likusių suma 3. Poros: (0,3), (1,2), (2,1), (3,0). Iš viso **4 variantai**.\n- Jei šimtai yra **3**: likusių suma 2. Poros: (0,2), (1,1), (2,0). Iš viso **3 variantai**.\n- Jei šimtai yra **4**: likusių suma 1. Poros: (0,1), (1,0). Iš viso **2 variantai**.\n- Jei šimtai yra **5**: likusių suma 0. Pora: (0,0). Iš viso **1 variantas**.\n\nBendra suma: $5 + 4 + 3 + 2 + 1 = 15$.\n\n**Atsakymas:** 15."
+      "solution": "Čia geriausia taikyti sisteminį išrašymą pagal pirmąjį skaitmenį: - Jei šimtai yra **1**: likusių skaitmenų suma turi būti 4. Poros (dešimtys, vienetai): (0,4), (1,3), (2,2), (3,1), (4,0). Iš viso **5 variantai**. - Jei šimtai yra **2**: likusių suma 3. Poros: (0,3), (1,2), (2,1), (3,0). Iš viso **4 variantai**. - Jei šimtai yra **3**: likusių suma 2. Poros: (0,2), (1,1), (2,0). Iš viso **3 variantai**. - Jei šimtai yra **4**: likusių suma 1. Poros: (0,1), (1,0). Iš viso **2 variantai**. - Jei šimtai yra **5**: likusių suma 0. Pora: (0,0). Iš viso **1 variantas**. Bendra suma: $5 + 4 + 3 + 2 + 1 = 15$. **Atsakymas:** 15."
     }
   ],
   "exercises": [

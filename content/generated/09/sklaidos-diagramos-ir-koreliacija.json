@@ -35,7 +35,18 @@
       "blogas-tieses-brezimas",
       "ekstrapoliacijos-pavojus"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "sklaidos-diagramos-ir-koreliacija-auto-001",
+      "sklaidos-diagramos-ir-koreliacija-auto-002",
+      "sklaidos-diagramos-ir-koreliacija-auto-003",
+      "sklaidos-diagramos-ir-koreliacija-auto-004",
+      "sklaidos-diagramos-ir-koreliacija-auto-005",
+      "sklaidos-diagramos-ir-koreliacija-auto-006",
+      "sklaidos-diagramos-ir-koreliacija-auto-007",
+      "sklaidos-diagramos-ir-koreliacija-auto-008",
+      "sklaidos-diagramos-ir-koreliacija-auto-009",
+      "sklaidos-diagramos-ir-koreliacija-auto-010"
+    ]
   },
   "theory": [
     {
@@ -168,7 +179,7 @@
       "blocks": [
         {
           "type": "method",
-          "text": "1. **Nubraižykite diagramą:** Pažymėkite taškus $(x, y)$.\n2. **Nustatykite kryptį:** Ar debesis kyla, leidžiasi, ar yra chaotiškas?\n3. **Įvertinkite stiprumą:** Kaip arti taškai yra vienas kito?\n4. **Nubrėžkite tiesę:** Naudokite liniuotę!\n5. **Padarykite išvadą:** Suformuluokite sakinį: „Didėjant $x$, kintamasis $y$ linkęs [didėti/mažėti]“."
+          "text": "1. **Nubraižykite diagramą:** Pažymėkite taškus $(x, y)$. 2. **Nustatykite kryptį:** Ar debesis kyla, leidžiasi, ar yra chaotiškas? 3. **Įvertinkite stiprumą:** Kaip arti taškai yra vienas kito? 4. **Nubrėžkite tiesę:** Naudokite liniuotę! 5. **Padarykite išvadą:** Suformuluokite sakinį: „Didėjant $x$, kintamasis $y$ linkęs [didėti/mažėti]“."
         }
       ]
     },
@@ -193,6 +204,76 @@
         {
           "type": "paragraph",
           "text": "Pažiūrėkime, kaip tai veikia praktikoje."
+        }
+      ]
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Sklaidos diagramos ir koreliacija“ 9 klasės kurse priklauso sričiai „Duomenys ir tikimybės“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: duomenų rinkinio struktūra, skaitinės charakteristikos, tikimybės modelis ir išvadų patikimumas. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Sklaidos diagrama, Koreliacija, Priežastingumas, Teigiama Koreliacija, Neigiama Koreliacija, Koreliacijos Koeficientas ir Regresijos Tiese. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Sklaidos diagramos ir koreliacija“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Atskirk duomenų aprašymą nuo išvados. Pirmiausia susitvarkyk lentelę ar diagramą, tada skaičiuok vidurkį, medianą, kvartilius, dažnius arba tikimybes. Jei yra imtis, visada paklausk, ką galima teigti apie imtį ir ko dar negalima tvirtai perkelti visai populiacijai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Sklaidos diagramos ir koreliacija“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Patikrink matavimo vienetus, bendrą dažnių sumą, tikimybių sumą ir tai, ar pasirinkta charakteristika tikrai atsako į klausimą. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Sklaidos diagramos ir koreliacija“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -421,8 +502,8 @@
       "id": "teigiama-koreliacija",
       "title": "Teigiama Koreliacija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Teigiama Koreliacija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Teigiama Koreliacija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -430,8 +511,8 @@
       "id": "neigiama-koreliacija",
       "title": "Neigiama Koreliacija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Neigiama Koreliacija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Neigiama Koreliacija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -439,8 +520,8 @@
       "id": "koreliacijos-koeficientas",
       "title": "Koreliacijos Koeficientas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Koreliacijos Koeficientas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Koreliacijos Koeficientas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -448,8 +529,8 @@
       "id": "regresijos-tiese",
       "title": "Regresijos Tiese",
       "type": "concept",
-      "shortDefinition": "S?voka ?Regresijos Tiese? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Regresijos Tiese“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -457,8 +538,8 @@
       "id": "interpoliacija",
       "title": "Interpoliacija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Interpoliacija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Interpoliacija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -466,8 +547,8 @@
       "id": "ekstrapoliacija",
       "title": "Ekstrapoliacija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Ekstrapoliacija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Ekstrapoliacija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -504,7 +585,408 @@
       "defaultSrs": true
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-001",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $1, 3, 5, 7$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 16, reikšmių skaičius 4.",
+          "latex": "\frac{16}{4}=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-002",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $2, 4, 6, 8$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 5,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 20, reikšmių skaičius 4.",
+          "latex": "\frac{20}{4}=5"
+        }
+      ],
+      "answerText": "5",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-003",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $3, 5, 7, 9$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 24, reikšmių skaičius 4.",
+          "latex": "\frac{24}{4}=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-004",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $4, 6, 8, 10$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 7,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 28, reikšmių skaičius 4.",
+          "latex": "\frac{28}{4}=7"
+        }
+      ],
+      "answerText": "7",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-005",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $5, 7, 9, 11$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 32, reikšmių skaičius 4.",
+          "latex": "\frac{32}{4}=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-006",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $6, 8, 10, 12$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 9,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 36, reikšmių skaičius 4.",
+          "latex": "\frac{36}{4}=9"
+        }
+      ],
+      "answerText": "9",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-007",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $7, 9, 11, 13$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 40, reikšmių skaičius 4.",
+          "latex": "\frac{40}{4}=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-008",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $8, 10, 12, 14$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 11,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 44, reikšmių skaičius 4.",
+          "latex": "\frac{44}{4}=11"
+        }
+      ],
+      "answerText": "11",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-009",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $9, 11, 13, 15$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 48, reikšmių skaičius 4.",
+          "latex": "\frac{48}{4}=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "sklaidos-diagramos-ir-koreliacija-auto-010",
+      "topicId": "sklaidos-diagramos-ir-koreliacija",
+      "grade": 9,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Raskite duomenų rinkinio $10, 12, 14, 16$ aritmetinį vidurkį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 13,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite visas reikšmes.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Gautą sumą padalinkite iš reikšmių skaičiaus.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Suma yra 52, reikšmių skaičius 4.",
+          "latex": "\frac{52}{4}=13"
+        }
+      ],
+      "answerText": "13",
+      "conceptIds": [
+        "sklaidos-diagrama",
+        "koreliacija"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ],
   "tests": [],
   "srsCards": []
 }

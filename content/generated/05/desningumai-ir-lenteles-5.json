@@ -43,7 +43,15 @@
     ],
     "exerciseIds": [
       "desningumai-ir-lenteles-5-ex-001",
-      "desningumai-ir-lenteles-5-ex-010"
+      "desningumai-ir-lenteles-5-ex-010",
+      "desningumai-ir-lenteles-5-auto-001",
+      "desningumai-ir-lenteles-5-auto-002",
+      "desningumai-ir-lenteles-5-auto-003",
+      "desningumai-ir-lenteles-5-auto-004",
+      "desningumai-ir-lenteles-5-auto-005",
+      "desningumai-ir-lenteles-5-auto-006",
+      "desningumai-ir-lenteles-5-auto-007",
+      "desningumai-ir-lenteles-5-auto-008"
     ]
   },
   "theory": [
@@ -88,7 +96,7 @@
         {
           "type": "method",
           "title": "Kaip „nulaužti“ sekos taisyklę?",
-          "text": "1. **Palyginimas**: Paimkite du gretimus narius (pvz., pirmąjį ir antrąjį).\n2. **Skirtumo radimas**: Atimkite mažesnį iš didesnio. Jei seka didėja, tai bus jūsų kandidatas į taisyklę $+d$. Jei mažėja – $-d$.\n3. **BŪTINAS Tikrinimas**: Tai svarbiausias žingsnis! Patikrinkite, ar ta pati taisyklė tinka bent dar dviem poroms narių. Jei taisyklė tinka tik vienai porai, tai gali būti atsitiktinumas!\n4. **Pratęsimas**: Taikykite taisyklę paskutiniam žinomam nariui, kad rastumėte naują."
+          "text": "1. **Palyginimas**: Paimkite du gretimus narius (pvz., pirmąjį ir antrąjį). 2. **Skirtumo radimas**: Atimkite mažesnį iš didesnio. Jei seka didėja, tai bus jūsų kandidatas į taisyklę $+d$. Jei mažėja – $-d$. 3. **BŪTINAS Tikrinimas**: Tai svarbiausias žingsnis! Patikrinkite, ar ta pati taisyklė tinka bent dar dviem poroms narių. Jei taisyklė tinka tik vienai porai, tai gali būti atsitiktinumas! 4. **Pratęsimas**: Taikykite taisyklę paskutiniam žinomam nariui, kad rastumėte naują."
         },
         {
           "type": "paragraph",
@@ -115,11 +123,11 @@
         {
           "type": "method",
           "title": "Figūrų sekos analizės planas",
-          "text": "1. **Suskaičiuokite**: Kiekviename paveikslėlyje tiksliai suskaičiuokite elementus (kvadratėlius, taškus, degtukus).\n2. **Sudarykite lentelę**: Viršuje rašykite figūros numerį ($1, 2, 3\\dots$), apačioje – elementų skaičių.\n3. **Ieškokite „priedo“**: Pažiūrėkite, kiek naujų elementų atsiranda kiekviename žingsnyje. Tai bus jūsų dėsningumo pagrindas."
+          "text": "1. **Suskaičiuokite**: Kiekviename paveikslėlyje tiksliai suskaičiuokite elementus (kvadratėlius, taškus, degtukus). 2. **Sudarykite lentelę**: Viršuje rašykite figūros numerį ($1, 2, 3\\dots$), apačioje – elementų skaičių. 3. **Ieškokite „priedo“**: Pažiūrėkite, kiek naujų elementų atsiranda kiekviename žingsnyje. Tai bus jūsų dėsningumo pagrindas."
         },
         {
           "type": "example",
-          "text": "Įsivaizduokime staliukus. Prie vieno kvadrato formos staliuko gali atsisėsti 4 žmonės. Jei sustumiame du staliukus, 2 vietos dingsta (sujungimas), lieka 6 vietos. Prie trijų staliukų – 8 vietos.\nSekos nariai: $4, 6, 8, \\dots$\nTaisyklė: kiekvienas naujas staliukas prideda po 2 naujas vietas (nes galuose sėdi tie patys du žmonės). Galime sakyti: „vietų skaičius = 2 kartus staliukų skaičius + 2“. Patikriname: $2 \\cdot 1 + 2 = 4$, $2 \\cdot 2 + 2 = 6$. Veikia!"
+          "text": "Įsivaizduokime staliukus. Prie vieno kvadrato formos staliuko gali atsisėsti 4 žmonės. Jei sustumiame du staliukus, 2 vietos dingsta (sujungimas), lieka 6 vietos. Prie trijų staliukų – 8 vietos. Sekos nariai: $4, 6, 8, \\dots$ Taisyklė: kiekvienas naujas staliukas prideda po 2 naujas vietas (nes galuose sėdi tie patys du žmonės). Galime sakyti: „vietų skaičius = 2 kartus staliukų skaičius + 2“. Patikriname: $2 \\cdot 1 + 2 = 4$, $2 \\cdot 2 + 2 = 6$. Veikia!"
         }
       ]
     },
@@ -142,11 +150,11 @@
         {
           "type": "method",
           "title": "Kaip „nulaužti“ lentelės kodą?",
-          "text": "1. **Atimties testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tuo pačiu skaičiumi. Jei taip, taisyklė yra $+b$.\n2. **Dalybos testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tą patį kiekį kartų. Jei taip, taisyklė yra $\\times a$.\n3. **Sudėtingas kodas**: Jei paprasti testai netinka, galbūt mašina atlieka du veiksmus? Pavyzdžiui, pirmiausia padaugina, o tada prideda. Tai dažnai pasitaiko!"
+          "text": "1. **Atimties testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tuo pačiu skaičiumi. Jei taip, taisyklė yra $+b$. 2. **Dalybos testas**: Pažiūrėkite, ar išvestis visada didesnė už įvestį tą patį kiekį kartų. Jei taip, taisyklė yra $\\times a$. 3. **Sudėtingas kodas**: Jei paprasti testai netinka, galbūt mašina atlieka du veiksmus? Pavyzdžiui, pirmiausia padaugina, o tada prideda. Tai dažnai pasitaiko!"
         },
         {
           "type": "example",
-          "text": "Turime tokius duomenis:\nĮvestis: $3 \\to$ Išvestis: $11$\nĮvestis: $5 \\to$ Išvestis: $17$\nĮvestis: $10 \\to$ Išvestis: $32$\nTestas 1: $3+8=11$, bet $5+8=13$ (netinka!).\nTestas 2: $3 \\times 3 = 9$, iki $11$ trūksta $2$. Tikriname: $5 \\times 3 + 2 = 15 + 2 = 17$ (tinka!).\nKodas: padauginti iš 3 ir pridėti 2 ($3x + 2$)."
+          "text": "Turime tokius duomenis: Įvestis: $3 \\to$ Išvestis: $11$ Įvestis: $5 \\to$ Išvestis: $17$ Įvestis: $10 \\to$ Išvestis: $32$ Testas 1: $3+8=11$, bet $5+8=13$ (netinka!). Testas 2: $3 \\times 3 = 9$, iki $11$ trūksta $2$. Tikriname: $5 \\times 3 + 2 = 15 + 2 = 17$ (tinka!). Kodas: padauginti iš 3 ir pridėti 2 ($3x + 2$)."
         }
       ]
     },
@@ -188,11 +196,11 @@
         {
           "type": "method",
           "title": "Atvirkštinių veiksmų poros",
-          "text": "- Sudėtis ($+$) $\\leftrightarrow$ Atimtis ($-$)\n- Daugyba ($\\cdot$) $\\leftrightarrow$ Dalyba ($:$)\n- Pakėlimas kvadratu $\\leftrightarrow$ Šaknies traukimas (tai sužinosite vėliau!)"
+          "text": "- Sudėtis ($+$) $\\leftrightarrow$ Atimtis ($-$) - Daugyba ($\\cdot$) $\\leftrightarrow$ Dalyba ($:$) - Pakėlimas kvadratu $\\leftrightarrow$ Šaknies traukimas (tai sužinosite vėliau!)"
         },
         {
           "type": "example",
-          "text": "Mašinos taisyklė yra $4x - 6$. Išvestis lygi $34$. Kokia buvo įvestis?\n1. Paskutinis veiksmas buvo „atimti 6“. Grįždami pridedame 6: $34 + 6 = 40$.\n2. Prieš tai buvo „padauginti iš 4“. Grįždami dalijame iš 4: $40 : 4 = 10$.\nĮvestis buvo 10. Patikriname: $4 \\cdot 10 - 6 = 40 - 6 = 34$. Teisingai!"
+          "text": "Mašinos taisyklė yra $4x - 6$. Išvestis lygi $34$. Kokia buvo įvestis? 1. Paskutinis veiksmas buvo „atimti 6“. Grįždami pridedame 6: $34 + 6 = 40$. 2. Prieš tai buvo „padauginti iš 4“. Grįždami dalijame iš 4: $40 : 4 = 10$. Įvestis buvo 10. Patikriname: $4 \\cdot 10 - 6 = 40 - 6 = 34$. Teisingai!"
         }
       ]
     },
@@ -206,7 +214,7 @@
         },
         {
           "type": "paragraph",
-          "text": "**Taksi ir pavežėjai**: Kaina susideda iš įsėdimo mokesčio (pvz., $2$ €) ir kainos už kilometrą (pvz., $0,80$ €). Tai formulė $0,8k + 2$. Programėlė tavo telefone naudoja būtent šią taisyklę, kad akimirksniu apskaičiuotų kelionės kainą.\n**Gamyba ir kepyklos**: Kepėjas žino, kad vienam tortui reikia 4 kiaušinių. Tai dėsningumas $4t$. Jei užsakymas yra 25 tortai, jis akimirksniu suskaičiuoja: $4 \\cdot 25 = 100$. Jam nereikia skaičiuoti po vieną."
+          "text": "**Taksi ir pavežėjai**: Kaina susideda iš įsėdimo mokesčio (pvz., $2$ €) ir kainos už kilometrą (pvz., $0,80$ €). Tai formulė $0,8k + 2$. Programėlė tavo telefone naudoja būtent šią taisyklę, kad akimirksniu apskaičiuotų kelionės kainą. **Gamyba ir kepyklos**: Kepėjas žino, kad vienam tortui reikia 4 kiaušinių. Tai dėsningumas $4t$. Jei užsakymas yra 25 tortai, jis akimirksniu suskaičiuoja: $4 \\cdot 25 = 100$. Jam nereikia skaičiuoti po vieną."
         },
         {
           "type": "note",
@@ -247,7 +255,7 @@
         {
           "type": "method",
           "title": "Savarankiško patikrinimo algoritmas",
-          "text": "1. Paimkite savo rastą taisyklę (pvz., $2n + 5$).\n2. Pasirinkite bet kurią įvestį iš lentelės (pavyzdžiui, $n=4$).\n3. Atlikite veiksmus: $2 \\cdot 4 + 5 = 13$.\n4. Palyginkite su išvestimi lentelėje. Jei ten parašyta $13$ – tavo taisyklė teisinga! Jei ne – ieškok klaidos."
+          "text": "1. Paimkite savo rastą taisyklę (pvz., $2n + 5$). 2. Pasirinkite bet kurią įvestį iš lentelės (pavyzdžiui, $n=4$). 3. Atlikite veiksmus: $2 \\cdot 4 + 5 = 13$. 4. Palyginkite su išvestimi lentelėje. Jei ten parašyta $13$ – tavo taisyklė teisinga! Jei ne – ieškok klaidos."
         }
       ]
     },
@@ -262,6 +270,76 @@
         {
           "type": "paragraph",
           "text": "Kiekvienas dėsningumas, kurį „nulaužiate“, daro jus protingesnius ir labiau pasiruošusius ateities iššūkiams. Nenuleiskite rankų, jei taisyklė nepasiduoda iš karto – detektyvams taip pat reikia laiko surinkti įkalčius. Sėkmės tyrinėjant skaičių pasaulį!"
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Dėsningumai, sekos ir įvesties-išvesties lentelės“ 5 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kintamasis, Raidinis reiškinys, Koeficientas, Lygtis, Nelygybė, Sprendinys ir Sistema. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Dėsningumai, sekos ir įvesties-išvesties lentelės“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Sutvarkyk reiškinį: 5x + 2x - x.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Dėsningumai, sekos ir įvesties-išvesties lentelės“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -308,8 +386,8 @@
       "id": "koeficientas",
       "title": "Koeficientas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Koeficientas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Koeficientas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -317,17 +395,17 @@
       "id": "lygtis",
       "title": "Lygtis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Lygtis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Lygtis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "nelygybe",
-      "title": "Nelygybe",
+      "title": "Nelygybė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Nelygybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Nelygybė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -335,8 +413,8 @@
       "id": "sprendinys",
       "title": "Sprendinys",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sprendinys? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sprendinys“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -344,26 +422,26 @@
       "id": "sistema",
       "title": "Sistema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sistema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sistema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "formule",
-      "title": "Formule",
+      "title": "Formulė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Formule? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Formulė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "tiesine-funkcija",
-      "title": "Tiesine Funkcija",
+      "title": "Tiesinė Funkcija",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tiesine Funkcija? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tiesinė Funkcija“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -371,17 +449,17 @@
       "id": "distributyvusis-destymas",
       "title": "Distributyvusis Destymas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Distributyvusis Destymas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Distributyvusis Destymas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "tiesine-lygybe",
-      "title": "Tiesine Lygybe",
+      "title": "Tiesinė lygybė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Tiesine Lygybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Tiesinė lygybė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -389,8 +467,8 @@
       "id": "proporcingumas",
       "title": "Proporcingumas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Proporcingumas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Proporcingumas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -487,7 +565,7 @@
       "id": "desningumai-ir-lenteles-5-exmp-3",
       "title": "Lentelės kodo nulaužimas",
       "level": "medium",
-      "problem": "Raskite lentelės taisyklę:\nĮvestis (n): 1, 2, 5, 10\nIšvestis: 10, 20, 50, 100",
+      "problem": "Raskite lentelės taisyklę: Įvestis (n): 1, 2, 5, 10 Išvestis: 10, 20, 50, 100",
       "conceptIds": [
         "kintamasis"
       ],
@@ -512,7 +590,7 @@
       "id": "desningumai-ir-lenteles-5-exmp-4",
       "title": "Sudėtingesnė (dviejų žingsnių) taisyklė",
       "level": "hard",
-      "problem": "Raskite lentelės taisyklę:\nĮvestis (x): 1, 2, 3, 4\nIšvestis: 5, 7, 9, 11",
+      "problem": "Raskite lentelės taisyklę: Įvestis (x): 1, 2, 3, 4 Išvestis: 5, 7, 9, 11",
       "conceptIds": [
         "koeficientas",
         "reiskinys"
@@ -751,6 +829,398 @@
       "mistakeIds": [],
       "estimatedSeconds": 90,
       "difficulty": "medium"
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-001",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=2x^2+6x$ išvestinės reikšmę taške $x=2$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=4x+6$.",
+          "latex": "f'(x)=4x+6"
+        },
+        {
+          "text": "Įstatę $x=2$ gauname 14.",
+          "latex": "f'(2)=4\\cdot2+6=14"
+        }
+      ],
+      "answerText": "14",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-002",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=3x^2+7x$ išvestinės reikšmę taške $x=3$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 25,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=6x+7$.",
+          "latex": "f'(x)=6x+7"
+        },
+        {
+          "text": "Įstatę $x=3$ gauname 25.",
+          "latex": "f'(3)=6\\cdot3+7=25"
+        }
+      ],
+      "answerText": "25",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-003",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=4x^2+8x$ išvestinės reikšmę taške $x=4$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 40,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=8x+8$.",
+          "latex": "f'(x)=8x+8"
+        },
+        {
+          "text": "Įstatę $x=4$ gauname 40.",
+          "latex": "f'(4)=8\\cdot4+8=40"
+        }
+      ],
+      "answerText": "40",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-004",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=1x^2+9x$ išvestinės reikšmę taške $x=5$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=2x+9$.",
+          "latex": "f'(x)=2x+9"
+        },
+        {
+          "text": "Įstatę $x=5$ gauname 19.",
+          "latex": "f'(5)=2\\cdot5+9=19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-005",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=2x^2+10x$ išvestinės reikšmę taške $x=1$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=4x+10$.",
+          "latex": "f'(x)=4x+10"
+        },
+        {
+          "text": "Įstatę $x=1$ gauname 14.",
+          "latex": "f'(1)=4\\cdot1+10=14"
+        }
+      ],
+      "answerText": "14",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-006",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=3x^2+11x$ išvestinės reikšmę taške $x=2$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 23,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=6x+11$.",
+          "latex": "f'(x)=6x+11"
+        },
+        {
+          "text": "Įstatę $x=2$ gauname 23.",
+          "latex": "f'(2)=6\\cdot2+11=23"
+        }
+      ],
+      "answerText": "23",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-007",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=4x^2+12x$ išvestinės reikšmę taške $x=3$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 36,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=8x+12$.",
+          "latex": "f'(x)=8x+12"
+        },
+        {
+          "text": "Įstatę $x=3$ gauname 36.",
+          "latex": "f'(3)=8\\cdot3+12=36"
+        }
+      ],
+      "answerText": "36",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "desningumai-ir-lenteles-5-auto-008",
+      "topicId": "desningumai-ir-lenteles-5",
+      "grade": 5,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Temoje „Dėsningumai, sekos ir įvesties-išvesties lentelės“ raskite funkcijos $f(x)=1x^2+13x$ išvestinės reikšmę taške $x=4$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 21,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Pirma išveskite funkciją pagal $x$.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Kvadratinio nario išvestinė yra $2ax$.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Į gautą išvestinę įstatykite nurodytą $x$.",
+          "penalty": 0.12
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Išvestinė yra $f'(x)=2x+13$.",
+          "latex": "f'(x)=2x+13"
+        },
+        {
+          "text": "Įstatę $x=4$ gauname 21.",
+          "latex": "f'(4)=2\\cdot4+13=21"
+        }
+      ],
+      "answerText": "21",
+      "conceptIds": [
+        "kintamasis",
+        "reiskinys"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
     }
   ],
   "tests": [

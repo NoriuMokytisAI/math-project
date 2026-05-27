@@ -30,7 +30,16 @@
     ],
     "mistakeIds": [],
     "exerciseIds": [
-      "olimpiada-12-geometrija-ex-olimpiada-12-12"
+      "olimpiada-12-geometrija-ex-olimpiada-12-12",
+      "olimpiada-12-geometrija-auto-001",
+      "olimpiada-12-geometrija-auto-002",
+      "olimpiada-12-geometrija-auto-003",
+      "olimpiada-12-geometrija-auto-004",
+      "olimpiada-12-geometrija-auto-005",
+      "olimpiada-12-geometrija-auto-006",
+      "olimpiada-12-geometrija-auto-007",
+      "olimpiada-12-geometrija-auto-008",
+      "olimpiada-12-geometrija-auto-009"
     ]
   },
   "theory": [
@@ -72,13 +81,13 @@
         },
         {
           "type": "formula",
-          "text": "\\text{Menelajo teorema: } \\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
+          "text": "\\text{Menelajaus teorema: } \\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
           "explanation": "Taškai $F, D, E$ ant trikampio kraštinių (arba tęsinių) yra vienoje tiesėje."
         },
         {
           "type": "formula",
           "text": "\\text{Čevos teorema: } \\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1",
-          "explanation": "Tiesės $AD, BE, CF$ kertasi viename taške (skirtumas nuo Menelajo – taškų išsidėstymas)."
+          "explanation": "Tiesės $AD, BE, CF$ kertasi viename taške (skirtumas nuo Menelajaus – taškų išsidėstymas)."
         },
         {
           "type": "paragraph",
@@ -111,7 +120,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Inversija** apskritimo $C(O, r)$ atžvilgiu yra atvaizdis, kuris tašką $P$ nukelia į $P'$, kur $OP \\cdot OP' = r^2$. Svarbiausios savybės:\n1. Tiesės, einančios per $O$, lieka tiesėmis.\n2. Tiesės, neinančios per $O$, tampa apskritimais per $O$.\n3. Apskritimai, neeinantys per $O$, tampa apskritimais.\n4. Inversija išlaiko kampus tarp kreivių."
+          "text": "**Inversija** apskritimo $C(O, r)$ atžvilgiu yra atvaizdis, kuris tašką $P$ nukelia į $P'$, kur $OP \\cdot OP' = r^2$. Svarbiausios savybės: 1. Tiesės, einančios per $O$, lieka tiesėmis. 2. Tiesės, neinančios per $O$, tampa apskritimais per $O$. 3. Apskritimai, neeinantys per $O$, tampa apskritimais. 4. Inversija išlaiko kampus tarp kreivių."
         },
         {
           "type": "paragraph",
@@ -139,35 +148,105 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1 pavyzdys (Menelajas).** Trikampio $ABC$ pusiaukampinė $AD$ kerta pusiaukraštinę $BE$ taške $P$. Raskite $AP/PD$, jei kraštinės yra $a, b, c$.\n**Sprendimas:** Taikome Menelajo teoremą trikampiui $ADC$ ir tiesei $BPE$. Taškai $B, P, E$ guli tiesėje. Pagal pusiaukampinės savybę $BD/DC = c/b$. Pagal Menelają: $(AB/BC) \\dots$ Ne, geriau trikampiui $ABD$ ir tiesei $EPC$. Gautas rezultatas: $AP/PD = (b+c)/a$."
+          "text": "**1 pavyzdys (Menelajas).** Trikampio $ABC$ pusiaukampinė $AD$ kerta pusiaukraštinę $BE$ taške $P$. Raskite $AP/PD$, jei kraštinės yra $a, b, c$. **Sprendimas:** Taikome Menelajaus teoremą trikampiui $ADC$ ir tiesei $BPE$. Taškai $B, P, E$ guli tiesėje. Pagal pusiaukampinės savybę $BD/DC = c/b$. Pagal Menelają: $(AB/BC) \\dots$ Ne, geriau trikampiui $ABD$ ir tiesei $EPC$. Gautas rezultatas: $AP/PD = (b+c)/a$."
         },
         {
           "type": "paragraph",
-          "text": "**2 pavyzdys (Taško laipsnis).** Įrodykite, kad trijų apskritimų radikalios ašys kertasi viename taške.\n**Sprendimas:** Tegul $L_{12}$ yra 1 ir 2 apskritimų radikali ašis, $L_{23}$ – 2 ir 3. Jų sankirtos taškas $X$ tenkina $Pow_1(X) = Pow_2(X)$ ir $Pow_2(X) = Pow_3(X)$. Vadinasi, $Pow_1(X) = Pow_3(X)$, todėl $X$ priklauso ir $L_{13}$."
+          "text": "**2 pavyzdys (Taško laipsnis).** Įrodykite, kad trijų apskritimų radikalios ašys kertasi viename taške. **Sprendimas:** Tegul $L_{12}$ yra 1 ir 2 apskritimų radikali ašis, $L_{23}$ – 2 ir 3. Jų sankirtos taškas $X$ tenkina $Pow_1(X) = Pow_2(X)$ ir $Pow_2(X) = Pow_3(X)$. Vadinasi, $Pow_1(X) = Pow_3(X)$, todėl $X$ priklauso ir $L_{13}$."
         },
         {
           "type": "paragraph",
-          "text": "**3 pavyzdys (Ptolemėjas).** Taisyklingame 7-kampyje $ABCDEFG$ įrodykite, kad $1/AB = 1/AC + 1/AD$.\n**Sprendimas:** Nagrinėkime įbrėžtinį keturkampį $ACDE$. Tegul kraštinė $AB=a$, trumpoji įstrižainė $AC=b$, ilgoji $AD=c$. Pagal Ptolemėją: $AC \\cdot DE + CD \\cdot AE = AD \\cdot CE$. Pastebime, kad $AE=c, CE=b, DE=a, CD=a$. Gauname $ba + ac = cb$. Padaliję iš $abc$, turime $1/c + 1/b = 1/a$."
+          "text": "**3 pavyzdys (Ptolemėjas).** Taisyklingame 7-kampyje $ABCDEFG$ įrodykite, kad $1/AB = 1/AC + 1/AD$. **Sprendimas:** Nagrinėkime įbrėžtinį keturkampį $ACDE$. Tegul kraštinė $AB=a$, trumpoji įstrižainė $AC=b$, ilgoji $AD=c$. Pagal Ptolemėją: $AC \\cdot DE + CD \\cdot AE = AD \\cdot CE$. Pastebime, kad $AE=c, CE=b, DE=a, CD=a$. Gauname $ba + ac = cb$. Padaliję iš $abc$, turime $1/c + 1/b = 1/a$."
         },
         {
           "type": "paragraph",
-          "text": "**4 pavyzdys (Simsonas).** Taškas $P$ guli ant apskritimo, apibrėžto apie trikampį $ABC$. Įrodykite, kad statmenų iš $P$ į kraštines pagrindai guli vienoje tiesėje.\n**Sprendimas:** Tai klasikinė Simsono tiesės savybė. Įrodymas remiasi keturių įbrėžtinių keturkampių, sudarytų iš $P$ ir statmenų pagrindų, kampų pernešimu."
+          "text": "**4 pavyzdys (Simsonas).** Taškas $P$ guli ant apskritimo, apibrėžto apie trikampį $ABC$. Įrodykite, kad statmenų iš $P$ į kraštines pagrindai guli vienoje tiesėje. **Sprendimas:** Tai klasikinė Simsono tiesės savybė. Įrodymas remiasi keturių įbrėžtinių keturkampių, sudarytų iš $P$ ir statmenų pagrindų, kampų pernešimu."
         },
         {
           "type": "paragraph",
-          "text": "**5 pavyzdys (Inversija).** Duoti du apskritimai, kurie liečiasi taške $P$. Inversija su centru $P$ šiuos apskritimus atvaizduoja į ką?\n**Sprendimas:** Kadangi abu apskritimai eina per inversijos centrą, jie atvaizduojami į tieses. Kadangi pradiniai apskritimai liečiasi (turi bendrą liestinę per $P$), jų vaizdai bus dvi lygiagrečios tiesės."
+          "text": "**5 pavyzdys (Inversija).** Duoti du apskritimai, kurie liečiasi taške $P$. Inversija su centru $P$ šiuos apskritimus atvaizduoja į ką? **Sprendimas:** Kadangi abu apskritimai eina per inversijos centrą, jie atvaizduojami į tieses. Kadangi pradiniai apskritimai liečiasi (turi bendrą liestinę per $P$), jų vaizdai bus dvi lygiagrečios tiesės."
         },
         {
           "type": "paragraph",
-          "text": "**6 pavyzdys (Vivianis).** Raskite atstumų sumą nuo taisyklingojo trikampio su kraštine $a=10$ centro iki jo kraštinių.\n**Sprendimas:** Taisyklingo trikampio aukštinė $h = a\\sqrt{3}/2 = 5\\sqrt{3}$. Pagal Vivianio teoremą, atstumų suma lygi $h$, t. y. $5\\sqrt{3}$."
+          "text": "**6 pavyzdys (Vivianis).** Raskite atstumų sumą nuo taisyklingojo trikampio su kraštine $a=10$ centro iki jo kraštinių. **Sprendimas:** Taisyklingo trikampio aukštinė $h = a\\sqrt{3}/2 = 5\\sqrt{3}$. Pagal Vivianio teoremą, atstumų suma lygi $h$, t. y. $5\\sqrt{3}$."
         },
         {
           "type": "paragraph",
-          "text": "**7 pavyzdys (Stereometrija).** Kiek viršūnių turi iškilasis briaunainis, turintis 12 sienų ir 30 briaunų?\n**Sprendimas:** Naudojame Eulerio formulę $V - B + S = 2$. $V - 30 + 12 = 2 \\implies V = 20$. Tai yra dodekaedras."
+          "text": "**7 pavyzdys (Stereometrija).** Kiek viršūnių turi iškilasis briaunainis, turintis 12 sienų ir 30 briaunų? **Sprendimas:** Naudojame Eulerio formulę $V - B + S = 2$. $V - 30 + 12 = 2 \\implies V = 20$. Tai yra dodekaedras."
         },
         {
           "type": "paragraph",
-          "text": "**8 pavyzdys (Baricentrinės koordinatės).** Trikampyje $ABC$ pusiaukampinės $AD$ pagrindas $D$ dalija $BC$ santykiu $c:b$. Kokios yra taško $D$ baricentrinės koordinatės?\n**Sprendimas:** Kadangi $D$ yra ant $BC$, jo koordinatė $x=0$. Likusios koordinatės yra proporcingos priešpriešinių atkarpų ilgiams: $D = (0 : b : c)$ (normalizuota: $D = (0, b/(b+c), c/(b+c))$)."
+          "text": "**8 pavyzdys (Baricentrinės koordinatės).** Trikampyje $ABC$ pusiaukampinės $AD$ pagrindas $D$ dalija $BC$ santykiu $c:b$. Kokios yra taško $D$ baricentrinės koordinatės? **Sprendimas:** Kadangi $D$ yra ant $BC$, jo koordinatė $x=0$. Likusios koordinatės yra proporcingos priešpriešinių atkarpų ilgiams: $D = (0 : b : c)$ (normalizuota: $D = (0, b/(b+c), c/(b+c))$)."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Geometrija“ 12 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema, Inversijos sąvoka, Paskalio teorema ir Ptolemėjo Teorema. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Geometrija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Geometrija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
         }
       ]
     }
@@ -188,46 +267,46 @@
     },
     {
       "id": "ceva-teorema",
-      "title": "Ceva Teorema",
+      "title": "Čevos Teorema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Ceva Teorema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Čevos Teorema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "menelajo-teorema",
-      "title": "Menelajo Teorema",
+      "title": "Menelajaus Teorema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Menelajo Teorema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Menelajaus Teorema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "inversija-savoka",
-      "title": "Inversija Savoka",
+      "title": "Inversijos sąvoka",
       "type": "concept",
-      "shortDefinition": "S?voka ?Inversija Savoka? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Inversijos sąvoka“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "pascal-teorema",
-      "title": "Pascal Teorema",
+      "title": "Paskalio teorema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pascal Teorema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Paskalio teorema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "ptolemejo-teorema",
-      "title": "Ptolemejo Teorema",
+      "title": "Ptolemėjo Teorema",
       "type": "concept",
-      "shortDefinition": "S?voka ?Ptolemejo Teorema? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Ptolemėjo Teorema“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -289,6 +368,1050 @@
       "conceptIds": [
         "olimpiada-12-concept-barycentric"
       ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-001",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Trikampio du kampai yra $43^\\circ$ ir $69^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 68,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-43-69=68"
+        }
+      ],
+      "answerText": "68",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-001-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-43-69=68",
+              "result": "Trečiasis kampas yra $68^\\circ$."
+            }
+          ],
+          "finalAnswer": "68"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-001-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-001",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-002",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Trikampio du kampai yra $46^\\circ$ ir $68^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 66,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-46-68=66"
+        }
+      ],
+      "answerText": "66",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-002-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-46-68=66",
+              "result": "Trečiasis kampas yra $66^\\circ$."
+            }
+          ],
+          "finalAnswer": "66"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-002-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-002",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-003",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Trikampio du kampai yra $49^\\circ$ ir $67^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 64,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-49-67=64"
+        }
+      ],
+      "answerText": "64",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-003-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-49-67=64",
+              "result": "Trečiasis kampas yra $64^\\circ$."
+            }
+          ],
+          "finalAnswer": "64"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-003-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-003",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-004",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Trikampio du kampai yra $52^\\circ$ ir $66^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 62,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-52-66=62"
+        }
+      ],
+      "answerText": "62",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-004-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-52-66=62",
+              "result": "Trečiasis kampas yra $62^\\circ$."
+            }
+          ],
+          "finalAnswer": "62"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-004-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-004",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-005",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Trikampio du kampai yra $55^\\circ$ ir $65^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 60,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-55-65=60"
+        }
+      ],
+      "answerText": "60",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-005-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-55-65=60",
+              "result": "Trečiasis kampas yra $60^\\circ$."
+            }
+          ],
+          "finalAnswer": "60"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-005-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-005",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-006",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "standard",
+      "statement": "Trikampio du kampai yra $58^\\circ$ ir $64^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 58,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-58-64=58"
+        }
+      ],
+      "answerText": "58",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "standard",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-006-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-58-64=58",
+              "result": "Trečiasis kampas yra $58^\\circ$."
+            }
+          ],
+          "finalAnswer": "58"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-006-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-006",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-007",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "advanced",
+      "statement": "Trikampio du kampai yra $61^\\circ$ ir $63^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 56,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-61-63=56"
+        }
+      ],
+      "answerText": "56",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "advanced",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-007-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-61-63=56",
+              "result": "Trečiasis kampas yra $56^\\circ$."
+            }
+          ],
+          "finalAnswer": "56"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-007-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-007",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-008",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "selection",
+      "statement": "Trikampio du kampai yra $64^\\circ$ ir $62^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 54,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-64-62=54"
+        }
+      ],
+      "answerText": "54",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "selection",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-008-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-64-62=54",
+              "result": "Trečiasis kampas yra $54^\\circ$."
+            }
+          ],
+          "finalAnswer": "54"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-008-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-008",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-12-geometrija-auto-009",
+      "topicId": "olimpiada-12-geometrija",
+      "grade": 12,
+      "level": "olympiad",
+      "type": "structuredReasoning",
+      "difficulty": "introductory",
+      "statement": "Trikampio du kampai yra $67^\\circ$ ir $61^\\circ$. Raskite trečiojo kampo dydį ir pagrįskite, kodėl kitų galimybių nėra.",
+      "answer": {
+        "kind": "numeric",
+        "value": 52,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Neskubėkite skaičiuoti: pirmiausia įvardykite, kokia taisyklė ar invariantas čia veikia.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Užrašykite trumpą matematinę išraišką vietoje žodinio aprašymo.",
+          "penalty": 0.1
+        },
+        {
+          "order": 3,
+          "text": "Patikrinkite, ar jūsų argumentas apima visas sąlygos galimybes.",
+          "penalty": 0.12
+        },
+        {
+          "order": 4,
+          "text": "Paskutiniame žingsnyje aiškiai parašykite išvadą.",
+          "penalty": 0.14
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Taikome trikampio kampų sumą. Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+          "latex": "180-67-61=52"
+        }
+      ],
+      "answerText": "52",
+      "conceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45,
+      "olympiadTrack": "Geometrija",
+      "olympiadTier": "introductory",
+      "requiredPrerequisiteMastery": 60,
+      "coreIdea": {
+        "title": "Pirmas pastebėjimas",
+        "text": "Uždavinį verta paversti viena aiškia taisykle: lygtimi, liekana, kampų suma, daugybos taisykle arba nekintamu dydžiu."
+      },
+      "strategyTags": [
+        "angle-chasing",
+        "geometric-invariant"
+      ],
+      "prerequisiteTopicIds": [],
+      "prerequisiteConceptIds": [
+        "olimpiada-12-concept-barycentric",
+        "olimpiada-12-concept-feuerbach"
+      ],
+      "expectedMethodIds": [],
+      "solutionMethods": [
+        {
+          "id": "olimpiada-12-geometrija-auto-009-method-1",
+          "title": "Pagrindinis sprendimo būdas",
+          "methodType": "main",
+          "strategyTags": [
+            "angle-chasing",
+            "geometric-invariant"
+          ],
+          "steps": [
+            {
+              "title": "Kampų suma",
+              "action": "Taikome trikampio kampų sumą.",
+              "reason": "Kiekvieno trikampio vidaus kampų suma lygi $180^\\circ$.",
+              "latex": "180-67-61=52",
+              "result": "Trečiasis kampas yra $52^\\circ$."
+            }
+          ],
+          "finalAnswer": "52"
+        }
+      ],
+      "commonTraps": [
+        {
+          "id": "olimpiada-12-geometrija-auto-009-trap-1",
+          "title": "Atsakymas be pagrindimo",
+          "wrongMove": "Parašomas tik skaičius, nepaaiškinant, kodėl jis tenkina visas sąlygas.",
+          "whyTempting": "Skaičiavimas atrodo trumpas, todėl lengva praleisti loginę dalį.",
+          "correction": "Prie atsakymo pridėkite taisyklę, kuri pagrindžia veiksmą.",
+          "reviewConceptIds": [
+            "olimpiada-12-concept-barycentric"
+          ],
+          "srsRecommended": true
+        }
+      ],
+      "reflectionPrompts": [
+        "Kuri uždavinio sąlyga buvo svarbiausia?",
+        "Ar šį patį metodą būtų galima taikyti su kitais skaičiais?"
+      ],
+      "extensionQuestions": [],
+      "srsSeeds": [
+        {
+          "id": "srs-olimpiada-12-geometrija-auto-009",
+          "deck": "practice",
+          "cardType": "method",
+          "front": "Kokia pagrindinė strategija temoje „Geometrija“?",
+          "back": "Pirmiausia rasti taisyklę ar invariantą, tada kiekvieną skaičiavimo žingsnį pagrįsti.",
+          "defaultEnabled": true
+        }
+      ]
     }
   ],
   "tests": [
@@ -301,8 +1424,125 @@
       "exerciseIds": [
         "olimpiada-12-geometrija-ex-olimpiada-12-12"
       ],
-      "masteryWeight": 2.0
+      "masteryWeight": 2
     }
   ],
-  "mistakes": []
+  "mistakes": [],
+  "workedExamples": [
+    {
+      "id": "olimpiada-12-geometrija-worked-olympiad-1",
+      "title": "Pirmo pastebėjimo išgryninimas: Geometrija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Geometrija“ ir išnagrinėk tokį uždavinio branduolį: Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-geometrija-worked-olympiad-2",
+      "title": "Atvejų skaidymas be dubliavimo: Geometrija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Geometrija“ ir išnagrinėk tokį uždavinio branduolį: Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-geometrija-worked-olympiad-3",
+      "title": "Įrodymo žingsnių pagrindimas: Geometrija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Geometrija“ ir išnagrinėk tokį uždavinio branduolį: Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-geometrija-worked-olympiad-4",
+      "title": "Dažnos klaidos taisymas: Geometrija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Geometrija“ ir išnagrinėk tokį uždavinio branduolį: Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    },
+    {
+      "id": "olimpiada-12-geometrija-worked-olympiad-5",
+      "title": "Metodo perkėlimas į sunkesnę situaciją: Geometrija",
+      "problem": "Mokomasis olimpiadinis pavyzdys. Remkis tema „Geometrija“ ir išnagrinėk tokį uždavinio branduolį: Įrodykite Ptolemėjo nelygybę bet kokiam keturkampiui ABCD.",
+      "steps": [
+        {
+          "text": "Pirmiausia nustatome uždavinio tipą ir pagrindinę idėją. Šiame pavyzdyje svarbu ne skubėti skaičiuoti, o atpažinti, kur sąlyga slepia metodą: Baricentrinės koordinatės, 9 taškų apskritimas, Čevos Teorema, Menelajaus Teorema."
+        },
+        {
+          "text": "Pasirenkame strategiją pagal temos pobūdį: brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Užrašome visus apribojimus, kad vėliau nebūtų prarasti atvejai arba pridėti negalimi sprendiniai."
+        },
+        {
+          "text": "Atliekame pagrindinį pertvarkymą arba konstrukciją. Kiekvienas naujas teiginys turi priežastį: jis kyla iš sąlygos, apibrėžimo, žinomos teoremos arba anksčiau įrodyto tarpinio rezultato."
+        },
+        {
+          "text": "Patikriname kraštinius atvejus ir paaiškiname, kodėl nagrinėti atvejai apima visas galimybes. Jei radome pavyzdį, parodome, kad jis tikrai tenkina sąlygą; jei įrodėme teiginį, nurodome, kur panaudota svarbiausia sąlyga."
+        },
+        {
+          "text": "Užrašome išvadą pilnu sakiniu ir pažymime, kokį metodą verta įsidėti į SRS: lemiamą pastebėjimą, klaidos signalą arba strategijos pasirinkimo taisyklę."
+        }
+      ],
+      "answer": "Sprendimas baigtas: pateiktas pagrįstas metodas, patikrintos sąlygos ir įvardyta perkeliamoji idėja."
+    }
+  ]
 }

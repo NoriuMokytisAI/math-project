@@ -80,7 +80,7 @@
         },
         {
           "type": "definitionCallout",
-          "text": "1. **Centroidas ($G$):** Pusiaukraštinių sankirta. Jis dalija kiekvieną pusiaukraštinę santykiu $2:1$ skaičiuojant nuo viršūnės.\n2. **Ortocentras ($H$):** Aukštinių sankirta.\n3. **Apibrėžtinio apskritimo centras ($O$):** Kraštinių vidurio statmenų sankirta.\n4. **Įbrėžtinio apskritimo centras ($I$):** Pusiaukampinių sankirta."
+          "text": "1. **Centroidas ($G$):** Pusiaukraštinių sankirta. Jis dalija kiekvieną pusiaukraštinę santykiu $2:1$ skaičiuojant nuo viršūnės. 2. **Ortocentras ($H$):** Aukštinių sankirta. 3. **Apibrėžtinio apskritimo centras ($O$):** Kraštinių vidurio statmenų sankirta. 4. **Įbrėžtinio apskritimo centras ($I$):** Pusiaukampinių sankirta."
         },
         {
           "type": "method",
@@ -98,7 +98,7 @@
         },
         {
           "type": "method",
-          "text": "Kaip atpažinti cikliškumą?\n1. Priešingų kampų suma lygi $180^\\circ$.\n2. Išorinis kampas lygus vidiniam priešingam kampui.\n3. Atkarpa $AB$ „matoma“ iš taškų $C$ ir $D$ tuo pačiu kampu (t. y. $\\angle ACB = \\angle ADB$)."
+          "text": "Kaip atpažinti cikliškumą? 1. Priešingų kampų suma lygi $180^\\circ$. 2. Išorinis kampas lygus vidiniam priešingam kampui. 3. Atkarpa $AB$ „matoma“ iš taškų $C$ ir $D$ tuo pačiu kampu (t. y. $\\angle ACB = \\angle ADB$)."
         },
         {
           "type": "paragraph",
@@ -116,7 +116,7 @@
         },
         {
           "type": "method",
-          "text": "Čevos teorema naudojama, kai trys tiesės (cevianai) kertasi viename taške. Tai leidžia susieti kraštinių atkarpų santykius.\nMenelajaus teorema naudojama, kai viena tiesė kerta trikampio kraštines (arba jų tęsinius). Tai geriausias būdas įrodyti, kad trys taškai yra vienoje tiesėje."
+          "text": "Čevos teorema naudojama, kai trys tiesės (cevianai) kertasi viename taške. Tai leidžia susieti kraštinių atkarpų santykius. Menelajaus teorema naudojama, kai viena tiesė kerta trikampio kraštines (arba jų tęsinius). Tai geriausias būdas įrodyti, kad trys taškai yra vienoje tiesėje."
         },
         {
           "type": "warningCallout",
@@ -153,6 +153,90 @@
         {
           "type": "method",
           "text": "Naudojant plotus galima įrodyti Menelajaus ar Čevos teoremas, taip pat rasti taško padėtį trikampio viduje. Pavyzdžiui, jei taškas $P$ yra trikampio $ABC$ viduje, tai taško $P$ atstumų iki kraštinių ir atitinkamų aukštinių santykių suma visada lygi 1."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Geometrija“ 9 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Čevos teorema, Menelajaus teorema, Trikampių panašumas, Taško galia apskritimo atžvilgiu, Įbrėžtinis keturkampis, Ptolemėjo teorema ir Trikampio centrai. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Geometrija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pradėk nuo tikslaus brėžinio, pažymėk žinomus kampus arba ilgius, tada ieškok panašių trikampių, lygių kampų, apskritimo savybių ar ploto santykių. Jei tiesioginis kelias nematomas, pridėk pagalbinę atkarpą, aukštinę, pusiaukampinę arba apskritimą ir tikrink, ar naujas objektas sujungia dvi uždavinio dalis. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Trikampio kraštinės yra $a=3, b=5, c=7$. Raskite kampą $C$, esantį prieš kraštinę $c$.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Geometrija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Atsakymą tikrink pagal kraštinius atvejus: ar ilgiai teigiami, ar kampų suma atitinka figūrą, ar gautas santykis nepasikeistų perbraižius brėžinį kitu masteliu. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti pagalbinė konstrukcija, kampų persekiojimas, panašumas, taško galia, plotų santykiai ir transformacijos, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-09-geometrija-olimpiadinis-papildomas-strategijos-pasirinkimas-1",
+      "title": "Strategijos pasirinkimo treniruotė",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kai uždavinys iš temos „Geometrija“ atrodo neaiškus, naudinga sąmoningai palyginti kelis galimus kelius. Vienas kelias remiasi tiesioginiu skaičiavimu, kitas ieško invarianto ar simetrijos, trečias bando mažą modelį. Pasirinkimas laikomas geru ne tada, kai jis gražiai atrodo, o tada, kai paaiškina, kodėl sąlyga tokia, kokia yra. Šioje temoje pagrindiniai signalai yra brėžinys, kampų ryšiai, atkarpų santykiai, plotai ir pagalbinės konstrukcijos. Jei pavyzdys prasideda taip: „Trikampio kraštinės yra $a=3, b=5, c=7$. Raskite kampą $C$, esantį prieš kraštinę $c$.“, pirmas darbas yra atskirti, kuri informacija duota tik skaičiavimui, o kuri priverčia rinktis metodą. Tik tada verta rašyti pilną sprendimą."
+        },
+        {
+          "type": "method",
+          "text": "Praktinis veiksmas: prieš žiūrėdamas į sprendimą užrašyk vieną galimą strategiją, vieną priežastį, kodėl ji turėtų veikti, ir vieną patikrą, kuri parodytų, ar kelias nesugriuvo."
         }
       ]
     }
@@ -265,31 +349,31 @@
     {
       "id": "we-geo-angle-chasing",
       "title": "Kampų „vaikymasis“ įbrėžtiniame keturkampyje",
-      "content": "Tegul $ABCD$ yra įbrėžtinis keturkampis. Įstrižainės $AC$ ir $BD$ kertasi taške $P$. Žinoma, kad $\\angle ABC = 110^\\circ$ ir $\\angle ACB = 30^\\circ$. Raskite $\\angle APD$.\n\n**Sprendimas:**\n1. Kadangi keturkampis įbrėžtinis, kampai besiremiantys į tą patį lanką yra lygūs.\n2. $\\angle ADB = \\angle ACB = 30^\\circ$ (remiasi į lanką $AB$).\n3. Trikampyje $ABC$ kampas $\\angle BAC = 180^\\circ - 110^\\circ - 30^\\circ = 40^\\circ$.\n4. $\\angle BDC = \\angle BAC = 40^\\circ$ (remiasi į lanką $BC$).\n5. Tada visas kampas $\\angle ADC = \\angle ADB + \\angle BDC = 30^\\circ + 40^\\circ = 70^\\circ$.\n6. Įbrėžtiniame keturkampyje $\\angle ADC + \\angle ABC = 70^\\circ + 110^\\circ = 180^\\circ$ (patikrinimas - teisinga).\n7. $\\angle CAD = \\angle CBD$ (remiasi į lanką $CD$).\n8. Trikampyje $APD$ kampas $\\angle APD = 180^\\circ - (\\angle PAD + \\angle ADP)$. Tačiau geriau pastebėti, kad $\\angle APD$ yra trikampio $BPC$ išorinis kampas.\n9. Atsakymas: $\\angle APD = 70^\\circ$ (naudojant panašius trikampius $APB \\sim DPC$).",
+      "content": "Tegul $ABCD$ yra įbrėžtinis keturkampis. Įstrižainės $AC$ ir $BD$ kertasi taške $P$. Žinoma, kad $\\angle ABC = 110^\\circ$ ir $\\angle ACB = 30^\\circ$. Raskite $\\angle APD$. **Sprendimas:** 1. Kadangi keturkampis įbrėžtinis, kampai besiremiantys į tą patį lanką yra lygūs. 2. $\\angle ADB = \\angle ACB = 30^\\circ$ (remiasi į lanką $AB$). 3. Trikampyje $ABC$ kampas $\\angle BAC = 180^\\circ - 110^\\circ - 30^\\circ = 40^\\circ$. 4. $\\angle BDC = \\angle BAC = 40^\\circ$ (remiasi į lanką $BC$). 5. Tada visas kampas $\\angle ADC = \\angle ADB + \\angle BDC = 30^\\circ + 40^\\circ = 70^\\circ$. 6. Įbrėžtiniame keturkampyje $\\angle ADC + \\angle ABC = 70^\\circ + 110^\\circ = 180^\\circ$ (patikrinimas - teisinga). 7. $\\angle CAD = \\angle CBD$ (remiasi į lanką $CD$). 8. Trikampyje $APD$ kampas $\\angle APD = 180^\\circ - (\\angle PAD + \\angle ADP)$. Tačiau geriau pastebėti, kad $\\angle APD$ yra trikampio $BPC$ išorinis kampas. 9. Atsakymas: $\\angle APD = 70^\\circ$ (naudojant panašius trikampius $APB \\sim DPC$).",
       "explanation": "Šis pavyzdys rodo, kaip įbrėžtinio keturkampio savybės leidžia „perkelti“ kampus po visą brėžinį."
     },
     {
       "id": "we-geo-simson-line-intro",
       "title": "Simpsono tiesės idėja",
-      "content": "Iš taško $P$, esančio ant trikampio $ABC$ apibrėžtinio apskritimo, nuleisti statmenys $PX, PY, PZ$ į kraštines. Įrodykite, kad $X, Y, Z$ yra vienoje tiesėje.\n\n**Sprendimas (eskizas):**\n1. Tai klasikinė teorema. Įrodymui naudojame keturis cikliškus keturkampius, kurie susidaro dėl statmenų kampų.\n2. Parodome, kad $\\angle PXZ + \\angle PXY = 180^\\circ$, kas reiškia, kad taškai yra vienoje tiesėje.\n3. Ši tiesė vadinama Simpsono tiese.",
+      "content": "Iš taško $P$, esančio ant trikampio $ABC$ apibrėžtinio apskritimo, nuleisti statmenys $PX, PY, PZ$ į kraštines. Įrodykite, kad $X, Y, Z$ yra vienoje tiesėje. **Sprendimas (eskizas):** 1. Tai klasikinė teorema. Įrodymui naudojame keturis cikliškus keturkampius, kurie susidaro dėl statmenų kampų. 2. Parodome, kad $\\angle PXZ + \\angle PXY = 180^\\circ$, kas reiškia, kad taškai yra vienoje tiesėje. 3. Ši tiesė vadinama Simpsono tiese.",
       "explanation": "Tai puikus pavyzdys, kaip taškų kolinearumas įrodomas per kampų lygybes cikliškuose keturkampiuose."
     },
     {
       "id": "we-geo-power-of-point-solve",
       "title": "Taško galios taikymas",
-      "content": "Dvi stygos $AB$ ir $CD$ kertasi taške $M$ apskritimo viduje. $AM=4, MB=6, CM=3$. Raskite $MD$.\n\n**Sprendimas:**\n1. Pagal taško galios teoremą (susikertančių stygų savybę), $AM \\cdot MB = CM \\cdot MD$.\n2. $4 \\cdot 6 = 3 \\cdot MD$.\n3. $24 = 3 \\cdot MD$.\n4. $MD = 8$.\n\n**Atsakymas:** 8.",
+      "content": "Dvi stygos $AB$ ir $CD$ kertasi taške $M$ apskritimo viduje. $AM=4, MB=6, CM=3$. Raskite $MD$. **Sprendimas:** 1. Pagal taško galios teoremą (susikertančių stygų savybę), $AM \\cdot MB = CM \\cdot MD$. 2. $4 \\cdot 6 = 3 \\cdot MD$. 3. $24 = 3 \\cdot MD$. 4. $MD = 8$. **Atsakymas:** 8.",
       "explanation": "Taško galia yra viena paprasčiausių, bet dažniausiai naudojamų savybių olimpiadose."
     },
     {
       "id": "we-geo-ceva-application",
       "title": "Čevos teoremos taikymas santykiams",
-      "content": "Trikampio $ABC$ pusiaukampinė $AD$, aukštinė $BE$ ir pusiaukraštinė $CF$ kertasi viename taške. Įrodykite ryšį tarp kraštinių.\n\n**Sprendimas:**\n1. Pagal Čevos teoremą: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$.\n2. Pusiaukraštinė reiškia $AF = FB$, tad $\\frac{AF}{FB} = 1$.\n3. Pusiaukampinė reiškia $\\frac{BD}{DC} = \\frac{AB}{AC}$ (pusiaukampinės teorema).\n4. Aukštinė trikampyje su kampu $C$ duoda $CE = BC \\cos C$ ir $EA = AC - BC \\cos C$ (arba per panašumą).\n5. Įstatę šias vertes gauname lygtį, siejančią kraštines $a, b, c$.",
+      "content": "Trikampio $ABC$ pusiaukampinė $AD$, aukštinė $BE$ ir pusiaukraštinė $CF$ kertasi viename taške. Įrodykite ryšį tarp kraštinių. **Sprendimas:** 1. Pagal Čevos teoremą: $\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$. 2. Pusiaukraštinė reiškia $AF = FB$, tad $\\frac{AF}{FB} = 1$. 3. Pusiaukampinė reiškia $\\frac{BD}{DC} = \\frac{AB}{AC}$ (pusiaukampinės teorema). 4. Aukštinė trikampyje su kampu $C$ duoda $CE = BC \\cos C$ ir $EA = AC - BC \\cos C$ (arba per panašumą). 5. Įstatę šias vertes gauname lygtį, siejančią kraštines $a, b, c$.",
       "explanation": "Čevos teorema sujungia skirtingas trikampio linijas į vieną algebrinę sąlygą."
     },
     {
       "id": "we-geo-euler-line-calc",
       "title": "Oilerio tiesės taikymas",
-      "content": "Trikampio ortocentras yra taške $(0, 0)$, o apibrėžtinio apskritimo centras yra taške $(3, 6)$. Raskite centroido koordinates.\n\n**Sprendimas:**\n1. Oilerio tiesėje taškai išsidėstę tvarka $H, G, O$.\n2. Žinome, kad $HG:GO = 2:1$.\n3. Naudojame atkarpos dalijimo santykiu formulę: $G = \\frac{1 \\cdot H + 2 \\cdot O}{3}$.\n4. $G_x = (1 \\cdot 0 + 2 \\cdot 3) / 3 = 2$.\n5. $G_y = (1 \\cdot 0 + 2 \\cdot 6) / 3 = 4$.\n\n**Atsakymas:** $(2, 4)$.",
+      "content": "Trikampio ortocentras yra taške $(0, 0)$, o apibrėžtinio apskritimo centras yra taške $(3, 6)$. Raskite centroido koordinates. **Sprendimas:** 1. Oilerio tiesėje taškai išsidėstę tvarka $H, G, O$. 2. Žinome, kad $HG:GO = 2:1$. 3. Naudojame atkarpos dalijimo santykiu formulę: $G = \\frac{1 \\cdot H + 2 \\cdot O}{3}$. 4. $G_x = (1 \\cdot 0 + 2 \\cdot 3) / 3 = 2$. 5. $G_y = (1 \\cdot 0 + 2 \\cdot 6) / 3 = 4$. **Atsakymas:** $(2, 4)$.",
       "explanation": "Geometrinė savybė $HG:GO = 2:1$ leidžia lengvai rasti vieną iš centrų žinant kitus du."
     }
   ],

@@ -47,7 +47,16 @@
       "saknu-skaiciaus-pamirsas"
     ],
     "exerciseIds": [
-      "kompl-ex-001"
+      "kompl-ex-001",
+      "kompleksiniai-skaiciai-auto-001",
+      "kompleksiniai-skaiciai-auto-002",
+      "kompleksiniai-skaiciai-auto-003",
+      "kompleksiniai-skaiciai-auto-004",
+      "kompleksiniai-skaiciai-auto-005",
+      "kompleksiniai-skaiciai-auto-006",
+      "kompleksiniai-skaiciai-auto-007",
+      "kompleksiniai-skaiciai-auto-008",
+      "kompleksiniai-skaiciai-auto-009"
     ]
   },
   "theory": [
@@ -70,7 +79,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Ši paprasta idėja išplečia skaičių sistemą taip, kad dabar kiekviena n-tojo laipsnio lygtis turi lygiai n sprendinių (skaičiuojant su kartotinumu). Tai vadinama Pagrindine algebros teorema."
+          "text": "Ši paprasta idėja išplečia skaičių sistemą taip, kad dabar kiekviena n-tojo laipsnio lygtis turi lygiai n sprendinių (skaičiuojant su kartotinumu). Tai vadinama Pagrindinė algebros teorema."
         }
       ]
     },
@@ -94,7 +103,7 @@
         {
           "type": "method",
           "title": "Veiksmai su algebrine forma:",
-          "text": "1. **Sudėtis/Atimtis:** Atskirai sudedame realiąsias ir menamąsias dalis: $(a+bi) + (c+di) = (a+c) + (b+d)i$.\n2. **Daugyba:** Dauginame kaip du dvinarius, prisimindami, kad $i^2 = -1$: $(a+bi)(c+di) = ac + adi + bci + bdi^2 = (ac-bd) + (ad+bc)i$."
+          "text": "1. **Sudėtis/Atimtis:** Atskirai sudedame realiąsias ir menamąsias dalis: $(a+bi) + (c+di) = (a+c) + (b+d)i$. 2. **Daugyba:** Dauginame kaip du dvinarius, prisimindami, kad $i^2 = -1$: $(a+bi)(c+di) = ac + adi + bci + bdi^2 = (ac-bd) + (ad+bc)i$."
         },
         {
           "type": "note",
@@ -112,7 +121,7 @@
         },
         {
           "type": "example",
-          "text": "Apskaičiuokime $\\frac{1+i}{2-i}$. Dauginame iš $(2+i)$:\n$\\frac{(1+i)(2+i)}{(2-i)(2+i)} = \\frac{2+i+2i+i^2}{2^2+1^2} = \\frac{1+3i}{5} = 0,2 + 0,6i$."
+          "text": "Apskaičiuokime $\\frac{1+i}{2-i}$. Dauginame iš $(2+i)$: $\\frac{(1+i)(2+i)}{(2-i)(2+i)} = \\frac{2+i+2i+i^2}{2^2+1^2} = \\frac{1+3i}{5} = 0,2 + 0,6i$."
         }
       ]
     },
@@ -182,7 +191,7 @@
         },
         {
           "type": "method",
-          "text": "**Daugyba trigonometrinėje formoje:** Moduliai sudauginami, o argumentai sudedami:\n$z_1 \\cdot z_2 = r_1 r_2 (\\cos(\\phi_1+\\phi_2) + i\\sin(\\phi_1+\\phi_2))$."
+          "text": "**Daugyba trigonometrinėje formoje:** Moduliai sudauginami, o argumentai sudedami: $z_1 \\cdot z_2 = r_1 r_2 (\\cos(\\phi_1+\\phi_2) + i\\sin(\\phi_1+\\phi_2))$."
         },
         {
           "type": "method",
@@ -240,6 +249,76 @@
             "**Pagrindinis argumentas:** Dažnai pamirštama redukuoti kampą į intervalą $[0, 2\\pi)$ arba $(-\\pi, \\pi]$.",
             "**Kvadratinės lygties diskriminantas:** Pamirštama, kad jei $D < 0$, sprendiniai vis tiek egzistuoja ir yra pavidalo $x = \\frac{-b \\pm i\\sqrt{|D|}}{2a}$."
           ]
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Kompleksiniai skaičiai“ 12 klasės kurse priklauso sričiai „Skaičiai ir skaičiavimai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: dalumas, liekanos, pirminiai daugikliai, paritetas, santykiai ir skaičiavimo struktūra. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Kompleksinis skaičius, Menamasis vienetas, Algebrinė forma, Jungtinis skaičius, Modulis, Realioji Dalis ir Menamoji Dalis. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Kompleksiniai skaičiai“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Išskaidyk skaičius į paprastesnes dalis: pirminius daugiklius, liekanas pagal pasirinktą modulį, bendrus daliklius arba santykio vienetus. Jei sąlyga kalba apie visus skaičius, ieškok invariantų ir draudžiamų liekanų; jei prašo rasti skaičių, kurk jį nuo dalumo sąlygų ir tik tada tikrink dydį."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Apskaičiuokite (1 + i) + (2 - 3i) realiąją dalį.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "kompleksiniai-skaiciai-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tikrink, ar rezultatas tenkina visas dalumo sąlygas, ar nepamiršta nulio, neigiamų reikšmių arba natūraliųjų skaičių apribojimo. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Kompleksiniai skaičiai“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -338,8 +417,8 @@
       "id": "realioji-dalis",
       "title": "Realioji Dalis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Realioji Dalis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Realioji Dalis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -347,17 +426,17 @@
       "id": "menamoji-dalis",
       "title": "Menamoji Dalis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Menamoji Dalis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Menamoji Dalis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "kompleksine-plokstuma",
-      "title": "Kompleksine Plokstuma",
+      "title": "Kompleksine Plokštuma",
       "type": "concept",
-      "shortDefinition": "S?voka ?Kompleksine Plokstuma? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Kompleksine Plokštuma“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -365,35 +444,35 @@
       "id": "argumentas",
       "title": "Argumentas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Argumentas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Argumentas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "trigonometrine-forma",
-      "title": "Trigonometrine Forma",
+      "title": "Trigonometrinė Forma",
       "type": "concept",
-      "shortDefinition": "S?voka ?Trigonometrine Forma? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Trigonometrinė Forma“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "muavro-formule",
-      "title": "Muavro Formule",
+      "title": "Muavro Formulė",
       "type": "concept",
-      "shortDefinition": "S?voka ?Muavro Formule? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Muavro Formulė“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
     {
       "id": "n-tojo-laipsnio-saknis",
-      "title": "N Tojo Laipsnio Saknis",
+      "title": "n-tojo Laipsnio Šaknis",
       "type": "concept",
-      "shortDefinition": "S?voka ?N Tojo Laipsnio Saknis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „n-tojo Laipsnio Šaknis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -685,6 +764,366 @@
       ],
       "estimatedSeconds": 20,
       "difficulty": "medium"
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-001",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(2+3i)+(4-2i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 6,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 2 ir 4.",
+          "latex": "2+4=6"
+        }
+      ],
+      "answerText": "6",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-002",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(3+4i)+(5-3i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 3 ir 5.",
+          "latex": "3+5=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-003",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(4+5i)+(6-1i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 4 ir 6.",
+          "latex": "4+6=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-004",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(5+6i)+(3-2i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 8,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 5 ir 3.",
+          "latex": "5+3=8"
+        }
+      ],
+      "answerText": "8",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-005",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(6+2i)+(4-3i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 6 ir 4.",
+          "latex": "6+4=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-006",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(7+3i)+(5-1i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 7 ir 5.",
+          "latex": "7+5=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-007",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(8+4i)+(6-2i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 8 ir 6.",
+          "latex": "8+6=14"
+        }
+      ],
+      "answerText": "14",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-008",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(9+5i)+(3-3i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 9 ir 3.",
+          "latex": "9+3=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "kompleksiniai-skaiciai-auto-009",
+      "topicId": "kompleksiniai-skaiciai",
+      "grade": 12,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Apskaičiuokite kompleksinių skaičių $(10+6i)+(4-1i)$ realiąją dalį.",
+      "answer": {
+        "kind": "numeric",
+        "value": 14,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Sudėkite tik realiąsias dalis.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Menamoji dalis su $i$ realiosios dalies nekeičia.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Realiosios dalys yra 10 ir 4.",
+          "latex": "10+4=14"
+        }
+      ],
+      "answerText": "14",
+      "conceptIds": [
+        "kompleksinis-skaicius",
+        "menamasis-vienetas"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [
@@ -699,7 +1138,7 @@
         "kompl-ex-001"
       ],
       "timeLimitSeconds": 1200,
-      "masteryWeight": 1.0,
+      "masteryWeight": 1,
       "passingThreshold": 0.7
     }
   ],

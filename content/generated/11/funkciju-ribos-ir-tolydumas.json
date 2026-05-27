@@ -51,7 +51,12 @@
       "funkciju-ribos-ir-tolydumas-ex-002",
       "funkciju-ribos-ir-tolydumas-ex-003",
       "funkciju-ribos-ir-tolydumas-ex-004",
-      "funkciju-ribos-ir-tolydumas-ex-005"
+      "funkciju-ribos-ir-tolydumas-ex-005",
+      "funkciju-ribos-ir-tolydumas-auto-001",
+      "funkciju-ribos-ir-tolydumas-auto-002",
+      "funkciju-ribos-ir-tolydumas-auto-003",
+      "funkciju-ribos-ir-tolydumas-auto-004",
+      "funkciju-ribos-ir-tolydumas-auto-005"
     ]
   },
   "theory": [
@@ -75,7 +80,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skaičių [[seka|seka]] – tai funkcija, kurios argumentas yra natūralusis skaičius $n$. Mes domimės, kas nutinka su sekos nariu $a_n$, kai $n$ tampa labai didelis ($n \to \\infty$)."
+          "text": "Skaičių [[seka|seka]] – tai funkcija, kurios argumentas yra natūralusis skaičius $n$. Mes domimės, kas nutinka su sekos nariu $a_n$, kai $n$ tampa labai didelis ($n o \\infty$)."
         },
         {
           "type": "definition",
@@ -84,7 +89,7 @@
         },
         {
           "type": "formula",
-          "latex": "\\lim_{n \to \\infty} a_n = A"
+          "latex": "\\lim_{n o \\infty} a_n = A"
         },
         {
           "type": "paragraph",
@@ -107,7 +112,7 @@
         },
         {
           "type": "formula",
-          "latex": "\\lim_{x \to x_0} f(x) = L"
+          "latex": "\\lim_{x o x_0} f(x) = L"
         },
         {
           "type": "warning",
@@ -126,8 +131,8 @@
         {
           "type": "list",
           "items": [
-            "**Riba iš kairės:** $\\lim_{x \to x_0^-} f(x) = L_1$ (artėjame per $x < x_0$)",
-            "**Riba iš dešinės:** $\\lim_{x \to x_0^+} f(x) = L_2$ (artėjame per $x > x_0$)"
+            "**Riba iš kairės:** $\\lim_{x o x_0^-} f(x) = L_1$ (artėjame per $x < x_0$)",
+            "**Riba iš dešinės:** $\\lim_{x o x_0^+} f(x) = L_2$ (artėjame per $x > x_0$)"
           ]
         },
         {
@@ -147,21 +152,21 @@
         {
           "type": "formula",
           "formulaId": "ribu-sumos-taisykle",
-          "latex": "\\lim_{x \to x_0}, [f(x) \\pm g(x)] = A \\pm B"
+          "latex": "\\lim_{x o x_0}, [f(x) \\pm g(x)] = A \\pm B"
         },
         {
           "type": "formula",
           "formulaId": "ribu-sandaugos-taisykle",
-          "latex": "\\lim_{x \to x_0}, [f(x) \\cdot g(x)] = A \\cdot B"
+          "latex": "\\lim_{x o x_0}, [f(x) \\cdot g(x)] = A \\cdot B"
         },
         {
           "type": "formula",
           "formulaId": "ribu-dalmens-taisykle",
-          "latex": "\\lim_{x \to x_0} \\frac{f(x)}, {g(x)} = \\frac{A}, {B}, \\quad (B \neq 0)"
+          "latex": "\\lim_{x o x_0} \\frac{f(x)}, {g(x)} = \\frac{A}, {B}, \\quad (B eq 0)"
         },
         {
           "type": "paragraph",
-          "text": "Jei funkcija yra tolydi (pavyzdžiui, daugianaris), tai ribą galima apskaičiuoti tiesiog įstačius reikšmę: $\\lim_{x \to x_0} f(x) = f(x_0)$."
+          "text": "Jei funkcija yra tolydi (pavyzdžiui, daugianaris), tai ribą galima apskaičiuoti tiesiog įstačius reikšmę: $\\lim_{x o x_0} f(x) = f(x_0)$."
         }
       ]
     },
@@ -171,11 +176,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dažnai tiesiogiai įstatę $x_0$ gauname beprasmius reiškinius, vadinamus [[neapibreztumas|neapibrėžtumais]]. Dažniausi iš jų: $\frac{0}, {0}$ ir $\frac{\\infty}, {\\infty}$."
+          "text": "Dažnai tiesiogiai įstatę $x_0$ gauname beprasmius reiškinius, vadinamus [[neapibreztumas|neapibrėžtumais]]. Dažniausi iš jų: $ rac{0}, {0}$ ir $ rac{\\infty}, {\\infty}$."
         },
         {
           "type": "note",
-          "text": "**Kaip naikinti neapibrėžtumus?**\n1. **$\frac{0}, {0}$ atveju:** skaidykite skaitiklį ir vardiklį dauginamaisiais ir suprastinkite.\n2. **$\frac{0}, {0}$ su šaknimis:** dauginkite iš jungtinio reiškinio.\n3. **$\frac{\\infty}, {\\infty}$ atveju:** dalinkite visus narius iš didžiausio vardiklio laipsnio."
+          "text": "**Kaip naikinti neapibrėžtumus?** 1. **$ rac{0}, {0}$ atveju:** skaidykite skaitiklį ir vardiklį dauginamaisiais ir suprastinkite. 2. **$ rac{0}, {0}$ su šaknimis:** dauginkite iš jungtinio reiškinio. 3. **$ rac{\\infty}, {\\infty}$ atveju:** dalinkite visus narius iš didžiausio vardiklio laipsnio."
         }
       ]
     },
@@ -185,16 +190,16 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kai $x \to \\infty$ arba $x \to -\\infty$, funkcijos riba nurodo grafiko elgesį toli nuo koordinačių pradžios."
+          "text": "Kai $x o \\infty$ arba $x o -\\infty$, funkcijos riba nurodo grafiko elgesį toli nuo koordinačių pradžios."
         },
         {
           "type": "definition",
           "conceptId": "asimptote",
-          "text": "Jei $\\lim_{x \to \\infty} f(x) = b$, tai tiesė $y = b$ vadinama **horizontaliaja asimptote**."
+          "text": "Jei $\\lim_{x o \\infty} f(x) = b$, tai tiesė $y = b$ vadinama **horizontaliaja asimptote**."
         },
         {
           "type": "paragraph",
-          "text": "Jei funkcijos riba taške $x_0$ lygi begalybei ($\\lim_{x \to x_0} f(x) = \\infty$), tai tiesė $x = x_0$ vadinama **vertikaliąja asimptote**."
+          "text": "Jei funkcijos riba taške $x_0$ lygi begalybei ($\\lim_{x o x_0} f(x) = \\infty$), tai tiesė $x = x_0$ vadinama **vertikaliąja asimptote**."
         }
       ]
     },
@@ -209,12 +214,12 @@
         {
           "type": "definition",
           "conceptId": "tolydumas",
-          "text": "Funkcija $f(x)$ vadinama tolydžia taške $x_0$, jei išpildytos trys sąlygos:\n1. Funkcija yra apibrėžta taške $x_0$.\n2. Egzistuoja baigtinė riba $\\lim_{x \to x_0} f(x)$.\n3. Ši riba lygi funkcijos reikšmei tame taške: $\\lim_{x \to x_0} f(x) = f(x_0)$."
+          "text": "Funkcija $f(x)$ vadinama tolydžia taške $x_0$, jei išpildytos trys sąlygos: 1. Funkcija yra apibrėžta taške $x_0$. 2. Egzistuoja baigtinė riba $\\lim_{x o x_0} f(x)$. 3. Ši riba lygi funkcijos reikšmei tame taške: $\\lim_{x o x_0} f(x) = f(x_0)$."
         },
         {
           "type": "formula",
           "formulaId": "tolydumo-salyga",
-          "latex": "\\lim_{x \to x_0^-} f(x) = \\lim_{x \to x_0^+} f(x) = f(x_0)"
+          "latex": "\\lim_{x o x_0^-} f(x) = \\lim_{x o x_0^+} f(x) = f(x_0)"
         }
       ]
     },
@@ -248,13 +253,83 @@
           "type": "formula",
           "formulaId": "pirmoji-svarbioji-riba",
           "title": "Pirmoji svarbioji riba",
-          "latex": "\\lim_{x \to 0} \\frac{\\sin x}, {x} = 1"
+          "latex": "\\lim_{x o 0} \\frac{\\sin x}, {x} = 1"
         },
         {
           "type": "formula",
           "formulaId": "antroji-svarbioji-riba",
           "title": "Antroji svarbioji riba (skaičius e)",
-          "latex": "\\lim_{n \to \\infty} \\left(1 + \\frac{1}, {n}\\right)^n = e \\approx 2{\n}718"
+          "latex": "\\lim_{n o \\infty} \\left(1 + \\frac{1}, {n}\\right)^n = e \\approx 2{ }718"
+        }
+      ]
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Funkcijų ribos ir tolydumas“ 11 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Riba, Sekos riba, Funkcijos riba taške, Vienpusė riba, Neapibrėžtumas, Tolydumas ir Trūkio taškas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Funkcijų ribos ir tolydumas“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Apskaičiuokite ribą: $\\lim_{x \\to 3} (2x^2 - 5)$“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Funkcijų ribos ir tolydumas“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
         }
       ]
     }
@@ -393,8 +468,8 @@
       "id": "begalybe",
       "title": "Begalybe",
       "type": "concept",
-      "shortDefinition": "S?voka ?Begalybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Begalybe“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -402,8 +477,8 @@
       "id": "sklaida",
       "title": "Sklaida",
       "type": "concept",
-      "shortDefinition": "S?voka ?Sklaida? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Sklaida“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -411,8 +486,8 @@
       "id": "konvergavimas",
       "title": "Konvergavimas",
       "type": "concept",
-      "shortDefinition": "S?voka ?Konvergavimas? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Konvergavimas“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -611,7 +686,7 @@
         },
         {
           "text": "Kadangi $5/x \\to 0$ ir $1/x^2 \\to 0$, lieka koeficientų santykis.",
-          "latex": "\\frac{3 + 0}, {2 - 0} = 1{\n}5"
+          "latex": "\\frac{3 + 0}, {2 - 0} = 1{ }5"
         }
       ],
       "answer": "1.5"
@@ -885,6 +960,206 @@
       ],
       "estimatedSeconds": 90,
       "difficulty": "medium"
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-auto-001",
+      "topicId": "funkciju-ribos-ir-tolydumas",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x-3$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=2\\cdot3-3=3"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "riba",
+        "sekos-riba"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-auto-002",
+      "topicId": "funkciju-ribos-ir-tolydumas",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x-2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=3\\cdot4-2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "riba",
+        "sekos-riba"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-auto-003",
+      "topicId": "funkciju-ribos-ir-tolydumas",
+      "grade": 11,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x-1$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=4\\cdot5-1=19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "riba",
+        "sekos-riba"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-auto-004",
+      "topicId": "funkciju-ribos-ir-tolydumas",
+      "grade": 11,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+0$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=5\\cdot2+0=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "riba",
+        "sekos-riba"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "funkciju-ribos-ir-tolydumas-auto-005",
+      "topicId": "funkciju-ribos-ir-tolydumas",
+      "grade": 11,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+1$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=1\\cdot3+1=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "riba",
+        "sekos-riba"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
     }
   ],
   "tests": [

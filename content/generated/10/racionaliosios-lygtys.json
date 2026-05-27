@@ -36,7 +36,18 @@
       "vardiklio-panaikinimas-be-lra",
       "skaiciavimo-klaida-dauginant-is-mbv"
     ],
-    "exerciseIds": []
+    "exerciseIds": [
+      "racionaliosios-lygtys-auto-001",
+      "racionaliosios-lygtys-auto-002",
+      "racionaliosios-lygtys-auto-003",
+      "racionaliosios-lygtys-auto-004",
+      "racionaliosios-lygtys-auto-005",
+      "racionaliosios-lygtys-auto-006",
+      "racionaliosios-lygtys-auto-007",
+      "racionaliosios-lygtys-auto-008",
+      "racionaliosios-lygtys-auto-009",
+      "racionaliosios-lygtys-auto-010"
+    ]
   },
   "theory": [
     {
@@ -69,7 +80,7 @@
         {
           "type": "method",
           "title": "Kaip išvengti pašalinių šaknų?",
-          "text": "1. Prieš spręsdami lygtį, prilyginkite visus vardiklius nuliui.\n2. Raskite $x$ reikšmes, kurios vardiklį paverčia nuliu.\n3. Užrašykite LRA: $x$ gali būti bet koks, išskyrus tas rastas reikšmes.\n4. Išsprendę lygtį, visada patikrinkite, ar gauti atsakymai priklauso LRA."
+          "text": "1. Prieš spręsdami lygtį, prilyginkite visus vardiklius nuliui. 2. Raskite $x$ reikšmes, kurios vardiklį paverčia nuliu. 3. Užrašykite LRA: $x$ gali būti bet koks, išskyrus tas rastas reikšmes. 4. Išsprendę lygtį, visada patikrinkite, ar gauti atsakymai priklauso LRA."
         }
       ]
     },
@@ -84,7 +95,7 @@
         {
           "type": "method",
           "title": "Būdas A: Dauginimas iš MBV",
-          "text": "1. Perkelkite visus lygties narius į vieną pusę (kad kitoje liktų nulis).\n2. Raskite bendrąjį vardiklį (MBV).\n3. Padauginkite visą lygtį iš šio vardiklio (taip jį panaikinsite).\n4. Išspręskite gautą sveikąją (dažniausiai tiesinę arba kvadratinę) lygtį.\n5. Atmeskite pašalines šaknis."
+          "text": "1. Perkelkite visus lygties narius į vieną pusę (kad kitoje liktų nulis). 2. Raskite bendrąjį vardiklį (MBV). 3. Padauginkite visą lygtį iš šio vardiklio (taip jį panaikinsite). 4. Išspręskite gautą sveikąją (dažniausiai tiesinę arba kvadratinę) lygtį. 5. Atmeskite pašalines šaknis."
         },
         {
           "type": "method",
@@ -113,6 +124,90 @@
         {
           "type": "warning",
           "text": "Vardiklio „pametimas“ be LRA: Niekada nepanaikinkite vardiklio, kol neužrašėte, kad jis nelygus nuliui!"
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-prasme",
+      "title": "Gilesnis temos vaizdas: ką čia iš tikrųjų mokomės",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tema „Trupmeninės racionaliosios lygtys“ 10 klasės kurse priklauso sričiai „Modeliai ir sąryšiai“, todėl jos tikslas nėra vien išmokti vieną taisyklę. Reikia pamatyti, kokį matematinį ryšį ši tema aprašo, kada jį galima taikyti ir kaip atpažinti situacijas, kuriose tas pats ryšys pasirodo kita forma. Mokantis verta pradėti nuo paprasto klausimo: kokie dydžiai čia kinta, kas lieka pastovu ir kokios sąlygos riboja galimus veiksmus? Kai šis klausimas atsakytas, formulės tampa ne atskirais sakiniais, o trumpu ryšių užrašu."
+        },
+        {
+          "type": "note",
+          "text": "Šią temą patogu skaityti per tokį objektyvą: reiškinių pertvarkymas, lygties struktūra, funkcijos elgesys, intervalai ir parametrų įtaka. Jei mokinys geba tą patį ryšį paaiškinti žodžiais, parodyti pavyzdyje ir patikrinti skaičiavimu, jis jau turi tvirtą pagrindą pereiti prie įvairesnių uždavinių."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-savokos",
+      "title": "Sąvokų ryšiai ir minimalus žinių žemėlapis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Trupmeninė racionalioji lygtis, Leistinųjų reikšmių aibė (LRA), Pasaline Šaknis, Bendravardiklinimas Lygtyse, Proporcijos Savybe, Skaidymas Dauginamaisiais ir Proporcijos savybė. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Mokantis temos „Trupmeninės racionaliosios lygtys“ naudinga susirašyti tris stulpelius: sąvoka, kaip ją atpažįstu uždavinio tekste, ir kokį veiksmą ji dažniausiai leidžia atlikti. Pavyzdžiui, jei sąlygoje atsiranda apribojimas, jis dažnai lemia apibrėžimo sritį, galimus atvejus arba tikrinimo žingsnį. Jei atsiranda santykis, ieškome proporcijos, mastelio, vieneto dalies arba lygiaverčio reiškinio. Toks žemėlapis sumažina spėliojimą ir padeda spręsti net tada, kai uždavinio formuluotė nėra pažįstama."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-metodas",
+      "title": "Sprendimo metodas nuo sąlygos iki atsakymo",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių."
+        },
+        {
+          "type": "paragraph",
+          "text": "Praktikoje tai reiškia, kad pirmas sprendimo veiksmas neturėtų būti aklas skaičiavimas. Pirmiausia perrašyk sąlygą matematiškai: pažymėk nežinomuosius, užrašyk duotus dydžius, išskirk apribojimus ir nuspręsk, kokio tipo atsakymo reikia. Tada rinkis vieną pagrindinį kelią ir jo laikykis iki pat patikros. Jei kelias stringa, neperrašinėk visko iš naujo: grįžk į sąlygą ir paklausk, kuri informacija dar nepanaudota. Dažnai būtent nepanaudota sąlygos dalis parodo trūkstamą žingsnį."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-pavyzdziai",
+      "title": "Kaip skaityti pavyzdžius ir perkelti metodą",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Tipinis šios temos uždavinio sakinys gali atrodyti taip: „Uždavinys apie temą „Trupmeninės racionaliosios lygtys“ turėtų prasidėti nuo duomenų ir tikslo atskyrimo.“. Skaitydamas tokį sakinį pirmiausia pabrauk duotus duomenis, tada atskirai pasižymėk, ko prašoma. Jeigu uždavinys turi kelis sakinius, paskutinis sakinys dažnai nusako tikslą, o ankstesni sakiniai pateikia sąlygas, kurias reikia paversti lygtimi, brėžiniu, lentele arba atvejų sistema."
+        },
+        {
+          "type": "note",
+          "text": "Vienas iš geriausių būdų mokytis yra po išspręsto pavyzdžio pakeisti vieną skaičių, vieną sąlygą arba klausimą ir pabandyti išspręsti dar kartą. Jei metodas sugriūva nuo mažo pakeitimo, vadinasi, buvo įsiminta forma, bet dar ne suprastas ryšys."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-klaidos",
+      "title": "Savikontrolė, klaidos ir pasiruošimas pratimams",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas. Dažna klaida šioje temoje yra praleisti paskutinį patikrinimą, nes tarpiniai veiksmai atrodo logiški. Vis dėlto net teisingas pertvarkymas gali duoti netinkamą atsakymą, jei nepaisyta sąlygos apribojimų arba supainiota, ką reiškia gautas dydis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prieš pereidamas prie sunkių uždavinių, mokinys turėtų gebėti atlikti tris veiksmus: savais žodžiais paaiškinti temą „Trupmeninės racionaliosios lygtys“, išspręsti paprastą tiesioginį uždavinį be užuominų ir ištaisyti bent vieną sąmoningai padarytą klaidą. Tik tada verta didinti uždavinių įvairovę, nes įvairovė be pagrindo dažnai sukuria triukšmą, o ne meistriškumą."
+        }
+      ]
+    },
+    {
+      "id": "racionaliosios-lygtys-gilinimas-papildomas-praktine-schema-1",
+      "title": "Praktinė sprendimo schema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temoje „Trupmeninės racionaliosios lygtys“ mokymasis tampa tvirtas tada, kai mokinys geba atpažinti tą pačią idėją skirtinguose formatuose: žodiniame uždavinyje, lentelėje, formulėje, brėžinyje arba teste. Jeigu sąlyga skamba taip: „uždavinys iš temos „Trupmeninės racionaliosios lygtys““, pirmiausia reikia ne skaičiuoti, o nuspręsti, kokią informaciją ji duoda. Tada pasirenkamas metodas: Pirmiausia nustatyk, kas yra nežinomasis, kokia yra apibrėžimo sritis ir kokios operacijos leidžiamos. Tada rinkis pertvarkymą: iškelk bendrą daugiklį, suvesk į sandaugą, naudok pakeitinį, nagrinėk ženklus intervaluose arba perkelk situaciją į grafiką. Kiekvieną ekvivalentų žingsnį lydėk patikra, ar neatsirado pašalinių sprendinių. Galiausiai atsakymas tikrinamas ne iš atminties, o pagal pradinę sąlygą. Taip išvengiama situacijos, kai veiksmai atlikti teisingai, bet sprendžiamas ne tas klausimas."
+        },
+        {
+          "type": "note",
+          "text": "Savikontrolė: Gautus sprendinius įstatyk į pradinę sąlygą, patikrink vardiklius, pošaknius, logaritmų argumentus ir intervalų ribas."
         }
       ]
     }
@@ -387,10 +482,10 @@
     },
     {
       "id": "pasaline-saknis",
-      "title": "Pasaline Saknis",
+      "title": "Pasaline Šaknis",
       "type": "concept",
-      "shortDefinition": "S?voka ?Pasaline Saknis? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Pasaline Šaknis“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -398,8 +493,8 @@
       "id": "bendravardiklinimas-lygtyse",
       "title": "Bendravardiklinimas Lygtyse",
       "type": "concept",
-      "shortDefinition": "S?voka ?Bendravardiklinimas Lygtyse? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Bendravardiklinimas Lygtyse“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -407,8 +502,8 @@
       "id": "proporcijos-savybe",
       "title": "Proporcijos Savybe",
       "type": "concept",
-      "shortDefinition": "S?voka ?Proporcijos Savybe? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Proporcijos Savybe“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     },
@@ -416,8 +511,8 @@
       "id": "skaidymas-dauginamaisiais",
       "title": "Skaidymas Dauginamaisiais",
       "type": "concept",
-      "shortDefinition": "S?voka ?Skaidymas Dauginamaisiais? naudojama ?ioje temoje.",
-      "intuition": "?i s?voka padeda susieti teorij? su u?daviniais.",
+      "shortDefinition": "Sąvoka „Skaidymas Dauginamaisiais“ naudojama šioje temoje.",
+      "intuition": "Ši sąvoka padeda susieti teoriją su uždaviniais.",
       "formal": "",
       "relatedConceptIds": []
     }
@@ -459,7 +554,408 @@
       "defaultSrs": true
     }
   ],
-  "exercises": [],
+  "exercises": [
+    {
+      "id": "racionaliosios-lygtys-auto-001",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x-3$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 3,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=2\\cdot3-3=3"
+        }
+      ],
+      "answerText": "3",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-002",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x-2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=3\\cdot4-2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-003",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x-1$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 19,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=4\\cdot5-1=19"
+        }
+      ],
+      "answerText": "19",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-004",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+0$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=5\\cdot2+0=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-005",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+1$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 4,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=1\\cdot3+1=4"
+        }
+      ],
+      "answerText": "4",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-006",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=2x+2$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=2\\cdot4+2=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-007",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=3x+3$. Apskaičiuokite $f(5)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 18,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=5$.",
+          "latex": "f(5)=3\\cdot5+3=18"
+        }
+      ],
+      "answerText": "18",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 65
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-008",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Vidutiniai",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=4x+4$. Apskaičiuokite $f(2)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 12,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=2$.",
+          "latex": "f(2)=4\\cdot2+4=12"
+        }
+      ],
+      "answerText": "12",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 75
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-009",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Sunkesni",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=5x+5$. Apskaičiuokite $f(3)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 20,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=3$.",
+          "latex": "f(3)=5\\cdot3+5=20"
+        }
+      ],
+      "answerText": "20",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 45
+    },
+    {
+      "id": "racionaliosios-lygtys-auto-010",
+      "topicId": "racionaliosios-lygtys",
+      "grade": 10,
+      "level": "Lengvi",
+      "type": "numericInput",
+      "difficulty": "medium",
+      "statement": "Duota funkcija $f(x)=1x+6$. Apskaičiuokite $f(4)$.",
+      "answer": {
+        "kind": "numeric",
+        "value": 10,
+        "tolerance": 0
+      },
+      "hints": [
+        {
+          "order": 1,
+          "text": "Vietoje $x$ įrašykite nurodytą skaičių.",
+          "penalty": 0.08
+        },
+        {
+          "order": 2,
+          "text": "Pirmiausia atlikite daugybą, tada sudėtį arba atimtį.",
+          "penalty": 0.1
+        }
+      ],
+      "solutionSteps": [
+        {
+          "text": "Įrašome $x=4$.",
+          "latex": "f(4)=1\\cdot4+6=10"
+        }
+      ],
+      "answerText": "10",
+      "conceptIds": [
+        "trupmenine-racionalioji-lygtis",
+        "lra-leistinuju-reiksmiu-aibe"
+      ],
+      "formulaIds": [],
+      "mistakeIds": [],
+      "estimatedSeconds": 55
+    }
+  ],
   "tests": [],
   "srsCards": []
 }

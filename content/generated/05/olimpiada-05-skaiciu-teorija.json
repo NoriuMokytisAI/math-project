@@ -67,7 +67,7 @@
         },
         {
           "type": "method",
-          "text": "**Pagrindinės operacijos**:\n- $\\text{L} \\pm \\text{L} = \\text{L}$\n- $\\text{N} \\pm \\text{N} = \\text{L}$\n- $\\text{L} \\pm \\text{N} = \\text{N}$\n- $\\text{L} \\times \\text{Bet koks} = \\text{L}$\n- $\\text{N} \\times \\text{N} = \\text{N}$"
+          "text": "**Pagrindinės operacijos**: - $\\text{L} \\pm \\text{L} = \\text{L}$ - $\\text{N} \\pm \\text{N} = \\text{L}$ - $\\text{L} \\pm \\text{N} = \\text{N}$ - $\\text{L} \\times \\text{Bet koks} = \\text{L}$ - $\\text{N} \\times \\text{N} = \\text{N}$"
         },
         {
           "type": "paragraph",
@@ -75,7 +75,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Olimpiadose dažnai pasitaiko uždavinių, kur reikia įrodyti, kad kažkokia operacija yra neįmanoma. Pavyzdžiui: „Ar galima 25 monetas išskirstyti į 10 dėžučių taip, kad kiekvienoje būtų nelyginis monetų skaičius?“ \nAnalizė: 10 nelyginių skaičių suma būtinai yra lyginė. Tačiau 25 yra nelyginis skaičius. Vadinasi, tai neįmanoma. Čia paritetas veikia kaip **invariantas** – savybė, kuri nekinta atliekant tam tikrus veiksmus."
+          "text": "Olimpiadose dažnai pasitaiko uždavinių, kur reikia įrodyti, kad kažkokia operacija yra neįmanoma. Pavyzdžiui: „Ar galima 25 monetas išskirstyti į 10 dėžučių taip, kad kiekvienoje būtų nelyginis monetų skaičius?“ Analizė: 10 nelyginių skaičių suma būtinai yra lyginė. Tačiau 25 yra nelyginis skaičius. Vadinasi, tai neįmanoma. Čia paritetas veikia kaip **invariantas** – savybė, kuri nekinta atliekant tam tikrus veiksmus."
         }
       ]
     },
@@ -88,7 +88,7 @@
         },
         {
           "type": "method",
-          "text": "**Svarbiausi požymiai**:\n- **Iš 2**: baigiasi 0, 2, 4, 6, 8.\n- **Iš 5**: baigiasi 0 arba 5.\n- **Iš 10**: baigiasi 0.\n- **Iš 4**: paskutiniai du skaitmenys sudaro skaičių, dalų iš 4.\n- **Iš 8**: paskutiniai trys skaitmenys sudaro skaičių, dalų iš 8.\n- **Iš 3**: skaitmenų suma dalijasi iš 3.\n- **Iš 9**: skaitmenų suma dalijasi iš 9.\n- **Iš 11**: skaitmenų, esančių nelyginėse vietose, suma ir skaitmenų, esančių lyginėse vietose, suma skiriasi per 11 kartotinį (arba yra lygios)."
+          "text": "**Svarbiausi požymiai**: - **Iš 2**: baigiasi 0, 2, 4, 6, 8. - **Iš 5**: baigiasi 0 arba 5. - **Iš 10**: baigiasi 0. - **Iš 4**: paskutiniai du skaitmenys sudaro skaičių, dalų iš 4. - **Iš 8**: paskutiniai trys skaitmenys sudaro skaičių, dalų iš 8. - **Iš 3**: skaitmenų suma dalijasi iš 3. - **Iš 9**: skaitmenų suma dalijasi iš 9. - **Iš 11**: skaitmenų, esančių nelyginėse vietose, suma ir skaitmenų, esančių lyginėse vietose, suma skiriasi per 11 kartotinį (arba yra lygios)."
         },
         {
           "type": "paragraph",
@@ -139,11 +139,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dažnai olimpiadose sutinkame „rebusus“, kur raidės žymi skaitmenis, pavyzdžiui, $ABC + ABC = BBB$. Tokiems uždaviniams spręsti naudojame **skiltinį skaičiaus užrašymą**:\n$\\overline{abc} = 100a + 10b + c$."
+          "text": "Dažnai olimpiadose sutinkame „rebusus“, kur raidės žymi skaitmenis, pavyzdžiui, $ABC + ABC = BBB$. Tokiems uždaviniams spręsti naudojame **skiltinį skaičiaus užrašymą**: $\\overline{abc} = 100a + 10b + c$."
         },
         {
           "type": "paragraph",
           "text": "Taip pat naudingas **daugybos stulpeliu imitavimas**. Jei žinome, kad skaičių dauginant iš 3 paskutinis skaitmuo tampa 1, tai tas skaitmuo būtinai buvo 7 (nes tik $7 \\times 3 = 21$ baigiasi vienetu). Atkūrinėdami skaičių nuo galo, galime rasti visą paslėptą seką."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-skaiciu-teorija-olimpiadinis-metodu-zemelapis",
+      "title": "Metodų žemėlapis ir ką reikia pastebėti pirmiausia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Olimpiadinė tema „Skaičių teorija“ 5 klasės lygmeniu nėra atskiras triukų rinkinys. Ji moko pasirinkti strategiją tada, kai standartinis mokyklinis algoritmas nebeveda tiesiai į atsakymą. Šioje temoje dažniausiai veikia šios idėjos: paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja. Sprendžiant verta ne klausti „kokią formulę taikyti?“, o klausti „kuri sąlygos dalis yra neįprasta ir ką ji verčia išsaugoti, palyginti arba apriboti?“"
+        },
+        {
+          "type": "strategy",
+          "text": "Pirmas pastebėjimas turi sumažinti nežinomybę. Jei uždavinys atrodo platus, ieškok mažiausio ar didžiausio objekto, liekanos, simetrijos, pagalbinės konstrukcijos arba tokio perrašymo, kuris paverčia sąlygą matomu ryšiu. Būtent šis žingsnis skiria olimpiadinį sprendimą nuo ilgo bandymų sąrašo."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-skaiciu-teorija-olimpiadines-prielaidos",
+      "title": "Ką verta prisiminti prieš sprendžiant",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Svarbiausios sąvokos: Olimpiadinė logika ir dedukcija, Matematinio įrodymo samprata, Paritetas (lyginumas), Pirminiai skaičiai, DBD ir MBK, 3 ir 9 dalumo požymis ir Skiltinis užrašas. Mokantis verta prie kiekvienos sąvokos prisirašyti po vieną pavyzdį, vieną ne pavyzdį ir vieną tipinę klaidą; taip žodynas virsta sprendimo įrankiu, o ne atmintinai išmoktu sąrašu."
+        },
+        {
+          "type": "method",
+          "text": "Prieš imdamasis uždavinio iš temos „Skaičių teorija“, mokinys turėtų patikrinti, ar moka atlikti bazinį veiksmą be užuominų: sukurti tinkamą žymėjimą, pasakyti, kokia sąlyga yra svarbiausia, ir paaiškinti, kodėl pasirinktas metodas nepažeidžia uždavinio apribojimų. Jei bent vienas iš šių veiksmų stringa, verta trumpai grįžti į mokyklinę teoriją arba žodyną, nes olimpiadinis sprendimas remiasi ne greičiu, o tiksliai sujungtomis prielaidomis."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-skaiciu-teorija-olimpiadinis-irodymo-planas",
+      "title": "Įrodymo planas: nuo idėjos iki griežto argumento",
+      "blocks": [
+        {
+          "type": "method",
+          "text": "Išskaidyk skaičius į paprastesnes dalis: pirminius daugiklius, liekanas pagal pasirinktą modulį, bendrus daliklius arba santykio vienetus. Jei sąlyga kalba apie visus skaičius, ieškok invariantų ir draudžiamų liekanų; jei prašo rasti skaičių, kurk jį nuo dalumo sąlygų ir tik tada tikrink dydį. Olimpiadiniame sprendime kiekvienas žingsnis turi turėti priežastį: iš kur atsirado naujas objektas, kodėl galima taikyti teoremą, kodėl nagrinėjami atvejai apima visas galimybes ir kodėl neatsiranda papildomų sprendinių. Sprendimą verta rašyti ne kaip skaičiavimų grandinę, o kaip trumpų teiginių seką: veiksmas, pagrindimas, išvada."
+        },
+        {
+          "type": "note",
+          "text": "Jei sprendimas remiasi prieštara, aiškiai įvardyk prielaidą, kuri bus paneigta. Jei remiasi konstrukcija, parodyk ne tik kaip objektą sukurti, bet ir kodėl jis tenkina visas sąlygas. Jei remiasi invariantu, parašyk, koks dydis nekinta ir kodėl kiekvienas leidžiamas veiksmas jo nekeičia."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-skaiciu-teorija-olimpiadinis-pavyzdzio-skaitymas",
+      "title": "Mokomasis pavyzdžio skaitymas",
+      "blocks": [
+        {
+          "type": "example",
+          "text": "Pavyzdinis uždavinio branduolys: „Skaičius baigiasi skaitmeniu $2$. Perkėlus šį skaitmenį į patį skaičiaus priekį, skaičius padidėja lygiai $2$ kartus. Raskite mažiausią tokį natūralųjį skaičių.“. Tokio sakinio nereikia pulti spręsti nuo pirmo skaičiaus. Pirmiausia pažymėk, kokia yra uždavinio rūšis: rasti, įrodyti, sukonstruoti ar paneigti. Tada užrašyk mažiausią modelį, kuriame sąlyga dar turi prasmę. Mažas modelis dažnai parodo dėsningumą, klaidingą spėjimą arba kelią į bendrą įrodymą."
+        },
+        {
+          "type": "strategy",
+          "text": "Kai uždavinys iš temos „Skaičių teorija“ išspręstas, būtina paklausti, ką galima perkelti į kitą uždavinį. Perkeliamas dalykas dažniausiai yra ne atsakymas, o metodas: kaip buvo pasirinktas objektas, kuri sąlyga tapo pagrindine, kokia klaida buvo pavojingiausia ir kur atsirado lemiamas pastebėjimas."
+        }
+      ]
+    },
+    {
+      "id": "olimpiada-05-skaiciu-teorija-olimpiadines-klaidos-ir-treniruote",
+      "title": "Dažnos klaidos, treniruotė ir SRS idėjos",
+      "blocks": [
+        {
+          "type": "warning",
+          "text": "Tikrink, ar rezultatas tenkina visas dalumo sąlygas, ar nepamiršta nulio, neigiamų reikšmių arba natūraliųjų skaičių apribojimo. Olimpiadiniuose uždaviniuose pavojinga per anksti nuspręsti, kad pastebėtas dėsningumas yra įrodymas. Keli pavyzdžiai gali pasiūlyti hipotezę, bet pilnas sprendimas turi paaiškinti, kodėl ji galioja visais atvejais arba tiksliai nurodyti ribas, kuriose ji galioja."
+        },
+        {
+          "type": "paragraph",
+          "text": "SRS kortelėms iš šios temos verta saugoti ne tik sąvokų apibrėžimus, bet ir metodinius signalus: kada naudoti paritetas, liekanos moduliu, pirminių daugiklių analizė, didžiausias bendras daliklis ir begalinio nusileidimo idėja, kokia klaida dažniausiai vilioja ir koks trumpas klausimas padeda ją pastebėti. Taip mokinys kartoja ne pavienį faktą, o sprendimo refleksą, kuris vėliau veikia naujuose uždaviniuose."
         }
       ]
     }
@@ -244,27 +314,27 @@
     {
       "title": "Dalumo požymių derinimas",
       "statement": "Raskite didžiausią penkiaženklį skaičių, kurio visi skaitmenys skirtingi ir kuris dalijasi iš 36.",
-      "solution": "Skaičius dalijasi iš 36, jei jis dalijasi iš 4 ir iš 9 (nes $4 \\times 9 = 36$).\n1. **9 dalumo požymis**: skaitmenų suma turi dalintis iš 9.\n2. **4 dalumo požymis**: paskutiniai du skaitmenys turi dalintis iš 4.\n3. **Didžiausias skaičius**: pradedame nuo 9, 8, 7...\n\nBandykime: 9876x. Skaitmenų suma $9+8+7+6 = 30$. Kad dalintųsi iš 9, suma turi būti 36, tad $x = 6$. Bet skaitmenys turi būti skirtingi, o 6 jau panaudotas. \nBandykime 9875x. Suma $9+8+7+5 = 29$. Trūksta 7 iki 36. $x=7$ (jau panaudotas).\nBandykime 9874x. Suma $9+8+7+4 = 28$. Trūksta 8 iki 36. $x=8$ (jau panaudotas).\nBandykime mažinti tūkstančius: 986xx. Didžiausias galimas galas, dalus iš 4: 72, 52, 40...\nTikriname 98640. Suma $9+8+6+4+0 = 27$. Tai dalijasi iš 9! Paskutiniai du skaitmenys 40 dalijasi iš 4. Skaitmenys skirtingi.\nAr yra didesnis? Tikriname 987xx dar kartą: 98712. Suma $9+8+7+1+2 = 27$. Tai didesnis už 98640. \nDar didesnis? 9873x. Trūksta 0 iki sumos 27. $98730$ nesidalija iš 4. Trūksta 9 iki sumos 36. $98739$ nesidalija iš 4.\nGalutinis patikrinimas: 98712 yra geras, bet bandykime 98748 (suma 36, bet 8 kartojasi). \nTeisingas atsakymas po nuoseklaus tikrinimo yra 98712.\n\n**Atsakymas:** 98712."
+      "solution": "Skaičius dalijasi iš 36, jei jis dalijasi iš 4 ir iš 9 (nes $4 \\times 9 = 36$). 1. **9 dalumo požymis**: skaitmenų suma turi dalintis iš 9. 2. **4 dalumo požymis**: paskutiniai du skaitmenys turi dalintis iš 4. 3. **Didžiausias skaičius**: pradedame nuo 9, 8, 7... Bandykime: 9876x. Skaitmenų suma $9+8+7+6 = 30$. Kad dalintųsi iš 9, suma turi būti 36, tad $x = 6$. Bet skaitmenys turi būti skirtingi, o 6 jau panaudotas. Bandykime 9875x. Suma $9+8+7+5 = 29$. Trūksta 7 iki 36. $x=7$ (jau panaudotas). Bandykime 9874x. Suma $9+8+7+4 = 28$. Trūksta 8 iki 36. $x=8$ (jau panaudotas). Bandykime mažinti tūkstančius: 986xx. Didžiausias galimas galas, dalus iš 4: 72, 52, 40... Tikriname 98640. Suma $9+8+6+4+0 = 27$. Tai dalijasi iš 9! Paskutiniai du skaitmenys 40 dalijasi iš 4. Skaitmenys skirtingi. Ar yra didesnis? Tikriname 987xx dar kartą: 98712. Suma $9+8+7+1+2 = 27$. Tai didesnis už 98640. Dar didesnis? 9873x. Trūksta 0 iki sumos 27. $98730$ nesidalija iš 4. Trūksta 9 iki sumos 36. $98739$ nesidalija iš 4. Galutinis patikrinimas: 98712 yra geras, bet bandykime 98748 (suma 36, bet 8 kartojasi). Teisingas atsakymas po nuoseklaus tikrinimo yra 98712. **Atsakymas:** 98712."
     },
     {
       "title": "Pirminių skaičių paslaptis",
       "statement": "Trijų pirminių skaičių suma lygi 30. Raskite visus tokius skaičių rinkinius.",
-      "solution": "Suma 30 yra lyginis skaičius.\n- Jei visi trys pirminiai būtų nelyginiai, jų suma būtų nelyginė (N+N+N = N).\n- Kadangi suma lyginė, vienas iš skaičių būtinai turi būti lyginis.\n- Vienintelis lyginis pirminis skaičius yra 2.\n\nVadinasi, vienas skaičius yra 2. Likusių dviejų suma yra $30 - 2 = 28$.\nIeškome pirminių skaičių porų, kurių suma 28:\n1. 5 ir 23 (abu pirminiai)\n2. 11 ir 17 (abu pirminiai)\n\n(Poros kaip 3 ir 25 netinka, nes 25 sudėtinis; 7 ir 21 netinka, nes 21 sudėtinis).\n\n**Atsakymas:** {2, 5, 23} ir {2, 11, 17}."
+      "solution": "Suma 30 yra lyginis skaičius. - Jei visi trys pirminiai būtų nelyginiai, jų suma būtų nelyginė (N+N+N = N). - Kadangi suma lyginė, vienas iš skaičių būtinai turi būti lyginis. - Vienintelis lyginis pirminis skaičius yra 2. Vadinasi, vienas skaičius yra 2. Likusių dviejų suma yra $30 - 2 = 28$. Ieškome pirminių skaičių porų, kurių suma 28: 1. 5 ir 23 (abu pirminiai) 2. 11 ir 17 (abu pirminiai) (Poros kaip 3 ir 25 netinka, nes 25 sudėtinis; 7 ir 21 netinka, nes 21 sudėtinis). **Atsakymas:** {2, 5, 23} ir {2, 11, 17}."
     },
     {
       "title": "Paskutinio skaitmens radimas",
       "statement": "Koks yra skaičiaus $7^{2023}$ paskutinis skaitmuo?",
-      "solution": "Stebėkime 7 laipsnių paskutinius skaitmenis:\n- $7^1 = 7$\n- $7^2 = 49 \\to 9$\n- $7^3 = \\dots 3$ (nes $9 \\times 7 = 63$)\n- $7^4 = \\dots 1$ (nes $3 \\times 7 = 21$)\n- $7^5 = \\dots 7$ (ciklas prasideda iš naujo)\n\nCiklo ilgis yra 4. Skaitmenys kartojasi: 7, 9, 3, 1.\nPadalijame laipsnio rodiklį 2023 iš ciklo ilgio 4:\n$2023 = 505 \\times 4 + 3$.\nLieka liekana 3. Tai reiškia, kad paskutinis skaitmuo bus 3-asis skaičius mūsų cikle.\n\n**Atsakymas:** 3."
+      "solution": "Stebėkime 7 laipsnių paskutinius skaitmenis: - $7^1 = 7$ - $7^2 = 49 \\to 9$ - $7^3 = \\dots 3$ (nes $9 \\times 7 = 63$) - $7^4 = \\dots 1$ (nes $3 \\times 7 = 21$) - $7^5 = \\dots 7$ (ciklas prasideda iš naujo) Ciklo ilgis yra 4. Skaitmenys kartojasi: 7, 9, 3, 1. Padalijame laipsnio rodiklį 2023 iš ciklo ilgio 4: $2023 = 505 \\times 4 + 3$. Lieka liekana 3. Tai reiškia, kad paskutinis skaitmuo bus 3-asis skaičius mūsų cikle. **Atsakymas:** 3."
     },
     {
       "title": "Dalyba su liekanomis",
       "statement": "Skaičių dalijant iš 3, gaunama liekana 2, o dalijant iš 5 – liekana 3. Kokia mažiausia galima šio skaičiaus vertė?",
-      "solution": "Išrašykime skaičius, kurie tenkina pirmą sąlygą (liekana 2 dalijant iš 3):\n2, 5, 8, 11, 14, 17, 20, 23, ...\n\nIšrašykime skaičius, kurie tenkina antrą sąlygą (liekana 3 dalijant iš 5):\n3, 8, 13, 18, 23, ...\n\nMatome, kad pirmasis bendras skaičius abiejuose sąrašuose yra 8.\nKitas toks skaičius bus $8 + MBK(3, 5) = 8 + 15 = 23$.\nMažiausia vertė yra 8.\n\n**Atsakymas:** 8."
+      "solution": "Išrašykime skaičius, kurie tenkina pirmą sąlygą (liekana 2 dalijant iš 3): 2, 5, 8, 11, 14, 17, 20, 23, ... Išrašykime skaičius, kurie tenkina antrą sąlygą (liekana 3 dalijant iš 5): 3, 8, 13, 18, 23, ... Matome, kad pirmasis bendras skaičius abiejuose sąrašuose yra 8. Kitas toks skaičius bus $8 + MBK(3, 5) = 8 + 15 = 23$. Mažiausia vertė yra 8. **Atsakymas:** 8."
     },
     {
       "title": "Rebusas",
       "statement": "Raskite skaitmenis A ir B, jei žinoma, kad skaičius $\\overline{1A2B}$ dalijasi iš 45.",
-      "solution": "Skaičius dalijasi iš 45, jei dalijasi iš 5 ir iš 9.\n1. **Dalumas iš 5**: skaičius turi baigtis 0 arba 5. Vadinasi, $B = 0$ arba $B = 5$.\n2. **Dalumas iš 9**: skaitmenų suma $1 + A + 2 + B = 3 + A + B$ turi dalintis iš 9.\n\n**Atvejis 1: B = 0**\nSuma: $3 + A + 0 = 3 + A$. Kad dalintųsi iš 9, $A$ turi būti 6.\nSkaičius: 1620.\n\n**Atvejis 2: B = 5**\nSuma: $3 + A + 5 = 8 + A$. Kad dalintųsi iš 9, $A$ turi būti 1.\nSkaičius: 1125.\n\n**Atsakymas:** (A=6, B=0) arba (A=1, B=5)."
+      "solution": "Skaičius dalijasi iš 45, jei dalijasi iš 5 ir iš 9. 1. **Dalumas iš 5**: skaičius turi baigtis 0 arba 5. Vadinasi, $B = 0$ arba $B = 5$. 2. **Dalumas iš 9**: skaitmenų suma $1 + A + 2 + B = 3 + A + B$ turi dalintis iš 9. **Atvejis 1: B = 0** Suma: $3 + A + 0 = 3 + A$. Kad dalintųsi iš 9, $A$ turi būti 6. Skaičius: 1620. **Atvejis 2: B = 5** Suma: $3 + A + 5 = 8 + A$. Kad dalintųsi iš 9, $A$ turi būti 1. Skaičius: 1125. **Atsakymas:** (A=6, B=0) arba (A=1, B=5)."
     }
   ],
   "exercises": [

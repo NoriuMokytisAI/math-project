@@ -16,7 +16,7 @@ export const tests = [
       "dt-ex-7",
       "dt-ex-8"
     ],
-    "masteryWeight": 1.0
+    "masteryWeight": 1
   },
   {
     "id": "dt-test-2",
@@ -281,7 +281,7 @@ export const tests = [
       "tl-ex-13",
       "tl-ex-14"
     ],
-    "masteryWeight": 1.0
+    "masteryWeight": 1
   },
   {
     "id": "tl-test-2",
@@ -533,7 +533,7 @@ export const tests = [
       "ex-st-07-006",
       "ex-st-07-008"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "test-trikampiai-7",
@@ -574,7 +574,7 @@ export const tests = [
       "ex-olimpiada-08-ef659ec4",
       "ex-olimpiada-08-alg-020"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-08-geo-test",
@@ -604,7 +604,7 @@ export const tests = [
       "ex-olimpiada-08-geo-019",
       "ex-olimpiada-08-geo-020"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-08-test-kombinatorika",
@@ -626,7 +626,7 @@ export const tests = [
     "exerciseIds": [
       "ex-olimpiada-08-nt-020"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "test-vidurio-linijos-8",
@@ -826,7 +826,7 @@ export const tests = [
       "ex-olimpiada-10-geo-08",
       "ex-olimpiada-10-geo-12"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-10-test-challenge",
@@ -849,7 +849,7 @@ export const tests = [
     "exerciseIds": [
       "olimpiada-10-strategijos-ir-irodymai-ex-olimpiada-10-01"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "statistika-tikimybe-ir-vektoriai-test-topic",
@@ -1061,7 +1061,7 @@ export const tests = [
       "ex-olimpiada-11-39",
       "ex-olimpiada-11-40"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-11-test-challenge",
@@ -1084,7 +1084,7 @@ export const tests = [
       "ex-olimpiada-11-17-copy-3133c7e1",
       "ex-olimpiada-11-17-copy-2f19f97a"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-11-test-challenge",
@@ -1095,7 +1095,7 @@ export const tests = [
     "exerciseIds": [
       "olimpiada-11-kombinatorika-ex-olimpiada-11-32"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-11-test-challenge",
@@ -1115,7 +1115,7 @@ export const tests = [
       "olimpiada-11-skaiciu-teorija-ex-olimpiada-11-19",
       "ex-olimpiada-11-20"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "racionaliosios-rodiklines-ir-logaritmines-lygtys-test-topic",
@@ -1313,7 +1313,7 @@ export const tests = [
       "vektoriai-plokstumoje-ex-022",
       "vektoriai-plokstumoje-ex-024"
     ],
-    "masteryWeight": 1.0
+    "masteryWeight": 1
   },
   {
     "id": "vektoriai-plokstumoje-challenge",
@@ -1435,7 +1435,7 @@ export const tests = [
     "exerciseIds": [
       "kompl-ex-001"
     ],
-    "masteryWeight": 1.0
+    "masteryWeight": 1
   },
   {
     "id": "olimpiada-12-test-challenge",
@@ -1476,7 +1476,7 @@ export const tests = [
     "exerciseIds": [
       "olimpiada-12-geometrija-ex-olimpiada-12-12"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-12-comb-challenge",
@@ -1487,7 +1487,7 @@ export const tests = [
     "exerciseIds": [
       "ex-olimpiada-12-05"
     ],
-    "masteryWeight": 2.0
+    "masteryWeight": 2
   },
   {
     "id": "olimpiada-12-test-challenge",
