@@ -293,6 +293,34 @@ Rules:
 
 Use passes instead of random content bursts.
 
+### Current Required Pass: Depth Warning Completion
+
+The current priority is to finish all content-depth warnings reported by
+`npm run validate:content`.
+
+Implementation rules:
+
+- expand real JSON files under `content/generated/{grade}/`,
+- work grade-by-grade in this order: `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`,
+- after each grade, run `npm run validate:content` and confirm the warning count decreases,
+- do not create generator scripts, parser scripts, temporary automation files, or backup artifacts as the deliverable,
+- do not rename existing topic, concept, exercise, test, or formula ids,
+- do not remove validation warnings by weakening validation rules,
+- do not satisfy word-count targets with filler.
+
+Acceptance for this pass:
+
+- every curriculum topic reaches at least `800` useful Lithuanian theory words,
+- every curriculum topic has at least `4` meaningful theory sections,
+- every olympiad topic reaches at least `1000` useful Lithuanian theory or method words,
+- every olympiad topic has at least `4` method-focused theory sections,
+- every olympiad topic has at least `5` worked examples or fully solved teaching problems,
+- `npm run validate:content` reports `0 issues` and `0 warnings`.
+
+Olympiad topics should receive extra attention. Add method notes, named
+strategies, proof patterns, first observations, traps, prerequisite bridges, and
+fully explained examples before adding more problem volume.
+
 ### Pass 1: Curriculum Inventory
 
 Read `matematikaPrograma.txt`.

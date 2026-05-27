@@ -229,6 +229,12 @@ If no filters are active, the app may use the topic's default recommendation seq
 
 Every topic theory page must be a real lesson.
 
+The next content-depth completion pass must eliminate every current `validate:content`
+depth warning by expanding the actual JSON topic files. Do not weaken the
+validator and do not mark thin topics as complete. The pass must be done
+grade-by-grade (`05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`) so each grade
+can be validated independently before moving on.
+
 Minimum mature curriculum topic target:
 
 - 800-1500 Lithuanian words of useful theory,
@@ -261,9 +267,19 @@ Minimum mature olympiad topic target:
 - prerequisite repair links,
 - SRS seeds for methods, mistakes, and insights.
 
+Olympiad depth warnings are the highest-risk part of the pass. Every olympiad
+topic must read like a teachable method lesson, not a problem dump. When an
+olympiad file is thin, add strategy explanations, proof patterns, prerequisite
+bridges, traps, and fully reasoned examples before adding more ordinary
+exercises.
+
 These are mature-topic targets. A topic may start smaller, but it must be marked as incomplete in coverage tracking and should not be considered production-complete.
 
 Do not add filler to meet word counts. Depth must come from useful explanations, methods, examples, edge cases, mistakes, prerequisite bridges, and transfer guidance.
+
+For the depth-completion pass, acceptance requires `npm run validate:content`
+to report `0 issues` and `0 warnings`. Warnings are allowed during early content
+growth, but this specific pass is not complete while any depth warning remains.
 
 ## Phase 10: Theory Page UI Requirements
 

@@ -212,7 +212,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ state, navigate, updateSta
                 <article key={topicId} className="topic-card">
                   <div className="progress-ring" style={{ '--p': val } as React.CSSProperties}>{val}%</div>
                   <div className="topic-card-body">
-                    <h3>{topic.title}</h3>
+                    <h3>{topic.title}{isOlympiadTopic ? " (olimpiadinė tema)" : ""}</h3>
                     <p>{label} • {solved}/{total} užd.</p>
                     <div className="mastery-bar" style={{ '--p': val } as React.CSSProperties}>
                       <span></span>

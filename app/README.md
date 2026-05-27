@@ -73,6 +73,14 @@ Olympiad content follows the same topic-level browsing rule as school content. G
 
 `Teorija` must support deep lessons, not only a few paragraphs. Mature curriculum and olympiad topics need structured sections, examples, mistakes, formulas/methods, glossary links, prerequisite links, and enough explanatory depth to teach independently.
 
+The current content-depth completion target is stricter than ordinary growth:
+all `npm run validate:content` depth warnings must be removed by expanding the
+actual topic JSON files grade-by-grade. Curriculum topics must reach the mature
+lesson target, while olympiad topics must be especially strengthened with
+method-focused theory and at least five fully reasoned worked examples or
+teaching problems. The validator must not be weakened to hide unfinished
+content.
+
 ## Canonical Phone Web Standard
 
 The website must be usable on phone widths down to `360px` without zooming, clipped text, thin vertical cards, hidden primary actions, or whole-page horizontal scrolling.
